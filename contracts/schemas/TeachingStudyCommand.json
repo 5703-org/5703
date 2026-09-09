@@ -1,0 +1,67 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "item_id": {
+      "title": "Item Id",
+      "type": "string"
+    },
+    "condition": {
+      "enum": [
+        "C0",
+        "C1",
+        "C2"
+      ],
+      "title": "Condition",
+      "type": "string"
+    },
+    "target_level": {
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ],
+      "title": "Target Level",
+      "type": "string"
+    },
+    "base_answer_id": {
+      "title": "Base Answer Id",
+      "type": "string"
+    },
+    "evidence_snapshot_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence Snapshot Ids",
+      "type": "array"
+    },
+    "model_configuration_id": {
+      "title": "Model Configuration Id",
+      "type": "string"
+    },
+    "prompt_configuration_id": {
+      "title": "Prompt Configuration Id",
+      "type": "string"
+    },
+    "profile_rule_version": {
+      "title": "Profile Rule Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "run_id",
+    "item_id",
+    "condition",
+    "target_level",
+    "base_answer_id",
+    "evidence_snapshot_ids",
+    "model_configuration_id",
+    "prompt_configuration_id",
+    "profile_rule_version"
+  ],
+  "title": "TeachingStudyCommand",
+  "type": "object"
+}

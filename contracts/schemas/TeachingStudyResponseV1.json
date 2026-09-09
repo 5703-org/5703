@@ -1,0 +1,49 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "teaching_study_response_v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "explanation": {
+      "minLength": 1,
+      "title": "Explanation",
+      "type": "string"
+    },
+    "citations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "title": "Citations",
+      "type": "array"
+    },
+    "learning_check": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Learning Check"
+    },
+    "invariant_check": {
+      "additionalProperties": true,
+      "title": "Invariant Check",
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "explanation",
+    "citations",
+    "learning_check",
+    "invariant_check"
+  ],
+  "title": "TeachingStudyResponseV1",
+  "type": "object"
+}

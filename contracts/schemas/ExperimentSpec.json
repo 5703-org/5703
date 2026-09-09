@@ -1,0 +1,86 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "protocol_id": {
+      "minLength": 1,
+      "title": "Protocol Id",
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "benchmark_openqa",
+        "benchmark_mcq"
+      ],
+      "title": "Mode",
+      "type": "string"
+    },
+    "condition": {
+      "enum": [
+        "E0",
+        "E1",
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "title": "Condition",
+      "type": "string"
+    },
+    "dataset": {
+      "minLength": 1,
+      "title": "Dataset",
+      "type": "string"
+    },
+    "dataset_revision": {
+      "minLength": 1,
+      "title": "Dataset Revision",
+      "type": "string"
+    },
+    "split": {
+      "enum": [
+        "train",
+        "validation",
+        "test",
+        "authored"
+      ],
+      "title": "Split",
+      "type": "string"
+    },
+    "seed": {
+      "title": "Seed",
+      "type": "integer"
+    },
+    "configuration_id": {
+      "title": "Configuration Id",
+      "type": "string"
+    },
+    "scheduled_count": {
+      "maximum": 10000,
+      "minimum": 1,
+      "title": "Scheduled Count",
+      "type": "integer"
+    },
+    "scorer_version": {
+      "default": "conservative-v1",
+      "title": "Scorer Version",
+      "type": "string"
+    },
+    "rubric_version": {
+      "default": "review-v1",
+      "title": "Rubric Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "protocol_id",
+    "mode",
+    "condition",
+    "dataset",
+    "dataset_revision",
+    "split",
+    "seed",
+    "configuration_id",
+    "scheduled_count"
+  ],
+  "title": "ExperimentSpec",
+  "type": "object"
+}

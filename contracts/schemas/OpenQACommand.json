@@ -1,0 +1,36 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "mode": {
+      "const": "benchmark_openqa",
+      "title": "Mode",
+      "type": "string"
+    },
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "item_id": {
+      "title": "Item Id",
+      "type": "string"
+    },
+    "question_id": {
+      "title": "Question Id",
+      "type": "string"
+    },
+    "question_text": {
+      "minLength": 1,
+      "title": "Question Text",
+      "type": "string"
+    }
+  },
+  "required": [
+    "mode",
+    "run_id",
+    "item_id",
+    "question_id",
+    "question_text"
+  ],
+  "title": "OpenQACommand",
+  "type": "object"
+}
