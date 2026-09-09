@@ -1,0 +1,96 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "chat_response_v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "response_type": {
+      "enum": [
+        "answer",
+        "clarification",
+        "refusal",
+        "social"
+      ],
+      "title": "Response Type",
+      "type": "string"
+    },
+    "answer_text": {
+      "minLength": 1,
+      "title": "Answer Text",
+      "type": "string"
+    },
+    "short_answer": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Short Answer"
+    },
+    "citations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "title": "Citations",
+      "type": "array"
+    },
+    "refusal_reason": {
+      "anyOf": [
+        {
+          "enum": [
+            "NO_EVIDENCE",
+            "INSUFFICIENT_EVIDENCE",
+            "CONFLICTING_EVIDENCE",
+            "OUT_OF_SCOPE"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Refusal Reason"
+    },
+    "follow_up_questions": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "maxItems": 3,
+      "title": "Follow Up Questions",
+      "type": "array"
+    },
+    "confidence": {
+      "anyOf": [
+        {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Confidence"
+    }
+  },
+  "required": [
+    "schema_version",
+    "response_type",
+    "answer_text",
+    "short_answer",
+    "citations",
+    "refusal_reason",
+    "follow_up_questions",
+    "confidence"
+  ],
+  "title": "ChatResponseV1",
+  "type": "object"
+}

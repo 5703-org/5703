@@ -1,0 +1,154 @@
+{
+  "$defs": {
+    "MessageRef": {
+      "additionalProperties": false,
+      "properties": {
+        "message_id": {
+          "title": "Message Id",
+          "type": "string"
+        },
+        "sequence": {
+          "title": "Sequence",
+          "type": "integer"
+        },
+        "answer_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Answer Id"
+        },
+        "role": {
+          "enum": [
+            "user",
+            "assistant"
+          ],
+          "title": "Role",
+          "type": "string"
+        },
+        "content": {
+          "title": "Content",
+          "type": "string"
+        },
+        "content_hash": {
+          "title": "Content Hash",
+          "type": "string"
+        }
+      },
+      "required": [
+        "message_id",
+        "sequence",
+        "answer_id",
+        "role",
+        "content",
+        "content_hash"
+      ],
+      "title": "MessageRef",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "session_id": {
+      "title": "Session Id",
+      "type": "string"
+    },
+    "cutoff_sequence": {
+      "title": "Cutoff Sequence",
+      "type": "integer"
+    },
+    "messages": {
+      "items": {
+        "$ref": "#/$defs/MessageRef"
+      },
+      "title": "Messages",
+      "type": "array"
+    },
+    "summary_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Summary Id"
+    },
+    "summary_hash": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Summary Hash"
+    },
+    "covered_until_sequence": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Covered Until Sequence"
+    },
+    "summary_text": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Summary Text"
+    },
+    "profile_snapshot_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Profile Snapshot Id"
+    },
+    "token_budget": {
+      "additionalProperties": true,
+      "title": "Token Budget",
+      "type": "object"
+    },
+    "exclusions": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Exclusions",
+      "type": "array"
+    }
+  },
+  "required": [
+    "session_id",
+    "cutoff_sequence",
+    "messages",
+    "summary_id",
+    "summary_hash",
+    "covered_until_sequence",
+    "summary_text",
+    "profile_snapshot_id",
+    "token_budget",
+    "exclusions"
+  ],
+  "title": "ConversationSnapshot",
+  "type": "object"
+}

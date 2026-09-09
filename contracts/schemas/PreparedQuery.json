@@ -1,0 +1,83 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "original_message": {
+      "minLength": 1,
+      "title": "Original Message",
+      "type": "string"
+    },
+    "standalone_query": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Standalone Query"
+    },
+    "intent": {
+      "enum": [
+        "factual",
+        "follow_up",
+        "reexplain",
+        "comparison",
+        "source_request",
+        "social",
+        "clarification"
+      ],
+      "title": "Intent",
+      "type": "string"
+    },
+    "topic_relation": {
+      "enum": [
+        "same_topic",
+        "new_topic",
+        "unclear"
+      ],
+      "title": "Topic Relation",
+      "type": "string"
+    },
+    "referenced_message_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Referenced Message Ids",
+      "type": "array"
+    },
+    "needs_clarification": {
+      "title": "Needs Clarification",
+      "type": "boolean"
+    },
+    "preparation_version": {
+      "minLength": 1,
+      "title": "Preparation Version",
+      "type": "string"
+    },
+    "fallback_reason": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Fallback Reason"
+    }
+  },
+  "required": [
+    "original_message",
+    "standalone_query",
+    "intent",
+    "topic_relation",
+    "referenced_message_ids",
+    "needs_clarification",
+    "preparation_version",
+    "fallback_reason"
+  ],
+  "title": "PreparedQuery",
+  "type": "object"
+}
