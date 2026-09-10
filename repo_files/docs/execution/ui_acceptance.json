@@ -1,0 +1,457 @@
+{
+  "kind": "subchecks_of_existing_acceptance",
+  "top_level_task_count_unchanged": 108,
+  "top_level_check_count_unchanged": 60,
+  "checks": [
+    {
+      "check_id": "UI-01",
+      "expected": "No shell overflow, overlapping prose or unreachable controls at the named widths.",
+      "task_ids": [
+        "FE-12",
+        "QA-12"
+      ],
+      "parent_acceptance_ids": [
+        "AC-44"
+      ],
+      "status": "REAL_FLOW_VERIFIED",
+      "actual": "Actual browser geometry and controls passed at the required sampled widths and breakpoint edges. The final official-source journey covers eleven widths; earlier login/stress/admin evidence adds 375, 1280 and 2560. No body/document clipping hides overflow.",
+      "actual_commands": [
+        "node scripts/verify-openstax-release.mjs"
+      ],
+      "evidence_paths": [
+        "artifacts/reports/frontend/openstax/2026-09-08T08-27-08-234Z/verification.json",
+        "artifacts/reports/frontend/login-responsive-bounds.json",
+        "artifacts/reports/frontend/chat-responsive-bounds.json",
+        "artifacts/reports/frontend/stress-layout.json",
+        "artifacts/reports/frontend/openstax-rollback-roundtrip/2026-09-08T08-42-25-678Z/verification.json",
+        "artifacts/reports/frontend/history-pagination/2026-09-08T08-55-45-630Z/verification.json",
+        "artifacts/reports/frontend/openstax-v5/2026-09-08T08-54-45-868Z/verification.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        }
+      ],
+      "reconciled_at": "2026-09-08T08:58:34Z",
+      "command_working_directory": "frontend"
+    },
+    {
+      "check_id": "UI-02",
+      "expected": "Resize loaded chat across widths and breakpoint edges without reload, lost draft/session/job or duplicate submission.",
+      "task_ids": [
+        "FE-04",
+        "FE-08"
+      ],
+      "parent_acceptance_ids": [
+        "AC-16",
+        "AC-43",
+        "AC-44"
+      ],
+      "status": "REAL_FLOW_VERIFIED",
+      "actual": "Loaded actual chat resized across widths and breakpoint edges without losing draft/session state or causing duplicate submissions. Inflight stop/retry state is recorded separately; answer generation remains mock.",
+      "actual_commands": [
+        "node scripts/verify-openstax-release.mjs"
+      ],
+      "evidence_paths": [
+        "artifacts/reports/frontend/openstax/2026-09-08T08-27-08-234Z/verification.json",
+        "artifacts/reports/frontend/chat-responsive-bounds.json",
+        "artifacts/reports/frontend/stop-retry.json",
+        "artifacts/reports/frontend/history-pagination/2026-09-08T08-55-45-630Z/verification.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        }
+      ],
+      "reconciled_at": "2026-09-08T08:58:34Z",
+      "command_working_directory": "frontend"
+    },
+    {
+      "check_id": "UI-03",
+      "expected": "Actual browser/text enlargement and 320 CSS-pixel reflow preserve reading and operations.",
+      "task_ids": [
+        "FE-12"
+      ],
+      "parent_acceptance_ids": [
+        "AC-44"
+      ],
+      "status": "REAL_FLOW_VERIFIED",
+      "actual": "Actual Chromium native Page zoom at 125%, 150%, 200% and 400% measured corresponding DPR and CSS reflow to 314px; source controls and draft/revision remained operable. This historical presentation check is not a new official-source or native-IME test.",
+      "actual_commands": [
+        "node scripts/verify-browser-zoom.mjs"
+      ],
+      "evidence_paths": [
+        "artifacts/reports/frontend/real-browser-zoom.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        }
+      ],
+      "reconciled_at": "2026-09-08T08:58:34Z",
+      "command_working_directory": "frontend"
+    },
+    {
+      "check_id": "UI-04",
+      "expected": "Long text wraps or scrolls locally without clipping or page-width overflow.",
+      "task_ids": [
+        "FE-05",
+        "FE-06",
+        "FE-10",
+        "FE-11"
+      ],
+      "parent_acceptance_ids": [
+        "AC-44"
+      ],
+      "status": "MOCK_TEST_PASSED",
+      "actual": "The authored persisted stress fixture retains 35 paragraphs, an unbroken word, long URL, code, 16-column table, formula and final paragraph; local scroll regions retain content without shell overflow. This establishes rendering only, not scientific or model quality.",
+      "actual_commands": [],
+      "evidence_paths": [
+        "artifacts/reports/frontend/stress-layout.json",
+        "evidence/integration/ui_stress_fixture.json",
+        "evidence/ui/legacy-mcq-final-component-tests.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        }
+      ],
+      "reconciled_at": "2026-09-08T08:58:34Z"
+    },
+    {
+      "check_id": "UI-05",
+      "expected": "Keyboard and low-height/orientation cases preserve composer/transcript/Close; record unavailable physical testing.",
+      "task_ids": [
+        "FE-03",
+        "FE-12"
+      ],
+      "parent_acceptance_ids": [
+        "AC-44"
+      ],
+      "status": "WAITING_EXTERNAL",
+      "actual": "Landscape 844×390 and low-height native zoom keep send/stop and Close reachable. Physical mobile soft-keyboard and actual orientation hardware sessions are unavailable and unverified; desktop emulation does not establish these clauses.",
+      "actual_commands": [],
+      "evidence_paths": [
+        "artifacts/reports/frontend/stress-layout.json",
+        "artifacts/reports/frontend/real-browser-zoom.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        }
+      ],
+      "reconciled_at": "2026-09-08T08:58:34Z"
+    },
+    {
+      "check_id": "UI-06",
+      "expected": "Drawers open/scroll/close, restore focus and show readable full-screen evidence on narrow screens.",
+      "task_ids": [
+        "FE-06",
+        "FE-08"
+      ],
+      "parent_acceptance_ids": [
+        "AC-16",
+        "AC-44"
+      ],
+      "status": "REAL_FLOW_VERIFIED",
+      "actual": "Actual citation/source drawer interactions preserve full source text, scroll and focus. Final official source title, URL, license, physical-page locator and figure/formula caveat are readable at 1440px and 390px; emulated-touch closure has separate evidence. The focused parser-v5 check additionally verifies current and historical source snapshots, official links and license metadata at 390px/1440px without changing earlier saved history.",
+      "actual_commands": [
+        "node scripts/verify-openstax-release.mjs"
+      ],
+      "evidence_paths": [
+        "artifacts/reports/frontend/openstax/2026-09-08T08-27-08-234Z/verification.json",
+        "artifacts/reports/frontend/stress-layout.json",
+        "artifacts/reports/frontend/touch-controls.json",
+        "artifacts/reports/frontend/openstax-v5/2026-09-08T08-54-45-868Z/verification.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        }
+      ],
+      "reconciled_at": "2026-09-08T08:58:34Z",
+      "command_working_directory": "frontend"
+    },
+    {
+      "check_id": "UI-07",
+      "expected": "Resize during generation/failure/re-login preserves durable state; failed regeneration retains prior revision.",
+      "task_ids": [
+        "FE-04",
+        "FE-08",
+        "CHAT-08"
+      ],
+      "parent_acceptance_ids": [
+        "AC-16",
+        "AC-43",
+        "AC-45"
+      ],
+      "status": "REAL_FLOW_VERIFIED",
+      "actual": "Real job resize/stop/retry and failed replacement retention passed with actual API, worker and PostgreSQL. Current official-source regeneration preserves earlier revision, evidence and feedback; re-login restores ten messages and the active replacement. Answering remains mock.",
+      "actual_commands": [
+        "node scripts/verify-openstax-release.mjs"
+      ],
+      "evidence_paths": [
+        "artifacts/reports/frontend/openstax/2026-09-08T08-27-08-234Z/verification.json",
+        "artifacts/reports/frontend/stop-retry.json",
+        "artifacts/reports/frontend/stress-layout.json",
+        "artifacts/reports/frontend/no-sciq-journey.json",
+        "artifacts/reports/frontend/history-pagination/2026-09-08T08-55-45-630Z/verification.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        }
+      ],
+      "reconciled_at": "2026-09-08T08:58:34Z",
+      "command_working_directory": "frontend"
+    },
+    {
+      "check_id": "UI-08",
+      "expected": "Older-message reading is not interrupted; Jump to latest and panel closure preserve position.",
+      "task_ids": [
+        "FE-08"
+      ],
+      "parent_acceptance_ids": [
+        "AC-44"
+      ],
+      "status": "REAL_FLOW_VERIFIED",
+      "actual": "An actual completed sixth response while reading at scrollTop 0 does not jump; Jump to latest returns to bottom and source-panel closure preserves reading position. This actual browser/persistence flow uses the explicitly authored stress fixture and mock answerer.",
+      "actual_commands": [],
+      "evidence_paths": [
+        "artifacts/reports/frontend/stress-layout.json",
+        "artifacts/reports/frontend/history-pagination/2026-09-08T08-55-45-630Z/verification.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        }
+      ],
+      "reconciled_at": "2026-09-08T08:58:34Z"
+    },
+    {
+      "check_id": "UI-09",
+      "expected": "Keyboard, IME, touch and visible focus work; essential controls are not hover-only.",
+      "task_ids": [
+        "FE-03",
+        "FE-12"
+      ],
+      "parent_acceptance_ids": [
+        "AC-44"
+      ],
+      "status": "WAITING_EXTERNAL",
+      "actual": "Desktop keyboard/focus, Enter/Shift+Enter, synthetic composition guard and emulated-touch source/feedback controls passed. Physical touch, native OS IME and screen-reader review remain unavailable and unverified; synthetic events do not establish these clauses.",
+      "actual_commands": [],
+      "evidence_paths": [
+        "artifacts/reports/frontend/touch-controls.json",
+        "artifacts/reports/frontend/runs/2026-09-08T07-05-28-822Z/results.json",
+        "evidence/ui/legacy-mcq-final-component-tests.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        }
+      ],
+      "reconciled_at": "2026-09-08T08:58:34Z"
+    },
+    {
+      "check_id": "UI-10",
+      "expected": "Login/profile/corpus/experiments fit with accessible errors, required fields and pagination.",
+      "task_ids": [
+        "FE-02",
+        "FE-07",
+        "FE-10",
+        "FE-11",
+        "FE-12"
+      ],
+      "parent_acceptance_ids": [],
+      "status": "REAL_FLOW_VERIFIED",
+      "actual": "Named login/profile/corpus/experiment views and errors retain their cited actual responsive browser evidence. The shipped automatic 100-row history pagination is now verified through the real browser/API/worker:51 social turns create 102 rows, requests return 100+2, all IDs/order/full text remain. A further UI turn produces 104 rows while preserving the old reading anchor and unsent draft. This separate UI-only fixture is not corpus input or model-quality evidence; there is no Load older button.",
+      "actual_commands": [
+        "node scripts/verify-history-pagination.mjs"
+      ],
+      "evidence_paths": [
+        "artifacts/reports/frontend/login-responsive-bounds.json",
+        "artifacts/reports/frontend/account-security.json",
+        "artifacts/reports/frontend/admin-experiments.json",
+        "artifacts/reports/frontend/runs/2026-09-08T07-02-19-133Z/results.json",
+        "artifacts/reports/frontend/openstax-rollback-roundtrip/2026-09-08T08-42-25-678Z/verification.json",
+        "artifacts/reports/frontend/history-pagination/2026-09-08T08-55-45-630Z/verification.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        },
+        {
+          "checkpoint": "pagination_clause_before_actual_execution",
+          "status": "IMPLEMENTED_UNVERIFIED",
+          "actual": "Actual login/profile/error forms, corpus controls and experiment detail/export/missing-input guidance have bounded responsive browser evidence. Session history pagination is implemented, but complete pagination acceptance for the named pages has no separately recorded browser proof. Preserve that clause as unverified.",
+          "actual_commands": [],
+          "evidence_paths": [
+            "artifacts/reports/frontend/login-responsive-bounds.json",
+            "artifacts/reports/frontend/account-security.json",
+            "artifacts/reports/frontend/admin-experiments.json",
+            "artifacts/reports/frontend/runs/2026-09-08T07-02-19-133Z/results.json",
+            "artifacts/reports/frontend/openstax-rollback-roundtrip/2026-09-08T08-42-25-678Z/verification.json",
+            "artifacts/reports/frontend/history-pagination/2026-09-08T08-55-45-630Z/verification.json"
+          ]
+        }
+      ],
+      "reconciled_at": "2026-09-08T08:58:34Z",
+      "command_working_directory": "frontend"
+    },
+    {
+      "check_id": "UI-11",
+      "expected": "Sources, applied profiles, mock/live and error feedback remain correct and discoverable.",
+      "task_ids": [
+        "FE-05",
+        "FE-06",
+        "FE-07"
+      ],
+      "parent_acceptance_ids": [
+        "AC-16",
+        "AC-37",
+        "AC-44"
+      ],
+      "status": "REAL_FLOW_VERIFIED",
+      "actual": "Actual official source snapshots, profile-off/applied snapshot, mock badge, citation hashes, license and explicit refusal/errors remain discoverable. Source-unavailable 410 and historical MCQ rendering additionally have read-only component evidence. No live-provider readiness or answer-quality claim. The focused parser-v5 check additionally verifies current and historical source snapshots, official links and license metadata at 390px/1440px without changing earlier saved history. New real-browser rejection checks at1440/390 verify the whole alert without manual scrolling; automatic reveal respects intentional older reading. Drafts/history and original failed attempts are preserved.",
+      "actual_commands": [
+        "node scripts/verify-openstax-release.mjs"
+      ],
+      "evidence_paths": [
+        "artifacts/reports/frontend/openstax/2026-09-08T08-27-08-234Z/verification.json",
+        "evidence/ui/legacy-mcq-final-component-tests.json",
+        "evidence/ui/openstax-attribution-component-check.json",
+        "artifacts/reports/frontend/openstax-v5/2026-09-08T08-54-45-868Z/verification.json",
+        "artifacts/reports/frontend/keyboard-suggestion/2026-09-08T09-54-55-082Z/verification.json",
+        "docs/execution/keyboard-suggestion-verification.md"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        },
+        {
+          "checkpoint": "before_local_error_visibility_fix",
+          "observation": {
+            "check_id": "UI-11",
+            "expected": "Sources, applied profiles, mock/live and error feedback remain correct and discoverable.",
+            "task_ids": [
+              "FE-05",
+              "FE-06",
+              "FE-07"
+            ],
+            "parent_acceptance_ids": [
+              "AC-16",
+              "AC-37",
+              "AC-44"
+            ],
+            "status": "REAL_FLOW_VERIFIED",
+            "actual": "Actual official source snapshots, profile-off/applied snapshot, mock badge, citation hashes, license and explicit refusal/errors remain discoverable. Source-unavailable 410 and historical MCQ rendering additionally have read-only component evidence. No live-provider readiness or answer-quality claim. The focused parser-v5 check additionally verifies current and historical source snapshots, official links and license metadata at 390px/1440px without changing earlier saved history.",
+            "actual_commands": [
+              "node scripts/verify-openstax-release.mjs"
+            ],
+            "evidence_paths": [
+              "artifacts/reports/frontend/openstax/2026-09-08T08-27-08-234Z/verification.json",
+              "evidence/ui/legacy-mcq-final-component-tests.json",
+              "evidence/ui/openstax-attribution-component-check.json",
+              "artifacts/reports/frontend/openstax-v5/2026-09-08T08-54-45-868Z/verification.json"
+            ],
+            "reconciled_at": "2026-09-08T08:58:34Z",
+            "command_working_directory": "frontend"
+          }
+        }
+      ],
+      "reconciled_at": "2026-09-08T10:00:42.833241+00:00",
+      "command_working_directory": "frontend"
+    },
+    {
+      "check_id": "UI-12",
+      "expected": "Review screenshots with bounds, real clicks and persisted state; rerun the complete no-SciQ journey.",
+      "task_ids": [
+        "CHAT-06",
+        "QA-12"
+      ],
+      "parent_acceptance_ids": [
+        "AC-37",
+        "AC-44"
+      ],
+      "status": "REAL_FLOW_VERIFIED",
+      "actual": "Actual complete no-SciQ learner journeys, immutable history/citations and completed administrator rollback are recorded with IDs, bounds and reviewed screenshots. Independent clean-install browser evidence is separate. Earlier failures remain preserved; physical/native/human acceptance remains outside these software observations.",
+      "actual_commands": [
+        "node scripts/verify-openstax-release.mjs"
+      ],
+      "evidence_paths": [
+        "artifacts/reports/frontend/openstax/2026-09-08T08-27-08-234Z/verification.json",
+        "artifacts/reports/frontend/openstax-rollback-roundtrip/2026-09-08T08-42-25-678Z/verification.json",
+        "artifacts/reports/frontend/no-sciq-journey.json",
+        "artifacts/reports/frontend/clean-install-browser.json",
+        "docs/execution/audit-ui.md",
+        "artifacts/reports/frontend/history-pagination/2026-09-08T08-55-45-630Z/verification.json",
+        "artifacts/reports/frontend/openstax-v5/2026-09-08T08-54-45-868Z/verification.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        }
+      ],
+      "reconciled_at": "2026-09-08T08:58:34Z",
+      "command_working_directory": "frontend"
+    }
+  ],
+  "status_definitions": {
+    "NOT_IMPLEMENTED": "Required implementation or artifact is absent.",
+    "IMPLEMENTED_UNVERIFIED": "Implementation exists, but a material acceptance clause remains unverified.",
+    "MOCK_TEST_PASSED": "The cited software scope passed with simulated or authored inputs; no scientific or live-model claim.",
+    "REAL_FLOW_VERIFIED": "The explicitly stated real component ran with its required dependencies/data; answering may remain mock.",
+    "WAITING_EXTERNAL": "A named unavailable external condition prevents this exact check; independent work continues."
+  },
+  "reconciled_at": "2026-09-08T10:00:42.833241+00:00",
+  "reconciliation_note": "Reconciled from preserved actual records, including default-size pagination and focused parser-v5 source continuity. No runtime UI changes or changes to the 108 tasks/60 top-level checks. Physical/native/human acceptance remains separately unverified."
+}

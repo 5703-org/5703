@@ -1,0 +1,91 @@
+import { test, expect } from '@playwright/test';
+import fs from 'node:fs/promises';
+import { apiCall, assertShell, login, send } from './helpers';
+
+test('stop and retry retain one logical user turn through real jobs', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await login(page);
+  await page.locator('.new-chat').click();
+  await expect(page).toHaveURL(/\/chat\/[0-9a-f-]+$/);
+  await expect(page.getByRole('heading', { name: /What would you like/ })).toBeVisible();
+  const input = page.getByRole('textbox', { name: 'Message Learning Assistant' });
+  await input.fill('What is photosynthesis?');
+  const submitted = page.waitForResponse(response => response.request().method() === 'POST' && response.url().endsWith('/messages'));
+  await page.getByRole('button', { name: 'Send message', exact: true }).click();
+  const receipt = (await (await submitted).json()).data;
+  const beforeStop = await apiCall(page, `/jobs/${receipt.job_id}`);
+  expect(['queued', 'running', 'retry_wait']).toContain(beforeStop.state);
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.getByRole('button', { name: 'Stop generation', exact: true }).click();
+  await expect(page.getByText('Generation stopped. Your conversation is saved.')).toBeVisible();
+  await expect(input).toHaveValue('What is photosynthesis?');
+  const stopped = await apiCall(page, `/jobs/${receipt.job_id}`);
+  expect(stopped.state).toBe('cancelled');
+  await page.getByRole('button', { name: 'Retry response', exact: true }).click();
+  await expect(page.locator('[data-answer-id]')).toHaveCount(1, { timeout: 30000 });
+  const sessionId = new URL(page.url()).pathname.split('/')[2];
+  const history = await apiCall(page, `/sessions/${sessionId}/messages?limit=100`);
+  expect(history.items.filter((item: { role: string }) => item.role === 'user')).toHaveLength(1);
+  expect(history.items[1].answer.request_id).toBe(receipt.request_id);
+  expect(history.items[1].answer.job_id).not.toBe(receipt.job_id);
+  expect((await apiCall(page, `/jobs/${receipt.job_id}`)).state).toBe('cancelled');
+  await fs.writeFile('../artifacts/reports/frontend/stop-retry.json', JSON.stringify({ session_id: sessionId, original_job_id: receipt.job_id, retry_job_id: history.items[1].answer.job_id, request_id: receipt.request_id, history_count: history.items.length, original_terminal_state: stopped.state }, null, 2));
+});
+
+test('persisted authored stress fixture reflows and retains failed regeneration and feedback', async ({ page }) => {
+  const fixture = JSON.parse(await fs.readFile('../evidence/integration/ui_stress_fixture.json', 'utf8'));
+  await login(page);
+  await page.goto(`/chat/${fixture.session_id}`);
+  await expect(page.locator('[data-answer-id]')).toHaveAttribute('data-answer-id', fixture.answer_id);
+  await expect(page.getByText('Authored UI fixture: replacement timed out; original answer is retained.')).toBeVisible();
+  const input = page.getByRole('textbox', { name: 'Message Learning Assistant' });
+  await input.fill('This draft survives inspection and every resize.');
+  const results = [];
+  for (const width of [320, 375, 390, 640, 768, 1024, 1280, 1440, 1920, 2560, 639, 641, 1023, 1025]) {
+    await page.setViewportSize({ width, height: 900 });
+    results.push(await assertShell(page, width));
+    const prose = page.locator('.assistant-message .prose');
+    await expect(prose).toContainText('Paragraph 35.');
+    await expect(prose).toContainText('Final reachable paragraph.');
+    const local = await page.locator('.prose pre, .prose .local-scroll').evaluateAll(nodes => nodes.map(node => { const element = node as HTMLElement; element.scrollLeft = element.scrollWidth; return { scrollWidth: element.scrollWidth, clientWidth: element.clientWidth, scrollLeft: element.scrollLeft, finalContent: element.textContent?.slice(-50) }; }));
+    expect(local).toHaveLength(2);
+    for (const scroller of local) if (scroller.scrollWidth > scroller.clientWidth) expect(scroller.scrollLeft).toBeGreaterThan(0);
+    await expect(page.locator('.katex')).toHaveCount(1);
+    await expect(input).toHaveValue('This draft survives inspection and every resize.');
+    await expect(page.locator('[data-answer-id]')).toHaveAttribute('data-answer-id', fixture.answer_id);
+  }
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.locator('.prose').getByText('Final reachable paragraph.', { exact: false }).scrollIntoViewIfNeeded();
+  await page.screenshot({ path: '../artifacts/reports/frontend/stress-final-390.png' });
+  await page.getByRole('button', { name: 'Feedback', exact: true }).click();
+  await expect(page.getByLabel('Comment', { exact: false })).toHaveValue('Keep this original feedback when a replacement fails.');
+  await page.keyboard.press('Escape');
+  const before = await page.locator('.transcript').evaluate(node => node.scrollTop);
+  await page.getByRole('button', { name: 'Open source 1' }).last().click();
+  await expect(page.locator('.source-passage')).toBeVisible();
+  await page.keyboard.press('Escape');
+  const after = await page.locator('.transcript').evaluate(node => node.scrollTop);
+  expect(Math.abs(after - before)).toBeLessThanOrEqual(2);
+  await page.reload();
+  await expect(page.locator('[data-answer-id]')).toHaveAttribute('data-answer-id', fixture.answer_id);
+  await expect(page.getByText('Authored UI fixture: replacement timed out; original answer is retained.')).toBeVisible();
+  const history = await apiCall(page, `/sessions/${fixture.session_id}/messages?limit=100`);
+  expect(history.latest_job_id).toBe(fixture.failed_job_id);
+  expect(history.items[1].active_answer_id).toBe(fixture.answer_id);
+  await fs.writeFile('../artifacts/reports/frontend/stress-layout.json', JSON.stringify({ fixture_kind: fixture.fixture_kind, session_id: fixture.session_id, retained_answer_id: fixture.answer_id, failed_job_id: fixture.failed_job_id, source_panel_scroll_delta: after - before, results, semantic_claim: false }, null, 2));
+});
+
+test('incoming completion respects an older reading position and Jump to latest', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await login(page);
+  for (let index = 0; index < 5; index++) await send(page, index === 0 ? 'What is photosynthesis?' : 'Why does photosynthesis need light?');
+  const input = page.getByRole('textbox', { name: 'Message Learning Assistant' });
+  await input.fill('Explain photosynthesis with more detail.');
+  await page.getByRole('button', { name: 'Send message', exact: true }).click();
+  await page.locator('.transcript').evaluate(node => { node.scrollTop = 0; node.dispatchEvent(new Event('scroll', { bubbles: true })); });
+  await expect(page.locator('[data-answer-id]')).toHaveCount(6, { timeout: 30000 });
+  expect(await page.locator('.transcript').evaluate(node => node.scrollTop)).toBeLessThan(100);
+  await page.getByRole('button', { name: 'Jump to latest', exact: true }).click();
+  const gap = await page.locator('.transcript').evaluate(node => node.scrollHeight - node.scrollTop - node.clientHeight);
+  expect(gap).toBeLessThan(5);
+});
