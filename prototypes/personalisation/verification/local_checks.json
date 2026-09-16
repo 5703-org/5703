@@ -1,0 +1,181 @@
+{
+  "executed_at_utc": "2026-09-16T06:37:35+00:00",
+  "runtime": "3.12.14",
+  "scope": "Source hashes/syntax and eight isolated original-function checks with synthetic inputs.",
+  "source_checks": [
+    {
+      "path": "personalisation/__init__.py",
+      "sha256_lf": "23a75533f30dd50e6399e574b56e3c458469f8a490ff57286dac273b30b3ac5f",
+      "manifest_match": true,
+      "syntax": "passed"
+    },
+    {
+      "path": "personalisation/compiler.py",
+      "sha256_lf": "f61c6af6fcd2ffc030dc5a91292bbf8927d61d6768c29dc240c1ba08640a55bd",
+      "manifest_match": true,
+      "syntax": "passed"
+    },
+    {
+      "path": "personalisation/rubric.py",
+      "sha256_lf": "9cbf44f036f7cf4fc7adcf825306202c3272fb904dba02c3bbc3d69df1dbdb43",
+      "manifest_match": true,
+      "syntax": "passed"
+    },
+    {
+      "path": "personalisation/study.py",
+      "sha256_lf": "e9644c7563f4a306832ca4c6add4c8fbf49b7fcf2c4114f6e9d2e02cedf0a533",
+      "manifest_match": true,
+      "syntax": "passed"
+    },
+    {
+      "path": "tests/unit/test_profiles.py",
+      "sha256_lf": "e9842bb1c698f23129e93b857875496a08d05f9bed7ed949ba06e17c1d639aab",
+      "manifest_match": true,
+      "syntax": "passed"
+    }
+  ],
+  "cases": [
+    {
+      "name": "request_mapping",
+      "input": "Explain that more simply.",
+      "expected": {
+        "level": "beginner",
+        "style": "concise",
+        "reason": "explicit_simplification"
+      },
+      "actual": {
+        "level": "beginner",
+        "style": "concise",
+        "reason": "explicit_simplification"
+      },
+      "passed": true
+    },
+    {
+      "name": "request_mapping",
+      "input": "Make that shorter.",
+      "expected": {
+        "style": "concise",
+        "reason": "explicit_concision"
+      },
+      "actual": {
+        "style": "concise",
+        "reason": "explicit_concision"
+      },
+      "passed": true
+    },
+    {
+      "name": "request_mapping",
+      "input": "Explain in more detail.",
+      "expected": {
+        "style": "detailed",
+        "reason": "explicit_detail"
+      },
+      "actual": {
+        "style": "detailed",
+        "reason": "explicit_detail"
+      },
+      "passed": true
+    },
+    {
+      "name": "request_mapping",
+      "input": "What is photosynthesis?",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "name": "missing_ratings",
+      "input": {
+        "level_fit": null,
+        "clarity": null,
+        "prerequisite_support": null,
+        "usefulness": null,
+        "guidance": null,
+        "consistency": null,
+        "correctness": null,
+        "groundedness": null
+      },
+      "expected": {
+        "complete": false,
+        "gates_passed": null
+      },
+      "actual": {
+        "complete": false,
+        "gates_passed": null
+      },
+      "passed": true
+    },
+    {
+      "name": "synthetic_acceptable_scores",
+      "input": {
+        "level_fit": 2,
+        "clarity": 2,
+        "prerequisite_support": 2,
+        "usefulness": 2,
+        "guidance": 2,
+        "consistency": 2,
+        "correctness": 2,
+        "groundedness": 2
+      },
+      "expected": {
+        "complete": true,
+        "gates_passed": true
+      },
+      "actual": {
+        "complete": true,
+        "gates_passed": true
+      },
+      "passed": true
+    },
+    {
+      "name": "synthetic_failed_correctness",
+      "input": {
+        "level_fit": 2,
+        "clarity": 2,
+        "prerequisite_support": 2,
+        "usefulness": 2,
+        "guidance": 2,
+        "consistency": 2,
+        "correctness": 0,
+        "groundedness": 2
+      },
+      "expected": {
+        "complete": true,
+        "gates_passed": false
+      },
+      "actual": {
+        "complete": true,
+        "gates_passed": false
+      },
+      "passed": true
+    },
+    {
+      "name": "out_of_range_rating",
+      "input": {
+        "level_fit": null,
+        "clarity": 4,
+        "prerequisite_support": null,
+        "usefulness": null,
+        "guidance": null,
+        "consistency": null,
+        "correctness": null,
+        "groundedness": null
+      },
+      "expected": "ValueError",
+      "actual": "ValueError",
+      "passed": true
+    }
+  ],
+  "passed": 8,
+  "total": 8,
+  "not_run": [
+    "full profile compiler",
+    "TokenCounter/model configuration integration",
+    "TeachingStudyService and C0/C1/C2 matrix",
+    "full pytest suite",
+    "conversation/database persistence",
+    "RAG/model generation",
+    "human evaluation"
+  ],
+  "interpretation": "Publication-time software checks only; not new full-module tests, not a reproduction of the reported live study, and not proof of personalisation quality."
+}
