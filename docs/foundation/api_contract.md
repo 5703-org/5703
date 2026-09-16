@@ -7,8 +7,17 @@ All application routes are under `/api/v1`. Success is `{data,meta:{trace_id}}`;
 | POST /auth/login | Public email/password | token, bearer type, expiry; invalid credentials 401 |
 | GET/PATCH /users/me | Signed-in; full_name for PATCH | User id/email/name/role/status/version |
 | POST /users/me/password | Signed-in old_password/new_password | Change hash, invalidate earlier tokens |
-| GET/POST /admin/users | Admin; email/name/password/role | Provision/list users; no email or SSO dependency |
-| PATCH /admin/users/{id} | Admin status/password/version | Disable/reset and revoke old tokens |
+| GET/POST /admin/users | Admin; email/full_name/password/role | Provision/list users in the actor's workspace; no password/hash in UserOut |
+| PATCH /admin/users/{id} | Admin status/password/version | Same-workspace disable/reset and token revocation; other workspace404; stale version/self-deactivation409 |
+| GET /admin/model-configurations/presets | Admin | Provider preset id/name/description, requires_api_key and editable public config defaults |
+| GET/POST /admin/model-configurations | Admin; ConfigurationSave on POST | List ModelSettingsState or create immutable ModelConfigurationOut revision1; save performs no provider call |
+| GET /admin/model-configurations/{id} | Same-workspace admin | Exact public version, fixed credential mask/presence and latest safe test result |
+| POST /admin/model-configurations/{id}/versions | Same-workspace admin; ConfigurationSave | Immutable successor; parent must be latest in its group, otherwise409 |
+| POST /admin/model-configurations/{id}/test | Same-workspace admin | One bounded connection probe; saved ConnectionTestOut with passed/failed, mock/live class and safe diagnostic |
+| POST /admin/model-configurations/{id}/activate | Same-workspace admin; test_id/expected_active_version | Require latest passing test of exact version, atomically switch pointer; return ModelSettingsState |
+| POST /admin/model-configurations/use-environment | Admin; expected_active_version | Explicit audited return to environment configuration; return ModelSettingsState |
+| GET /admin/failures | Admin; limit1–100, offset>=0, optional state | Workspace-scoped FailurePage items/total/limit/offset; default error/refused/clarification/cancelled; all includes successful rows |
+| GET /admin/failures/{request_id} | Same-workspace admin | FailureDetail with safe stage/model/count/attempt/budget/evidence-ID projections; missing or other workspace404 |
 | GET/PUT /profiles/me | Owner; ProfileUpdate with expected version | Current saved profile revision; conflict 409 |
 | POST /profiles/me/reset | Owner expected version | intermediate/concise/en/empty topics and new revision |
 | POST/GET /sessions | Owner title optional; status filter | Session or owned session array; message pagination is separate |
@@ -32,7 +41,7 @@ All application routes are under `/api/v1`. Success is `{data,meta:{trace_id}}`;
 | GET/POST /corpus/releases | Admin; configuration_id and processing_run_ids | Staging build job and releases with exact counts |
 | POST /corpus/releases/{id}/activate or /rollback | Admin | Atomic active pointer change for validated intact release |
 | GET/POST /configurations | Admin; kind/name/values | Immutable sanitized configuration and canonical hash |
-| GET /capabilities | Signed-in | model_mode, chat_ready/evaluation_ready, separate missing reasons |
+| GET /capabilities | Signed-in | Effective workspace model_mode, chat_ready/evaluation_ready and separate missing reasons; explicit evaluation model is independent of chat activation |
 | GET /health/live and /health/ready | Public minimal status | Process and database checks; model/corpus/evaluation availability is reported by authenticated capabilities |
 | POST/GET /experiments | Admin ExperimentSpec | Draft run/list; private references never accepted here |
 | GET /experiments/{id} | Admin | Spec, item counts, current state and trace-linked failures |
@@ -40,6 +49,16 @@ All application routes are under `/api/v1`. Success is `{data,meta:{trace_id}}`;
 | GET /experiments/{id}/results or /export | Admin | Separate protocol results and JSONL/CSV with all scheduled outcomes |
 
 The learner landing route is `/chat`. Only `{content,use_profile}` is accepted from the composer; choices, gold, history, owner and model fields are forbidden. Profile levels are beginner/intermediate/advanced; styles concise/detailed/socratic; initial language en; up to 20 self-reported topics of 200 characters each. An explicit invalid value is 422, while absent legacy policy gets a recorded intermediate fallback.
+
+The [13 September upgrade](../execution/answering_upgrade_20260913.md) adds administrator model management without changing the learner command. `ConfigurationSave` contains `name`, `preset`, a validated `config` object, optional write-only `api_key`, and `clear_api_key=false`. Omitted/null key preserves the prior encrypted reference when creating a successor; clear explicitly removes it; replacement and clear together are invalid. Preserving a credential across a provider or destination-origin change is rejected unless the administrator explicitly replaces or clears it. Base URLs cannot contain userinfo, query parameters or fragments; Azure API version is a separate field.
+
+Supported protocol identifiers are mock, openai, openai_compatible, local, ollama, azure_openai, anthropic and gemini. The config includes model/base_url, window_tokens/max_tokens/timeout_seconds, temperature/seed, token_limit_parameter, structured_output_mode, reasoning_effort, optional thinking_enabled, api_version/auth_header, and tokenizer provider/name/revision/local-path/fallback settings. A preset is editable configuration guidance; its existence does not certify an arbitrary model or provider account. `thinking_enabled=null` preserves provider behavior, while supported compatible protocols can explicitly enable or disable it. Mock checking and real transport checking remain visibly different.
+
+`ModelConfigurationOut` returns id/group_id/revision/name/preset, public config/hash, has_api_key and a fixed `********` mask (or null), created_at, latest_test and active. `ModelSettingsState` returns all saved versions, active_configuration_id, active_version, source (database/environment) and encryption_ready. `ConnectionTestOut` returns id/configuration_id, status, model_mode, diagnostic_code/message, latency_ms, whitelisted usage and created_at. Failed probes are successful API operations with status=failed; they never enable activation or trigger a mock fallback. Activation conflicts use409. Encryption/decryption unavailability uses503 MODEL_UNAVAILABLE. No response contains plaintext keys, ciphertext, raw provider output or authorization headers.
+
+Failure summaries identify the request/session/owner, actual question/state/response type, safe error code/message, creation time, provider/model/configuration ID and separate candidate/submitted/cited counts. Detail adds HTTP trace identity, stage states, finite budget counters, sanitized attempt summaries, retrieval query, candidate/submitted/cited chunk IDs, answer text and refusal reason. Counts can be null when historical traces did not record them; no missing historical count is invented. This is operational inspection, not independent evidence that a model answer is semantically supported.
+
+Formal evaluation selects a managed version explicitly through an immutable evaluation configuration's `values.model_configuration_id`; it does not inherit the chat active pointer. The exact model version and mode enter the frozen environment hash and request command, while its secret is resolved only in worker memory. Scalar model overrides cannot be combined with that explicit managed version. The existing gold-free benchmark and independent teaching contracts remain separate, and live execution still requires the evaluator's explicit allow-live operation.
 
 An answered ChatResponseV1 contains exactly schema_version, response_type, answer_text, short_answer, citations, refusal_reason, follow_up_questions, confidence. Example: `{schema_version:"chat_response_v1",response_type:"answer",answer_text:"Light energy is stored in sugars. [ev_001]",short_answer:"Chemical energy in sugars",citations:["ev_001"],refusal_reason:null,follow_up_questions:[],confidence:null}` is an authored fixture only and requires matching context. A refusal uses response_type refusal, useful answer_text, null short_answer/confidence, empty citations/follow-ups and a permitted reason. A provider error instead returns a failed job with a code such as PROVIDER_TIMEOUT and recovery guidance; it never masquerades as refusal.
 

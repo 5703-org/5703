@@ -1639,6 +1639,907 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorEnvelope'
+  /api/v1/admin/model-configurations/presets:
+    get:
+      tags:
+      - model-settings
+      summary: Presets
+      operationId: presets_api_v1_admin_model_configurations_presets_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_list_ProviderPreset__'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+      security:
+      - HTTPBearer: []
+  /api/v1/admin/model-configurations:
+    get:
+      tags:
+      - model-settings
+      summary: Configurations
+      operationId: configurations_api_v1_admin_model_configurations_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_ModelSettingsState_'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+      security:
+      - HTTPBearer: []
+    post:
+      tags:
+      - model-settings
+      summary: Create
+      operationId: create_api_v1_admin_model_configurations_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConfigurationSave'
+        required: true
+      responses:
+        '201':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_ModelConfigurationOut_'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+      security:
+      - HTTPBearer: []
+  /api/v1/admin/model-configurations/use-environment:
+    post:
+      tags:
+      - model-settings
+      summary: Use Environment
+      operationId: use_environment_api_v1_admin_model_configurations_use_environment_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EnvironmentInput'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_ModelSettingsState_'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+      security:
+      - HTTPBearer: []
+  /api/v1/admin/model-configurations/{configuration_id}:
+    get:
+      tags:
+      - model-settings
+      summary: Get Configuration
+      operationId: get_configuration_api_v1_admin_model_configurations__configuration_id__get
+      security:
+      - HTTPBearer: []
+      parameters:
+      - name: configuration_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Configuration Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_ModelConfigurationOut_'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+  /api/v1/admin/model-configurations/{configuration_id}/versions:
+    post:
+      tags:
+      - model-settings
+      summary: Create Version
+      operationId: create_version_api_v1_admin_model_configurations__configuration_id__versions_post
+      security:
+      - HTTPBearer: []
+      parameters:
+      - name: configuration_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Configuration Id
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConfigurationSave'
+      responses:
+        '201':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_ModelConfigurationOut_'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+  /api/v1/admin/model-configurations/{configuration_id}/test:
+    post:
+      tags:
+      - model-settings
+      summary: Test Configuration
+      operationId: test_configuration_api_v1_admin_model_configurations__configuration_id__test_post
+      security:
+      - HTTPBearer: []
+      parameters:
+      - name: configuration_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Configuration Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_ConnectionTestOut_'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+  /api/v1/admin/model-configurations/{configuration_id}/activate:
+    post:
+      tags:
+      - model-settings
+      summary: Activate Configuration
+      operationId: activate_configuration_api_v1_admin_model_configurations__configuration_id__activate_post
+      security:
+      - HTTPBearer: []
+      parameters:
+      - name: configuration_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Configuration Id
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ActivationInput'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_ModelSettingsState_'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+  /api/v1/admin/failures:
+    get:
+      tags:
+      - answering
+      summary: Failures
+      operationId: failures_api_v1_admin_failures_get
+      security:
+      - HTTPBearer: []
+      parameters:
+      - name: limit
+        in: query
+        required: false
+        schema:
+          type: integer
+          maximum: 100
+          minimum: 1
+          default: 50
+          title: Limit
+      - name: offset
+        in: query
+        required: false
+        schema:
+          type: integer
+          minimum: 0
+          default: 0
+          title: Offset
+      - name: state
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - enum:
+            - all
+            - error
+            - refused
+            - clarification
+            - cancelled
+            - answered
+            type: string
+          - type: 'null'
+          title: State
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_FailurePage_'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+  /api/v1/admin/failures/{request_id}:
+    get:
+      tags:
+      - answering
+      summary: Failure Details
+      operationId: failure_details_api_v1_admin_failures__request_id__get
+      security:
+      - HTTPBearer: []
+      parameters:
+      - name: request_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Request Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_FailureDetail_'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
   /api/v1/sessions/{session_id}/messages:
     post:
       tags:
@@ -5614,6 +6515,21 @@ components:
       required:
       - version
       title: AccountUpdate
+    ActivationInput:
+      properties:
+        test_id:
+          type: string
+          title: Test Id
+        expected_active_version:
+          type: integer
+          minimum: 0.0
+          title: Expected Active Version
+      additionalProperties: false
+      type: object
+      required:
+      - test_id
+      - expected_active_version
+      title: ActivationInput
     AnswerOut:
       properties:
         id:
@@ -5895,6 +6811,89 @@ components:
       - name
       - values
       title: ConfigInput
+    ConfigurationSave:
+      properties:
+        name:
+          type: string
+          maxLength: 120
+          minLength: 1
+          title: Name
+        preset:
+          type: string
+          maxLength: 60
+          minLength: 1
+          title: Preset
+          default: custom
+        config:
+          $ref: '#/components/schemas/ModelValues'
+        api_key:
+          anyOf:
+          - type: string
+            maxLength: 8192
+            format: password
+            writeOnly: true
+          - type: 'null'
+          title: Api Key
+        clear_api_key:
+          type: boolean
+          title: Clear Api Key
+          default: false
+      additionalProperties: false
+      type: object
+      required:
+      - name
+      - config
+      title: ConfigurationSave
+    ConnectionTestOut:
+      properties:
+        id:
+          type: string
+          title: Id
+        configuration_id:
+          type: string
+          title: Configuration Id
+        status:
+          type: string
+          enum:
+          - passed
+          - failed
+          title: Status
+        model_mode:
+          type: string
+          enum:
+          - mock
+          - live
+          title: Model Mode
+        diagnostic_code:
+          type: string
+          title: Diagnostic Code
+        message:
+          type: string
+          title: Message
+        latency_ms:
+          type: integer
+          title: Latency Ms
+        usage:
+          additionalProperties: true
+          type: object
+          title: Usage
+        created_at:
+          type: string
+          format: date-time
+          title: Created At
+      additionalProperties: false
+      type: object
+      required:
+      - id
+      - configuration_id
+      - status
+      - model_mode
+      - diagnostic_code
+      - message
+      - latency_ms
+      - usage
+      - created_at
+      title: ConnectionTestOut
     ConversationSnapshot:
       properties:
         session_id:
@@ -5981,6 +6980,18 @@ components:
       - data
       - meta
       title: Envelope[CapabilitiesOut]
+    Envelope_ConnectionTestOut_:
+      properties:
+        data:
+          $ref: '#/components/schemas/ConnectionTestOut'
+        meta:
+          $ref: '#/components/schemas/ResponseMeta'
+      additionalProperties: false
+      type: object
+      required:
+      - data
+      - meta
+      title: Envelope[ConnectionTestOut]
     Envelope_EvidenceSnapshot_:
       properties:
         data:
@@ -5993,6 +7004,30 @@ components:
       - data
       - meta
       title: Envelope[EvidenceSnapshot]
+    Envelope_FailureDetail_:
+      properties:
+        data:
+          $ref: '#/components/schemas/FailureDetail'
+        meta:
+          $ref: '#/components/schemas/ResponseMeta'
+      additionalProperties: false
+      type: object
+      required:
+      - data
+      - meta
+      title: Envelope[FailureDetail]
+    Envelope_FailurePage_:
+      properties:
+        data:
+          $ref: '#/components/schemas/FailurePage'
+        meta:
+          $ref: '#/components/schemas/ResponseMeta'
+      additionalProperties: false
+      type: object
+      required:
+      - data
+      - meta
+      title: Envelope[FailurePage]
     Envelope_FeedbackOut_:
       properties:
         data:
@@ -6041,6 +7076,30 @@ components:
       - data
       - meta
       title: Envelope[MessagePage]
+    Envelope_ModelConfigurationOut_:
+      properties:
+        data:
+          $ref: '#/components/schemas/ModelConfigurationOut'
+        meta:
+          $ref: '#/components/schemas/ResponseMeta'
+      additionalProperties: false
+      type: object
+      required:
+      - data
+      - meta
+      title: Envelope[ModelConfigurationOut]
+    Envelope_ModelSettingsState_:
+      properties:
+        data:
+          $ref: '#/components/schemas/ModelSettingsState'
+        meta:
+          $ref: '#/components/schemas/ResponseMeta'
+      additionalProperties: false
+      type: object
+      required:
+      - data
+      - meta
+      title: Envelope[ModelSettingsState]
     Envelope_Profile_:
       properties:
         data:
@@ -6159,6 +7218,21 @@ components:
       - data
       - meta
       title: Envelope[list[FeedbackOut]]
+    Envelope_list_ProviderPreset__:
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/ProviderPreset'
+          type: array
+          title: Data
+        meta:
+          $ref: '#/components/schemas/ResponseMeta'
+      additionalProperties: false
+      type: object
+      required:
+      - data
+      - meta
+      title: Envelope[list[ProviderPreset]]
     Envelope_list_SessionOut__:
       properties:
         data:
@@ -6205,6 +7279,17 @@ components:
       - data
       - meta
       title: Envelope[list[dict]]
+    EnvironmentInput:
+      properties:
+        expected_active_version:
+          type: integer
+          minimum: 0.0
+          title: Expected Active Version
+      additionalProperties: false
+      type: object
+      required:
+      - expected_active_version
+      title: EnvironmentInput
     ErrorData:
       additionalProperties: false
       properties:
@@ -6377,6 +7462,286 @@ components:
       - configuration_id
       - scheduled_count
       title: ExperimentSpec
+    FailureAttempt:
+      properties:
+        stage:
+          type: string
+          title: Stage
+        status:
+          type: string
+          title: Status
+        error_code:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Error Code
+        duration_ms:
+          anyOf:
+          - type: number
+          - type: 'null'
+          title: Duration Ms
+        created_at:
+          type: string
+          format: date-time
+          title: Created At
+      additionalProperties: false
+      type: object
+      required:
+      - stage
+      - status
+      - created_at
+      title: FailureAttempt
+    FailureCounts:
+      properties:
+        candidates:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Candidates
+        submitted:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Submitted
+        cited:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Cited
+      additionalProperties: false
+      type: object
+      title: FailureCounts
+    FailureDetail:
+      properties:
+        request_id:
+          type: string
+          title: Request Id
+        session_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Session Id
+        owner_id:
+          type: string
+          title: Owner Id
+        question:
+          type: string
+          title: Question
+        state:
+          type: string
+          title: State
+        response_type:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Response Type
+        error_code:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Error Code
+        error_message:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Error Message
+        created_at:
+          type: string
+          format: date-time
+          title: Created At
+        model:
+          $ref: '#/components/schemas/FailureModel'
+        counts:
+          $ref: '#/components/schemas/FailureCounts'
+        http_trace_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Http Trace Id
+        stages:
+          items:
+            $ref: '#/components/schemas/FailureStage'
+          type: array
+          title: Stages
+        budget:
+          additionalProperties:
+            anyOf:
+            - type: integer
+            - type: number
+          type: object
+          title: Budget
+        attempts:
+          items:
+            $ref: '#/components/schemas/FailureAttempt'
+          type: array
+          title: Attempts
+        retrieval_query:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Retrieval Query
+        evidence:
+          $ref: '#/components/schemas/FailureEvidence'
+        answer_text:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Answer Text
+        refusal_reason:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Refusal Reason
+      additionalProperties: false
+      type: object
+      required:
+      - request_id
+      - owner_id
+      - question
+      - state
+      - created_at
+      - model
+      - counts
+      - stages
+      - budget
+      - attempts
+      - evidence
+      title: FailureDetail
+    FailureEvidence:
+      properties:
+        candidate_chunk_ids:
+          items:
+            type: string
+          type: array
+          title: Candidate Chunk Ids
+        submitted_chunk_ids:
+          items:
+            type: string
+          type: array
+          title: Submitted Chunk Ids
+        cited_chunk_ids:
+          items:
+            type: string
+          type: array
+          title: Cited Chunk Ids
+      additionalProperties: false
+      type: object
+      title: FailureEvidence
+    FailureModel:
+      properties:
+        provider:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Provider
+        model:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Model
+        configuration_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Configuration Id
+      additionalProperties: false
+      type: object
+      title: FailureModel
+    FailurePage:
+      properties:
+        items:
+          items:
+            $ref: '#/components/schemas/FailureSummary'
+          type: array
+          title: Items
+        total:
+          type: integer
+          title: Total
+        limit:
+          type: integer
+          title: Limit
+        offset:
+          type: integer
+          title: Offset
+      additionalProperties: false
+      type: object
+      required:
+      - items
+      - total
+      - limit
+      - offset
+      title: FailurePage
+    FailureStage:
+      properties:
+        stage:
+          type: string
+          title: Stage
+        status:
+          type: string
+          title: Status
+        detail:
+          type: string
+          title: Detail
+      additionalProperties: false
+      type: object
+      required:
+      - stage
+      - status
+      - detail
+      title: FailureStage
+    FailureSummary:
+      properties:
+        request_id:
+          type: string
+          title: Request Id
+        session_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Session Id
+        owner_id:
+          type: string
+          title: Owner Id
+        question:
+          type: string
+          title: Question
+        state:
+          type: string
+          title: State
+        response_type:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Response Type
+        error_code:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Error Code
+        error_message:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Error Message
+        created_at:
+          type: string
+          format: date-time
+          title: Created At
+        model:
+          $ref: '#/components/schemas/FailureModel'
+        counts:
+          $ref: '#/components/schemas/FailureCounts'
+      additionalProperties: false
+      type: object
+      required:
+      - request_id
+      - owner_id
+      - question
+      - state
+      - created_at
+      - model
+      - counts
+      title: FailureSummary
     FeedbackInput:
       properties:
         helpful:
@@ -6766,6 +8131,235 @@ components:
       - content
       - content_hash
       title: MessageRef
+    ModelConfigurationOut:
+      properties:
+        id:
+          type: string
+          title: Id
+        group_id:
+          type: string
+          title: Group Id
+        revision:
+          type: integer
+          title: Revision
+        name:
+          type: string
+          title: Name
+        preset:
+          type: string
+          title: Preset
+        config:
+          $ref: '#/components/schemas/ModelValues'
+        config_hash:
+          type: string
+          title: Config Hash
+        has_api_key:
+          type: boolean
+          title: Has Api Key
+        api_key_masked:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Api Key Masked
+        created_at:
+          type: string
+          format: date-time
+          title: Created At
+        latest_test:
+          anyOf:
+          - $ref: '#/components/schemas/ConnectionTestOut'
+          - type: 'null'
+        active:
+          type: boolean
+          title: Active
+      additionalProperties: false
+      type: object
+      required:
+      - id
+      - group_id
+      - revision
+      - name
+      - preset
+      - config
+      - config_hash
+      - has_api_key
+      - api_key_masked
+      - created_at
+      - latest_test
+      - active
+      title: ModelConfigurationOut
+    ModelSettingsState:
+      properties:
+        items:
+          items:
+            $ref: '#/components/schemas/ModelConfigurationOut'
+          type: array
+          title: Items
+        active_configuration_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Active Configuration Id
+        active_version:
+          type: integer
+          title: Active Version
+        source:
+          type: string
+          enum:
+          - database
+          - environment
+          title: Source
+        encryption_ready:
+          type: boolean
+          title: Encryption Ready
+      additionalProperties: false
+      type: object
+      required:
+      - items
+      - active_configuration_id
+      - active_version
+      - source
+      - encryption_ready
+      title: ModelSettingsState
+    ModelValues:
+      properties:
+        provider:
+          type: string
+          enum:
+          - mock
+          - openai
+          - openai_compatible
+          - local
+          - ollama
+          - azure_openai
+          - anthropic
+          - gemini
+          title: Provider
+        model:
+          type: string
+          maxLength: 200
+          minLength: 1
+          title: Model
+        base_url:
+          anyOf:
+          - type: string
+            maxLength: 2048
+          - type: 'null'
+          title: Base Url
+        window_tokens:
+          type: integer
+          maximum: 2000000.0
+          minimum: 2048.0
+          title: Window Tokens
+          default: 16384
+        max_tokens:
+          type: integer
+          maximum: 1024.0
+          minimum: 1.0
+          title: Max Tokens
+          default: 1024
+        timeout_seconds:
+          type: number
+          maximum: 60.0
+          exclusiveMinimum: 0.0
+          title: Timeout Seconds
+          default: 60
+        temperature:
+          anyOf:
+          - type: number
+            maximum: 2.0
+            minimum: 0.0
+          - type: 'null'
+          title: Temperature
+          default: 0
+        seed:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Seed
+        token_limit_parameter:
+          type: string
+          enum:
+          - max_tokens
+          - max_completion_tokens
+          title: Token Limit Parameter
+          default: max_tokens
+        structured_output_mode:
+          type: string
+          enum:
+          - json_schema
+          - json_object
+          - prompt
+          title: Structured Output Mode
+          default: json_schema
+        reasoning_effort:
+          anyOf:
+          - type: string
+            maxLength: 30
+          - type: 'null'
+          title: Reasoning Effort
+        thinking_enabled:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Thinking Enabled
+        api_version:
+          anyOf:
+          - type: string
+            maxLength: 50
+          - type: 'null'
+          title: Api Version
+        auth_header:
+          anyOf:
+          - type: string
+            enum:
+            - Authorization
+            - api-key
+            - x-api-key
+            - x-goog-api-key
+          - type: 'null'
+          title: Auth Header
+        tokenizer_provider:
+          type: string
+          enum:
+          - auto
+          - tiktoken
+          - huggingface
+          - estimate
+          - provider
+          title: Tokenizer Provider
+          default: estimate
+        tokenizer_name:
+          anyOf:
+          - type: string
+            maxLength: 200
+          - type: 'null'
+          title: Tokenizer Name
+        tokenizer_revision:
+          anyOf:
+          - type: string
+            maxLength: 100
+          - type: 'null'
+          title: Tokenizer Revision
+        tokenizer_local_path:
+          anyOf:
+          - type: string
+            maxLength: 1024
+          - type: 'null'
+          title: Tokenizer Local Path
+        token_count_fallback:
+          type: string
+          enum:
+          - estimate
+          - error
+          title: Token Count Fallback
+          default: estimate
+      additionalProperties: false
+      type: object
+      required:
+      - provider
+      - model
+      title: ModelValues
     PasswordChange:
       properties:
         old_password:
@@ -6875,6 +8469,33 @@ components:
       required:
       - version
       title: ProfileUpdate
+    ProviderPreset:
+      properties:
+        id:
+          type: string
+          title: Id
+        name:
+          type: string
+          title: Name
+        description:
+          type: string
+          title: Description
+        requires_api_key:
+          type: boolean
+          title: Requires Api Key
+        config:
+          additionalProperties: true
+          type: object
+          title: Config
+      additionalProperties: false
+      type: object
+      required:
+      - id
+      - name
+      - description
+      - requires_api_key
+      - config
+      title: ProviderPreset
     ReleaseInput:
       properties:
         processing_run_ids:

@@ -2,7 +2,7 @@
 
 A conversational learning assistant that answers natural-language questions using a bounded OpenStax knowledge corpus, actual conversation context, explicit learner preferences and inspectable citations. The project also includes separate reproducible evaluation tools.
 
-**Current local result:** all four complete official OpenStax PDFs (4,638 pages) have been processed into 10,594 real 384-dimensional E5 vectors and published in PostgreSQL/pgvector. Only the answer LLM remains explicitly mock. Exact source recovery, license/hash/version, vector and retrieval proof is in the [per-book report](docs/execution/openstax-corpus-report.md). Actual API/browser chat, restored full-corpus integrity and remaining verification are tracked in [PRD](PRD.md), [SPEC](SPEC.md), [PLANS](PLANS.md) and [current progress](docs/execution/progress.md). Live answer effectiveness, full graphical/equation fidelity and independent human review remain unverified; no whole-project research completion is claimed.
+**Current local result:** all four complete official OpenStax PDFs (4,638 pages) have been processed into 10,594 real 384-dimensional E5 vectors and published in PostgreSQL/pgvector. Administrator model settings now select a tested live provider; DeepSeek `deepseek-flash` is connected on the development host. Explicit mock answering remains available. Exact source recovery, license/hash/version, vector and retrieval proof is in the [per-book report](docs/execution/openstax-corpus-report.md). Current live tests, retained failures and delivery checks are recorded in the [upgrade record](docs/execution/answering_upgrade_20260913.md). See [model administration](docs/model-administration.md) for provider configuration. Full graphical/equation fidelity and independent human review remain separate acceptance work.
 
 ## Product and research modes
 
@@ -16,7 +16,7 @@ Learners land at `/chat`. Included capabilities are accounts, sessions, bounded 
 
 ## Current host deployment
 
-The existing Windows workspace uses its `.venv`, the persistent PostgreSQL container at port 55432, host API on 8000 and frontend on 5173. Its active release pins E5 and the local `artifacts/huggingface` cache; the answer model remains mock. The database and source store already contain the real corpus. To restart this host arrangement, keep Docker running and use separate terminals from the repository root:
+The existing Windows workspace uses its `.venv`, the persistent PostgreSQL container at port **15432**, host API on 8000 and frontend on 5173. Its active release pins E5 and the local `artifacts/huggingface` cache; the workspace administrator selects the answer model. The database and source store already contain the real corpus. To restart this host arrangement, keep Docker running and use separate terminals from the repository root:
 
 ```powershell
 $env:PYTHONPATH = '.;backend'
@@ -75,4 +75,4 @@ Technical implementation, executed technical validation, real-model research and
 
 ## Local delivery and evidence
 
-[Handover](HANDOVER.md) links the current 236-Python/25-frontend unchanged-source gate, earlier independent clean installation, real four-book corpus, fixed-window comparison and complete backup/restore. [Current scope reconciliation](evidence/source_audit/documentation-review-ledger-reconciliation.json) preserves all 108 tasks, 60 acceptance checks and 12 responsive checks. [Generated delivery views](docs/delivery/README.md) provide the required owner/week reporting from the same ledgers. The current source ZIP is `artifacts/deliverables/CS30-1_local_project_2026-09-08_documentation_update2.zip`; its adjacent verification JSON and embedded manifest record every included file hash. The earlier source ZIP and installation proof remain preserved. Real data/model/backup files remain at their documented local paths and are separate from these source packages.
+[Handover](HANDOVER.md) explains the 13 September complete runnable package, isolated installation, real four-book corpus and eight assigned source packs. [The upgrade record](docs/execution/answering_upgrade_20260913.md) links current software checks, actual model questions, separate research and remaining review. [Generated delivery views](docs/delivery/README.md) report the same original 108 tasks, 60 checks and 12 responsive subchecks. The previous 8 September 236-Python/25-frontend gate and source-only ZIP remain dated historical evidence. The new complete package includes verified corpus/model resources and an embedded file-hash manifest; existing credentials, private evaluation references and learner history stay outside the ZIP.

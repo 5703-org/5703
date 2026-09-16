@@ -4,7 +4,7 @@ Status: foundation specification based on the supplied v5 assignment and inspect
 
 ## Scope and shared execution
 
-One answer service supports `interactive_chat`, `benchmark_openqa`, and `benchmark_mcq`. Chat and OpenQA use `ChatResponseV1`; MCQ alone uses the historical eight-field `MCQResponseV1`. Mode and condition are separate: E0 is no retrieval and E1 is the frozen basic dense RAG control. R1 BM25, R2 RRF and R3 reranking are separately named retrieval variants. Profile studies are a separate research service, not a fourth answer mode or a mandatory second product call.
+One answer service supports `interactive_chat`, `benchmark_openqa`, and `benchmark_mcq`. Chat and OpenQA use `ChatResponseV1`; MCQ alone uses the historical eight-field `MCQResponseV1`. In formal evaluation, E0 is no retrieval and E1 is the frozen basic dense RAG control. R1 BM25, R2 RRF and R3 reranking are separately named retrieval variants. Interactive requests retain their existing retrieval-enabled condition field while separately freezing an explicit `retrieval_policy` and hash; the configured current chat policy uses R2 candidates and fixed local MiniLM reranking. That policy never changes frozen E1 experiments or older requests. Profile studies are a separate research service, not a fourth answer mode or a mandatory second product call.
 
 The shared flow is validated saved input → frozen conversation/profile/configuration references → query preparation or benchmark bypass → retrieval or E0 bypass → selected evidence and whole-window accounting → versioned role-separated prompt → provider call → strict parsing and semantic validation → atomic backend publication. A valid provider response is not yet a valid answer, and a valid answer schema does not prove factual correctness.
 
@@ -67,7 +67,7 @@ A clear factual request with no selected evidence can receive a locally construc
 
 ## Provider and retry semantics
 
-Provide explicit mock and one configurable compatible HTTP/local live adapter. Retain the inspected urllib transport concepts and configuration semantics where correct, but use role-separated messages and explicit endpoint capability settings. A supplied model example or old prefix heuristic is not evidence of current provider support. Missing endpoint/model/key configuration returns unavailable; a live failure never falls back to mock.
+Provide explicit mock, OpenAI-compatible/Azure/Ollama Chat Completions, native Anthropic Messages and native Gemini generateContent adapters through `generation/providers.py`. Use role-separated messages and explicit endpoint capability settings. Workspace model settings save/test/activate immutable revisions with separately encrypted credentials; requests retain their selected revision. The exact supported configuration fields, local tokenizer options and protocol references are in [model administration](../model-administration.md). Missing endpoint/model/key configuration returns unavailable; a live failure never falls back to mock.
 
 Normalize `provider`, configured and returned model identifiers, raw text, input/output/total/reasoning tokens, latency, finish reason, provider request ID, HTTP status, Retry-After, retryable and error code. Unknown fields remain null. Cost is null without a frozen price record; unknown usage is not zero. Token sums retain completeness information if any attempt usage is unknown. Do not expose authorization headers, keys or arbitrary provider response bodies to the UI/logs; errors use bounded sanitized diagnostics and trace IDs.
 

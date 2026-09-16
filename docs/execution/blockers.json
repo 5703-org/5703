@@ -1,5 +1,5 @@
 {
-  "status_note": "Current exact external inputs and resolved source gaps. Ordinary downloads, real embeddings and official corpus publication have executed; only the answer LLM was user-deferred.",
+  "status_note": "Current external inputs and remaining independent reviews. DeepSeek live answering is configured and tested as of13 September2026; no provider credential blocker remains for the selected account.",
   "blockers": [
     {
       "id": "INPUT-PILOT-RAW",
@@ -54,7 +54,7 @@
     },
     {
       "id": "INPUT-LIVE-MODEL",
-      "status": "WAITING_EXTERNAL",
+      "status": "REAL_FLOW_VERIFIED",
       "affected_tasks": [
         "GEN-02",
         "QA-07",
@@ -64,9 +64,9 @@
         "PER-09"
       ],
       "affected_checks": [],
-      "missing": "User-deferred answering provider/model configuration and actual research-call budget. This does not apply to local E5, OpenStax, SciQ or learned reranker downloads.",
-      "resolution": "Use supplied intended configuration within recorded limits; verify current connectivity, then execute separately frozen live runs.",
-      "independent_work": "Continue real corpus, real retrieval diagnostics and all mock-answer software/operational verification.",
+      "missing": null,
+      "resolution": "User selected deepseek-flash, configured LLM_API_KEY locally and authorized required test spending. Actual provider catalog, JSON probe and browser activation succeeded; live quality tests retain failures and continue separately.",
+      "independent_work": "Live conversation/profile validation and frozen E0/E1 OpenQA subsets; independent human ratings remain separate.",
       "initial_observation": {
         "status": "NOT_ESTABLISHED",
         "missing": "Explicitly usable provider/model credentials or local weights, pinned tokenizer/model configuration and research run limits.",
@@ -79,7 +79,11 @@
       "related_acceptance_ids": [
         "AC-19"
       ],
-      "component_scope": "These unavailable inputs block the named research/live-provider task components. AC-19 honesty and AC-34 simulated adapter switching have local software evidence; absent research inputs are not missing prerequisites for those software checks."
+      "component_scope": "These unavailable inputs block the named research/live-provider task components. AC-19 honesty and AC-34 simulated adapter switching have local software evidence; absent research inputs are not missing prerequisites for those software checks.",
+      "evidence": [
+        "evidence/answering-upgrade/20260913/live-model-configuration.json",
+        "artifacts/reports/frontend/admin-settings/verification-summary.json"
+      ]
     },
     {
       "id": "INPUT-ANNOTATIONS-RATINGS",

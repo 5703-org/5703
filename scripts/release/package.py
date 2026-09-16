@@ -26,6 +26,7 @@ DIRECTORIES = {
 }
 EXCLUDED_PARTS = {
     ".git",
+    ".secrets",
     ".venv",
     "__pycache__",
     "node_modules",

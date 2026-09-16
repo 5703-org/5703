@@ -1,5 +1,7 @@
 # Final document consistency review
 
+Historical scope: this file records the 8 September documentation-only review. Its source snapshot, test counts and package paths below describe that date. The current 13 September implementation/document review is [upgrade-delivery-report-20260913.md](upgrade-delivery-report-20260913.md), with actual DeepSeek, current software gates, isolated installation and separate research evidence. The provider is now configured; historical deferment statements do not describe current availability.
+
 The subsequent bounded audit checked mandatory local deliverables in English master sections4–5,14–15,19.6,20.6 and AppendixD, with the corresponding Chinese taskbook sections. The source permits canonical substantive documents and actual executable paths instead of redundant suggested filenames. No additional mandatory local artifact was found missing within those inspected sections.
 
 Three statements were corrected without changing original requirements or running new application tests:

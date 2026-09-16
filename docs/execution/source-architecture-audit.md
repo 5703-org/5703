@@ -1,6 +1,36 @@
 # Source architecture and current evidence reconciliation
 
-Snapshot: 8 September 2026. The original first audit is retained by its saved checkpoint; this current mapping is updated from actual source and runtime evidence, without claiming whole-project scientific acceptance. The latest user instruction requires documentation reconciliation first, then the full official OpenStax corpus and real local embeddings. Only answer generation may remain mock. Earlier audit wording that deferred learned embeddings or ordinary official-data acquisition is superseded.
+Original diagram inspection and baseline mapping: 8 September 2026. Current upgrade overlay: 13 September 2026. The dated baseline tables below preserve the original source inspection and its evidence scope. The overlay updates implementation state without pretending to re-inspect a different original drawing. Model credentials are now configured and real DeepSeek calls have executed; older references to user-deferred live answering describe the baseline only.
+
+## 13 September module and connection overlay
+
+The original source is `E:/5703/development_inputs/sources/COMP5703/CS30-1_Project_Framework_and_Delivery_Workflow.pdf`, outside the application directory, physical/printed page 1, Figure 1. Its current SHA256 remains `033d1901b9dfe18a9e60b8f7a4b7c2e35dc7027367eb07ad668f1bd8a2f69b1d`, matching the 8 September source manifest. The retained visual inspection is [the rendered page](../../evidence/source_audit/original-framework-page-1.png), which is included in portable evidence. This current check verifies unchanged source bytes; the original visual inspection date remains 8 September. Its ten modules and eight drawn connections are mapped below. Model settings, account administration and diagnostics are implementation additions, not newly discovered boxes in the original figure.
+
+| Original module | Current state and evidence |
+| --- | --- |
+| Trusted Educational Documents | REAL_FLOW_VERIFIED: same four official full PDFs and hashes; current migration preservation and portable-import checks supplement the original acquisition record |
+| Parse, Clean and Chunk | REAL_FLOW_VERIFIED for the retained source units, decisions, spans and active chunk lineage; no reparse is claimed; full image/equation semantics remain unverified |
+| Embedding Models | REAL_FLOW_VERIFIED: retained pinned E5 model and 10,594 real 384-dimensional active vectors pass current import checks; other embedding comparisons remain separate |
+| Vector Knowledge Base | REAL_FLOW_VERIFIED: current PostgreSQL/pgvector release identity, all active joins/hashes/finite vectors and source files verified before isolated import commit |
+| Question + Student Profile | REAL_FLOW_VERIFIED for current actual DeepSeek requests with frozen profile/history snapshots; actual level-fit quality is assessed separately |
+| Query Processing | REAL_FLOW_VERIFIED for actual explicit-topic and follow-up requests; two complete live suites retain discovered classification/coverage failures and corrections |
+| Retrieve + Rerank | REAL_FLOW_VERIFIED for retained dense/hybrid/MiniLM actual inference; interactive coverage changes are versioned separately from frozen E1; independent relevance judgments remain unavailable |
+| Prompt + LLM | REAL_FLOW_VERIFIED for saved/tested/enabled DeepSeek, actual tokenizer accounting and model calls; other provider protocols have controlled transport tests, not external connectivity proof |
+| Grounded Answer + Citations | REAL_FLOW_VERIFIED for strict publication and exact actual citations/source text; current browser proves five submitted/two cited; semantic support remains a distinct review |
+| Evaluation & Observability | REAL_FLOW_VERIFIED for current safe administrator diagnostics and live usage records; protocol-specific real study evidence is linked from the upgrade record; independent ratings/qrels remain WAITING_EXTERNAL |
+
+| Original drawn connection | Current state and evidence boundary |
+| --- | --- |
+| Documents → Parse/Clean/Chunk | REAL_FLOW_VERIFIED: current retained original/source/processing joins and hashes; historical actual processing evidence preserved |
+| Parse/Clean/Chunk → Embedding Models | REAL_FLOW_VERIFIED: active chunks retain exact fixed-model input/span identities; current import validates the complete release |
+| Embedding Models → Vector Knowledge Base | REAL_FLOW_VERIFIED: actual stored E5 vectors and fixed configuration are checked in the isolated database |
+| Question/Profile → Query Processing | REAL_FLOW_VERIFIED: real request history/profile snapshots and prepared query traces retained in both live suites |
+| Query Processing → Retrieve/Rerank | REAL_FLOW_VERIFIED: real question encoding and candidate retrieval; missing gas-law coverage is retained as a failure, not erased by later improvement |
+| Vector Knowledge Base → Retrieve + Rerank | REAL_FLOW_VERIFIED: current active source membership and actual fixed MiniLM inference; formal qrel scores remain separate |
+| Retrieve/Rerank → Prompt/LLM | REAL_FLOW_VERIFIED: actual submitted chunk IDs, complete snapshot text, token budgets and provider usage recorded independently from candidate counts |
+| Prompt/LLM → Grounded Answer/Citations | REAL_FLOW_VERIFIED for real response parsing, atomic storage and exact source viewing; AI review identifies semantic limitations and does not impersonate human acceptance |
+
+Current evidence: [migration](../../evidence/answering-upgrade/20260913/migration-preservation.json), [portable import](../../evidence/answering-upgrade/20260913/portable-corpus-checked-import.json), [live suite 2](../../evidence/answering-upgrade/20260913/live-suite-attempt2.json), [AI review](../../evidence/answering-upgrade/20260913/live-suite-attempt2-ai-review-20260913T035720Z.json), [browser index](../../artifacts/reports/frontend/admin-settings/verification-summary.json), [upgrade execution record](answering_upgrade_20260913.md). The figure's Evaluation & Observability footer has no drawn arrows; its additional implementation relationships remain explicitly inferred from the taskbook.
 
 ## What was actually supplied
 

@@ -36,6 +36,8 @@ Learners own accounts, profiles, sessions, messages and answer feedback. Adminis
 | REQ-26 | Enter/Shift+Enter, IME composition, touch, visible keyboard focus and modal focus return work. Composer and close controls stay reachable in short viewports. | FE-03/12; AC-44; UI-05/06/09 |
 | REQ-27 | Verify widths and boundary sizes, real text/browser zoom, long-content fixtures and actual persisted UI state. Unavailable physical soft-keyboard tests are recorded, never inferred from emulation. | QA-12, FE-12; AC-44; UI-01–12 |
 | REQ-28 | Process the entire four-book official OpenStax scope (Biology2e, Chemistry2e, Anatomy&Physiology2e, Concepts of Biology) with real local pinned E5 embeddings and actual pgvector retrieval. Only answer generation may mock; authored/raw/vector fixtures cannot satisfy formal corpus acceptance. Preserve every quarantine reason and original version. | DAT-01–12, RET-01–06; AC-03–06/26/28/35 |
+| UPD-REQ-01 | Administrators save a versioned provider/base URL/model/key configuration, make a real connection test and explicitly enable the tested revision; keys remain write-only and encrypted, and running work keeps its frozen revision. | User-authorized 13 September extension; UPD-01/02; GEN-02, BE-06/08/12/13, FE-09 |
+| UPD-REQ-02 | Administrators manage accounts and inspect successful/failed question stages with separate candidate, submitted and cited counts. Learner source controls list actual citations. | UPD-05/06; BE-03/09/12/13, FE-02/05/07/09 |
 
 ## Required connected journeys
 

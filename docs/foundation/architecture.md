@@ -2,7 +2,7 @@
 
 [SPEC.md](../../SPEC.md) is the implementation entry point; [PRD.md](../../PRD.md) defines product scope and [PLANS.md](../../PLANS.md) records the complete task status. This is one modular application with a React browser, FastAPI process, one durable worker and PostgreSQL 16/pgvector. The optional evaluator shares answer execution through gold-free commands; its private references are absent from API/worker runtime images and mounts. English free-text chat is primary; E0 is no retrieval and E1 is frozen R0 dense retrieval.
 
-The original full-system diagram is Figure 1 on page 1 of `development_inputs/sources/COMP5703/CS30-1_Project_Framework_and_Delivery_Workflow.pdf`; the original baseline is the unpaginated `tut5/xianshu/architecture-en-preview.png`. Exact source/module/connection mapping and visual inspection are in [source-architecture-audit.md](../execution/source-architecture-audit.md). The following diagrams are current architectural summaries, not original figures or declarations of actual class names.
+The original full-system diagram is Figure 1 on page 1 of `E:/5703/development_inputs/sources/COMP5703/CS30-1_Project_Framework_and_Delivery_Workflow.pdf`; the original baseline in that source directory is the unpaginated `tut5/xianshu/architecture-en-preview.png`. The source directory is adjacent to the application checkout. Exact source/module/connection mapping, current hash confirmation and the retained visual inspection are in [source-architecture-audit.md](../execution/source-architecture-audit.md). The following diagrams are current architectural summaries, not original figures or declarations of actual class names.
 
 ```mermaid
 flowchart LR
@@ -30,6 +30,10 @@ The active replacement boundaries are concrete functions/adapters below. API rou
 | Context/query preparation | `conversation/context.py:select_context`, `summary.py:summarize`, `query.py:prepare_query` |
 | Profile compiler | `personalisation/compiler.py:compile_profile`; rules and temporary turn override frozen in `snapshots` |
 | Language-model boundary | `generation/adapters.py:LLMAdapter.generate` and `types.py:ModelConfig`, invoked by `GenerationService` |
+| Provider wire protocols | `generation/providers.py`; OpenAI-compatible/Azure/Ollama Chat Completions, native Anthropic Messages and Gemini generateContent |
+| Model settings | `backend/app/modules/model_settings/`; workspace revisions, encrypted credential references, actual connection tests and compare-and-set activation |
+| Token accounting | `generation/token_counting.py`; local pinned tokenizers, explicit estimates and provider count calls sharing the request budget |
+| Failure diagnostics | `backend/app/modules/answering/diagnostics.py`; selected workspace-scoped question/stage/error/count fields, excluding raw provider prompts and credentials |
 | Prompt and response policy | `generation/prompt_builder.py:build_messages`, versioned prompts, `parser.py:parse_response` |
 | Shared answer execution | `backend/app/modules/answering/service.py:submit_chat` and `execute_answer`, invoked by routes/worker; there is no implemented class named `AnswerExecutionService` |
 | Evaluator bridge | Experiment `bridge.py:DatabaseAnswerBackend`, `create_backend`, `register_manifest`, `submit_item`; creates the same AnswerRequest/Job rows consumed by `execute_answer` |
@@ -74,4 +78,4 @@ One active answer job per session prevents ordering ambiguity. Slow embedding/re
 
 `compose.yaml` is the release path: frontend serves one built application, API/worker share source storage/runtime configuration, and only the evaluator receives private reference/run mounts. Startup is database health, migrations, explicit development seed, then API/worker/frontend. A failed corpus build preserves the active pointer. Backup/restore uses a distinct database and empty source target; exact implemented commands are in [runbook.md](../runbook.md).
 
-The current priority is all four official books—Biology 2e, Chemistry 2e, Anatomy & Physiology 2e and Concepts of Biology—with complete page processing, source QA and real local learned embeddings. Retired College Physics is excluded; SciQ/support is evaluator-only. Only answer generation may remain mock. Earlier real database/browser tests used authored content and mock embeddings; architecture diagrams, wrapper tests and installed dependencies do not establish completion of the real corpus. Per-book results and remaining stages are recorded in the canonical ledgers and `evidence/openstax/` when produced.
+All four required official books—Biology 2e, Chemistry 2e, Anatomy & Physiology 2e and Concepts of Biology—have actual source processing and a published 10,594-vector real E5 release. The per-book report records exact coverage and remaining visual/semantic limits. Retired College Physics is excluded; SciQ/support remains evaluator-only. The 13 September upgrade rechecks corpus integrity and connects actual DeepSeek answering, with failed attempts and scoped reviews retained. Historical authored/mock tests remain distinct from these real flows. The canonical ledgers and upgrade record link current results.
