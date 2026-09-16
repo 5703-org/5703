@@ -1,0 +1,54 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "mode": {
+      "const": "benchmark_mcq",
+      "title": "Mode",
+      "type": "string"
+    },
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "item_id": {
+      "title": "Item Id",
+      "type": "string"
+    },
+    "question_id": {
+      "title": "Question Id",
+      "type": "string"
+    },
+    "question_text": {
+      "minLength": 1,
+      "title": "Question Text",
+      "type": "string"
+    },
+    "options": {
+      "additionalProperties": {
+        "minLength": 1,
+        "pattern": "\\S",
+        "type": "string"
+      },
+      "propertyNames": {
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "title": "Options",
+      "type": "object"
+    }
+  },
+  "required": [
+    "mode",
+    "run_id",
+    "item_id",
+    "question_id",
+    "question_text",
+    "options"
+  ],
+  "title": "MCQCommand",
+  "type": "object"
+}

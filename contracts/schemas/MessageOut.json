@@ -1,0 +1,695 @@
+{
+  "$defs": {
+    "AnswerOut": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "request_id": {
+          "title": "Request Id",
+          "type": "string"
+        },
+        "job_id": {
+          "title": "Job Id",
+          "type": "string"
+        },
+        "message_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Message Id"
+        },
+        "mode": {
+          "enum": [
+            "interactive_chat",
+            "benchmark_openqa",
+            "benchmark_mcq"
+          ],
+          "title": "Mode",
+          "type": "string"
+        },
+        "response_schema": {
+          "enum": [
+            "chat_response_v1",
+            "mcq_response_v1"
+          ],
+          "title": "Response Schema",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "answered",
+            "clarification",
+            "refused"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "model_mode": {
+          "enum": [
+            "mock",
+            "live"
+          ],
+          "title": "Model Mode",
+          "type": "string"
+        },
+        "response": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ChatResponseV1"
+            },
+            {
+              "$ref": "#/$defs/MCQResponseV1"
+            }
+          ],
+          "title": "Response"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/EvidenceSnapshot"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "profile_snapshot": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Profile Snapshot"
+        },
+        "conversation_snapshot": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ConversationSnapshot"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "timing": {
+          "additionalProperties": true,
+          "title": "Timing",
+          "type": "object"
+        },
+        "can_regenerate": {
+          "title": "Can Regenerate",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "request_id",
+        "job_id",
+        "message_id",
+        "mode",
+        "response_schema",
+        "status",
+        "model_mode",
+        "response",
+        "evidence",
+        "profile_snapshot",
+        "conversation_snapshot",
+        "timing",
+        "can_regenerate"
+      ],
+      "title": "AnswerOut",
+      "type": "object"
+    },
+    "ChatResponseV1": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "chat_response_v1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "response_type": {
+          "enum": [
+            "answer",
+            "clarification",
+            "refusal",
+            "social"
+          ],
+          "title": "Response Type",
+          "type": "string"
+        },
+        "answer_text": {
+          "minLength": 1,
+          "title": "Answer Text",
+          "type": "string"
+        },
+        "short_answer": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Short Answer"
+        },
+        "citations": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Citations",
+          "type": "array"
+        },
+        "refusal_reason": {
+          "anyOf": [
+            {
+              "enum": [
+                "NO_EVIDENCE",
+                "INSUFFICIENT_EVIDENCE",
+                "CONFLICTING_EVIDENCE",
+                "OUT_OF_SCOPE"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Refusal Reason"
+        },
+        "follow_up_questions": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "maxItems": 3,
+          "title": "Follow Up Questions",
+          "type": "array"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Confidence"
+        }
+      },
+      "required": [
+        "schema_version",
+        "response_type",
+        "answer_text",
+        "short_answer",
+        "citations",
+        "refusal_reason",
+        "follow_up_questions",
+        "confidence"
+      ],
+      "title": "ChatResponseV1",
+      "type": "object"
+    },
+    "ConversationSnapshot": {
+      "additionalProperties": false,
+      "properties": {
+        "session_id": {
+          "title": "Session Id",
+          "type": "string"
+        },
+        "cutoff_sequence": {
+          "title": "Cutoff Sequence",
+          "type": "integer"
+        },
+        "messages": {
+          "items": {
+            "$ref": "#/$defs/MessageRef"
+          },
+          "title": "Messages",
+          "type": "array"
+        },
+        "summary_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Summary Id"
+        },
+        "summary_hash": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Summary Hash"
+        },
+        "covered_until_sequence": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Covered Until Sequence"
+        },
+        "summary_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Summary Text"
+        },
+        "profile_snapshot_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Profile Snapshot Id"
+        },
+        "token_budget": {
+          "additionalProperties": true,
+          "title": "Token Budget",
+          "type": "object"
+        },
+        "exclusions": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Exclusions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "session_id",
+        "cutoff_sequence",
+        "messages",
+        "summary_id",
+        "summary_hash",
+        "covered_until_sequence",
+        "summary_text",
+        "profile_snapshot_id",
+        "token_budget",
+        "exclusions"
+      ],
+      "title": "ConversationSnapshot",
+      "type": "object"
+    },
+    "EvidenceOrigin": {
+      "additionalProperties": false,
+      "properties": {
+        "request_id": {
+          "title": "Request Id",
+          "type": "string"
+        },
+        "evidence_id": {
+          "title": "Evidence Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "request_id",
+        "evidence_id"
+      ],
+      "title": "EvidenceOrigin",
+      "type": "object"
+    },
+    "EvidenceSnapshot": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {
+          "pattern": "^ev_[0-9]{3,}$",
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "chunk_id": {
+          "title": "Chunk Id",
+          "type": "string"
+        },
+        "asset_id": {
+          "title": "Asset Id",
+          "type": "string"
+        },
+        "processing_id": {
+          "title": "Processing Id",
+          "type": "string"
+        },
+        "source_title": {
+          "minLength": 1,
+          "title": "Source Title",
+          "type": "string"
+        },
+        "source_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Url"
+        },
+        "license": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "License"
+        },
+        "section": {
+          "title": "Section",
+          "type": "string"
+        },
+        "pages": {
+          "items": {
+            "type": "integer"
+          },
+          "title": "Pages",
+          "type": "array"
+        },
+        "locator": {
+          "minLength": 1,
+          "title": "Locator",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Text",
+          "type": "string"
+        },
+        "text_hash": {
+          "title": "Text Hash",
+          "type": "string"
+        },
+        "context_order": {
+          "title": "Context Order",
+          "type": "integer"
+        },
+        "inherited_from": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceOrigin"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "evidence_id",
+        "chunk_id",
+        "asset_id",
+        "processing_id",
+        "source_title",
+        "section",
+        "pages",
+        "locator",
+        "text",
+        "text_hash",
+        "context_order"
+      ],
+      "title": "EvidenceSnapshot",
+      "type": "object"
+    },
+    "MCQResponseV1": {
+      "additionalProperties": false,
+      "properties": {
+        "question_id": {
+          "minLength": 1,
+          "title": "Question Id",
+          "type": "string"
+        },
+        "answer": {
+          "anyOf": [
+            {
+              "enum": [
+                "A",
+                "B",
+                "C",
+                "D"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Answer"
+        },
+        "answer_text": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Answer Text"
+        },
+        "citations": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Citations",
+          "type": "array"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Confidence"
+        },
+        "refused": {
+          "title": "Refused",
+          "type": "boolean"
+        },
+        "refusal_reason": {
+          "anyOf": [
+            {
+              "enum": [
+                "NO_EVIDENCE",
+                "INSUFFICIENT_EVIDENCE",
+                "IRRELEVANT_EVIDENCE",
+                "CONFLICTING_EVIDENCE",
+                "UNSUPPORTED_ANSWER",
+                "INVALID_CITATION"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Refusal Reason"
+        },
+        "short_explanation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Short Explanation"
+        }
+      },
+      "required": [
+        "question_id",
+        "answer",
+        "answer_text",
+        "citations",
+        "confidence",
+        "refused",
+        "refusal_reason",
+        "short_explanation"
+      ],
+      "title": "MCQResponseV1",
+      "type": "object"
+    },
+    "MessageRef": {
+      "additionalProperties": false,
+      "properties": {
+        "message_id": {
+          "title": "Message Id",
+          "type": "string"
+        },
+        "sequence": {
+          "title": "Sequence",
+          "type": "integer"
+        },
+        "answer_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Answer Id"
+        },
+        "role": {
+          "enum": [
+            "user",
+            "assistant"
+          ],
+          "title": "Role",
+          "type": "string"
+        },
+        "content": {
+          "title": "Content",
+          "type": "string"
+        },
+        "content_hash": {
+          "title": "Content Hash",
+          "type": "string"
+        }
+      },
+      "required": [
+        "message_id",
+        "sequence",
+        "answer_id",
+        "role",
+        "content",
+        "content_hash"
+      ],
+      "title": "MessageRef",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "session_id": {
+      "title": "Session Id",
+      "type": "string"
+    },
+    "sequence": {
+      "title": "Sequence",
+      "type": "integer"
+    },
+    "role": {
+      "enum": [
+        "user",
+        "assistant"
+      ],
+      "title": "Role",
+      "type": "string"
+    },
+    "content": {
+      "title": "Content",
+      "type": "string"
+    },
+    "state": {
+      "title": "State",
+      "type": "string"
+    },
+    "active_answer_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Active Answer Id"
+    },
+    "answer": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/AnswerOut"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "request_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Request Id"
+    },
+    "created_at": {
+      "title": "Created At",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "session_id",
+    "sequence",
+    "role",
+    "content",
+    "state",
+    "active_answer_id",
+    "answer",
+    "request_id",
+    "created_at"
+  ],
+  "title": "MessageOut",
+  "type": "object"
+}

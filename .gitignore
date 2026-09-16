@@ -1,63 +1,33 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual environments
-.venv/
-venv/
-ENV/
-env/
-
-# IDEs
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Data & models (keep structure, ignore large files)
-data/raw/*
-data/processed/*
-!data/raw/.gitkeep
-!data/processed/.gitkeep
-models/
-*.bin
-*.pt
-*.pth
-*.safetensors
-
-# Logs & outputs
-logs/
-*.log
-outputs/
-results/
-
-# Environment variables
 .env
-.env.local
-
-# FAISS indices
-*.faiss
-*.index
+.secrets/
+artifacts/backups/
+artifacts/tiktoken/
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.db
+artifacts/storage/
+artifacts/openstax/originals/
+artifacts/openstax/official-html/
+artifacts/huggingface/
+artifacts/ocr/
+artifacts/deliverables/
+artifacts/evaluator-private/
+artifacts/runs/
+artifacts/ci-storage/
+artifacts/cs30_ci_*/
+evidence/legacy/*_verification_copy/
+playwright-report/
+test-results/
+.npm-cache/
+evidence/recovery/**/database.dump
+evidence/recovery/**/sources/
+artifacts/restore-*/
+artifacts/browser-profiles/
+frontend/.browser-profiles/
+*.log

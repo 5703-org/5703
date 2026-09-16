@@ -1,0 +1,21 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "content": {
+      "maxLength": 4000,
+      "minLength": 1,
+      "title": "Content",
+      "type": "string"
+    },
+    "use_profile": {
+      "default": true,
+      "title": "Use Profile",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "content"
+  ],
+  "title": "ChatMessageCreate",
+  "type": "object"
+}

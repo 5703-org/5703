@@ -1,0 +1,107 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "question_id": {
+      "minLength": 1,
+      "title": "Question Id",
+      "type": "string"
+    },
+    "answer": {
+      "anyOf": [
+        {
+          "enum": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Answer"
+    },
+    "answer_text": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Answer Text"
+    },
+    "citations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "title": "Citations",
+      "type": "array"
+    },
+    "confidence": {
+      "anyOf": [
+        {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Confidence"
+    },
+    "refused": {
+      "title": "Refused",
+      "type": "boolean"
+    },
+    "refusal_reason": {
+      "anyOf": [
+        {
+          "enum": [
+            "NO_EVIDENCE",
+            "INSUFFICIENT_EVIDENCE",
+            "IRRELEVANT_EVIDENCE",
+            "CONFLICTING_EVIDENCE",
+            "UNSUPPORTED_ANSWER",
+            "INVALID_CITATION"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Refusal Reason"
+    },
+    "short_explanation": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Short Explanation"
+    }
+  },
+  "required": [
+    "question_id",
+    "answer",
+    "answer_text",
+    "citations",
+    "confidence",
+    "refused",
+    "refusal_reason",
+    "short_explanation"
+  ],
+  "title": "MCQResponseV1",
+  "type": "object"
+}
