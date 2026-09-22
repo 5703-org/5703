@@ -989,7 +989,7 @@ def activate(db, release_id):
     return release
 
 
-def retrieve(db, query, release_id, variant=None, top_k=None):
+def retrieve(db, query, release_id, variant=None, top_k=None, *, runtime_device=None):
     release = db.get(CorpusRelease, release_id)
     if not release or release.state not in ("active", "retired", "validated"):
         raise AppError("SOURCE_UNAVAILABLE", detail="Pinned corpus is unavailable.")
@@ -1053,7 +1053,11 @@ def retrieve(db, query, release_id, variant=None, top_k=None):
         return bm25(query, [row(v) for v in values], k)
     if not values:
         return []
-    embedder = make_embedding(cfg)
+    embedder = (
+        make_embedding(cfg, runtime_device=runtime_device)
+        if runtime_device is not None
+        else make_embedding(cfg)
+    )
     encoded = embedder.encode([query], kind="query")
     if len(encoded) != 1:
         raise AppError("SOURCE_UNAVAILABLE", detail="Query embedding count is invalid.")
@@ -1091,7 +1095,7 @@ def retrieve(db, query, release_id, variant=None, top_k=None):
         return CrossEncoderReranker(
             cfg.get("reranker_model", "BAAI/bge-reranker-base"),
             cfg.get("reranker_revision"),
-            device=cfg.get("reranker_device"),
+            device=runtime_device or cfg.get("reranker_device"),
             cache_folder=cfg.get("reranker_cache_folder"),
         ).rerank(query, fused, k)
     raise AppError("VALIDATION_FAILED", detail="Unsupported retrieval variant.")
