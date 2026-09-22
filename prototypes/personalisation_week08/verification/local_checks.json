@@ -1,0 +1,198 @@
+{
+  "executed_at_utc": "2026-09-22T07:52:52.106664+00:00",
+  "scope": "Original stdlib-only modules; v1 eligible original AST only. Synthetic inputs. No extraction adapters, configured tokenizer, model, storage, API, database, or application integration executed.",
+  "synthetic_counter_note": "Selection/conflict tests use ceil(character_count/4) solely as a deterministic test double. It is NOT model token verification; default real byte fallback is separately observed.",
+  "source_root": "Caller-supplied --source-root; absolute local path omitted for privacy.",
+  "sources": [
+    {
+      "path": "generation/joint_policy.py",
+      "sha256": "6701411ea8a142ac6ff8acb197be9400694b9f5bec623713536886976845b034",
+      "syntax": "passed"
+    },
+    {
+      "path": "generation/teaching.py",
+      "sha256": "244b0de57eb5459551f4953f2098ae7c27b4126157f36340b08411453c8fd7b7",
+      "syntax": "passed"
+    },
+    {
+      "path": "personalisation/memory.py",
+      "sha256": "3895ff0ffd52a543408b24183b869d2009130bcf9c9c1074fc031aac6156e322",
+      "syntax": "passed"
+    },
+    {
+      "path": "personalisation/memory_extraction.py",
+      "sha256": "e9c7e339e11795af8157433a7bc193f24c7b96178fe866de1c7f803611637292",
+      "syntax": "passed"
+    },
+    {
+      "path": "personalisation/memory_v2.py",
+      "sha256": "17ce9c5b4acb2e361c0077c042b474c5beef75da97b00f8de07ff6dd6393ee27",
+      "syntax": "passed"
+    }
+  ],
+  "checks": [
+    {
+      "name": "policy rejects invalid condition",
+      "passed": true
+    },
+    {
+      "name": "hint requires help level 1 to 3",
+      "passed": true
+    },
+    {
+      "name": "T2 hint enables evidence and cumulative controls",
+      "passed": true
+    },
+    {
+      "name": "T0 hint skips online check while T0 direct checks",
+      "passed": true
+    },
+    {
+      "name": "claim spans exactly slice source and preserve citation IDs",
+      "passed": true
+    },
+    {
+      "name": "exact memory segment redacted to metadata",
+      "passed": true
+    },
+    {
+      "name": "memory segment rejects missing required keys",
+      "passed": true
+    },
+    {
+      "name": "explicit simpler applies when profile off",
+      "passed": true
+    },
+    {
+      "name": "hint request maps to hint plan",
+      "passed": true
+    },
+    {
+      "name": "negated hint request not mapped to hint",
+      "passed": true
+    },
+    {
+      "name": "misconception phrase maps to check plan",
+      "passed": true
+    },
+    {
+      "name": "v1 durable eligibility excludes temporary turn",
+      "passed": true
+    },
+    {
+      "name": "v2 temporary statement produces no durable operation",
+      "passed": true
+    },
+    {
+      "name": "v2 explicit preference becomes attributable ADD",
+      "passed": true
+    },
+    {
+      "name": "v2 correction becomes UPDATE",
+      "passed": true
+    },
+    {
+      "name": "v2 explicit erasure becomes DELETE",
+      "passed": true
+    },
+    {
+      "name": "topic aliases map photosynthesis to biology",
+      "passed": true
+    },
+    {
+      "name": "validation accepts exact attributable typed operation",
+      "passed": true
+    },
+    {
+      "name": "validation rejects changed content",
+      "passed": true
+    },
+    {
+      "name": "extraction cannot create assessment record",
+      "passed": true
+    },
+    {
+      "name": "query conditioned selection excludes irrelevant scope",
+      "passed": true
+    },
+    {
+      "name": "briefly current instruction supersedes saved detail field (expected behaviour)",
+      "passed": false,
+      "error": "AssertionError: False"
+    },
+    {
+      "name": "recognized brief current instruction supersedes same saved field",
+      "passed": true
+    },
+    {
+      "name": "unconfirmed record excluded",
+      "passed": true
+    },
+    {
+      "name": "controlled projection suppresses source URL and preserves excerpt",
+      "passed": true
+    },
+    {
+      "name": "projection hash repeats for identical input",
+      "passed": true
+    }
+  ],
+  "passed": 25,
+  "total": 26,
+  "risk_observations": [
+    {
+      "id": "profile_off_still_uses_saved_style",
+      "observed": true,
+      "level": null,
+      "style": "detailed",
+      "source": "generation/teaching.py:26-31"
+    },
+    {
+      "id": "validator_accepts_delete_without_erasure_request",
+      "observed": true,
+      "source": "personalisation/memory_v2.py:379-420",
+      "boundary": "No database write was run; downstream enforcement unknown."
+    },
+    {
+      "id": "selector_does_not_itself_filter_expired_entries",
+      "observed": true,
+      "source": "personalisation/memory_v2.py:459-511",
+      "boundary": "Storage/read layer could filter before calling this function; absent in member package."
+    },
+    {
+      "id": "selector_uses_profile_defaults_when_use_profile_false",
+      "observed": true,
+      "saved_profile_defaults": {
+        "level": "advanced",
+        "style": "detailed"
+      },
+      "source": "personalisation/memory_v2.py:458,485-486,561-563"
+    },
+    {
+      "id": "briefly_mismatch_between_teaching_and_memory_selection",
+      "teaching_style": "concise",
+      "memory_current_operations": [],
+      "source": "generation/teaching.py:35-36; personalisation/memory_v2.py:283-286"
+    },
+    {
+      "id": "default_byte_budget_empty",
+      "entries_retained": 0,
+      "token_counting": "utf8_byte_upper_bound",
+      "token_count": 501,
+      "limit": 768
+    },
+    {
+      "id": "default_byte_budget_one_entry",
+      "entries_retained": 0,
+      "token_counting": "utf8_byte_upper_bound",
+      "token_count": 501,
+      "limit": 768
+    }
+  ],
+  "dependencies_absent_in_delivery": [
+    "generation/adapters.py",
+    "generation/types.py",
+    "generation/token_counting.py",
+    "backend memory-state database, persistence/API, migration, expiry/revocation validation and integration tests"
+  ]
+}
