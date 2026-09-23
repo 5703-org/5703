@@ -1,0 +1,196 @@
+{
+  "passed": true,
+  "started_at": "2026-09-20T06:19:37.912Z",
+  "scope": "One prespecified real browser hint → another hint → explicit full explanation journey; no resampling or response interception.",
+  "requests": [
+    {
+      "label": "first-hint",
+      "status": 202,
+      "input": {
+        "content": "Give only a first hint: why does photosynthesis need light?",
+        "use_profile": false,
+        "answer_mode": "textbook",
+        "teaching_mode": "hint"
+      },
+      "receipt": {
+        "request_id": "b44700d5-a35d-4c53-b865-7076e433c2f2",
+        "job_id": "de6ae9f9-12c6-4aa4-9d02-c812db1592ef",
+        "user_message_id": "0fd866f3-73e9-41b6-a5aa-232dc0cb4392",
+        "poll_url": "/api/v1/jobs/de6ae9f9-12c6-4aa4-9d02-c812db1592ef"
+      },
+      "error_code": null,
+      "job": {
+        "id": "de6ae9f9-12c6-4aa4-9d02-c812db1592ef",
+        "request_id": "b44700d5-a35d-4c53-b865-7076e433c2f2",
+        "state": "succeeded",
+        "stage": "complete",
+        "error": null,
+        "answer_id": "eb405a5c-ddd5-448f-84b8-6c9c9db6dcf4",
+        "can_retry": false,
+        "created_at": "2026-09-20T06:19:39.061609+00:00",
+        "updated_at": "2026-09-20T06:19:54.050645+00:00"
+      },
+      "answer": {
+        "id": "eb405a5c-ddd5-448f-84b8-6c9c9db6dcf4",
+        "response_sha256": "6bd8e5999f9d35639ff8c7baedfad80427b1054355511ac9c7c868988f7a84b5",
+        "response_type": "answer",
+        "teaching_mode": "hint",
+        "task_id": "8121f591-20a7-4dce-bcd7-ed326dda942a",
+        "help_level": 1,
+        "presentation_id": "cfcc15fe-29a7-4d68-8e4d-bf730eb97aab",
+        "citations": [
+          "ev_001"
+        ],
+        "memory_applied": false
+      }
+    },
+    {
+      "label": "another-hint",
+      "status": 202,
+      "input": {
+        "content": "Give me another hint for this problem.",
+        "use_profile": false,
+        "answer_mode": "textbook",
+        "teaching_mode": "hint",
+        "task_action": "more_hint",
+        "task_id": "8121f591-20a7-4dce-bcd7-ed326dda942a"
+      },
+      "receipt": {
+        "request_id": "bb329805-b7a7-4768-acf4-a8b975c947aa",
+        "job_id": "463553a6-6d26-41f6-aeb6-db06ff06f7f6",
+        "user_message_id": "9d64ec08-614c-4cb0-8a1a-da760d209c54",
+        "poll_url": "/api/v1/jobs/463553a6-6d26-41f6-aeb6-db06ff06f7f6"
+      },
+      "error_code": null,
+      "job": {
+        "id": "463553a6-6d26-41f6-aeb6-db06ff06f7f6",
+        "request_id": "bb329805-b7a7-4768-acf4-a8b975c947aa",
+        "state": "succeeded",
+        "stage": "complete",
+        "error": null,
+        "answer_id": "0094c756-5637-4945-967b-3eb5b26750b6",
+        "can_retry": false,
+        "created_at": "2026-09-20T06:19:55.483883+00:00",
+        "updated_at": "2026-09-20T06:20:22.546548+00:00"
+      },
+      "answer": {
+        "id": "0094c756-5637-4945-967b-3eb5b26750b6",
+        "response_sha256": "b61eac0c196bc89bafa0971c683df9c9d26a6baa10e025f81cae7134604d83b7",
+        "response_type": "answer",
+        "teaching_mode": "hint",
+        "task_id": "8121f591-20a7-4dce-bcd7-ed326dda942a",
+        "help_level": 2,
+        "presentation_id": "061fcbbc-bfb7-429a-a39c-8e7740434d77",
+        "citations": [
+          "ev_001"
+        ],
+        "memory_applied": false
+      }
+    },
+    {
+      "label": "full-explanation",
+      "status": 202,
+      "input": {
+        "content": "Please give me the full explanation for this problem.",
+        "use_profile": false,
+        "answer_mode": "textbook",
+        "teaching_mode": "direct",
+        "task_action": "full_explanation",
+        "task_id": "8121f591-20a7-4dce-bcd7-ed326dda942a"
+      },
+      "receipt": {
+        "request_id": "55cb451d-b624-4bb4-a844-c137f74cafa8",
+        "job_id": "0f7d479a-2573-42e0-821e-ff96a39d7ba8",
+        "user_message_id": "597e4f76-cc44-44e7-a75b-52a46412dd7a",
+        "poll_url": "/api/v1/jobs/0f7d479a-2573-42e0-821e-ff96a39d7ba8"
+      },
+      "error_code": null,
+      "job": {
+        "id": "0f7d479a-2573-42e0-821e-ff96a39d7ba8",
+        "request_id": "55cb451d-b624-4bb4-a844-c137f74cafa8",
+        "state": "succeeded",
+        "stage": "complete",
+        "error": null,
+        "answer_id": "9ab873a5-ed9f-42c8-9dbc-e34873c0facd",
+        "can_retry": false,
+        "created_at": "2026-09-20T06:20:23.132790+00:00",
+        "updated_at": "2026-09-20T06:20:58.114695+00:00"
+      },
+      "answer": {
+        "id": "9ab873a5-ed9f-42c8-9dbc-e34873c0facd",
+        "response_sha256": "8b7828e8a8cf9de5ce99a5856396ec14c3a24c47ac3427f3a3cf231cc057792a",
+        "response_type": "answer",
+        "teaching_mode": "direct",
+        "task_id": "8121f591-20a7-4dce-bcd7-ed326dda942a",
+        "help_level": 0,
+        "presentation_id": "69e8addb-9283-4b1b-9094-13821b350cfc",
+        "citations": [
+          "ev_001",
+          "ev_010"
+        ],
+        "memory_applied": false
+      }
+    }
+  ],
+  "exposures": [
+    {
+      "input": {
+        "presentation_id": "cfcc15fe-29a7-4d68-8e4d-bf730eb97aab",
+        "surface": "answer",
+        "kind": "rendered"
+      },
+      "status": 200,
+      "id": "4021b033-fb25-4fb8-b0a5-9081a6e3d644",
+      "kind": "rendered",
+      "error_code": null
+    },
+    {
+      "input": {
+        "presentation_id": "061fcbbc-bfb7-429a-a39c-8e7740434d77",
+        "surface": "answer",
+        "kind": "rendered"
+      },
+      "status": 200,
+      "id": "2572894a-2546-4721-b6d2-c036863e6c69",
+      "kind": "rendered",
+      "error_code": null
+    },
+    {
+      "input": {
+        "presentation_id": "69e8addb-9283-4b1b-9094-13821b350cfc",
+        "surface": "answer",
+        "kind": "rendered"
+      },
+      "status": 200,
+      "id": "b9613450-fd64-48a2-a92e-7c9b626236dc",
+      "kind": "rendered",
+      "error_code": null
+    },
+    {
+      "input": {
+        "presentation_id": "69e8addb-9283-4b1b-9094-13821b350cfc",
+        "surface": "answer",
+        "kind": "rendered"
+      },
+      "status": 200,
+      "id": "b9613450-fd64-48a2-a92e-7c9b626236dc",
+      "kind": "rendered",
+      "error_code": null
+    }
+  ],
+  "page_errors": [],
+  "browser_version": "153.0.4234.48",
+  "chat_source_sha256": "fcf6e9392b3168c301133b4e7c990cb7fbace7ff906dc4a00a532b8ab3f978fc",
+  "session_id": "b4054d2f-cec0-4dce-bdc9-30e7e8334219",
+  "new_problem_resets_to_direct": true,
+  "persisted_tasks": [
+    {
+      "id": "8121f591-20a7-4dce-bcd7-ed326dda942a",
+      "teaching_mode": "direct",
+      "help_level": 0,
+      "state": "active",
+      "version": 3
+    }
+  ],
+  "finished_at": "2026-09-20T06:20:59.611Z"
+}
