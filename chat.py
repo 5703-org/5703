@@ -1,0 +1,121 @@
+"""Explicit, frozen interactive retrieval policy; benchmark retrieval is unchanged."""
+
+from functools import lru_cache
+import hashlib
+import json
+from pathlib import Path
+import re
+from threading import RLock
+
+from .ranking import CrossEncoderReranker
+from .runtime import DEVICES
+
+POLICY_VERSION = "chat_hybrid_rerank_v1"
+_RERANKER_LOCK = RLock()
+FIELDS = {
+    "version",
+    "retriever",
+    "candidate_count",
+    "reranker_model",
+    "reranker_revision",
+    "reranker_device",
+    "reranker_cache_folder",
+}
+
+
+def validate_policy(value):
+    if not isinstance(value, dict) or set(value) != FIELDS:
+        raise ValueError("Interactive retrieval requires an exact, explicit policy")
+    if value["version"] != POLICY_VERSION or value["retriever"] != "R2":
+        raise ValueError("Unsupported interactive retrieval policy")
+    if type(value["candidate_count"]) is not int or not 1 <= value["candidate_count"] <= 20:
+        raise ValueError("Interactive candidate count must be between 1 and 20")
+    if not isinstance(value["reranker_model"], str) or not value["reranker_model"].strip():
+        raise ValueError("An explicit local reranker model is required")
+    if not isinstance(value["reranker_revision"], str) or not re.fullmatch(
+        r"[0-9a-f]{40}", value["reranker_revision"]
+    ):
+        raise ValueError("Interactive reranking requires a fixed model commit")
+    if value["reranker_device"] not in DEVICES:
+        raise ValueError("An explicit reranker device is required")
+    if (
+        not isinstance(value["reranker_cache_folder"], str)
+        or not value["reranker_cache_folder"].strip()
+    ):
+        raise ValueError("A local reranker cache folder is required")
+    return dict(value)
+
+
+def policy_hash(value):
+    return hashlib.sha256(
+        json.dumps(value, sort_keys=True, separators=(",", ":")).encode()
+    ).hexdigest()
+
+
+def load_policy(path):
+    """Read once at submission; workers never reload the mutable configuration file."""
+    if not path:
+        return None
+    return validate_policy(json.loads(Path(path).read_text(encoding="utf-8")))
+
+
+@lru_cache(maxsize=2)
+def _reranker(model, revision, device, cache_folder):
+    # Require the pinned checkpoint to be present. Interactive requests must not
+    # initiate model downloads or silently switch to an unlearned ranker.
+    from huggingface_hub import snapshot_download
+
+    snapshot = snapshot_download(
+        model, revision=revision, cache_dir=cache_folder, local_files_only=True
+    )
+    ranker = CrossEncoderReranker(snapshot, revision, device=device, cache_folder=cache_folder)
+    ranker.model_name = model
+    return ranker
+
+
+def rerank_candidates(query, candidates, policy, *, runtime_device=None):
+    policy = validate_policy(policy)
+    if runtime_device is not None and runtime_device not in DEVICES:
+        raise ValueError("Reranking execution needs a resolved local device")
+    if len(candidates) > policy["candidate_count"]:
+        raise ValueError("Interactive candidate input exceeds its frozen limit")
+    before = [item["chunk_id"] for item in candidates]
+    if len(before) != len(set(before)):
+        raise ValueError("Duplicate interactive candidates")
+    if not candidates:
+        return [], {
+            "policy": policy,
+            "policy_hash": policy_hash(policy),
+            "candidate_ids": [],
+            "ranked_ids": [],
+        }
+    with _RERANKER_LOCK:
+        ranker = _reranker(
+            policy["reranker_model"],
+            policy["reranker_revision"],
+            runtime_device or policy["reranker_device"],
+            policy["reranker_cache_folder"],
+        )
+    ranked = ranker.rerank(query, candidates, k=len(candidates))
+    after = [item["chunk_id"] for item in ranked]
+    if len(after) != len(before) or set(after) != set(before):
+        raise ValueError("Interactive reranker changed candidate membership")
+    originals = {item["chunk_id"]: item for item in candidates}
+    for item in ranked:
+        original = originals[item["chunk_id"]]
+        if any(
+            item.get(key) != original.get(key)
+            for key in original
+            if key not in ("score", "score_type")
+        ):
+            raise ValueError("Interactive reranker changed immutable source data")
+    return ranked, {
+        "policy": policy,
+        "policy_hash": policy_hash(policy),
+        "candidate_ids": before,
+        "ranked_ids": after,
+        "recorded_device": policy["reranker_device"],
+        "execution_device": runtime_device or policy["reranker_device"],
+        "rerank_ms": ranked[0].get("rerank_ms"),
+        "scope": "local learned ordering only; scores are not evidence support labels",
+    }

@@ -1,0 +1,116 @@
+"""Deterministic BM25, reciprocal-rank fusion and configurable cross-encoder."""
+
+from collections import Counter
+import math
+import time
+from .embedding import tokens
+
+
+def bm25(query, rows, k=5, k1=1.5, b=0.75):
+    if (
+        type(k) is not int
+        or k < 1
+        or not math.isfinite(k1)
+        or k1 <= 0
+        or not math.isfinite(b)
+        or not 0 <= b <= 1
+    ):
+        raise ValueError("BM25 requires positive k/k1 and finite b in [0,1]")
+    counts = [Counter(tokens(r["text"])) for r in rows]
+    average = sum(sum(c.values()) for c in counts) / len(counts) if counts else 0
+    q = set(tokens(query))
+    df = {w: sum(w in c for c in counts) for w in q}
+    scored = []
+    for row, c in zip(rows, counts):
+        length = sum(c.values())
+        score = sum(
+            math.log(1 + (len(rows) - df[w] + 0.5) / (df[w] + 0.5))
+            * c[w]
+            * (k1 + 1)
+            / (c[w] + k1 * (1 - b + b * length / average))
+            for w in q
+            if c[w] and average
+        )
+        scored.append({**row, "score": score, "score_type": "bm25"})
+    return sorted(scored, key=lambda r: (-r["score"], r["chunk_id"]))[:k]
+
+
+def rrf(lists, k=5, constant=60):
+    if type(k) is not int or k < 1 or not math.isfinite(constant) or constant <= 0:
+        raise ValueError("RRF requires positive k and rank constant")
+    rows, scores = {}, Counter()
+    for source in lists:
+        seen = set()
+        for rank, row in enumerate(source, 1):
+            cid = row["chunk_id"]
+            if cid in seen:
+                continue
+            seen.add(cid)
+            rows.setdefault(cid, row)
+            scores[cid] += 1 / (constant + rank)
+    return [
+        {**rows[cid], "score": scores[cid], "score_type": "rrf"}
+        for cid in sorted(scores, key=lambda x: (-scores[x], x))[:k]
+    ]
+
+
+class CrossEncoderReranker:
+    def __init__(
+        self, model="BAAI/bge-reranker-base", revision=None, device=None, cache_folder=None
+    ):
+        if not revision or revision in ("main", "latest"):
+            raise ValueError("A pinned cross-encoder revision is required")
+        try:
+            from sentence_transformers import CrossEncoder
+        except ImportError as exc:
+            raise RuntimeError("R3 unavailable: optional model dependencies missing") from exc
+        if device is not None and device not in ("cpu", "cuda", "cuda:0", "mps"):
+            raise ValueError("Reranker device must explicitly select cpu, cuda, cuda:0 or mps")
+        options = {}
+        if device is not None:
+            options["device"] = device
+        if cache_folder is not None:
+            options["cache_folder"] = cache_folder
+        self.model = CrossEncoder(model, revision=revision, **options)
+        self.revision = revision
+        self.model_name = model
+
+    def rerank(self, query, rows, k=5):
+        if type(k) is not int or k < 1:
+            raise ValueError("Reranking requires a positive k")
+        selected = rows[:20]
+        if not selected:
+            return []
+        start = time.perf_counter()
+        window = self.model.max_length or self.model.tokenizer.model_max_length
+        input_sizes = [
+            len(self.model.tokenizer.encode(query, r["text"], add_special_tokens=True))
+            for r in selected
+        ]
+        if any(size > window for size in input_sizes):
+            raise ValueError("Cross-encoder input over limit; explicit window policy required")
+        scores = self.model.predict([(query, r["text"]) for r in selected])
+        if len(scores) != len(selected) or any(not math.isfinite(float(s)) for s in scores):
+            raise ValueError("Cross-encoder returned a wrong-count or nonfinite score batch")
+        elapsed = (time.perf_counter() - start) * 1000
+        return sorted(
+            [
+                {
+                    **r,
+                    "score": float(s),
+                    "score_type": "cross_encoder",
+                    "reranker_revision": self.revision,
+                    "reranker_model": self.model_name,
+                    "rerank_ms": elapsed,
+                    "rerank_input": {
+                        "query_characters": len(query),
+                        "text_characters": len(r["text"]),
+                        "tokens": size,
+                        "window": window,
+                        "truncated": False,
+                    },
+                }
+                for r, s, size in zip(selected, scores, input_sizes)
+            ],
+            key=lambda r: (-r["score"], r["chunk_id"]),
+        )[:k]
