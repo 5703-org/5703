@@ -1,0 +1,235 @@
+"""Small deterministic preparation for obvious referents with explicit ambiguity."""
+
+from __future__ import annotations
+import re
+from contracts.models import PreparedQuery
+
+VERSION = "conversation_preparer_v5"
+DEPENDENT = re.compile(r"\b(it|its|that|this|they|them|those|these|again)\b", re.I)
+REEXPLAIN = re.compile(
+    r"\b(simpler|simplify|more simply|rephrase|again|example|analogy|more detail|shorter|summari[sz]e)\b",
+    re.I,
+)
+EXPANSION = re.compile(
+    r"\b(examples?|analog(?:y|ies)|applications?|apply|more detail|elaborate|deeper|why|how|compare|difference|what else|tell me more)\b",
+    re.I,
+)
+
+
+def evidence_strategy(message: str, prepared: dict | None) -> str:
+    """Reuse only a resolved restatement/source request; new knowledge needs retrieval."""
+    if not prepared:
+        return "retrieve"
+    if prepared.get("needs_clarification") or prepared.get("intent") == "social":
+        return "none"
+    resolved = prepared.get("topic_relation") == "same_topic" and prepared.get(
+        "referenced_message_ids"
+    )
+    if not resolved:
+        return "retrieve"
+    if prepared.get("intent") == "source_request":
+        return "reuse_only"
+    if EXPANSION.search(message):
+        return "retrieve_and_reuse"
+    if prepared.get("intent") == "reexplain":
+        return "reuse_only"
+    return "retrieve_and_reuse"
+
+
+def has_local_referent(message: str) -> bool:
+    """Keep an explicit subject before a later clause; do not import an old topic.
+
+    This bounded syntax rule does not resolve arbitrary English coreference. It
+    only recognizes a named subject before the first pronoun and a subsequent
+    coordinating/subordinate clause, leaving the complete question unchanged.
+    """
+    first = DEPENDENT.search(message)
+    if not first:
+        return False
+    prefix = message[: first.start()]
+    boundaries = list(re.finditer(r"\b(and|when|while|because|if|where|although)\b", prefix, re.I))
+    topic_clause = prefix[: boundaries[-1].start()] if boundaries else prefix
+    # Question grammar and generic referents cannot establish a named subject.
+    grammar = set(
+        "what why how who which is are was were does do did can could would should will happens happen happening to of a an the in on for with from at by explain describe tell me please about thing things something anything everything process concept topic question answer change changes result results give example examples analogy another uses use produces produce makes make contains contain has have".split()
+    )
+    named = bool(set(re.findall(r"[a-z][a-z-]*", topic_clause.casefold())) - grammar)
+    return named and bool(
+        boundaries or re.search(r"\b(uses?|produces?|makes?|contains?|has|have)\b", prefix, re.I)
+    )
+
+
+def subject_from(message: str) -> str | None:
+    text = message.strip().rstrip("?.!")
+    correction = re.search(
+        r"(?:i meant|i mean|actually[,]?\s*(?:i mean)?)\s+(.+?)(?:,?\s+not\s+.+)?$", text, re.I
+    )
+    if correction:
+        return correction.group(1).strip()
+    explicit = re.search(
+        r"\b(?:example|analogy|sources?|citations?)\s+(?:of|for|about|on)\s+(.+)", text, re.I
+    )
+    if explicit:
+        text = explicit.group(1).strip()
+    text = re.sub(
+        r"^(?:what (?:is|are)|explain|describe|tell me about|can you explain|how does|why does)\s+",
+        "",
+        text,
+        flags=re.I,
+    )
+    # Isolate an explicitly named subject before presentation requests and
+    # subordinate questions; the full learner question remains unchanged.
+    text = re.split(
+        r"\s+(?:in detail|in simple terms|in simpler terms|more simply|briefly|including|with an example)\b|,\s*(?:and|including|with|using)\b",
+        text,
+        maxsplit=1,
+        flags=re.I,
+    )[0].strip()
+    text = re.sub(
+        r"\s+(?:work|works|happen|happens|need|needs|use|uses|require|requires|occur|occurs)\b.*$",
+        "",
+        text,
+        flags=re.I,
+    )
+    text = re.sub(r"\s+(?:in simple terms|in detail|briefly|please)$", "", text, flags=re.I)
+    text = re.sub(r"\s+(?:more simply|again|in simpler terms)$", "", text, flags=re.I)
+    if not text or DEPENDENT.search(text) or REEXPLAIN.search(text) or len(text) > 180:
+        return None
+    return text
+
+
+def prepare_query(
+    message: str, history: list[dict] | None = None, summary: str | None = None
+) -> PreparedQuery:
+    history = history or []
+    original = message.strip()
+    if not original:
+        raise ValueError("A nonblank current message is required")
+    fields = dict(
+        original_message=original,
+        standalone_query=original,
+        intent="factual",
+        topic_relation="new_topic",
+        referenced_message_ids=[],
+        needs_clarification=False,
+        preparation_version=VERSION,
+        fallback_reason=None,
+    )
+    if not re.search(r"\w", original):
+        return PreparedQuery(
+            **{
+                **fields,
+                "standalone_query": None,
+                "intent": "clarification",
+                "topic_relation": "unclear",
+                "needs_clarification": True,
+                "fallback_reason": "missing_question",
+            }
+        )
+    if re.fullmatch(r"(?:hi|hello|hey|thanks|thank you|okay|ok|great|bye)[!. ]*", original, re.I):
+        return PreparedQuery(
+            **{
+                **fields,
+                "standalone_query": None,
+                "intent": "social",
+                "topic_relation": "same_topic",
+            }
+        )
+    source_request = bool(
+        re.search(r"\b(source|sources|citation|citations|where did .*come from)\b", original, re.I)
+    )
+    reexplain = bool(REEXPLAIN.search(original))
+    dependent = (
+        (bool(DEPENDENT.search(original)) and not has_local_referent(original))
+        or reexplain
+        or source_request
+        or bool(re.fullmatch(r"(?:why|how|tell me more|continue|go on)[?.! ]*", original, re.I))
+    )
+    explicit_example = re.search(r"\b(?:example|analogy)\s+(?:of|for|about)\s+(.+)", original, re.I)
+    if explicit_example and not DEPENDENT.search(explicit_example.group(1)):
+        return PreparedQuery(**{**fields, "intent": "reexplain"})
+    explicit_source = re.search(
+        r"\b(?:sources?|citations?)\s+(?:of|for|about|on)\s+(.+)", original, re.I
+    )
+    if explicit_source and not DEPENDENT.search(explicit_source.group(1)):
+        return PreparedQuery(**{**fields, "intent": "source_request"})
+    if reexplain and re.match(
+        r"^(?:explain|describe|summari[sz]e|simplify|rephrase|what is|what are|how does|why does)\s+",
+        original,
+        re.I,
+    ):
+        explicit_topic = subject_from(original)
+        if explicit_topic:
+            return PreparedQuery(**{**fields, "intent": "reexplain"})
+    antecedent, ref = None, None
+    for prior in reversed(history):
+        if prior.get("role") != "user":
+            continue
+        if (
+            re.search(
+                r"\b(compare|comparison|difference between)\b", prior.get("content", ""), re.I
+            )
+            and dependent
+        ):
+            fields["fallback_reason"] = "ambiguous_referent_after_comparison"
+            break
+        possible = subject_from(prior.get("content", ""))
+        if possible:
+            antecedent = possible
+            ref = str(prior.get("message_id", prior.get("id", "")))
+            break
+    if not antecedent and not fields["fallback_reason"] and summary:
+        pointers = [
+            (mid, subject_from(content))
+            for mid, content in re.findall(r"^\[([^\]]+)\] (.+)$", summary, re.M)
+        ]
+        pointers = [(mid, subject) for mid, subject in pointers if subject]
+        if len({subject.casefold() for _, subject in pointers}) == 1:
+            ref, antecedent = pointers[-1]
+    if dependent and not antecedent:
+        return PreparedQuery(
+            **{
+                **fields,
+                "standalone_query": None,
+                "intent": "clarification",
+                "topic_relation": "unclear",
+                "needs_clarification": True,
+                "fallback_reason": fields["fallback_reason"] or "missing_referent",
+            }
+        )
+    if dependent:
+        if has_local_referent(original):
+            rewritten = original
+        else:
+            rewritten = re.sub(
+                r"\b(it|that|this|they|them|those|these)\b",
+                lambda _: antecedent,
+                original,
+                flags=re.I,
+            )
+            rewritten = re.sub(r"\bits\b", lambda _: antecedent + "'s", rewritten, flags=re.I)
+        if antecedent.casefold() not in rewritten.casefold():
+            rewritten += " Topic: " + antecedent + "."
+        if reexplain or source_request:
+            # A restatement/source request points to the immediately preceding
+            # completed exchange even when its user question was itself dependent.
+            latest_user = next((m for m in reversed(history) if m.get("role") == "user"), None)
+            if latest_user:
+                ref = str(latest_user.get("message_id", latest_user.get("id", "")))
+        fields.update(
+            standalone_query=rewritten,
+            topic_relation="same_topic",
+            referenced_message_ids=[ref] if ref else [],
+            intent="source_request"
+            if source_request
+            else "reexplain"
+            if reexplain
+            else "comparison"
+            if re.search(r"compar|difference|versus", original, re.I)
+            else "follow_up",
+        )
+    elif re.search(r"compar|difference|versus", original, re.I):
+        fields["intent"] = "comparison"
+    elif antecedent and antecedent.casefold() in original.casefold():
+        fields["topic_relation"] = "same_topic"
+    return PreparedQuery(**fields)

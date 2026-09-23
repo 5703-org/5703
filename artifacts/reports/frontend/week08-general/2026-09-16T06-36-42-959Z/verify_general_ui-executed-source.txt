@@ -1,0 +1,94 @@
+import { chromium, expect } from 'file:///E:/5703/learning-assistant/frontend/node_modules/@playwright/test/index.mjs';
+import fs from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+
+const root = 'E:/5703/learning-assistant';
+const source = JSON.parse(await fs.readFile(`${root}/evidence/week08-delivery/20260916/integrated/general-mode-http-attempt1.json`, 'utf8'));
+const sessionId = source.session_id;
+const output = `${root}/artifacts/reports/frontend/week08-general/${new Date().toISOString().replaceAll(':', '-').replaceAll('.', '-')}`;
+await fs.mkdir(output, { recursive: true });
+const digest = value => createHash('sha256').update(value).digest('hex');
+const record = { status: 'running', started_at: new Date().toISOString(), session_id: sessionId, scope: 'Read-only rendering of saved real general-mode and textbook outcomes, including the retained failed follow-up. Native select keyboard and session-storage choices only; zero answering submissions.', checks: [], page_errors: [], mutations: [] };
+const browser = await chromium.launch({ channel: 'msedge' });
+const context = await browser.newContext({ baseURL: 'http://127.0.0.1:5173', viewport: { width: 1440, height: 1000 } });
+const page = await context.newPage();
+page.on('pageerror', error => record.page_errors.push(error.name));
+page.on('request', request => { if (!['GET', 'HEAD', 'OPTIONS'].includes(request.method())) record.mutations.push({ method: request.method(), path: new URL(request.url()).pathname }); });
+async function api(path) {
+  const token = await page.evaluate(() => sessionStorage.getItem('cs30.access-token'));
+  const response = await page.request.get(`/api/v1${path}`, { headers: { Authorization: `Bearer ${token}` } });
+  expect(response.status()).toBe(200);
+  return (await response.json()).data;
+}
+try {
+  record.browser_version = browser.version();
+  record.source_hashes = {};
+  for (const file of ['frontend/src/Chat.tsx', 'frontend/src/api.ts', 'frontend/src/sources.ts', 'frontend/src/styles/app.css']) record.source_hashes[file] = digest(await fs.readFile(`${root}/${file}`));
+  await page.goto('/login');
+  await page.getByLabel('Email', { exact: true }).fill('student2@example.com');
+  await page.getByLabel('Password', { exact: true }).fill('Passw0rd!');
+  await page.getByRole('button', { name: 'Sign in', exact: true }).click();
+  await expect(page.getByRole('textbox', { name: 'Message Learning Assistant' })).toBeVisible();
+  const before = await api(`/sessions/${sessionId}/messages`);
+  const general = before.items.find(item => item.answer?.answer_mode === 'general_knowledge');
+  expect(general).toBeTruthy();
+  expect(general.answer.source_provenance).toBe('model_general_knowledge_unverified');
+  expect(general.answer.response.citations).toEqual([]);
+  expect(general.answer.evidence).toEqual([]);
+  record.saved = { answer_id: general.answer.id, model_mode: general.answer.model_mode, answer_mode: general.answer.answer_mode, source_provenance: general.answer.source_provenance, citations: 0, evidence: 0, messages: before.items.length, history_sha256: digest(JSON.stringify(before)) };
+  await page.goto(`/chat/${sessionId}`);
+  await expect(page.locator(`[data-answer-id="${general.answer.id}"]`)).toBeVisible();
+  const select = page.getByRole('combobox', { name: 'Answer source' });
+  await expect(select).toHaveValue('textbook');
+  const generalArticle = page.locator(`[data-answer-id="${general.answer.id}"]`);
+  await expect(generalArticle.getByText('General knowledge', { exact: true })).toBeVisible();
+  await expect(generalArticle.getByText('Model knowledge · verify independently.', { exact: true })).toBeVisible();
+  await expect(generalArticle.getByRole('button', { name: /^Sources|^Open source/ })).toHaveCount(0);
+  const failedRows = before.items.filter(item => item.role === 'user' && ['failed', 'error'].includes(item.state));
+  expect(failedRows.length).toBeGreaterThan(0);
+  for (const failed of failedRows) await expect(page.locator(`[data-message-id="${failed.id}"]`).getByText('Response failed', { exact: true })).toBeVisible();
+  record.retained_failed_message_ids = failedRows.map(item => item.id);
+  for (const width of [1440, 390]) {
+    await page.setViewportSize({ width, height: width === 390 ? 844 : 1000 });
+    await select.focus();
+    await page.keyboard.press('Home');
+    await page.keyboard.press('ArrowDown');
+    await page.keyboard.press('Enter');
+    await expect(select).toHaveValue('general_knowledge');
+    await expect(page.getByText('General knowledge uses the model’s knowledge without textbook sources. Verify important details.', { exact: true })).toBeVisible();
+    await generalArticle.locator('.answer-metadata').scrollIntoViewIfNeeded();
+    await page.screenshot({ path: `${output}/general-${width}.png` });
+    const overflow = await page.evaluate(() => ({ client: document.documentElement.clientWidth, scroll: document.documentElement.scrollWidth }));
+    expect(overflow.scroll).toBeLessThanOrEqual(overflow.client + 1);
+    const box = await select.boundingBox();
+    expect(box.height).toBeGreaterThanOrEqual(44);
+    expect(box.x).toBeGreaterThanOrEqual(0);
+    expect(box.x + box.width).toBeLessThanOrEqual(width + 1);
+    await page.reload();
+    await expect(select).toHaveValue('general_knowledge');
+    await expect(generalArticle.getByText('General knowledge', { exact: true })).toBeVisible();
+    await select.focus();
+    await page.keyboard.press('Home');
+    await page.keyboard.press('Enter');
+    await expect(select).toHaveValue('textbook');
+    await expect(generalArticle.getByText('General knowledge', { exact: true })).toBeVisible();
+    record.checks.push({ width, keyboard_select: true, reload_preserves_choice: true, saved_mode_independent_from_composer: true, no_textbook_citations: true, overflow, select_box: box });
+  }
+  const after = await api(`/sessions/${sessionId}/messages`);
+  expect(digest(JSON.stringify(after))).toBe(record.saved.history_sha256);
+  expect(record.mutations).toEqual([{ method: 'POST', path: '/api/v1/auth/login' }]);
+  expect(record.page_errors).toEqual([]);
+  record.history_unchanged = true;
+  record.status = 'passed';
+} catch (error) {
+  record.status = 'failed';
+  record.error = { name: error.name, message: String(error.message).replace(/eyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+/g, '[redacted token]').slice(0, 2200) };
+  await page.screenshot({ path: `${output}/failure.png` }).catch(() => {});
+  process.exitCode = 1;
+} finally {
+  record.finished_at = new Date().toISOString();
+  record.limits = ['Existing G3 provider failure is preserved; this check establishes saved output and error rendering, not successful provider follow-up.', '390-pixel desktop emulation does not establish physical mobile, native IME or assistive-technology usability.', 'No new provider calls or independent scientific ratings.'];
+  await fs.writeFile(`${output}/verification.json`, JSON.stringify(record, null, 2));
+  await browser.close();
+  console.log(JSON.stringify({ status: record.status, output }));
+}
