@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; img-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Source review</title>
+<style>
+:root { color-scheme: light; font-family: system-ui,sans-serif; color:#1f2328; background:#fff; line-height:1.6; }
+* { box-sizing:border-box; } body { margin:0; } main { max-width:58rem; margin:auto; padding:2rem 1.25rem 4rem; }
+h1 { font-size:1.8rem; line-height:1.25; } h2 { font-size:1.25rem; } h3 { font-size:1rem; }
+p { margin:.6rem 0; } .secondary,small { color:#59636e; } .stack { display:grid; gap:1rem; }
+label { display:grid; gap:.3rem; } input,button,textarea { font:inherit; max-width:100%; }
+input,textarea { padding:.6rem; border:1px solid #aeb6bf; border-radius:.4rem; }
+button { padding:.55rem 1rem; min-height:44px; border:1px solid #aeb6bf; border-radius:.4rem; color:inherit; background:#f7f7f8; cursor:pointer; }
+button.primary { background:#1f2328; color:white; } button:disabled { opacity:.5; cursor:default; }
+:focus-visible { outline:3px solid #4577b5; outline-offset:3px; } .actions { display:flex; flex-wrap:wrap; gap:.6rem; align-items:center; margin:1rem 0; }
+fieldset { border:1px solid #d8dde3; border-radius:.5rem; padding:1rem; margin:1rem 0; min-width:0; }
+legend { font-weight:600; } .option { display:flex; align-items:center; gap:.7rem; min-height:44px; }
+.option input { width:1.1rem; height:1.1rem; } .passage,.answer,.claim { white-space:pre-wrap; overflow-wrap:anywhere; }
+.answer,.claim { background:#f7f7f8; padding:1rem; border-radius:.5rem; }
+.passage { border-block:1px solid #d8dde3; padding:1rem 0; } mark { background:#fff0ad; color:inherit; border-bottom:2px solid #9f7c20; }
+.source { margin:1.5rem 0; } .status { padding:.7rem 1rem; background:#f7f7f8; border-radius:.5rem; }
+.error { color:#892c22; white-space:pre-wrap; overflow-wrap:anywhere; } [hidden] { display:none !important; }
+.record-list { padding-left:1.25rem; } .record-list li { margin:.5rem 0; } .timer { font-variant-numeric:tabular-nums; }
+@media(max-width:639px) { main { padding:1.2rem 1rem 3rem; } h1 { font-size:1.55rem; } }
+</style>
+</head>
+<body><main>
+<h1>Source review</h1>
+<p>Check whether a claim is supported by its source passages. The two presentations keep the answer and source text identical.</p>
+<p class="secondary">This page works locally. It sends no files, answers or ratings to a server. Download your recorded judgments before closing it.</p>
+<section id="setup" class="stack" aria-label="Review setup">
+  <label>Review data file<input id="input-file" type="file" accept="application/json,.json"></label>
+  <label>Anonymous participant code<input id="participant" required maxlength="64" autocomplete="off" placeholder="Use the code supplied by the study coordinator"></label>
+  <p class="secondary">Use a study code rather than your name or email. Each participant receives a reproducible, counterbalanced presentation order.</p>
+  <button id="prepare" class="primary">Prepare review</button>
+</section>
+<p id="error" class="error" role="alert" hidden></p>
+<section id="review" hidden aria-label="Review workspace">
+  <p id="study-info" class="secondary"></p>
+  <p id="progress" class="status" role="status"></p>
+  <p>Choose Start when ready. Read the answer and the selected claim, inspect the passages, and record your judgment. Done records elapsed time and your selection. A paused or hidden page is recorded separately.</p>
+  <div class="actions"><button id="start" class="primary">Start review</button><button id="pause" hidden>Pause review</button><span id="timer" class="timer" aria-label="Current elapsed wall time"></span></div>
+  <p id="paused" class="status" hidden>Review paused. Resume to show this item again.</p>
+  <section id="stimulus" hidden aria-label="Review item">
+    <h2 id="item-heading" tabindex="-1"></h2>
+    <h3>Question</h3><p id="question" class="answer"></p>
+    <h3>Answer</h3><div id="answer" class="answer"></div>
+    <h3>Claim to check</h3><p id="claim" class="claim"></p>
+    <div id="sources"></div>
+    <fieldset><legend>How well do these passages support the selected claim?</legend>
+      <label class="option"><input type="radio" name="support" value="supported">Supported</label>
+      <label class="option"><input type="radio" name="support" value="partially_supported">Partially supported</label>
+      <label class="option"><input type="radio" name="support" value="unsupported">Unsupported</label>
+      <label class="option"><input type="radio" name="support" value="cannot_judge">Cannot judge</label>
+    </fieldset>
+    <label>Reason or uncertainty (optional)<textarea id="comment" rows="3" maxlength="2000"></textarea></label>
+    <div class="actions"><button id="done" class="primary" disabled>Done</button></div>
+  </section>
+  <p id="saved" class="status" role="status" hidden></p>
+  <div class="actions"><button id="reopen" hidden>Reopen last completed item</button><button id="download" disabled>Download judgments</button></div>
+  <details><summary>Review records and study key</summary><p class="secondary">The separate analysis key becomes available after all scheduled presentations. Reopened attempts stay separate; earlier judgments remain unchanged.</p><ol id="records" class="record-list"></ol><button id="key-download" disabled>Download analysis key</button></details>
+</section>
+<noscript>This local review tool requires JavaScript.</noscript>
+</main>
+<script id="review-script">
+'use strict';
+const TOOL_VERSION = 'highlight_review_v1';
+const INPUT_VERSION = 'highlight_review_input_v1';
+const MAX_BYTES = 20 * 1024 * 1024;
+const el = id => document.getElementById(id);
+const utf8 = new TextEncoder();
+const sha = async value => Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', typeof value === 'string' ? utf8.encode(value) : value)), x => x.toString(16).padStart(2, '0')).join('');
+const initialDocument = document.documentElement.outerHTML;
+let data = null, datasetHash = null, participant = null, schedule = [], scheduleHash = null, mapping = null, toolHash = null;
+let cursor = 0, completed = [], active = null, tick = null, runStarted = null, reopening = false;
+const fail = message => { el('error').textContent = message; el('error').hidden = false; };
+const clearError = () => { el('error').hidden = true; el('error').textContent = ''; };
+const rng = seed => () => { let t = seed += 0x6D2B79F5; t = Math.imul(t ^ t >>> 15, t | 1); t ^= t + Math.imul(t ^ t >>> 7, t | 61); return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+function shuffle(items, random) { const result = [...items]; for (let i = result.length - 1; i > 0; i--) { const j = Math.floor(random() * (i + 1)); [result[i], result[j]] = [result[j], result[i]]; } return result; }
+function requireString(value, name, max = 300000) { if (typeof value !== 'string' || !value.trim() || value.length > max) throw new Error(`Invalid ${name}.`); }
+function allowedKeys(value, names, name) { if (!value || typeof value !== 'object' || Array.isArray(value) || Object.keys(value).some(key => !names.includes(key))) throw new Error(`Unsupported fields in ${name}. Supply only the participant input contract.`); }
+async function validate(input) {
+  allowedKeys(input, ['version','review_version','seed','items'], 'review data');
+  if (input.version !== INPUT_VERSION) throw new Error('Unsupported review data version.');
+  requireString(input.review_version, 'review version', 200);
+  if (!Number.isInteger(input.seed) || input.seed < 0 || input.seed > 4294967295) throw new Error('The frozen seed must be an unsigned 32-bit integer.');
+  if (!Array.isArray(input.items) || input.items.length < 1 || input.items.length > 1000) throw new Error('Supply between 1 and 1,000 review items.');
+  const ids = new Set();
+  for (const item of input.items) {
+    allowedKeys(item, ['id','question','answer_text','claim','evidence'], 'review item');
+    allowedKeys(item.claim, ['claim_id','start','end','text'], 'claim');
+    requireString(item.id, 'item ID', 200); if (ids.has(item.id)) throw new Error(`Duplicate item ID: ${item.id}`); ids.add(item.id);
+    requireString(item.question, 'question'); requireString(item.answer_text, 'answer'); requireString(item.claim?.claim_id, 'claim ID', 200); requireString(item.claim?.text, 'claim text');
+    const chars = Array.from(item.answer_text), { start, end, text } = item.claim;
+    if (!Number.isInteger(start) || !Number.isInteger(end) || start < 0 || end <= start || chars.slice(start, end).join('') !== text) throw new Error(`Claim offsets do not match the answer for ${item.id}.`);
+    if (!Array.isArray(item.evidence) || !item.evidence.length || item.evidence.length > 20) throw new Error(`Invalid evidence for ${item.id}.`);
+    const evidenceIds = new Set(); let highlights = 0;
+    for (const source of item.evidence) {
+      allowedKeys(source, ['evidence_id','source_title','locator','text','text_sha256','segments'], 'source');
+      requireString(source.evidence_id, 'evidence ID', 200); if (evidenceIds.has(source.evidence_id)) throw new Error(`Duplicate evidence in ${item.id}.`); evidenceIds.add(source.evidence_id);
+      requireString(source.source_title, 'source title'); requireString(source.text, 'source text');
+      if (!/^[0-9a-f]{64}$/.test(source.text_sha256 || '') || await sha(source.text) !== source.text_sha256) throw new Error(`Source hash mismatch for ${item.id}/${source.evidence_id}.`);
+      if (!Array.isArray(source.segments) || !source.segments.length || source.segments.map(s => s.text).join('') !== source.text) throw new Error(`Both presentations must contain identical source text: ${item.id}/${source.evidence_id}.`);
+      for (const segment of source.segments) {
+        allowedKeys(segment, ['text','highlight','fragment_ids'], 'source segment');
+        if (typeof segment.text !== 'string' || typeof segment.highlight !== 'boolean') throw new Error('Invalid source segment.');
+        if (segment.highlight) {
+          if (!segment.text || !Array.isArray(segment.fragment_ids) || !segment.fragment_ids.length || segment.fragment_ids.some(id => typeof id !== 'string' || !id)) throw new Error('Every highlighted segment needs exact fragment IDs.');
+          highlights++;
+        }
+      }
+    }
+    if (!highlights) throw new Error(`No claim-specific highlighted fragment exists for ${item.id}.`);
+  }
+}
+function pending() {
+  const row = schedule[cursor];
+  el('progress').textContent = row ? `Item ${cursor + 1} of ${schedule.length} · Presentation ${row.presentation_code}` : `All ${schedule.length} scheduled presentations completed.`;
+  el('start').hidden = !row; el('start').disabled = !!active;
+  el('reopen').hidden = !completed.length || !!active;
+  el('download').disabled = !completed.length;
+  el('key-download').disabled = cursor < schedule.length || !!active;
+}
+function textNode(tag, value, className) { const node = document.createElement(tag); node.textContent = value; if (className) node.className = className; return node; }
+function showItem(row) {
+  const item = data.items[row.item_index];
+  el('item-heading').textContent = `Presentation ${row.presentation_code}`; el('question').textContent = item.question;
+  el('answer').textContent = item.answer_text; el('claim').textContent = item.claim.text;
+  el('sources').replaceChildren();
+  for (const source of item.evidence) {
+    const section = document.createElement('section'); section.className = 'source'; section.append(textNode('h3', source.source_title));
+    if (source.locator) section.append(textNode('p', source.locator, 'secondary'));
+    const passage = document.createElement('div'); passage.className = 'passage';
+    for (const segment of source.segments) passage.append(row.condition === 'highlight' && segment.highlight ? textNode('mark', segment.text) : document.createTextNode(segment.text));
+    section.append(passage); el('sources').append(section);
+  }
+  document.querySelectorAll('input[name="support"]').forEach(input => { input.checked = false; }); el('comment').value = ''; el('done').disabled = true;
+}
+function accumulate(now = performance.now()) { if (active?.visibleSince !== null && active?.visibleSince !== undefined) { active.visibleMs += now - active.visibleSince; active.visibleSince = null; } }
+function start(index = cursor, isReopen = false) {
+  if (active || !schedule[index]) return; clearError();
+  const row = schedule[index]; showItem(row); const now = performance.now();
+  reopening = isReopen;
+  active = { schedule_index: index, row, started_at: new Date().toISOString(), start: now, visibleSince: document.visibilityState === 'visible' ? now : null, visibleMs: 0, paused: false, events: [{ kind: 'started', elapsed_ms: 0 }], reopened: isReopen };
+  el('stimulus').hidden = false; el('paused').hidden = true; el('saved').hidden = true; el('start').disabled = true; el('reopen').hidden = true;
+  el('pause').hidden = false; el('pause').textContent = 'Pause review'; el('item-heading').focus();
+  el('key-download').disabled = true;
+  tick = setInterval(() => { if (active) el('timer').textContent = `${Math.floor((performance.now() - active.start) / 1000)} s elapsed`; }, 250);
+}
+function pause() {
+  if (!active) return;
+  const now = performance.now(); accumulate(now); active.paused = !active.paused;
+  active.events.push({ kind: active.paused ? 'paused' : 'resumed', elapsed_ms: Math.round(now - active.start) });
+  if (!active.paused && document.visibilityState === 'visible') active.visibleSince = now;
+  el('stimulus').hidden = active.paused; el('paused').hidden = !active.paused;
+  el('pause').textContent = active.paused ? 'Resume review' : 'Pause review';
+  if (!active.paused) el('item-heading').focus();
+}
+function done() {
+  const support = document.querySelector('input[name="support"]:checked')?.value;
+  if (!active || active.paused || !support) return;
+  const now = performance.now(); accumulate(now); const item = data.items[active.row.item_index];
+  const attempts = completed.filter(row => row.schedule_index === active.schedule_index).length;
+  const result = { item_id: item.id, claim_id: item.claim.claim_id, schedule_index: active.schedule_index, presentation_code: active.row.presentation_code, attempt: attempts + 1, reopened: active.reopened, started_at: active.started_at, completed_at: new Date().toISOString(), elapsed_wall_ms: Math.round(now - active.start), active_visible_ms: Math.round(active.visibleMs), support, comment: el('comment').value, events: [...active.events, { kind: 'done', elapsed_ms: Math.round(now - active.start) }] };
+  completed.push(result); if (!reopening) cursor++;
+  clearInterval(tick); active = null; el('stimulus').hidden = true; el('pause').hidden = true; el('timer').textContent = '';
+  const line = textNode('li', `${completed.length}. ${item.id}, presentation ${result.presentation_code}, attempt ${result.attempt}: ${support.replaceAll('_', ' ')}; ${result.elapsed_wall_ms} ms wall time.`);
+  el('records').append(line); el('saved').textContent = 'Judgment recorded locally. Download your judgments to keep them.'; el('saved').hidden = false;
+  pending(); (cursor < schedule.length ? el('start') : el('download')).focus();
+}
+function download(name, value) { const url = URL.createObjectURL(new Blob([JSON.stringify(value, null, 2)], { type:'application/json' })); const link = document.createElement('a'); link.href = url; link.download = name; link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000); }
+function safeName(value) { return value.replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 64); }
+el('prepare').addEventListener('click', async () => {
+  clearError(); el('prepare').disabled = true;
+  try {
+    const file = el('input-file').files[0]; participant = el('participant').value.trim(); requireString(participant, 'anonymous participant code', 64);
+    if (!file || file.size > MAX_BYTES) throw new Error('Choose a review JSON file of at most 20 MB.');
+    const bytes = await file.arrayBuffer(); const candidate = JSON.parse(new TextDecoder('utf-8', { fatal:true }).decode(bytes)); await validate(candidate);
+    data = candidate; datasetHash = await sha(bytes); toolHash = await sha(initialDocument);
+    const identity = await sha(JSON.stringify([TOOL_VERSION, data.review_version, data.seed, participant])); const random = rng(parseInt(identity.slice(0, 8), 16));
+    const indices = shuffle(data.items.map((_, index) => index), random); const flip = random() < .5;
+    mapping = flip ? { A:'highlight', B:'paragraph' } : { A:'paragraph', B:'highlight' };
+    const first = indices.map((item_index, index) => ({ item_index, condition:(index % 2 === 0) !== flip ? 'highlight' : 'paragraph' }));
+    const second = shuffle(first.map(row => ({ ...row, condition: row.condition === 'highlight' ? 'paragraph' : 'highlight' })), random);
+    if (second.length > 1 && second[0].item_index === first.at(-1).item_index) second.push(second.shift());
+    schedule = [...first, ...second].map(row => ({ ...row, presentation_code: mapping.A === row.condition ? 'A' : 'B' }));
+    scheduleHash = await sha(JSON.stringify(schedule)); runStarted = new Date().toISOString();
+    el('study-info').textContent = `${data.review_version} · ${data.items.length} matched items · ${schedule.length} presentations · Participant ${participant}`;
+    el('setup').hidden = true; el('review').hidden = false; pending(); el('start').focus();
+  } catch (error) { fail(error instanceof Error ? error.message : 'The review file could not be loaded.'); }
+  finally { el('prepare').disabled = false; }
+});
+el('start').addEventListener('click', () => start()); el('pause').addEventListener('click', pause); el('done').addEventListener('click', done);
+el('reopen').addEventListener('click', () => { if (completed.length) start(completed.at(-1).schedule_index, true); });
+document.querySelectorAll('input[name="support"]').forEach(input => input.addEventListener('change', () => { el('done').disabled = !document.querySelector('input[name="support"]:checked'); }));
+document.addEventListener('visibilitychange', () => {
+  if (!active) return; const now = performance.now(); accumulate(now); active.events.push({ kind: document.visibilityState === 'visible' ? 'page_visible' : 'page_hidden', elapsed_ms: Math.round(now - active.start) });
+  if (document.visibilityState === 'visible' && !active.paused) active.visibleSince = now;
+});
+el('download').addEventListener('click', () => download(`source-review-${safeName(participant)}.json`, { version:'highlight_review_results_v1', tool_version:TOOL_VERSION, tool_dom_sha256:toolHash, dataset_sha256:datasetHash, review_version:data.review_version, seed:data.seed, participant_id:participant, schedule_sha256:scheduleHash, run_started_at:runStarted, exported_at:new Date().toISOString(), planned_presentations:schedule.length, completed_presentations:new Set(completed.map(row => row.schedule_index)).size, remaining_presentations:schedule.length - cursor, incomplete_current:active ? { schedule_index:active.schedule_index, started_at:active.started_at, status:'in_progress_unscored' } : null, timing_definition:'Wall time includes pauses and hidden-tab time. Active visible time excludes them. These are browser observations, not proof of attention or comprehension.', attempts:completed }));
+el('key-download').addEventListener('click', () => download(`source-review-analysis-key-${safeName(participant)}.json`, { version:'highlight_review_key_v1', tool_version:TOOL_VERSION, dataset_sha256:datasetHash, review_version:data.review_version, participant_id:participant, seed:data.seed, schedule_sha256:scheduleHash, presentation_mapping:mapping, schedule:schedule.map((row,index) => ({ schedule_index:index, item_id:data.items[row.item_index].id, claim_id:data.items[row.item_index].claim.claim_id, presentation_code:row.presentation_code, condition:row.condition })) }));
+window.addEventListener('beforeunload', event => { if (completed.length || active) { event.preventDefault(); event.returnValue = ''; } });
+</script>
+</body>
+</html>

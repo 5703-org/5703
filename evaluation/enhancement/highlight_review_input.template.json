@@ -1,0 +1,75 @@
+{
+  "version": "highlight_review_input_v1",
+  "review_version": "FORMAT-EXAMPLE-NOT-STUDY-DATA",
+  "seed": 20260920,
+  "items": [
+    {
+      "id": "FORMAT-EXAMPLE-01",
+      "question": "What form of energy is stored in sugars?",
+      "answer_text": "Light energy is stored as chemical energy. [ev_001]",
+      "claim": {
+        "claim_id": "FORMAT-EXAMPLE-01-claim",
+        "start": 0,
+        "end": 51,
+        "text": "Light energy is stored as chemical energy. [ev_001]"
+      },
+      "evidence": [
+        {
+          "evidence_id": "ev_001",
+          "source_title": "Authored format example; replace with frozen study evidence",
+          "locator": "Software fixture only",
+          "text": "Photosynthesis captures light energy. Some of that energy is stored as chemical energy in sugars.",
+          "text_sha256": "8e8b2e565864464d6097918506fc1f8c3265c77e06a22dd40e353b659428f4f4",
+          "segments": [
+            {
+              "text": "Photosynthesis captures light energy. ",
+              "highlight": false,
+              "fragment_ids": []
+            },
+            {
+              "text": "Some of that energy is stored as chemical energy in sugars.",
+              "highlight": true,
+              "fragment_ids": [
+                "FORMAT-EXAMPLE-01-authored-fragment"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FORMAT-EXAMPLE-02",
+      "question": "How do enzymes affect activation energy?",
+      "answer_text": "Enzymes lower activation energy. [ev_001]",
+      "claim": {
+        "claim_id": "FORMAT-EXAMPLE-02-claim",
+        "start": 0,
+        "end": 41,
+        "text": "Enzymes lower activation energy. [ev_001]"
+      },
+      "evidence": [
+        {
+          "evidence_id": "ev_001",
+          "source_title": "Authored format example; replace with frozen study evidence",
+          "locator": "Software fixture only",
+          "text": "Enzymes lower the activation energy of a reaction. They are not consumed by that reaction.",
+          "text_sha256": "5016bd8be7ddac0375886e7d4d1ca9c084bd42b9e480cb3c4e549619f427d231",
+          "segments": [
+            {
+              "text": "Enzymes lower the activation energy of a reaction.",
+              "highlight": true,
+              "fragment_ids": [
+                "FORMAT-EXAMPLE-02-authored-fragment"
+              ]
+            },
+            {
+              "text": " They are not consumed by that reaction.",
+              "highlight": false,
+              "fragment_ids": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
