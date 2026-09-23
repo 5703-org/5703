@@ -1720,6 +1720,93 @@ paths:
                 $ref: '#/components/schemas/ErrorEnvelope'
       security:
       - HTTPBearer: []
+  /api/v1/admin/model-configurations/capability-profile:
+    post:
+      tags:
+      - model-settings
+      summary: Capability Profile
+      operationId: capability_profile_api_v1_admin_model_configurations_capability_profile_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ModelValues'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_dict_'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+      security:
+      - HTTPBearer: []
   /api/v1/admin/model-configurations:
     get:
       tags:
@@ -2171,6 +2258,23 @@ paths:
         schema:
           type: string
           title: Configuration Id
+      - name: Idempotency-Key
+        in: header
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Idempotency-Key
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CompatibilityInput'
+              default:
+                tier: all
+                role: answer
+                network_label: local_unverified
       responses:
         '200':
           description: Successful Response
@@ -2178,6 +2282,94 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Envelope_ConnectionTestOut_'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+  /api/v1/admin/model-configurations/{configuration_id}/tests:
+    get:
+      tags:
+      - model-settings
+      summary: Test History
+      operationId: test_history_api_v1_admin_model_configurations__configuration_id__tests_get
+      security:
+      - HTTPBearer: []
+      parameters:
+      - name: configuration_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Configuration Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_list_ConnectionTestOut__'
         '422':
           description: Structured application error
           content:
@@ -3223,7 +3415,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Envelope_EvidenceSnapshot_'
+                $ref: '#/components/schemas/Envelope_Union_EvidenceSnapshot__CitationView__'
         '422':
           description: Structured application error
           content:
@@ -6398,6 +6590,1505 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorEnvelope'
+  /api/v1/me/memory/settings:
+    get:
+      tags:
+      - learning state
+      summary: Memory Settings
+      operationId: memory_settings_api_v1_me_memory_settings_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_MemorySettingsOut_'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+      security:
+      - HTTPBearer: []
+    patch:
+      tags:
+      - learning state
+      summary: Save Memory Settings
+      operationId: save_memory_settings_api_v1_me_memory_settings_patch
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MemorySettingsUpdate'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_MemorySettingsOut_'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+      security:
+      - HTTPBearer: []
+  /api/v1/me/memories:
+    get:
+      tags:
+      - learning state
+      summary: Memories
+      operationId: memories_api_v1_me_memories_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_list_MemoryOut__'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+      security:
+      - HTTPBearer: []
+    post:
+      tags:
+      - learning state
+      summary: Create Memory
+      operationId: create_memory_api_v1_me_memories_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MemoryRecordCreate'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_MemoryOut_'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+      security:
+      - HTTPBearer: []
+  /api/v1/me/memories/{memory_id}:
+    patch:
+      tags:
+      - learning state
+      summary: Edit Memory
+      operationId: edit_memory_api_v1_me_memories__memory_id__patch
+      security:
+      - HTTPBearer: []
+      parameters:
+      - name: memory_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Memory Id
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MemoryEdit'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_MemoryOut_'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+    delete:
+      tags:
+      - learning state
+      summary: Delete Memory
+      operationId: delete_memory_api_v1_me_memories__memory_id__delete
+      security:
+      - HTTPBearer: []
+      parameters:
+      - name: memory_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Memory Id
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MemoryDelete'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_dict_'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+  /api/v1/me/memory/assessments:
+    post:
+      tags:
+      - learning state
+      summary: Record Assessment
+      operationId: record_assessment_api_v1_me_memory_assessments_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MemoryAssessmentCreate'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_MemoryOut_'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+      security:
+      - HTTPBearer: []
+  /api/v1/me/memory/summary:
+    get:
+      tags:
+      - learning state
+      summary: Memory Summary
+      operationId: memory_summary_api_v1_me_memory_summary_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_MemorySummaryOut_'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+      security:
+      - HTTPBearer: []
+  /api/v1/me/memory/processing:
+    get:
+      tags:
+      - learning state
+      summary: Memory Processing
+      operationId: memory_processing_api_v1_me_memory_processing_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_list_MemoryProcessingOut__'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+      security:
+      - HTTPBearer: []
+  /api/v1/me/memory/preview:
+    post:
+      tags:
+      - learning state
+      summary: Preview Learner State
+      operationId: preview_learner_state_api_v1_me_memory_preview_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LearnerStatePreview'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_LearnerStateOut_'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+      security:
+      - HTTPBearer: []
+  /api/v1/me/memories/{memory_id}/undo:
+    post:
+      tags:
+      - learning state
+      summary: Undo Memory Save
+      description: Undo this saved revision by deleting it; never resurrect a hidden
+        deleted body.
+      operationId: undo_memory_save_api_v1_me_memories__memory_id__undo_post
+      security:
+      - HTTPBearer: []
+      parameters:
+      - name: memory_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Memory Id
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MemoryDelete'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_dict_'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+  /api/v1/me/memories/{memory_id}/source:
+    get:
+      tags:
+      - learning state
+      summary: Memory Source
+      operationId: memory_source_api_v1_me_memories__memory_id__source_get
+      security:
+      - HTTPBearer: []
+      parameters:
+      - name: memory_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Memory Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_dict_'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+  /api/v1/sessions/{session_id}/memory-notices:
+    get:
+      tags:
+      - learning state
+      summary: Memory Notices
+      operationId: memory_notices_api_v1_sessions__session_id__memory_notices_get
+      security:
+      - HTTPBearer: []
+      parameters:
+      - name: session_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Session Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_list_dict__'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+  /api/v1/sessions/{session_id}/learning-tasks:
+    get:
+      tags:
+      - learning state
+      summary: Learning Tasks
+      operationId: learning_tasks_api_v1_sessions__session_id__learning_tasks_get
+      security:
+      - HTTPBearer: []
+      parameters:
+      - name: session_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Session Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_list_TaskOut__'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+  /api/v1/answers/{answer_id}/presentation:
+    get:
+      tags:
+      - learning state
+      summary: Presentation
+      operationId: presentation_api_v1_answers__answer_id__presentation_get
+      security:
+      - HTTPBearer: []
+      parameters:
+      - name: answer_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Answer Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_PresentationOut_'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+  /api/v1/answers/{answer_id}/claims/{claim_id}/sources:
+    get:
+      tags:
+      - learning state
+      summary: Claim Sources
+      operationId: claim_sources_api_v1_answers__answer_id__claims__claim_id__sources_get
+      security:
+      - HTTPBearer: []
+      parameters:
+      - name: answer_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Answer Id
+      - name: claim_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Claim Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_list_CitationView__'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+  /api/v1/answers/{answer_id}/exposures:
+    post:
+      tags:
+      - learning state
+      summary: Exposure
+      operationId: exposure_api_v1_answers__answer_id__exposures_post
+      security:
+      - HTTPBearer: []
+      parameters:
+      - name: answer_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Answer Id
+      - name: idempotency-key
+        in: header
+        required: true
+        schema:
+          type: string
+          title: Idempotency-Key
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExposureInput'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_ExposureOut_'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
   /api/v1/health/live:
     get:
       tags:
@@ -6524,6 +8215,16 @@ components:
           type: integer
           minimum: 0.0
           title: Expected Active Version
+        checker_configuration_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Checker Configuration Id
+        checker_test_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Checker Test Id
       additionalProperties: false
       type: object
       required:
@@ -6572,6 +8273,21 @@ components:
           - mock
           - live
           title: Model Mode
+        answer_mode:
+          type: string
+          enum:
+          - textbook
+          - general_knowledge
+          title: Answer Mode
+          default: textbook
+        source_provenance:
+          type: string
+          enum:
+          - textbook_evidence
+          - model_general_knowledge_unverified
+          - benchmark_protocol
+          title: Source Provenance
+          default: textbook_evidence
         response:
           anyOf:
           - $ref: '#/components/schemas/ChatResponseV1'
@@ -6599,6 +8315,40 @@ components:
         can_regenerate:
           type: boolean
           title: Can Regenerate
+        teaching_mode:
+          type: string
+          enum:
+          - direct
+          - hint
+          title: Teaching Mode
+          default: direct
+        task_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Task Id
+        help_level:
+          type: integer
+          title: Help Level
+          default: 0
+        presentation:
+          anyOf:
+          - additionalProperties: true
+            type: object
+          - type: 'null'
+          title: Presentation
+        attribution:
+          anyOf:
+          - additionalProperties: true
+            type: object
+          - type: 'null'
+          title: Attribution
+        memory_notices:
+          items:
+            additionalProperties: true
+            type: object
+          type: array
+          title: Memory Notices
       additionalProperties: false
       type: object
       required:
@@ -6706,6 +8456,36 @@ components:
           type: boolean
           title: Use Profile
           default: true
+        answer_mode:
+          type: string
+          enum:
+          - textbook
+          - general_knowledge
+          title: Answer Mode
+          default: textbook
+        teaching_mode:
+          anyOf:
+          - type: string
+            enum:
+            - direct
+            - hint
+          - type: 'null'
+          title: Teaching Mode
+        task_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Task Id
+        task_action:
+          type: string
+          enum:
+          - auto
+          - new
+          - continue
+          - more_hint
+          - full_explanation
+          title: Task Action
+          default: auto
       additionalProperties: false
       type: object
       required:
@@ -6777,6 +8557,61 @@ components:
       - follow_up_questions
       - confidence
       title: ChatResponseV1
+    CitationView:
+      properties:
+        evidence_id:
+          type: string
+          title: Evidence Id
+        claim_ids:
+          items:
+            type: string
+          type: array
+          title: Claim Ids
+        title:
+          type: string
+          title: Title
+        source_title:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Source Title
+        section:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Section
+        pages:
+          items:
+            type: integer
+          type: array
+          title: Pages
+        segments:
+          items:
+            $ref: '#/components/schemas/TextSegment'
+          type: array
+          title: Segments
+        available_actions:
+          items:
+            type: string
+          type: array
+          title: Available Actions
+        source_url:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Source Url
+        license:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: License
+      additionalProperties: false
+      type: object
+      required:
+      - evidence_id
+      - title
+      - segments
+      title: CitationView
     CommandInput:
       properties:
         command:
@@ -6788,6 +8623,34 @@ components:
       required:
       - command
       title: CommandInput
+    CompatibilityInput:
+      properties:
+        tier:
+          type: string
+          enum:
+          - basic
+          - structured
+          - project
+          - all
+          title: Tier
+          default: all
+        role:
+          type: string
+          enum:
+          - answer
+          - checker
+          title: Role
+          default: answer
+        network_label:
+          type: string
+          maxLength: 80
+          minLength: 1
+          pattern: ^[A-Za-z0-9_. -]+$
+          title: Network Label
+          default: local_unverified
+      additionalProperties: false
+      type: object
+      title: CompatibilityInput
     ConfigInput:
       properties:
         kind:
@@ -6855,8 +8718,10 @@ components:
         status:
           type: string
           enum:
+          - running
           - passed
           - failed
+          - uncertain
           title: Status
         model_mode:
           type: string
@@ -6881,6 +8746,54 @@ components:
           type: string
           format: date-time
           title: Created At
+        test_version:
+          type: string
+          enum:
+          - legacy_connection_v1
+          - provider_probe_v2
+          title: Test Version
+          default: legacy_connection_v1
+        role:
+          type: string
+          enum:
+          - answer
+          - checker
+          title: Role
+          default: answer
+        tier:
+          type: string
+          enum:
+          - legacy
+          - basic
+          - structured
+          - project
+          - all
+          title: Tier
+          default: legacy
+        network_label:
+          type: string
+          title: Network Label
+          default: not_recorded
+        project_passed:
+          type: boolean
+          title: Project Passed
+          default: false
+        completed_at:
+          anyOf:
+          - type: string
+            format: date-time
+          - type: 'null'
+          title: Completed At
+        budget:
+          additionalProperties: true
+          type: object
+          title: Budget
+        stages:
+          items:
+            additionalProperties: true
+            type: object
+          type: array
+          title: Stages
       additionalProperties: false
       type: object
       required:
@@ -6992,10 +8905,10 @@ components:
       - data
       - meta
       title: Envelope[ConnectionTestOut]
-    Envelope_EvidenceSnapshot_:
+    Envelope_ExposureOut_:
       properties:
         data:
-          $ref: '#/components/schemas/EvidenceSnapshot'
+          $ref: '#/components/schemas/ExposureOut'
         meta:
           $ref: '#/components/schemas/ResponseMeta'
       additionalProperties: false
@@ -7003,7 +8916,7 @@ components:
       required:
       - data
       - meta
-      title: Envelope[EvidenceSnapshot]
+      title: Envelope[ExposureOut]
     Envelope_FailureDetail_:
       properties:
         data:
@@ -7064,6 +8977,54 @@ components:
       - data
       - meta
       title: Envelope[JobReceipt]
+    Envelope_LearnerStateOut_:
+      properties:
+        data:
+          $ref: '#/components/schemas/LearnerStateOut'
+        meta:
+          $ref: '#/components/schemas/ResponseMeta'
+      additionalProperties: false
+      type: object
+      required:
+      - data
+      - meta
+      title: Envelope[LearnerStateOut]
+    Envelope_MemoryOut_:
+      properties:
+        data:
+          $ref: '#/components/schemas/MemoryOut'
+        meta:
+          $ref: '#/components/schemas/ResponseMeta'
+      additionalProperties: false
+      type: object
+      required:
+      - data
+      - meta
+      title: Envelope[MemoryOut]
+    Envelope_MemorySettingsOut_:
+      properties:
+        data:
+          $ref: '#/components/schemas/MemorySettingsOut'
+        meta:
+          $ref: '#/components/schemas/ResponseMeta'
+      additionalProperties: false
+      type: object
+      required:
+      - data
+      - meta
+      title: Envelope[MemorySettingsOut]
+    Envelope_MemorySummaryOut_:
+      properties:
+        data:
+          $ref: '#/components/schemas/MemorySummaryOut'
+        meta:
+          $ref: '#/components/schemas/ResponseMeta'
+      additionalProperties: false
+      type: object
+      required:
+      - data
+      - meta
+      title: Envelope[MemorySummaryOut]
     Envelope_MessagePage_:
       properties:
         data:
@@ -7100,6 +9061,18 @@ components:
       - data
       - meta
       title: Envelope[ModelSettingsState]
+    Envelope_PresentationOut_:
+      properties:
+        data:
+          $ref: '#/components/schemas/PresentationOut'
+        meta:
+          $ref: '#/components/schemas/ResponseMeta'
+      additionalProperties: false
+      type: object
+      required:
+      - data
+      - meta
+      title: Envelope[PresentationOut]
     Envelope_Profile_:
       properties:
         data:
@@ -7148,6 +9121,21 @@ components:
       - data
       - meta
       title: Envelope[TokenData]
+    Envelope_Union_EvidenceSnapshot__CitationView__:
+      properties:
+        data:
+          anyOf:
+          - $ref: '#/components/schemas/EvidenceSnapshot'
+          - $ref: '#/components/schemas/CitationView'
+          title: Data
+        meta:
+          $ref: '#/components/schemas/ResponseMeta'
+      additionalProperties: false
+      type: object
+      required:
+      - data
+      - meta
+      title: Envelope[Union[EvidenceSnapshot, CitationView]]
     Envelope_Union_FeedbackOut__NoneType__:
       properties:
         data:
@@ -7203,6 +9191,36 @@ components:
       - data
       - meta
       title: Envelope[dict[str, bool]]
+    Envelope_list_CitationView__:
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/CitationView'
+          type: array
+          title: Data
+        meta:
+          $ref: '#/components/schemas/ResponseMeta'
+      additionalProperties: false
+      type: object
+      required:
+      - data
+      - meta
+      title: Envelope[list[CitationView]]
+    Envelope_list_ConnectionTestOut__:
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/ConnectionTestOut'
+          type: array
+          title: Data
+        meta:
+          $ref: '#/components/schemas/ResponseMeta'
+      additionalProperties: false
+      type: object
+      required:
+      - data
+      - meta
+      title: Envelope[list[ConnectionTestOut]]
     Envelope_list_FeedbackOut__:
       properties:
         data:
@@ -7218,6 +9236,36 @@ components:
       - data
       - meta
       title: Envelope[list[FeedbackOut]]
+    Envelope_list_MemoryOut__:
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/MemoryOut'
+          type: array
+          title: Data
+        meta:
+          $ref: '#/components/schemas/ResponseMeta'
+      additionalProperties: false
+      type: object
+      required:
+      - data
+      - meta
+      title: Envelope[list[MemoryOut]]
+    Envelope_list_MemoryProcessingOut__:
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/MemoryProcessingOut'
+          type: array
+          title: Data
+        meta:
+          $ref: '#/components/schemas/ResponseMeta'
+      additionalProperties: false
+      type: object
+      required:
+      - data
+      - meta
+      title: Envelope[list[MemoryProcessingOut]]
     Envelope_list_ProviderPreset__:
       properties:
         data:
@@ -7248,6 +9296,21 @@ components:
       - data
       - meta
       title: Envelope[list[SessionOut]]
+    Envelope_list_TaskOut__:
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/TaskOut'
+          type: array
+          title: Data
+        meta:
+          $ref: '#/components/schemas/ResponseMeta'
+      additionalProperties: false
+      type: object
+      required:
+      - data
+      - meta
+      title: Envelope[list[TaskOut]]
     Envelope_list_UserOut__:
       properties:
         data:
@@ -7378,6 +9441,23 @@ components:
           anyOf:
           - $ref: '#/components/schemas/EvidenceOrigin'
           - type: 'null'
+        chunk_text_hash:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Chunk Text Hash
+        chunk_start:
+          anyOf:
+          - type: integer
+            minimum: 0.0
+          - type: 'null'
+          title: Chunk Start
+        chunk_end:
+          anyOf:
+          - type: integer
+            minimum: 0.0
+          - type: 'null'
+          title: Chunk End
       additionalProperties: false
       type: object
       required:
@@ -7462,6 +9542,69 @@ components:
       - configuration_id
       - scheduled_count
       title: ExperimentSpec
+    ExposureInput:
+      properties:
+        kind:
+          type: string
+          enum:
+          - rendered
+          - citation_opened
+          - full_source_requested
+          title: Kind
+        presentation_id:
+          type: string
+          title: Presentation Id
+        evidence_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Evidence Id
+        claim_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Claim Id
+        surface:
+          type: string
+          enum:
+          - answer
+          - citation
+          - full_source
+          title: Surface
+          default: answer
+        parent_exposure_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Parent Exposure Id
+      additionalProperties: false
+      type: object
+      required:
+      - kind
+      - presentation_id
+      title: ExposureInput
+    ExposureOut:
+      properties:
+        id:
+          type: string
+          title: Id
+        kind:
+          type: string
+          title: Kind
+        presentation_id:
+          type: string
+          title: Presentation Id
+        citation_view:
+          anyOf:
+          - $ref: '#/components/schemas/CitationView'
+          - type: 'null'
+      additionalProperties: false
+      type: object
+      required:
+      - id
+      - kind
+      - presentation_id
+      title: ExposureOut
     FailureAttempt:
       properties:
         stage:
@@ -7484,6 +9627,10 @@ components:
           type: string
           format: date-time
           title: Created At
+        provider_diagnostic:
+          anyOf:
+          - $ref: '#/components/schemas/FailureProviderDiagnostic'
+          - type: 'null'
       additionalProperties: false
       type: object
       required:
@@ -7498,6 +9645,11 @@ components:
           - type: integer
           - type: 'null'
           title: Candidates
+        filtered:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Filtered
         submitted:
           anyOf:
           - type: integer
@@ -7592,6 +9744,10 @@ components:
           - type: string
           - type: 'null'
           title: Refusal Reason
+        processing:
+          anyOf:
+          - $ref: '#/components/schemas/FailureProcessing'
+          - type: 'null'
       additionalProperties: false
       type: object
       required:
@@ -7671,6 +9827,162 @@ components:
       - limit
       - offset
       title: FailurePage
+    FailureProcessing:
+      properties:
+        understanding:
+          $ref: '#/components/schemas/ProcessingUnderstanding'
+        corpus_release_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Corpus Release Id
+        requested_device:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Requested Device
+        resolved_device:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Resolved Device
+        relevance_policy:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Relevance Policy
+        relevance_minimum_logit:
+          anyOf:
+          - type: number
+          - type: 'null'
+          title: Relevance Minimum Logit
+        reranker_model:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Reranker Model
+        excluded:
+          items:
+            $ref: '#/components/schemas/ProcessingExclusion'
+          type: array
+          title: Excluded
+        exclusions_truncated:
+          type: boolean
+          title: Exclusions Truncated
+          default: false
+        timing_ms:
+          additionalProperties:
+            type: number
+          type: object
+          title: Timing Ms
+        timing_scope:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Timing Scope
+        coverage:
+          anyOf:
+          - $ref: '#/components/schemas/ProcessingCoverage'
+          - type: 'null'
+        packing:
+          anyOf:
+          - $ref: '#/components/schemas/ProcessingPacking'
+          - type: 'null'
+        citation_audit:
+          anyOf:
+          - $ref: '#/components/schemas/ProcessingCitationAudit'
+          - type: 'null'
+        reuse:
+          anyOf:
+          - $ref: '#/components/schemas/ProcessingReuse'
+          - type: 'null'
+        teaching:
+          anyOf:
+          - $ref: '#/components/schemas/ProcessingTeaching'
+          - type: 'null'
+        facet_fallback:
+          anyOf:
+          - $ref: '#/components/schemas/ProcessingFacetFallback'
+          - type: 'null'
+        selection_source:
+          anyOf:
+          - type: string
+            enum:
+            - whole_query
+            - facet_fallback
+          - type: 'null'
+          title: Selection Source
+        memory:
+          anyOf:
+          - $ref: '#/components/schemas/ProcessingMemory'
+          - type: 'null'
+      additionalProperties: false
+      type: object
+      required:
+      - understanding
+      title: FailureProcessing
+    FailureProviderDiagnostic:
+      properties:
+        stage:
+          type: string
+          enum:
+          - configuration
+          - network
+          - http
+          - decode
+          - validation
+          - completed
+          title: Stage
+        http_status:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Http Status
+        provider_error_type:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Provider Error Type
+        provider_error_code:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Provider Error Code
+        provider_error_parameter:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Provider Error Parameter
+        provider_request_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Provider Request Id
+        finish_reason:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Finish Reason
+        network_error:
+          anyOf:
+          - type: string
+            enum:
+            - dns
+            - tls
+            - connection
+            - timeout
+          - type: 'null'
+          title: Network Error
+        request_submitted:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Request Submitted
+      additionalProperties: false
+      type: object
+      required:
+      - stage
+      title: FailureProviderDiagnostic
     FailureStage:
       properties:
         stage:
@@ -7917,6 +10229,69 @@ components:
       - user_message_id
       - poll_url
       title: JobReceipt
+    LearnerStateOut:
+      properties:
+        enabled:
+          type: boolean
+          title: Enabled
+        policy_version:
+          type: string
+          title: Policy Version
+        snapshot_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Snapshot Id
+        fields:
+          items:
+            additionalProperties: true
+            type: object
+          type: array
+          title: Fields
+        entries:
+          items:
+            additionalProperties: true
+            type: object
+          type: array
+          title: Entries
+        query_topics:
+          items:
+            type: string
+          type: array
+          title: Query Topics
+        excluded:
+          items:
+            additionalProperties: true
+            type: object
+          type: array
+          title: Excluded
+        limitations:
+          items:
+            type: string
+          type: array
+          title: Limitations
+      additionalProperties: false
+      type: object
+      required:
+      - enabled
+      - policy_version
+      title: LearnerStateOut
+    LearnerStatePreview:
+      properties:
+        question:
+          type: string
+          maxLength: 4000
+          minLength: 1
+          title: Question
+        use_profile:
+          type: boolean
+          title: Use Profile
+          default: true
+      additionalProperties: false
+      type: object
+      required:
+      - question
+      title: LearnerStatePreview
     LoginRequest:
       properties:
         email:
@@ -8012,6 +10387,392 @@ components:
       required:
       - manifest
       title: ManifestInput
+    MemoryAssessmentCreate:
+      properties:
+        owner_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Owner Id
+        question_message_id:
+          type: string
+          title: Question Message Id
+        response_message_id:
+          type: string
+          title: Response Message Id
+        question_quote:
+          type: string
+          maxLength: 4000
+          minLength: 1
+          title: Question Quote
+        response_quote:
+          type: string
+          maxLength: 4000
+          minLength: 1
+          title: Response Quote
+        scope:
+          type: string
+          maxLength: 200
+          minLength: 1
+          title: Scope
+        scoring_basis:
+          type: string
+          maxLength: 4000
+          minLength: 1
+          title: Scoring Basis
+        evaluator_id:
+          type: string
+          maxLength: 120
+          minLength: 1
+          title: Evaluator Id
+        evaluator_version:
+          type: string
+          maxLength: 120
+          minLength: 1
+          title: Evaluator Version
+        score:
+          anyOf:
+          - type: number
+            maximum: 1.0
+            minimum: 0.0
+          - type: 'null'
+          title: Score
+        confirmation:
+          type: string
+          enum:
+          - self_reported
+          - automatic
+          - human
+          title: Confirmation
+          default: self_reported
+        rubric_kind:
+          type: string
+          enum:
+          - recorded
+          - exact_text
+          - numeric
+          title: Rubric Kind
+          default: recorded
+        expected_answer:
+          anyOf:
+          - type: string
+            maxLength: 2000
+          - type: 'null'
+          title: Expected Answer
+        tolerance:
+          type: number
+          minimum: 0.0
+          title: Tolerance
+          default: 0.0
+        reviewer_attestation:
+          type: boolean
+          title: Reviewer Attestation
+          default: false
+      additionalProperties: false
+      type: object
+      required:
+      - question_message_id
+      - response_message_id
+      - question_quote
+      - response_quote
+      - scope
+      - scoring_basis
+      - evaluator_id
+      - evaluator_version
+      title: MemoryAssessmentCreate
+    MemoryDelete:
+      properties:
+        version:
+          type: integer
+          minimum: 1.0
+          title: Version
+      additionalProperties: false
+      type: object
+      required:
+      - version
+      title: MemoryDelete
+    MemoryEdit:
+      properties:
+        version:
+          type: integer
+          minimum: 1.0
+          title: Version
+        content:
+          type: string
+          maxLength: 2000
+          minLength: 1
+          title: Content
+        scope:
+          type: string
+          maxLength: 200
+          minLength: 1
+          title: Scope
+          default: global
+        expires_at:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Expires At
+        field_key:
+          anyOf:
+          - type: string
+            maxLength: 120
+          - type: 'null'
+          title: Field Key
+      additionalProperties: false
+      type: object
+      required:
+      - version
+      - content
+      title: MemoryEdit
+    MemoryOut:
+      properties:
+        id:
+          type: string
+          title: Id
+        category:
+          type: string
+          enum:
+          - preference
+          - goal
+          - confirmed_observation
+          - course_context
+          - self_reported_observation
+          - assessment_performance
+          title: Category
+        content:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Content
+        scope:
+          type: string
+          title: Scope
+        source_message_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Source Message Id
+        status:
+          type: string
+          enum:
+          - active
+          - expired
+          - deleted
+          title: Status
+        version:
+          type: integer
+          title: Version
+        updated_at:
+          type: string
+          title: Updated At
+        expires_at:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Expires At
+        field_key:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Field Key
+        scope_topics:
+          items:
+            type: string
+          type: array
+          title: Scope Topics
+        verification:
+          type: string
+          title: Verification
+          default: legacy_unverified
+        writer_version:
+          type: string
+          title: Writer Version
+          default: explicit_learning_memory_v1
+        effective_at:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Effective At
+        source_event_sequence:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Source Event Sequence
+        provenance:
+          additionalProperties: true
+          type: object
+          title: Provenance
+      additionalProperties: false
+      type: object
+      required:
+      - id
+      - category
+      - content
+      - scope
+      - source_message_id
+      - status
+      - version
+      - updated_at
+      - expires_at
+      title: MemoryOut
+    MemoryProcessingOut:
+      properties:
+        event_id:
+          type: string
+          title: Event Id
+        source_message_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Source Message Id
+        sequence:
+          type: integer
+          title: Sequence
+        status:
+          type: string
+          title: Status
+        operations:
+          items:
+            additionalProperties: true
+            type: object
+          type: array
+          title: Operations
+        error:
+          anyOf:
+          - additionalProperties: true
+            type: object
+          - type: 'null'
+          title: Error
+        created_at:
+          type: string
+          title: Created At
+      additionalProperties: false
+      type: object
+      required:
+      - event_id
+      - source_message_id
+      - sequence
+      - status
+      - operations
+      - error
+      - created_at
+      title: MemoryProcessingOut
+    MemoryRecordCreate:
+      properties:
+        category:
+          type: string
+          enum:
+          - preference
+          - goal
+          - course_context
+          - self_reported_observation
+          title: Category
+        field_key:
+          type: string
+          maxLength: 120
+          minLength: 1
+          title: Field Key
+        content:
+          type: string
+          maxLength: 2000
+          minLength: 1
+          title: Content
+        scope:
+          type: string
+          maxLength: 200
+          minLength: 1
+          title: Scope
+          default: global
+        source_message_id:
+          type: string
+          title: Source Message Id
+        source_quote:
+          type: string
+          maxLength: 4000
+          minLength: 1
+          title: Source Quote
+        expires_at:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Expires At
+      additionalProperties: false
+      type: object
+      required:
+      - category
+      - field_key
+      - content
+      - source_message_id
+      - source_quote
+      title: MemoryRecordCreate
+    MemorySettingsOut:
+      properties:
+        enabled:
+          type: boolean
+          title: Enabled
+        version:
+          type: integer
+          title: Version
+        revocation_epoch:
+          type: integer
+          title: Revocation Epoch
+      additionalProperties: false
+      type: object
+      required:
+      - enabled
+      - version
+      - revocation_epoch
+      title: MemorySettingsOut
+    MemorySettingsUpdate:
+      properties:
+        enabled:
+          type: boolean
+          title: Enabled
+        version:
+          type: integer
+          minimum: 1.0
+          title: Version
+      additionalProperties: false
+      type: object
+      required:
+      - enabled
+      - version
+      title: MemorySettingsUpdate
+    MemorySummaryOut:
+      properties:
+        enabled:
+          type: boolean
+          title: Enabled
+        version:
+          type: string
+          title: Version
+        active_count:
+          type: integer
+          title: Active Count
+        summary:
+          type: string
+          title: Summary
+        items:
+          items:
+            $ref: '#/components/schemas/MemoryOut'
+          type: array
+          title: Items
+        limitations:
+          items:
+            type: string
+          type: array
+          title: Limitations
+      additionalProperties: false
+      type: object
+      required:
+      - enabled
+      - version
+      - active_count
+      - summary
+      - items
+      - limitations
+      title: MemorySummaryOut
     MessageOut:
       properties:
         id:
@@ -8169,6 +10930,14 @@ components:
           anyOf:
           - $ref: '#/components/schemas/ConnectionTestOut'
           - type: 'null'
+        latest_answer_test:
+          anyOf:
+          - $ref: '#/components/schemas/ConnectionTestOut'
+          - type: 'null'
+        latest_checker_test:
+          anyOf:
+          - $ref: '#/components/schemas/ConnectionTestOut'
+          - type: 'null'
         active:
           type: boolean
           title: Active
@@ -8203,6 +10972,11 @@ components:
         active_version:
           type: integer
           title: Active Version
+        active_checker_configuration_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Active Checker Configuration Id
         source:
           type: string
           enum:
@@ -8254,7 +11028,7 @@ components:
           default: 16384
         max_tokens:
           type: integer
-          maximum: 1024.0
+          maximum: 32768.0
           minimum: 1.0
           title: Max Tokens
           default: 1024
@@ -8354,6 +11128,16 @@ components:
           - error
           title: Token Count Fallback
           default: estimate
+        capability_version:
+          anyOf:
+          - type: string
+            const: provider_capabilities_v1
+          - type: 'null'
+          title: Capability Version
+        capabilities:
+          anyOf:
+          - $ref: '#/components/schemas/ProviderCapabilities'
+          - type: 'null'
       additionalProperties: false
       type: object
       required:
@@ -8376,6 +11160,47 @@ components:
       - old_password
       - new_password
       title: PasswordChange
+    PresentationOut:
+      properties:
+        id:
+          type: string
+          title: Id
+        task_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Task Id
+        teaching_mode:
+          type: string
+          enum:
+          - direct
+          - hint
+          title: Teaching Mode
+        help_level:
+          type: integer
+          title: Help Level
+        policy_version:
+          type: string
+          title: Policy Version
+        content_hash:
+          type: string
+          title: Content Hash
+        citation_views:
+          items:
+            $ref: '#/components/schemas/CitationView'
+          type: array
+          title: Citation Views
+      additionalProperties: false
+      type: object
+      required:
+      - id
+      - task_id
+      - teaching_mode
+      - help_level
+      - policy_version
+      - content_hash
+      - citation_views
+      title: PresentationOut
     ProcessInput:
       properties:
         configuration:
@@ -8390,6 +11215,369 @@ components:
       additionalProperties: false
       type: object
       title: ProcessInput
+    ProcessingCitationAudit:
+      properties:
+        version:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Version
+        status:
+          anyOf:
+          - type: string
+            enum:
+            - review_required
+            - no_heuristic_flags
+            - not_applicable
+          - type: 'null'
+          title: Status
+        flag_count:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Flag Count
+      additionalProperties: false
+      type: object
+      title: ProcessingCitationAudit
+    ProcessingCorrection:
+      properties:
+        replacement:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Replacement
+        excluded:
+          items:
+            type: string
+          type: array
+          title: Excluded
+        prior_question:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Prior Question
+      additionalProperties: false
+      type: object
+      title: ProcessingCorrection
+    ProcessingCoverage:
+      properties:
+        version:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Version
+        status:
+          anyOf:
+          - type: string
+            enum:
+            - none
+            - partial
+            - full
+          - type: 'null'
+          title: Status
+        uncovered_facet_ids:
+          items:
+            type: string
+          type: array
+          title: Uncovered Facet Ids
+        scope:
+          type: string
+          title: Scope
+          default: Lexical request coverage; independent support review remains separate.
+      additionalProperties: false
+      type: object
+      title: ProcessingCoverage
+    ProcessingExclusion:
+      properties:
+        chunk_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Chunk Id
+        reason:
+          type: string
+          title: Reason
+        stage:
+          type: string
+          enum:
+          - relevance
+          - budget
+          - reuse
+          title: Stage
+        score:
+          anyOf:
+          - type: number
+          - type: 'null'
+          title: Score
+      additionalProperties: false
+      type: object
+      required:
+      - reason
+      - stage
+      title: ProcessingExclusion
+    ProcessingFacet:
+      properties:
+        id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Id
+        request:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Request
+        terms:
+          items:
+            type: string
+          type: array
+          title: Terms
+      additionalProperties: false
+      type: object
+      title: ProcessingFacet
+    ProcessingFacetAttempt:
+      properties:
+        facet_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Facet Id
+        query:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Query
+        candidate_count:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Candidate Count
+        accepted_count:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Accepted Count
+        accepted_chunk_ids:
+          items:
+            type: string
+          type: array
+          title: Accepted Chunk Ids
+        model:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Model
+        revision:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Revision
+        excluded:
+          items:
+            $ref: '#/components/schemas/ProcessingExclusion'
+          type: array
+          title: Excluded
+      additionalProperties: false
+      type: object
+      title: ProcessingFacetAttempt
+    ProcessingFacetFallback:
+      properties:
+        triggered:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Triggered
+        reason:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Reason
+        policy_version:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Policy Version
+        whole_query_candidate_count:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Whole Query Candidate Count
+        whole_query_accepted_count:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Whole Query Accepted Count
+        elapsed_ms:
+          anyOf:
+          - type: number
+          - type: 'null'
+          title: Elapsed Ms
+        attempted_facets:
+          items:
+            $ref: '#/components/schemas/ProcessingFacetAttempt'
+          type: array
+          title: Attempted Facets
+        accepted_chunk_ids:
+          items:
+            type: string
+          type: array
+          title: Accepted Chunk Ids
+      additionalProperties: false
+      type: object
+      title: ProcessingFacetFallback
+    ProcessingMemory:
+      properties:
+        status:
+          type: string
+          enum:
+          - ready
+          - disabled
+          - unavailable
+          title: Status
+        policy_version:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Policy Version
+        error_code:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Error Code
+      additionalProperties: false
+      type: object
+      required:
+      - status
+      title: ProcessingMemory
+    ProcessingPacking:
+      properties:
+        version:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Version
+        text_token_ceiling:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Text Token Ceiling
+        duplicate_count:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Duplicate Count
+      additionalProperties: false
+      type: object
+      title: ProcessingPacking
+    ProcessingReuse:
+      properties:
+        available_count:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Available Count
+        eligible_count:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Eligible Count
+        rescored_chunk_ids:
+          items:
+            type: string
+          type: array
+          title: Rescored Chunk Ids
+      additionalProperties: false
+      type: object
+      title: ProcessingReuse
+    ProcessingTeaching:
+      properties:
+        level:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Level
+        style:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Style
+        mode:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Mode
+      additionalProperties: false
+      type: object
+      title: ProcessingTeaching
+    ProcessingUnderstanding:
+      properties:
+        standalone_query:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Standalone Query
+        intent:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Intent
+        topic_relation:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Topic Relation
+        needs_clarification:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Needs Clarification
+        clarification_reason:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Clarification Reason
+        requested_facets:
+          items:
+            $ref: '#/components/schemas/ProcessingFacet'
+          type: array
+          title: Requested Facets
+        comparison_targets:
+          items:
+            type: string
+          type: array
+          title: Comparison Targets
+        negation:
+          items:
+            type: string
+          type: array
+          title: Negation
+        numbers:
+          items:
+            type: string
+          type: array
+          title: Numbers
+        conditions:
+          items:
+            type: string
+          type: array
+          title: Conditions
+        correction:
+          anyOf:
+          - $ref: '#/components/schemas/ProcessingCorrection'
+          - type: 'null'
+        method:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Method
+        limitations:
+          items:
+            type: string
+          type: array
+          title: Limitations
+      additionalProperties: false
+      type: object
+      title: ProcessingUnderstanding
     Profile:
       properties:
         level:
@@ -8469,6 +11657,83 @@ components:
       required:
       - version
       title: ProfileUpdate
+    ProviderCapabilities:
+      properties:
+        profile:
+          type: string
+          maxLength: 80
+          minLength: 1
+          title: Profile
+        api_style:
+          type: string
+          enum:
+          - chat_completions
+          - responses
+          - anthropic_messages
+          - gemini_generate
+          title: Api Style
+        output_token_parameter:
+          type: string
+          enum:
+          - max_tokens
+          - max_completion_tokens
+          - max_output_tokens
+          - maxOutputTokens
+          title: Output Token Parameter
+        temperature:
+          type: boolean
+          title: Temperature
+          default: true
+        seed:
+          type: boolean
+          title: Seed
+          default: false
+        reasoning_effort:
+          type: boolean
+          title: Reasoning Effort
+          default: false
+        thinking_toggle:
+          type: boolean
+          title: Thinking Toggle
+          default: false
+        structured_modes:
+          items:
+            type: string
+            enum:
+            - json_schema
+            - json_object
+            - prompt
+          type: array
+          maxItems: 3
+          minItems: 1
+          title: Structured Modes
+        probe_output_tokens:
+          type: integer
+          maximum: 8192.0
+          minimum: 128.0
+          title: Probe Output Tokens
+          default: 512
+        output_token_ceiling:
+          type: integer
+          maximum: 200000.0
+          minimum: 1024.0
+          title: Output Token Ceiling
+          default: 32768
+        declaration:
+          type: string
+          enum:
+          - runtime_protocol_defaults
+          - operator_declared
+          title: Declaration
+          default: runtime_protocol_defaults
+      additionalProperties: false
+      type: object
+      required:
+      - profile
+      - api_style
+      - output_token_parameter
+      - structured_modes
+      title: ProviderCapabilities
     ProviderPreset:
       properties:
         id:
@@ -8665,6 +11930,47 @@ components:
       - covered_until_sequence
       - summary_text
       title: SummaryOut
+    TaskOut:
+      properties:
+        id:
+          type: string
+          title: Id
+        session_id:
+          type: string
+          title: Session Id
+        question:
+          type: string
+          title: Question
+        task_type:
+          type: string
+          title: Task Type
+        teaching_mode:
+          type: string
+          enum:
+          - direct
+          - hint
+          title: Teaching Mode
+        help_level:
+          type: integer
+          title: Help Level
+        state:
+          type: string
+          title: State
+        version:
+          type: integer
+          title: Version
+      additionalProperties: false
+      type: object
+      required:
+      - id
+      - session_id
+      - question
+      - task_type
+      - teaching_mode
+      - help_level
+      - state
+      - version
+      title: TaskOut
     TeachingInput:
       properties:
         base_answer_ids:
@@ -8688,6 +11994,25 @@ components:
       required:
       - base_answer_ids
       title: TeachingInput
+    TextSegment:
+      properties:
+        text:
+          type: string
+          title: Text
+        highlight:
+          type: boolean
+          title: Highlight
+          default: false
+        fragment_ids:
+          items:
+            type: string
+          type: array
+          title: Fragment Ids
+      additionalProperties: false
+      type: object
+      required:
+      - text
+      title: TextSegment
     TokenData:
       properties:
         access_token:

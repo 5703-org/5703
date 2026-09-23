@@ -33,6 +33,22 @@ Original decisions are dated 8 September 2026; SCOPE-05 and ENG-09–11 record t
 
 ## Inputs that require real evidence
 
-The source archive initially omitted the historical Concepts of Biology PDF. Official acquisition on8September2026 recovered the exact historical SHA256, and physical pages1–2 were inspected as cover/blank. The old pilot records remain unchanged; new reviewed processing and the complete four-book E5 release are documented in `docs/execution/openstax-corpus-report.md`. A different future PDF hash requires new identity/review and cannot inherit these decisions.
+The source archive initially omitted the historical Concepts of Biology PDF. Official acquisition on 8 September 2026 recovered the exact historical SHA256, and physical pages1–2 were inspected as cover/blank. The old pilot records remain unchanged; new reviewed processing and the complete four-book E5 release are documented in `docs/execution/openstax-corpus-report.md`. A different future PDF hash requires new identity/review and cannot inherit these decisions.
 
 Live model/provider credentials, actual selected model/tokenizer checkpoints, approved research execution limits, SciQ revision/splits, qrels, independent ratings and physical-device keyboard observations are not established by configuration examples or source reports. Track exact current availability in `../execution/blockers.json`; continue all independent software work. Do not ask for routine signatures from named owners.
+
+## Week 8 decisions — 16 September 2026
+
+| ID | Decision | Authority and evidence boundary |
+| --- | --- | --- |
+| SCOPE-06 | Include the research assessment and feasible implementation of all eight improvement tracks in Week 8; retain independent judgments and broader studies as separate follow-up work. | User clarification; original 108/60/12 IDs and accountable owners remain unchanged. See the Week 8 delivery record. |
+| ENG-12 | Freeze a bounded interactive relevance policy and learner-context understanding; keep the default textbook-grounded and preserve explicit clarification/error distinctions. | Actual alias/correction and zero-call refusal tests; -4.0 cutoff is provisional and limited to the pinned MiniLM score scale. No general semantic understanding/claim verifier is implied. |
+| ENG-13 | Separate query runtime device from immutable corpus build identity; preserve old commands and formal E0/E1. | Actual CPU E5/pgvector/reranker and isolated CPU-wheel runs preserve the same release fingerprint. Explicit device failures do not silently fall back; physical MPS and broad device equivalence remain unverified. |
+| ENG-14 | Bind each delivery claim to its actual code/resource/install evidence and preserve older packages. | 331 Python/51 frontend is the dated initial reliability checkpoint; final current software passes 427/56, fresh Windows CPU installation has a separate passed record, while final Week 8 archive sidecars remain pending. No rejected private backup/raw-context export is retried. |
+| ENG-15 | Freeze v8 preparation and bounded prior/fresh evidence union; preserve legacy v6 and formal E0/E1. | Current-query scores and pinned-release source checks prevent old citations from bypassing relevance. |
+| ENG-16 | Expose lexical coverage and citation-review observations with null independent support/ratings. | Automated features guide behavior and diagnosis without claiming semantic or pedagogical correctness. |
+| ENG-17 | Freeze v9 understanding and optional facet fallback; preserve every older request version. | At most two explicit facet subqueries/20 additional ranking slots after whole-query zero acceptance, final admission at most 20 and shared active/token budgets. Different query scores are not compared. Actual failures and versioned source bytes remain retained. |
+| ENG-18 | Permit only an explicit per-request general-knowledge choice, with textbook default. | General mode bypasses source retrieval and rejects citations, exposes unverified model provenance and remains frozen through retry/regeneration. Existing textbook idempotency hashes and old histories remain compatible. |
+
+The earlier design-only interpretation is superseded by integrated structured understanding, bounded evidence union, complementary packing, teaching/trace controls and the authored 120-case catalogue. Independent qrels, semantic judgments and learning outcomes remain unperformed until actually collected. [Current Week 8 scope](../execution/week08-delivery-20260916.md).
+

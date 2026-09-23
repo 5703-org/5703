@@ -42,6 +42,12 @@ Apache2.0 terms. The checkpoint and original model card are included in the comp
 package. The configured interactive R2 candidate reranking and optional R3 comparison
 keep explicit configuration identities and do not change the active corpus or E1.
 
+The Week 8 delivery additionally includes full license texts in `docs/licenses/`:
+the MIT notice from the upstream Microsoft unilm project linked by E5's pinned
+model card, and the Apache License 2.0 text from the Apache Software Foundation.
+`docs/licenses/SOURCE_MANIFEST.json` records acquisition URLs, dates and byte hashes.
+The original pinned cards, checkpoint bytes and source notices remain unchanged.
+
 `deepseek-ai/DeepSeek-V4-Flash-0731` tokenizer files are pinned at
 `7872f01b1d1fe23eabc4c98b48bffcef5a386062`. The package retains its original README,
 MIT LICENSE and source URL/hash manifest beside the tokenizer. No DeepSeek model

@@ -16,6 +16,7 @@ Text = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1)]
 ExactText = Annotated[str, StringConstraints(min_length=1, pattern=r"\S")]
 Level = Literal["beginner", "intermediate", "advanced"]
 Mode = Literal["interactive_chat", "benchmark_openqa", "benchmark_mcq"]
+AnswerMode = Literal["textbook", "general_knowledge"]
 Reason = Literal["NO_EVIDENCE", "INSUFFICIENT_EVIDENCE", "CONFLICTING_EVIDENCE", "OUT_OF_SCOPE"]
 
 
@@ -26,6 +27,10 @@ class Contract(BaseModel):
 class ChatMessageCreate(Contract):
     content: Annotated[str, StringConstraints(strip_whitespace=True, min_length=1, max_length=4000)]
     use_profile: bool = True
+    answer_mode: AnswerMode = "textbook"
+    teaching_mode: Literal["direct", "hint"] | None = None
+    task_id: str | None = None
+    task_action: Literal["auto", "new", "continue", "more_hint", "full_explanation"] = "auto"
 
 
 class ChatResponseV1(Contract):
@@ -173,6 +178,9 @@ class EvidenceSnapshot(Contract):
     text_hash: str
     context_order: int
     inherited_from: EvidenceOrigin | None = None
+    chunk_text_hash: str | None = Field(default=None, exclude_if=lambda value: value is None)
+    chunk_start: int | None = Field(default=None, ge=0, exclude_if=lambda value: value is None)
+    chunk_end: int | None = Field(default=None, ge=0, exclude_if=lambda value: value is None)
 
 
 class InteractiveChatCommand(Contract):
@@ -291,12 +299,22 @@ class AnswerOut(Contract):
     response_schema: Literal["chat_response_v1", "mcq_response_v1"]
     status: Literal["answered", "clarification", "refused"]
     model_mode: Literal["mock", "live"]
+    answer_mode: AnswerMode = "textbook"
+    source_provenance: Literal[
+        "textbook_evidence", "model_general_knowledge_unverified", "benchmark_protocol"
+    ] = "textbook_evidence"
     response: ChatResponseV1 | MCQResponseV1
     evidence: list[EvidenceSnapshot]
     profile_snapshot: dict | None
     conversation_snapshot: ConversationSnapshot | None
     timing: dict
     can_regenerate: bool
+    teaching_mode: Literal["direct", "hint"] = "direct"
+    task_id: str | None = None
+    help_level: int = 0
+    presentation: dict | None = None
+    attribution: dict | None = None
+    memory_notices: list[dict] = Field(default_factory=list)
 
 
 class MessageOut(Contract):

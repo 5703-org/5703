@@ -11,6 +11,55 @@
       "default": true,
       "title": "Use Profile",
       "type": "boolean"
+    },
+    "answer_mode": {
+      "default": "textbook",
+      "enum": [
+        "textbook",
+        "general_knowledge"
+      ],
+      "title": "Answer Mode",
+      "type": "string"
+    },
+    "teaching_mode": {
+      "anyOf": [
+        {
+          "enum": [
+            "direct",
+            "hint"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Teaching Mode"
+    },
+    "task_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Task Id"
+    },
+    "task_action": {
+      "default": "auto",
+      "enum": [
+        "auto",
+        "new",
+        "continue",
+        "more_hint",
+        "full_explanation"
+      ],
+      "title": "Task Action",
+      "type": "string"
     }
   },
   "required": [

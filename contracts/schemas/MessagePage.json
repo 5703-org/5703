@@ -60,6 +60,25 @@
           "title": "Model Mode",
           "type": "string"
         },
+        "answer_mode": {
+          "default": "textbook",
+          "enum": [
+            "textbook",
+            "general_knowledge"
+          ],
+          "title": "Answer Mode",
+          "type": "string"
+        },
+        "source_provenance": {
+          "default": "textbook_evidence",
+          "enum": [
+            "textbook_evidence",
+            "model_general_knowledge_unverified",
+            "benchmark_protocol"
+          ],
+          "title": "Source Provenance",
+          "type": "string"
+        },
         "response": {
           "anyOf": [
             {
@@ -108,6 +127,66 @@
         "can_regenerate": {
           "title": "Can Regenerate",
           "type": "boolean"
+        },
+        "teaching_mode": {
+          "default": "direct",
+          "enum": [
+            "direct",
+            "hint"
+          ],
+          "title": "Teaching Mode",
+          "type": "string"
+        },
+        "task_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Task Id"
+        },
+        "help_level": {
+          "default": 0,
+          "title": "Help Level",
+          "type": "integer"
+        },
+        "presentation": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Presentation"
+        },
+        "attribution": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Attribution"
+        },
+        "memory_notices": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Memory Notices",
+          "type": "array"
         }
       },
       "required": [
@@ -435,6 +514,44 @@
             }
           ],
           "default": null
+        },
+        "chunk_text_hash": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Chunk Text Hash"
+        },
+        "chunk_start": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Chunk Start"
+        },
+        "chunk_end": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Chunk End"
         }
       },
       "required": [

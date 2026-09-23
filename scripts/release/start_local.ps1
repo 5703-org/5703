@@ -2,7 +2,9 @@ param(
     [switch]$Install,
     [int]$DatabasePort = 15532,
     [int]$ApiPort = 18000,
-    [int]$FrontendPort = 15173
+    [int]$FrontendPort = 15173,
+    [ValidateSet('auto','cpu','cuda','cuda:0','mps')]
+    [string]$Device = 'auto'
 )
 $ErrorActionPreference = 'Stop'
 $projectRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '../..'))
@@ -28,7 +30,8 @@ if ($Install) {
         python -m venv .venv
         if ($LASTEXITCODE -ne 0) { throw 'Python 3.13 is required.' }
     }
-    & $python -m pip install -r requirements.lock -r requirements-embeddings.lock
+    $embeddingLock = if ($Device -like 'cuda*') { 'requirements-embeddings.lock' } else { 'requirements-embeddings-cpu.lock' }
+    & $python -m pip install -r requirements.lock -r $embeddingLock
     if ($LASTEXITCODE -ne 0) { throw 'Python dependency installation failed.' }
     Push-Location frontend
     try {
@@ -42,8 +45,9 @@ if (-not (Test-Path -LiteralPath $python)) { throw 'Run this script with -Instal
 $settingsNames = & $python -c "from app.core.config import Settings; from pydantic import AliasChoices; names=set(Settings.model_fields); [names.update(f.validation_alias.choices if isinstance(f.validation_alias,AliasChoices) else [f.validation_alias]) for f in Settings.model_fields.values() if f.validation_alias]; print('\n'.join(sorted(names)))"
 if ($LASTEXITCODE -ne 0) { throw 'Settings preflight failed.' }
 foreach ($settingName in $settingsNames) { Remove-Item -LiteralPath ('Env:' + $settingName) -ErrorAction SilentlyContinue }
-& $python -c "import sys,torch; assert sys.version_info[:2] == (3,13), 'Python 3.13 is required'; assert torch.cuda.is_available(), 'The bundled immutable E5 release requires an NVIDIA CUDA device. No model/device substitution was made.'"
-if ($LASTEXITCODE -ne 0) { throw 'Runtime preflight failed. Check Python 3.13 and the NVIDIA driver.' }
+$env:LOCAL_MODEL_DEVICE = $Device
+& $python -c "import sys,json; from retrieval.runtime import resolve_device; assert sys.version_info[:2] == (3,13), 'Python 3.13 is required'; print(json.dumps({'local_model_policy':sys.argv[1],'resolved_device':resolve_device(sys.argv[1])}))" "$Device"
+if ($LASTEXITCODE -ne 0) { throw 'Local model preflight failed. Check the dependencies or select -Device cpu.' }
 if (-not (Test-Path -LiteralPath '.env')) {
     $jwtSecret = [guid]::NewGuid().ToString('N') + [guid]::NewGuid().ToString('N')
     $databasePassword = [guid]::NewGuid().ToString('N')
@@ -61,6 +65,7 @@ LLM_MODEL=authored-extractive-v1
 LLM_API_KEY=
 MODEL_CONFIG_KEY_FILE=./.secrets/model-config.key
 CHAT_RETRIEVAL_CONFIG=./configs/retrieval/chat_hybrid_minilm.json
+LOCAL_MODEL_DEVICE=$Device
 TIKTOKEN_CACHE_DIR=./artifacts/tiktoken
 "@ | Set-Content -LiteralPath '.env' -Encoding utf8
 }

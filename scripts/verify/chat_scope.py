@@ -33,7 +33,18 @@ def main():
                     name == "evaluation" or name.startswith("evaluation.") for name in names
                 ), str(path)
             inspected.append(str(path.relative_to(ROOT)))
-    assert set(ChatMessageCreate.model_fields) == {"content", "use_profile"}
+    assert set(ChatMessageCreate.model_fields) == {
+        "content",
+        "use_profile",
+        "answer_mode",
+        "teaching_mode",
+        "task_id",
+        "task_action",
+    }
+    ordinary = ChatMessageCreate(content="A question")
+    assert ordinary.answer_mode == "textbook"
+    assert ordinary.teaching_mode is None and ordinary.task_id is None
+    assert ordinary.task_action == "auto"
     compose = yaml.safe_load((ROOT / "compose.yaml").read_text())
     for name in ("api", "worker"):
         assert compose["services"][name]["build"]["target"] == "runtime"

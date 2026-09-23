@@ -6,7 +6,7 @@ Accountable owner and suggested course week are reporting metadata, never permis
 
 Canonical requirements, shared interfaces and evidence: [PRD.md](<../../PRD.md>) · [SPEC.md](<../../SPEC.md>) · [PLANS.md](<../../PLANS.md>) · [HANDOVER.md](<../../HANDOVER.md>) · [docs/foundation/api_contract.md](<../foundation/api_contract.md>) · [contracts/openapi.json](<../../contracts/openapi.json>) · [docs/execution/tasks.json](<../execution/tasks.json>) · [docs/execution/reporting_plan.json](<../execution/reporting_plan.json>) · [docs/execution/acceptance.json](<../execution/acceptance.json>)
 
-Task-ledger reconciliation timestamp (not a completion date): 2026-09-13T05:24:19.545152+00:00
+Task-ledger reconciliation timestamp (not a completion date): 2026-09-16T05:43:05.480026+00:00
 
 This export implements source section 20.6 (INT-10, CHAT-12, QA-14 and owner handovers). Eight owner files and seven course-week files each partition the same 108 tasks exactly once. Repeated planning cross-references are not duplicate completion claims. The shared acceptance view retains all 60 check references.
 

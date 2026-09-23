@@ -49,7 +49,19 @@ def main():
     ):
         assert name in public, name
     assert public["ChatMessageCreate"]["additionalProperties"] is False
-    assert set(public["ChatMessageCreate"]["properties"]) == {"content", "use_profile"}
+    assert set(public["ChatMessageCreate"]["properties"]) == {
+        "content",
+        "use_profile",
+        "answer_mode",
+        "teaching_mode",
+        "task_id",
+        "task_action",
+    }
+    assert public["ChatMessageCreate"]["properties"]["answer_mode"]["default"] == "textbook"
+    assert public["ChatMessageCreate"]["properties"]["answer_mode"]["enum"] == [
+        "textbook",
+        "general_knowledge",
+    ]
     assert "/api/v1/experiments/{run_id}/results" in schema["paths"]
     result = {
         "status": "passed",

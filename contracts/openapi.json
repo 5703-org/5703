@@ -84,6 +84,28 @@
       "ActivationInput": {
         "additionalProperties": false,
         "properties": {
+          "checker_configuration_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Checker Configuration Id"
+          },
+          "checker_test_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Checker Test Id"
+          },
           "expected_active_version": {
             "minimum": 0.0,
             "title": "Expected Active Version",
@@ -104,6 +126,27 @@
       "AnswerOut": {
         "additionalProperties": false,
         "properties": {
+          "answer_mode": {
+            "default": "textbook",
+            "enum": [
+              "textbook",
+              "general_knowledge"
+            ],
+            "title": "Answer Mode",
+            "type": "string"
+          },
+          "attribution": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Attribution"
+          },
           "can_regenerate": {
             "title": "Can Regenerate",
             "type": "boolean"
@@ -125,6 +168,11 @@
             "title": "Evidence",
             "type": "array"
           },
+          "help_level": {
+            "default": 0,
+            "title": "Help Level",
+            "type": "integer"
+          },
           "id": {
             "title": "Id",
             "type": "string"
@@ -132,6 +180,14 @@
           "job_id": {
             "title": "Job Id",
             "type": "string"
+          },
+          "memory_notices": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Memory Notices",
+            "type": "array"
           },
           "message_id": {
             "anyOf": [
@@ -160,6 +216,18 @@
             ],
             "title": "Model Mode",
             "type": "string"
+          },
+          "presentation": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Presentation"
           },
           "profile_snapshot": {
             "anyOf": [
@@ -196,6 +264,16 @@
             "title": "Response Schema",
             "type": "string"
           },
+          "source_provenance": {
+            "default": "textbook_evidence",
+            "enum": [
+              "textbook_evidence",
+              "model_general_knowledge_unverified",
+              "benchmark_protocol"
+            ],
+            "title": "Source Provenance",
+            "type": "string"
+          },
           "status": {
             "enum": [
               "answered",
@@ -203,6 +281,26 @@
               "refused"
             ],
             "title": "Status",
+            "type": "string"
+          },
+          "task_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Task Id"
+          },
+          "teaching_mode": {
+            "default": "direct",
+            "enum": [
+              "direct",
+              "hint"
+            ],
+            "title": "Teaching Mode",
             "type": "string"
           },
           "timing": {
@@ -336,11 +434,58 @@
       "ChatMessageCreate": {
         "additionalProperties": false,
         "properties": {
+          "answer_mode": {
+            "default": "textbook",
+            "enum": [
+              "textbook",
+              "general_knowledge"
+            ],
+            "title": "Answer Mode",
+            "type": "string"
+          },
           "content": {
             "maxLength": 4000,
             "minLength": 1,
             "title": "Content",
             "type": "string"
+          },
+          "task_action": {
+            "default": "auto",
+            "enum": [
+              "auto",
+              "new",
+              "continue",
+              "more_hint",
+              "full_explanation"
+            ],
+            "title": "Task Action",
+            "type": "string"
+          },
+          "task_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Task Id"
+          },
+          "teaching_mode": {
+            "anyOf": [
+              {
+                "enum": [
+                  "direct",
+                  "hint"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Teaching Mode"
           },
           "use_profile": {
             "default": true,
@@ -450,6 +595,98 @@
         "title": "ChatResponseV1",
         "type": "object"
       },
+      "CitationView": {
+        "additionalProperties": false,
+        "properties": {
+          "available_actions": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Available Actions",
+            "type": "array"
+          },
+          "claim_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Claim Ids",
+            "type": "array"
+          },
+          "evidence_id": {
+            "title": "Evidence Id",
+            "type": "string"
+          },
+          "license": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "License"
+          },
+          "pages": {
+            "items": {
+              "type": "integer"
+            },
+            "title": "Pages",
+            "type": "array"
+          },
+          "section": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Section"
+          },
+          "segments": {
+            "items": {
+              "$ref": "#/components/schemas/TextSegment"
+            },
+            "title": "Segments",
+            "type": "array"
+          },
+          "source_title": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Title"
+          },
+          "source_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Url"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          }
+        },
+        "required": [
+          "evidence_id",
+          "title",
+          "segments"
+        ],
+        "title": "CitationView",
+        "type": "object"
+      },
       "CommandInput": {
         "additionalProperties": false,
         "properties": {
@@ -463,6 +700,41 @@
           "command"
         ],
         "title": "CommandInput",
+        "type": "object"
+      },
+      "CompatibilityInput": {
+        "additionalProperties": false,
+        "properties": {
+          "network_label": {
+            "default": "local_unverified",
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_. -]+$",
+            "title": "Network Label",
+            "type": "string"
+          },
+          "role": {
+            "default": "answer",
+            "enum": [
+              "answer",
+              "checker"
+            ],
+            "title": "Role",
+            "type": "string"
+          },
+          "tier": {
+            "default": "all",
+            "enum": [
+              "basic",
+              "structured",
+              "project",
+              "all"
+            ],
+            "title": "Tier",
+            "type": "string"
+          }
+        },
+        "title": "CompatibilityInput",
         "type": "object"
       },
       "ConfigInput": {
@@ -543,6 +815,23 @@
       "ConnectionTestOut": {
         "additionalProperties": false,
         "properties": {
+          "budget": {
+            "additionalProperties": true,
+            "title": "Budget",
+            "type": "object"
+          },
+          "completed_at": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Completed At"
+          },
           "configuration_id": {
             "title": "Configuration Id",
             "type": "string"
@@ -576,12 +865,62 @@
             "title": "Model Mode",
             "type": "string"
           },
+          "network_label": {
+            "default": "not_recorded",
+            "title": "Network Label",
+            "type": "string"
+          },
+          "project_passed": {
+            "default": false,
+            "title": "Project Passed",
+            "type": "boolean"
+          },
+          "role": {
+            "default": "answer",
+            "enum": [
+              "answer",
+              "checker"
+            ],
+            "title": "Role",
+            "type": "string"
+          },
+          "stages": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Stages",
+            "type": "array"
+          },
           "status": {
             "enum": [
+              "running",
               "passed",
-              "failed"
+              "failed",
+              "uncertain"
             ],
             "title": "Status",
+            "type": "string"
+          },
+          "test_version": {
+            "default": "legacy_connection_v1",
+            "enum": [
+              "legacy_connection_v1",
+              "provider_probe_v2"
+            ],
+            "title": "Test Version",
+            "type": "string"
+          },
+          "tier": {
+            "default": "legacy",
+            "enum": [
+              "legacy",
+              "basic",
+              "structured",
+              "project",
+              "all"
+            ],
+            "title": "Tier",
             "type": "string"
           },
           "usage": {
@@ -757,11 +1096,11 @@
         "title": "Envelope[ConnectionTestOut]",
         "type": "object"
       },
-      "Envelope_EvidenceSnapshot_": {
+      "Envelope_ExposureOut_": {
         "additionalProperties": false,
         "properties": {
           "data": {
-            "$ref": "#/components/schemas/EvidenceSnapshot"
+            "$ref": "#/components/schemas/ExposureOut"
           },
           "meta": {
             "$ref": "#/components/schemas/ResponseMeta"
@@ -771,7 +1110,7 @@
           "data",
           "meta"
         ],
-        "title": "Envelope[EvidenceSnapshot]",
+        "title": "Envelope[ExposureOut]",
         "type": "object"
       },
       "Envelope_FailureDetail_": {
@@ -859,6 +1198,74 @@
         "title": "Envelope[JobReceipt]",
         "type": "object"
       },
+      "Envelope_LearnerStateOut_": {
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/LearnerStateOut"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/ResponseMeta"
+          }
+        },
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "Envelope[LearnerStateOut]",
+        "type": "object"
+      },
+      "Envelope_MemoryOut_": {
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/MemoryOut"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/ResponseMeta"
+          }
+        },
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "Envelope[MemoryOut]",
+        "type": "object"
+      },
+      "Envelope_MemorySettingsOut_": {
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/MemorySettingsOut"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/ResponseMeta"
+          }
+        },
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "Envelope[MemorySettingsOut]",
+        "type": "object"
+      },
+      "Envelope_MemorySummaryOut_": {
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/MemorySummaryOut"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/ResponseMeta"
+          }
+        },
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "Envelope[MemorySummaryOut]",
+        "type": "object"
+      },
       "Envelope_MessagePage_": {
         "additionalProperties": false,
         "properties": {
@@ -908,6 +1315,23 @@
           "meta"
         ],
         "title": "Envelope[ModelSettingsState]",
+        "type": "object"
+      },
+      "Envelope_PresentationOut_": {
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/PresentationOut"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/ResponseMeta"
+          }
+        },
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "Envelope[PresentationOut]",
         "type": "object"
       },
       "Envelope_Profile_": {
@@ -976,6 +1400,31 @@
           "meta"
         ],
         "title": "Envelope[TokenData]",
+        "type": "object"
+      },
+      "Envelope_Union_EvidenceSnapshot__CitationView__": {
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/EvidenceSnapshot"
+              },
+              {
+                "$ref": "#/components/schemas/CitationView"
+              }
+            ],
+            "title": "Data"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/ResponseMeta"
+          }
+        },
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "Envelope[Union[EvidenceSnapshot, CitationView]]",
         "type": "object"
       },
       "Envelope_Union_FeedbackOut__NoneType__": {
@@ -1059,6 +1508,48 @@
         "title": "Envelope[dict[str, bool]]",
         "type": "object"
       },
+      "Envelope_list_CitationView__": {
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/CitationView"
+            },
+            "title": "Data",
+            "type": "array"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/ResponseMeta"
+          }
+        },
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "Envelope[list[CitationView]]",
+        "type": "object"
+      },
+      "Envelope_list_ConnectionTestOut__": {
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/ConnectionTestOut"
+            },
+            "title": "Data",
+            "type": "array"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/ResponseMeta"
+          }
+        },
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "Envelope[list[ConnectionTestOut]]",
+        "type": "object"
+      },
       "Envelope_list_FeedbackOut__": {
         "additionalProperties": false,
         "properties": {
@@ -1078,6 +1569,48 @@
           "meta"
         ],
         "title": "Envelope[list[FeedbackOut]]",
+        "type": "object"
+      },
+      "Envelope_list_MemoryOut__": {
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/MemoryOut"
+            },
+            "title": "Data",
+            "type": "array"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/ResponseMeta"
+          }
+        },
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "Envelope[list[MemoryOut]]",
+        "type": "object"
+      },
+      "Envelope_list_MemoryProcessingOut__": {
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/MemoryProcessingOut"
+            },
+            "title": "Data",
+            "type": "array"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/ResponseMeta"
+          }
+        },
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "Envelope[list[MemoryProcessingOut]]",
         "type": "object"
       },
       "Envelope_list_ProviderPreset__": {
@@ -1120,6 +1653,27 @@
           "meta"
         ],
         "title": "Envelope[list[SessionOut]]",
+        "type": "object"
+      },
+      "Envelope_list_TaskOut__": {
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/TaskOut"
+            },
+            "title": "Data",
+            "type": "array"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/ResponseMeta"
+          }
+        },
+        "required": [
+          "data",
+          "meta"
+        ],
+        "title": "Envelope[list[TaskOut]]",
         "type": "object"
       },
       "Envelope_list_UserOut__": {
@@ -1246,9 +1800,44 @@
             "title": "Asset Id",
             "type": "string"
           },
+          "chunk_end": {
+            "anyOf": [
+              {
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Chunk End"
+          },
           "chunk_id": {
             "title": "Chunk Id",
             "type": "string"
+          },
+          "chunk_start": {
+            "anyOf": [
+              {
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Chunk Start"
+          },
+          "chunk_text_hash": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Chunk Text Hash"
           },
           "context_order": {
             "title": "Context Order",
@@ -1429,6 +2018,107 @@
         "title": "ExperimentSpec",
         "type": "object"
       },
+      "ExposureInput": {
+        "additionalProperties": false,
+        "properties": {
+          "claim_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Claim Id"
+          },
+          "evidence_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Evidence Id"
+          },
+          "kind": {
+            "enum": [
+              "rendered",
+              "citation_opened",
+              "full_source_requested"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "parent_exposure_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Parent Exposure Id"
+          },
+          "presentation_id": {
+            "title": "Presentation Id",
+            "type": "string"
+          },
+          "surface": {
+            "default": "answer",
+            "enum": [
+              "answer",
+              "citation",
+              "full_source"
+            ],
+            "title": "Surface",
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind",
+          "presentation_id"
+        ],
+        "title": "ExposureInput",
+        "type": "object"
+      },
+      "ExposureOut": {
+        "additionalProperties": false,
+        "properties": {
+          "citation_view": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/CitationView"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "kind": {
+            "title": "Kind",
+            "type": "string"
+          },
+          "presentation_id": {
+            "title": "Presentation Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "presentation_id"
+        ],
+        "title": "ExposureOut",
+        "type": "object"
+      },
       "FailureAttempt": {
         "additionalProperties": false,
         "properties": {
@@ -1458,6 +2148,16 @@
               }
             ],
             "title": "Error Code"
+          },
+          "provider_diagnostic": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/FailureProviderDiagnostic"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "stage": {
             "title": "Stage",
@@ -1500,6 +2200,17 @@
               }
             ],
             "title": "Cited"
+          },
+          "filtered": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Filtered"
           },
           "submitted": {
             "anyOf": [
@@ -1601,6 +2312,16 @@
           "owner_id": {
             "title": "Owner Id",
             "type": "string"
+          },
+          "processing": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/FailureProcessing"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "question": {
             "title": "Question",
@@ -1780,6 +2501,316 @@
           "offset"
         ],
         "title": "FailurePage",
+        "type": "object"
+      },
+      "FailureProcessing": {
+        "additionalProperties": false,
+        "properties": {
+          "citation_audit": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ProcessingCitationAudit"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "corpus_release_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Corpus Release Id"
+          },
+          "coverage": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ProcessingCoverage"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "excluded": {
+            "items": {
+              "$ref": "#/components/schemas/ProcessingExclusion"
+            },
+            "title": "Excluded",
+            "type": "array"
+          },
+          "exclusions_truncated": {
+            "default": false,
+            "title": "Exclusions Truncated",
+            "type": "boolean"
+          },
+          "facet_fallback": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ProcessingFacetFallback"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "memory": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ProcessingMemory"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "packing": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ProcessingPacking"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "relevance_minimum_logit": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Relevance Minimum Logit"
+          },
+          "relevance_policy": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Relevance Policy"
+          },
+          "requested_device": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Requested Device"
+          },
+          "reranker_model": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reranker Model"
+          },
+          "resolved_device": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Resolved Device"
+          },
+          "reuse": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ProcessingReuse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "selection_source": {
+            "anyOf": [
+              {
+                "enum": [
+                  "whole_query",
+                  "facet_fallback"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Selection Source"
+          },
+          "teaching": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ProcessingTeaching"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "timing_ms": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "title": "Timing Ms",
+            "type": "object"
+          },
+          "timing_scope": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Timing Scope"
+          },
+          "understanding": {
+            "$ref": "#/components/schemas/ProcessingUnderstanding"
+          }
+        },
+        "required": [
+          "understanding"
+        ],
+        "title": "FailureProcessing",
+        "type": "object"
+      },
+      "FailureProviderDiagnostic": {
+        "additionalProperties": false,
+        "properties": {
+          "finish_reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Finish Reason"
+          },
+          "http_status": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Http Status"
+          },
+          "network_error": {
+            "anyOf": [
+              {
+                "enum": [
+                  "dns",
+                  "tls",
+                  "connection",
+                  "timeout"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Network Error"
+          },
+          "provider_error_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Provider Error Code"
+          },
+          "provider_error_parameter": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Provider Error Parameter"
+          },
+          "provider_error_type": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Provider Error Type"
+          },
+          "provider_request_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Provider Request Id"
+          },
+          "request_submitted": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Request Submitted"
+          },
+          "stage": {
+            "enum": [
+              "configuration",
+              "network",
+              "http",
+              "decode",
+              "validation",
+              "completed"
+            ],
+            "title": "Stage",
+            "type": "string"
+          }
+        },
+        "required": [
+          "stage"
+        ],
+        "title": "FailureProviderDiagnostic",
         "type": "object"
       },
       "FailureStage": {
@@ -2147,6 +3178,95 @@
         "title": "JobReceipt",
         "type": "object"
       },
+      "LearnerStateOut": {
+        "additionalProperties": false,
+        "properties": {
+          "enabled": {
+            "title": "Enabled",
+            "type": "boolean"
+          },
+          "entries": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Entries",
+            "type": "array"
+          },
+          "excluded": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Excluded",
+            "type": "array"
+          },
+          "fields": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Fields",
+            "type": "array"
+          },
+          "limitations": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Limitations",
+            "type": "array"
+          },
+          "policy_version": {
+            "title": "Policy Version",
+            "type": "string"
+          },
+          "query_topics": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Query Topics",
+            "type": "array"
+          },
+          "snapshot_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Snapshot Id"
+          }
+        },
+        "required": [
+          "enabled",
+          "policy_version"
+        ],
+        "title": "LearnerStateOut",
+        "type": "object"
+      },
+      "LearnerStatePreview": {
+        "additionalProperties": false,
+        "properties": {
+          "question": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Question",
+            "type": "string"
+          },
+          "use_profile": {
+            "default": true,
+            "title": "Use Profile",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "question"
+        ],
+        "title": "LearnerStatePreview",
+        "type": "object"
+      },
       "LoginRequest": {
         "properties": {
           "email": {
@@ -2288,6 +3408,560 @@
           "manifest"
         ],
         "title": "ManifestInput",
+        "type": "object"
+      },
+      "MemoryAssessmentCreate": {
+        "additionalProperties": false,
+        "properties": {
+          "confirmation": {
+            "default": "self_reported",
+            "enum": [
+              "self_reported",
+              "automatic",
+              "human"
+            ],
+            "title": "Confirmation",
+            "type": "string"
+          },
+          "evaluator_id": {
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "Evaluator Id",
+            "type": "string"
+          },
+          "evaluator_version": {
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "Evaluator Version",
+            "type": "string"
+          },
+          "expected_answer": {
+            "anyOf": [
+              {
+                "maxLength": 2000,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expected Answer"
+          },
+          "owner_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Owner Id"
+          },
+          "question_message_id": {
+            "title": "Question Message Id",
+            "type": "string"
+          },
+          "question_quote": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Question Quote",
+            "type": "string"
+          },
+          "response_message_id": {
+            "title": "Response Message Id",
+            "type": "string"
+          },
+          "response_quote": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Response Quote",
+            "type": "string"
+          },
+          "reviewer_attestation": {
+            "default": false,
+            "title": "Reviewer Attestation",
+            "type": "boolean"
+          },
+          "rubric_kind": {
+            "default": "recorded",
+            "enum": [
+              "recorded",
+              "exact_text",
+              "numeric"
+            ],
+            "title": "Rubric Kind",
+            "type": "string"
+          },
+          "scope": {
+            "maxLength": 200,
+            "minLength": 1,
+            "title": "Scope",
+            "type": "string"
+          },
+          "score": {
+            "anyOf": [
+              {
+                "maximum": 1.0,
+                "minimum": 0.0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Score"
+          },
+          "scoring_basis": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Scoring Basis",
+            "type": "string"
+          },
+          "tolerance": {
+            "default": 0.0,
+            "minimum": 0.0,
+            "title": "Tolerance",
+            "type": "number"
+          }
+        },
+        "required": [
+          "question_message_id",
+          "response_message_id",
+          "question_quote",
+          "response_quote",
+          "scope",
+          "scoring_basis",
+          "evaluator_id",
+          "evaluator_version"
+        ],
+        "title": "MemoryAssessmentCreate",
+        "type": "object"
+      },
+      "MemoryDelete": {
+        "additionalProperties": false,
+        "properties": {
+          "version": {
+            "minimum": 1.0,
+            "title": "Version",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "version"
+        ],
+        "title": "MemoryDelete",
+        "type": "object"
+      },
+      "MemoryEdit": {
+        "additionalProperties": false,
+        "properties": {
+          "content": {
+            "maxLength": 2000,
+            "minLength": 1,
+            "title": "Content",
+            "type": "string"
+          },
+          "expires_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expires At"
+          },
+          "field_key": {
+            "anyOf": [
+              {
+                "maxLength": 120,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Field Key"
+          },
+          "scope": {
+            "default": "global",
+            "maxLength": 200,
+            "minLength": 1,
+            "title": "Scope",
+            "type": "string"
+          },
+          "version": {
+            "minimum": 1.0,
+            "title": "Version",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "version",
+          "content"
+        ],
+        "title": "MemoryEdit",
+        "type": "object"
+      },
+      "MemoryOut": {
+        "additionalProperties": false,
+        "properties": {
+          "category": {
+            "enum": [
+              "preference",
+              "goal",
+              "confirmed_observation",
+              "course_context",
+              "self_reported_observation",
+              "assessment_performance"
+            ],
+            "title": "Category",
+            "type": "string"
+          },
+          "content": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Content"
+          },
+          "effective_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Effective At"
+          },
+          "expires_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expires At"
+          },
+          "field_key": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Field Key"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "provenance": {
+            "additionalProperties": true,
+            "title": "Provenance",
+            "type": "object"
+          },
+          "scope": {
+            "title": "Scope",
+            "type": "string"
+          },
+          "scope_topics": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Scope Topics",
+            "type": "array"
+          },
+          "source_event_sequence": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Event Sequence"
+          },
+          "source_message_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Message Id"
+          },
+          "status": {
+            "enum": [
+              "active",
+              "expired",
+              "deleted"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "updated_at": {
+            "title": "Updated At",
+            "type": "string"
+          },
+          "verification": {
+            "default": "legacy_unverified",
+            "title": "Verification",
+            "type": "string"
+          },
+          "version": {
+            "title": "Version",
+            "type": "integer"
+          },
+          "writer_version": {
+            "default": "explicit_learning_memory_v1",
+            "title": "Writer Version",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "category",
+          "content",
+          "scope",
+          "source_message_id",
+          "status",
+          "version",
+          "updated_at",
+          "expires_at"
+        ],
+        "title": "MemoryOut",
+        "type": "object"
+      },
+      "MemoryProcessingOut": {
+        "additionalProperties": false,
+        "properties": {
+          "created_at": {
+            "title": "Created At",
+            "type": "string"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error"
+          },
+          "event_id": {
+            "title": "Event Id",
+            "type": "string"
+          },
+          "operations": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Operations",
+            "type": "array"
+          },
+          "sequence": {
+            "title": "Sequence",
+            "type": "integer"
+          },
+          "source_message_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Message Id"
+          },
+          "status": {
+            "title": "Status",
+            "type": "string"
+          }
+        },
+        "required": [
+          "event_id",
+          "source_message_id",
+          "sequence",
+          "status",
+          "operations",
+          "error",
+          "created_at"
+        ],
+        "title": "MemoryProcessingOut",
+        "type": "object"
+      },
+      "MemoryRecordCreate": {
+        "additionalProperties": false,
+        "properties": {
+          "category": {
+            "enum": [
+              "preference",
+              "goal",
+              "course_context",
+              "self_reported_observation"
+            ],
+            "title": "Category",
+            "type": "string"
+          },
+          "content": {
+            "maxLength": 2000,
+            "minLength": 1,
+            "title": "Content",
+            "type": "string"
+          },
+          "expires_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expires At"
+          },
+          "field_key": {
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "Field Key",
+            "type": "string"
+          },
+          "scope": {
+            "default": "global",
+            "maxLength": 200,
+            "minLength": 1,
+            "title": "Scope",
+            "type": "string"
+          },
+          "source_message_id": {
+            "title": "Source Message Id",
+            "type": "string"
+          },
+          "source_quote": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Source Quote",
+            "type": "string"
+          }
+        },
+        "required": [
+          "category",
+          "field_key",
+          "content",
+          "source_message_id",
+          "source_quote"
+        ],
+        "title": "MemoryRecordCreate",
+        "type": "object"
+      },
+      "MemorySettingsOut": {
+        "additionalProperties": false,
+        "properties": {
+          "enabled": {
+            "title": "Enabled",
+            "type": "boolean"
+          },
+          "revocation_epoch": {
+            "title": "Revocation Epoch",
+            "type": "integer"
+          },
+          "version": {
+            "title": "Version",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "enabled",
+          "version",
+          "revocation_epoch"
+        ],
+        "title": "MemorySettingsOut",
+        "type": "object"
+      },
+      "MemorySettingsUpdate": {
+        "additionalProperties": false,
+        "properties": {
+          "enabled": {
+            "title": "Enabled",
+            "type": "boolean"
+          },
+          "version": {
+            "minimum": 1.0,
+            "title": "Version",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "enabled",
+          "version"
+        ],
+        "title": "MemorySettingsUpdate",
+        "type": "object"
+      },
+      "MemorySummaryOut": {
+        "additionalProperties": false,
+        "properties": {
+          "active_count": {
+            "title": "Active Count",
+            "type": "integer"
+          },
+          "enabled": {
+            "title": "Enabled",
+            "type": "boolean"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/MemoryOut"
+            },
+            "title": "Items",
+            "type": "array"
+          },
+          "limitations": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Limitations",
+            "type": "array"
+          },
+          "summary": {
+            "title": "Summary",
+            "type": "string"
+          },
+          "version": {
+            "title": "Version",
+            "type": "string"
+          }
+        },
+        "required": [
+          "enabled",
+          "version",
+          "active_count",
+          "summary",
+          "items",
+          "limitations"
+        ],
+        "title": "MemorySummaryOut",
         "type": "object"
       },
       "MessageOut": {
@@ -2518,6 +4192,26 @@
             "title": "Id",
             "type": "string"
           },
+          "latest_answer_test": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ConnectionTestOut"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "latest_checker_test": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ConnectionTestOut"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "latest_test": {
             "anyOf": [
               {
@@ -2561,6 +4255,17 @@
       "ModelSettingsState": {
         "additionalProperties": false,
         "properties": {
+          "active_checker_configuration_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Active Checker Configuration Id"
+          },
           "active_configuration_id": {
             "anyOf": [
               {
@@ -2650,9 +4355,31 @@
             ],
             "title": "Base Url"
           },
+          "capabilities": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ProviderCapabilities"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "capability_version": {
+            "anyOf": [
+              {
+                "const": "provider_capabilities_v1",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Capability Version"
+          },
           "max_tokens": {
             "default": 1024,
-            "maximum": 1024.0,
+            "maximum": 32768.0,
             "minimum": 1.0,
             "title": "Max Tokens",
             "type": "integer"
@@ -2844,6 +4571,64 @@
         "title": "PasswordChange",
         "type": "object"
       },
+      "PresentationOut": {
+        "additionalProperties": false,
+        "properties": {
+          "citation_views": {
+            "items": {
+              "$ref": "#/components/schemas/CitationView"
+            },
+            "title": "Citation Views",
+            "type": "array"
+          },
+          "content_hash": {
+            "title": "Content Hash",
+            "type": "string"
+          },
+          "help_level": {
+            "title": "Help Level",
+            "type": "integer"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "policy_version": {
+            "title": "Policy Version",
+            "type": "string"
+          },
+          "task_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Task Id"
+          },
+          "teaching_mode": {
+            "enum": [
+              "direct",
+              "hint"
+            ],
+            "title": "Teaching Mode",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "task_id",
+          "teaching_mode",
+          "help_level",
+          "policy_version",
+          "content_hash",
+          "citation_views"
+        ],
+        "title": "PresentationOut",
+        "type": "object"
+      },
       "ProcessInput": {
         "additionalProperties": false,
         "properties": {
@@ -2861,6 +4646,671 @@
           }
         },
         "title": "ProcessInput",
+        "type": "object"
+      },
+      "ProcessingCitationAudit": {
+        "additionalProperties": false,
+        "properties": {
+          "flag_count": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Flag Count"
+          },
+          "status": {
+            "anyOf": [
+              {
+                "enum": [
+                  "review_required",
+                  "no_heuristic_flags",
+                  "not_applicable"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Status"
+          },
+          "version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Version"
+          }
+        },
+        "title": "ProcessingCitationAudit",
+        "type": "object"
+      },
+      "ProcessingCorrection": {
+        "additionalProperties": false,
+        "properties": {
+          "excluded": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Excluded",
+            "type": "array"
+          },
+          "prior_question": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Prior Question"
+          },
+          "replacement": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Replacement"
+          }
+        },
+        "title": "ProcessingCorrection",
+        "type": "object"
+      },
+      "ProcessingCoverage": {
+        "additionalProperties": false,
+        "properties": {
+          "scope": {
+            "default": "Lexical request coverage; independent support review remains separate.",
+            "title": "Scope",
+            "type": "string"
+          },
+          "status": {
+            "anyOf": [
+              {
+                "enum": [
+                  "none",
+                  "partial",
+                  "full"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Status"
+          },
+          "uncovered_facet_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Uncovered Facet Ids",
+            "type": "array"
+          },
+          "version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Version"
+          }
+        },
+        "title": "ProcessingCoverage",
+        "type": "object"
+      },
+      "ProcessingExclusion": {
+        "additionalProperties": false,
+        "properties": {
+          "chunk_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Chunk Id"
+          },
+          "reason": {
+            "title": "Reason",
+            "type": "string"
+          },
+          "score": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Score"
+          },
+          "stage": {
+            "enum": [
+              "relevance",
+              "budget",
+              "reuse"
+            ],
+            "title": "Stage",
+            "type": "string"
+          }
+        },
+        "required": [
+          "reason",
+          "stage"
+        ],
+        "title": "ProcessingExclusion",
+        "type": "object"
+      },
+      "ProcessingFacet": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Id"
+          },
+          "request": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Request"
+          },
+          "terms": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Terms",
+            "type": "array"
+          }
+        },
+        "title": "ProcessingFacet",
+        "type": "object"
+      },
+      "ProcessingFacetAttempt": {
+        "additionalProperties": false,
+        "properties": {
+          "accepted_chunk_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Accepted Chunk Ids",
+            "type": "array"
+          },
+          "accepted_count": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Accepted Count"
+          },
+          "candidate_count": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Candidate Count"
+          },
+          "excluded": {
+            "items": {
+              "$ref": "#/components/schemas/ProcessingExclusion"
+            },
+            "title": "Excluded",
+            "type": "array"
+          },
+          "facet_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Facet Id"
+          },
+          "model": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Model"
+          },
+          "query": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Query"
+          },
+          "revision": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Revision"
+          }
+        },
+        "title": "ProcessingFacetAttempt",
+        "type": "object"
+      },
+      "ProcessingFacetFallback": {
+        "additionalProperties": false,
+        "properties": {
+          "accepted_chunk_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Accepted Chunk Ids",
+            "type": "array"
+          },
+          "attempted_facets": {
+            "items": {
+              "$ref": "#/components/schemas/ProcessingFacetAttempt"
+            },
+            "title": "Attempted Facets",
+            "type": "array"
+          },
+          "elapsed_ms": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Elapsed Ms"
+          },
+          "policy_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Policy Version"
+          },
+          "reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reason"
+          },
+          "triggered": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Triggered"
+          },
+          "whole_query_accepted_count": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Whole Query Accepted Count"
+          },
+          "whole_query_candidate_count": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Whole Query Candidate Count"
+          }
+        },
+        "title": "ProcessingFacetFallback",
+        "type": "object"
+      },
+      "ProcessingMemory": {
+        "additionalProperties": false,
+        "properties": {
+          "error_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error Code"
+          },
+          "policy_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Policy Version"
+          },
+          "status": {
+            "enum": [
+              "ready",
+              "disabled",
+              "unavailable"
+            ],
+            "title": "Status",
+            "type": "string"
+          }
+        },
+        "required": [
+          "status"
+        ],
+        "title": "ProcessingMemory",
+        "type": "object"
+      },
+      "ProcessingPacking": {
+        "additionalProperties": false,
+        "properties": {
+          "duplicate_count": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Duplicate Count"
+          },
+          "text_token_ceiling": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Text Token Ceiling"
+          },
+          "version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Version"
+          }
+        },
+        "title": "ProcessingPacking",
+        "type": "object"
+      },
+      "ProcessingReuse": {
+        "additionalProperties": false,
+        "properties": {
+          "available_count": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Available Count"
+          },
+          "eligible_count": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Eligible Count"
+          },
+          "rescored_chunk_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Rescored Chunk Ids",
+            "type": "array"
+          }
+        },
+        "title": "ProcessingReuse",
+        "type": "object"
+      },
+      "ProcessingTeaching": {
+        "additionalProperties": false,
+        "properties": {
+          "level": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Level"
+          },
+          "mode": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Mode"
+          },
+          "style": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Style"
+          }
+        },
+        "title": "ProcessingTeaching",
+        "type": "object"
+      },
+      "ProcessingUnderstanding": {
+        "additionalProperties": false,
+        "properties": {
+          "clarification_reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Clarification Reason"
+          },
+          "comparison_targets": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Comparison Targets",
+            "type": "array"
+          },
+          "conditions": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Conditions",
+            "type": "array"
+          },
+          "correction": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ProcessingCorrection"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "intent": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Intent"
+          },
+          "limitations": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Limitations",
+            "type": "array"
+          },
+          "method": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Method"
+          },
+          "needs_clarification": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Needs Clarification"
+          },
+          "negation": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Negation",
+            "type": "array"
+          },
+          "numbers": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Numbers",
+            "type": "array"
+          },
+          "requested_facets": {
+            "items": {
+              "$ref": "#/components/schemas/ProcessingFacet"
+            },
+            "title": "Requested Facets",
+            "type": "array"
+          },
+          "standalone_query": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Standalone Query"
+          },
+          "topic_relation": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Topic Relation"
+          }
+        },
+        "title": "ProcessingUnderstanding",
         "type": "object"
       },
       "Profile": {
@@ -2961,6 +5411,102 @@
           "version"
         ],
         "title": "ProfileUpdate",
+        "type": "object"
+      },
+      "ProviderCapabilities": {
+        "additionalProperties": false,
+        "properties": {
+          "api_style": {
+            "enum": [
+              "chat_completions",
+              "responses",
+              "anthropic_messages",
+              "gemini_generate"
+            ],
+            "title": "Api Style",
+            "type": "string"
+          },
+          "declaration": {
+            "default": "runtime_protocol_defaults",
+            "enum": [
+              "runtime_protocol_defaults",
+              "operator_declared"
+            ],
+            "title": "Declaration",
+            "type": "string"
+          },
+          "output_token_ceiling": {
+            "default": 32768,
+            "maximum": 200000.0,
+            "minimum": 1024.0,
+            "title": "Output Token Ceiling",
+            "type": "integer"
+          },
+          "output_token_parameter": {
+            "enum": [
+              "max_tokens",
+              "max_completion_tokens",
+              "max_output_tokens",
+              "maxOutputTokens"
+            ],
+            "title": "Output Token Parameter",
+            "type": "string"
+          },
+          "probe_output_tokens": {
+            "default": 512,
+            "maximum": 8192.0,
+            "minimum": 128.0,
+            "title": "Probe Output Tokens",
+            "type": "integer"
+          },
+          "profile": {
+            "maxLength": 80,
+            "minLength": 1,
+            "title": "Profile",
+            "type": "string"
+          },
+          "reasoning_effort": {
+            "default": false,
+            "title": "Reasoning Effort",
+            "type": "boolean"
+          },
+          "seed": {
+            "default": false,
+            "title": "Seed",
+            "type": "boolean"
+          },
+          "structured_modes": {
+            "items": {
+              "enum": [
+                "json_schema",
+                "json_object",
+                "prompt"
+              ],
+              "type": "string"
+            },
+            "maxItems": 3,
+            "minItems": 1,
+            "title": "Structured Modes",
+            "type": "array"
+          },
+          "temperature": {
+            "default": true,
+            "title": "Temperature",
+            "type": "boolean"
+          },
+          "thinking_toggle": {
+            "default": false,
+            "title": "Thinking Toggle",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "profile",
+          "api_style",
+          "output_token_parameter",
+          "structured_modes"
+        ],
+        "title": "ProviderCapabilities",
         "type": "object"
       },
       "ProviderPreset": {
@@ -3252,6 +5798,59 @@
         "title": "SummaryOut",
         "type": "object"
       },
+      "TaskOut": {
+        "additionalProperties": false,
+        "properties": {
+          "help_level": {
+            "title": "Help Level",
+            "type": "integer"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "question": {
+            "title": "Question",
+            "type": "string"
+          },
+          "session_id": {
+            "title": "Session Id",
+            "type": "string"
+          },
+          "state": {
+            "title": "State",
+            "type": "string"
+          },
+          "task_type": {
+            "title": "Task Type",
+            "type": "string"
+          },
+          "teaching_mode": {
+            "enum": [
+              "direct",
+              "hint"
+            ],
+            "title": "Teaching Mode",
+            "type": "string"
+          },
+          "version": {
+            "title": "Version",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "session_id",
+          "question",
+          "task_type",
+          "teaching_mode",
+          "help_level",
+          "state",
+          "version"
+        ],
+        "title": "TaskOut",
+        "type": "object"
+      },
       "TeachingInput": {
         "additionalProperties": false,
         "properties": {
@@ -3285,6 +5884,32 @@
           "base_answer_ids"
         ],
         "title": "TeachingInput",
+        "type": "object"
+      },
+      "TextSegment": {
+        "additionalProperties": false,
+        "properties": {
+          "fragment_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Fragment Ids",
+            "type": "array"
+          },
+          "highlight": {
+            "default": false,
+            "title": "Highlight",
+            "type": "boolean"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          }
+        },
+        "required": [
+          "text"
+        ],
+        "title": "TextSegment",
         "type": "object"
       },
       "TokenData": {
@@ -4458,6 +7083,152 @@
         ]
       }
     },
+    "/api/v1/admin/model-configurations/capability-profile": {
+      "post": {
+        "operationId": "capability_profile_api_v1_admin_model_configurations_capability_profile_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ModelValues"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_dict_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Capability Profile",
+        "tags": [
+          "model-settings"
+        ]
+      }
+    },
     "/api/v1/admin/model-configurations/presets": {
       "get": {
         "operationId": "presets_api_v1_admin_model_configurations_presets_get",
@@ -5056,8 +7827,38 @@
               "title": "Configuration Id",
               "type": "string"
             }
+          },
+          {
+            "in": "header",
+            "name": "Idempotency-Key",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Idempotency-Key"
+            }
           }
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompatibilityInput",
+                "default": {
+                  "network_label": "local_unverified",
+                  "role": "answer",
+                  "tier": "all"
+                }
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "content": {
@@ -5186,6 +7987,153 @@
           }
         ],
         "summary": "Test Configuration",
+        "tags": [
+          "model-settings"
+        ]
+      }
+    },
+    "/api/v1/admin/model-configurations/{configuration_id}/tests": {
+      "get": {
+        "operationId": "test_history_api_v1_admin_model_configurations__configuration_id__tests_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "configuration_id",
+            "required": true,
+            "schema": {
+              "title": "Configuration Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_list_ConnectionTestOut__"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Test History",
         "tags": [
           "model-settings"
         ]
@@ -6088,6 +9036,162 @@
         ]
       }
     },
+    "/api/v1/answers/{answer_id}/claims/{claim_id}/sources": {
+      "get": {
+        "operationId": "claim_sources_api_v1_answers__answer_id__claims__claim_id__sources_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "answer_id",
+            "required": true,
+            "schema": {
+              "title": "Answer Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "claim_id",
+            "required": true,
+            "schema": {
+              "title": "Claim Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_list_CitationView__"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Claim Sources",
+        "tags": [
+          "learning state"
+        ]
+      }
+    },
     "/api/v1/answers/{answer_id}/evidence/{evidence_id}": {
       "get": {
         "operationId": "evidence_api_v1_answers__answer_id__evidence__evidence_id__get",
@@ -6116,7 +9220,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Envelope_EvidenceSnapshot_"
+                  "$ref": "#/components/schemas/Envelope_Union_EvidenceSnapshot__CitationView__"
                 }
               }
             },
@@ -6241,6 +9345,172 @@
         "summary": "Evidence",
         "tags": [
           "answering"
+        ]
+      }
+    },
+    "/api/v1/answers/{answer_id}/exposures": {
+      "post": {
+        "operationId": "exposure_api_v1_answers__answer_id__exposures_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "answer_id",
+            "required": true,
+            "schema": {
+              "title": "Answer Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "idempotency-key",
+            "required": true,
+            "schema": {
+              "title": "Idempotency-Key",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExposureInput"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_ExposureOut_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Exposure",
+        "tags": [
+          "learning state"
         ]
       }
     },
@@ -6543,6 +9813,153 @@
         "summary": "Put Feedback",
         "tags": [
           "answering"
+        ]
+      }
+    },
+    "/api/v1/answers/{answer_id}/presentation": {
+      "get": {
+        "operationId": "presentation_api_v1_answers__answer_id__presentation_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "answer_id",
+            "required": true,
+            "schema": {
+              "title": "Answer Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_PresentationOut_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Presentation",
+        "tags": [
+          "learning state"
         ]
       }
     },
@@ -11167,6 +14584,1747 @@
         ]
       }
     },
+    "/api/v1/me/memories": {
+      "get": {
+        "operationId": "memories_api_v1_me_memories_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_list_MemoryOut__"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Memories",
+        "tags": [
+          "learning state"
+        ]
+      },
+      "post": {
+        "operationId": "create_memory_api_v1_me_memories_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MemoryRecordCreate"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_MemoryOut_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Create Memory",
+        "tags": [
+          "learning state"
+        ]
+      }
+    },
+    "/api/v1/me/memories/{memory_id}": {
+      "delete": {
+        "operationId": "delete_memory_api_v1_me_memories__memory_id__delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "memory_id",
+            "required": true,
+            "schema": {
+              "title": "Memory Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MemoryDelete"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_dict_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Delete Memory",
+        "tags": [
+          "learning state"
+        ]
+      },
+      "patch": {
+        "operationId": "edit_memory_api_v1_me_memories__memory_id__patch",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "memory_id",
+            "required": true,
+            "schema": {
+              "title": "Memory Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MemoryEdit"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_MemoryOut_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Edit Memory",
+        "tags": [
+          "learning state"
+        ]
+      }
+    },
+    "/api/v1/me/memories/{memory_id}/source": {
+      "get": {
+        "operationId": "memory_source_api_v1_me_memories__memory_id__source_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "memory_id",
+            "required": true,
+            "schema": {
+              "title": "Memory Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_dict_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Memory Source",
+        "tags": [
+          "learning state"
+        ]
+      }
+    },
+    "/api/v1/me/memories/{memory_id}/undo": {
+      "post": {
+        "description": "Undo this saved revision by deleting it; never resurrect a hidden deleted body.",
+        "operationId": "undo_memory_save_api_v1_me_memories__memory_id__undo_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "memory_id",
+            "required": true,
+            "schema": {
+              "title": "Memory Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MemoryDelete"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_dict_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Undo Memory Save",
+        "tags": [
+          "learning state"
+        ]
+      }
+    },
+    "/api/v1/me/memory/assessments": {
+      "post": {
+        "operationId": "record_assessment_api_v1_me_memory_assessments_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MemoryAssessmentCreate"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_MemoryOut_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Record Assessment",
+        "tags": [
+          "learning state"
+        ]
+      }
+    },
+    "/api/v1/me/memory/preview": {
+      "post": {
+        "operationId": "preview_learner_state_api_v1_me_memory_preview_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LearnerStatePreview"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_LearnerStateOut_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Preview Learner State",
+        "tags": [
+          "learning state"
+        ]
+      }
+    },
+    "/api/v1/me/memory/processing": {
+      "get": {
+        "operationId": "memory_processing_api_v1_me_memory_processing_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_list_MemoryProcessingOut__"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Memory Processing",
+        "tags": [
+          "learning state"
+        ]
+      }
+    },
+    "/api/v1/me/memory/settings": {
+      "get": {
+        "operationId": "memory_settings_api_v1_me_memory_settings_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_MemorySettingsOut_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Memory Settings",
+        "tags": [
+          "learning state"
+        ]
+      },
+      "patch": {
+        "operationId": "save_memory_settings_api_v1_me_memory_settings_patch",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MemorySettingsUpdate"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_MemorySettingsOut_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Save Memory Settings",
+        "tags": [
+          "learning state"
+        ]
+      }
+    },
+    "/api/v1/me/memory/summary": {
+      "get": {
+        "operationId": "memory_summary_api_v1_me_memory_summary_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_MemorySummaryOut_"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Memory Summary",
+        "tags": [
+          "learning state"
+        ]
+      }
+    },
     "/api/v1/processing-runs/{before_id}/diff/{after_id}": {
       "get": {
         "operationId": "processing_diff_api_v1_processing_runs__before_id__diff__after_id__get",
@@ -12780,6 +17938,300 @@
         "summary": "Archive Session",
         "tags": [
           "learning"
+        ]
+      }
+    },
+    "/api/v1/sessions/{session_id}/learning-tasks": {
+      "get": {
+        "operationId": "learning_tasks_api_v1_sessions__session_id__learning_tasks_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "session_id",
+            "required": true,
+            "schema": {
+              "title": "Session Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_list_TaskOut__"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Learning Tasks",
+        "tags": [
+          "learning state"
+        ]
+      }
+    },
+    "/api/v1/sessions/{session_id}/memory-notices": {
+      "get": {
+        "operationId": "memory_notices_api_v1_sessions__session_id__memory_notices_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "session_id",
+            "required": true,
+            "schema": {
+              "title": "Session Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_list_dict__"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Memory Notices",
+        "tags": [
+          "learning state"
         ]
       }
     },

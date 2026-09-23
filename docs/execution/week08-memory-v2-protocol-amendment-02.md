@@ -1,0 +1,9 @@
+# Protocol amendment 02 — conditional learner-given calculations
+
+Recorded on 21 September 2026 before the executable formal freeze and before any new formal outcome. Retained-family development probes are a separate development set.
+
+The repaired checker distinguishes formulas quoted from a textbook from formulas explicitly supplied by a learner. `formula_basis=problem_input` requires an exact current-question quote and a null source-fragment ID. The arithmetic interpreter verifies exact numeric givens and the stated result; formula applicability and unit validity remain model judgments. Public conditional derivations retain null textbook-support status, an explicit conditional flag and no invented source citation. Textbook method/background claims continue to require their own cited source support. [The implementation record](answer-reliability-v2-20260921.md) defines the exact fields and tests.
+
+The registered B2/C/T/M conditions use this repaired contract. B1 retains the exact legacy checker. This is part of the stated combined reliability change; C2 changes repair instructions under the same v2 contract and does not isolate formula validation.
+
+The authored final catalogue was checked against active original source text before generation. Q07 holds glucose low; Q12 supplies its short-interval assumption; Q14 supplies the copper half-reaction; Q18 includes Chemistry 21.3; Q21 asks only the collective membrane functions present in Concepts 15.6; Q22/Q23 use Concepts 19.4. Q24 replaces an unsupported viral-cycle scope with Concepts 17.1 capsid/envelope structure. Original audit findings and exact native anchors are retained. No outcome-based item removal occurred. The inventory remains 24 families, six per textbook, including 12 teaching tasks. Human oracle confirmation remains a separate prerequisite.

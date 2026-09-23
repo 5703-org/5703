@@ -4,6 +4,30 @@ Version5.0 plus responsive refinement and the user's real-knowledge-base priorit
 
 ## Actors and scope
 
+The 21 September brief adds the following cumulative requirements. The [current implementation record](../execution/week08-memory-v2-20260921.md) and [registered protocol](../execution/week08-memory-v2-protocol-20260921.md) carry current status and evidence; the earlier requirements below retain their scope.
+
+| Enhancement ID | Observable requirement | Related original scope |
+| --- | --- | --- |
+| W8V2-REQ-01 | Resolve saved credentials through the managed backend; test basic generation, structured output and the complete project contract separately, with bounded sanitised diagnostics, exact immutable versions and explicit activation. | GEN-01/02, BE-07/08, FE-08, AC-09/10/24/25 |
+| W8V2-REQ-02 | Keep full textbook answers as default; combine complementary evidence within 3,000 tokens, preserve atomic formulas/conditions, and repair diagnosed claim/marker/fragment or checker inconsistencies within existing call/time limits. | RET-03/04, GEN-04/05/06, CHAT-04, AC-09/10/13/38/40 |
+| W8V2-REQ-03 | Typed memory has stable identities, explicit operations, scope/effective order and validated sources; current correction affects the current response; delayed work cannot restore superseded or erased content. | PER-01–09, BE-05, AC-15/29/30 |
+| W8V2-REQ-04 | Derive an attributable query-conditioned learner state with current-instruction and subject-specific preference precedence; observations require adequate evidence, and one assessment never certifies general mastery. | PER-01–09, CHAT-02/03, AC-15/29/30/43 |
+| W8V2-REQ-05 | Display active-item summaries, full memory/source/scope/edit/delete controls and optional-stage failures; disable, expiry and erasure cover derived state and delayed jobs. | PER-01–09, BE-05, FE-04, AC-14/15/29/30 |
+| W8V2-REQ-06 | Execute new independent A/B/C/T/M studies with frozen conditions, explicit denominators, failure/cost accounting, targeted ablations and separately imported actual two-reviewer ratings. | QA-07–11, PER-08, AC-17–19/46/47 |
+| W8V2-REQ-07 | Preserve corpus/history and original IDs; validate CPU/runtime, fresh isolated installation, all public resources, complete/eight-member packages and nine rendered English DOCX reports. | INT-10, QA-14, AC-48–60 |
+
+The 20 September user instruction adds the requirements below to the original numbered scope. The [frozen experiment protocol](../execution/week08-enhancement-protocol-20260920.md) defines comparisons and evidence boundaries; [the execution record](../execution/week08-enhancement-20260920.md) holds current results.
+
+| Enhancement ID | Observable requirement | Related original scope |
+| --- | --- | --- |
+| W8E-REQ-01 | Bind answer claims to exact immutable cleaned-source fragments, verifying version, Unicode offsets, hashes and ownership; preserve multi-fragment and partial/unsupported judgments with checker provenance. | DAT-06, GEN-06, FE-05, AC-13/14 |
+| W8E-REQ-02 | Enable optional versioned learning memory with explicit-source provenance, relevant retrieval, current-request precedence, editable entries, expiry, deletion/derived-content purge and stale-job suppression. | PER-01–09, BE-05, AC-15/29/30 |
+| W8E-REQ-03 | Persist per-problem hint state and actual disclosure; direct full answers are the default and new problems reset the hint task. Learner-requested full help is immediate. | CHAT-02–06, GEN-04/05, FE-03, AC-36–43 |
+| W8E-REQ-04 | Apply joint hint limits across answer body, short answer, suggestions and normal source views, including accumulated prior exposure; enforce the same projection through every learner API. | GEN-06, FE-05, BE-10, AC-13/14/43 |
+| W8E-REQ-05 | Share four-call/180-second product budgets across generation/check/repair; separately bound and account memory jobs and offline judging. Preserve failures, interruptions and cancellation fences. | BE-07/08, GEN-04, AC-09–12/24/25 |
+| W8E-REQ-06 | Run fixed-input hint controls/ablations, paragraph/posthoc/preselection citation comparisons and memory comparisons; retain all planned denominators and task-paired uncertainty. Independent human labels remain separate. | QA-07–11, PER-08, AC-17–19/46/47 |
+| W8E-REQ-07 | Deliver reproducible source/resources, eight responsibility packages, English member reports, an overall methods/results/cost/failures report and blinded human import tools. | INT-10, QA-14, AC-60 |
+
 Learners own accounts, profiles, sessions, messages and answer feedback. Administrators additionally manage accounts, corpus processing/releases and experiments, and review feedback. The single worker executes durable jobs. The offline evaluator holds references/labels and submits only gold-free commands. Accountable domain owners are reporting metadata, not user accounts or fabricated reviewers.
 
 | ID | Requirement and observable acceptance | Primary task/check coverage |
@@ -52,6 +76,20 @@ Learners own accounts, profiles, sessions, messages and answer feedback. Adminis
 
 ## Out of scope and evidence limits
 
-No cross-session semantic or episodic memory, automatic mastery inference, learner file uploads, voice/multimodal inputs, open-web agents, full LMS, foundation-model training, multi-tenancy platform or distributed orchestration is required. These exclusions never remove conversation history within a session.
+The 20 September user-authorized scope includes opt-in cross-session memory of explicit learning preferences and goals. Automatic mastery inference, general episodic recall, learner file uploads, voice/multimodal inputs, open-web agents, a full LMS, foundation-model training, a multi-tenancy platform and distributed orchestration remain outside the current scope. Session conversation history remains available through its existing controls.
 
 Authored sources and deterministic mock adapters establish software behaviour only. A real OpenStax corpus release needs actual provenance and source review. Scientific conclusions need actual frozen runs and annotations/ratings. UI screenshots alone do not prove a connected journey. Performance figures must distinguish chat versus evaluation, include the environment and retain unknown cost as null.
+
+## Week 8 reliability/CPU supplement
+
+These requirements follow the 16 September user request and Week 8 clarification. They supplement the original 108 tasks/60 checks/12 responsive checks without replacing their text or ownership. The integrated Week 8 implementation and separate remaining judgments are in [the Week 8 record](../execution/week08-delivery-20260916.md).
+
+| Supplement | Observable requirement and current boundary | Existing scope |
+| --- | --- | --- |
+| W8-REQ-01 | Preserve learner intent/corrections and clarify unresolved short terms. Structured requirements preserve explicit comparison/correction/negation/numbers/conditions with conservative ambiguity; arbitrary semantic rewriting remains unverified. | CHAT-04/05; GEN-03/04; AC-38/39/40 |
+| W8-REQ-02 | Screen unrelated evidence before answering, retain reasons and distinguish no evidence from runtime failure. The current pinned-model cutoff is provisional; topical relevance and claim coverage are different. | RET-05/09; GEN-04/07; BE-08/09; AC-08/09/41 |
+| W8-REQ-03 | Select query execution device independently of immutable build identity; freeze new request settings, preserve old commands and fail explicitly on unavailable requested devices. | RET-01/03/05; INT-04; BE-08/13; AC-06/11/35/48 |
+| W8-REQ-04 | Deliver a complete CPU-capable package and eight uniquely assigned member work packages with reproducible source/resource identities and current evidence. Existing private credentials/history remain excluded. | INT-04/05/10; DAT-12; QA-14; CHAT-11/12; AC-01/20/48; HC-02 |
+| W8-REQ-05 | Separate authored 120-case data and implemented lexical/control mechanisms from actual executions, calibrated/independent semantic/teaching judgments and physical-device acceptance; preserve every historical outcome. | INT-08/09; QA-01/05/09/10/14; AC-18/19/47 |
+
+The eight implemented/researched Week 8 tracks supplement existing acceptance rows; independent review and broader studies are separate follow-up targets. General-knowledge fallback stays disabled. A valid schema, cited ID or retained passage alone does not establish semantic correctness or educational benefit.

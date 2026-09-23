@@ -2,6 +2,69 @@
 
 Original diagram inspection and baseline mapping: 8 September 2026. Current upgrade overlay: 13 September 2026. The dated baseline tables below preserve the original source inspection and its evidence scope. The overlay updates implementation state without pretending to re-inspect a different original drawing. Model credentials are now configured and real DeepSeek calls have executed; older references to user-deferred live answering describe the baseline only.
 
+## 21 September Memory V2 and reliability overlay
+
+Figure 1 is on physical/printed page 1 of `E:/5703/development_inputs/sources/COMP5703/CS30-1_Project_Framework_and_Delivery_Workflow.pdf`. Its bytes were rehashed on 21 September: SHA-256 `033d1901b9dfe18a9e60b8f7a4b7c2e35dc7027367eb07ad668f1bd8a2f69b1d`, identical to the retained visually inspected source. The following map preserves the ten original modules and eight drawn connections. The earlier rendered-page inspection remains the visual source of that inventory.
+
+| Original module | Current scoped state and evidence |
+| --- | --- |
+| Trusted Educational Documents | REAL_FLOW_VERIFIED: original four-book release, source hashes and 48 bundled source objects validated in the fresh CPU import. |
+| Parse, Clean and Chunk | REAL_FLOW_VERIFIED for preserved source units, processing decisions, chunks and exact locators; this iteration reuses the completed source processing. |
+| Embedding Models | REAL_FLOW_VERIFIED: genuine CPU E5 query inference and preserved 10,594 fixed-model vectors of dimension 384. |
+| Vector Knowledge Base | REAL_FLOW_VERIFIED: original release fingerprint preserved; separate PostgreSQL/pgvector import and current migrations executed. |
+| Question + Student Profile | MOCK_TEST_PASSED for typed/scoped memory operations and precedence; REAL_FLOW_VERIFIED for browser editing, query preview, disable/delete and isolated HTTP persistence. Model-level memory use has its frozen M study. |
+| Query Processing | MOCK_TEST_PASSED for version v11 local-reference rules; REAL_FLOW_VERIFIED for actual CPU query preparation and current development requests. |
+| Retrieve + Rerank | REAL_FLOW_VERIFIED: actual CPU E5, BM25/RRF and fixed MiniLM inference; 24 formal question families retain their exact retrieved pools, including one empty pool. |
+| Prompt + LLM | REAL_FLOW_VERIFIED for current DeepSeek role-specific probes, bounded generation/check/repair and recorded development outcomes. Formal generation has 552 terminal records; automatic judging and all-planned analysis remain separate. |
+| Grounded Answer + Citations | REAL_FLOW_VERIFIED for actual persisted hint/source interactions and exact controlled source views; software checks bind claims, markers and spans. Semantic support has separate automatic and human evaluation. |
+| Evaluation & Observability | MOCK_TEST_PASSED for frozen schedule, private-label separation, stopping rules, import and analysis contracts; all 552 formal generation/judgment receipts, paired analysis, costs and two blank 552-row reviewer forms are verified; actual quality limitations remain in the terminal results. Human ratings and oracle confirmations are WAITING_EXTERNAL. |
+
+| Original drawn connection | Current scoped state and evidence |
+| --- | --- |
+| Documents → Parse/Clean/Chunk | REAL_FLOW_VERIFIED: imported original hashes and source-unit/processing lineage retain the original official inputs. |
+| Parse/Clean/Chunk → Embedding Models | REAL_FLOW_VERIFIED: imported chunk text, spans and fixed embedding identity match the preserved release. |
+| Embedding Models → Vector Knowledge Base | REAL_FLOW_VERIFIED: complete 10,594-vector import validates dimensions, finite values, hashes and source membership. |
+| Question/Profile → Query Processing | MOCK_TEST_PASSED for current/subject/global precedence, isolation and frozen policy; actual browser and HTTP records exercise the connection. |
+| Query Processing → Retrieve/Rerank | REAL_FLOW_VERIFIED: current versioned queries use genuine CPU encoding and reranking; accepted and empty retrievals are retained. |
+| Vector Knowledge Base → Retrieve + Rerank | REAL_FLOW_VERIFIED: exact release membership and retrieved source snapshots preserved across matched conditions. |
+| Retrieve/Rerank → Prompt/LLM | REAL_FLOW_VERIFIED: complete complementary passages, capacity accounting and exact supplied fragment identities retained in actual development and ongoing formal requests. |
+| Prompt/LLM → Grounded Answer/Citations | REAL_FLOW_VERIFIED: strict bounded checking, publication and source projection exercised; terminal binding failures remain recorded delivery failures. |
+
+Current evidence: [complete 828/86 software gate](../../evidence/week08-memory-v2/20260921/software-gate-release-final-20260922/software_gate.json), [migration preservation](../../evidence/week08-memory-v2/20260921/migration/preservation-result.json), [CPU installation](../../evidence/week08-memory-v2/20260921/portable/summary.json), [final public source parity](../../evidence/week08-memory-v2/20260921/portable/source-parity-release-final-20260922.json), [memory browser](../../evidence/week08-memory-v2/20260921/memory/browser-final/verification.json), [implementation and formal checkpoint](week08-memory-v2-20260921.md). Original Evaluation & Observability remains a figure footer without drawn evaluation arrows. New memory and model-administration relationships are implementation additions.
+
+
+The [terminal results](memory-v2-results-20260921.md) preserve positive and negative paired differences, A1 judgment undercoverage and zero independent human ratings. The current software gate covers the public tests-only successor; the original study snapshot remains exact in the verified private archive.
+
+## 20 September enhancement overlay
+
+The original Figure 1 remains in `CS30-1_Project_Framework_and_Delivery_Workflow.pdf`, physical/printed page 1. Its SHA256 was rechecked on 20 September and remains `033d1901b9dfe18a9e60b8f7a4b7c2e35dc7027367eb07ad668f1bd8a2f69b1d`. The retained visual inspection identifies the ten original modules and eight drawn connections below. Memory, teaching state and exact fragments are current implementation additions. The original drawing has no evaluation arrows; this overlay does not invent them.
+
+| Original module | 20 September actual state and evidence |
+| --- | --- |
+| Trusted Educational Documents | REAL_FLOW_VERIFIED: same four official books; original assets validated in the fresh portable import |
+| Parse, Clean and Chunk | REAL_FLOW_VERIFIED for preserved raw/cleaned SourceUnits, processing versions and spans; no reparse claimed; exact fragment mapping adds Unicode positions |
+| Embedding Models | REAL_FLOW_VERIFIED: pinned E5 CPU query execution and retained 10,594 real 384-dimensional vectors |
+| Vector Knowledge Base | REAL_FLOW_VERIFIED: source/migration fingerprints preserved, independent empty PostgreSQL/pgvector installation imports the complete release |
+| Question + Student Profile | REAL_FLOW_VERIFIED: direct/hint commands, frozen settings and opt-in memory snapshots; memory failures are retained in its separate 36-condition comparison |
+| Query Processing | REAL_FLOW_VERIFIED: version v10 preserves current declarative givens; formal F28/F40/F56 clarification outcomes remain failures for the scheduled answer tasks |
+| Retrieve + Rerank | REAL_FLOW_VERIFIED: real CPU E5, BM25/RRF and MiniLM initial retrieval frozen across conditions; relevance quality remains a distinct judgment |
+| Prompt + LLM | REAL_FLOW_VERIFIED: actual DeepSeek generation, check, finite repair/recheck and purpose accounting; other providers retain their tested protocol adapters |
+| Grounded Answer + Citations | REAL_FLOW_VERIFIED: exact fragments, claim links and controlled public views exercised through actual HTTP/browser interactions; semantic failures remain terminal outcomes |
+| Evaluation & Observability | REAL_FLOW_VERIFIED: all 900 hint and 180 citation requests, separate judging, paired intervals and usage records; independent human scores are WAITING_EXTERNAL |
+
+| Original drawn connection | Current verified implementation and boundary |
+| --- | --- |
+| Documents → Parse/Clean/Chunk | Preserved original/source joins and immutable lineage validated on import; no new parsing run |
+| Parse/Clean/Chunk → Embedding Models | Same source chunks, fixed model/tokenizer and vector identities preserved |
+| Embedding Models → Vector Knowledge Base | Complete vector import and checks in a fresh isolated database |
+| Question/Profile → Query Processing | Actual task transitions, per-turn settings and memory fences; user/current instructions remain separate from evaluator labels |
+| Query Processing → Retrieve/Rerank | Real CPU preparation/embedding/search; the three formal clarifications remain in all denominators |
+| Vector Knowledge Base → Retrieve + Rerank | Frozen release/source identities and initial candidate hashes for all formal conditions |
+| Retrieve/Rerank → Prompt/LLM | Same bounded initial evidence per matched task; actual evidence/fragment selections, budgets and stage attempts retained |
+| Prompt/LLM → Grounded Answer/Citations | Finite publication gate and shared answer/history/source projection; terminal failed drafts are private |
+
+Current evidence: [migration preservation](../../evidence/week08-enhancement/20260920/backend/main-migration-preservation.json), [portable CPU execution](../../evidence/week08-enhancement/20260920/portable/app-attempt1.json), [runtime parity](../../evidence/week08-enhancement/20260920/portable/source-parity.json), [source browser](../../evidence/week08-enhancement/20260920/frontend/live-source-browser-summary.json), [formal execution and results](week08-enhancement-20260920.md). A real flow verification covers the named connection; the measured negative primary comparison and remaining human/visual/device scope remain explicit.
+
 ## 13 September module and connection overlay
 
 The original source is `E:/5703/development_inputs/sources/COMP5703/CS30-1_Project_Framework_and_Delivery_Workflow.pdf`, outside the application directory, physical/printed page 1, Figure 1. Its current SHA256 remains `033d1901b9dfe18a9e60b8f7a4b7c2e35dc7027367eb07ad668f1bd8a2f69b1d`, matching the 8 September source manifest. The retained visual inspection is [the rendered page](../../evidence/source_audit/original-framework-page-1.png), which is included in portable evidence. This current check verifies unchanged source bytes; the original visual inspection date remains 8 September. Its ten modules and eight drawn connections are mapped below. Model settings, account administration and diagnostics are implementation additions, not newly discovered boxes in the original figure.
