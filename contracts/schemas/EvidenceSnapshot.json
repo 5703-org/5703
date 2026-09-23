@@ -1,0 +1,166 @@
+{
+  "$defs": {
+    "EvidenceOrigin": {
+      "additionalProperties": false,
+      "properties": {
+        "request_id": {
+          "title": "Request Id",
+          "type": "string"
+        },
+        "evidence_id": {
+          "title": "Evidence Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "request_id",
+        "evidence_id"
+      ],
+      "title": "EvidenceOrigin",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "evidence_id": {
+      "pattern": "^ev_[0-9]{3,}$",
+      "title": "Evidence Id",
+      "type": "string"
+    },
+    "chunk_id": {
+      "title": "Chunk Id",
+      "type": "string"
+    },
+    "asset_id": {
+      "title": "Asset Id",
+      "type": "string"
+    },
+    "processing_id": {
+      "title": "Processing Id",
+      "type": "string"
+    },
+    "source_title": {
+      "minLength": 1,
+      "title": "Source Title",
+      "type": "string"
+    },
+    "source_url": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Url"
+    },
+    "license": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "License"
+    },
+    "section": {
+      "title": "Section",
+      "type": "string"
+    },
+    "pages": {
+      "items": {
+        "type": "integer"
+      },
+      "title": "Pages",
+      "type": "array"
+    },
+    "locator": {
+      "minLength": 1,
+      "title": "Locator",
+      "type": "string"
+    },
+    "text": {
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Text",
+      "type": "string"
+    },
+    "text_hash": {
+      "title": "Text Hash",
+      "type": "string"
+    },
+    "context_order": {
+      "title": "Context Order",
+      "type": "integer"
+    },
+    "inherited_from": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/EvidenceOrigin"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "chunk_text_hash": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Chunk Text Hash"
+    },
+    "chunk_start": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Chunk Start"
+    },
+    "chunk_end": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Chunk End"
+    }
+  },
+  "required": [
+    "evidence_id",
+    "chunk_id",
+    "asset_id",
+    "processing_id",
+    "source_title",
+    "section",
+    "pages",
+    "locator",
+    "text",
+    "text_hash",
+    "context_order"
+  ],
+  "title": "EvidenceSnapshot",
+  "type": "object"
+}

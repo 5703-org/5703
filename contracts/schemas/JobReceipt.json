@@ -1,0 +1,36 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "request_id": {
+      "title": "Request Id",
+      "type": "string"
+    },
+    "job_id": {
+      "title": "Job Id",
+      "type": "string"
+    },
+    "user_message_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "User Message Id"
+    },
+    "poll_url": {
+      "title": "Poll Url",
+      "type": "string"
+    }
+  },
+  "required": [
+    "request_id",
+    "job_id",
+    "user_message_id",
+    "poll_url"
+  ],
+  "title": "JobReceipt",
+  "type": "object"
+}

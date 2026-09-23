@@ -1,0 +1,1279 @@
+{
+  "spec_version": "5.0",
+  "week_system": "Course/teaching week; project_week=course_week-2 from Week 3",
+  "week_13": "Optional contingency only; official dates/deadlines not confirmed",
+  "schedule_status": "Suggested team reporting allocation only, not execution schedule, deadline or actual completion evidence.",
+  "weekly_work_packages": [
+    {
+      "course_week": 6,
+      "project_week": 4,
+      "task_ids": [
+        "INT-01",
+        "INT-02",
+        "CHAT-01",
+        "INT-03",
+        "INT-04",
+        "INT-05"
+      ],
+      "work": "Audit archives/git state; publish chat scope and migration mapping, reconcile foundations and coordinate the first thin slice.",
+      "deliverables": [
+        "docs/foundation/",
+        "AGENTS.md",
+        "PLANS.md",
+        "docs/execution/"
+      ],
+      "downstream_consumers": "all eight workstreams",
+      "acceptance": "Contracts, IDs and dependency checks pass; every existing-work claim has a source; continue coding after FOUNDATION_READY.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Xianshu Zhang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 6,
+      "project_week": 4,
+      "task_ids": [
+        "DAT-01",
+        "DAT-03",
+        "DAT-02",
+        "DAT-04",
+        "DAT-05",
+        "DAT-06",
+        "DAT-07",
+        "DAT-08"
+      ],
+      "work": "Reuse parsing, inspect available originals/quarantine, produce stable chunks/spans and a first release from ready sources.",
+      "deliverables": [
+        "pipelines/",
+        "configs/corpus/",
+        "artifacts/manifests/"
+      ],
+      "downstream_consumers": "Chengzhou Liu; Zeping Liao",
+      "acceptance": "Chunks trace to source; missing originals are not approved; ready-source releases need not wait for every book.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Hongle Yang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 6,
+      "project_week": 4,
+      "task_ids": [
+        "RET-01",
+        "RET-02",
+        "RET-03",
+        "RET-04",
+        "RET-05"
+      ],
+      "work": "Receive stable chunks and implement E5/pgvector/R0, actual-context evidence and budget interfaces.",
+      "deliverables": [
+        "retrieval/",
+        "contracts/fixtures/evidence/"
+      ],
+      "downstream_consumers": "Sijin Lu; Zeping Liao",
+      "acceptance": "Numeric fixtures rank correctly; normal/empty retrieval is callable; citation IDs match text hashes.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Chengzhou Liu",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 6,
+      "project_week": 4,
+      "task_ids": [
+        "GEN-01",
+        "GEN-02",
+        "GEN-03",
+        "GEN-04",
+        "GEN-05",
+        "GEN-08"
+      ],
+      "work": "Reproduce in a copy, port complete assets, and fix bias/oracle/strict parsing/truncation/empty output while establishing shared chat types.",
+      "deliverables": [
+        "generation/",
+        "contracts/schemas/",
+        "tests/contract/"
+      ],
+      "downstream_consumers": "Zeping Liao; Baiqing Huang; Chong Zhang",
+      "acceptance": "Relevant HC-01–07 checks run; chat input needs no options; historical failure records remain.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Sijin Lu",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 6,
+      "project_week": 4,
+      "task_ids": [
+        "PER-01",
+        "PER-02",
+        "PER-03",
+        "PER-04"
+      ],
+      "work": "Locate/verify compiler source; freeze profile mapping/defaults and provide deterministic English policies for all three levels.",
+      "deliverables": [
+        "personalisation/",
+        "contracts/fixtures/profiles/"
+      ],
+      "downstream_consumers": "Sijin Lu; Zeping Liao; Baiqing Huang",
+      "acceptance": "Repeated compilation is hash-stable; invalid explicit values fail; defaults and temporary presentation requests are defined.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Pengyuan Xia",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 6,
+      "project_week": 4,
+      "task_ids": [
+        "BE-01",
+        "BE-02",
+        "BE-03",
+        "BE-07",
+        "BE-09",
+        "BE-04",
+        "BE-05",
+        "BE-06",
+        "CHAT-02"
+      ],
+      "work": "Reverify backend foundations; migrate messages/snapshots/answers/evidence/jobs incrementally and prepare the real POST messages orchestration.",
+      "deliverables": [
+        "backend/app/",
+        "backend/alembic/",
+        "contracts/openapi.yaml"
+      ],
+      "downstream_consumers": "Baiqing Huang; Sijin Lu; Chengzhou Liu",
+      "acceptance": "Fresh and legacy-fixture upgrades pass; one request persists messages and citations with an explicitly mock model if needed.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Zeping Liao",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 6,
+      "project_week": 4,
+      "task_ids": [
+        "FE-01",
+        "FE-02",
+        "FE-03",
+        "FE-04",
+        "FE-05"
+      ],
+      "work": "Retain useful wireframe semantics, build login and /chat, and connect typed message APIs for full responses and errors.",
+      "deliverables": [
+        "frontend/src/features/auth/",
+        "frontend/src/features/chat/"
+      ],
+      "downstream_consumers": "Zeping Liao; Chong Zhang",
+      "acceptance": "No mandatory A–D fields; send has a real database effect; unfinished features cannot claim success.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Baiqing Huang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 6,
+      "project_week": 4,
+      "task_ids": [
+        "QA-01",
+        "QA-03",
+        "QA-05",
+        "CHAT-10"
+      ],
+      "work": "Create 12 conversation families and register 60 scenarios; prioritise generation-migration negatives and thin-slice checks independent of SciQ files.",
+      "deliverables": [
+        "tests/fixtures/",
+        "tests/contract/",
+        "docs/execution/acceptance.json"
+      ],
+      "downstream_consumers": "all eight workstreams",
+      "acceptance": "Expected versus executed checks are separate; the legacy 39-test scope is explicit, not full-project acceptance.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Chong Zhang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 7,
+      "project_week": 5,
+      "task_ids": [
+        "CHAT-01",
+        "INT-06",
+        "INT-07"
+      ],
+      "work": "Coordinate consumer-side seam tests and accept the chat product, not isolated modules; maintain the end-of-week defect list.",
+      "deliverables": [
+        "docs/execution/week_07.md",
+        "docs/traceability.md"
+      ],
+      "downstream_consumers": "all eight workstreams",
+      "acceptance": "J1/J2/J3/J4/J6 and no-SciQ chat pass; blockers have explicit owners.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Xianshu Zhang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 7,
+      "project_week": 5,
+      "task_ids": [
+        "DAT-09",
+        "DAT-08",
+        "DAT-10"
+      ],
+      "work": "Connect deactivation/restoration/reprocessing; separately prepare SciQ evaluation files without indexing support as textbook evidence.",
+      "deliverables": [
+        "pipelines/lifecycle.py",
+        "evaluation/datasets/"
+      ],
+      "downstream_consumers": "Chengzhou Liu; Zeping Liao; Chong Zhang",
+      "acceptance": "New queries exclude deactivated sources; history is unchanged or explicitly unavailable; chat has no gold mounts.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Hongle Yang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 7,
+      "project_week": 5,
+      "task_ids": [
+        "CHAT-04",
+        "RET-04",
+        "RET-06",
+        "RET-05"
+      ],
+      "work": "Implement standalone follow-up queries, topic changes, clarification and underlying evidence reuse; record raw and prepared queries.",
+      "deliverables": [
+        "conversation/query.py",
+        "retrieval/context.py"
+      ],
+      "downstream_consumers": "Sijin Lu; Zeping Liao; Chong Zhang",
+      "acceptance": "The light follow-up uses its real referent; topic changes drop irrelevant evidence; empty retrieval differs from an outage.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Chengzhou Liu",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 7,
+      "project_week": 5,
+      "task_ids": [
+        "GEN-06",
+        "GEN-07",
+        "GEN-08",
+        "GEN-09",
+        "CHAT-05"
+      ],
+      "work": "Extract runtime generation service; connect messages/history/profile/evidence and one bounded retry policy; inspect actual model payloads.",
+      "deliverables": [
+        "generation/service.py",
+        "generation/tracing.py"
+      ],
+      "downstream_consumers": "Zeping Liao; Pengyuan Xia; Baiqing Huang",
+      "acceptance": "Executable HC-08–11 checks pass; profiles enter one main call, with no silent fallback or lost history.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Sijin Lu",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 7,
+      "project_week": 5,
+      "task_ids": [
+        "PER-03",
+        "PER-04",
+        "PER-05",
+        "CHAT-07"
+      ],
+      "work": "Connect save/reset/snapshot/temporary simplification and verify that disabling profiles retains conversational context.",
+      "deliverables": [
+        "personalisation/service.py",
+        "tests/e2e/profile/"
+      ],
+      "downstream_consumers": "Sijin Lu; Baiqing Huang; Zeping Liao",
+      "acceptance": "All three policies enter actual requests; historical profile snapshots remain; temporary requests do not rewrite saved level.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Pengyuan Xia",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 7,
+      "project_week": 5,
+      "task_ids": [
+        "CHAT-03",
+        "BE-08",
+        "BE-10",
+        "BE-12",
+        "BE-13",
+        "BE-14",
+        "CHAT-08"
+      ],
+      "work": "Complete shared orchestration, recent context/extractive summaries, transactional publication, retry and latest-answer revisions; sync client contracts.",
+      "deliverables": [
+        "backend/app/modules/answering/",
+        "conversation/",
+        "contracts/"
+      ],
+      "downstream_consumers": "Baiqing Huang; Sijin Lu; Chong Zhang",
+      "acceptance": "Duplicate send deduplicates; refresh restores; failed regeneration preserves old answer; summaries exclude future/other-session text.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Zeping Liao",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 7,
+      "project_week": 5,
+      "task_ids": [
+        "FE-07",
+        "FE-04",
+        "FE-10",
+        "FE-05",
+        "FE-06",
+        "FE-08",
+        "FE-09",
+        "CHAT-06"
+      ],
+      "work": "Connect the chat workspace, evidence drawer, profiles, feedback, stop/retry/regenerate, history and corpus status.",
+      "deliverables": [
+        "frontend/src/features/",
+        "tests/e2e/"
+      ],
+      "downstream_consumers": "Chong Zhang; Zeping Liao",
+      "acceptance": "Natural multi-turn flow works; Enter/Shift+Enter, failed drafts and re-login behave correctly; controls have real effects.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Baiqing Huang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 7,
+      "project_week": 5,
+      "task_ids": [
+        "QA-02",
+        "QA-03",
+        "QA-05",
+        "CHAT-10"
+      ],
+      "work": "Run 12 conversation families and recovery negatives; finish independent evaluation adapters and metric math tests; label live semantic checks separately.",
+      "deliverables": [
+        "evaluation/conversations/",
+        "tests/e2e/",
+        "evaluation/metrics/"
+      ],
+      "downstream_consumers": "Xianshu Zhang; all developers",
+      "acceptance": "No-SciQ operation, reference/clarification/topic/summary/profile/revision checks inspect actual records.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Chong Zhang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 8,
+      "project_week": 6,
+      "task_ids": [
+        "INT-07",
+        "INT-08"
+      ],
+      "work": "Freeze protocols, manifests, configurations and reporting; continue fixing chat defects without replacing product acceptance with scores.",
+      "deliverables": [
+        "docs/baseline_freeze.md",
+        "docs/execution/week_08.md"
+      ],
+      "downstream_consumers": "Chong Zhang; Sijin Lu; Chengzhou Liu",
+      "acceptance": "OpenQA/MCQ directories and denominators are separate; unrun studies remain blocked, not passed.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Xianshu Zhang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 8,
+      "project_week": 6,
+      "task_ids": [
+        "DAT-09",
+        "DAT-08"
+      ],
+      "work": "Verify available SciQ revision/splits/hashes and corpus manifests; provide source locators for annotation.",
+      "deliverables": [
+        "evaluation/datasets/",
+        "artifacts/manifests/"
+      ],
+      "downstream_consumers": "Chong Zhang; Chengzhou Liu",
+      "acceptance": "System-visible exports contain only protocol fields; support is absent from the textbook index.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Hongle Yang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 8,
+      "project_week": 6,
+      "task_ids": [
+        "RET-04",
+        "RET-05",
+        "RET-07"
+      ],
+      "work": "Stabilise R0 traces and review source coverage; implement R1 in parallel without changing frozen E1.",
+      "deliverables": [
+        "retrieval/tracing.py",
+        "retrieval/bm25.py"
+      ],
+      "downstream_consumers": "Chong Zhang; Sijin Lu",
+      "acceptance": "The same release reproduces candidate order; a retrieval miss alone does not prove absent source coverage.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Chengzhou Liu",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 8,
+      "project_week": 6,
+      "task_ids": [
+        "GEN-08",
+        "GEN-10",
+        "GEN-11"
+      ],
+      "work": "Connect OpenQA/MCQ contracts and actual provider metadata to the formal runner; run a separate live smoke when configured and authorised.",
+      "deliverables": [
+        "generation/benchmark_context.py",
+        "configs/models/"
+      ],
+      "downstream_consumers": "Chong Zhang; Zeping Liao",
+      "acceptance": "Inputs/settings are comparable; examples do not select a verified model; preserve the historical probe.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Sijin Lu",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 8,
+      "project_week": 6,
+      "task_ids": [
+        "PER-08",
+        "PER-05"
+      ],
+      "work": "Recheck product profiles; prepare rating templates and fixed-level cases without delaying already-required chat features.",
+      "deliverables": [
+        "personalisation/rubric/",
+        "docs/user_profiles.md"
+      ],
+      "downstream_consumers": "Chong Zhang; Sijin Lu",
+      "acceptance": "Baseline inputs exclude profiles while normal chat retains them; rating templates contain no fabricated scores.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Pengyuan Xia",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 8,
+      "project_week": 6,
+      "task_ids": [
+        "BE-11",
+        "BE-12"
+      ],
+      "work": "Implement experiment runs/items, freeze/cancel/resume/export through shared AnswerExecutionService without fake learner sessions.",
+      "deliverables": [
+        "backend/app/modules/experiments/",
+        "evaluation/runner/"
+      ],
+      "downstream_consumers": "Chong Zhang; Baiqing Huang",
+      "acceptance": "All scheduled items retain outcomes; stopping the evaluator does not affect chat_ready.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Zeping Liao",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 8,
+      "project_week": 6,
+      "task_ids": [
+        "FE-11",
+        "FE-08"
+      ],
+      "work": "Build secondary admin evaluation/results views showing protocol, mock/live and failure counts; continue chat UX fixes.",
+      "deliverables": [
+        "frontend/src/features/admin/experiments/"
+      ],
+      "downstream_consumers": "Chong Zhang; Zeping Liao",
+      "acceptance": "Learner landing remains /chat; exports use actual server records, not invented frontend metrics.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Baiqing Huang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 8,
+      "project_week": 6,
+      "task_ids": [
+        "QA-04",
+        "QA-06",
+        "CHAT-09",
+        "QA-07",
+        "QA-08"
+      ],
+      "work": "Freeze coverage review and run manifests; execute E0/E1 or record blockers, separately calculating EM/F1, MCQ and semantic review.",
+      "deliverables": [
+        "evaluation/runner/",
+        "evaluation/analysis/",
+        "artifacts/runs/"
+      ],
+      "downstream_consumers": "Xianshu Zhang; all workstreams",
+      "acceptance": "Failures/refusals remain in N; aliases/references never enter generation; HC-12 and denominator fixtures pass.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Chong Zhang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 9,
+      "project_week": 7,
+      "task_ids": [
+        "INT-07",
+        "INT-08"
+      ],
+      "work": "Review variant controls and code diffs; integrate improvements without requiring unsupported positive gains.",
+      "deliverables": [
+        "docs/research/variant_registry.md"
+      ],
+      "downstream_consumers": "Chengzhou Liu; Chong Zhang",
+      "acceptance": "Every comparison identifies changed/fixed factors; the prior baseline is not overwritten.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Xianshu Zhang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 9,
+      "project_week": 7,
+      "task_ids": [
+        "DAT-07",
+        "DAT-11"
+      ],
+      "work": "Build fixed-window/structure-aware releases with span mappings and re-annotate qrels where necessary.",
+      "deliverables": [
+        "configs/variants/chunking/",
+        "evaluation/annotations/"
+      ],
+      "downstream_consumers": "Chengzhou Liu; Chong Zhang",
+      "acceptance": "Incompatible chunk IDs are not reused; old answer text/hashes remain unchanged.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Hongle Yang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 9,
+      "project_week": 7,
+      "task_ids": [
+        "RET-07",
+        "RET-08",
+        "RET-09",
+        "RET-10"
+      ],
+      "work": "Deliver BM25, RRF, re-ranking and chunk/embedding/k ablations; distinguish executable code from blocked measurements when models are unavailable.",
+      "deliverables": [
+        "retrieval/",
+        "configs/variants/",
+        "artifacts/runs/ablations/"
+      ],
+      "downstream_consumers": "Chong Zhang; Sijin Lu; Zeping Liao",
+      "acceptance": "RRF matches hand calculations; changed embedding dimensions get compatible indexes; no hidden R3 fallback.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Chengzhou Liu",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 9,
+      "project_week": 7,
+      "task_ids": [
+        "GEN-07",
+        "GEN-10"
+      ],
+      "work": "Implement matched-policy controls and versioned prompts, recording timing/usage/errors without attributing multi-factor changes solely to retrieval.",
+      "deliverables": [
+        "configs/variants/matched_policy/",
+        "docs/research/generation_controls.md"
+      ],
+      "downstream_consumers": "Chong Zhang; Chengzhou Liu",
+      "acceptance": "Protocols remain distinct, reuse the shared engine and do not alter chat entry; a second live model remains optional.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Sijin Lu",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 9,
+      "project_week": 7,
+      "task_ids": [
+        "PER-08",
+        "PER-06"
+      ],
+      "work": "Prepare C0/C1/C2 inputs, frozen base responses/evidence and blinded rubrics for the next week.",
+      "deliverables": [
+        "configs/profiles/study.yaml",
+        "personalisation/rubric/"
+      ],
+      "downstream_consumers": "Chong Zhang; Sijin Lu",
+      "acceptance": "Study and product configurations are separate; gold never replaces the base response.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Pengyuan Xia",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 9,
+      "project_week": 7,
+      "task_ids": [
+        "BE-11",
+        "BE-14",
+        "BE-15"
+      ],
+      "work": "Connect variant versions/run traces and embedding storage boundaries; verify backend/client schema synchronisation.",
+      "deliverables": [
+        "backend/app/modules/experiments/",
+        "contracts/"
+      ],
+      "downstream_consumers": "Chengzhou Liu; Baiqing Huang",
+      "acceptance": "Switching retrievers does not rewrite login/history/evidence; legacy migration fixtures pass.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Zeping Liao",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 9,
+      "project_week": 7,
+      "task_ids": [
+        "FE-10",
+        "FE-11",
+        "FE-06"
+      ],
+      "work": "Complete comparison/configuration/failure-trace views and historical citation rendering after corpus changes.",
+      "deliverables": [
+        "frontend/src/features/admin/experiments/",
+        "frontend/src/features/evidence/"
+      ],
+      "downstream_consumers": "Chong Zhang; Zeping Liao",
+      "acceptance": "Display actual denominators and missing metrics; old citations never silently target new content.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Baiqing Huang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 9,
+      "project_week": 7,
+      "task_ids": [
+        "QA-04",
+        "QA-08",
+        "QA-09"
+      ],
+      "work": "Check single-factor comparisons, compatible qrels and paired samples; produce at least one real controlled finding when inputs permit.",
+      "deliverables": [
+        "evaluation/analysis/ablation.py",
+        "artifacts/reports/"
+      ],
+      "downstream_consumers": "Xianshu Zhang; Chengzhou Liu",
+      "acceptance": "Retain negative findings, keep missing labels null and identify exactly which comparisons were not executed.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Chong Zhang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 10,
+      "project_week": 8,
+      "task_ids": [
+        "INT-09",
+        "INT-07"
+      ],
+      "work": "Confirm study samples and real review arrangements; control remaining scope without adding large features.",
+      "deliverables": [
+        "docs/execution/week_10.md",
+        "docs/research/"
+      ],
+      "downstream_consumers": "Pengyuan Xia; Chong Zhang",
+      "acceptance": "Research and engineering gaps are separate; naming reviewers is not evidence of performed ratings.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Xianshu Zhang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 10,
+      "project_week": 8,
+      "task_ids": [
+        "DAT-11",
+        "DAT-12"
+      ],
+      "work": "Freeze study source spans/releases, complete data dictionary/rebuild notes and address remaining source anomalies.",
+      "deliverables": [
+        "docs/data/",
+        "artifacts/reports/data_quality.json"
+      ],
+      "downstream_consumers": "Pengyuan Xia; Chong Zhang",
+      "acceptance": "Study evidence is locatable; missing originals/use constraints are explicit, without expanding knowledge-source scope.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Hongle Yang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 10,
+      "project_week": 8,
+      "task_ids": [
+        "RET-10",
+        "RET-11"
+      ],
+      "work": "Finish retrieval ablations, analyse misses/context exclusions and freeze evidence for profile studies.",
+      "deliverables": [
+        "docs/research/retrieval_findings.md"
+      ],
+      "downstream_consumers": "Pengyuan Xia; Chong Zhang",
+      "acceptance": "Matched profile items hold question/evidence fixed; comparison data remains traceable.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Chengzhou Liu",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 10,
+      "project_week": 8,
+      "task_ids": [
+        "GEN-09",
+        "GEN-10",
+        "GEN-11"
+      ],
+      "work": "Implement separate TeachingStudyService/schema and generate C0/C1/C2 explanations; product chat still uses one main generation.",
+      "deliverables": [
+        "generation/teaching_study.py",
+        "contracts/schemas/teaching_study.json"
+      ],
+      "downstream_consumers": "Pengyuan Xia; Chong Zhang; Zeping Liao",
+      "acceptance": "Study outputs do not append learner messages or mutate the base response; usage is per study item.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Sijin Lu",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 10,
+      "project_week": 8,
+      "task_ids": [
+        "PER-08",
+        "PER-06",
+        "PER-07"
+      ],
+      "work": "Run the frozen level/condition matrix, check supported-meaning preservation and prepare randomised blinded review with anchored criteria.",
+      "deliverables": [
+        "evaluation/runner/personalisation.py",
+        "personalisation/invariants.py"
+      ],
+      "downstream_consumers": "Chong Zhang; Sijin Lu",
+      "acceptance": "Report actual output count rather than assuming 270; missing ratings are null; structural checks are not semantic proof.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Pengyuan Xia",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 10,
+      "project_week": 8,
+      "task_ids": [
+        "BE-11",
+        "BE-15"
+      ],
+      "work": "Persist separate study items/outputs/rating references; complete result reads and feedback review, checking transactions.",
+      "deliverables": [
+        "backend/app/modules/experiments/",
+        "backend/app/modules/learning/feedback/"
+      ],
+      "downstream_consumers": "Baiqing Huang; Chong Zhang",
+      "acceptance": "User chat and study identities are separate; feedback has an operator handling path.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Zeping Liao",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 10,
+      "project_week": 8,
+      "task_ids": [
+        "FE-07",
+        "FE-11",
+        "FE-09",
+        "FE-12"
+      ],
+      "work": "Polish applied-profile visibility, feedback review and result exports; test keyboard and narrow-screen behaviour.",
+      "deliverables": [
+        "frontend/src/features/",
+        "docs/frontend.md"
+      ],
+      "downstream_consumers": "Chong Zhang; Pengyuan Xia",
+      "acceptance": "Current profiles differ clearly from historical snapshots; status does not depend on colour alone.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Baiqing Huang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 10,
+      "project_week": 8,
+      "task_ids": [
+        "QA-11",
+        "QA-10"
+      ],
+      "work": "Collect actual independent ratings/disagreements, reconcile samples/pairs/missingness and start full negative/fault regression.",
+      "deliverables": [
+        "evaluation/analysis/personalisation.py",
+        "tests/integration/faults/"
+      ],
+      "downstream_consumers": "Xianshu Zhang; Pengyuan Xia",
+      "acceptance": "Without actual ratings, claim no learning effect; cluster repeated outputs by question and retain failures.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Chong Zhang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 11,
+      "project_week": 9,
+      "task_ids": [
+        "INT-09",
+        "INT-07",
+        "CHAT-11"
+      ],
+      "work": "Audit requirement-to-code mapping, obsolete MCQ-mainline assumptions and blockers; prepare a release candidate.",
+      "deliverables": [
+        "docs/release_candidate.md",
+        "scripts/verify/chat_scope.py"
+      ],
+      "downstream_consumers": "all eight workstreams",
+      "acceptance": "No missing IDs, cycles or mandatory-choice remnants; critical defects are fixed or explicitly blocking.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Xianshu Zhang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 11,
+      "project_week": 9,
+      "task_ids": [
+        "DAT-10",
+        "DAT-12"
+      ],
+      "work": "Check asset/chunk/vector counts and historical hashes in a separate restore environment; complete quality limitations.",
+      "deliverables": [
+        "docs/data/",
+        "artifacts/reports/restore/"
+      ],
+      "downstream_consumers": "Zeping Liao; Chong Zhang",
+      "acceptance": "Restore preserves provenance; cleanup does not delete referenced evidence.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Hongle Yang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 11,
+      "project_week": 9,
+      "task_ids": [
+        "RET-06",
+        "RET-11"
+      ],
+      "work": "Execute R0/R1 and embedding replacement drills and diagnose measured bottlenecks; avoid speculative optimisation.",
+      "deliverables": [
+        "tests/integration/test_retrieval_replacement.py"
+      ],
+      "downstream_consumers": "Chong Zhang; Zeping Liao",
+      "acceptance": "Shared consumers remain unchanged; dimension changes use explicit migrations/new indexes, never mixed writes.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Chengzhou Liu",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 11,
+      "project_week": 9,
+      "task_ids": [
+        "GEN-06",
+        "GEN-11"
+      ],
+      "work": "Regress empty/truncated responses, HTTP errors, duplicate JSON keys, budgets and live configuration; reconcile actual generation evidence.",
+      "deliverables": [
+        "tests/contract/",
+        "docs/generation.md"
+      ],
+      "downstream_consumers": "Chong Zhang; Zeping Liao",
+      "acceptance": "Legacy 39 tests and new HC results remain separate; aggregate retry counts agree and mocks cannot masquerade as live.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Sijin Lu",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 11,
+      "project_week": 9,
+      "task_ids": [
+        "PER-07",
+        "PER-09"
+      ],
+      "work": "Complete available ratings and review misleading analogies, negation and formulas; write findings and limitations.",
+      "deliverables": [
+        "docs/research/personalisation.md"
+      ],
+      "downstream_consumers": "Chong Zhang; Xianshu Zhang",
+      "acceptance": "Examples trace to run/profile/rater; unrated items do not receive default high scores.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Pengyuan Xia",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 11,
+      "project_week": 9,
+      "task_ids": [
+        "BE-15",
+        "BE-16"
+      ],
+      "work": "Complete clean install, legacy upgrade, single-worker restart, transaction faults, backup/restore and rollback.",
+      "deliverables": [
+        "scripts/release/",
+        "compose.yaml",
+        "docs/runbook.md"
+      ],
+      "downstream_consumers": "Chong Zhang; all developers",
+      "acceptance": "Commands rerun; failures do not publish partial success; restore targets are isolated from user databases.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Zeping Liao",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 11,
+      "project_week": 9,
+      "task_ids": [
+        "FE-06",
+        "FE-08",
+        "FE-12"
+      ],
+      "work": "Run full browser regression for stop/retry/latest-answer revision/account switch/re-login/history evidence.",
+      "deliverables": [
+        "tests/e2e/",
+        "artifacts/reports/frontend/"
+      ],
+      "downstream_consumers": "Chong Zhang; Zeping Liao",
+      "acceptance": "UI values match DB snapshots; no dead controls, fake streaming or hardcoded success.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Baiqing Huang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 11,
+      "project_week": 9,
+      "task_ids": [
+        "QA-13",
+        "QA-11",
+        "QA-10",
+        "QA-12"
+      ],
+      "work": "Execute all 48 AC plus 12 HC scenarios, replacement/restore/performance checks; record real environment, commands, exit codes, failures and skips.",
+      "deliverables": [
+        "artifacts/reports/acceptance/",
+        "docs/execution/acceptance.json"
+      ],
+      "downstream_consumers": "Xianshu Zhang; all workstreams",
+      "acceptance": "Unexecuted checks are not passes; mocks prove wiring only, with live semantic evidence separate.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Chong Zhang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 12,
+      "project_week": 10,
+      "task_ids": [
+        "CHAT-12",
+        "INT-10"
+      ],
+      "work": "Integrate final English ledgers, guides, architecture, actual contributions and demo; coordinate real human review without signing for others.",
+      "deliverables": [
+        "README.md",
+        "docs/handover.md",
+        "artifacts/release/"
+      ],
+      "downstream_consumers": "team and authorised reviewers",
+      "acceptance": "All 108 tasks/60 scenarios have evidence or exact blockers; demonstrate chat before SciQ.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Xianshu Zhang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 12,
+      "project_week": 10,
+      "task_ids": [
+        "DAT-12"
+      ],
+      "work": "Deliver data dictionary, source manifests, quality report and rebuilding instructions.",
+      "deliverables": [
+        "docs/data/",
+        "artifacts/manifests/"
+      ],
+      "downstream_consumers": "all receiving developers",
+      "acceptance": "A permitted example rebuilds; incomplete books/quarantine remain explicit.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Hongle Yang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 12,
+      "project_week": 10,
+      "task_ids": [
+        "RET-11"
+      ],
+      "work": "Deliver retrieval configurations/comparisons, index rebuild/replacement instructions and actual findings.",
+      "deliverables": [
+        "docs/research/retrieval_findings.md",
+        "docs/retrieval.md"
+      ],
+      "downstream_consumers": "all receiving developers",
+      "acceptance": "Every result row has run/config provenance; negative and unrun results remain distinct.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Chengzhou Liu",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 12,
+      "project_week": 10,
+      "task_ids": [
+        "GEN-11"
+      ],
+      "work": "Deliver English target-repository START_HERE/HANDOVER, adapter/prompt/schema guidance and all known-issue dispositions.",
+      "deliverables": [
+        "docs/handover/generation.md",
+        "docs/generation.md"
+      ],
+      "downstream_consumers": "all receiving developers",
+      "acceptance": "New English docs are not copies of the original Chinese handover; relocated commands are tested and history preserved.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Sijin Lu",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 12,
+      "project_week": 10,
+      "task_ids": [
+        "PER-09"
+      ],
+      "work": "Deliver profile usage guidance, policy versions, study outputs and human-review limitations.",
+      "deliverables": [
+        "docs/user_profiles.md",
+        "docs/research/personalisation.md"
+      ],
+      "downstream_consumers": "all receiving developers",
+      "acceptance": "Self-selected level is not measured mastery; findings map to real review.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Pengyuan Xia",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 12,
+      "project_week": 10,
+      "task_ids": [
+        "BE-17"
+      ],
+      "work": "Deliver runnable local deployment, migration, backup/restore, account/corpus/job commands and troubleshooting.",
+      "deliverables": [
+        "docs/runbook.md",
+        "docs/backend_handover.md"
+      ],
+      "downstream_consumers": "all receiving developers",
+      "acceptance": "A different environment follows the guide; absent live keys have setup steps, not fabricated results.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Zeping Liao",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 12,
+      "project_week": 10,
+      "task_ids": [
+        "FE-12"
+      ],
+      "work": "Deliver chat user guidance, UI walkthrough and browser test evidence; remove misleading placeholder entry points.",
+      "deliverables": [
+        "docs/user_guide.md",
+        "docs/frontend.md"
+      ],
+      "downstream_consumers": "team and demonstrators",
+      "acceptance": "A user can ask/follow up/inspect sources/change profiles/recover history without the author.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Baiqing Huang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    },
+    {
+      "course_week": 12,
+      "project_week": 10,
+      "task_ids": [
+        "QA-14"
+      ],
+      "work": "Audit final evidence and reproducible checks, separating implementation, technical validation, live research and human acceptance.",
+      "deliverables": [
+        "docs/release_checklist.md",
+        "artifacts/reports/acceptance.json"
+      ],
+      "downstream_consumers": "Xianshu Zhang; authorised reviewers",
+      "acceptance": "Missing ratings/models/originals remain explicit; do not flatten every status into DONE.",
+      "status": "PLANNED",
+      "actual_evidence": [],
+      "accountable_owner": "Chong Zhang",
+      "reporting_view_only": true,
+      "actual_executor": null,
+      "actual_completed_at": null
+    }
+  ],
+  "purpose": "REPORTING_VIEW_ONLY",
+  "calendar_gating": false,
+  "snapshot_course_week": 6,
+  "suggested_reporting_delivery_week": 12,
+  "week08_supplement": {
+    "authority": "User clarification on 16 September 2026: research and feasible implementation of all eight tracks belong to Week 8; independent judgments and broader measured studies remain separate follow-up work.",
+    "record": "docs/execution/week08-delivery-20260916.md",
+    "member_map": "docs/delivery/week08/README.md",
+    "original_reporting_allocations_preserved": true,
+    "task_ids_unchanged": 108,
+    "acceptance_ids_unchanged": 60,
+    "ui_subchecks_unchanged": 12,
+    "research_tracks": [
+      "Grouped 120-case evidence-bound study design",
+      "Structured question understanding",
+      "Relevance versus coverage",
+      "Complementary evidence budget and three-level citation review",
+      "Explicit grounded answer/failure policy",
+      "Build identity versus query device",
+      "Learning quality and independent learning",
+      "Compact safe administrator request trace"
+    ],
+    "scope": "The 120-case developer catalogue and bounded understanding/evidence/teaching/diagnostic/general-mode mechanisms are implemented. The central record separates current427/56software, retained real outcomes, CPU/browser proof and unperformed independent review."
+  }
+}

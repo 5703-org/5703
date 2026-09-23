@@ -1,0 +1,42 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "mode": {
+      "const": "interactive_chat",
+      "title": "Mode",
+      "type": "string"
+    },
+    "session_id": {
+      "title": "Session Id",
+      "type": "string"
+    },
+    "user_message_id": {
+      "title": "User Message Id",
+      "type": "string"
+    },
+    "conversation_snapshot_id": {
+      "title": "Conversation Snapshot Id",
+      "type": "string"
+    },
+    "profile_snapshot_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Profile Snapshot Id"
+    }
+  },
+  "required": [
+    "mode",
+    "session_id",
+    "user_message_id",
+    "conversation_snapshot_id",
+    "profile_snapshot_id"
+  ],
+  "title": "InteractiveChatCommand",
+  "type": "object"
+}

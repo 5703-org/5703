@@ -1,0 +1,150 @@
+{
+  "status_note": "Current external inputs and remaining independent reviews. DeepSeek live answering is configured and tested as of13 September2026; no provider credential blocker remains for the selected account.",
+  "blockers": [
+    {
+      "id": "INPUT-PILOT-RAW",
+      "status": "REAL_FLOW_VERIFIED",
+      "affected_tasks": [
+        "DAT-03"
+      ],
+      "affected_checks": [
+        "AC-04"
+      ],
+      "missing": null,
+      "resolution": "Official Concepts of Biology download exactly matches the historical PDF SHA256; physical1cover/2blank were inspected. New full-book reviewed processing and real E5 release are active; old pilot records unchanged.",
+      "independent_work": "Adapt parser, authored-source ingestion/chunking and releases from actually ready sources.",
+      "initial_observation": {
+        "status": "MISSING_FROM_SUPPLIED_TREE",
+        "missing": "Original Concepts of Biology PDF matching SHA-256 da0ffc8585e172f04eb0abb08949087baf85cc229ef2736ef06e5aa17094b1f6 for physical pages 1 and 2 review.",
+        "resolution": "Obtain matching permitted bytes, inspect the pages and record an actual quality decision; a changed edition is a separate asset.",
+        "independent_work": "Adapt parser, authored-source ingestion/chunking and releases from actually ready sources."
+      },
+      "evidence": [
+        "evidence/openstax/concepts-biology-acquisition.json",
+        "evidence/openstax/pdf-source-inspection.json",
+        "evidence/openstax/v5/publication.json"
+      ]
+    },
+    {
+      "id": "INPUT-SCIQ",
+      "status": "REAL_FLOW_VERIFIED",
+      "affected_tasks": [
+        "DAT-09",
+        "QA-07",
+        "QA-09"
+      ],
+      "affected_checks": [
+        "AC-17",
+        "AC-18",
+        "AC-19"
+      ],
+      "missing": null,
+      "resolution": "Actual owner revision2c94ad3e1aafab77146f384e23536f97a4849815 and all13,679 source rows acquired/hash checked. All OpenQA stems projected;48 original duplicate-option records explicitly fail MCQ preflight, with no silent filtering.",
+      "independent_work": "All normal chat, authored adapter fixtures, protocol/scoring/freeze/resume implementation.",
+      "initial_observation": {
+        "status": "NOT_SUPPLIED",
+        "missing": "Actual SciQ revision, split files and checksums for real dataset runs.",
+        "resolution": "Acquire and freeze the intended dataset in evaluator-only storage, validate counts/checksums and run the implemented gold-free adapters.",
+        "independent_work": "All normal chat, authored adapter fixtures, protocol/scoring/freeze/resume implementation."
+      },
+      "evidence": [
+        "evidence/sciq/acquisition.json",
+        "docs/sciq_acquisition.md"
+      ]
+    },
+    {
+      "id": "INPUT-LIVE-MODEL",
+      "status": "REAL_FLOW_VERIFIED",
+      "affected_tasks": [
+        "GEN-02",
+        "QA-07",
+        "QA-09",
+        "PER-03",
+        "PER-06",
+        "PER-09"
+      ],
+      "affected_checks": [],
+      "missing": null,
+      "resolution": "User selected deepseek-flash, configured LLM_API_KEY locally and authorized required test spending. Actual provider catalog, JSON probe and browser activation succeeded; live quality tests retain failures and continue separately.",
+      "independent_work": "Live conversation/profile validation and frozen E0/E1 OpenQA subsets; independent human ratings remain separate.",
+      "initial_observation": {
+        "status": "NOT_ESTABLISHED",
+        "missing": "Explicitly usable provider/model credentials or local weights, pinned tokenizer/model configuration and research run limits.",
+        "resolution": "Use supplied intended configuration within recorded limits; verify current connectivity, then execute separately frozen live runs.",
+        "independent_work": "Labelled deterministic mock integration, real transport with simulated error tests and all product implementation."
+      },
+      "previous_affected_checks": [
+        "AC-19"
+      ],
+      "related_acceptance_ids": [
+        "AC-19"
+      ],
+      "component_scope": "These unavailable inputs block the named research/live-provider task components. AC-19 honesty and AC-34 simulated adapter switching have local software evidence; absent research inputs are not missing prerequisites for those software checks.",
+      "evidence": [
+        "evidence/answering-upgrade/20260913/live-model-configuration.json",
+        "artifacts/reports/frontend/admin-settings/verification-summary.json"
+      ]
+    },
+    {
+      "id": "INPUT-ANNOTATIONS-RATINGS",
+      "status": "WAITING_EXTERNAL",
+      "affected_tasks": [
+        "QA-04",
+        "QA-10",
+        "RET-10",
+        "RET-11",
+        "PER-08",
+        "PER-09"
+      ],
+      "affected_checks": [],
+      "missing": "Actual source-reviewed qrels and independent blind human ratings tied to frozen outputs.",
+      "resolution": "Prepare and run review workflows, then import real ratings with identity, missingness and disagreement retained.",
+      "independent_work": "Annotation/rating tools, version checks, paired analysis and honest missing-data outputs.",
+      "initial_observation": {
+        "status": "NOT_SUPPLIED",
+        "missing": "Actual source-reviewed qrels and independent blind human ratings tied to frozen outputs.",
+        "resolution": "Prepare and run review workflows, then import real ratings with identity, missingness and disagreement retained.",
+        "independent_work": "Annotation/rating tools, version checks, paired analysis and honest missing-data outputs."
+      },
+      "previous_affected_checks": [
+        "AC-19"
+      ],
+      "related_acceptance_ids": [
+        "AC-19"
+      ],
+      "component_scope": "These unavailable inputs block the named research/live-provider task components. AC-19 honesty and AC-34 simulated adapter switching have local software evidence; absent research inputs are not missing prerequisites for those software checks."
+    },
+    {
+      "id": "INPUT-PHYSICAL-DEVICE",
+      "status": "WAITING_EXTERNAL",
+      "affected_tasks": [
+        "FE-12",
+        "QA-12"
+      ],
+      "affected_checks": [
+        "UI-05",
+        "UI-09"
+      ],
+      "missing": "Actual physical-device soft keyboard/orientation, native IME and assistive-technology/human observations remain unavailable. Real desktop browser zoom and viewport/resize checks have already executed.",
+      "resolution": "Use the prepared responsive acceptance cases on the actual devices/input methods/reviewers; record exact observations independently of emulated viewports.",
+      "independent_work": "Responsive implementation, named-width/boundary/state-preservation Playwright checks and screenshots.",
+      "initial_observation": {
+        "status": "NOT_ESTABLISHED",
+        "missing": "Available real-device soft-keyboard/orientation and actual browser zoom observations.",
+        "resolution": "Perform available genuine browser/device checks and record exact unavailable cases; viewport emulation alone is insufficient.",
+        "independent_work": "Responsive implementation, named-width/boundary/state-preservation Playwright checks and screenshots."
+      },
+      "evidence": [
+        "docs/execution/audit-ui.md",
+        "docs/execution/ui_acceptance.json"
+      ],
+      "previous_affected_checks": [
+        "UI-03",
+        "UI-05"
+      ],
+      "mapping_correction": "UI-03 actual native desktop zoom/reflow is verified. Physical keyboard/orientation and native IME/assistive review belong to UI-05 and UI-09."
+    }
+  ],
+  "updated_at": "2026-09-08T10:00:42.833241+00:00",
+  "latest_local_audit": "docs/execution/local-audit-continuation.md"
+}

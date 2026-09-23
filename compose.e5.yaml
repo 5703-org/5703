@@ -1,0 +1,68 @@
+# Optional standalone deployment. It never replaces the base Compose services.
+# Supply an explicit matching database and source store before enabling real-e5.
+name: cs30-e5
+x-e5-environment: &e5-environment
+  APP_ENV: ${APP_ENV:-dev}
+  MODEL_MODE: mock
+  LLM_PROVIDER: mock
+  LLM_MODEL: authored-extractive-v1
+  DATABASE_URL: ${E5_DATABASE_URL:?Set E5_DATABASE_URL to the intended database}
+  STORAGE_ROOT: /data/storage
+  SECRET_KEY: ${SECRET_KEY:-local-development-only-change-this-secret-5703}
+  ALLOWED_ORIGINS: http://localhost:5173,http://127.0.0.1:5173
+  HF_HUB_OFFLINE: '1'
+  HF_HUB_DISABLE_TELEMETRY: '1'
+x-e5-gpu: &e5-gpu
+  resources:
+    reservations:
+      devices:
+        - driver: nvidia
+          count: 1
+          capabilities: [gpu]
+x-e5-build: &e5-build
+  context: .
+  dockerfile: backend/Dockerfile
+  target: runtime-e5
+services:
+  api-e5:
+    restart: unless-stopped
+    profiles: [real-e5]
+    platform: linux/amd64
+    image: cs30-e5-runtime:local
+    build: *e5-build
+    environment: *e5-environment
+    deploy: *e5-gpu
+    ports: ['127.0.0.1:${E5_API_PORT:-8100}:8000']
+    volumes:
+      - ${E5_STORAGE_PATH:?Set E5_STORAGE_PATH to the matching source store}:/data/storage
+      - ${E5_MODEL_CACHE_PATH:-./artifacts/huggingface}:/app/artifacts/huggingface:ro
+  worker-e5:
+    restart: unless-stopped
+    profiles: [real-e5]
+    platform: linux/amd64
+    image: cs30-e5-runtime:local
+    build: *e5-build
+    command: ['python', '-m', 'app.worker']
+    environment: *e5-environment
+    deploy: *e5-gpu
+    volumes:
+      - ${E5_STORAGE_PATH:?Set E5_STORAGE_PATH to the matching source store}:/data/storage
+      - ${E5_MODEL_CACHE_PATH:-./artifacts/huggingface}:/app/artifacts/huggingface:ro
+  e5-verify:
+    profiles: [real-e5]
+    platform: linux/amd64
+    image: cs30-e5-runtime:local
+    build: *e5-build
+    command: ['python', '/app/e5_container_probe.py']
+    environment:
+      <<: *e5-environment
+      PGOPTIONS: '-c default_transaction_read_only=on'
+    deploy: *e5-gpu
+    read_only: true
+    tmpfs: ['/tmp']
+    volumes:
+      - ${E5_STORAGE_PATH:?Set E5_STORAGE_PATH to the matching source store}:/data/storage:ro
+      - ${E5_MODEL_CACHE_PATH:-./artifacts/huggingface}:/app/artifacts/huggingface:ro
+      - ./evidence/e5-container:/proof
+      - ./evidence/openstax/retrieval-verification.json:/app/retrieval-baseline.json:ro
+      - ./scripts/verify/e5_container.py:/app/e5_container_probe.py:ro

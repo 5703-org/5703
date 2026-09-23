@@ -1,0 +1,207 @@
+{
+  "schema": "week06_runtime_port_observation_v1",
+  "observed_at_utc": "2026-09-08T13:14:03.134290+00:00",
+  "read_only": true,
+  "credentials_stored": false,
+  "user_stated_ports": {
+    "database": 15432,
+    "frontend": 5173,
+    "api": 8000
+  },
+  "saved_original_dotenv": {
+    "DATABASE_URL": {
+      "present": true,
+      "endpoints": [
+        {
+          "scheme": "postgresql+psycopg",
+          "host": "127.0.0.1",
+          "port": 15432
+        }
+      ]
+    },
+    "ALLOWED_ORIGINS": {
+      "present": true,
+      "endpoints": [
+        {
+          "scheme": "http",
+          "host": "localhost",
+          "port": 5173
+        },
+        {
+          "scheme": "http",
+          "host": "127.0.0.1",
+          "port": 5173
+        }
+      ]
+    },
+    "LLM_API_BASE": {
+      "present": true,
+      "endpoints": []
+    },
+    "POSTGRES_PORT": {
+      "present": true,
+      "port": 15432,
+      "numeric": true
+    },
+    "DB_PORT": {
+      "present": false
+    },
+    "API_PORT": {
+      "present": false
+    },
+    "FRONTEND_PORT": {
+      "present": false
+    }
+  },
+  "inherited_inspection_process_environment": {
+    "DATABASE_URL": {
+      "present": false
+    },
+    "ALLOWED_ORIGINS": {
+      "present": false
+    },
+    "LLM_API_BASE": {
+      "present": false
+    },
+    "POSTGRES_PORT": {
+      "present": false
+    },
+    "DB_PORT": {
+      "present": false
+    },
+    "API_PORT": {
+      "present": false
+    },
+    "FRONTEND_PORT": {
+      "present": false
+    }
+  },
+  "compose_file_sha256": "e89db4e8a741f472e6454d10531882c230c5401d6ac615eba70f28b2edeb0b63",
+  "compose_declared_ports": {
+    "db": [
+      "127.0.0.1:${POSTGRES_PORT:-55432}:5432"
+    ],
+    "api": [
+      "127.0.0.1:${API_PORT:-8000}:8000"
+    ],
+    "frontend": [
+      "127.0.0.1:${FRONTEND_PORT:-5173}:80"
+    ]
+  },
+  "initial_incorrect_health_path_probes": [
+    {
+      "url": "http://127.0.0.1:8000/health/live",
+      "http_status": 404,
+      "reachable": true
+    },
+    {
+      "url": "http://127.0.0.1:8000/health/ready",
+      "http_status": 404,
+      "reachable": true
+    }
+  ],
+  "http_observations": [
+    {
+      "url": "http://127.0.0.1:8000/live",
+      "http_status": 200,
+      "reachable": true,
+      "safe_status_fields": {
+        "status": "alive"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:8000/ready",
+      "http_status": 200,
+      "reachable": true,
+      "safe_status_fields": {
+        "status": "ready"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:5173/",
+      "http_status": 200,
+      "reachable": true,
+      "non_json_response": true
+    }
+  ],
+  "health_route_source": "backend/app/main.py:56-73; /live and /ready are actual defined routes, while the initial /health/live and /health/ready probes correctly returned404.",
+  "runtime_bindings": {
+    "observed_at_utc": "2026-09-08T23:13:31.022057+10:00",
+    "listeners": [
+      {
+        "local_address": "::",
+        "local_port": 5432,
+        "owning_pid": 9736,
+        "process_name": "postgres"
+      },
+      {
+        "local_address": "127.0.0.1",
+        "local_port": 15432,
+        "owning_pid": 32336,
+        "process_name": "com.docker.backend"
+      },
+      {
+        "local_address": "127.0.0.1",
+        "local_port": 8000,
+        "owning_pid": 58056,
+        "process_name": "python"
+      },
+      {
+        "local_address": "0.0.0.0",
+        "local_port": 5432,
+        "owning_pid": 9736,
+        "process_name": "postgres"
+      },
+      {
+        "local_address": "127.0.0.1",
+        "local_port": 5173,
+        "owning_pid": 51820,
+        "process_name": "node"
+      }
+    ],
+    "docker_database_binding": {
+      "5432/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "15432"
+        }
+      ]
+    },
+    "docker_database_state": "running",
+    "api_database_socket_observation_at_utc": "2026-09-08T13:14:02.2941733+00:00",
+    "api_database_connections": [
+      {
+        "LocalAddress": "127.0.0.1",
+        "LocalPort": 58428,
+        "RemoteAddress": "127.0.0.1",
+        "RemotePort": 15432,
+        "State": 5,
+        "OwningProcess": 58056
+      },
+      {
+        "LocalAddress": "127.0.0.1",
+        "LocalPort": 50961,
+        "RemoteAddress": "127.0.0.1",
+        "RemotePort": 15432,
+        "State": 5,
+        "OwningProcess": 58056
+      },
+      {
+        "LocalAddress": "127.0.0.1",
+        "LocalPort": 50960,
+        "RemoteAddress": "127.0.0.1",
+        "RemotePort": 15432,
+        "State": 5,
+        "OwningProcess": 58056
+      }
+    ]
+  },
+  "conclusion": "Saved .env configures localhost database15432 and POSTGRES_PORT15432. Actual Docker binding maps127.0.0.1:15432 to5432. Host frontend5173 and API8000 are independently checked. Compose default55432 applies only if POSTGRES_PORT is unset; it is not the current saved setting.",
+  "limits": [
+    "Saved .env and the environment inherited by this inspection process are different evidence layers; neither alone proves a running service's effective configuration.",
+    "The inspection does not read credentials or the full environment/command line from any other process.",
+    "Windows listener inspection required read-only escalation after a sandbox access-denied result. Only relevant port/process metadata was retained.",
+    "The running API/worker process's complete environment was not extracted. Inherited inspection-process values must not be labelled those processes' effective environment.",
+    "A reachable readiness endpoint is an observation, not a database write or model invocation."
+  ]
+}

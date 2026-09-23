@@ -1,0 +1,70 @@
+name: cs30-learning
+services:
+  db:
+    restart: unless-stopped
+    image: pgvector/pgvector:0.8.6-pg16-trixie
+    environment:
+      POSTGRES_DB: learning
+      POSTGRES_USER: learning
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-local-dev-database-only}
+    ports:
+      - '127.0.0.1:${POSTGRES_PORT:-55432}:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U learning -d learning']
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  api:
+    restart: unless-stopped
+    build: {context: ., dockerfile: backend/Dockerfile, target: runtime}
+    environment: &runtime
+      APP_ENV: ${APP_ENV:-dev}
+      MODEL_MODE: ${MODEL_MODE:-mock}
+      DATABASE_URL: postgresql+psycopg://learning:${POSTGRES_PASSWORD:-local-dev-database-only}@db:5432/learning
+      SECRET_KEY: ${SECRET_KEY:-local-development-only-change-this-secret-5703}
+      STORAGE_ROOT: /data/storage
+      ALLOWED_ORIGINS: http://localhost:${FRONTEND_PORT:-5173},http://127.0.0.1:${FRONTEND_PORT:-5173}
+      LLM_PROVIDER: ${LLM_PROVIDER:-mock}
+      LLM_MODEL: ${LLM_MODEL:-authored-extractive-v1}
+      LLM_API_BASE: ${LLM_API_BASE:-}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      MODEL_CONFIG_KEY_FILE: /data/secrets/model-config.key
+      MODEL_CONFIG_ENCRYPTION_KEY: ${MODEL_CONFIG_ENCRYPTION_KEY:-}
+      TIKTOKEN_CACHE_DIR: /data/tokenizers/tiktoken
+    command: ['uvicorn','app.main:app','--host','0.0.0.0','--port','8000']
+    depends_on: {db: {condition: service_healthy}}
+    ports: ['127.0.0.1:${API_PORT:-8000}:8000']
+    volumes: ['storage:/data/storage', 'model-secrets:/data/secrets', 'tokenizer-cache:/data/tokenizers']
+  worker:
+    restart: unless-stopped
+    build: {context: ., dockerfile: backend/Dockerfile, target: runtime}
+    environment: *runtime
+    command: ['python','-m','app.worker']
+    depends_on: {db: {condition: service_healthy}}
+    volumes: ['storage:/data/storage', 'model-secrets:/data/secrets:ro', 'tokenizer-cache:/data/tokenizers']
+  frontend:
+    restart: unless-stopped
+    build: {context: ./frontend}
+    ports: ['127.0.0.1:${FRONTEND_PORT:-5173}:80']
+    depends_on: [api]
+  evaluator:
+    profiles: [evaluation]
+    build: {context: ., dockerfile: backend/Dockerfile, target: evaluator}
+    environment:
+      <<: *runtime
+      EVALUATION_PRIVATE_ROOT: /data/evaluator-private
+      EVALUATION_EXPORT_ROOT: /data/runs
+    volumes:
+      - storage:/data/storage
+      - ./artifacts/evaluator-private:/data/evaluator-private
+      - ./artifacts/runs:/data/runs
+      - model-secrets:/data/secrets:ro
+      - tokenizer-cache:/data/tokenizers
+    command: ['python','-m','evaluation.runner','--help']
+volumes:
+  pgdata:
+  storage:
+  model-secrets:
+  tokenizer-cache:

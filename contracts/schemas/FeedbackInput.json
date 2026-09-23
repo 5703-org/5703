@@ -1,0 +1,27 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "helpful": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Helpful"
+    },
+    "comment": {
+      "default": "",
+      "maxLength": 2000,
+      "title": "Comment",
+      "type": "string"
+    }
+  },
+  "required": [
+    "helpful"
+  ],
+  "title": "FeedbackInput",
+  "type": "object"
+}
