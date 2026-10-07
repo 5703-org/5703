@@ -80,13 +80,18 @@ def documents(db: Session = Depends(get_db), actor: User = Depends(require_roles
     return ok(
         [
             document_out(db, d)
-            for d in db.scalars(select(Document).order_by(Document.created_at.desc()))
+            for d in db.scalars(
+                select(Document)
+                .join(User, User.id == Document.owner_id)
+                .where(User.workspace_id == actor.workspace_id)
+                .order_by(Document.created_at.desc())
+            )
         ]
     )
 
 
 @router.post("/documents", status_code=201, response_model=Envelope[dict])
-async def upload(
+def upload(
     file: UploadFile = File(...),
     title: str = Form(..., min_length=1, max_length=500),
     edition: str = Form(""),
@@ -96,9 +101,8 @@ async def upload(
     actor: User = Depends(require_roles("admin")),
     settings: Settings = Depends(get_settings),
 ):
-    data = await file.read(settings.max_upload_bytes + 1)
-    doc, version, duplicate = service.ingest(
-        db, settings, actor.id, file.filename, data, title, edition, source_url, license
+    doc, version, duplicate = service.ingest_stream(
+        db, settings, actor.id, file.filename, file.file, title, edition, source_url, license
     )
     db.commit()
     return ok(
@@ -110,9 +114,7 @@ async def upload(
 def document(
     document_id: str, db: Session = Depends(get_db), actor: User = Depends(require_roles("admin"))
 ):
-    doc = db.get(Document, document_id)
-    if not doc:
-        raise AppError("NOT_FOUND")
+    doc = service.workspace_document(db, actor.id, document_id)
     return ok(document_out(db, doc, True))
 
 
@@ -132,6 +134,7 @@ def process(
 def processing_quality(
     processing_id: str, db: Session = Depends(get_db), actor: User = Depends(require_roles("admin"))
 ):
+    service.workspace_processing(db, actor.id, processing_id)
     return ok(service.processing_quality(db, processing_id))
 
 
@@ -142,13 +145,13 @@ def processing_diff(
     db: Session = Depends(get_db),
     actor: User = Depends(require_roles("admin")),
 ):
+    service.workspace_processing(db, actor.id, before_id)
+    service.workspace_processing(db, actor.id, after_id)
     return ok(service.processing_diff(db, before_id, after_id))
 
 
-def change_visibility(db, id, action):
-    doc = db.get(Document, id)
-    if not doc:
-        raise AppError("NOT_FOUND")
+def change_visibility(db, id, action, *, actor):
+    doc = service.workspace_document(db, actor.id, id, lock=True)
     if action == "restore" and doc.revoked:
         raise AppError(
             "CONFLICT", detail="Revoked content requires a new authorized source version."
@@ -165,21 +168,21 @@ def change_visibility(db, id, action):
 def deactivate(
     document_id: str, db: Session = Depends(get_db), actor: User = Depends(require_roles("admin"))
 ):
-    return change_visibility(db, document_id, "deactivate")
+    return change_visibility(db, document_id, "deactivate", actor=actor)
 
 
 @router.post("/documents/{document_id}/restore", response_model=Envelope[dict])
 def restore(
     document_id: str, db: Session = Depends(get_db), actor: User = Depends(require_roles("admin"))
 ):
-    return change_visibility(db, document_id, "restore")
+    return change_visibility(db, document_id, "restore", actor=actor)
 
 
 @router.post("/documents/{document_id}/revoke", response_model=Envelope[dict])
 def revoke(
     document_id: str, db: Session = Depends(get_db), actor: User = Depends(require_roles("admin"))
 ):
-    return change_visibility(db, document_id, "revoke")
+    return change_visibility(db, document_id, "revoke", actor=actor)
 
 
 @router.get("/corpus/releases", response_model=Envelope[list[dict]])

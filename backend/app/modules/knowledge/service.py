@@ -1,17 +1,30 @@
 """Source administration, immutable processing and transactional release activation."""
 
 from pathlib import Path
+import codecs
 import hashlib
+from io import BytesIO
 import json
 import math
+import shutil
 import struct
+import tempfile
+import time
 from sqlalchemy import select, text
 from sqlalchemy.orm import Session
 from app.core.exceptions import AppError
 from app.db.base import new_uuid, utcnow
 from app.modules.knowledge.models import *
 from app.modules.answering.models import Job
+from app.modules.knowledge.access import workspace_document, workspace_processing
+from app.platform_core.source_locks import lock_source_maintenance
 from pipelines.parse import CURRENT_PARSER_REVISION, parse
+from pipelines.parse_isolated import (
+    POLICY_VERSION as ISOLATED_PARSER_POLICY,
+    ParseIsolationCancelled,
+    ParseIsolationFailure,
+    parse_isolated,
+)
 from pipelines.chunk import chunks
 from pipelines.reports import quality_rows, compare_processing
 from pipelines.supplements import apply_publisher_supplements
@@ -143,6 +156,21 @@ def ingest(
     source_url="",
     license="Not specified",
 ):
+    """Keep the programmatic byte API while sharing the bounded upload path."""
+    return ingest_stream(
+        db,
+        settings,
+        owner_id,
+        filename,
+        BytesIO(data),
+        title,
+        edition,
+        source_url,
+        license,
+    )
+
+
+def _validate_upload_fields(filename, title):
     if (
         not filename
         or len(filename) > 250
@@ -153,40 +181,127 @@ def ingest(
         raise AppError("VALIDATION_FAILED", detail="Use a plain filename without a path.")
     if not title.strip() or len(title.strip()) > 500:
         raise AppError("VALIDATION_FAILED", detail="A nonblank source title is required.")
-    if len(data) > settings.max_upload_bytes:
-        raise AppError("UPLOAD_TOO_LARGE")
     suffix = Path(filename).suffix.casefold()
-    if suffix == ".pdf" and data.startswith(b"%PDF-"):
-        mime = "application/pdf"
-    elif suffix == ".txt" and not data.startswith((b"%PDF-", b"MZ", b"PK\x03\x04")):
-        try:
-            decoded = data.decode("utf-8-sig")
-            if "\x00" in decoded:
-                raise ValueError("Binary data")
-        except (UnicodeDecodeError, ValueError):
-            raise AppError("UNSUPPORTED_MEDIA")
-        mime = "text/plain"
-    else:
+    if suffix not in (".pdf", ".txt"):
         raise AppError("UNSUPPORTED_MEDIA")
-    h = hashlib.sha256(data).hexdigest()
+    return suffix
+
+
+def _file_sha256(path):
+    digest = hashlib.sha256()
+    with path.open("rb") as source:
+        for block in iter(lambda: source.read(64 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def ingest_stream(
+    db,
+    settings,
+    owner_id,
+    filename,
+    source,
+    title,
+    edition="",
+    source_url="",
+    license="Not specified",
+):
+    """Stage and validate upload bytes in fixed chunks before immutable storage."""
+    suffix = _validate_upload_fields(filename, title)
+    storage = Path(settings.storage_root).resolve() / "originals"
+    storage.mkdir(parents=True, exist_ok=True)
+    staged = None
+    try:
+        digest = hashlib.sha256()
+        size = 0
+        header = b""
+        decoder = codecs.getincrementaldecoder("utf-8-sig")() if suffix == ".txt" else None
+        with tempfile.NamedTemporaryFile(
+            mode="w+b", prefix=".upload-", suffix=".part", dir=storage, delete=False
+        ) as temporary:
+            staged = Path(temporary.name)
+            while True:
+                chunk = source.read(64 * 1024)
+                if not isinstance(chunk, bytes):
+                    raise AppError("VALIDATION_FAILED", detail="Upload source must supply bytes.")
+                if not chunk:
+                    break
+                size += len(chunk)
+                if size > settings.max_upload_bytes:
+                    raise AppError("UPLOAD_TOO_LARGE")
+                header = (header + chunk)[:5]
+                if decoder is not None:
+                    try:
+                        if "\x00" in decoder.decode(chunk, final=False):
+                            raise AppError("UNSUPPORTED_MEDIA")
+                    except UnicodeDecodeError as exc:
+                        raise AppError("UNSUPPORTED_MEDIA") from exc
+                digest.update(chunk)
+                temporary.write(chunk)
+            if decoder is not None:
+                try:
+                    if "\x00" in decoder.decode(b"", final=True):
+                        raise AppError("UNSUPPORTED_MEDIA")
+                except UnicodeDecodeError as exc:
+                    raise AppError("UNSUPPORTED_MEDIA") from exc
+        if suffix == ".pdf" and header.startswith(b"%PDF-"):
+            mime = "application/pdf"
+        elif suffix == ".txt" and not header.startswith((b"%PDF-", b"MZ", b"PK\x03\x04")):
+            mime = "text/plain"
+        else:
+            raise AppError("UNSUPPORTED_MEDIA")
+        h = digest.hexdigest()
+        return _register_staged(
+            db,
+            settings,
+            owner_id,
+            filename,
+            staged,
+            size,
+            h,
+            mime,
+            title,
+            edition,
+            source_url,
+            license,
+        )
+    finally:
+        if staged is not None:
+            staged.unlink(missing_ok=True)
+
+
+def _register_staged(
+    db, settings, owner_id, filename, staged, size, h, mime, title, edition, source_url, license
+):
     old = db.scalar(select(DocumentVersion).where(DocumentVersion.raw_hash == h))
     if old:
-        return db.get(Document, old.document_id), old, True
+        return workspace_document(db, owner_id, old.document_id), old, True
     if db.bind.dialect.name == "postgresql":
         # Orphan cleanup uses this transaction lock too: it must not remove an
         # old hash-named file between this existence check and version insertion.
-        db.execute(text("SELECT pg_advisory_xact_lock(5703002)"))
+        lock_source_maintenance(db)
         old = db.scalar(select(DocumentVersion).where(DocumentVersion.raw_hash == h))
         if old:
-            return db.get(Document, old.document_id), old, True
+            return workspace_document(db, owner_id, old.document_id), old, True
     storage = Path(settings.storage_root).resolve() / "originals"
-    storage.mkdir(parents=True, exist_ok=True)
+    suffix = Path(filename).suffix.casefold()
     target = storage / (h + suffix)
     # User filenames never select an output path.
     if not target.exists():
-        with target.open("xb") as stream:
-            stream.write(data)
-    elif hashlib.sha256(target.read_bytes()).hexdigest() != h:
+        created = False
+        try:
+            with target.open("xb") as stream:
+                created = True
+                with staged.open("rb") as source:
+                    shutil.copyfileobj(source, stream, length=64 * 1024)
+        except FileExistsError:
+            # Another local request may have installed this exact hash first.
+            pass
+        except BaseException:
+            if created:
+                target.unlink(missing_ok=True)
+            raise
+    if _file_sha256(target) != h:
         raise AppError(
             "SOURCE_UNAVAILABLE", detail="An existing immutable original has a mismatched hash."
         )
@@ -203,7 +318,7 @@ def ingest(
         document_id=document.id,
         raw_hash=h,
         media_type=mime,
-        size_bytes=len(data),
+        size_bytes=size,
         storage_path=str(Path("originals") / (h + suffix)),
         original_filename=filename,
     )
@@ -213,7 +328,7 @@ def ingest(
 
 
 def queue_process(db, document_id, actor_id, configuration=None, exclusions=None):
-    doc = db.scalar(select(Document).where(Document.id == document_id).with_for_update())
+    doc = workspace_document(db, actor_id, document_id, lock=True)
     if not doc or doc.revoked or not doc.active:
         raise AppError("NOT_FOUND")
     version = db.scalar(
@@ -237,7 +352,14 @@ def queue_process(db, document_id, actor_id, configuration=None, exclusions=None
         if existing.state == "failed" and (
             not job or job.state in ("failed", "cancelled", "succeeded")
         ):
-            job = Job(owner_id=actor_id, kind="process", payload={"processing_id": existing.id})
+            job = Job(
+                owner_id=actor_id,
+                kind="process",
+                payload={
+                    "processing_id": existing.id,
+                    "parser_execution": ISOLATED_PARSER_POLICY,
+                },
+            )
             existing.state = "registered"
             existing.error = None
             db.add(job)
@@ -246,7 +368,11 @@ def queue_process(db, document_id, actor_id, configuration=None, exclusions=None
     run = ProcessingRun(document_version_id=version.id, config_hash=h, configuration=configuration)
     db.add(run)
     db.flush()
-    job = Job(owner_id=actor_id, kind="process", payload={"processing_id": run.id})
+    job = Job(
+        owner_id=actor_id,
+        kind="process",
+        payload={"processing_id": run.id, "parser_execution": ISOLATED_PARSER_POLICY},
+    )
     db.add(job)
     db.flush()
     return run, job
@@ -348,7 +474,7 @@ def _processing_stage(db, execution, processing_id, stage):
     db.commit()
 
 
-def execute_processing(db, settings, processing_id, execution=None):
+def execute_processing(db, settings, processing_id, execution=None, parser_policy=None):
     try:
         _execution_fence(db, execution, "process", processing_id)
         run = db.get(ProcessingRun, processing_id)
@@ -365,16 +491,68 @@ def execute_processing(db, settings, processing_id, execution=None):
         if (
             not path.is_relative_to(root)
             or not path.is_file()
-            or hashlib.sha256(path.read_bytes()).hexdigest() != version.raw_hash
+            or _file_sha256(path) != version.raw_hash
         ):
             raise AppError(
                 "SOURCE_UNAVAILABLE", detail="Original source is missing or its hash differs."
             )
         _processing_stage(db, execution, processing_id, "parsing")
         # Parsing, model loading and tokenization execute without a Job row lock.
-        units = parse(
-            path, version.media_type, parser_revision=run.configuration["parser_revision"]
-        )
+        if parser_policy == ISOLATED_PARSER_POLICY:
+            job_id, token = execution if execution is not None else (None, None)
+            last_heartbeat = time.monotonic()
+
+            def parser_cancelled():
+                nonlocal last_heartbeat
+                if job_id is None:
+                    return False
+                with Session(db.get_bind()) as observer:
+                    authorized = observer.scalar(
+                        select(Job.id).where(
+                            Job.id == job_id,
+                            Job.state == "running",
+                            Job.execution_token == token,
+                        )
+                    )
+                if not authorized:
+                    return True
+                if time.monotonic() - last_heartbeat >= 30:
+                    _execution_fence(db, execution, "process", processing_id)
+                    db.commit()
+                    last_heartbeat = time.monotonic()
+                return False
+
+            try:
+                parsed = parse_isolated(
+                    path,
+                    version.media_type,
+                    run.configuration["parser_revision"],
+                    version.raw_hash,
+                    temporary_root=root,
+                    max_input_bytes=settings.max_upload_bytes,
+                    max_output_bytes=settings.parser_output_max_bytes,
+                    timeout_seconds=settings.parser_wall_seconds,
+                    cancel_check=parser_cancelled,
+                )
+            except ParseIsolationCancelled as exc:
+                raise CorpusExecutionCancelled(
+                    "The processing job was cancelled during parsing."
+                ) from exc
+            except ParseIsolationFailure as exc:
+                raise AppError(exc.code, detail=str(exc)) from exc
+            if _file_sha256(path) != version.raw_hash:
+                raise AppError(
+                    "SOURCE_UNAVAILABLE", detail="Original source changed during parsing."
+                )
+            units = parsed.units
+        elif parser_policy is None:
+            # Jobs queued before isolated_parse_v1 have no runtime marker.
+            # Their parser and version-specific text behavior stay unchanged.
+            units = parse(
+                path, version.media_type, parser_revision=run.configuration["parser_revision"]
+            )
+        else:
+            raise AppError("PARSER_EXECUTION_ERROR", detail="Unknown parser execution policy.")
         from pipelines.supplements import apply_page_reviews
 
         units = apply_page_reviews(
@@ -622,7 +800,7 @@ def processing_diff(db, before_id, after_id):
 def queue_release(db, owner_id, processing_run_ids, configuration_id=None, name="Corpus release"):
     if not processing_run_ids or len(set(processing_run_ids)) != len(processing_run_ids):
         raise AppError("VALIDATION_FAILED", detail="Select distinct ready processing runs.")
-    runs = [db.get(ProcessingRun, id) for id in processing_run_ids]
+    runs = [workspace_processing(db, owner_id, id) for id in processing_run_ids]
     if any(not r or r.state != "ready" for r in runs):
         raise AppError("CONFLICT", detail="Only ready processing runs can enter a release.")
     config = db.get(Configuration, configuration_id) if configuration_id else None
@@ -965,7 +1143,7 @@ def _release_rows(db, release, require_active=False, *, provenance=None):
 
 def activate(db, release_id):
     if db.bind.dialect.name == "postgresql":
-        db.execute(text("SELECT pg_advisory_xact_lock(5703002)"))
+        lock_source_maintenance(db)
     pointer = db.scalar(select(ActiveCorpus).where(ActiveCorpus.id == 1).with_for_update())
     if not pointer:
         pointer = ActiveCorpus(id=1)
@@ -989,7 +1167,9 @@ def activate(db, release_id):
     return release
 
 
-def retrieve(db, query, release_id, variant=None, top_k=None, *, runtime_device=None):
+def _retrieve_reference(
+    db, query, release_id, variant=None, top_k=None, *, runtime_device=None, allowed_chunk_ids=None
+):
     release = db.get(CorpusRelease, release_id)
     if not release or release.state not in ("active", "retired", "validated"):
         raise AppError("SOURCE_UNAVAILABLE", detail="Pinned corpus is unavailable.")
@@ -1018,6 +1198,9 @@ def retrieve(db, query, release_id, variant=None, top_k=None, *, runtime_device=
             Document.revoked.is_(False),
         )
     )
+    allowed = set(allowed_chunk_ids) if allowed_chunk_ids is not None else None
+    if allowed is not None:
+        query_rows = query_rows.where(Chunk.id.in_(allowed))
     media_types = provenance["media_types"]
     visual_pages = provenance["visual_pages"]
 
@@ -1048,7 +1231,11 @@ def retrieve(db, query, release_id, variant=None, top_k=None, *, runtime_device=
             else [],
         }
 
-    values = [value for value in integrity_rows if value[2].active and not value[2].revoked]
+    values = [
+        value
+        for value in integrity_rows
+        if value[2].active and not value[2].revoked and (allowed is None or value[1].id in allowed)
+    ]
     if variant == "R1":
         return bm25(query, [row(v) for v in values], k)
     if not values:
@@ -1099,3 +1286,162 @@ def retrieve(db, query, release_id, variant=None, top_k=None, *, runtime_device=
             cache_folder=cfg.get("reranker_cache_folder"),
         ).rerank(query, fused, k)
     raise AppError("VALIDATION_FAILED", detail="Unsupported retrieval variant.")
+
+
+def _retrieval_row(value, provenance):
+    _, chunk, doc = value
+    page_label = (
+        "PDF physical pages"
+        if provenance["media_types"][chunk.processing_id] == "application/pdf"
+        else "source pages"
+    )
+    visual = any((chunk.processing_id, page) in provenance["visual_pages"] for page in chunk.pages)
+    warning = "Figures or formulas may require viewing the original PDF."
+    locator = f"{chunk.section}; {page_label} " + ", ".join(map(str, chunk.pages))
+    return {
+        "chunk_id": chunk.id,
+        "asset_id": doc.id,
+        "processing_id": chunk.processing_id,
+        "source_title": doc.title,
+        "source_url": doc.source_url or None,
+        "license": doc.license or None,
+        "section": chunk.section,
+        "pages": list(chunk.pages),
+        "locator": locator + ("; " + warning if visual else ""),
+        "text": chunk.text,
+        "text_hash": chunk.text_hash,
+        "quality_warnings": [{"code": "UNEXTRACTED_VISUAL_CONTENT", "message": warning}]
+        if visual
+        else [],
+    }
+
+
+def retrieve(
+    db,
+    query,
+    release_id,
+    variant=None,
+    top_k=None,
+    *,
+    runtime_device=None,
+    cache_scope=None,
+    execution_trace=None,
+    allowed_chunk_ids=None,
+):
+    """New interactive callers explicitly opt into epoch-validated retrieval.
+
+    Frozen benchmark and historical requests retain complete per-query validation.
+    Cached statistics always belong to the current visible subset of the release.
+    """
+    from . import cache
+    from retrieval.query_cache import encode_query
+
+    if cache_scope is None or db.bind.dialect.name != "postgresql" or allowed_chunk_ids is not None:
+        if execution_trace is not None and allowed_chunk_ids is not None:
+            execution_trace["reading_scope"] = {
+                "applied_before_ranking": True,
+                "allowed_chunk_count": len(allowed_chunk_ids),
+                "lexical_statistics": "scoped_reference",
+                "cache_used": False,
+            }
+        return _retrieve_reference(
+            db,
+            query,
+            release_id,
+            variant,
+            top_k,
+            runtime_device=runtime_device,
+            **({"allowed_chunk_ids": allowed_chunk_ids} if allowed_chunk_ids is not None else {}),
+        )
+    start = time.perf_counter()
+    release = db.get(CorpusRelease, release_id, populate_existing=True)
+    if not release or release.state not in ("active", "retired", "validated"):
+        raise AppError("SOURCE_UNAVAILABLE", detail="Pinned corpus is unavailable.")
+    cfg = release.configuration
+    k = cfg.get("top_k", 5) if top_k is None else top_k
+    variant = variant or cfg.get("retriever", "R0")
+    if type(k) is not int or not 1 <= k <= 50 or variant not in ("R0", "R1", "R2", "R3"):
+        raise AppError("VALIDATION_FAILED", detail="Invalid retrieval depth or variant.")
+    timings = {}
+    try:
+        index, validation = cache.load(
+            db, release, _retrieval_row, _release_rows, _embedding_hash, digest
+        )
+        timings["release_cache"] = validation
+        cfg = release.configuration
+        dense = []
+        if variant != "R1" and index.rows:
+            at = time.perf_counter()
+            vector, hit = encode_query(
+                cfg, query, runtime_device=runtime_device, scope=cache_scope, enabled=True
+            )
+            timings["query_embedding_ms"] = (time.perf_counter() - at) * 1000
+            timings["query_vector_cache_hit"] = hit
+            at = time.perf_counter()
+            distance = ReleaseChunk.embedding.cosine_distance(vector)
+            query_rows = (
+                select(ReleaseChunk, Chunk, Document)
+                .join(Chunk, Chunk.id == ReleaseChunk.chunk_id)
+                .join(Document, Document.id == Chunk.document_id)
+                .where(
+                    ReleaseChunk.release_id == release_id,
+                    Document.active.is_(True),
+                    Document.revoked.is_(False),
+                )
+                .order_by(distance, Chunk.id)
+                .limit(50)
+                .execution_options(populate_existing=True)
+            )
+            ranked = list(db.execute(query_rows))
+            cache.validate_hits(db, release_id, index, ranked, _retrieval_row, _embedding_hash)
+            dense = [
+                {
+                    **_retrieval_row(v, index.provenance),
+                    "score": sum(float(a) * b for a, b in zip(v[0].embedding, vector)),
+                    "score_type": "cosine",
+                }
+                for v in ranked
+            ]
+            timings["dense_ms"] = (time.perf_counter() - at) * 1000
+        if variant == "R0":
+            result = dense[:k]
+        else:
+            at = time.perf_counter()
+            lexical = index.lexical.search(query, k if variant == "R1" else 50)
+            timings["lexical_ms"] = (time.perf_counter() - at) * 1000
+            # Lexical-only hits also receive current persisted-source validation.
+            ids = [r["chunk_id"] for r in lexical]
+            hits = (
+                list(
+                    db.execute(
+                        select(ReleaseChunk, Chunk, Document)
+                        .join(Chunk, Chunk.id == ReleaseChunk.chunk_id)
+                        .join(Document, Document.id == Chunk.document_id)
+                        .where(ReleaseChunk.release_id == release_id, Chunk.id.in_(ids))
+                        .execution_options(populate_existing=True)
+                    )
+                )
+                if ids
+                else []
+            )
+            if len(hits) != len(ids):
+                raise ValueError("Lexical source membership changed")
+            cache.validate_hits(db, release_id, index, hits, _retrieval_row, _embedding_hash)
+            result = lexical if variant == "R1" else rrf([dense, lexical], max(20, k))[:k]
+            if variant == "R3":
+                result = CrossEncoderReranker(
+                    cfg.get("reranker_model", "BAAI/bge-reranker-base"),
+                    cfg.get("reranker_revision"),
+                    device=runtime_device or cfg.get("reranker_device"),
+                    cache_folder=cfg.get("reranker_cache_folder"),
+                ).rerank(query, rrf([dense, lexical], max(20, k)), k)
+        if cache.epoch(db) != index.token:
+            raise ValueError("Sources changed during retrieval")
+    except (ValueError, KeyError, TypeError) as exc:
+        raise AppError(
+            "SOURCE_UNAVAILABLE", detail="Pinned release failed current integrity validation."
+        ) from exc
+    timings["retrieval_total_ms"] = (time.perf_counter() - start) * 1000
+    if execution_trace is not None:
+        execution_trace.update(timings)
+    return result

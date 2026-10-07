@@ -125,6 +125,146 @@ def test_upload_type_path_limits_recursive_secrets_and_raw_dedup(runtime):
         )
 
 
+def test_processing_rejects_corrupted_original_before_parser(runtime):
+    rt = runtime
+    raw = ("# Original integrity\nThe source explains cell membranes. " + uuid4().hex).encode()
+    imported = upload(rt, raw)
+    with rt.db() as db:
+        version = db.get(DocumentVersion, imported["version"]["id"])
+        original = Path(rt.settings.storage_root, version.storage_path)
+        assert service._file_sha256(original) == version.raw_hash
+
+    corrupted = bytearray(raw)
+    corrupted[-1] ^= 1
+    original.write_bytes(corrupted)
+    assert original.stat().st_size == len(raw)
+    assert service._file_sha256(original) != version.raw_hash
+
+    admin = rt.headers("admin@example.com")
+    queued = call(rt, "POST", f"/documents/{imported['document']['id']}/process", {}, admin, 202)
+    with (
+        patch.object(service, "_file_sha256", wraps=service._file_sha256) as stream_hash,
+        patch.object(
+            service, "parse", side_effect=AssertionError("Corrupted source was parsed")
+        ) as parser,
+    ):
+        assert rt.work()
+    stream_hash.assert_called_once_with(original.resolve())
+    parser.assert_not_called()
+
+    job = call(rt, "GET", "/jobs/" + queued["job_id"], headers=admin)
+    assert job["state"] == "failed" and job["error"]["code"] == "SOURCE_UNAVAILABLE"
+    with rt.db() as db:
+        run = db.get(ProcessingRun, queued["processing_id"])
+        assert run.state == "failed" and run.error["code"] == "SOURCE_UNAVAILABLE"
+        assert not db.scalar(
+            select(SourceUnit.id).where(SourceUnit.processing_id == queued["processing_id"])
+        )
+        assert not db.scalar(select(Chunk.id).where(Chunk.processing_id == queued["processing_id"]))
+
+
+def test_new_processing_is_isolated_and_old_queued_job_keeps_inline_parser(runtime):
+    rt = runtime
+    admin = rt.headers("admin@example.com")
+    new = upload(rt, ("# Diffusion\nA membrane permits diffusion. " + uuid4().hex).encode())
+    queued = call(rt, "POST", f"/documents/{new['document']['id']}/process", {}, admin, 202)
+    with rt.db() as db:
+        job = db.get(Job, queued["job_id"])
+        assert job.payload["parser_execution"] == service.ISOLATED_PARSER_POLICY
+        run = db.get(ProcessingRun, queued["processing_id"])
+        assert "parser_execution" not in run.configuration
+        assert run.config_hash == service.digest(run.configuration)
+    with patch.object(service, "parse", side_effect=AssertionError("Inline parser used")):
+        assert rt.work()
+    assert call(rt, "GET", "/jobs/" + queued["job_id"], headers=admin)["state"] == "succeeded"
+    with rt.db() as db:
+        version = db.get(DocumentVersion, new["version"]["id"])
+        original = Path(rt.settings.storage_root, version.storage_path)
+        expected = service.parse(original, version.media_type)
+        actual = list(
+            db.scalars(
+                select(SourceUnit)
+                .where(SourceUnit.processing_id == queued["processing_id"])
+                .order_by(SourceUnit.sequence)
+            )
+        )
+        assert [(unit.page, unit.section, unit.raw_text) for unit in actual] == [
+            (unit["page"], unit["section"], unit["raw_text"]) for unit in expected
+        ]
+
+    legacy = upload(rt, ("# Osmosis\nWater moves down a gradient. " + uuid4().hex).encode())
+    old_queue = call(rt, "POST", f"/documents/{legacy['document']['id']}/process", {}, admin, 202)
+    with rt.db() as db:
+        job = db.get(Job, old_queue["job_id"])
+        job.payload = {"processing_id": old_queue["processing_id"]}
+        db.commit()
+    with patch.object(
+        service, "parse_isolated", side_effect=AssertionError("Legacy job was isolated")
+    ):
+        assert rt.work()
+    assert call(rt, "GET", "/jobs/" + old_queue["job_id"], headers=admin)["state"] == "succeeded"
+
+
+@pytest.mark.parametrize(
+    ("setting", "limit", "error_code"),
+    [
+        ("parser_output_max_bytes", 32, "PARSER_OUTPUT_LIMIT"),
+        ("parser_wall_seconds", 0.001, "PARSER_TIMEOUT"),
+    ],
+)
+def test_isolated_parser_limit_failure_keeps_run_unpublished_and_can_retry(
+    runtime, setting, limit, error_code
+):
+    rt = runtime
+    admin = rt.headers("admin@example.com")
+    uploaded = upload(rt, ("# Limits\nSource text for a parser limit. " + uuid4().hex).encode())
+    saved = getattr(rt.settings, setting)
+    setattr(rt.settings, setting, limit)
+    try:
+        queued = call(
+            rt, "POST", f"/documents/{uploaded['document']['id']}/process", {}, admin, 202
+        )
+        assert rt.work()
+    finally:
+        setattr(rt.settings, setting, saved)
+    job = call(rt, "GET", "/jobs/" + queued["job_id"], headers=admin)
+    assert job["state"] == "failed" and job["error"]["code"] == error_code
+    with rt.db() as db:
+        run = db.get(ProcessingRun, queued["processing_id"])
+        assert run.state == "failed" and run.error["code"] == error_code
+        assert not db.scalar(select(SourceUnit.id).where(SourceUnit.processing_id == run.id))
+        assert not db.scalar(select(Chunk.id).where(Chunk.processing_id == run.id))
+    rerun = call(rt, "POST", f"/documents/{uploaded['document']['id']}/process", {}, admin, 202)
+    assert rerun["processing_id"] == queued["processing_id"]
+    assert rerun["job_id"] != queued["job_id"]
+    assert rt.work()
+    assert call(rt, "GET", "/jobs/" + rerun["job_id"], headers=admin)["state"] == "succeeded"
+
+
+def test_malformed_pdf_fails_without_publishing_units_or_chunks(runtime):
+    rt = runtime
+    admin = rt.headers("admin@example.com")
+    response = rt.client.post(
+        "/api/v1/documents",
+        headers=admin,
+        data={"title": "Damaged PDF fixture"},
+        files={
+            "file": ("damaged.pdf", b"%PDF-1.7\ninvalid xref and no pages\n", "application/pdf")
+        },
+    )
+    assert response.status_code == 201, response.text
+    document_id = response.json()["data"]["document"]["id"]
+    queued = call(rt, "POST", f"/documents/{document_id}/process", {}, admin, 202)
+    assert rt.work()
+    job = call(rt, "GET", "/jobs/" + queued["job_id"], headers=admin)
+    assert job["state"] == "failed" and job["error"]["code"] == "PARSER_FAILED"
+    with rt.db() as db:
+        run = db.get(ProcessingRun, queued["processing_id"])
+        assert run.state == "failed" and run.error["code"] == "PARSER_FAILED"
+        assert not db.scalar(select(SourceUnit.id).where(SourceUnit.processing_id == run.id))
+        assert not db.scalar(select(Chunk.id).where(Chunk.processing_id == run.id))
+
+
 def test_quarantine_inspectable_exclusion_and_processing_lineage(runtime):
     rt = runtime
     admin = rt.headers("admin@example.com")
@@ -653,7 +793,7 @@ def test_process_stop_and_stale_recovery_fence_late_publication_and_allow_rerun(
     queued = call(rt, "POST", f"/documents/{imported['document']['id']}/process", {}, admin, 202)
     entered = Event()
     resume = Event()
-    original = service.parse
+    original = service.parse_isolated
 
     def blocked_parse(*args, **kwargs):
         entered.set()
@@ -661,7 +801,7 @@ def test_process_stop_and_stale_recovery_fence_late_publication_and_allow_rerun(
         return original(*args, **kwargs)
 
     with (
-        patch("app.modules.knowledge.service.parse", side_effect=blocked_parse),
+        patch("app.modules.knowledge.service.parse_isolated", side_effect=blocked_parse),
         ThreadPoolExecutor(max_workers=2) as pool,
     ):
         work = pool.submit(rt.work)
