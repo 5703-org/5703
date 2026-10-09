@@ -1,0 +1,430 @@
+{
+  "fixture_version": "saved_bound_repair_contract_replay_v1",
+  "case": "g01_actual18",
+  "scope": "Offline preservation and edit-permission replay only; no new semantic quality result.",
+  "source_artifacts": [
+    {
+      "file": "deepseek-e2e-control-18/deepseek-native-outcome-01.json",
+      "sha256": "57a0a62755cf331383f96dcc4e2f678a0b890c582e5bd554065b42101d129b4c",
+      "bytes": 97482,
+      "json_pointers": [
+        "/drafts/0/response",
+        "/drafts/0/tutor_question",
+        "/drafts/0/learner_attempt_evaluation",
+        "/drafts/0/projection",
+        "/attribution/claims",
+        "/checks/0/judgment",
+        "/checks/0/structural_issues",
+        "/checks/0/repair_plan",
+        "/teaching_context",
+        "/evidence",
+        "/messages"
+      ]
+    },
+    {
+      "file": "deepseek-e2e-control-18/deepseek-request-result-04.json",
+      "sha256": "075f67d6a5a4f9d45e10c49b40767da49a9411fb231bca9336eff7c5364f59f1",
+      "bytes": 2730,
+      "json_pointer": "/raw_model_text",
+      "raw_model_text_sha256": "d9d7afb4ca3044e452efe1c29a5263dc1897a6821feefba2317e592ae00a6d9c"
+    }
+  ],
+  "extraction": {
+    "excluded_fields": [
+      "messages with role=system",
+      "claim.support diagnostic metadata"
+    ],
+    "draft": "/drafts/0/response plus recorded teaching metadata",
+    "protected": "Known unique protected claim, reconstructed by the unchanged v4/v5 protection policy in the independent audit; not a new human judgment.",
+    "request_binding": "Only recorded public user messages and teaching_context."
+  },
+  "draft": {
+    "schema_version": "chat_response_v1",
+    "response_type": "answer",
+    "answer_text": "Here is a neutral way to frame the choice. The equation is 5x - 4 = 21. That equation has a term containing x and a separate constant term, and the goal is to isolate x using equality-preserving inverse operations. Consider this hypothesis: handle one visible local component independently of the whole. Would that hypothesis fit the given structure and the order of steps? What already-visible feature of the equation supports your judgment, and why does checking that fit matter before deciding on a first step?",
+    "short_answer": null,
+    "citations": [],
+    "refusal_reason": null,
+    "follow_up_questions": [],
+    "confidence": 0.6,
+    "tutor_question": {
+      "question": "Would that hypothesis fit the given structure and the order of steps? What already-visible feature of the equation supports your judgment, and why does checking that fit matter before deciding on a first step?",
+      "expected_response_kind": "explanation"
+    },
+    "learner_attempt_evaluation": null
+  },
+  "claims": [
+    {
+      "claim_id": "claim_94fdda7a415771f7782931c6_1",
+      "answer_field": "answer_text",
+      "start": 0,
+      "end": 42,
+      "text": "Here is a neutral way to frame the choice.",
+      "evidence_ids": [],
+      "fragment_ids": []
+    },
+    {
+      "claim_id": "claim_1963131a69208ae6a8cc3a6a_1",
+      "answer_field": "answer_text",
+      "start": 43,
+      "end": 71,
+      "text": "The equation is 5x - 4 = 21.",
+      "evidence_ids": [],
+      "fragment_ids": []
+    },
+    {
+      "claim_id": "claim_bc41123b60c7a9ab968ce8f1_1",
+      "answer_field": "answer_text",
+      "start": 72,
+      "end": 214,
+      "text": "That equation has a term containing x and a separate constant term, and the goal is to isolate x using equality-preserving inverse operations.",
+      "evidence_ids": [],
+      "fragment_ids": [
+        "span_a413e17412ea3c709816d2b2e5ac4113"
+      ]
+    },
+    {
+      "claim_id": "claim_471f63eea9ca1436fc6886da_1",
+      "answer_field": "answer_text",
+      "start": 215,
+      "end": 303,
+      "text": "Consider this hypothesis: handle one visible local component independently of the whole.",
+      "evidence_ids": [],
+      "fragment_ids": []
+    },
+    {
+      "claim_id": "claim_66efad041dd4004c4c8a1b44_1",
+      "answer_field": "answer_text",
+      "start": 304,
+      "end": 373,
+      "text": "Would that hypothesis fit the given structure and the order of steps?",
+      "evidence_ids": [],
+      "fragment_ids": []
+    },
+    {
+      "claim_id": "claim_69e6ad410e43b9203e62b7c5_1",
+      "answer_field": "answer_text",
+      "start": 374,
+      "end": 513,
+      "text": "What already-visible feature of the equation supports your judgment, and why does checking that fit matter before deciding on a first step?",
+      "evidence_ids": [],
+      "fragment_ids": []
+    }
+  ],
+  "protected": [
+    {
+      "claim_id": "claim_1963131a69208ae6a8cc3a6a_1",
+      "answer_field": "answer_text",
+      "start": 43,
+      "end": 71,
+      "text": "The equation is 5x - 4 = 21.",
+      "evidence_ids": [],
+      "fragment_ids": []
+    }
+  ],
+  "judgment": {
+    "claims": [
+      {
+        "claim_id": "claim_94fdda7a415771f7782931c6_1",
+        "basis": "nonfactual",
+        "factual": false,
+        "status": "supported",
+        "fragment_ids": [],
+        "problem_quote": null,
+        "derivation": null,
+        "reason": "Procedural framing of the response; it makes no scientific assertion."
+      },
+      {
+        "claim_id": "claim_1963131a69208ae6a8cc3a6a_1",
+        "basis": "problem_input",
+        "factual": true,
+        "status": "supported",
+        "fragment_ids": [],
+        "problem_quote": "5x - 4 = 21",
+        "derivation": null,
+        "reason": "The equation matches an exact contiguous substring of the learner's given problem."
+      },
+      {
+        "claim_id": "claim_bc41123b60c7a9ab968ce8f1_1",
+        "basis": "textbook",
+        "factual": true,
+        "status": "unsupported",
+        "fragment_ids": [
+          "span_a413e17412ea3c709816d2b2e5ac4113"
+        ],
+        "problem_quote": null,
+        "derivation": null,
+        "reason": "The claim that the equation has an x-term and a separate constant term is not a source-level assertion needing certification, but this draft was submitted in textbook mode with a citation, and ev_001 (the only passage) says nothing about the equation's local term structure; the listed citation contributes nothing to this descriptive claim, so the textbook support is unsupported."
+      },
+      {
+        "claim_id": "claim_471f63eea9ca1436fc6886da_1",
+        "basis": "nonfactual",
+        "factual": false,
+        "status": "supported",
+        "fragment_ids": [],
+        "problem_quote": null,
+        "derivation": null,
+        "reason": "Explicitly labelled neutral hypothesis offered as procedural framing for the learner's fit judgment; it asserts no scientific fact."
+      },
+      {
+        "claim_id": "claim_66efad041dd4004c4c8a1b44_1",
+        "basis": "nonfactual",
+        "factual": false,
+        "status": "supported",
+        "fragment_ids": [],
+        "problem_quote": null,
+        "derivation": null,
+        "reason": "A question asking the learner to judge whether the hypothesis fits; it asserts no scientific fact."
+      },
+      {
+        "claim_id": "claim_69e6ad410e43b9203e62b7c5_1",
+        "basis": "nonfactual",
+        "factual": false,
+        "status": "supported",
+        "fragment_ids": [],
+        "problem_quote": null,
+        "derivation": null,
+        "reason": "A question asking for the learner's basis and why fit matters; no factual assertion is made."
+      }
+    ],
+    "body_ok": false,
+    "specific_help": true,
+    "scope_ok": true,
+    "suggestions_ok": true,
+    "evidence_display_ok": true,
+    "cumulative_ok": true,
+    "complete_answer": false,
+    "coverage": "supported_partial",
+    "missing_facets": [
+      "The learner must still produce the fit judgment and its basis themselves; the hint intentionally withholds the first inverse operation."
+    ],
+    "limitations_explicit": false,
+    "reason": "The hint correctly keeps the saved operation unanswered and asks for a judgment with basis, but claim_bc41123b60c7a9ab968ce8f1_1 is classified as a textbook claim with an irrelevant citation, so body_ok must be false and the response cannot publish on that support defect. Hint scope and the selection task (no supplied candidate; neutral whole-structure hypothesis) are otherwise respected, and no non-repetitive next action is demanded because the hint stage deliberately leaves reasoning to the learner.",
+    "repair_fragment_ids": [],
+    "attempt_evaluation_ok": true,
+    "tutor_question_ok": true,
+    "requirements": [
+      {
+        "requirement_id": "requirement_01",
+        "relevance": "related",
+        "sufficiency": "partial",
+        "evidence": [
+          {
+            "evidence_id": "ev_001",
+            "fragment_id": "F001",
+            "quote": "An equality remains valid when the same permissible operation is applied to both sides."
+          }
+        ],
+        "conditions_preserved": true,
+        "response_coverage": "partial",
+        "missing_information": "The passage states the equality-preserving principle but does not provide the specific first inverse operation for 5x - 4 = 21 or a full explanation of starting the isolation; the hint deliberately withholds that selection.",
+        "reason": "The source supports the general inverse-operation/equality principle underlying the current step but does not itself establish the particular choice requested; the draft only frames the decision and leaves the operation unstated as required at hint stage 1."
+      }
+    ],
+    "non_repetitive_next_action": false
+  },
+  "structural_issues": [
+    {
+      "code": "REQUIREMENT_LIMITATION_MISSING",
+      "requirement_id": "requirement_01"
+    },
+    {
+      "code": "TUTOR_ACTION_REPEATS_DISCLOSED_ANSWER"
+    },
+    {
+      "code": "ACTUAL_CITATION_ASSESSMENT_MISSING",
+      "claim_id": "claim_bc41123b60c7a9ab968ce8f1_1"
+    },
+    {
+      "code": "ACTUAL_CITATION_FRAGMENT_INVALID",
+      "claim_id": "claim_bc41123b60c7a9ab968ce8f1_1"
+    },
+    {
+      "code": "ACTUAL_CITATION_IRRELEVANT",
+      "claim_id": "claim_bc41123b60c7a9ab968ce8f1_1"
+    },
+    {
+      "claim_id": "claim_bc41123b60c7a9ab968ce8f1_1",
+      "code": "CHECK_UNDISPLAYED_SUPPORT"
+    }
+  ],
+  "repair_plan": {
+    "version": "cause_specific_hint_progression_repair_v10",
+    "actions": [
+      {
+        "origin": "source_coverage",
+        "claim_id": null,
+        "code": "REQUIREMENT_LIMITATION_MISSING",
+        "action": "resolve_exact_source_association"
+      },
+      {
+        "origin": "source_coverage",
+        "claim_id": null,
+        "code": "TUTOR_ACTION_REPEATS_DISCLOSED_ANSWER",
+        "action": "restore_current_operation_with_useful_non_repetitive_learner_action",
+        "response_scope": "current_allowed_hint_action"
+      },
+      {
+        "origin": "citation_binding",
+        "claim_id": "claim_bc41123b60c7a9ab968ce8f1_1",
+        "code": "ACTUAL_CITATION_ASSESSMENT_MISSING",
+        "action": "bind_or_split_claim_citations"
+      },
+      {
+        "origin": "citation_binding",
+        "claim_id": "claim_bc41123b60c7a9ab968ce8f1_1",
+        "code": "ACTUAL_CITATION_FRAGMENT_INVALID",
+        "action": "bind_or_split_claim_citations"
+      },
+      {
+        "origin": "citation_binding",
+        "claim_id": "claim_bc41123b60c7a9ab968ce8f1_1",
+        "code": "ACTUAL_CITATION_IRRELEVANT",
+        "action": "bind_or_split_claim_citations"
+      },
+      {
+        "origin": "source_coverage",
+        "claim_id": "claim_bc41123b60c7a9ab968ce8f1_1",
+        "code": "CHECK_UNDISPLAYED_SUPPORT",
+        "action": "select_safe_visible_support"
+      },
+      {
+        "origin": "answer",
+        "claim_id": "claim_bc41123b60c7a9ab968ce8f1_1",
+        "code": "CLAIM_UNSUPPORTED",
+        "action": "support_required_content_or_narrow_optional_assertion"
+      },
+      {
+        "origin": "answer",
+        "code": "INCOMPLETE_REQUEST",
+        "action": "complete_current_permitted_hint_action_without_later_solution",
+        "response_scope": "current_allowed_hint_action"
+      }
+    ],
+    "remaining_repair_pairs": 1
+  },
+  "request_binding": {
+    "user_messages": [
+      {
+        "role": "user",
+        "content": "Help me with the current practice step without giving the answer."
+      }
+    ],
+    "teaching_context": {
+      "current_problem": "Solve the equation 5x - 4 = 21. For now, choose the first inverse step without carrying it out.",
+      "help_level": 1,
+      "practice_context": {
+        "concepts": [
+          "equality-preserving inverse operations"
+        ],
+        "conditions": [
+          "5x - 4 = 21",
+          "The objective is to isolate x using equality-preserving inverse operations."
+        ],
+        "current_step": 1,
+        "current_step_prompt": "Choose the first inverse operation that starts isolating x before transforming either side.",
+        "item_id": "synthetic_h1_algebra_inverse_structure",
+        "progress_version": 1,
+        "prompt": "Solve the equation 5x - 4 = 21. For now, choose the first inverse step without carrying it out.",
+        "source": {
+          "source_unit_id": "synthetic_h1_equality_unit"
+        },
+        "version": "practice_tutor_context_v1",
+        "selection_candidates": {
+          "version": "selection_candidates_v1",
+          "current_step": 1,
+          "task_ref": {
+            "field": "recorded_step_goal.operation",
+            "start": 0,
+            "end": 91,
+            "exact_quote": "Choose the first inverse operation that starts isolating x before transforming either side."
+          },
+          "candidate_refs": []
+        },
+        "selection_task": {
+          "version": "selection_task_v1",
+          "current_step": 1,
+          "task_ref": {
+            "field": "recorded_step_goal.operation",
+            "start": 0,
+            "end": 91,
+            "exact_quote": "Choose the first inverse operation that starts isolating x before transforming either side."
+          },
+          "candidate_presence": "absent",
+          "candidate_refs": []
+        }
+      },
+      "teaching_mode": "hint",
+      "turn_role": "user_question"
+    }
+  },
+  "selection_contract": {
+    "selection_candidates": {
+      "version": "selection_candidates_v1",
+      "current_step": 1,
+      "task_ref": {
+        "field": "recorded_step_goal.operation",
+        "start": 0,
+        "end": 91,
+        "exact_quote": "Choose the first inverse operation that starts isolating x before transforming either side."
+      },
+      "candidate_refs": []
+    },
+    "selection_task": {
+      "version": "selection_task_v1",
+      "current_step": 1,
+      "task_ref": {
+        "field": "recorded_step_goal.operation",
+        "start": 0,
+        "end": 91,
+        "exact_quote": "Choose the first inverse operation that starts isolating x before transforming either side."
+      },
+      "candidate_presence": "absent",
+      "candidate_refs": []
+    }
+  },
+  "projection": {
+    "version": "learning_enhancement_v1",
+    "response": {
+      "schema_version": "chat_response_v1",
+      "response_type": "answer",
+      "answer_text": "Here is a neutral way to frame the choice. The equation is 5x - 4 = 21. That equation has a term containing x and a separate constant term, and the goal is to isolate x using equality-preserving inverse operations. Consider this hypothesis: handle one visible local component independently of the whole. Would that hypothesis fit the given structure and the order of steps? What already-visible feature of the equation supports your judgment, and why does checking that fit matter before deciding on a first step?",
+      "short_answer": null,
+      "citations": [],
+      "refusal_reason": null,
+      "follow_up_questions": [],
+      "confidence": 0.6
+    },
+    "citation_views": [],
+    "content_hash": "ad1090b2f9c6a5aefb24d032e9a18fc002a09127ed9bcd45a2ed870759e9fcb5"
+  },
+  "evidence_ids": [
+    "ev_001"
+  ],
+  "saved_full_repair": {
+    "schema_version": "chat_response_v1",
+    "response_type": "answer",
+    "answer_text": "Here is a neutral way to frame the decision. The equation you are given is 5x - 4 = 21, and the goal is to isolate x using equality-preserving inverse operations. One neutral hypothesis, explicitly labelled as a hypothesis, is to handle one visible local component independently of the whole. Would that treatment fit the structure of this equation and the order of steps? What already-visible feature of the given equation supports your judgment, and why does checking that fit matter before you decide on a first step?",
+    "short_answer": null,
+    "citations": [],
+    "refusal_reason": null,
+    "follow_up_questions": [],
+    "confidence": 0.6,
+    "tutor_question": {
+      "question": "Would that treatment fit the structure of this equation and the order of steps? What already-visible feature of the given equation supports your judgment, and why does checking that fit matter before you decide on a first step?",
+      "expected_response_kind": "explanation"
+    },
+    "learner_attempt_evaluation": null
+  },
+  "saved_error": {
+    "code": "REPAIR_CHANGED_APPROVED_CONTENT",
+    "message": "The targeted repair changed an unaffected approved claim",
+    "retryable": false,
+    "details": {}
+  },
+  "recorded_acceptance_unchanged": {
+    "native_response": null,
+    "native_published": false,
+    "human_rating": null
+  }
+}
