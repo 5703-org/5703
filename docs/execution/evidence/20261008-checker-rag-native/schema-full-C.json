@@ -1,0 +1,72 @@
+{
+  "status": "ACTUAL_SINGLE_DIAGNOSTIC_HTTP_RESPONSE_NOT_QUALIFICATION_OR_ACTIVATION",
+  "at_UTC": "2026-10-07T19:29:23.377161+00:00",
+  "slot": "slot01",
+  "selected_diagnostic": "C_full_four_nonenum_nullable_type_arrays_original_full_validation",
+  "scheduled_bucket": "schema-probe",
+  "configuration_id": "b004de0f-60dc-4245-876e-9a53fcb64c03",
+  "configuration_hash": "75d79c7bc4afccf2120e65c67d3d3fc4719a01b04e6830744a539032d503aea7",
+  "qualification_calls": 0,
+  "activation_posts": 0,
+  "database_writes": 0,
+  "E_writes": 0,
+  "diagnostic_POSTs": 1,
+  "known_cost_USD": null,
+  "unknown_hold_USD": "0.0495616",
+  "upstream_schema_error": {
+    "error": {
+      "message": "Provider returned error",
+      "code": 400
+    },
+    "metadata_raw_google_error": {
+      "status": "INVALID_ARGUMENT",
+      "message": "Request contains an invalid argument.",
+      "code": 400
+    }
+  },
+  "raw_payload_headers_credentials_exported": false,
+  "full_compact_shape_and_lossless_decode_valid": false,
+  "mini_schema_feature_shape_valid": false,
+  "original_full_scientific_qualification_still_required": true,
+  "stage": "one_exact_wire_diagnostic_POST",
+  "http_status": 400,
+  "single_transport_elapsed_ms": 1276.7357,
+  "captured_body_bytes": 340,
+  "response_body_sha256": "a9d47434c919e2573d8ee79d9fbb178497570bcecbc3b8942735add032e14483",
+  "safe_usage": {},
+  "safe_gateway_classification": {
+    "stage": "http",
+    "http_status": 400,
+    "provider_error_type": null,
+    "provider_error_code": "400",
+    "provider_error_parameter": null,
+    "message": "The gateway request failed. Category: unknown_provider_failure.",
+    "message_redacted": true,
+    "provider_request_id": null,
+    "finish_reason": null,
+    "network_error": null,
+    "request_submitted": true,
+    "latency_ms": 0,
+    "gateway_failure_category": "unknown_provider_failure",
+    "gateway_classification_evidence": "http_status",
+    "gateway_embedded_error_code": 400
+  },
+  "focused_source_after": {
+    "generation\\compact_findings_v3.py": "1aba7601543d2b08c5331a0e139726191e13948a7dd6343eb7292262e1e2de8a",
+    "generation\\providers.py": "bbfb74558e1adf5e4850edad02bb117af221c804aaad6e6f260addfe05fb38f4",
+    "generation\\google_schema_compiler04.py": "81523f87f315b6f8aecddffd2fda0271af9d306ae294973ecbdd400eb2e047ef",
+    "generation\\probes.py": "642ba880a6dcd3448513b98c0699175cd2fa6b9dafdaa92b65ea3f513d336df2",
+    "generation\\types.py": "de000ead20b00c09dcab7e1e7e0bad92685932a67b127731ff8cd8a9d86bd4bb",
+    "generation\\capabilities.py": "590dac5cb82bf1494cd0db01af422800ce1dd227bae5e943d608c841401ebff0",
+    "generation\\openrouter_routes.py": "7e9ec301cb0ef18dd0ea9a27dc9849c0e088ec1537ee1d58db010ef7c38f4557",
+    "backend\\app\\modules\\model_settings\\service.py": "e6e0a9d41846ff36a37bc1eef72892f9ddbc3f2c4648f36f2e9a714f07d5e39d",
+    "backend\\app\\modules\\model_settings\\compatibility.py": "107c3dcb2025e927244a77f4dc1734cbe49c2149b150a02c6314a93896bd3667",
+    "generation\\adapters.py": "62819ed7a7b7282c2e26894cf5a1b19414f923da7e5f60525bc23f156d706834",
+    "generation\\network_policy.py": "31ee11495949894073b292cd39b5d186f0ea21f5fd3f598b243e9f37b467bf02",
+    "generation\\provider_diagnostics.py": "109f75fd2858c35530c93e3c4a663629bc143344e190bab42eec5458ff39c6b5"
+  },
+  "focused_source_unchanged": true,
+  "sensitive_memory_references_dropped": true,
+  "completed_UTC": "2026-10-07T19:29:25.242259+00:00",
+  "exit_code": 0
+}

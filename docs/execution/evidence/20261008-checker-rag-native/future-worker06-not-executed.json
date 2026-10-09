@@ -1,0 +1,30 @@
+{
+  "status": "PREPARATION_ONLY_NOT_EXECUTED",
+  "worker05": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-compact-repair-20261008-01\\run_current_scoped_native_GPU_worker_PREPARED05.py",
+    "bytes": 42879,
+    "sha256": "1ec9a0898c796699a6d86c9534f808bd190e2e99735e0c124e12495659e5a716"
+  },
+  "worker06": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-compact-repair-20261008-01\\run_current_scoped_native_GPU_worker_PREPARED06.py",
+    "bytes": 43092,
+    "sha256": "c007cf2582601dc359b0f555c9914b52680a21b671e758d352c77a5706b4fee2"
+  },
+  "exact_diff": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-compact-repair-20261008-01\\native_worker_05_to_06_unconditional_lock_close_exact.diff",
+    "bytes": 961,
+    "sha256": "49245683ed9b928d34ce2b7d27e8b5b7c1c54b01141fb227952e80231f25a83e"
+  },
+  "isolated_fake_lock_validation": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-compact-repair-20261008-01\\native-worker06-fake-lock-exception-validation01.json",
+    "bytes": 1517,
+    "sha256": "4651b68405f7655c65023a770449f33eabc8651acb9a9afc6e03998dbeb849e1"
+  },
+  "ast_parse_and_compile_only": "PASS",
+  "actual_worker04_untouched": true,
+  "worker06_db_api_key_model_provider_calls": 0,
+  "phase_lock_close": "Always attempted once in independent try, even unlock/seek exception; closure receipt only true if close succeeds.",
+  "finish_error_gate": "Preserves worker05 boolean-only error_present; any finish error stops further cases.",
+  "normal_science_source_budget_and_all_prior_holds": "Unchanged",
+  "actual_completed_four_cases": "Parent reports actual worker04 4/4, cleanup0 and 9 known provider POSTs; no model rerun occurred."
+}

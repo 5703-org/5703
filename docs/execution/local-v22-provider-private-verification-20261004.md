@@ -1,0 +1,86 @@
+# Local H1 offline checkpoint - 5 October 2026
+
+H1 now has a limited process-task contract for eligible mathematical selection goals: request a concrete applicability or structural-fit judgment and its reason while leaving the selected target unanswered. Pending scope and attempt feedback retain precedence; no model call, schema, answer key or domain classifier was added.
+
+Frozen cross-domain controls received 50/50 independent AI label agreement; only 2/10 original goals match the unchanged automatic selector. This is authored offline design evidence, not actual-model improvement. Focused regression passed 83 tests plus 88 subtests, including 40 new controls. The complete eight-stage mock gate passed 3734 Python tests plus 102 subtests and 196 frontend tests, with source hashes unchanged.
+
+This round made zero paid calls deliberately to avoid ineffective repeats. Existing testing authorization and the 120 budget remain valid. The previous two actual-model semantic failures and human-null fields remain unchanged; complete course acceptance is not claimed. See [the dated offline record](local-h1-task-alignment-offline-20261005.md) for exact source, review, test evidence and remaining limits. All prior document bytes follow unchanged.
+
+# Current verified checkpoint - V10 hint progression S11/P01
+
+Recorded at 2026-10-05T04:55:48.325418+00:00. Global acceptance remains **PARTIAL_ACCEPTANCE_PENDING**; bounded stage: **BOUNDED_STAGE_CLOSED_WITH_REMAINING_ACCEPTANCE_GAPS**. The 949-input source passed task2-hint-progression-v1-full-03. Full03 passed all eight stages: Python quality, foundation, contracts, chat scope, 3694 Python tests and 102 subtests, frontend types, 196 frontend tests and build. Forty Python warnings remain recorded. Full01 was interrupted and remains incomplete; full02 failed three stale test expectations and formatting, and remains preserved as FAIL. Targeted03 and the final full03 closed after the six thin repairs. Full02, targeted03 and full03 removed their own isolated test containers. The interrupted full01 container was last observed exited after the reboot and was retained by this task. Real databases and paid APIs were not used for these gates. The separate ROOT 945-to-949 source promotion and retained gate records are preserved; this save performs no source promotion.
+
+Once-only observations: S11 native PASS / independent AI FAIL (delivered_response; 3 observed numeric requests); P01 native PASS / independent AI FAIL (delivered_response; 2 observed numeric requests). Native delivery, independent AI delivered-content review and diagnostic draft assessments remain separate. The older S11 formula-then-readback AI failure and G01 observation remain unchanged. No all-twelve-course or human-learning completion is claimed; human measurements remain null.
+
+Stage known tariff upper: CNY0.079336; aggregate known upper: CNY0.424482; final protection: CNY10.424482; retained uncertain holds: CNY10.0. Known upper CNY0 inside new whole holds is not added again. The prior CNY23.881782 replacement was already applied exactly once. This stage makes no settlement, excess release or refund; billing debit remains null. Unknown native usage retains HOLD8.
+
+S11 and P01 are each authorized once, at most four physical calls per case, two per role, one correction and zero HTTP retries. The scope is closed or stopped on the recorded fault; no third case, replay, or further paid call is authorized here. S11 and P01 were each invoked exactly once and closed with five total physical requests. Both native deliveries passed, while both independent AI content reviews failed. No further paid call, retry, replay or third case is authorized by this stage. The stage is closed with semantic acceptance gaps; it is not project completion. Fresh resource measurements are in the linked inventory; zero files were deleted and reclaimed space remains null. All earlier documents, reports and public evidence retain their complete previous bytes.
+
+[Current public stage report and evidence](local-deepseek-hint-progression-v1-20261005.md).
+
+---
+
+# Current verified checkpoint - step-goal S11/G01
+
+Recorded at 2026-10-05T01:34:46.353792+00:00. Global status: **PARTIAL_ACCEPTANCE_PENDING**; bounded two-case status: **PARTIAL_ACCEPTANCE_PENDING**. The 945-input source passed final full04: 3651 Python tests, 14 subtests and 196 frontend tests. Initial full01 failures (147 failed / 3502 passed), full02 failures (38 failed / 3613 passed + 14 subtests), and full03 PASS remain separately recorded. The original 15-file promotion and subsequent four-file V9 headroom amendment have preserved receipts.
+
+New once-only observations: S11 native PASS / independent AI FAIL (delivered_response; 2 observed requests); G01 native PASS / independent AI PASS (delivered_response; 2 observed requests). Native delivery, independent AI content assessment and retained draft assessments remain distinct. No human/classroom effects or completion of all twelve course cases are claimed. Their absence is not a new engineering execution blocker.
+
+New known tariff upper: CNY0.060456; aggregate known upper: CNY0.345146. Protection before the historical financial decision: CNY34.226928; after: CNY10.345146. Applied old excess: CNY23.881782 (conditionally eligible CNY23.881782). Legacy unknown CNY10 and all new whole holds CNY0 remain; known cost inside a whole hold is not added again. All historical CNY34 holds stayed in force during both calls. Original S11 remains UNKNOWN / UNRESOLVED / NOT_AVAILABLE with reported requests null; no bill debit or old native/content/paid-count upgrade is claimed.
+
+This two-case once-only actual scope is exhausted; no further paid call is authorized here. Any remaining current-step/non-repetition or generalization gap requires a generic local repair, isolated free verification and separately authorized actual testing. Cleanup is the dated 12-path / 30.26MiB metadata-only inventory: zero files deleted, reclaimed space null, denied C/E GetVolume queries not retried. Protected runtimes, real databases, experiment data and all prior deliveries remain preserved.
+
+[Current public report and evidence](local-deepseek-step-goal-v1-20261004.md).
+
+---
+
+# Current verified checkpoint - 4 October 2026
+
+Recorded at 2026-10-04T22:35:43.979883+00:00. Current status: **PARTIAL_ACCEPTANCE_PENDING**. The 943-input source passed all eight software stages: 3,607 Python tests, 14 subtests and 196 frontend tests. The generic source-faithful delivery/repair changes and dated migration were promoted with five-file compare-and-swap and preserved previous bytes.
+
+New isolated DeepSeek deliveries: S02 native PASS / independent AI content PASS (2 requests); S10 native PASS / independent AI content PASS after repair (4 requests; initial diagnostic draft remains FAIL); S11 native PASS / independent AI content FAIL (2 requests). S11 discloses the initial pressure and then asks the learner to repeat it, instead of selecting the pressure-volume relation for the current H1 step. Native checker acceptance does not settle this teaching-quality gap.
+
+New calculated cost upper bound: CNY0.114316. Cumulative known upper: CNY0.284690. Cumulative protected cost or hold: CNY34.166472, retaining all historical CNY34 holds without adding known costs inside whole holds again. Billing debit is unknown. The original S11 remains UNKNOWN with unresolved cause and preserved CNY8 hold.
+
+The three once-only actual tests in this scope are complete. Further actual retesting requires a new explicit scope authorization. The next local change should enforce the current teaching goal and a useful non-repetitive learner action, preserve grounding and withheld final answers, and pass isolated free checks before any newly authorized actual test. Human/classroom measurements are not claimed. The cleanup record is a metadata-only candidate inventory; no files were deleted. Protected runtimes, real databases, experiment inputs/results and old deliveries are preserved.
+
+[Current public report and evidence](local-deepseek-native-delivery-v2-20261004.md).
+
+---
+
+# Review results
+
+
+Current bounded business status at 2026-10-04T20:54:23.363053+00:00: PARTIAL_ACCEPTANCE_PENDING; S02: native PASS (OK), content FAIL (independent_ai); S10: native FAIL (NATIVE_GATE_REJECTED), content UNAVAILABLE (independent_ai); S11: native UNKNOWN (WORKER_RESULT_INVALID), content UNAVAILABLE (root_availability_only); S02_RETEST: native FAIL (NATIVE_GATE_REJECTED), content UNAVAILABLE (independent_ai). Known aggregate upper CNY0.170374; historical unknown hold CNY10; per-run whole business holds CNY[S10=8, S11=8, S02_RETEST=8] are included inside combined protected CNY34.052156, with known costs not added again to whole holds (actual bill null). Original failed content remains preserved; unexecuted cases have no claimed PASS; S11 unavailable content has no AI or human score. [Current public business evidence](local-deepseek-three-business-20261004.md).
+
+
+Current durable business status at 2026-10-04T18:42:28.248047+00:00: the one authorized repaired native DeepSeek S01 passed the native answer/checker release gate; physical calls 2, child recovery complete, parent match matched, known upper CNY0.025136, new uncertain hold CNY0.0, protected accounting CNY10.025408 including unchanged historical CNY2+CNY8 holds and calibration CNY0.000272 (bill null). E941/C941 unchanged. No automatic paid continuation. [Durable native business evidence](local-deepseek-durable-native-business-20261004.md).
+
+
+Current business-pilot status, 4 October 2026 at 17:20:19 UTC: one actual native DeepSeek S01 invocation stopped at WORKER_RESULT_INVALID; physical calls, usage and content are unknown, and its full CNY8 remains held. Original CNY2 hold + known calibration upper CNY0.000272 + this hold = protected CNY10.000272, bill null. New paid work paused; E941/C941 unchanged. Public subprocess probes identify GBK-versus-UTF8 serialization defect, with minimal ASCII-JSON repair prepared separately; actual cause/fees remain unproved. [Business stop and evidence](local-deepseek-native-business-stop-20261004.md).
+
+
+Current actual-probe status, 4 October 2026 at 16:39:16 UTC: the reviewed application-guard repair completed one authorized supplemental DeepSeek request with HTTP200, exact JSON and service usage116 input/5 output. Its calculated fee upper is CNY0.000272 (not a verified bill); the first unknown CNY2 hold remains. E941/C941 source is unchanged. No further connectivity retries or six-case draft calls occurred. [Repair, limits and evidence](local-deepseek-repaired-probe-20261004.md).
+
+
+Current actual-probe status, 4 October 2026 at 16:15:58 UTC: the first DeepSeek public probe stopped with PROVIDER_NETWORK_ERROR after one recorded transport attempt. HTTP status, usage and cost are unknown; the full CNY2 reservation is held and paid testing is paused without replay. E941 source remains identical to the passed full gate. [Outcome and exact resumption boundary](local-deepseek-first-probe-stop-20261004.md).
+
+CS30-1 local source checkpoint, 4 October 2026. The 941 captured inputs in `E:\5703\learning-assistant` match the final passed candidate. The reviewed main repairs were promoted at 14:47:41 UTC, and the active-interpreter matrix correction at 15:19:24 UTC. Source default is `anchored_reference_v22` with requirements V8. The complete eight-stage mock gate finished at 15:17:40 UTC: 3,588 Python tests, 14 subtests and 196 frontend tests passed. Fifteen real local-browser controls passed at 15:09:17 UTC. All owned test processes and temporary databases were cleaned.
+
+V22 applies bounded presentation preferences through all seven consumers while preserving frozen legacy producers, source-support checks and the original authored mock refusal. Provider request-ID handling removes configured-key echoes on successful and exceptional decode paths. The formal zero-provider v2 runner rejects incompatible runs before HTTP, preserves reserved pilot lineage and leaves unknown measured usage/cost null.
+
+Private-file parsing passed 93 authored offline tests, including six fictitious-file CLI subprocesses. Independent review passed 92 pure cases and 47 effective-protocol controls using 43 fake wire envelopes. `validated_parse_only` certifies parsing and public-policy checks; it does not persist credentials, import them into the database, certify account access or activate models.
+
+The reusable public matrix, `provider_matrix_reusable_v4`, covers 12 synthetic cases, 24 prepared V21/V22 native requests, nine preset/local wire shapes and six explicit mock probes. Its frozen-script workflow and path/import guards passed independent review. An additional actual-repository run initially rejected legitimate `.venv` dependencies; that failure remains retained. The smallest fix recognizes only the active interpreter's checked `purelib`/`platlib` roots and retains native-file/reparse rejection. Nineteen authored origin controls, 14 independent origin controls and all 44 existing preflight controls passed. Fresh validation from the promoted E repository passed at 15:19:29 UTC with zero provider calls. The historical 3,404-attempt matrix ceiling is preparation, not a queued experiment or a measured quality result.
+
+The isolated V22 Compose installation smoke passed and cleaned at 14:09:46 UTC. Parity covers 348 runtime files, 55 dependency pins, 62 frontend files and all eight presets. Five roles started, and background/interactive jobs used a newly created authored database. The mock refusal was expected; no semantic-quality claim follows. Five containers, two volumes and two networks were removed. Runtime source and frontend parity were rechecked after final software testing. API/database/workers use an internal network; only the frontend joins an approved second bridge. Retained failed harness and denied registry-metadata attempts remain inspectable; no image environment values were read.
+
+The user explicitly confirmed the original API draft was empty and authorized relocation. At 14:52:32 UTC, 20 empty key slots and byte-preserved provider JSON were verified; original files were moved to a recoverable C-workspace backup. The current private file is `E:\Project_Private\API_Profiles\5703\providers.json`; the former C file is absent. After the user reported filling it and authorized local testing, a program checked only safe metadata at 15:09:15 UTC: one DeepSeek entry has a key, model `deepseek-flash`, provider `openai_compatible`, and official Chat base `https://api.deepseek.com/v1`. No secret value was exposed, hashed, copied to evidence or permanently persisted. There is no default private-file path. The separately created `providers.prefilled.example.json` has 20 blank keys and does not overwrite the filled file. Fifteen remote public candidates and the authored mock passed local schema/wire-shape checks; Azure/local/custom fields and regional/account prerequisites remain explicit.
+
+Latest authorization supersedes earlier unlimited and 50-CNY states: both projects share 300 CNY; CS30-1 has a cumulative 120-CNY allocation including its initial 2-CNY smoke. The user clarified the account cap changed to 300 CNY. No account limits or funding were changed by this task. Only DeepSeek public/synthetic calls are authorized. US providers are deferred. Qwen Token Plan [Personal](https://www.alibabacloud.com/help/en/model-studio/token-plan-personal-overview) and [Team](https://www.alibabacloud.com/help/en/model-studio/token-plan-team-overview) are restricted to interactive use; ordinary eligible PAYG or written permission is needed for automation.
+
+At this checkpoint, actual provider calls and spend remain zero. A one-case in-memory DeepSeek smoke is being prepared with the approved initial bounds: no more than four physical requests, 8,000 input/1,024 output tokens per request and five minutes overall. Its selected smaller connection probe uses one attempt, 128 output tokens and 20 seconds. Official-model reference tokenization and a directly applicable CNY tariff are being validated, with fake tests for reservation, deadline, egress, secret-safe output and stopping on uncertain usage. Real comparative teaching quality and full live-study execution remain unverified. These are execution-facility checks, not missing user permission or an unspecified budget.
+
+Protected installed runtimes, databases, all experiment inputs/results and old deliveries remain unchanged, especially `E:\5703\week09-private-db\staging-fresh-integrated-runtime-20261001` and `E:\5703\week09-private-db\staging-goal-unit-current-cpu-20261002`. No branch reset, push, upload, deployment or course submission occurred. Current Git branch is unborn `master`, with one worktree.
+
+[Evidence manifest](../../evidence/week09-continuation/20261004/task2-current941-v22-09/manifest.json) records identities and outcomes. Current Canvas assessment/rubric/template/deadline/submission instructions and authentic member contributions remain required for course delivery. No human observations, approval or signatures are fabricated. Resource ownership and cleanup candidates are recorded separately; unique evidence, original inputs and active dependencies remain protected.

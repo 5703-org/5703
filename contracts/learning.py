@@ -29,7 +29,8 @@ class MemoryOut(Contract):
     content: str | None
     scope: str
     source_message_id: str | None
-    status: Literal["active", "expired", "deleted"]
+    status: Literal["active", "paused", "expired", "deleted"]
+    match_policy: Literal["rules_only", "calibrated_semantic"] = "rules_only"
     version: int
     updated_at: str
     expires_at: str | None
@@ -52,6 +53,12 @@ class MemoryEdit(Contract):
 
 class MemoryDelete(Contract):
     version: int = Field(ge=1)
+
+
+class MemoryControlsUpdate(Contract):
+    version: int = Field(ge=1)
+    paused: bool
+    match_policy: Literal["rules_only", "calibrated_semantic"] = "rules_only"
 
 
 class MemoryRecordCreate(Contract):
@@ -123,9 +130,19 @@ class TaskOut(Contract):
     question: str
     task_type: str
     teaching_mode: Literal["direct", "hint"]
+    practice_item_id: str | None = None
+    practice_goal_id: str | None = None
+    practice_progress_version: int | None = None
     help_level: int
     state: str
     version: int
+    pending_tutor_question_id: str | None = None
+    pending_tutor_question: str | None = None
+    pending_tutor_question_version: int = 0
+    expected_response_kind: Literal["concept", "numeric", "explanation", "choice"] | None = None
+    current_step: int = 1
+    turn_role: Literal["user_question", "learner_attempt"] = "user_question"
+    last_attempt_evaluation: dict | None = None
 
 
 class ExposureInput(Contract):
@@ -186,10 +203,16 @@ class ClaimSupportOut(Contract):
     status: Literal["supported", "partial", "unsupported"] | None = None
     basis: (
         Literal[
-            "textbook", "problem_input", "derived_calculation", "nonfactual", "evidence_limitation"
+            "textbook",
+            "problem_input",
+            "derived_calculation",
+            "nonfactual",
+            "evidence_limitation",
+            "general_knowledge",
         ]
         | None
     ) = None
+    general_knowledge_status: Literal["supported", "partial", "unsupported"] | None = None
     checker_configuration_id: str | None = None
     checker_model: str | None = None
     strategy: str | None = None

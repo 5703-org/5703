@@ -24,6 +24,37 @@ class Contract(BaseModel):
     model_config = ConfigDict(extra="forbid", allow_inf_nan=False, strict=True)
 
 
+class ReadingSelection(Contract):
+    start: int = Field(ge=0)
+    end: int = Field(gt=0)
+    text: Annotated[str, StringConstraints(min_length=1, max_length=8000)]
+
+    @model_validator(mode="after")
+    def exact_length(self):
+        if self.end <= self.start or self.end - self.start != len(self.text):
+            raise ValueError("Selection offsets must identify the exact Unicode text")
+        return self
+
+
+class ReadingContext(Contract):
+    scope: Literal["chapter", "textbook", "all"]
+    document_id: str | None = None
+    source_unit_id: str | None = None
+    selection: ReadingSelection | None = None
+
+    @model_validator(mode="after")
+    def required_locator(self):
+        if self.scope != "all" and not self.document_id:
+            raise ValueError("A chapter or textbook scope requires a document")
+        if self.scope == "chapter" and not self.source_unit_id:
+            raise ValueError("A chapter scope requires a source unit")
+        if (self.source_unit_id or self.selection) and not self.document_id:
+            raise ValueError("A source selection requires its document")
+        if self.selection and not self.source_unit_id:
+            raise ValueError("A source selection requires its source unit")
+        return self
+
+
 class ChatMessageCreate(Contract):
     content: Annotated[str, StringConstraints(strip_whitespace=True, min_length=1, max_length=4000)]
     use_profile: bool = True
@@ -31,6 +62,31 @@ class ChatMessageCreate(Contract):
     teaching_mode: Literal["direct", "hint"] | None = None
     task_id: str | None = None
     task_action: Literal["auto", "new", "continue", "more_hint", "full_explanation"] = "auto"
+    task_version: int | None = Field(default=None, ge=1)
+    pending_tutor_question_id: str | None = None
+    pending_tutor_question_version: int | None = Field(default=None, ge=1)
+    turn_role: Literal["auto", "learner_attempt"] = "auto"
+    reading_context: ReadingContext | None = None
+
+    @model_validator(mode="after")
+    def pending_question_identity(self):
+        if self.reading_context is not None and self.answer_mode != "textbook":
+            raise ValueError("A textbook reading context requires textbook answer mode")
+        if self.task_version is not None and self.task_id is None:
+            raise ValueError("A task revision requires its task identity")
+        identifiers = (
+            self.pending_tutor_question_id,
+            self.pending_tutor_question_version,
+        )
+        if any(value is not None for value in identifiers) and (
+            not all(value is not None for value in identifiers)
+            or self.task_id is None
+            or self.task_version is None
+        ):
+            raise ValueError("A pending tutor question requires its task and both revisions")
+        if self.turn_role == "learner_attempt" and self.pending_tutor_question_id is None:
+            raise ValueError("A learner attempt must identify the pending tutor question")
+        return self
 
 
 class ChatResponseV1(Contract):
@@ -312,9 +368,12 @@ class AnswerOut(Contract):
     teaching_mode: Literal["direct", "hint"] = "direct"
     task_id: str | None = None
     help_level: int = 0
+    learning_task: dict | None = None
     presentation: dict | None = None
     attribution: dict | None = None
     memory_notices: list[dict] = Field(default_factory=list)
+    answer_completeness: dict | None = None
+    reading_context: dict | None = None
 
 
 class MessageOut(Contract):

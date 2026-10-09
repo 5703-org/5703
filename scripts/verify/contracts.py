@@ -56,6 +56,11 @@ def main():
         "teaching_mode",
         "task_id",
         "task_action",
+        "task_version",
+        "pending_tutor_question_id",
+        "pending_tutor_question_version",
+        "turn_role",
+        "reading_context",
     }
     assert public["ChatMessageCreate"]["properties"]["answer_mode"]["default"] == "textbook"
     assert public["ChatMessageCreate"]["properties"]["answer_mode"]["enum"] == [

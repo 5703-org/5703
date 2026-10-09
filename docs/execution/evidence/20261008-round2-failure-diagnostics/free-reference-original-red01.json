@@ -1,0 +1,169 @@
+{
+  "status": "ACTUAL_REFERENCE_STALE_IDENTITY_REPRODUCED",
+  "elapsed_seconds": 0.5865568000008352,
+  "cases": [
+    {
+      "case": "revoke/R1",
+      "expected": {
+        "outcome": "rows",
+        "count": 0
+      },
+      "holding_session": {
+        "outcome": "rows",
+        "count": 2,
+        "chunk_ids": [
+          "a1c8da6e4edb25f95035f979e6525e4242e2",
+          "97fafc353cbba682ac08a44e7c7917acc4d8"
+        ]
+      },
+      "fresh_session": {
+        "outcome": "rows",
+        "count": 0
+      },
+      "passed": false,
+      "strong_references_retained": true,
+      "prechange_values": {
+        "active": true,
+        "revoked": false,
+        "first_text": "Photosynthesis captures light energy and stores chemical energy in sugars. Light supplies energy to convert carbon dioxide and water into sugars. Oxygen is released.",
+        "processing_state": "ready"
+      },
+      "fixture_lineage": {
+        "document": "220311f6-1459-4c92-9da5-29992a597ad3",
+        "version": "3a54f224-caed-43a4-abb8-fd81a6b69476",
+        "processing": "6d010f22-73ca-4675-b08c-818fe3000023",
+        "release": "09c175f2-a0a7-4409-9f1f-ffbd182f993a"
+      },
+      "embedding_provider": "mock",
+      "embedding_revision": "mock-hash-v1",
+      "source_before_mutation_validated": true
+    },
+    {
+      "case": "chunk_text/R1",
+      "expected": {
+        "outcome": "error",
+        "code": "SOURCE_UNAVAILABLE"
+      },
+      "holding_session": {
+        "outcome": "rows",
+        "count": 2,
+        "chunk_ids": [
+          "fdb20c30c1801a05f90cb6f63acfeb161d68",
+          "affb0fc2d60405559caed7f8d3b9744ae02a"
+        ]
+      },
+      "fresh_session": {
+        "outcome": "error",
+        "code": "SOURCE_UNAVAILABLE"
+      },
+      "passed": false,
+      "strong_references_retained": true,
+      "prechange_values": {
+        "active": true,
+        "revoked": false,
+        "first_text": "Photosynthesis captures light energy and stores chemical energy in sugars. Light supplies energy to convert carbon dioxide and water into sugars. Oxygen is released.",
+        "processing_state": "ready"
+      },
+      "fixture_lineage": {
+        "document": "48cc8d32-3eb8-42c0-81db-186c42771b90",
+        "version": "d881c05f-6e34-42d1-9b07-de6c4eb04852",
+        "processing": "c383963f-9907-4f02-8bf2-7a567291c4df",
+        "release": "42b9eda6-e6c9-419f-a5cf-d8a8530dd886"
+      },
+      "embedding_provider": "mock",
+      "embedding_revision": "mock-hash-v1",
+      "source_before_mutation_validated": true
+    }
+  ],
+  "pass_count": 0,
+  "fail_count": 2,
+  "fatal": null,
+  "source_before": [
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\knowledge\\service.py",
+      "bytes": 58805,
+      "sha256": "1c97a87dce1f97fa8ded300d0fa4c5d2c509ddd7b4b7fefa0c2475ed9c242151"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\knowledge\\cache.py",
+      "bytes": 4748,
+      "sha256": "85706e87b794b66a7c74a3f270d7ee77c68d3aa41602c9b6fc10374c605cf935"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\knowledge\\models.py",
+      "bytes": 6392,
+      "sha256": "9c805591dc374f5188d11504504c0b28380a5a0b6a39038a7702cefef5cc5f4a"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\retrieval\\embedding.py",
+      "bytes": 5863,
+      "sha256": "4bf84b63bddf93aa6d86f6c0f38726b222029ef5cb5a39a44f9e5e494498cdfa"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\pipelines\\parse.py",
+      "bytes": 9313,
+      "sha256": "7f734839898211f1cb8a4a24a9d1950b0d04198b881fda16409fb57be58d2ce4"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\pipelines\\chunk.py",
+      "bytes": 6262,
+      "sha256": "68a8f6d31cca4e3d97f51f2d2b5fa0926993cf5e2c044ee3466f64155aed8cbf"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\pipelines\\reports.py",
+      "bytes": 6759,
+      "sha256": "55e104fd643c099731d886632548fa629c035d27ad241cb87d947a97ab37f05d"
+    }
+  ],
+  "source_after": [
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\knowledge\\service.py",
+      "bytes": 58805,
+      "sha256": "1c97a87dce1f97fa8ded300d0fa4c5d2c509ddd7b4b7fefa0c2475ed9c242151"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\knowledge\\cache.py",
+      "bytes": 4748,
+      "sha256": "85706e87b794b66a7c74a3f270d7ee77c68d3aa41602c9b6fc10374c605cf935"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\knowledge\\models.py",
+      "bytes": 6392,
+      "sha256": "9c805591dc374f5188d11504504c0b28380a5a0b6a39038a7702cefef5cc5f4a"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\retrieval\\embedding.py",
+      "bytes": 5863,
+      "sha256": "4bf84b63bddf93aa6d86f6c0f38726b222029ef5cb5a39a44f9e5e494498cdfa"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\pipelines\\parse.py",
+      "bytes": 9313,
+      "sha256": "7f734839898211f1cb8a4a24a9d1950b0d04198b881fda16409fb57be58d2ce4"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\pipelines\\chunk.py",
+      "bytes": 6262,
+      "sha256": "68a8f6d31cca4e3d97f51f2d2b5fa0926993cf5e2c044ee3466f64155aed8cbf"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\pipelines\\reports.py",
+      "bytes": 6759,
+      "sha256": "55e104fd643c099731d886632548fa629c035d27ad241cb87d947a97ab37f05d"
+    }
+  ],
+  "source_unchanged": true,
+  "denials": [],
+  "closed_engines": [
+    "revoke/R1",
+    "chunk_text/R1"
+  ],
+  "provider_calls": 0,
+  "network_calls": 0,
+  "real_database_reads_writes": 0,
+  "Gold_reads": 0,
+  "credential_reads": 0,
+  "repository_writes": 0,
+  "fixture_database_only": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-reference-source-refresh-before01",
+  "scope": "Authored isolated SQLite two-Session source refresh regression; no PostgreSQL trigger or paid-model quality claim."
+}

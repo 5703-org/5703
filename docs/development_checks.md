@@ -1,5 +1,11 @@
 # Development and CI checks
 
+## Learning-workspace focused checks
+
+Run `python -m pytest tests/unit/test_learning_product_grading.py tests/integration/test_learning_product.py` against the established disposable PostgreSQL fixture, with `TEST_DATABASE_SERVER` containing only the authorized server URL. The fixture creates and removes its own `cs30_test_*` database. Do not target the main learning database. The recorded run passed 35 checks; `python -m mypy contracts/study.py backend/app/modules/learning_product --follow-imports=silent --check-untyped-defs --no-incremental` and scoped Ruff also passed at that checkpoint.
+
+Answer-core and proposal tests have separate receipts, as do the frontend component/build checks. The current [implementation record](execution/week09-learning-continuation-20260930.md) links them. None is a substitute for the aggregate gate, actual browser journey, real source/device checks or a frozen formal comparison.
+
 ## Current public-distribution checkpoint
 
 The [22 September local release gate](../evidence/week08-memory-v2/20260921/software-gate-release-final-20260922/software_gate.json) passed 828 Python and 86 frontend checks, all eight stages and zero skips. All 487 source/configuration files remained unchanged during the gate. This includes the earlier public-fixture successor (five revised tests and two new helpers) and the later release packager/resource regression correction. Product and evaluator behavior are unchanged. The original 485-file formal-study version remains exact in the verified separate private research archive. Public tests require no held-out catalogue or reference labels. Earlier recorded gates below retain their dates and scopes.

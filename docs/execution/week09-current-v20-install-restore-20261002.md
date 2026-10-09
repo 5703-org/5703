@@ -1,0 +1,9 @@
+# Week 9 current V20 source installation and database restoration
+
+The same-host isolated installation matches all 844 software-gate inputs, 858 public code/contract files and 54,491 installed file pins. Its 21-file source update retained eleven previous files in a private backup. The initial copy audit failed because its helper reused a file-stream variable after copying. That failed receipt remains unchanged. A separate read-only reconciliation verified every expected installed file, original protected file and eight original process identities, with no additional copies or database operations.
+
+The isolated PostgreSQL database was restored from the preserved official-source environment. All 65 tables retain exact columns and original rows. The source database and its physical catalogue remain unchanged. PostgreSQL reflected some check constraints and defaults with different text after restoration: sixteen recognized renderings, 646 actual SQL truth checks and twelve typed-default pairs passed the frozen finite equivalence checks. Every other reflected schema field matches. The 28 original pending background events remain unchanged.
+
+This verifies source installation and restoration on the development computer. Dependencies, CPU wheels and model caches were reused. Current cancellation, recovery, load and real teaching requests have their own runtime records. Independent-computer, Mac, physical-device and human quality acceptance remain separate requirements. No provider call or original-database write occurred in this installation/restore audit.
+
+[Actual metadata](../../evidence/week09-continuation/20261001/current-v20-install-restore-20261002.json), [V20 source contract and gate](week09-help-depth-contract-v20-20261002.md), and [retained running-cancellation failure](week09-current-runtime-cancellation-20261002.md).

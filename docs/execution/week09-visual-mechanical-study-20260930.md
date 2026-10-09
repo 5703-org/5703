@@ -1,0 +1,21 @@
+# Week 9 visual-source mechanical study
+
+The four hash-pinned official OpenStax PDFs and their previously preserved full visual catalogs supplied 5,543 source-bound candidates. This study paired the previous PyMuPDF visual extractor with the current clipped-geometry extractor on the **120 preselected, unlabeled regions** in the existing [review sheet](../../evidence/week09-continuation/20260930/visual-review-v2/review-sheet.csv). The selection contains 10 figure, 10 table and 10 formula candidates from each book. The original source, catalog, and selection hashes were verified before the [freeze](../../evidence/week09-continuation/20260930/visual-formal-120-freeze.json) was saved. The freeze SHA-256 is `c44107bdcd42e95b89642eec28cf85c6fc0744d6a32097057132d663f91d97a8`; its evaluator source SHA-256 is `68f39557bb6c2c42f8c634674843f8788164590641eeca95002d2660732e4d45`. The [complete per-region outcomes](../../evidence/week09-continuation/20260930/visual-formal-120-outcomes.json) have SHA-256 `794fd3492b8f07ae63c0bec3a352db64496cdb17cb415bf8ef91fae2ecdc1a4d`.
+
+The frozen selection has 24 development, 24 pilot and 72 reserved cases on 118 distinct physical PDF pages. The split unit is book plus physical page. It does **not** establish chapter-, concept- or cross-book-disjoint semantic testing. The same original region is compared across extractor revisions. The current extractor and actual source PDF were checked with PyMuPDF 1.28.2; the isolated V11 PostgreSQL and administrator HTTP service were used only for read-only identity and source-view checks. No answer-model calls or database mutations were made.
+
+| Mechanical observation | Previous extractor | Current extractor or runtime |
+| --- | ---: | ---: |
+| Paired regions whose recorded rectangle is contained in the physical PDF page | 116/120 | 120/120 |
+| Figure candidates whose source image digest and raw rectangle were recovered from the original PDF | Not scored | 40/40 |
+| Candidate native text found as an exact native PDF line | Not scored | 120/120 |
+| Table candidates with a reconstructed grid of consistent row and column counts | Not scored | 35/40 |
+| Table candidates without reconstructed cells | Not scored | 5/40 |
+| Exact candidate identity, source hash, catalog hash, page, geometry, text and review state in isolated PostgreSQL | Not scored | 120/120 |
+| Administrator detail and original-page PNG responses on one sample per book and region kind | Not scored | 12/12 |
+
+The four previous off-page rectangles are `VIS-006` (Anatomy and Physiology 2e, physical page 695), `VIS-007` (Anatomy and Physiology 2e, page 849), `VIS-064` (Chemistry 2e, page 419), and `VIS-095` (Concepts of Biology, page 287). The current extractor clipped their visible locators to the original page while retaining their raw image rectangles. Unreconstructed table examples are `VIS-016` (Anatomy and Physiology 2e, page 909), `VIS-041` and `VIS-045` (Biology 2e, pages 112 and 592), `VIS-073` (Chemistry 2e, page 115), and `VIS-104` (Concepts of Biology, page 231). These five remained in the denominator and remain review candidates.
+
+The isolated database still contained **5,543 visual candidates, zero visual reviews**, and active corpus release `4f11bd70-a486-4d16-b216-78cfe499530a`. Every sampled administrator detail response marked its candidate ineligible as answer evidence. None of the 120 geometry and native-text checks establishes correct figure interpretation, complete table reading order, formula symbols and units, or answer correctness. Native-line recovery is a reproducibility check against the same PDF library, not an independent transcription label. All reviewer judgment fields remain empty. The independent review of the 120 source regions and paired downstream question answering therefore remain outstanding. The prior 10,594 real vectors and released chunks were not changed.
+
+The executable evaluator is [visual_formal.py](../../evaluation/week09_continuation/visual_formal.py); four focused failure-boundary tests passed, and Ruff check and format check passed. A correctly labelled semantic visual study needs independent source-region and question labels, then concept-group isolation across overlapping Biology books before a quality rate is reported.

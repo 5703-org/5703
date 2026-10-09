@@ -154,6 +154,19 @@
           "title": "Help Level",
           "type": "integer"
         },
+        "learning_task": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Learning Task"
+        },
         "presentation": {
           "anyOf": [
             {
@@ -187,6 +200,32 @@
           },
           "title": "Memory Notices",
           "type": "array"
+        },
+        "answer_completeness": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Answer Completeness"
+        },
+        "reading_context": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reading Context"
         }
       },
       "required": [

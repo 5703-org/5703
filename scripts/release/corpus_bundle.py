@@ -6,10 +6,11 @@ import gzip
 import hashlib
 import json
 import math
+import os
 from pathlib import Path
 import shutil
 
-from sqlalchemy import DateTime, create_engine, func, insert, select, text
+from sqlalchemy import DateTime, create_engine, func, insert, select
 from sqlalchemy.orm import Session
 
 from app.cli import seed
@@ -28,6 +29,7 @@ from app.modules.knowledge.models import (
 )
 from scripts.release.common import file_hash
 from app.modules.knowledge.service import _release_rows
+from app.platform_core.source_locks import lock_source_maintenance
 
 BOOKS = {"Biology 2e", "Chemistry 2e", "Anatomy and Physiology 2e", "Concepts of Biology"}
 TABLES = [
@@ -240,16 +242,19 @@ def import_bundle(source, settings):
                 raise ValueError(
                     "Import requires an empty corpus; existing sources are never overwritten"
                 )
-            seed(db)
+            existing_admin = db.scalar(select(User.id).where(User.email == "admin@example.com"))
+            initial_password = os.environ.get("CS30_PORTABLE_INITIAL_PASSWORD")
+            if not initial_password:
+                raise ValueError("Corpus import requires CS30_PORTABLE_INITIAL_PASSWORD")
+            seed(db, initial_password=initial_password)
             admin = db.scalar(select(User).where(User.email == "admin@example.com"))
-            if not admin:
-                raise ValueError("Create the local administrator before corpus import")
+            if not admin or admin.status != "active" or admin.role.name != "admin":
+                raise ValueError("An active local administrator is required before corpus import")
             owner = admin.id
         models = {model.__tablename__: model for model in TABLES}
         actual = {name: 0 for name in models}
         with Session(engine) as db, db.begin():
-            if engine.dialect.name == "postgresql":
-                db.execute(text("SELECT pg_advisory_xact_lock(5703002)"))
+            lock_source_maintenance(db)
             if db.scalar(select(func.count()).select_from(Document)):
                 raise ValueError(
                     "A concurrent operator installed a corpus; no existing rows were overwritten"
@@ -328,6 +333,7 @@ def import_bundle(source, settings):
                 raise ValueError("Publication integrity verification failed")
         return {
             "status": "passed",
+            "initial_admin_password_generated": existing_admin is None,
             "active_release_id": manifest["active_release_id"],
             "active_vectors": count,
             "counts": actual,

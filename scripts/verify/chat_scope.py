@@ -40,11 +40,17 @@ def main():
         "teaching_mode",
         "task_id",
         "task_action",
+        "task_version",
+        "pending_tutor_question_id",
+        "pending_tutor_question_version",
+        "turn_role",
+        "reading_context",
     }
     ordinary = ChatMessageCreate(content="A question")
     assert ordinary.answer_mode == "textbook"
     assert ordinary.teaching_mode is None and ordinary.task_id is None
     assert ordinary.task_action == "auto"
+    assert ordinary.reading_context is None
     compose = yaml.safe_load((ROOT / "compose.yaml").read_text())
     for name in ("api", "worker"):
         assert compose["services"][name]["build"]["target"] == "runtime"

@@ -1,0 +1,86 @@
+{
+  "status": "READ_ONLY_PUBLIC_SOURCE_INTERPRETATION_NO_RUNTIME",
+  "source_pins": [
+    {
+      "path": "E:\\5703\\learning-assistant\\retrieval\\embedding.py",
+      "bytes": 5863,
+      "sha256": "4bf84b63bddf93aa6d86f6c0f38726b222029ef5cb5a39a44f9e5e494498cdfa"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\retrieval\\chat.py",
+      "bytes": 6766,
+      "sha256": "44de09b08a89e9d2bb8cc09d0ea4f773d8a919b95d2cb51385eb1dc0f4cf5382"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\retrieval\\ranking.py",
+      "bytes": 5195,
+      "sha256": "ba6a33904d180dc7d8f7af6ed6bb51248ddea0aded39426a4c97e831bdc98fb8"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\retrieval\\query_cache.py",
+      "bytes": 1715,
+      "sha256": "bd1c4efbbb6219b1bba07b72e58a3dab00dea0ec3e4206e9e0793a0e7304e8e8"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\knowledge\\cache.py",
+      "bytes": 4748,
+      "sha256": "85706e87b794b66a7c74a3f270d7ee77c68d3aa41602c9b6fc10374c605cf935"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\knowledge\\service.py",
+      "bytes": 58805,
+      "sha256": "1c97a87dce1f97fa8ded300d0fa4c5d2c509ddd7b4b7fefa0c2475ed9c242151"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\answering\\service.py",
+      "bytes": 92797,
+      "sha256": "4ff471baab3eeceef59634407a28b884118eb3d433752defacfd04abd4b462de"
+    }
+  ],
+  "actual_database_traces_examined": false,
+  "provider_calls": 0,
+  "model_execution": false,
+  "source_files_written": false,
+  "parent_reported_actual_retrieval_ms_in_case_order": [
+    6286.59,
+    345.296,
+    189.123,
+    108.61
+  ],
+  "model_cache": {
+    "embedding": "embedding.py107-133 caches only model instances, max2; ordinary encode recomputes query vectors unless query_cache separately supplies one.",
+    "reranker": "chat.py76-87 caches fixed model/revision/device/cache_folder instances, max2. rerank is executed for each candidate call."
+  },
+  "conditional_normal_retrieval_caches": {
+    "enablement": "answering/service.py1524-1527: frozen command retrieval_optimization==validated_release_cache_v1. knowledge/service.py1339 requires owner cache_scope, PostgreSQL, no allowed_chunk_ids. Other branches retain reference validation.",
+    "release_snapshot": "knowledge/cache.py65-111: key=(database bind, release id, current transactional invalidation epoch, digest configuration/manifest), LRU2. Cache hit still obtains invalidation epoch; returned hits undergo current persisted source and vector validation plus final epoch check. No source gate bypass.",
+    "query_vector": "query_cache.py16-41: requires E5/enabled/scope. Hashed key includes VERSION+owner scope+complete frozen configuration+runtime_device+query; TTL300s, max256. Reuses only vector, no answer or retrieved text. Cross-session repeat of same effective query for same owner/config/device can hit."
+  },
+  "trace_fields": {
+    "retrieval_execution.retrieval_stages.release_cache.hit": "Actual validated-release snapshot cache hit, not model/query cache hit.",
+    "retrieval_execution.retrieval_stages.release_cache.validation_ms": "Time for cache.load including epoch checks and cache lookup or full snapshot validation/construction.",
+    "retrieval_execution.retrieval_stages.query_vector_cache_hit": "Actual boolean returned by encode_query; false also applies when caching not applicable.",
+    "retrieval_execution.retrieval_stages.query_embedding_ms": "encode_query duration, including lookup or actual query encoding.",
+    "retrieval_execution.retrieval_stages.dense_ms": "Database cosine query + current retrieved-hit validation + result construction.",
+    "retrieval_execution.retrieval_stages.lexical_ms": "Lexical index search only; subsequent source-hit validation is outside this sub-timer.",
+    "retrieval_execution.retrieval_stages.retrieval_total_ms": "knowledge.service.retrieve1356-1444, through final source epoch validation; excludes later interactive rerank.",
+    "retrieval_execution.rerank_ms": "ranking.py92-107: normal predict timing includes waiting for per-model prediction lock. chat trace copies from ranked result.",
+    "retrieval_ms": "answering.service1480-1786 outer elapsed; includes normal retrieve, frozen rerank and subsequent retrieval processing.",
+    "retrieval_execution.recorded_device": "Frozen policy device.",
+    "retrieval_execution.execution_device": "Resolved runtime override or frozen policy device."
+  },
+  "interpretation_limits": [
+    "Loading model objects before timer does not precompute questions, release snapshot, query vectors or first GPU inference.",
+    "Warm model instances do not remove first-query inference/setup, release validation or database/cache differences.",
+    "Different order/questions/arms and repeated same-owner queries may mix cold and warm paths.",
+    "Exact four persisted traces are needed to attribute actual cache hits or substage times. Source alone does not establish these actual runtime values.",
+    "Four genuine case timings establish observed functional latency only, not a controlled hybrid-versus-dense speed improvement."
+  ],
+  "suggested_exact_four_readonly_projection": [
+    "case_id",
+    "command.retrieval_optimization",
+    "trace.retrieval_execution.retrieval_stages",
+    "trace.retrieval_execution.rerank_ms",
+    "timing.retrieval_ms"
+  ]
+}

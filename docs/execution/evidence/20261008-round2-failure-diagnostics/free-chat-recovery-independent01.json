@@ -1,0 +1,91 @@
+{
+  "verdict": "PASS",
+  "status": "INDEPENDENT_FINAL_CHAT_RECOVERY_STATIC_REVIEW",
+  "reviewer": "/root/bound_patch_independent_review",
+  "scope": "5703 conversation transcript recovery only; original submission, learning bindings, source and scientific behavior preserved",
+  "pins": {
+    "original": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\chat-transcript-recovery-PREPARED01\\Chat-original01.tsx",
+      "bytes": 42374,
+      "sha256": "99fe41917baac13ce4b3b4465a83d9a204733debfcf3a7269e61ba9106384092"
+    },
+    "final_candidate": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\chat-transcript-recovery-PREPARED01\\Chat-candidate03.tsx",
+      "bytes": 42676,
+      "sha256": "1becbfb17c1f8dcce050b434a49cf23ae9d4a3077c5b5e188e23d66db3043661"
+    },
+    "regression_tests": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\chat-transcript-recovery-PREPARED01\\ChatTranscriptRecovery.test.tsx",
+      "bytes": 13259,
+      "sha256": "95b8ad3565a136a2790c3ad72593b2036c9ecd8bad800fd627e604a1ac2e9b14"
+    },
+    "final_manifest": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\chat-transcript-recovery-PREPARED01\\ROOT-final-adoption-manifest03.json",
+      "bytes": 1483,
+      "sha256": "a2539a5d802a9007c2913549695ebed27abfc3eb1db9b93675c489866d35674e"
+    }
+  },
+  "checks": {
+    "submission_draft_clear_and_learning_task_binding_exact": true,
+    "lifecycle_cancel_archive_rename_exact": true,
+    "terminal_poll_body_and_cleanup_exact": true,
+    "mounted_request_pending_refs_and_persistence_effects_exact": true,
+    "answer_and_evidence_and_feedback_views_exact": true,
+    "new_transcript_failure_and_success_updates_guarded": true,
+    "reload_clears_only_same_reference_error_at_start": true,
+    "reload_does_not_clear_general_error_on_async_success": true,
+    "loading_finally_preexisting_in_original": true,
+    "six_tests_declared": true,
+    "first_five_tests_unchanged_exact_reconstructed_sha256": true,
+    "candidate02_to03_exact_unknown_annotation_only": true,
+    "candidate03_JS_behavior_equivalent_to_reviewed_candidate02": true
+  },
+  "corrected_finding": {
+    "candidate01_sha256": "5b993cd68856dcfb49b10c16e4b91b97c3abc05dcd5ed4bbb12ca02d2671c016",
+    "failure": "While reload is pending, an explicit submission may reject and set a new error; the old reload success .then(setError(null)) then hid that independent submission failure.",
+    "candidate02_fix": "Remove asynchronous general-error clearing. At click time clear only an error object identical to the captured transcriptError; current transcript success clears only transcriptError inside its existing request/mounted guard.",
+    "sixth_regression": "Deferred transcript retry, explicit mocked send409, then successful history resolution; submission error, draft and one explicit submission remain while transcript error disappears.",
+    "final_type_precision": "Candidate03 adds only explicit unknown to the state updater parameter, fixing contextual inference for useState<unknown> without changing runtime logic."
+  },
+  "meaningful_regression_design": [
+    "Same-session recovery after initial session GET failure; no implicit submit.",
+    "Same-session recovery after initial history failure, preserving stored composer draft.",
+    "Draft editing preserves recovery; only explicit submit binds current recovered tutor question/version rather than stale stored task fields.",
+    "Failed retry remains recoverable; reload disabled while that retry is pending.",
+    "Completed-job history refresh failure preserves prior answer and unsent draft, then loads saved completed response without submission.",
+    "Late successful reload preserves an independent submission rejection."
+  ],
+  "preservation": [
+    "Current-request and mounted guards still protect transcript/session/message/job and new transcript-error writes.",
+    "Exact original draft clearing, pending submission freezing/idempotency and task binding functions are unchanged.",
+    "Terminal poll cancellation/timer cleanup and source/evidence views are unchanged.",
+    "No automatic send, lifecycle POST, generation retry, teaching mode change, policy retuning, scientific/proof/citation/schema relaxation or paid request is introduced by reload."
+  ],
+  "inherited_limitation": "Outer loading .finally callbacks are not request/mounted-guarded in both the original and final candidate. This is recorded as existing behavior; no new transcript/task corruption was demonstrated and this narrow review does not certify every possible overlapping loading indicator transition.",
+  "runtime_qualification": {
+    "reviewer_tests_or_runtime_executed": false,
+    "parent_reports_candidate02_targeted_tests": 53,
+    "candidate03_type_only_change": "Exact verified annotation-only delta; no JavaScript runtime behavior change.",
+    "final_candidate03_tests_and_typecheck": "In progress at review creation; use the actual final results before adoption. No typecheck/runtime PASS is inferred from this static review."
+  },
+  "actions": {
+    "stdlib_text_hash_json_only": true,
+    "create_only_this_W_review": true,
+    "E_writes": 0,
+    "typescript_or_application_imports": 0,
+    "tests": 0,
+    "database": 0,
+    "network": 0,
+    "models": 0,
+    "providers": 0,
+    "credentials_or_env": 0,
+    "Gold": 0
+  },
+  "blockers": [],
+  "supersedes": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\independent-chat-recovery-static01.json",
+    "bytes": 4819,
+    "sha256": "209a7a91192958068bb43f170a858224c7b6f4950fae092f738692b0988ffefd"
+  },
+  "candidate_sha256": "1becbfb17c1f8dcce050b434a49cf23ae9d4a3077c5b5e188e23d66db3043661"
+}

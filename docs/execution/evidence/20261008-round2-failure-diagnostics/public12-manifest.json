@@ -1,0 +1,248 @@
+{
+  "schema": "old128_seen_dev_candidate12_openqa36_manifest_v2",
+  "status": "PREPARED_NOT_EXECUTED",
+  "dataset_revision": "2c94ad3e1aafab77146f384e23536f97a4849815",
+  "source_universe": {
+    "paired_questions": 128,
+    "validation_prefix": 64,
+    "test_prefix": 64,
+    "previously_exposed_development": true
+  },
+  "selection": {
+    "method": "Purposeful coverage of recorded public outcome strata with six IDs per split; no random or blind-test claim",
+    "questions": [
+      {
+        "question_id": "sciq:test:000008",
+        "split": "test",
+        "stratum": "mcq_refusal_regression",
+        "rationale": "A long-chain hydrocarbon viscosity question replaces the already successful current DEV electron-acceptor case within the historical MCQ refusal stratum.",
+        "semantic_cause_identified": false,
+        "supersedes_candidate01_question_id": "sciq:test:000000",
+        "historical_selection_protocol": "mcq",
+        "prospective_retest_protocol": "openqa"
+      },
+      {
+        "question_id": "sciq:test:000015",
+        "split": "test",
+        "stratum": "mcq_refusal_regression",
+        "rationale": "Physical-science light-production question broadens the refusal stratum beyond the prior chemistry example.",
+        "semantic_cause_identified": false,
+        "historical_selection_protocol": "mcq",
+        "prospective_retest_protocol": "openqa"
+      },
+      {
+        "question_id": "sciq:test:000003",
+        "split": "test",
+        "stratum": "mcq_refusal_regression",
+        "rationale": "A height-relative-to-sea-level question replaces the chemical-reaction terminology case within the historical MCQ refusal stratum to retain six IDs per original split.",
+        "semantic_cause_identified": false,
+        "supersedes_candidate01_question_id": "sciq:validation:000028",
+        "historical_selection_protocol": "mcq",
+        "prospective_retest_protocol": "openqa"
+      },
+      {
+        "question_id": "sciq:validation:000040",
+        "split": "validation",
+        "stratum": "mcq_refusal_regression",
+        "rationale": "A short mechanics question permits inspection of whether a compact public definition exists and reaches the supplied evidence.",
+        "semantic_cause_identified": false,
+        "historical_selection_protocol": "mcq",
+        "prospective_retest_protocol": "openqa"
+      },
+      {
+        "question_id": "sciq:validation:000013",
+        "split": "validation",
+        "stratum": "openqa_completed_lexical_regression",
+        "rationale": "A telophase question replaces the already successful current DEV organ-system case within the historical completed OpenQA EM-regression stratum; E1 token F1 was 0.5.",
+        "semantic_cause_identified": false,
+        "supersedes_candidate01_question_id": "sciq:test:000013",
+        "historical_selection_protocol": "openqa",
+        "prospective_retest_protocol": "openqa"
+      },
+      {
+        "question_id": "sciq:test:000019",
+        "split": "test",
+        "stratum": "openqa_completed_lexical_regression",
+        "rationale": "Water-vapor terminology has zero historical E1 token overlap. This warrants separate corpus-coverage, evidence-sufficiency and answer review without presuming which caused the mismatch.",
+        "semantic_cause_identified": false,
+        "historical_selection_protocol": "openqa",
+        "prospective_retest_protocol": "openqa"
+      },
+      {
+        "question_id": "sciq:validation:000002",
+        "split": "validation",
+        "stratum": "openqa_completed_lexical_regression",
+        "rationale": "Genetics definition case with historical E1 F1 0.4 permits inspection of partial lexical overlap versus completeness of the submitted evidence.",
+        "semantic_cause_identified": false,
+        "historical_selection_protocol": "openqa",
+        "prospective_retest_protocol": "openqa"
+      },
+      {
+        "question_id": "sciq:validation:000047",
+        "split": "validation",
+        "stratum": "openqa_completed_lexical_regression",
+        "rationale": "A percentage and missing-term question with historical E1 F1 2/3 permits numeric, qualifier and extraction review under the unchanged scorer.",
+        "semantic_cause_identified": false,
+        "historical_selection_protocol": "openqa",
+        "prospective_retest_protocol": "openqa"
+      },
+      {
+        "question_id": "sciq:test:000014",
+        "split": "test",
+        "stratum": "openqa_refusal_regression",
+        "rationale": "Plant-function case lost both MCQ selection and OpenQA EM through refusal; it links the two protocol partitions without asserting retrieval failure.",
+        "semantic_cause_identified": false,
+        "historical_selection_protocol": "openqa",
+        "prospective_retest_protocol": "openqa"
+      },
+      {
+        "question_id": "sciq:validation:000060",
+        "split": "validation",
+        "stratum": "openqa_refusal_regression",
+        "rationale": "Protein terminology case lost both MCQ selection and OpenQA EM through refusal; it adds a distinct source-definition requirement.",
+        "semantic_cause_identified": false,
+        "historical_selection_protocol": "openqa",
+        "prospective_retest_protocol": "openqa"
+      },
+      {
+        "question_id": "sciq:test:000052",
+        "split": "test",
+        "stratum": "openqa_infrastructure_loss",
+        "rationale": "One of the two retained pre-provider execution failures: E1 EM was already zero, while F1 fell from 0.2 to zero. Treat as infrastructure evidence, not a semantic RAG error.",
+        "semantic_cause_identified": false,
+        "historical_selection_protocol": "openqa",
+        "prospective_retest_protocol": "openqa"
+      },
+      {
+        "question_id": "sciq:validation:000052",
+        "split": "validation",
+        "stratum": "openqa_infrastructure_loss",
+        "rationale": "The second retained pre-provider execution failure: E1 EM was already zero, while F1 fell from 2/7 to zero. Preserve it separately from answer/refusal regressions.",
+        "semantic_cause_identified": false,
+        "historical_selection_protocol": "openqa",
+        "prospective_retest_protocol": "openqa"
+      }
+    ],
+    "question_count": 12,
+    "direct_selection_or_EM_regressions": 10,
+    "separate_infrastructure_F1_losses": 2,
+    "stratum_counts": {
+      "mcq_refusal_regression": 4,
+      "openqa_completed_lexical_regression": 4,
+      "openqa_refusal_regression": 2,
+      "openqa_infrastructure_loss": 2
+    },
+    "current_success_cases_excluded": [
+      "sciq:test:000000",
+      "sciq:test:000013",
+      "sciq:test:000030"
+    ]
+  },
+  "prospective_design": {
+    "protocols": [
+      "openqa"
+    ],
+    "conditions": [
+      "E0_none",
+      "E1_R0_dense_top5",
+      "R2_hybrid_plus_pinned_MiniLM_top5"
+    ],
+    "prepared_condition_count": 36,
+    "scheduled_denominator_per_protocol_arm_if_executed": 12,
+    "active_execution_scheduled": false,
+    "matched_policy": "Use the identical OpenQA system policy, output schema, model configuration, output cap, confidence/refusal rule and extraction across all three arms. Permit the same model-knowledge fallback. Only supplied evidence may differ. Question stems are unchanged, choices are absent, and history/profile are empty.",
+    "model_configuration": null,
+    "source_release_and_processing_configuration": null,
+    "prompt_and_response_schema_hashes": null,
+    "root_freeze_required_before_any_execution": true,
+    "scorer_version": "conservative-v1",
+    "scorer_source_pin": {
+      "path": "E:\\5703\\learning-assistant\\evaluation\\metrics\\scoring.py",
+      "bytes": 6178,
+      "sha256": "d9e2427b7f61e0cd82760bf0f2129576185239d43ef685c35ed7dd2fb9453a89"
+    },
+    "unstarted_invalid_error_refused_items_retained": true,
+    "alias_score": "Optional separately versioned whole-compact-answer diagnostic after generation closure; retain primary EM/F1 unchanged",
+    "openqa_receives_choices": false,
+    "historical_mcq_selection_is_current_mcq_retest": false,
+    "separate_root_owned_checker_pair": {
+      "conditions": 2,
+      "included_in_candidate36": false,
+      "combined_root_round_upper_condition_count": 38
+    }
+  },
+  "failure_attribution": {
+    "corpus_coverage": "An empty or irrelevant candidate union does not establish absence from the full released corpus; require separate source search/review evidence.",
+    "automatic_source_labels": "Label only stem plus exact public passages/provenance, with no expected labels, historical scores, generated answers or ranks. Store broad relevance and complete answer sufficiency separately; preserve unknown/disputed labels and source quotes.",
+    "synonym_scoring": "A completed EM regression or partial token overlap is a lexical observation. Synonym equivalence needs an independent declared diagnostic; do not relabel it factual error from scores alone.",
+    "rerank_harm": "Compare R2 input pool and reranked output on unchanged candidate memberships and texts. Harm is observed only when judged relevant or sufficient evidence is demoted or lost; historical R0-only E1 outcomes do not show rerank harm."
+  },
+  "retrieval_metric_contract": {
+    "candidate_universe": "Per-question frozen unique union of twenty R0 dense candidates and twenty R2 hybrid candidates, using exact chunk/text identities; publish actual counts and complete memberships. This preparation has not retrieved the twelve pools.",
+    "fixed_P_at_5": "Confirmed relevant returned positions / 5; report unknown bounds. Strict point precision is unavailable if any top-five label is unknown.",
+    "precision_among_actual_returned": "Confirmed relevant returned / actual returned count, with its own explicit denominator; NULL when no passage is returned or any returned-passage relevance judgment is unknown.",
+    "pool_relative_recall": "Relevant returned / all relevant members of the fully judged frozen union; NULL if any pool label is unresolved or the union has no positives.",
+    "full_corpus_recall": null,
+    "sufficient_evidence_rate": "Separate confirmed fully sufficient returned positions / 5 using the sufficiency rubric; do not substitute broad relevance P@5."
+  },
+  "source_pins": {
+    "mcq_results": {
+      "path": "E:\\5703\\learning-assistant\\evidence\\sciq\\live-mcq-first64-20260913\\results.json",
+      "bytes": 313765,
+      "sha256": "300076b88fff984cc65605326db3768bbdd9e49bb4baf298fcdc68ffb4de5657"
+    },
+    "openqa_results": {
+      "path": "E:\\5703\\learning-assistant\\evidence\\sciq\\live-openqa-first64-20260913\\results.json",
+      "bytes": 332560,
+      "sha256": "1cb646bfac905cbeb578a72eb4dd3dc1917e3224179cdc1023dac39d4b83032b"
+    },
+    "public_questions": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-rag-quality-matched-dev-20261007-01\\public\\old128-exposed-questions-only01.jsonl",
+      "bytes": 48006,
+      "sha256": "c4d0f8e06267084ee4b5d59c64e218ffbb32cfb584969c406da315208491acde"
+    },
+    "mcq_report": {
+      "path": "E:\\5703\\learning-assistant\\evidence\\sciq\\live-mcq-first64-20260913\\report.md",
+      "bytes": 4353,
+      "sha256": "43037c9b336a9749e1e8de3c8bbaccb2233c81433142917e376f59ec6780abfa"
+    },
+    "openqa_report": {
+      "path": "E:\\5703\\learning-assistant\\evidence\\sciq\\live-openqa-first64-20260913\\report.md",
+      "bytes": 4395,
+      "sha256": "00096ec61e12d339d081b0a37f9fea88b902d23652d432ea08e9625ec43b933f"
+    },
+    "terminal_verification": {
+      "path": "E:\\5703\\learning-assistant\\evidence\\sciq\\live-comparisons-terminal-verification-20260913.json",
+      "bytes": 4470,
+      "sha256": "ad363b8c28c6700660d5ec40191ade3b3487b079748ed58653ee0b7f2e6133e8"
+    },
+    "conservative_scorer": {
+      "path": "E:\\5703\\learning-assistant\\evaluation\\metrics\\scoring.py",
+      "bytes": 6178,
+      "sha256": "d9e2427b7f61e0cd82760bf0f2129576185239d43ef685c35ed7dd2fb9453a89"
+    }
+  },
+  "boundaries": {
+    "provider_calls": 0,
+    "database_calls": 0,
+    "credential_reads": 0,
+    "gold_or_private_reference_reads": 0,
+    "model_execution": false,
+    "E_writes": 0,
+    "production_default_adoption": false,
+    "accuracy_or_learning_gain_claim": false
+  },
+  "supersedes_preparation01": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-round2-old128-public-strata-preparation-20261008-01\\candidate12-manifest01.json",
+    "sha256": "99bb8d4aa6ca3f4a8beea00eeaece18ee64d951abb8fb4b2f05abc3611f3eb24",
+    "reason": "OpenQA-only budget scope and exclude already successful current three-question DEV cases"
+  },
+  "historical_infrastructure_attribution_source": {
+    "pin": {
+      "path": "E:\\5703\\learning-assistant\\evidence\\sciq\\live-openqa-first64-20260913\\report.md",
+      "bytes": 4395,
+      "sha256": "00096ec61e12d339d081b0a37f9fea88b902d23652d432ea08e9625ec43b933f"
+    },
+    "statement": "The original public report attributes the two E1 execution errors to OutOfMemoryError and MemoryError before provider execution. The numeric outcome audit itself records only EXECUTION_FAILED."
+  }
+}

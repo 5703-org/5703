@@ -1,0 +1,27 @@
+# Explicit V7 pending-question hint contract
+
+V7 gives an initial hint a concrete action tied to the recorded pending tutor question and scopes an incomplete hint's repair to the permitted current action. It is an explicit successor to `generation_controls_v6`; ordinary new requests still freeze V6. The default independent checker remains `typed_joint_v5`.
+
+The retained current864 development run had five conditions and fifteen model replies. It returned one full QA response and withheld all four teaching responses. An independent source-backed local Codex AI review judged the full QA candidate appropriate and all four retained teaching candidates outside the pending step. One repaired candidate also revealed a later concept through its source display. These observations are separate from human ratings, measured learning gain and any unexecuted V7 quality trial. The exact failed outcomes and their original baseline remain retained privately.
+
+## Producer and consumer changes
+
+`generation/teaching_plan_v7.py` freezes `generation_controls_v7`, `progress_action_plan_v7` and `progress_display_v7`. It inherits V6's A/B/C/D flags, evidence policy, one supplementary lookup limit, ten-candidate limit and zero provider planning calls. With hint mode, a recorded pending question and a `user_question` turn, it selects `support_pending_question`. The plan keeps the question, current step, expected reply kind and help allowance. A help request or assistant restatement does not establish a learner attempt or authorize movement to a later mechanism.
+
+`generation/checked.py` explicitly dispatches V7. Its shared hint instructions use the already recorded learner-turn contract independently of the content factor. A/C continue to omit `TEACHING_ACTION_PLAN`; B/D include it in generation and checking. C/D retain planned source-display selection. V7 direct QA receives the existing generation and checker prompts without the new hint instructions.
+
+New scientific premises, including premises inside questions, require actual adjacent citations and complete source support. Minimal support must fit the current operation and permitted display scope. Exact non-target learner givens and pure procedural guidance may remain uncited after independent checking. If a complete source fragment would reveal a pending or later target, the generator must choose safe procedural guidance rather than truncate the source, invent support, remove necessary citations or display the revealing fragment. The selector does not certify semantic safety; the final independent source-display and cumulative checks remain required.
+
+The checker instructions distinguish available source information from intentionally deferred response coverage. A source-sufficient requirement must have an empty `missing_information` field, even when the bounded hint defers its response coverage. Genuine partial, absent and conflicting source contexts retain their named gaps. `assess_requirements` and actual citation normalization retain their existing source bytes and rejection behavior.
+
+V7's repair adapter preserves every structural, factual and teaching action. It retains `INCOMPLETE_REQUEST` but changes its repair target from all original requested facets to the current allowed hint action. The adapter does not make `complete_answer` a new mandatory hint gate or accept an incomplete current action; the existing specific-help, question, scope and support checks remain authoritative. Direct QA retains the full requested-facet completion action and its complete-answer gate. A genuine defect still requires a bounded answer repair and a fresh independent final check.
+
+`generation/coverage_query_policy_v1.py` recognizes V7 in the existing frozen context whitelist. `backend/app/modules/answering/service.py` recognizes and dispatches a saved explicit V7 policy, while its normal submission producer still freezes V6. Clients receive no new policy input field. Neither change increases lookup, token, call or active-time budgets.
+
+## Verification and remaining acceptance
+
+The focused offline run passed 61 unit cases across `test_teaching_plan_v7.py`, the existing V6 suite and auxiliary coverage-policy suite. It covered all four factor combinations, pending-question preservation, immutable legacy plans, direct QA coverage, genuine hint repair followed by a fresh check, final scope rejection, source-sufficiency contradictions and uncited-source substitution. Ruff format and lint checks passed for the five affected Python files. These are authored engineering tests, not model-quality labels.
+
+A separate private replay used the exact retained C repair plan and all four actual teaching contexts. Its fifteen checks preserved every old citation/display defect, narrowed only the incomplete-hint repair action, retained the current three validator source hashes, preserved all thirty-six paid frame files and verified the four successor pure plans' unchanged pending questions, help allowances and factor flags. It generated no successor answer and provides no measured quality gain.
+
+No DB migration, provider call, network request, installed PROJECT copy, browser action or service control was performed for this implementation. Full current-source verification and a separately authorized, bounded real V7 quality trial remain to be completed. Promotion of V7 for ordinary new requests is a separate decision; V6 requests and historical responses keep their original producers and bytes.

@@ -1,0 +1,250 @@
+{
+  "status": "W_ONLY_FIXED_PUBLIC_CHECKER_PAIR_PREPARED_AND_LOCAL_CONTRACT_REPLAY_PASS",
+  "at_UTC": "2026-10-07T20:50:49.633291+00:00",
+  "trace_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-owned-slow-trace02\\owned-slow-trace-public01.json",
+    "bytes": 281852,
+    "sha256": "0e20e58c403e3c496d3596dc27e984302a1e73162a422e46255a62194ab457eb"
+  },
+  "native_timing_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-compact-repair-20261008-01\\actual-native-timing-root-native-four-20261008-02\\terminal-receipt01.json",
+    "bytes": 209715,
+    "sha256": "d89383350d866ca4269a3ac1345de323b60422d43a495d383a73ace443002799"
+  },
+  "native_case_usage_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-compact-repair-20261008-01\\actual-current-native-worker-root-native-four-20261008-02\\case04-terminal01.json",
+    "bytes": 2573,
+    "sha256": "3d1683a0fb93ac452de27fa24266eec3201bfb3da7ac2d4be844f42e53f0cb34"
+  },
+  "source_pins": [
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\parser.py",
+      "bytes": 7035,
+      "sha256": "5eb3eabae06b786669a74cb362b2a387db873f0b05d8d461592886e7fe49e749"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\reliability_v3.py",
+      "bytes": 16571,
+      "sha256": "33d72113ee45fa489adaaf274dbfa8f1b342d8cd0834cbb8188713f6c3254fa2"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\reliability_v4.py",
+      "bytes": 10203,
+      "sha256": "0771dd38c821053788608a942033081433ab8ac2ef53afd3d14ed68987b9b56c"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\reliability_v5.py",
+      "bytes": 8366,
+      "sha256": "7260e47e6b51e45834f660f5d0fabb3c142b760f40a6c791fff733c08fd1261d"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checker_encoding.py",
+      "bytes": 4294,
+      "sha256": "57e7fdc229e0732d827af1be3985db8c8ccff91d40e4a6699ad28784ccedf8e2"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checker_contract.py",
+      "bytes": 2958,
+      "sha256": "7b1c3b69d54586b99e14722c8c375bb1481bc452b64f5b2ec71e11052532537e"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checked.py",
+      "bytes": 142373,
+      "sha256": "fb7c47b04253906aaa6c8753f0f907f9ff468dddd3280b5555048b1151ff3be2"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\providers.py",
+      "bytes": 26220,
+      "sha256": "bbfb74558e1adf5e4850edad02bb117af221c804aaad6e6f260addfe05fb38f4"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\provider_diagnostics.py",
+      "bytes": 11568,
+      "sha256": "109f75fd2858c35530c93e3c4a663629bc143344e190bab42eec5458ff39c6b5"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\adapters.py",
+      "bytes": 29192,
+      "sha256": "62819ed7a7b7282c2e26894cf5a1b19414f923da7e5f60525bc23f156d706834"
+    }
+  ],
+  "source_unchanged": true,
+  "exact_failure": {
+    "feedback": [
+      {
+        "code": "REQUIREMENT_SOURCE_QUOTE_INVALID",
+        "requirement_id": "requirement_01"
+      }
+    ],
+    "path": "requirements[0].evidence[1].quote",
+    "evidence_id": "ev_002",
+    "fragment_id": "F006",
+    "returned_quote": "In facilitated transport, also called facilitated diffusion, material moves across the plasma membrane with the assistance of transmembrane proteins down a concentration gradient...",
+    "submitted_exact_fragment_text": "Facilitated transport In facilitated transport, also called facilitated diffusion, material moves across the plasma membrane with the assistance of transmembrane proteins down a concentration gradient (from high to low concentration) without the expenditure of cellular energy.",
+    "cause": "New literal ellipsis and omitted source suffix make the returned quote noncontiguous/not verbatim."
+  },
+  "actual_timings_ms": {
+    "http_message_POST_to_answer_GET": 32933.151,
+    "retrieval": 108.61,
+    "generation": 4530,
+    "joint_check": 4660,
+    "checker_contract_repair": 23068,
+    "checking_total": 27728
+  },
+  "checker_share_of_HTTP_percent": 84.195,
+  "repair_share_of_HTTP_percent": 70.045,
+  "original_joint_response_replay": {
+    "typed_schema_valid": true,
+    "exact_claim_identity_valid": true,
+    "binding_issues": [],
+    "requirement_contract_issues": [
+      {
+        "code": "REQUIREMENT_SOURCE_QUOTE_INVALID",
+        "requirement_id": "requirement_01"
+      }
+    ],
+    "requirement_defects": [],
+    "coherence_issues": [],
+    "semantic_summary_origin": "existing online checker verdict, not new independent evaluation"
+  },
+  "successful_repair_response_replay": {
+    "typed_schema_valid": true,
+    "exact_claim_identity_valid": true,
+    "binding_issues": [],
+    "requirement_contract_issues": [],
+    "requirement_defects": [],
+    "coherence_issues": [],
+    "semantic_summary_origin": "existing online checker verdict, not new independent evaluation"
+  },
+  "authored_negative_mutations": [
+    {
+      "test": "missing_body_ok",
+      "observed": "ORIGINAL_TYPED_SCHEMA_REJECTED"
+    },
+    {
+      "test": "missing_specific_help",
+      "observed": "ORIGINAL_TYPED_SCHEMA_REJECTED"
+    },
+    {
+      "test": "missing_scope_ok",
+      "observed": "ORIGINAL_TYPED_SCHEMA_REJECTED"
+    },
+    {
+      "test": "missing_suggestions_ok",
+      "observed": "ORIGINAL_TYPED_SCHEMA_REJECTED"
+    },
+    {
+      "test": "missing_evidence_display_ok",
+      "observed": "ORIGINAL_TYPED_SCHEMA_REJECTED"
+    },
+    {
+      "test": "missing_cumulative_ok",
+      "observed": "ORIGINAL_TYPED_SCHEMA_REJECTED"
+    },
+    {
+      "test": "missing_complete_answer",
+      "observed": "ORIGINAL_TYPED_SCHEMA_REJECTED"
+    },
+    {
+      "test": "missing_limitations_explicit",
+      "observed": "ORIGINAL_TYPED_SCHEMA_REJECTED"
+    },
+    {
+      "test": "missing_attempt_evaluation_ok",
+      "observed": "ORIGINAL_TYPED_SCHEMA_REJECTED"
+    },
+    {
+      "test": "missing_tutor_question_ok",
+      "observed": "ORIGINAL_TYPED_SCHEMA_REJECTED"
+    },
+    {
+      "test": "missing_non_repetitive_next_action",
+      "observed": "ORIGINAL_TYPED_SCHEMA_REJECTED"
+    },
+    {
+      "test": "nine_requirement_evidence_records",
+      "observed": "ORIGINAL_TYPED_MAX8_REJECTED"
+    },
+    {
+      "test": "invented_requirement_quote",
+      "observed": "ORIGINAL_EXACT_QUOTE_VALIDATOR_REJECTED"
+    },
+    {
+      "test": "citation_outside_actual_allowlist",
+      "observed": "ORIGINAL_CITATION_BINDING_VALIDATOR_REJECTED"
+    },
+    {
+      "test": "missing_calculation_formula_quote",
+      "observed": "ORIGINAL_COMPLETE_PROOF_SCHEMA_REJECTED"
+    },
+    {
+      "test": "incorrect_authored_calculation",
+      "observed": "ORIGINAL_ARITHMETIC_VALIDATOR_REJECTED",
+      "code": "DERIVATION_ARITHMETIC_MISMATCH"
+    }
+  ],
+  "authored_arithmetic_control": {
+    "valid": true,
+    "formula_basis": "textbook",
+    "conditional_on_given_rule": false,
+    "computed_value": "12",
+    "stated_result": "12",
+    "rounding_tolerance": "0.5",
+    "scope": "Arithmetic and exact quotes only; formula applicability and units remain model judgments.",
+    "human_rating": null
+  },
+  "frozen_pair_pins": {
+    "baseline": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-compact-repair-20261008-01\\round2-latency-pair-preparation02\\frozen-baseline-checker01.json",
+      "bytes": 44224,
+      "sha256": "8d1abfd25c7f5630f8bca50d11c4e433842d10c6af3831faeed9b506d5d63148"
+    },
+    "concise": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-compact-repair-20261008-01\\round2-latency-pair-preparation02\\frozen-concise-checker01.json",
+      "bytes": 45575,
+      "sha256": "11faafbb217f405e2d578416b45dbcf4e837e17f988c82fbb32d3c20c2c38b78"
+    }
+  },
+  "schema_provenance": {
+    "recorded_attempt_field": "joint_check_v5 schema name only",
+    "reconstructed_full_schema": "current compact_schema(ReliableCheckV5); JSON Schema bytes were not retained in the trace",
+    "actual_native_source_pin_matches": {
+      "generation/checked.py": true,
+      "generation/providers.py": true,
+      "generation/provider_diagnostics.py": true,
+      "generation/adapters.py": true
+    },
+    "full_schema_raw_saved_in_trace": false
+  },
+  "changed_fields": [
+    "messages[0].content: exact original plus one appendix"
+  ],
+  "unchanged": [
+    "all original user messages and source text",
+    "schema",
+    "model configuration",
+    "json_object",
+    "4096 output cap",
+    "Vertex global LOW route",
+    "science/citation/proof validators",
+    "all eleven flags",
+    "requirements/evidence max8"
+  ],
+  "calls": {
+    "this_preparation_provider_calls": 0,
+    "this_preparation_database_actions": 0,
+    "this_preparation_key_reads": 0,
+    "this_preparation_Gold_reads": 0,
+    "this_preparation_model_execution": 0,
+    "minimum_future_pair_physical_checker_requests": 2,
+    "optional_reverse_order_replicate_additional_requests": 2,
+    "automatic_retries": 0,
+    "automatic_contract_repair_in_pair": 0
+  },
+  "limits": [
+    "Existing verdict replay tests structure, identities, quotes, arithmetic and consistency only; it does not independently establish semantic scientific support.",
+    "No complete GenerationService/native publication replay or fresh role/course qualification was performed.",
+    "The concise candidate has not received an actual provider response and is not adopted/activated.",
+    "Four actual jobs cannot establish causal RAG speed improvement, stable five-to-ten seconds or p95."
+  ]
+}

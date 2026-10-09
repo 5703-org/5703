@@ -1,0 +1,31 @@
+{
+  "schema": "round2_seen_dev_exploratory_quality_judgments_v1",
+  "status": "FROZEN_BEFORE_NEW_GENERATION",
+  "origin": "ROOT scientific intent rules from twelve public question stems; no reference file has been opened in this round",
+  "selected_questions_sha256": "b1848e0bcd9d2257047704288fa5e081bc7e70e83bf1ba9643cd26c18aa7c85c",
+  "primary_scoring": "Unchanged original EM and token F1 from evaluation/metrics/scoring.py; references ROOT-local after every generation process is closed.",
+  "secondary_scoring": "Whole-answer equivalence only within an explicit class below. NFKC/casefold/whitespace normalization first. No substring answer scoring, negation stripping, unit/sign removal or post-output additions.",
+  "retrieval_labels": "Exploratory deterministic lexical relationship labels, not human judgments or scientific truth. A chunk is rule-positive only when all groups of one sufficiency rule match its full text. Alias/answer-word mention alone is a separate weaker coverage indicator.",
+  "precision_denominator": "Rule-positive selected chunks / five selected chunks in each RAG arm.",
+  "recall_denominator": "Rule-positive selected chunks / distinct rule-positive chunks in the frozen union of normal dense top-five and all twenty RRF candidates for that question. NULL if zero positives. This is candidate-pool Recall@5, not full-corpus recall.",
+  "coverage": "Candidate word mention and relationship-positive counts; corpus lexical scans, when present, use only scoped active textbook chunks. No-match cannot establish scientific absence or complete corpus coverage.",
+  "rerank_harm": "MiniLM-specific ordering harm means fewer rule-positive top-five chunks after MiniLM than the original RRF top-five drawn from the identical twenty-candidate pool. Hybrid versus dense selection differences are a separate overall pipeline comparison. Answer score changes are reported separately; these diagnostic counts alone do not prove a causal scientific error.",
+  "generation_policy": "All three arms may use own scientific knowledge, all receive the same OpenQA instructions and JSON shape. NoRAG receives an empty evidence list; dense and hybrid receive their frozen five full chunks. Question order fixed; arm order rotated by question index.",
+  "seen_dev": true,
+  "human_labels": null,
+  "questions": [
+    {"question_id":"sciq:test:000008","equivalence_classes":[["high","high viscosity","a high viscosity","higher viscosity"]],"answer_mentions":["viscos"],"sufficiency_rules":[["viscos","hydrocarbon|alkane","long.chain|chain length|increas.*chain|higher|high"]]},
+    {"question_id":"sciq:test:000015","equivalence_classes":[],"answer_mentions":["electron","photon|light"],"sufficiency_rules":[["neon|discharge|gas","electron|atom","excit|energ","emit|photon|lower.*(level|state)|return.*(level|state)"]]},
+    {"question_id":"sciq:test:000003","equivalence_classes":[["elevation","altitude"]],"answer_mentions":["elevation|altitude"],"sufficiency_rules":[["elevation|altitude","sea level"]]},
+    {"question_id":"sciq:validation:000040","equivalence_classes":[["buoyancy","buoyant force","the buoyant force","buoyancy force","upthrust"]],"answer_mentions":["buoyan|upthrust"],"sufficiency_rules":[["buoyan|upthrust","weight|lighter|upward|fluid|water"]]},
+    {"question_id":"sciq:validation:000013","equivalence_classes":[["chromatin","chromatin fibers","chromatin fibres"]],"answer_mentions":["chromatin"],"sufficiency_rules":[["telophase","chromatin|uncoil|decondens"]]},
+    {"question_id":"sciq:test:000019","equivalence_classes":[["humidity","the humidity"],["absolute humidity","the absolute humidity"]],"answer_mentions":["humidity"],"sufficiency_rules":[["humidity","water vapou?r","amount|content|concentration"]]},
+    {"question_id":"sciq:validation:000002","equivalence_classes":[["nucleotide","nucleotides","base","bases","nucleotide bases"]],"answer_mentions":["nucleotide|base"],"sufficiency_rules":[["frameshift|frame.shift","insert|delet","nucleotide|base"]]},
+    {"question_id":"sciq:validation:000047","equivalence_classes":[["atmospheric","atmospheric pressure","standard atmospheric","standard atmospheric pressure","normal atmospheric pressure"]],"answer_mentions":["atmospheric|standard.*pressure"],"sufficiency_rules":[["pressure","sea level","80 ?%|0[.]8|altitude|elevation"]],"ambiguity":"The stem gives no altitude/location; exact expected completion is ROOT-local and the supplementary class is deliberately narrow."},
+    {"question_id":"sciq:test:000014","equivalence_classes":[["photosynthesis","photosynthetic ability","the ability to photosynthesize","ability to photosynthesize","photosynthesize"]],"answer_mentions":["photosynth"],"sufficiency_rules":[["plant","photosynth","parasit|lost|loss|heterotroph|non.photosynth"]]},
+    {"question_id":"sciq:validation:000060","equivalence_classes":[["apoenzyme","an apoenzyme"],["apoprotein","an apoprotein"]],"answer_mentions":["apoenzyme|apoprotein"],"sufficiency_rules":[["apoenzyme|apoprotein","prosthetic|cofactor|protein.*part"]]},
+    {"question_id":"sciq:test:000052","equivalence_classes":[["abdominopelvic cavity","the abdominopelvic cavity","abdominal and pelvic cavities"],["abdominal cavity","the abdominal cavity"]],"answer_mentions":["abdomin|pelvi"],"sufficiency_rules":[["collateral|prevertebral|preaortic","gangli","abdomin|pelvi"]]},
+    {"question_id":"sciq:validation:000052","equivalence_classes":[["early adulthood","young adulthood","young adult","early adult years"]],"answer_mentions":["adult|physical peak|peak.*physical"],"sufficiency_rules":[["adult","physical|physiolog","peak|strongest|maximum|prime"]]}
+  ],
+  "limits": ["Twelve already-seen failures are a diagnostic DEV sample, not a held-out benchmark.","Lexical rules can miss synonyms and can match unrelated neighboring text; inspect these separately from answer accuracy.","A single pair of provider calls cannot establish a stable latency improvement, p95 or native end-to-end speed."]
+}

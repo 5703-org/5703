@@ -1,0 +1,104 @@
+{
+  "schema": "5703_round2_actual_local_publication_independent_readback_v1",
+  "verdict": "PASS",
+  "status": "ACTUAL_LOCAL_E_PUBLICATION_AND_PRESERVATION_READBACK_VERIFIED_EXTERNAL_PAYLOAD_PERMISSION_STILL_PENDING",
+  "reviewer": "/root/bound_patch_independent_review",
+  "at_UTC": "2026-10-07T21:47:41.430977+00:00",
+  "publication_receipt_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-local-E-round2-publication01\\publication-finished01.json",
+    "bytes": 7738,
+    "sha256": "57ed8307c39bb680613f0bf96e61239db55878160faa44fac37ec94eeae6d425"
+  },
+  "quote_adoption_receipt_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-E-quote-only-adoption01\\adoption-receipt01.json",
+    "bytes": 881,
+    "sha256": "1a7eda5c9adb75a473025632b163e013be09e8cad5653170a626635199f97d3a"
+  },
+  "free64_receipt_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-quote-contract-free01\\receipt01.json",
+    "bytes": 1836,
+    "sha256": "917204c6e7e708edd02cf974d5ffafaf1fd01af34610912cb9c228d706404d4d"
+  },
+  "free64_junit_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-quote-contract-free01\\junit.xml",
+    "bytes": 9832,
+    "sha256": "ad5d8c300140697216b5f07f76440d8ef448a8d1f4e62d04a4c12d238a873f54"
+  },
+  "prior_publication_receipt_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-compact-repair-20261008-01\\actual-local-E-checkpoint-publication01\\publication-finished01.json",
+    "bytes": 6977,
+    "sha256": "5e9bff2bad5848b938841c1529a9da3bf7e636d84fc2d2de29c5afe54b237c1b"
+  },
+  "source17_manifest_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-compact-repair-20261008-01\\current-native-source17-pins01.json",
+    "bytes": 6749,
+    "sha256": "8c51b3383f2efc7ec50b5d8346e9e1a441211af174147b680838e4fbf039d269"
+  },
+  "checks": {
+    "new_E_files_exact_hash_and_size_matches": 26,
+    "new_E_files_total_bytes": 941424,
+    "new_evidence_payload_bytes_excluding_reports_and_index": 917929,
+    "two_new_reports_bytes": 11913,
+    "evidence_index_bytes": 11582,
+    "prior_E_reports_and_evidence_hashes_preserved": 24,
+    "doc_appends_current_hashes_and_W_backup_exact_prefixes_match": 2,
+    "doc_old_prefix_bytes_preserved": 290341,
+    "prompt_current_bytes": 13981,
+    "prompt_sha256": "de1cd3f969d157ce8447f0e02bef7967bdad7a425941047fcf6284a684587148",
+    "prompt_original_backup_bytes_preserved": 13637,
+    "prompt_append_bytes": 344,
+    "three_compact_core_provider_test_sources_unchanged": true,
+    "source17_distinct_listed_public_source_pins_current": 17,
+    "source17_excludes_the_separately_adopted_prompt": true,
+    "existing_JUnit_tests": 64,
+    "JUnit_failures_errors_skips": 0,
+    "existing_test_receipt_source_before_after_current_match": true,
+    "report_claims_local_protocol_tests_not_fresh_model_semantic_or_latency_pass": true,
+    "saved_lexical_dense_selected_positives": 12,
+    "saved_lexical_RRF_and_MiniLM_selected_positives_each": 19,
+    "per_arm_selected_denominator": 60,
+    "candidate_pool_rule_positive_denominator": 35,
+    "same_pool_MiniLM_harm_questions": [
+      "sciq:test:000014",
+      "sciq:test:000052"
+    ],
+    "corpus_scan_saved_denominator": 10594,
+    "corpus_scan_saved_transient_bytes": 13558249,
+    "corpus_zero_rule_match_questions": 4,
+    "saved_public_example_text_hashes_checked": 33,
+    "lexical_scientific_absence_and_semantic_sufficiency_remain_NULL": true,
+    "journal19_exact_anchor_preserved": true,
+    "expected_new_paid_owned_output_and_claim_directories_absent": true,
+    "journal20_absent": true,
+    "report_scope_cost_counters_and_pending_disclosure_blocker_match_saved_receipts": true
+  },
+  "retained_finance": {
+    "cumulative_observed_requests": 164,
+    "known_cost_calls": 151,
+    "UNKNOWN_cost_calls": 13,
+    "known_subtotal_USD": "0.467741750",
+    "prior_followup_known_USD": "0.05677010",
+    "prior_followup_UNKNOWN_full_holds_USD": "0.14868480",
+    "new38_prepared_upper_USD": "1.58382080",
+    "prepared_worst_prior_plus_new_USD": "1.78927570",
+    "headroom_inside_retained_1_94_reserve_USD": "0.15072430",
+    "combined_retained_protection_USD": "9.97128969",
+    "new_paid_requests_claims_known_cost_and_UNKNOWN_holds_reported": 0,
+    "invoice_or_verified_account_balance": null
+  },
+  "remaining_execution_blocker": "ROOT-attested formal automatic review rejected the same paid pair before process creation twice; after public/synthetic data audit it required explicit disclosure permission for nonpublic local checker/answer instructions sent to OpenRouter. The 2+36 scope question is pending. This review does not grant, infer or bypass that permission.",
+  "qualifications": [
+    "Independently read/hash checked exact selected E/W files and parsed existing JUnit and saved JSON; did not execute tests, models, DB, providers or publication controllers.",
+    "Both doc before backups equal entire preserved prefixes; prompt backup and all previously listed reports remain intact. No assertion that this is a fresh audit of every database, staging object or unrelated file.",
+    "No process inventory was performed. Paid-zero conclusion combines ROOT-attested before-execution review rejection, saved blocker receipt, unchanged journal19 and absent exact expected paid evidence/claim directories.",
+    "Corpus counts are saved readonly-run evidence; finite-pool lexical counts were independently recomputed from public saved full texts/rules. No new corpus/DB scan or independent scientific relevance judgment occurred.",
+    "Key/Gold absence is supported by scoped public projections and retained receipts; reviewer did not open keys, Gold or raw databases to certify absence.",
+    "Historical native times precede the prompt repair. Fresh live speed, answer accuracy, human ratings, full role/course acceptance and overall project completion remain unverified."
+  ],
+  "reviewer_actions": {
+    "E_writes": 0,
+    "tests_models_DB_API_network_credentials_Gold_process_or_controller_actions": 0,
+    "new_W_review_only": true
+  },
+  "remaining_local_publication_blockers": []
+}

@@ -1,0 +1,71 @@
+{
+  "schema": "5703_reranker_immutable_candidate_independent_static_review_v1",
+  "verdict": "PASS",
+  "status": "NARROW_W_CANDIDATE_REVIEWED_NO_ADOPTION_OR_TEST_EXECUTION_BY_REVIEWER",
+  "reviewer": "/root/bound_patch_independent_review",
+  "at_UTC": "2026-10-07T22:15:04.146770+00:00",
+  "manifest_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\free-rerank-immutable-preparation01\\preparation-manifest02.json",
+    "bytes": 4803,
+    "sha256": "9a827d507a5b1f21cde58f14aab4405ef53df38a8a83cd0e940524e646d868bf"
+  },
+  "files": [
+    {
+      "target": "E:\\5703\\learning-assistant\\retrieval\\chat.py",
+      "before": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\free-rerank-immutable-preparation01\\before\\retrieval\\chat.py",
+        "bytes": 6766,
+        "sha256": "44de09b08a89e9d2bb8cc09d0ea4f773d8a919b95d2cb51385eb1dc0f4cf5382"
+      },
+      "candidate": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\free-rerank-immutable-preparation01\\candidate\\retrieval\\chat.py",
+        "bytes": 6963,
+        "sha256": "79bcc314e734acd77a02f8e70efa86a6d24f6f0ca6c2598d5d445d237a6b0267"
+      }
+    },
+    {
+      "target": "E:\\5703\\learning-assistant\\tests\\unit\\test_retrieval_chat.py",
+      "before": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\free-rerank-immutable-preparation01\\before\\tests\\unit\\test_retrieval_chat.py",
+        "bytes": 3573,
+        "sha256": "f185d027f9a9ad5389372bdd27b41e4b7572c49fcb0f76693c512b05400f2e4b"
+      },
+      "candidate": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\free-rerank-immutable-preparation01\\candidate02\\tests\\unit\\test_retrieval_chat.py",
+        "bytes": 7145,
+        "sha256": "b3b8a0c34d2272c96460af881d6cad42e5831573943e1e1e5d786f267e24a573"
+      }
+    }
+  ],
+  "baseline_red_receipt_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-free-continuation-root-rerank-before-20261007-02\\receipt01.json",
+    "bytes": 3302,
+    "sha256": "8b80c3e7d90351e0a861a30d54c54861335019594c54cb71e19d6c9ad04e3587"
+  },
+  "checks": {
+    "current_E_targets_match_preserved_before_bytes": true,
+    "source_snapshot_is_deep_copied_before_ranker_invocation": true,
+    "ranker_receives_independently_detached_deep_copy": true,
+    "existing_membership_and_original_immutable_field_comparisons_preserved": true,
+    "score_and_score_type_updates_and_existing_sort_order_remain_allowed": true,
+    "old_policy_model_revision_device_budget_tie_rules_and_token_windows_unchanged": true,
+    "all_other_production_functions_AST_unchanged": true,
+    "all_old_test_functions_AST_unchanged": true,
+    "new_eight_cases_cover_mutable_text_hash_pages_nested_locator_removed_field_duplicate_ID_clean_scores_order_failure_and_later_consumer_isolation": true,
+    "actual_saved_baseline_two_regressions_fail_as_expected": true,
+    "no_science_citation_proof_eleven_flag_or_teaching_policy_change": true
+  },
+  "limits": [
+    "Default learned ranker is not alleged to mutate input; patch closes the extension/adapter aliasing hole and preserves caller data when an adapter fails.",
+    "The saved 240-pair audit checks saved full-text/hash/window declarations; it is not a new tokenizer/model run or semantic/latency acceptance.",
+    "Reviewer did not run tests. ROOT must perform its authorized exclusive two-file CAS with original backups and meaningful free green checks.",
+    "Adoption invalidates historical source17 retrieval/chat.py pin and linked future paid/source guards. Preserve immutable historical manifests, budgets, releases and experiment inputs. Future authorized executions require separately reviewed new bindings; paid2+36 remains STOPPED pending explicit payload disclosure permission."
+  ],
+  "reviewer_actions": {
+    "E_writes": 0,
+    "tests_models_DB_API_keys_Gold": 0,
+    "historical_manifest_budget_or_paid_runner_writes": 0,
+    "new_W_review_only": true
+  },
+  "remaining_static_blockers": []
+}

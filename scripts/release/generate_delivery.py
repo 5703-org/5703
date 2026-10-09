@@ -95,6 +95,43 @@ def header(page, title, tasks_document):
     ]
 
 
+def continuation_observations(page, row):
+    observations = row.get("week09_learning_observations") or []
+    if not observations:
+        return []
+    lines = [
+        "Current learning-workspace observations (original requirement status retained):",
+        "",
+    ]
+    for observation in observations:
+        lines.extend(
+            [
+                "- Checkpoint / observed at: "
+                + recorded(observation.get("checkpoint"))
+                + " / "
+                + recorded(observation.get("observed_at")),
+                "- Scoped observation status: " + code(observation.get("status")),
+                "- Scope: " + recorded(observation.get("scope")),
+                "- Component checks: " + recorded(observation.get("component_verification")),
+                "- Evidence: " + path_list(page, observation.get("evidence_paths", [])),
+                "- Remaining scope: " + recorded(observation.get("remaining_scope")),
+                "- New formal-study / human-review state: "
+                + recorded(observation.get("formal_study_status"))
+                + " / "
+                + recorded(observation.get("human_review_status")),
+                "",
+            ]
+        )
+    lines.extend(
+        [
+            "These observations do not replace the original clause or establish formal "
+            "completion. Overlapping suite counts are not additive.",
+            "",
+        ]
+    )
+    return lines
+
+
 def task_reference(page, task, *, week=False):
     filename = (
         f"by_week/course-week-{task['reporting']['suggested_course_week']:02d}.md"
@@ -190,6 +227,7 @@ def task_section(page, task, by_id, dependents):
             if component.get("evidence_paths"):
                 rows.append("  Evidence: " + path_list(page, component["evidence_paths"]))
         rows.append("")
+    rows.extend(continuation_observations(page, task))
     rows.extend(
         [
             "Historical statuses and source-supported historical facts remain in the "
@@ -356,6 +394,7 @@ def render(raw):
                 "",
             ]
         )
+        lines.extend(continuation_observations(page, check))
     output["acceptance.md"] = "\n".join(lines).encode("utf-8")
     page = DESTINATION / "README.md"
     lines = header(page, "Generated delivery views", tasks_document)
@@ -452,7 +491,20 @@ def main():
     }
     # Authored weekly reports supplement the canonical generated views.
     # Keep every other unexpected path subject to the existing review guard.
-    supplemental = {name for name in existing if name.startswith("week08/")}
+    supplemental = {
+        name
+        for name in existing
+        if name.startswith(
+            (
+                "week08/",
+                "week08-enhancement/",
+                "week08-memory-v2/",
+                "teaching-performance/",
+                "week09/",
+                "week09-continuation/",
+            )
+        )
+    }
     extra = existing - output.keys() - supplemental
     if extra:
         raise SystemExit(

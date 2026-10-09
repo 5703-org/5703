@@ -1,0 +1,17 @@
+# Week 9 current installation and startup on 3 October 2026
+
+The current 880-input source candidate passed all eight software stages: 3,197 Python cases, two subtests and 196 frontend cases. The installed CPU project received 36 replacements and sixteen additions, with complete parity across 54,773 registered files. All 88 original protected files retained their hashes.
+
+Four normal CPU roles and four normal Main roles started successfully. The new CPU API and frontend use ports 18969 and 15369; Main uses 18010 and 15183. The original legacy services remain preserved. Main has the measured interactive/background worker lock split. Read-only snapshots preserved all 65 tables in each tested database, including the 10,594 real 384-dimensional active vectors. Startup probes used no paid provider calls. CPU startup used explicit mock answering with real stored textbook resources; Main retained its saved configuration.
+
+Initial prelaunch validation failures are retained with their actual times and error records. The corrected startup used a fresh source/DB/process observation and verified the exact Windows launcher and child identities. The completed historical stop receipts retain their original timestamps. Original environments, credentials, source materials, accounts, answers, citations and publication records stayed intact.
+
+Real practice assessment completed sixteen model calls plus six deterministic controls. Ten text assessments passed their output contract and six remain pending after invalid source or response spans. None of the eight source-contradictory controls was marked correct. The private direct-service trial persisted no learner progress. [Real assessment results](week09-real-practice-assessment-results-20261003.md).
+
+The five-slot initial-turn generation trial used fourteen calls and published four responses. QA delivered a complete mechanism explanation; A was withheld after checker inconsistency; B and C delivered procedural questions; D answered its own repeated question. Independent teaching scores and later stages remain pending. [Actual generation and teaching observations](week09-real-g005-initial-hint-results-20261003.md).
+
+The active visual catalogue remains V2. The separate V5 review bundle retains all four original PDFs, 4,638 pages and 5,543 lineages. Visual content approval, source relation publication, independent human ratings, knowledge-point-disjoint formal trials, current linked learner quality acceptance and independent-machine/Mac checks retain their specific open records. Original task and acceptance numbering remains unchanged.
+
+Nine English reports and the cumulative complete/eight-owner packages have separate authoring, page-review and archive verification receipts. The final delivery entry is recorded outside the product source tree after independent package verification. [Runtime preservation evidence](../../evidence/week09-continuation/20261003/current880-installation-and-startup-69.json).
+
+Final report page review completed on 3 October 2026: the overall report has four pages and each of the eight personal reports has two pages. All twenty current pages passed actual image review, including readable body text, full project-title footers, page numbering and even-page footers. Original fonts, styles and page geometry were preserved. This visual review contains zero human answer-quality ratings. [Current report visual QA](../../evidence/week09-continuation/20261003/report-qa-current880-final20-pages-77.json).

@@ -16,6 +16,14 @@ Select an answer citation to see its claim-specific source: book, chapter, page 
 
 Source positions refer to immutable cleaned SourceUnit characters, with processing/document versions and SHA256 checks. Mapping quality and clipped atomic blocks remain recorded. These positions identify extracted textbook text; diagram interpretation and PDF glyph-level highlighting have separate scope. Older answers retain their original source versions and compatible historical presentation.
 
+## Saved practice and grading
+
+Open a published practice item and submit your response for its current question or step. Choice and numeric responses use their exact rules. Short text and text-valued steps receive one source-bound assessment from a configured saved real model. An administrator sets up the active answer/checker pair in Models; a missing, mock or unavailable configuration leaves the response saved pending review.
+
+A saved attempt keeps its original submission feedback. A separate assessment can be pending review, applied or superseded. Only an applied assessment supplies the effective grade to practice, goals, review, tutoring and opt-in practice memory. Failed or superseded checks retain your free text without applying a new grade or advancement; revise and submit deliberately. Correct applied feedback advances the current step. Graded totals and pending totals are shown separately. A model-assessed result has no independent semantic-verification claim.
+
+See the [current model-assessment contract](execution/week09-practice-model-assessment-20261003.md).
+
 ## Learning memory
 
 Open the memory page to enable memory for your account. It starts disabled. Once enabled, explicit long-term preferences, goals, course context and stated difficulties can be saved with their source. A stated difficulty is labelled self-reported. Assessment observations retain the question, learner response, scoring basis and evaluator version. A current-turn instruction applies to that request.

@@ -24,6 +24,16 @@ limits are in `docs/execution/openstax-corpus-report.md` and
 `evidence/openstax/*-acquisition.json`. Original embedded notices and identified
 trademark/third-party limitations remain authoritative.
 
+The 30 September continuation includes four derived, source-hash-bound visual
+candidate catalogs from the same official PDFs. They cover 3,536 figure images,
+339 table candidates and 1,668 formula candidates at original page locations.
+Their extracted text, coordinates and review metadata remain subject to the
+underlying OpenStax CC BY-NC-SA terms and original PDF notices. All 5,543 records
+are marked for review; none is published as answer evidence by the catalog import.
+The original PDF and catalog hashes, extraction revision and unresolved regions
+are recorded in `evidence/week09-continuation/20260930/visual-full-attempt2/manifest.json`
+and `evidence/week09-continuation/20260930/main-visual-candidates-import.json`.
+
 - [OpenStax](https://openstax.org/)
 - [CC BY-NC-SA4.0 terms](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 

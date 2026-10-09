@@ -1,0 +1,350 @@
+{
+  "format": "5703_local_private_configuration_draft_v1",
+  "consumer_status": "draft_only_no_current_bulk_file_consumer",
+  "primary_provider": "Explicit authored mock",
+  "configurations": [
+    {
+      "name": "OpenAI",
+      "config": {
+        "provider": "openai",
+        "model": "",
+        "base_url": "https://api.openai.com/v1",
+        "window_tokens": 16384,
+        "max_tokens": 1024,
+        "timeout_seconds": 60,
+        "temperature": 0,
+        "tokenizer_provider": "estimate",
+        "token_count_fallback": "estimate",
+        "token_limit_parameter": "max_tokens",
+        "structured_output_mode": "json_schema"
+      },
+      "api_key": ""
+    },
+    {
+      "name": "Azure OpenAI",
+      "config": {
+        "provider": "azure_openai",
+        "model": "",
+        "base_url": "",
+        "window_tokens": 16384,
+        "max_tokens": 1024,
+        "timeout_seconds": 60,
+        "temperature": 0,
+        "tokenizer_provider": "estimate",
+        "token_count_fallback": "estimate",
+        "token_limit_parameter": "max_tokens",
+        "structured_output_mode": "json_schema",
+        "api_version": null
+      },
+      "api_key": ""
+    },
+    {
+      "name": "Anthropic",
+      "config": {
+        "provider": "anthropic",
+        "model": "",
+        "base_url": "https://api.anthropic.com/v1",
+        "window_tokens": 16384,
+        "max_tokens": 1024,
+        "timeout_seconds": 60,
+        "temperature": 0,
+        "tokenizer_provider": "estimate",
+        "token_count_fallback": "estimate",
+        "token_limit_parameter": "max_tokens",
+        "structured_output_mode": "prompt",
+        "api_version": "2023-06-01"
+      },
+      "api_key": ""
+    },
+    {
+      "name": "Google Gemini",
+      "config": {
+        "provider": "gemini",
+        "model": "",
+        "base_url": "https://generativelanguage.googleapis.com/v1beta",
+        "window_tokens": 16384,
+        "max_tokens": 1024,
+        "timeout_seconds": 60,
+        "temperature": 0,
+        "tokenizer_provider": "estimate",
+        "token_count_fallback": "estimate",
+        "token_limit_parameter": "max_tokens",
+        "structured_output_mode": "json_schema"
+      },
+      "api_key": ""
+    },
+    {
+      "name": "Ollama",
+      "config": {
+        "provider": "ollama",
+        "model": "",
+        "base_url": "http://127.0.0.1:11434/v1",
+        "window_tokens": 16384,
+        "max_tokens": 1024,
+        "timeout_seconds": 60,
+        "temperature": 0,
+        "tokenizer_provider": "estimate",
+        "token_count_fallback": "estimate",
+        "token_limit_parameter": "max_tokens",
+        "structured_output_mode": "json_schema"
+      },
+      "api_key": ""
+    },
+    {
+      "name": "DeepSeek compatible endpoint",
+      "config": {
+        "provider": "openai_compatible",
+        "model": "deepseek-flash",
+        "base_url": "https://api.deepseek.com/v1",
+        "window_tokens": 16384,
+        "max_tokens": 1024,
+        "timeout_seconds": 60,
+        "temperature": 0,
+        "tokenizer_provider": "estimate",
+        "token_count_fallback": "estimate",
+        "token_limit_parameter": "max_tokens",
+        "structured_output_mode": "json_object",
+        "thinking_enabled": false
+      },
+      "api_key": ""
+    },
+    {
+      "name": "Custom compatible endpoint",
+      "config": {
+        "provider": "openai_compatible",
+        "model": "",
+        "base_url": "",
+        "window_tokens": 16384,
+        "max_tokens": 1024,
+        "timeout_seconds": 60,
+        "temperature": 0,
+        "tokenizer_provider": "estimate",
+        "token_count_fallback": "estimate",
+        "token_limit_parameter": "max_tokens",
+        "structured_output_mode": "json_schema"
+      },
+      "api_key": ""
+    },
+    {
+      "name": "Explicit authored mock",
+      "config": {
+        "provider": "mock",
+        "model": "authored-extractive-v1",
+        "base_url": null,
+        "window_tokens": 16384,
+        "max_tokens": 1024,
+        "timeout_seconds": 60,
+        "temperature": 0,
+        "tokenizer_provider": "estimate",
+        "token_count_fallback": "estimate",
+        "token_limit_parameter": "max_tokens",
+        "structured_output_mode": "json_schema"
+      },
+      "api_key": ""
+    },
+    {
+      "name": "Local OpenAI-compatible server",
+      "config": {
+        "provider": "local",
+        "model": "",
+        "base_url": "",
+        "window_tokens": 16384,
+        "max_tokens": 1024,
+        "timeout_seconds": 60,
+        "temperature": 0,
+        "tokenizer_provider": "estimate",
+        "token_count_fallback": "estimate",
+        "token_limit_parameter": "max_tokens",
+        "structured_output_mode": "json_schema"
+      },
+      "api_key": ""
+    },
+    {
+      "name": "xAI",
+      "config": {
+        "provider": "openai_compatible",
+        "model": "",
+        "base_url": "",
+        "window_tokens": 16384,
+        "max_tokens": 1024,
+        "timeout_seconds": 60,
+        "temperature": 0,
+        "tokenizer_provider": "estimate",
+        "token_count_fallback": "estimate",
+        "token_limit_parameter": "max_tokens",
+        "structured_output_mode": "json_object"
+      },
+      "api_key": ""
+    },
+    {
+      "name": "Meta-compatible endpoint",
+      "config": {
+        "provider": "openai_compatible",
+        "model": "",
+        "base_url": "",
+        "window_tokens": 16384,
+        "max_tokens": 1024,
+        "timeout_seconds": 60,
+        "temperature": 0,
+        "tokenizer_provider": "estimate",
+        "token_count_fallback": "estimate",
+        "token_limit_parameter": "max_tokens",
+        "structured_output_mode": "json_object"
+      },
+      "api_key": ""
+    },
+    {
+      "name": "Qwen",
+      "config": {
+        "provider": "openai_compatible",
+        "model": "",
+        "base_url": "",
+        "window_tokens": 16384,
+        "max_tokens": 1024,
+        "timeout_seconds": 60,
+        "temperature": 0,
+        "tokenizer_provider": "estimate",
+        "token_count_fallback": "estimate",
+        "token_limit_parameter": "max_tokens",
+        "structured_output_mode": "json_object"
+      },
+      "api_key": ""
+    },
+    {
+      "name": "GLM",
+      "config": {
+        "provider": "openai_compatible",
+        "model": "",
+        "base_url": "",
+        "window_tokens": 16384,
+        "max_tokens": 1024,
+        "timeout_seconds": 60,
+        "temperature": 0,
+        "tokenizer_provider": "estimate",
+        "token_count_fallback": "estimate",
+        "token_limit_parameter": "max_tokens",
+        "structured_output_mode": "json_object"
+      },
+      "api_key": ""
+    },
+    {
+      "name": "Kimi",
+      "config": {
+        "provider": "openai_compatible",
+        "model": "",
+        "base_url": "",
+        "window_tokens": 16384,
+        "max_tokens": 1024,
+        "timeout_seconds": 60,
+        "temperature": 0,
+        "tokenizer_provider": "estimate",
+        "token_count_fallback": "estimate",
+        "token_limit_parameter": "max_tokens",
+        "structured_output_mode": "json_object"
+      },
+      "api_key": ""
+    },
+    {
+      "name": "MiniMax",
+      "config": {
+        "provider": "openai_compatible",
+        "model": "",
+        "base_url": "",
+        "window_tokens": 16384,
+        "max_tokens": 1024,
+        "timeout_seconds": 60,
+        "temperature": 0,
+        "tokenizer_provider": "estimate",
+        "token_count_fallback": "estimate",
+        "token_limit_parameter": "max_tokens",
+        "structured_output_mode": "json_object"
+      },
+      "api_key": ""
+    },
+    {
+      "name": "Doubao",
+      "config": {
+        "provider": "openai_compatible",
+        "model": "",
+        "base_url": "",
+        "window_tokens": 16384,
+        "max_tokens": 1024,
+        "timeout_seconds": 60,
+        "temperature": 0,
+        "tokenizer_provider": "estimate",
+        "token_count_fallback": "estimate",
+        "token_limit_parameter": "max_tokens",
+        "structured_output_mode": "json_object"
+      },
+      "api_key": ""
+    },
+    {
+      "name": "ERNIE",
+      "config": {
+        "provider": "openai_compatible",
+        "model": "",
+        "base_url": "",
+        "window_tokens": 16384,
+        "max_tokens": 1024,
+        "timeout_seconds": 60,
+        "temperature": 0,
+        "tokenizer_provider": "estimate",
+        "token_count_fallback": "estimate",
+        "token_limit_parameter": "max_tokens",
+        "structured_output_mode": "json_object"
+      },
+      "api_key": ""
+    },
+    {
+      "name": "Tencent Hunyuan",
+      "config": {
+        "provider": "openai_compatible",
+        "model": "",
+        "base_url": "",
+        "window_tokens": 16384,
+        "max_tokens": 1024,
+        "timeout_seconds": 60,
+        "temperature": 0,
+        "tokenizer_provider": "estimate",
+        "token_count_fallback": "estimate",
+        "token_limit_parameter": "max_tokens",
+        "structured_output_mode": "json_object"
+      },
+      "api_key": ""
+    },
+    {
+      "name": "iFlytek Spark",
+      "config": {
+        "provider": "openai_compatible",
+        "model": "",
+        "base_url": "",
+        "window_tokens": 16384,
+        "max_tokens": 1024,
+        "timeout_seconds": 60,
+        "temperature": 0,
+        "tokenizer_provider": "estimate",
+        "token_count_fallback": "estimate",
+        "token_limit_parameter": "max_tokens",
+        "structured_output_mode": "json_object"
+      },
+      "api_key": ""
+    },
+    {
+      "name": "MiMo",
+      "config": {
+        "provider": "openai_compatible",
+        "model": "",
+        "base_url": "",
+        "window_tokens": 16384,
+        "max_tokens": 1024,
+        "timeout_seconds": 60,
+        "temperature": 0,
+        "tokenizer_provider": "estimate",
+        "token_count_fallback": "estimate",
+        "token_limit_parameter": "max_tokens",
+        "structured_output_mode": "json_object"
+      },
+      "api_key": ""
+    }
+  ]
+}

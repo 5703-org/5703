@@ -1,0 +1,18 @@
+{
+  "version": "chat_hybrid_rerank_v2",
+  "retriever": "R2",
+  "candidate_count": 20,
+  "reranker_model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+  "reranker_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+  "reranker_device": "cpu",
+  "reranker_cache_folder": "artifacts/huggingface",
+  "reranker_runtime": {
+    "version": "cpu_reranker_runtime_v1",
+    "backend": "torch",
+    "threads": 16,
+    "batch_size": 20,
+    "artifact_path": null,
+    "artifact_sha256": null
+  },
+  "adaptive_policy": null
+}

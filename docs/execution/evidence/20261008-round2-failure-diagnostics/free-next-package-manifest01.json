@@ -1,0 +1,1478 @@
+{
+  "format": "CS30_1_SELECTED_CURRENT_MAIN_NEXT_PACKAGE_PLAN_V1",
+  "status": "PREPARED_ONLY_NOT_ARCHIVED_NOT_INSTALLER_NOT_FULL_RELEASE_ACCEPTANCE",
+  "created_UTC": "2026-10-07T22:36:07.274890+00:00",
+  "project_root": "E:\\5703\\learning-assistant",
+  "observed_findings": {
+    "current_main_contains_C9_1_activation_fix": true,
+    "latest_C9_1_minimum_archive_contains_activation_fix": true,
+    "original_latest_complete_C9_archive_lacks_C9_1_UI_and_public_eligibility_projection": true,
+    "complete_archive_selected_code_identity_verified_from_actual_members": true,
+    "complete_archive_whole_SHA_recomputed": false,
+    "latest_minimum_archive_whole_SHA_recomputed": true,
+    "current_Main_Models_is_not_C9_Models": true,
+    "current_activation_test_differs_from_original_historical_adoption": true,
+    "original_complete_archive_is_not_current_Main": true
+  },
+  "package_identities": {
+    "original_complete_C9": {
+      "path": "E:\\5703\\learning-assistant\\deliverables\\20261006-c9-complete-local-delivery-01\\CS30-1_Current972_c9a35b_Complete_Project_20261006.zip",
+      "canonical_identity_recorded": "c9a35bfeee65acbf2e7dd2c8fcdc1df86ef89f71af5781873d3c7581145389c9",
+      "manifest": {
+        "path": "E:\\5703\\learning-assistant\\deliverables\\20261006-c9-complete-local-delivery-01\\PACKAGE_MANIFEST.json",
+        "bytes": 260713,
+        "sha256": "a1c3040c88790807ca1c01790e7da2b924bfa212c40cc3b6e3e1bde63a180956"
+      },
+      "member_count": 1099,
+      "interpretation": "Immutable historical complete package; inspected only selected public code members, no extraction or whole-archive hashing."
+    },
+    "latest_C9_1_minimum": {
+      "path": "E:\\5703\\learning-assistant\\deliverables\\20261007-c9-1-activation-hotfix-01\\C9.1_ActivationV4_ExactFiles_20261007.zip",
+      "bytes": 1258150,
+      "sha256": "18517dbf63a459b49a65bb2e854c344cfc3629b25c700edbfe0582ab7e23f9b0",
+      "manifest": {
+        "path": "E:\\5703\\learning-assistant\\deliverables\\20261007-c9-1-activation-hotfix-01\\FILES_MANIFEST.json",
+        "bytes": 14622,
+        "sha256": "992e9a1af1c937919c60a75e9f394d3d4f0f7f4f9d85e45ea7e4f4a79f22c90c"
+      },
+      "member_count": 71,
+      "interpretation": "Exact replacement files for original C9, not current Main reconstruction. Do not overwrite Main Models.tsx with the C9 variant."
+    }
+  },
+  "actual_selected_code_comparisons": {
+    "backend/app/modules/model_settings/compatibility.py": {
+      "current_main": {
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\model_settings\\compatibility.py",
+        "bytes": 13564,
+        "sha256": "107c3dcb2025e927244a77f4dc1734cbe49c2149b150a02c6314a93896bd3667"
+      },
+      "baseline_manifest": {
+        "path": "backend/app/modules/model_settings/compatibility.py",
+        "bytes": 12997,
+        "sha256": "594bb0e7ccc04a871efe66ff24d8b78f4058f31e625d05d46d80731218f96137",
+        "owner_index": 5,
+        "role": "canonical"
+      },
+      "C9_1_manifest": {
+        "relative_path": "backend/app/modules/model_settings/compatibility.py",
+        "sha256": "107c3dcb2025e927244a77f4dc1734cbe49c2149b150a02c6314a93896bd3667",
+        "bytes": 13564
+      },
+      "baseline_selected_member": {
+        "member": "learning-assistant/backend/app/modules/model_settings/compatibility.py",
+        "bytes": 12997,
+        "sha256": "594bb0e7ccc04a871efe66ff24d8b78f4058f31e625d05d46d80731218f96137",
+        "shared_activation_predicate": false,
+        "activation_eligible_literal": false
+      },
+      "C9_1_selected_member": {
+        "member": "payload/backend/app/modules/model_settings/compatibility.py",
+        "bytes": 13564,
+        "sha256": "107c3dcb2025e927244a77f4dc1734cbe49c2149b150a02c6314a93896bd3667",
+        "shared_activation_predicate": true,
+        "activation_eligible_literal": true
+      }
+    },
+    "backend/app/modules/model_settings/schemas.py": {
+      "current_main": {
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\model_settings\\schemas.py",
+        "bytes": 6855,
+        "sha256": "5c878eb1fee7540d6350eaaf1961c779052e2aa6225f2c540fc1f6a94164ec21"
+      },
+      "baseline_manifest": {
+        "path": "backend/app/modules/model_settings/schemas.py",
+        "bytes": 6817,
+        "sha256": "d5f8fe600ebdaab0be9e29d44645744a0baadeed39a9047ea77af55d75f50ae9",
+        "owner_index": 5,
+        "role": "canonical"
+      },
+      "C9_1_manifest": {
+        "relative_path": "backend/app/modules/model_settings/schemas.py",
+        "sha256": "5c878eb1fee7540d6350eaaf1961c779052e2aa6225f2c540fc1f6a94164ec21",
+        "bytes": 6855
+      },
+      "baseline_selected_member": {
+        "member": "learning-assistant/backend/app/modules/model_settings/schemas.py",
+        "bytes": 6817,
+        "sha256": "d5f8fe600ebdaab0be9e29d44645744a0baadeed39a9047ea77af55d75f50ae9"
+      },
+      "C9_1_selected_member": {
+        "member": "payload/backend/app/modules/model_settings/schemas.py",
+        "bytes": 6855,
+        "sha256": "5c878eb1fee7540d6350eaaf1961c779052e2aa6225f2c540fc1f6a94164ec21"
+      }
+    },
+    "backend/app/modules/model_settings/service.py": {
+      "current_main": {
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\model_settings\\service.py",
+        "bytes": 19093,
+        "sha256": "e6e0a9d41846ff36a37bc1eef72892f9ddbc3f2c4648f36f2e9a714f07d5e39d"
+      },
+      "baseline_manifest": {
+        "path": "backend/app/modules/model_settings/service.py",
+        "bytes": 19093,
+        "sha256": "e6e0a9d41846ff36a37bc1eef72892f9ddbc3f2c4648f36f2e9a714f07d5e39d",
+        "owner_index": 5,
+        "role": "canonical"
+      },
+      "C9_1_manifest": null,
+      "baseline_selected_member": {
+        "member": "learning-assistant/backend/app/modules/model_settings/service.py",
+        "bytes": 19093,
+        "sha256": "e6e0a9d41846ff36a37bc1eef72892f9ddbc3f2c4648f36f2e9a714f07d5e39d"
+      },
+      "C9_1_selected_member": null
+    },
+    "generation/probes.py": {
+      "current_main": {
+        "path": "E:\\5703\\learning-assistant\\generation\\probes.py",
+        "bytes": 25176,
+        "sha256": "642ba880a6dcd3448513b98c0699175cd2fa6b9dafdaa92b65ea3f513d336df2"
+      },
+      "baseline_manifest": {
+        "path": "generation/probes.py",
+        "bytes": 21937,
+        "sha256": "8720b1f9f26c196aff5772d6e2d9695d22d393cda3e07934f091bce5c860475b",
+        "owner_index": 3,
+        "role": "canonical"
+      },
+      "C9_1_manifest": null,
+      "baseline_selected_member": {
+        "member": "learning-assistant/generation/probes.py",
+        "bytes": 21937,
+        "sha256": "8720b1f9f26c196aff5772d6e2d9695d22d393cda3e07934f091bce5c860475b"
+      },
+      "C9_1_selected_member": null
+    },
+    "contracts/openapi.json": {
+      "current_main": {
+        "path": "E:\\5703\\learning-assistant\\contracts\\openapi.json",
+        "bytes": 881178,
+        "sha256": "1e3e8b8fa421b99aecfe90ff23c3ef08dcb99814182fe8656602aea3b75530c1"
+      },
+      "baseline_manifest": {
+        "path": "contracts/openapi.json",
+        "bytes": 881026,
+        "sha256": "e17373cc6f4a4db467ab7d8365d4dba62470d47fbb7d6bd3a0c1e2cfbf6c2193",
+        "owner_index": 0,
+        "role": "canonical"
+      },
+      "C9_1_manifest": {
+        "relative_path": "contracts/openapi.json",
+        "sha256": "1e3e8b8fa421b99aecfe90ff23c3ef08dcb99814182fe8656602aea3b75530c1",
+        "bytes": 881178
+      },
+      "baseline_selected_member": {
+        "member": "learning-assistant/contracts/openapi.json",
+        "bytes": 881026,
+        "sha256": "e17373cc6f4a4db467ab7d8365d4dba62470d47fbb7d6bd3a0c1e2cfbf6c2193"
+      },
+      "C9_1_selected_member": {
+        "member": "payload/contracts/openapi.json",
+        "bytes": 881178,
+        "sha256": "1e3e8b8fa421b99aecfe90ff23c3ef08dcb99814182fe8656602aea3b75530c1"
+      }
+    },
+    "contracts/openapi.yaml": {
+      "current_main": {
+        "path": "E:\\5703\\learning-assistant\\contracts\\openapi.yaml",
+        "bytes": 587324,
+        "sha256": "df3bbc19a63cdac0582979f9835b8926cdb1cfde42ccc0870592fb9a6cf8c5ef"
+      },
+      "baseline_manifest": {
+        "path": "contracts/openapi.yaml",
+        "bytes": 587209,
+        "sha256": "a3dfe82348e9e215abc6db29e933311d3e0c71c1fdd36cbafdfb98e26a71a87d",
+        "owner_index": 0,
+        "role": "canonical"
+      },
+      "C9_1_manifest": {
+        "relative_path": "contracts/openapi.yaml",
+        "sha256": "df3bbc19a63cdac0582979f9835b8926cdb1cfde42ccc0870592fb9a6cf8c5ef",
+        "bytes": 587324
+      },
+      "baseline_selected_member": {
+        "member": "learning-assistant/contracts/openapi.yaml",
+        "bytes": 587209,
+        "sha256": "a3dfe82348e9e215abc6db29e933311d3e0c71c1fdd36cbafdfb98e26a71a87d"
+      },
+      "C9_1_selected_member": {
+        "member": "payload/contracts/openapi.yaml",
+        "bytes": 587324,
+        "sha256": "df3bbc19a63cdac0582979f9835b8926cdb1cfde42ccc0870592fb9a6cf8c5ef"
+      }
+    },
+    "tests/unit/test_model_activation_eligibility.py": {
+      "current_main": {
+        "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_model_activation_eligibility.py",
+        "bytes": 11925,
+        "sha256": "14efbfbcd9d6ff64701bc56e3d1c44faebe0f703da2bba22bf5cff615a33a58e"
+      },
+      "baseline_manifest": null,
+      "C9_1_manifest": null,
+      "baseline_selected_member": null,
+      "C9_1_selected_member": null
+    },
+    "frontend/src/Models.tsx": {
+      "current_main": {
+        "path": "E:\\5703\\learning-assistant\\frontend\\src\\Models.tsx",
+        "bytes": 29089,
+        "sha256": "03b36dd1e6f19accbec293fffaafaed92819a8f12206a450ef31d53ed75fc550"
+      },
+      "baseline_manifest": {
+        "path": "frontend/src/Models.tsx",
+        "bytes": 28513,
+        "sha256": "11f2f211f9708f077549fdb9de4da7c945a9ed5dd5967e668077e5e030a97431",
+        "owner_index": 6,
+        "role": "canonical"
+      },
+      "C9_1_manifest": {
+        "relative_path": "frontend/src/Models.tsx",
+        "sha256": "4f525cea2ddb8bdd10ff63238ff1d3426ffb663c87b37fcd47c29a0da86aba25",
+        "bytes": 28750
+      },
+      "baseline_selected_member": {
+        "member": "learning-assistant/frontend/src/Models.tsx",
+        "bytes": 28513,
+        "sha256": "11f2f211f9708f077549fdb9de4da7c945a9ed5dd5967e668077e5e030a97431",
+        "version_v3_literal": true,
+        "version_v4_literal": false,
+        "activation_eligible_literal": false
+      },
+      "C9_1_selected_member": {
+        "member": "payload/frontend/src/Models.tsx",
+        "bytes": 28750,
+        "sha256": "4f525cea2ddb8bdd10ff63238ff1d3426ffb663c87b37fcd47c29a0da86aba25",
+        "version_v3_literal": false,
+        "version_v4_literal": true,
+        "activation_eligible_literal": true
+      }
+    },
+    "frontend/src/Models.test.tsx": {
+      "current_main": {
+        "path": "E:\\5703\\learning-assistant\\frontend\\src\\Models.test.tsx",
+        "bytes": 29884,
+        "sha256": "7746f3985ecca6c53211c06ea831751e6c166603d298902a9d40eeb67131ace1"
+      },
+      "baseline_manifest": {
+        "path": "frontend/src/Models.test.tsx",
+        "bytes": 21454,
+        "sha256": "31277ffd853db0bef4c96b491ef6d998891320b29ea4848f3888c9d64e705048",
+        "owner_index": 6,
+        "role": "canonical"
+      },
+      "C9_1_manifest": null,
+      "baseline_selected_member": {
+        "member": "learning-assistant/frontend/src/Models.test.tsx",
+        "bytes": 21454,
+        "sha256": "31277ffd853db0bef4c96b491ef6d998891320b29ea4848f3888c9d64e705048"
+      },
+      "C9_1_selected_member": null
+    },
+    "frontend/src/generated/api.ts": {
+      "current_main": {
+        "path": "E:\\5703\\learning-assistant\\frontend\\src\\generated\\api.ts",
+        "bytes": 769095,
+        "sha256": "8ed06863986566d3d92435ae62f860f50eeef924bb20cb71fd07068480602104"
+      },
+      "baseline_manifest": {
+        "path": "frontend/src/generated/api.ts",
+        "bytes": 768956,
+        "sha256": "855f5e69fac3f81312dee667be04b960f2ef4b0709b867d5b44ac527dc9d78d0",
+        "owner_index": 6,
+        "role": "canonical"
+      },
+      "C9_1_manifest": {
+        "relative_path": "frontend/src/generated/api.ts",
+        "sha256": "8ed06863986566d3d92435ae62f860f50eeef924bb20cb71fd07068480602104",
+        "bytes": 769095
+      },
+      "baseline_selected_member": {
+        "member": "learning-assistant/frontend/src/generated/api.ts",
+        "bytes": 768956,
+        "sha256": "855f5e69fac3f81312dee667be04b960f2ef4b0709b867d5b44ac527dc9d78d0"
+      },
+      "C9_1_selected_member": {
+        "member": "payload/frontend/src/generated/api.ts",
+        "bytes": 769095,
+        "sha256": "8ed06863986566d3d92435ae62f860f50eeef924bb20cb71fd07068480602104"
+      }
+    },
+    "generation/compact_findings_v3.py": {
+      "current_main": {
+        "path": "E:\\5703\\learning-assistant\\generation\\compact_findings_v3.py",
+        "bytes": 37169,
+        "sha256": "1aba7601543d2b08c5331a0e139726191e13948a7dd6343eb7292262e1e2de8a"
+      },
+      "baseline_manifest": null,
+      "C9_1_manifest": null,
+      "baseline_selected_member": null,
+      "C9_1_selected_member": null
+    },
+    "generation/providers.py": {
+      "current_main": {
+        "path": "E:\\5703\\learning-assistant\\generation\\providers.py",
+        "bytes": 26220,
+        "sha256": "bbfb74558e1adf5e4850edad02bb117af221c804aaad6e6f260addfe05fb38f4"
+      },
+      "baseline_manifest": {
+        "path": "generation/providers.py",
+        "bytes": 18590,
+        "sha256": "fc4ad47d4d680764c5f7411632bb81515e9ccac6b6d7e94327b76b39cf346d14",
+        "owner_index": 3,
+        "role": "canonical"
+      },
+      "C9_1_manifest": null,
+      "baseline_selected_member": {
+        "member": "learning-assistant/generation/providers.py",
+        "bytes": 18590,
+        "sha256": "fc4ad47d4d680764c5f7411632bb81515e9ccac6b6d7e94327b76b39cf346d14"
+      },
+      "C9_1_selected_member": null
+    },
+    "generation/prompts/joint_check_v5.txt": {
+      "current_main": {
+        "path": "E:\\5703\\learning-assistant\\generation\\prompts\\joint_check_v5.txt",
+        "bytes": 13981,
+        "sha256": "de1cd3f969d157ce8447f0e02bef7967bdad7a425941047fcf6284a684587148"
+      },
+      "baseline_manifest": {
+        "path": "generation/prompts/joint_check_v5.txt",
+        "bytes": 13637,
+        "sha256": "f8205cf9ca65fb43717da3784c4ea3167d38a4f323f8108254a705b178b28de8",
+        "owner_index": 3,
+        "role": "canonical"
+      },
+      "C9_1_manifest": null,
+      "baseline_selected_member": {
+        "member": "learning-assistant/generation/prompts/joint_check_v5.txt",
+        "bytes": 13637,
+        "sha256": "f8205cf9ca65fb43717da3784c4ea3167d38a4f323f8108254a705b178b28de8"
+      },
+      "C9_1_selected_member": null
+    },
+    "tests/unit/test_compact_checker_v3_transport.py": {
+      "current_main": {
+        "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_compact_checker_v3_transport.py",
+        "bytes": 25923,
+        "sha256": "601cd57745d93e1c6560df7b3c31533ca025200bdc423a1ba2d6134cd61748f3"
+      },
+      "baseline_manifest": null,
+      "C9_1_manifest": null,
+      "baseline_selected_member": null,
+      "C9_1_selected_member": null
+    },
+    "retrieval/chat.py": {
+      "current_main": {
+        "path": "E:\\5703\\learning-assistant\\retrieval\\chat.py",
+        "bytes": 6963,
+        "sha256": "79bcc314e734acd77a02f8e70efa86a6d24f6f0ca6c2598d5d445d237a6b0267"
+      },
+      "baseline_manifest": {
+        "path": "retrieval/chat.py",
+        "bytes": 6766,
+        "sha256": "44de09b08a89e9d2bb8cc09d0ea4f773d8a919b95d2cb51385eb1dc0f4cf5382",
+        "owner_index": 2,
+        "role": "canonical"
+      },
+      "C9_1_manifest": null,
+      "baseline_selected_member": {
+        "member": "learning-assistant/retrieval/chat.py",
+        "bytes": 6766,
+        "sha256": "44de09b08a89e9d2bb8cc09d0ea4f773d8a919b95d2cb51385eb1dc0f4cf5382"
+      },
+      "C9_1_selected_member": null
+    },
+    "backend/app/modules/knowledge/service.py": {
+      "current_main": {
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\knowledge\\service.py",
+        "bytes": 59083,
+        "sha256": "faed2d363d333afbf317a1738e192d4cc827a40b278de33f6ede3794385bb355"
+      },
+      "baseline_manifest": {
+        "path": "backend/app/modules/knowledge/service.py",
+        "bytes": 58805,
+        "sha256": "1c97a87dce1f97fa8ded300d0fa4c5d2c509ddd7b4b7fefa0c2475ed9c242151",
+        "owner_index": 1,
+        "role": "canonical"
+      },
+      "C9_1_manifest": null,
+      "baseline_selected_member": {
+        "member": "learning-assistant/backend/app/modules/knowledge/service.py",
+        "bytes": 58805,
+        "sha256": "1c97a87dce1f97fa8ded300d0fa4c5d2c509ddd7b4b7fefa0c2475ed9c242151"
+      },
+      "C9_1_selected_member": null
+    }
+  },
+  "next_package_source_policy": {
+    "base": "Current Main source after ROOT finalizes pending local changes; do not reuse old C9 source for missing paths.",
+    "pinned_member_count": 48,
+    "pinned_members": [
+      {
+        "relative_path": "backend/app/modules/model_settings/compatibility.py",
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\model_settings\\compatibility.py",
+        "bytes": 13564,
+        "sha256": "107c3dcb2025e927244a77f4dc1734cbe49c2149b150a02c6314a93896bd3667",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "backend/app/modules/model_settings/schemas.py",
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\model_settings\\schemas.py",
+        "bytes": 6855,
+        "sha256": "5c878eb1fee7540d6350eaaf1961c779052e2aa6225f2c540fc1f6a94164ec21",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "backend/app/modules/model_settings/service.py",
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\model_settings\\service.py",
+        "bytes": 19093,
+        "sha256": "e6e0a9d41846ff36a37bc1eef72892f9ddbc3f2c4648f36f2e9a714f07d5e39d",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "generation/probes.py",
+        "path": "E:\\5703\\learning-assistant\\generation\\probes.py",
+        "bytes": 25176,
+        "sha256": "642ba880a6dcd3448513b98c0699175cd2fa6b9dafdaa92b65ea3f513d336df2",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "contracts/openapi.json",
+        "path": "E:\\5703\\learning-assistant\\contracts\\openapi.json",
+        "bytes": 881178,
+        "sha256": "1e3e8b8fa421b99aecfe90ff23c3ef08dcb99814182fe8656602aea3b75530c1",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "contracts/openapi.yaml",
+        "path": "E:\\5703\\learning-assistant\\contracts\\openapi.yaml",
+        "bytes": 587324,
+        "sha256": "df3bbc19a63cdac0582979f9835b8926cdb1cfde42ccc0870592fb9a6cf8c5ef",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "tests/unit/test_model_activation_eligibility.py",
+        "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_model_activation_eligibility.py",
+        "bytes": 11925,
+        "sha256": "14efbfbcd9d6ff64701bc56e3d1c44faebe0f703da2bba22bf5cff615a33a58e",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "frontend/src/Models.tsx",
+        "path": "E:\\5703\\learning-assistant\\frontend\\src\\Models.tsx",
+        "bytes": 29089,
+        "sha256": "03b36dd1e6f19accbec293fffaafaed92819a8f12206a450ef31d53ed75fc550",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "frontend/src/Models.test.tsx",
+        "path": "E:\\5703\\learning-assistant\\frontend\\src\\Models.test.tsx",
+        "bytes": 29884,
+        "sha256": "7746f3985ecca6c53211c06ea831751e6c166603d298902a9d40eeb67131ace1",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "frontend/src/generated/api.ts",
+        "path": "E:\\5703\\learning-assistant\\frontend\\src\\generated\\api.ts",
+        "bytes": 769095,
+        "sha256": "8ed06863986566d3d92435ae62f860f50eeef924bb20cb71fd07068480602104",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "generation/compact_findings_v3.py",
+        "path": "E:\\5703\\learning-assistant\\generation\\compact_findings_v3.py",
+        "bytes": 37169,
+        "sha256": "1aba7601543d2b08c5331a0e139726191e13948a7dd6343eb7292262e1e2de8a",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "generation/providers.py",
+        "path": "E:\\5703\\learning-assistant\\generation\\providers.py",
+        "bytes": 26220,
+        "sha256": "bbfb74558e1adf5e4850edad02bb117af221c804aaad6e6f260addfe05fb38f4",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "generation/prompts/joint_check_v5.txt",
+        "path": "E:\\5703\\learning-assistant\\generation\\prompts\\joint_check_v5.txt",
+        "bytes": 13981,
+        "sha256": "de1cd3f969d157ce8447f0e02bef7967bdad7a425941047fcf6284a684587148",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "tests/unit/test_compact_checker_v3_transport.py",
+        "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_compact_checker_v3_transport.py",
+        "bytes": 25923,
+        "sha256": "601cd57745d93e1c6560df7b3c31533ca025200bdc423a1ba2d6134cd61748f3",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "retrieval/chat.py",
+        "path": "E:\\5703\\learning-assistant\\retrieval\\chat.py",
+        "bytes": 6963,
+        "sha256": "79bcc314e734acd77a02f8e70efa86a6d24f6f0ca6c2598d5d445d237a6b0267",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "retrieval/ranking.py",
+        "path": "E:\\5703\\learning-assistant\\retrieval\\ranking.py",
+        "bytes": 5195,
+        "sha256": "ba6a33904d180dc7d8f7af6ed6bb51248ddea0aded39426a4c97e831bdc98fb8",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "backend/app/modules/knowledge/service.py",
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\knowledge\\service.py",
+        "bytes": 59083,
+        "sha256": "faed2d363d333afbf317a1738e192d4cc827a40b278de33f6ede3794385bb355",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "backend/app/modules/knowledge/cache.py",
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\knowledge\\cache.py",
+        "bytes": 4748,
+        "sha256": "85706e87b794b66a7c74a3f270d7ee77c68d3aa41602c9b6fc10374c605cf935",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "tests/unit/test_retrieval.py",
+        "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_retrieval.py",
+        "bytes": 5217,
+        "sha256": "bca91c40e4b4ff20b8d1ef1ac24409815bc79e5cbdb97242053a8f00bca4f3af",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "tests/unit/test_retrieval_chat.py",
+        "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_retrieval_chat.py",
+        "bytes": 7145,
+        "sha256": "b3b8a0c34d2272c96460af881d6cad42e5831573943e1e1e5d786f267e24a573",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "tests/unit/test_retrieval_cache.py",
+        "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_retrieval_cache.py",
+        "bytes": 4062,
+        "sha256": "b14e1305854c88301030534586a98406330e45e51abfcec279ba4726d42cb76e",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "tests/unit/test_embedding_cache.py",
+        "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_embedding_cache.py",
+        "bytes": 7064,
+        "sha256": "d035720e26913c7d493b71b6ef626d0000d348465c80224cf38eec7677770b02",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "tests/unit/test_reference_source_refresh.py",
+        "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_reference_source_refresh.py",
+        "bytes": 7857,
+        "sha256": "0c6540f0666e2ca1c7b1cacb9420c4f53e1baa14aef5dcf2261cb3b849d3c19e",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "tests/unit/test_answer_core_v5.py",
+        "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_answer_core_v5.py",
+        "bytes": 27685,
+        "sha256": "f398479340b4e61011bd289795d8c1f911bbbf96478145401a3f26848e7ba454",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "tests/unit/test_checker_contract_v9.py",
+        "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_checker_contract_v9.py",
+        "bytes": 11972,
+        "sha256": "c0606ac29f7eea6dd5a346821bfd5e72858eddc6fdb5e65b15e89ff18fd3316b",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "requirements.lock",
+        "path": "E:\\5703\\learning-assistant\\requirements.lock",
+        "bytes": 1022,
+        "sha256": "d8dfc7c7a3595a337232f0426495bfabd901a17cc2a40949acbd8e8c9e14bc9c",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "requirements-dev.lock",
+        "path": "E:\\5703\\learning-assistant\\requirements-dev.lock",
+        "bytes": 176,
+        "sha256": "134b094d390dab42f301f02db46d170f10d293baca710cb5476a1f914e140fa0",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "requirements-embeddings-cpu.lock",
+        "path": "E:\\5703\\learning-assistant\\requirements-embeddings-cpu.lock",
+        "bytes": 659,
+        "sha256": "f027ab5599958875c003018141905d6ebfcedd8e0977524061b9ec9b47efad1a",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "frontend/package.json",
+        "path": "E:\\5703\\learning-assistant\\frontend\\package.json",
+        "bytes": 1134,
+        "sha256": "ae34299e3aae1b093395469121722889d73d475ab83d1bd75e6df4d23dd42baf",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "frontend/package-lock.json",
+        "path": "E:\\5703\\learning-assistant\\frontend\\package-lock.json",
+        "bytes": 148798,
+        "sha256": "fcc7ee6091794982da906d1ffd7db1d9d419384b0ec76cc543a83f4b88d0e8f1",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "pyproject.toml",
+        "path": "E:\\5703\\learning-assistant\\pyproject.toml",
+        "bytes": 1131,
+        "sha256": "67e34ffd3a2de13ea00ca10928817429dfeb8ee0862c551f3ed3be403a180e62",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "AGENTS.md",
+        "path": "E:\\5703\\learning-assistant\\AGENTS.md",
+        "bytes": 2398,
+        "sha256": "7d226abe53d350fcda15a5b1f540fea558682de7e08bcdb6a98e82668708fe97",
+        "observation_scope": "PREPUBLICATION_SNAPSHOT_NOT_FRESH_CAPTURE",
+        "requires_fresh_capture_after_ROOT_document_publication": true
+      },
+      {
+        "relative_path": "README.md",
+        "path": "E:\\5703\\learning-assistant\\README.md",
+        "bytes": 108177,
+        "sha256": "51d3c88a45901ad4ea403a40e9df7645180996a8e5f27ac50fbb2e1b461bf42b",
+        "observation_scope": "PREPUBLICATION_SNAPSHOT_NOT_FRESH_CAPTURE",
+        "requires_fresh_capture_after_ROOT_document_publication": true
+      },
+      {
+        "relative_path": "PLANS.md",
+        "path": "E:\\5703\\learning-assistant\\PLANS.md",
+        "bytes": 161416,
+        "sha256": "8e4d06859a55067d81e4670129aa0e3c4d38fd524daaf56e6e4dbcabcf3cd502",
+        "observation_scope": "PREPUBLICATION_SNAPSHOT_NOT_FRESH_CAPTURE",
+        "requires_fresh_capture_after_ROOT_document_publication": true
+      },
+      {
+        "relative_path": "PRD.md",
+        "path": "E:\\5703\\learning-assistant\\PRD.md",
+        "bytes": 97762,
+        "sha256": "5ac0d1d9a2ec8b9ccfd2ffc1965ba15de97df9740a54701e3c831f3c624fb8d3",
+        "observation_scope": "PREPUBLICATION_SNAPSHOT_NOT_FRESH_CAPTURE",
+        "requires_fresh_capture_after_ROOT_document_publication": true
+      },
+      {
+        "relative_path": "SPEC.md",
+        "path": "E:\\5703\\learning-assistant\\SPEC.md",
+        "bytes": 127508,
+        "sha256": "4c31ddb3e2e1d7a1e88b4c775696c242ee40b82e27ff3c625ef8c6f2e972bfc9",
+        "observation_scope": "PREPUBLICATION_SNAPSHOT_NOT_FRESH_CAPTURE",
+        "requires_fresh_capture_after_ROOT_document_publication": true
+      },
+      {
+        "relative_path": "HANDOVER.md",
+        "path": "E:\\5703\\learning-assistant\\HANDOVER.md",
+        "bytes": 24798,
+        "sha256": "4f78f977d42587db8510459664d356738b6020d59d28bec5c884b1d90174462d",
+        "observation_scope": "PREPUBLICATION_SNAPSHOT_NOT_FRESH_CAPTURE",
+        "requires_fresh_capture_after_ROOT_document_publication": true
+      },
+      {
+        "relative_path": "SOURCE_NOTICES.md",
+        "path": "E:\\5703\\learning-assistant\\SOURCE_NOTICES.md",
+        "bytes": 4842,
+        "sha256": "111ed1f82b3ba7e8be2f70f928f327b5960c2f0f0d358a3fcfc2fbb1fe6ba161",
+        "observation_scope": "PREPUBLICATION_SNAPSHOT_NOT_FRESH_CAPTURE",
+        "requires_fresh_capture_after_ROOT_document_publication": true
+      },
+      {
+        "relative_path": "docs/runbook.md",
+        "path": "E:\\5703\\learning-assistant\\docs\\runbook.md",
+        "bytes": 56123,
+        "sha256": "7d44b36728124cf1be24e7f00fe7e97b4bba520f2f4d8cfb9b0bd3888cbd7037",
+        "observation_scope": "PREPUBLICATION_SNAPSHOT_NOT_FRESH_CAPTURE",
+        "requires_fresh_capture_after_ROOT_document_publication": true
+      },
+      {
+        "relative_path": "docs/foundation/decisions.md",
+        "path": "E:\\5703\\learning-assistant\\docs\\foundation\\decisions.md",
+        "bytes": 11764,
+        "sha256": "30f7894518af5ef2a5797c271ac61df5b3172de6f5e2f679cf7edc7210544cb8",
+        "observation_scope": "PREPUBLICATION_SNAPSHOT_NOT_FRESH_CAPTURE",
+        "requires_fresh_capture_after_ROOT_document_publication": true
+      },
+      {
+        "relative_path": "docs/foundation/handover_migration.md",
+        "path": "E:\\5703\\learning-assistant\\docs\\foundation\\handover_migration.md",
+        "bytes": 141405,
+        "sha256": "f64e8f659905531e3136ea0488adca37c6a92c5621cc6d62c91cd1cd4d93db73",
+        "observation_scope": "PREPUBLICATION_SNAPSHOT_NOT_FRESH_CAPTURE",
+        "requires_fresh_capture_after_ROOT_document_publication": true
+      },
+      {
+        "relative_path": "docs/execution/progress.md",
+        "path": "E:\\5703\\learning-assistant\\docs\\execution\\progress.md",
+        "bytes": 159548,
+        "sha256": "a803728c5725fbd4fc6d59c1fb5791de694d54401dc9b99a983ae5a32501a900",
+        "observation_scope": "PREPUBLICATION_SNAPSHOT_NOT_FRESH_CAPTURE",
+        "requires_fresh_capture_after_ROOT_document_publication": true
+      },
+      {
+        "relative_path": "docs/execution/c9-1-activation-v4-hotfix-20261007.md",
+        "path": "E:\\5703\\learning-assistant\\docs\\execution\\c9-1-activation-v4-hotfix-20261007.md",
+        "bytes": 7837,
+        "sha256": "2cfa11beefcec4b2de2011426fbbc6604bcb1e97790821682c6c4e50c230f365",
+        "observation_scope": "PREPUBLICATION_SNAPSHOT_NOT_FRESH_CAPTURE",
+        "requires_fresh_capture_after_ROOT_document_publication": true
+      },
+      {
+        "relative_path": "docs/execution/20261008-checker-bound-matched-rag-and-native-timing.md",
+        "path": "E:\\5703\\learning-assistant\\docs\\execution\\20261008-checker-bound-matched-rag-and-native-timing.md",
+        "bytes": 10392,
+        "sha256": "4b3b6a69801836c55c13837348cecbf91a2c9b3630cc2b295c97aea79f10f34f",
+        "observation_scope": "PREPUBLICATION_SNAPSHOT_NOT_FRESH_CAPTURE",
+        "requires_fresh_capture_after_ROOT_document_publication": true
+      },
+      {
+        "relative_path": "docs/execution/20261008-round2-quote-repair-and-free-failure-diagnostics.md",
+        "path": "E:\\5703\\learning-assistant\\docs\\execution\\20261008-round2-quote-repair-and-free-failure-diagnostics.md",
+        "bytes": 25534,
+        "sha256": "e951bb962b5b1a90435a1454b8d9071792425d2a1c4863be2ce860b95dfe06bf",
+        "observation_scope": "PREPUBLICATION_SNAPSHOT_NOT_FRESH_CAPTURE",
+        "requires_fresh_capture_after_ROOT_document_publication": true
+      },
+      {
+        "relative_path": "docs/execution/20261008-round2-interview-evidence-qa.md",
+        "path": "E:\\5703\\learning-assistant\\docs\\execution\\20261008-round2-interview-evidence-qa.md",
+        "bytes": 3093,
+        "sha256": "380d9abf94b4eda7b2893fef1c59330c15214d487c837475680022c89c8bd2b1",
+        "observation_scope": "PREPUBLICATION_SNAPSHOT_NOT_FRESH_CAPTURE",
+        "requires_fresh_capture_after_ROOT_document_publication": true
+      },
+      {
+        "relative_path": "frontend/src/Chat.tsx",
+        "path": "E:\\5703\\learning-assistant\\frontend\\src\\Chat.tsx",
+        "bytes": 42676,
+        "sha256": "1becbfb17c1f8dcce050b434a49cf23ae9d4a3077c5b5e188e23d66db3043661",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      },
+      {
+        "relative_path": "frontend/src/ChatTranscriptRecovery.test.tsx",
+        "path": "E:\\5703\\learning-assistant\\frontend\\src\\ChatTranscriptRecovery.test.tsx",
+        "bytes": 13259,
+        "sha256": "95b8ad3565a136a2790c3ad72593b2036c9ecd8bad800fd627e604a1ac2e9b14",
+        "observation_scope": "FINAL_SELECTED_SOURCE_READBACK",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      }
+    ],
+    "selected_current_pins_unchanged_during_this_readback": null,
+    "whole_repository_snapshot_frozen": false,
+    "full_package_member_manifest_complete": false,
+    "concurrency_boundary": "ROOT is publishing report/progress/handover updates. The documentation pins are explicitly PREPUBLICATION observations; final assembly must capture fresh complete source/doc identities. No global snapshot, lock or all-writer absence is claimed.",
+    "pending_members": [
+      {
+        "relative_path": "frontend/src/Chat.tsx",
+        "observation_before_ROOT_pending_patch": {
+          "path": "E:\\5703\\learning-assistant\\frontend\\src\\Chat.tsx",
+          "bytes": 42374,
+          "sha256": "99fe41917baac13ce4b3b4465a83d9a204733debfcf3a7269e61ba9106384092"
+        },
+        "next_package_final_sha256": "1becbfb17c1f8dcce050b434a49cf23ae9d4a3077c5b5e188e23d66db3043661",
+        "status": "ACTUAL_ROOT_E_ADOPTION_AND_TARGETED_REGRESSION_VERIFIED",
+        "actual_adopted_final_pin": {
+          "path": "E:\\5703\\learning-assistant\\frontend\\src\\Chat.tsx",
+          "bytes": 42676,
+          "sha256": "1becbfb17c1f8dcce050b434a49cf23ae9d4a3077c5b5e188e23d66db3043661"
+        },
+        "pending": false
+      },
+      {
+        "relative_path": "frontend/src/ChatTranscriptRecovery.test.tsx",
+        "observation_before_ROOT_pending_patch": null,
+        "planned_creation": true,
+        "next_package_final_sha256": "95b8ad3565a136a2790c3ad72593b2036c9ecd8bad800fd627e604a1ac2e9b14",
+        "status": "ACTUAL_ROOT_E_ADOPTION_AND_TARGETED_REGRESSION_VERIFIED",
+        "actual_adopted_final_pin": {
+          "path": "E:\\5703\\learning-assistant\\frontend\\src\\ChatTranscriptRecovery.test.tsx",
+          "bytes": 13259,
+          "sha256": "95b8ad3565a136a2790c3ad72593b2036c9ecd8bad800fd627e604a1ac2e9b14"
+        },
+        "pending": false
+      }
+    ],
+    "approved_public_source_recipe": "Resolve every intended member from current Main against a new complete allowlist, excluding private fixtures; capture exact source and build identities before any archive action. This planning manifest is not itself that complete allowlist.",
+    "unchanged_boundary_members": [
+      {
+        "relative_path": "frontend/src/Chat.test.tsx",
+        "original_observed_pin": {
+          "path": "E:\\5703\\learning-assistant\\frontend\\src\\Chat.test.tsx",
+          "bytes": 41883,
+          "sha256": "ee17c19a919a98cb81cd7fb17e4ab0b3bb075f370b17a79ccfe2e455a7d95c69"
+        },
+        "planned_change": false,
+        "status": "EXISTING_FILE_REMAINS_UNCHANGED_BY_THIS_CHAT_REPAIR",
+        "current_readback_verified_UTC": "2026-10-07T22:48:23.818213+00:00"
+      }
+    ],
+    "original_selected_readback_unchanged_at_creation": true,
+    "verification_scope": "Selected non-document source and final adopted Chat files are current at this update; all document pins remain the original PREPUBLICATION snapshot. No fresh global complete-source identity is claimed.",
+    "final_selected_non_document_source_count": 33,
+    "final_selected_non_document_source_readback_match": true,
+    "document_snapshot_members_requiring_fresh_capture": [
+      "AGENTS.md",
+      "README.md",
+      "PLANS.md",
+      "PRD.md",
+      "SPEC.md",
+      "HANDOVER.md",
+      "SOURCE_NOTICES.md",
+      "docs/runbook.md",
+      "docs/foundation/decisions.md",
+      "docs/foundation/handover_migration.md",
+      "docs/execution/progress.md",
+      "docs/execution/c9-1-activation-v4-hotfix-20261007.md",
+      "docs/execution/20261008-checker-bound-matched-rag-and-native-timing.md",
+      "docs/execution/20261008-round2-quote-repair-and-free-failure-diagnostics.md",
+      "docs/execution/20261008-round2-interview-evidence-qa.md"
+    ],
+    "pending_Chat_source_adoption_count": 0
+  },
+  "current_Main_frontend": {
+    "assets_manifest": {
+      "path": "E:\\5703\\learning-assistant\\deliverables\\20261007-c9-1-activation-hotfix-01\\Evidence\\Main_built_assets.json",
+      "bytes": 11829,
+      "sha256": "b33442fddbcfb2f7fcd832662521ec8e17606ea562a125d6b659888113b8693c"
+    },
+    "actual_verified_asset_count": 62,
+    "actual_verified_assets": [
+      {
+        "relative_path": "frontend/dist/assets/index-CUoHqvNA.js",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\index-CUoHqvNA.js",
+        "bytes": 873502,
+        "sha256": "68549304024a0d613b2c9d3e6767451c937d323cf09128b824af1975a0183f1c"
+      },
+      {
+        "relative_path": "frontend/dist/assets/index-HL830G62.css",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\index-HL830G62.css",
+        "bytes": 57281,
+        "sha256": "b2db40cc767988bcb2388911a59e0efef21b5aa3cac4a45c778f13b626316199"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_AMS-Regular-BQhdFMY1.woff2",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_AMS-Regular-BQhdFMY1.woff2",
+        "bytes": 28076,
+        "sha256": "0cdd387c9590a1a9f9794560022dbb59654a7d86f187aa0c81495ad42d3a7308"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_AMS-Regular-DMm9YOAa.woff",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_AMS-Regular-DMm9YOAa.woff",
+        "bytes": 33516,
+        "sha256": "30da91e84c893f875e252689faebdc590b2871145e8adc7f9a9d4dbd8ce0b251"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_AMS-Regular-DRggAlZN.ttf",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_AMS-Regular-DRggAlZN.ttf",
+        "bytes": 63632,
+        "sha256": "68534840bcfdd2bffb6f0e8deb48684dd01e7f04ea2813267577afb906de1d13"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Caligraphic-Bold-ATXxdsX0.ttf",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Caligraphic-Bold-ATXxdsX0.ttf",
+        "bytes": 12368,
+        "sha256": "07d8e303ce4fc12b4bb54f1004170dd190a1f3db45d400fe68060df3e0897268"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Caligraphic-Bold-BEiXGLvX.woff",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Caligraphic-Bold-BEiXGLvX.woff",
+        "bytes": 7716,
+        "sha256": "1ae6bd7475590e97e7f145a89e09ccde322f7a6bc0b91607b1c8b8ee28290fed"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Caligraphic-Bold-Dq_IR9rO.woff2",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Caligraphic-Bold-Dq_IR9rO.woff2",
+        "bytes": 6912,
+        "sha256": "de7701e42cf1f4cf0b766c03fb27977207eee2f4fd5d76fa82188406da43ea4c"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Caligraphic-Regular-CTRA-rTL.woff",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Caligraphic-Regular-CTRA-rTL.woff",
+        "bytes": 7656,
+        "sha256": "3398dd02302557a793f2863f88e02d96ce10df2abffa07c8e9fa90775116e65c"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Caligraphic-Regular-Di6jR-x-.woff2",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Caligraphic-Regular-Di6jR-x-.woff2",
+        "bytes": 6908,
+        "sha256": "5d53e70ad607c2352162dec9e0923fb54ecdafaccbf604cd8dcf7d00facb989b"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Caligraphic-Regular-wX97UBjC.ttf",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Caligraphic-Regular-wX97UBjC.ttf",
+        "bytes": 12344,
+        "sha256": "ed0b74372feefcbb9c0666b2e210da37b7e49fa7fbbf3eeb11db5f693dacfbb7"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Fraktur-Bold-BdnERNNW.ttf",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Fraktur-Bold-BdnERNNW.ttf",
+        "bytes": 19584,
+        "sha256": "9163df9c7122432e6495b4229fa9071cf9ae86a758ae5efc4924ec2e1a6dbce1"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Fraktur-Bold-BsDP51OF.woff",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Fraktur-Bold-BsDP51OF.woff",
+        "bytes": 13296,
+        "sha256": "9be7ceb88004ab8ad124082246fbfcca4091e36385d4ec6ed1df67375dad50fb"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Fraktur-Bold-CL6g_b3V.woff2",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Fraktur-Bold-CL6g_b3V.woff2",
+        "bytes": 11348,
+        "sha256": "74444efd593c005e3f4573b44524704c0af0a937fe911cca9e94068d0d140d3f"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Fraktur-Regular-CB_wures.ttf",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Fraktur-Regular-CB_wures.ttf",
+        "bytes": 19572,
+        "sha256": "1e6f9579e90e2cac37f8f60a597c436e075c114385652b7cbeb0dec0421291b3"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Fraktur-Regular-CTYiF6lA.woff2",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Fraktur-Regular-CTYiF6lA.woff2",
+        "bytes": 11316,
+        "sha256": "51814d270d06ff0255dba0799994fa4d8c84d11f09951d47595f4abb1f3602dc"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Fraktur-Regular-Dxdc4cR9.woff",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Fraktur-Regular-Dxdc4cR9.woff",
+        "bytes": 13208,
+        "sha256": "5e28753be717dac97f559f49bc10be9cf3c124ddcabda6659d11cb68febc6463"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Main-Bold-Cx986IdX.woff2",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Main-Bold-Cx986IdX.woff2",
+        "bytes": 25324,
+        "sha256": "0f60d1b897938ec918c8ce073092411baf9438f6739465693ff18b0f9d20b021"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Main-Bold-Jm3AIy58.woff",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Main-Bold-Jm3AIy58.woff",
+        "bytes": 29912,
+        "sha256": "c76c5d696297d51b9cb1639c7da4334f0e7dec81b42b11213b5e25ef671bb822"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Main-Bold-waoOVXN0.ttf",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Main-Bold-waoOVXN0.ttf",
+        "bytes": 51336,
+        "sha256": "138ac28d1663b3037e9c5f52371fa5c63d8324f4a38d22cd573e6ea3a3fd0cf8"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Main-BoldItalic-DxDJ3AOS.woff2",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Main-BoldItalic-DxDJ3AOS.woff2",
+        "bytes": 16780,
+        "sha256": "99cd42a3c072d918f2f44984a807cf7aa16e13545fd0875fc07c6c65f99e715b"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Main-BoldItalic-DzxPMmG6.ttf",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Main-BoldItalic-DzxPMmG6.ttf",
+        "bytes": 32968,
+        "sha256": "70ee1f64a20f2048c21940ef46d0144fd215baa953ca69afd1e31e98544f708f"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Main-BoldItalic-SpSLRI95.woff",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Main-BoldItalic-SpSLRI95.woff",
+        "bytes": 19412,
+        "sha256": "a6f7ec0d846ac7ad975adb8959c37ed49b94acbc4ae436db9ce9e20287e4a64c"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Main-Italic-3WenGoN9.ttf",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Main-Italic-3WenGoN9.ttf",
+        "bytes": 33580,
+        "sha256": "0d85ae7cc30f23790a7f1a58c4a112fdca8aae769b6ba11429af1d98b1b6cb3a"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Main-Italic-BMLOBm91.woff",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Main-Italic-BMLOBm91.woff",
+        "bytes": 19676,
+        "sha256": "f1d6ef86f3b11a528bd5185199bd2443ecb2b0dead96d88674b5a2c12be24bdf"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Main-Italic-NWA7e6Wa.woff2",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Main-Italic-NWA7e6Wa.woff2",
+        "bytes": 16988,
+        "sha256": "97479ca6cce906abc961ecac96faa5f9ca2e61b8e7670d475826bcdee9a7c267"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Main-Regular-B22Nviop.woff2",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Main-Regular-B22Nviop.woff2",
+        "bytes": 26272,
+        "sha256": "c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Main-Regular-Dr94JaBh.woff",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Main-Regular-Dr94JaBh.woff",
+        "bytes": 30772,
+        "sha256": "c6368d87e8a1a3a5d337623d83d8dc4b868f242a9ad476237d6f8d1e0f168cdc"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Main-Regular-ypZvNtVU.ttf",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Main-Regular-ypZvNtVU.ttf",
+        "bytes": 53580,
+        "sha256": "d0332f52868370fd83ae7fa46470f90c8f2eab2fcf12bc4f88080b340c95a830"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Math-BoldItalic-B3XSjfu4.ttf",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Math-BoldItalic-B3XSjfu4.ttf",
+        "bytes": 31196,
+        "sha256": "f9377ab0271cda59af24bcffbd46a4d0c8a3572ffafdbb38de2ad5ea7b0d5ee5"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Math-BoldItalic-CZnvNsCZ.woff2",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Math-BoldItalic-CZnvNsCZ.woff2",
+        "bytes": 16400,
+        "sha256": "dc47344dbb6cb5b655c8460d561f4df5f501b90c804ad3c6cec65fe322351ab1"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Math-BoldItalic-iY-2wyZ7.woff",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Math-BoldItalic-iY-2wyZ7.woff",
+        "bytes": 18668,
+        "sha256": "850c0af5c2238497febaf5e461d880bf458c341f42f4f330f1b1ab5698b1998e"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Math-Italic-DA0__PXp.woff",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Math-Italic-DA0__PXp.woff",
+        "bytes": 18748,
+        "sha256": "8a8d244581371912b8f3f5a23e2437cb2a59cd9bcaebb0346e722c05737a2571"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Math-Italic-flOr_0UB.ttf",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Math-Italic-flOr_0UB.ttf",
+        "bytes": 31308,
+        "sha256": "08ce98e51b04d58945a301e639e02b6998af29fdfd61a7b8afdd07bbfc479d4a"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Math-Italic-t53AETM-.woff2",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Math-Italic-t53AETM-.woff2",
+        "bytes": 16440,
+        "sha256": "7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_SansSerif-Bold-CFMepnvq.ttf",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_SansSerif-Bold-CFMepnvq.ttf",
+        "bytes": 24504,
+        "sha256": "1ece03f79f95277d57dc7f6b435a74e1379b0d46104a8530286b60ff49369ea0"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_SansSerif-Bold-D1sUS0GD.woff2",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_SansSerif-Bold-D1sUS0GD.woff2",
+        "bytes": 12216,
+        "sha256": "e99ae51144bf1232efcc1bfe5add36262c6866b0faab24fa75740e1b98577a62"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_SansSerif-Bold-DbIhKOiC.woff",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_SansSerif-Bold-DbIhKOiC.woff",
+        "bytes": 14408,
+        "sha256": "ece03cfd83e22c212cdef66feb8442d25a083beb988db3f1883f3f9738d750ba"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_SansSerif-Italic-C3H0VqGB.woff2",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_SansSerif-Italic-C3H0VqGB.woff2",
+        "bytes": 12028,
+        "sha256": "00b26ac825e2095056396e0553b8ac26d3f8ad158c3826e28b4c45b385c4714a"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_SansSerif-Italic-DN2j7dab.woff",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_SansSerif-Italic-DN2j7dab.woff",
+        "bytes": 14112,
+        "sha256": "91ee67500cc0129aa0ace3ac5c61ff1692102f0f31d02b69347fba35dcb75bf2"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_SansSerif-Italic-YYjJ1zSn.ttf",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_SansSerif-Italic-YYjJ1zSn.ttf",
+        "bytes": 22364,
+        "sha256": "3931dd81faed86ba021bb2bbdc36f5bed9a38d6b4f4077aca59b265aa1b02083"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_SansSerif-Regular-BNo7hRIc.ttf",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_SansSerif-Regular-BNo7hRIc.ttf",
+        "bytes": 19436,
+        "sha256": "f36ea897e19f4a2e571d1e900e4e3710e438deb05a842486045ba0a3e616a4ad"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_SansSerif-Regular-CS6fqUqJ.woff",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_SansSerif-Regular-CS6fqUqJ.woff",
+        "bytes": 12316,
+        "sha256": "11e4dc8a6471ff6d6ee561d53d10fde8f7489e798257ff449c5d37c197435605"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_SansSerif-Regular-DDBCnlJ7.woff2",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_SansSerif-Regular-DDBCnlJ7.woff2",
+        "bytes": 10344,
+        "sha256": "68e8c73ef42afd3ccec58bf0fba302cce448938e7fc020a5e31f8a952eee1342"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Script-Regular-C5JkGWo-.ttf",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Script-Regular-C5JkGWo-.ttf",
+        "bytes": 16648,
+        "sha256": "1c67f068fea8bb09bf099c088b1cf64bd27516a6e07f4684344873564bb66a67"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Script-Regular-D3wIWfF6.woff2",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Script-Regular-D3wIWfF6.woff2",
+        "bytes": 9644,
+        "sha256": "036d4e95149b69ff9bcc0cd55771efeb25ffa3947293e69acd78d5ac328c684b"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Script-Regular-D5yQViql.woff",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Script-Regular-D5yQViql.woff",
+        "bytes": 10588,
+        "sha256": "d96cdf2b3bdd4d64a8fd5f74a4c467f123a8a73931cd435889f08ffaf9bf947a"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Size1-Regular-C195tn64.woff",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Size1-Regular-C195tn64.woff",
+        "bytes": 6496,
+        "sha256": "c943cc986384f59e86bea5fd7dc50a9c4dfe567a7c05eb40d6790720dead97c9"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Size1-Regular-Dbsnue_I.ttf",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Size1-Regular-Dbsnue_I.ttf",
+        "bytes": 12228,
+        "sha256": "95b6d2f1a50173bfedb8c63e1d1c99b10427d0a4df4201cb44513b226951a22b"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Size1-Regular-mCD8mA8B.woff2",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Size1-Regular-mCD8mA8B.woff2",
+        "bytes": 5468,
+        "sha256": "6b47c40166b6dbe21a5dfca7718413f2147fd2399be1ba605d8ad39cedf25dfe"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Size2-Regular-B7gKUWhC.ttf",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Size2-Regular-B7gKUWhC.ttf",
+        "bytes": 11508,
+        "sha256": "a6b2099fb555c60e3a0db3a08842ebf1d732c6eb4e4bf44913613bed4fc4e39b"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Size2-Regular-Dy4dx90m.woff2",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Size2-Regular-Dy4dx90m.woff2",
+        "bytes": 5208,
+        "sha256": "d04c54219f9eaec6d4d4fd42dfb28785975a4794d6b2fc71e566b9cd6db842dd"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Size2-Regular-oD1tc_U0.woff",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Size2-Regular-oD1tc_U0.woff",
+        "bytes": 6188,
+        "sha256": "2014c523c3210bcc166648c4d4cc57f05b747df07a24277bf71c51e67dc79e3d"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Size3-Regular-CTq5MqoE.woff",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Size3-Regular-CTq5MqoE.woff",
+        "bytes": 4420,
+        "sha256": "6ab6b62e9b62dae2c00dd90f791bd10950be0ecc3490d7d6045f51c2e8fe0949"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Size3-Regular-DgpXs0kz.ttf",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Size3-Regular-DgpXs0kz.ttf",
+        "bytes": 7588,
+        "sha256": "500e04d54f0d51666332c9d2089aa803be22aa878eca539e59fa53c6e522b082"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Size4-Regular-BF-4gkZK.woff",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Size4-Regular-BF-4gkZK.woff",
+        "bytes": 5980,
+        "sha256": "99f9c6750b489c9462bf04900bd3f939df9b829339daaaaa99ef5495cdddea58"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Size4-Regular-Dl5lxZxV.woff2",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Size4-Regular-Dl5lxZxV.woff2",
+        "bytes": 4928,
+        "sha256": "a4af7d414440a1c1790825cfb700cf9cf43b0f2c4b04f0ebc523011ad9853ec0"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Size4-Regular-DWFBv043.ttf",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Size4-Regular-DWFBv043.ttf",
+        "bytes": 10364,
+        "sha256": "c647367d1dd4e162468717d020e1fc0f1dc5c26ebfdffbe55261713bf88c5877"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Typewriter-Regular-C0xS9mPB.woff",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Typewriter-Regular-C0xS9mPB.woff",
+        "bytes": 16028,
+        "sha256": "e14fed02b1aba7ce9f5afd5844b5d0321b22351febc720e0de8b8723527609f7"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Typewriter-Regular-CO6r4hn1.woff2",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Typewriter-Regular-CO6r4hn1.woff2",
+        "bytes": 13568,
+        "sha256": "71d517d67827787cfabdf186914cc3358eda539e37931941f2b2fd4a21f68c0b"
+      },
+      {
+        "relative_path": "frontend/dist/assets/KaTeX_Typewriter-Regular-D3Ib7_Hf.ttf",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\assets\\KaTeX_Typewriter-Regular-D3Ib7_Hf.ttf",
+        "bytes": 27556,
+        "sha256": "f01f3e87d9c6a61c0c081ceb577abd864eb00a612f7ac1620dd6915fad2ef5aa"
+      },
+      {
+        "relative_path": "frontend/dist/index.html",
+        "path": "E:\\5703\\learning-assistant\\frontend\\dist\\index.html",
+        "bytes": 576,
+        "sha256": "8c78407716f833a347a20337ae2e42f2696470992f38c9dd47ba7dd5fc3fe289"
+      }
+    ],
+    "current_index": {
+      "path": "E:\\5703\\learning-assistant\\frontend\\dist\\index.html",
+      "bytes": 576,
+      "sha256": "8c78407716f833a347a20337ae2e42f2696470992f38c9dd47ba7dd5fc3fe289"
+    },
+    "built_v4_and_eligibility_literals_present": true,
+    "next_package_build_status": "STALE_AFTER_PENDING_CHAT_SOURCE_CHANGE",
+    "historical_C9_assets_must_not_overlay_Main": true,
+    "usable_for_next_pending_Chat_source": false,
+    "fresh_matching_build_required": true,
+    "stale_scope": "The 62 assets retain their previous Main build identity. Actual adopted Chat source now differs; noEmit and component tests do not produce matching assets. A current matching build and finite member readback are required before release.",
+    "stale_after_Chat_source_change_is_now_actual": true
+  },
+  "existing_validation_scopes": [
+    {
+      "scope": "49 current source immutability/reference freshness unit cases",
+      "receipt": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-free-continuation-root-after-free-repairs-20261007-01\\receipt01.json",
+        "bytes": 5364,
+        "sha256": "c648ef6180606825a4aa2c4448cb9737d02e99757a930e7cd76716510644bb49"
+      },
+      "junit": {
+        "tests": 49,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "source_pins_match_current": true,
+      "live_model_quality_or_latency_acceptance": false
+    },
+    {
+      "scope": "64 answer-core/checker-contract scripted unit cases",
+      "receipt": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-quote-contract-free01\\receipt01.json",
+        "bytes": 1836,
+        "sha256": "917204c6e7e708edd02cf974d5ffafaf1fd01af34610912cb9c228d706404d4d"
+      },
+      "junit": {
+        "tests": 64,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "junit_file": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-quote-contract-free01\\junit.xml",
+        "bytes": 9832,
+        "sha256": "ad5d8c300140697216b5f07f76440d8ef448a8d1f4e62d04a4c12d238a873f54"
+      },
+      "source_pins_match_current": true,
+      "live_model_quality_or_latency_acceptance": false
+    },
+    {
+      "scope": "Historical Main C9.1 36 selected backend / 233 frontend / types/build",
+      "receipt": {
+        "path": "E:\\5703\\learning-assistant\\deliverables\\20261007-c9-1-activation-hotfix-01\\Evidence\\Main_validation.json",
+        "bytes": 2532,
+        "sha256": "193f1bbc54b1ec58f3443bff43aeae5045679cbb27d7436408e927f279259ea1"
+      },
+      "adoption": {
+        "path": "E:\\5703\\learning-assistant\\deliverables\\20261007-c9-1-activation-hotfix-01\\Evidence\\MAIN_ADOPTION_RECEIPT.json",
+        "bytes": 5523,
+        "sha256": "0e181b5e2d3dad615b61ff6b452161f14241f7c58f8b3c2d4a5a000b402febb6"
+      },
+      "current_activation_test_sha256": "14efbfbcd9d6ff64701bc56e3d1c44faebe0f703da2bba22bf5cff615a33a58e",
+      "historical_activation_test_sha256": "7a12dccd89c44a99c52134c83ad208bc6d0e8caa0584874b581efa19ac681512",
+      "same_current_activation_test_identity": false,
+      "is_fresh_current_complete_gate": false
+    },
+    {
+      "scope": "53 targeted Chat/recovery/race regressions plus noEmit static types",
+      "receipt": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-free-chat-recovery-root-final-20261007-02\\receipt01.json",
+        "bytes": 17479,
+        "sha256": "e0a043121dd53f9f752c134300d98dd2f69a381664d04ad186e0628f45e600dd"
+      },
+      "junit": {
+        "tests": 53,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "typecheck": {
+        "exit_code": 0,
+        "noEmit": true
+      },
+      "executed_Chat_matches_actual_E_adoption": true,
+      "full_current_frontend_gate": false,
+      "current_matching_build": false,
+      "browser_acceptance": false
+    }
+  ],
+  "required_free_validation_before_new_release": [
+    "Actual Chat source/test adoption and 53 targeted regressions/noEmit are verified. Preserve these exact final pins; recapture all documentation/source identities after ROOT finishes current publication.",
+    "Verify current C9.1 strict activation predicate and missing/false/stale/role/config/schema/prompt negative gates against current test source, not historical test hash.",
+    "Before archive, regenerate/check frontend contract types, run directly affected frontend regressions, and obtain matching current frontend build/asset manifest; do not combine old C9 assets with Main.",
+    "Reuse existing 49 and 64 evidence only for exact unchanged source identities and their declared scopes; do not infer aggregate fresh full gate from their sum.",
+    "Create a complete current public source allowlist and exact member manifest; record omitted opaque private fixtures without opening or exporting them.",
+    "Verify any future new archive by finite clean extraction/member readback in isolated output; this agent has not archived, installed, built, or invoked tests."
+  ],
+  "release_boundaries": {
+    "current_live_provider_acceptance": false,
+    "fresh_whole_project_gate": false,
+    "course_completion": false,
+    "new_machine_installation": false,
+    "automatic_installer": false,
+    "pending_provider_2_plus_36": "STOP; no attempts until explicit external-prompt disclosure authorization and ROOT-reviewed successor source guards.",
+    "credentials_or_database_contents_in_manifest": false
+  },
+  "exclusions": [
+    "All .env and runtime settings values; .secrets, encryption keys, API keys, auth headers, key files and credential files.",
+    "All private/student datasets, Gold/label/reference answer contents, real database files/dumps/backups and week09-private-db protected staging.",
+    "Forbidden Codex session directories and denied/protected targets.",
+    "Experimental inputs/results unless a separately reviewed finite public evidence member is explicitly allowlisted.",
+    "Existing archives, node_modules, .venv, model caches, downloaded checkpoints and giant raw corpus copies.",
+    "No install, package creation/copy, dependency download, service start, provider call, remote push/upload/deploy or course submission occurs in this preparation."
+  ],
+  "actual_actions": {
+    "E_writes": 0,
+    "DB_accesses": 0,
+    "credential_or_Gold_reads": 0,
+    "provider_requests": 0,
+    "archive_extractions": 0,
+    "new_archives": 0,
+    "dependency_installs": 0,
+    "tests_or_builds_started": 0,
+    "W_prepared_manifest_files": 1
+  },
+  "canonical_completion_evidence": [
+    {
+      "relative_path": "docs/execution/tasks.json",
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\tasks.json",
+      "json_pointer": "/project_complete",
+      "value": false,
+      "line": 163342,
+      "bytes": 13277085,
+      "sha256": "c56119170b9fca1e7eadb1f91db0268c3f57ff25f332e068dfb8679b24aface7",
+      "interpretation": "Canonical registry state only; dated row evidence is not reinterpreted as latest full-course verification."
+    },
+    {
+      "relative_path": "docs/execution/acceptance.json",
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\acceptance.json",
+      "json_pointer": "/project_complete",
+      "value": false,
+      "line": 88042,
+      "bytes": 7610741,
+      "sha256": "b36020cd2acd576fa071ce85c6007d116c7c0b73c8859875f047c44f59c80c73",
+      "interpretation": "Canonical registry state only; dated row evidence is not reinterpreted as latest full-course verification."
+    }
+  ],
+  "pending_chat_targeted_evidence": {
+    "original_red": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-free-chat-recovery-root-original-20261007-04\\receipt01.json",
+      "bytes": 16111,
+      "sha256": "63540cdaa8f0013a8fecd2aec83c1c5b4055c5e6967d453c4664e90431767c6a",
+      "junit": {
+        "tests": 5,
+        "failures": 5,
+        "errors": 0,
+        "skipped": 0
+      },
+      "boundary_denials": [],
+      "scope": "Actual original implementation negative baseline; not a successful product acceptance."
+    },
+    "candidate_green_and_static_types": {
+      "status": "ACTUAL_FREE_CHAT_RECOVERY_TARGETED_PASS",
+      "receipt": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-free-chat-recovery-root-final-20261007-02\\receipt01.json",
+        "bytes": 17479,
+        "sha256": "e0a043121dd53f9f752c134300d98dd2f69a381664d04ad186e0628f45e600dd"
+      },
+      "junit": {
+        "tests": 53,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "typecheck": {
+        "exit_code": 0,
+        "noEmit": true
+      },
+      "source_unchanged": true,
+      "boundary_denials": [],
+      "executed_chat_sha256": "1becbfb17c1f8dcce050b434a49cf23ae9d4a3077c5b5e188e23d66db3043661",
+      "adopted_test_equals_executed_test": true,
+      "scope": "Isolated targeted component regression and noEmit static types only; no current browser/build/live-model/full gate acceptance."
+    },
+    "E_adoption": {
+      "status": "ACTUAL_FREE_LOCAL_SOURCE_AND_REGRESSION_ADOPTED",
+      "receipt": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-free-source-adoption-root-chat-recovery-20261007-01\\receipt01.json",
+        "bytes": 1225,
+        "sha256": "bca6b0609b8b4db6cacd86ff85f61924803162f8148c01a8d1e755faf80d8c35"
+      },
+      "actual_final_targets": {
+        "frontend/src/Chat.tsx": {
+          "path": "E:\\5703\\learning-assistant\\frontend\\src\\Chat.tsx",
+          "bytes": 42676,
+          "sha256": "1becbfb17c1f8dcce050b434a49cf23ae9d4a3077c5b5e188e23d66db3043661"
+        },
+        "frontend/src/ChatTranscriptRecovery.test.tsx": {
+          "path": "E:\\5703\\learning-assistant\\frontend\\src\\ChatTranscriptRecovery.test.tsx",
+          "bytes": 13259,
+          "sha256": "95b8ad3565a136a2790c3ad72593b2036c9ecd8bad800fd627e604a1ac2e9b14"
+        }
+      },
+      "all_held_handles_closed": true,
+      "backups_preserved": true
+    },
+    "independent_final_static_review": {
+      "status": "INDEPENDENT_FINAL_CHAT_RECOVERY_STATIC_REVIEW",
+      "verdict": "PASS",
+      "receipt": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\independent-chat-recovery-static02.json",
+        "bytes": 5955,
+        "sha256": "711f469ce825c894342bf8dad6faa0a9cc04537681a9f0dc729b806d932a6532"
+      },
+      "runtime_test_execution_by_reviewer": false
+    }
+  },
+  "updated_UTC": "2026-10-07T22:48:23.818213+00:00",
+  "prepared_manifest_continuation": "Final ROOT-authorized update of the same W-only planning file. Stop this agent's writes after readback so ROOT can copy its finite evidence. No new version, report, archive, build, test, E write, credentials or DB action.",
+  "not_ready_to_package": true,
+  "not_ready_reasons": [
+    "Current frontend build remains stale after actual Chat source adoption.",
+    "Documentation pins are PREPUBLICATION snapshots and require fresh capture after ROOT finishes document publication.",
+    "This is a selected source plan, not a complete current public package member manifest.",
+    "Current activation regression source differs from the historical C9.1 backend test source; old validation is not a fresh complete current gate."
+  ]
+}

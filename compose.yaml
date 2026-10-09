@@ -41,7 +41,14 @@ services:
     restart: unless-stopped
     build: {context: ., dockerfile: backend/Dockerfile, target: runtime}
     environment: *runtime
-    command: ['python','-m','app.worker']
+    command: ['python','-m','app.worker','--queue','interactive']
+    depends_on: {db: {condition: service_healthy}}
+    volumes: ['storage:/data/storage', 'model-secrets:/data/secrets:ro', 'tokenizer-cache:/data/tokenizers']
+  worker-background:
+    restart: unless-stopped
+    build: {context: ., dockerfile: backend/Dockerfile, target: runtime}
+    environment: *runtime
+    command: ['python','-m','app.worker','--queue','background']
     depends_on: {db: {condition: service_healthy}}
     volumes: ['storage:/data/storage', 'model-secrets:/data/secrets:ro', 'tokenizer-cache:/data/tokenizers']
   frontend:

@@ -1,0 +1,51 @@
+# Review results
+
+The 951-file successor passed the current eight-stage free software gate on 2026-10-05 at 12:14:01 UTC. The two historical DeepSeek cases used the 950-file source: neither passed native teaching acceptance. The 951 successor has not been retested with an actual provider. Full repair request capacity remains **NOT_ESTABLISHED**, and no rating or coursework completion is claimed.
+
+This checkpoint is prepared for a separately reviewed local source promotion. The accompanying publication receipt must have status `PUBLISHED_AND_FULL_READBACK_VERIFIED` before E promotion is described as complete. The gate result below is `SOURCE951_CURRENT_FULL_FREE_GATE_PASS`; it used mock provider mode and a fresh, owned temporary PostgreSQL container, which was removed after the run. It does not establish actual teaching quality, a browser lifecycle review, a rebuilt installation package or a restarted runtime.
+
+| Review or verification | Source and result | Evidence boundary |
+| --- | --- | --- |
+| Current full software gate | C951: all eight stages passed; 3,755 Python tests, 102 subtests and 196 frontend tests | Current mock software gate; original warnings are retained in the logs |
+| Focused V10 regression suite | C951: 118 tests and 88 subtests passed | Free isolated tests; no actual provider or real database |
+| Four transport length boundaries | 32,768 bytes accepted; 32,769 rejected; canonical references 8,000 accepted and 8,001 rejected | Four fictional bodies, nine local token counts; this is not a complete repair route or teaching-quality PASS |
+| Independent code review | Three changed public C files: static PASS | Full-solution, schema, paid routing and H2/H3 protections remain in scope of the unchanged checks |
+| Historical S11 actual acceptance | E950: three requests; `NATIVE_GATE_REJECTED`; review result FAIL_FORMULA_DISCLOSURE | Formula disclosure was safely withheld; no publishable answer |
+| Historical G01 actual acceptance | E950: two requests; then `REQUEST_BOUND_EXCEEDED`; content null | Exact rejected request purpose, body and size were not captured publicly; do not infer them |
+| Rating | No rating supplied | Existing review JSON retains its original authority and provenance |
+| Existing provider configuration maintenance | At 11:07 UTC, 25 blank public fields were filled and two existing guides updated | Historical public receipts preserve key bytes and all nonblank values; this report does not read or validate the current private configuration |
+| Luna configuration validation | Blocked by automatic approval review before process start | Zero private reads, requests and USD spend; current key validation is unknown |
+
+The eight passed software stages are `python_quality`, `foundation`, `contracts`, `chat_scope`, `python_tests`, `frontend_types`, `frontend_tests` and `frontend_build`. The current runtime receipt binds the C951 source before and after, E950 before and after, the original software gate, all stage logs, and owned-container removal. API calls, private configuration reads, dependency installation and E writes during that gate were zero; it used isolated fictional test data and no real database.
+
+The source change is limited to the following mapping. The separately approved publisher checks all 950 original source inputs, admits exactly these replacements and the new test, and verifies all 951 source inputs after promotion.
+
+| E target | Reviewed change |
+| --- | --- |
+| `generation/checked.py` | V10-only lossless JSON whitespace compaction for context and feedback. For the validated V10 H1 `hint_task` case with `specific_help=false`, use the existing global teaching boundary and run the existing fresh checks. |
+| `generation/teaching_plan_v10.py` | Explicit H1 selection guidance forbids reproducing the formula or operation in the question or citation; the checker sentence remains limited to a `hint_task` selection. |
+| `tests/unit/test_v10_transport_compaction.py` | New free compaction, readback-repair and H2/H3 isolation regression cases. |
+
+V9 and earlier prompt behavior, schemas, labels, full-solution protections, database behavior and paid routing are unchanged. This narrow correction does not enlarge the approved 32 KiB / 8,000 canonical-reference limits. Lossless whitespace compaction alone cannot bound arbitrarily long allowed repair or checker feedback. The fictional size fixtures demonstrate structural risk and guard behavior; they do not reproduce the missing actual G01 request, prove output under the 1,536-token gate, or establish the complete four-call route.
+
+The offline frontend dependency copy used only already installed public packages: copy02 preserved the failed empty copy01 tree, copied 11,860 files / 176,631,950 bytes, and verified every copied file hash and final readback. It performed no installation or E write. Its original public manifest is bound by SHA256 `41b9eec7c112e025175be4ec294e693faf9c292786b44e6d686f46c88320dbc9`; package contents are not recopied into this report's evidence.
+
+The configuration maintenance receipts describe the completed 11:07 UTC operation, not current provider contents. They report 20 registry rows at that time, 25 public-field fills, exact key-byte preservation, nonblank-value preservation and no API call. New user edits and Luna configuration values are not read, hashed, copied or rewritten by this publication. The Luna approval rejection is retained as a separate historical event. Approval for it remains pending at this checkpoint; no retry, alternate path or credential probe occurred.
+
+The earlier CNY project/shared ceilings are historical and have been removed by the user. Existing DeepSeek usage and reserved holds remain in their original ledger and are not relabelled as settled bills. Any future one-connect Luna check belongs in a separate USD ledger, is limited to one phase up to USD0.01, and is separate from DeepSeek teaching quality. This publication starts no provider request, and a new teaching-quality experiment still requires a frozen plan and its authorization.
+
+Publication01 stopped during C source metadata preflight because its custom directory-name rule misclassified existing public evaluation fixtures. It created no E files and no publication intent or original-file backups. This was a local preflight classification error, not a filesystem permission denial or an actual provider run. The separate reviewed publication02 admits only the three frozen evaluation fixture directories and their exact ten manifest-pinned leaf files; any extra leaf, nested directory, unexpected manifest pin or other private directory stops before source content is read. Fixture and source bytes are hashed only after both complete metadata inventories pass; changed file bytes stop before E writes. The original01 scripts, plan, reviews and prepared inputs remain unchanged.
+
+Original public source and six status-document bytes are backed up in C before E mutation. Each status document receives a new prefix with its complete old bytes retained as the tail. The new source file, report and evidence directory use exclusive creation. Existing user changes cause a CAS failure. Partial attempts retain their intent, original backups and exact failed target; the publisher performs no automatic replay, deletion or rollback. The former actual report and its 23 evidence files remain unchanged. The six previous status documents retain their complete old bytes as tails; their new prefixes change the full-file hashes. Original review JSON and its provenance remain unchanged.
+
+The E full-source inventory is verified only by a successful final publication receipt. Runtime restart, new packaging, current880/883 reconciliation, real browser acceptance, clean installation, backup restore, live scientific acceptance and rating and physical-mobile review remain separate tasks. This gate does not mark the course project complete.
+
+Evidence is in [the successor evidence folder](../../evidence/week09-continuation/20261005/task2-h1-task-alignment-successor-v2-02/). In particular:
+
+- [Current full-gate runtime receipt](../../evidence/week09-continuation/20261005/task2-h1-task-alignment-successor-v2-02/full-gate-runtime-receipt.json), [software gate](../../evidence/week09-continuation/20261005/task2-h1-task-alignment-successor-v2-02/software_gate.json), [source snapshot](../../evidence/week09-continuation/20261005/task2-h1-task-alignment-successor-v2-02/full-gate-source-snapshot.json) and [independent readback](../../evidence/week09-continuation/20261005/task2-h1-task-alignment-successor-v2-02/full-gate-independent-readback.json).
+- [Focused05](../../evidence/week09-continuation/20261005/task2-h1-task-alignment-successor-v2-02/focused-unit-05.json), [guard02](../../evidence/week09-continuation/20261005/task2-h1-task-alignment-successor-v2-02/length-guards-free-02.json) and [independent guard review](../../evidence/week09-continuation/20261005/task2-h1-task-alignment-successor-v2-02/independent-length-guard-review-02.json).
+- [Public configuration completion receipt](../../evidence/week09-continuation/20261005/task2-h1-task-alignment-successor-v2-02/provider-public-defaults-merged-01.json) and [Luna approval rejection](../../evidence/week09-continuation/20261005/task2-h1-task-alignment-successor-v2-02/luna-validation-approval-rejected-01.json).
+- [The preserved historical actual report](local-h1-task-alignment-actual-20261005.md), which retains the 950 DeepSeek results and original review provenance.
+- [Exact publication plan](../../evidence/week09-continuation/20261005/task2-h1-task-alignment-successor-v2-02/publication-plan-01.json) and [independent publication review](../../evidence/week09-continuation/20261005/task2-h1-task-alignment-successor-v2-02/independent-publication-review-01.json).
+
+New-directory creation and opening are separate Windows operations. The publisher requires sole-writer ownership of the fixed delivery targets during this short interval, refuses a nonempty or reparse replacement, and retains directory handles afterward. It does not claim atomic directory-creation identity against a malicious concurrent replacement. All existing-file CAS writes and reads use their retained exclusive handles.

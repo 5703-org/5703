@@ -1,0 +1,61 @@
+{
+  "status": "FREE_ISOLATED_FAKE_LOCK_CHECKS_PASS",
+  "test_method": "Execute only AST-extracted two-try cleanup branch against authored fake lock/msvcrt objects; no main or real locking import/execution.",
+  "cases": [
+    {
+      "name": "normal_unlock_and_close",
+      "status": "PASS",
+      "close_calls": 1,
+      "cleanup_errors": [],
+      "closed_receipt": true
+    },
+    {
+      "name": "unlock_error_still_closes",
+      "status": "PASS",
+      "close_calls": 1,
+      "cleanup_errors": [
+        "budget_unlock:OSError"
+      ],
+      "closed_receipt": true
+    },
+    {
+      "name": "seek_error_still_closes",
+      "status": "PASS",
+      "close_calls": 1,
+      "cleanup_errors": [
+        "budget_unlock:OSError"
+      ],
+      "closed_receipt": true
+    },
+    {
+      "name": "close_error_recorded",
+      "status": "PASS",
+      "close_calls": 1,
+      "cleanup_errors": [
+        "budget_lock_close:OSError"
+      ],
+      "closed_receipt": false
+    },
+    {
+      "name": "both_errors_retained",
+      "status": "PASS",
+      "close_calls": 1,
+      "cleanup_errors": [
+        "budget_unlock:OSError",
+        "budget_lock_close:OSError"
+      ],
+      "closed_receipt": false
+    },
+    {
+      "name": "ungranted_handle_still_closes",
+      "status": "PASS",
+      "close_calls": 1,
+      "cleanup_errors": [],
+      "closed_receipt": true
+    }
+  ],
+  "real_db_api_key_model_provider_calls": 0,
+  "real_lock_opened": false,
+  "product_imported": false,
+  "worker_main_executed": false
+}

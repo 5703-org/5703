@@ -1,0 +1,880 @@
+{
+  "status": "ACTUAL_CURRENT_SCOPED_FOUR_NATIVE_CHECKED_ANSWERS_COMPLETE",
+  "started_at_UTC": "2026-10-07T20:15:27.844101+00:00",
+  "pid": 6448,
+  "nonce": "root-native-four-20261008-02",
+  "actor_id": "dddf8bdc-52fc-40ef-a704-1c9e5bb3f188",
+  "source_pins": {
+    "generation/compact_findings_v3.py": "1aba7601543d2b08c5331a0e139726191e13948a7dd6343eb7292262e1e2de8a",
+    "generation/providers.py": "bbfb74558e1adf5e4850edad02bb117af221c804aaad6e6f260addfe05fb38f4",
+    "generation/google_schema_compiler04.py": "81523f87f315b6f8aecddffd2fda0271af9d306ae294973ecbdd400eb2e047ef",
+    "generation/probes.py": "642ba880a6dcd3448513b98c0699175cd2fa6b9dafdaa92b65ea3f513d336df2",
+    "generation/types.py": "de000ead20b00c09dcab7e1e7e0bad92685932a67b127731ff8cd8a9d86bd4bb",
+    "generation/capabilities.py": "590dac5cb82bf1494cd0db01af422800ce1dd227bae5e943d608c841401ebff0",
+    "generation/openrouter_routes.py": "7e9ec301cb0ef18dd0ea9a27dc9849c0e088ec1537ee1d58db010ef7c38f4557",
+    "backend/app/modules/model_settings/service.py": "e6e0a9d41846ff36a37bc1eef72892f9ddbc3f2c4648f36f2e9a714f07d5e39d",
+    "backend/app/modules/model_settings/compatibility.py": "107c3dcb2025e927244a77f4dc1734cbe49c2149b150a02c6314a93896bd3667",
+    "generation/adapters.py": "62819ed7a7b7282c2e26894cf5a1b19414f923da7e5f60525bc23f156d706834",
+    "generation/network_policy.py": "31ee11495949894073b292cd39b5d186f0ea21f5fd3f598b243e9f37b467bf02",
+    "generation/provider_diagnostics.py": "109f75fd2858c35530c93e3c4a663629bc143344e190bab42eec5458ff39c6b5",
+    "backend/app/worker.py": "4ac015176cc08524f054beafe78e9da56a02d831c858e079ef1d75074efa8634",
+    "backend/app/modules/answering/service.py": "4ff471baab3eeceef59634407a28b884118eb3d433752defacfd04abd4b462de",
+    "retrieval/embedding.py": "4bf84b63bddf93aa6d86f6c0f38726b222029ef5cb5a39a44f9e5e494498cdfa",
+    "retrieval/chat.py": "44de09b08a89e9d2bb8cc09d0ea4f773d8a919b95d2cb51385eb1dc0f4cf5382",
+    "generation/checked.py": "fb7c47b04253906aaa6c8753f0f907f9ff468dddd3280b5555048b1151ff3be2"
+  },
+  "scheduled_jobs": 4,
+  "claimed_jobs": [
+    "55f9a97f-f439-45b5-86ba-5a4c7135eade",
+    "3ebc7ac4-1cd8-4734-9114-767f6b94c44f",
+    "b396d45d-f023-4bdb-8aef-233633dcbd59",
+    "e3595107-76fb-4130-be58-ef0669e95515"
+  ],
+  "terminal_jobs": [
+    {
+      "at_UTC": "2026-10-07T20:15:46.839130+00:00",
+      "case_id": "case01",
+      "job_id": "55f9a97f-f439-45b5-86ba-5a4c7135eade",
+      "request_id": "0d8f770b-70d3-4193-9449-1f604e3f099b",
+      "state": "succeeded",
+      "answer_id": "0b82bdbb-e036-44ef-a9cd-50dece4e7610",
+      "normal_checked_answer_published": true,
+      "actual_physical_POSTs": 2,
+      "actual_persisted_safe_usage_events": [
+        {
+          "sequence": 1,
+          "phase": "start",
+          "attempt_id": "0d8f770b-70d3-4193-9449-1f604e3f099b:attempt:1",
+          "stage": "generation",
+          "usage": {},
+          "request_submitted": null
+        },
+        {
+          "sequence": 2,
+          "phase": "finish",
+          "attempt_id": "0d8f770b-70d3-4193-9449-1f604e3f099b:attempt:1",
+          "stage": "generation",
+          "usage": {
+            "input_tokens": 6259,
+            "output_tokens": 1051,
+            "total_tokens": 7310,
+            "reasoning_tokens": 783,
+            "cache_hit_input_tokens": 0,
+            "cache_miss_input_tokens": 6259,
+            "cost": 0.0045052
+          },
+          "request_submitted": true
+        },
+        {
+          "sequence": 3,
+          "phase": "start",
+          "attempt_id": "0d8f770b-70d3-4193-9449-1f604e3f099b:attempt:2",
+          "stage": "joint_check",
+          "usage": {},
+          "request_submitted": null
+        },
+        {
+          "sequence": 4,
+          "phase": "finish",
+          "attempt_id": "0d8f770b-70d3-4193-9449-1f604e3f099b:attempt:2",
+          "stage": "joint_check",
+          "usage": {
+            "input_tokens": 7387,
+            "output_tokens": 709,
+            "total_tokens": 8096,
+            "reasoning_tokens": 0,
+            "cache_hit_input_tokens": 0,
+            "cache_miss_input_tokens": 7387,
+            "cost": 0.0039886
+          },
+          "request_submitted": true
+        }
+      ],
+      "known_cost_USD": "0.0084938",
+      "unknown_holds_USD": "0",
+      "unknown_costs_keep_full_call_set_hold": false,
+      "known_cost_within_unresolved_holds_not_added_twice": true,
+      "invoice_or_billing_settlement": null
+    },
+    {
+      "at_UTC": "2026-10-07T20:15:59.917010+00:00",
+      "case_id": "case02",
+      "job_id": "3ebc7ac4-1cd8-4734-9114-767f6b94c44f",
+      "request_id": "7bd7c6d7-565e-4f40-a1a8-bcb9e0aa1497",
+      "state": "succeeded",
+      "answer_id": "09de85ae-7e6b-41c2-b43b-1e052a5a3b4b",
+      "normal_checked_answer_published": true,
+      "actual_physical_POSTs": 2,
+      "actual_persisted_safe_usage_events": [
+        {
+          "sequence": 1,
+          "phase": "start",
+          "attempt_id": "7bd7c6d7-565e-4f40-a1a8-bcb9e0aa1497:attempt:1",
+          "stage": "generation",
+          "usage": {},
+          "request_submitted": null
+        },
+        {
+          "sequence": 2,
+          "phase": "finish",
+          "attempt_id": "7bd7c6d7-565e-4f40-a1a8-bcb9e0aa1497:attempt:1",
+          "stage": "generation",
+          "usage": {
+            "input_tokens": 10947,
+            "output_tokens": 1294,
+            "total_tokens": 12241,
+            "reasoning_tokens": 907,
+            "cache_hit_input_tokens": 0,
+            "cache_miss_input_tokens": 10947,
+            "cost": 0.0065191
+          },
+          "request_submitted": true
+        },
+        {
+          "sequence": 3,
+          "phase": "start",
+          "attempt_id": "7bd7c6d7-565e-4f40-a1a8-bcb9e0aa1497:attempt:2",
+          "stage": "joint_check",
+          "usage": {},
+          "request_submitted": null
+        },
+        {
+          "sequence": 4,
+          "phase": "finish",
+          "attempt_id": "7bd7c6d7-565e-4f40-a1a8-bcb9e0aa1497:attempt:2",
+          "stage": "joint_check",
+          "usage": {
+            "input_tokens": 9706,
+            "output_tokens": 1846,
+            "total_tokens": 11552,
+            "reasoning_tokens": 0,
+            "cache_hit_input_tokens": 0,
+            "cache_miss_input_tokens": 9706,
+            "cost": 0.0075268
+          },
+          "request_submitted": true
+        }
+      ],
+      "known_cost_USD": "0.0140459",
+      "unknown_holds_USD": "0",
+      "unknown_costs_keep_full_call_set_hold": false,
+      "known_cost_within_unresolved_holds_not_added_twice": true,
+      "invoice_or_billing_settlement": null
+    },
+    {
+      "at_UTC": "2026-10-07T20:16:07.495164+00:00",
+      "case_id": "case03",
+      "job_id": "b396d45d-f023-4bdb-8aef-233633dcbd59",
+      "request_id": "ed1547b1-8593-4ee3-ac5a-c3cf086bcb4d",
+      "state": "succeeded",
+      "answer_id": "ee143b9f-42ac-4243-969b-1c96911edc88",
+      "normal_checked_answer_published": true,
+      "actual_physical_POSTs": 2,
+      "actual_persisted_safe_usage_events": [
+        {
+          "sequence": 1,
+          "phase": "start",
+          "attempt_id": "ed1547b1-8593-4ee3-ac5a-c3cf086bcb4d:attempt:1",
+          "stage": "generation",
+          "usage": {},
+          "request_submitted": null
+        },
+        {
+          "sequence": 2,
+          "phase": "finish",
+          "attempt_id": "ed1547b1-8593-4ee3-ac5a-c3cf086bcb4d:attempt:1",
+          "stage": "generation",
+          "usage": {
+            "input_tokens": 9769,
+            "output_tokens": 521,
+            "total_tokens": 10290,
+            "reasoning_tokens": 260,
+            "cache_hit_input_tokens": 0,
+            "cache_miss_input_tokens": 9769,
+            "cost": 0.0042332
+          },
+          "request_submitted": true
+        },
+        {
+          "sequence": 3,
+          "phase": "start",
+          "attempt_id": "ed1547b1-8593-4ee3-ac5a-c3cf086bcb4d:attempt:2",
+          "stage": "joint_check",
+          "usage": {},
+          "request_submitted": null
+        },
+        {
+          "sequence": 4,
+          "phase": "finish",
+          "attempt_id": "ed1547b1-8593-4ee3-ac5a-c3cf086bcb4d:attempt:2",
+          "stage": "joint_check",
+          "usage": {
+            "input_tokens": 8690,
+            "output_tokens": 955,
+            "total_tokens": 9645,
+            "reasoning_tokens": 0,
+            "cache_hit_input_tokens": 0,
+            "cache_miss_input_tokens": 8690,
+            "cost": 0.0049945
+          },
+          "request_submitted": true
+        }
+      ],
+      "known_cost_USD": "0.0092277",
+      "unknown_holds_USD": "0",
+      "unknown_costs_keep_full_call_set_hold": false,
+      "known_cost_within_unresolved_holds_not_added_twice": true,
+      "invoice_or_billing_settlement": null
+    },
+    {
+      "at_UTC": "2026-10-07T20:16:40.440297+00:00",
+      "case_id": "case04",
+      "job_id": "e3595107-76fb-4130-be58-ef0669e95515",
+      "request_id": "80085619-813c-450c-ab79-e988ba6f265b",
+      "state": "succeeded",
+      "answer_id": "cd3eaf22-1f89-4f95-9b6b-f51cc908bf54",
+      "normal_checked_answer_published": true,
+      "actual_physical_POSTs": 3,
+      "actual_persisted_safe_usage_events": [
+        {
+          "sequence": 1,
+          "phase": "start",
+          "attempt_id": "80085619-813c-450c-ab79-e988ba6f265b:attempt:1",
+          "stage": "generation",
+          "usage": {},
+          "request_submitted": null
+        },
+        {
+          "sequence": 2,
+          "phase": "finish",
+          "attempt_id": "80085619-813c-450c-ab79-e988ba6f265b:attempt:1",
+          "stage": "generation",
+          "usage": {
+            "input_tokens": 7638,
+            "output_tokens": 1060,
+            "total_tokens": 8698,
+            "reasoning_tokens": 705,
+            "cache_hit_input_tokens": 0,
+            "cache_miss_input_tokens": 7638,
+            "cost": 0.0049414
+          },
+          "request_submitted": true
+        },
+        {
+          "sequence": 3,
+          "phase": "start",
+          "attempt_id": "80085619-813c-450c-ab79-e988ba6f265b:attempt:2",
+          "stage": "joint_check",
+          "usage": {},
+          "request_submitted": null
+        },
+        {
+          "sequence": 4,
+          "phase": "finish",
+          "attempt_id": "80085619-813c-450c-ab79-e988ba6f265b:attempt:2",
+          "stage": "joint_check",
+          "usage": {
+            "input_tokens": 8177,
+            "output_tokens": 1301,
+            "total_tokens": 9478,
+            "reasoning_tokens": 0,
+            "cache_hit_input_tokens": 0,
+            "cache_miss_input_tokens": 8177,
+            "cost": 0.0057056
+          },
+          "request_submitted": true
+        },
+        {
+          "sequence": 5,
+          "phase": "start",
+          "attempt_id": "80085619-813c-450c-ab79-e988ba6f265b:attempt:3",
+          "stage": "checker_contract_repair",
+          "usage": {},
+          "request_submitted": null
+        },
+        {
+          "sequence": 6,
+          "phase": "finish",
+          "attempt_id": "80085619-813c-450c-ab79-e988ba6f265b:attempt:3",
+          "stage": "checker_contract_repair",
+          "usage": {
+            "input_tokens": 8317,
+            "output_tokens": 849,
+            "total_tokens": 9166,
+            "reasoning_tokens": 0,
+            "cache_hit_input_tokens": 0,
+            "cache_miss_input_tokens": 8317,
+            "cost": 0.0046176
+          },
+          "request_submitted": true
+        }
+      ],
+      "known_cost_USD": "0.0152646",
+      "unknown_holds_USD": "0",
+      "unknown_costs_keep_full_call_set_hold": false,
+      "known_cost_within_unresolved_holds_not_added_twice": true,
+      "invoice_or_billing_settlement": null
+    }
+  ],
+  "shared_before_worker": {
+    "counts": {
+      "qualification": 3,
+      "quality": 18,
+      "reference": 1,
+      "fixed_input_old_new_checker_replay": 1,
+      "native": 0,
+      "schema-probe": 2,
+      "requalification": 0,
+      "unassigned-spare": 0
+    },
+    "maximum_calls": 42,
+    "started_calls": 25,
+    "submitted_upper_USD": "1.0809600",
+    "maximum_submitted_upper_USD": "1.9235072"
+  },
+  "budget_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-compact-repair-20261008-01\\ROOT-new-batch-budget02.json",
+    "bytes": 4569,
+    "sha256": "5577628c2328476a35119f7ca211a8773166103fd1043d82e36f36317807fc11"
+  },
+  "acceptance_condition": "EXISTING_CURRENT_PROJECT_BASELINE",
+  "normal_activation_evidence_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-compact-repair-20261008-01\\actual-existing-project-baseline-CAS-root-baseline-cas-20261008-01\\normal-CAS-terminal01.json",
+    "bytes": 2726,
+    "sha256": "eeaca08fb0f47d4979431ea96b6e6bde9c2bf38a31ddc2e35f1300f43960a573"
+  },
+  "course_basic_structured_covered": false,
+  "new_three_tier_qualification_performed": false,
+  "normal_run_once_and_execute_answer_reused": true,
+  "only_queue_selection_scoped": true,
+  "scientific_code_monkeypatched": false,
+  "old_jobs_or_recovery_processed": false,
+  "provider_HTTP_retries_permitted": 0,
+  "model_inference_precomputed": false,
+  "default_key_file_lookup": false,
+  "successful_checked_answers": 4,
+  "original_shared_budget_lock_closed": true,
+  "wire_records": [
+    {
+      "status": "MAY_BE_SUBMITTED_NEVER_RETRY",
+      "at_UTC": "2026-10-07T20:15:39.569977+00:00",
+      "nonce": "root-native-four-20261008-02",
+      "case_id": "case01",
+      "job_id": "55f9a97f-f439-45b5-86ba-5a4c7135eade",
+      "request_id": "0d8f770b-70d3-4193-9449-1f604e3f099b",
+      "native_slot": 1,
+      "job_physical_call": 1,
+      "submitted_upper_USD": "0.0495616",
+      "new_batch_maximum_calls": 42,
+      "group": "native",
+      "slot": 1,
+      "native_phase_physical_cap": 12,
+      "selected_four_jobs_maximum_calls": 12,
+      "shared_before_this_hold": {
+        "counts": {
+          "qualification": 3,
+          "quality": 18,
+          "reference": 1,
+          "fixed_input_old_new_checker_replay": 1,
+          "native": 0,
+          "schema-probe": 2,
+          "requalification": 0,
+          "unassigned-spare": 0
+        },
+        "maximum_calls": 42,
+        "started_calls": 25,
+        "submitted_upper_USD": "1.0809600",
+        "maximum_submitted_upper_USD": "1.9235072"
+      },
+      "wire_bytes": 28228,
+      "wire_sha256": "f04fdb3e43fcee081ef8a72395219accb53eda92ad898ea7991f5dba35523955",
+      "output_cap": 2048,
+      "provider_preferences": {
+        "order": [
+          "google-vertex/global"
+        ],
+        "only": [
+          "google-vertex/global"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 0.3,
+          "completion": 2.5
+        }
+      },
+      "reasoning": {
+        "effort": "low"
+      },
+      "old_STOP_slots_and_unknown_holds_preserved": true,
+      "actual_running_execution_lease_and_first_attempt_verified": true,
+      "raw_payload_and_headers_exported": false,
+      "acceptance_condition": "EXISTING_CURRENT_PROJECT_BASELINE",
+      "response_format_type": "json_object"
+    },
+    {
+      "status": "MAY_BE_SUBMITTED_NEVER_RETRY",
+      "at_UTC": "2026-10-07T20:15:43.994723+00:00",
+      "nonce": "root-native-four-20261008-02",
+      "case_id": "case01",
+      "job_id": "55f9a97f-f439-45b5-86ba-5a4c7135eade",
+      "request_id": "0d8f770b-70d3-4193-9449-1f604e3f099b",
+      "native_slot": 2,
+      "job_physical_call": 2,
+      "submitted_upper_USD": "0.0495616",
+      "new_batch_maximum_calls": 42,
+      "group": "native",
+      "slot": 2,
+      "native_phase_physical_cap": 12,
+      "selected_four_jobs_maximum_calls": 12,
+      "shared_before_this_hold": {
+        "counts": {
+          "qualification": 3,
+          "quality": 18,
+          "reference": 1,
+          "fixed_input_old_new_checker_replay": 1,
+          "native": 1,
+          "schema-probe": 2,
+          "requalification": 0,
+          "unassigned-spare": 0
+        },
+        "maximum_calls": 42,
+        "started_calls": 26,
+        "submitted_upper_USD": "1.1305216",
+        "maximum_submitted_upper_USD": "1.9235072"
+      },
+      "wire_bytes": 34953,
+      "wire_sha256": "0788cf4d52b891fabe78836161e97b3a58c56e2b503ac3ba524afc8a0f337db8",
+      "output_cap": 4096,
+      "provider_preferences": {
+        "order": [
+          "google-vertex/global"
+        ],
+        "only": [
+          "google-vertex/global"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 0.3,
+          "completion": 2.5
+        }
+      },
+      "reasoning": {
+        "effort": "low"
+      },
+      "old_STOP_slots_and_unknown_holds_preserved": true,
+      "actual_running_execution_lease_and_first_attempt_verified": true,
+      "raw_payload_and_headers_exported": false,
+      "acceptance_condition": "EXISTING_CURRENT_PROJECT_BASELINE",
+      "response_format_type": "json_object"
+    },
+    {
+      "status": "MAY_BE_SUBMITTED_NEVER_RETRY",
+      "at_UTC": "2026-10-07T20:15:47.643638+00:00",
+      "nonce": "root-native-four-20261008-02",
+      "case_id": "case02",
+      "job_id": "3ebc7ac4-1cd8-4734-9114-767f6b94c44f",
+      "request_id": "7bd7c6d7-565e-4f40-a1a8-bcb9e0aa1497",
+      "native_slot": 4,
+      "job_physical_call": 1,
+      "submitted_upper_USD": "0.0495616",
+      "new_batch_maximum_calls": 42,
+      "group": "native",
+      "slot": 4,
+      "native_phase_physical_cap": 12,
+      "selected_four_jobs_maximum_calls": 12,
+      "shared_before_this_hold": {
+        "counts": {
+          "qualification": 3,
+          "quality": 18,
+          "reference": 1,
+          "fixed_input_old_new_checker_replay": 1,
+          "native": 2,
+          "schema-probe": 2,
+          "requalification": 0,
+          "unassigned-spare": 0
+        },
+        "maximum_calls": 42,
+        "started_calls": 27,
+        "submitted_upper_USD": "1.1800832",
+        "maximum_submitted_upper_USD": "1.9235072"
+      },
+      "wire_bytes": 43575,
+      "wire_sha256": "fa728158592ebe177bfd9b1285c6f1a254962f8a9f5db8165addc65313c963e4",
+      "output_cap": 2048,
+      "provider_preferences": {
+        "order": [
+          "google-vertex/global"
+        ],
+        "only": [
+          "google-vertex/global"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 0.3,
+          "completion": 2.5
+        }
+      },
+      "reasoning": {
+        "effort": "low"
+      },
+      "old_STOP_slots_and_unknown_holds_preserved": true,
+      "actual_running_execution_lease_and_first_attempt_verified": true,
+      "raw_payload_and_headers_exported": false,
+      "acceptance_condition": "EXISTING_CURRENT_PROJECT_BASELINE",
+      "response_format_type": "json_object"
+    },
+    {
+      "status": "MAY_BE_SUBMITTED_NEVER_RETRY",
+      "at_UTC": "2026-10-07T20:15:52.877262+00:00",
+      "nonce": "root-native-four-20261008-02",
+      "case_id": "case02",
+      "job_id": "3ebc7ac4-1cd8-4734-9114-767f6b94c44f",
+      "request_id": "7bd7c6d7-565e-4f40-a1a8-bcb9e0aa1497",
+      "native_slot": 5,
+      "job_physical_call": 2,
+      "submitted_upper_USD": "0.0495616",
+      "new_batch_maximum_calls": 42,
+      "group": "native",
+      "slot": 5,
+      "native_phase_physical_cap": 12,
+      "selected_four_jobs_maximum_calls": 12,
+      "shared_before_this_hold": {
+        "counts": {
+          "qualification": 3,
+          "quality": 18,
+          "reference": 1,
+          "fixed_input_old_new_checker_replay": 1,
+          "native": 3,
+          "schema-probe": 2,
+          "requalification": 0,
+          "unassigned-spare": 0
+        },
+        "maximum_calls": 42,
+        "started_calls": 28,
+        "submitted_upper_USD": "1.2296448",
+        "maximum_submitted_upper_USD": "1.9235072"
+      },
+      "wire_bytes": 43361,
+      "wire_sha256": "f22bec8ef5cbf2f5161a82cee9ad7f94bbb50f1cf6180ad1fbbe866cfb633e4e",
+      "output_cap": 4096,
+      "provider_preferences": {
+        "order": [
+          "google-vertex/global"
+        ],
+        "only": [
+          "google-vertex/global"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 0.3,
+          "completion": 2.5
+        }
+      },
+      "reasoning": {
+        "effort": "low"
+      },
+      "old_STOP_slots_and_unknown_holds_preserved": true,
+      "actual_running_execution_lease_and_first_attempt_verified": true,
+      "raw_payload_and_headers_exported": false,
+      "acceptance_condition": "EXISTING_CURRENT_PROJECT_BASELINE",
+      "response_format_type": "json_object"
+    },
+    {
+      "status": "MAY_BE_SUBMITTED_NEVER_RETRY",
+      "at_UTC": "2026-10-07T20:16:00.522182+00:00",
+      "nonce": "root-native-four-20261008-02",
+      "case_id": "case03",
+      "job_id": "b396d45d-f023-4bdb-8aef-233633dcbd59",
+      "request_id": "ed1547b1-8593-4ee3-ac5a-c3cf086bcb4d",
+      "native_slot": 7,
+      "job_physical_call": 1,
+      "submitted_upper_USD": "0.0495616",
+      "new_batch_maximum_calls": 42,
+      "group": "native",
+      "slot": 7,
+      "native_phase_physical_cap": 12,
+      "selected_four_jobs_maximum_calls": 12,
+      "shared_before_this_hold": {
+        "counts": {
+          "qualification": 3,
+          "quality": 18,
+          "reference": 1,
+          "fixed_input_old_new_checker_replay": 1,
+          "native": 4,
+          "schema-probe": 2,
+          "requalification": 0,
+          "unassigned-spare": 0
+        },
+        "maximum_calls": 42,
+        "started_calls": 29,
+        "submitted_upper_USD": "1.2792064",
+        "maximum_submitted_upper_USD": "1.9235072"
+      },
+      "wire_bytes": 40239,
+      "wire_sha256": "1673debd654f3a9b88a4d65df209e221eb9ea88b2cc8c39d6f2f29f349dd8dce",
+      "output_cap": 2048,
+      "provider_preferences": {
+        "order": [
+          "google-vertex/global"
+        ],
+        "only": [
+          "google-vertex/global"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 0.3,
+          "completion": 2.5
+        }
+      },
+      "reasoning": {
+        "effort": "low"
+      },
+      "old_STOP_slots_and_unknown_holds_preserved": true,
+      "actual_running_execution_lease_and_first_attempt_verified": true,
+      "raw_payload_and_headers_exported": false,
+      "acceptance_condition": "EXISTING_CURRENT_PROJECT_BASELINE",
+      "response_format_type": "json_object"
+    },
+    {
+      "status": "MAY_BE_SUBMITTED_NEVER_RETRY",
+      "at_UTC": "2026-10-07T20:16:03.724124+00:00",
+      "nonce": "root-native-four-20261008-02",
+      "case_id": "case03",
+      "job_id": "b396d45d-f023-4bdb-8aef-233633dcbd59",
+      "request_id": "ed1547b1-8593-4ee3-ac5a-c3cf086bcb4d",
+      "native_slot": 8,
+      "job_physical_call": 2,
+      "submitted_upper_USD": "0.0495616",
+      "new_batch_maximum_calls": 42,
+      "group": "native",
+      "slot": 8,
+      "native_phase_physical_cap": 12,
+      "selected_four_jobs_maximum_calls": 12,
+      "shared_before_this_hold": {
+        "counts": {
+          "qualification": 3,
+          "quality": 18,
+          "reference": 1,
+          "fixed_input_old_new_checker_replay": 1,
+          "native": 5,
+          "schema-probe": 2,
+          "requalification": 0,
+          "unassigned-spare": 0
+        },
+        "maximum_calls": 42,
+        "started_calls": 30,
+        "submitted_upper_USD": "1.3287680",
+        "maximum_submitted_upper_USD": "1.9235072"
+      },
+      "wire_bytes": 40862,
+      "wire_sha256": "110f6c9f66dc640d92fad915669b64652abe1482561cbd1b2517b6692dd77202",
+      "output_cap": 4096,
+      "provider_preferences": {
+        "order": [
+          "google-vertex/global"
+        ],
+        "only": [
+          "google-vertex/global"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 0.3,
+          "completion": 2.5
+        }
+      },
+      "reasoning": {
+        "effort": "low"
+      },
+      "old_STOP_slots_and_unknown_holds_preserved": true,
+      "actual_running_execution_lease_and_first_attempt_verified": true,
+      "raw_payload_and_headers_exported": false,
+      "acceptance_condition": "EXISTING_CURRENT_PROJECT_BASELINE",
+      "response_format_type": "json_object"
+    },
+    {
+      "status": "MAY_BE_SUBMITTED_NEVER_RETRY",
+      "at_UTC": "2026-10-07T20:16:07.948119+00:00",
+      "nonce": "root-native-four-20261008-02",
+      "case_id": "case04",
+      "job_id": "e3595107-76fb-4130-be58-ef0669e95515",
+      "request_id": "80085619-813c-450c-ab79-e988ba6f265b",
+      "native_slot": 10,
+      "job_physical_call": 1,
+      "submitted_upper_USD": "0.0495616",
+      "new_batch_maximum_calls": 42,
+      "group": "native",
+      "slot": 10,
+      "native_phase_physical_cap": 12,
+      "selected_four_jobs_maximum_calls": 12,
+      "shared_before_this_hold": {
+        "counts": {
+          "qualification": 3,
+          "quality": 18,
+          "reference": 1,
+          "fixed_input_old_new_checker_replay": 1,
+          "native": 6,
+          "schema-probe": 2,
+          "requalification": 0,
+          "unassigned-spare": 0
+        },
+        "maximum_calls": 42,
+        "started_calls": 31,
+        "submitted_upper_USD": "1.3783296",
+        "maximum_submitted_upper_USD": "1.9235072"
+      },
+      "wire_bytes": 32949,
+      "wire_sha256": "0714bfbfca4bbb9748b04fe8eea159a929d52b03ef755c7d8ffa28210a1094b1",
+      "output_cap": 2048,
+      "provider_preferences": {
+        "order": [
+          "google-vertex/global"
+        ],
+        "only": [
+          "google-vertex/global"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 0.3,
+          "completion": 2.5
+        }
+      },
+      "reasoning": {
+        "effort": "low"
+      },
+      "old_STOP_slots_and_unknown_holds_preserved": true,
+      "actual_running_execution_lease_and_first_attempt_verified": true,
+      "raw_payload_and_headers_exported": false,
+      "acceptance_condition": "EXISTING_CURRENT_PROJECT_BASELINE",
+      "response_format_type": "json_object"
+    },
+    {
+      "status": "MAY_BE_SUBMITTED_NEVER_RETRY",
+      "at_UTC": "2026-10-07T20:16:12.529425+00:00",
+      "nonce": "root-native-four-20261008-02",
+      "case_id": "case04",
+      "job_id": "e3595107-76fb-4130-be58-ef0669e95515",
+      "request_id": "80085619-813c-450c-ab79-e988ba6f265b",
+      "native_slot": 11,
+      "job_physical_call": 2,
+      "submitted_upper_USD": "0.0495616",
+      "new_batch_maximum_calls": 42,
+      "group": "native",
+      "slot": 11,
+      "native_phase_physical_cap": 12,
+      "selected_four_jobs_maximum_calls": 12,
+      "shared_before_this_hold": {
+        "counts": {
+          "qualification": 3,
+          "quality": 18,
+          "reference": 1,
+          "fixed_input_old_new_checker_replay": 1,
+          "native": 7,
+          "schema-probe": 2,
+          "requalification": 0,
+          "unassigned-spare": 0
+        },
+        "maximum_calls": 42,
+        "started_calls": 32,
+        "submitted_upper_USD": "1.4278912",
+        "maximum_submitted_upper_USD": "1.9235072"
+      },
+      "wire_bytes": 38118,
+      "wire_sha256": "dc600c92226503c9f80ecd69e64453aa1ef82ad64c6c9bd23a607fa297ff573e",
+      "output_cap": 4096,
+      "provider_preferences": {
+        "order": [
+          "google-vertex/global"
+        ],
+        "only": [
+          "google-vertex/global"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 0.3,
+          "completion": 2.5
+        }
+      },
+      "reasoning": {
+        "effort": "low"
+      },
+      "old_STOP_slots_and_unknown_holds_preserved": true,
+      "actual_running_execution_lease_and_first_attempt_verified": true,
+      "raw_payload_and_headers_exported": false,
+      "acceptance_condition": "EXISTING_CURRENT_PROJECT_BASELINE",
+      "response_format_type": "json_object"
+    },
+    {
+      "status": "MAY_BE_SUBMITTED_NEVER_RETRY",
+      "at_UTC": "2026-10-07T20:16:17.223657+00:00",
+      "nonce": "root-native-four-20261008-02",
+      "case_id": "case04",
+      "job_id": "e3595107-76fb-4130-be58-ef0669e95515",
+      "request_id": "80085619-813c-450c-ab79-e988ba6f265b",
+      "native_slot": 12,
+      "job_physical_call": 3,
+      "submitted_upper_USD": "0.0495616",
+      "new_batch_maximum_calls": 42,
+      "group": "native",
+      "slot": 12,
+      "native_phase_physical_cap": 12,
+      "selected_four_jobs_maximum_calls": 12,
+      "shared_before_this_hold": {
+        "counts": {
+          "qualification": 3,
+          "quality": 18,
+          "reference": 1,
+          "fixed_input_old_new_checker_replay": 1,
+          "native": 8,
+          "schema-probe": 2,
+          "requalification": 0,
+          "unassigned-spare": 0
+        },
+        "maximum_calls": 42,
+        "started_calls": 33,
+        "submitted_upper_USD": "1.4774528",
+        "maximum_submitted_upper_USD": "1.9235072"
+      },
+      "wire_bytes": 38819,
+      "wire_sha256": "02805f71fb85f57e8de5d8b9944e4eed5ac9380562caaeb262060c8bb9bac472",
+      "output_cap": 4096,
+      "provider_preferences": {
+        "order": [
+          "google-vertex/global"
+        ],
+        "only": [
+          "google-vertex/global"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 0.3,
+          "completion": 2.5
+        }
+      },
+      "reasoning": {
+        "effort": "low"
+      },
+      "old_STOP_slots_and_unknown_holds_preserved": true,
+      "actual_running_execution_lease_and_first_attempt_verified": true,
+      "raw_payload_and_headers_exported": false,
+      "acceptance_condition": "EXISTING_CURRENT_PROJECT_BASELINE",
+      "response_format_type": "json_object"
+    }
+  ],
+  "transport_denials": [],
+  "actual_physical_POSTs": 9,
+  "focused_source_unchanged": true,
+  "finished_at_UTC": "2026-10-07T20:16:40.450189+00:00",
+  "cleanup_errors": [],
+  "memory_fixture_key_cleared": true,
+  "source_files_written": false,
+  "exit_code": 0
+}
