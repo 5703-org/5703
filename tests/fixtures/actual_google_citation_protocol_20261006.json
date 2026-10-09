@@ -1,0 +1,93 @@
+{
+  "schema": "actual_google_citation_protocol_replay_v1",
+  "receipt_sha256": "7c34063180711f770f451205235d89f5aa4235298d3b10bf04c3acdfd2408d6d",
+  "scope": "Selected actual public response bodies and evidence-ID lists only; no source corpus/prompt/credentials copied. Original terminal failures preserved. Protocol controls do not certify source support or semantic quality.",
+  "atomic": {
+    "selected_evidence_ids": [
+      "ev_001",
+      "ev_002",
+      "ev_003",
+      "ev_004",
+      "ev_005",
+      "ev_006",
+      "ev_007",
+      "ev_008",
+      "ev_009",
+      "ev_010",
+      "ev_011",
+      "ev_012",
+      "ev_013",
+      "ev_014",
+      "ev_015",
+      "ev_016"
+    ],
+    "generation": {
+      "raw_text": "{\n  \"schema_version\": \"chat_response_v1\",\n  \"response_type\": \"answer\",\n  \"answer_text\": \"The atomic number (Z) of an element is equal to the number of protons found in its nucleus [ev_003, ev_007]. This property defines the elemental identity of an atom [ev_003].\",\n  \"short_answer\": \"The atomic number is the number of protons in an atom's nucleus [ev_003, ev_007].\",\n  \"citations\": [\n    \"ev_003\",\n    \"ev_007\"\n  ],\n  \"refusal_reason\": null,\n  \"follow_up_questions\": [],\n  \"confidence\": 1.0,\n  \"tutor_question\": null,\n  \"learner_attempt_evaluation\": null\n}",
+      "raw_text_sha256": "45c35bc0c7b51dcb3f247f53fdc9743891e8b1a65cc778c5f42cac22631fc6c7"
+    },
+    "generation_format_repair": {
+      "raw_text": "{\n  \"schema_version\": \"chat_response_v1\",\n  \"response_type\": \"answer\",\n  \"answer_text\": \"The atomic number (Z) of an element is equal to the number of protons found in its nucleus [ev_003, ev_007]. This property defines the elemental identity of an atom [ev_003].\",\n  \"short_answer\": \"The atomic number is the number of protons in an atom's nucleus [ev_003, ev_007].\",\n  \"citations\": [\n    \"ev_003\",\n    \"ev_007\"\n  ],\n  \"refusal_reason\": null,\n  \"follow_up_questions\": [],\n  \"confidence\": 1.0,\n  \"tutor_question\": null,\n  \"learner_attempt_evaluation\": null\n}",
+      "raw_text_sha256": "45c35bc0c7b51dcb3f247f53fdc9743891e8b1a65cc778c5f42cac22631fc6c7"
+    },
+    "terminal_error": {
+      "code": "CITATION_MARKER_MISMATCH",
+      "message": "Enhanced response or source mapping failed validation.",
+      "details": {
+        "error_type": "ResponseValidationError",
+        "validation_code": null
+      }
+    },
+    "actual_system_starts_with_current_checked_generation_v5": true
+  },
+  "chloroplast": {
+    "selected_evidence_ids": [
+      "ev_001",
+      "ev_002",
+      "ev_003",
+      "ev_004",
+      "ev_005",
+      "ev_006",
+      "ev_007",
+      "ev_008",
+      "ev_009",
+      "ev_010",
+      "ev_011",
+      "ev_012"
+    ],
+    "generation": {
+      "raw_text": "{\n  \"schema_version\": \"chat_response_v1\",\n  \"response_type\": \"answer\",\n  \"answer_text\": \"A chloroplast is an organelle found in plant cells and other autotrophic eukaryotes where photosynthesis takes place [ev_001]. Chloroplasts are plant cell organelles that carry out photosynthesis, which is the series of reactions that use carbon dioxide, water, and light energy to make glucose and oxygen [ev_007]. Structurally, chloroplasts possess a double-membrane envelope consisting of an outer membrane and an inner membrane, enclose stacked thylakoid membrane structures (grana) and a fluid called the stroma, and contain their own DNA [ev_001, ev_004].\",\n  \"short_answer\": \"A chloroplast is a plant cell organelle that carries out photosynthesis.\",\n  \"citations\": [\n    \"ev_001\",\n    \"ev_004\",\n    \"ev_007\"\n  ],\n  \"refusal_reason\": null,\n  \"follow_up_questions\": [],\n  \"confidence\": 1.0,\n  \"tutor_question\": null,\n  \"learner_attempt_evaluation\": null\n}",
+      "raw_text_sha256": "eb8be70ac6daeba98e4f91e7e605dcbcef12c800b2cb0856d7ebf29ca2080f55"
+    },
+    "generation_format_repair": {
+      "raw_text": "{\n  \"schema_version\": \"chat_response_v1\",\n  \"response_type\": \"answer\",\n  \"answer_text\": \"A chloroplast is an organelle found in all autotrophic eukaryotes where photosynthesis takes place [ev_001]. Chloroplasts are plant cell organelles that carry out photosynthesis, which is the series of reactions that use carbon dioxide, water, and light energy to make glucose and oxygen [ev_007]. Structurally, chloroplasts have a double membrane envelope [ev_001], enclose thylakoid membranes stacked into grana and fluid called the stroma, and possess their own DNA [ev_004].\",\n  \"short_answer\": \"A chloroplast is a plant cell organelle that carries out photosynthesis.\",\n  \"citations\": [\n    \"ev_001\",\n    \"ev_004\",\n    \"ev_007\"\n  ],\n  \"refusal_reason\": null,\n  \"follow_up_questions\": [],\n  \"confidence\": 1.0,\n  \"tutor_question\": null,\n  \"learner_attempt_evaluation\": null\n}",
+      "raw_text_sha256": "112f0bb4ff2d8937f638105278c5f69d7e1e0d4cf988a680ee8497480ed3d535"
+    },
+    "joint_check": {
+      "raw_text": "{\"claims\":[{\"basis\":\"textbook\",\"claim_id\":\"claim_b9e722d98e180e340c401e04_1\",\"reason\":\"Supported by ev_001 F001 stating that in all autotrophic eukaryotes, photosynthesis takes place inside a chloroplast.\",\"status\":\"supported\",\"citations\":[{\"evidence_id\":\"ev_001\",\"fragment_ids\":[\"F001\",\"F002\",\"F003\",\"F004\"],\"relation\":\"supporting\"}]},{\"basis\":\"textbook\",\"claim_id\":\"claim_0c1aea4cbeb2f0aacff26817_1\",\"reason\":\"Supported by ev_007 F029 and F030 describing chloroplasts and photosynthesis.\",\"status\":\"supported\",\"citations\":[{\"evidence_id\":\"ev_007\",\"fragment_ids\":[\"F027\",\"F028\",\"F029\",\"F030\",\"F031\"],\"relation\":\"supporting\"}]},{\"basis\":\"textbook\",\"claim_id\":\"claim_a1b0573313bca45eeb531214_1\",\"reason\":\"Double membrane envelope is supported by ev_001 F004, and stroma, grana, and DNA are supported by ev_004 F014, F015, F017, F018.\",\"status\":\"supported\",\"citations\":[{\"evidence_id\":\"ev_001\",\"fragment_ids\":[\"F001\",\"F002\",\"F003\",\"F004\"],\"relation\":\"supporting\"},{\"evidence_id\":\"ev_004\",\"fragment_ids\":[\"F014\",\"F015\",\"F016\",\"F017\",\"F018\"],\"relation\":\"supporting\"}]},{\"basis\":\"textbook\",\"claim_id\":\"claim_8298e4752e85bde98a7e7038_1\",\"reason\":\"Short answer summary supported by textbook evidence sources.\",\"status\":\"supported\",\"citations\":[]}],\"body_ok\":true,\"specific_help\":true,\"scope_ok\":true,\"suggestions_ok\":true,\"evidence_display_ok\":true,\"cumulative_ok\":true,\"complete_answer\":true,\"coverage\":\"full\",\"missing_facets\":[],\"limitations_explicit\":true,\"reason\":\"The response accurately and fully answers the question using supported textbook sources.\",\"repair_fragment_ids\":[],\"attempt_evaluation_ok\":true,\"tutor_question_ok\":true,\"requirements\":[{\"conditions_preserved\":true,\"evidence\":[{\"evidence_id\":\"ev_007\",\"fragment_id\":\"F029\",\"quote\":\"Chloroplasts are plant cell organelles that carry out photosynthesis.\"},{\"evidence_id\":\"ev_007\",\"fragment_id\":\"F030\",\"quote\":\"Photosynthesis is the series of reactions that use carbon dioxide, water, and light energy to make glucose and oxygen.\"},{\"evidence_id\":\"ev_001\",\"fragment_id\":\"F001\",\"quote\":\"In all autotrophic eukaryotes, photosynthesis takes place inside an organelle called a chloroplast.\"}],\"missing_information\":\"\",\"reason\":\"The definition and main features of a chloroplast are fully supported by the sources.\",\"relevance\":\"related\",\"requirement_id\":\"requirement_01\",\"response_coverage\":\"covered\",\"sufficiency\":\"sufficient\"}],\"non_repetitive_next_action\":true}",
+      "raw_text_sha256": "0e6cd09af1bb9bc72e9a189d33b6fafae00b672e6e28c8aced0b1102f174aeb9"
+    },
+    "terminal_error": {
+      "code": "SEMANTIC_CHECK_FAILED",
+      "message": "The proposed answer did not pass its required support or teaching checks",
+      "details": {
+        "revision": 0,
+        "publication_block": {
+          "version": "semantic_publication_block_v1",
+          "stop_reason": "insufficient_calls_for_repair_and_recheck",
+          "remaining_provider_calls": 1,
+          "required_calls_for_repair_and_recheck": 2,
+          "checker_contract_repair_calls": 0,
+          "checker_reported_body_ok": true,
+          "checker_reported_non_supported_factual_claims": 0,
+          "failed_checker_gate_names": [],
+          "checker_reported_coverage": "full",
+          "requirement_issue_codes": [],
+          "structural_issue_codes": [
+            "CHECK_SUPPORT_WITHOUT_SOURCE"
+          ]
+        }
+      }
+    },
+    "actual_system_starts_with_current_checked_generation_v5": true
+  }
+}
