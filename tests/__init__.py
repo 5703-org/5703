@@ -1,1 +1,1 @@
-"""Unit tests for the CS-30-1 baseline."""
+"""Public authored software tests and independent fixture factories."""
