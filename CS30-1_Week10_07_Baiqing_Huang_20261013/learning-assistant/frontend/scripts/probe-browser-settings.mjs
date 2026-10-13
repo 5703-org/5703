@@ -1,0 +1,12 @@
+import { chromium } from '@playwright/test';
+import fs from 'node:fs/promises';
+const directory = '.browser-profiles/zoom-probe';
+const context = await chromium.launchPersistentContext(directory, { channel: 'chromium', headless: true, viewport: null, args: ['--window-size=1440,1000'] });
+const page = context.pages()[0];
+await page.goto('chrome://settings/appearance');
+await page.locator('settings-ui').waitFor();
+await page.waitForTimeout(1000);
+console.log(await page.locator('settings-ui').innerText());
+console.log(await page.locator('select').evaluateAll(nodes => nodes.map(node=>({id:node.id,aria:node.getAttribute('aria-label'),options:node.textContent}))));
+await page.screenshot({ path: '../artifacts/reports/frontend/browser-settings-probe.png' });
+await context.close();
