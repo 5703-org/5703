@@ -29,6 +29,7 @@ from pipelines.chunk import chunks
 from pipelines.reports import quality_rows, compare_processing
 from pipelines.supplements import apply_publisher_supplements
 from retrieval.embedding import make_embedding, validate_vector
+from retrieval.runtime import resolve_device
 from retrieval.ranking import bm25, rrf, CrossEncoderReranker
 
 DEFAULT_CONFIG = {
@@ -1167,9 +1168,77 @@ def activate(db, release_id):
     return release
 
 
+def prewarm_active_retrieval_cache(
+    db, *, prepare_embedding_model=False, runtime_device=None, requested_device="recorded"
+):
+    """Optionally load the exact local model; never encode or publish a query."""
+    from . import cache
+
+    if db.new or db.dirty or db.deleted:
+        raise ValueError("Retrieval prewarm requires an unmodified session")
+    pointer = db.get(ActiveCorpus, 1, populate_existing=True)
+    if not pointer or not pointer.release_id:
+        return {"status": "skipped_no_active_corpus"}
+    release_id = pointer.release_id
+    release = db.get(CorpusRelease, release_id, populate_existing=True)
+    if not release or release.state != "active":
+        raise AppError("SOURCE_UNAVAILABLE", detail="Active corpus is unavailable for prewarm.")
+    index, validation = cache.load(
+        db, release, _retrieval_row, _release_rows, _embedding_hash, digest
+    )
+    current_pointer = db.get(ActiveCorpus, 1, populate_existing=True)
+    if (
+        not current_pointer
+        or current_pointer.release_id != release_id
+        or cache.epoch(db) != index.token
+    ):
+        raise ValueError("Active corpus changed during retrieval prewarm")
+    model_report = {}
+    if prepare_embedding_model:
+        model_report = {"embedding_model_prepared": False, "embedding_model_prepare_ms": 0.0}
+        if release.configuration.get("embedding_provider") == "e5":
+            device_started = time.perf_counter()
+            if runtime_device is None and requested_device != "recorded":
+                runtime_device = resolve_device(requested_device)
+            device_resolution_ms = round((time.perf_counter() - device_started) * 1000, 3)
+            model_started = time.perf_counter()
+            options = {"runtime_device": runtime_device} if runtime_device is not None else {}
+            make_embedding(release.configuration, **options)
+            model_report = {
+                "embedding_model_prepared": True,
+                "embedding_model_prepare_ms": round(
+                    (time.perf_counter() - model_started) * 1000, 3
+                ),
+                "embedding_runtime_device": runtime_device,
+                "embedding_device_resolution_ms": device_resolution_ms,
+            }
+            current_pointer = db.get(ActiveCorpus, 1, populate_existing=True)
+            if (
+                not current_pointer
+                or current_pointer.release_id != release_id
+                or cache.epoch(db) != index.token
+            ):
+                raise ValueError("Active corpus changed during embedding model prewarm")
+    return {
+        "status": "ready",
+        "cache_version": validation["version"],
+        "cache_hit": validation["hit"],
+        "validation_ms": validation["validation_ms"],
+        "visible_chunk_count": len(index.rows),
+        "release_id_sha256": digest(release_id),
+        "epoch_sha256": digest(index.token),
+        **model_report,
+    }
+
+
 def _retrieve_reference(
     db, query, release_id, variant=None, top_k=None, *, runtime_device=None, allowed_chunk_ids=None
 ):
+    # Flush local changes before invalidating loaded identities, including when
+    # autoflush is disabled. Complete validation must read current source records
+    # rather than objects retained before another transaction changed them.
+    db.flush()
+    db.expire_all()
     release = db.get(CorpusRelease, release_id)
     if not release or release.state not in ("active", "retired", "validated"):
         raise AppError("SOURCE_UNAVAILABLE", detail="Pinned corpus is unavailable.")
