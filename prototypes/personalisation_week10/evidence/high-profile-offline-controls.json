@@ -1,0 +1,122 @@
+{
+  "status": "PASS_FIVE_REAL_NORMAL_IMPORT_OFFLINE_HIGH_ROUTE_CONTROLS",
+  "controls": [
+    {
+      "control": "new_high_normal_validate_and_full49_payload",
+      "PASS": true,
+      "reasoning": {
+        "effort": "high"
+      },
+      "max_tokens": 8192,
+      "wire_bytes": 87979,
+      "wire_sha256": "4b161afd80f10c425ed517456c446d22b2ae0f5d7731974bc373a6ae10614c9c",
+      "whole_wire_cost_bound_USD": "0.0481025",
+      "routing": {
+        "order": [
+          "google-vertex/global"
+        ],
+        "only": [
+          "google-vertex/global"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 0.3,
+          "completion": 2.5
+        }
+      }
+    },
+    {
+      "control": "existing_medium_exact49_body_and_old_low_preserved",
+      "PASS": true,
+      "high_vs_complete49_only_reasoning_effort_changed": true,
+      "messages_DATA_schema8192_unchanged": true,
+      "CURRENT_PROFILE_IDS": [
+        "openai_luna_v2",
+        "qwen38_alibaba_v2",
+        "glm53_deepinfra_fp4_v1",
+        "gemini35_google_vertex_v1",
+        "gemini35_google_vertex_minimal_v1",
+        "gemini35_google_vertex_compact_checker_v3"
+      ]
+    },
+    {
+      "control": "fixed_policy_overrides_rejected_even_equal_high",
+      "PASS": true,
+      "both_validate_and_payload_rejected": [
+        [
+          "OpenRouter route has a fixed reasoning policy",
+          "OpenRouter route has a fixed reasoning policy"
+        ],
+        [
+          "OpenRouter route has a fixed reasoning policy",
+          "OpenRouter route has a fixed reasoning policy"
+        ],
+        [
+          "OpenRouter route has a fixed reasoning policy",
+          "OpenRouter route has a fixed reasoning policy"
+        ]
+      ]
+    },
+    {
+      "control": "wrong_model_rejected",
+      "PASS": true,
+      "both_validate_and_payload_rejected": [
+        "OpenRouter route does not match the frozen model and protocol",
+        "OpenRouter route does not match the frozen model and protocol"
+      ]
+    },
+    {
+      "control": "wrong_provider_rejected",
+      "PASS": true,
+      "both_validate_and_payload_rejected": [
+        "OpenRouter route does not match the frozen model and protocol",
+        "OpenRouter route does not match the frozen model and protocol"
+      ]
+    }
+  ],
+  "controls_passed": 5,
+  "imports": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-gemini-high-profile-candidate\\generation\\openrouter_routes.py",
+      "bytes": 12577,
+      "sha256": "1442c74ede3884bbe2a8250272b4b98e17363ffcb3b5b602af0107fdbf3abc71"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-gemini-high-profile-candidate\\generation\\types.py",
+      "bytes": 10131,
+      "sha256": "f74ce2c7295b7ee655577bc330791fbdd2c62447b8f7d4414af85b4aba7bcd69"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-gemini-high-profile-candidate\\generation\\providers.py",
+      "bytes": 26220,
+      "sha256": "bbfb74558e1adf5e4850edad02bb117af221c804aaad6e6f260addfe05fb38f4"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-gemini-high-profile-candidate\\generation\\capabilities.py",
+      "bytes": 4926,
+      "sha256": "590dac5cb82bf1494cd0db01af422800ce1dd227bae5e943d608c841401ebff0"
+    }
+  ],
+  "schema_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-gemini-high-profile-candidate\\SCOPED3031_SCHEMA.json",
+    "bytes": 3031,
+    "sha256": "da548389e9bace0395f7c60b457d4e787b2fdb415ca9efaa4b10eebe601d4871"
+  },
+  "prior49_exact_wire_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-unit-proof-plan49-replay-candidate\\UNIT_PROOF_PLAN49_EXACT_WIRE.json",
+    "bytes": 87981,
+    "sha256": "bbca2830159c4fd824218a09f22032754168f8563b936b79836d58fd1cf76729"
+  },
+  "max_tokens_tested": 8192,
+  "runtime_PROFILES_mutated": false,
+  "sys_modules_or_sys_path_monkeypatch": false,
+  "API_requests": 0,
+  "DB_accesses": 0,
+  "credential_accesses": 0,
+  "Main_writes": 0,
+  "controllers_started": 0,
+  "audit_denials": [],
+  "limitations": "Actual offline normal encoding of the complete public49 body only; no live endpoint, model output, source entailment, latency or paid scope qualification."
+}
+
