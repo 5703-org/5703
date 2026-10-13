@@ -1,0 +1,23 @@
+test_actual_endpoint_requires_header_annotation (__main__.ProtocolControls.test_actual_endpoint_requires_header_annotation) ... ok
+test_lost_message_response_remains_single_attempt (__main__.ProtocolControls.test_lost_message_response_remains_single_attempt) ... FAIL
+test_missing_required_header_negative_control (__main__.ProtocolControls.test_missing_required_header_negative_control) ... ok
+test_normal_case_header_binds_scope_session_and_message_once (__main__.ProtocolControls.test_normal_case_header_binds_scope_session_and_message_once) ... ok
+test_numeric_http_failure_diagnostic_no_body_or_retry (__main__.ProtocolControls.test_numeric_http_failure_diagnostic_no_body_or_retry) ... ok
+test_urllib_request_contains_real_header_only_on_message (__main__.ProtocolControls.test_urllib_request_contains_real_header_only_on_message) ... ok
+
+======================================================================
+FAIL: test_lost_message_response_remains_single_attempt (__main__.ProtocolControls.test_lost_message_response_remains_single_attempt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85_fix1.py", line 202, in test_lost_message_response_remains_single_attempt
+    self.assertEqual(receipt["error"]["code"], "LOCAL_API_TRANSPORT_FAILED")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'CLIENT_EXECUTION_STOPPED' != 'LOCAL_API_TRANSPORT_FAILED'
+- CLIENT_EXECUTION_STOPPED
++ LOCAL_API_TRANSPORT_FAILED
+
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.043s
+
+FAILED (failures=1)

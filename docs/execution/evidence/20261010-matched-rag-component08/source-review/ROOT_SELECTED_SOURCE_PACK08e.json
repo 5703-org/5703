@@ -1,0 +1,434 @@
+{
+  "status": "ROOT_EXTRACTED_EXACT_ACTUAL_SELECTED_TEXT_NOT_ENTAILMENT_CERTIFICATION",
+  "actual_result_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\component-rag-quality08\\actual08e\\RESULT08.json",
+    "bytes": 305861,
+    "sha256": "e5a82ffa7056af68eb16c1de0b05877e2dc42ab01df7f72ad5c6fee22aeaa1a5"
+  },
+  "arms": {
+    "Dense5": {
+      "actual_response": {
+        "schema_version": "chat_response_v1",
+        "response_type": "answer",
+        "answer_text": "Homeostasis refers to the relatively stable state inside the body of an animal [ev_005]. Animal organs and organ systems constantly adjust to internal and external changes through this process to maintain a dynamic equilibrium [ev_004]. Maintaining homeostasis requires that the body continuously monitor its internal conditions around a particular set point [ev_003].",
+        "short_answer": "Homeostasis is the maintenance of a stable internal steady state or dynamic equilibrium in the body [ev_004] [ev_005].",
+        "citations": [
+          "ev_003",
+          "ev_004",
+          "ev_005"
+        ],
+        "refusal_reason": null,
+        "follow_up_questions": [],
+        "confidence": 1.0
+      },
+      "claims": [
+        {
+          "actual_claim": {
+            "answer_field": "answer_text",
+            "claim_id": "claim_b970143817f77e292eb89a1b_1",
+            "end": 88,
+            "evidence_ids": [
+              "ev_005"
+            ],
+            "start": 0,
+            "text": "Homeostasis refers to the relatively stable state inside the body of an animal [ev_005]."
+          },
+          "actual_checker_selection": {
+            "basis": "textbook",
+            "citations": [
+              {
+                "evidence_id": "ev_005",
+                "fragment_ids": [
+                  "F018"
+                ],
+                "relation": "supporting"
+              }
+            ],
+            "claim_id": "claim_b970143817f77e292eb89a1b_1",
+            "reason": "F018 states: 'Homeostasis refers to the relatively stable state inside the body of an animal.'",
+            "status": "supported"
+          },
+          "actual_selected_source_fragments": [
+            {
+              "block_kind": "prose",
+              "complete_block": true,
+              "evidence_id": "ev_005",
+              "exact_text": "16.1 Homeostasis and Osmoregulation LEARNING OBJECTIVES By the end of this section, you will be able to: • Explain the concept of homeostasis • Describe thermoregulation of endothermic and ectothermic animals • Explain how the kidneys serve as the main osmoregulatory organs in the human body Homeostasis refers to the relatively stable state inside the body of an animal.",
+              "fragment_id": "F018"
+            }
+          ]
+        },
+        {
+          "actual_claim": {
+            "answer_field": "answer_text",
+            "claim_id": "claim_907324f3618486bf1c61c80c_1",
+            "end": 236,
+            "evidence_ids": [
+              "ev_004"
+            ],
+            "start": 89,
+            "text": "Animal organs and organ systems constantly adjust to internal and external changes through this process to maintain a dynamic equilibrium [ev_004]."
+          },
+          "actual_checker_selection": {
+            "basis": "textbook",
+            "citations": [
+              {
+                "evidence_id": "ev_004",
+                "fragment_ids": [
+                  "F014"
+                ],
+                "relation": "supporting"
+              }
+            ],
+            "claim_id": "claim_907324f3618486bf1c61c80c_1",
+            "reason": "F014 states: 'Animal organs and organ systems constantly adjust to internal and external changes through a process called homeostasis (“steady state”).'",
+            "status": "supported"
+          },
+          "actual_selected_source_fragments": [
+            {
+              "block_kind": "prose",
+              "complete_block": true,
+              "evidence_id": "ev_004",
+              "exact_text": "33.3 Homeostasis LEARNING OBJECTIVES By the end of this section, you will be able to do the following: • Define homeostasis • Describe the factors affecting homeostasis • Discuss positive and negative feedback mechanisms used in homeostasis • Describe thermoregulation of endothermic and ectothermic animals Animal organs and organ systems constantly adjust to internal and external changes through a process called homeostasis (“steady state”).",
+              "fragment_id": "F014"
+            }
+          ]
+        },
+        {
+          "actual_claim": {
+            "answer_field": "answer_text",
+            "claim_id": "claim_990c0dad25bc74039e18e014_1",
+            "end": 368,
+            "evidence_ids": [
+              "ev_003"
+            ],
+            "start": 237,
+            "text": "Maintaining homeostasis requires that the body continuously monitor its internal conditions around a particular set point [ev_003]."
+          },
+          "actual_checker_selection": {
+            "basis": "textbook",
+            "citations": [
+              {
+                "evidence_id": "ev_003",
+                "fragment_ids": [
+                  "F010",
+                  "F011"
+                ],
+                "relation": "supporting"
+              }
+            ],
+            "claim_id": "claim_990c0dad25bc74039e18e014_1",
+            "reason": "F010 and F011 support that maintaining homeostasis requires continuously monitoring internal conditions around particular set points.",
+            "status": "supported"
+          },
+          "actual_selected_source_fragments": [
+            {
+              "block_kind": "prose",
+              "complete_block": true,
+              "evidence_id": "ev_003",
+              "exact_text": "1.5 Homeostasis LEARNING OBJECTIVES By the end of this section, you will be able to: • Discuss the role of homeostasis in healthy functioning • Contrast negative and positive feedback, giving one physiologic example of each mechanism Maintaining homeostasis requires that the body continuously monitor its internal conditions.",
+              "fragment_id": "F010"
+            },
+            {
+              "block_kind": "prose",
+              "complete_block": true,
+              "evidence_id": "ev_003",
+              "exact_text": "From body temperature to blood pressure to levels of certain nutrients, each physiological condition has a particular set point.",
+              "fragment_id": "F011"
+            }
+          ]
+        },
+        {
+          "actual_claim": {
+            "answer_field": "short_answer",
+            "claim_id": "claim_ec833a20c4d8577ebf2eaddf_1",
+            "end": 118,
+            "evidence_ids": [
+              "ev_004",
+              "ev_005"
+            ],
+            "start": 0,
+            "text": "Homeostasis is the maintenance of a stable internal steady state or dynamic equilibrium in the body [ev_004] [ev_005]."
+          },
+          "actual_checker_selection": {
+            "basis": "textbook",
+            "citations": [
+              {
+                "evidence_id": "ev_004",
+                "fragment_ids": [
+                  "F016"
+                ],
+                "relation": "supporting"
+              },
+              {
+                "evidence_id": "ev_005",
+                "fragment_ids": [
+                  "F018"
+                ],
+                "relation": "supporting"
+              }
+            ],
+            "claim_id": "claim_ec833a20c4d8577ebf2eaddf_1",
+            "reason": "F018 and F016 establish homeostasis as a stable internal steady state or dynamic equilibrium.",
+            "status": "supported"
+          },
+          "actual_selected_source_fragments": [
+            {
+              "block_kind": "prose",
+              "complete_block": true,
+              "evidence_id": "ev_004",
+              "exact_text": "Homeostasis means to maintain dynamic equilibrium in the body.",
+              "fragment_id": "F016"
+            },
+            {
+              "block_kind": "prose",
+              "complete_block": true,
+              "evidence_id": "ev_005",
+              "exact_text": "16.1 Homeostasis and Osmoregulation LEARNING OBJECTIVES By the end of this section, you will be able to: • Explain the concept of homeostasis • Describe thermoregulation of endothermic and ectothermic animals • Explain how the kidneys serve as the main osmoregulatory organs in the human body Homeostasis refers to the relatively stable state inside the body of an animal.",
+              "fragment_id": "F018"
+            }
+          ]
+        }
+      ],
+      "raw_attempt_evaluation_ok": "not_applicable",
+      "normalization": {
+        "version": "conditional_attempt_evaluation_v1",
+        "applicability": "not_applicable",
+        "verdict": "not_applicable",
+        "normalization": "unchanged",
+        "learner_evaluation_passed": null,
+        "gate_satisfied": true
+      },
+      "unselected_reference_F016_for_Dense_claim2_only": {
+        "block_kind": "prose",
+        "complete_block": true,
+        "evidence_id": "ev_004",
+        "exact_text": "Homeostasis means to maintain dynamic equilibrium in the body.",
+        "fragment_id": "F016"
+      }
+    },
+    "Hybrid5": {
+      "actual_response": {
+        "schema_version": "chat_response_v1",
+        "response_type": "answer",
+        "answer_text": "Homeostasis, literally meaning \"steady state,\" refers to the relatively stable internal environment required to maintain life [ev_002]. It is a dynamic state of balance where biological systems constantly adjust to internal and external changes within parameters compatible with life [ev_004] [ev_005]. The goal of this process is the maintenance of equilibrium around a specific value or set point [ev_003].",
+        "short_answer": "Homeostasis is the maintenance of a dynamic equilibrium and stable internal environment required to sustain life [ev_002] [ev_005].",
+        "citations": [
+          "ev_002",
+          "ev_004",
+          "ev_005",
+          "ev_003"
+        ],
+        "refusal_reason": null,
+        "follow_up_questions": [],
+        "confidence": 1.0
+      },
+      "claims": [
+        {
+          "actual_claim": {
+            "answer_field": "answer_text",
+            "claim_id": "claim_3a2ac6d7b31b13901684501a_1",
+            "end": 135,
+            "evidence_ids": [
+              "ev_002"
+            ],
+            "start": 0,
+            "text": "Homeostasis, literally meaning \"steady state,\" refers to the relatively stable internal environment required to maintain life [ev_002]."
+          },
+          "actual_checker_selection": {
+            "basis": "textbook",
+            "citations": [
+              {
+                "evidence_id": "ev_002",
+                "fragment_ids": [
+                  "F007"
+                ],
+                "relation": "supporting"
+              }
+            ],
+            "claim_id": "claim_3a2ac6d7b31b13901684501a_1",
+            "reason": "Supported by fragment F007 stating that homeostasis literally means steady state and refers to the relatively stable internal environment required to maintain life.",
+            "status": "supported"
+          },
+          "actual_selected_source_fragments": [
+            {
+              "block_kind": "prose",
+              "complete_block": true,
+              "evidence_id": "ev_002",
+              "exact_text": "Homeostasis (literally, “steady state”) refers to the relatively stable internal environment required to maintain life.",
+              "fragment_id": "F007"
+            }
+          ]
+        },
+        {
+          "actual_claim": {
+            "answer_field": "answer_text",
+            "claim_id": "claim_696ad2e1b2a27e92fdab607e_1",
+            "end": 302,
+            "evidence_ids": [
+              "ev_004",
+              "ev_005"
+            ],
+            "start": 136,
+            "text": "It is a dynamic state of balance where biological systems constantly adjust to internal and external changes within parameters compatible with life [ev_004] [ev_005]."
+          },
+          "actual_checker_selection": {
+            "basis": "textbook",
+            "citations": [
+              {
+                "evidence_id": "ev_004",
+                "fragment_ids": [
+                  "F017"
+                ],
+                "relation": "supporting"
+              },
+              {
+                "evidence_id": "ev_005",
+                "fragment_ids": [
+                  "F020",
+                  "F022",
+                  "F023"
+                ],
+                "relation": "supporting"
+              }
+            ],
+            "claim_id": "claim_696ad2e1b2a27e92fdab607e_1",
+            "reason": "Supported by fragments F017, F020, F022, and F023 indicating dynamic equilibrium and constant adjustment to changes within parameters compatible with life.",
+            "status": "supported"
+          },
+          "actual_selected_source_fragments": [
+            {
+              "block_kind": "prose",
+              "complete_block": true,
+              "evidence_id": "ev_004",
+              "exact_text": "Homeostasis is a term used in biology that refers to a dynamic state of balance within parameters that are compatible with life.",
+              "fragment_id": "F017"
+            },
+            {
+              "block_kind": "prose",
+              "complete_block": true,
+              "evidence_id": "ev_005",
+              "exact_text": "33.3 Homeostasis LEARNING OBJECTIVES By the end of this section, you will be able to do the following: • Define homeostasis • Describe the factors affecting homeostasis • Discuss positive and negative feedback mechanisms used in homeostasis • Describe thermoregulation of endothermic and ectothermic animals Animal organs and organ systems constantly adjust to internal and external changes through a process called homeostasis (“steady state”).",
+              "fragment_id": "F020"
+            },
+            {
+              "block_kind": "prose",
+              "complete_block": true,
+              "evidence_id": "ev_005",
+              "exact_text": "Homeostasis means to maintain dynamic equilibrium in the body.",
+              "fragment_id": "F022"
+            },
+            {
+              "block_kind": "prose",
+              "complete_block": true,
+              "evidence_id": "ev_005",
+              "exact_text": "It is dynamic because it is constantly adjusting to the changes that the body’s systems encounter.",
+              "fragment_id": "F023"
+            }
+          ]
+        },
+        {
+          "actual_claim": {
+            "answer_field": "answer_text",
+            "claim_id": "claim_9d6368347c133c14262f4423_1",
+            "end": 408,
+            "evidence_ids": [
+              "ev_003"
+            ],
+            "start": 303,
+            "text": "The goal of this process is the maintenance of equilibrium around a specific value or set point [ev_003]."
+          },
+          "actual_checker_selection": {
+            "basis": "textbook",
+            "citations": [
+              {
+                "evidence_id": "ev_003",
+                "fragment_ids": [
+                  "F011"
+                ],
+                "relation": "supporting"
+              }
+            ],
+            "claim_id": "claim_9d6368347c133c14262f4423_1",
+            "reason": "Supported by fragment F011 stating the goal of homeostasis is the maintenance of equilibrium around a point or value called a set point.",
+            "status": "supported"
+          },
+          "actual_selected_source_fragments": [
+            {
+              "block_kind": "prose",
+              "complete_block": true,
+              "evidence_id": "ev_003",
+              "exact_text": "Homeostatic Process The goal of homeostasis is the maintenance of equilibrium around a point or value called a set point.",
+              "fragment_id": "F011"
+            }
+          ]
+        },
+        {
+          "actual_claim": {
+            "answer_field": "short_answer",
+            "claim_id": "claim_b5229dd1205d3e556293f2ee_1",
+            "end": 131,
+            "evidence_ids": [
+              "ev_002",
+              "ev_005"
+            ],
+            "start": 0,
+            "text": "Homeostasis is the maintenance of a dynamic equilibrium and stable internal environment required to sustain life [ev_002] [ev_005]."
+          },
+          "actual_checker_selection": {
+            "basis": "textbook",
+            "citations": [
+              {
+                "evidence_id": "ev_002",
+                "fragment_ids": [
+                  "F007"
+                ],
+                "relation": "supporting"
+              },
+              {
+                "evidence_id": "ev_005",
+                "fragment_ids": [
+                  "F022"
+                ],
+                "relation": "supporting"
+              }
+            ],
+            "claim_id": "claim_b5229dd1205d3e556293f2ee_1",
+            "reason": "Short answer supported by fragments F007 and F022 regarding dynamic equilibrium and maintaining a stable internal environment to sustain life.",
+            "status": "supported"
+          },
+          "actual_selected_source_fragments": [
+            {
+              "block_kind": "prose",
+              "complete_block": true,
+              "evidence_id": "ev_002",
+              "exact_text": "Homeostasis (literally, “steady state”) refers to the relatively stable internal environment required to maintain life.",
+              "fragment_id": "F007"
+            },
+            {
+              "block_kind": "prose",
+              "complete_block": true,
+              "evidence_id": "ev_005",
+              "exact_text": "Homeostasis means to maintain dynamic equilibrium in the body.",
+              "fragment_id": "F022"
+            }
+          ]
+        }
+      ],
+      "raw_attempt_evaluation_ok": "not_applicable",
+      "normalization": {
+        "version": "conditional_attempt_evaluation_v1",
+        "applicability": "not_applicable",
+        "verdict": "not_applicable",
+        "normalization": "unchanged",
+        "learner_evaluation_passed": null,
+        "gate_satisfied": true
+      },
+      "unselected_reference_F016_for_Dense_claim2_only": null
+    }
+  },
+  "child_read_approval_timeout_is_not_unsafe_judgment": true,
+  "API_calls": 0,
+  "DB_access": false,
+  "native_or_credentials_read": false
+}

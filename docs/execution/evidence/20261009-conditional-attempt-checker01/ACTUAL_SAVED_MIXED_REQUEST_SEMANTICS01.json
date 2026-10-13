@@ -1,0 +1,224 @@
+{
+  "status": "ACTUAL_READONLY_SAVED_MIXED_REQUEST_SEMANTICS_PASS",
+  "at_UTC": "2026-10-09T16:19:13.375639+00:00",
+  "request_id": "86ccea30-76ee-47b5-bbad-d8b431728fb5",
+  "job_id": "42dab830-cd5b-4702-87b3-8b8e256f0102",
+  "session_id": "27168c0e-a5f7-4f63-9ccf-53d7982bc168",
+  "workspace_id": "5ef0e22c-45f2-4c72-9ff8-acfee1e6b655",
+  "database": "cs30_week10_pair_b_20261009_01",
+  "request_mode": "interactive_chat",
+  "memory_snapshot_is_none": true,
+  "command_teaching_context_keys": [
+    "attempt_history",
+    "continuing",
+    "current_problem",
+    "current_request",
+    "current_step",
+    "delivered_turns",
+    "disclosure_events",
+    "expected_response_kind",
+    "exposure_epoch",
+    "help_level",
+    "last_attempt_evaluation",
+    "learner_attempt",
+    "pending_tutor_question",
+    "pending_tutor_question_id",
+    "pending_tutor_question_version",
+    "pending_validation_id",
+    "pending_validation_version",
+    "policy_version",
+    "question",
+    "requested_help",
+    "requirements",
+    "task_id",
+    "task_revision",
+    "task_type",
+    "task_version",
+    "teaching_mode",
+    "turn_role"
+  ],
+  "reading_context_is_none": true,
+  "generation_request_mode": "interactive_chat",
+  "question_sha256": "212c31fae733b4a005bdb56790438f1ecdce2e389dc1c5263493f6c2149e6fa3",
+  "question_bytes": 86,
+  "teaching_context": {
+    "keys": [
+      "attempt_history",
+      "continuing",
+      "current_problem",
+      "current_request",
+      "current_step",
+      "delivered_turns",
+      "disclosure_events",
+      "expected_response_kind",
+      "exposure_epoch",
+      "help_level",
+      "last_attempt_evaluation",
+      "learner_attempt",
+      "pending_tutor_question",
+      "pending_tutor_question_id",
+      "pending_tutor_question_version",
+      "pending_validation_id",
+      "pending_validation_version",
+      "policy_version",
+      "question",
+      "requested_help",
+      "requirements",
+      "task_id",
+      "task_revision",
+      "task_type",
+      "task_version",
+      "teaching_mode",
+      "turn_role"
+    ],
+    "turn_role": "user_question",
+    "learner_attempt_present": true,
+    "learner_attempt_nonempty": false,
+    "learner_attempt_type": "NoneType",
+    "attempt_history_count": 0,
+    "last_attempt_evaluation_nonempty": false,
+    "pending_tutor_question_nonempty": false,
+    "pending_tutor_question_id_nonempty": false,
+    "current_request_nonempty": true
+  },
+  "memory_context_is_none": true,
+  "saved_attempts": [
+    {
+      "phase": "start",
+      "model": null,
+      "finish_reason": null,
+      "purpose": "generation",
+      "stage": "generation",
+      "request_submitted": null
+    },
+    {
+      "phase": "finish",
+      "model": "anthropic/claude-haiku-5.5",
+      "finish_reason": "stop",
+      "purpose": "generation",
+      "stage": "generation",
+      "request_submitted": true
+    },
+    {
+      "phase": "start",
+      "model": null,
+      "finish_reason": null,
+      "purpose": "joint_check",
+      "stage": "joint_check",
+      "request_submitted": null
+    },
+    {
+      "phase": "finish",
+      "model": "google/gemini-3.5-flash-lite",
+      "finish_reason": "stop",
+      "purpose": "joint_check",
+      "stage": "joint_check",
+      "request_submitted": true
+    }
+  ],
+  "teacher_bytes": 1625,
+  "teacher_sha256": "f843ea4e3ef7aea098eb327c85fe9da81d64f2fe2519c81b342375d00967a0ae",
+  "teacher_attempt_field_metadata": [
+    {
+      "path": "learner_attempt_evaluation",
+      "nonempty": false,
+      "type": "NoneType"
+    }
+  ],
+  "checker": {
+    "saved_schema_name": "joint_check_v5",
+    "reconstructed_full_schema_sha256": "7988037e08d52662a1b232f049776a42b6d10ad5d896f1a26c8c912b3efd79d4",
+    "reconstructed_schema_matches_original_actual_schema_sha256": true,
+    "reconstructed_schema_required_contains_attempt_evaluation_ok": true,
+    "reconstructed_schema_attempt_evaluation_ok": {
+      "type": "boolean"
+    },
+    "frozen_model": "google/gemini-3.5-flash-lite",
+    "frozen_protocol": "json_object",
+    "normal_actual_payload_protocol": {
+      "type": "json_object"
+    },
+    "normal_wire_schema_sha256": "7988037e08d52662a1b232f049776a42b6d10ad5d896f1a26c8c912b3efd79d4",
+    "normal_wire_schema_required_contains_attempt_evaluation_ok": true,
+    "normal_wire_schema_field_present": true,
+    "schema_hint_count": 1,
+    "original_system_field_mentions": 2,
+    "user_field_mentions": 0,
+    "user_is_json": true,
+    "user_top_level_keys": [
+      "ACTUAL_CITATION_BINDINGS",
+      "ATTEMPT_EVALUATION",
+      "BINDING_BANK",
+      "CHECKER_INPUT_ENCODING",
+      "CHECK_SCOPE",
+      "CLAIMS",
+      "CONTEXT_COVERAGE",
+      "LEARNER_TURN",
+      "POLICY",
+      "PRIOR_EXPOSURE",
+      "PROPOSED_DELIVERY",
+      "SOURCE_FRAGMENTS",
+      "TUTOR_QUESTION",
+      "answer_mode",
+      "current_problem",
+      "question"
+    ],
+    "user_attempt_field_metadata": [
+      {
+        "path": "LEARNER_TURN.turn_role",
+        "nonempty": true,
+        "type": "str",
+        "turn_role": "user_question"
+      }
+    ],
+    "original_messages_sha256": "ed7689c19dc1a8186376589ae570f47d73e99dca53991d48a581cb25ba5e7d1e",
+    "normal_wire_messages_sha256": "bf39b05b39592d7db614e957e5a6b1b601acef54a91f0797ebaa0b50f2316b92",
+    "original_message_count": 2,
+    "output_bytes": 4837,
+    "output_sha256": "82d4d2c010eb573f6cbf7fc12381b5e7b4b7a0a0b12653adfd7effcefbe9ab74",
+    "output_json_parse_PASS": true,
+    "output_top_level_keys": [
+      "body_ok",
+      "claims",
+      "complete_answer",
+      "coverage",
+      "cumulative_ok",
+      "evidence_display_ok",
+      "limitations_explicit",
+      "missing_facets",
+      "non_repetitive_next_action",
+      "reason",
+      "repair_fragment_ids",
+      "requirements",
+      "scope_ok",
+      "specific_help",
+      "suggestions_ok",
+      "tutor_question_ok"
+    ],
+    "output_missing_attempt_evaluation_ok": true,
+    "full_Pydantic_issues": [
+      {
+        "loc": [
+          "attempt_evaluation_ok"
+        ],
+        "type": "missing"
+      }
+    ]
+  },
+  "guardrails": {
+    "transaction_read_only_verified": true,
+    "database_writes": 0,
+    "model_POSTs": 0,
+    "new_teacher_calls": 0,
+    "key_or_DSN_exported": false,
+    "private_fixture_read": false,
+    "saved_raw_text_written": false,
+    "transaction_rollback_and_engine_dispose": true,
+    "production_main_writes": 0
+  },
+  "reader_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\attempt-evaluation-conditional-preparation01\\saved_mixed_request_reader01.py",
+    "bytes": 7371,
+    "sha256": "17e9ecc66e854b682033f4784c5c4b1a81e5cff1f38218faa85ecfa2687e6ca9"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "index": 2,
+  "case_id_local_only": "DEV03_dropped_guard_negative",
+  "expected_local_only": "unsupported",
+  "status": "OBSERVATION_RETAINED",
+  "transport_attempts": 1,
+  "physical_POSTs_confirmed": 1,
+  "known_cost_USD": "0.010675",
+  "UNKNOWN_hold_USD": "0",
+  "wire_sha256": "8addf09d9613fc6d65b70a97163be7e36f4e3360bee41a76741dcae838749d15",
+  "raw_receipt_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic64-candidate\\actual64\\case02\\raw-provider-read01.json",
+      "bytes": 27315,
+      "sha256": "051dcc953396f07c3afe38b9a296fde4dddbbf3b8630c063e3dcde3a019f5632"
+    }
+  ],
+  "human_rating": null,
+  "production_publication_authorized": false,
+  "complete_adapter_return_ms": 13133.6101,
+  "provider_result": {
+    "raw_text": "{\n  \"additional_gaps\": [],\n  \"atom_id\": \"A1\",\n  \"condition_judgments\": [\n    {\n      \"condition_id\": \"C0\",\n      \"evidence_spans\": [\n        {\n          \"end\": 148,\n          \"fragment_id\": \"F1\",\n          \"quote\": \"Gate G opens when the supply voltage exceeds 12 V and the safety pin is inserted.\",\n          \"start\": 67\n        },\n        {\n          \"end\": 215,\n          \"fragment_id\": \"F1\",\n          \"quote\": \"With the pin removed, Gate G",
+    "provider": "openai_compatible",
+    "model": "google/gemini-3.5-flash-lite",
+    "finish_reason": "length",
+    "provider_request_id": "gen-1791697361-lfLrtY8WXn6NmbNg5cVC",
+    "usage": {
+      "input_tokens": 1575,
+      "output_tokens": 4081,
+      "total_tokens": 5656,
+      "reasoning_tokens": 3931,
+      "cache_hit_input_tokens": 0,
+      "cache_miss_input_tokens": 1575,
+      "cost": 0.010675
+    },
+    "latency_ms": 13133,
+    "error": {
+      "code": "OUTPUT_TRUNCATED",
+      "message": "Provider output reached its token limit",
+      "retryable": false,
+      "details": {}
+    },
+    "request_submitted": true,
+    "diagnostic": {
+      "stage": "decode",
+      "http_status": 200,
+      "provider_error_type": null,
+      "provider_error_code": null,
+      "provider_error_parameter": null,
+      "message": null,
+      "message_redacted": false,
+      "provider_request_id": "gen-1791697361-lfLrtY8WXn6NmbNg5cVC",
+      "finish_reason": "length",
+      "network_error": null,
+      "request_submitted": true,
+      "latency_ms": 13133,
+      "gateway_failure_category": "model_output_truncated",
+      "gateway_classification_evidence": "local_validation"
+    }
+  },
+  "fully_settled": true
+}

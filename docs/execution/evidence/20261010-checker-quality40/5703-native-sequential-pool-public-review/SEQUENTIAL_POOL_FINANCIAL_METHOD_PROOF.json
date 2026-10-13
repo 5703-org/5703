@@ -1,0 +1,154 @@
+{
+  "status": "OFFLINE_SEQUENTIAL_POOL_FINANCIAL_METHOD_PROOF_PASS_NOT_NATIVE_RELEASE",
+  "immutable_public_source_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation36\\scientific_native_closure_guard_PREPARED09.py",
+    "bytes": 338976,
+    "sha256": "2194360c40cdb3431d23c53bfd22ddbab30edbba8dbeeac2a4e062af96e6969f"
+  },
+  "example_parent_confirmed_current_group": {
+    "actual_POSTs": 20,
+    "actual_known_USD": "0.17182790",
+    "original_cash_cap_USD": "0.24000000",
+    "remaining_pool_USD": "0.06817210",
+    "per_request_full_hold_USD": "0.04100000",
+    "max_new_POSTs": 2,
+    "maximum_settled_teacher_fee_allowing_second_hold_USD": "0.02717210",
+    "source": "Root reported closed actual40; this proof does not create or approve a native allocation."
+  },
+  "minimum_financial_policy_changes": {
+    "source_methods": {
+      "_tally": {
+        "source_SHA256": "32e9352ef29ffd162ece3bf57d4ae05aaae374c398eb7b9a3cc8a29de9a1a654",
+        "derived_SHA256": "32aef1193f1ac036b0b8516079d71b7f3a812a78df239a0586ee4ce9fa9b95f2"
+      },
+      "claim": {
+        "source_SHA256": "6d91f692b222c7a9f32f48513f6b0770efa525c15f49b5daa0f1ae686dd69ae4",
+        "derived_SHA256": "dc73bc5d0c4e740aade4fbd8f18548176ffcef4ad38be2a6ecfc97fd36bdd6d9"
+      },
+      "_finish_locked": {
+        "source_SHA256": "154b49349c26faf3b47ea2547d0441537a686d1a4281becf45ce43d0b97e4689",
+        "derived_SHA256": "f7adf2998f509b6cbfaadd4eb9de8259a138457b275103c41dc88392ea8395c2"
+      }
+    },
+    "financial_policy_delta": {
+      "old_locked_admission": "_need(Decimal(slot) * UPPER <= RESERVE, \"BATCH_RESERVE_BOUND\")",
+      "new_locked_admission": "_need(_decimal(before[\"known_API_cost_USD\"]) + _decimal(before[\"full_unknown_hold_USD\"]) + UPPER <= RESERVE, \"BATCH_RESERVE_BOUND\")"
+    },
+    "uniform_current_scope_hold_literal_delta": {
+      "before_USD": "0.04500000",
+      "after_USD": "0.04100000"
+    },
+    "current_scope_status_total_literal_delta": {
+      "before_USD": "0.18000000",
+      "after_USD": "0.06817210"
+    },
+    "all_other_selected_method_code_preserved": true
+  },
+  "cases": [
+    {
+      "case": "ordinary_known_costs",
+      "PASS": true,
+      "synthetic_final_known_USD": "0.02500000",
+      "original_static_second_slot_predicate_would_pass": false
+    },
+    {
+      "case": "exact_second_admission_boundary",
+      "PASS": true,
+      "synthetic_final_known_USD": "0.06817210",
+      "original_static_second_slot_predicate_would_pass": false
+    },
+    {
+      "case": "one_unit_at_1e_8_below_boundary",
+      "PASS": true,
+      "synthetic_final_known_USD": "0.06817209",
+      "original_static_second_slot_predicate_would_pass": false
+    },
+    {
+      "case": "zero_recorded_teacher_cost",
+      "PASS": true,
+      "synthetic_final_known_USD": "0.04100000",
+      "original_static_second_slot_predicate_would_pass": false
+    },
+    {
+      "case": "one_unit_at_1e_8_above_boundary",
+      "PASS": true,
+      "rejection": "BATCH_RESERVE_BOUND",
+      "started_claims": 1
+    },
+    {
+      "case": "teacher_at_full_request_bound",
+      "PASS": true,
+      "rejection": "BATCH_RESERVE_BOUND",
+      "started_claims": 1
+    },
+    {
+      "case": "one_open_claim_blocks_another",
+      "PASS": true,
+      "rejection": "OPEN_UNKNOWN_OR_STOP"
+    },
+    {
+      "case": "UNKNOWN_full_hold",
+      "PASS": true,
+      "rejection": "OPEN_UNKNOWN_OR_STOP",
+      "held_USD": "0.04100000"
+    },
+    {
+      "case": "invalid_nonfinite_cost_full_hold",
+      "PASS": true,
+      "rejection": "OPEN_UNKNOWN_OR_STOP",
+      "held_USD": "0.04100000"
+    },
+    {
+      "case": "invalid_negative_cost_full_hold",
+      "PASS": true,
+      "rejection": "OPEN_UNKNOWN_OR_STOP",
+      "held_USD": "0.04100000"
+    },
+    {
+      "case": "known_fee_receipt_cannot_be_rewritten",
+      "PASS": true,
+      "rejection": "IMMUTABLE_FINISH_EXISTS"
+    },
+    {
+      "case": "over_bound_actual_fee_is_retained_and_stops",
+      "PASS": true
+    },
+    {
+      "case": "malformed_start_keeps_full_hold_and_stops",
+      "PASS": true
+    },
+    {
+      "case": "cheap_settlements_do_not_release_call_slots",
+      "PASS": true
+    },
+    {
+      "case": "pool_below_one_request_bound_refuses_first_start",
+      "PASS": true
+    }
+  ],
+  "passed_case_count": 15,
+  "invariant": "Under one outstanding claim and unchanged request bound, known cumulative cost + pending/UNKNOWN full holds never exceeds the frozen pool at admission; original group known cost plus pool is at most 0.24.",
+  "completion_is_conditional": "If first cost exceeds pool minus 0.041, or first is open/UNKNOWN/faulted, stop before checker. Never publish an unchecked teacher draft.",
+  "strict_bound_not_reduced": {
+    "strict_wire_price_upper_USD": "0.03988480",
+    "unchanged_safety_margin_USD": "0.00050000",
+    "sum_USD": "0.04038480",
+    "full_pending_request_hold_USD": "0.04100000"
+  },
+  "limitations": [
+    "Financial methods run against a virtual in-memory ledger, not a native worker or physical ledger.",
+    "Real authority, source pins, filesystem locks, provider route/wire verification, private fixture, semantic/source/schema/UI gates are not exercised or certified by this financial proof.",
+    "The proposed authority gate must freeze the exact available pool and require one full hold; any future scope still needs all existing gates and full-source science PASS.",
+    "An over-bound provider fee is retained and stops further submissions, as in the existing contract; the admission guarantee uses the unchanged enforced price/wire/output bound."
+  ],
+  "actions": {
+    "actual_API_POSTs": 0,
+    "actual_expense_USD": "0",
+    "DB_calls": 0,
+    "real_native_scopes_or_configs_created": 0,
+    "private_binder_or_auth_reads": 0,
+    "denied_override_reads": 0,
+    "Main_or_B_writes": 0,
+    "W_metadata_only": true
+  }
+}

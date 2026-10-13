@@ -1,0 +1,217 @@
+{
+  "controls": [
+    {
+      "name": "actual36_core_and_current39_index_unchanged",
+      "passed": true,
+      "detail": {
+        "claims": 10,
+        "units": 19,
+        "source_fragments": 71,
+        "anchor_groups": 111
+      }
+    },
+    {
+      "name": "trusted_rules_once_in_system_and_absent_from_user_data",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "immutable_validation_input_alias_preserved_without_post_encoding_pop",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "default_system_data_and_roles_exactly_unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "relation_v1_system_data_and_roles_exactly_unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "conversation_segment_role_and_order_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "actual_lossless_encoder_retains_system_and_all_data",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "initial_and_recheck_render_do_not_accumulate_system_rules",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "output_schema_signature_and_order_retained",
+      "passed": true,
+      "detail": {
+        "compact_schema_sha256": "864212a5e636d2cadbc34328f431712a954c30130848a31e64e66e4bdedbc926",
+        "top_property_order": [
+          "claims",
+          "body_ok",
+          "specific_help",
+          "scope_ok",
+          "suggestions_ok",
+          "evidence_display_ok",
+          "cumulative_ok",
+          "complete_answer",
+          "coverage",
+          "missing_facets",
+          "limitations_explicit",
+          "reason",
+          "repair_fragment_ids",
+          "attempt_evaluation_ok",
+          "tutor_question_ok",
+          "requirements",
+          "non_repetitive_next_action"
+        ],
+        "top_required_order": [
+          "claims",
+          "body_ok",
+          "specific_help",
+          "scope_ok",
+          "suggestions_ok",
+          "evidence_display_ok",
+          "cumulative_ok",
+          "complete_answer",
+          "coverage",
+          "missing_facets",
+          "limitations_explicit",
+          "reason",
+          "repair_fragment_ids",
+          "attempt_evaluation_ok",
+          "tutor_question_ok",
+          "requirements",
+          "non_repetitive_next_action"
+        ]
+      }
+    },
+    {
+      "name": "old_actual36_scope_failure_remains_unmodified",
+      "passed": true,
+      "detail": {
+        "scope_codes": [
+          "SOURCE_SCOPE_CONTEXT_NOT_SELECTED"
+        ],
+        "raw_not_repaired_or_certified": true
+      }
+    },
+    {
+      "name": "actual39_spaced_schema_key_remains_hard_rejected",
+      "passed": true,
+      "detail": {
+        "schema_errors": [
+          {
+            "path": [
+              "claims",
+              0,
+              "textbook",
+              "citations",
+              0,
+              "evidence_id"
+            ],
+            "type": "missing"
+          },
+          {
+            "path": [
+              "claims",
+              0,
+              "textbook",
+              "citations",
+              0,
+              " evidence_id"
+            ],
+            "type": "extra_forbidden"
+          }
+        ],
+        "scope_and_relation_gates": "NOT_RUN",
+        "key_trimming": false,
+        "raw_repair": false
+      }
+    },
+    {
+      "name": "system_does_not_promote_learner_or_source_values",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_other_business_ast_and_default_gates_unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rubric_hash_records_actual_promoted_template",
+      "passed": true,
+      "detail": {
+        "actual_template_sha256": "eb09f2734a3decb142defefdcd5113682129501a51636ad5694b9d00d1077873",
+        "old_template_sha256": "30078107048050fcb5a162a8628377de1476b9ec0a4e5a2f80fdfb4837f3a226",
+        "both_actual_hash_consumers_retained": true
+      }
+    },
+    {
+      "name": "Main_pins_unchanged",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "small_controls_passed": 15,
+  "actual36_initial_input_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\runtime\\retained-provider-diagnostics\\slot-02-model-output01.json",
+    "bytes": 56525,
+    "sha256": "f3ed73ca40b0258998ef25d9d4d1fa74ace5e060cd1140b0ccca07bf831e1e67"
+  },
+  "actual39_invalid_raw_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-fixed-checker-pair39-candidate\\actual-fixed-pair39\\candidate39-POST_FINISHED01.json",
+    "bytes": 9837,
+    "sha256": "b806b4e4d93b26709c45b0dee9bc7327f52381846074e93af421ed9e5ba6c299"
+  },
+  "schema_errors39": [
+    {
+      "path": [
+        "claims",
+        0,
+        "textbook",
+        "citations",
+        0,
+        "evidence_id"
+      ],
+      "type": "missing"
+    },
+    {
+      "path": [
+        "claims",
+        0,
+        "textbook",
+        "citations",
+        0,
+        " evidence_id"
+      ],
+      "type": "extra_forbidden"
+    }
+  ],
+  "instruction_delivery": {
+    "helper": "source_relation_checker_system",
+    "placement": "existing system message tail, before the provider's unchanged schema hint",
+    "user_instruction_field_removed_before_encoding": true,
+    "system_instructions_are_trusted_constants_only": true
+  },
+  "payload_measurement": {
+    "old_encoded_data_bytes": 49386,
+    "new_encoded_data_bytes": 45953,
+    "old_compact_messages_bytes": 59230,
+    "new_compact_messages_bytes": 59381,
+    "compact_messages_delta_bytes": 151,
+    "final_audit_utf8_bytes": 196,
+    "whole_provider_wire_not_measured_here": true
+  },
+  "output_schema_parser_assessor_gates_default_policy_changed": false,
+  "provider_requests": 0,
+  "database_accesses": 0,
+  "main_writes": 0,
+  "audit_denials": [],
+  "scientific_full_support_or_latency_success_established": false
+}

@@ -1,0 +1,421 @@
+{
+  "artifact_role": "FREE_DIAGNOSTIC_AND_PROPOSAL_ONLY",
+  "main_files_modified": 0,
+  "database_reads": 0,
+  "database_writes": 0,
+  "network_calls": 0,
+  "provider_POSTs": 0,
+  "evidence_mutations": 0,
+  "historical_code_bytes_tested": false,
+  "historical_code_equivalence": "UNKNOWN; no historical mapper source snapshot inspected",
+  "current_code_tested": true,
+  "current_source_pins": [
+    {
+      "path": "retrieval/source_spans.py",
+      "bytes": 11063,
+      "sha256": "8289958b634853a3dab4c6880340c8ee0505c49e9df2d869d18fa8925750ff29"
+    },
+    {
+      "path": "retrieval/source_spans_v2.py",
+      "bytes": 4520,
+      "sha256": "327e5387857d6f641b9991adddc7bed4fd0b6ade8fbde2885183a6b8de8f57e5"
+    },
+    {
+      "path": "pipelines/chunk.py",
+      "bytes": 6262,
+      "sha256": "68a8f6d31cca4e3d97f51f2d2b5fa0926993cf5e2c044ee3466f64155aed8cbf"
+    },
+    {
+      "path": "pipelines/parse.py",
+      "bytes": 9313,
+      "sha256": "7f734839898211f1cb8a4a24a9d1950b0d04198b881fda16409fb57be58d2ce4"
+    },
+    {
+      "path": "pipelines/clean.py",
+      "bytes": 1699,
+      "sha256": "34d63f7c474cba188bcf034a02f407157720d15b14d43aec2212f8b268a66e47"
+    },
+    {
+      "path": "generation/prompts/joint_check_v5.txt",
+      "bytes": 15456,
+      "sha256": "0f404cb3cb519e89f71e27a7f5abc93aac4c80f03b4245d3f94c201f8d4965c0"
+    }
+  ],
+  "retained_input_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\attempt-evaluation-conditional-preparation01\\retained-checker-diagnostic-preparation01\\actual-free-retention02\\private-diagnostic\\checker-input-schema01.json",
+      "bytes": 108699,
+      "sha256": "ae8b7cc7b80e0d35a9ec4a3b5c505e42529f368f0350389282fbe42bc6c6a387"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\attempt-evaluation-conditional-preparation01\\retained-checker-diagnostic-preparation01\\actual-free-retention02\\private-diagnostic\\generation-final-outcome01.json",
+      "bytes": 136309,
+      "sha256": "f91059ce3b698736b264a58df34d7ab478d83ba1aa93b8206c729279114b5dad"
+    }
+  ],
+  "retained_exact_selected_fragments": [
+    {
+      "alias": "F054",
+      "fragment_id": "span_db8a12e2096eef418af7799d31eff8b6",
+      "evidence_id": "ev_010",
+      "chunk_id": "d78123b2ffdc57261b6fef649db606d00094",
+      "asset_id": "3294e86a-c158-4dbe-97e3-6169352497ab",
+      "document_version_id": "35d45deb-de7f-4194-9ce2-1861ae84434d",
+      "processing_id": "82fb328d-a383-43c2-a6eb-b91b61d05069",
+      "source_unit_id": "9384d80eee75aac546751fdd4d6708b70e6c",
+      "start": 2060,
+      "end": 2147,
+      "exact_text": "One of the three-carbon molecules of G3P leaves the cycle to become a 5 • Key Terms 131",
+      "text_hash": "89f58060b3f0936bc12d967bc682b0e35cb99ccfd34a3b40657e132ef914524b",
+      "chunk_start": 725,
+      "chunk_end": 812,
+      "page": 145,
+      "block_kind": "prose",
+      "mapping_quality": "sentence",
+      "complete_block": true,
+      "offset_basis": "cleaned_source_unit_unicode"
+    },
+    {
+      "alias": "F055",
+      "fragment_id": "span_67e8193225353c7abd5a297af143f4ee",
+      "evidence_id": "ev_010",
+      "chunk_id": "d78123b2ffdc57261b6fef649db606d00094",
+      "asset_id": "3294e86a-c158-4dbe-97e3-6169352497ab",
+      "document_version_id": "35d45deb-de7f-4194-9ce2-1861ae84434d",
+      "processing_id": "82fb328d-a383-43c2-a6eb-b91b61d05069",
+      "source_unit_id": "309bd7732f8ae5010d824c241b5d1d9ffb1a",
+      "start": 0,
+      "end": 32,
+      "exact_text": "part of a carbohydrate molecule.",
+      "text_hash": "c1a3b48806142a30bd23bc23fb441bd6a5b341e414f4665f186a9b86b60a22bb",
+      "chunk_start": 814,
+      "chunk_end": 846,
+      "page": 146,
+      "block_kind": "prose",
+      "mapping_quality": "sentence",
+      "complete_block": true,
+      "offset_basis": "cleaned_source_unit_unicode"
+    }
+  ],
+  "full_original_units_and_raw_page_text_available_in_this_task": false,
+  "retained_F054_end_equals_original_unit_length": "UNKNOWN without original unit",
+  "retained_F055_starts_original_unit": true,
+  "reproduction_scope": "Current mapper and current small chunk constructor; exact retained selected texts placed in authored two-page units, not a reconstruction or mutation of original units",
+  "case_count": 14,
+  "PASS_count": 14,
+  "cases": [
+    {
+      "case": "retained-text-faithful-synthetic-page-seam",
+      "PASS": true,
+      "legacy_equals_current_default": true,
+      "all_complete_block": true,
+      "warning_count": 1,
+      "preserved_exact_offsets_hashes_ids_flags_and_input": true,
+      "semantic_entailment_certified": false,
+      "fragments": [
+        {
+          "source_unit_id": "synthetic-unit-0",
+          "page": 145,
+          "start": 0,
+          "end": 87,
+          "block_kind": "prose",
+          "complete_block": true
+        },
+        {
+          "source_unit_id": "synthetic-unit-1",
+          "page": 146,
+          "start": 0,
+          "end": 32,
+          "block_kind": "prose",
+          "complete_block": true
+        }
+      ]
+    },
+    {
+      "case": "generic-page-continuation",
+      "PASS": true,
+      "legacy_equals_current_default": true,
+      "all_complete_block": true,
+      "warning_count": 1,
+      "preserved_exact_offsets_hashes_ids_flags_and_input": true,
+      "semantic_entailment_certified": false,
+      "fragments": [
+        {
+          "source_unit_id": "synthetic-unit-0",
+          "page": 145,
+          "start": 0,
+          "end": 32,
+          "block_kind": "prose",
+          "complete_block": true
+        },
+        {
+          "source_unit_id": "synthetic-unit-1",
+          "page": 146,
+          "start": 0,
+          "end": 19,
+          "block_kind": "prose",
+          "complete_block": true
+        }
+      ]
+    },
+    {
+      "case": "complete-sentence-page-seam",
+      "PASS": true,
+      "legacy_equals_current_default": true,
+      "all_complete_block": true,
+      "warning_count": 0,
+      "preserved_exact_offsets_hashes_ids_flags_and_input": true,
+      "semantic_entailment_certified": false,
+      "fragments": [
+        {
+          "source_unit_id": "synthetic-unit-0",
+          "page": 145,
+          "start": 0,
+          "end": 30,
+          "block_kind": "prose",
+          "complete_block": true
+        },
+        {
+          "source_unit_id": "synthetic-unit-1",
+          "page": 146,
+          "start": 0,
+          "end": 25,
+          "block_kind": "prose",
+          "complete_block": true
+        }
+      ]
+    },
+    {
+      "case": "next-page-uppercase-no-inference",
+      "PASS": true,
+      "legacy_equals_current_default": true,
+      "all_complete_block": true,
+      "warning_count": 0,
+      "preserved_exact_offsets_hashes_ids_flags_and_input": true,
+      "semantic_entailment_certified": false,
+      "fragments": [
+        {
+          "source_unit_id": "synthetic-unit-0",
+          "page": 145,
+          "start": 0,
+          "end": 26,
+          "block_kind": "prose",
+          "complete_block": true
+        },
+        {
+          "source_unit_id": "synthetic-unit-1",
+          "page": 146,
+          "start": 0,
+          "end": 29,
+          "block_kind": "prose",
+          "complete_block": true
+        }
+      ]
+    },
+    {
+      "case": "nonadjacent-pages-no-inference",
+      "PASS": true,
+      "legacy_equals_current_default": true,
+      "all_complete_block": true,
+      "warning_count": 0,
+      "preserved_exact_offsets_hashes_ids_flags_and_input": true,
+      "semantic_entailment_certified": false,
+      "fragments": [
+        {
+          "source_unit_id": "synthetic-unit-0",
+          "page": 145,
+          "start": 0,
+          "end": 32,
+          "block_kind": "prose",
+          "complete_block": true
+        },
+        {
+          "source_unit_id": "synthetic-unit-1",
+          "page": 147,
+          "start": 0,
+          "end": 19,
+          "block_kind": "prose",
+          "complete_block": true
+        }
+      ]
+    },
+    {
+      "case": "explicit-formula-no-punctuation-downgrade",
+      "PASS": true,
+      "legacy_equals_current_default": true,
+      "all_complete_block": true,
+      "warning_count": 0,
+      "preserved_exact_offsets_hashes_ids_flags_and_input": true,
+      "semantic_entailment_certified": false,
+      "fragments": [
+        {
+          "source_unit_id": "synthetic-unit-0",
+          "page": 145,
+          "start": 0,
+          "end": 5,
+          "block_kind": "formula",
+          "complete_block": true
+        },
+        {
+          "source_unit_id": "synthetic-unit-1",
+          "page": 146,
+          "start": 0,
+          "end": 9,
+          "block_kind": "formula",
+          "complete_block": true
+        }
+      ]
+    },
+    {
+      "case": "heading-lowercase-variable-warning-is-not-failure",
+      "PASS": true,
+      "legacy_equals_current_default": true,
+      "all_complete_block": true,
+      "warning_count": 1,
+      "preserved_exact_offsets_hashes_ids_flags_and_input": true,
+      "semantic_entailment_certified": false,
+      "fragments": [
+        {
+          "source_unit_id": "synthetic-unit-0",
+          "page": 145,
+          "start": 0,
+          "end": 14,
+          "block_kind": "prose",
+          "complete_block": true
+        },
+        {
+          "source_unit_id": "synthetic-unit-1",
+          "page": 146,
+          "start": 0,
+          "end": 21,
+          "block_kind": "prose",
+          "complete_block": true
+        }
+      ]
+    },
+    {
+      "case": "explicit-prose-blocks-authority-preserved",
+      "PASS": true,
+      "legacy_equals_current_default": true,
+      "all_complete_block": true,
+      "warning_count": 0,
+      "preserved_exact_offsets_hashes_ids_flags_and_input": true,
+      "semantic_entailment_certified": false,
+      "fragments": [
+        {
+          "source_unit_id": "synthetic-unit-0",
+          "page": 145,
+          "start": 0,
+          "end": 32,
+          "block_kind": "prose",
+          "complete_block": true
+        },
+        {
+          "source_unit_id": "synthetic-unit-1",
+          "page": 146,
+          "start": 0,
+          "end": 19,
+          "block_kind": "prose",
+          "complete_block": true
+        }
+      ]
+    },
+    {
+      "case": "decimal-and-complete-sentences",
+      "PASS": true,
+      "legacy_equals_current_default": true,
+      "all_complete_block": true,
+      "warning_count": 0,
+      "preserved_exact_offsets_hashes_ids_flags_and_input": true,
+      "semantic_entailment_certified": false,
+      "fragments": [
+        {
+          "source_unit_id": "synthetic-unit-0",
+          "page": 145,
+          "start": 0,
+          "end": 29,
+          "block_kind": "prose",
+          "complete_block": true
+        },
+        {
+          "source_unit_id": "synthetic-unit-0",
+          "page": 145,
+          "start": 30,
+          "end": 47,
+          "block_kind": "prose",
+          "complete_block": true
+        }
+      ]
+    },
+    {
+      "case": "quote-terminated-sentence",
+      "PASS": true,
+      "legacy_equals_current_default": true,
+      "all_complete_block": true,
+      "warning_count": 0,
+      "preserved_exact_offsets_hashes_ids_flags_and_input": true,
+      "semantic_entailment_certified": false,
+      "fragments": [
+        {
+          "source_unit_id": "synthetic-unit-0",
+          "page": 145,
+          "start": 0,
+          "end": 37,
+          "block_kind": "prose",
+          "complete_block": true
+        },
+        {
+          "source_unit_id": "synthetic-unit-1",
+          "page": 146,
+          "start": 0,
+          "end": 26,
+          "block_kind": "prose",
+          "complete_block": true
+        }
+      ]
+    },
+    {
+      "case": "standalone-heading-without-continuation",
+      "PASS": true,
+      "legacy_equals_current_default": true,
+      "all_complete_block": true,
+      "warning_count": 0,
+      "preserved_exact_offsets_hashes_ids_flags_and_input": true,
+      "semantic_entailment_certified": false,
+      "fragments": [
+        {
+          "source_unit_id": "synthetic-unit-0",
+          "page": 145,
+          "start": 0,
+          "end": 15,
+          "block_kind": "prose",
+          "complete_block": true
+        }
+      ]
+    },
+    {
+      "case": "submitted-clipping-still-fails-local-completeness",
+      "PASS": true
+    },
+    {
+      "case": "invalid-retained-raw-hash-remains-rejected",
+      "PASS": true
+    },
+    {
+      "case": "inline-caption-without-corroborated-seam-is-prose",
+      "PASS": true,
+      "current_limitation_reproduced": true,
+      "caption_semantic_boundaries_not_known": true
+    }
+  ],
+  "interpretation": {
+    "complete_block": "Exact coverage of a locally extracted block, not a semantic sentence/caption completeness certificate",
+    "observed_text_cut": "Retained F054 ends inside the grammatical phrase 'become a'; F055 continues that phrase on the next physical page, with page furniture between. Manual text inspection supports continuation, while original raw/OCR provenance remains unverified here.",
+    "current_mapper_limitation_reproduced": true,
+    "unconditional_scientific_support_promotion_found": false,
+    "warning_candidate": "Diagnostic only; possible seam can also be a legitimate heading/lowercase variable and never flips flags or certifies support",
+    "minimal_prompt_correction_warranted": true,
+    "source_mapper_boolean_change_ready": false,
+    "new_frozen_source_policy_needed_for_boolean_or_partition_semantics_change": true
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "index": 1,
+  "case_id_local_only": "DEV01_guarded_relay_positive",
+  "expected_local_only": "supported",
+  "status": "OBSERVATION_RETAINED",
+  "transport_attempts": 1,
+  "physical_POSTs_confirmed": 1,
+  "known_cost_USD": "0.0094622",
+  "UNKNOWN_hold_USD": "0",
+  "wire_sha256": "582bdf28b93ec0402c5b3b84749633f1a50b53b3bd0385fee3029401099f3ea6",
+  "raw_receipt_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic64-candidate\\actual64\\case01\\raw-provider-read01.json",
+      "bytes": 38128,
+      "sha256": "ddff03c2861ebfe98c796d1f0fee5a1d4a86491510dce919ce7ce469025028c3"
+    }
+  ],
+  "human_rating": null,
+  "production_publication_authorized": false,
+  "complete_adapter_return_ms": 9849.5493,
+  "provider_result": {
+    "raw_text": "{\"additional_gaps\":[],\"atom_id\":\"A1\",\"condition_judgments\":[{\"condition_id\":\"C0\",\"evidence_spans\":[{\"end\":160,\"fragment_id\":\"F1\",\"quote\":\"Test rule: when Sensor A reports pressure above 5 kPa while the key is armed, Relay R closes.\",\"start\":67}],\"gap\":null,\"semantic_reason\":\"The cited text explicitly states the complete proposition that when Sensor A reports pressure above 5 kPa while the key is armed, Relay R closes.\",\"verdict\":\"supported\"},{\"condition_id\":\"C1\",\"evidence_spans\":[{\"end\":160,\"fragment_id\":\"F1\",\"quote\":\"Test rule: when Sensor A reports pressure above 5 kPa while the key is armed, Relay R closes.\",\"start\":67}],\"gap\":null,\"semantic_reason\":\"The cited text specifies that the pressure report originates from Sensor A and has a threshold above 5 kPa.\",\"verdict\":\"supported\"},{\"condition_id\":\"C2\",\"evidence_spans\":[{\"end\":160,\"fragment_id\":\"F1\",\"quote\":\"Test rule: when Sensor A reports pressure above 5 kPa while the key is armed, Relay R closes.\",\"start\":67}],\"gap\":null,\"semantic_reason\":\"The cited text explicitly incorporates the armed-key condition in the implication.\",\"verdict\":\"supported\"},{\"condition_id\":\"C3\",\"evidence_spans\":[{\"end\":160,\"fragment_id\":\"F1\",\"quote\":\"Test rule: when Sensor A reports pressure above 5 kPa while the key is armed, Relay R closes.\",\"start\":67}],\"gap\":null,\"semantic_reason\":\"The cited text establishes that the consequence of the rule is the closing of Relay R.\",\"verdict\":\"supported\"}],\"schema_version\":\"atomic_support_judgment_v1\",\"verdict\":\"supported\"}",
+    "provider": "openai_compatible",
+    "model": "google/gemini-3.5-flash-lite",
+    "finish_reason": "stop",
+    "provider_request_id": "gen-1791697352-G70qwQYu6YQYxxASgRif",
+    "usage": {
+      "input_tokens": 1599,
+      "output_tokens": 3593,
+      "total_tokens": 5192,
+      "reasoning_tokens": 3195,
+      "cache_hit_input_tokens": 0,
+      "cache_miss_input_tokens": 1599,
+      "cost": 0.0094622
+    },
+    "latency_ms": 9846,
+    "error": null,
+    "request_submitted": true,
+    "diagnostic": {
+      "stage": "completed",
+      "http_status": 200,
+      "provider_error_type": null,
+      "provider_error_code": null,
+      "provider_error_parameter": null,
+      "message": null,
+      "message_redacted": false,
+      "provider_request_id": "gen-1791697352-G70qwQYu6YQYxxASgRif",
+      "finish_reason": "stop",
+      "network_error": null,
+      "request_submitted": true,
+      "latency_ms": 9846
+    }
+  },
+  "fully_settled": true
+}

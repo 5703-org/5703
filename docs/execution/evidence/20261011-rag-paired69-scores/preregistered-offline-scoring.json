@@ -1,0 +1,1493 @@
+{
+  "schema_version": "rag_paired66_preregistered_offline_scoring_v1",
+  "frozen_utc": "2026-10-11T07:27:53.664687+00:00",
+  "provenance": {
+    "author": "independent AI reviewer /root/atomic62_negative_review",
+    "basis": "Unchanged twelve AI-authored questions and their predesignated original OpenStax public passages; source-only independent reference/fact authoring before actual66 generation.",
+    "human_rating": null,
+    "human_gold": false,
+    "held_out_claim": false,
+    "actual66_model_answers_read": false,
+    "old_sciq_model_outputs_read": false,
+    "provider_calls": 0,
+    "auth_reads": 0,
+    "database_reads": 0,
+    "network_calls": 0,
+    "main_writes": 0
+  },
+  "source_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-designated-support-benchmark-20261008-01\\DESIGNATED_SUPPORT_BENCHMARK_FROZEN01.json",
+      "sha256": "0ad5237e7f69fcd5eb09ce0cd60ec2584556e31b6dcff69bd2111ca550730db3",
+      "bytes": 21070
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-designated-support-benchmark-20261008-01\\PUBLIC_DESIGNATED_SUPPORTS_BEFORE_QUESTIONS01.json",
+      "sha256": "a8a6ddd29980d4f1996701b806f32a9706731f05d4037e70c1aa00e62e906aa1",
+      "bytes": 29401
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\evaluation\\metrics\\scoring.py",
+      "sha256": "d9e2427b7f61e0cd82760bf0f2129576185239d43ef685c35ed7dd2fb9453a89",
+      "bytes": 6178
+    }
+  ],
+  "source_attribution": "OpenStax Biology2e, Mary Ann Clark, Jung Choi, Matthew Douglas; original source license preserved in inventory. Current OpenStax preface license independently inspected2026-10-08.",
+  "source_version": "Official Biology 2e PDF acquired2026-09-08; actual native release and per-passage SHA fixed; web revision not substituted.",
+  "corpus_release_id": "4f11bd70-a486-4d16-b216-78cfe499530a",
+  "book_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+  "lexical_scoring": {
+    "implementation_path": "E:\\5703\\learning-assistant\\evaluation\\metrics\\scoring.py",
+    "implementation_sha256": "d9e2427b7f61e0cd82760bf0f2129576185239d43ef685c35ed7dd2fb9453a89",
+    "SCORER_VERSION": "conservative-v1",
+    "TOKENIZER_VERSION": "words-signed-numbers-symbols-v1",
+    "TOKEN_PATTERN": "[+−-]?(?:\\d+(?:\\.\\d*)?|\\.\\d+)(?:[eE][+−-]?\\d+)?|[^\\W\\d_]+(?:['’][^\\W\\d_]+)*|[^\\w\\s]",
+    "implementation_functions": [
+      "normalize",
+      "tokens",
+      "exact_match",
+      "token_f1",
+      "score_outcome"
+    ],
+    "mode": "benchmark_openqa",
+    "input_field": "completed answer response.short_answer only",
+    "reference_count_per_question": 1,
+    "normalization": "Unicode NFKC, then casefold, then split whitespace and join with one space. Punctuation is preserved.",
+    "token_f1": "Use existing TOKEN_PATTERN.findall(normalize(text)); overlap is sum of Counter multiset intersection; score is 2*overlap/(prediction token count + reference token count), or zero for either empty token list.",
+    "exact_match": "Both normalized strings must be nonempty and exactly equal.",
+    "empty_or_non_answer": "Follow the pinned score_outcome implementation; missing/empty compact answers and ineligible execution outcomes get zero lexical credit within the scheduled denominator. Do not extract a substitute answer from full prose.",
+    "aliases_or_posthoc_reference_expansion": false,
+    "interpretation": "Diagnostic lexical proxies only; EM/F1 are separate from semantic completeness and evidence support, and low lexical overlap does not establish an incorrect answer."
+  },
+  "evidence_scoring": {
+    "reviewer_type": "independent AI semantic review; human null",
+    "unit": "question-specific atomic required fact plus binding and necessary conditions",
+    "fact_verdicts": [
+      "supported",
+      "unsupported",
+      "uncertain",
+      "not_stated"
+    ],
+    "supported": "The answer states the required fact and the actually available/selected evidence supports it with correct subject/object, relation and relevant qualifiers. Exact text matching alone is not semantic certification.",
+    "unsupported": "The answer's stated fact conflicts with, or is assigned to the wrong entity/condition by, the inspected evidence; give the concrete reason and quote.",
+    "uncertain": "The inspected evidence is insufficient or ambiguous to establish a stated fact; preserve the gap rather than infer support.",
+    "not_stated": "The answer omits a question-required fact; omission is not a fabricated contradictory assertion.",
+    "required_fact_coverage": "Number of required facts stated correctly / fixed number of required facts; an omitted facet cannot be compensated by another fact. Report correctness/completeness separately from witness sufficiency.",
+    "complete_question_answer": "Every preregistered required fact is stated correctly, with identities, causal relations and necessary qualifiers intact.",
+    "complete_selected_witness_trail": "Every stated required fact is supported by actual cited/selected source text. All quote IDs in a listed multi-quote support bundle are needed when they jointly bind antecedents, conditions or causal premises; one-sided relation evidence fails even if the full reference passage contains the answer.",
+    "reference_bundle_role": "The listed designated chunk and quotes are known sufficient support, not an exhaustive relevance label set. Other returned passages may genuinely support an answer; assess their text directly and record new-source review explicitly without adding reference aliases or silently changing frozen required facts.",
+    "answer_vs_context_axes": "Keep answer fact correctness/completeness, available-context support, actual selected-citation support and lexical EM/F1 as separate denominators. Absence of the predesignated chunk is not proof that another passage cannot answer the question.",
+    "additional_claims": "Assess extra answer claims separately when evidence permits. Nonexhaustive sources cannot certify all external facts; report unreviewed/uncertain claims and do not infer global factual correctness.",
+    "conflict_and_qualifiers": "Preserve contradictory evidence as uncertainty and explicitly report it. Keep may/perhaps uncertainty and do not upgrade possibilities, approximate quantities or implications into universal guarantees.",
+    "truth_certification": false
+  },
+  "limitations": [
+    "The twelve questions are synthetic AI-authored diagnostic items, not learner history, human gold, or a held-out query sample.",
+    "Textbook passages are attributed real public OpenStax source text, not newly invented textbook facts.",
+    "One predesignated supporting chunk per question is a nonexhaustive known-support catalog; complete corpus relevance is unannotated.",
+    "All quote substrings, raw UTF-8 hashes and Unicode codepoint offsets are independently verified against the saved passage text. Source-unit coordinates are inherited public metadata mapped arithmetically; complete source units/PDF/DB were not separately reopened.",
+    "References intentionally have no aliases; legitimate paraphrases may score poorly under conservative lexical EM/F1 while meeting semantic required facts.",
+    "No model outcomes, retrieval-quality changes, production safety, native UI success, or end-to-end latency are established by this source-only preregistration."
+  ],
+  "verification": {
+    "question_count": 12,
+    "question_hashes_verified": 12,
+    "designated_passage_hashes_verified": 12,
+    "source_quote_substrings_hashes_and_coordinates_verified": 27,
+    "required_fact_count": 38,
+    "all_required_facts_have_explicit_quote_bundles": true,
+    "required_source_insufficiencies": [],
+    "scorer_executed_or_reimplemented": false
+  },
+  "questions": [
+    {
+      "question_id": "designated_support_01",
+      "question": "What details should the methods section of a scientific paper provide so that another scientist can reproduce the experiment?",
+      "question_sha256": "6d35b76ffd745e14ed446ac584a33e420d93777e23970bc9bfb2afac45c7d91e",
+      "reference": "An accurate, sufficiently detailed description of materials and substances, data-gathering methods and techniques, measurements, calculations, and statistical analyses, so another researcher can repeat the experiment and obtain similar results.",
+      "reference_sha256": "7c70c43ee5b2a6df77d84b22c6c575510f0a6f88bef511032f2bc56b2ea4adff",
+      "reference_aliases": [],
+      "required_facts": [
+        {
+          "fact_id": "materials",
+          "proposition": "Accurately describe the materials/substances used.",
+          "quote_ids": [
+            "Q1"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "methods",
+          "proposition": "Describe the methods and techniques used to gather data.",
+          "quote_ids": [
+            "Q1"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "measurements",
+          "proposition": "Describe how measurements were made.",
+          "quote_ids": [
+            "Q3"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "calculations",
+          "proposition": "Describe the calculations used to examine the data.",
+          "quote_ids": [
+            "Q3"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "statistics",
+          "proposition": "Describe the statistical analyses used to examine the data.",
+          "quote_ids": [
+            "Q3"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "replication",
+          "proposition": "Give enough accurate detail for another researcher to repeat the experiment and obtain similar results.",
+          "quote_ids": [
+            "Q2"
+          ],
+          "support_relation": "direct"
+        }
+      ],
+      "optional_source_details": [
+        {
+          "fact_id": "conciseness",
+          "proposition": "The description need not be verbose.",
+          "quote_ids": [
+            "Q2"
+          ],
+          "support_relation": "direct"
+        }
+      ],
+      "source_quotes": [
+        {
+          "quote_id": "Q1",
+          "chunk_id": "da2ca6888f8a2d01ef0d81502a1c79f45c31",
+          "chunk_text_sha256": "8d7855d3bbd12e092197fbfd736a308f8b838d326f0e20ebc049c69423353d83",
+          "start": 516,
+          "end": 688,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "The materials and methods section includes a complete and accurate description of the substances the researchers use, and the method and techniques they use to gather data.",
+          "quote_sha256": "faf0985063da38a776b718a5fa7b95ba852d7357bf8aa6743e40e923b1ebcaf3",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "ebf7228a4946d20fce73ff87ee2a7b767982",
+              "page": 38,
+              "chunk_start": 516,
+              "chunk_end": 688,
+              "source_unit_start": 1128,
+              "source_unit_end": 1300
+            }
+          ]
+        },
+        {
+          "quote_id": "Q2",
+          "chunk_id": "da2ca6888f8a2d01ef0d81502a1c79f45c31",
+          "chunk_text_sha256": "8d7855d3bbd12e092197fbfd736a308f8b838d326f0e20ebc049c69423353d83",
+          "start": 689,
+          "end": 847,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "The description should be thorough enough to allow another researcher to repeat the experiment and obtain similar results, but it does not have to be verbose.",
+          "quote_sha256": "0722a8547108294c5cb436f651e81b43a2fe5c85559596d67bb4b4f59d715081",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "ebf7228a4946d20fce73ff87ee2a7b767982",
+              "page": 38,
+              "chunk_start": 689,
+              "chunk_end": 847,
+              "source_unit_start": 1301,
+              "source_unit_end": 1459
+            }
+          ]
+        },
+        {
+          "quote_id": "Q3",
+          "chunk_id": "da2ca6888f8a2d01ef0d81502a1c79f45c31",
+          "chunk_text_sha256": "8d7855d3bbd12e092197fbfd736a308f8b838d326f0e20ebc049c69423353d83",
+          "start": 848,
+          "end": 1017,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "This section will also include information on how the researchers made measurements and the types of calculations and statistical analyses they used to examine raw data.",
+          "quote_sha256": "7842eb09fc8cd7966c1175be112dac80324cf18a4461078cef3980459c4245e4",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "ebf7228a4946d20fce73ff87ee2a7b767982",
+              "page": 38,
+              "chunk_start": 848,
+              "chunk_end": 1017,
+              "source_unit_start": 1460,
+              "source_unit_end": 1629
+            }
+          ]
+        }
+      ],
+      "designated_support_bundle": {
+        "chunk_ids": [
+          "da2ca6888f8a2d01ef0d81502a1c79f45c31"
+        ],
+        "covers_required_fact_ids": [
+          "materials",
+          "methods",
+          "measurements",
+          "calculations",
+          "statistics",
+          "replication"
+        ],
+        "sufficient_for_all_question_required_facts": true,
+        "catalog_exhaustive": false
+      },
+      "source_metadata": {
+        "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+        "section": "Chapter 1 The Study of Life / 1.1 The Science of Biology",
+        "physical_pages": [
+          38
+        ],
+        "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf#page=38"
+      },
+      "source_insufficiency_for_required_facts": false,
+      "ambiguities_and_scope_notes": []
+    },
+    {
+      "question_id": "designated_support_02",
+      "question": "How do gated ion channels help nerve cells transmit electrical signals and muscle cells contract?",
+      "question_sha256": "6d4a7f94f2625c185167999239c6c713386b224460de12248ead45e0418a8ebf",
+      "reference": "Opening and closing gated sodium, potassium, and calcium channels changes ion concentrations across the membrane, facilitating electrical transmission in nerve cells and contraction in muscle cells.",
+      "reference_sha256": "14ccffe8279dbddad9be47ad043488c8d232b6fcf248e196aa6a0c21fe801c64",
+      "reference_aliases": [],
+      "required_facts": [
+        {
+          "fact_id": "gating",
+          "proposition": "The channels open and close to control ion movement.",
+          "quote_ids": [
+            "Q1",
+            "Q2"
+          ],
+          "support_relation": "explicit ion-channel context plus opening/closing mechanism"
+        },
+        {
+          "fact_id": "ion_concentrations",
+          "proposition": "Opening/closing changes relative ion concentrations on opposite sides of the membrane.",
+          "quote_ids": [
+            "Q2"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "nerve_signals",
+          "proposition": "These changes facilitate electrical transmission along nerve-cell membranes.",
+          "quote_ids": [
+            "Q1",
+            "Q2"
+          ],
+          "support_relation": "same-paragraph explicit cell-type binding"
+        },
+        {
+          "fact_id": "muscle_contraction",
+          "proposition": "These changes facilitate contraction in muscle cells.",
+          "quote_ids": [
+            "Q1",
+            "Q2"
+          ],
+          "support_relation": "same-paragraph explicit cell-type binding"
+        }
+      ],
+      "optional_source_details": [
+        {
+          "fact_id": "ion_names",
+          "proposition": "The passage names sodium, potassium, and calcium gated channels.",
+          "quote_ids": [
+            "Q1"
+          ],
+          "support_relation": "direct"
+        }
+      ],
+      "source_quotes": [
+        {
+          "quote_id": "Q1",
+          "chunk_id": "11e3c1e7ef176a836bd476ced930947f38c7",
+          "chunk_text_sha256": "07b67558f3f1d9909cfc6572da13a64b5d461e48bda33b04b02564cfc8d0be9e",
+          "start": 555,
+          "end": 713,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "Cells involved in transmitting electrical impulses, such as nerve and muscle cells, have gated channels for sodium, potassium, and calcium in their membranes.",
+          "quote_sha256": "19682f74d1d03b717942c32209a6c2a82a7236ef97734416fc446967cee78a94",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "6a7770d94a751d4815cd1b1e604ce13847ae",
+              "page": 161,
+              "chunk_start": 555,
+              "chunk_end": 713,
+              "source_unit_start": 3175,
+              "source_unit_end": 3333
+            }
+          ]
+        },
+        {
+          "quote_id": "Q2",
+          "chunk_id": "11e3c1e7ef176a836bd476ced930947f38c7",
+          "chunk_text_sha256": "07b67558f3f1d9909cfc6572da13a64b5d461e48bda33b04b02564cfc8d0be9e",
+          "start": 714,
+          "end": 984,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "Opening and closing these channels changes the relative concentrations on opposing sides of the membrane of these ions, resulting in facilitating electrical transmission along membranes (in the case of nerve cells) or in muscle contraction (in the case of muscle cells).",
+          "quote_sha256": "0ad4a4b36ae89d18842dcbe74ceb167fee905847ac3ea60dd137c2198e125b67",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "6a7770d94a751d4815cd1b1e604ce13847ae",
+              "page": 161,
+              "chunk_start": 714,
+              "chunk_end": 984,
+              "source_unit_start": 3334,
+              "source_unit_end": 3604
+            }
+          ]
+        }
+      ],
+      "designated_support_bundle": {
+        "chunk_ids": [
+          "11e3c1e7ef176a836bd476ced930947f38c7"
+        ],
+        "covers_required_fact_ids": [
+          "gating",
+          "ion_concentrations",
+          "nerve_signals",
+          "muscle_contraction"
+        ],
+        "sufficient_for_all_question_required_facts": true,
+        "catalog_exhaustive": false
+      },
+      "source_metadata": {
+        "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+        "section": "Chapter 5 Structure and Function of Plasma Membranes / 5.2 Passive Transport",
+        "physical_pages": [
+          161
+        ],
+        "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf#page=161"
+      },
+      "source_insufficiency_for_required_facts": false,
+      "ambiguities_and_scope_notes": [
+        "The earlier quoted word gated contains PDF/OCR typography; the selected mechanism sentences avoid that artifact."
+      ]
+    },
+    {
+      "question_id": "designated_support_03",
+      "question": "Why can the same signaling molecule cause different responses in different types of cells?",
+      "question_sha256": "5888b8aabb0dfd41608388fad05c6ecb15bf806eb454c4618af2923d1d8eb9da",
+      "reference": "Different cell types express different proteins, so the same signaling ligand can initiate different responses in different cells.",
+      "reference_sha256": "515531306d5e8f025e9900bc9ba192e03269927699096624eae080475742a3fa",
+      "reference_aliases": [],
+      "required_facts": [
+        {
+          "fact_id": "same_ligand",
+          "proposition": "The same ligand can initiate different signals/responses in different cell types.",
+          "quote_ids": [
+            "Q1"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "protein_expression",
+          "proposition": "The response differences are due to differences in protein expression between cell types.",
+          "quote_ids": [
+            "Q1"
+          ],
+          "support_relation": "direct"
+        }
+      ],
+      "optional_source_details": [],
+      "source_quotes": [
+        {
+          "quote_id": "Q1",
+          "chunk_id": "1cdf3bf107a0eab807083f50ce09acab18ce",
+          "chunk_text_sha256": "c096239088099d168641435760e18b8d521c8e99ff30e249c683bc02a14478b2",
+          "start": 863,
+          "end": 1045,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "the same ligands are often used to initiate different signals in different cell types. This variation in response is due to differences in protein expression in different cell types.",
+          "quote_sha256": "3c532414ff26eebdc058d886fde98e43a16f2340d9f2bb6c9913f9b2d7072ef9",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "4fce165ced12cbb699d7373e5ed81a9ef494",
+              "page": 268,
+              "chunk_start": 863,
+              "chunk_end": 1045,
+              "source_unit_start": 520,
+              "source_unit_end": 702
+            }
+          ]
+        }
+      ],
+      "designated_support_bundle": {
+        "chunk_ids": [
+          "1cdf3bf107a0eab807083f50ce09acab18ce"
+        ],
+        "covers_required_fact_ids": [
+          "same_ligand",
+          "protein_expression"
+        ],
+        "sufficient_for_all_question_required_facts": true,
+        "catalog_exhaustive": false
+      },
+      "source_metadata": {
+        "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+        "section": "Chapter 9 Cell Communication / 9.2 Propagation of the Signal",
+        "physical_pages": [
+          267,
+          268
+        ],
+        "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf#page=267"
+      },
+      "source_insufficiency_for_required_facts": false,
+      "ambiguities_and_scope_notes": [
+        "The antecedent of 'This variation' is retained in the same quote; no particular receptor or effector is required."
+      ]
+    },
+    {
+      "question_id": "designated_support_04",
+      "question": "How are the short and long arms of a chromosome named?",
+      "question_sha256": "83c0e22f169853de01da7cedec2eff79873d5adab8d9208bf802e86370affbad",
+      "reference": "The short arm is p, and the long arm is q.",
+      "reference_sha256": "25810f2a209f68f31291f16fa8d74730beeae4caedc5151f3429cf60f8dcb70c",
+      "reference_aliases": [],
+      "required_facts": [
+        {
+          "fact_id": "short_p",
+          "proposition": "The short chromosome arm is designated p.",
+          "quote_ids": [
+            "Q1"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "long_q",
+          "proposition": "The long chromosome arm is designated q.",
+          "quote_ids": [
+            "Q2"
+          ],
+          "support_relation": "direct"
+        }
+      ],
+      "optional_source_details": [
+        {
+          "fact_id": "p_origin",
+          "proposition": "p stands for petite.",
+          "quote_ids": [
+            "Q1"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "q_origin",
+          "proposition": "q follows p alphabetically.",
+          "quote_ids": [
+            "Q2"
+          ],
+          "support_relation": "direct"
+        }
+      ],
+      "source_quotes": [
+        {
+          "quote_id": "Q1",
+          "chunk_id": "c5ca735f5d58a4f8919a3850359e41dd5523",
+          "chunk_text_sha256": "2cc9d56314fa27fd991ff538a78994ec9d7b503ca8db6b0f7b9633eb2183f534",
+          "start": 1038,
+          "end": 1092,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "We abbreviate the short arm p (for “petite”); whereas,",
+          "quote_sha256": "725e26217fa55b578b846324e1e519f83f77627baafebfb65d43a6a8f9f55aa7",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "710edac3d9d2854ef840ec4420c491490482",
+              "page": 367,
+              "chunk_start": 1038,
+              "chunk_end": 1092,
+              "source_unit_start": 2019,
+              "source_unit_end": 2073
+            }
+          ]
+        },
+        {
+          "quote_id": "Q2",
+          "chunk_id": "c5ca735f5d58a4f8919a3850359e41dd5523",
+          "chunk_text_sha256": "2cc9d56314fa27fd991ff538a78994ec9d7b503ca8db6b0f7b9633eb2183f534",
+          "start": 1093,
+          "end": 1162,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "we abbreviate the long arm q (because it follows “p” alphabetically).",
+          "quote_sha256": "a7cc07c879fd7e162a77cbc60a7983a738946db843437bb00be897d3124d1b17",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "710edac3d9d2854ef840ec4420c491490482",
+              "page": 367,
+              "chunk_start": 1093,
+              "chunk_end": 1162,
+              "source_unit_start": 2074,
+              "source_unit_end": 2143
+            }
+          ]
+        }
+      ],
+      "designated_support_bundle": {
+        "chunk_ids": [
+          "c5ca735f5d58a4f8919a3850359e41dd5523"
+        ],
+        "covers_required_fact_ids": [
+          "short_p",
+          "long_q"
+        ],
+        "sufficient_for_all_question_required_facts": true,
+        "catalog_exhaustive": false
+      },
+      "source_metadata": {
+        "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+        "section": "Chapter 13 Modern Understandings of Inheritance / 13.2 Chromosomal Basis of Inherited Disorders",
+        "physical_pages": [
+          367
+        ],
+        "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf#page=367"
+      },
+      "source_insufficiency_for_required_facts": false,
+      "ambiguities_and_scope_notes": [
+        "The etymology is optional; the question-required answer is the correct arm-to-letter mapping. Raw PDF quote typography is preserved verbatim."
+      ]
+    },
+    {
+      "question_id": "designated_support_05",
+      "question": "Why might recombination hotspots make a genetic linkage map differ from a physical map of the genome?",
+      "question_sha256": "25a47420f0481cdb205117ad65b20f4a161e2bbbd0a041505036ebb316dbfe59",
+      "reference": "Linkage maps depend on recombination, whose rate varies across regions such as hotspots, whereas physical maps show actual distances and nucleotide counts between markers.",
+      "reference_sha256": "2dabfb4d8263b1ed68b6f227df60f944e9e8f152dce218a0e7742a4537c91557",
+      "reference_aliases": [],
+      "required_facts": [
+        {
+          "fact_id": "recombination_basis",
+          "proposition": "Genetic/linkage maps depend on recombination.",
+          "quote_ids": [
+            "Q1"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "local_variation",
+          "proposition": "Recombination varies by genome region, including hotspots, and this affects genetic mapping.",
+          "quote_ids": [
+            "Q1",
+            "Q2"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "physical_contrast",
+          "proposition": "Physical maps represent actual physical distances and nucleotide counts rather than recombination rates, explaining possible disagreement.",
+          "quote_ids": [
+            "Q1",
+            "Q2",
+            "Q3"
+          ],
+          "support_relation": "explicit mapping premises and their conservative contrast"
+        }
+      ],
+      "optional_source_details": [],
+      "source_quotes": [
+        {
+          "quote_id": "Q1",
+          "chunk_id": "0c3ff37ed8f4c367e68d02dcf74f44ed6280",
+          "chunk_text_sha256": "dcaa02aee96247f922b0015136f74fc115f3a695522dd77a4fa485426bfd97d5",
+          "start": 430,
+          "end": 605,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "Because genetic maps rely completely on the natural process of recombination, natural increases or decreases in the recombination level of a given genome area affects mapping.",
+          "quote_sha256": "3d6c1ad92e419488b79128f4029db40724ca4a17bc5ec4aed885965312023633",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "6b0efa4d65dada9d51d19024b9aa3236d561",
+              "page": 472,
+              "chunk_start": 430,
+              "chunk_end": 605,
+              "source_unit_start": 215,
+              "source_unit_end": 390
+            }
+          ]
+        },
+        {
+          "quote_id": "Q2",
+          "chunk_id": "0c3ff37ed8f4c367e68d02dcf74f44ed6280",
+          "chunk_text_sha256": "dcaa02aee96247f922b0015136f74fc115f3a695522dd77a4fa485426bfd97d5",
+          "start": 606,
+          "end": 718,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "Some parts of the genome are recombination hotspots; whereas, others do not show a propensity for recombination.",
+          "quote_sha256": "f57e6059f2704b17cb3ca3418670042a899528951b8e8ebbbc635d3bab13087a",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "6b0efa4d65dada9d51d19024b9aa3236d561",
+              "page": 472,
+              "chunk_start": 606,
+              "chunk_end": 718,
+              "source_unit_start": 391,
+              "source_unit_end": 503
+            }
+          ]
+        },
+        {
+          "quote_id": "Q3",
+          "chunk_id": "0c3ff37ed8f4c367e68d02dcf74f44ed6280",
+          "chunk_text_sha256": "dcaa02aee96247f922b0015136f74fc115f3a695522dd77a4fa485426bfd97d5",
+          "start": 828,
+          "end": 953,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "A physical map provides detail of the actual physical distance between genetic markers, as well as the number of nucleotides.",
+          "quote_sha256": "5b4283c0540815724dfc3badb5c95cd4d905f7f187426569e0da466e42953779",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "6b0efa4d65dada9d51d19024b9aa3236d561",
+              "page": 472,
+              "chunk_start": 828,
+              "chunk_end": 953,
+              "source_unit_start": 613,
+              "source_unit_end": 738
+            }
+          ]
+        }
+      ],
+      "designated_support_bundle": {
+        "chunk_ids": [
+          "0c3ff37ed8f4c367e68d02dcf74f44ed6280"
+        ],
+        "covers_required_fact_ids": [
+          "recombination_basis",
+          "local_variation",
+          "physical_contrast"
+        ],
+        "sufficient_for_all_question_required_facts": true,
+        "catalog_exhaustive": false
+      },
+      "source_metadata": {
+        "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+        "section": "Chapter 17 Biotechnology and Genomics / 17.2 Mapping Genomes",
+        "physical_pages": [
+          471,
+          472
+        ],
+        "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf#page=471"
+      },
+      "source_insufficiency_for_required_facts": false,
+      "ambiguities_and_scope_notes": [
+        "No recombination-to-distance formula, numeric error size, or directional distortion is supplied or required."
+      ]
+    },
+    {
+      "question_id": "designated_support_06",
+      "question": "How does a temperate bacteriophage preserve its DNA during lysogeny, and what can trigger a return to the lytic cycle?",
+      "question_sha256": "be3d3ee5daee631acd7be0bef96919b7ac3ba2cad06412b7711f0864a1817e74",
+      "reference": "During lysogeny, phage DNA integrates into the host genome and is inherited by later generations. Stress such as starvation or toxic chemicals may cause the prophage to excise and enter the lytic cycle.",
+      "reference_sha256": "470a1bd5ba22ab5ed2c3c8c59862e789d19504e686f9d189d6c3330f40bb2558",
+      "reference_aliases": [],
+      "required_facts": [
+        {
+          "fact_id": "host_integration",
+          "proposition": "In lysogeny, phage DNA is incorporated into the host genome.",
+          "quote_ids": [
+            "Q1"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "inheritance",
+          "proposition": "The integrated DNA is passed to subsequent host generations.",
+          "quote_ids": [
+            "Q1"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "stress_excision",
+          "proposition": "Environmental stress may cause the prophage to excise.",
+          "quote_ids": [
+            "Q2"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "lytic_return",
+          "proposition": "Excision can lead to entry into the lytic cycle.",
+          "quote_ids": [
+            "Q2"
+          ],
+          "support_relation": "direct"
+        }
+      ],
+      "optional_source_details": [
+        {
+          "fact_id": "stress_examples",
+          "proposition": "Starvation and toxic chemicals are examples of triggering stressors.",
+          "quote_ids": [
+            "Q2"
+          ],
+          "support_relation": "direct"
+        }
+      ],
+      "source_quotes": [
+        {
+          "quote_id": "Q1",
+          "chunk_id": "41974915f0bc270aefd1bd5bc3d73cd92c48",
+          "chunk_text_sha256": "12108172c6f07bd88f6bf7aef603aed6746586b19c0e39b77323637f103a5a93",
+          "start": 363,
+          "end": 483,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "In the lysogenic cycle, phage DNA is incorporated into the host genome, where it is passed on to subsequent generations.",
+          "quote_sha256": "5929c45d2edb408bb4caa123a0314c8e9f1032fd59e4e56b233361c9ab0e78a6",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "862c62991cded03c2a9c1a527cc5dd51c2b2",
+              "page": 563,
+              "chunk_start": 363,
+              "chunk_end": 483,
+              "source_unit_start": 162,
+              "source_unit_end": 282
+            }
+          ]
+        },
+        {
+          "quote_id": "Q2",
+          "chunk_id": "41974915f0bc270aefd1bd5bc3d73cd92c48",
+          "chunk_text_sha256": "12108172c6f07bd88f6bf7aef603aed6746586b19c0e39b77323637f103a5a93",
+          "start": 484,
+          "end": 617,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "Environmental stressors such as starvation or exposure to toxic chemicals may cause the prophage to excise and enter the lytic cycle.",
+          "quote_sha256": "c04a6508bbbbb8b0fd5e59ac43ba03876d49b11266f764ca24211dc3f2d02443",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "862c62991cded03c2a9c1a527cc5dd51c2b2",
+              "page": 563,
+              "chunk_start": 484,
+              "chunk_end": 617,
+              "source_unit_start": 283,
+              "source_unit_end": 416
+            }
+          ]
+        }
+      ],
+      "designated_support_bundle": {
+        "chunk_ids": [
+          "41974915f0bc270aefd1bd5bc3d73cd92c48"
+        ],
+        "covers_required_fact_ids": [
+          "host_integration",
+          "inheritance",
+          "stress_excision",
+          "lytic_return"
+        ],
+        "sufficient_for_all_question_required_facts": true,
+        "catalog_exhaustive": false
+      },
+      "source_metadata": {
+        "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+        "section": "Chapter 21 Viruses / 21.2 Virus Infections and Hosts",
+        "physical_pages": [
+          562,
+          563
+        ],
+        "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf#page=562"
+      },
+      "source_insufficiency_for_required_facts": false,
+      "ambiguities_and_scope_notes": [
+        "Keep the source's 'may': stress is a possible trigger, not an unconditional guarantee. The embedded multiple-choice false-statement distractors are not narrative assertions and are excluded as evidence."
+      ]
+    },
+    {
+      "question_id": "designated_support_07",
+      "question": "Why do liverwort thalli generally need moist habitats despite having openings for gas exchange?",
+      "question_sha256": "0bd9c0ec4409dfe56208ce3b91f3ba6d310c50640deb1b9656c07c335aa81c8e",
+      "reference": "Their gas-exchange openings lack active guard-cell control. The thallus absorbs water across its surface and lacks a cuticle to prevent drying, so it prefers moist habitats.",
+      "reference_sha256": "3118c1e8ff3fba6736904db1b3b24514de15508561b874d2ff9ab92427302e07",
+      "reference_aliases": [],
+      "required_facts": [
+        {
+          "fact_id": "unregulated_openings",
+          "proposition": "The gas-exchange openings do not actively open and close by guard-cell action.",
+          "quote_ids": [
+            "Q1"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "surface_water_uptake",
+          "proposition": "The thallus takes up water over its entire surface.",
+          "quote_ids": [
+            "Q2"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "cuticle_desiccation",
+          "proposition": "It lacks a cuticle preventing desiccation; this explains the preference for wet habitats.",
+          "quote_ids": [
+            "Q2"
+          ],
+          "support_relation": "direct"
+        }
+      ],
+      "optional_source_details": [
+        {
+          "fact_id": "not_stomata",
+          "proposition": "The passage distinguishes these openings from stomata.",
+          "quote_ids": [
+            "Q1"
+          ],
+          "support_relation": "direct"
+        }
+      ],
+      "source_quotes": [
+        {
+          "quote_id": "Q1",
+          "chunk_id": "d6a565996763d180bc177291d26bcec06671",
+          "chunk_text_sha256": "a1db784360bc2db2377f66f3ed476c2edf886cf8f372d7caf7b868d51064a738",
+          "start": 651,
+          "end": 756,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "However, these are not stomata, because they do not actively open and close by the action of guard cells.",
+          "quote_sha256": "5be6d2efca626ecd5c6391401bf796523fedd73c3d0e35a1635154421350ddda",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "ba432966c0b8671e4400c149ddd7fe01f208",
+              "page": 698,
+              "chunk_start": 651,
+              "chunk_end": 756,
+              "source_unit_start": 464,
+              "source_unit_end": 569
+            }
+          ]
+        },
+        {
+          "quote_id": "Q2",
+          "chunk_id": "d6a565996763d180bc177291d26bcec06671",
+          "chunk_text_sha256": "a1db784360bc2db2377f66f3ed476c2edf886cf8f372d7caf7b868d51064a738",
+          "start": 757,
+          "end": 904,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "Instead, the thallus takes up water over its entire surface and has no cuticle to prevent desiccation, which explains their preferred wet habitats.",
+          "quote_sha256": "9c29b97e151111c9dd27f2898d4e13a33cde164a61aba108a04e91e2c5c2137e",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "ba432966c0b8671e4400c149ddd7fe01f208",
+              "page": 698,
+              "chunk_start": 757,
+              "chunk_end": 904,
+              "source_unit_start": 570,
+              "source_unit_end": 717
+            }
+          ]
+        }
+      ],
+      "designated_support_bundle": {
+        "chunk_ids": [
+          "d6a565996763d180bc177291d26bcec06671"
+        ],
+        "covers_required_fact_ids": [
+          "unregulated_openings",
+          "surface_water_uptake",
+          "cuticle_desiccation"
+        ],
+        "sufficient_for_all_question_required_facts": true,
+        "catalog_exhaustive": false
+      },
+      "source_metadata": {
+        "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+        "section": "Chapter 25 Seedless Plants / 25.3 Bryophytes",
+        "physical_pages": [
+          697,
+          698
+        ],
+        "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf#page=697"
+      },
+      "source_insufficiency_for_required_facts": false,
+      "ambiguities_and_scope_notes": [
+        "No reproductive dependence on water is required; the question is about the thallus and gas-exchange openings."
+      ]
+    },
+    {
+      "question_id": "designated_support_08",
+      "question": "What skeletal and finger features helped pterosaurs support their large membranous wings?",
+      "question_sha256": "ac8c3a60ae665bbafcb95ba5e0609a52e739b0f7ae685df10c85760c1734a19d",
+      "reference": "Pterosaurs had ultralight skeletons, a pteroid bone strengthening the forewing membrane, and a greatly elongated fourth finger supporting much of the wing.",
+      "reference_sha256": "872bc883925187b2e4d0285296e46a1ff69d5dbf15f58fbaad9070014777fec7",
+      "reference_aliases": [],
+      "required_facts": [
+        {
+          "fact_id": "ultralight_skeleton",
+          "proposition": "Pterosaurs had ultralight skeletons.",
+          "quote_ids": [
+            "Q1"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "pteroid_support",
+          "proposition": "A pteroid bone strengthened the forewing membrane.",
+          "quote_ids": [
+            "Q1"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "fourth_finger",
+          "proposition": "A greatly elongated fourth finger supported the wing.",
+          "quote_ids": [
+            "Q2"
+          ],
+          "support_relation": "direct"
+        }
+      ],
+      "optional_source_details": [
+        {
+          "fact_id": "approximate_fraction",
+          "proposition": "The fourth finger supported perhaps half the wing; the proportion is explicitly tentative.",
+          "quote_ids": [
+            "Q2"
+          ],
+          "support_relation": "direct"
+        }
+      ],
+      "source_quotes": [
+        {
+          "quote_id": "Q1",
+          "chunk_id": "541f2535af14b192bde89e8221cb0db25f04",
+          "chunk_text_sha256": "f5e2874020f0dfd142d9e9fd317cfd199e143220a6e0c2aed312e2fabf917d40",
+          "start": 258,
+          "end": 378,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "Pterosaurs had ultralight skeletons, with a pteroid bone, unique to pterosaurs, that strengthened the forewing membrane.",
+          "quote_sha256": "a950b6253c7861bc433a0b1bf9c9bb90bb2cc86fed80e9135309e2f8f10ba1f7",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "ed8e29a14a615fae353464883cc6dfc157ba",
+              "page": 848,
+              "chunk_start": 258,
+              "chunk_end": 378,
+              "source_unit_start": 3290,
+              "source_unit_end": 3410
+            }
+          ]
+        },
+        {
+          "quote_id": "Q2",
+          "chunk_id": "541f2535af14b192bde89e8221cb0db25f04",
+          "chunk_text_sha256": "f5e2874020f0dfd142d9e9fd317cfd199e143220a6e0c2aed312e2fabf917d40",
+          "start": 379,
+          "end": 496,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "Much of their wing span was exaggerated by a greatly elongated fourth finger that supported perhaps half of the wing.",
+          "quote_sha256": "2a43b7e5d4c472b77302b0e2670d1d59ff1c5ef27c12325d8673003a50a573bd",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "ed8e29a14a615fae353464883cc6dfc157ba",
+              "page": 848,
+              "chunk_start": 379,
+              "chunk_end": 496,
+              "source_unit_start": 3411,
+              "source_unit_end": 3528
+            }
+          ]
+        }
+      ],
+      "designated_support_bundle": {
+        "chunk_ids": [
+          "541f2535af14b192bde89e8221cb0db25f04"
+        ],
+        "covers_required_fact_ids": [
+          "ultralight_skeleton",
+          "pteroid_support",
+          "fourth_finger"
+        ],
+        "sufficient_for_all_question_required_facts": true,
+        "catalog_exhaustive": false
+      },
+      "source_metadata": {
+        "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+        "section": "Chapter 29 Vertebrates / 29.4 Reptiles",
+        "physical_pages": [
+          848
+        ],
+        "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf#page=848"
+      },
+      "source_insufficiency_for_required_facts": false,
+      "ambiguities_and_scope_notes": [
+        "The fourth-finger identity is required. The source's tentative 'perhaps half' must not be converted into an exact established proportion."
+      ]
+    },
+    {
+      "question_id": "designated_support_09",
+      "question": "Which cells make the matrix of cartilage, and what are the spaces containing these cells called?",
+      "question_sha256": "b31eaabaf6af5039376ca90ca9a145dd41c9bf3e0abc31da6e6e74812001ded1",
+      "reference": "Chondrocytes make the cartilage matrix, and the spaces containing them are called lacunae.",
+      "reference_sha256": "b306b0c7da3d07e5d36cb65191b36b86b8ce25b70ded6f2f19a096aafc8fe2a2",
+      "reference_aliases": [],
+      "required_facts": [
+        {
+          "fact_id": "matrix_cells",
+          "proposition": "Chondrocytes make the cartilage matrix.",
+          "quote_ids": [
+            "Q1"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "lacunae",
+          "proposition": "The spaces containing chondrocytes are called lacunae.",
+          "quote_ids": [
+            "Q2"
+          ],
+          "support_relation": "direct"
+        }
+      ],
+      "optional_source_details": [
+        {
+          "fact_id": "fibers",
+          "proposition": "The passage also says these cells make tissue fibers.",
+          "quote_ids": [
+            "Q1"
+          ],
+          "support_relation": "direct"
+        }
+      ],
+      "source_quotes": [
+        {
+          "quote_id": "Q1",
+          "chunk_id": "4c2d57677126d73c6d0405f57792c12e1018",
+          "chunk_text_sha256": "7e5463a807d99894855af43df54c478b992267ba5cebc8b77390f3d801295234",
+          "start": 440,
+          "end": 513,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "The cells, called chondrocytes, make the matrix and fibers of the tissue.",
+          "quote_sha256": "08b0c1f4b37d374b1b6e58e54585c0f34b85aa99053660a2f60a90e91c6be35d",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "5e22d7010cbdac2aea84e22e5b61bd7540b6",
+              "page": 982,
+              "chunk_start": 440,
+              "chunk_end": 513,
+              "source_unit_start": 1532,
+              "source_unit_end": 1605
+            }
+          ]
+        },
+        {
+          "quote_id": "Q2",
+          "chunk_id": "4c2d57677126d73c6d0405f57792c12e1018",
+          "chunk_text_sha256": "7e5463a807d99894855af43df54c478b992267ba5cebc8b77390f3d801295234",
+          "start": 514,
+          "end": 580,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "Chondrocytes are found in spaces within the tissue called lacunae.",
+          "quote_sha256": "7160f1dbe543dae913d05a251e9f764e7566ca1abdb695d005314089e08f00c3",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "5e22d7010cbdac2aea84e22e5b61bd7540b6",
+              "page": 982,
+              "chunk_start": 514,
+              "chunk_end": 580,
+              "source_unit_start": 1606,
+              "source_unit_end": 1672
+            }
+          ]
+        }
+      ],
+      "designated_support_bundle": {
+        "chunk_ids": [
+          "4c2d57677126d73c6d0405f57792c12e1018"
+        ],
+        "covers_required_fact_ids": [
+          "matrix_cells",
+          "lacunae"
+        ],
+        "sufficient_for_all_question_required_facts": true,
+        "catalog_exhaustive": false
+      },
+      "source_metadata": {
+        "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+        "section": "Chapter 33 The Animal Body: Basic Form and Function / 33.2 Animal Primary Tissues",
+        "physical_pages": [
+          982,
+          983
+        ],
+        "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf#page=982"
+      },
+      "source_insufficiency_for_required_facts": false,
+      "ambiguities_and_scope_notes": [
+        "No external chondroblast/chondrocyte developmental distinction is substituted for the provided passage."
+      ]
+    },
+    {
+      "question_id": "designated_support_10",
+      "question": "How can too little dietary iodine cause an enlarged thyroid even when TSH is elevated?",
+      "question_sha256": "6cac42825032f65a89711f247138c9f8691f0df855e0f6e233dcb0e067f78bcc",
+      "reference": "Without enough iodine, T3 and T4 cannot be synthesized. Elevated TSH stimulates colloid accumulation, but without iodine it is not converted into thyroid hormone, so the gland enlarges into a goiter.",
+      "reference_sha256": "0ff46ceef1b33ea06e9c660e250ddd94257ce05c11ac269c6be8e87d1e009858",
+      "reference_aliases": [],
+      "required_facts": [
+        {
+          "fact_id": "iodine_synthesis",
+          "proposition": "Inadequate iodine prevents synthesis of T3 and T4 thyroid hormones.",
+          "quote_ids": [
+            "Q1"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "tsh_without_hormone",
+          "proposition": "TSH overproduction can coexist with failure to form thyroid hormone and goiter.",
+          "quote_ids": [
+            "Q2"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "tsh_colloid",
+          "proposition": "TSH stimulation increases thyroid colloid accumulation.",
+          "quote_ids": [
+            "Q3"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "unconverted_colloid_goiter",
+          "proposition": "Without iodine, colloid is not converted into thyroid hormone; continued accumulation enlarges the gland into a goiter.",
+          "quote_ids": [
+            "Q3",
+            "Q4"
+          ],
+          "support_relation": "retain same-paragraph colloid antecedent and causal chain"
+        }
+      ],
+      "optional_source_details": [],
+      "source_quotes": [
+        {
+          "quote_id": "Q1",
+          "chunk_id": "0d905ac55e4a54ded23075193278fb2cea72",
+          "chunk_text_sha256": "f6bf7ffa5c4bb7cec214aa587d0714e61d19a810ae6fcb1cf111205b8508e56e",
+          "start": 341,
+          "end": 467,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "Inadequate iodine intake, which occurs in many developing countries, results in an inability to synthesize T3 and T4 hormones.",
+          "quote_sha256": "04e701e2e76def5dd687a888e7faf2cdf69ba2dbb05266da5769964ca8505b5e",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "864cc5a525da26f2f81fdfb841378500b3e5",
+              "page": 1111,
+              "chunk_start": 341,
+              "chunk_end": 467,
+              "source_unit_start": 1310,
+              "source_unit_end": 1436
+            }
+          ]
+        },
+        {
+          "quote_id": "Q2",
+          "chunk_id": "0d905ac55e4a54ded23075193278fb2cea72",
+          "chunk_text_sha256": "f6bf7ffa5c4bb7cec214aa587d0714e61d19a810ae6fcb1cf111205b8508e56e",
+          "start": 468,
+          "end": 607,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "The thyroid gland enlarges in a condition called goiter, which is caused by overproduction of TSH without the formation of thyroid hormone.",
+          "quote_sha256": "626839d6e1de183f613b6e717855f9b01f1624e81547441e6aab9bac0e6b0313",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "864cc5a525da26f2f81fdfb841378500b3e5",
+              "page": 1111,
+              "chunk_start": 468,
+              "chunk_end": 607,
+              "source_unit_start": 1437,
+              "source_unit_end": 1576
+            }
+          ]
+        },
+        {
+          "quote_id": "Q3",
+          "chunk_id": "0d905ac55e4a54ded23075193278fb2cea72",
+          "chunk_text_sha256": "f6bf7ffa5c4bb7cec214aa587d0714e61d19a810ae6fcb1cf111205b8508e56e",
+          "start": 608,
+          "end": 746,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "Thyroglobulin is contained in a fluid called colloid, and TSH stimulation results in higher levels of colloid accumulation in the thyroid.",
+          "quote_sha256": "227f0fbd8efeb2631be9ed81a95d6e97b89c770ba30ace4d23772845393add58",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "864cc5a525da26f2f81fdfb841378500b3e5",
+              "page": 1111,
+              "chunk_start": 608,
+              "chunk_end": 746,
+              "source_unit_start": 1577,
+              "source_unit_end": 1715
+            }
+          ]
+        },
+        {
+          "quote_id": "Q4",
+          "chunk_id": "0d905ac55e4a54ded23075193278fb2cea72",
+          "chunk_text_sha256": "f6bf7ffa5c4bb7cec214aa587d0714e61d19a810ae6fcb1cf111205b8508e56e",
+          "start": 747,
+          "end": 902,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "In the absence of iodine, this is not converted to thyroid hormone, and colloid begins to accumulate more and more in the thyroid gland, leading to goiter.",
+          "quote_sha256": "d68ec68408524d37c79a2fc94eb44da9e44ed38b20634761e79c2fe5dfd7be97",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "864cc5a525da26f2f81fdfb841378500b3e5",
+              "page": 1111,
+              "chunk_start": 747,
+              "chunk_end": 902,
+              "source_unit_start": 1716,
+              "source_unit_end": 1871
+            }
+          ]
+        }
+      ],
+      "designated_support_bundle": {
+        "chunk_ids": [
+          "0d905ac55e4a54ded23075193278fb2cea72"
+        ],
+        "covers_required_fact_ids": [
+          "iodine_synthesis",
+          "tsh_without_hormone",
+          "tsh_colloid",
+          "unconverted_colloid_goiter"
+        ],
+        "sufficient_for_all_question_required_facts": true,
+        "catalog_exhaustive": false
+      },
+      "source_metadata": {
+        "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+        "section": "Chapter 37 The Endocrine System / 37.3 Regulation of Body Processes",
+        "physical_pages": [
+          1111
+        ],
+        "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf#page=1111"
+      },
+      "source_insufficiency_for_required_facts": false,
+      "ambiguities_and_scope_notes": [
+        "The selected passage starts with a cropped preceding sentence, but all required facts have complete later sentences. TRH and loss of negative feedback are not specified here and are not required or silently added."
+      ]
+    },
+    {
+      "question_id": "designated_support_11",
+      "question": "Why does filtrate become more dilute as it travels up the ascending limb of the loop of Henle?",
+      "question_sha256": "f26876d1c3cefd2cf2890a96da64485077d29e774f7795da3dc42114dba96b4a",
+      "reference": "Salt leaves the ascending limb without water leaving, so the filtrate becomes more dilute.",
+      "reference_sha256": "2fb9abada17cee0620b9aec8f8be01460e89625948028f44f574727dc6936799",
+      "reference_aliases": [],
+      "required_facts": [
+        {
+          "fact_id": "salt_loss",
+          "proposition": "Salt leaves the filtrate in the ascending limb.",
+          "quote_ids": [
+            "Q3"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "no_water_loss",
+          "proposition": "Water does not leave along with that salt.",
+          "quote_ids": [
+            "Q3"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "dilution",
+          "proposition": "Salt loss without water loss causes the filtrate to become more dilute up the limb.",
+          "quote_ids": [
+            "Q3"
+          ],
+          "support_relation": "direct"
+        }
+      ],
+      "optional_source_details": [
+        {
+          "fact_id": "thin_diffusion",
+          "proposition": "Na+ and Cl- diffuse to interstitial fluid in the thin ascending segment.",
+          "quote_ids": [
+            "Q1"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "thick_active_transport",
+          "proposition": "The same ions are actively transported to interstitial fluid in the thick segment.",
+          "quote_ids": [
+            "Q1",
+            "Q2"
+          ],
+          "support_relation": "retain named-ion antecedent"
+        }
+      ],
+      "source_quotes": [
+        {
+          "quote_id": "Q1",
+          "chunk_id": "7958cb1b8f4e677df57cda75ecbeee7ed924",
+          "chunk_text_sha256": "d998b9f7d4b1b0733b9acbfbf7337c89ceec774c39ff3dcec03c939d5329bae7",
+          "start": 963,
+          "end": 1065,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "In the thin part of the ascending loop of Henle, Na+ and Cl- ions diffuse into the interstitial fluid.",
+          "quote_sha256": "92ee9fdf96d8bfe7a1e0c2a8aee3ea8910ed0e4d205d180ea1f32b2c0ef3c7aa",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "36215a2004ce98df58c29f98c7ebe5a67ac1",
+              "page": 1230,
+              "chunk_start": 963,
+              "chunk_end": 1065,
+              "source_unit_start": 1893,
+              "source_unit_end": 1995
+            }
+          ]
+        },
+        {
+          "quote_id": "Q2",
+          "chunk_id": "7958cb1b8f4e677df57cda75ecbeee7ed924",
+          "chunk_text_sha256": "d998b9f7d4b1b0733b9acbfbf7337c89ceec774c39ff3dcec03c939d5329bae7",
+          "start": 1066,
+          "end": 1154,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "In the thick part, these same ions are actively transported into the interstitial fluid.",
+          "quote_sha256": "e6f3f1100dbb5dd9bf55aee91efdfe6fb93a9b8f4add88bb6a5b1d665d815bbc",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "36215a2004ce98df58c29f98c7ebe5a67ac1",
+              "page": 1230,
+              "chunk_start": 1066,
+              "chunk_end": 1154,
+              "source_unit_start": 1996,
+              "source_unit_end": 2084
+            }
+          ]
+        },
+        {
+          "quote_id": "Q3",
+          "chunk_id": "7958cb1b8f4e677df57cda75ecbeee7ed924",
+          "chunk_text_sha256": "d998b9f7d4b1b0733b9acbfbf7337c89ceec774c39ff3dcec03c939d5329bae7",
+          "start": 1155,
+          "end": 1250,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "Because salt but not water is lost, the filtrate becomes more dilute as it travels up the limb.",
+          "quote_sha256": "0f7d33c05027a7defa83013b8fb2152dbf0ba27223d7d0b9972db2cf3dd10de6",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "36215a2004ce98df58c29f98c7ebe5a67ac1",
+              "page": 1230,
+              "chunk_start": 1155,
+              "chunk_end": 1250,
+              "source_unit_start": 2085,
+              "source_unit_end": 2180
+            }
+          ]
+        }
+      ],
+      "designated_support_bundle": {
+        "chunk_ids": [
+          "7958cb1b8f4e677df57cda75ecbeee7ed924"
+        ],
+        "covers_required_fact_ids": [
+          "salt_loss",
+          "no_water_loss",
+          "dilution"
+        ],
+        "sufficient_for_all_question_required_facts": true,
+        "catalog_exhaustive": false
+      },
+      "source_metadata": {
+        "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+        "section": "Chapter 41 Osmotic Regulation and Excretion / 41.2 The Kidneys and Osmoregulatory Organs",
+        "physical_pages": [
+          1230
+        ],
+        "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf#page=1230"
+      },
+      "source_insufficiency_for_required_facts": false,
+      "ambiguities_and_scope_notes": [
+        "The question asks why dilution occurs; the obligatory causal salt/water distinction is sufficient. Segment-specific transport modes are optional details, and no transporter names are supplied."
+      ]
+    },
+    {
+      "question_id": "designated_support_12",
+      "question": "How is species diversity defined for a biological community?",
+      "question_sha256": "ddbf90cf9ea5e1e14fc3418d1210897870a240b6ecd8be1f790005396f4dd74a",
+      "reference": "Species diversity is the number of species sharing a habitat together with their relative abundances.",
+      "reference_sha256": "1cc2a5f4337f5c6fd8636814b6167c7e6914e0d8485b03e794d97431e0242f57",
+      "reference_aliases": [],
+      "required_facts": [
+        {
+          "fact_id": "species_number",
+          "proposition": "Species diversity includes the number of species in the shared habitat/community.",
+          "quote_ids": [
+            "Q1"
+          ],
+          "support_relation": "direct"
+        },
+        {
+          "fact_id": "relative_abundance",
+          "proposition": "Species diversity also includes the relative abundances of those species.",
+          "quote_ids": [
+            "Q1"
+          ],
+          "support_relation": "direct"
+        }
+      ],
+      "optional_source_details": [],
+      "source_quotes": [
+        {
+          "quote_id": "Q1",
+          "chunk_id": "3759f299b91264f63b639659ad8aff211259",
+          "chunk_text_sha256": "c9ff3ebdbd9a721b563a8be6c7a3962a519aa552bab21f4b0cb091a4c8b278aa",
+          "start": 712,
+          "end": 820,
+          "coordinate_system": "original Unicode codepoints; end-exclusive",
+          "quote": "The number of species occupying the same habitat and their relative abundance is known as species diversity.",
+          "quote_sha256": "ab0cf6d87ed8ac2e7cec084421892449ffdb91bd84d2fe74554769b9d3f9d950",
+          "inherited_source_unit_coordinates": [
+            {
+              "unit_id": "2204f72ab125f38bb1363aaab66a3e12bb78",
+              "page": 1366,
+              "chunk_start": 712,
+              "chunk_end": 820,
+              "source_unit_start": 712,
+              "source_unit_end": 820
+            }
+          ]
+        }
+      ],
+      "designated_support_bundle": {
+        "chunk_ids": [
+          "3759f299b91264f63b639659ad8aff211259"
+        ],
+        "covers_required_fact_ids": [
+          "species_number",
+          "relative_abundance"
+        ],
+        "sufficient_for_all_question_required_facts": true,
+        "catalog_exhaustive": false
+      },
+      "source_metadata": {
+        "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+        "section": "Chapter 45 Population and Community Ecology / 45.6 Community Ecology",
+        "physical_pages": [
+          1366
+        ],
+        "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf#page=1366"
+      },
+      "source_insufficiency_for_required_facts": false,
+      "ambiguities_and_scope_notes": [
+        "Species count alone is incomplete; total organism count alone is not the definition. No diversity-index formula is required."
+      ]
+    }
+  ]
+}

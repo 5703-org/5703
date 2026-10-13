@@ -1,0 +1,158 @@
+--- frozen08d
++++ successor08e
+@@ -1,6 +1,6 @@
+ """Matched current GenerationService pair08; default is zero-call payload capture."""
+ from __future__ import annotations
+-import argparse,copy,hashlib,importlib.util,json,math,os,sys,time
++import argparse,copy,hashlib,importlib.util,ipaddress,json,math,os,socket,sys,time
+ from dataclasses import asdict
+ from datetime import datetime,timezone
+ from decimal import Decimal
+@@ -53,7 +53,7 @@
+ args=p.parse_args()
+ if args.execute and not args.manifest_sha256:raise SystemExit("Reviewed manifest pin required")
+ ROOT.mkdir(parents=True,exist_ok=True)
+-OUT=ROOT/("actual08d" if args.execute else "preflight08d")
++OUT=ROOT/("actual08e" if args.execute else "preflight08e")
+ if OUT.exists():raise SystemExit("Attempt exists; preserve it and prepare a reviewed successor")
+ OUT.mkdir();TEMP=OUT/"temporary";TEMP.mkdir()
+ for k,v in {"PYTHONDONTWRITEBYTECODE":"1","HF_HUB_OFFLINE":"1","TRANSFORMERS_OFFLINE":"1",
+@@ -63,18 +63,37 @@
+ def inside(path,root):
+  try:Path(path).resolve().relative_to(root.resolve());return True
+  except (ValueError,TypeError,OSError):return False
++def safe_network_identity(value):
++ if value=="openrouter.ai":return value
++ try:
++  address=ipaddress.ip_address(value)
++  return str(address) if address.is_global else "[non-public address]"
++ except (ValueError,TypeError):return "[unexpected host]"
++def network_trace(event,**fields):
++ if active is not None:active.setdefault("network_trace",[]).append({"event":event,**fields})
++def same_pinned_ip(value,c):
++ try:return str(ipaddress.ip_address(value))==c.get("pinned_ip")
++ except (ValueError,TypeError):return False
+ def audit(event,a):
+  if event in {"subprocess.Popen","os.system","os.posix_spawn"}:raise PermissionError("No child processes")
+  if event=="socket.getaddrinfo":
+   if phase=="credentials" and a[0]=="127.0.0.1":return
+-  if active is not None and a[0]=="openrouter.ai":return
+-  raise PermissionError("Network phase forbidden")
++  c=active
++  if phase=="component_generation" and c is not None and c.get("transport_url")==URL and c.get("posted") is True and c.get("post") is not None and a[1]==443 and len(a)>3 and a[3]==socket.SOCK_STREAM:
++   if c.get("resolving_host") is True and c.get("pinned_ip") is None and a[0]=="openrouter.ai":
++    network_trace("validated-resolver-host",host="openrouter.ai",port=443);return
++   if c.get("resolving_host") is False and c.get("pinned_ip") and same_pinned_ip(a[0],c):
++    network_trace("numeric-pinned-IP-resolution",host=safe_network_identity(a[0]),port=443);return
++  network_trace("blocked-resolution",host=safe_network_identity(a[0]),port=a[1] if type(a[1]) is int else None)
++  raise PermissionError("Network phase or pinned resolution forbidden")
+  if event=="socket.connect":
+-  dest=a[1]
++  dest=a[1];c=active
+   if isinstance(dest,tuple) and len(dest)>1:
+    if phase=="credentials" and dest[:2]==("127.0.0.1",15433):return
+-   if active is not None and dest[1]==443:return
+-  raise PermissionError("Network destination forbidden")
++   network_trace("connect-requested",host=safe_network_identity(dest[0]),port=dest[1] if type(dest[1]) is int else None)
++   if phase=="component_generation" and c is not None and c.get("transport_url")==URL and c.get("posted") is True and c.get("post") is not None and c.get("pinned_ip") and dest[1]==443 and same_pinned_ip(dest[0],c) and getattr(a[0],"family",None) in {socket.AF_INET,socket.AF_INET6} and getattr(a[0],"type",None)==socket.SOCK_STREAM and (len(dest)==2 or (len(dest)==4 and dest[2:]==(0,0))):return
++  network_trace("blocked-connect")
++  raise PermissionError("Network destination is not the validated pinned IP")
+  if event=="open" and isinstance(a[0],(str,bytes,os.PathLike)):
+   path=Path(os.fsdecode(a[0]));mode=a[1] if isinstance(a[1],str) else "";flags=a[2] if len(a)>2 and isinstance(a[2],int) else 0
+   writing=any(c in mode for c in "wax+") or bool(flags&(os.O_WRONLY|os.O_RDWR|os.O_CREAT|os.O_TRUNC|os.O_APPEND))
+@@ -83,7 +102,7 @@
+   if "\\.codex\\sessions\\" in low or "\\.codex\\archived_sessions\\" in low:raise PermissionError("Forbidden sessions")
+   if path.name.casefold()==".env" or path.name.casefold().startswith(".env."):raise PermissionError("No dotenv")
+   allowed={CONTEXT.resolve(),CRED.resolve(),DIAG.resolve(),Path(__file__).resolve(),
+-  (ROOT/"preflight08d/PREFLIGHT_MANIFEST08.json").resolve(),*((W/s).resolve() for s in CODE_PINS)}
++  (ROOT/"preflight08e/PREFLIGHT_MANIFEST08.json").resolve(),*((W/s).resolve() for s in CODE_PINS)}
+   if phase=="credentials":allowed|=credential_paths
+   if inside(path,W) and not inside(path,OUT) and path.resolve() not in allowed:raise PermissionError("No extra W/native/auth/binder input")
+  if event in {"os.mkdir","os.remove","os.rmdir","os.chmod"} and a and isinstance(a[0],(str,bytes,os.PathLike)):
+@@ -115,9 +134,9 @@
+  "question":QUESTION,"context_sha256":INPUT_SHA,"scheduled_arms":2,
+  "arms":[{"arm":s,"status":"NOT_STARTED","outcome":None,"component_generation_elapsed_ms":None} for s in ARMS],
+  "human_gold":None,"EM_F1":None,"native_Send_to_DOM_ms":None,"default_RAG_promotion":False,
+- "historical_UNKNOWN_changed":False,"scope":"single development question; checker observations, not model accuracy or human gold",
++ "historical_UNKNOWN_changed":False,"prior08d_UNKNOWN_hold_usd":"0.03","combined_successor_plus_prior_hold_bound_usd":"0.15","scope":"single development question; checker observations, not model accuracy or human gold",
+  "audit_scope":"Python socket events do not count libpq C-native connections"}
+- redactor=None;original=None;key=None;captures={};reviewed=None
++ redactor=None;original=None;original_pin=None;key=None;captures={};reviewed=None
+  try:
+   phase="public_preparation"
+   from generation.types import GenerationRequest,ModelConfig,RequestBudget,ProviderResult,failure
+@@ -155,7 +174,7 @@
+   "main_source_and_prompt_fingerprints":sourcepins,"credential_CODE_sha256":CRED_SHA,"diagnostic_CODE_sha256":DIAG_SHA}
+   save("FROZEN_PUBLIC_REQUESTS08.json",public);save("PRODUCTION_BINDING08.json",binding)
+   if args.execute:
+-   mb=(ROOT/"preflight08d/PREFLIGHT_MANIFEST08.json").read_bytes()
++   mb=(ROOT/"preflight08e/PREFLIGHT_MANIFEST08.json").read_bytes()
+    if hashlib.sha256(mb).hexdigest()!=args.manifest_sha256:raise GuardDenied("Manifest pin changed")
+    reviewed=json.loads(mb)
+    if reviewed["status"]!="READY_FOR_ROOT_REVIEW" or reviewed["runner_sha256"]!=binding["runner_sha256"] or reviewed["request_config_hash"]!=digest(public) or reviewed["context_sha256"]!=INPUT_SHA or reviewed["main_source_and_prompt_fingerprints"]!=sourcepins:raise GuardDenied("Reviewed production/input drift")
+@@ -177,7 +196,20 @@
+    if upper>PER:raise GuardDenied("Cost bound exceeded")
+    return {"body_bytes":len(raw),"body_sha256":hashlib.sha256(raw).hexdigest(),"conservative_cost_upper_usd":str(upper),
+    "role":role,"max_price":provider["max_price"],"output_limit":4096,"input_bound":"UTF8 body bytes+1024 protocol allowance; not actual tokens"}
+-  original=am.open_provider
++  original=am.open_provider;original_pin=am.pinned_address
++  def pin_guard(url):
++   c=active
++   if phase!="component_generation" or c is None or c.get("transport_url")!=URL or c.get("posted") is not True or c.get("post") is None or url!=URL or c.get("pinned_ip") is not None:
++    raise GuardDenied("Only original Main resolver for active exact OpenRouter URL")
++   c["resolving_host"]=True
++   try:address=original_pin(url)
++   finally:c["resolving_host"]=False
++   literal=ipaddress.ip_address(address)
++   if not literal.is_global or (isinstance(literal,ipaddress.IPv6Address) and literal.ipv4_mapped):
++    raise GuardDenied("Original Main resolver returned non-public IP")
++   c["pinned_ip"]=str(literal)
++   network_trace("original-Main-validated-IP",host=c["pinned_ip"],port=443)
++   return address
+   def open_guard(envelope,timeout):
+    # Recheck only the frozen deterministic CODE/prompt paths before every POST.
+    for relative,expected_pin in sourcepins.items():
+@@ -192,15 +224,24 @@
+    if c["role"]=="generation" and reviewed["teacher_payloads"][c["arm"]]["body_sha256"]!=proof["body_sha256"]:raise GuardDenied("Teacher wire differs from reviewed capture")
+    if ledger["stopped"] or ledger["POST_attempts"]>=4 or c["posted"] or Decimal(ledger["known_cost_usd"])+PER>TOTAL:raise GuardDenied("Finite cap/stopped")
+    c["posted"]=True
+-   post={"arm":c["arm"],"role":c["role"],"started_at_utc":now(),"cost_status":"UNKNOWN","reported_cost_usd":None,"complete":False,"wire_proof":proof,"raw_receipts":[]}
++   post={"arm":c["arm"],"role":c["role"],"started_at_utc":now(),"cost_status":"UNKNOWN","reported_cost_usd":None,"complete":False,"wire_proof":proof,"raw_receipts":[],"network_trace":c["network_trace"]}
+    ledger["POST_attempts"]+=1;ledger["posts"].append(post);c["post"]=post
+    save(c["prefix"]+"-POST_STARTED_UNKNOWN08.json",post)
+    def retained(receipt):post["raw_receipts"].append(receipt)
+    prefix=OUT/(c["prefix"]+"-raw-provider")
++   c["transport_url"]=URL
+    try:return diag.wrap_provider_response(original(envelope,timeout=timeout),path_prefix=prefix,redactor=redactor,on_saved=retained)
+    except urlerror.HTTPError as exc:
++    network_trace("HTTP-error-response",exception_type=type(exc).__name__,status=exc.code)
+     diag.retain_http_error_reads(exc,path_prefix=prefix,redactor=redactor,on_saved=retained);raise
+-  am.open_provider=open_guard
++   except Exception as exc:
++    reason=getattr(exc,"reason",None)
++    network_trace("transport-exception",exception_type=type(exc).__name__,reason_type=type(reason).__name__ if reason is not None else None,
++    errno=getattr(exc,"errno",None) if type(getattr(exc,"errno",None)) is int else None,
++    reason_errno=getattr(reason,"errno",None) if type(getattr(reason,"errno",None)) is int else None)
++    raise
++   finally:c["transport_url"]=None;c["resolving_host"]=False;c["pinned_ip"]=None
++  am.pinned_address=pin_guard;am.open_provider=open_guard
+   class RoleAdapter:
+    def __init__(self,arm,role):
+     self.arm=arm;self.role=role;self.used=False
+@@ -219,7 +260,7 @@
+     save(prefix+"-planned-wire08.json",{"payload":body,"schema":response_schema,"schema_name":response_schema_name,"transport_metadata":metadata,"body_sha256":hashlib.sha256(raw).hexdigest()})
+     proof=wire_proof(raw,body,self.role);captures.setdefault(self.arm,{})[self.role]=proof
+     if not args.execute:return self.denied("CAPTURE_ONLY_NO_MODEL_RESULT")
+-    active={"arm":self.arm,"role":self.role,"body":body,"prefix":prefix,"posted":False,"post":None}
++    active={"arm":self.arm,"role":self.role,"body":body,"prefix":prefix,"posted":False,"post":None,"network_trace":[],"transport_url":None,"resolving_host":False,"pinned_ip":None}
+     try:
+      response=self.delegate.generate(messages,response_schema=response_schema,response_schema_name=response_schema_name,request_context=request_context,timeout_seconds=timeout_seconds)
+      post=active["post"]
+@@ -269,6 +310,7 @@
+   result["status"]="STOP_PREPARATION_OR_EXECUTION";result["failure"]={"exception_type":type(exc).__name__,"phase":phase,"no_retry":True}
+  finally:
+   if original is not None:am.open_provider=original
++  if original_pin is not None:am.pinned_address=original_pin
+   active=None;phase="final";result["ledger"]=ledger;result["finished_at_utc"]=now()
+   if redactor is not None:receipt=diag.save(OUT/"RESULT08.json",result,redactor)
+   else:

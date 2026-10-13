@@ -1,0 +1,82 @@
+{
+  "DB_rebuilt_or_written": false,
+  "Q3_replayed": false,
+  "Q4_replayed": false,
+  "adopted_source_pins": [
+    {
+      "bytes": 29552,
+      "path": "E:\\5703\\learning-assistant\\generation\\adapters.py",
+      "sha256": "99075cb07f4faf861119c5fa5113da6951408c02323c14452d090661fd0c3ddb"
+    },
+    {
+      "bytes": 11703,
+      "path": "E:\\5703\\learning-assistant\\generation\\openrouter_routes.py",
+      "sha256": "eb2471e712bc92e5c04495b5353017dbcbc7aa8cdec5451b0ead9f05050588ee"
+    },
+    {
+      "bytes": 25431,
+      "path": "E:\\5703\\learning-assistant\\generation\\probes.py",
+      "sha256": "b9cccc3ae40886da1c327c9721d5d1e1511d200ec72e0e8fbd100c037c12923e"
+    }
+  ],
+  "automatic_second_attempt": false,
+  "cases": [
+    {
+      "UNKNOWN_full_hold_USD": "0.03000000",
+      "case": "projected_full_native_checker",
+      "finish_UTC": "2026-10-09T10:25:57.733635+00:00",
+      "finish_reason": null,
+      "http_status": 400,
+      "latency_ms": 1380,
+      "local_validation_error_types": [],
+      "provider_request_id": null,
+      "provider_request_id_is_generation_id": false,
+      "raw_body_messages_headers_or_credentials_exported": false,
+      "reported_cost_USD": null,
+      "request_submitted": true,
+      "safe_vendor_error": {
+        "body_retained_or_exported": false,
+        "body_within_bound": true,
+        "message_features": [
+          "vendor_mentions_schema"
+        ],
+        "schema_pointers": [],
+        "vendor_messages": [
+          {
+            "sanitized_message": "Provider returned error",
+            "source": "error.message"
+          },
+          {
+            "sanitized_message": "The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.",
+            "source": "error.metadata.raw.error.message"
+          }
+        ]
+      },
+      "slot": 1,
+      "transport_error_category": "PROVIDER_HTTP_OR_EMBEDDED_ERROR",
+      "usage": {},
+      "valid_local_schema_result": false
+    }
+  ],
+  "execution_attempt_limit": 1,
+  "known_reported_cost_USD": "0",
+  "manual_retry_redirect_or_fallback": false,
+  "maximum_authorized_new_POSTs": 2,
+  "maximum_new_reserve_USD": "0.06000000",
+  "native_semantic_publication_verified": false,
+  "new_UNKNOWN_full_holds_USD": "0.03",
+  "old_STOP_modified": false,
+  "old_UNKNOWN_hold_preserved_USD": "0.06000000",
+  "original_local_validator": "ReliableCheckV5",
+  "physical_POST_count": 1,
+  "remaining_scope_requires_changed_candidate_and_existing_single_scope_accounting": true,
+  "schema_transport": {
+    "original_response_schema_sha256": "7988037e08d52662a1b232f049776a42b6d10ad5d896f1a26c8c912b3efd79d4",
+    "policy_id": "anthropic_structured_bounds_v1",
+    "provider_schema_before_projection_sha256": "7988037e08d52662a1b232f049776a42b6d10ad5d896f1a26c8c912b3efd79d4",
+    "removed_bound_count": 42,
+    "wire_schema_sha256": "70355e166c78f69ccd65927c425ff3ba93daf18e7e0bd1d9490c7ea6c1746c9b"
+  },
+  "status": "PROJECTED_FULL_CHECKER_FAILED_STOP_NO_RETRY",
+  "unused_authorized_slots": 1
+}

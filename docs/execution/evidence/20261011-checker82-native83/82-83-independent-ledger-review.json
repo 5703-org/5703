@@ -1,0 +1,373 @@
+{
+  "schema": "5703_independent_ledger_close82_83_review_v1",
+  "reviewed_at_UTC": "2026-10-11T14:59:35.492677+00:00",
+  "status": "PASS",
+  "issues": [],
+  "stage_denominator": 4,
+  "failed_pilots_included": [
+    "82-01",
+    "83-01"
+  ],
+  "actual_physical_posts": 10,
+  "numeric_settled_posts": 10,
+  "known_cost_USD": 0.0963751,
+  "known_cost_USD_decimal": "0.0963751",
+  "unknown_full_hold_USD": 0,
+  "unknown_is_JSON_number": true,
+  "unknown_verified_with_Decimal": true,
+  "global_request_cap": 12,
+  "global_cost_cap_USD": 1,
+  "extra_financial_request_claims_or_extra_browser_submissions": false,
+  "old_history_pins_unchanged": true,
+  "historical_receipts": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker80\\native80\\native-provider70\\final-receipt.json",
+      "sha256": "aec5908764e8628d4fe676389818ccd8224d771d4fc1b31302e21ff8da9e100e"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker80\\native81\\native-provider70\\final-receipt.json",
+      "sha256": "43e491a103e79e8f028f24c4be6709e01389dba6634e07b61035afaa1f964b25"
+    }
+  ],
+  "stages": [
+    {
+      "stage": "82-01",
+      "actual_posts": 2,
+      "settled_numeric_cost_observations": 2,
+      "known_cost_USD": 0.0211619,
+      "known_cost_USD_decimal": "0.0211619",
+      "unknown_full_hold_USD": 0,
+      "unknown_verified_with_Decimal": true,
+      "failed_stage_retained_in_denominator": true,
+      "stop_code": "NORMAL_ADAPTER_ERROR_STOPPED",
+      "financial_receipt": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage01\\native-provider70\\final-receipt.json",
+        "sha256": "7d3377cfba30a91f7ebf704c1ee7b50947d1bdab5e24479eb993f8981c0ca394"
+      },
+      "scope_claim": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage01\\native-provider70\\scope-claim.json",
+        "sha256": "df33b9d0b374cf0527187590920d367d749e78d6f392700a9b50fad6881e6d69"
+      },
+      "api_threads_closed": true,
+      "api_closure": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage01\\api-closure77.json",
+        "sha256": "82f01b2f27f69d53315b3576e128ddf9362c92dae1f793a13f6ee6a33384309b"
+      },
+      "browser_closed": true,
+      "browser_closure": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage01\\journey-receipt82.json",
+        "sha256": "18bf7aa90a73de34e91608cdd269a0177b7b9f163b186f91d5b54b4d44d1e757"
+      },
+      "browser_message_submissions": 1,
+      "requests": [
+        {
+          "slot": 1,
+          "role": "teacher",
+          "known_cost_USD": 0.0020054,
+          "known_cost_USD_decimal": "0.0020054",
+          "unknown_full_hold_USD": 0,
+          "claim": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage01\\native-provider70\\slot-01-claim.json",
+            "sha256": "c76ac81741f0ea3d81156c89e5ba7b0b1cd28870d8734b2d21c3f3fdcf6d340b"
+          },
+          "financial_observation": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage01\\native-provider70\\slot-01-financial.json",
+            "sha256": "6efd48ad08b568c6cdd4426596c72ef315c59622bdba9903e9a8e762090f2bbc"
+          },
+          "settlement": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage01\\native-provider70\\slot-01-settlement.json",
+            "sha256": "0937eb26be3c1b766c3c5045bab30f7c1a5f22c1170735bbefa213b7c2ae8c82"
+          }
+        },
+        {
+          "slot": 2,
+          "role": "checker",
+          "known_cost_USD": 0.0191565,
+          "known_cost_USD_decimal": "0.0191565",
+          "unknown_full_hold_USD": 0,
+          "claim": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage01\\native-provider70\\slot-02-claim.json",
+            "sha256": "15778a21ccee5a74a6755bbf92547feb0d99caa89bb907cc7c24cfaa813d10af"
+          },
+          "financial_observation": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage01\\native-provider70\\slot-02-financial.json",
+            "sha256": "8f62fda948bdda9cd0a7c0f925a87dc349c5b3e93c93fd0d9d3a5e05c1395061"
+          },
+          "settlement": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage01\\native-provider70\\slot-02-settlement.json",
+            "sha256": "eae908a35d7b2efa3753d0736e11ac9cde48cfbf4d882724b397b56469d32c5e"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "82-02",
+      "actual_posts": 3,
+      "settled_numeric_cost_observations": 3,
+      "known_cost_USD": 0.0254342,
+      "known_cost_USD_decimal": "0.0254342",
+      "unknown_full_hold_USD": 0,
+      "unknown_verified_with_Decimal": true,
+      "failed_stage_retained_in_denominator": false,
+      "stop_code": null,
+      "financial_receipt": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage02\\native-provider70\\final-receipt.json",
+        "sha256": "ab4b3231c5123b95dde884c3b2e1fd141138ba9a29d8d9ab65a8eac33c174a26"
+      },
+      "scope_claim": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage02\\native-provider70\\scope-claim.json",
+        "sha256": "822c864f319fdc670ba9d562b160010a08abe035dbb54fe87660f50a82da9919"
+      },
+      "api_threads_closed": true,
+      "api_closure": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage02\\api-closure77.json",
+        "sha256": "6735ba3c2b69f40cbbc4506546c376c4cd84b079965d2ff5a0fa143b58dbb48b"
+      },
+      "browser_closed": true,
+      "browser_closure": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage02\\journey-receipt82.json",
+        "sha256": "bc580056b9fa73a9cdc7d7dd1e8c12be29c0e0a288ed3203b834c88fc8ea14f0"
+      },
+      "browser_message_submissions": 1,
+      "requests": [
+        {
+          "slot": 1,
+          "role": "teacher",
+          "known_cost_USD": 0.0019542,
+          "known_cost_USD_decimal": "0.0019542",
+          "unknown_full_hold_USD": 0,
+          "claim": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage02\\native-provider70\\slot-01-claim.json",
+            "sha256": "47937b6449ddd8f7934eaa5e6f43530e65bb172d5cf29a405d2599087bf5eea8"
+          },
+          "financial_observation": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage02\\native-provider70\\slot-01-financial.json",
+            "sha256": "436a40bdb162909d1aaa32130d4ace3ff2a320f982f0634e86cee154b7a51e9e"
+          },
+          "settlement": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage02\\native-provider70\\slot-01-settlement.json",
+            "sha256": "9931c67cd424a92013b41a921bf0ea54d2b14cb3990e10a8faed2f2994e811f8"
+          }
+        },
+        {
+          "slot": 2,
+          "role": "checker",
+          "known_cost_USD": 0.0118245,
+          "known_cost_USD_decimal": "0.0118245",
+          "unknown_full_hold_USD": 0,
+          "claim": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage02\\native-provider70\\slot-02-claim.json",
+            "sha256": "4be37d59934f279c71d8931fef8918e5aea5f3b953c4d3faa45d3b0ffcf09dfd"
+          },
+          "financial_observation": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage02\\native-provider70\\slot-02-financial.json",
+            "sha256": "9ec0b2ee1a5e8f5b14637b7f5b17f615b76159f3dc41938979abaa6a47bb4c86"
+          },
+          "settlement": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage02\\native-provider70\\slot-02-settlement.json",
+            "sha256": "06555fde4769c6c8a63aebe3e0eb8356597bea7cf34850faebc344008abb225c"
+          }
+        },
+        {
+          "slot": 3,
+          "role": "checker",
+          "known_cost_USD": 0.0116555,
+          "known_cost_USD_decimal": "0.0116555",
+          "unknown_full_hold_USD": 0,
+          "claim": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage02\\native-provider70\\slot-03-claim.json",
+            "sha256": "aa7578ce55a29da740ba594e2ad87e86f45cd1f42ca690a32b9e2a7ad7f59492"
+          },
+          "financial_observation": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage02\\native-provider70\\slot-03-financial.json",
+            "sha256": "01da6416e4452479fd37efd1126062cfd0c28ae3ccea53b1df7e8f7620daf34d"
+          },
+          "settlement": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage02\\native-provider70\\slot-03-settlement.json",
+            "sha256": "915384a1d0244ea2c3eaa3d11cb0bdfdbf77cdc24ec3d478f841af28bacf3002"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "82-03",
+      "actual_posts": 3,
+      "settled_numeric_cost_observations": 3,
+      "known_cost_USD": 0.0285791,
+      "known_cost_USD_decimal": "0.0285791",
+      "unknown_full_hold_USD": 0,
+      "unknown_verified_with_Decimal": true,
+      "failed_stage_retained_in_denominator": false,
+      "stop_code": null,
+      "financial_receipt": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage03\\native-provider70\\final-receipt.json",
+        "sha256": "e74c155eebd32bdf8afe242967c664996596b771506a9c0bad4bd3da6121ecde"
+      },
+      "scope_claim": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage03\\native-provider70\\scope-claim.json",
+        "sha256": "f768c367fdbef2cb0f73f81e0426ee89fc1cbcefd23a7abaf3add00f80387d16"
+      },
+      "api_threads_closed": true,
+      "api_closure": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage03\\api-closure77.json",
+        "sha256": "13c23d6b709f15716a1442a7295c1088b83e2048b13564048feaa6fab9f41141"
+      },
+      "browser_closed": true,
+      "browser_closure": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage03\\journey-receipt82.json",
+        "sha256": "7f0eb887365217f3566a667a3f130ca95aa9643e0225843199809dc88dd56533"
+      },
+      "browser_message_submissions": 1,
+      "requests": [
+        {
+          "slot": 1,
+          "role": "teacher",
+          "known_cost_USD": 0.0019377,
+          "known_cost_USD_decimal": "0.0019377",
+          "unknown_full_hold_USD": 0,
+          "claim": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage03\\native-provider70\\slot-01-claim.json",
+            "sha256": "47937b6449ddd8f7934eaa5e6f43530e65bb172d5cf29a405d2599087bf5eea8"
+          },
+          "financial_observation": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage03\\native-provider70\\slot-01-financial.json",
+            "sha256": "447eddc8c60060671164a931836e5a57da90fa49233595c280f7d040c3f0b16d"
+          },
+          "settlement": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage03\\native-provider70\\slot-01-settlement.json",
+            "sha256": "23141d2501c9787033a32bb172868bf13c894684755255927d474792f7759134"
+          }
+        },
+        {
+          "slot": 2,
+          "role": "checker",
+          "known_cost_USD": 0.0133277,
+          "known_cost_USD_decimal": "0.0133277",
+          "unknown_full_hold_USD": 0,
+          "claim": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage03\\native-provider70\\slot-02-claim.json",
+            "sha256": "debee27e19901eb933c74acd7e42564b23ec25b477e1ae528ef4ab66fe883f72"
+          },
+          "financial_observation": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage03\\native-provider70\\slot-02-financial.json",
+            "sha256": "20e2493e625fdb5baf73c349ff3fe431560dfcaa55b30c6d4e73b39141a1978d"
+          },
+          "settlement": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage03\\native-provider70\\slot-02-settlement.json",
+            "sha256": "603e6d09e3d2e0ee54519baf386198db8cc988fd450dc4f290e6a3b7d885942f"
+          }
+        },
+        {
+          "slot": 3,
+          "role": "checker",
+          "known_cost_USD": 0.0133137,
+          "known_cost_USD_decimal": "0.0133137",
+          "unknown_full_hold_USD": 0,
+          "claim": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage03\\native-provider70\\slot-03-claim.json",
+            "sha256": "a305acff9a157e264977bbb09dabc497494807ba1221e0e4766bda1eb5cd43de"
+          },
+          "financial_observation": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage03\\native-provider70\\slot-03-financial.json",
+            "sha256": "54b0bc5bc208c3172b9f5a6391a0b2a8ff921a6cdda0fbe3fd8522624863da50"
+          },
+          "settlement": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\stage03\\native-provider70\\slot-03-settlement.json",
+            "sha256": "5503685006b7bf906e4158513d8db0aa75c21008621567b6ea6ba89124ce9ce5"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "83-01",
+      "actual_posts": 2,
+      "settled_numeric_cost_observations": 2,
+      "known_cost_USD": 0.0211999,
+      "known_cost_USD_decimal": "0.0211999",
+      "unknown_full_hold_USD": 0,
+      "unknown_verified_with_Decimal": true,
+      "failed_stage_retained_in_denominator": true,
+      "stop_code": "NORMAL_ADAPTER_ERROR_STOPPED",
+      "financial_receipt": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker83\\stage01\\native-provider70\\final-receipt.json",
+        "sha256": "085c694516d780f6fb64b78234774eca50adcab2e21e53f854097034d300ea1d"
+      },
+      "scope_claim": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker83\\stage01\\native-provider70\\scope-claim.json",
+        "sha256": "7a8fe6eb8cd440a9574147339ba04cd9d95d22cc887edb733d96cb55fadf116e"
+      },
+      "api_threads_closed": true,
+      "api_closure": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker83\\stage01\\api-closure77.json",
+        "sha256": "c226916bb9457053ccd94c423cd8e8f8042ff81d7966f4331184ce3317164b55"
+      },
+      "browser_closed": true,
+      "browser_closure": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker83\\stage01\\journey-receipt82.json",
+        "sha256": "9ceea82595989adc27e9c9f47ba598782299d89e1c94906de924d23d0cb14490"
+      },
+      "browser_message_submissions": 1,
+      "requests": [
+        {
+          "slot": 1,
+          "role": "teacher",
+          "known_cost_USD": 0.0020677,
+          "known_cost_USD_decimal": "0.0020677",
+          "unknown_full_hold_USD": 0,
+          "claim": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker83\\stage01\\native-provider70\\slot-01-claim.json",
+            "sha256": "47937b6449ddd8f7934eaa5e6f43530e65bb172d5cf29a405d2599087bf5eea8"
+          },
+          "financial_observation": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker83\\stage01\\native-provider70\\slot-01-financial.json",
+            "sha256": "0d8c189dc950856426a7ba038d9ecd50aad253d56e1c6a1dcc61e4b085b61ccc"
+          },
+          "settlement": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker83\\stage01\\native-provider70\\slot-01-settlement.json",
+            "sha256": "f6465599770d3c2ed54999756df658fdb871bd79bc10d91f007bea9c72ae5a72"
+          }
+        },
+        {
+          "slot": 2,
+          "role": "checker",
+          "known_cost_USD": 0.0191322,
+          "known_cost_USD_decimal": "0.0191322",
+          "unknown_full_hold_USD": 0,
+          "claim": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker83\\stage01\\native-provider70\\slot-02-claim.json",
+            "sha256": "514eb335ecd2dea2aa2bf048f2511280aac0a337152f808aaafd2b3186b3fc25"
+          },
+          "financial_observation": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker83\\stage01\\native-provider70\\slot-02-financial.json",
+            "sha256": "7107fd473dde36e5d0ca68f9480da3a145b677dc14e5fb0b08a51e2f84432622"
+          },
+          "settlement": {
+            "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker83\\stage01\\native-provider70\\slot-02-settlement.json",
+            "sha256": "38c4224e979833570c0e8bc194d32f2128d0a7cdaa56965baa976bbf91142a0e"
+          }
+        }
+      ]
+    }
+  ],
+  "closed82_global_remainder_consumption_preserved": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker82\\batch82-stage-ledgers\\closed82-remainder-e74c155eebd32bdf8afe242967c664996596b771506a9c0bad4bd3da6121ecde-consumed.json",
+    "sha256": "cb1ceca98ac3d27b07e54f1e1cf721beb1849a169b187ac52a1e01053244f255"
+  },
+  "new83_local_claim_preserved": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker83\\batch83-stage-ledgers\\stage-01-claim.json",
+    "sha256": "9bb5bc9db9990153898c3bce7a486c747a35a55b764499888a3e4f90600c60f8"
+  },
+  "new83_failure": {
+    "error_code": "OUTPUT_TRUNCATED",
+    "finish_reason": "length",
+    "source": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker83\\stage01\\adapter-observation-02-outcome82.json",
+      "sha256": "9361cbeb37385171faa25e30a5b1811c98b860f3cfde2b96e760c5b5f0f3f62a"
+    }
+  },
+  "old82_first_pilot_cause": "UNKNOWN; no recovered finite adapter cause",
+  "reclaim_or_retry_performed": false,
+  "Main_access": false,
+  "database_auth_network_or_model_access": false,
+  "limits": "Financial and lifecycle audit only; no semantic certification or speedup comparison across prompt versions."
+}

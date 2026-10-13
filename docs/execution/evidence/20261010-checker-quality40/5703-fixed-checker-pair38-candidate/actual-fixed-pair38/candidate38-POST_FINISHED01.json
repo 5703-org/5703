@@ -1,0 +1,1080 @@
+{
+  "arm": "candidate38",
+  "status": "OBSERVED",
+  "physical_POSTs": 1,
+  "known_cost_USD": "0.0167358",
+  "reported_cost_USD": "0.0167358",
+  "fully_settled": true,
+  "latency_ms": 10933.4511,
+  "timing_boundary": "LLMAdapter.generate invocation to complete return",
+  "provider_result": {
+    "raw_text": "{\n  \"claims\": [\n    {\n      \"basis\": \"textbook\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"ev_007\",\n          \"fragment_ids\": [\n            \"F054\",\n            \"F055\",\n            \"F056\"\n          ],\n          \"relation\": \"supporting\"\n        },\n        {\n          \"evidence_id\": \"ev_008\",\n          \"fragment_ids\": [\n            \"F064\"\n          ],\n          \"relation\": \"supporting\"\n        }\n      ],\n      \"claim_id\": \"claim_9dd7ed3c15bfc4ae4368ad47_1\",\n      \"reason\": \"Supported by text showing RuBisCO combines CO2 with RuBP (a 5-carbon molecule with a phosphate on each end).\",\n      \"status\": \"supported\",\n      \"units\": [\n        {\n          \"conditions_preserved\": true,\n          \"fragment_ids\": [\n            \"F054\",\n            \"F055\",\n            \"F056\",\n            \"F064\"\n          ],\n          \"reason\": \"Directly supported by fragments detailing RuBisCO, CO2, RuBP combination and structure.\",\n          \"relation_preserved\": true,\n          \"status\": \"supported\",\n          \"unit_id\": \"U01\"\n        }\n      ]\n    },\n    {\n      \"basis\": \"textbook\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"ev_007\",\n          \"fragment_ids\": [\n            \"F056\"\n          ],\n          \"relation\": \"supporting\"\n        }\n      ],\n      \"claim_id\": \"claim_9e6350bf8c8ac897dd6ce681_1\",\n      \"reason\": \"Supported by source stating the six-carbon compound is converted into two three-carbon compounds (3-PGA).\",\n      \"status\": \"supported\",\n      \"units\": [\n        {\n          \"conditions_preserved\": true,\n          \"fragment_ids\": [\n            \"F056\"\n          ],\n          \"reason\": \"Supported by fragment indicating the intermediate 6-carbon product is converted into two 3-carbon compounds.\",\n          \"relation_preserved\": true,\n          \"status\": \"supported\",\n          \"unit_id\": \"U01\"\n        }\n      ]\n    },\n    {\n      \"basis\": \"textbook\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"ev_007\",\n          \"fragment_ids\": [\n            \"F058\",\n            \"F059\"\n          ],\n          \"relation\": \"supporting\"\n        },\n        {\n          \"evidence_id\": \"ev_003\",\n          \"fragment_ids\": [\n            \"F018\"\n          ],\n          \"relation\": \"supporting\"\n        }\n      ],\n      \"claim_id\": \"claim_f9fe075af789df975cbeaea7_1\",\n      \"reason\": \"Supported by fragments showing ATP and NADPH convert 3-PGA into G3P in a reduction reaction.\",\n      \"status\": \"supported\",\n      \"units\": [\n        {\n          \"conditions_preserved\": true,\n          \"fragment_ids\": [\n            \"F058\",\n            \"F018\"\n          ],\n          \"reason\": \"ATP and NADPH energy conversion to G3P is supported.\",\n          \"relation_preserved\": true,\n          \"status\": \"supported\",\n          \"unit_id\": \"U01\"\n        },\n        {\n          \"conditions_preserved\": true,\n          \"fragment_ids\": [\n            \"F058\",\n            \"F059\"\n          ],\n          \"reason\": \"Reduction reaction involving electron gain is supported.\",\n          \"relation_preserved\": true,\n          \"status\": \"supported\",\n          \"unit_id\": \"U02\"\n        }\n      ]\n    },\n    {\n      \"basis\": \"textbook\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"ev_007\",\n          \"fragment_ids\": [\n            \"F057\"\n          ],\n          \"relation\": \"supporting\"\n        }\n      ],\n      \"claim_id\": \"claim_364664c975bdc00d74ab2a22_1\",\n      \"reason\": \"Supported by source stating fixation of inorganic CO2 into organic molecules is called carbon fixation.\",\n      \"status\": \"supported\",\n      \"units\": [\n        {\n          \"conditions_preserved\": true,\n          \"fragment_ids\": [\n            \"F057\"\n          ],\n          \"reason\": \"Carbon fixation naming is explicitly supported.\",\n          \"relation_preserved\": true,\n          \"status\": \"supported\",\n          \"unit_id\": \"U01\"\n        }\n      ]\n    },\n    {\n      \"basis\": \"textbook\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"ev_002\",\n          \"fragment_ids\": [\n            \"F009\",\n            \"F011\",\n            \"F012\",\n            \"F013\"\n          ],\n          \"relation\": \"supporting\"\n        }\n      ],\n      \"claim_id\": \"claim_8b458d38f4d30c5060c0957c_1\",\n      \"reason\": \"Supported by text regarding turns, G3P export, and regeneration of RuBP.\",\n      \"status\": \"supported\",\n      \"units\": [\n        {\n          \"conditions_preserved\": true,\n          \"fragment_ids\": [\n            \"F012\"\n          ],\n          \"reason\": \"Each turn makes two G3Ps.\",\n          \"relation_preserved\": true,\n          \"status\": \"supported\",\n          \"unit_id\": \"U01\"\n        },\n        {\n          \"conditions_preserved\": true,\n          \"fragment_ids\": [\n            \"F011\"\n          ],\n          \"reason\": \"Three turns fix enough net carbon to export one G3P.\",\n          \"relation_preserved\": true,\n          \"status\": \"supported\",\n          \"unit_id\": \"U02\"\n        },\n        {\n          \"conditions_preserved\": true,\n          \"fragment_ids\": [\n            \"F009\",\n            \"F013\"\n          ],\n          \"reason\": \"Remaining G3P regenerates RuBP.\",\n          \"relation_preserved\": true,\n          \"status\": \"supported\",\n          \"unit_id\": \"U03\"\n        }\n      ]\n    },\n    {\n      \"basis\": \"textbook\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"ev_001\",\n          \"fragment_ids\": [\n            \"F001\",\n            \"F002\"\n          ],\n          \"relation\": \"supporting\"\n        }\n      ],\n      \"claim_id\": \"claim_9eace1a26f8e9d6071f0acb8_1\",\n      \"reason\": \"Supported by text stating one G3P leaves for carbohydrates, requiring six turns for glucose.\",\n      \"status\": \"supported\",\n      \"units\": [\n        {\n          \"conditions_preserved\": true,\n          \"fragment_ids\": [\n            \"F001\"\n          ],\n          \"reason\": \"One G3P leaves for carbohydrate/glucose formation.\",\n          \"relation_preserved\": true,\n          \"status\": \"supported\",\n          \"unit_id\": \"U01\"\n        },\n        {\n          \"conditions_preserved\": true,\n          \"fragment_ids\": [\n            \"F002\"\n          ],\n          \"reason\": \"Six turns required for six carbon atoms.\",\n          \"relation_preserved\": true,\n          \"status\": \"supported\",\n          \"unit_id\": \"U02\"\n        }\n      ]\n    },\n    {\n      \"basis\": \"textbook\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"ev_001\",\n          \"fragment_ids\": [\n            \"F003\"\n          ],\n          \"relation\": \"supporting\"\n        },\n        {\n          \"evidence_id\": \"ev_003\",\n          \"fragment_ids\": [\n            \"F021\"\n          ],\n          \"relation\": \"supporting\"\n        }\n      ],\n      \"claim_id\": \"claim_e042c515f904bec48279173e_1\",\n      \"reason\": \"Supported by text showing remaining G3P stays to form RuBP for more CO2.\",\n      \"status\": \"supported\",\n      \"units\": [\n        {\n          \"conditions_preserved\": true,\n          \"fragment_ids\": [\n            \"F003\",\n            \"F021\"\n          ],\n          \"reason\": \"Remaining G3P regenerates RuBP.\",\n          \"relation_preserved\": true,\n          \"status\": \"supported\",\n          \"unit_id\": \"U01\"\n        },\n        {\n          \"conditions_preserved\": true,\n          \"fragment_ids\": [\n            \"F021\"\n          ],\n          \"reason\": \"RuBP is ready to react with more CO2.\",\n          \"relation_preserved\": true,\n          \"status\": \"supported\",\n          \"unit_id\": \"U02\"\n        }\n      ]\n    },\n    {\n      \"basis\": \"textbook\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"ev_001\",\n          \"fragment_ids\": [\n            \"F004\"\n          ],\n          \"relation\": \"supporting\"\n        }\n      ],\n      \"claim_id\": \"claim_4e19e4a486fe9dc923da7169_1\",\n      \"reason\": \"Supported by text stating ATP is used in RuBP regeneration.\",\n      \"status\": \"supported\",\n      \"units\": [\n        {\n          \"conditions_preserved\": true,\n          \"fragment_ids\": [\n            \"F004\"\n          ],\n          \"reason\": \"ATP use in regeneration is supported.\",\n          \"relation_preserved\": true,\n          \"status\": \"supported\",\n          \"unit_id\": \"U01\"\n        }\n      ]\n    },\n    {\n      \"basis\": \"textbook\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"ev_007\",\n          \"fragment_ids\": [\n            \"F056\",\n            \"F058\"\n          ],\n          \"relation\": \"supporting\"\n        }\n      ],\n      \"claim_id\": \"claim_b85b9fa953bffc184b48ae2d_1\",\n      \"reason\": \"Supported by fixation and reduction details in ev_007.\",\n      \"status\": \"supported\",\n      \"units\": [\n        {\n          \"conditions_preserved\": true,\n          \"fragment_ids\": [\n            \"F056\"\n          ],\n          \"reason\": \"RuBisCO combines CO2 with RuBP.\",\n          \"relation_preserved\": true,\n          \"status\": \"supported\",\n          \"unit_id\": \"U01\"\n        },\n        {\n          \"conditions_preserved\": true,\n          \"fragment_ids\": [\n            \"F056\"\n          ],\n          \"reason\": \"Product splits into two 3-PGA.\",\n          \"relation_preserved\": true,\n          \"status\": \"supported\",\n          \"unit_id\": \"U02\"\n        },\n        {\n          \"conditions_preserved\": true,\n          \"fragment_ids\": [\n            \"F058\"\n          ],\n          \"reason\": \"ATP mentioned.\",\n          \"relation_preserved\": true,\n          \"status\": \"supported\",\n          \"unit_id\": \"U03\"\n        },\n        {\n          \"conditions_preserved\": true,\n          \"fragment_ids\": [\n            \"F058\"\n          ],\n          \"reason\": \"NADPH reduces to G3P.\",\n          \"relation_preserved\": true,\n          \"status\": \"supported\",\n          \"unit_id\": \"U04\"\n        }\n      ]\n    },\n    {\n      \"basis\": \"textbook\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"ev_002\",\n          \"fragment_ids\": [\n            \"F009\",\n            \"F011\",\n            \"F013\"\n          ],\n          \"relation\": \"supporting\"\n        },\n        {\n          \"evidence_id\": \"ev_003\",\n          \"fragment_ids\": [\n            \"F021\"\n          ],\n          \"relation\": \"supporting\"\n        }\n      ],\n      \"claim_id\": \"claim_4bbb28fe7a90b6a3f87b6b75_1\",\n      \"reason\": \"Supported by text about G3P recycling and export.\",\n      \"status\": \"supported\",\n      \"units\": [\n        {\n          \"conditions_preserved\": true,\n          \"fragment_ids\": [\n            \"F013\",\n            \"F021\"\n          ],\n          \"reason\": \"Most G3P is recycled.\",\n          \"relation_preserved\": true,\n          \"status\": \"supported\",\n          \"unit_id\": \"U01\"\n        },\n        {\n          \"conditions_preserved\": true,\n          \"fragment_ids\": [\n            \"F009\",\n            \"F011\",\n            \"F013\"\n          ],\n          \"reason\": \"One G3P per three turns is exported.\",\n          \"relation_preserved\": true,\n          \"status\": \"supported\",\n          \"unit_id\": \"U02\"\n        }\n      ]\n    }\n  ],\n  \"body_ok\": true,\n  \"complete_answer\": true,\n  \"coverage\": \"full\",\n  \"cumulative_ok\": true,\n  \"evidence_display_ok\": true,\n  \"limitations_explicit\": true,\n  \"missing_facets\": [],\n  \"non_repetitive_next_action\": true,\n  \"reason\": \"All claims are fully supported by the provided text sources, answering the user question completely.\",\n  \"repair_fragment_ids\": [],\n  \"requirements\": [\n    {\n      \"conditions_preserved\": true,\n      \"evidence\": [\n        {\n          \"evidence_id\": \"ev_007\",\n          \"fragment_id\": \"F056\",\n          \"quote\": \"RuBisCO catalyzes a reaction between CO2 and RuBP, which forms a six-carbon compound that is immediately converted into two three-carbon compounds.\"\n        },\n        {\n          \"evidence_id\": \"ev_007\",\n          \"fragment_id\": \"F058\",\n          \"quote\": \"ATP and NADPH use their stored energy to convert the three-carbon compound, 3-PGA, into another three-carbon compound called G3P.\"\n        }\n      ],\n      \"missing_information\": \"\",\n      \"reason\": \"The requirement is fully met by the source fragments.\",\n      \"relevance\": \"related\",\n      \"requirement_id\": \"requirement_01\",\n      \"response_coverage\": \"covered\",\n      \"sufficiency\": \"sufficient\"\n    },\n    {\n      \"conditions_preserved\": true,\n      \"evidence\": [\n        {\n          \"evidence_id\": \"ev_002\",\n          \"fragment_id\": \"F009\",\n          \"quote\": \"Interesting, at this point, only one of the G3P molecules leaves the Calvin cycle and is sent to the cytoplasm to contribute to the formation of other compounds needed by the plant.\"\n        },\n        {\n          \"evidence_id\": \"ev_002\",\n          \"fragment_id\": \"F013\",\n          \"quote\": \"One is exported while the remaining five G3P molecules remain in the cycle and are used to regenerate RuBP, which enables the system to prepare for more CO2 to be fixed.\"\n        }\n      ],\n      \"missing_information\": \"\",\n      \"reason\": \"The requirement is fully met by the source fragments explaining why some G3P leaves and the rest remains.\",\n      \"relevance\": \"related\",\n      \"requirement_id\": \"requirement_02\",\n      \"response_coverage\": \"covered\",\n      \"sufficiency\": \"sufficient\"\n    }\n  ],\n  \"scope_ok\": true,\n  \"specific_help\": true,\n  \"suggestions_ok\": true,\n  \"tutor_question_ok\": true,\n  \"attempt_evaluation_ok\": true\n}",
+    "provider": "openai_compatible",
+    "model": "google/gemini-3.5-flash-lite",
+    "finish_reason": "stop",
+    "provider_request_id": "gen-1791622388-7RGQBbQ1PrNa6H1NJSjq",
+    "usage": {
+      "input_tokens": 22711,
+      "output_tokens": 3969,
+      "total_tokens": 26680,
+      "reasoning_tokens": 0,
+      "cache_hit_input_tokens": 0,
+      "cache_miss_input_tokens": 22711,
+      "cost": 0.0167358
+    },
+    "latency_ms": 10933,
+    "error": null,
+    "request_submitted": true,
+    "diagnostic": {
+      "stage": "completed",
+      "http_status": 200,
+      "provider_error_type": null,
+      "provider_error_code": null,
+      "provider_error_parameter": null,
+      "message": null,
+      "message_redacted": false,
+      "provider_request_id": "gen-1791622388-7RGQBbQ1PrNa6H1NJSjq",
+      "finish_reason": "stop",
+      "network_error": null,
+      "request_submitted": true,
+      "latency_ms": 10933
+    }
+  },
+  "raw_receipt_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-fixed-checker-pair38-candidate\\actual-fixed-pair38\\candidate38-raw-provider-read01.json",
+      "bytes": 55050,
+      "sha256": "273122d2c490cd31a56b3b2d41b7f2c859330836724d208e26f9651401ef77e3"
+    }
+  ],
+  "validation": {
+    "schema_PASS": true,
+    "local_binding_and_relation_contract_PASS": true,
+    "independent_source_entailment_certified": false,
+    "native_publication": false,
+    "exact_claim_identity_PASS": true,
+    "binding_issues": [],
+    "source_contract_issues": [],
+    "source_semantic_defects": [],
+    "model_relation_assessment": {
+      "version": "source_relation_contract_v2",
+      "method": "online_checker_lossless_syntactic_units_and_exact_binding_validation",
+      "accepted": true,
+      "claims": [
+        {
+          "claim_id": "claim_9dd7ed3c15bfc4ae4368ad47_1",
+          "checker_claim_status": "supported",
+          "exact_claim_content_covered": true,
+          "obligations": [
+            {
+              "unit_id": "U01",
+              "status": "supported",
+              "fragment_ids": [
+                "F054",
+                "F055",
+                "F056",
+                "F064"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "Directly supported by fragments detailing RuBisCO, CO2, RuBP combination and structure.",
+              "claim_quote": "In the Calvin cycle, RuBisCO catalyzes the fixation reaction by combining CO2 with RuBP, a five-carbon molecule with a phosphate group on each end [ev_007] [ev_008].",
+              "claim_start": 0,
+              "claim_end": 165,
+              "source_quotes": [
+                {
+                  "evidence_id": "ev_007",
+                  "fragment_id": "F054",
+                  "quote": "In the stroma, in addition to CO2, two other chemicals are present to initiate the Calvin cycle: an enzyme abbreviated RuBisCO, and the molecule ribulose bisphosphate (RuBP)."
+                },
+                {
+                  "evidence_id": "ev_007",
+                  "fragment_id": "F055",
+                  "quote": "RuBP has five atoms of carbon and a phosphate group on each end."
+                },
+                {
+                  "evidence_id": "ev_007",
+                  "fragment_id": "F056",
+                  "quote": "RuBisCO catalyzes a reaction between CO2 and RuBP, which forms a six-carbon compound that is immediately converted into two three-carbon compounds."
+                },
+                {
+                  "evidence_id": "ev_008",
+                  "fragment_id": "F064",
+                  "quote": "Stage 1: Fixation In the stroma, in addition to CO2, two other components are present to initiate the light-independent reactions: an enzyme called ribulose-1,5-bisphosphate carboxylase/oxygenase (RuBisCO), and three molecules of ribulose bisphosphate (RuBP), as shown in Figure 8.19."
+                }
+              ],
+              "defect_codes": []
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_9e6350bf8c8ac897dd6ce681_1",
+          "checker_claim_status": "supported",
+          "exact_claim_content_covered": true,
+          "obligations": [
+            {
+              "unit_id": "U01",
+              "status": "supported",
+              "fragment_ids": [
+                "F056"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "Supported by fragment indicating the intermediate 6-carbon product is converted into two 3-carbon compounds.",
+              "claim_quote": "The resulting six-carbon compound is immediately broken down into two three-carbon compounds, 3-PGA [ev_007].",
+              "claim_start": 0,
+              "claim_end": 109,
+              "source_quotes": [
+                {
+                  "evidence_id": "ev_007",
+                  "fragment_id": "F056",
+                  "quote": "RuBisCO catalyzes a reaction between CO2 and RuBP, which forms a six-carbon compound that is immediately converted into two three-carbon compounds."
+                }
+              ],
+              "defect_codes": []
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_f9fe075af789df975cbeaea7_1",
+          "checker_claim_status": "supported",
+          "exact_claim_content_covered": true,
+          "obligations": [
+            {
+              "unit_id": "U01",
+              "status": "supported",
+              "fragment_ids": [
+                "F058",
+                "F018"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "ATP and NADPH energy conversion to G3P is supported.",
+              "claim_quote": "The energy in ATP",
+              "claim_start": 0,
+              "claim_end": 17,
+              "source_quotes": [
+                {
+                  "evidence_id": "ev_007",
+                  "fragment_id": "F058",
+                  "quote": "ATP and NADPH use their stored energy to convert the three-carbon compound, 3-PGA, into another three-carbon compound called G3P."
+                },
+                {
+                  "evidence_id": "ev_003",
+                  "fragment_id": "F018",
+                  "quote": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P."
+                }
+              ],
+              "defect_codes": []
+            },
+            {
+              "unit_id": "U02",
+              "status": "supported",
+              "fragment_ids": [
+                "F058",
+                "F059"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "Reduction reaction involving electron gain is supported.",
+              "claim_quote": " and NADPH is then used to convert the three-carbon 3-PGA into G3P, a reduction reaction that involves the gain of electrons [ev_007] [ev_003].",
+              "claim_start": 17,
+              "claim_end": 160,
+              "source_quotes": [
+                {
+                  "evidence_id": "ev_007",
+                  "fragment_id": "F058",
+                  "quote": "ATP and NADPH use their stored energy to convert the three-carbon compound, 3-PGA, into another three-carbon compound called G3P."
+                },
+                {
+                  "evidence_id": "ev_007",
+                  "fragment_id": "F059",
+                  "quote": "This type of reaction is called a reduction reaction, because it involves the gain of electrons."
+                }
+              ],
+              "defect_codes": []
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_364664c975bdc00d74ab2a22_1",
+          "checker_claim_status": "supported",
+          "exact_claim_content_covered": true,
+          "obligations": [
+            {
+              "unit_id": "U01",
+              "status": "supported",
+              "fragment_ids": [
+                "F057"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "Carbon fixation naming is explicitly supported.",
+              "claim_quote": "Because CO2 is fixed from its inorganic form into organic molecules, this is called carbon fixation [ev_007].",
+              "claim_start": 0,
+              "claim_end": 109,
+              "source_quotes": [
+                {
+                  "evidence_id": "ev_007",
+                  "fragment_id": "F057",
+                  "quote": "This process is called carbon fixation, because CO2 is “fixed” from its inorganic form into organic molecules."
+                }
+              ],
+              "defect_codes": []
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_8b458d38f4d30c5060c0957c_1",
+          "checker_claim_status": "supported",
+          "exact_claim_content_covered": true,
+          "obligations": [
+            {
+              "unit_id": "U01",
+              "status": "supported",
+              "fragment_ids": [
+                "F012"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "Each turn makes two G3Ps.",
+              "claim_quote": "Each turn makes two G3P molecules,",
+              "claim_start": 0,
+              "claim_end": 34,
+              "source_quotes": [
+                {
+                  "evidence_id": "ev_002",
+                  "fragment_id": "F012",
+                  "quote": "But each turn makes two G3Ps, thus three turns make six G3Ps."
+                }
+              ],
+              "defect_codes": []
+            },
+            {
+              "unit_id": "U02",
+              "status": "supported",
+              "fragment_ids": [
+                "F011"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "Three turns fix enough net carbon to export one G3P.",
+              "claim_quote": " and three turns fix enough net carbon to export one G3P,",
+              "claim_start": 34,
+              "claim_end": 91,
+              "source_quotes": [
+                {
+                  "evidence_id": "ev_002",
+                  "fragment_id": "F011",
+                  "quote": "chloroplast has three carbon atoms, it takes three “turns” of the Calvin cycle to fix enough net carbon to export one G3P."
+                }
+              ],
+              "defect_codes": []
+            },
+            {
+              "unit_id": "U03",
+              "status": "supported",
+              "fragment_ids": [
+                "F009",
+                "F013"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "Remaining G3P regenerates RuBP.",
+              "claim_quote": " while the remaining G3P molecules are used to regenerate RuBP so the cycle can prepare for more CO2 to be fixed [ev_002].",
+              "claim_start": 91,
+              "claim_end": 213,
+              "source_quotes": [
+                {
+                  "evidence_id": "ev_002",
+                  "fragment_id": "F009",
+                  "quote": "Stage 3: Regeneration Interestingly, at this point, only one of the G3P molecules leaves the Calvin cycle and is sent to the cytoplasm to contribute to the formation of other compounds needed by the plant."
+                },
+                {
+                  "evidence_id": "ev_002",
+                  "fragment_id": "F013",
+                  "quote": "One is exported while the remaining five G3P molecules remain in the cycle and are used to regenerate RuBP, which enables the system to prepare for more CO2 to be fixed."
+                }
+              ],
+              "defect_codes": []
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_9eace1a26f8e9d6071f0acb8_1",
+          "checker_claim_status": "supported",
+          "exact_claim_content_covered": true,
+          "obligations": [
+            {
+              "unit_id": "U01",
+              "status": "supported",
+              "fragment_ids": [
+                "F001"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "One G3P leaves for carbohydrate/glucose formation.",
+              "claim_quote": "One G3P leaves the cycle to contribute to the formation of a carbohydrate molecule, commonly glucose,",
+              "claim_start": 0,
+              "claim_end": 101,
+              "source_quotes": [
+                {
+                  "evidence_id": "ev_001",
+                  "fragment_id": "F001",
+                  "quote": "One of the G3P molecules leaves the Calvin cycle to contribute to the formation of the carbohydrate molecule, which is commonly glucose (C6H12O6)."
+                }
+              ],
+              "defect_codes": []
+            },
+            {
+              "unit_id": "U02",
+              "status": "supported",
+              "fragment_ids": [
+                "F002"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "Six turns required for six carbon atoms.",
+              "claim_quote": " which requires six turns of the cycle for six carbon atoms [ev_001].",
+              "claim_start": 101,
+              "claim_end": 170,
+              "source_quotes": [
+                {
+                  "evidence_id": "ev_001",
+                  "fragment_id": "F002",
+                  "quote": "Because the carbohydrate molecule has six carbon atoms, it takes six turns of the Calvin cycle to make one carbohydrate molecule (one for each carbon dioxide molecule fixed)."
+                }
+              ],
+              "defect_codes": []
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_e042c515f904bec48279173e_1",
+          "checker_claim_status": "supported",
+          "exact_claim_content_covered": true,
+          "obligations": [
+            {
+              "unit_id": "U01",
+              "status": "supported",
+              "fragment_ids": [
+                "F003",
+                "F021"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "Remaining G3P regenerates RuBP.",
+              "claim_quote": "The remaining G3P molecules stay in the cycle to be formed back into RuBP,",
+              "claim_start": 0,
+              "claim_end": 74,
+              "source_quotes": [
+                {
+                  "evidence_id": "ev_001",
+                  "fragment_id": "F003",
+                  "quote": "The remaining G3P molecules regenerate RuBP, which enables the system to prepare for the carbon-fixation step."
+                },
+                {
+                  "evidence_id": "ev_003",
+                  "fragment_id": "F021",
+                  "quote": "The remaining G3P molecules stay in the cycle to be formed back into RuBP, which is ready to react with more CO2."
+                }
+              ],
+              "defect_codes": []
+            },
+            {
+              "unit_id": "U02",
+              "status": "supported",
+              "fragment_ids": [
+                "F021"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "RuBP is ready to react with more CO2.",
+              "claim_quote": " which is ready to react with more CO2 [ev_003] [ev_001].",
+              "claim_start": 74,
+              "claim_end": 131,
+              "source_quotes": [
+                {
+                  "evidence_id": "ev_003",
+                  "fragment_id": "F021",
+                  "quote": "The remaining G3P molecules stay in the cycle to be formed back into RuBP, which is ready to react with more CO2."
+                }
+              ],
+              "defect_codes": []
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_4e19e4a486fe9dc923da7169_1",
+          "checker_claim_status": "supported",
+          "exact_claim_content_covered": true,
+          "obligations": [
+            {
+              "unit_id": "U01",
+              "status": "supported",
+              "fragment_ids": [
+                "F004"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "ATP use in regeneration is supported.",
+              "claim_quote": "ATP is also used in the regeneration of RuBP [ev_001].",
+              "claim_start": 0,
+              "claim_end": 54,
+              "source_quotes": [
+                {
+                  "evidence_id": "ev_001",
+                  "fragment_id": "F004",
+                  "quote": "ATP is also used in the regeneration of RuBP."
+                }
+              ],
+              "defect_codes": []
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_b85b9fa953bffc184b48ae2d_1",
+          "checker_claim_status": "supported",
+          "exact_claim_content_covered": true,
+          "obligations": [
+            {
+              "unit_id": "U01",
+              "status": "supported",
+              "fragment_ids": [
+                "F056"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "RuBisCO combines CO2 with RuBP.",
+              "claim_quote": "RuBisCO combines CO2 with RuBP",
+              "claim_start": 0,
+              "claim_end": 30,
+              "source_quotes": [
+                {
+                  "evidence_id": "ev_007",
+                  "fragment_id": "F056",
+                  "quote": "RuBisCO catalyzes a reaction between CO2 and RuBP, which forms a six-carbon compound that is immediately converted into two three-carbon compounds."
+                }
+              ],
+              "defect_codes": []
+            },
+            {
+              "unit_id": "U02",
+              "status": "supported",
+              "fragment_ids": [
+                "F056"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "Product splits into two 3-PGA.",
+              "claim_quote": "; the six-carbon product splits into two 3-PGA,",
+              "claim_start": 30,
+              "claim_end": 77,
+              "source_quotes": [
+                {
+                  "evidence_id": "ev_007",
+                  "fragment_id": "F056",
+                  "quote": "RuBisCO catalyzes a reaction between CO2 and RuBP, which forms a six-carbon compound that is immediately converted into two three-carbon compounds."
+                }
+              ],
+              "defect_codes": []
+            },
+            {
+              "unit_id": "U03",
+              "status": "supported",
+              "fragment_ids": [
+                "F058"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "ATP mentioned.",
+              "claim_quote": " which ATP",
+              "claim_start": 77,
+              "claim_end": 87,
+              "source_quotes": [
+                {
+                  "evidence_id": "ev_007",
+                  "fragment_id": "F058",
+                  "quote": "ATP and NADPH use their stored energy to convert the three-carbon compound, 3-PGA, into another three-carbon compound called G3P."
+                }
+              ],
+              "defect_codes": []
+            },
+            {
+              "unit_id": "U04",
+              "status": "supported",
+              "fragment_ids": [
+                "F058"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "NADPH reduces to G3P.",
+              "claim_quote": " and NADPH reduce to G3P [ev_007].",
+              "claim_start": 87,
+              "claim_end": 121,
+              "source_quotes": [
+                {
+                  "evidence_id": "ev_007",
+                  "fragment_id": "F058",
+                  "quote": "ATP and NADPH use their stored energy to convert the three-carbon compound, 3-PGA, into another three-carbon compound called G3P."
+                }
+              ],
+              "defect_codes": []
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_4bbb28fe7a90b6a3f87b6b75_1",
+          "checker_claim_status": "supported",
+          "exact_claim_content_covered": true,
+          "obligations": [
+            {
+              "unit_id": "U01",
+              "status": "supported",
+              "fragment_ids": [
+                "F013",
+                "F021"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "Most G3P is recycled.",
+              "claim_quote": "Most G3P is recycled to regenerate RuBP,",
+              "claim_start": 0,
+              "claim_end": 40,
+              "source_quotes": [
+                {
+                  "evidence_id": "ev_002",
+                  "fragment_id": "F013",
+                  "quote": "One is exported while the remaining five G3P molecules remain in the cycle and are used to regenerate RuBP, which enables the system to prepare for more CO2 to be fixed."
+                },
+                {
+                  "evidence_id": "ev_003",
+                  "fragment_id": "F021",
+                  "quote": "The remaining G3P molecules stay in the cycle to be formed back into RuBP, which is ready to react with more CO2."
+                }
+              ],
+              "defect_codes": []
+            },
+            {
+              "unit_id": "U02",
+              "status": "supported",
+              "fragment_ids": [
+                "F009",
+                "F011",
+                "F013"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "One G3P per three turns is exported.",
+              "claim_quote": " while one G3P per three turns is exported for carbohydrate formation [ev_002] [ev_003].",
+              "claim_start": 40,
+              "claim_end": 128,
+              "source_quotes": [
+                {
+                  "evidence_id": "ev_002",
+                  "fragment_id": "F009",
+                  "quote": "Stage 3: Regeneration Interestingly, at this point, only one of the G3P molecules leaves the Calvin cycle and is sent to the cytoplasm to contribute to the formation of other compounds needed by the plant."
+                },
+                {
+                  "evidence_id": "ev_002",
+                  "fragment_id": "F011",
+                  "quote": "chloroplast has three carbon atoms, it takes three “turns” of the Calvin cycle to fix enough net carbon to export one G3P."
+                },
+                {
+                  "evidence_id": "ev_002",
+                  "fragment_id": "F013",
+                  "quote": "One is exported while the remaining five G3P molecules remain in the cycle and are used to regenerate RuBP, which enables the system to prepare for more CO2 to be fixed."
+                }
+              ],
+              "defect_codes": []
+            }
+          ]
+        }
+      ],
+      "contract_issue_codes": [],
+      "semantic_defect_codes": [],
+      "independent_evaluation": false,
+      "human_rating": null,
+      "source_entailment_locally_certified": false,
+      "semantic_atomicity_locally_certified": false
+    },
+    "checker_inconsistencies": [],
+    "repairable_verdict_inconsistencies": [],
+    "technical_entity_binding_issues": [],
+    "scope_repair_triggered": false,
+    "typed_judgment": {
+      "claims": [
+        {
+          "claim_id": "claim_9dd7ed3c15bfc4ae4368ad47_1",
+          "reason": "Supported by text showing RuBisCO combines CO2 with RuBP (a 5-carbon molecule with a phosphate on each end).",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_007",
+              "fragment_ids": [
+                "F054",
+                "F055",
+                "F056"
+              ],
+              "relation": "supporting"
+            },
+            {
+              "evidence_id": "ev_008",
+              "fragment_ids": [
+                "F064"
+              ],
+              "relation": "supporting"
+            }
+          ],
+          "units": [
+            {
+              "unit_id": "U01",
+              "status": "supported",
+              "fragment_ids": [
+                "F054",
+                "F055",
+                "F056",
+                "F064"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "Directly supported by fragments detailing RuBisCO, CO2, RuBP combination and structure."
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_9e6350bf8c8ac897dd6ce681_1",
+          "reason": "Supported by source stating the six-carbon compound is converted into two three-carbon compounds (3-PGA).",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_007",
+              "fragment_ids": [
+                "F056"
+              ],
+              "relation": "supporting"
+            }
+          ],
+          "units": [
+            {
+              "unit_id": "U01",
+              "status": "supported",
+              "fragment_ids": [
+                "F056"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "Supported by fragment indicating the intermediate 6-carbon product is converted into two 3-carbon compounds."
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_f9fe075af789df975cbeaea7_1",
+          "reason": "Supported by fragments showing ATP and NADPH convert 3-PGA into G3P in a reduction reaction.",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_007",
+              "fragment_ids": [
+                "F058",
+                "F059"
+              ],
+              "relation": "supporting"
+            },
+            {
+              "evidence_id": "ev_003",
+              "fragment_ids": [
+                "F018"
+              ],
+              "relation": "supporting"
+            }
+          ],
+          "units": [
+            {
+              "unit_id": "U01",
+              "status": "supported",
+              "fragment_ids": [
+                "F058",
+                "F018"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "ATP and NADPH energy conversion to G3P is supported."
+            },
+            {
+              "unit_id": "U02",
+              "status": "supported",
+              "fragment_ids": [
+                "F058",
+                "F059"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "Reduction reaction involving electron gain is supported."
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_364664c975bdc00d74ab2a22_1",
+          "reason": "Supported by source stating fixation of inorganic CO2 into organic molecules is called carbon fixation.",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_007",
+              "fragment_ids": [
+                "F057"
+              ],
+              "relation": "supporting"
+            }
+          ],
+          "units": [
+            {
+              "unit_id": "U01",
+              "status": "supported",
+              "fragment_ids": [
+                "F057"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "Carbon fixation naming is explicitly supported."
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_8b458d38f4d30c5060c0957c_1",
+          "reason": "Supported by text regarding turns, G3P export, and regeneration of RuBP.",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_002",
+              "fragment_ids": [
+                "F009",
+                "F011",
+                "F012",
+                "F013"
+              ],
+              "relation": "supporting"
+            }
+          ],
+          "units": [
+            {
+              "unit_id": "U01",
+              "status": "supported",
+              "fragment_ids": [
+                "F012"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "Each turn makes two G3Ps."
+            },
+            {
+              "unit_id": "U02",
+              "status": "supported",
+              "fragment_ids": [
+                "F011"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "Three turns fix enough net carbon to export one G3P."
+            },
+            {
+              "unit_id": "U03",
+              "status": "supported",
+              "fragment_ids": [
+                "F009",
+                "F013"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "Remaining G3P regenerates RuBP."
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_9eace1a26f8e9d6071f0acb8_1",
+          "reason": "Supported by text stating one G3P leaves for carbohydrates, requiring six turns for glucose.",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_001",
+              "fragment_ids": [
+                "F001",
+                "F002"
+              ],
+              "relation": "supporting"
+            }
+          ],
+          "units": [
+            {
+              "unit_id": "U01",
+              "status": "supported",
+              "fragment_ids": [
+                "F001"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "One G3P leaves for carbohydrate/glucose formation."
+            },
+            {
+              "unit_id": "U02",
+              "status": "supported",
+              "fragment_ids": [
+                "F002"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "Six turns required for six carbon atoms."
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_e042c515f904bec48279173e_1",
+          "reason": "Supported by text showing remaining G3P stays to form RuBP for more CO2.",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_001",
+              "fragment_ids": [
+                "F003"
+              ],
+              "relation": "supporting"
+            },
+            {
+              "evidence_id": "ev_003",
+              "fragment_ids": [
+                "F021"
+              ],
+              "relation": "supporting"
+            }
+          ],
+          "units": [
+            {
+              "unit_id": "U01",
+              "status": "supported",
+              "fragment_ids": [
+                "F003",
+                "F021"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "Remaining G3P regenerates RuBP."
+            },
+            {
+              "unit_id": "U02",
+              "status": "supported",
+              "fragment_ids": [
+                "F021"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "RuBP is ready to react with more CO2."
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_4e19e4a486fe9dc923da7169_1",
+          "reason": "Supported by text stating ATP is used in RuBP regeneration.",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_001",
+              "fragment_ids": [
+                "F004"
+              ],
+              "relation": "supporting"
+            }
+          ],
+          "units": [
+            {
+              "unit_id": "U01",
+              "status": "supported",
+              "fragment_ids": [
+                "F004"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "ATP use in regeneration is supported."
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_b85b9fa953bffc184b48ae2d_1",
+          "reason": "Supported by fixation and reduction details in ev_007.",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_007",
+              "fragment_ids": [
+                "F056",
+                "F058"
+              ],
+              "relation": "supporting"
+            }
+          ],
+          "units": [
+            {
+              "unit_id": "U01",
+              "status": "supported",
+              "fragment_ids": [
+                "F056"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "RuBisCO combines CO2 with RuBP."
+            },
+            {
+              "unit_id": "U02",
+              "status": "supported",
+              "fragment_ids": [
+                "F056"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "Product splits into two 3-PGA."
+            },
+            {
+              "unit_id": "U03",
+              "status": "supported",
+              "fragment_ids": [
+                "F058"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "ATP mentioned."
+            },
+            {
+              "unit_id": "U04",
+              "status": "supported",
+              "fragment_ids": [
+                "F058"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "NADPH reduces to G3P."
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_4bbb28fe7a90b6a3f87b6b75_1",
+          "reason": "Supported by text about G3P recycling and export.",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_002",
+              "fragment_ids": [
+                "F009",
+                "F011",
+                "F013"
+              ],
+              "relation": "supporting"
+            },
+            {
+              "evidence_id": "ev_003",
+              "fragment_ids": [
+                "F021"
+              ],
+              "relation": "supporting"
+            }
+          ],
+          "units": [
+            {
+              "unit_id": "U01",
+              "status": "supported",
+              "fragment_ids": [
+                "F013",
+                "F021"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "Most G3P is recycled."
+            },
+            {
+              "unit_id": "U02",
+              "status": "supported",
+              "fragment_ids": [
+                "F009",
+                "F011",
+                "F013"
+              ],
+              "relation_preserved": true,
+              "conditions_preserved": true,
+              "reason": "One G3P per three turns is exported."
+            }
+          ]
+        }
+      ],
+      "body_ok": true,
+      "specific_help": true,
+      "scope_ok": true,
+      "suggestions_ok": true,
+      "evidence_display_ok": true,
+      "cumulative_ok": true,
+      "complete_answer": true,
+      "coverage": "full",
+      "missing_facets": [],
+      "limitations_explicit": true,
+      "reason": "All claims are fully supported by the provided text sources, answering the user question completely.",
+      "repair_fragment_ids": [],
+      "attempt_evaluation_ok": true,
+      "tutor_question_ok": true,
+      "requirements": [
+        {
+          "requirement_id": "requirement_01",
+          "relevance": "related",
+          "sufficiency": "sufficient",
+          "evidence": [
+            {
+              "evidence_id": "ev_007",
+              "fragment_id": "F056",
+              "quote": "RuBisCO catalyzes a reaction between CO2 and RuBP, which forms a six-carbon compound that is immediately converted into two three-carbon compounds."
+            },
+            {
+              "evidence_id": "ev_007",
+              "fragment_id": "F058",
+              "quote": "ATP and NADPH use their stored energy to convert the three-carbon compound, 3-PGA, into another three-carbon compound called G3P."
+            }
+          ],
+          "conditions_preserved": true,
+          "response_coverage": "covered",
+          "missing_information": "",
+          "reason": "The requirement is fully met by the source fragments."
+        },
+        {
+          "requirement_id": "requirement_02",
+          "relevance": "related",
+          "sufficiency": "sufficient",
+          "evidence": [
+            {
+              "evidence_id": "ev_002",
+              "fragment_id": "F009",
+              "quote": "Interesting, at this point, only one of the G3P molecules leaves the Calvin cycle and is sent to the cytoplasm to contribute to the formation of other compounds needed by the plant."
+            },
+            {
+              "evidence_id": "ev_002",
+              "fragment_id": "F013",
+              "quote": "One is exported while the remaining five G3P molecules remain in the cycle and are used to regenerate RuBP, which enables the system to prepare for more CO2 to be fixed."
+            }
+          ],
+          "conditions_preserved": true,
+          "response_coverage": "covered",
+          "missing_information": "",
+          "reason": "The requirement is fully met by the source fragments explaining why some G3P leaves and the rest remains."
+        }
+      ],
+      "non_repetitive_next_action": true
+    },
+    "model_all_units_supported_without_local_contract_errors": true,
+    "acceptance_contract_observer_review_pending": true,
+    "all_product_publication_gates_replayed": false
+  }
+}

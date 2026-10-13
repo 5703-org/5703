@@ -1,0 +1,118 @@
+{
+  "schema": "cs30-candidate-spec-review72-v1",
+  "status": "PASS_FOR_BOUNDED_ROUTE_MOCK_BROWSER_REGRESSION",
+  "blocking_findings": [],
+  "review_method": "Read-only code/config/controller/type-check-helper inspection and offline mechanical verification of immutable execution receipts, exact file pins, six Playwright results, trace files and current Main source bytes.",
+  "reviewer_service_or_browser_runs": 0,
+  "reviewer_compiler_runs": 0,
+  "reviewer_database_accesses": 0,
+  "reviewer_real_auth_reads": 0,
+  "reviewer_provider_requests": 0,
+  "reviewer_main_writes": 0,
+  "final_candidate": {
+    "path": "composer-route-mock.candidate.spec.ts",
+    "bytes": 17083,
+    "sha256": "6776bccd5645e5ddffa3945c9f4e44d63a1bace15f7b4a0695405048bf0b0fbe",
+    "intended_main_path": "frontend/tests/e2e/composer-route-mock.spec.ts",
+    "written_to_main_by_this_review": false,
+    "initial_candidate_bytes": 17039,
+    "initial_candidate_sha256": "f0e2afa5ebb777c75939d992b2fc23eb28163331ba3763fa1bcc6e98966b437b",
+    "change_verified": "Reverting only the frontend-server ownership comment in memory reconstructs the exact initial candidate hash and byte count. No functional candidate change occurred. The final comment correctly says the test environment supplies the frontend server and the spec starts none."
+  },
+  "execution_evidence": {
+    "receipt": {
+      "path": "candidate-run72-2026-10-11T10-40-35-398Z/candidate-execution-receipt72.json",
+      "bytes": 28972,
+      "sha256": "d63585ddaf13bb88e49a819f944b3dd8044d682cddb8dc0bb31c2fa8fb626b3b",
+      "status": "PASS"
+    },
+    "playwright_report": {
+      "path": "candidate-run72-2026-10-11T10-40-35-398Z/playwright-results72.json",
+      "bytes": 11142,
+      "sha256": "0d35096e797b0d1ef1e81617f2c29fabc9ff60ff9fdeed43f8c3ae4e89e78d76",
+      "version": "1.63.0",
+      "expected": 6,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "root_errors": 0,
+      "retries": 0,
+      "workers": 1,
+      "duration_ms": 7852.188
+    },
+    "playwright_exit_code": 0,
+    "candidate_and_execution_pins_match_current_files": true,
+    "six_results_independently_verified": "Six specs, each with exactly one passed result, retry=0 and no result errors. Each has a nonempty trace attachment.",
+    "independent_main_source_pins_checked": 68,
+    "main_source_before_after_equal": true,
+    "main_current_source_pin_mismatches": 0,
+    "owned_vite_ready_log": "VITE v8.2.2 ready in 124 ms; Local http://127.0.0.1:15199/",
+    "owned_vite_closed": true,
+    "owned_port_closed_confirmed": true,
+    "port_closure_method_reviewed": "Controller TCP probe records true only for ECONNREFUSED; timeout or successful connection does not pass. No fresh network probe was performed by the reviewer.",
+    "separate_runner_evidence": "The earlier eight-case runner execution remains independent. The six passed results here are from the actual candidate spec, not inferred from that runner."
+  },
+  "typecheck_evidence": {
+    "path": "candidate-typecheck72-2026-10-11T10-40-35-491Z.json",
+    "bytes": 695,
+    "sha256": "c1cf516b75160f84380019ef0e349e795b2f0ea01e80f92cf8391eb41e521ba0",
+    "status": "PASS",
+    "same_candidate_sha256": true,
+    "diagnostics": 0,
+    "virtual_main_path": "E:/5703/learning-assistant/frontend/tests/e2e/composer-route-mock.spec.ts",
+    "strict_current_main_tsconfig": true,
+    "no_emit": true,
+    "helper": {"path": "typecheck_candidate72.cjs", "bytes": 3051, "sha256": "e2243277c8af5a6a8e93d294d251c5732ee23f449e5d055b12449109edee2119"},
+    "helper_integrity_review": "Uses current Main tsconfig compiler options, maps the candidate bytes to the intended Main path in a compiler host, sets the compiler directory to Main, disables emit/incremental/composite, refuses host writes and reports every getPreEmitDiagnostics result without filtering errors.",
+    "preserved_initial_helper_failure": {
+      "path": "candidate-typecheck72-2026-10-11T10-40-09-731Z.json",
+      "bytes": 1515,
+      "sha256": "e4a29feed39c99752cd2d9f922965d80f54e466ceb71e675d94e9c5d47699d3c",
+      "status": "FAIL",
+      "same_final_candidate_hash": true,
+      "diagnostics": "Missing node and vite/client type libraries and node:crypto declarations. The helper's directory/type lookup was corrected; the candidate bytes were unchanged between this failure and the passing type check."
+    },
+    "limit": "Checks this candidate and its imported type graph at the intended path; this is not a new whole-frontend build or full repository type check."
+  },
+  "implementation_pins": [
+    {"path": "playwright72.config.cjs", "bytes": 1041, "sha256": "b577ceca9a7b10badc00f899207c82c9519677e5a9792d8f74df5182702ab7d8"},
+    {"path": "run_candidate72.cjs", "bytes": 5390, "sha256": "7858595d224510763e3f51f796f676259fd043afaaf970ddd451353673e39918"},
+    {"path": "vite72.config.mjs", "bytes": 726, "sha256": "432c3419d2089f0dad08f4858f5d7cc872c48ee787041a69bba2c244d74a439e"}
+  ],
+  "source_contract_checks": {
+    "test_count": 6,
+    "interaction_groups": ["Ordinary Enter and rapid submission", "Shift+Enter newline", "Independent IME guards plus matching positive control", "Follow-up turn and mock history reload"],
+    "negative_guard_independence": "Native composition uses keyCode=13/isComposing=true; independent keyCode guard uses 229/false. Both assert exact received fields, default_prevented=false, dispatch_allowed=true, retained draft and zero submissions after two browser frames.",
+    "positive_control": "The same synthetic keydown helper with 13/false asserts default_prevented=true/dispatch_allowed=false and one exact messages payload/key. This prevents vacuous coverage from an unhandled synthetic event.",
+    "shift_enter": "Uses actual browser keyboard Shift+Enter, asserts the exact newline-containing textarea value, no progress and zero submissions.",
+    "ordinary_enter": "Held receipt verifies rapid Enter deduplication and submitting/queued/running progress; asserts one exact session messages endpoint, content/use_profile=false/answer_mode=textbook, UUIDv4 key and completed mock history answer.",
+    "follow_up": "One suggestion click uses the same normal messages endpoint with exact suggestion/profile/source body, distinct keys/job/request/user-message IDs, disabled suggestion while working, two completed answers/four fixture messages, exact user bubble and a fresh history read after reload.",
+    "typed_dtos": "User, Profile, Session, Capabilities, Message, Job, JobReceipt, Evidence, Answer and MessagePage reference current frontend types. Reviewed fields match current public DTO declarations; no real account/configuration credential or evaluator gold is used.",
+    "imports": "Bare @playwright/test and node:crypto are appropriate for the intended frontend package. The ../../src/types type-only import resolves correctly from frontend/tests/e2e/composer-route-mock.spec.ts. W execution resolves the installed Playwright package through the owned controller, and the virtual Main type check verifies the intended final import path."
+  },
+  "isolation_review": {
+    "routes": "Context routes are installed before page navigation. External origins and unexpected API prefix/method/path requests are aborted and recorded; afterEach soft assertions fail the test for such requests or page exceptions.",
+    "state": "Empty storageState, blocked service workers, synthetic login and per-test in-memory fixtures. The spec imports no real auth helper and performs no database, model or paid request.",
+    "execution": "Controller refuses an occupied/unverified 15199 port, launches only owned hidden Vite and Playwright children, records execution-time candidate/config/controller pins, and stores reports/traces under W. Vite uses current Main frontend source with owned env/cache/output and rejects unmocked API requests instead of proxying to a backend.",
+    "installs": 0,
+    "main_writes_recorded": 0,
+    "provider_requests_recorded": 0,
+    "acceptance_upgrade": false
+  },
+  "trace_pins": [
+    {"directory": "composer-route-mock.candid-27975-ending-and-shows-completion", "bytes": 2962637, "sha256": "366326336ae2ce2218537331d22ce44b7b68da90f2ae43757ae1ca37ec3b74c9"},
+    {"directory": "composer-route-mock.candid-e5433--newline-without-submitting", "bytes": 353680, "sha256": "deb86718bf860a8b7a0e1d5068493da1d4b6bccda3af339d2b6df3ddf001b0c2"},
+    {"directory": "composer-route-mock.candid-cff62-he-draft-without-submitting", "bytes": 319086, "sha256": "6260a6b2ca7d6e7fcd308b036836af97ac432c58391b0746a8a0057f8d2c0068"},
+    {"directory": "composer-route-mock.candid-b9d83-he-draft-without-submitting", "bytes": 320121, "sha256": "149c165870cf68539716d53d2dcf78cdb8b0a3a9604a17d6abc54c40e5a3f368"},
+    {"directory": "composer-route-mock.candid-9d233-reaches-the-product-handler", "bytes": 381042, "sha256": "be1625e4996a8205d90ee404255eebaafa22627e72cbe38edb3c785b9f29b948"},
+    {"directory": "composer-route-mock.candid-e57de-on-and-reloads-mock-history", "bytes": 2135622, "sha256": "9a628476179ae13ad155c879a1559ba3d0d3de4a37bb305d26e22ceb31aec52d"}
+  ],
+  "claim_boundaries": [
+    "Actual six-test candidate execution and a strict virtual Main noEmit check have now passed; the earlier unexecuted-candidate state is superseded only by these exact new records.",
+    "All API responses, history rows, jobs, answers and login credentials are synthetic in-memory browser fixtures. History reload verifies frontend consumption, not actual database persistence or durable worker behavior.",
+    "The fixture publishes success and assistant history together; these tests do not independently delay history after success to prove the publication gate.",
+    "The six-test spec covers composer keyboard and follow-up behavior. It does not execute cancellation, provider failure, clipboard copy, keyboard citation dialogs, retry endpoints, native OS IME, physical devices or human/learner evaluation.",
+    "The candidate remains a W artifact at this review. Main integration and any subsequent validation require their own concrete record; the existing source bytes are unchanged.",
+    "AC-44 remains IMPLEMENTED_UNVERIFIED under its full real-endpoint requirement. No whole-project completion, real model quality or formal latency improvement is claimed."
+  ]
+}

@@ -1,0 +1,656 @@
+{
+  "status": "PUBLIC_ACTUAL11_SOURCE_IDENTITY_AND_GEOMETRY_VERIFIED_NOT_ENTAILMENT",
+  "input_pins": [
+    {
+      "path_relative_to_batch": "scientific-native-closure11\\browser\\real-browser-live-qa-receipt01.json",
+      "bytes": 31894,
+      "sha256": "eb60a3f2e05668dc6c6356a5a49ae45c273903a7247fedb8067f5fd72eea215f"
+    },
+    {
+      "path_relative_to_batch": "scientific-native-closure11\\runtime\\budget-status-public01.json",
+      "bytes": 1362,
+      "sha256": "95b299172614be50878d796d0c8e32dabcb14ea256eb479c9481db1f6e45f4ff"
+    },
+    {
+      "path_relative_to_batch": "scientific-native-closure11\\runtime\\retained-provider-diagnostics\\native-generation-outcome01.json",
+      "bytes": 548662,
+      "sha256": "50074ffa14099fb7c9468a46c51487e8c76c6a1ce1d32b1fde2ed22045979e30"
+    },
+    {
+      "path_relative_to_batch": "scientific-native-closure11\\runtime\\retained-provider-diagnostics\\slot-04-model-output01.json",
+      "bytes": 32190,
+      "sha256": "2a988b0e6e6758865ccced3bc7d344f3f4178cc50ae6d4249efc71bdefa712e5"
+    },
+    {
+      "path_relative_to_batch": "scientific-native-closure11\\runtime\\retained-provider-diagnostics\\slot-01-generation-read01.json",
+      "bytes": 9129,
+      "sha256": "2d16aa304a4d940ed0d189d648c02734cb7caa9fab0c31660be5affd3841ca07"
+    },
+    {
+      "path_relative_to_batch": "scientific-native-closure11\\runtime\\retained-provider-diagnostics\\slot-02-joint_check-read01.json",
+      "bytes": 21304,
+      "sha256": "1c4583a66f5082ad235892cf1a0ca82572effe24acb53f04304146ff452d66a5"
+    },
+    {
+      "path_relative_to_batch": "scientific-native-closure11\\runtime\\retained-provider-diagnostics\\slot-03-semantic_repair-read01.json",
+      "bytes": 20921,
+      "sha256": "ce32df4832de5d319e62bd3c0766242811718e9dd08479429af454f0aec2e475"
+    },
+    {
+      "path_relative_to_batch": "scientific-native-closure11\\runtime\\retained-provider-diagnostics\\slot-04-joint_recheck-read01.json",
+      "bytes": 21968,
+      "sha256": "d9eb7eb63c3a624782e4733ed364d728993adad941d52172c136cf3f98ce0408"
+    }
+  ],
+  "actual_question": "How do light-dependent reactions provide the energy carriers used by the Calvin cycle?",
+  "answer_id": "29924da6-426e-49f4-ac2e-0b6ddbc6688e",
+  "request_id": "1feec7e6-55ce-45e1-9004-3759a38d90a7",
+  "job_id": "575eb62a-2d3c-4bb3-b632-6ed2a022b8c1",
+  "final_response": {
+    "schema_version": "chat_response_v1",
+    "response_type": "answer",
+    "answer_text": "The light-dependent reactions convert light energy into chemical energy [ev_008], and the energy carriers then move that energy to the Calvin cycle [ev_008]. The light-dependent reactions use light to temporarily store energy in energy carriers [ev_005] [ev_008]. Photosystems absorb light and use electron transport chains to convert energy into the chemical energy of ATP and NADPH [ev_002]. The energy carriers that move energy from the light-dependent reactions to the Calvin cycle are described as \"full\" because they bring energy [ev_001] [ev_005]. These energy-carrying molecules travel into the stroma, where the Calvin cycle reactions take place [ev_007]. The Calvin cycle then uses the energy in ATP and NADPH to convert molecules into G3P, which is used to build carbohydrate molecules [ev_010]. After the energy is released, the \"empty\" carriers return to the light-dependent reactions to obtain more energy [ev_001] [ev_005].",
+    "short_answer": "Light-dependent reactions store light energy in ATP and NADPH, which travel to the stroma and supply the energy the Calvin cycle uses to build carbohydrates [ev_007] [ev_010].",
+    "citations": [
+      "ev_008",
+      "ev_005",
+      "ev_002",
+      "ev_001",
+      "ev_007",
+      "ev_010"
+    ],
+    "refusal_reason": null,
+    "follow_up_questions": [],
+    "confidence": 0.8
+  },
+  "actual_final_claim_denominator": 8,
+  "actual_checker_input_fragment_denominator": 67,
+  "actual_claims": [
+    {
+      "ordinal": 1,
+      "claim_id": "claim_6fa60ebfc9d56cc26abfddde_1",
+      "answer_field": "answer_text",
+      "start": 0,
+      "end": 157,
+      "text": "The light-dependent reactions convert light energy into chemical energy [ev_008], and the energy carriers then move that energy to the Calvin cycle [ev_008].",
+      "actual_model_status": "supported",
+      "actual_model_reason": "Fragments F042 and F043 support that light-dependent reactions convert light energy into chemical energy to be used by the Calvin cycle.",
+      "selected_union": [
+        {
+          "evidence_id": "ev_008",
+          "fragment_alias": "F042",
+          "relation": "supporting",
+          "exact_text": "Each pigment can absorb different wavelengths of light, which allows the plant to absorb any light that passes through the taller trees. (credit: Jason Hollinger) How Light-Dependent Reactions Work The overall purpose of the light-dependent reactions is to convert light energy into chemical energy.",
+          "checker_input_complete_block": true,
+          "provenance": {
+            "fragment_id": "span_aef88da7210ccdb7eaec2d299b5e7c3f",
+            "evidence_id": "ev_008",
+            "chunk_id": "4d3771ea2c0b38e9defc8ead78b2eea518cf",
+            "asset_id": "3294e86a-c158-4dbe-97e3-6169352497ab",
+            "document_version_id": "35d45deb-de7f-4194-9ce2-1861ae84434d",
+            "processing_id": "82fb328d-a383-43c2-a6eb-b91b61d05069",
+            "source_unit_id": "d4f2c268aabe6d35a8e1bb794f91abbc2ee7",
+            "start": 1267,
+            "end": 1566,
+            "exact_text": "Each pigment can absorb different wavelengths of light, which allows the plant to absorb any light that passes through the taller trees. (credit: Jason Hollinger) How Light-Dependent Reactions Work The overall purpose of the light-dependent reactions is to convert light energy into chemical energy.",
+            "text_hash": "1290ddf491f21c69a15bc1f56b212dda4efea694324ca84433ff091a0552019e",
+            "chunk_start": 158,
+            "chunk_end": 457,
+            "page": 138,
+            "block_kind": "prose",
+            "mapping_quality": "sentence",
+            "complete_block": true,
+            "offset_basis": "cleaned_source_unit_unicode"
+          }
+        },
+        {
+          "evidence_id": "ev_008",
+          "fragment_alias": "F043",
+          "relation": "supporting",
+          "exact_text": "This chemical energy will be used by the Calvin cycle to fuel the assembly of sugar molecules.",
+          "checker_input_complete_block": true,
+          "provenance": {
+            "fragment_id": "span_522764d4ea98ab8cc228d8b4f1163783",
+            "evidence_id": "ev_008",
+            "chunk_id": "4d3771ea2c0b38e9defc8ead78b2eea518cf",
+            "asset_id": "3294e86a-c158-4dbe-97e3-6169352497ab",
+            "document_version_id": "35d45deb-de7f-4194-9ce2-1861ae84434d",
+            "processing_id": "82fb328d-a383-43c2-a6eb-b91b61d05069",
+            "source_unit_id": "d4f2c268aabe6d35a8e1bb794f91abbc2ee7",
+            "start": 1567,
+            "end": 1661,
+            "exact_text": "This chemical energy will be used by the Calvin cycle to fuel the assembly of sugar molecules.",
+            "text_hash": "c3e391b6bc80da6e500a902fafba3d10724d1e913e0bb318e8dd64e492cc735c",
+            "chunk_start": 458,
+            "chunk_end": 552,
+            "page": 138,
+            "block_kind": "prose",
+            "mapping_quality": "sentence",
+            "complete_block": true,
+            "offset_basis": "cleaned_source_unit_unicode"
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 2,
+      "claim_id": "claim_945bf429847c4ab3464582ef_1",
+      "answer_field": "answer_text",
+      "start": 158,
+      "end": 263,
+      "text": "The light-dependent reactions use light to temporarily store energy in energy carriers [ev_005] [ev_008].",
+      "actual_model_status": "supported",
+      "actual_model_reason": "Fragments F029 and F042 jointly show light-dependent reactions temporarily store energy in energy carriers.",
+      "selected_union": [
+        {
+          "evidence_id": "ev_005",
+          "fragment_alias": "F029",
+          "relation": "supporting",
+          "exact_text": "The light-dependent reactions utilize certain molecules to temporarily store the energy: These are referred to as energy carriers.",
+          "checker_input_complete_block": true,
+          "provenance": {
+            "fragment_id": "span_da05e15e378bb8d7ff72296587cd5412",
+            "evidence_id": "ev_005",
+            "chunk_id": "97a8d4b03e388126a40e104c4d5e310e4641",
+            "asset_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+            "document_version_id": "bb336e9b-ef43-466f-9e65-ca6d1d196c4b",
+            "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+            "source_unit_id": "072fb74e256184e4e568fa976f69bdc6d2c5",
+            "start": 1863,
+            "end": 1993,
+            "exact_text": "The light-dependent reactions utilize certain molecules to temporarily store the energy: These are referred to as energy carriers.",
+            "text_hash": "aed87a03a12217ca921a100aed423b96cc268b216f80d009bf393bf43a3076aa",
+            "chunk_start": 939,
+            "chunk_end": 1069,
+            "page": 238,
+            "block_kind": "prose",
+            "mapping_quality": "sentence",
+            "complete_block": true,
+            "offset_basis": "cleaned_source_unit_unicode"
+          }
+        },
+        {
+          "evidence_id": "ev_008",
+          "fragment_alias": "F042",
+          "relation": "supporting",
+          "exact_text": "Each pigment can absorb different wavelengths of light, which allows the plant to absorb any light that passes through the taller trees. (credit: Jason Hollinger) How Light-Dependent Reactions Work The overall purpose of the light-dependent reactions is to convert light energy into chemical energy.",
+          "checker_input_complete_block": true,
+          "provenance": {
+            "fragment_id": "span_aef88da7210ccdb7eaec2d299b5e7c3f",
+            "evidence_id": "ev_008",
+            "chunk_id": "4d3771ea2c0b38e9defc8ead78b2eea518cf",
+            "asset_id": "3294e86a-c158-4dbe-97e3-6169352497ab",
+            "document_version_id": "35d45deb-de7f-4194-9ce2-1861ae84434d",
+            "processing_id": "82fb328d-a383-43c2-a6eb-b91b61d05069",
+            "source_unit_id": "d4f2c268aabe6d35a8e1bb794f91abbc2ee7",
+            "start": 1267,
+            "end": 1566,
+            "exact_text": "Each pigment can absorb different wavelengths of light, which allows the plant to absorb any light that passes through the taller trees. (credit: Jason Hollinger) How Light-Dependent Reactions Work The overall purpose of the light-dependent reactions is to convert light energy into chemical energy.",
+            "text_hash": "1290ddf491f21c69a15bc1f56b212dda4efea694324ca84433ff091a0552019e",
+            "chunk_start": 158,
+            "chunk_end": 457,
+            "page": 138,
+            "block_kind": "prose",
+            "mapping_quality": "sentence",
+            "complete_block": true,
+            "offset_basis": "cleaned_source_unit_unicode"
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 3,
+      "claim_id": "claim_37eb9395c8cbcb5721d36f6e_1",
+      "answer_field": "answer_text",
+      "start": 264,
+      "end": 393,
+      "text": "Photosystems absorb light and use electron transport chains to convert energy into the chemical energy of ATP and NADPH [ev_002].",
+      "actual_model_status": "supported",
+      "actual_model_reason": "Fragment F007 establishes that photosystems absorb light and use electron transport chains to convert energy into ATP and NADH (energy carriers).",
+      "selected_union": [
+        {
+          "evidence_id": "ev_002",
+          "fragment_alias": "F007",
+          "relation": "supporting",
+          "exact_text": "Photosystems absorb light and use electron transport chains to convert energy into the chemical energy of ATP and NADH.",
+          "checker_input_complete_block": true,
+          "provenance": {
+            "fragment_id": "span_995aca56e79b2599b43091549d262544",
+            "evidence_id": "ev_002",
+            "chunk_id": "54dec51018c11b95d8a0c05157c6e54b7c29",
+            "asset_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+            "document_version_id": "bb336e9b-ef43-466f-9e65-ca6d1d196c4b",
+            "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+            "source_unit_id": "16bed8c48ed2bef283382f99256f607d797d",
+            "start": 1090,
+            "end": 1209,
+            "exact_text": "Photosystems absorb light and use electron transport chains to convert energy into the chemical energy of ATP and NADH.",
+            "text_hash": "ebbdc51829a08b0a61ba05d8c7caa768d401e704209132aa6f855bcd9166a0ca",
+            "chunk_start": 558,
+            "chunk_end": 677,
+            "page": 249,
+            "block_kind": "prose",
+            "mapping_quality": "sentence",
+            "complete_block": true,
+            "offset_basis": "cleaned_source_unit_unicode"
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 4,
+      "claim_id": "claim_b7f9e15645de941723449704_1",
+      "answer_field": "answer_text",
+      "start": 394,
+      "end": 554,
+      "text": "The energy carriers that move energy from the light-dependent reactions to the Calvin cycle are described as \"full\" because they bring energy [ev_001] [ev_005].",
+      "actual_model_status": "supported",
+      "actual_model_reason": "Fragments F002 and F030 describe the energy carriers as full because they bring energy.",
+      "selected_union": [
+        {
+          "evidence_id": "ev_001",
+          "fragment_alias": "F002",
+          "relation": "supporting",
+          "exact_text": "The carriers that move energy from the light-dependent reactions to the Calvin cycle reactions can be thought of as “full” because they bring energy.",
+          "checker_input_complete_block": true,
+          "provenance": {
+            "fragment_id": "span_13d8f9a35661f0fb624af18c220292d6",
+            "evidence_id": "ev_001",
+            "chunk_id": "b95f28d179085402ad7d76e11cfa30b499da",
+            "asset_id": "3294e86a-c158-4dbe-97e3-6169352497ab",
+            "document_version_id": "35d45deb-de7f-4194-9ce2-1861ae84434d",
+            "processing_id": "82fb328d-a383-43c2-a6eb-b91b61d05069",
+            "source_unit_id": "70a0305c9d11b854d54c558bd1ab3cb153b1",
+            "start": 1416,
+            "end": 1565,
+            "exact_text": "The carriers that move energy from the light-dependent reactions to the Calvin cycle reactions can be thought of as “full” because they bring energy.",
+            "text_hash": "6ea81195b4c83fd36a8abea39e89795c4930011cecf5715a4d1b0f10cd8c182b",
+            "chunk_start": 498,
+            "chunk_end": 647,
+            "page": 135,
+            "block_kind": "prose",
+            "mapping_quality": "sentence",
+            "complete_block": true,
+            "offset_basis": "cleaned_source_unit_unicode"
+          }
+        },
+        {
+          "evidence_id": "ev_005",
+          "fragment_alias": "F030",
+          "relation": "supporting",
+          "exact_text": "The energy carriers that move energy from light-dependent reactions to light-independent reactions can be thought of as “full” because they are rich in energy.",
+          "checker_input_complete_block": true,
+          "provenance": {
+            "fragment_id": "span_f816c1a25e5501267853c457782b4597",
+            "evidence_id": "ev_005",
+            "chunk_id": "97a8d4b03e388126a40e104c4d5e310e4641",
+            "asset_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+            "document_version_id": "bb336e9b-ef43-466f-9e65-ca6d1d196c4b",
+            "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+            "source_unit_id": "072fb74e256184e4e568fa976f69bdc6d2c5",
+            "start": 1994,
+            "end": 2153,
+            "exact_text": "The energy carriers that move energy from light-dependent reactions to light-independent reactions can be thought of as “full” because they are rich in energy.",
+            "text_hash": "8a9ccbdbbe0d6ff9ae6c025e15d615f88e9d4cc0759d9fedb23ba214c3d00ad5",
+            "chunk_start": 1070,
+            "chunk_end": 1229,
+            "page": 238,
+            "block_kind": "prose",
+            "mapping_quality": "sentence",
+            "complete_block": true,
+            "offset_basis": "cleaned_source_unit_unicode"
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 5,
+      "claim_id": "claim_d5ccefbc42fc42739dca1c3d_1",
+      "answer_field": "answer_text",
+      "start": 555,
+      "end": 664,
+      "text": "These energy-carrying molecules travel into the stroma, where the Calvin cycle reactions take place [ev_007].",
+      "actual_model_status": "supported",
+      "actual_model_reason": "Fragment F037 states that these energy-carrying molecules travel into the stroma where the Calvin cycle takes place.",
+      "selected_union": [
+        {
+          "evidence_id": "ev_007",
+          "fragment_alias": "F037",
+          "relation": "supporting",
+          "exact_text": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+          "checker_input_complete_block": true,
+          "provenance": {
+            "fragment_id": "span_8f1a62f750cb3a80f992bbac985e92d6",
+            "evidence_id": "ev_007",
+            "chunk_id": "f5f548e0f0238b9ca641c222302920bd9e6e",
+            "asset_id": "3294e86a-c158-4dbe-97e3-6169352497ab",
+            "document_version_id": "35d45deb-de7f-4194-9ce2-1861ae84434d",
+            "processing_id": "82fb328d-a383-43c2-a6eb-b91b61d05069",
+            "source_unit_id": "8bd9edcf0207e2fb714c2840ecc6398bfbff",
+            "start": 863,
+            "end": 962,
+            "exact_text": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+            "text_hash": "606fdcf5a3064a4d77ffbad85c4b56f0002123b63ac5b5df981b58ec2dee1933",
+            "chunk_start": 139,
+            "chunk_end": 238,
+            "page": 141,
+            "block_kind": "prose",
+            "mapping_quality": "sentence",
+            "complete_block": true,
+            "offset_basis": "cleaned_source_unit_unicode"
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 6,
+      "claim_id": "claim_a0c3ecf4e442eddb81aa4b1b_1",
+      "answer_field": "answer_text",
+      "start": 665,
+      "end": 806,
+      "text": "The Calvin cycle then uses the energy in ATP and NADPH to convert molecules into G3P, which is used to build carbohydrate molecules [ev_010].",
+      "actual_model_status": "supported",
+      "actual_model_reason": "Fragment F053 supports that the Calvin cycle uses energy in ATP and NADPH to convert molecules into G3P to build carbohydrates.",
+      "selected_union": [
+        {
+          "evidence_id": "ev_010",
+          "fragment_alias": "F053",
+          "relation": "supporting",
+          "exact_text": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+          "checker_input_complete_block": true,
+          "provenance": {
+            "fragment_id": "span_0daa77759f0a36e4197e28c3a7df8a5e",
+            "evidence_id": "ev_010",
+            "chunk_id": "d78123b2ffdc57261b6fef649db606d00094",
+            "asset_id": "3294e86a-c158-4dbe-97e3-6169352497ab",
+            "document_version_id": "35d45deb-de7f-4194-9ce2-1861ae84434d",
+            "processing_id": "82fb328d-a383-43c2-a6eb-b91b61d05069",
+            "source_unit_id": "9384d80eee75aac546751fdd4d6708b70e6c",
+            "start": 1901,
+            "end": 2059,
+            "exact_text": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+            "text_hash": "8f2ee0ffdf8145c06f89c4db9b4d5df0defc3c916d8fa99c5c9ade22fbea2e22",
+            "chunk_start": 566,
+            "chunk_end": 724,
+            "page": 145,
+            "block_kind": "prose",
+            "mapping_quality": "sentence",
+            "complete_block": true,
+            "offset_basis": "cleaned_source_unit_unicode"
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 7,
+      "claim_id": "claim_1d43516889b5d53f4e881ef9_1",
+      "answer_field": "answer_text",
+      "start": 807,
+      "end": 938,
+      "text": "After the energy is released, the \"empty\" carriers return to the light-dependent reactions to obtain more energy [ev_001] [ev_005].",
+      "actual_model_status": "supported",
+      "actual_model_reason": "Fragments F003 and F031 show that empty carriers return to the light-dependent reactions to obtain more energy.",
+      "selected_union": [
+        {
+          "evidence_id": "ev_001",
+          "fragment_alias": "F003",
+          "relation": "supporting",
+          "exact_text": "After the energy is released, the “empty” energy carriers return to the light-dependent reactions to obtain more energy.",
+          "checker_input_complete_block": true,
+          "provenance": {
+            "fragment_id": "span_d79a5dd8adc00070817b948e6abf25b3",
+            "evidence_id": "ev_001",
+            "chunk_id": "b95f28d179085402ad7d76e11cfa30b499da",
+            "asset_id": "3294e86a-c158-4dbe-97e3-6169352497ab",
+            "document_version_id": "35d45deb-de7f-4194-9ce2-1861ae84434d",
+            "processing_id": "82fb328d-a383-43c2-a6eb-b91b61d05069",
+            "source_unit_id": "70a0305c9d11b854d54c558bd1ab3cb153b1",
+            "start": 1566,
+            "end": 1686,
+            "exact_text": "After the energy is released, the “empty” energy carriers return to the light-dependent reactions to obtain more energy.",
+            "text_hash": "42f47d41240c5b2ef75be23fcbb6d8b71ecb76cac7a90fe9d0330c6a0a049cb2",
+            "chunk_start": 648,
+            "chunk_end": 768,
+            "page": 135,
+            "block_kind": "prose",
+            "mapping_quality": "sentence",
+            "complete_block": true,
+            "offset_basis": "cleaned_source_unit_unicode"
+          }
+        },
+        {
+          "evidence_id": "ev_005",
+          "fragment_alias": "F031",
+          "relation": "supporting",
+          "exact_text": "After the energy is released, the “empty” energy carriers return to the light-dependent reaction to obtain more energy.",
+          "checker_input_complete_block": true,
+          "provenance": {
+            "fragment_id": "span_a34fdfab217c4529b7fe2cd0e04d3998",
+            "evidence_id": "ev_005",
+            "chunk_id": "97a8d4b03e388126a40e104c4d5e310e4641",
+            "asset_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+            "document_version_id": "bb336e9b-ef43-466f-9e65-ca6d1d196c4b",
+            "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+            "source_unit_id": "072fb74e256184e4e568fa976f69bdc6d2c5",
+            "start": 2154,
+            "end": 2273,
+            "exact_text": "After the energy is released, the “empty” energy carriers return to the light-dependent reaction to obtain more energy.",
+            "text_hash": "b5ed6876f9042c1f0c994e0590eee53b42f565bd007b388013072ca84fdc2366",
+            "chunk_start": 1230,
+            "chunk_end": 1349,
+            "page": 238,
+            "block_kind": "prose",
+            "mapping_quality": "sentence",
+            "complete_block": true,
+            "offset_basis": "cleaned_source_unit_unicode"
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 8,
+      "claim_id": "claim_97876c61b726837907e36641_1",
+      "answer_field": "short_answer",
+      "start": 0,
+      "end": 175,
+      "text": "Light-dependent reactions store light energy in ATP and NADPH, which travel to the stroma and supply the energy the Calvin cycle uses to build carbohydrates [ev_007] [ev_010].",
+      "actual_model_status": "supported",
+      "actual_model_reason": "Fragments F036, F037, F051, and F053 support the summary that light-dependent reactions produce ATP and NADPH which travel to the stroma to support carbohydrate building in the Calvin cycle.",
+      "selected_union": [
+        {
+          "evidence_id": "ev_007",
+          "fragment_alias": "F036",
+          "relation": "supporting",
+          "exact_text": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.",
+          "checker_input_complete_block": true,
+          "provenance": {
+            "fragment_id": "span_1d77ba72ab25e9f04b8f13fc0e2bb0c2",
+            "evidence_id": "ev_007",
+            "chunk_id": "f5f548e0f0238b9ca641c222302920bd9e6e",
+            "asset_id": "3294e86a-c158-4dbe-97e3-6169352497ab",
+            "document_version_id": "35d45deb-de7f-4194-9ce2-1861ae84434d",
+            "processing_id": "82fb328d-a383-43c2-a6eb-b91b61d05069",
+            "source_unit_id": "8bd9edcf0207e2fb714c2840ecc6398bfbff",
+            "start": 771,
+            "end": 862,
+            "exact_text": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.",
+            "text_hash": "4165a545e507a6b32094143b577105ff897e3eddc5b2c9b13e41d41c16eec272",
+            "chunk_start": 47,
+            "chunk_end": 138,
+            "page": 141,
+            "block_kind": "prose",
+            "mapping_quality": "sentence",
+            "complete_block": true,
+            "offset_basis": "cleaned_source_unit_unicode"
+          }
+        },
+        {
+          "evidence_id": "ev_007",
+          "fragment_alias": "F037",
+          "relation": "supporting",
+          "exact_text": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+          "checker_input_complete_block": true,
+          "provenance": {
+            "fragment_id": "span_8f1a62f750cb3a80f992bbac985e92d6",
+            "evidence_id": "ev_007",
+            "chunk_id": "f5f548e0f0238b9ca641c222302920bd9e6e",
+            "asset_id": "3294e86a-c158-4dbe-97e3-6169352497ab",
+            "document_version_id": "35d45deb-de7f-4194-9ce2-1861ae84434d",
+            "processing_id": "82fb328d-a383-43c2-a6eb-b91b61d05069",
+            "source_unit_id": "8bd9edcf0207e2fb714c2840ecc6398bfbff",
+            "start": 863,
+            "end": 962,
+            "exact_text": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+            "text_hash": "606fdcf5a3064a4d77ffbad85c4b56f0002123b63ac5b5df981b58ec2dee1933",
+            "chunk_start": 139,
+            "chunk_end": 238,
+            "page": 141,
+            "block_kind": "prose",
+            "mapping_quality": "sentence",
+            "complete_block": true,
+            "offset_basis": "cleaned_source_unit_unicode"
+          }
+        },
+        {
+          "evidence_id": "ev_010",
+          "fragment_alias": "F051",
+          "relation": "supporting",
+          "exact_text": "Photosystem I absorbs a second photon, which results in the formation of an NADPH molecule, another energy carrier for the Calvin cycle reactions. 5.3 The Calvin Cycle Using the energy carriers formed in the first stage of photosynthesis, the Calvin cycle reactions fix CO2 from the environment to build carbohydrate molecules.",
+          "checker_input_complete_block": true,
+          "provenance": {
+            "fragment_id": "span_18eae2f9fd973adf387c7eb4d53ae0ea",
+            "evidence_id": "ev_010",
+            "chunk_id": "d78123b2ffdc57261b6fef649db606d00094",
+            "asset_id": "3294e86a-c158-4dbe-97e3-6169352497ab",
+            "document_version_id": "35d45deb-de7f-4194-9ce2-1861ae84434d",
+            "processing_id": "82fb328d-a383-43c2-a6eb-b91b61d05069",
+            "source_unit_id": "9384d80eee75aac546751fdd4d6708b70e6c",
+            "start": 1492,
+            "end": 1819,
+            "exact_text": "Photosystem I absorbs a second photon, which results in the formation of an NADPH molecule, another energy carrier for the Calvin cycle reactions. 5.3 The Calvin Cycle Using the energy carriers formed in the first stage of photosynthesis, the Calvin cycle reactions fix CO2 from the environment to build carbohydrate molecules.",
+            "text_hash": "d02758677c15d5ed19271c33b904d826f7342b8078cd98de8a9bd93b484b190c",
+            "chunk_start": 157,
+            "chunk_end": 484,
+            "page": 145,
+            "block_kind": "prose",
+            "mapping_quality": "sentence",
+            "complete_block": true,
+            "offset_basis": "cleaned_source_unit_unicode"
+          }
+        },
+        {
+          "evidence_id": "ev_010",
+          "fragment_alias": "F053",
+          "relation": "supporting",
+          "exact_text": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+          "checker_input_complete_block": true,
+          "provenance": {
+            "fragment_id": "span_0daa77759f0a36e4197e28c3a7df8a5e",
+            "evidence_id": "ev_010",
+            "chunk_id": "d78123b2ffdc57261b6fef649db606d00094",
+            "asset_id": "3294e86a-c158-4dbe-97e3-6169352497ab",
+            "document_version_id": "35d45deb-de7f-4194-9ce2-1861ae84434d",
+            "processing_id": "82fb328d-a383-43c2-a6eb-b91b61d05069",
+            "source_unit_id": "9384d80eee75aac546751fdd4d6708b70e6c",
+            "start": 1901,
+            "end": 2059,
+            "exact_text": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+            "text_hash": "8f2ee0ffdf8145c06f89c4db9b4d5df0defc3c916d8fa99c5c9ade22fbea2e22",
+            "chunk_start": 566,
+            "chunk_end": 724,
+            "page": 145,
+            "block_kind": "prose",
+            "mapping_quality": "sentence",
+            "complete_block": true,
+            "offset_basis": "cleaned_source_unit_unicode"
+          }
+        }
+      ]
+    }
+  ],
+  "provider_scope": {
+    "physical_POST_count": 4,
+    "known_API_cost_USD": "0.0173608",
+    "new_UNKNOWN_count": 0,
+    "open_claims": 0,
+    "fully_settled": true,
+    "final_budget_status": "READY",
+    "stop_exists": false,
+    "historical_unknown_hold_USD": "0.09000000",
+    "physical_response_receipts": [
+      {
+        "slot": 1,
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider_request_id": "gen-1791583034-90XzswJyatiqSnbHTNk1",
+        "model": "anthropic/claude-haiku-5.5",
+        "known_API_cost_USD": "0.0018526",
+        "retained_body_sha256": "0fba393bd72db2e54dd551cb1702f9e7053edb1d6a081b20be2fc3c7cf048016"
+      },
+      {
+        "slot": 2,
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider_request_id": "gen-1791583039-uFZbS0mAHvBuG36KfycP",
+        "model": "google/gemini-3.5-flash-lite",
+        "known_API_cost_USD": "0.0064793",
+        "retained_body_sha256": "aa6117079efd5608f725e110a8ef00890bc8f6506d6c0c544883288d876343b8"
+      },
+      {
+        "slot": 3,
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider_request_id": "gen-1791583044-aNelRjR9CQFraActow1c",
+        "model": "anthropic/claude-haiku-5.5",
+        "known_API_cost_USD": "0.0024682",
+        "retained_body_sha256": "9dd3a93741d0621d45a88ea153e44b6f15f79c1486a6fe7b0ab84767d288f3cd"
+      },
+      {
+        "slot": 4,
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider_request_id": "gen-1791583052-r2kZukyNNGRfn1GhSes2",
+        "model": "google/gemini-3.5-flash-lite",
+        "known_API_cost_USD": "0.0065607",
+        "retained_body_sha256": "b30d3dc6ee4df2b406a617f52cedc943166498089c3ea74434158d7f4a82e6ed"
+      }
+    ]
+  },
+  "raw_and_typed": {
+    "raw_attempt_evaluation_ok_present": true,
+    "raw_attempt_evaluation_ok": "not_applicable",
+    "typed_attempt_evaluation_ok": "not_applicable",
+    "server_not_applicable_predicate": true,
+    "strict_json_PASS": true,
+    "conditional_full_Pydantic_PASS": true,
+    "actual_final_business_PASS": true,
+    "actual_final_pipeline_issues": [],
+    "actual_first_check_accepted": false,
+    "actual_final_check_accepted": true,
+    "native_stages": [
+      "generation",
+      "joint_check",
+      "semantic_repair",
+      "joint_recheck"
+    ]
+  },
+  "native_observations": {
+    "Q2_child_status": "PASS",
+    "Send_to_full_painted_cited_DOM_ms": 24245.89999999851,
+    "refresh_persisted": true,
+    "overall_browser_status": "ACTUAL_Q2_DEVELOPMENT_REGRESSION_NATIVE_UI_PASS",
+    "overall_regression_status": "PASS",
+    "failure_code": null,
+    "failure_exception_class": null,
+    "source_assessment_is_separate": true
+  },
+  "source_verification_limit": "Directly verified retained checker-input table, provider physical response, exact selected aliases, public attribution identities/hashes and claim spans. No new original-book, database, wire-request transmission, source truth or human-Gold certification is claimed.",
+  "reviewer_operations": {
+    "API": 0,
+    "database": 0,
+    "browser": 0,
+    "model": 0,
+    "private_auth_binding_reads": 0,
+    "main_writes": 0
+  }
+}

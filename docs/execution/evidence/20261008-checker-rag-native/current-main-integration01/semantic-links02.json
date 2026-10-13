@@ -1,0 +1,1091 @@
+{
+  "format": "5703_current_requirement_registry_partial_links_v1",
+  "status": "PREPARED_NOT_PUBLISHED_NOT_ACCEPTANCE",
+  "mapping_rule": "Each link names a direct semantic fragment shared with an original task and only its existing canonical acceptance edges. Links are not whole-requirement equivalence or acceptance. Expanded requirements without a clear original equivalent remain unmapped.",
+  "rows": [
+    {
+      "id": "REQ-W09-01-01",
+      "links": [
+        {
+          "task_id": "CHAT-04",
+          "acceptance_ids": [
+            "AC-38",
+            "AC-39",
+            "AC-40"
+          ],
+          "scope": "Reference resolution, topic correction and ambiguity preserve the original message meaning."
+        },
+        {
+          "task_id": "CHAT-10",
+          "acceptance_ids": [
+            "AC-38",
+            "AC-39",
+            "AC-40",
+            "AC-42"
+          ],
+          "scope": "Authored natural multi-turn intent, correction and long-history scenario coverage."
+        }
+      ]
+    },
+    {
+      "id": "REQ-W09-01-02",
+      "links": [],
+      "unmapped_reason": "The original three-mode policy does not define the later independent full-answer/hint and textbook/general-knowledge axes."
+    },
+    {
+      "id": "REQ-W09-01-03",
+      "links": [],
+      "unmapped_reason": "Original query/evidence traces do not specify the later three distinct relevance, context-sufficiency and final-claim-support decisions."
+    },
+    {
+      "id": "REQ-W09-01-04",
+      "links": [
+        {
+          "task_id": "RET-04",
+          "acceptance_ids": [
+            "AC-08",
+            "AC-25",
+            "AC-41",
+            "AC-42"
+          ],
+          "scope": "Whole-chunk packing, actual model-context budgeting and exclusion of historical assistant text as evidence."
+        },
+        {
+          "task_id": "GEN-06",
+          "acceptance_ids": [
+            "AC-25"
+          ],
+          "scope": "All optional preparation and repair share the persisted call/time allowance."
+        }
+      ],
+      "unmapped_remainder": "Necessary-point semantic coverage and the named-gap lookup policy are expanded requirements."
+    },
+    {
+      "id": "REQ-W09-01-05",
+      "links": [
+        {
+          "task_id": "GEN-04",
+          "acceptance_ids": [
+            "AC-09",
+            "AC-39",
+            "AC-40",
+            "HC-03"
+          ],
+          "scope": "Separate clear factual insufficient-evidence, genuine ambiguity and social outcomes."
+        },
+        {
+          "task_id": "GEN-05",
+          "acceptance_ids": [
+            "AC-10",
+            "HC-05",
+            "HC-06",
+            "HC-07"
+          ],
+          "scope": "Invalid schema and provider output are errors distinct from valid model refusal."
+        },
+        {
+          "task_id": "GEN-02",
+          "acceptance_ids": [
+            "AC-11",
+            "HC-11"
+          ],
+          "scope": "Provider/configuration unavailability remains explicit without silent fallback."
+        }
+      ],
+      "unmapped_remainder": "Independent semantic appropriateness of the later full/partial/named-gap outcome set."
+    },
+    {
+      "id": "REQ-W09-02-01",
+      "links": [
+        {
+          "task_id": "GEN-07",
+          "acceptance_ids": [
+            "AC-08",
+            "AC-14",
+            "AC-41",
+            "HC-09"
+          ],
+          "scope": "Request-local evidence identities and authentic original source locators."
+        }
+      ],
+      "unmapped_remainder": "Stable claim identities and the expanded textbook/given/derivation/guidance/general-knowledge taxonomy."
+    },
+    {
+      "id": "REQ-W09-02-02",
+      "links": [
+        {
+          "task_id": "GEN-07",
+          "acceptance_ids": [
+            "AC-08",
+            "AC-14",
+            "AC-41",
+            "HC-09"
+          ],
+          "scope": "Citations resolve to the actual authorized prompt snapshot rather than a guessed replacement source."
+        },
+        {
+          "task_id": "BE-09",
+          "acceptance_ids": [
+            "AC-08",
+            "AC-14",
+            "AC-28",
+            "AC-41"
+          ],
+          "scope": "Stored current-request citations retain immutable source provenance."
+        },
+        {
+          "task_id": "PER-07",
+          "acceptance_ids": [
+            "AC-47"
+          ],
+          "scope": "Semantic factual/negation/formula review is separate from mechanical evidence-ID checks."
+        }
+      ]
+    },
+    {
+      "id": "REQ-W09-02-03",
+      "links": [],
+      "unmapped_reason": "Original finite JSON-format repair is not equivalent to authorized defective-span semantic repair, protected-content preservation and a complete fresh joint check."
+    },
+    {
+      "id": "REQ-W09-02-04",
+      "links": [
+        {
+          "task_id": "PER-07",
+          "acceptance_ids": [
+            "AC-19",
+            "AC-47"
+          ],
+          "scope": "Independent supported-meaning review separates factual changes from structured-output validity."
+        },
+        {
+          "task_id": "QA-10",
+          "acceptance_ids": [
+            "AC-19",
+            "AC-47"
+          ],
+          "scope": "Genuine independent ratings, missingness and disagreements are preserved."
+        }
+      ],
+      "unmapped_remainder": "Calibrated false-block/false-release and repaired-draft evaluation is broader than the original profile review."
+    },
+    {
+      "id": "REQ-W09-02-05",
+      "links": [
+        {
+          "task_id": "GEN-02",
+          "acceptance_ids": [
+            "HC-07",
+            "HC-11"
+          ],
+          "scope": "Actual provider output and configuration capability are distinct from examples/connectivity."
+        },
+        {
+          "task_id": "GEN-05",
+          "acceptance_ids": [
+            "AC-10",
+            "HC-05",
+            "HC-06",
+            "HC-07"
+          ],
+          "scope": "Strict mode-specific schemas and explicit invalid-output states."
+        },
+        {
+          "task_id": "GEN-06",
+          "acceptance_ids": [
+            "HC-10"
+          ],
+          "scope": "Finite format recovery through the actual application service."
+        }
+      ]
+    },
+    {
+      "id": "REQ-W09-02-06",
+      "links": [
+        {
+          "task_id": "GEN-04",
+          "acceptance_ids": [
+            "AC-09",
+            "HC-03"
+          ],
+          "scope": "Nonfactual social/clarification turns need no fabricated factual evidence; nonempty evidence does not itself prove support."
+        }
+      ],
+      "unmapped_remainder": "Procedural scientific guidance classification and the later product general-knowledge mode are not the original greeting/clarification or benchmark E0 policies."
+    },
+    {
+      "id": "REQ-W09-02-07",
+      "links": [
+        {
+          "task_id": "CHAT-04",
+          "acceptance_ids": [
+            "AC-40"
+          ],
+          "scope": "Explicit topic changes and corrected premises take priority in query preparation."
+        }
+      ],
+      "unmapped_remainder": "Saved pending learning tasks, numeric/unit continuations and help-depth limits are expanded product behavior."
+    },
+    {
+      "id": "REQ-W09-03-01",
+      "links": [
+        {
+          "task_id": "FE-06",
+          "acceptance_ids": [
+            "AC-14",
+            "AC-16",
+            "AC-41"
+          ],
+          "scope": "Authentic source/page locators, authorized snapshots and restored evidence viewing."
+        }
+      ],
+      "unmapped_remainder": "The later PDF reader, highlights, selection-based submission, reading position and mobile physical selection lifecycle have no complete original task equivalent."
+    },
+    {
+      "id": "REQ-W09-03-02",
+      "links": [],
+      "unmapped_reason": "Versioned reviewed concept prerequisites, learning goals and attempt-derived goal state were added after the original chat/profile registry."
+    },
+    {
+      "id": "REQ-W09-03-03",
+      "links": [],
+      "unmapped_reason": "Learner practice generation, scoring, publication and private answer keys are not the original evaluator-only SciQ MCQ workflow."
+    },
+    {
+      "id": "REQ-W09-03-04",
+      "links": [],
+      "unmapped_reason": "Attempt/grade-driven saved-task tutoring and bounded help progression are not equivalent to ordinary chat or presentation-level profiles."
+    },
+    {
+      "id": "REQ-W09-03-05",
+      "links": [],
+      "unmapped_reason": "An error/review queue and same-concept learning transfer are not the original helpfulness/comment feedback endpoint."
+    },
+    {
+      "id": "REQ-W09-03-06",
+      "links": [],
+      "unmapped_reason": "Typed opt-in learning memory, goals/observations/tasks, TTL and undo are not the original three-level profile snapshot or in-session conversation history."
+    },
+    {
+      "id": "REQ-W09-03-07",
+      "links": [],
+      "unmapped_reason": "Source-linked personal notes/bookmarks, review-card conversion and Markdown/DOCX export are expanded requirements without a complete original task equivalent."
+    },
+    {
+      "id": "REQ-W09-03-08",
+      "links": [
+        {
+          "task_id": "BE-06",
+          "acceptance_ids": [
+            "AC-14",
+            "AC-26",
+            "AC-28"
+          ],
+          "scope": "Source processing/review and explicit release lifecycle administration."
+        },
+        {
+          "task_id": "FE-10",
+          "acceptance_ids": [
+            "AC-14",
+            "AC-26",
+            "AC-28"
+          ],
+          "scope": "Usable administrator source review, activate/revoke/restore and rollback controls."
+        },
+        {
+          "task_id": "FE-11",
+          "acceptance_ids": [
+            "AC-18",
+            "AC-19"
+          ],
+          "scope": "Protocol-specific study denominators and complete outcome states."
+        },
+        {
+          "task_id": "BE-03",
+          "acceptance_ids": [
+            "AC-31"
+          ],
+          "scope": "Supported account operations with learner/admin ownership."
+        },
+        {
+          "task_id": "BE-12",
+          "acceptance_ids": [
+            "HC-11"
+          ],
+          "scope": "Truthful product readiness and provider unavailability reasons."
+        }
+      ],
+      "unmapped_remainder": "The full later model-trial, request-stage replay and bounded draft recovery workflow exceeds these original fragments."
+    },
+    {
+      "id": "REQ-W09-04-01",
+      "links": [],
+      "unmapped_reason": "Pre-generation saved-goal/attempt teaching plans, disclosure allowances and expected learner replies were not specified by the original profile or context-selection tasks."
+    },
+    {
+      "id": "REQ-W09-04-02",
+      "links": [],
+      "unmapped_reason": "Cumulative pedagogical disclosure over answers, prompts, citations and visual views is an expanded requirement, distinct from evaluator-label isolation."
+    },
+    {
+      "id": "REQ-W09-04-03",
+      "links": [],
+      "unmapped_reason": "Coverage/targeted semantic repair and conditional learning-memory mechanism comparison is not the original retrieval ablation or C0/C1/C2 presentation study."
+    },
+    {
+      "id": "REQ-W09-05-01",
+      "links": [
+        {
+          "task_id": "DAT-01",
+          "acceptance_ids": [
+            "AC-03",
+            "AC-14"
+          ],
+          "scope": "Actual source manifests, hashes and provenance replace fabricated assets."
+        },
+        {
+          "task_id": "DAT-08",
+          "acceptance_ids": [
+            "AC-06",
+            "AC-26",
+            "AC-28"
+          ],
+          "scope": "Real release chunk/vector counts, hashes and exact processing identities."
+        }
+      ],
+      "unmapped_remainder": "The precise four-book/10,594-vector retained baseline is a later concrete source binding."
+    },
+    {
+      "id": "REQ-W09-05-02",
+      "links": [
+        {
+          "task_id": "DAT-01",
+          "acceptance_ids": [
+            "AC-14"
+          ],
+          "scope": "Origin, edition, use status and attribution remain recorded."
+        },
+        {
+          "task_id": "DAT-04",
+          "acceptance_ids": [
+            "AC-04"
+          ],
+          "scope": "Raw/clean text and physical source locators remain inspectable."
+        },
+        {
+          "task_id": "DAT-06",
+          "acceptance_ids": [
+            "AC-05",
+            "AC-28"
+          ],
+          "scope": "Exact source-span maps and stable chunk boundaries."
+        },
+        {
+          "task_id": "DAT-07",
+          "acceptance_ids": [
+            "AC-05",
+            "AC-28"
+          ],
+          "scope": "Changed processing rules preserve original asset bytes and prior spans."
+        }
+      ]
+    },
+    {
+      "id": "REQ-W09-05-03",
+      "links": [
+        {
+          "task_id": "DAT-04",
+          "acceptance_ids": [
+            "AC-04"
+          ],
+          "scope": "PDF/text extraction with raw text, physical pages, real section boundaries and explicit blocking errors."
+        },
+        {
+          "task_id": "DAT-05",
+          "acceptance_ids": [
+            "AC-04"
+          ],
+          "scope": "Unicode/header cleaning retains raw content, warnings and blocking issues."
+        }
+      ],
+      "unmapped_remainder": "Full semantic table/header/formula/glyph/figure and original geometry publication review is an expanded requirement."
+    },
+    {
+      "id": "REQ-W09-05-04",
+      "links": [
+        {
+          "task_id": "DAT-04",
+          "acceptance_ids": [
+            "AC-04",
+            "AC-34"
+          ],
+          "scope": "Actual parser execution has explicit damaged/unsupported errors rather than invented text."
+        },
+        {
+          "task_id": "DAT-12",
+          "acceptance_ids": [
+            "AC-05",
+            "AC-20",
+            "AC-28"
+          ],
+          "scope": "Source processing counts, exclusions, quality decisions and reproducible rebuild guidance."
+        }
+      ],
+      "unmapped_remainder": "The complete 185-MB book scope and concept-relation review are later concrete requirements."
+    },
+    {
+      "id": "REQ-W09-06-01",
+      "links": [
+        {
+          "task_id": "GEN-06",
+          "acceptance_ids": [
+            "AC-25"
+          ],
+          "scope": "Persisted finite preparation/generation/repair counters."
+        },
+        {
+          "task_id": "RET-11",
+          "acceptance_ids": [
+            "AC-18",
+            "AC-19",
+            "AC-35"
+          ],
+          "scope": "Measured quality, latency and resource comparisons retain limitations."
+        }
+      ],
+      "unmapped_remainder": "The exact ordered optimization and calibrated adaptive-quality phases are expanded policies."
+    },
+    {
+      "id": "REQ-W09-06-02",
+      "links": [
+        {
+          "task_id": "RET-06",
+          "acceptance_ids": [
+            "AC-14",
+            "AC-27",
+            "AC-41"
+          ],
+          "scope": "Current visibility/revocation filtering and versioned invalidation prevent stale-source cache exposure."
+        },
+        {
+          "task_id": "RET-07",
+          "acceptance_ids": [
+            "AC-19",
+            "AC-34"
+          ],
+          "scope": "Frozen same-release BM25 tokenization, lexical scores and deterministic ties."
+        },
+        {
+          "task_id": "DAT-08",
+          "acceptance_ids": [
+            "AC-06",
+            "AC-26",
+            "AC-28"
+          ],
+          "scope": "Complete validated release counts, processing identities and hashes."
+        }
+      ]
+    },
+    {
+      "id": "REQ-W09-06-03",
+      "links": [
+        {
+          "task_id": "RET-01",
+          "acceptance_ids": [
+            "AC-06",
+            "AC-35"
+          ],
+          "scope": "Compatible query/passage tokenization, batching, caching, revisions and dimensions."
+        }
+      ],
+      "unmapped_remainder": "Warm instance/thread reuse and provider/prompt-cache policy effects are later performance requirements."
+    },
+    {
+      "id": "REQ-W09-06-04",
+      "links": [],
+      "unmapped_reason": "PyTorch versus ONNX FP32/INT8 backend equivalence and calibrated ranking thresholds are not identical to original chunking/embedding-model/k ablations."
+    },
+    {
+      "id": "REQ-W09-06-05",
+      "links": [
+        {
+          "task_id": "BE-07",
+          "acceptance_ids": [
+            "AC-12",
+            "AC-13",
+            "AC-24",
+            "AC-25",
+            "AC-33",
+            "HC-08"
+          ],
+          "scope": "Owned durable claim/cancel/recovery and finite retry counters."
+        },
+        {
+          "task_id": "FE-04",
+          "acceptance_ids": [
+            "AC-11",
+            "AC-12",
+            "AC-16",
+            "AC-24",
+            "AC-44"
+          ],
+          "scope": "Queued/running/terminal UI, stop/retry and relogin recovery."
+        },
+        {
+          "task_id": "BE-13",
+          "acceptance_ids": [
+            "AC-11",
+            "AC-25"
+          ],
+          "scope": "Bounded concurrency and time limits with consistent errors."
+        }
+      ],
+      "unmapped_remainder": "Adaptive shadow/quality-gated policy and interactive/parser/study prioritization require separate current proof."
+    },
+    {
+      "id": "REQ-W09-06-06",
+      "links": [
+        {
+          "task_id": "QA-13",
+          "acceptance_ids": [
+            "AC-11",
+            "AC-25"
+          ],
+          "scope": "Actual chat total/stage p50/p95, failures, environment and usage are separate from MCQ timing."
+        },
+        {
+          "task_id": "QA-08",
+          "acceptance_ids": [
+            "AC-18",
+            "AC-19",
+            "AC-47"
+          ],
+          "scope": "Paired intervals and scenario clustering retain separate semantic correctness measurements."
+        }
+      ],
+      "unmapped_remainder": "The 30% warm end-to-end target, non-inferiority margin and submit-to-visible-page population are later frozen-study requirements."
+    },
+    {
+      "id": "REQ-W09-07-01",
+      "links": [
+        {
+          "task_id": "INT-04",
+          "acceptance_ids": [
+            "AC-01",
+            "AC-02",
+            "AC-37",
+            "HC-02"
+          ],
+          "scope": "Reproducible fresh installation and actual startup components."
+        },
+        {
+          "task_id": "BE-16",
+          "acceptance_ids": [
+            "AC-01",
+            "AC-20",
+            "AC-26",
+            "AC-33"
+          ],
+          "scope": "Real local migration/recovery in disposable targets."
+        },
+        {
+          "task_id": "BE-15",
+          "acceptance_ids": [
+            "AC-02",
+            "AC-12",
+            "AC-13",
+            "AC-24",
+            "AC-26"
+          ],
+          "scope": "PostgreSQL concurrency, interruption, rollback and no half-published success."
+        }
+      ],
+      "unmapped_remainder": "The later installed practice learner journey is an additional module acceptance scope."
+    },
+    {
+      "id": "REQ-W09-07-02",
+      "links": [
+        {
+          "task_id": "BE-16",
+          "acceptance_ids": [
+            "AC-20",
+            "AC-26",
+            "AC-33"
+          ],
+          "scope": "Disposable database/asset restore and release rollback preserve authentic users/evidence."
+        },
+        {
+          "task_id": "BE-15",
+          "acceptance_ids": [
+            "AC-02",
+            "AC-13",
+            "AC-26"
+          ],
+          "scope": "Restart/transaction faults and no overwritten or orphaned success."
+        },
+        {
+          "task_id": "BE-17",
+          "acceptance_ids": [
+            "AC-20",
+            "AC-33"
+          ],
+          "scope": "Runnable recovery targets and operations guidance."
+        }
+      ]
+    },
+    {
+      "id": "REQ-W09-07-03",
+      "links": [
+        {
+          "task_id": "FE-12",
+          "acceptance_ids": [
+            "AC-16",
+            "AC-44"
+          ],
+          "scope": "Physical keyboard/input and narrow/desktop real-API usability boundary."
+        }
+      ],
+      "unmapped_remainder": "Separate another-machine, Mac, CUDA and assistive-input environments have no complete original task equivalent; responsive UI checks remain a separate namespace."
+    },
+    {
+      "id": "REQ-W09-08-01",
+      "links": [
+        {
+          "task_id": "BE-03",
+          "acceptance_ids": [
+            "AC-14",
+            "AC-31",
+            "AC-43"
+          ],
+          "scope": "Learner/admin ownership, disabled accounts, reset and old credential rejection."
+        },
+        {
+          "task_id": "FE-02",
+          "acceptance_ids": [
+            "AC-14",
+            "AC-31",
+            "AC-43"
+          ],
+          "scope": "Login/logout/account transitions agree with server access enforcement."
+        },
+        {
+          "task_id": "QA-11",
+          "acceptance_ids": [
+            "AC-14"
+          ],
+          "scope": "Negative ownership/access controls."
+        }
+      ],
+      "unmapped_remainder": "The later full paired-authorized-control design needs its own current evidence."
+    },
+    {
+      "id": "REQ-W09-08-02",
+      "links": [
+        {
+          "task_id": "DAT-02",
+          "acceptance_ids": [
+            "AC-03"
+          ],
+          "scope": "Bounded administrator uploads reject disguised/unsupported types, size and unsafe paths."
+        },
+        {
+          "task_id": "BE-13",
+          "acceptance_ids": [
+            "AC-11",
+            "AC-25"
+          ],
+          "scope": "Redacted errors/logs and bounded inputs/concurrency/time."
+        },
+        {
+          "task_id": "FE-05",
+          "acceptance_ids": [
+            "AC-10",
+            "AC-44"
+          ],
+          "scope": "Safe response rendering with honest output states."
+        }
+      ],
+      "unmapped_remainder": "Redirect/DNS/special-address defenses, encryption and complete delivery scans are later security extensions."
+    },
+    {
+      "id": "REQ-W09-08-03",
+      "links": [
+        {
+          "task_id": "RET-06",
+          "acceptance_ids": [
+            "AC-14",
+            "AC-41"
+          ],
+          "scope": "Revoked source filtering and historical unavailable-source behavior."
+        },
+        {
+          "task_id": "BE-09",
+          "acceptance_ids": [
+            "AC-14",
+            "AC-28",
+            "AC-41"
+          ],
+          "scope": "Owned immutable evidence/source lineage is preserved."
+        },
+        {
+          "task_id": "BE-15",
+          "acceptance_ids": [
+            "AC-13"
+          ],
+          "scope": "Stale or cancelled attempts cannot publish after worker interruption or transaction recovery."
+        }
+      ],
+      "unmapped_remainder": "Adaptive source/memory/multiturn injection resistance is a separate expanded semantic study."
+    },
+    {
+      "id": "REQ-W09-08-04",
+      "links": [],
+      "unmapped_reason": "Model-mediated wrong-feedback misconceptions, cumulative help and paired attack/useful-task outcomes are not equivalent to original runtime negative/fault tests."
+    },
+    {
+      "id": "REQ-W09-09-01",
+      "links": [
+        {
+          "task_id": "INT-08",
+          "acceptance_ids": [
+            "AC-18",
+            "AC-19",
+            "AC-46"
+          ],
+          "scope": "Immutable protocol/input/model/prompt/corpus/scorer freezes separate technical rehearsal and actual results."
+        },
+        {
+          "task_id": "BE-11",
+          "acceptance_ids": [
+            "AC-18",
+            "AC-19",
+            "AC-23",
+            "AC-27",
+            "AC-46"
+          ],
+          "scope": "Preregistered isolated study items preserve source changes and all outcomes."
+        },
+        {
+          "task_id": "QA-09",
+          "acceptance_ids": [
+            "AC-19",
+            "AC-35"
+          ],
+          "scope": "Frozen one-factor variants retain qrel compatibility and real execution identities."
+        }
+      ],
+      "unmapped_remainder": "Concept-disjoint seven-family reserve design, evaluator calibration and statistically chosen sample sizes remain expanded requirements."
+    },
+    {
+      "id": "REQ-W09-09-02",
+      "links": [],
+      "unmapped_reason": "The seven-family expanded study program and its planning scales have no complete original 108-task counterpart."
+    },
+    {
+      "id": "REQ-W09-09-03",
+      "links": [
+        {
+          "task_id": "GEN-10",
+          "acceptance_ids": [
+            "AC-07",
+            "AC-19",
+            "AC-46"
+          ],
+          "scope": "Separately labelled E0/no-retrieval and grounded open-answer/MCQ controls retain unchanged definitions."
+        },
+        {
+          "task_id": "QA-07",
+          "acceptance_ids": [
+            "AC-07",
+            "AC-18",
+            "AC-19",
+            "AC-46"
+          ],
+          "scope": "Actual separated baseline protocols retain fixed corpus/model settings and full denominators."
+        }
+      ],
+      "unmapped_remainder": "A/B/C/D content-planning by source-display factorial teaching is not C0/C1/C2 profile presentation or a retrieval-only ablation."
+    },
+    {
+      "id": "REQ-W09-09-04",
+      "links": [
+        {
+          "task_id": "PER-08",
+          "acceptance_ids": [
+            "AC-19",
+            "AC-29"
+          ],
+          "scope": "Anchored blinded rating sheets preserve missingness and independent disagreements."
+        },
+        {
+          "task_id": "QA-10",
+          "acceptance_ids": [
+            "AC-19",
+            "AC-29",
+            "AC-47"
+          ],
+          "scope": "Genuine independent paired ratings remain distinct from online structured checks."
+        },
+        {
+          "task_id": "QA-03",
+          "acceptance_ids": [
+            "AC-17",
+            "AC-23",
+            "AC-46"
+          ],
+          "scope": "Evaluator-only gold never enters runtime generation fields."
+        }
+      ],
+      "unmapped_remainder": "AI judge order/length/style/injection calibration and validated visible-only simulated student trajectories are additional requirements."
+    },
+    {
+      "id": "REQ-W09-09-05",
+      "links": [
+        {
+          "task_id": "PER-08",
+          "acceptance_ids": [
+            "AC-19",
+            "AC-29"
+          ],
+          "scope": "Independent human review material and actual rating provenance are retained."
+        },
+        {
+          "task_id": "PER-09",
+          "acceptance_ids": [
+            "AC-19",
+            "AC-29"
+          ],
+          "scope": "Missing ratings and learning gains remain unavailable rather than fabricated."
+        },
+        {
+          "task_id": "QA-10",
+          "acceptance_ids": [
+            "AC-19",
+            "AC-29",
+            "AC-47"
+          ],
+          "scope": "Actual independent paired reviewer data are required for human conclusions."
+        }
+      ]
+    },
+    {
+      "id": "REQ-W09-10-01",
+      "links": [
+        {
+          "task_id": "QA-05",
+          "acceptance_ids": [
+            "AC-18",
+            "AC-19",
+            "AC-47"
+          ],
+          "scope": "Mode-aware scores and semantic review have distinct honest denominator scopes."
+        },
+        {
+          "task_id": "QA-06",
+          "acceptance_ids": [
+            "AC-18",
+            "AC-19",
+            "HC-12"
+          ],
+          "scope": "All scheduled terminal outcomes, failures and usage are preserved."
+        },
+        {
+          "task_id": "QA-13",
+          "acceptance_ids": [
+            "AC-11",
+            "AC-25"
+          ],
+          "scope": "All/success/failure timing and actual usage remain separate."
+        }
+      ],
+      "unmapped_remainder": "Expanded useful-hint, false-block/false-release, disclosure and attack metrics must retain their own later criteria."
+    },
+    {
+      "id": "REQ-W09-10-02",
+      "links": [
+        {
+          "task_id": "QA-08",
+          "acceptance_ids": [
+            "AC-18",
+            "AC-19",
+            "AC-47"
+          ],
+          "scope": "Correct paired tests/intervals and scenario clustering avoid independent-turn pseudoreplication."
+        },
+        {
+          "task_id": "QA-10",
+          "acceptance_ids": [
+            "AC-19",
+            "AC-47"
+          ],
+          "scope": "Human ratings are paired by question and not independent repeated students."
+        }
+      ],
+      "unmapped_remainder": "The new teaching factorial interaction analysis needs its own frozen current experiment."
+    },
+    {
+      "id": "REQ-W09-10-03",
+      "links": [
+        {
+          "task_id": "INT-08",
+          "acceptance_ids": [
+            "AC-18",
+            "AC-19",
+            "AC-46"
+          ],
+          "scope": "Model/prompt/corpus/scorer identity and protocol-specific manifests are frozen."
+        },
+        {
+          "task_id": "BE-11",
+          "acceptance_ids": [
+            "AC-18",
+            "AC-19",
+            "AC-27"
+          ],
+          "scope": "Study identities and all outcomes remain separate under environment changes."
+        },
+        {
+          "task_id": "QA-06",
+          "acceptance_ids": [
+            "AC-18",
+            "AC-19",
+            "HC-12"
+          ],
+          "scope": "Attempts, usage and immutable historical failures are retained."
+        },
+        {
+          "task_id": "QA-13",
+          "acceptance_ids": [
+            "AC-11",
+            "AC-25"
+          ],
+          "scope": "Actual usage/cost limitations are reported without filling unknown costs."
+        }
+      ]
+    },
+    {
+      "id": "REQ-W09-11-01",
+      "links": [],
+      "unmapped_reason": "Original owner/executor metadata and the later explicit prohibition on invented member contribution are administrative source requirements rather than a whole original task definition."
+    },
+    {
+      "id": "REQ-W09-12-01",
+      "links": [
+        {
+          "task_id": "INT-05",
+          "acceptance_ids": [
+            "AC-01",
+            "AC-02",
+            "AC-10",
+            "AC-21"
+          ],
+          "scope": "Actual format/types/schema/unit/PostgreSQL/frontend/browser checks are separate from live tests."
+        },
+        {
+          "task_id": "QA-14",
+          "acceptance_ids": [
+            "AC-19",
+            "AC-21",
+            "AC-48"
+          ],
+          "scope": "Current audit preserves exact commands, failures and separate technical/research/human evidence tiers."
+        },
+        {
+          "task_id": "GEN-11",
+          "acceptance_ids": [
+            "HC-01"
+          ],
+          "scope": "Fresh immutable source/package manifests bind actual rerun evidence, not historical logs."
+        }
+      ]
+    },
+    {
+      "id": "REQ-W09-12-02",
+      "links": [
+        {
+          "task_id": "INT-10",
+          "acceptance_ids": [
+            "AC-20",
+            "AC-21",
+            "AC-37",
+            "AC-48"
+          ],
+          "scope": "A current runnable integrated delivery includes auditable registries and clean rebuild limitations."
+        },
+        {
+          "task_id": "CHAT-12",
+          "acceptance_ids": [
+            "AC-20",
+            "AC-37",
+            "AC-48"
+          ],
+          "scope": "Reproducible English architecture/demo and all task/check evidence or explicit blockers."
+        }
+      ],
+      "unmapped_remainder": "Eight disjoint latest-current owner overlays and exact reconstruction are later delivery requirements."
+    },
+    {
+      "id": "REQ-W09-12-03",
+      "links": [
+        {
+          "task_id": "INT-10",
+          "acceptance_ids": [
+            "AC-20",
+            "AC-48"
+          ],
+          "scope": "English integrated guidance and separate research reports distinguish technical evidence and human acceptance."
+        },
+        {
+          "task_id": "GEN-11",
+          "acceptance_ids": [
+            "AC-19",
+            "AC-48",
+            "HC-01",
+            "HC-12"
+          ],
+          "scope": "Actual generation methods, errors, limits and historic/current execution evidence are documented."
+        }
+      ],
+      "unmapped_remainder": "One overall plus eight personal DOCX reports, copy equality and every-page rendered QA are later prescribed delivery formats."
+    },
+    {
+      "id": "REQ-W09-12-04",
+      "links": [
+        {
+          "task_id": "INT-01",
+          "acceptance_ids": [
+            "AC-48",
+            "HC-01"
+          ],
+          "scope": "Original assets/user changes and actual source manifest identities are preserved."
+        },
+        {
+          "task_id": "BE-16",
+          "acceptance_ids": [
+            "AC-20",
+            "AC-33"
+          ],
+          "scope": "Reproducible isolated backup/restore and recovery targets."
+        },
+        {
+          "task_id": "QA-06",
+          "acceptance_ids": [
+            "AC-18",
+            "AC-19",
+            "HC-12"
+          ],
+          "scope": "Protocol data, all raw terminal failures and original experiment histories remain retained."
+        },
+        {
+          "task_id": "PER-08",
+          "acceptance_ids": [
+            "AC-19",
+            "AC-29"
+          ],
+          "scope": "Blinded tools preserve missing independent ratings."
+        }
+      ],
+      "unmapped_remainder": "Current full package/report parity and reconstruction remain a separate expanded release closure."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+# Preserving compound-predicate source plan
+
+The recommended local repair preserves every original scientific contribution while separating the three citation scopes. Only final-04 `claim_2e2e3ba2b43cbd571afa271b_1`, normalized `answer_text[1134,1297)`, is replaced; all other seven claims and all other response fields remain exact. The earlier automatic PASS and independent missed-support limitation are unchanged historical evidence.
+
+| New sentence | Own actual citation and selected fragments | Complete predicate support |
+| --- | --- | --- |
+| The energy in ATP and NADPH is used to convert three-carbon compounds into G3P [ev_010]. | ev_010 / F053 | F053 supplies ATP/NADPH energy, three-carbon precursor compounds, conversion, and the G3P product. |
+| G3P can leave the cycle and become part of a carbohydrate molecule [ev_010]. | ev_010 / F054 **and** F055 | The established cross-unit prose continuation supplies both leaving the cycle and becoming a carbohydrate component. “Can” narrows the source's “One of ... leaves” conservatively; it does not assert that every G3P molecule leaves. |
+| The Calvin cycle reactions take place in the stroma [ev_007]. | ev_007 / F037 | F037 explicitly supplies the location. It is now independently cited rather than borrowed from a different claim. |
+
+F054 is exactly “One of the three-carbon molecules of G3P leaves the cycle to become a 5 ? Key Terms 131”; F055 is exactly “part of a carbohydrate molecule.” They are in the same immutable chunk `d78123b2ffdc57261b6fef649db606d00094`, at neighboring chunk ranges `[725,812)` and `[814,846)`, with different source-unit IDs. The sequence and sentence continuation establish the narrow scientific relation collectively. “5 ? Key Terms 131” is intervening page-layout noise, not a scientific condition, negation, chemical formula, or different referent. Reading the complementary prose fragments together adds no scientific premise.
+
+This joint entailment judgment does **not** create a merged source passage. The exact two original strings, separate fragment identities, source units, pages, and offsets remain preserved. Each supporting quote stays within its own fragment. Their `complete_block=true` metadata is not used as proof; the clipped/page-noise quality caveat remains explicit. Complementary prose across a verified source sequence can support the relation without the automatic blanket rejection appropriate to an incomplete atomic formula, table, or caption.
+
+F053 alone cannot support the old whole claim: it lacks the carbohydrate continuation and stroma qualifier. That is the meaningful negative control. The three separate scopes above, with F053, F054+F055, and F037 respectively, provide the free positive source-scope control. These are independent analyst judgments and structured controls, not measurements of model accuracy or a new real checker result.
+
+The prepared candidate retains photosystem absorption, electron transport, the frozen PSI-to-NADPH mechanism, ATP/NADPH storage and transport, carrier recycling, G3P formation, the direct carbohydrate-component relation, and stroma location. It introduces no unprovided ATP-synthase, proton-gradient, or NADP+ mechanism. The JSON also records a clean F053/F051 backup if the continuation is later rejected, explicitly disclosing that backup's loss of the optional direct G3P link; the preserving version is recommended now that the actual sequence is established.
+
+No source, source map, actual log, gate, label, protected other claim, or main-repository file was changed. No API or database call or credential/seed/binder read occurred. Fresh real regression, human gold evaluation, universal source-quality/provenance certification, native publication, and full UI timing remain outside this free preparation. The JSON includes exact source strings, actual identities, per-predicate reasons, candidate hash, and preservation bounds.

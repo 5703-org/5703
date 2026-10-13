@@ -1,0 +1,298 @@
+{
+  "schema": "5703_actual_native_relation_public_summary_v1",
+  "native_number": 36,
+  "actual_succeeded": true,
+  "actual_error": null,
+  "outcome_available": true,
+  "browser_available": true,
+  "failure_snapshot_available": false,
+  "failure_snapshot_error_class": null,
+  "same_actual30_question_regression_not_new_heldout_question": true,
+  "browser_status": "ACTUAL_Q_NEW36_SAME_CASE_FIX_REGRESSION_NATIVE_UI_PASS",
+  "provider_post_count": 4,
+  "known_cost_USD": "0.0311765",
+  "new_UNKNOWN": 0,
+  "fully_settled": true,
+  "open_claims": 0,
+  "stop_exists": false,
+  "stage_clocks": {
+    "generation": {
+      "status": "OBSERVED",
+      "physical_POSTs": 1,
+      "latency_ms": 5626
+    },
+    "joint_check": {
+      "status": "OBSERVED",
+      "physical_POSTs": 1,
+      "latency_ms": 10755
+    },
+    "semantic_repair": {
+      "status": "OBSERVED",
+      "physical_POSTs": 1,
+      "latency_ms": 9071
+    },
+    "joint_recheck": {
+      "status": "OBSERVED",
+      "physical_POSTs": 1,
+      "latency_ms": 7740
+    }
+  },
+  "slots": [
+    {
+      "slot": 1,
+      "stage": "generation",
+      "latency_ms": 5626,
+      "http_status": 200,
+      "finish_reason": "stop",
+      "evidence_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\runtime\\retained-provider-diagnostics\\slot-01-model-output01.json",
+        "bytes": 2940,
+        "sha256": "70cdb08fbddf3ed362951f3243972dac5bcb72d754ff92514ef094706456f4f2"
+      }
+    },
+    {
+      "slot": 2,
+      "stage": "joint_check",
+      "latency_ms": 10755,
+      "http_status": 200,
+      "finish_reason": "stop",
+      "evidence_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\runtime\\retained-provider-diagnostics\\slot-02-model-output01.json",
+        "bytes": 56525,
+        "sha256": "f3ed73ca40b0258998ef25d9d4d1fa74ace5e060cd1140b0ccca07bf831e1e67"
+      }
+    },
+    {
+      "slot": 3,
+      "stage": "semantic_repair",
+      "latency_ms": 9071,
+      "http_status": 200,
+      "finish_reason": "stop",
+      "evidence_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\runtime\\retained-provider-diagnostics\\slot-03-model-output01.json",
+        "bytes": 1516,
+        "sha256": "0ceae43edf8695a636f745e76e5423e3789e34dfbbd2c78320accb4b29c4b8da"
+      }
+    },
+    {
+      "slot": 4,
+      "stage": "joint_recheck",
+      "latency_ms": 7740,
+      "http_status": 200,
+      "finish_reason": "stop",
+      "evidence_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\runtime\\retained-provider-diagnostics\\slot-04-model-output01.json",
+        "bytes": 51850,
+        "sha256": "af450f2b56bb949f10bfcaf4f6fc64a7174ae4dbc2e663658afb2c4dcbfbaca4"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "Q_NEW36",
+      "status": "PASS",
+      "answer_id": "4e066de3-219c-40e9-b1ff-8251f7040b02",
+      "tfull_ms": 41144.90000000596,
+      "tfailure_ms": null,
+      "citation_checked": true,
+      "citation_controls_checked": 10,
+      "refresh_persisted": true,
+      "server_worker_timing": {
+        "timing_scope": "worker_execution_before_answer_insert_v1",
+        "units": "milliseconds",
+        "excludes": "HTTP admission, queue wait, answer insertion/commit, browser loading/paint",
+        "total_ms": 37777.65,
+        "generation_ms": 14697,
+        "checking_ms": 18495,
+        "token_count_ms": 0,
+        "model_total_ms": 33192,
+        "preparation_ms": 40.872,
+        "query_preparation_ms": 3.464,
+        "retrieval_ms": 463.534,
+        "teaching_plan_ms": 0.391,
+        "submission_to_worker_start_ms": 714.798,
+        "generation_wall_ms": 37108.756,
+        "publication_before_commit_ms": 227.207,
+        "worker_before_commit_ms": 38001.252
+      }
+    }
+  ],
+  "recorded_wire_sizes_bytes": [
+    44477,
+    68490,
+    73719,
+    68461
+  ],
+  "wire_limit_bytes": 98304,
+  "wire_limit_basis": "fee-derived local guard, not provider byte cap",
+  "resources": {
+    "status": "CLOSED",
+    "batch_id": "516e8c2c-1849-44ce-92ef-f11389a6c4c1",
+    "paired_leg_id": "B_startup_prewarm",
+    "browser_leg_passed": true,
+    "native_checked_completed": true,
+    "native_completed_question_ids": [
+      "Q_NEW36"
+    ],
+    "native_executed_question_ids": [
+      "Q_NEW36"
+    ],
+    "all_submitted_native_jobs_checked": true,
+    "continuation_mode": "SAME_QUESTION_FIX_REGRESSION_NEW_SCOPE_NEW_WORKER",
+    "single_Q2_development_regression_completed": false,
+    "old_Q2_request_job_or_answer_replayed": false,
+    "historical_failed_Q3_Q4_replayed": false,
+    "same_worker_across_Q1_Q2_demonstrated": false,
+    "independent_quality_acceptance": false,
+    "worker_pid": 158140,
+    "engine_object_identity": 2107805739264,
+    "database_target_public": {
+      "database_name": "cs30_week10_pair_b_20261009_01",
+      "host": "127.0.0.1",
+      "port": 15433
+    },
+    "active_pointers_unchanged": true,
+    "owned_threads_closed": true,
+    "owned_database_resources_closed": true,
+    "cleanup_error_classes": [],
+    "cleanup_guard_faults": [],
+    "raw_cleanup_errors_exported": false,
+    "leg_closed_after_advisory_unlock_connection_close_and_engine_dispose": true,
+    "local_models_loaded": true,
+    "provider_calls_are_guarded": true,
+    "no_old_job_recovery": true,
+    "retrieval_variant": "R2",
+    "embedding_provider": "native_e5",
+    "default_profile_pin": {
+      "bytes": 294,
+      "path": "E:\\5703\\learning-assistant\\configs\\retrieval\\chat_hybrid_minilm.json",
+      "sha256": "23ca72ddb737045259a04cbfc81c71969440f11cc2fa1a77bc7f8e7fc4364e17"
+    },
+    "model_cache_readonly": true,
+    "python_write_denials": [],
+    "historical_lock_handles_read_byte_only": true,
+    "cpu_threads": 4,
+    "native_cuda_allowed": true,
+    "no_runtime_retrieval_override": true
+  },
+  "check_summaries": [
+    {
+      "revision": 0,
+      "accepted": false,
+      "validation_state": "validated",
+      "source_relation_protection_invalidation": {
+        "version": "source_relation_protection_invalidation_v1",
+        "stage": "before_teaching_repair_boundary",
+        "method": "same_selector_same_global_gates_without_validated_negative_unit_issues",
+        "protected_without_negative_unit_ids": [
+          "claim_364664c975bdc00d74ab2a22_1",
+          "claim_4bbb28fe7a90b6a3f87b6b75_1",
+          "claim_4e19e4a486fe9dc923da7169_1",
+          "claim_8b458d38f4d30c5060c0957c_1",
+          "claim_9e6350bf8c8ac897dd6ce681_1",
+          "claim_9eace1a26f8e9d6071f0acb8_1",
+          "claim_b85b9fa953bffc184b48ae2d_1",
+          "claim_e042c515f904bec48279173e_1",
+          "claim_f9fe075af789df975cbeaea7_1"
+        ],
+        "protected_with_all_diagnostic_ids": [
+          "claim_364664c975bdc00d74ab2a22_1",
+          "claim_4bbb28fe7a90b6a3f87b6b75_1",
+          "claim_4e19e4a486fe9dc923da7169_1",
+          "claim_8b458d38f4d30c5060c0957c_1",
+          "claim_9e6350bf8c8ac897dd6ce681_1",
+          "claim_9eace1a26f8e9d6071f0acb8_1",
+          "claim_b85b9fa953bffc184b48ae2d_1",
+          "claim_e042c515f904bec48279173e_1",
+          "claim_f9fe075af789df975cbeaea7_1"
+        ],
+        "protection_removed_claim_ids": [],
+        "unattributed_protection_losses": [],
+        "negative_unit_reasons": [],
+        "source_binding_contract_valid": true,
+        "independent_semantic_evaluation": false,
+        "publication_override": false
+      },
+      "claim_feedback_transport": {
+        "codec_proof": {
+          "version": "lossless_claim_feedback27_v1",
+          "encoding": "lossless_claim_feedback27_v1",
+          "original_utf8_bytes": 27170,
+          "transmitted_utf8_bytes": 23385,
+          "saved_utf8_bytes": 3785,
+          "original_sha256": "e604a5bf4c383fc831f2c3bbfd902041d831131df4174a017ee660ed14e16913",
+          "restored_sha256": "e604a5bf4c383fc831f2c3bbfd902041d831131df4174a017ee660ed14e16913",
+          "exact_round_trip_verified": true,
+          "canonical_json_and_types_verified": true,
+          "claim_span_count": 10,
+          "protected_claim_ref_count": 9,
+          "source_quote_ref_count": 24,
+          "source_quote_verified_fragment_count": 24,
+          "source_quote_context_only_count": 0,
+          "source_quote_refs_are_ownership_certificates": false,
+          "original_draft_sha256": "7e631b4f114c2c03d1535da69916093779d6f10b3f3f75c8c54fede29edadef2",
+          "original_claims_sha256": "e51e99d55ec97abc39f14c78a24a9688bc70a5cb769ef9149c55d633bcaa76d2",
+          "original_source_quotes_sha256": "29e5ea587bbd549b617b1c6f627459ddbdb9b5a448a5c5631e74a6e62dd9a0aa",
+          "source_repair_candidates_sha256": "bb3a86f5a6ef9459f0cbaae4ce71ab9c48f8e341a7750c341c2d9ee8831dfb4d"
+        },
+        "selected_wire_encoding": "lossless_claim_feedback27_v1",
+        "raw_server_feedback_sha256": "e604a5bf4c383fc831f2c3bbfd902041d831131df4174a017ee660ed14e16913",
+        "projected_feedback_sha256": "e604a5bf4c383fc831f2c3bbfd902041d831131df4174a017ee660ed14e16913",
+        "full_content_utf8_bytes": 27170,
+        "selected_content_utf8_bytes": 24284,
+        "full_serialized_content_utf8_bytes": 29376,
+        "selected_serialized_content_utf8_bytes": 26442,
+        "saved_provider_wire_utf8_bytes": 2934,
+        "wire_delta_basis": "same_remaining_body_and_outer_JSON_string_serializer",
+        "trusted_instruction_included_in_wire_measurement": true,
+        "authoritative_server_feedback_changed": false
+      }
+    },
+    {
+      "revision": 1,
+      "accepted": true,
+      "validation_state": "validated",
+      "source_relation_protection_invalidation": null,
+      "claim_feedback_transport": null
+    }
+  ],
+  "evidence_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\runtime\\budget-status-public01.json",
+      "bytes": 1362,
+      "sha256": "bc42ac1453ee671e30582819fbca872170b3d7764a2ad059cf2928e215d359fd"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\runtime\\runtime-closed-public01.json",
+      "bytes": 1793,
+      "sha256": "3166a4c3a5ee7a725c873345aa06168071a88daa9527ba25ff2d5f273bec5e4d"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\runtime\\retained-provider-diagnostics\\native-generation-outcome01.json",
+      "bytes": 833871,
+      "sha256": "bb4a50a877a49a9103ea15e26ccb35b6000451c337989e3f46fad376e5abe517"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\browser\\real-browser-live-qa-receipt01.json",
+      "bytes": 95638,
+      "sha256": "0fc5fa5834743114048b19e2d7d74fbd89f01857d120c709b63ed7baa5071722"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\runtime\\actual-model-inputs-public01.jsonl",
+      "bytes": 9690,
+      "sha256": "b6cb4f79fe4fae6d7062d0bdd746dd40c2c22884fa7a57bcf0487eb6dd6e0487"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation36\\SCIENTIFIC_NATIVE_CLOSURE_GUARD_RELEASE_ACTUAL09.json",
+      "bytes": 187979,
+      "sha256": "5dce4dfe21673b7856762fd2f85b5ec24b7e80bbd649a4a8a5982d92209b1d0c"
+    }
+  ],
+  "limitations": [
+    "Independent source quality requires a separate full-predicate review.",
+    "A repeated old question is development regression, not a formal quality test.",
+    "One new question is functional confirmation, not a held-out benchmark.",
+    "Nested worker and provider clocks must not be added together.",
+    "Missing outcome, browser receipt or stage clock remains missing."
+  ]
+}

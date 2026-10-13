@@ -1,0 +1,810 @@
+{
+  "stage": "joint_check",
+  "raw": {
+    "label": "joint_check",
+    "raw_bytes": 3820,
+    "raw_sha256": "ec9b9a1fe68da966edaf3e32881f4b1fe491144a77ca9733a940c5e89373db89",
+    "retained_raw_text": "{\"claims\":[{\"basis\":\"textbook\",\"claim_id\":\"claim_561d7dd60df84aeb4419a8fa_1\",\"reason\":\"This claim provides an introductory overview of the light-dependent reactions and Calvin cycle, but it is uncited.\",\"status\":\"unsupported\",\"citations\":[]},{\"basis\":\"textbook\",\"claim_id\":\"claim_1164120d7fbf738484d1ab10_1\",\"citations\":[{\"evidence_id\":\"ev_008\",\"fragment_ids\":[\"F042\",\"F043\"],\"relation\":\"supporting\"}],\"reason\":\"The cited fragments successfully establish that light-dependent reactions convert light energy into chemical energy used by the Calvin cycle.\",\"status\":\"supported\"},{\"basis\":\"textbook\",\"claim_id\":\"claim_37eb9395c8cbcb5721d36f6e_1\",\"citations\":[{\"evidence_id\":\"ev_002\",\"fragment_ids\":[\"F007\"],\"relation\":\"supporting\"}],\"reason\":\"The cited fragment supports that photosystems absorb light and use electron transport chains to convert energy into ATP and NADPH.\",\"status\":\"supported\"},{\"basis\":\"textbook\",\"claim_id\":\"claim_d5ccefbc42fc42739dca1c3d_1\",\"citations\":[{\"evidence_id\":\"ev_007\",\"fragment_ids\":[\"F037\"],\"relation\":\"supporting\"}],\"reason\":\"The cited fragment establishes that these energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.\",\"status\":\"supported\"},{\"basis\":\"textbook\",\"claim_id\":\"claim_8cd7b13097db1301a18c28c6_1\",\"citations\":[{\"evidence_id\":\"ev_001\",\"fragment_ids\":[\"F002\",\"F003\"],\"relation\":\"supporting\"}],\"reason\":\"The cited fragments successfully support the description of full and empty energy carriers moving between the light-dependent reactions and the Calvin cycle.\",\"status\":\"supported\"},{\"basis\":\"textbook\",\"claim_id\":\"claim_4b734243e658fbd9d35d6efa_1\",\"citations\":[{\"evidence_id\":\"ev_010\",\"fragment_ids\":[\"F053\"],\"relation\":\"supporting\"}],\"reason\":\"The cited fragment supports that the energy in ATP and NADPH is used to convert molecules into G3P in the Calvin cycle.\",\"status\":\"supported\"},{\"basis\":\"textbook\",\"claim_id\":\"claim_034e3660ebd128deb9923620_1\",\"citations\":[{\"evidence_id\":\"ev_002\",\"fragment_ids\":[\"F007\"],\"relation\":\"supporting\"},{\"evidence_id\":\"ev_007\",\"fragment_ids\":[\"F037\"],\"relation\":\"supporting\"}],\"reason\":\"The cited fragments jointly support the short answer regarding light-dependent reactions storing energy in ATP and NADPH and carrying it into the stroma.\",\"status\":\"supported\"}],\"body_ok\":false,\"specific_help\":true,\"scope_ok\":true,\"suggestions_ok\":true,\"evidence_display_ok\":true,\"cumulative_ok\":true,\"complete_answer\":true,\"coverage\":\"full\",\"missing_facets\":[],\"limitations_explicit\":false,\"reason\":\"One factual claim lacks source citations, making body_ok false, but all required question facets are fully covered by the source fragments.\",\"repair_fragment_ids\":[\"F002\",\"F003\",\"F007\",\"F037\",\"F042\",\"F043\",\"F053\"],\"attempt_evaluation_ok\":\"not_applicable\",\"tutor_question_ok\":true,\"requirements\":[{\"conditions_preserved\":true,\"evidence\":[{\"evidence_id\":\"ev_008\",\"fragment_id\":\"F042\",\"quote\":\"The overall purpose of the light-dependent reactions is to convert light energy into chemical energy.\"},{\"evidence_id\":\"ev_008\",\"fragment_id\":\"F043\",\"quote\":\"This chemical energy will be used by the Calvin cycle to fuel the assembly of sugar molecules.\"},{\"evidence_id\":\"ev_002\",\"fragment_id\":\"F007\",\"quote\":\"Photosystems absorb light and use electron transport chains to convert energy into the chemical energy of ATP and NADPH.\"},{\"evidence_id\":\"ev_007\",\"fragment_id\":\"F037\",\"quote\":\"These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.\"}],\"missing_information\":\"\",\"reason\":\"The provided source fragments fully discuss how light-dependent reactions capture light energy and produce energy carriers for the Calvin cycle.\",\"relevance\":\"related\",\"response_coverage\":\"covered\",\"requirement_id\":\"requirement_01\",\"sufficiency\":\"sufficient\"}],\"non_repetitive_next_action\":true}",
+    "retained_text_bytes": 3820,
+    "retained_text_sha256": "ec9b9a1fe68da966edaf3e32881f4b1fe491144a77ca9733a940c5e89373db89",
+    "redaction_changed_raw": false
+  },
+  "error": null,
+  "diagnostic": {
+    "stage": "completed",
+    "http_status": 200,
+    "provider_error_type": null,
+    "provider_error_code": null,
+    "provider_error_parameter": null,
+    "message": null,
+    "message_redacted": false,
+    "provider_request_id": "gen-1791592688-TEF5AcLRUvp1BzQ0Ch1p",
+    "finish_reason": "stop",
+    "network_error": null,
+    "request_submitted": true,
+    "latency_ms": 3898
+  },
+  "check_data": {
+    "ACTUAL_CITATION_BINDINGS": {
+      "columns": [
+        "binding_ids",
+        "claim_id"
+      ],
+      "rows": [
+        [
+          [],
+          "claim_561d7dd60df84aeb4419a8fa_1"
+        ],
+        [
+          [
+            "B001"
+          ],
+          "claim_1164120d7fbf738484d1ab10_1"
+        ],
+        [
+          [
+            "B002"
+          ],
+          "claim_37eb9395c8cbcb5721d36f6e_1"
+        ],
+        [
+          [
+            "B003"
+          ],
+          "claim_d5ccefbc42fc42739dca1c3d_1"
+        ],
+        [
+          [
+            "B004"
+          ],
+          "claim_8cd7b13097db1301a18c28c6_1"
+        ],
+        [
+          [
+            "B005"
+          ],
+          "claim_4b734243e658fbd9d35d6efa_1"
+        ],
+        [
+          [
+            "B002",
+            "B003"
+          ],
+          "claim_034e3660ebd128deb9923620_1"
+        ]
+      ]
+    },
+    "ATTEMPT_EVALUATION": null,
+    "ATTEMPT_EVALUATION_APPLICABILITY": {
+      "status": "not_applicable",
+      "version": "conditional_attempt_evaluation_v1"
+    },
+    "BINDING_BANK": {
+      "columns": [
+        "allowed_fragment_ids",
+        "binding_id",
+        "evidence_id"
+      ],
+      "rows": [
+        [
+          [
+            "F041",
+            "F042",
+            "F043",
+            "F044",
+            "F045",
+            "F046"
+          ],
+          "B001",
+          "ev_008"
+        ],
+        [
+          [
+            "F005",
+            "F006",
+            "F007",
+            "F008",
+            "F009",
+            "F010",
+            "F011"
+          ],
+          "B002",
+          "ev_002"
+        ],
+        [
+          [
+            "F036",
+            "F037",
+            "F038",
+            "F039",
+            "F040"
+          ],
+          "B003",
+          "ev_007"
+        ],
+        [
+          [
+            "F001",
+            "F002",
+            "F003",
+            "F004"
+          ],
+          "B004",
+          "ev_001"
+        ],
+        [
+          [
+            "F051",
+            "F052",
+            "F053",
+            "F054",
+            "F055",
+            "F056"
+          ],
+          "B005",
+          "ev_010"
+        ]
+      ]
+    },
+    "CHECKER_INPUT_ENCODING": {
+      "instructions": "Each table row pairs with its columns by position. Reconstruct every exact claim and complete source fragment. Each claim's binding_ids references BINDING_BANK: that bank fixes its actual evidence_id and only allowed_fragment_ids. Shared banks do not add citations to other claims. Empty binding_ids means uncited. Use the unchanged output schema and check every ordinary support/disclosure gate.",
+      "version": "lossless_checker_tables_v1"
+    },
+    "CHECK_SCOPE": {
+      "body_and_short_answer": true,
+      "current_evidence_display": false,
+      "current_suggestions": false,
+      "prior_actual_exposure": false
+    },
+    "CLAIMS": {
+      "columns": [
+        "answer_field",
+        "claim_id",
+        "end",
+        "evidence_ids",
+        "start",
+        "text"
+      ],
+      "rows": [
+        [
+          "answer_text",
+          "claim_561d7dd60df84aeb4419a8fa_1",
+          160,
+          [],
+          0,
+          "The light-dependent reactions convert light energy into chemical energy stored in energy carriers, and these carriers transport that energy to the Calvin cycle."
+        ],
+        [
+          "answer_text",
+          "claim_1164120d7fbf738484d1ab10_1",
+          336,
+          [
+            "ev_008"
+          ],
+          161,
+          "The light-dependent reactions convert light energy into chemical energy, and this chemical energy is used by the Calvin cycle to fuel the assembly of sugar molecules [ev_008]."
+        ],
+        [
+          "answer_text",
+          "claim_37eb9395c8cbcb5721d36f6e_1",
+          466,
+          [
+            "ev_002"
+          ],
+          337,
+          "Photosystems absorb light and use electron transport chains to convert energy into the chemical energy of ATP and NADPH [ev_002]."
+        ],
+        [
+          "answer_text",
+          "claim_d5ccefbc42fc42739dca1c3d_1",
+          576,
+          [
+            "ev_007"
+          ],
+          467,
+          "These energy-carrying molecules travel into the stroma, where the Calvin cycle reactions take place [ev_007]."
+        ],
+        [
+          "answer_text",
+          "claim_8cd7b13097db1301a18c28c6_1",
+          835,
+          [
+            "ev_001"
+          ],
+          577,
+          "The carriers that move energy from the light-dependent reactions to the Calvin cycle are described as \"full\" because they bring energy; after the energy is released, the \"empty\" carriers return to the light-dependent reactions to obtain more energy [ev_001]."
+        ],
+        [
+          "answer_text",
+          "claim_4b734243e658fbd9d35d6efa_1",
+          1004,
+          [
+            "ev_010"
+          ],
+          836,
+          "In the Calvin cycle, the energy in ATP and NADPH is used to convert three-carbon molecules into G3P, which is the product used to build carbohydrate molecules [ev_010]."
+        ],
+        [
+          "short_answer",
+          "claim_034e3660ebd128deb9923620_1",
+          141,
+          [
+            "ev_002",
+            "ev_007"
+          ],
+          0,
+          "Light-dependent reactions store light energy in ATP and NADPH, which carry that energy into the Calvin cycle in the stroma [ev_002] [ev_007]."
+        ]
+      ]
+    },
+    "CONTEXT_COVERAGE": {
+      "budget_lost_requirement_ids": [
+        "requirement_01"
+      ],
+      "context_sufficiency_estimate": "partial",
+      "requirements": [
+        {
+          "candidate_lexically_covered": true,
+          "conditions": [],
+          "id": "requirement_01",
+          "intent": "explanation",
+          "matched_evidence_ids": [
+            "ev_001",
+            "ev_002",
+            "ev_003",
+            "ev_004",
+            "ev_005",
+            "ev_006",
+            "ev_007",
+            "ev_008",
+            "ev_009",
+            "ev_010",
+            "ev_011",
+            "ev_013"
+          ],
+          "missing_term_groups": [
+            [
+              "provide"
+            ]
+          ],
+          "objects": [],
+          "origin": "verbatim_question_structure_v5",
+          "packed_lexically_covered": false,
+          "relation": "explanation",
+          "request": "How do light-dependent reactions provide the energy carriers used by the Calvin cycle"
+        }
+      ],
+      "response_guidance": "Evaluate source meaning and each required relation and condition. Words distributed across passages may provide complementary evidence but do not establish a valid comparison, causal link or sufficient context. Answer supported parts and name actual gaps.",
+      "semantic_evaluation_required": true,
+      "semantic_sufficiency": null,
+      "transport_version": "coverage_context_v1",
+      "version": "context_coverage_v3"
+    },
+    "LEARNER_TURN": {
+      "current_step": 1,
+      "expected_response_kind": null,
+      "pending_tutor_question": null,
+      "pending_tutor_question_id": null,
+      "turn_role": "user_question"
+    },
+    "POLICY": {
+      "check_cumulative": false,
+      "check_suggestions": false,
+      "condition": "T2",
+      "control_evidence": false,
+      "help_constraint": "Give the complete supported explanation requested, including relevant conditions, units and limits. Do not force hints.",
+      "help_level": 0,
+      "human_rating": null,
+      "online_check": true,
+      "task_type": "process_reasoning",
+      "teaching_mode": "direct",
+      "version": "learning_enhancement_v1"
+    },
+    "PRIOR_EXPOSURE": {
+      "disabled": true
+    },
+    "PROPOSED_DELIVERY": {
+      "citation_views": [],
+      "response": {
+        "answer_text": "The light-dependent reactions convert light energy into chemical energy stored in energy carriers, and these carriers transport that energy to the Calvin cycle. The light-dependent reactions convert light energy into chemical energy, and this chemical energy is used by the Calvin cycle to fuel the assembly of sugar molecules [ev_008]. Photosystems absorb light and use electron transport chains to convert energy into the chemical energy of ATP and NADPH [ev_002]. These energy-carrying molecules travel into the stroma, where the Calvin cycle reactions take place [ev_007]. The carriers that move energy from the light-dependent reactions to the Calvin cycle are described as \"full\" because they bring energy; after the energy is released, the \"empty\" carriers return to the light-dependent reactions to obtain more energy [ev_001]. In the Calvin cycle, the energy in ATP and NADPH is used to convert three-carbon molecules into G3P, which is the product used to build carbohydrate molecules [ev_010].",
+        "citations": [
+          "ev_001",
+          "ev_002",
+          "ev_007",
+          "ev_008",
+          "ev_010"
+        ],
+        "confidence": 0.8,
+        "refusal_reason": null,
+        "response_type": "answer",
+        "schema_version": "chat_response_v1",
+        "short_answer": "Light-dependent reactions store light energy in ATP and NADPH, which carry that energy into the Calvin cycle in the stroma [ev_002] [ev_007]."
+      },
+      "source_display_control_disabled": true
+    },
+    "SOURCE_FRAGMENTS": {
+      "columns": [
+        "block_kind",
+        "complete_block",
+        "evidence_id",
+        "exact_text",
+        "fragment_id"
+      ],
+      "rows": [
+        [
+          "prose",
+          true,
+          "ev_001",
+          "The two reactions use carrier molecules to transport the energy from one to the other.",
+          "F001"
+        ],
+        [
+          "prose",
+          true,
+          "ev_001",
+          "The carriers that move energy from the light-dependent reactions to the Calvin cycle reactions can be thought of as “full” because they bring energy.",
+          "F002"
+        ],
+        [
+          "prose",
+          true,
+          "ev_001",
+          "After the energy is released, the “empty” energy carriers return to the light-dependent reactions to obtain more energy.",
+          "F003"
+        ],
+        [
+          "prose",
+          true,
+          "ev_001",
+          "The two-stage, two-location photosynthesis process was discovered by Joan Mary Anderson, whose continuing work over the subsequent decades provided much of our understanding of the process, the membranes, and the chemicals involved.",
+          "F004"
+        ],
+        [
+          "prose",
+          true,
+          "ev_002",
+          "EVOLUTION C ONNE CTION Photosynthesis During the evolution of photosynthesis, a major shift occurred from the bacterial type of photosynthesis that involves only one photosystem and is typically anoxygenic (does not generate oxygen) into modern oxygenic (does generate oxygen) photosynthesis, employing two photosystems.",
+          "F005"
+        ],
+        [
+          "prose",
+          true,
+          "ev_002",
+          "This modern oxygenic photosynthesis is used by many organisms—from giant tropical leaves in the rainforest to tiny cyanobacterial cells—and the process and components of this photosynthesis remain largely the same.",
+          "F006"
+        ],
+        [
+          "prose",
+          true,
+          "ev_002",
+          "Photosystems absorb light and use electron transport chains to convert energy into the chemical energy of ATP and NADH.",
+          "F007"
+        ],
+        [
+          "prose",
+          true,
+          "ev_002",
+          "The subsequent light-independent reactions then assemble carbohydrate molecules with this energy.",
+          "F008"
+        ],
+        [
+          "prose",
+          true,
+          "ev_002",
+          "In the harsh dry heat of the desert, plants must conserve and use every drop of water to survive.",
+          "F009"
+        ],
+        [
+          "prose",
+          true,
+          "ev_002",
+          "Because stomata must open to allow for the uptake of CO2, water escapes from the leaf during active photosynthesis.",
+          "F010"
+        ],
+        [
+          "prose",
+          true,
+          "ev_002",
+          "Desert plants have evolved processes to conserve water and deal with harsh conditions.",
+          "F011"
+        ],
+        [
+          "prose",
+          true,
+          "ev_003",
+          "8.3 Using Light Energy to Make Organic Molecules LEARNING OBJECTIVES By the end of this section, you will be able to do the following: • Describe the Calvin cycle • Define carbon fixation • Explain how photosynthesis works in the energy cycle of all living organisms After the energy from the sun is converted into chemical energy and temporarily stored in ATP and NADPH molecules, the cell has the fuel needed to build carbohydrate molecules for long-term energy storage.",
+          "F012"
+        ],
+        [
+          "prose",
+          true,
+          "ev_003",
+          "The products of the light-dependent reactions, ATP and NADPH, have lifespans in the range of millionths of seconds, whereas the products of the light-independent reactions (carbohydrates and other forms of reduced carbon) can survive almost indefinitely.",
+          "F013"
+        ],
+        [
+          "prose",
+          true,
+          "ev_003",
+          "The carbohydrate molecules made will have a backbone of carbon atoms.",
+          "F014"
+        ],
+        [
+          "prose",
+          true,
+          "ev_003",
+          "But where does the carbon come from?",
+          "F015"
+        ],
+        [
+          "prose",
+          true,
+          "ev_003",
+          "It comes from carbon dioxide—the gas that is a waste product of respiration in microbes, fungi, plants,",
+          "F016"
+        ],
+        [
+          "prose",
+          true,
+          "ev_004",
+          "Why are carnivores, such as lions, dependent on photosynthesis to survive? 23 .",
+          "F017"
+        ],
+        [
+          "prose",
+          true,
+          "ev_004",
+          "Why are energy carriers thought of as either “full” or “empty”? 24 .",
+          "F018"
+        ],
+        [
+          "prose",
+          true,
+          "ev_004",
+          "Describe how the grey wolf population would be impacted by a volcanic eruption that spewed a dense ash cloud that blocked sunlight in a section of Yellowstone National Park. 25 .",
+          "F019"
+        ],
+        [
+          "prose",
+          true,
+          "ev_004",
+          "How does the closing of the stomata limit photosynthesis? 26 .",
+          "F020"
+        ],
+        [
+          "prose",
+          true,
+          "ev_004",
+          "Describe the pathway of electron transfer from photosystem II to photosystem I in light-dependent reactions. 27 .",
+          "F021"
+        ],
+        [
+          "prose",
+          true,
+          "ev_004",
+          "What are the roles of ATP and NADPH in photosynthesis? 28 .",
+          "F022"
+        ],
+        [
+          "prose",
+          true,
+          "ev_004",
+          "How and why would the end products of photosynthesis be changed if a plant had a mutation that eliminated its photosystem II complex? 29 .",
+          "F023"
+        ],
+        [
+          "prose",
+          true,
+          "ev_004",
+          "Why is the third stage of the Calvin cycle called the regeneration stage? 30 .",
+          "F024"
+        ],
+        [
+          "prose",
+          true,
+          "ev_004",
+          "Which part of the light-independent reactions would be affected if a cell could not produce the enzyme RuBisCO? 31 .",
+          "F025"
+        ],
+        [
+          "prose",
+          true,
+          "ev_004",
+          "Why does it take three turns of the Calvin cycle to produce G3P, the initial product of photosynthesis? 32 .",
+          "F026"
+        ],
+        [
+          "prose",
+          true,
+          "ev_004",
+          "Imagine a sealed terrarium containing a plant and a beetle.",
+          "F027"
+        ],
+        [
+          "prose",
+          true,
+          "ev_005",
+          "In addition, however, several enzymes of the light-independent reactions are activated by light.",
+          "F028"
+        ],
+        [
+          "prose",
+          true,
+          "ev_005",
+          "The light-dependent reactions utilize certain molecules to temporarily store the energy: These are referred to as energy carriers.",
+          "F029"
+        ],
+        [
+          "prose",
+          true,
+          "ev_005",
+          "The energy carriers that move energy from light-dependent reactions to light-independent reactions can be thought of as “full” because they are rich in energy.",
+          "F030"
+        ],
+        [
+          "prose",
+          true,
+          "ev_005",
+          "After the energy is released, the “empty” energy carriers return to the light-dependent reaction to obtain more energy.",
+          "F031"
+        ],
+        [
+          "prose",
+          true,
+          "ev_005",
+          "Figure 8.7 illustrates the components inside the chloroplast where the light-dependent and light-independent reactions take place.",
+          "F032"
+        ],
+        [
+          "prose",
+          true,
+          "ev_006",
+          "INTRODUCTION CHAPTER 5 Photosynthesis 5.1 Overview of Photosynthesis 5.2 The Light-Dependent Reactions of Photosynthesis 5.3 The Calvin Cycle No matter how complex or advanced a machine, such as the latest cellular phone, the device cannot function without energy.",
+          "F033"
+        ],
+        [
+          "prose",
+          true,
+          "ev_006",
+          "Living things, similar to machines, have many complex components; they too cannot do anything without energy, which is why humans and all other organisms must “eat” in some form or another.",
+          "F034"
+        ],
+        [
+          "prose",
+          true,
+          "ev_006",
+          "That may be common knowledge, but how many people realize that every bite of every meal ingested depends on the process of photosynthesis?",
+          "F035"
+        ],
+        [
+          "prose",
+          true,
+          "ev_007",
+          "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.",
+          "F036"
+        ],
+        [
+          "prose",
+          true,
+          "ev_007",
+          "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+          "F037"
+        ],
+        [
+          "prose",
+          true,
+          "ev_007",
+          "The Calvin cycle reactions (Figure 5.15) can be organized into three basic stages: fixation, reduction, and regeneration.",
+          "F038"
+        ],
+        [
+          "prose",
+          true,
+          "ev_007",
+          "In the stroma, in addition to CO2, two other chemicals are present to initiate the Calvin cycle: an enzyme abbreviated RuBisCO, and the molecule ribulose bisphosphate (RuBP).",
+          "F039"
+        ],
+        [
+          "prose",
+          true,
+          "ev_007",
+          "RuBP has five atoms of carbon and a phosphate group on each end.",
+          "F040"
+        ],
+        [
+          "prose",
+          true,
+          "ev_008",
+          "FIGURE 5.11 Plants that commonly grow in the shade benefit from having a variety of light-absorbing pigments.",
+          "F041"
+        ],
+        [
+          "prose",
+          true,
+          "ev_008",
+          "Each pigment can absorb different wavelengths of light, which allows the plant to absorb any light that passes through the taller trees. (credit: Jason Hollinger) How Light-Dependent Reactions Work The overall purpose of the light-dependent reactions is to convert light energy into chemical energy.",
+          "F042"
+        ],
+        [
+          "prose",
+          true,
+          "ev_008",
+          "This chemical energy will be used by the Calvin cycle to fuel the assembly of sugar molecules.",
+          "F043"
+        ],
+        [
+          "prose",
+          true,
+          "ev_008",
+          "The light-dependent reactions begin in a grouping of pigment molecules and proteins called a photosystem.",
+          "F044"
+        ],
+        [
+          "prose",
+          true,
+          "ev_008",
+          "Photosystems exist in the membranes of thylakoids.",
+          "F045"
+        ],
+        [
+          "prose",
+          true,
+          "ev_008",
+          "A pigment molecule in the photosystem absorbs one photon, a quantity or “packet” of light energy, at a time.",
+          "F046"
+        ],
+        [
+          "prose",
+          true,
+          "ev_009",
+          "Department of Biology, Texas A&M University.",
+          "F047"
+        ],
+        [
+          "prose",
+          true,
+          "ev_009",
+          "The light-independent reactions of the Calvin cycle can be organized into three basic stages: fixation, reduction, and regeneration.",
+          "F048"
+        ],
+        [
+          "prose",
+          true,
+          "ev_009",
+          "Stage 1: Fixation In the stroma, in addition to CO2, two other components are present to initiate the light-independent reactions: an enzyme called ribulose-1,5-bisphosphate carboxylase/oxygenase (RuBisCO), and three molecules of ribulose bisphosphate (RuBP), as shown in Figure 8.19.",
+          "F049"
+        ],
+        [
+          "prose",
+          true,
+          "ev_009",
+          "RuBP has five atoms of carbon, flanked by two phosphates.",
+          "F050"
+        ],
+        [
+          "prose",
+          true,
+          "ev_010",
+          "Photosystem I absorbs a second photon, which results in the formation of an NADPH molecule, another energy carrier for the Calvin cycle reactions. 5.3 The Calvin Cycle Using the energy carriers formed in the first stage of photosynthesis, the Calvin cycle reactions fix CO2 from the environment to build carbohydrate molecules.",
+          "F051"
+        ],
+        [
+          "prose",
+          true,
+          "ev_010",
+          "An enzyme, RuBisCO, catalyzes the fixation reaction, by combining CO2 with RuBP.",
+          "F052"
+        ],
+        [
+          "prose",
+          true,
+          "ev_010",
+          "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+          "F053"
+        ],
+        [
+          "prose",
+          true,
+          "ev_010",
+          "One of the three-carbon molecules of G3P leaves the cycle to become a 5 • Key Terms 131",
+          "F054"
+        ],
+        [
+          "prose",
+          true,
+          "ev_010",
+          "part of a carbohydrate molecule.",
+          "F055"
+        ],
+        [
+          "prose",
+          true,
+          "ev_010",
+          "The remaining G3P molecules stay in the cycle to be formed back into RuBP, which is ready to react with more CO2.",
+          "F056"
+        ],
+        [
+          "prose",
+          true,
+          "ev_011",
+          "carbon dioxide, the gas that animals exhale with each breath.",
+          "F057"
+        ],
+        [
+          "prose",
+          true,
+          "ev_011",
+          "The Calvin cycle is the term used for the reactions of photosynthesis that use the energy stored by the light-dependent reactions to form glucose and other carbohydrate molecules.",
+          "F058"
+        ],
+        [
+          "prose",
+          true,
+          "ev_011",
+          "The Interworkings of the Calvin Cycle In plants, carbon dioxide (CO2) enters the leaf through the stomata and diffuses into the mesophyll cells and into the stroma of the chloroplast—the site of the Calvin cycle reactions where sugar is synthesized.",
+          "F059"
+        ],
+        [
+          "prose",
+          true,
+          "ev_011",
+          "The reactions are named after Melvin Calvin, the scientist who discovered them, and reference the fact that the reactions function as a cycle.",
+          "F060"
+        ],
+        [
+          "prose",
+          true,
+          "ev_011",
+          "Others call it the Calvin-Benson cycle to include the name of another scientist involved in its discovery, Andrew Benson (Figure 5.14).",
+          "F061"
+        ],
+        [
+          "prose",
+          true,
+          "ev_012",
+          "Technically, each breaking of a water molecule releases a pair of electrons, and therefore can replace two donated electrons.",
+          "F062"
+        ],
+        [
+          "prose",
+          true,
+          "ev_013",
+          "Why are carnivores, such as lions, dependent on photosynthesis to survive? 14 .",
+          "F063"
+        ],
+        [
+          "prose",
+          true,
+          "ev_013",
+          "Describe the pathway of energy in light-dependent reactions. 132 5 • Visual Connection Questions",
+          "F064"
+        ],
+        [
+          "prose",
+          true,
+          "ev_013",
+          "15 .",
+          "F065"
+        ],
+        [
+          "prose",
+          true,
+          "ev_013",
+          "Which part of the Calvin cycle would be affected if a cell could not produce the enzyme RuBisCO? 16 .",
+          "F066"
+        ],
+        [
+          "prose",
+          true,
+          "ev_013",
+          "Explain the reciprocal nature of the net chemical reactions for photosynthesis and respiration. 5 • Critical Thinking Questions 133",
+          "F067"
+        ]
+      ]
+    },
+    "TUTOR_QUESTION": null,
+    "answer_mode": "textbook",
+    "current_problem": "How do light-dependent reactions provide the energy carriers used by the Calvin cycle?",
+    "question": "How do light-dependent reactions provide the energy carriers used by the Calvin cycle?"
+  }
+}

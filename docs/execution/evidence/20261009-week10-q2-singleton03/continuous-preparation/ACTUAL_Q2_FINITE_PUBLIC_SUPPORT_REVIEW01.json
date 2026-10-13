@@ -1,0 +1,198 @@
+{
+  "schema": "5703_q2_finite_public_support_review_v1",
+  "status": "ACTUAL_Q2_UI_NATIVE_PASS_WITH_PARTIAL_OPENED_SOURCE_BODY_REVIEW",
+  "reviewer_kind": "Assistant comparison of retained public source text and screenshots; not a human rating, independent scientific evaluator or formal quality score",
+  "source_index_sha256": "1ada08eec0778fdf84dd1c2cdd2d9e946bafc9cddbef6bbbd85cf66ee04263c1",
+  "batch_id": "cs30-week10-q2-singleton-20261009-01",
+  "continuation_mode": "Q2_FIRST_EXECUTION_NEW_WORKER",
+  "model": "google/gemini-3.5-flash-lite",
+  "provider_route": "google-vertex/global",
+  "question": "How do light-dependent reactions provide the energy carriers used by the Calvin cycle?",
+  "answer_text": "The light-dependent reactions convert light energy into chemical energy [ev_008] by using photosystems and electron transport chains to produce the energy carriers ATP and NADPH [ev_002] [ev_010]. These energy carriers are considered \"full\" because they transport this stored energy from the light-dependent reactions into the stroma where the Calvin cycle reactions take place [ev_001] [ev_005] [ev_007]. Once the energy is released for the Calvin cycle, the \"empty\" energy carriers return to the light-dependent reactions to obtain more energy [ev_001] [ev_005].",
+  "answer_text_sha256": "68839961f8a016c0788f9cff4ec2dc20af1b7fa4741d25972a6b6b6d68dee5e1",
+  "citation_ids": [
+    "ev_001",
+    "ev_002",
+    "ev_005",
+    "ev_007",
+    "ev_008",
+    "ev_010"
+  ],
+  "core_reply_assessment": "The reply names ATP and NADPH, describes their production through light-driven photosystems/electron transport and transfer to Calvin-cycle reactions, and describes return of spent carriers. This records what the answer says; support of every claim is not independently established by the single retained source body.",
+  "opened_source": {
+    "title": "Concepts of Biology",
+    "section": "Chapter 5 Photosynthesis / 5.2 The Light-Dependent Reactions of Photosynthesis",
+    "PDF_physical_page": 138,
+    "excerpt": "Each pigment can absorb different wavelengths of light, which allows the plant to absorb any light that passes through the taller trees. (credit: Jason Hollinger) How Light-Dependent Reactions Work The overall purpose of the light-dependent reactions is to convert light energy into chemical energy.",
+    "excerpt_sha256": "1290ddf491f21c69a15bc1f56b212dda4efea694324ca84433ff091a0552019e",
+    "finding": "Directly supports conversion of light energy to chemical energy.",
+    "does_not_in_this_retained_excerpt_directly_establish": [
+      "Photosystems and electron transport chains produce ATP and NADPH.",
+      "The carriers transfer stored energy into the stroma for Calvin-cycle reactions.",
+      "Spent carriers return to the light-dependent reactions."
+    ]
+  },
+  "claim_review": [
+    {
+      "claim": "Light-dependent reactions convert light into chemical energy.",
+      "citations": [
+        "ev_008"
+      ],
+      "retained_opened_source_support": "DIRECTLY_SUPPORTED"
+    },
+    {
+      "claim": "Photosystems and electron transport chains produce ATP and NADPH.",
+      "citations": [
+        "ev_002",
+        "ev_010"
+      ],
+      "retained_opened_source_support": "OTHER_CITED_BODIES_NOT_INDIVIDUALLY_REVIEWED"
+    },
+    {
+      "claim": "Full carriers transport energy into the stroma for the Calvin cycle.",
+      "citations": [
+        "ev_001",
+        "ev_005",
+        "ev_007"
+      ],
+      "retained_opened_source_support": "OTHER_CITED_BODIES_NOT_INDIVIDUALLY_REVIEWED"
+    },
+    {
+      "claim": "Empty carriers return for more energy.",
+      "citations": [
+        "ev_001",
+        "ev_005"
+      ],
+      "retained_opened_source_support": "OTHER_CITED_BODIES_NOT_INDIVIDUALLY_REVIEWED"
+    }
+  ],
+  "normal_UI_observations": {
+    "login_HTTP_status": 200,
+    "one_normal_Q2_message_submitted": true,
+    "actual_navigation_section": "Chapter 8 Photosynthesis / 8.2 The Light-Dependent Reactions of Photosynthesis",
+    "bounded_DOM_wait": "The adopted browser07 waits for exactly one actual chapter control using expect.toHaveCount(1, timeout=15000), then follows the normal reader draft path. This observed run completed; no blind sleep or forced click.",
+    "normal_UI_reading_context_removed": true,
+    "actual_submitted_reader_is_absent": true,
+    "retrieval_scope": "all_active_corpus",
+    "chapter_filter_applied": false,
+    "navigation_scope_is_not_retrieval_filter": true,
+    "full_reply_and_citation_controls_painted": true,
+    "citation_open_verified": true,
+    "refresh_same_answer_body_verified": true,
+    "browser_and_context_closed": true
+  },
+  "timing_ms": {
+    "Send_to_complete_cited_answer_DOM": 12146.800000000745,
+    "Send_to_first_visible_prose": 12146.300000000745,
+    "root_process_launch_to_worker_ready": 15027.13671875,
+    "root_process_launch_to_complete_answer": 30788.138867188245,
+    "worker_stages": {
+      "timing_scope": "worker_execution_before_answer_insert_v1",
+      "units": "milliseconds",
+      "excludes": "HTTP admission, queue wait, answer insertion/commit, browser loading/paint",
+      "total_ms": 11006.37,
+      "generation_ms": 5472,
+      "checking_ms": 4186,
+      "token_count_ms": 0,
+      "model_total_ms": 9658,
+      "preparation_ms": 51.956,
+      "query_preparation_ms": 1.711,
+      "retrieval_ms": 142.356,
+      "teaching_plan_ms": 0.237,
+      "submission_to_worker_start_ms": 210.269,
+      "generation_wall_ms": 10600.68,
+      "publication_before_commit_ms": 256.216,
+      "worker_before_commit_ms": 11259.984
+    },
+    "native_rerank": 59.67880000025616,
+    "retrieval_stages": {
+      "query_embedding_ms": 7.1907999990799,
+      "query_vector_cache_hit": false,
+      "dense_ms": 36.60250000029919,
+      "lexical_ms": 6.49409999823547,
+      "retrieval_total_ms": 72.88690000132192,
+      "release_cache": {
+        "version": "validated_release_cache_v1",
+        "hit": true,
+        "validation_ms": 3.5575000001699664
+      }
+    },
+    "timing_limits": "Double-RAF sampled DOM includes answer DTO observation/control-loop delay. First prose is not provider TTFT. Worker stage intervals overlap and must not be summed as disjoint components."
+  },
+  "worker_and_cache": {
+    "worker_pid": 13352,
+    "engine_object_identity": 2757691235632,
+    "same_worker_across_Q1_Q2": false,
+    "Q1_replayed_in_this_worker": false,
+    "release_cache_hit": true,
+    "query_vector_cache_hit": false,
+    "epoch_changed_during_question": false,
+    "invalidation_intentionally_triggered": false,
+    "scope": "Release preparation was reused by Q2 on its new worker. This does not establish reuse across Q1 and Q2 or cache invalidation under a changed release."
+  },
+  "native_result": {
+    "job_state": "succeeded",
+    "complete_normal_checker": true,
+    "source_publication_validation": true,
+    "native_R2_rerank_trace_present": true,
+    "runtime_closed": "CLOSED",
+    "threads_and_database_resources_closed": true
+  },
+  "observed_settlement_snapshot": {
+    "physical_provider_POSTs": 2,
+    "known_API_cost_USD": "0.0117991",
+    "new_UNKNOWN_cost_count": 0,
+    "remaining_provider_slots": 0,
+    "scope": "Observed public job settlement, not an invoice or a new authorization."
+  },
+  "evidence": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\browser-continuous03\\real-browser-live-qa-receipt01.json",
+      "bytes": 27381,
+      "sha256": "36d93ef626982207617932b7ce275ae383e8b5737b3c39cc54b0d48e89bb468f"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous03\\native-retrieval-a896c33a-5bb9-4529-a309-6c7ed7b5402b-public01.json",
+      "bytes": 9913,
+      "sha256": "f67e1514bf9a71950b2d832825287f21146cd537f4512909ece4b4eb8442ca4d"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous03\\runtime-closed-public01.json",
+      "bytes": 1925,
+      "sha256": "ec3d2fbb96025bdf16a8dc67bb5dd3dba2d66b67b6ae01ba3f94bb6e86e5267b"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\browser-continuous03\\scope-Q2-public01.json",
+      "bytes": 2008,
+      "sha256": "897657f4b3bfecac68eddd2b02aac36aa8ae32df2525473e9e4ebf3938c4e887"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\browser-continuous03\\Q2-citation.png",
+      "bytes": 115032,
+      "sha256": "8448556951ca144525c064f64786a0a9c2682ceae9d50887579b4247552097e9"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\browser-continuous03\\Q2-citation.txt",
+      "bytes": 2169,
+      "sha256": "2030cf7551688460441021233c4259436786b764472edbab68d36338cec5aef5"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\browser-continuous03\\Q2-refreshed.png",
+      "bytes": 74830,
+      "sha256": "0acece6bf2d7da798a7858515d51dfa1e367cb5571b55cf960ff60498b018c09"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\browser-continuous03\\Q2-refreshed.txt",
+      "bytes": 1309,
+      "sha256": "69aebe72460d12cbbd5b3f61ba1dba9be9c78cbc17f9d7174347c6d958c0af91"
+    }
+  ],
+  "new_browser_launches_for_this_review": 0,
+  "new_API_calls_for_this_review": 0,
+  "new_provider_POSTs_for_this_review": 0,
+  "main_repository_changes": 0,
+  "human_rating": null,
+  "scientific_quality_acceptance": "NOT_ASSERTED",
+  "p95": "NOT_MEASURED",
+  "project_complete": false
+}

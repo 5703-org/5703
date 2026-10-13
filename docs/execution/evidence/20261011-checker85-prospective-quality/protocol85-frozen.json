@@ -1,0 +1,364 @@
+{
+  "schema": "5703_phase85_independent_unseen8_protocol_v1",
+  "status": "READY_FROZEN_PUBLIC_CASES",
+  "authorization": "parent_phase85_unseen8_public_textbooks_20posts_1USD_20261011",
+  "initial_case_claims": 8,
+  "nominal_initial_posts": 16,
+  "maximum_physical_posts": 20,
+  "cost_cap_USD": "1.00",
+  "maximum_hold_per_request_USD": "0.0714688",
+  "reserved_extra_posts": 4,
+  "reserved_extra_posts_enabled": false,
+  "automatic_retries": 0,
+  "case_roles": [
+    "teacher/generation",
+    "checker/joint_check"
+  ],
+  "case_request_cap": 2,
+  "whole_case_seconds_cap": 180,
+  "deadline_anchor": "normal transport case claim after startup prewarm before listener",
+  "rubrics_sent_to_provider": false,
+  "old_closed12_requests": 12,
+  "old_closed12_known_cost_USD": "0.1085513",
+  "old_closed12_occupancy_in_new_budget": 0,
+  "old84_final_receipt_sha256": "26820328f86bc0113ea0a1402fac9e20c960771679e76d2f58509ae38ec1448e",
+  "old84_final_API_sha256": "415e5f9dc226b7220051f395fa93e9806c79826f3bc6a271e08f77295175c66a",
+  "cases": [
+    {
+      "case_id": "case01",
+      "question_id": "development85_01",
+      "question_text": "Why does the spindle (M) checkpoint stop a cell from entering anaphase when a pair of sister chromatids is not correctly attached, and what attachment condition must be satisfied before the cell cycle proceeds?",
+      "question_sha256": "9a5b5edb9fc79fc6f9da2ed9f631ba9c574827d1220ada7de82064592d538b08"
+    },
+    {
+      "case_id": "case02",
+      "question_id": "development85_02",
+      "question_text": "Glucose can enter a cell through facilitated transport. Does this require the cell to expend energy, and in which direction relative to the concentration gradient does glucose move? Explain the role of the membrane transport protein.",
+      "question_sha256": "0d5d4aa98b479de78b5b3a6264504a12812f9fd6c9ef46f738bce6938608ef4c"
+    },
+    {
+      "case_id": "case03",
+      "question_id": "development85_03",
+      "question_text": "Does a molecule binding at an allosteric site necessarily inhibit an enzyme? Contrast how an allosteric inhibitor and an allosteric activator affect enzyme shape, substrate binding and enzyme activity.",
+      "question_sha256": "79e10aea43d34d5ec92aaa1d42a4123f94c4991e83cbfa6be3ae55e97891ffe5"
+    },
+    {
+      "case_id": "case04",
+      "question_id": "development85_04",
+      "question_text": "For vinegar with a hydronium ion concentration of approximately 4 × 10^-3 M, a learner writes pH = 11.6 and pOH = 2.4. Are those assignments correct? Give the correct pair and identify which of the two quantities is normally measured directly with a pH meter.",
+      "question_sha256": "bc771dece3e6c2961dd8ed4aee766ba3b8b3034549ee19977f7b9c68db092bfd"
+    },
+    {
+      "case_id": "case05",
+      "question_id": "development85_05",
+      "question_text": "Model a fixed amount of gas as ideal. It occupies 0.450 L at 300 K and is heated to 400 K while pressure stays constant. What final volume is expected, and why must the temperature be on the kelvin scale? If pressure were also allowed to change without its new value being given, would these temperatures alone determine the final volume?",
+      "question_sha256": "e159815e7046927e2c08025e57d0281f18aa174fc19c599a3c4f577c2757cc0f"
+    },
+    {
+      "case_id": "case06",
+      "question_id": "development85_06",
+      "question_text": "Trace blood from the right ventricle through the pulmonary circulation back to the left atrium. Which pulmonary vessels carry deoxygenated blood and which return oxygenated blood, and where does the change in oxygenation occur? Explain why the word 'artery' alone is not enough to label pulmonary blood as oxygen-rich.",
+      "question_sha256": "ea0adda731dcc65c3190efb769fcd3f9ce5af66598fa77e861e9ff797db909c4"
+    },
+    {
+      "case_id": "case07",
+      "question_id": "development85_07",
+      "question_text": "During translation, how does AUG differ from the stop codons UAA, UAG and UGA? Explain what happens to the growing polypeptide and the ribosome when a stop codon is reached, instead of treating the stop codon as an instruction to add another amino acid.",
+      "question_sha256": "bd615ce859d72da72075a72c25ffad9a476e20e8bd3293850cb705775620fafc"
+    },
+    {
+      "case_id": "case08",
+      "question_id": "development85_08",
+      "question_text": "In a well-insulated bomb calorimeter, a reaction raises the temperature of its surrounding water by 5.0 °C. Taking the reacting material as the system, what sign should the reaction heat q have? Can its numerical heat in joules be obtained from this temperature change alone? Explain what additional calorimeter quantity is needed and why calibration matters.",
+      "question_sha256": "32cfb6093a0691704c5f389c7baacdcb19d00b3b4c9c99a69c3a124b66b089c1"
+    }
+  ],
+  "expected_model_config": {
+    "provider": "openai_compatible",
+    "model": "anthropic/claude-haiku-5.5",
+    "base_url": "https://openrouter.ai/api/v1",
+    "api_key_env": null,
+    "window_tokens": 131072,
+    "max_tokens": 2048,
+    "timeout_seconds": 45.0,
+    "temperature": null,
+    "seed": null,
+    "token_limit_parameter": "max_tokens",
+    "structured_output_mode": "json_schema",
+    "reasoning_effort": null,
+    "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+    "api_version": null,
+    "auth_header": null,
+    "tokenizer_provider": "estimate",
+    "tokenizer_name": null,
+    "tokenizer_revision": null,
+    "tokenizer_local_path": null,
+    "token_count_fallback": "estimate",
+    "thinking_enabled": null,
+    "capability_version": "provider_capabilities_v1",
+    "capabilities": {
+      "profile": "openai_compatible_text_v1",
+      "api_style": "chat_completions",
+      "output_token_parameter": "max_tokens",
+      "temperature": true,
+      "seed": true,
+      "reasoning_effort": false,
+      "thinking_toggle": false,
+      "structured_modes": [
+        "json_schema",
+        "json_object",
+        "prompt"
+      ],
+      "probe_output_tokens": 512,
+      "output_token_ceiling": 32768,
+      "declaration": "runtime_protocol_defaults"
+    },
+    "openrouter_route_profile": "haiku55_google_vertex_low_v1"
+  },
+  "expected_checker_config": {
+    "provider": "openai_compatible",
+    "model": "google/gemini-3.5-flash-lite",
+    "base_url": "https://openrouter.ai/api/v1",
+    "api_key_env": null,
+    "window_tokens": 131072,
+    "max_tokens": 4096,
+    "timeout_seconds": 45.0,
+    "temperature": null,
+    "seed": null,
+    "token_limit_parameter": "max_tokens",
+    "structured_output_mode": "json_object",
+    "reasoning_effort": null,
+    "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+    "api_version": null,
+    "auth_header": null,
+    "tokenizer_provider": "estimate",
+    "tokenizer_name": null,
+    "tokenizer_revision": null,
+    "tokenizer_local_path": null,
+    "token_count_fallback": "estimate",
+    "thinking_enabled": null,
+    "capability_version": "provider_capabilities_v1",
+    "capabilities": {
+      "profile": "openai_compatible_text_v1",
+      "api_style": "chat_completions",
+      "output_token_parameter": "max_tokens",
+      "temperature": true,
+      "seed": true,
+      "reasoning_effort": false,
+      "thinking_toggle": false,
+      "structured_modes": [
+        "json_schema",
+        "json_object",
+        "prompt"
+      ],
+      "probe_output_tokens": 512,
+      "output_token_ceiling": 32768,
+      "declaration": "runtime_protocol_defaults"
+    },
+    "openrouter_route_profile": "gemini35_google_vertex_v1"
+  },
+  "input_policy": "lossless_full_checker_tables_v2",
+  "output_policy": "lossless_unit_findings_v1",
+  "source_pins_pending": false,
+  "real_claims": 0,
+  "provider_posts": 0,
+  "question_file_sha256": "9d35553d2b973e082152e0d119c1bdbff3102ef55a4936d47fe93d337d6f19da",
+  "public_source_boundary_sha256": "c7d6b28b6caee42d3d17879228f966411afba7db5eed53a7c0003d760263acdb",
+  "source_pins": [
+    {
+      "path": "backend/app/core/config.py",
+      "bytes": 7480,
+      "sha256": "f7d117d22925209e66617baa32aac3c3e41a530d6a20f2a7a10e434928f1155d"
+    },
+    {
+      "path": "backend/app/db/base.py",
+      "bytes": 1052,
+      "sha256": "45b925d6ecbb31a10e68f415a93a271fded22e7a5a910be71ae8d0e74157920b"
+    },
+    {
+      "path": "backend/app/db/session.py",
+      "bytes": 1647,
+      "sha256": "c49d02fba805016dc940acd4e281f0717d9d88ff0ffc0687f4bbc5d7d5b0eeeb"
+    },
+    {
+      "path": "backend/app/main.py",
+      "bytes": 3780,
+      "sha256": "ef671429abefbad54925e87613f4686877068de5137396b86d011fb519de473a"
+    },
+    {
+      "path": "backend/app/modules/answering/models.py",
+      "bytes": 6923,
+      "sha256": "179e0a78c38a4c0224ad0b5846ca6d7731e97bef7cab6c0fb8bc21cbeaf9ef29"
+    },
+    {
+      "path": "backend/app/modules/answering/service.py",
+      "bytes": 95312,
+      "sha256": "a8f8e02d156a5d940fa49a16558b26f87f0816b61a2671d9efa0b615d226c1b0"
+    },
+    {
+      "path": "backend/app/modules/identity/models.py",
+      "bytes": 2932,
+      "sha256": "c11094b2642b9a13bab870ba6154aa302280836c8838a42f2566547ac01af80d"
+    },
+    {
+      "path": "backend/app/modules/knowledge/service.py",
+      "bytes": 62130,
+      "sha256": "26b6e89f55902bfba8ca8302ab69ae54a65160193994ea204272964ae968c8e1"
+    },
+    {
+      "path": "backend/app/modules/learning/models.py",
+      "bytes": 1060,
+      "sha256": "b98af9973cf65593d30fb20bda08ccbbb0a8dc304aa9223f6f71aa49b85f80ac"
+    },
+    {
+      "path": "backend/app/modules/learning_state/models.py",
+      "bytes": 8894,
+      "sha256": "170ac23cfe6c4686ea6be837fa9db04007878fc8682e5a032d2f325bed0f26ec"
+    },
+    {
+      "path": "backend/app/modules/model_settings/models.py",
+      "bytes": 7198,
+      "sha256": "dd4aadd9910b1935149174d5d355a3ebc82c1aa0ce1e9ae030ab95e06dac24e4"
+    },
+    {
+      "path": "backend/app/modules/model_settings/service.py",
+      "bytes": 19093,
+      "sha256": "e6e0a9d41846ff36a37bc1eef72892f9ddbc3f2c4648f36f2e9a714f07d5e39d"
+    },
+    {
+      "path": "backend/app/platform_core/worker_locks.py",
+      "bytes": 3015,
+      "sha256": "b2d5c5284c3440e16dee05d2e41677a4a94390436aacab8e97e9508d3c38a4fb"
+    },
+    {
+      "path": "backend/app/worker.py",
+      "bytes": 12018,
+      "sha256": "bda7c7ec99de6f30eb6e7d124d6dc8318752f4680a6d0c84106f65f013553df4"
+    },
+    {
+      "path": "frontend/package.json",
+      "bytes": 1134,
+      "sha256": "ae34299e3aae1b093395469121722889d73d475ab83d1bd75e6df4d23dd42baf"
+    },
+    {
+      "path": "frontend/src/App.tsx",
+      "bytes": 15036,
+      "sha256": "0fa3fa6a7afeb674c65f58be33d83d161ef54a7e543543bc698bf5a1975046bd"
+    },
+    {
+      "path": "frontend/src/Chat.tsx",
+      "bytes": 43076,
+      "sha256": "e15a0b56d7ee9d20c8312c05b7e86f60360c3127d930ce50f348c56b0c0a3ad7"
+    },
+    {
+      "path": "frontend/src/Markdown.tsx",
+      "bytes": 4549,
+      "sha256": "3edc21990e972fae30acc2b22fea1ddee014e8cc7e11b93c67dfa8d6081966d4"
+    },
+    {
+      "path": "frontend/src/api.ts",
+      "bytes": 4059,
+      "sha256": "5492a02e628bdd7b189329e0d6e97026857ef1e8d6ed4fc32a983f4ed24e1f88"
+    },
+    {
+      "path": "generation/adapters.py",
+      "bytes": 29552,
+      "sha256": "99075cb07f4faf861119c5fa5113da6951408c02323c14452d090661fd0c3ddb"
+    },
+    {
+      "path": "generation/binding_repair.py",
+      "bytes": 3071,
+      "sha256": "38ba52eed48bd188698851c8cf9dfbea4d40d087d8bf7be8ce2c70cdff9ac293"
+    },
+    {
+      "path": "generation/checked.py",
+      "bytes": 166258,
+      "sha256": "fd8f18a8a7dbed449654310fb17086ddb4207069a394ca4ac55cf2db3a6fab8c"
+    },
+    {
+      "path": "generation/checker_encoding.py",
+      "bytes": 4294,
+      "sha256": "57e7fdc229e0732d827af1be3985db8c8ccff91d40e4a6699ad28784ccedf8e2"
+    },
+    {
+      "path": "generation/checker_encoding_v2.py",
+      "bytes": 8946,
+      "sha256": "60eafb9111ac6ec9008b913e296edd771f1cbd99729928dc20aa163e4ab68860"
+    },
+    {
+      "path": "generation/lossless_unit_findings_v1.py",
+      "bytes": 32988,
+      "sha256": "0d60cc97701b624e733838ae09abb91e42c4aee6dd63cf2a4c663ae9a8f14ae1"
+    },
+    {
+      "path": "generation/network_policy.py",
+      "bytes": 3407,
+      "sha256": "31ee11495949894073b292cd39b5d186f0ea21f5fd3f598b243e9f37b467bf02"
+    },
+    {
+      "path": "generation/openrouter_routes.py",
+      "bytes": 12356,
+      "sha256": "c82e86990476c0f95da650b38ef444e62c1dba6ae29f407a44c4af444ad2348e"
+    },
+    {
+      "path": "generation/prompt_builder.py",
+      "bytes": 10256,
+      "sha256": "d6cb2fefc3a98549b4193111cff5e1132e663d02198af1b8a9b3aee98325a606"
+    },
+    {
+      "path": "generation/prompts/checked_generation_v5.txt",
+      "bytes": 14862,
+      "sha256": "341c2e2d154993fb8cae909299824a236f8c886c26d3d69c8e8dade41de127fb"
+    },
+    {
+      "path": "generation/prompts/joint_check_v5.txt",
+      "bytes": 21673,
+      "sha256": "06763c8ce8ac3395f93b26fcf66131bb9fdad8370284e9ceb233a5b48afcf27e"
+    },
+    {
+      "path": "generation/providers.py",
+      "bytes": 28382,
+      "sha256": "c00004ce5bb14c65d775f16700f10facd182194533462a114d9e086d9ed6fac4"
+    },
+    {
+      "path": "generation/reliability_v5.py",
+      "bytes": 26253,
+      "sha256": "f1cf5db78bb8f07996e8f56f48db8542a82591e92b90d233d0a58dd1a73f169d"
+    },
+    {
+      "path": "generation/service.py",
+      "bytes": 29098,
+      "sha256": "e694ec2f919754480b927ac7c48ee966a0d9db3d875ff70a71ad39ba08211fcb"
+    },
+    {
+      "path": "generation/source_relations.py",
+      "bytes": 7679,
+      "sha256": "3a934201cb5fab583e2f6186322b2b7f208070d6863ce864258900c1b4f636ed"
+    },
+    {
+      "path": "generation/source_relations_v2.py",
+      "bytes": 25459,
+      "sha256": "ab22171c03566ed1f8b97e67bb1d0d5f4b276e0ab0bcc40be487f3b296ceeb11"
+    },
+    {
+      "path": "generation/types.py",
+      "bytes": 10176,
+      "sha256": "757f907befeaa9300fdeb8ab5c8d03d205c142920cf3c2f5e72ee98988f53068"
+    },
+    {
+      "path": "personalisation/compiler.py",
+      "bytes": 3519,
+      "sha256": "f61c6af6fcd2ffc030dc5a91292bbf8927d61d6768c29dc240c1ba08640a55bd"
+    },
+    {
+      "path": "generation/prompts/source_relation_generation_v2.txt",
+      "bytes": 2475,
+      "sha256": "79f9933cc4a74cedab05dee07fef53c619f52657bef66c730374167c25a28597"
+    },
+    {
+      "path": "generation/prompts/source_relation_check_v2.txt",
+      "bytes": 5884,
+      "sha256": "7a4a2bb4ccb036121985bb2c041976a7bb2342690e46c8e7d2ecfb61219232e7"
+    }
+  ]
+}

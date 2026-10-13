@@ -1,0 +1,94 @@
+{
+  "version": "formatting_static_review84_revision3_v1",
+  "status": "PASS",
+  "reviewer": "native76_narrow_review",
+  "scope": {
+    "kind": "three_file_read_only_AST_format_revision",
+    "main_writes": 0,
+    "db_access": 0,
+    "credential_access": 0,
+    "network_requests": 0,
+    "model_requests": 0,
+    "tests_executed": 0,
+    "runtime_started": 0,
+    "source_modules_imported": 0,
+    "previous_review_preserved": "5703-checker84/integration-static-review84-final.json"
+  },
+  "previous_semantic_review": {
+    "path": "5703-checker84/integration-static-review84-final.json",
+    "bytes": 9527,
+    "sha256": "7ec482cd58b9d1700fcf0a8b4ab7e5890730dcb2ecf271037df13cb61d18a273",
+    "codec_sha256": "affbbf2db064323e9139273917f2d47dc36c95d073225f97e888fa0144cc6b7b"
+  },
+  "proof_pins": [
+    {
+      "path": "5703-checker84-output-candidate/formatting-revision3-proof.json",
+      "bytes": 1037,
+      "sha256": "e27c7fb78378f0a09628d7b8c121453de256a66587904a8b10cdc0c93966071f"
+    },
+    {
+      "path": "5703-checker84-output-candidate/integration84-test-format-proof.json",
+      "bytes": 958,
+      "sha256": "16c903b990034bac719bf6aad5b42d24074c1612513a876230ac0c09d14033f7"
+    }
+  ],
+  "files": [
+    {
+      "relative_path": "generation/lossless_unit_findings_v1.py",
+      "before_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker84-output-candidate\\frozen-revision2\\generation\\lossless_unit_findings_v1.py",
+      "after_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker84-output-candidate\\generation\\lossless_unit_findings_v1.py",
+      "before_bytes": 28255,
+      "before_sha256": "affbbf2db064323e9139273917f2d47dc36c95d073225f97e888fa0144cc6b7b",
+      "after_bytes": 27701,
+      "after_sha256": "8eac286e0fcc88d51a694f9523345bc47b82087c36a57a5561ac645270cc9773",
+      "before_ast_sha256": "216956c396253c18e070606ee613a671fc071ae8bc1d6e0cc3d5911c489d3cf0",
+      "after_ast_sha256": "216956c396253c18e070606ee613a671fc071ae8bc1d6e0cc3d5911c489d3cf0",
+      "ast_exactly_equal": true,
+      "diff_added_lines": 19,
+      "diff_removed_lines": 56
+    },
+    {
+      "relative_path": "tests/unit/test_checker_output_projection_v1.py",
+      "before_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker84-output-candidate\\frozen-revision2\\tests\\unit\\test_checker_output_projection_v1.py",
+      "after_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker84-output-candidate\\tests\\unit\\test_checker_output_projection_v1.py",
+      "before_bytes": 23044,
+      "before_sha256": "fc303406f8f9458de6da7acacc2e39685e04b1ef85ede1f092ffc338daa64ac1",
+      "after_bytes": 22852,
+      "after_sha256": "af3eac1822f124c20563cd35018498dc84e1a97f6c3149dfdde34555059a25c4",
+      "before_ast_sha256": "555ffe80d5b65d91775dee951dda57696d1b6b53788c4be32c8adf0d24dcbc9b",
+      "after_ast_sha256": "555ffe80d5b65d91775dee951dda57696d1b6b53788c4be32c8adf0d24dcbc9b",
+      "ast_exactly_equal": true,
+      "diff_added_lines": 12,
+      "diff_removed_lines": 37
+    },
+    {
+      "relative_path": "tests/unit/test_lossless_output_integration84.py",
+      "before_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker84\\format-backups84\\tests\\unit\\test_lossless_output_integration84.py",
+      "after_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker84-output-candidate\\tests\\unit\\test_lossless_output_integration84.py",
+      "before_bytes": 16646,
+      "before_sha256": "5e549430d0315f82bb81f1c53a35868de845d9a63720694463dad002e3ec1d10",
+      "after_bytes": 16948,
+      "after_sha256": "d7b1eaa5a65de04273303494065e57b921d512d18172e9649c540eb1048408d9",
+      "before_ast_sha256": "0072d3c6c55ccd85b8b2a55bde4441848fd3353fd6983a933fb870f2f044e524",
+      "after_ast_sha256": "0072d3c6c55ccd85b8b2a55bde4441848fd3353fd6983a933fb870f2f044e524",
+      "ast_exactly_equal": true,
+      "diff_added_lines": 48,
+      "diff_removed_lines": 19
+    }
+  ],
+  "method": "Independent stdlib ast.parse followed by ast.dump(include_attributes=False) exact comparison for each actual before/after file. No imports, source execution, tests, or provider calls.",
+  "conclusions": {
+    "all_three_AST_exactly_equal": true,
+    "codec_conditions_aliases_schema_literals_and_gate_behavior_unchanged": true,
+    "both_test_assertions_and_semantic_literals_unchanged": true,
+    "actual_preformat_integration_test_snapshot_used": true,
+    "ordinary_publication_semantics_remain_bound_to_prior_semantic_review": true,
+    "default_policy_None_unchanged": true,
+    "nullable_reference_fix_retained": true
+  },
+  "limitations": [
+    "This is a static formatting-revision review, not an assertion that Main tests or real-provider/native acceptance have passed.",
+    "No live request or timing result was produced by this review."
+  ],
+  "blockers": []
+}

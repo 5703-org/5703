@@ -1,0 +1,107 @@
+{
+  "status": "ACTUAL_WEEK10_TARGETED_FREE_VALIDATION_PASS",
+  "created_at_utc": "2026-10-09T01:00:41.282429+00:00",
+  "main_files": [
+    {
+      "path": "backend/app/core/config.py",
+      "bytes": 6113,
+      "sha256": "dc856ad228ec6b17fe757b051a16551863167b03fce348e69119376f9aaba98d"
+    },
+    {
+      "path": "backend/app/worker.py",
+      "bytes": 11785,
+      "sha256": "64f712d0c6c1e58a7a0a44aa0aaaa61883fcd5386ca18e5d889d0507200aba3b"
+    },
+    {
+      "path": "backend/app/modules/knowledge/service.py",
+      "bytes": 60529,
+      "sha256": "6170d5b38ae9aea264eb3fa738e567cdaacb5dbead8b32cfb74abd92c9550b10"
+    },
+    {
+      "path": "tests/unit/test_worker_retrieval_prewarm.py",
+      "bytes": 19613,
+      "sha256": "e797e4179af8d4a63641ceb939a133efd0dc73515d5ba66825a4ae71760659be"
+    }
+  ],
+  "unit_gate": {
+    "launcher": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-cache-ready-verification-20261009-01\\run_worker_prewarm_unit_gate_PREPARED02.py",
+    "command": [
+      "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+      "-I",
+      "-B",
+      "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-cache-ready-verification-20261009-01\\run_worker_prewarm_unit_gate_PREPARED02.py"
+    ],
+    "exit_code": 0,
+    "tests": 48,
+    "passed": 48,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "pytest_reported_duration_seconds": 1.44,
+    "selected_tests": [
+      "tests/unit/test_worker_retrieval_prewarm.py",
+      "tests/unit/test_retrieval_cache.py",
+      "tests/unit/test_worker_queues.py"
+    ],
+    "isolation": "Pre-import network/DNS/UDP, non-synthetic database and dotenv path denial; only newly owned temporary SQLite and fake Session/Engine",
+    "junit": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-cache-ready-verification-20261009-01\\worker-prewarm-junit01.xml",
+      "bytes": 7651,
+      "sha256": "d170ebef3fb0450d49ea476cd4fa30f91820700f7d187ea89f2aa8cb77cf436d"
+    },
+    "log": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-cache-ready-verification-20261009-01\\ACTUAL_UNIT_GATE01.log",
+      "bytes": 101,
+      "sha256": "7b4b07c808aaeea93d94576a5b01aa5f38f8d5369a9ea776779fcd9f86b17b28"
+    }
+  },
+  "static": [
+    {
+      "check": "ruff-check",
+      "command": [
+        "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+        "-I",
+        "-B",
+        "-m",
+        "ruff",
+        "check",
+        "--no-cache",
+        "E:\\5703\\learning-assistant\\backend\\app\\core\\config.py",
+        "E:\\5703\\learning-assistant\\backend\\app\\worker.py",
+        "E:\\5703\\learning-assistant\\backend\\app\\modules\\knowledge\\service.py",
+        "E:\\5703\\learning-assistant\\tests\\unit\\test_worker_retrieval_prewarm.py"
+      ],
+      "exit_code": 0,
+      "output": "All checks passed!\n"
+    },
+    {
+      "check": "ruff-format-check",
+      "command": [
+        "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+        "-I",
+        "-B",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "--no-cache",
+        "E:\\5703\\learning-assistant\\backend\\app\\core\\config.py",
+        "E:\\5703\\learning-assistant\\backend\\app\\worker.py",
+        "E:\\5703\\learning-assistant\\backend\\app\\modules\\knowledge\\service.py",
+        "E:\\5703\\learning-assistant\\tests\\unit\\test_worker_retrieval_prewarm.py"
+      ],
+      "exit_code": 0,
+      "output": "4 files already formatted\n"
+    }
+  ],
+  "initial_format_check": "Failed only on the new test file; original preserved; formatter AST equality verified and corrected file passed",
+  "provider_calls": 0,
+  "real_database_connections": 0,
+  "full_suite_rerun": false,
+  "postgresql_integration_rerun": false,
+  "browser_pair": "NOT_EXECUTED_BUDGET_PROTECTION_INSUFFICIENT",
+  "speedup_measured": null,
+  "ttft_measured": null,
+  "p95_measured": null,
+  "project_complete": false
+}

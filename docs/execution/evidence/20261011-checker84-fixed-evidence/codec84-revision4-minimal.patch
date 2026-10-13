@@ -1,0 +1,792 @@
+--- a/generation/lossless_unit_findings_v1.py
++++ b/generation/lossless_unit_findings_v1.py
+@@ -2,13 +2,14 @@
+ 
+ This candidate does not select evidence, establish entailment, supply judgments,
+ alter output limits, or replace the canonical schema and semantic validators.
+-Offsets count Python/Unicode codepoints in the exact original fragment text.
++The model selects fixed original-text IDs; local offsets never come from it.
+ """
+ 
+ from __future__ import annotations
+ 
+ import hashlib
+ import json
++import re
+ from copy import deepcopy
+ from dataclasses import dataclass
+ 
+@@ -75,6 +76,13 @@
+     "missing_information": "mi",
+ }
+ REVERSE_KEYS = {value: key for key, value in KEYS.items()}
++QUOTE_REFERENCE_SPEC = {
++    "representation": "fixed_original_text_id_v1",
++    "whole_fragment_max_characters": 1200,
++    "long_blocks": "maximal_consecutive_complete_sentences_from_each_sentence_start",
++    "overlong_sentence": "no_selectable_quote_id; original_source_remains_unchanged",
++    "partial_quote_fallback": False,
++}
+ 
+ 
+ def _json(value):
+@@ -112,6 +120,62 @@
+         _fail(f"Missing or extra {label} keys")
+ 
+ 
++def _quote_catalogue(packet):
++    """Finite exact source ranges, never summarized or certified as sufficient."""
++    catalogue = {}
++    unavailable = []
++    source_ids = {row["fragment_id"] for row in packet["SOURCE_FRAGMENTS"]}
++    next_block_id = 1
++    for fragment in packet["SOURCE_FRAGMENTS"]:
++        text, fid = fragment["exact_text"], fragment["fragment_id"]
++        if not text or fragment["complete_block"] is not True:
++            continue
++        if len(text) <= 1200:
++            catalogue[fid] = {
++                "fragment_id": fid,
++                "start": 0,
++                "end": len(text),
++                "sentence_start": None,
++                "sentence_end": None,
++            }
++            continue
++        boundaries = [0] + [
++            match.end() for match in re.finditer(r"(?<=[.!?。！？])\s+|\n[ \t]*\n", text)
++        ]
++        if boundaries[-1] != len(text):
++            boundaries.append(len(text))
++        for i, start in enumerate(boundaries[:-1]):
++            if boundaries[i + 1] - start > 1200:
++                unavailable.append([fid, i + 1, start, boundaries[i + 1]])
++                continue
++            j = i + 1
++            while j + 1 < len(boundaries) and boundaries[j + 1] - start <= 1200:
++                j += 1
++            while f"Q{next_block_id:06d}" in source_ids:
++                next_block_id += 1
++            quote_id = f"Q{next_block_id:06d}"
++            next_block_id += 1
++            catalogue[quote_id] = {
++                "fragment_id": fid,
++                "start": start,
++                "end": boundaries[j],
++                "sentence_start": i + 1,
++                "sentence_end": j,
++            }
++    return catalogue, unavailable
++
++
++def _wire_fingerprint(packet):
++    catalogue, unavailable = _quote_catalogue(packet)
++    spec = {
++        "quote_reference_spec": QUOTE_REFERENCE_SPEC,
++        "field_aliases": KEYS,
++        "quote_catalogue": catalogue,
++        "unselectable_sentence_ranges": unavailable,
++    }
++    return hashlib.sha256(_json(spec).encode("utf-8")).hexdigest()
++
++
+ @dataclass(frozen=True)
+ class OutputContext:
+     """The packet is frozen by value; no mutable references to caller input."""
+@@ -119,6 +183,7 @@
+     packet_json: str
+     digest: str
+     canonical_schema_sha256: str
++    wire_codec_fingerprint: str
+ 
+     @property
+     def packet(self):
+@@ -130,6 +195,7 @@
+             "version": VERSION,
+             "context_sha256": self.digest,
+             "canonical_schema_sha256": self.canonical_schema_sha256,
++            "wire_codec_fingerprint": self.wire_codec_fingerprint,
+             "claim_count": len(claims),
+             "requirement_count": len(requirements),
+             "fragment_count": len(fragments),
+@@ -206,8 +272,17 @@
+     schema_sha = hashlib.sha256(
+         _json(compact_schema(ReliableUnitCheck)).encode("utf-8")
+     ).hexdigest()
+-    bound = _json({"packet": packet, "canonical_schema_sha256": schema_sha})
+-    return OutputContext(frozen, hashlib.sha256(bound.encode("utf-8")).hexdigest(), schema_sha)
++    fingerprint = _wire_fingerprint(packet)
++    bound = _json(
++        {
++            "packet": packet,
++            "canonical_schema_sha256": schema_sha,
++            "wire_codec_fingerprint": fingerprint,
++        }
++    )
++    return OutputContext(
++        frozen, hashlib.sha256(bound.encode("utf-8")).hexdigest(), schema_sha, fingerprint
++    )
+ 
+ 
+ def build_context(packet):
+@@ -225,9 +300,17 @@
+     schema_sha = hashlib.sha256(
+         _json(compact_schema(ReliableUnitCheck)).encode("utf-8")
+     ).hexdigest()
+-    bound = _json({"packet": context.packet, "canonical_schema_sha256": schema_sha})
++    fingerprint = _wire_fingerprint(context.packet)
++    bound = _json(
++        {
++            "packet": context.packet,
++            "canonical_schema_sha256": schema_sha,
++            "wire_codec_fingerprint": fingerprint,
++        }
++    )
+     if (
+         schema_sha != context.canonical_schema_sha256
++        or fingerprint != context.wire_codec_fingerprint
+         or hashlib.sha256(bound.encode("utf-8")).hexdigest() != context.digest
+     ):
+         _fail("Changed output context digest")
+@@ -242,17 +325,39 @@
+ 
+ 
+ def reference_instructions(context):
+-    _, claims, requirements, fragments = _tables(context)
++    packet, claims, requirements, _ = _tables(context)
++    catalogue, unavailable = _quote_catalogue(packet)
+     codebook = {
+         "version": VERSION,
+         "context_sha256": context.digest,
++        "wire_codec_fingerprint": context.wire_codec_fingerprint,
+         "field_aliases": KEYS,
+         "claim_aliases": claims,
+         "requirement_aliases": requirements,
+-        "fragment_span_columns": ["fragment_id", "unicode_length", "complete_block"],
+-        "fragment_span_rows": [
+-            [fid, len(row["exact_text"]), row["complete_block"]] for fid, row in fragments.items()
++        "whole_fragment_quote_ids": [
++            qid for qid, row in catalogue.items() if row["sentence_start"] is None
+         ],
++        "long_quote_columns": [
++            "quote_id",
++            "fragment_id",
++            "first_sentence",
++            "last_sentence",
++            "original_start",
++            "original_end",
++        ],
++        "long_quote_rows": [
++            [
++                qid,
++                row["fragment_id"],
++                row["sentence_start"],
++                row["sentence_end"],
++                row["start"],
++                row["end"],
++            ]
++            for qid, row in catalogue.items()
++            if row["sentence_start"] is not None
++        ],
++        "unselectable_over_cap_sentence_ranges": unavailable,
+     }
+     return (
+         "Return the lossless_unit_findings_v1 schema. This overrides only any "
+@@ -260,20 +365,22 @@
+         "canonical shape is restored after strict decoding. Abbreviated fields mean the "
+         "same canonical fields; supply every judgment, reason, boolean and reference "
+         "yourself. Claim/requirement aliases identify only their original records. "
+-        "In requirement evidence, p=[start,end] replaces quote: exact Unicode "
+-        "codepoint offsets in that same original f fragment, end exclusive. Select "
+-        "the needed exact contiguous passage, including its relevant conditions and "
+-        "negations. If a fragment is at most 1200 characters, [0,length] may be "
+-        "explicitly selected only when that complete original fragment is the needed "
+-        "evidence; it is never a default. Do not infer support from offsets, reuse "
++        "In requirement evidence, p is one fixed quote ID from this codebook, never "
++        "coordinates. A whole-fragment ID equals f and restores that complete "
++        "original SOURCE_FRAGMENTS text. Long Q IDs identify the listed consecutive "
++        "original sentences; original ranges are local metadata, not numbers to "
++        "calculate or emit. Explicitly select all needed passages, including their "
++        "conditions and negations; no ID is a default or a proof of sufficiency. "
++        "Do not infer support from a fixed ID, reuse "
+         "another parent claim's citation selection, or omit a judgment. Given and "
+-        "calculation quotes remain literal. Repeated identical passages use their "
+-        "first exact occurrence for canonical pointers. Codebook: " + _json(codebook)
++        "calculation quotes remain literal. Use concise decisive reasons without "
++        "omitting a judgment or necessary gap. Codebook: " + _json(codebook)
+     )
+ 
+ 
+ def wire_schema(context):
+-    _, claims, requirements, _ = _tables(context)
++    packet, claims, requirements, _ = _tables(context)
++    catalogue, _ = _quote_catalogue(packet)
+     canonical = compact_schema(ReliableUnitCheck)
+ 
+     def rename(node):
+@@ -307,13 +414,12 @@
+             properties["k"] = {"type": "string", "enum": list(requirements)}
+     quote = defs["RequirementEvidence"]["properties"].pop("q")
+     defs["RequirementEvidence"]["properties"]["p"] = {
+-        "type": "array",
+-        "items": {"type": "integer", "minimum": 0},
+-        "minItems": 2,
+-        "maxItems": 2,
+-        "description": "Exact [start,end) Unicode codepoint span in original f only; "
++        "type": "string",
++        "description": "One fixed original-text ID in the codebook, owned by the same f; "
+         f"decoded quote length {quote['minLength']}..{quote['maxLength']}.",
+     }
++    if catalogue:
++        defs["RequirementEvidence"]["properties"]["p"]["enum"] = list(catalogue)
+     defs["RequirementEvidence"]["required"] = [
+         "p" if key == "q" else key for key in defs["RequirementEvidence"]["required"]
+     ]
+@@ -462,6 +568,7 @@
+     full = deepcopy(full)
+     _validate_original_fields(full, context)
+     _, aliases, requirements, fragments = _tables(context)
++    catalogue, _ = _quote_catalogue(context.packet)
+     reverse_claims = {original: alias for alias, original in aliases.items()}
+     reverse_requirements = {original: alias for alias, original in requirements.items()}
+     projected = _walk(full, encoding=True)
+@@ -471,8 +578,15 @@
+         requirement["k"] = reverse_requirements[requirement["k"]]
+         for evidence in requirement["ev"]:
+             quote = evidence.pop("q")
+-            start = fragments[evidence["f"]]["exact_text"].find(quote)
+-            evidence["p"] = [start, start + len(quote)]
++            candidates = [
++                qid
++                for qid, row in catalogue.items()
++                if row["fragment_id"] == evidence["f"]
++                and fragments[evidence["f"]]["exact_text"][row["start"] : row["end"]] == quote
++            ]
++            if not candidates:
++                _fail("Exact canonical quote is not represented by a fixed ID; no widening allowed")
++            evidence["p"] = candidates[0]
+     projected.update(v=VERSION, h=context.digest)
+     return projected
+ 
+@@ -483,6 +597,7 @@
+         _fail("Projected checker output must be an object")
+     projected = deepcopy(projected)
+     _, aliases, requirements, fragments = _tables(context)
++    catalogue, _ = _quote_catalogue(context.packet)
+     if projected.pop("v", None) != VERSION or projected.pop("h", None) != context.digest:
+         _fail("Missing, unknown or stale projection metadata")
+     for claim in _rows(projected.get("cs"), "projected claims"):
+@@ -495,22 +610,19 @@
+         requirement["k"] = requirements[requirement["k"]]
+         for evidence in _rows(requirement.get("ev"), "projected requirement evidence"):
+             _exact_keys(evidence, {"e", "f", "p"}, "projected requirement evidence")
+-            fid, span = evidence["f"], evidence["p"]
++            fid, quote_id = evidence["f"], evidence["p"]
+             if fid not in fragments or fragments[fid]["evidence_id"] != evidence["e"]:
+                 _fail("Foreign requirement evidence pointer")
+-            if (
+-                not isinstance(span, list)
+-                or len(span) != 2
+-                or any(type(offset) is not int for offset in span)
+-            ):
+-                _fail("Span requires two integer codepoint offsets, not booleans")
+-            start, end = span
++            if not isinstance(quote_id, str) or quote_id not in catalogue:
++                _fail("Unknown or malformed fixed quote ID")
++            reference = catalogue[quote_id]
++            if reference["fragment_id"] != fid:
++                _fail("Fixed quote ID belongs to another fragment")
++            start, end = reference["start"], reference["end"]
+             text = fragments[fid]["exact_text"]
+             if not 0 <= start < end <= len(text) or end - start > 1200:
+                 _fail("Requirement span is empty, out of bounds or exceeds original quote cap")
+             quote = text[start:end]
+-            if text.find(quote) != start:
+-                _fail("Repeated quote must use its first exact occurrence")
+             evidence.pop("p")
+             evidence["q"] = quote
+     full = _walk(projected, encoding=False)
+@@ -595,16 +707,48 @@
+         from generation.attempt_evaluation_contract_v1 import (
+             ordinary_question_without_attempt,
+         )
++        from generation.parser import strict_json
+ 
+         prepared_messages = deepcopy(messages)
+         if (
+             not isinstance(prepared_messages, list)
+             or not prepared_messages
+-            or prepared_messages[-1].get("role") != "user"
+-            or not isinstance(prepared_messages[-1].get("content"), str)
++            or any(not isinstance(row, dict) for row in prepared_messages)
+         ):
+             _fail("LOSSLESS_OUTPUT_CHECKER_PACKET_MISSING")
+-        packet = json.loads(prepared_messages[-1]["content"])
++        packet_keys = {
++            "CHECKER_INPUT_ENCODING",
++            "SOURCE_RELATION_POLICY",
++            "CLAIMS",
++            "ACTUAL_CITATION_BINDINGS",
++            "SOURCE_SYNTACTIC_UNITS",
++            "SOURCE_FRAGMENTS",
++            "SOURCE_FRAGMENT_TABLE",
++            "CONTEXT_COVERAGE",
++        }
++        packets = []
++        for row in prepared_messages:
++            if row.get("role") != "user":
++                continue
++            content = row.get("content")
++            if not isinstance(content, str):
++                _fail("LOSSLESS_OUTPUT_CHECKER_PACKET_MISSING")
++            has_packet_marker = any(re.search(rf'"{key}"\s*:', content) for key in packet_keys)
++            if not content.lstrip().startswith("{") and not has_packet_marker:
++                continue
++            try:
++                candidate = strict_json(content)
++            except ValueError as exc:
++                raise ValueError("LOSSLESS_OUTPUT_BAD_PACKET_USER_MESSAGE") from exc
++            if packet_keys.intersection(candidate):
++                packets.append(candidate)
++            elif has_packet_marker:
++                _fail("LOSSLESS_OUTPUT_BAD_PACKET_USER_MESSAGE")
++        if not packets:
++            _fail("LOSSLESS_OUTPUT_CHECKER_PACKET_MISSING")
++        if len(packets) != 1:
++            _fail("LOSSLESS_OUTPUT_CHECKER_PACKET_AMBIGUOUS")
++        packet = packets[0]
+         metadata = packet.get("CHECKER_INPUT_ENCODING")
+         if metadata is not None:
+             if not isinstance(metadata, dict):
+--- a/tests/unit/test_checker_output_projection_v1.py
++++ b/tests/unit/test_checker_output_projection_v1.py
+@@ -197,7 +197,7 @@
+     )
+ 
+ 
+-def test_fragment_full_span_is_explicit_unicode_pointer_without_duplicate_source_text():
++def test_fragment_full_text_is_explicit_fixed_id_without_duplicate_source_text():
+     packet, full = fixture()
+     context = codec.build_context(packet)
+     encoded = codec.encode_findings(full, context)
+@@ -205,26 +205,30 @@
+     assert evidence == {
+         "e": "ev1",
+         "f": "F001",
+-        "p": [0, len(packet["SOURCE_FRAGMENTS"][0]["exact_text"])],
++        "p": "F001",
+     }
+     assert codec.hydrate_findings(encoded, context)["requirements"][0]["evidence"][0][
+         "quote"
+     ].endswith("α😀")
+     instructions = codec.reference_instructions(context)
+-    assert "fragment_span_rows" in instructions
++    assert "whole_fragment_quote_ids" in instructions
+     assert packet["SOURCE_FRAGMENTS"][0]["exact_text"] not in instructions
+-    assert "never a default" in instructions
+-
+-
+-def test_partial_exact_span_and_literal_given_calculation_quotes_roundtrip():
+-    packet, full = fixture()
+-    full["requirements"][0]["evidence"][0]["quote"] = "does not emit two sparks"
+-    context = codec.build_context(packet)
+-    encoded = codec.encode_findings(full, context)
+-    assert encoded["rs"][0]["ev"][0]["p"][0] > 0
++    assert "no ID is a default" in instructions
++
++
++def test_uncatalogued_partial_quote_rejects_without_widening_and_literal_quotes_roundtrip():
++    packet, full = fixture()
++    context = codec.build_context(packet)
++    encoded = codec.encode_findings(full, context)
++    assert encoded["rs"][0]["ev"][0]["p"] == "F001"
+     assert encoded["cs"][1]["pq"] == full["claims"][1]["problem_quote"]
+     assert encoded["cs"][2]["d"]["fq"] == full["claims"][2]["derivation"]["formula_quote"]
+     assert codec.hydrate_findings(encoded, context) == full
++    full["requirements"][0]["evidence"][0]["quote"] = "does not emit two sparks"
++    before = deepcopy(full)
++    with pytest.raises(ValueError, match="no widening"):
++        codec.encode_findings(full, context)
++    assert full == before
+ 
+ 
+ def test_nullable_negative_calculation_refs_remain_null_without_positive_or_citation_fill():
+@@ -358,19 +362,18 @@
+         codec.build_context(packet)
+ 
+ 
+-def test_same_valid_different_span_is_model_selection_not_locally_certified_entailment():
+-    packet, full = fixture()
+-    context = codec.build_context(packet)
+-    encoded = codec.encode_findings(full, context)
+-    text = packet["SOURCE_FRAGMENTS"][0]["exact_text"]
+-    start = text.index("emit two sparks")
+-    encoded["rs"][0]["ev"][0]["p"] = [start, start + len("emit two sparks")]
++def test_fixed_id_selection_does_not_certify_conditions_or_turn_negative_flags_positive():
++    packet, full = fixture()
++    context = codec.build_context(packet)
++    encoded = codec.encode_findings(full, context)
+     restored = codec.hydrate_findings(encoded, context)
+-    assert restored["requirements"][0]["evidence"][0]["quote"] == "emit two sparks"
++    assert (
++        restored["requirements"][0]["evidence"][0]["quote"]
++        == packet["SOURCE_FRAGMENTS"][0]["exact_text"]
++    )
+     assert restored["requirements"][0]["conditions_preserved"] is False
+     assert restored["body_ok"] is False
+-    # This exact substring omits the negation: the original semantic gates must
+-    # reject an unsupported optimistic judgment. The codec cannot prove it.
++    # A fixed original-text ID is structural identity, not semantic sufficiency.
+ 
+ 
+ def test_schema_preserves_all_original_caps_and_requires_model_fields():
+@@ -407,7 +410,7 @@
+     context = codec.build_context(packet)
+     encoded["h"] = context.digest
+     encoded["rs"][0]["ev"][0]["p"] = [0, 1201]
+-    with pytest.raises(ValueError, match="quote cap"):
++    with pytest.raises(ValueError, match="fixed quote ID"):
+         codec.hydrate_findings(encoded, context)
+ 
+ 
+--- /dev/null
++++ b/tests/unit/test_checker_output_fixed_ids_v4.py
+@@ -0,0 +1,220 @@
++"""Fixed original-text references; no model, service, database or network."""
++
++import hashlib
++import importlib.util
++import json
++import sys
++from copy import deepcopy
++from pathlib import Path
++
++import pytest
++
++from generation.reliability_v4 import compact_schema
++from generation.source_relations_v2 import ReliableUnitCheck, scoped_syntactic_units
++
++HELPER = Path(__file__).with_name("test_checker_output_projection_v1.py")
++SPEC = importlib.util.spec_from_file_location("fixed_id_public_fixture84", HELPER)
++assert SPEC is not None and SPEC.loader is not None
++fixture_module = importlib.util.module_from_spec(SPEC)
++sys.modules[SPEC.name] = fixture_module
++SPEC.loader.exec_module(fixture_module)
++codec = fixture_module.codec
++
++
++def prepared_fixture():
++    packet, full = fixture_module.fixture()
++    context = codec.build_context(packet)
++    return packet, full, context, codec.encode_full(full, context)
++
++
++def long_fixture():
++    packet, full = fixture_module.fixture()
++    text = "Unless the safety guard is open, the device does not emit sparks. "
++    text += " ".join(
++        f"Background sentence {i} retains the original source wording." for i in range(35)
++    )
++    text += " Only under the stated count basis can the final operation release two sparks."
++    packet["SOURCE_FRAGMENTS"][0]["exact_text"] = text
++    packet["SOURCE_SYNTACTIC_UNITS"] = scoped_syntactic_units(
++        packet["CLAIMS"], packet["ACTUAL_CITATION_BINDINGS"], packet["SOURCE_FRAGMENTS"]
++    )
++    context = codec.build_context(packet)
++    catalogue, _ = codec._quote_catalogue(packet)
++    rows = [(qid, row) for qid, row in catalogue.items() if row["fragment_id"] == "F001"]
++    qid, row = rows[0]
++    full["requirements"][0]["evidence"][0]["quote"] = text[row["start"] : row["end"]]
++    return packet, full, context, rows
++
++
++def test_whole_original_id_exactly_restores_unicode_all_variants_and_negative_fields():
++    packet, full, context, wire = prepared_fixture()
++    assert wire["rs"][0]["ev"][0] == {"e": "ev1", "f": "F001", "p": "F001"}
++    restored = codec.decode(wire, context)
++    assert restored == full
++    assert (
++        restored["requirements"][0]["evidence"][0]["quote"]
++        == packet["SOURCE_FRAGMENTS"][0]["exact_text"]
++    )
++    assert restored["claims"][0]["units"][0]["status"] == "unsupported"
++    assert restored["claims"][0]["units"][0]["conditions_preserved"] is False
++    assert restored["claims"][1]["problem_quote"] == full["claims"][1]["problem_quote"]
++    assert restored["claims"][2]["derivation"] == full["claims"][2]["derivation"]
++
++
++def test_long_blocks_are_finite_overlapping_exact_sentence_ranges_visible_without_text_copy():
++    packet, full, context, rows = long_fixture()
++    text = packet["SOURCE_FRAGMENTS"][0]["exact_text"]
++    assert len(rows) > 1
++    assert rows[1][1]["start"] < rows[0][1]["end"]
++    assert all(0 < row["end"] - row["start"] <= 1200 for _, row in rows)
++    wire = codec.encode_full(full, context)
++    assert wire["rs"][0]["ev"][0]["p"] == rows[0][0]
++    assert codec.decode(wire, context) == full
++    instructions = codec.reference_instructions(context)
++    assert "first_sentence" in instructions and "last_sentence" in instructions
++    assert all(qid in instructions for qid, _ in rows)
++    assert text not in instructions
++    schema = codec.wire_schema(context)
++    assert schema["$defs"]["RequirementEvidence"]["properties"]["p"]["type"] == "string"
++    assert set(schema["$defs"]["RequirementEvidence"]["properties"]["p"]["enum"]) >= {
++        qid for qid, _ in rows
++    }
++
++
++def test_unknown_fixed_id_rejects_without_nearby_or_whole_fragment_fallback():
++    _, _, context, wire = prepared_fixture()
++    wire["rs"][0]["ev"][0]["p"] = "F001-unknown"
++    with pytest.raises(ValueError, match="fixed quote ID"):
++        codec.decode(wire, context)
++
++
++def test_legacy_coordinates_or_boolean_are_not_fixed_ids():
++    _, _, context, wire = prepared_fixture()
++    for value in ([0, 4], True, 0):
++        wire["rs"][0]["ev"][0]["p"] = value
++        with pytest.raises(ValueError, match="fixed quote ID"):
++            codec.decode(wire, context)
++
++
++def test_foreign_fragment_fixed_id_rejects_even_when_original_text_is_available():
++    _, _, context, wire = prepared_fixture()
++    wire["rs"][0]["ev"][0]["p"] = "F002"
++    with pytest.raises(ValueError, match="another fragment"):
++        codec.decode(wire, context)
++
++
++def test_foreign_evidence_owner_rejects():
++    _, _, context, wire = prepared_fixture()
++    wire["rs"][0]["ev"][0]["e"] = "ev2"
++    with pytest.raises(ValueError, match="Foreign"):
++        codec.decode(wire, context)
++
++
++def test_missing_fixed_id_never_defaults_to_whole_fragment():
++    _, _, context, wire = prepared_fixture()
++    wire["rs"][0]["ev"][0].pop("p")
++    with pytest.raises(ValueError, match="Missing"):
++        codec.decode(wire, context)
++
++
++def test_duplicate_selected_reference_rejects_without_deduplicating_model_output():
++    _, _, context, wire = prepared_fixture()
++    wire["rs"][0]["ev"].append(deepcopy(wire["rs"][0]["ev"][0]))
++    with pytest.raises(ValueError, match="Duplicate"):
++        codec.decode(wire, context)
++
++
++def test_incomplete_original_is_not_promoted_by_fixed_id():
++    packet, _, _, wire = prepared_fixture()
++    packet["SOURCE_FRAGMENTS"][0]["complete_block"] = False
++    packet["SOURCE_SYNTACTIC_UNITS"] = scoped_syntactic_units(
++        packet["CLAIMS"], packet["ACTUAL_CITATION_BINDINGS"], packet["SOURCE_FRAGMENTS"]
++    )
++    context = codec.build_context(packet)
++    wire["h"] = context.digest
++    with pytest.raises(ValueError, match="fixed quote ID"):
++        codec.decode(wire, context)
++
++
++def test_old_coordinate_context_digest_is_stale_even_with_a_new_fixed_id_field():
++    packet, _, context, wire = prepared_fixture()
++    old_bound = codec.canonical(
++        {"packet": packet, "canonical_schema_sha256": context.canonical_schema_sha256}
++    )
++    wire["h"] = hashlib.sha256(old_bound.encode("utf-8")).hexdigest()
++    assert wire["h"] != context.digest
++    assert context.descriptor()["wire_codec_fingerprint"] == context.wire_codec_fingerprint
++    with pytest.raises(ValueError, match="stale"):
++        codec.decode(wire, context)
++
++
++def test_uncatalogued_narrow_quote_is_rejected_without_widening_or_verdict_changes():
++    packet, full, context, _ = prepared_fixture()
++    full["requirements"][0]["evidence"][0]["quote"] = "does not emit two sparks"
++    before = deepcopy(full)
++    with pytest.raises(ValueError, match="no widening"):
++        codec.encode_full(full, context)
++    assert full == before
++    assert packet == context.packet
++
++
++def test_over_cap_single_sentence_has_no_id_and_is_not_cut_or_summarized():
++    packet, full = fixture_module.fixture()
++    text = "Unless " + "longword " * 150 + "the device must not emit sparks."
++    packet["SOURCE_FRAGMENTS"][0]["exact_text"] = text
++    packet["SOURCE_SYNTACTIC_UNITS"] = scoped_syntactic_units(
++        packet["CLAIMS"], packet["ACTUAL_CITATION_BINDINGS"], packet["SOURCE_FRAGMENTS"]
++    )
++    context = codec.build_context(packet)
++    catalogue, unavailable = codec._quote_catalogue(packet)
++    assert not any(row["fragment_id"] == "F001" for row in catalogue.values())
++    assert unavailable == [["F001", 1, 0, len(text)]]
++    assert context.packet["SOURCE_FRAGMENTS"][0]["exact_text"] == text
++    full["requirements"][0]["evidence"][0]["quote"] = text[:1200]
++    with pytest.raises(ValueError, match="no widening"):
++        codec.encode_full(full, context)
++
++
++def test_partial_long_block_does_not_certify_omitted_condition_negation_or_sufficiency():
++    packet, full, context, rows = long_fixture()
++    text = packet["SOURCE_FRAGMENTS"][0]["exact_text"]
++    qid, row = rows[1]
++    quote = text[row["start"] : row["end"]]
++    assert "does not emit sparks" not in quote
++    full["requirements"][0]["evidence"][0]["quote"] = quote
++    full["requirements"][0]["sufficiency"] = "partial"
++    full["requirements"][0]["conditions_preserved"] = False
++    full["requirements"][0]["reason"] = (
++        "The selected passage omits the necessary condition and negation."
++    )
++    wire = codec.encode_full(full, context)
++    assert wire["rs"][0]["ev"][0]["p"] == qid
++    restored = codec.decode(wire, context)
++    assert restored == full
++    assert restored["requirements"][0]["sufficiency"] == "partial"
++    assert restored["requirements"][0]["conditions_preserved"] is False
++    assert restored["body_ok"] is False
++    assert context.descriptor()["source_entailment_certified"] is False
++
++
++def test_complementary_original_ids_remain_separate_quotes_and_keep_original_caps():
++    packet, full, context, wire = prepared_fixture()
++    assert wire["rs"][0]["ev"] == [
++        {"e": "ev1", "f": "F001", "p": "F001"},
++        {"e": "ev1", "f": "F002", "p": "F002"},
++    ]
++    restored = codec.decode(wire, context)
++    assert [row["quote"] for row in restored["requirements"][0]["evidence"]] == [
++        packet["SOURCE_FRAGMENTS"][0]["exact_text"],
++        packet["SOURCE_FRAGMENTS"][1]["exact_text"],
++    ]
++    original = compact_schema(ReliableUnitCheck)
++    shape = codec.wire_schema(context)
++    assert (
++        shape["$defs"]["RequirementCheck"]["properties"]["ev"]["maxItems"]
++        == original["$defs"]["RequirementCheck"]["properties"]["evidence"]["maxItems"]
++        == 8
++    )
++    assert shape["$defs"]["TextbookUnitClaim"]["properties"]["r"]["maxLength"] == 800
++    assert shape["$defs"]["UnitAssessment"]["properties"]["r"]["maxLength"] == 200
++    assert original["$defs"]["RequirementEvidence"]["properties"]["quote"]["maxLength"] == 1200
+--- /dev/null
++++ b/tests/unit/test_checker_output_packet_feedback_v4.py
+@@ -0,0 +1,115 @@
++"""Real correction-message layout; original input and feedback stay unchanged."""
++
++import importlib.util
++import json
++import sys
++from copy import deepcopy
++from pathlib import Path
++
++import pytest
++
++from generation import checker_encoding, checker_encoding_v2
++from generation.reliability_v4 import compact_schema
++from generation.source_relations_v2 import ReliableUnitCheck, scoped_syntactic_units
++
++HELPER = Path(__file__).with_name("test_checker_output_projection_v1.py")
++SPEC = importlib.util.spec_from_file_location("feedback_public_fixture84", HELPER)
++assert SPEC is not None and SPEC.loader is not None
++fixture_module = importlib.util.module_from_spec(SPEC)
++sys.modules[SPEC.name] = fixture_module
++SPEC.loader.exec_module(fixture_module)
++codec = fixture_module.codec
++
++
++def packet_message(packet):
++    return {"role": "user", "content": json.dumps(packet, ensure_ascii=False)}
++
++
++def ordinary_fixture():
++    packet, full = fixture_module.fixture()
++    packet.update(
++        answer_mode="textbook",
++        LEARNER_TURN={"turn_role": "user_question"},
++        ATTEMPT_EVALUATION=None,
++        TUTOR_QUESTION=None,
++    )
++    packet["SOURCE_SYNTACTIC_UNITS"] = scoped_syntactic_units(
++        packet["CLAIMS"], packet["ACTUAL_CITATION_BINDINGS"], packet["SOURCE_FRAGMENTS"]
++    )
++    return packet, full
++
++
++def test_unique_encoded_packet_before_correction_feedback_preserves_every_message():
++    packet, full = ordinary_fixture()
++    feedback = {
++        "role": "user",
++        "content": "Re-evaluate exactly the same unchanged draft and source display. "
++        "Your previous check had contract contradictions. Preserve honest unsupported/partial "
++        "decisions. CHECKER_CONTRACT_ISSUES_JSON:\n"
++        '[{"code":"citation_fragment_scope","field":"CLAIMS"}]',
++    }
++    for encode in (checker_encoding.encode, checker_encoding_v2.encode):
++        messages = [
++            {"role": "system", "content": "Use the complete canonical checker contract."},
++            packet_message(encode(packet)),
++            {"role": "assistant", "content": "Previous withheld checker reply."},
++            feedback,
++            {"role": "user", "content": '{"field_errors":[],"instruction":"try again"}'},
++        ]
++        before = deepcopy(messages)
++        prepared = codec.prepare(messages, compact_schema(ReliableUnitCheck))
++        assert messages == before
++        assert prepared.messages[1:] == before[1:]
++        assert prepared.messages[0]["content"].startswith(before[0]["content"] + "\n\n")
++        assert prepared.context.packet == packet
++        assert codec.decode(codec.encode_full(full, prepared.context), prepared.context) == full
++
++
++def test_duplicate_or_packet_like_second_input_rejects_without_selecting_first_or_last():
++    packet, _ = ordinary_fixture()
++    for second in (packet, {"CLAIMS": []}, {"CHECKER_INPUT_ENCODING": {"version": "fake"}}):
++        messages = [
++            {"role": "system", "content": "Original checker."},
++            packet_message(packet),
++            packet_message(second),
++            {"role": "user", "content": "Correct only the judgment."},
++        ]
++        before = deepcopy(messages)
++        with pytest.raises(ValueError, match="PACKET_AMBIGUOUS"):
++            codec.prepare(messages, compact_schema(ReliableUnitCheck))
++        assert messages == before
++
++
++def test_missing_malformed_or_single_pseudo_packet_cannot_be_feedback_fallback():
++    for content in (
++        "Correct only the judgment using the supplied exact claims and aliases.",
++        '{"SOURCE_RELATION_POLICY":"source_relation_contract_v2"}',
++        '{"CHECKER_INPUT_ENCODING":',
++        '{"CLAIMS":[]}',
++    ):
++        messages = [
++            {"role": "system", "content": "Original checker."},
++            {"role": "user", "content": content},
++        ]
++        before = deepcopy(messages)
++        with pytest.raises(ValueError):
++            codec.prepare(messages, compact_schema(ReliableUnitCheck))
++        assert messages == before
++    packet, _ = ordinary_fixture()
++    for malformed in (
++        '{"CLAIMS":[],"CLAIMS":[]}',
++        '{"unrelated_feedback":NaN}',
++        '{"CL\\u0041IMS":',
++        '[{"CLAIMS":[]}]',
++        '```json\n{"CLAIMS":[]}\n```',
++        '\ufeff{"CLAIMS":[]}',
++    ):
++        messages = [
++            {"role": "system", "content": "Original checker."},
++            packet_message(packet),
++            {"role": "user", "content": malformed},
++        ]
++        before = deepcopy(messages)
++        with pytest.raises(ValueError, match="BAD_PACKET_USER_MESSAGE"):
++            codec.prepare(messages, compact_schema(ReliableUnitCheck))
++        assert messages == before

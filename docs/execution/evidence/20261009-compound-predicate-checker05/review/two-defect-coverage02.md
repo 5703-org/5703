@@ -1,0 +1,21 @@
+# Independent fresh two-defect candidate review
+
+The exact candidate preserves the required broad explanation and useful mechanism. It is a legitimate bounded repair, with final scientific acceptance still pending an independent complete recheck. This reviewer made no API request, database operation, credential/seed/binder access, protected-span edit, or main-repository write.
+
+The actual fresh unchanged-draft checker marked the introductory `claim_1ad094406c5a0d4221904d72_1` unsupported and `claim_8c3369c13449744ca7b21a20_1` partial with contradictory citation binding. It independently reported requested coverage full, no missing facets, and a complete answer, while correctly rejecting `body_ok`. Its five other supported claims had no recorded per-claim pipeline issues and remain protected.
+
+The reviewed candidate removes only `answer_text[0,144)` and replaces only `[350,551)`. All five protected texts and inline citations are byte-for-character exact within the decoded Unicode strings. The short answer and all other shared teacher fields remain exact; the citation metadata set remains the same. These checks do not recertify the old support labels.
+
+| New complete assertion | Frozen actual citation and fragment | Scope finding |
+| --- | --- | --- |
+| Photosystems absorb light and use electron transport chains to convert energy into chemical energy. | `ev_002`, F007 | Keeps the useful generic mechanism. It ends before F007's ATP/NADH product qualifier, does not assert that qualifier, and does not replace its NADH text with NADPH. The complete source was read. |
+| Photosystem I absorbs a second photon, resulting in NADPH, an energy carrier for Calvin cycle reactions. | `ev_010`, F051 | Preserves photosystem identity, second-photon condition, product, and use; the entire relation is present in the frozen sentence. No NADP+ reduction claim is added. |
+| Sun-derived chemical energy is temporarily stored in ATP/NADPH, providing fuel for carbohydrate molecules and long-term storage. | `ev_003`, F012 | F012 supports all actors, relationships, and the temporary-versus-long-term distinction. It adds no proton-gradient or ATP-synthase mechanism. |
+
+The discarded intro adds no unique knowledge: retained protected claims `claim_843e45c501deb6048e9271db_1` (original `[145,349)`), `claim_1c71ec2df3c08732f8f68cd7_1` (`[552,758)`), and `claim_a6a2652d20ee17bbe5f3e20d_1` (`short_answer[0,138)`) already establish conversion, ATP/NADPH carrier identities, and delivery to the stroma. The new replacement retains photosystem absorption and electron transport instead of dropping them, and adds the frozen PSI-to-NADPH step. ATP/NADPH use in G3P production and carrier recycling remain intact in the other protected body claims.
+
+The revision therefore preserves the high-level explanation requested by “How do light-dependent reactions provide the energy carriers used by the Calvin cycle?” It removes the conflicting ATP/NADH product assertion rather than useful necessary knowledge. The 67 frozen fragments do not explicitly establish NADP+ reduction, a proton gradient, or ATP synthase; none is inserted, and this review does not invent a new requirement for exhaustive biochemical detail.
+
+Limits remain explicit. F007 still contains the source-level ATP/NADH inconsistency; narrowing the answer does not repair or scientifically certify the source, and final source-display checks remain necessary. The fresh checker selects only F053 for protected `claim_2e2e3ba2b43cbd571afa271b_1` (`[1026,1189)`): that passage supports ATP/NADPH-to-G3P but not by itself the carbohydrate clause. Same-citation F051 and F054–F055 supply that context; F054 is visibly clipped and F055 completes it. A later full check must assess the complete preserved assertion rather than assuming the saved supported label establishes every predicate. No protected text or saved assessment was changed here.
+
+No live web material was added to the frozen sources. Bibliographic/license/frozen-edition provenance is not established by this local review. The JSON records exact candidate geometry, complete immutable supporting fragments, contiguous quotes, actual fresh judgments, all five protected bindings, file hashes, and the remaining limits. Native publication, complete UI delivery, and its timing remain unverified.

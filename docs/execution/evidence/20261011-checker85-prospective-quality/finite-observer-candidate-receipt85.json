@@ -1,0 +1,76 @@
+{
+  "created_UTC": "2026-10-11T18:35:13.344174+00:00",
+  "agent": "/root/checker82_startup_prewarm",
+  "Main_writes_by_this_agent": 0,
+  "frozen_runtime_writes_by_this_agent": 0,
+  "actual_provider_calls_by_this_agent": 0,
+  "auth_DB_access_by_this_agent": 0,
+  "actual_ledger_access_or_reset_by_this_agent": 0,
+  "schema": "phase85_finite_observer_candidate_prepared_receipt_v1",
+  "status": "REVIEWED_FIVE_SYNTHETIC_CONTROLS_PASS_NOT_INTEGRATED",
+  "pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-finite-observer-candidate\\outcome_observer82.py.before85",
+      "bytes": 1916,
+      "sha256": "bc5f8341e98298b064d4c0db93266efda697662429fda050dcec9986ee1c05a2"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-finite-observer-candidate\\outcome_observer82.py",
+      "bytes": 2792,
+      "sha256": "e9a3167934f36ebe054a4cedb3e2674c54118c9d0e896bea8ea468618f3c57d1"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-finite-observer-candidate\\finite-observer85.patch",
+      "bytes": 3166,
+      "sha256": "09e1f7a020315bb75b162594d4b2871a5cc03c9b3ac0d8a7e5cdaffee3fbb306"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-finite-observer-candidate\\test_finite_observer85.py",
+      "bytes": 6970,
+      "sha256": "2d097568ec71b561004e153c930b7bba5e0f45acc9dbe52542a5f2638162f491"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-finite-observer-candidate\\independent-review85.json",
+      "bytes": 2671,
+      "sha256": "ead0313cd4bbff43cd7dda2107d58ff181b8bf48f3c087bd8bc9183de5c379c8"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-finite-observer-candidate\\free-controls85.json",
+      "bytes": 2772,
+      "sha256": "cb823ebf04d920d02635db8e89820ab610547f6fbc666a74581bc6a30fc8f497"
+    }
+  ],
+  "frozen_observer_readback": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\outcome_observer82.py",
+    "bytes": 1916,
+    "sha256": "bc5f8341e98298b064d4c0db93266efda697662429fda050dcec9986ee1c05a2"
+  },
+  "frozen_observer_equals_before": true,
+  "change": {
+    "known_added_error_code": "CHECKER_TRANSPORT_INVALID",
+    "only_added_category": "LOSSLESS_OUTPUT_INVALID",
+    "unknown_error": "UNRECOGNIZED/null",
+    "unknown_category": "UNRECOGNIZED/null",
+    "fields_not_read_or_exported": [
+      "raw_text",
+      "error.message",
+      "error.details",
+      "auth"
+    ],
+    "financial_settlement_authority": false
+  },
+  "validated": {
+    "pure_synthetic_controls": 5,
+    "failures": 0,
+    "errors": 0,
+    "network_attempts": 0,
+    "legacy_observer_fields_equivalent": true,
+    "original_outcome_identity_preserved": true
+  },
+  "limitations": [
+    "Future controlled runtime candidate only, not integrated with frozen85 controllers.",
+    "Original adapter exceptions still bypass observer because original call is outside try.",
+    "No attempt-finish persistence, model behavior, provider wire equality, semantic quality, or case03 cause proof.",
+    "No cohort reset, reopen, replay, or provider request."
+  ]
+}

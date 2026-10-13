@@ -1,0 +1,67 @@
+{
+  "status": "ACTUAL_FREE_INDEPENDENT_FAILED_COMPONENT_LEDGER_REVIEW08d",
+  "actual_RESULT_pin": {"bytes": 87868, "sha256": "fb5483a864467bc5e32cc12ab7bdb43e1c72e0471d747ca8caf0a71cc5694f6a"},
+  "actual_result_folder": "diagnostic-preparation/component-rag-quality08/actual08d",
+  "observed_pair_result": "NO_ANSWER_OR_QUALITY_COMPARISON_PRODUCED",
+  "scheduled_arm_denominator": 2,
+  "Dense5": {
+    "status": "FAILED_RETAINED",
+    "teacher_transport_attempts_reserved": 1,
+    "checker_executed": false,
+    "raw_teacher_text": "",
+    "raw_HTTP_receipts": [],
+    "response_present": false,
+    "actual_checks": 0,
+    "error": "PROVIDER_NETWORK_ERROR",
+    "network_category": "connection",
+    "provider_adapter_latency_ms": 375,
+    "GenerationService_failed_interval_ms": 416.502,
+    "final_pipeline_success_observation": false,
+    "scientific_claim_assessment": null,
+    "complete_answer_time_ms": null
+  },
+  "Hybrid5": {
+    "status": "NOT_RUN_GLOBAL_STOP",
+    "actual_provider_calls": 0,
+    "checker_executed": false,
+    "response_present": false,
+    "GenerationService_elapsed_ms": null,
+    "scientific_claim_assessment": null
+  },
+  "ledger_observations": {
+    "POST_attempts": 1,
+    "known_cost_usd": "0",
+    "new_UNKNOWN": 1,
+    "stopped": true,
+    "stop_reason": "UNKNOWN_PROVIDER_COST",
+    "reported_cost_usd": null,
+    "all_usage_token_counts_null": true,
+    "UNKNOWN_hold_kept_usd": "0.03",
+    "format_repairs": 0,
+    "transient_retries": 0,
+    "post_finish_complete_field_meaning": "A failed adapter result was retained; this is not successful HTTP completion or a known invoice.",
+    "request_submitted_field_meaning": "Main sets true before the transport call. Its true value is not independent evidence of remote receipt or billing.",
+    "top_level_ACTUAL_PAIR_FINISHED_meaning": "The runner loop returned and persisted its ledger, not successful generation of both answers.",
+    "cost_zero_not_proven": true,
+    "UNKNOWN_not_removed_or_reclassified": true
+  },
+  "post_execution_static_guard_finding": {
+    "prepaid_static_review_PASS_preserved": true,
+    "missed_compatibility_detail": "Main's validated public-address transport passes a numeric IP to stdlib socket.create_connection, whose getaddrinfo call is rejected by the 08d hostname-only audit rule.",
+    "evidence_kind": "Source-derived incompatibility identified after the actual retained failure; the failed receipt contains only the generic connection category, not the exact audit event.",
+    "outage_or_remote_rejection_proven": false,
+    "no_remote_send_or_no_charge_proven_by_this_review": false,
+    "next_candidate_requirement": "A separately reviewed successor may permit only the exact address returned by the unchanged Main validated resolver and its matching numeric lookup at port443. Preserve the original UNKNOWN; no trial external request by the reviewer."
+  },
+  "interpretation_bounds": {
+    "question_level_answer_quality": null,
+    "source_entailment_or_supported_claim_rate": null,
+    "human_gold_or_model_accuracy": null,
+    "RAG_winner": null,
+    "native_Send_to_DOM_ms": null,
+    "latency_difference_between_arms": null,
+    "project_complete": false
+  },
+  "reviewer_operations": {"API_POSTs": 0, "DB_or_model_operations": 0, "credential_or_native_data_reads": 0, "actual_source_candidate_or_Main_mutations": 0},
+  "preservation": "Actual08d result/provider/POST-finish records, first08 preflight, finalized08d static review and existing campaign UNKNOWN remain unchanged. This new receipt records the failed observation separately."
+}

@@ -1,0 +1,159 @@
+{
+  "version": "fixed_ids_static_review84_revision4_v1",
+  "status": "PASS",
+  "reviewer": "native76_narrow_review",
+  "reviewed_receipt": {
+    "path": "5703-checker84-output-candidate/codec84-final-receipt-v4.json",
+    "bytes": 6500,
+    "sha256": "a6bdb2fb0977a8e9d0c774211d217335ffc6806bfd329d3e4e0662d4da3a65b1"
+  },
+  "scope": {
+    "static_source_and_test_source_only": true,
+    "main_writes": 0,
+    "tests_executed": 0,
+    "runtime_started": 0,
+    "db_access": 0,
+    "credential_access": 0,
+    "network_requests": 0,
+    "model_requests": 0,
+    "old_reviews_preserved": true
+  },
+  "four_candidate_pins": [
+    {
+      "relative_path": "generation/lossless_unit_findings_v1.py",
+      "bytes": 32988,
+      "sha256": "0d60cc97701b624e733838ae09abb91e42c4aee6dd63cf2a4c663ae9a8f14ae1",
+      "receipt_matches": true,
+      "main_before_receipt_matches": true
+    },
+    {
+      "relative_path": "tests/unit/test_checker_output_projection_v1.py",
+      "bytes": 22788,
+      "sha256": "2bfa8498aac811efe55de7f25868f80505c3a1937b7ee2725a6bd9847553ed65",
+      "receipt_matches": true,
+      "main_before_receipt_matches": true
+    },
+    {
+      "relative_path": "tests/unit/test_checker_output_fixed_ids_v4.py",
+      "bytes": 9501,
+      "sha256": "f71776523ac3d7ad5ca967ab1f6e2e38cf324fc2e063972770330afbb65bb072",
+      "receipt_matches": true,
+      "main_before_receipt_matches": true
+    },
+    {
+      "relative_path": "tests/unit/test_checker_output_packet_feedback_v4.py",
+      "bytes": 4619,
+      "sha256": "04cc7e819967579e4dc6212fabfc6d9a6471362d82441ef6fb6ce1ce23585c4b",
+      "receipt_matches": true,
+      "main_before_receipt_matches": true
+    }
+  ],
+  "main_six_integration_and_two_gate_source_pins": [
+    {
+      "path": "backend/app/core/config.py",
+      "bytes": 7480,
+      "sha256": "f7d117d22925209e66617baa32aac3c3e41a530d6a20f2a7a10e434928f1155d",
+      "matches": true
+    },
+    {
+      "path": "backend/app/modules/answering/service.py",
+      "bytes": 95312,
+      "sha256": "a8f8e02d156a5d940fa49a16558b26f87f0816b61a2671d9efa0b615d226c1b0",
+      "matches": true
+    },
+    {
+      "path": "generation/checked.py",
+      "bytes": 166258,
+      "sha256": "fd8f18a8a7dbed449654310fb17086ddb4207069a394ca4ac55cf2db3a6fab8c",
+      "matches": true
+    },
+    {
+      "path": "generation/providers.py",
+      "bytes": 28382,
+      "sha256": "c00004ce5bb14c65d775f16700f10facd182194533462a114d9e086d9ed6fac4",
+      "matches": true
+    },
+    {
+      "path": "generation/reliability_v5.py",
+      "bytes": 26253,
+      "sha256": "f1cf5db78bb8f07996e8f56f48db8542a82591e92b90d233d0a58dd1a73f169d",
+      "matches": true
+    },
+    {
+      "path": "generation/service.py",
+      "bytes": 29098,
+      "sha256": "e694ec2f919754480b927ac7c48ee966a0d9db3d875ff70a71ad39ba08211fcb",
+      "matches": true
+    },
+    {
+      "path": "generation/source_relations_v2.py",
+      "bytes": 25459,
+      "sha256": "ab22171c03566ed1f8b97e67bb1d0d5f4b276e0ab0bcc40be487f3b296ceeb11",
+      "matches": true
+    },
+    {
+      "path": "generation/types.py",
+      "bytes": 10176,
+      "sha256": "757f907befeaa9300fdeb8ab5c8d03d205c142920cf3c2f5e72ee98988f53068",
+      "matches": true
+    }
+  ],
+  "source_pin_manifest": {
+    "path": "5703-checker84/source-pins84-current.json",
+    "sha256": "1080815274907ff3cbce21f5bb2b1fd0a10f9735415e91d2c9f2cd997a8c4320"
+  },
+  "checks": {
+    "fixed_id_owned_by_exact_fragment_and_evidence": true,
+    "quote_restored_only_from_original_text_slice": true,
+    "whole_fragment_id_explicit_without_default": true,
+    "long_quote_id_finite_deterministic_catalogue": true,
+    "catalogue_and_alias_fingerprint_bound_to_full_packet_and_schema_context": true,
+    "old_coordinate_array_and_old_context_rejected": true,
+    "unknown_or_uncatalogued_quote_rejected_without_widening": true,
+    "incomplete_source_and_duplicate_reference_rejected": true,
+    "multiple_evidence_objects_order_and_original_caps_retained": true,
+    "all_model_authored_statuses_basis_flags_relevance_sufficiency_coverage_reasons_retained": true,
+    "negation_quantity_conditions_missing_steps_not_certified_by_id": true,
+    "all_required_full_schema_fields_and_original_gates_required": true,
+    "nullable_negative_calculation_references_preserved": true,
+    "nonnull_foreign_calculation_and_parent_unit_references_rejected": true,
+    "default_None_and_explicit_request_scope_unchanged": true,
+    "schema_projection_and_basic_provider_guards_unchanged": true,
+    "original_claim_patch_policy_and_full_terminal_gate_unchanged": true,
+    "shared_compiler_used_for_token_counter_and_real_payload": true,
+    "unique_original_packet_strictly_decoded_before_context_freeze": true,
+    "zero_or_multiple_packet_candidates_rejected": true,
+    "malformed_packet_markers_wrappers_duplicates_and_nonfinite_JSON_rejected": true,
+    "original_contract_feedback_message_content_and_order_preserved": true,
+    "no_provider_retry_or_budget_change": true
+  },
+  "unchanged_codec_AST_functions": [
+    "_json",
+    "_fail",
+    "_rows",
+    "_unique",
+    "_exact_keys",
+    "build_context",
+    "_walk",
+    "_validate_original_fields",
+    "hydrate_findings",
+    "canonical",
+    "digest",
+    "validate_request",
+    "PreparedOutput"
+  ],
+  "fixed_compatibility_defects": [
+    "prepare no longer assumes the final user message is the canonical packet; it retains normal contract-repair feedback while selecting exactly one original complete packet.",
+    "Explicit quoted packet-key plus colon markers trigger the original strict JSON-object parser; malformed list, code-fence, BOM and pseudo-packet content cannot be silently selected or skipped."
+  ],
+  "actual_limits": [
+    "Finite catalogue representation is not an arbitrary-substring roundtrip. An exact quote outside the catalogue is rejected; it is never widened, truncated or summarized.",
+    "Long-source segmentation uses punctuation and blank-line heuristics. Abbreviations or source formatting can create boundaries; these ranges are not a semantic completeness certificate.",
+    "A single over-cap range can have no selectable quote ID. Original source remains present; rejection is required rather than fabricating a substitute.",
+    "An ID proves exact provenance only. Source entailment, negation, quantity basis, conditions, required steps and publication acceptance still depend on model-authored judgments and unchanged full validators.",
+    "No real-provider acceptance, latency, token saving or scientific correctness was established by this static review.",
+    "Receipt-reported focused controls 18+8 precede the layout fix; final controls are separately 3+3. They are not combined as a deduplicated total, and no JUnit or test rerun was performed by this reviewer."
+  ],
+  "remaining_blocker": "none",
+  "blockers": []
+}

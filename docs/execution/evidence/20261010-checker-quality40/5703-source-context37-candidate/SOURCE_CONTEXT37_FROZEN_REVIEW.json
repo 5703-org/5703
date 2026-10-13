@@ -1,0 +1,92 @@
+{
+  "status": "W_ONLY_TWO_FILE_CANDIDATE_FROZEN_READY_FOR_ROOT_REVIEW_NOT_ADOPTED",
+  "before": [
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\source_relations_v2.py",
+      "backup": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-context37-candidate\\source_relations_v2.py.before",
+      "bytes": 9726,
+      "sha256": "315695072e6236185fa0ddf128af55d6ea7d5fb0bbaf38712ec7605fba70b90a"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checked.py",
+      "backup": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-context37-candidate\\checked.py.before",
+      "bytes": 155519,
+      "sha256": "78f1d853495c46f86b7f53016b3f32222860a04bc63dc6aebd2fb1e3a8efab24"
+    }
+  ],
+  "candidate_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-context37-candidate\\source_relations_v2.py",
+      "bytes": 14948,
+      "sha256": "8a20a6c54d2631315d7bd494df2eb0a7b2f62488e1f5e770de4ed6fd4016a1e8"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-context37-candidate\\checked.py",
+      "bytes": 155543,
+      "sha256": "5b62005af2263600d6c9485aedf73613acd825bade85f41fc33ba88b0b39994c"
+    }
+  ],
+  "diff_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-context37-candidate\\SOURCE_CONTEXT37.diff",
+    "bytes": 7073,
+    "sha256": "7fc727b6d42c43b3bd46c7c52f649b84643825a547d9ff7fa450d584abad56b4"
+  },
+  "small_controls_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-context37-candidate\\SOURCE_CONTEXT37_SMALL_FREE_CONTROLS.json",
+    "bytes": 6332,
+    "sha256": "136a7cd981a353a5e6094aa2eefbf0cab50d9ed2c21683ddc86e48431939949f"
+  },
+  "small_controls_passed": 16,
+  "current_ReliableUnitCheck_schema_exact_equal_before_after": true,
+  "current_ReliableUnitCheck_unannotated_schema_sha256": "b37b523346e4a418564ed23f84103bb277a83f6880fed2f73b708cd30a6d6e93",
+  "current_checker_compact_schema_exact_equal_before_after": true,
+  "current_checker_compact_schema_sha256": "864212a5e636d2cadbc34328f431712a954c30130848a31e64e66e4bdedbc926",
+  "Ruff": {
+    "command": "E:/5703/learning-assistant/.venv/Scripts/ruff.exe check --no-cache --config E:/5703/learning-assistant/pyproject.toml <two W candidates>",
+    "exit_code": 0,
+    "stdout": "All checks passed!",
+    "configuration_pin": {
+      "path": "E:\\5703\\learning-assistant\\pyproject.toml",
+      "bytes": 1131,
+      "sha256": "67e34ffd3a2de13ea00ca10928817429dfeb8ee0862c551f3ed3be403a180e62"
+    },
+    "first_attempt": {
+      "explicit_Main_configuration": false,
+      "exit_code": 1,
+      "reported_items": 21,
+      "rule_codes": [
+        "I001",
+        "F401",
+        "B023",
+        "S110",
+        "BLE001",
+        "FURB167",
+        "SIM905"
+      ],
+      "description": "The initial W-context all-style invocation failed; repeated with the actual project executable-correctness configuration. No old-code style cleanup or rule weakening was performed."
+    }
+  },
+  "payload_measurement": {
+    "old_lossless_checker_packet_UTF8_bytes": 28294,
+    "new_lossless_checker_packet_UTF8_bytes": 39415,
+    "packet_delta_UTF8_bytes": 11121,
+    "context_candidate_rows": 89,
+    "initial_source_texts_retained": 71,
+    "initial_claims_retained": 10,
+    "whole_wire_not_measured_here": true
+  },
+  "business_change": "Initial V2 input provides same-claim permitted complete-block occurrence tables for literal leading scope, technical identifiers, numeric/quantity words, predicate terms and explicitly labelled word-family lookup hints. Full claims, units, source blocks and allowlists remain untouched. checked.py passes its already-present full_aliased_fragments to the helper.",
+  "rule_reuse": "V5 leading-scope and actual same-binding complete-block rules copied; its post-verdict helper was not called using a fabricated supported judgment.",
+  "limitations": [
+    "The three retained partials are one body claim and two short-answer claims. Their missing source contexts are now discoverable candidates; semantic support has not yet been fixed or proved.",
+    "Ordinary word overlap and English word-family collisions may add irrelevant candidates. The model must read whole predicates and unchanged full source blocks; hints cannot certify identity, polarity, conditions, numerical relations, aliases or continuation.",
+    "All 89 hint rows are metadata within original allowed bindings. Packet cost rose 11,121 bytes; actual whole-wire/token costs require Root's finite paired serialization and guard checks.",
+    "No actual model paired result, measured speedup, complete source support or p95 claim exists for this candidate.",
+    "The fixed experiment baseline must remain the original actual36 initial 10-claim/19-unit packet. Its accepted rewritten 10/21 packet is only a mapped reference, never the other arm."
+  ],
+  "no_automatic_citation_selection_or_raw_judgment_change": true,
+  "output_schema_parser_assessor_gates_default_policy_changed": false,
+  "Main_two_business_file_pins_unchanged": true,
+  "API_DB_auth_calls_or_Main_B_writes": 0,
+  "audit_denials": []
+}

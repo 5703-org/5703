@@ -1,0 +1,828 @@
+{
+  "schema_version": "rag66_free_synthetic_scoring_validation_v1",
+  "completed_utc": "2026-10-11T07:41:49.618771+00:00",
+  "status": "passed",
+  "scope": "Free synthetic software-interface validation only, not actual twelve-question answer-quality scores.",
+  "provenance": {
+    "author": "AI reviewer /root/atomic62_negative_review",
+    "human_rating": null,
+    "human_gold": false,
+    "provider_calls": 0,
+    "auth_reads": 0,
+    "database_reads": 0,
+    "network_calls": 0,
+    "main_writes": 0,
+    "model_answer_reads": 0,
+    "independent_math_review": "Second AI reviewer confirmed all five lexical probes and aggregate EM=1/6,F1=13/45 before execution."
+  },
+  "pins": [
+    {
+      "path": "E:\\5703\\learning-assistant\\evaluation\\metrics\\scoring.py",
+      "sha256": "d9e2427b7f61e0cd82760bf0f2129576185239d43ef685c35ed7dd2fb9453a89"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-rag-paired66-standards\\preregistered-offline-scoring.json",
+      "sha256": "9c1f506b970a191b7187c3ad6e09f2264191a7607a83c6dfbadf795886f8e201"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-rag-paired66-standards\\verify_offline_scoring66.py",
+      "sha256": "c6e98bd05cabe70f3f7b1712e0272aed8bd6fc92a3366e555744b4376ea63975"
+    }
+  ],
+  "versions": {
+    "scorer": "conservative-v1",
+    "tokenizer": "words-signed-numbers-symbols-v1"
+  },
+  "lexical_probes": [
+    {
+      "case_id": "nfkc_casefold_whitespace",
+      "prediction": "  ＣＡＦＥ́\tStraße \nＡ  ",
+      "reference": "café strasse a",
+      "independent_math_expectation": {
+        "em": 1.0,
+        "token_f1": 1.0
+      },
+      "derivation": "NFKC maps fullwidth letters, combines acute accent; casefold maps ß to ss; whitespace collapses.",
+      "actual_public_scores": {
+        "em": 1.0,
+        "token_f1": 1.0
+      }
+    },
+    {
+      "case_id": "punctuation_retained",
+      "prediction": "alpha,beta",
+      "reference": "alpha beta",
+      "independent_math_expectation": {
+        "em": 0.0,
+        "token_f1": 0.8
+      },
+      "derivation": "Prediction has three tokens [alpha, comma, beta], reference has two; two shared tokens give 4/5.",
+      "actual_public_scores": {
+        "em": 0.0,
+        "token_f1": 0.8
+      }
+    },
+    {
+      "case_id": "repeated_token_multiset",
+      "prediction": "red red blue",
+      "reference": "red blue blue",
+      "independent_math_expectation": {
+        "em": 0.0,
+        "token_f1": 0.6666666666666666
+      },
+      "derivation": "Only one red and one blue overlap by multiplicity; four divided by six gives 2/3, not set-overlap 1.",
+      "actual_public_scores": {
+        "em": 0.0,
+        "token_f1": 0.6666666666666666
+      }
+    },
+    {
+      "case_id": "signed_number_identity",
+      "prediction": "-3",
+      "reference": "3",
+      "independent_math_expectation": {
+        "em": 0.0,
+        "token_f1": 0.0
+      },
+      "derivation": "Signed -3 and unsigned 3 are different single tokens.",
+      "actual_public_scores": {
+        "em": 0.0,
+        "token_f1": 0.0
+      }
+    },
+    {
+      "case_id": "empty_prediction",
+      "prediction": " \t\n ",
+      "reference": "yes",
+      "independent_math_expectation": {
+        "em": 0.0,
+        "token_f1": 0.0
+      },
+      "derivation": "An empty normalized prediction receives no lexical credit.",
+      "actual_public_scores": {
+        "em": 0.0,
+        "token_f1": 0.0
+      }
+    }
+  ],
+  "synthetic_finalized12": {
+    "rows": [
+      {
+        "case_id": "synthetic_01_nfkc_exact",
+        "outcome": {
+          "status": "completed",
+          "response": {
+            "response_type": "answer",
+            "short_answer": "  ＣＡＦＥ́\tStraße \nＡ  "
+          }
+        },
+        "reference": "café strasse a",
+        "actual_public_scores": {
+          "em": 1.0,
+          "token_f1": 1.0,
+          "compact_answer_present": true,
+          "valid_response": true,
+          "lexically_scorable": true,
+          "scorer_version": "conservative-v1"
+        }
+      },
+      {
+        "case_id": "synthetic_02_whitespace_exact",
+        "outcome": {
+          "status": "completed",
+          "response": {
+            "response_type": "answer",
+            "short_answer": " \tA\nB  "
+          }
+        },
+        "reference": "a b",
+        "actual_public_scores": {
+          "em": 1.0,
+          "token_f1": 1.0,
+          "compact_answer_present": true,
+          "valid_response": true,
+          "lexically_scorable": true,
+          "scorer_version": "conservative-v1"
+        }
+      },
+      {
+        "case_id": "synthetic_03_punctuation",
+        "outcome": {
+          "status": "completed",
+          "response": {
+            "response_type": "answer",
+            "short_answer": "alpha,beta"
+          }
+        },
+        "reference": "alpha beta",
+        "actual_public_scores": {
+          "em": 0.0,
+          "token_f1": 0.8,
+          "compact_answer_present": true,
+          "valid_response": true,
+          "lexically_scorable": true,
+          "scorer_version": "conservative-v1"
+        }
+      },
+      {
+        "case_id": "synthetic_04_multiset",
+        "outcome": {
+          "status": "completed",
+          "response": {
+            "response_type": "answer",
+            "short_answer": "red red blue"
+          }
+        },
+        "reference": "red blue blue",
+        "actual_public_scores": {
+          "em": 0.0,
+          "token_f1": 0.6666666666666666,
+          "compact_answer_present": true,
+          "valid_response": true,
+          "lexically_scorable": true,
+          "scorer_version": "conservative-v1"
+        }
+      },
+      {
+        "case_id": "synthetic_05_failed",
+        "outcome": {
+          "status": "failed",
+          "response": {
+            "response_type": "answer",
+            "short_answer": "yes"
+          }
+        },
+        "reference": "yes",
+        "actual_public_scores": {
+          "em": 0.0,
+          "token_f1": 0.0,
+          "compact_answer_present": false,
+          "valid_response": false,
+          "lexically_scorable": false,
+          "scorer_version": "conservative-v1"
+        }
+      },
+      {
+        "case_id": "synthetic_06_refusal",
+        "outcome": {
+          "status": "completed",
+          "response": {
+            "response_type": "refusal",
+            "short_answer": "yes"
+          }
+        },
+        "reference": "yes",
+        "actual_public_scores": {
+          "em": 0.0,
+          "token_f1": 0.0,
+          "compact_answer_present": false,
+          "valid_response": false,
+          "lexically_scorable": false,
+          "scorer_version": "conservative-v1"
+        }
+      },
+      {
+        "case_id": "synthetic_07_cancelled",
+        "outcome": {
+          "status": "cancelled",
+          "response": {
+            "response_type": "answer",
+            "short_answer": "yes"
+          }
+        },
+        "reference": "yes",
+        "actual_public_scores": {
+          "em": 0.0,
+          "token_f1": 0.0,
+          "compact_answer_present": false,
+          "valid_response": false,
+          "lexically_scorable": false,
+          "scorer_version": "conservative-v1"
+        }
+      },
+      {
+        "case_id": "synthetic_08_missing_compact",
+        "outcome": {
+          "status": "completed",
+          "response": {
+            "response_type": "answer",
+            "full_answer": "yes"
+          }
+        },
+        "reference": "yes",
+        "actual_public_scores": {
+          "em": 0.0,
+          "token_f1": 0.0,
+          "compact_answer_present": false,
+          "valid_response": true,
+          "lexically_scorable": false,
+          "scorer_version": "conservative-v1"
+        }
+      },
+      {
+        "case_id": "synthetic_09_null_compact",
+        "outcome": {
+          "status": "completed",
+          "response": {
+            "response_type": "answer",
+            "short_answer": null
+          }
+        },
+        "reference": "yes",
+        "actual_public_scores": {
+          "em": 0.0,
+          "token_f1": 0.0,
+          "compact_answer_present": false,
+          "valid_response": true,
+          "lexically_scorable": false,
+          "scorer_version": "conservative-v1"
+        }
+      },
+      {
+        "case_id": "synthetic_10_empty_compact",
+        "outcome": {
+          "status": "completed",
+          "response": {
+            "response_type": "answer",
+            "short_answer": " \t "
+          }
+        },
+        "reference": "yes",
+        "actual_public_scores": {
+          "em": 0.0,
+          "token_f1": 0.0,
+          "compact_answer_present": false,
+          "valid_response": true,
+          "lexically_scorable": false,
+          "scorer_version": "conservative-v1"
+        }
+      },
+      {
+        "case_id": "synthetic_11_nonstring_compact",
+        "outcome": {
+          "status": "completed",
+          "response": {
+            "response_type": "answer",
+            "short_answer": [
+              "yes"
+            ]
+          }
+        },
+        "reference": "yes",
+        "actual_public_scores": {
+          "em": 0.0,
+          "token_f1": 0.0,
+          "compact_answer_present": false,
+          "valid_response": true,
+          "lexically_scorable": false,
+          "scorer_version": "conservative-v1"
+        }
+      },
+      {
+        "case_id": "synthetic_12_nonanswer",
+        "outcome": {
+          "status": "completed",
+          "response": {
+            "response_type": "unanswerable",
+            "short_answer": "yes"
+          }
+        },
+        "reference": "yes",
+        "actual_public_scores": {
+          "em": 0.0,
+          "token_f1": 0.0,
+          "compact_answer_present": false,
+          "valid_response": false,
+          "lexically_scorable": false,
+          "scorer_version": "conservative-v1"
+        }
+      }
+    ],
+    "public_aggregate": {
+      "mode": "benchmark_openqa",
+      "scheduled_count": 12,
+      "status_counts": {
+        "completed": 10,
+        "failed": 1,
+        "cancelled": 1
+      },
+      "valid_response_count": 8,
+      "metrics": {
+        "em": 0.16666666666666666,
+        "token_f1": 0.2888888888888889
+      },
+      "metric_kind": "lexical_diagnostic_proxies",
+      "scorer_version": "conservative-v1",
+      "missing_compact_answer_count": 8,
+      "timing": {
+        "preparation_ms": {
+          "n": 0,
+          "p50": null,
+          "p95": null
+        },
+        "retrieval_ms": {
+          "n": 0,
+          "p50": null,
+          "p95": null
+        },
+        "generation_ms": {
+          "n": 0,
+          "p50": null,
+          "p95": null
+        },
+        "total_ms": {
+          "n": 0,
+          "p50": null,
+          "p95": null
+        }
+      },
+      "usage": {
+        "input_tokens": {
+          "total": null,
+          "known_subtotal": null,
+          "known_count": 0,
+          "unknown_count": 12
+        },
+        "output_tokens": {
+          "total": null,
+          "known_subtotal": null,
+          "known_count": 0,
+          "unknown_count": 12
+        },
+        "total_tokens": {
+          "total": null,
+          "known_subtotal": null,
+          "known_count": 0,
+          "unknown_count": 12
+        },
+        "cost": {
+          "total": null,
+          "known_subtotal": null,
+          "known_count": 0,
+          "unknown_count": 12
+        }
+      },
+      "research_claim": "No semantic-correctness or learning-gain claim is implied."
+    },
+    "independent_math": {
+      "em": "2/12 = 1/6",
+      "token_f1": "(2 + 4/5 + 2/3)/12 = 13/45"
+    },
+    "zero_credit_rows": [
+      "synthetic_05_failed",
+      "synthetic_06_refusal",
+      "synthetic_07_cancelled",
+      "synthetic_08_missing_compact",
+      "synthetic_09_null_compact",
+      "synthetic_10_empty_compact",
+      "synthetic_11_nonstring_compact",
+      "synthetic_12_nonanswer"
+    ],
+    "excluded_from_denominator": []
+  },
+  "pending_input_boundary": {
+    "raw_public_synthetic_probe": {
+      "mode": "benchmark_openqa",
+      "scheduled_count": 12,
+      "status_counts": {
+        "pending": 12
+      },
+      "valid_response_count": 0,
+      "metrics": {
+        "em": 0.0,
+        "token_f1": 0.0
+      },
+      "metric_kind": "lexical_diagnostic_proxies",
+      "scorer_version": "conservative-v1",
+      "missing_compact_answer_count": 12,
+      "timing": {
+        "preparation_ms": {
+          "n": 0,
+          "p50": null,
+          "p95": null
+        },
+        "retrieval_ms": {
+          "n": 0,
+          "p50": null,
+          "p95": null
+        },
+        "generation_ms": {
+          "n": 0,
+          "p50": null,
+          "p95": null
+        },
+        "total_ms": {
+          "n": 0,
+          "p50": null,
+          "p95": null
+        }
+      },
+      "usage": {
+        "input_tokens": {
+          "total": null,
+          "known_subtotal": null,
+          "known_count": 0,
+          "unknown_count": 12
+        },
+        "output_tokens": {
+          "total": null,
+          "known_subtotal": null,
+          "known_count": 0,
+          "unknown_count": 12
+        },
+        "total_tokens": {
+          "total": null,
+          "known_subtotal": null,
+          "known_count": 0,
+          "unknown_count": 12
+        },
+        "cost": {
+          "total": null,
+          "known_subtotal": null,
+          "known_count": 0,
+          "unknown_count": 12
+        }
+      },
+      "research_claim": "No semantic-correctness or learning-gain claim is implied."
+    },
+    "interpretation": "The existing aggregate imputes absent scores as zero across its scheduled input. This is an input/lifecycle boundary, not evidence of an executed failure or a product defect.",
+    "required_acceptance_rule": "Only call score_outcome for actual finalized outcomes, and only call aggregate for a completely finalized cohort. Until then, reported EM/F1 stay null; preserve scheduled slots without fabricating observed zero scores.",
+    "guarded_all_pending_report": {
+      "scheduled_count": 12,
+      "finalized": false,
+      "aggregate_invoked": false,
+      "metrics": {
+        "em": null,
+        "token_f1": null
+      }
+    },
+    "guarded_mixed_pending_report": {
+      "scheduled_count": 12,
+      "finalized": false,
+      "aggregate_invoked": false,
+      "metrics": {
+        "em": null,
+        "token_f1": null
+      }
+    }
+  },
+  "actual_rag_quality_metrics": null,
+  "checks": [
+    {
+      "name": "scorer_version",
+      "observed": "conservative-v1",
+      "expected": "conservative-v1",
+      "passed": true
+    },
+    {
+      "name": "tokenizer_version",
+      "observed": "words-signed-numbers-symbols-v1",
+      "expected": "words-signed-numbers-symbols-v1",
+      "passed": true
+    },
+    {
+      "name": "token_pattern_literal",
+      "observed": "[+−-]?(?:\\d+(?:\\.\\d*)?|\\.\\d+)(?:[eE][+−-]?\\d+)?|[^\\W\\d_]+(?:['’][^\\W\\d_]+)*|[^\\w\\s]",
+      "expected": "[+−-]?(?:\\d+(?:\\.\\d*)?|\\.\\d+)(?:[eE][+−-]?\\d+)?|[^\\W\\d_]+(?:['’][^\\W\\d_]+)*|[^\\w\\s]",
+      "passed": true
+    },
+    {
+      "name": "nfkc_casefold_whitespace.em",
+      "observed": 1.0,
+      "expected": 1.0,
+      "passed": true
+    },
+    {
+      "name": "nfkc_casefold_whitespace.token_f1",
+      "observed": 1.0,
+      "expected": 1.0,
+      "passed": true
+    },
+    {
+      "name": "punctuation_retained.em",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "punctuation_retained.token_f1",
+      "observed": 0.8,
+      "expected": 0.8,
+      "passed": true
+    },
+    {
+      "name": "repeated_token_multiset.em",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "repeated_token_multiset.token_f1",
+      "observed": 0.6666666666666666,
+      "expected": 0.6666666666666666,
+      "passed": true
+    },
+    {
+      "name": "signed_number_identity.em",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "signed_number_identity.token_f1",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "empty_prediction.em",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "empty_prediction.token_f1",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "normalized_unicode",
+      "observed": "café strasse a",
+      "expected": "café strasse a",
+      "passed": true
+    },
+    {
+      "name": "punctuation_tokens",
+      "observed": [
+        "alpha",
+        ",",
+        "beta"
+      ],
+      "expected": [
+        "alpha",
+        ",",
+        "beta"
+      ],
+      "passed": true
+    },
+    {
+      "name": "synthetic_01_nfkc_exact.em",
+      "observed": 1.0,
+      "expected": 1.0,
+      "passed": true
+    },
+    {
+      "name": "synthetic_01_nfkc_exact.token_f1",
+      "observed": 1.0,
+      "expected": 1.0,
+      "passed": true
+    },
+    {
+      "name": "synthetic_02_whitespace_exact.em",
+      "observed": 1.0,
+      "expected": 1.0,
+      "passed": true
+    },
+    {
+      "name": "synthetic_02_whitespace_exact.token_f1",
+      "observed": 1.0,
+      "expected": 1.0,
+      "passed": true
+    },
+    {
+      "name": "synthetic_03_punctuation.em",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "synthetic_03_punctuation.token_f1",
+      "observed": 0.8,
+      "expected": 0.8,
+      "passed": true
+    },
+    {
+      "name": "synthetic_04_multiset.em",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "synthetic_04_multiset.token_f1",
+      "observed": 0.6666666666666666,
+      "expected": 0.6666666666666666,
+      "passed": true
+    },
+    {
+      "name": "synthetic_05_failed.em",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "synthetic_05_failed.token_f1",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "synthetic_06_refusal.em",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "synthetic_06_refusal.token_f1",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "synthetic_07_cancelled.em",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "synthetic_07_cancelled.token_f1",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "synthetic_08_missing_compact.em",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "synthetic_08_missing_compact.token_f1",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "synthetic_09_null_compact.em",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "synthetic_09_null_compact.token_f1",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "synthetic_10_empty_compact.em",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "synthetic_10_empty_compact.token_f1",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "synthetic_11_nonstring_compact.em",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "synthetic_11_nonstring_compact.token_f1",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "synthetic_12_nonanswer.em",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "synthetic_12_nonanswer.token_f1",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "finalized_scheduled_denominator",
+      "observed": 12,
+      "expected": 12,
+      "passed": true
+    },
+    {
+      "name": "finalized_em",
+      "observed": 0.16666666666666666,
+      "expected": 0.16666666666666666,
+      "passed": true
+    },
+    {
+      "name": "finalized_f1",
+      "observed": 0.2888888888888889,
+      "expected": 0.28888888888888886,
+      "passed": true
+    },
+    {
+      "name": "raw_pending_probe_em",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "raw_pending_probe_f1",
+      "observed": 0.0,
+      "expected": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pending_report_metrics_null",
+      "observed": {
+        "em": null,
+        "token_f1": null
+      },
+      "expected": {
+        "em": null,
+        "token_f1": null
+      },
+      "passed": true
+    },
+    {
+      "name": "pending_report_no_aggregate_call",
+      "observed": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "partially_finalized_metrics_null",
+      "observed": {
+        "em": null,
+        "token_f1": null
+      },
+      "expected": {
+        "em": null,
+        "token_f1": null
+      },
+      "passed": true
+    },
+    {
+      "name": "partially_finalized_no_aggregate_call",
+      "observed": false,
+      "expected": false,
+      "passed": true
+    }
+  ],
+  "check_count": 48,
+  "passed_check_count": 48,
+  "limitations": [
+    "Synthetic rows are deliberately named synthetic_* and never assigned the twelve benchmark question IDs.",
+    "No new answer quality, semantic correctness, evidence support, retrieval improvement or latency is inferred.",
+    "valid_response and compact_answer_present are separate existing public-interface fields; a completed answer can remain valid_response=true while missing compact text receives zero lexical credit.",
+    "No production execution/reporting code was modified; the lifecycle guard here demonstrates the required future caller rule."
+  ]
+}

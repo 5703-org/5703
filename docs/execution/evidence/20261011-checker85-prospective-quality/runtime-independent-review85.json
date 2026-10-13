@@ -1,0 +1,154 @@
+{
+  "schema": "phase85_independent_static_review_v2",
+  "status": "STATIC_REVIEW_PASS",
+  "reviewer": "/root/checker82_startup_prewarm/prewarm_safety_review",
+  "authorization": "parent_phase85_unseen8_public_textbooks_20posts_1USD_20261011",
+  "scope": "Public W85 preparation, permanent-stop writer and controller wiring; no live-runtime qualification.",
+  "source_pin_stage": "Pre-freeze source bytes independently read, hashed and matched to the targeted receipt. Root completed freeze afterward; the reviewer verified that only the two public pin assignments changed.",
+  "source_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\budget85.py",
+      "bytes": 15754,
+      "sha256": "44d2c0373c40bfcbf395571108cf6bf8eddf0a911bc8579df2234426c1e8f525"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\normal_transport85.py",
+      "bytes": 28904,
+      "sha256": "48b272a9282470e453245a75ba6f0a7e2642a3eeb58e0503ccb78d92364091a0"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\server85.py",
+      "bytes": 17905,
+      "sha256": "8db33cbd90922febd6c08f885bfce367d4b3fafdecfe516cf001a2104ca56851"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\prepare_runtime85.py",
+      "bytes": 7778,
+      "sha256": "be433cc0ea34cb9243a895e461d87037e64380be52c86e2511f820fb480db99c"
+    }
+  ],
+  "reviewed_invariants": [
+    "Independent flat cohort: case01..case08 only; unique case/question claims; teacher then checker only; no replay, automatic retry, third post or authorized extra four calls.",
+    "Decimal HOLD 0.0714688, global maximum20/USD1, serial admission/settlement, teacher pair-headroom preflight without booking a second hold; unknown exposure prevents further admission.",
+    "Exclusive immutable claims/settlements; unsafe exposure retains at least full hold and cannot later be safely released; historical closed12 occupancy remains zero in the new budget.",
+    "stop_cohort writes/fsyncs an exclusive permanent marker with finite code, protocol binding and optional review pin; both ROOT_QA codes require a 64-hex review SHA.",
+    "Repeated stops return the first exact validated marker without overwrite; malformed/partial markers remain terminal; all holds and settlements are preserved; in-flight settlement stays permitted.",
+    "A stop blocks claim_case/reserve_post even at settled UNKNOWN0. Transport stop/context exceptions and server target/controller failures now write the permanent marker.",
+    "Transport view reflects external cohort stops and cannot label such a scope active/closed; ordinary TARGET_EXECUTOR_RETURNED, including checker rejection, does not invent a critical quality finding.",
+    "One declared 180-second case deadline spans teacher/checker without reset; global reservation precedes physical open; validated safe settlement must return settled=true.",
+    "Server validates scope/protocol/public-boundary pins before auth access. Freeze-only preparer requires explicit source/question arguments, changes only public pin assignments and creates no live claims.",
+    "Only pinned question fields enter runtime; no rubric is read/projected. Serial per-case execution, prospective QA review and the review pin supplied to a QA stop remain Root-owned."
+  ],
+  "stop_codes": [
+    "UNSAFE_NORMAL_TRANSPORT",
+    "UNSAFE_NORMAL_TARGET",
+    "UNSAFE_LOCAL_CONTROLLER",
+    "ROOT_QA_CRITICAL_UNSUPPORTED_FACT",
+    "ROOT_QA_COHORT_STOP"
+  ],
+  "historical_review": {
+    "archive_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\independent-review85.json.before-stop85",
+    "bytes": 3909,
+    "sha256": "010c7eee32f9a9c56907eb99977a5649e8755be31027ad457b2e7db0ad0bb423",
+    "qualification": "Superseded preparation review before the permanent-stop writer and freeze-only preparer fixes; its PASS is not reused as this revision's final review."
+  },
+  "parent_test_executions": [
+    {
+      "stage": "Historical pre-stop controls",
+      "receipt_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\free-controls\\run-20261011T173722026816Z-e2afaf\\receipt.json",
+      "receipt_sha256": "62b271553d8304ff88c7b61ce00f4e42a016463974f807b14ac1714f43902457",
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "status": "PASS",
+      "qualification": "12 budget plus 2 protocol controls executed by parent on earlier pins; not rerun or claimed as execution coverage of the updated controllers.",
+      "reviewer_executed": false
+    },
+    {
+      "stage": "Current targeted permanent-stop controls",
+      "receipt_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\free-controls\\stop-20261011T175007864977Z-ac42d8\\receipt.json",
+      "receipt_bytes": 2100,
+      "receipt_sha256": "9e6b34758b2fe2006133c52f43f88d6fd3958858d5e155296e71e79ac1ddcfed",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "status": "PASS",
+      "elapsed_seconds": 1.2589889000009862,
+      "test_source": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\test_stop85.py",
+        "bytes": 3374,
+        "sha256": "fca85353724428110af2ea0b2fd6c9345a64a399a0c5107ba44de9e55b5db3bc"
+      },
+      "actual_receipt_read_and_hash_checked_by_reviewer": true,
+      "four_reviewed_pre_freeze_source_pins_match_receipt": true,
+      "guards": {
+        "DB": 0,
+        "network": 0,
+        "auth": 0,
+        "outside_run_write": 0,
+        "real_ledger_read": 0
+      },
+      "Main_project_imports": [],
+      "real_cohort_or_case_claims": 0,
+      "provider_posts": 0,
+      "whole_suite_run": false,
+      "live_transport_context_entered": false,
+      "prior_harness_failure_receipts": [
+        "free-controls/stop-20261011T174720842017Z-4de1ef/receipt.json",
+        "free-controls/stop-20261011T174839726580Z-de3d7d/receipt.json"
+      ],
+      "reviewer_executed": false
+    }
+  ],
+  "reviewer_actions_this_revision": {
+    "public_W_source_and_receipt_reads": true,
+    "W_budget_stop_API_and_two_synthetic_control_writes": true,
+    "review_JSON_write_and_exact_historical_archive": true,
+    "tests_run": 0,
+    "auth_reads_or_actions": 0,
+    "DB_actions": 0,
+    "network_actions": 0,
+    "model_loads": 0,
+    "Main_reads": 0,
+    "Main_writes": 0,
+    "real_ledger_reads": 0,
+    "rubric_reads": 0,
+    "runtime_freezes": 0,
+    "live_contexts_started": 0
+  },
+  "blockers": [],
+  "qualification": "Static prepared-source review only. Parent targeted tests cover the two pure-budget stop controls; no whole-suite, live transport, auth/DB execution or runtime freeze was performed by the reviewer.",
+  "Root_owned_freeze_followup": {
+    "executed_by": "Root",
+    "executed_by_reviewer": false,
+    "actual_public_before_after_files_read_and_hashed": true,
+    "comparison_method": "For each file, exactly one named assignment line was replaced with a fixed token. All remaining text was ordinal-identical; no Python import, AST execution or tests were run.",
+    "files": [
+      {
+        "name": "normal_transport85.py",
+        "constant": "TRANSPORT_PINS",
+        "before_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\normal_transport85.py.before-freeze85",
+        "before_bytes": 28904,
+        "before_sha256": "48b272a9282470e453245a75ba6f0a7e2642a3eeb58e0503ccb78d92364091a0",
+        "frozen_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\normal_transport85.py",
+        "frozen_bytes": 29163,
+        "frozen_sha256": "e642397dd59da8a3e62eb65a1e56800166de5607b708ca6fd38d91fa1abdfb1d",
+        "only_single_pin_assignment_text_changed": true
+      },
+      {
+        "name": "targeted_answer85.py",
+        "constant": "SOURCE_PINS",
+        "before_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\targeted_answer85.py.before-freeze85",
+        "before_bytes": 26612,
+        "before_sha256": "90e2c0037b1aeafbfa13843c9eb6551398698eb5b9194eccd34aa615ada9850e",
+        "frozen_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\targeted_answer85.py",
+        "frozen_bytes": 26871,
+        "frozen_sha256": "6abde033b0ec8da3f3567388df6c213fc5d8efacdadb61e7a334e0d83611f91f",
+        "only_single_pin_assignment_text_changed": true
+      }
+    ],
+    "qualification": "No independent read of Main, real ledgers, case scopes or rubric; Root aggregate validation is not represented as reviewer execution."
+  }
+}

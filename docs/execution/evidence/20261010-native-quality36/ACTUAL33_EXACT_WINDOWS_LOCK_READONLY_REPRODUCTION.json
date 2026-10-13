@@ -1,0 +1,47 @@
+{
+  "B_byte_writes": 0,
+  "Main_writes": 0,
+  "actual_held_lock_read_denial": {
+    "errno": 13,
+    "error_class": "PermissionError",
+    "exception_target_matches_exact_public_lock": false,
+    "guard_caller_lines": [
+      496,
+      280,
+      271
+    ],
+    "target": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-scientific-native-closure32\\global-pair-budget.lock",
+    "winerror": null
+  },
+  "authentication_values_or_exception_text_exported": false,
+  "baseline_without_held_lock_passed": true,
+  "database_accesses": 0,
+  "guard_constructor_or_preflight_or_stop_invoked": false,
+  "input_pins_unchanged": true,
+  "ordered_whole_guard_lock_set_acquired": false,
+  "original_native_inner_traceback_was_retained": false,
+  "provider_requests": 0,
+  "same_actual_public_guard_financial_method_invoked": true,
+  "schema": "5703_actual33_exact_windows_lock_readonly_reproduction_v1",
+  "source_pins": [
+    {
+      "bytes": 298454,
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py",
+      "sha256": "28b3797a8b1b87bdba57234b787c8ab82bc6d0b9410645527b03b2c8abac94be"
+    },
+    {
+      "bytes": 187841,
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\SCIENTIFIC_NATIVE_CLOSURE_GUARD_RELEASE_ACTUAL09.json",
+      "sha256": "3b8999e659eeadf92bd763c128fc598b1ac81d5fb62b4e029ae20f3a230c9337"
+    },
+    {
+      "bytes": 1,
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-scientific-native-closure32\\global-pair-budget.lock",
+      "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    }
+  ],
+  "status": "PASS_EXACT_PUBLIC_LOCK_PERMISSIONERROR_REPRODUCED",
+  "target_lock_acquired_nonblocking": true,
+  "target_lock_released": true,
+  "target_stream_closed": true
+}

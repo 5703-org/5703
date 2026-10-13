@@ -1,0 +1,68 @@
+{
+  "index": 3,
+  "case_id_local_only": "DEV11_missing_identity_bridge_uncertain",
+  "expected_local_only": "uncertain",
+  "status": "OBSERVATION_RETAINED",
+  "transport_attempts": 1,
+  "physical_POSTs_confirmed": 1,
+  "known_cost_USD": "0.0113754",
+  "UNKNOWN_hold_USD": "0",
+  "raw_receipt_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic64-completion-candidate\\actual64completion\\raw-provider-read01.json",
+      "bytes": 34770,
+      "sha256": "4f262cbc91ff78b909cbbde3aa5e435facd0f72855a747d7b2dfd06e80f670ec"
+    }
+  ],
+  "max_new_POSTs": 1,
+  "wire_sha256": "dd31e7473003b65f078c25d024a64bf5a992133a4705f201f1f1abbad21501a5",
+  "output_ceiling": 8192,
+  "automatic_retries": 0,
+  "old_batches_written": false,
+  "credentials_exported": false,
+  "human_rating": null,
+  "production_publication_authorized": false,
+  "started_UTC": "2026-10-11T05:47:47.319817+00:00",
+  "complete_adapter_return_ms": 13084.0855,
+  "provider_result": {
+    "raw_text": "{\n  \"additional_gaps\": [],\n  \"atom_id\": \"A1\",\n  \"condition_judgments\": [\n    {\n      \"condition_id\": \"C0\",\n      \"evidence_spans\": [\n        {\n          \"end\": 221,\n          \"fragment_id\": \"F2\",\n          \"quote\": \"Its origin and packet identifier were not recorded; other gateways were active in that trial.\",\n          \"start\": 128\n        }\n      ],\n      \"gap\": {\n        \"detail\": \"Lack of identifiers and presence of other gateways prevent establishing that the packet received by Node N originated at Gateway G.\",\n        \"kind\": \"unresolved_identity\"\n      },\n      \"semantic_reason\": \"Without recorded packet identifiers or origins, and with multiple gateways active, it cannot be proven that the Aster packet received by Node N originated at Gateway G.\",\n      \"verdict\": \"uncertain\"\n    },\n    {\n      \"condition_id\": \"C1\",\n      \"evidence_spans\": [\n        {\n          \"end\": 125,\n          \"fragment_id\": \"F1\",\n          \"quote\": \"During Trial T, Gateway G emitted one packet.\",\n          \"start\": 78\n        }\n      ],\n      \"gap\": null,\n      \"semantic_reason\": \"F1 explicitly confirms that Gateway G emitted one packet during Trial T.\",\n      \"verdict\": \"supported\"\n    },\n    {\n      \"condition_id\": \"C2\",\n      \"evidence_spans\": [\n        {\n          \"end\": 127,\n          \"fragment_id\": \"F2\",\n          \"quote\": \"During Trial T, Node N received one Aster packet.\",\n          \"start\": 78\n        }\n      ],\n      \"gap\": null,\n      \"semantic_reason\": \"F2 explicitly confirms that Node N received one Aster packet during Trial T.\",\n      \"verdict\": \"supported\"\n    },\n    {\n      \"condition_id\": \"C3\",\n      \"evidence_spans\": [\n        {\n          \"end\": 221,\n          \"fragment_id\": \"F2\",\n          \"quote\": \"Its origin and packet identifier were not recorded; other gateways were active in that trial.\",\n          \"start\": 128\n        }\n      ],\n      \"gap\": {\n        \"detail\": \"Unrecorded identifiers and active competing gateways make it impossible to confirm the emitted packet and received packet are the same.\",\n        \"kind\": \"unresolved_identity\"\n      },\n      \"semantic_reason\": \"Packet identifiers were not recorded and other gateways were active, leaving the identity and correspondence of the received packet unverified.\",\n      \"verdict\": \"uncertain\"\n    }\n  ],\n  \"schema_version\": \"atomic_support_judgment_v1\",\n  \"verdict\": \"uncertain\"\n}",
+    "provider": "openai_compatible",
+    "model": "google/gemini-3.5-flash-lite",
+    "finish_reason": "stop",
+    "provider_request_id": "gen-1791697667-jDct6buCkEKI2tncUYol",
+    "usage": {
+      "input_tokens": 1643,
+      "output_tokens": 4353,
+      "total_tokens": 5996,
+      "reasoning_tokens": 3695,
+      "cache_hit_input_tokens": 0,
+      "cache_miss_input_tokens": 1643,
+      "cost": 0.0113754
+    },
+    "latency_ms": 13080,
+    "error": null,
+    "request_submitted": true,
+    "diagnostic": {
+      "stage": "completed",
+      "http_status": 200,
+      "provider_error_type": null,
+      "provider_error_code": null,
+      "provider_error_parameter": null,
+      "message": null,
+      "message_redacted": false,
+      "provider_request_id": "gen-1791697667-jDct6buCkEKI2tncUYol",
+      "finish_reason": "stop",
+      "network_error": null,
+      "request_submitted": true,
+      "latency_ms": 13080
+    }
+  },
+  "fully_settled": true,
+  "closed_UTC": "2026-10-11T05:48:00.911286+00:00",
+  "scope_POST_slots_used": 3,
+  "scope_known_cost_USD": "0.0315126",
+  "scope_UNKNOWN_hold_USD": "0",
+  "remaining_scope_slots": 0,
+  "combined_known_USD": "0.22909566",
+  "scope_remaining_USD": "0.0284874"
+}

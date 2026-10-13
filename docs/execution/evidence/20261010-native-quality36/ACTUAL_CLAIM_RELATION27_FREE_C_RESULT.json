@@ -1,0 +1,984 @@
+{
+  "schema": "actual_claim_relation_free27_c",
+  "status": "PASS",
+  "passed_tests": 245,
+  "failed_tests": 0,
+  "skipped_tests": 0,
+  "passed_subtests": 115,
+  "failed_subtests": 0,
+  "skipped_subtests": 0,
+  "pytest_failures": [],
+  "counting_method": "ordinary call reports separated from reports with subtest context",
+  "approved_main27_pins": {
+    "generation/checked.py": "82b9236eb8894c050fc8b9c823002c662c98bbccd4b408e61de2debb0ad23757",
+    "generation/claim_feedback_transport_v1.py": "b937d997845f5568ba489f5de939d9e90bac5dd4b4221fac72ce04e209489ebb",
+    "generation/prompts/checked_generation_v5.txt": "b73c66a8cf5ddbc9d5a03f240f491b27b0267d65854e536ff5dfee2e448b547f",
+    "generation/prompts/joint_check_v5.txt": "71dc02ee98ae43ad82e5cdfd459e46362cb17c58678861e6f1fc1f57db6e6771",
+    "generation/reliability_v5.py": "12410fac97c1031b277f63c08f71459e035e0d2bcee6d2ef9731d7243af37dcc",
+    "generation/source_relation_protection_audit.py": "cc216362adb723d4aeaae508894947d621868cd43886b1138c7d7493c4cca7f5",
+    "tests/unit/test_claim_feedback_transport_service_v1.py": "653161f2de5480e12a879bc308874ed81196b5f812dcf87a4328b4f9e4e98d54",
+    "tests/unit/test_claim_feedback_transport_v1.py": "0376aab23c4db466a9e5ba4311da185ad7099a82aa618d390186e995dcdaac0d",
+    "tests/unit/test_generation_relation_producer_contract.py": "716d303363269d75e9aa11c7b8e2b9f8064f1ae71e295da618e5f8980b123c45",
+    "tests/unit/test_source_relation_audit27.py": "89e7c5ef5ec44ff820f66a906e0d2c26d2bc191eb0d9b2ca391f1aed67c696dd",
+    "tests/unit/test_source_relation_protection27.py": "12fdfd0d3c3b857cad3ef4ba42b8ca16f12a1a55dc31fb5b13300d501d2a409b",
+    "tests/unit/test_source_scope_context.py": "3c3da191175d93eb0328fa89f03e72bb9a919eac0bb812bdc8a6c9eb74e087db",
+    "tests/unit/test_source_scope_context_service.py": "3788abcee8ac89ef6c412a65c3298d309c1a5df6c5303abb40e662c6ee697771",
+    "tests/unit/test_source_scope_repair_projection.py": "295c5ed4ce063b5e1dd93a13cae9f6b5335d6b470b3b8131fa4bfa47ee290146",
+    "tests/unit/test_technical_entity_binding_reason.py": "ea25bb67809c9105bcfbf2e2d1cdd0be4b0e856878f420cc3454796a634411fd",
+    "tests/unit/test_technical_entity_cross_surface.py": "f15384166a145725443d564d2c7c1a994b84b90dc97eae2e7ea8a52766f76135",
+    "tests/unit/test_technical_entity_cross_surface_service.py": "8ac662ac34975cac021e8472fcdbb6c71c727154aa101f30fe8cbdbdb764cde0"
+  },
+  "source_relation_v2_schema": {
+    "name": "joint_check_source_relations_v2",
+    "scope": "base strict model; native per-request bindings require their own pin",
+    "annotated_sha256": "864212a5e636d2cadbc34328f431712a954c30130848a31e64e66e4bdedbc926",
+    "annotations_removed_sha256": "d70953f108718f92cd9ea1d94ca143669fcaed065ea666d35766964956e50f88",
+    "public_artifact_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\joint_check_source_relations_v2.base.schema.json",
+      "bytes": 7125,
+      "sha256": "864212a5e636d2cadbc34328f431712a954c30130848a31e64e66e4bdedbc926"
+    }
+  },
+  "main_pins_before": [
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checked.py",
+      "bytes": 155256,
+      "sha256": "82b9236eb8894c050fc8b9c823002c662c98bbccd4b408e61de2debb0ad23757"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\reliability_v5.py",
+      "bytes": 25521,
+      "sha256": "12410fac97c1031b277f63c08f71459e035e0d2bcee6d2ef9731d7243af37dcc"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\checked_generation_v5.txt",
+      "bytes": 13666,
+      "sha256": "b73c66a8cf5ddbc9d5a03f240f491b27b0267d65854e536ff5dfee2e448b547f"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_generation_relation_producer_contract.py",
+      "bytes": 9458,
+      "sha256": "716d303363269d75e9aa11c7b8e2b9f8064f1ae71e295da618e5f8980b123c45"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_technical_entity_binding_reason.py",
+      "bytes": 3436,
+      "sha256": "ea25bb67809c9105bcfbf2e2d1cdd0be4b0e856878f420cc3454796a634411fd"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_technical_entity_cross_surface.py",
+      "bytes": 10969,
+      "sha256": "f15384166a145725443d564d2c7c1a994b84b90dc97eae2e7ea8a52766f76135"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_technical_entity_cross_surface_service.py",
+      "bytes": 5378,
+      "sha256": "8ac662ac34975cac021e8472fcdbb6c71c727154aa101f30fe8cbdbdb764cde0"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_scope_context.py",
+      "bytes": 8647,
+      "sha256": "3c3da191175d93eb0328fa89f03e72bb9a919eac0bb812bdc8a6c9eb74e087db"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_scope_context_service.py",
+      "bytes": 6722,
+      "sha256": "3788abcee8ac89ef6c412a65c3298d309c1a5df6c5303abb40e662c6ee697771"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\joint_check_v5.txt",
+      "bytes": 19985,
+      "sha256": "71dc02ee98ae43ad82e5cdfd459e46362cb17c58678861e6f1fc1f57db6e6771"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_scope_repair_projection.py",
+      "bytes": 10606,
+      "sha256": "295c5ed4ce063b5e1dd93a13cae9f6b5335d6b470b3b8131fa4bfa47ee290146"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\source_relation_protection_audit.py",
+      "bytes": 3959,
+      "sha256": "cc216362adb723d4aeaae508894947d621868cd43886b1138c7d7493c4cca7f5"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\claim_feedback_transport_v1.py",
+      "bytes": 22926,
+      "sha256": "b937d997845f5568ba489f5de939d9e90bac5dd4b4221fac72ce04e209489ebb"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\source_relations.py",
+      "bytes": 7679,
+      "sha256": "3a934201cb5fab583e2f6186322b2b7f208070d6863ce864258900c1b4f636ed"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\source_relations_v2.py",
+      "bytes": 7734,
+      "sha256": "41813b7a8eb223d65ff609eb61f517151278ce21c6f2823e395acdf601826d31"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\repair_context.py",
+      "bytes": 4445,
+      "sha256": "a3aabe3476b1c5e44a77132d7b78abd8aa779a7f8f34e8a802f81bef430ac9bd"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_generation_v2.txt",
+      "bytes": 835,
+      "sha256": "2d1c0be4ddd86a87ca871355da573dedb5ac0a231c7399d227c1d306e74f08cb"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_check_v2.txt",
+      "bytes": 3478,
+      "sha256": "09cdc2550eab2673c505e2b3572e14b9979feff5fa1e373d91177ea7f6d2555c"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_repair_v2.txt",
+      "bytes": 853,
+      "sha256": "deeeccc16c30f726c52771fa64e174ac4078860040cc16f78a8e69c7c14fbda5"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_relation_units_v2.py",
+      "bytes": 10950,
+      "sha256": "4612d442513ec4e21314b30cd95237e191c07fd6e26f0a198f885ad39c6af256"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_relation_contract.py",
+      "bytes": 21389,
+      "sha256": "ab8b386e5b14ceb00d1c7cf0f1941bc7aa929f9aef06d227d234150fa809ecbb"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_relation_audit27.py",
+      "bytes": 6578,
+      "sha256": "89e7c5ef5ec44ff820f66a906e0d2c26d2bc191eb0d9b2ca391f1aed67c696dd"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_relation_protection27.py",
+      "bytes": 14556,
+      "sha256": "12fdfd0d3c3b857cad3ef4ba42b8ca16f12a1a55dc31fb5b13300d501d2a409b"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_claim_feedback_transport_v1.py",
+      "bytes": 18755,
+      "sha256": "0376aab23c4db466a9e5ba4311da185ad7099a82aa618d390186e995dcdaac0d"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_claim_feedback_transport_service_v1.py",
+      "bytes": 21224,
+      "sha256": "653161f2de5480e12a879bc308874ed81196b5f812dcf87a4328b4f9e4e98d54"
+    }
+  ],
+  "main_pins_after": [
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checked.py",
+      "bytes": 155256,
+      "sha256": "82b9236eb8894c050fc8b9c823002c662c98bbccd4b408e61de2debb0ad23757"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\reliability_v5.py",
+      "bytes": 25521,
+      "sha256": "12410fac97c1031b277f63c08f71459e035e0d2bcee6d2ef9731d7243af37dcc"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\checked_generation_v5.txt",
+      "bytes": 13666,
+      "sha256": "b73c66a8cf5ddbc9d5a03f240f491b27b0267d65854e536ff5dfee2e448b547f"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_generation_relation_producer_contract.py",
+      "bytes": 9458,
+      "sha256": "716d303363269d75e9aa11c7b8e2b9f8064f1ae71e295da618e5f8980b123c45"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_technical_entity_binding_reason.py",
+      "bytes": 3436,
+      "sha256": "ea25bb67809c9105bcfbf2e2d1cdd0be4b0e856878f420cc3454796a634411fd"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_technical_entity_cross_surface.py",
+      "bytes": 10969,
+      "sha256": "f15384166a145725443d564d2c7c1a994b84b90dc97eae2e7ea8a52766f76135"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_technical_entity_cross_surface_service.py",
+      "bytes": 5378,
+      "sha256": "8ac662ac34975cac021e8472fcdbb6c71c727154aa101f30fe8cbdbdb764cde0"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_scope_context.py",
+      "bytes": 8647,
+      "sha256": "3c3da191175d93eb0328fa89f03e72bb9a919eac0bb812bdc8a6c9eb74e087db"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_scope_context_service.py",
+      "bytes": 6722,
+      "sha256": "3788abcee8ac89ef6c412a65c3298d309c1a5df6c5303abb40e662c6ee697771"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\joint_check_v5.txt",
+      "bytes": 19985,
+      "sha256": "71dc02ee98ae43ad82e5cdfd459e46362cb17c58678861e6f1fc1f57db6e6771"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_scope_repair_projection.py",
+      "bytes": 10606,
+      "sha256": "295c5ed4ce063b5e1dd93a13cae9f6b5335d6b470b3b8131fa4bfa47ee290146"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\source_relation_protection_audit.py",
+      "bytes": 3959,
+      "sha256": "cc216362adb723d4aeaae508894947d621868cd43886b1138c7d7493c4cca7f5"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\claim_feedback_transport_v1.py",
+      "bytes": 22926,
+      "sha256": "b937d997845f5568ba489f5de939d9e90bac5dd4b4221fac72ce04e209489ebb"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\source_relations.py",
+      "bytes": 7679,
+      "sha256": "3a934201cb5fab583e2f6186322b2b7f208070d6863ce864258900c1b4f636ed"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\source_relations_v2.py",
+      "bytes": 7734,
+      "sha256": "41813b7a8eb223d65ff609eb61f517151278ce21c6f2823e395acdf601826d31"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\repair_context.py",
+      "bytes": 4445,
+      "sha256": "a3aabe3476b1c5e44a77132d7b78abd8aa779a7f8f34e8a802f81bef430ac9bd"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_generation_v2.txt",
+      "bytes": 835,
+      "sha256": "2d1c0be4ddd86a87ca871355da573dedb5ac0a231c7399d227c1d306e74f08cb"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_check_v2.txt",
+      "bytes": 3478,
+      "sha256": "09cdc2550eab2673c505e2b3572e14b9979feff5fa1e373d91177ea7f6d2555c"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_repair_v2.txt",
+      "bytes": 853,
+      "sha256": "deeeccc16c30f726c52771fa64e174ac4078860040cc16f78a8e69c7c14fbda5"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_relation_units_v2.py",
+      "bytes": 10950,
+      "sha256": "4612d442513ec4e21314b30cd95237e191c07fd6e26f0a198f885ad39c6af256"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_relation_contract.py",
+      "bytes": 21389,
+      "sha256": "ab8b386e5b14ceb00d1c7cf0f1941bc7aa929f9aef06d227d234150fa809ecbb"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_relation_audit27.py",
+      "bytes": 6578,
+      "sha256": "89e7c5ef5ec44ff820f66a906e0d2c26d2bc191eb0d9b2ca391f1aed67c696dd"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_relation_protection27.py",
+      "bytes": 14556,
+      "sha256": "12fdfd0d3c3b857cad3ef4ba42b8ca16f12a1a55dc31fb5b13300d501d2a409b"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_claim_feedback_transport_v1.py",
+      "bytes": 18755,
+      "sha256": "0376aab23c4db466a9e5ba4311da185ad7099a82aa618d390186e995dcdaac0d"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_claim_feedback_transport_service_v1.py",
+      "bytes": 21224,
+      "sha256": "653161f2de5480e12a879bc308874ed81196b5f812dcf87a4328b4f9e4e98d54"
+    }
+  ],
+  "helper_pins_before": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\generation_source_delta_binding22.py",
+      "bytes": 9942,
+      "sha256": "b23a908916c9f2371c997b3adc73dc2a4162714671b1bc94d9a72ca63e2b22a7"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\test_generation_source_delta_binding22.py",
+      "bytes": 17711,
+      "sha256": "a7f3776a071f4622372e075d35f866977f35d4fe6e084e46525a067774ae5448"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\test_source_label_index.py",
+      "bytes": 6647,
+      "sha256": "d308e6d48abef5513c96f23a9576098416d878501c15ac622a6367bef258f99c"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\test_requirement_schema22.py",
+      "bytes": 14852,
+      "sha256": "f63a24cbeff46f36b86d54fbecaa99b6a8c9baa82b3394b7a05a3a7230a5b507"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\test_cross_surface_service23.py",
+      "bytes": 5378,
+      "sha256": "8ac662ac34975cac021e8472fcdbb6c71c727154aa101f30fe8cbdbdb764cde0"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\reliability_v5.py.before23",
+      "bytes": 17969,
+      "sha256": "cf09eaecb45faa07f7762fb2e45e9d6982079356acd97f7798373429d8a99b76"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\test_scope_context_service25.py",
+      "bytes": 6722,
+      "sha256": "3788abcee8ac89ef6c412a65c3298d309c1a5df6c5303abb40e662c6ee697771"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\test_source_scope_repair_projection26.py",
+      "bytes": 10606,
+      "sha256": "295c5ed4ce063b5e1dd93a13cae9f6b5335d6b470b3b8131fa4bfa47ee290146"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\offline.ini",
+      "bytes": 21,
+      "sha256": "bf86cec34582454295d6d58edcaa5238eb52160b89a3032263d679455e826480"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\actual21-final-checker-public-replay.json",
+      "bytes": 30436,
+      "sha256": "4978eba882cd4c6235feb05141a756e51e384164cb79b4c92ebab2738c0f0a44"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\run_actual_claim_relation27_free_c.py",
+      "bytes": 21855,
+      "sha256": "44eae186feeef66dcc36d62dd4e2e65b0b439d021fa791a90912532eee8c7aeb"
+    }
+  ],
+  "helper_pins_after": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\generation_source_delta_binding22.py",
+      "bytes": 9942,
+      "sha256": "b23a908916c9f2371c997b3adc73dc2a4162714671b1bc94d9a72ca63e2b22a7"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\test_generation_source_delta_binding22.py",
+      "bytes": 17711,
+      "sha256": "a7f3776a071f4622372e075d35f866977f35d4fe6e084e46525a067774ae5448"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\test_source_label_index.py",
+      "bytes": 6647,
+      "sha256": "d308e6d48abef5513c96f23a9576098416d878501c15ac622a6367bef258f99c"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\test_requirement_schema22.py",
+      "bytes": 14852,
+      "sha256": "f63a24cbeff46f36b86d54fbecaa99b6a8c9baa82b3394b7a05a3a7230a5b507"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\test_cross_surface_service23.py",
+      "bytes": 5378,
+      "sha256": "8ac662ac34975cac021e8472fcdbb6c71c727154aa101f30fe8cbdbdb764cde0"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\reliability_v5.py.before23",
+      "bytes": 17969,
+      "sha256": "cf09eaecb45faa07f7762fb2e45e9d6982079356acd97f7798373429d8a99b76"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\test_scope_context_service25.py",
+      "bytes": 6722,
+      "sha256": "3788abcee8ac89ef6c412a65c3298d309c1a5df6c5303abb40e662c6ee697771"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\test_source_scope_repair_projection26.py",
+      "bytes": 10606,
+      "sha256": "295c5ed4ce063b5e1dd93a13cae9f6b5335d6b470b3b8131fa4bfa47ee290146"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\offline.ini",
+      "bytes": 21,
+      "sha256": "bf86cec34582454295d6d58edcaa5238eb52160b89a3032263d679455e826480"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\actual21-final-checker-public-replay.json",
+      "bytes": 30436,
+      "sha256": "4978eba882cd4c6235feb05141a756e51e384164cb79b4c92ebab2738c0f0a44"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-claim-relation27-free-c\\run_actual_claim_relation27_free_c.py",
+      "bytes": 21855,
+      "sha256": "44eae186feeef66dcc36d62dd4e2e65b0b439d021fa791a90912532eee8c7aeb"
+    }
+  ],
+  "checker_annotated_schema_sha256": "761335318e2a18caad91fe3e0ffe7387ca650f22e49bd3b73333cbae5bcf5015",
+  "checker_annotations_removed_schema_sha256": "f259fd47e0156f8d526996b7ce1fddb71d246bec8cb6d79f789dfa898d6bc0e0",
+  "actual21_strict_rejection": [
+    {
+      "path": [
+        "attempt_evaluation_ok"
+      ],
+      "type": "missing"
+    },
+    {
+      "path": [
+        "requirements",
+        0,
+        "evidence",
+        1,
+        "fragment_id"
+      ],
+      "type": "missing"
+    },
+    {
+      "path": [
+        "requirements",
+        0,
+        "evidence",
+        1,
+        "fragment_ids"
+      ],
+      "type": "extra_forbidden"
+    },
+    {
+      "path": [
+        "requirements",
+        0,
+        "evidence",
+        2,
+        "fragment_id"
+      ],
+      "type": "missing"
+    },
+    {
+      "path": [
+        "requirements",
+        0,
+        "evidence",
+        2,
+        "fragment_ids"
+      ],
+      "type": "extra_forbidden"
+    }
+  ],
+  "database_access": 0,
+  "pytest_exit_code": 0,
+  "source_pins_before": [
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checked.py",
+      "bytes": 155256,
+      "sha256": "82b9236eb8894c050fc8b9c823002c662c98bbccd4b408e61de2debb0ad23757"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\reliability_v5.py",
+      "bytes": 25521,
+      "sha256": "12410fac97c1031b277f63c08f71459e035e0d2bcee6d2ef9731d7243af37dcc"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\checked_generation_v5.txt",
+      "bytes": 13666,
+      "sha256": "b73c66a8cf5ddbc9d5a03f240f491b27b0267d65854e536ff5dfee2e448b547f"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_generation_relation_producer_contract.py",
+      "bytes": 9458,
+      "sha256": "716d303363269d75e9aa11c7b8e2b9f8064f1ae71e295da618e5f8980b123c45"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_technical_entity_binding_reason.py",
+      "bytes": 3436,
+      "sha256": "ea25bb67809c9105bcfbf2e2d1cdd0be4b0e856878f420cc3454796a634411fd"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_technical_entity_cross_surface.py",
+      "bytes": 10969,
+      "sha256": "f15384166a145725443d564d2c7c1a994b84b90dc97eae2e7ea8a52766f76135"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_technical_entity_cross_surface_service.py",
+      "bytes": 5378,
+      "sha256": "8ac662ac34975cac021e8472fcdbb6c71c727154aa101f30fe8cbdbdb764cde0"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_scope_context.py",
+      "bytes": 8647,
+      "sha256": "3c3da191175d93eb0328fa89f03e72bb9a919eac0bb812bdc8a6c9eb74e087db"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_scope_context_service.py",
+      "bytes": 6722,
+      "sha256": "3788abcee8ac89ef6c412a65c3298d309c1a5df6c5303abb40e662c6ee697771"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\joint_check_v5.txt",
+      "bytes": 19985,
+      "sha256": "71dc02ee98ae43ad82e5cdfd459e46362cb17c58678861e6f1fc1f57db6e6771"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_scope_repair_projection.py",
+      "bytes": 10606,
+      "sha256": "295c5ed4ce063b5e1dd93a13cae9f6b5335d6b470b3b8131fa4bfa47ee290146"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\source_relation_protection_audit.py",
+      "bytes": 3959,
+      "sha256": "cc216362adb723d4aeaae508894947d621868cd43886b1138c7d7493c4cca7f5"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\claim_feedback_transport_v1.py",
+      "bytes": 22926,
+      "sha256": "b937d997845f5568ba489f5de939d9e90bac5dd4b4221fac72ce04e209489ebb"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\source_relations.py",
+      "bytes": 7679,
+      "sha256": "3a934201cb5fab583e2f6186322b2b7f208070d6863ce864258900c1b4f636ed"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\source_relations_v2.py",
+      "bytes": 7734,
+      "sha256": "41813b7a8eb223d65ff609eb61f517151278ce21c6f2823e395acdf601826d31"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\repair_context.py",
+      "bytes": 4445,
+      "sha256": "a3aabe3476b1c5e44a77132d7b78abd8aa779a7f8f34e8a802f81bef430ac9bd"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_generation_v2.txt",
+      "bytes": 835,
+      "sha256": "2d1c0be4ddd86a87ca871355da573dedb5ac0a231c7399d227c1d306e74f08cb"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_check_v2.txt",
+      "bytes": 3478,
+      "sha256": "09cdc2550eab2673c505e2b3572e14b9979feff5fa1e373d91177ea7f6d2555c"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_repair_v2.txt",
+      "bytes": 853,
+      "sha256": "deeeccc16c30f726c52771fa64e174ac4078860040cc16f78a8e69c7c14fbda5"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_relation_units_v2.py",
+      "bytes": 10950,
+      "sha256": "4612d442513ec4e21314b30cd95237e191c07fd6e26f0a198f885ad39c6af256"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_relation_contract.py",
+      "bytes": 21389,
+      "sha256": "ab8b386e5b14ceb00d1c7cf0f1941bc7aa929f9aef06d227d234150fa809ecbb"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_relation_audit27.py",
+      "bytes": 6578,
+      "sha256": "89e7c5ef5ec44ff820f66a906e0d2c26d2bc191eb0d9b2ca391f1aed67c696dd"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_relation_protection27.py",
+      "bytes": 14556,
+      "sha256": "12fdfd0d3c3b857cad3ef4ba42b8ca16f12a1a55dc31fb5b13300d501d2a409b"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_claim_feedback_transport_v1.py",
+      "bytes": 18755,
+      "sha256": "0376aab23c4db466a9e5ba4311da185ad7099a82aa618d390186e995dcdaac0d"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_claim_feedback_transport_service_v1.py",
+      "bytes": 21224,
+      "sha256": "653161f2de5480e12a879bc308874ed81196b5f812dcf87a4328b4f9e4e98d54"
+    }
+  ],
+  "source_pins_after": [
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checked.py",
+      "bytes": 155256,
+      "sha256": "82b9236eb8894c050fc8b9c823002c662c98bbccd4b408e61de2debb0ad23757"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\reliability_v5.py",
+      "bytes": 25521,
+      "sha256": "12410fac97c1031b277f63c08f71459e035e0d2bcee6d2ef9731d7243af37dcc"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\checked_generation_v5.txt",
+      "bytes": 13666,
+      "sha256": "b73c66a8cf5ddbc9d5a03f240f491b27b0267d65854e536ff5dfee2e448b547f"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_generation_relation_producer_contract.py",
+      "bytes": 9458,
+      "sha256": "716d303363269d75e9aa11c7b8e2b9f8064f1ae71e295da618e5f8980b123c45"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_technical_entity_binding_reason.py",
+      "bytes": 3436,
+      "sha256": "ea25bb67809c9105bcfbf2e2d1cdd0be4b0e856878f420cc3454796a634411fd"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_technical_entity_cross_surface.py",
+      "bytes": 10969,
+      "sha256": "f15384166a145725443d564d2c7c1a994b84b90dc97eae2e7ea8a52766f76135"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_technical_entity_cross_surface_service.py",
+      "bytes": 5378,
+      "sha256": "8ac662ac34975cac021e8472fcdbb6c71c727154aa101f30fe8cbdbdb764cde0"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_scope_context.py",
+      "bytes": 8647,
+      "sha256": "3c3da191175d93eb0328fa89f03e72bb9a919eac0bb812bdc8a6c9eb74e087db"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_scope_context_service.py",
+      "bytes": 6722,
+      "sha256": "3788abcee8ac89ef6c412a65c3298d309c1a5df6c5303abb40e662c6ee697771"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\joint_check_v5.txt",
+      "bytes": 19985,
+      "sha256": "71dc02ee98ae43ad82e5cdfd459e46362cb17c58678861e6f1fc1f57db6e6771"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_scope_repair_projection.py",
+      "bytes": 10606,
+      "sha256": "295c5ed4ce063b5e1dd93a13cae9f6b5335d6b470b3b8131fa4bfa47ee290146"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\source_relation_protection_audit.py",
+      "bytes": 3959,
+      "sha256": "cc216362adb723d4aeaae508894947d621868cd43886b1138c7d7493c4cca7f5"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\claim_feedback_transport_v1.py",
+      "bytes": 22926,
+      "sha256": "b937d997845f5568ba489f5de939d9e90bac5dd4b4221fac72ce04e209489ebb"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\source_relations.py",
+      "bytes": 7679,
+      "sha256": "3a934201cb5fab583e2f6186322b2b7f208070d6863ce864258900c1b4f636ed"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\source_relations_v2.py",
+      "bytes": 7734,
+      "sha256": "41813b7a8eb223d65ff609eb61f517151278ce21c6f2823e395acdf601826d31"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\repair_context.py",
+      "bytes": 4445,
+      "sha256": "a3aabe3476b1c5e44a77132d7b78abd8aa779a7f8f34e8a802f81bef430ac9bd"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_generation_v2.txt",
+      "bytes": 835,
+      "sha256": "2d1c0be4ddd86a87ca871355da573dedb5ac0a231c7399d227c1d306e74f08cb"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_check_v2.txt",
+      "bytes": 3478,
+      "sha256": "09cdc2550eab2673c505e2b3572e14b9979feff5fa1e373d91177ea7f6d2555c"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_repair_v2.txt",
+      "bytes": 853,
+      "sha256": "deeeccc16c30f726c52771fa64e174ac4078860040cc16f78a8e69c7c14fbda5"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_relation_units_v2.py",
+      "bytes": 10950,
+      "sha256": "4612d442513ec4e21314b30cd95237e191c07fd6e26f0a198f885ad39c6af256"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_relation_contract.py",
+      "bytes": 21389,
+      "sha256": "ab8b386e5b14ceb00d1c7cf0f1941bc7aa929f9aef06d227d234150fa809ecbb"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_relation_audit27.py",
+      "bytes": 6578,
+      "sha256": "89e7c5ef5ec44ff820f66a906e0d2c26d2bc191eb0d9b2ca391f1aed67c696dd"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_relation_protection27.py",
+      "bytes": 14556,
+      "sha256": "12fdfd0d3c3b857cad3ef4ba42b8ca16f12a1a55dc31fb5b13300d501d2a409b"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_claim_feedback_transport_v1.py",
+      "bytes": 18755,
+      "sha256": "0376aab23c4db466a9e5ba4311da185ad7099a82aa618d390186e995dcdaac0d"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_claim_feedback_transport_service_v1.py",
+      "bytes": 21224,
+      "sha256": "653161f2de5480e12a879bc308874ed81196b5f812dcf87a4328b4f9e4e98d54"
+    }
+  ],
+  "all_pins_unchanged": true,
+  "audit_denials": [],
+  "public_main_source_reads": [
+    "E:\\5703\\learning-assistant\\contracts\\__init__.py",
+    "E:\\5703\\learning-assistant\\contracts\\models.py",
+    "E:\\5703\\learning-assistant\\conversation\\__init__.py",
+    "E:\\5703\\learning-assistant\\conversation\\context.py",
+    "E:\\5703\\learning-assistant\\conversation\\query.py",
+    "E:\\5703\\learning-assistant\\conversation\\requirements.py",
+    "E:\\5703\\learning-assistant\\conversation\\summary.py",
+    "E:\\5703\\learning-assistant\\conversation\\understanding.py",
+    "E:\\5703\\learning-assistant\\generation\\__init__.py",
+    "E:\\5703\\learning-assistant\\generation\\adapters.py",
+    "E:\\5703\\learning-assistant\\generation\\attempt_evaluation_contract_v1.py",
+    "E:\\5703\\learning-assistant\\generation\\binding_repair.py",
+    "E:\\5703\\learning-assistant\\generation\\capabilities.py",
+    "E:\\5703\\learning-assistant\\generation\\checked.py",
+    "E:\\5703\\learning-assistant\\generation\\checker_contract.py",
+    "E:\\5703\\learning-assistant\\generation\\checker_encoding.py",
+    "E:\\5703\\learning-assistant\\generation\\checker_encoding_v6.py",
+    "E:\\5703\\learning-assistant\\generation\\citation_assessment_routing_v1.py",
+    "E:\\5703\\learning-assistant\\generation\\citation_marker_render_v1.py",
+    "E:\\5703\\learning-assistant\\generation\\citation_scope_v8.py",
+    "E:\\5703\\learning-assistant\\generation\\claim_feedback_transport_v1.py",
+    "E:\\5703\\learning-assistant\\generation\\coverage_query_policy_v1.py",
+    "E:\\5703\\learning-assistant\\generation\\coverage_v2.py",
+    "E:\\5703\\learning-assistant\\generation\\coverage_v3.py",
+    "E:\\5703\\learning-assistant\\generation\\coverage_v4.py",
+    "E:\\5703\\learning-assistant\\generation\\coverage_v5.py",
+    "E:\\5703\\learning-assistant\\generation\\evidence_budget.py",
+    "E:\\5703\\learning-assistant\\generation\\evidence_coverage.py",
+    "E:\\5703\\learning-assistant\\generation\\hint_progression_v10.py",
+    "E:\\5703\\learning-assistant\\generation\\joint_policy.py",
+    "E:\\5703\\learning-assistant\\generation\\local_repair.py",
+    "E:\\5703\\learning-assistant\\generation\\network_policy.py",
+    "E:\\5703\\learning-assistant\\generation\\openrouter_routes.py",
+    "E:\\5703\\learning-assistant\\generation\\parser.py",
+    "E:\\5703\\learning-assistant\\generation\\pending_action_v8.py",
+    "E:\\5703\\learning-assistant\\generation\\prompt_builder.py",
+    "E:\\5703\\learning-assistant\\generation\\prompts\\cause_specific_repair_v3.txt",
+    "E:\\5703\\learning-assistant\\generation\\prompts\\chat_v1.txt",
+    "E:\\5703\\learning-assistant\\generation\\prompts\\checked_generation_v5.txt",
+    "E:\\5703\\learning-assistant\\generation\\prompts\\checker_contract_v3.txt",
+    "E:\\5703\\learning-assistant\\generation\\prompts\\claim_patch_checker_v1.txt",
+    "E:\\5703\\learning-assistant\\generation\\prompts\\claim_patch_generation_v1.txt",
+    "E:\\5703\\learning-assistant\\generation\\prompts\\claim_patch_repair_v1.txt",
+    "E:\\5703\\learning-assistant\\generation\\prompts\\joint_check_v5.txt",
+    "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_check_v1.txt",
+    "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_check_v2.txt",
+    "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_generation_v1.txt",
+    "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_generation_v2.txt",
+    "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_repair_v1.txt",
+    "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_repair_v2.txt",
+    "E:\\5703\\learning-assistant\\generation\\prompts\\typed_citation_check_v10.txt",
+    "E:\\5703\\learning-assistant\\generation\\prompts\\typed_citation_generation_v10.txt",
+    "E:\\5703\\learning-assistant\\generation\\providers.py",
+    "E:\\5703\\learning-assistant\\generation\\reliability_v3.py",
+    "E:\\5703\\learning-assistant\\generation\\reliability_v4.py",
+    "E:\\5703\\learning-assistant\\generation\\reliability_v5.py",
+    "E:\\5703\\learning-assistant\\generation\\reliability_v6.py",
+    "E:\\5703\\learning-assistant\\generation\\repair_context.py",
+    "E:\\5703\\learning-assistant\\generation\\repair_patch_v1.py",
+    "E:\\5703\\learning-assistant\\generation\\request_target_v1.py",
+    "E:\\5703\\learning-assistant\\generation\\response_field_contract_v2.py",
+    "E:\\5703\\learning-assistant\\generation\\schema_diagnostic_observer_v1.py",
+    "E:\\5703\\learning-assistant\\generation\\selection_task_contract.py",
+    "E:\\5703\\learning-assistant\\generation\\semantic_negative_v1.py",
+    "E:\\5703\\learning-assistant\\generation\\semantic_negative_v2.py",
+    "E:\\5703\\learning-assistant\\generation\\service.py",
+    "E:\\5703\\learning-assistant\\generation\\source_relation_protection_audit.py",
+    "E:\\5703\\learning-assistant\\generation\\source_relations.py",
+    "E:\\5703\\learning-assistant\\generation\\source_relations_v2.py",
+    "E:\\5703\\learning-assistant\\generation\\source_view_repair.py",
+    "E:\\5703\\learning-assistant\\generation\\support_audit.py",
+    "E:\\5703\\learning-assistant\\generation\\teaching.py",
+    "E:\\5703\\learning-assistant\\generation\\teaching_plan.py",
+    "E:\\5703\\learning-assistant\\generation\\teaching_plan_v10.py",
+    "E:\\5703\\learning-assistant\\generation\\teaching_plan_v2.py",
+    "E:\\5703\\learning-assistant\\generation\\teaching_plan_v3.py",
+    "E:\\5703\\learning-assistant\\generation\\teaching_plan_v4.py",
+    "E:\\5703\\learning-assistant\\generation\\teaching_plan_v5.py",
+    "E:\\5703\\learning-assistant\\generation\\teaching_plan_v6.py",
+    "E:\\5703\\learning-assistant\\generation\\teaching_plan_v7.py",
+    "E:\\5703\\learning-assistant\\generation\\teaching_plan_v8.py",
+    "E:\\5703\\learning-assistant\\generation\\teaching_plan_v9.py",
+    "E:\\5703\\learning-assistant\\generation\\token_counting.py",
+    "E:\\5703\\learning-assistant\\generation\\typed_citation_contract_v10.py",
+    "E:\\5703\\learning-assistant\\generation\\types.py",
+    "E:\\5703\\learning-assistant\\generation\\unit_definition_plan_v1.py",
+    "E:\\5703\\learning-assistant\\retrieval\\__init__.py",
+    "E:\\5703\\learning-assistant\\retrieval\\complementary_spans.py",
+    "E:\\5703\\learning-assistant\\retrieval\\source_spans.py",
+    "E:\\5703\\learning-assistant\\retrieval\\source_spans_v2.py",
+    "E:\\5703\\learning-assistant\\tests\\__init__.py",
+    "E:\\5703\\learning-assistant\\tests\\unit\\test_answer_core_v5.py",
+    "E:\\5703\\learning-assistant\\tests\\unit\\test_claim_feedback_transport_service_v1.py",
+    "E:\\5703\\learning-assistant\\tests\\unit\\test_claim_feedback_transport_v1.py",
+    "E:\\5703\\learning-assistant\\tests\\unit\\test_enhancement_generation.py",
+    "E:\\5703\\learning-assistant\\tests\\unit\\test_generation_relation_producer_contract.py",
+    "E:\\5703\\learning-assistant\\tests\\unit\\test_source_relation_audit27.py",
+    "E:\\5703\\learning-assistant\\tests\\unit\\test_source_relation_contract.py",
+    "E:\\5703\\learning-assistant\\tests\\unit\\test_source_relation_protection27.py",
+    "E:\\5703\\learning-assistant\\tests\\unit\\test_source_relation_units_v2.py",
+    "E:\\5703\\learning-assistant\\tests\\unit\\test_source_scope_context.py",
+    "E:\\5703\\learning-assistant\\tests\\unit\\test_source_scope_context_service.py",
+    "E:\\5703\\learning-assistant\\tests\\unit\\test_source_scope_repair_projection.py",
+    "E:\\5703\\learning-assistant\\tests\\unit\\test_teaching_contracts_v4.py",
+    "E:\\5703\\learning-assistant\\tests\\unit\\test_technical_entity_binding_reason.py",
+    "E:\\5703\\learning-assistant\\tests\\unit\\test_technical_entity_cross_surface.py",
+    "E:\\5703\\learning-assistant\\tests\\unit\\test_technical_entity_cross_surface_service.py"
+  ],
+  "main_writes": 0,
+  "paid_requests": 0,
+  "database_or_service_started": false,
+  "full_unit_repeated": false,
+  "repair_wire_projection_controls_passed": true,
+  "actual24_scope_replay_details": {
+    "status": "PASS_ACTUAL_MAIN_NEGATIVE_SCOPE_REPLAY",
+    "original_public_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure24\\runtime\\retained-provider-diagnostics\\native-generation-outcome01.json",
+      "bytes": 450746,
+      "sha256": "4087a4105c362ccbdc9c8b8bc0556400225e701a0dd2a8f694ecb740c59bf3cd"
+    },
+    "fragment_count": 67,
+    "claim_count": 5,
+    "issues": [
+      {
+        "code": "SOURCE_SCOPE_CONTEXT_NOT_SELECTED",
+        "claim_id": "claim_527610ff834beb5490755ddd_1",
+        "leading_scope": "light-dependent reactions",
+        "scope_start": 4,
+        "scope_end": 29,
+        "selected_fragment_ids": [
+          "F012"
+        ],
+        "context_candidate_fragments": [
+          {
+            "evidence_id": "ev_003",
+            "fragment_id": "F013",
+            "scope_start": 20,
+            "scope_end": 45
+          }
+        ],
+        "binding_recheck_required": true,
+        "claim_relation_assessed": false,
+        "reason": "Leading scope absent from selected support; recheck allowed source context. Occurrence alone is not support.",
+        "source_entailment_certified": false,
+        "publication_override": false
+      },
+      {
+        "code": "SOURCE_SCOPE_CONTEXT_NOT_SELECTED",
+        "claim_id": "claim_82ce740c6dbf4426f1afb603_1",
+        "leading_scope": "Calvin cycle",
+        "scope_start": 7,
+        "scope_end": 19,
+        "selected_fragment_ids": [
+          "F053"
+        ],
+        "context_candidate_fragments": [
+          {
+            "evidence_id": "ev_010",
+            "fragment_id": "F051",
+            "scope_start": 123,
+            "scope_end": 135
+          }
+        ],
+        "binding_recheck_required": true,
+        "claim_relation_assessed": false,
+        "reason": "Leading scope absent from selected support; recheck allowed source context. Occurrence alone is not support.",
+        "source_entailment_certified": false,
+        "publication_override": false
+      }
+    ],
+    "raw_judgment_and_inputs_unchanged": true,
+    "publication_replayed": false,
+    "semantic_support_certified": false,
+    "qualification": "Context occurrence alone cannot establish the G3P-to-carbohydrate relationship."
+  },
+  "actual24_scope_replay_passed": true,
+  "actual22_cross_surface_replay_passed": true,
+  "actual22_cross_surface_replay_details": {
+    "status": "PASS_ACTUAL_MAIN_NEGATIVE_BINDING_REPLAY",
+    "original_public_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure22\\runtime\\retained-provider-diagnostics\\native-generation-outcome01.json",
+      "bytes": 298074,
+      "sha256": "1c3c51a43ca037f19a71f03444c8536ddafc313704b667f20c50e280e9d15658"
+    },
+    "source_fragment_count": 67,
+    "claim_count": 7,
+    "body_direct_diagnostic_unchanged": true,
+    "short_recheck_added": true,
+    "raw_checker_and_inputs_unchanged": true,
+    "new_issues": [
+      {
+        "code": "UNRESOLVED_TECHNICAL_ENTITY_COLLISION",
+        "claim_id": "claim_37eb9395c8cbcb5721d36f6e_1",
+        "claimed_identifier": "NADPH",
+        "source_identifiers": [
+          "NADH"
+        ],
+        "reason_source_identifiers": [
+          "NADH"
+        ],
+        "selected_fragment_ids": [
+          "F007"
+        ],
+        "reason": "The claimed identifier is absent from its selected supporting union; a model reason cannot establish a source alias. A selected source supplies the same proposition with a one-edit different identifier in that slot. The model reason cannot exempt this source-binding conflict. Resolve this binding before publication; this is not a scientific falsehood verdict or an entailment certificate.",
+        "source_entailment_certified": false,
+        "publication_override": false
+      },
+      {
+        "code": "UNRESOLVED_TECHNICAL_ENTITY_COLLISION",
+        "claim_id": "claim_78d2792420eff7369b6a4e92_1",
+        "claimed_identifier": "NADPH",
+        "source_identifiers": [
+          "NADH"
+        ],
+        "reason_source_identifiers": [
+          "NADH"
+        ],
+        "selected_fragment_ids": [
+          "F007"
+        ],
+        "binding_diagnostic_origin": "cross_surface_copy_witness_v1",
+        "anchor_claim_id": "claim_37eb9395c8cbcb5721d36f6e_1",
+        "binding_recheck_required": true,
+        "claim_relation_assessed": false,
+        "reason": "This surface contains the same identifier missing from its own selected supporting union and actually selects the exact source fragment with a same-round copied-proposition identifier mismatch on another surface. Re-evaluate this source binding together with that claim. The diagnostic neither rewrites the model judgment nor certifies a scientific falsehood, a source alias or entailment.",
+        "source_entailment_certified": false,
+        "publication_override": false
+      },
+      {
+        "code": "SOURCE_SCOPE_CONTEXT_NOT_SELECTED",
+        "claim_id": "claim_f3cadbda8fcaaa9b0563eaaa_1",
+        "leading_scope": "Calvin cycle",
+        "scope_start": 7,
+        "scope_end": 19,
+        "selected_fragment_ids": [
+          "F053"
+        ],
+        "context_candidate_fragments": [
+          {
+            "evidence_id": "ev_010",
+            "fragment_id": "F051",
+            "scope_start": 123,
+            "scope_end": 135
+          }
+        ],
+        "binding_recheck_required": true,
+        "claim_relation_assessed": false,
+        "reason": "Leading scope absent from selected support; recheck allowed source context. Occurrence alone is not support.",
+        "source_entailment_certified": false,
+        "publication_override": false
+      }
+    ],
+    "original_actual_error_unchanged": {
+      "code": "CLAIM_PATCH_SUMMARY_BINDING",
+      "message": "Enhanced response or source mapping failed validation.",
+      "retryable": false,
+      "details": {
+        "error_type": "ResponseValidationError",
+        "validation_code": null
+      }
+    },
+    "final_publication_replayed": false,
+    "scientific_quality_certified": false
+  },
+  "qualification": "Actual current Main scoped unit/source-binding/protection/transport tests plus retained negative guard controls. Authored semantic fixture statuses do not certify online model accuracy or scientific entailment."
+}

@@ -1,0 +1,149 @@
+......................................................................FF [ 36%]
+F.F..................................................................... [ 72%]
+......................................................                   [100%]
+================================== FAILURES ===================================
+_____ test_actual_learner_attempt_still_requires_checked_boolean[missing] _____
+
+verdict = 'missing'
+
+    @pytest.mark.parametrize("verdict", ["missing", False, NOT_APPLICABLE])
+    def test_actual_learner_attempt_still_requires_checked_boolean(verdict):
+        def attempt_checker(messages):
+            value = checker(messages)
+            if verdict == "missing":
+                value.pop("attempt_evaluation_ok")
+            else:
+                value["attempt_evaluation_ok"] = verdict
+            return value
+    
+        request = req(
+            question="Light energy.",
+            teaching_context={
+                "turn_role": "learner_attempt",
+                "learner_attempt": "Light energy.",
+                "pending_tutor_question": "What does photosynthesis use?",
+                "current_problem": "What does photosynthesis use?",
+            },
+        )
+>       draft = answer(learner_attempt_evaluation={
+            "status": "correct",
+            "feedback": "Photosynthesis uses light energy. [ev_001]",
+        })
+
+E:\5703\learning-assistant\tests\unit\test_attempt_evaluation_conditional_v1.py:236: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+text = 'Photosynthesis uses light energy. [ev_001]'
+values = {'learner_attempt_evaluation': {'status': 'correct', 'feedback': 'Photosynthesis uses light energy. [ev_001]'}}
+
+    def answer(text="Photosynthesis uses light energy. [ev_001]", **values):
+>       return chat_value("answer", text, citations=["ev_001"], **values)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: chat_value() got an unexpected keyword argument 'learner_attempt_evaluation'
+
+E:\5703\learning-assistant\tests\unit\test_enhancement_generation.py:67: TypeError
+______ test_actual_learner_attempt_still_requires_checked_boolean[False] ______
+
+verdict = False
+
+    @pytest.mark.parametrize("verdict", ["missing", False, NOT_APPLICABLE])
+    def test_actual_learner_attempt_still_requires_checked_boolean(verdict):
+        def attempt_checker(messages):
+            value = checker(messages)
+            if verdict == "missing":
+                value.pop("attempt_evaluation_ok")
+            else:
+                value["attempt_evaluation_ok"] = verdict
+            return value
+    
+        request = req(
+            question="Light energy.",
+            teaching_context={
+                "turn_role": "learner_attempt",
+                "learner_attempt": "Light energy.",
+                "pending_tutor_question": "What does photosynthesis use?",
+                "current_problem": "What does photosynthesis use?",
+            },
+        )
+>       draft = answer(learner_attempt_evaluation={
+            "status": "correct",
+            "feedback": "Photosynthesis uses light energy. [ev_001]",
+        })
+
+E:\5703\learning-assistant\tests\unit\test_attempt_evaluation_conditional_v1.py:236: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+text = 'Photosynthesis uses light energy. [ev_001]'
+values = {'learner_attempt_evaluation': {'status': 'correct', 'feedback': 'Photosynthesis uses light energy. [ev_001]'}}
+
+    def answer(text="Photosynthesis uses light energy. [ev_001]", **values):
+>       return chat_value("answer", text, citations=["ev_001"], **values)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: chat_value() got an unexpected keyword argument 'learner_attempt_evaluation'
+
+E:\5703\learning-assistant\tests\unit\test_enhancement_generation.py:67: TypeError
+_ test_actual_learner_attempt_still_requires_checked_boolean[not_applicable] __
+
+verdict = 'not_applicable'
+
+    @pytest.mark.parametrize("verdict", ["missing", False, NOT_APPLICABLE])
+    def test_actual_learner_attempt_still_requires_checked_boolean(verdict):
+        def attempt_checker(messages):
+            value = checker(messages)
+            if verdict == "missing":
+                value.pop("attempt_evaluation_ok")
+            else:
+                value["attempt_evaluation_ok"] = verdict
+            return value
+    
+        request = req(
+            question="Light energy.",
+            teaching_context={
+                "turn_role": "learner_attempt",
+                "learner_attempt": "Light energy.",
+                "pending_tutor_question": "What does photosynthesis use?",
+                "current_problem": "What does photosynthesis use?",
+            },
+        )
+>       draft = answer(learner_attempt_evaluation={
+            "status": "correct",
+            "feedback": "Photosynthesis uses light energy. [ev_001]",
+        })
+
+E:\5703\learning-assistant\tests\unit\test_attempt_evaluation_conditional_v1.py:236: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+text = 'Photosynthesis uses light energy. [ev_001]'
+values = {'learner_attempt_evaluation': {'status': 'correct', 'feedback': 'Photosynthesis uses light energy. [ev_001]'}}
+
+    def answer(text="Photosynthesis uses light energy. [ev_001]", **values):
+>       return chat_value("answer", text, citations=["ev_001"], **values)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: chat_value() got an unexpected keyword argument 'learner_attempt_evaluation'
+
+E:\5703\learning-assistant\tests\unit\test_enhancement_generation.py:67: TypeError
+_________ test_invalid_compact_wire_config_retains_structured_failure _________
+
+    def test_invalid_compact_wire_config_retains_structured_failure():
+        request = req(
+            teaching_context={"turn_role": "user_question"},
+            checker_config=compact_config(model="wrong-model"),
+        )
+        script = Script([])
+        out = GenerationService(adapter=script, checker_adapter=script).generate(
+            request, RequestBudget(max_calls=2)
+        )
+        assert not out.succeeded and out.response is None
+>       assert out.error["code"] == "CONFIGURATION_ERROR"
+E       AssertionError: assert 'ENHANCEMENT_VALIDATION_ERROR' == 'CONFIGURATION_ERROR'
+E         
+E         - CONFIGURATION_ERROR
+E         + ENHANCEMENT_VALIDATION_ERROR
+
+E:\5703\learning-assistant\tests\unit\test_attempt_evaluation_conditional_v1.py:287: AssertionError
+=========================== short test summary info ===========================
+FAILED E:\5703\learning-assistant\tests\unit\test_attempt_evaluation_conditional_v1.py::test_actual_learner_attempt_still_requires_checked_boolean[missing]
+FAILED E:\5703\learning-assistant\tests\unit\test_attempt_evaluation_conditional_v1.py::test_actual_learner_attempt_still_requires_checked_boolean[False]
+FAILED E:\5703\learning-assistant\tests\unit\test_attempt_evaluation_conditional_v1.py::test_actual_learner_attempt_still_requires_checked_boolean[not_applicable]
+FAILED E:\5703\learning-assistant\tests\unit\test_attempt_evaluation_conditional_v1.py::test_invalid_compact_wire_config_retains_structured_failure
+4 failed, 194 passed in 1.83s

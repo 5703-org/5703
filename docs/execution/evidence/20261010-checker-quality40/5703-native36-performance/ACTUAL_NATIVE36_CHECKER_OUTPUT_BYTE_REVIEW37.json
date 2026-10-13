@@ -1,0 +1,148 @@
+{
+  "schema": "5703_native36_independent_checker_byte_analysis37_v1",
+  "result": "READ_ONLY_SAVED_OUTPUT_BYTE_ANALYSIS_COMPLETE",
+  "method": "Python stdlib lexical UTF8 accounting. Field/value string counts include their exact JSON quotes and escapes. Only JSON whitespace outside strings is classified as removable formatting. Existing raw responses remain unchanged.",
+  "input_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-native36-performance\\ACTUAL_NATIVE36_PERFORMANCE_REVIEW.json",
+      "bytes": 16213,
+      "sha256": "8c5d4238e675b3114847e93f7833bcb576c637ef5893be60afb8117e4fe5c57c"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\runtime\\retained-provider-diagnostics\\slot-02-model-output01.json",
+      "bytes": 56525,
+      "sha256": "f3ed73ca40b0258998ef25d9d4d1fa74ace5e060cd1140b0ccca07bf831e1e67"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\runtime\\retained-provider-diagnostics\\slot-04-model-output01.json",
+      "bytes": 51850,
+      "sha256": "af450f2b56bb949f10bfcaf4f6fc64a7174ae4dbc2e663658afb2c4dcbfbaca4"
+    }
+  ],
+  "outputs": [
+    {
+      "stage": "initial_checker",
+      "raw_utf8_bytes": 11770,
+      "raw_sha256": "6991952bb911f634cedb4e6b90a1e102779820d8e165b9d297a95ac63764ca4e",
+      "redaction_changed_raw": false,
+      "composition_bytes": {
+        "outside_string_whitespace": 4574,
+        "field_name_string_tokens": 3211,
+        "value_string_tokens": 3054,
+        "structural_punctuation": 726,
+        "scalar_literal_tokens": 205
+      },
+      "formatting_percent": 38.8615,
+      "lexically_minified_bytes": 7196,
+      "parsed_object_equal": true,
+      "all_string_lexemes_equal": true,
+      "reason_string_token_bytes": 1053,
+      "reason_percent_of_original": 8.9465,
+      "reason_string_count": 32,
+      "reason_bytes_by_path": {
+        "claims.*.reason": 275,
+        "claims.*.units.*.reason": 464,
+        "reason": 123,
+        "requirements.*.reason": 191
+      },
+      "quote_string_token_bytes": 445,
+      "provider_reported_output_tokens": 3776,
+      "recorded_provider_request_interval_ms": 10755
+    },
+    {
+      "stage": "final_rechecker",
+      "raw_utf8_bytes": 7646,
+      "raw_sha256": "4c8395e16820a8ae6074d1ed6cf3089378e985dc40b6117bf904e96618f23441",
+      "redaction_changed_raw": false,
+      "composition_bytes": {
+        "outside_string_whitespace": 0,
+        "field_name_string_tokens": 3336,
+        "value_string_tokens": 3341,
+        "structural_punctuation": 748,
+        "scalar_literal_tokens": 221
+      },
+      "formatting_percent": 0,
+      "lexically_minified_bytes": 7646,
+      "parsed_object_equal": true,
+      "all_string_lexemes_equal": true,
+      "reason_string_token_bytes": 1109,
+      "reason_percent_of_original": 14.503,
+      "reason_string_count": 34,
+      "reason_bytes_by_path": {
+        "claims.*.reason": 284,
+        "claims.*.units.*.reason": 454,
+        "reason": 107,
+        "requirements.*.reason": 264
+      },
+      "quote_string_token_bytes": 658,
+      "provider_reported_output_tokens": 2366,
+      "recorded_provider_request_interval_ms": 7740
+    }
+  ],
+  "schema_binding_evidence": {
+    "contract_name": "ReliableUnitCheck V2",
+    "pin": "input_pins[0], current_v2_offline_schema_and_relation_proof",
+    "validation": "Existing saved proof reports current_V2 PASS for both unmodified outputs; this analysis ran no additional schema validator.",
+    "initial": {
+      "claims": 10,
+      "units": 19,
+      "source_fragments": 71
+    },
+    "final": {
+      "claims": 10,
+      "units": 21,
+      "source_fragments": 71
+    },
+    "same_top_level_field_set": [
+      "claims",
+      "body_ok",
+      "complete_answer",
+      "coverage",
+      "cumulative_ok",
+      "evidence_display_ok",
+      "limitations_explicit",
+      "missing_facets",
+      "non_repetitive_next_action",
+      "reason",
+      "repair_fragment_ids",
+      "requirements",
+      "scope_ok",
+      "specific_help",
+      "suggestions_ok",
+      "attempt_evaluation_ok",
+      "tutor_question_ok"
+    ],
+    "current37_paired_input_or_canonical_schema_bytes_read": false,
+    "current37_schema_sha256": null,
+    "boundary": "No Main/B was read. The retained current-V2 proof and exact output receipts are pinned; no new claim of canonical current37 schema/input provenance is made."
+  },
+  "findings": [
+    "Formatting is substantial in the initial output (38.86%) but already absent in the recheck. It is not a universal checker-output overhead.",
+    "Reason strings are 8.95% and14.50% of raw bytes, so verbose justification is not the dominant byte category here. Required field names and support/ID/status strings recur by contract; repetition is not evidence they may be removed.",
+    "After lossless formatting removal, initial7196B is smaller than final7646B. This does not yield a token count, token saving, or isolated latency explanation.",
+    "Recorded generation5626ms+repair9071ms+recheck7740ms=22437ms, already over20s even apart from the first checker. Minification alone cannot be asserted to solve the unchanged observed serial path.",
+    "Repair+recheck was16811ms, the larger avoidable-branch candidate already addressed by Main37 leading-scope input hints. Success or causal time saving must await actual37 evidence; required final recheck after repair remains mandatory."
+  ],
+  "next_single_small_experiment": {
+    "change": "After actual37 pair closes and Root reviews its actual first-checker formatting/path, add only a request instruction that the model emits one compact/minified JSON object with no insignificant whitespace outside strings.",
+    "do_not_change": [
+      "any output field/schema/parser",
+      "all claim/unit/requirement/source/relation/quality checks",
+      "selected citations, quotes and string contents",
+      "negative/partial/unsupported findings",
+      "source/publication gates",
+      "mandatory full final recheck after repair",
+      "model/config/route/evidence in the matched comparison"
+    ],
+    "do_not_add_concurrently": "No reason shortening and no change to the in-progress37 paired prompt.",
+    "why": "Targets observed4574B of optional initial formatting while leaving complete mandatory outputs. Recheck already proves compact JSON is representable under the retained contract.",
+    "execution_boundary": "Candidate request instruction only; locally minifying an already received response cannot save its original generation time. No new harness or API call was created here.",
+    "measurement": "Record actual generated raw bytes/formatting, provider-reported usage, complete checker intervals and selected-source/quality outcomes. No predicted speedup, token saving,20s attainment or causal improvement is claimed."
+  },
+  "limitations": [
+    "Native36 is one retained case; native34/36 legacy timings do not establish paired causal performance.",
+    "Provider request intervals are not pure remote compute or TTFT; nested server/browser clocks are not added.",
+    "Publication PASS does not certify complete independent source support; existing final7complete/3partial observation remains unchanged.",
+    "Only three authorized W public inputs and own analysis outputs were accessed; no Main/B/DB/API/credentials, new test or harness."
+  ]
+}

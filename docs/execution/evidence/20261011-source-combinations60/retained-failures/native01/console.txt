@@ -1,0 +1,33 @@
+
+Running 1 test using 1 worker
+
+  x  1 proof60.spec.ts:12:5 › real mock worker source combination publishes, then honest partial preserves answer and draft through reload (10.0s)
+
+
+  1) proof60.spec.ts:12:5 › real mock worker source combination publishes, then honest partial preserves answer and draft through reload 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('button', { name: 'Retry response', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('button', { name: 'Retry response', exact: true }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Retry response', exact: true })
+
+
+      113 |   expect(secondJob.error.code).toBe('SEMANTIC_CHECK_FAILED');
+      114 |   await expect(page.getByText(secondJob.error.message, { exact: true })).toBeVisible();
+    > 115 |   await expect(page.getByRole('button', { name: 'Retry response', exact: true })).toBeVisible();
+          |                                                                                   ^
+      116 |   await expect(page.getByRole('button', { name: 'Stop generation', exact: true })).toHaveCount(0);
+      117 |   await expect(page.locator('[data-answer-id]')).toHaveCount(1);
+      118 |   await expect(page.locator('[data-answer-id]').last()).toHaveAttribute('data-answer-id', answerId!);
+        at C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-proof60-browser\proof60.spec.ts:115:83
+
+    Error Context: native01\browser-artifacts\proof60-real-mock-worker-s-f7d22-er-and-draft-through-reload\error-context.md
+
+  1 failed
+    proof60.spec.ts:12:5 › real mock worker source combination publishes, then honest partial preserves answer and draft through reload 

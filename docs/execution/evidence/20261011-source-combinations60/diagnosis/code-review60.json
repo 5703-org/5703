@@ -1,0 +1,97 @@
+{
+  "review_id": "proof60_code_review",
+  "reviewed_date_utc": "2026-10-11",
+  "status": "STATIC_REVIEW_NO_REMAINING_CODE_BLOCKER",
+  "review_method": "Read-only inspection of candidate code, Main producer/consumer contracts, and authored test source; no candidate or test execution.",
+  "source_entailment_certified": false,
+  "independent_semantic_quality_measured": false,
+  "human_rating": null,
+  "candidates": [
+    {
+      "file": "5703-proof60-candidate/source_evidence_combinations_v1.py",
+      "sha256": "ab69de76304a08370acd9483866fbc84ea364e77caab36c723796f1e40bc4f8a"
+    },
+    {
+      "file": "5703-proof60-candidate/checked.py",
+      "sha256": "88509d22466095e5761bd247269a4dd03432fcb4dd2511ed02739e29da2e5d30"
+    },
+    {
+      "file": "5703-proof60-candidate/source_relation_repair_v2.txt",
+      "sha256": "03c8fa82094f1d2c9e4e7fee95bfd6ec2f555cef72220bdf761a13679779b92c"
+    }
+  ],
+  "actual_promotion_manifest": {
+    "file": "5703-proof60-candidate/promotion60-review.json",
+    "sha256": "5b4bc8fa42995edbb537e374f2b235bf36c35b6d60a8d2262a2764a29f8b33d1",
+    "inspected": true,
+    "description": "Contains the current three production candidates and two frozen test candidates. This is the manifest inspected for promotion.",
+    "historical_prepared_receipt_is_not_a_current_pin": true,
+    "historical_receipt": "5703-proof60-candidate/integration60-review.json",
+    "old_prepare_script_was_not_rerun": true,
+    "old_prepare_script_current_execution_not_authorized_by_this_review": true
+  },
+  "fixes_observed": [
+    {
+      "issue": "Metadata capacity used compact JSON while the ordinary repair transport serializes spaced JSON.",
+      "resolution": "The helper now counts ensure_ascii=False, sort_keys=True with the default spaced serializer. The compact V10 representation is no larger.",
+      "accepted": true
+    },
+    {
+      "issue": "A global-only rejection or a small negative subset previously rebuilt lookup indexes for all claims.",
+      "resolution": "Full claim/binding/source/unit identity checks run first. The zero-negative branch returns without scoped lookup; only negative claim IDs and their corresponding immutable bindings are indexed.",
+      "accepted": true
+    },
+    {
+      "issue": "An unconditional local-patch instruction could conflict with existing complete-draft repair contracts.",
+      "resolution": "The prompt follows the existing repair output contract and asks for a local patch only when that contract permits it.",
+      "accepted": true
+    }
+  ],
+  "checked_invariants": [
+    "The actual checker alias-to-canonical reconstruction precedes the new helper call. Canonical binding allowlists are derived from the same current claim's immutable binding table.",
+    "Allowed fragments must resolve to the matching evidence owner; duplicate identities and changed recorded exact-text hashes fail closed.",
+    "The helper reads but does not mutate original claims, assessment statuses, relations, conditions, or source text.",
+    "Already-supported units receive no proposal. Invalid checked unit identities remain rejected before the zero-negative fast path.",
+    "Selected lexical coverage is captured before supplement coverage changes; combined coverage is separately reported.",
+    "Only precise complete source blocks are eligible. Coarse/incomplete selected blocks produce exclusion records instead of fabricated precise support.",
+    "Each supplement contains at most 4 new IDs; global unique supplement IDs are at most 12; total newly proposed complete source text is at most 6000 Unicode code points.",
+    "Proposal metadata has at most 12 records and 64 displayed anchor rows per record. The finalizer removes entire trailing proposals/exclusions and recounts retained sources rather than clipping claim or source text.",
+    "18 KiB applies to the proposal metadata JSON subtree; it is not a bound on complete repair feedback or the enclosing HTTP request.",
+    "Occurrence counts, word-family hints, common source locations, and candidate combinations are explicitly navigation-only. They certify neither predicate ownership, semantic continuation, nor source entailment or semantic absence.",
+    "The proposal is attached to the same private_check dictionary already stored in output.checks and to repair feedback. It adds no public answer override.",
+    "The claim-feedback codec preserves unknown fields and proves a lossless round trip; the source-text codec restores exact candidate text from unchanged CURRENT_EVIDENCE.",
+    "The existing finite revision loop, repair/recheck call reservation, protected-span checks, schema validation, fresh checker, and final-partial publication block are unchanged.",
+    "The helper and preparation CLI add no network, authentication, or database calls. The helper adds no domain-answer constants or new regular expressions."
+  ],
+  "test_source_review": {
+    "tests_executed_by_reviewer": false,
+    "unit_file": "5703-proof60-tests/test_source_evidence_combinations_v1.py",
+    "unit_sha256": "1d9bb48e8d3257e65dadd9546f7a7877b4dc28ea1045617dabe8652827762b0e",
+    "runtime_file": "5703-proof60-tests/test_source_evidence_combinations_runtime.py",
+    "runtime_sha256": "f81a6d8169e8ede946a83acb23c7291276ec071c0b3b7d82ab516983eed60e48",
+    "observations": [
+      "Authored neutralisation, DNS, constant-mass mechanics, and shared-metal-predicate cases are development regressions, not unseen evaluation data or semantic Gold.",
+      "Zero-negative planner controls forbid scoped lookup through a failing spy. Malformed supported unit identities must fail before lookup.",
+      "Capacity cases inspect both real spaced and compact serializers, stress actual metadata, require whole-record removal, and recount retained source IDs/characters.",
+      "Real GenerationService cases retain a protected baseline, send the original local-patch schema, reserve one complete final check, and reject final partial without output.",
+      "The encoder spy captures exact trusted codec inputs and returns the unmodified producer result. Marker detection is confined to authored test decoding; no application marker detection was added.",
+      "The PostgreSQL test source uses the existing disposable runtime fixture and normal API/worker path, checks frozen request command and budgets, verifies private plan persistence and original partial, and checks canonical publication/reload or zero Answer rows."
+    ]
+  },
+  "remaining_code_blockers": [],
+  "remaining_validation": [
+    "The root writer must run the frozen unit and integration candidates against the promoted current files and record actual outcomes.",
+    "Script judgments and mock runtime results cannot establish that a live checker chooses adequate independent sources, resolves predicate ownership, or repairs saved semantic gaps.",
+    "The proposed navigation plan must continue to be treated as candidate-only; fresh source and publication checks remain required."
+  ],
+  "reviewer_actions": {
+    "main_file_writes": 0,
+    "git_actions": 0,
+    "external_requests": 0,
+    "database_actions": 0,
+    "authentication_access": 0,
+    "candidate_execution": 0,
+    "test_execution": 0,
+    "workspace_deliverable": "5703-proof60-diagnosis/code-review60.json"
+  }
+}

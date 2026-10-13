@@ -1,0 +1,283 @@
+{
+  "API_calls": 0,
+  "at_UTC": "2026-10-10T00:08:19.085248+00:00",
+  "browser_full_byte_identity_only_equality": true,
+  "cases": [
+    {
+      "case": "generation/teacher",
+      "kind": "actual_helper_toy_control",
+      "passed": true
+    },
+    {
+      "case": "None/teacher",
+      "kind": "actual_helper_toy_control",
+      "passed": true
+    },
+    {
+      "case": "joint_check/checker",
+      "kind": "actual_helper_toy_control",
+      "passed": true
+    },
+    {
+      "case": "joint_recheck/checker",
+      "kind": "actual_helper_toy_control",
+      "passed": true
+    },
+    {
+      "case": "semantic_repair/teacher",
+      "kind": "actual_helper_toy_control",
+      "passed": true
+    },
+    {
+      "case": "foreign_provider_unchanged",
+      "kind": "actual_helper_toy_control",
+      "passed": true
+    },
+    {
+      "case": "foreign_model_unchanged",
+      "kind": "actual_helper_toy_control",
+      "passed": true
+    },
+    {
+      "case": "foreign_openrouter_route_profile_unchanged",
+      "kind": "actual_helper_toy_control",
+      "passed": true
+    },
+    {
+      "case": "wrong_initial_cap_1024_rejected",
+      "kind": "actual_helper_toy_control",
+      "passed": true
+    },
+    {
+      "case": "wrong_initial_cap_4096_rejected",
+      "kind": "actual_helper_toy_control",
+      "passed": true
+    },
+    {
+      "cap": 2048,
+      "kind": "actual_AST_claim_predicate_replay",
+      "observed_acceptance": true,
+      "passed": true,
+      "stage": "generation"
+    },
+    {
+      "cap": 4096,
+      "kind": "actual_AST_claim_predicate_replay",
+      "observed_acceptance": false,
+      "passed": true,
+      "stage": "generation"
+    },
+    {
+      "cap": 8192,
+      "kind": "actual_AST_claim_predicate_replay",
+      "observed_acceptance": false,
+      "passed": true,
+      "stage": "generation"
+    },
+    {
+      "cap": 2048,
+      "kind": "actual_AST_claim_predicate_replay",
+      "observed_acceptance": false,
+      "passed": true,
+      "stage": "joint_check"
+    },
+    {
+      "cap": 4096,
+      "kind": "actual_AST_claim_predicate_replay",
+      "observed_acceptance": true,
+      "passed": true,
+      "stage": "joint_check"
+    },
+    {
+      "cap": 8192,
+      "kind": "actual_AST_claim_predicate_replay",
+      "observed_acceptance": false,
+      "passed": true,
+      "stage": "joint_check"
+    },
+    {
+      "cap": 2048,
+      "kind": "actual_AST_claim_predicate_replay",
+      "observed_acceptance": false,
+      "passed": true,
+      "stage": "semantic_repair"
+    },
+    {
+      "cap": 4096,
+      "kind": "actual_AST_claim_predicate_replay",
+      "observed_acceptance": true,
+      "passed": true,
+      "stage": "semantic_repair"
+    },
+    {
+      "cap": 8192,
+      "kind": "actual_AST_claim_predicate_replay",
+      "observed_acceptance": false,
+      "passed": true,
+      "stage": "semantic_repair"
+    },
+    {
+      "cap": 2048,
+      "kind": "actual_AST_claim_predicate_replay",
+      "observed_acceptance": false,
+      "passed": true,
+      "stage": "joint_recheck"
+    },
+    {
+      "cap": 4096,
+      "kind": "actual_AST_claim_predicate_replay",
+      "observed_acceptance": true,
+      "passed": true,
+      "stage": "joint_recheck"
+    },
+    {
+      "cap": 8192,
+      "kind": "actual_AST_claim_predicate_replay",
+      "observed_acceptance": false,
+      "passed": true,
+      "stage": "joint_recheck"
+    },
+    {
+      "cap": 2048,
+      "kind": "actual_AST_wire_predicate_replay",
+      "observed_acceptance": true,
+      "passed": true,
+      "stage": "generation"
+    },
+    {
+      "cap": 2048,
+      "kind": "actual_AST_persisted_start_predicate_replay",
+      "observed_acceptance": true,
+      "passed": true,
+      "stage": "generation"
+    },
+    {
+      "cap": 4096,
+      "kind": "actual_AST_wire_predicate_replay",
+      "observed_acceptance": false,
+      "passed": true,
+      "stage": "generation"
+    },
+    {
+      "cap": 4096,
+      "kind": "actual_AST_persisted_start_predicate_replay",
+      "observed_acceptance": false,
+      "passed": true,
+      "stage": "generation"
+    },
+    {
+      "cap": 2048,
+      "kind": "actual_AST_wire_predicate_replay",
+      "observed_acceptance": false,
+      "passed": true,
+      "stage": "semantic_repair"
+    },
+    {
+      "cap": 2048,
+      "kind": "actual_AST_persisted_start_predicate_replay",
+      "observed_acceptance": false,
+      "passed": true,
+      "stage": "semantic_repair"
+    },
+    {
+      "cap": 4096,
+      "kind": "actual_AST_wire_predicate_replay",
+      "observed_acceptance": true,
+      "passed": true,
+      "stage": "semantic_repair"
+    },
+    {
+      "cap": 4096,
+      "kind": "actual_AST_persisted_start_predicate_replay",
+      "observed_acceptance": true,
+      "passed": true,
+      "stage": "semantic_repair"
+    },
+    {
+      "kind": "actual_AST_stage_role_predicate_replay",
+      "observed_acceptance": true,
+      "passed": true,
+      "role": "teacher",
+      "stage": "generation"
+    },
+    {
+      "kind": "actual_AST_stage_role_predicate_replay",
+      "observed_acceptance": false,
+      "passed": true,
+      "role": "checker",
+      "stage": "generation"
+    },
+    {
+      "kind": "actual_AST_stage_role_predicate_replay",
+      "observed_acceptance": false,
+      "passed": true,
+      "role": "teacher",
+      "stage": "joint_check"
+    },
+    {
+      "kind": "actual_AST_stage_role_predicate_replay",
+      "observed_acceptance": true,
+      "passed": true,
+      "role": "checker",
+      "stage": "joint_check"
+    },
+    {
+      "kind": "actual_AST_stage_role_predicate_replay",
+      "observed_acceptance": true,
+      "passed": true,
+      "role": "teacher",
+      "stage": "semantic_repair"
+    },
+    {
+      "kind": "actual_AST_stage_role_predicate_replay",
+      "observed_acceptance": false,
+      "passed": true,
+      "role": "checker",
+      "stage": "semantic_repair"
+    },
+    {
+      "kind": "actual_AST_stage_role_predicate_replay",
+      "observed_acceptance": false,
+      "passed": true,
+      "role": "teacher",
+      "stage": "joint_recheck"
+    },
+    {
+      "kind": "actual_AST_stage_role_predicate_replay",
+      "observed_acceptance": true,
+      "passed": true,
+      "role": "checker",
+      "stage": "joint_recheck"
+    }
+  ],
+  "cases_passed": 38,
+  "complete_guard_end_to_end_or_native_success_claimed": false,
+  "consistent_repair_path": {
+    "claim_cap_accepts": true,
+    "helper_repair_cap": 4096,
+    "persisted_start_accepts": true,
+    "wire_accepts": true
+  },
+  "database_access": 0,
+  "guard_pin": {
+    "bytes": 133181,
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation13\\scientific_native_closure_guard_PREPARED09.py",
+    "sha256": "f327ce8d82e99db84f7d7abea8e37659ffd3b26a5e431e552f45b88007b9b4e0"
+  },
+  "helper_pin": {
+    "bytes": 2126,
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation13\\native_checker_json_object_override_PREPARED01.py",
+    "sha256": "9576cc3952374d3725bc4b512e738ad1f4dea0b655693ad7f555883e317b713f"
+  },
+  "original_38_diagnostic_pin": {
+    "bytes": 13120,
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\root-delegated-native13-coordinationB\\ACTUAL_NATIVE13_READONLY_COORDINATION.json",
+    "sha256": "441a4a714b6c1c86f628335bd708deb97d903732c7d12bb1c1a3caeda1d3b88e"
+  },
+  "reused_29_browser_control_pin": {
+    "bytes": 11965,
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\direct-user-continuation07\\native-worker-liveness12\\ACTUAL_PURE_POST_LIVENESS_CONTROLS12.json",
+    "sha256": "6a5c4f4226e3d7fedd51cc349039c3359581607ec96da2a9af5a7babdf9abde8"
+  },
+  "status": "ACTUAL_REUSED_38_NATIVE13_CAP_CONTROLS_PASS"
+}

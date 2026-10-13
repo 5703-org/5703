@@ -1,0 +1,380 @@
+{
+  "status": "PUBLIC_SEQUENTIAL_POOL_REVIEW_COMPLETE_NATIVE_BLOCKED_AFTER_UNKNOWN41",
+  "purpose": "Use a smaller safe conditional cash pool rather than requiring two simultaneous full holds; preserve one-open-claim and every request bound.",
+  "historical_public_review_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\NATIVE_NEXT_MINIMAL_REUSE_FROZEN_REVIEW.json",
+    "bytes": 15984,
+    "sha256": "873474e9d8c8e9751d1a45f73ba6b4205d876107f324bee1656289539b11206a"
+  },
+  "financial_method_proof_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-native-sequential-pool-public-review\\SEQUENTIAL_POOL_FINANCIAL_METHOD_PROOF.json",
+    "bytes": 6126,
+    "sha256": "d81ae178663f9d1e2c400869f4cc609208e61b7fb5b77733712b199650cb4df9"
+  },
+  "public_source_pins_verified": [
+    {
+      "role": "guard",
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation36\\scientific_native_closure_guard_PREPARED09.py",
+      "bytes": 338976,
+      "sha256": "2194360c40cdb3431d23c53bfd22ddbab30edbba8dbeeac2a4e062af96e6969f"
+    },
+    {
+      "role": "runtime",
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation36\\launch_week10_scientific_native_closure_PREPARED09.py",
+      "bytes": 113785,
+      "sha256": "77d2a5f990bd6e0434471f1bf191f5ab77ea055a31448723d843bf967a8d086f"
+    },
+    {
+      "role": "controller",
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation36\\execute_week10_scientific_native_closure_ROOT_PREPARED09.py",
+      "bytes": 70242,
+      "sha256": "ce8408afb77e666e3a8c0837c960c99f9eb52e8ca68579e9d365b314bf94ed5c"
+    },
+    {
+      "role": "browser",
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation36\\real_browser_week10_scientific_native_closure_PREPARED01.cjs",
+      "bytes": 82844,
+      "sha256": "2c1a948acdddc7914d87d7cac0de268a553a025ca85a2ab0df613b0bcbd72c1b"
+    },
+    {
+      "role": "pure_wire_budget",
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-wire-budget36-candidate\\wire_budget_contract36_CANDIDATE.py",
+      "bytes": 6320,
+      "sha256": "eafb18d2421583a37a5372a899b38e97347dcb007f1432bb2d9b0a91337aa055"
+    },
+    {
+      "role": "existing_public_free_preflight",
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\direct-user-continuation07\\root-native36-linked-recovery\\native_free_preflight36.py",
+      "bytes": 12985,
+      "sha256": "8c0f717d1c215fce10e2885852b517df460b3403017ad6909880df1c0745f51f"
+    }
+  ],
+  "exact_13_cap_anchors": [
+    {
+      "role": "guard",
+      "source_line": 45,
+      "old_public_anchor": "MAX_POSTS = 4",
+      "historical_pre41_example_only_anchor": "MAX_POSTS = 2",
+      "any_future_scope_must_recompute_total_pool": true,
+      "exact_occurrences": 1,
+      "new_scope_only": true
+    },
+    {
+      "role": "guard",
+      "source_line": 46,
+      "old_public_anchor": "MAX_POSTS_PER_LEG = 4",
+      "historical_pre41_example_only_anchor": "MAX_POSTS_PER_LEG = 2",
+      "any_future_scope_must_recompute_total_pool": true,
+      "exact_occurrences": 1,
+      "new_scope_only": true
+    },
+    {
+      "role": "guard",
+      "source_line": 49,
+      "old_public_anchor": "RESERVE = Decimal('0.18000000')",
+      "historical_pre41_example_only_anchor": "RESERVE = Decimal('0.06817210')",
+      "any_future_scope_must_recompute_total_pool": true,
+      "exact_occurrences": 1,
+      "new_scope_only": true
+    },
+    {
+      "role": "guard",
+      "source_line": 482,
+      "old_public_anchor": "a[\"maximum_physical_POSTs\"] == MAX_POSTS == 4",
+      "historical_pre41_example_only_anchor": "a[\"maximum_physical_POSTs\"] == MAX_POSTS == 2",
+      "any_future_scope_must_recompute_total_pool": true,
+      "exact_occurrences": 1,
+      "new_scope_only": true
+    },
+    {
+      "role": "guard",
+      "source_line": 483,
+      "old_public_anchor": "_decimal(a[\"maximum_new_reserve_USD\"]) == RESERVE == Decimal('0.18')",
+      "historical_pre41_example_only_anchor": "_decimal(a[\"maximum_new_reserve_USD\"]) == RESERVE == Decimal('0.06817210')",
+      "any_future_scope_must_recompute_total_pool": true,
+      "exact_occurrences": 1,
+      "new_scope_only": true
+    },
+    {
+      "role": "guard",
+      "source_line": 846,
+      "old_public_anchor": "\"max_possible_new_batch_reserve_USD\": '0.18000000'",
+      "historical_pre41_example_only_anchor": "\"max_possible_new_batch_reserve_USD\": '0.06817210'",
+      "any_future_scope_must_recompute_total_pool": true,
+      "exact_occurrences": 1,
+      "new_scope_only": true
+    },
+    {
+      "role": "runtime",
+      "source_line": 187,
+      "old_public_anchor": "release.get(\"max_provider_posts\") != 4",
+      "historical_pre41_example_only_anchor": "release.get(\"max_provider_posts\") != 2",
+      "any_future_scope_must_recompute_total_pool": true,
+      "exact_occurrences": 1,
+      "new_scope_only": true
+    },
+    {
+      "role": "runtime",
+      "source_line": 188,
+      "old_public_anchor": "release.get(\"new_batch_reserve_USD\") != \"0.18000000\"",
+      "historical_pre41_example_only_anchor": "release.get(\"new_batch_reserve_USD\") != \"0.06817210\"",
+      "any_future_scope_must_recompute_total_pool": true,
+      "exact_occurrences": 1,
+      "new_scope_only": true
+    },
+    {
+      "role": "runtime",
+      "source_line": 435,
+      "old_public_anchor": "max_provider_calls=4, provider_timeout_seconds=60",
+      "historical_pre41_example_only_anchor": "max_provider_calls=2, provider_timeout_seconds=60",
+      "any_future_scope_must_recompute_total_pool": true,
+      "exact_occurrences": 1,
+      "new_scope_only": true
+    },
+    {
+      "role": "controller",
+      "source_line": 402,
+      "old_public_anchor": "2 <= budget[\"provider_post_count\"] <= 4",
+      "historical_pre41_example_only_anchor": "budget[\"provider_post_count\"] == 2",
+      "any_future_scope_must_recompute_total_pool": true,
+      "exact_occurrences": 1,
+      "new_scope_only": true
+    },
+    {
+      "role": "browser",
+      "source_line": 17,
+      "old_public_anchor": "const MAX_PROVIDER_POSTS = 4, MIN_PROVIDER_SLOTS = 2, MAX_REQUEST_POSTS = 4;",
+      "historical_pre41_example_only_anchor": "const MAX_PROVIDER_POSTS = 2, MIN_PROVIDER_SLOTS = 2, MAX_REQUEST_POSTS = 2;",
+      "any_future_scope_must_recompute_total_pool": true,
+      "exact_occurrences": 1,
+      "new_scope_only": true
+    },
+    {
+      "role": "browser",
+      "source_line": 18,
+      "old_public_anchor": "const BATCH_RESERVE_SCALED = 18000000n;",
+      "historical_pre41_example_only_anchor": "const BATCH_RESERVE_SCALED = 6817210n;",
+      "any_future_scope_must_recompute_total_pool": true,
+      "exact_occurrences": 1,
+      "new_scope_only": true
+    },
+    {
+      "role": "browser",
+      "source_line": 333,
+      "old_public_anchor": "new_batch_reserve_USD: '0.18000000', maximum_authorized_new_batch_cost_USD: '0.18000000'",
+      "historical_pre41_example_only_anchor": "new_batch_reserve_USD: '0.06817210', maximum_authorized_new_batch_cost_USD: '0.06817210'",
+      "any_future_scope_must_recompute_total_pool": true,
+      "exact_occurrences": 1,
+      "new_scope_only": true
+    }
+  ],
+  "current_scope_full_hold_constant": {
+    "source_line": 48,
+    "before_USD": "0.04500000",
+    "after_USD": "0.04100000"
+  },
+  "current_scope_method_full_hold_literals": [
+    {
+      "method": "_tally",
+      "source_line": 775,
+      "before_USD": "0.04500000",
+      "after_USD": "0.04100000"
+    },
+    {
+      "method": "_tally",
+      "source_line": 810,
+      "before_USD": "0.04500000",
+      "after_USD": "0.04100000"
+    },
+    {
+      "method": "claim",
+      "source_line": 949,
+      "before_USD": "0.04500000",
+      "after_USD": "0.04100000"
+    },
+    {
+      "method": "claim",
+      "source_line": 955,
+      "before_USD": "0.04500000",
+      "after_USD": "0.04100000"
+    },
+    {
+      "method": "_finish_locked",
+      "source_line": 1008,
+      "before_USD": "0.04500000",
+      "after_USD": "0.04100000"
+    }
+  ],
+  "additional_financial_policy_changes": [
+    {
+      "role": "guard",
+      "method": "claim",
+      "source_line": 946,
+      "old_predicate": "_need(Decimal(slot) * UPPER <= RESERVE, \"BATCH_RESERVE_BOUND\")",
+      "proposed_predicate": "_need(_decimal(before[\"known_API_cost_USD\"]) + _decimal(before[\"full_unknown_hold_USD\"]) + UPPER <= RESERVE, \"BATCH_RESERVE_BOUND\")",
+      "proof": "Actual extracted claim method tested in 15 in-memory cases; locks and READY/fully_settled guards retained."
+    },
+    {
+      "role": "guard",
+      "method": "_verify_financial_authorization",
+      "source_line": 501,
+      "old_predicate": "MAX_POSTS * UPPER == RESERVE",
+      "proposed_predicate": "MAX_POSTS == 2 and UPPER <= RESERVE and RESERVE == _decimal(WIRE_BUDGET_CONTRACT[\"new_scope_reserve_USD\"]) and _decimal(WIRE_BUDGET_CONTRACT[\"previous_spent_USD\"]) + RESERVE <= _decimal(WIRE_BUDGET_CONTRACT[\"original_total_budget_USD\"])",
+      "proof": "Financial lower-pool predicate exercised as explicit offline static gate; full authority function not executed or certified."
+    },
+    {
+      "role": "pure_wire_budget",
+      "method": "derive_native_guard_wire_contract",
+      "source_line": 79,
+      "old_predicate": "new_scope = reserve * 4",
+      "proposed_predicate": "new_scope = exact_frozen_remaining_pool_from_latest_closed_receipts",
+      "proof": "Declared total pool must equal the fresh release/authority, hold <= pool and previous_spent + pool <= original_total; no product equality."
+    }
+  ],
+  "selected_public_method_signature_lines": {
+    "_tally": {
+      "signature_line": 744,
+      "last_line": 852
+    },
+    "claim": {
+      "signature_line": 910,
+      "last_line": 963
+    },
+    "_finish_locked": {
+      "signature_line": 973,
+      "last_line": 1020
+    },
+    "_verify_financial_authorization": {
+      "signature_line": 475,
+      "last_line": 542
+    },
+    "_locks": {
+      "signature_line": 580,
+      "last_line": 661
+    },
+    "_wire_metadata": {
+      "signature_line": 873,
+      "last_line": 896
+    }
+  },
+  "unchanged_sequential_protocol": [
+    {
+      "role": "runtime",
+      "method": "audited_call",
+      "lines": {
+        "signature_line": 890,
+        "last_line": 963
+      },
+      "settlement_line": 943,
+      "behavior": "Settles cost-known first request before adapter returns; uncertainty retains full hold and stops. It does not require total == max_posts * hold."
+    },
+    {
+      "role": "browser",
+      "source_lines": [
+        17,
+        18,
+        206,
+        210,
+        214,
+        333,
+        810
+      ],
+      "behavior": "Checks exact scaled total and known + holds <= total, lifetime/per-leg slot caps and >=2 settled calls for success; update fresh pool mirrors, not its guarantee."
+    },
+    {
+      "role": "controller",
+      "source_line": 402,
+      "behavior": "Successful completed native requires exactly 2 physical calls in the new cap; no monetary product requirement."
+    },
+    {
+      "role": "existing_public_free_preflight",
+      "source_lines": [
+        61,
+        62,
+        63,
+        64,
+        68,
+        69,
+        71,
+        105
+      ],
+      "behavior": "Exact literal metadata mirrors need fresh cap/hold/pool/prior fields. No proof requires total == 2 * per-call hold. Private consumer execution remains Root only."
+    }
+  ],
+  "fresh_structured_sync_required": [
+    "Guard MAX_POSTS/MAX_POSTS_PER_LEG=2; UPPER=0.041; RESERVE=exact pool; current START/UNKNOWN/after-claim literals=0.041 and status total=pool.",
+    "Guard MONEY current new_separate_authorized_scope_USD, maximum_batch_reserve_USD, each_leg_full_bound_USD=pool; original and historical settled/UNKNOWN facts remain unchanged.",
+    "Pure wire contract maximum_new_physical_POSTs/manual_new_allocation_physical_POSTs=2; previous_spent_USD and previous_physical_POSTs_used from all latest CLOSED current-group receipts; cumulative maximum count=prior+2; cumulative cash=known+pool.",
+    "New authority maximum_physical_POSTs=2, maximum_new_reserve_USD=pool, per_POST_full_hold_USD=0.041; frozen wire contract, release MONEY and exact current public predecessor receipts must agree. Do not modify any old authority.",
+    "Release/template max_provider_posts/maximum_provider_post_count/per-leg=2, new_batch_reserve_USD=pool and exact money shape from new guard contract.",
+    "Browser MAX_PROVIDER_POSTS/MAX_REQUEST_POSTS=2, MIN_PROVIDER_SLOTS remains 2, BATCH_RESERVE_SCALED=pool * 1e8 as exact integer; report reserve fields=pool.",
+    "Runtime software max_provider_calls=2; controller success physical count=2; all authority/release/free-preflight/current exact pins updated from newly sealed source bytes.",
+    "Fresh unique future native42+ paths/nonce/claims/report labels only after strict/schema/full-source science PASS and exact post-diagnostic41 receipts. No old STOP edit, slot reuse, new provider qualification or historical test rerun."
+  ],
+  "financial_example_only_after_actual40_before_any41_expense": {
+    "parent_confirmed_prior_actual_POSTs": 20,
+    "parent_confirmed_prior_known_USD": "0.17182790",
+    "original_total_USD": "0.24000000",
+    "available_conditional_pool_USD": "0.06817210",
+    "maximum_new_POSTs": 2,
+    "per_pending_POST_full_hold_USD": "0.04100000",
+    "strict_wire_output_price_bound_USD": "0.03988480",
+    "safety_margin_USD": "0.00050000",
+    "bound_plus_margin_USD": "0.04038480",
+    "first_POST_minimum_available_pool_USD": "0.04100000",
+    "maximum_settled_teacher_fee_allowing_checker_USD": "0.02717210",
+    "two_simultaneous_holds_USD": "0.08200000",
+    "simultaneous_two_holds_not_admitted_or_required": true,
+    "no_current_scope_budget_frozen_or_allocated": true
+  },
+  "latest_parent_reported_state_after_actual41": {
+    "result_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-fixed-checker-native-schema41-candidate\\actual-native-schema41\\actual-checker-native-schema41-result01.json",
+    "source": "Root reported actual41; exact current group/private ledger is not opened by this child.",
+    "prior_actual_POSTs": 20,
+    "new_actual41_POSTs": 1,
+    "reported_current_group_POSTs_by_sum": 21,
+    "known_group_USD": "0.17182790",
+    "new41_full_UNKNOWN_hold_USD": "0.04500000",
+    "known_plus_new_UNKNOWN_USD": "0.21682790",
+    "original_cash_cap_USD": "0.24000000",
+    "unheld_remaining_USD": "0.02317210",
+    "full_single_request_hold_required_USD": "0.04100000",
+    "unheld_pool_below_one_full_hold": true,
+    "fully_settled": false,
+    "actual41_status": "STOP_RETAINED_HTTP400_GOOGLE_INVALID_ARGUMENT_NO_MODEL_OUTPUT_COST_UNKNOWN",
+    "native_or_further_paid_action_permitted": false,
+    "UNKNOWN_release_or_fee_resolution_performed_or_requested": false,
+    "cannot_assume_HTTP400_is_free": true
+  },
+  "future_42_plus_release_preconditions": [
+    "Blocked now: actual41 retains0.045 UNKNOWN hold, fully_settled=false and only0.02317210 remains unheld; neither a fully settled predecessor nor one0.041 hold is available. No additional paid action or hold release is authorized.",
+    "Only a future authorized actual resolution can supply CLOSED known-cost receipts with no new open/UNKNOWN claim; exact immutable receipt pins and whole current-group count/known fees must then independently bind into the new producer/authority.",
+    "Recompute pool = 0.24 - exact latest known group fees, and require pool >=0.041 before first call. Diagnostic41 costing more than0.02717210 would leave less than one full hold from the current balance.",
+    "Even if a first teacher can start, checker is conditional on its final known fee <= pool -0.041. Unknown fee/transport failure/insufficient pool stops, preserves receipt and yields no complete-answer success.",
+    "Require strict complete schema plus independent10 complete claims/19 complete units source grade, exact adopted Main source pins and current small free receipt before any native run.",
+    "Final checker/publication/semantic/source/citation gates and native repair policy retained. With max2 after two calls, insufficient_calls_for_repair_and_recheck prevents repair/recheck and publication; no third call."
+  ],
+  "current_scientific_blocker": "Root reported actual40 both schema FAILED because all10 claim citations omitted; no10C19C PASS. Actual41 fullV2 strict schema HTTP400 produced no model output and no science grade. This financial proof is not a source-quality or native release.",
+  "current_Main_pins_not_certified_by_this_child": true,
+  "latest_actual_native_baseline": {
+    "native_id": 36,
+    "TFull_seconds": 41.14490000000596,
+    "new_native_observation_or_TFull_created": false
+  },
+  "limitations": [
+    "Financial methods run against a virtual in-memory ledger, not a native worker or physical ledger.",
+    "Real authority, source pins, filesystem locks, provider route/wire verification, private fixture, semantic/source/schema/UI gates are not exercised or certified by this financial proof.",
+    "The proposed authority gate must freeze the exact available pool and require one full hold; any future scope still needs all existing gates and full-source science PASS.",
+    "An over-bound provider fee is retained and stops further submissions, as in the existing contract; the admission guarantee uses the unchanged enforced price/wire/output bound."
+  ],
+  "actions": {
+    "actual_API_POSTs": 0,
+    "actual_new_budget_allocation_USD": "0",
+    "DB_calls": 0,
+    "auth_seed_private_binder_or_denied_override_reads": 0,
+    "Main_or_B_writes": 0,
+    "native_scope_or_configuration_or_slot_created": 0,
+    "old_authority_or_STOP_edits": 0,
+    "only_own_W_small_public_artifacts_written": true
+  }
+}

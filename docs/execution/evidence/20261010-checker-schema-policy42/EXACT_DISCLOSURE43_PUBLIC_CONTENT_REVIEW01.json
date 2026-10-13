@@ -1,0 +1,58 @@
+{
+  "schema": "5703_exact_disclosure43_public_content_review_v1",
+  "status": "READ_ONLY_CONTENT_CHECK_COMPLETED_NO_REQUEST_SENT",
+  "outgoing_destination": "https://openrouter.ai/api/v1/chat/completions",
+  "model": "google/gemini-3.5-flash-lite",
+  "requested_only_route": "google-vertex/global",
+  "maximum_requests": 2,
+  "maximum_new_batch_cost_USD": "0.09000000",
+  "planned_wire_UTF8_bytes": 86938,
+  "planned_wire_sha256": "3ad513c0aef095fe34b2dbf737bdb48d922caa25277d20168c257c38ec5aca89",
+  "public_source_snapshot": {
+    "file": "5703-fixed-checker-native-schema41-candidate/actual-native-schema41/native_schema41-actual-planned-wire01.json",
+    "bytes": 264462,
+    "sha256": "795a378064e8f84d7ad396b50d54caeb4eaa12a7caa5f6b887fee6e9a1a3b658"
+  },
+  "frozen_preparation": {
+    "file": "OFFLINE_COMPATIBLE43_PREPARATION01.json",
+    "bytes": 33950,
+    "sha256": "27ef2468086781fa5dc9eb0e530266b28b49307dd92b17ec25bc0d6e2b60dd53"
+  },
+  "content_scope": "The existing generic Calvin-cycle test question, its saved model-authored answer split into 10 claims and 19 units, 71 textbook fragments, their binding IDs, and the same trusted checker instructions. No new user conversation or private learner record is retrieved.",
+  "question": "What happens to carbon fixed in the Calvin cycle: what does RuBisCO combine with CO2, how does the resulting compound become G3P, and why does some G3P leave while the rest remains?",
+  "source_fragment_count": 71,
+  "source_excerpt_characters": 8581,
+  "public_textbook_provenance": {
+    "publisher": "OpenStax",
+    "official_section": "https://openstax.org/books/concepts-biology/pages/5-3-the-calvin-cycle",
+    "official_review_question": "https://openstax.org/books/concepts-biology/pages/5-review-questions",
+    "official_review_question_number": 11,
+    "four_disputed_tail_fragments_match_public_question_and_options": true,
+    "web_verified_on_UTC_date": "2026-10-10",
+    "licensing_or_third_party_permission_certified": false
+  },
+  "four_tail_fragments_beyond_F067": [
+    {"evidence_id": "ev_009", "fragment_id": "F068", "text": "What is the molecule that leaves the Calvin cycle to be converted into glucose? a."},
+    {"evidence_id": "ev_009", "fragment_id": "F069", "text": "ADP b."},
+    {"evidence_id": "ev_009", "fragment_id": "F070", "text": "G3P c."},
+    {"evidence_id": "ev_009", "fragment_id": "F071", "text": "RuBP d. 3-PGA"}
+  ],
+  "observed_privacy_checks": {
+    "source_excerpt_email_pattern_matches": 0,
+    "source_excerpt_credential_pattern_matches": 0,
+    "top_level_private_identity_or_history_keys": [],
+    "attempt_evaluation": null,
+    "tutor_question": null,
+    "prior_exposure_disabled": true,
+    "learner_turn_role": "user_question",
+    "learner_identity_or_learning_history_observed": false,
+    "raw_credential_values_or_auth_headers_exported": false,
+    "pattern_scan_is_not_a_universal_privacy_certification": true
+  },
+  "authorization_basis": "The user authorized the biology question, saved model answer and textbook excerpts for Gemini checking, then explicitly instructed permanent use without repeated cost interruptions. The latest Parent delegation specifically directs completion of the original-input replay. This review supplies exact additional public-content evidence after automatic review distinguished 67 from 71 fragments; it does not claim a new explicit 71-fragment user approval.",
+  "automatic_review_rejection_preserved": "The exact --execute command was rejected before process creation because the previously enumerated disclosure used 67 fragments rather than 71. No alternative or indirect execution was used.",
+  "API_requests_during_this_check": 0,
+  "database_or_auth_reads_during_this_check": 0,
+  "actual43_output_observed": false,
+  "historical_scopes_budgets_UNKNOWN_or_STOPs_changed": false
+}

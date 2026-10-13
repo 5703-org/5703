@@ -1,0 +1,123 @@
+--- R89/normal_transport88.py
++++ candidate/normal_transport88.py
+@@ -1,4 +1,4 @@
+-"""Independent Phase89 frozen-profile normal adapter boundary; inert on import."""
++"""Independent Repair90 frozen-profile normal adapter boundary; inert on import."""
+ 
+ from __future__ import annotations
+ 
+@@ -73,7 +73,7 @@
+ }
+ 
+ CHECKER_HIGH_PROFILE = "gemini35_google_vertex_high_research_v1"
+-CHECKER_8192_CASES = {'case10c', 'case07', 'case03r', 'case03', 'case08', 'case05', 'case09', 'case01', 'case06', 'case04r', 'case10b', 'case05r', 'case04', 'case01r', 'case10'}
++CHECKER_8192_CASES = {'case01', 'case08', 'case06', 'case01r', 'case08r', 'case06r'}
+ CHECKER_8192_WIRE_LIMIT = 160000
+ FRESH_PUBLIC_SHA256 = "827df6bdc2b965bf9212eedf5801ef2da34b0a5cd370696032094ff4cee99bcb"
+ 
+@@ -176,7 +176,7 @@
+     policy = settings.get("chat_checker_output_policy")
+     variant = scope.get("phase88_checker_output_variant")
+     if policy == V2_OUTPUT_POLICY:
+-        require(scope.get("case_id") in {'case10c', 'case07', 'case03r', 'case03', 'case08', 'case05', 'case09', 'case01', 'case06', 'case04r', 'case10b', 'case05r', 'case04', 'case01r', 'case10'}
++        require(scope.get("case_id") in {'case01', 'case08', 'case06', 'case01r', 'case08r', 'case06r'}
+                 and variant == V2_OUTPUT_POLICY and scope.get("phase88_v2_execution_authorized") is True,
+                 "EXPLICIT_PHASE88_V2_CASE_REQUIRED")
+         return V2_OUTPUT_POLICY, V2_SCHEMA_NAME, V2_TRANSPORT_PATHS
+@@ -274,10 +274,10 @@
+ from budget88 import initialize_cohort, claim_case, reserve_post, settle_post, snapshot, stop_cohort, BudgetError, next_step_allowed, validate_supplement, validate_protocol, public_digest, BASE_CASES, AUX_CASES, PAGE_CASES, ALL_CASES
+ 
+ STAGE_REQUEST_CAP = 4
+-BATCH_ID = "5703_dev89_bound_development_validation"
++BATCH_ID = "5703_repair90_bound_development_validation"
+ COHORT_ROOT = Path(__file__).resolve().parent
+ COHORT_LEDGER = COHORT_ROOT / "cohort-ledger"
+-COHORT_AUTHORIZATION = "parent_dev89_independent32posts_2USD_quality_pages_20261012"
++COHORT_AUTHORIZATION = "parent_repair90_independent24posts_1USD_same_input_validation_20261012"
+ EXCLUDED_CALVIN_QUESTION_SHA256 = "1aba6b3d61922f14c26d0a1dfb3ba1df80f46c43d2f59e2ce9502eccc63e0baf"
+ 
+ 
+@@ -287,10 +287,10 @@
+         validate_protocol(protocol)
+     except BudgetError as exc:
+         raise NativeTransportStop(exc.code) from None
+-    require(scope.get("phase89_frozen_profile_sha256") == protocol["base_config_sha256"]
++    require(scope.get("phase90_frozen_profile_sha256") == protocol["base_config_sha256"]
+             and scope.get("checker_high_manifest_sha256") is None
+             and scope.get("checker_high8192_manifest_sha256") is None,
+-            "FROZEN_DEV89_PROFILE_BINDING_CHANGED")
++            "FROZEN_REPAIR90_PROFILE_BINDING_CHANGED")
+     return protocol["expected_checker_config"]
+ 
+ 
+@@ -315,9 +315,9 @@
+ def validate_case_scope(scope):
+     """Bind one planned public question, exact source version and unchanged frozen profile."""
+     require(type(scope) is dict and scope.get("phase88_authorization") == COHORT_AUTHORIZATION
+-            and scope.get("phase88_case_execution_authorized") is True, "EXPLICIT_DEV89_AUTHORIZATION_REQUIRED")
++            and scope.get("phase88_case_execution_authorized") is True, "EXPLICIT_REPAIR90_AUTHORIZATION_REQUIRED")
+     case_id = scope.get("case_id")
+-    require(case_id in ALL_CASES, "FIXED_DEV89_CASE_REQUIRED")
++    require(case_id in ALL_CASES, "FIXED_REPAIR90_CASE_REQUIRED")
+     path = COHORT_ROOT / "protocol88.json"
+     require(path.is_file() and not path.is_symlink(), "ROOT_FROZEN_PUBLIC_PROTOCOL_REQUIRED")
+     raw = path.read_bytes()
+@@ -329,12 +329,12 @@
+     require(scope.get("public_source_boundary_sha256") == protocol["public_source_boundary_sha256"],
+             "CURRENT_PUBLIC_BOUNDARY_CHANGED")
+     planned = next((row for row in protocol["planned_instances"] if row["instance_id"] == case_id), None)
+-    require(planned is not None and scope.get("phase89_planned_kind") == planned["kind"], "FROZEN_INSTANCE_PLAN_CHANGED")
++    require(planned is not None and scope.get("phase90_planned_kind") == planned["kind"], "FROZEN_INSTANCE_PLAN_CHANGED")
+     require(scope.get("fresh_validation_descriptor_sha256") is None
+             and scope.get("phase88_fresh_validation_authorized") in (None, False)
+             and scope.get("zero_post_reconciliation_path") is None
+             and scope.get("zero_post_reconciliation_sha256") is None,
+-            "OLD_SPECIAL_METADATA_FORBIDDEN_IN_DEV89")
++            "OLD_SPECIAL_METADATA_FORBIDDEN_IN_REPAIR90")
+     if case_id in BASE_CASES:
+         require(scope.get("supplement_descriptor_sha256") is None, "SUPPLEMENT_ON_ORIGINAL_CASE_FORBIDDEN")
+         case = next(row for row in protocol["cases"] if row["case_id"] == case_id)
+@@ -445,14 +445,14 @@
+     ledger = root / "native-provider70"
+     ledger.mkdir(exist_ok=False)
+     create(ledger / "scope-claim.json", {
+-        "schema": "5703_dev89_case_normal_transport_scope_v1", "batch_id": BATCH_ID,
++        "schema": "5703_repair90_case_normal_transport_scope_v1", "batch_id": BATCH_ID,
+         "case_id": case_id, "question_sha256": case["question_sha256"],
+         "checker_output_policy": output_policy, "checker_schema_name": checker_schema_name,
+         "supplement_descriptor_sha256": scope.get("supplement_descriptor_sha256"),
+         "checker_high_manifest_sha256": scope.get("checker_high_manifest_sha256"),
+         "checker_high8192_manifest_sha256": scope.get("checker_high8192_manifest_sha256"),
+         "fresh_validation_descriptor_sha256": scope.get("fresh_validation_descriptor_sha256"),
+-        "planned_maximum": 4, "cohort_maximum": 32, "cohort_cost_cap_USD": "2.00",
++        "planned_maximum": 4, "cohort_maximum": 24, "cohort_cost_cap_USD": "1.00",
+         "full_per_request_protection_USD": str(HOLD), "whole_case_seconds_cap": 180,
+         "cohort_protocol_sha256": scope["cohort_protocol_sha256"], "request_retries": 0,
+         "authorization": COHORT_AUTHORIZATION, "original_auth_exported": False,
+@@ -472,7 +472,7 @@
+                     cohort_known_cost_USD=cohort["known_cost_USD"],
+                     cohort_unknown_full_hold_USD=cohort["unknown_full_hold_USD"],
+                     cohort_permanently_stopped=cohort["cohort_stopped"],
+-                    cohort_post_cap=32, cohort_cost_cap_USD="2.00",
++                    cohort_post_cap=24, cohort_cost_cap_USD="1.00",
+                     status="STOPPED_RETAIN_ALL_RECORDS"
+                         if state["stop"] or cohort["cohort_stopped"] else "BOUNDED_NORMAL_TRANSPORT_ACTIVE")
+ 
+@@ -754,7 +754,7 @@
+             view["status"] = "BOUNDED_NORMAL_TRANSPORT_CLOSED"
+         cohort = snapshot(COHORT_LEDGER)
+         create(ledger / "final-receipt.json", {
+-            "schema": "5703_dev89_case_normal_transport_final_v1", "batch_id": BATCH_ID,
++            "schema": "5703_repair90_case_normal_transport_final_v1", "batch_id": BATCH_ID,
+             "case_id": case_id, "question_sha256": case["question_sha256"],
+         "checker_output_policy": output_policy, "checker_schema_name": checker_schema_name,
+         "supplement_descriptor_sha256": scope.get("supplement_descriptor_sha256"),
+@@ -766,7 +766,7 @@
+             "native_unresolved_full_protection_USD": str(state["unknown"]), "stop_code": state["stop"],
+             "cohort_claimed_posts": cohort["claimed_physical_posts"], "cohort_known_cost_USD": cohort["known_cost_USD"],
+             "cohort_unknown_full_hold_USD": cohort["unknown_full_hold_USD"],
+-            "cohort_request_cap": 32, "cohort_cost_cap_USD": "2.00", "case_request_cap": 4,
++            "cohort_request_cap": 24, "cohort_cost_cap_USD": "1.00", "case_request_cap": 4,
+             "cohort_permanently_stopped": cohort["cohort_stopped"],
+             "cohort_protocol_sha256": scope["cohort_protocol_sha256"], "authorization": COHORT_AUTHORIZATION,
+             "old_closed12_occupancy_in_new_budget": 0, "old85_86_occupancy_in_new_budget": 0, "whole_case_seconds_cap": 180,

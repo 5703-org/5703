@@ -1,0 +1,14 @@
+{
+  "schema": "phase85_posttrial_synthetic_harness_failure_v1",
+  "status": "HARNESS_FAILED_AT_JUNIT_FINALIZATION",
+  "error": "SYNTHETIC_OUTSIDE_WRITE_FORBIDDEN",
+  "cause": "Junit platform.node invoked Windows version discovery and attempted NUL outside the run directory; audit blocked it",
+  "junit_counts": null,
+  "candidate_test_failure_established": false,
+  "provider_posts": 0,
+  "DB_actions": 0,
+  "auth_actions": 0,
+  "Main_writes": 0,
+  "correction": "Set only synthetic Junit hostname metadata; retain network, subprocess and outside-write guards",
+  "recorded_after_failure_from_root_tool_result": true
+}

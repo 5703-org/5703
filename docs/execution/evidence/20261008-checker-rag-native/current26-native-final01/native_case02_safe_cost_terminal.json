@@ -1,0 +1,77 @@
+{
+  "at_UTC": "2026-10-08T06:56:19.465242+00:00",
+  "case_id": "case02",
+  "job_id": "84feeb05-b7db-49b3-aa7c-ef7a20a59592",
+  "request_id": "ef76155f-df9a-490d-a87e-89147c710d87",
+  "state": "succeeded",
+  "answer_id": "ef3b7d64-8d8b-4ba5-9806-38c3c9ec5d78",
+  "normal_checked_answer_published": true,
+  "actual_physical_POSTs": 2,
+  "actual_persisted_safe_usage_events": [
+    {
+      "sequence": 1,
+      "phase": "start",
+      "attempt_id": "ef76155f-df9a-490d-a87e-89147c710d87:attempt:1",
+      "stage": "generation",
+      "latency_ms": null,
+      "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+      "usage": {},
+      "request_submitted": null,
+      "error_present": false
+    },
+    {
+      "sequence": 2,
+      "phase": "finish",
+      "attempt_id": "ef76155f-df9a-490d-a87e-89147c710d87:attempt:1",
+      "stage": "generation",
+      "latency_ms": 5132,
+      "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+      "usage": {
+        "input_tokens": 10947,
+        "output_tokens": 1398,
+        "total_tokens": 12345,
+        "reasoning_tokens": 1085,
+        "cache_hit_input_tokens": 0,
+        "cache_miss_input_tokens": 10947,
+        "cost": 0.0067791
+      },
+      "request_submitted": true,
+      "error_present": false
+    },
+    {
+      "sequence": 3,
+      "phase": "start",
+      "attempt_id": "ef76155f-df9a-490d-a87e-89147c710d87:attempt:2",
+      "stage": "joint_check",
+      "latency_ms": null,
+      "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+      "usage": {},
+      "request_submitted": null,
+      "error_present": false
+    },
+    {
+      "sequence": 4,
+      "phase": "finish",
+      "attempt_id": "ef76155f-df9a-490d-a87e-89147c710d87:attempt:2",
+      "stage": "joint_check",
+      "latency_ms": 4280,
+      "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+      "usage": {
+        "input_tokens": 9860,
+        "output_tokens": 1020,
+        "total_tokens": 10880,
+        "reasoning_tokens": 0,
+        "cache_hit_input_tokens": 0,
+        "cache_miss_input_tokens": 9860,
+        "cost": 0.005508
+      },
+      "request_submitted": true,
+      "error_present": false
+    }
+  ],
+  "known_cost_USD": "0.0122871",
+  "unknown_holds_USD": "0",
+  "unknown_costs_keep_full_call_set_hold": false,
+  "known_cost_within_unresolved_holds_not_added_twice": true,
+  "invoice_or_billing_settlement": null
+}

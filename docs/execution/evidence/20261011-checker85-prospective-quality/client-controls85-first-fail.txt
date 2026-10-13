@@ -1,0 +1,360 @@
+test_busy_owned_api_is_preserved_not_force_stopped (__main__.ClientControls.test_busy_owned_api_is_preserved_not_force_stopped) ... ERROR
+test_closed_failed_recovery_target_and_original_teacher_raw (__main__.ClientControls.test_closed_failed_recovery_target_and_original_teacher_raw) ... ERROR
+test_domain_refusal_is_completed_api_not_quality_pass (__main__.ClientControls.test_domain_refusal_is_completed_api_not_quality_pass) ... ERROR
+test_idle_close_settlement_finite_then_succeeds (__main__.ClientControls.test_idle_close_settlement_finite_then_succeeds) ... ERROR
+test_json_duplicates_and_nonfinite_reject (__main__.ClientControls.test_json_duplicates_and_nonfinite_reject) ... ok
+test_login_failure_stops_before_any_session_and_closes (__main__.ClientControls.test_login_failure_stops_before_any_session_and_closes) ... ERROR
+test_lost_post_response_never_retries (__main__.ClientControls.test_lost_post_response_never_retries) ... ERROR
+test_normal_full_response_api_only_and_owned_close (__main__.ClientControls.test_normal_full_response_api_only_and_owned_close) ... ERROR
+test_poll_deadline_finite_without_message_retry (__main__.ClientControls.test_poll_deadline_finite_without_message_retry) ... ERROR
+test_prior_client_claim_refuses_second_login_before_network (__main__.ClientControls.test_prior_client_claim_refuses_second_login_before_network) ... ERROR
+test_private_response_withheld_instead_of_redacted_science (__main__.ClientControls.test_private_response_withheld_instead_of_redacted_science) ... ERROR
+test_scope_tamper_refuses_before_network_or_close (__main__.ClientControls.test_scope_tamper_refuses_before_network_or_close) ... ERROR
+test_terminal_failed_is_counted_preserved_and_no_answer_read (__main__.ClientControls.test_terminal_failed_is_counted_preserved_and_no_answer_read) ... ERROR
+test_transport_redirect_forbidden_and_fixed_origin (__main__.ClientControls.test_transport_redirect_forbidden_and_fixed_origin) ... ok
+test_wrong_job_stops_and_owned_api_closes (__main__.ClientControls.test_wrong_job_stops_and_owned_api_closes) ... ERROR
+test_wrong_ownership_claim_refuses_before_network (__main__.ClientControls.test_wrong_ownership_claim_refuses_before_network) ... ERROR
+
+======================================================================
+ERROR: test_busy_owned_api_is_preserved_not_force_stopped (__main__.ClientControls.test_busy_owned_api_is_preserved_not_force_stopped)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 165, in test_busy_owned_api_is_preserved_not_force_stopped
+    receipt = self.run_client()
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 107, in run_client
+    return client.run_case(self.case, self.scope, self.pin, login=self.login,
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           transport=self.api, clock=self.clock, sleep=self.clock.sleep,
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           runtime=self.runtime)
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 175, in run_case
+    case_dir, scope, pins = checked_case(case_dir, scope_file, scope_sha256, runtime)
+                            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 108, in checked_case
+    runtime = runtime.resolve(strict=True)
+  File "D:\Python\Lib\pathlib\_local.py", line 670, in resolve
+    return self.with_segments(os.path.realpath(self, strict=strict))
+                              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 726, in realpath
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-client\\synthetic-controls\\20261011T173229Z-25bca9a7\\test_busy_owned_api_is_preserved_not_force_stopped'
+
+======================================================================
+ERROR: test_closed_failed_recovery_target_and_original_teacher_raw (__main__.ClientControls.test_closed_failed_recovery_target_and_original_teacher_raw)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 225, in test_closed_failed_recovery_target_and_original_teacher_raw
+    receipt = self.run_client()
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 107, in run_client
+    return client.run_case(self.case, self.scope, self.pin, login=self.login,
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           transport=self.api, clock=self.clock, sleep=self.clock.sleep,
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           runtime=self.runtime)
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 175, in run_case
+    case_dir, scope, pins = checked_case(case_dir, scope_file, scope_sha256, runtime)
+                            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 108, in checked_case
+    runtime = runtime.resolve(strict=True)
+  File "D:\Python\Lib\pathlib\_local.py", line 670, in resolve
+    return self.with_segments(os.path.realpath(self, strict=strict))
+                              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 726, in realpath
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-client\\synthetic-controls\\20261011T173229Z-25bca9a7\\test_closed_failed_recovery_target_and_original_teacher_raw'
+
+======================================================================
+ERROR: test_domain_refusal_is_completed_api_not_quality_pass (__main__.ClientControls.test_domain_refusal_is_completed_api_not_quality_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 130, in test_domain_refusal_is_completed_api_not_quality_pass
+    receipt = self.run_client()
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 107, in run_client
+    return client.run_case(self.case, self.scope, self.pin, login=self.login,
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           transport=self.api, clock=self.clock, sleep=self.clock.sleep,
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           runtime=self.runtime)
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 175, in run_case
+    case_dir, scope, pins = checked_case(case_dir, scope_file, scope_sha256, runtime)
+                            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 108, in checked_case
+    runtime = runtime.resolve(strict=True)
+  File "D:\Python\Lib\pathlib\_local.py", line 670, in resolve
+    return self.with_segments(os.path.realpath(self, strict=strict))
+                              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 726, in realpath
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-client\\synthetic-controls\\20261011T173229Z-25bca9a7\\test_domain_refusal_is_completed_api_not_quality_pass'
+
+======================================================================
+ERROR: test_idle_close_settlement_finite_then_succeeds (__main__.ClientControls.test_idle_close_settlement_finite_then_succeeds)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 159, in test_idle_close_settlement_finite_then_succeeds
+    receipt = self.run_client()
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 107, in run_client
+    return client.run_case(self.case, self.scope, self.pin, login=self.login,
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           transport=self.api, clock=self.clock, sleep=self.clock.sleep,
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           runtime=self.runtime)
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 175, in run_case
+    case_dir, scope, pins = checked_case(case_dir, scope_file, scope_sha256, runtime)
+                            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 108, in checked_case
+    runtime = runtime.resolve(strict=True)
+  File "D:\Python\Lib\pathlib\_local.py", line 670, in resolve
+    return self.with_segments(os.path.realpath(self, strict=strict))
+                              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 726, in realpath
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-client\\synthetic-controls\\20261011T173229Z-25bca9a7\\test_idle_close_settlement_finite_then_succeeds'
+
+======================================================================
+ERROR: test_login_failure_stops_before_any_session_and_closes (__main__.ClientControls.test_login_failure_stops_before_any_session_and_closes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 208, in test_login_failure_stops_before_any_session_and_closes
+    receipt = self.run_client()
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 107, in run_client
+    return client.run_case(self.case, self.scope, self.pin, login=self.login,
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           transport=self.api, clock=self.clock, sleep=self.clock.sleep,
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           runtime=self.runtime)
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 175, in run_case
+    case_dir, scope, pins = checked_case(case_dir, scope_file, scope_sha256, runtime)
+                            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 108, in checked_case
+    runtime = runtime.resolve(strict=True)
+  File "D:\Python\Lib\pathlib\_local.py", line 670, in resolve
+    return self.with_segments(os.path.realpath(self, strict=strict))
+                              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 726, in realpath
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-client\\synthetic-controls\\20261011T173229Z-25bca9a7\\test_login_failure_stops_before_any_session_and_closes'
+
+======================================================================
+ERROR: test_lost_post_response_never_retries (__main__.ClientControls.test_lost_post_response_never_retries)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 173, in test_lost_post_response_never_retries
+    receipt = self.run_client()
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 107, in run_client
+    return client.run_case(self.case, self.scope, self.pin, login=self.login,
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           transport=self.api, clock=self.clock, sleep=self.clock.sleep,
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           runtime=self.runtime)
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 175, in run_case
+    case_dir, scope, pins = checked_case(case_dir, scope_file, scope_sha256, runtime)
+                            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 108, in checked_case
+    runtime = runtime.resolve(strict=True)
+  File "D:\Python\Lib\pathlib\_local.py", line 670, in resolve
+    return self.with_segments(os.path.realpath(self, strict=strict))
+                              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 726, in realpath
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-client\\synthetic-controls\\20261011T173229Z-25bca9a7\\test_lost_post_response_never_retries'
+
+======================================================================
+ERROR: test_normal_full_response_api_only_and_owned_close (__main__.ClientControls.test_normal_full_response_api_only_and_owned_close)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 112, in test_normal_full_response_api_only_and_owned_close
+    receipt = self.run_client()
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 107, in run_client
+    return client.run_case(self.case, self.scope, self.pin, login=self.login,
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           transport=self.api, clock=self.clock, sleep=self.clock.sleep,
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           runtime=self.runtime)
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 175, in run_case
+    case_dir, scope, pins = checked_case(case_dir, scope_file, scope_sha256, runtime)
+                            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 108, in checked_case
+    runtime = runtime.resolve(strict=True)
+  File "D:\Python\Lib\pathlib\_local.py", line 670, in resolve
+    return self.with_segments(os.path.realpath(self, strict=strict))
+                              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 726, in realpath
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-client\\synthetic-controls\\20261011T173229Z-25bca9a7\\test_normal_full_response_api_only_and_owned_close'
+
+======================================================================
+ERROR: test_poll_deadline_finite_without_message_retry (__main__.ClientControls.test_poll_deadline_finite_without_message_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 152, in test_poll_deadline_finite_without_message_retry
+    receipt = self.run_client()
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 107, in run_client
+    return client.run_case(self.case, self.scope, self.pin, login=self.login,
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           transport=self.api, clock=self.clock, sleep=self.clock.sleep,
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           runtime=self.runtime)
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 175, in run_case
+    case_dir, scope, pins = checked_case(case_dir, scope_file, scope_sha256, runtime)
+                            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 108, in checked_case
+    runtime = runtime.resolve(strict=True)
+  File "D:\Python\Lib\pathlib\_local.py", line 670, in resolve
+    return self.with_segments(os.path.realpath(self, strict=strict))
+                              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 726, in realpath
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-client\\synthetic-controls\\20261011T173229Z-25bca9a7\\test_poll_deadline_finite_without_message_retry'
+
+======================================================================
+ERROR: test_prior_client_claim_refuses_second_login_before_network (__main__.ClientControls.test_prior_client_claim_refuses_second_login_before_network)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 180, in test_prior_client_claim_refuses_second_login_before_network
+    self.run_client()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 107, in run_client
+    return client.run_case(self.case, self.scope, self.pin, login=self.login,
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           transport=self.api, clock=self.clock, sleep=self.clock.sleep,
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           runtime=self.runtime)
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 175, in run_case
+    case_dir, scope, pins = checked_case(case_dir, scope_file, scope_sha256, runtime)
+                            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 108, in checked_case
+    runtime = runtime.resolve(strict=True)
+  File "D:\Python\Lib\pathlib\_local.py", line 670, in resolve
+    return self.with_segments(os.path.realpath(self, strict=strict))
+                              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 726, in realpath
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-client\\synthetic-controls\\20261011T173229Z-25bca9a7\\test_prior_client_claim_refuses_second_login_before_network'
+
+======================================================================
+ERROR: test_private_response_withheld_instead_of_redacted_science (__main__.ClientControls.test_private_response_withheld_instead_of_redacted_science)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 201, in test_private_response_withheld_instead_of_redacted_science
+    receipt = self.run_client()
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 107, in run_client
+    return client.run_case(self.case, self.scope, self.pin, login=self.login,
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           transport=self.api, clock=self.clock, sleep=self.clock.sleep,
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           runtime=self.runtime)
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 175, in run_case
+    case_dir, scope, pins = checked_case(case_dir, scope_file, scope_sha256, runtime)
+                            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 108, in checked_case
+    runtime = runtime.resolve(strict=True)
+  File "D:\Python\Lib\pathlib\_local.py", line 670, in resolve
+    return self.with_segments(os.path.realpath(self, strict=strict))
+                              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 726, in realpath
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-client\\synthetic-controls\\20261011T173229Z-25bca9a7\\test_private_response_withheld_instead_of_redacted_science'
+
+======================================================================
+ERROR: test_scope_tamper_refuses_before_network_or_close (__main__.ClientControls.test_scope_tamper_refuses_before_network_or_close)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 189, in test_scope_tamper_refuses_before_network_or_close
+    self.run_client()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 107, in run_client
+    return client.run_case(self.case, self.scope, self.pin, login=self.login,
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           transport=self.api, clock=self.clock, sleep=self.clock.sleep,
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           runtime=self.runtime)
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 175, in run_case
+    case_dir, scope, pins = checked_case(case_dir, scope_file, scope_sha256, runtime)
+                            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 108, in checked_case
+    runtime = runtime.resolve(strict=True)
+  File "D:\Python\Lib\pathlib\_local.py", line 670, in resolve
+    return self.with_segments(os.path.realpath(self, strict=strict))
+                              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 726, in realpath
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-client\\synthetic-controls\\20261011T173229Z-25bca9a7\\test_scope_tamper_refuses_before_network_or_close'
+
+======================================================================
+ERROR: test_terminal_failed_is_counted_preserved_and_no_answer_read (__main__.ClientControls.test_terminal_failed_is_counted_preserved_and_no_answer_read)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 137, in test_terminal_failed_is_counted_preserved_and_no_answer_read
+    receipt = self.run_client()
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 107, in run_client
+    return client.run_case(self.case, self.scope, self.pin, login=self.login,
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           transport=self.api, clock=self.clock, sleep=self.clock.sleep,
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           runtime=self.runtime)
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 175, in run_case
+    case_dir, scope, pins = checked_case(case_dir, scope_file, scope_sha256, runtime)
+                            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 108, in checked_case
+    runtime = runtime.resolve(strict=True)
+  File "D:\Python\Lib\pathlib\_local.py", line 670, in resolve
+    return self.with_segments(os.path.realpath(self, strict=strict))
+                              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 726, in realpath
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-client\\synthetic-controls\\20261011T173229Z-25bca9a7\\test_terminal_failed_is_counted_preserved_and_no_answer_read'
+
+======================================================================
+ERROR: test_wrong_job_stops_and_owned_api_closes (__main__.ClientControls.test_wrong_job_stops_and_owned_api_closes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 146, in test_wrong_job_stops_and_owned_api_closes
+    receipt = self.run_client()
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 107, in run_client
+    return client.run_case(self.case, self.scope, self.pin, login=self.login,
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           transport=self.api, clock=self.clock, sleep=self.clock.sleep,
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           runtime=self.runtime)
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 175, in run_case
+    case_dir, scope, pins = checked_case(case_dir, scope_file, scope_sha256, runtime)
+                            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 108, in checked_case
+    runtime = runtime.resolve(strict=True)
+  File "D:\Python\Lib\pathlib\_local.py", line 670, in resolve
+    return self.with_segments(os.path.realpath(self, strict=strict))
+                              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 726, in realpath
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-client\\synthetic-controls\\20261011T173229Z-25bca9a7\\test_wrong_job_stops_and_owned_api_closes'
+
+======================================================================
+ERROR: test_wrong_ownership_claim_refuses_before_network (__main__.ClientControls.test_wrong_ownership_claim_refuses_before_network)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 196, in test_wrong_ownership_claim_refuses_before_network
+    self.run_client()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\test_client85.py", line 107, in run_client
+    return client.run_case(self.case, self.scope, self.pin, login=self.login,
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           transport=self.api, clock=self.clock, sleep=self.clock.sleep,
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           runtime=self.runtime)
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 175, in run_case
+    case_dir, scope, pins = checked_case(case_dir, scope_file, scope_sha256, runtime)
+                            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-checker85-client\api_client85.py", line 108, in checked_case
+    runtime = runtime.resolve(strict=True)
+  File "D:\Python\Lib\pathlib\_local.py", line 670, in resolve
+    return self.with_segments(os.path.realpath(self, strict=strict))
+                              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 726, in realpath
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-client\\synthetic-controls\\20261011T173229Z-25bca9a7\\test_wrong_ownership_claim_refuses_before_network'
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.057s
+
+FAILED (errors=14)

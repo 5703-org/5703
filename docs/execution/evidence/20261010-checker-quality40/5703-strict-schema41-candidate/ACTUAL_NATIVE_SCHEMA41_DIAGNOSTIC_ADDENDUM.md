@@ -1,0 +1,19 @@
+# Actual native full-schema diagnostic41 outcome
+
+The single Root-executed native full-schema diagnostic stopped after **one physical POST with HTTP 400** on 2026-10-10. The upstream Google error was generic `INVALID_ARGUMENT` / `Request contains an invalid argument`. It identified no offending field. This observed request was not accepted, despite passing local request preparation. No particular JSON Schema keyword, schema complexity limit, gateway translation, or other parameter is established as the cause.
+
+The request retained the same Gemini 3.5 Flash-Lite model and fixed `gemini35_google_vertex_v1` route, full canonical V2 schema **7,125 bytes / SHA-256 `864212a5e636d2cadbc34328f431712a954c30130848a31e64e66e4bdedbc926`**, and original fixed **10 claims / 19 units / 71 source blocks**. The complete prepared wire was **91,032 bytes / SHA-256 `6ac52691212a056207652d3f0b5156d7e1a7e0b849ad7ff99c8bf6f42568e07c`**. Only the declared output-format transport changed from the frozen candidate40: identical authored system rules and source data, with the automatic textual schema hint moved into the identical full `json_schema` response format. No schema projection, compact hydration, citation autofill, fallback, or weakening of the local validators occurred.
+
+No model completion, token usage, or reported fee was returned. Therefore **schema validation and source-quality review did not run**, and this call provides no evidence of repair avoidance, scientific support, or native UI time to complete an answer. The public result's `schema_PASS=false` indicates no admitted response; it is not a completed schema check on returned model JSON. Adapter invocation-to-return latency was **1,297.5456 ms**, which measures the failed request only.
+
+The **USD 0.04500000 UNKNOWN hold remains reserved**. The closed group's known cost remains **USD 0.17182790**; zero newly recorded known expense is not a claim that this failed request was free. Within the original USD 0.24000000 envelope, known expense plus this hold leaves **USD 0.02317210**, insufficient for another full-request USD 0.045 reserve. Existing historical UNKNOWN holds were not released. This scope is stopped and its local lock released; no follow-up request is authorized under this scope.
+
+There were zero automatic retries, teacher calls, JSON repairs, experiment database accesses, or course qualification claims. Root's execution recorded one approved read-only credential-preparation database leg for the existing isolated test database; this addendum author performed no credential or database access. Returned raw output was not repaired or populated. The frozen feasibility report remains unchanged: general model structured-output documentation does not certify acceptance of this exact full schema through this fixed gateway endpoint.
+
+| Retained public evidence | Bytes | SHA-256 |
+| --- | ---: | --- |
+| `5703-fixed-checker-native-schema41-candidate/OFFLINE_CHECKER_NATIVE_SCHEMA41_PREPARATION01.json` | 27,693 | `e1d9c7e398b04d5e21cb5c947010358f0069a4cd7703af4e3d469bbcfd7ef881` |
+| `5703-fixed-checker-native-schema41-candidate/actual-native-schema41/actual-checker-native-schema41-result01.json` | 3,616 | `615934b671341b9f968b9b4cc4aeeeceb21e04602b7c13c0e9155bc1142c6dd6` |
+| `5703-fixed-checker-native-schema41-candidate/actual-native-schema41/native_schema41-raw-provider-read01.json` | 1,778 | `f51efd5ceae9b6ae94814405a798919382e19f37c02d0adfc59c3d0bba56114d` |
+
+Next work is local evidence reconciliation and a concrete compatibility investigation that preserves the complete contract. Do not retry this scope, infer a specific failing keyword from the generic error, project away constraints, fill missing citations, switch providers, or release the UNKNOWN hold without an actual settlement receipt.

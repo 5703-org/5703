@@ -1,0 +1,36 @@
+{
+  "status": "ACTUAL_THREE_FILE_MAIN_PREWARM_ADOPTION_PASS",
+  "created_at_utc": "2026-10-09T00:54:54.964854+00:00",
+  "scope": "Week10 opt-in validated retrieval cache prewarm; default disabled",
+  "root_review": "No actionable correctness finding in three-file patch; inspected digest, native cache lifecycle, worker lock ordering, transaction read-only and rollback",
+  "source04_archive_mutated": false,
+  "provider_calls": 0,
+  "database_connections": 0,
+  "files": [
+    {
+      "path": "backend/app/core/config.py",
+      "before_sha256": "11a6026afa1533a860b3f6be71b3c79200b6c3d0b5cea616b5d18c7abdf55195",
+      "after_sha256": "dc856ad228ec6b17fe757b051a16551863167b03fce348e69119376f9aaba98d",
+      "before_bytes": 6063,
+      "after_bytes": 6113,
+      "backup": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-cache-ready-verification-20261009-01\\adoption-backups01\\backend\\app\\core\\config.py"
+    },
+    {
+      "path": "backend/app/worker.py",
+      "before_sha256": "4ac015176cc08524f054beafe78e9da56a02d831c858e079ef1d75074efa8634",
+      "after_sha256": "64f712d0c6c1e58a7a0a44aa0aaaa61883fcd5386ca18e5d889d0507200aba3b",
+      "before_bytes": 10181,
+      "after_bytes": 11785,
+      "backup": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-cache-ready-verification-20261009-01\\adoption-backups01\\backend\\app\\worker.py"
+    },
+    {
+      "path": "backend/app/modules/knowledge/service.py",
+      "before_sha256": "faed2d363d333afbf317a1738e192d4cc827a40b278de33f6ede3794385bb355",
+      "after_sha256": "6170d5b38ae9aea264eb3fa738e567cdaacb5dbead8b32cfb74abd92c9550b10",
+      "before_bytes": 59083,
+      "after_bytes": 60529,
+      "backup": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-cache-ready-verification-20261009-01\\adoption-backups01\\backend\\app\\modules\\knowledge\\service.py"
+    }
+  ],
+  "tests": "NOT_YET_RUN"
+}

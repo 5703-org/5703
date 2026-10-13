@@ -1,0 +1,94 @@
+{
+  "schema": "5703_free26_public_attempt_history_v1",
+  "scope": "Public metadata read from original receipts; failure classifications follow the root implementation diagnosis and the verified final source diff. Original files are retained, not overwritten or reclassified.",
+  "counts_qualification": "Complete-run collector values include subtest call reports. Final C is 141 ordinary tests plus 90 subtests. Overlapping runs are not additive unique tests.",
+  "attempts": [
+    {
+      "source": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-scope-context26-free\\ACTUAL_SCOPE_CONTEXT26_FREE_RESULT.json",
+      "bytes": 28404,
+      "sha256": "b3292648b6b28839f129be0465952979211f7d6b63d629ca6e3ec95e30f4c12f",
+      "status": "FAIL",
+      "collector_passed": 230,
+      "failed": 1,
+      "skipped": 0,
+      "all_pins_unchanged": true,
+      "audit_denials": [],
+      "provider_calls": 0,
+      "database_access": 0,
+      "main_writes": 0,
+      "classification": "Test serializer assumption: default versus compact JSON encoder."
+    },
+    {
+      "source": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-scope-context26-free-b\\ACTUAL_SCOPE_CONTEXT26_FREE_RESULT.json",
+      "bytes": 28436,
+      "sha256": "30b469816fa3be0a3732548366e78b17be5188cb8456358ea477859dc2a86bb0",
+      "status": "FAIL",
+      "collector_passed": 230,
+      "failed": 1,
+      "skipped": 0,
+      "all_pins_unchanged": true,
+      "audit_denials": [],
+      "provider_calls": 0,
+      "database_access": 0,
+      "main_writes": 0,
+      "classification": "After serializer correction, actual missing projection in the unprotected full-draft repair branch."
+    },
+    {
+      "source": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-scope-context26-free-debug\\ACTUAL_SCOPE_CONTEXT26_FREE_RESULT.json",
+      "bytes": 28317,
+      "sha256": "015580ead2cf10a819bccfd4c485fa446f94888cc2203e8d0b8272c090ffa5d0",
+      "status": "FAIL",
+      "collector_passed": 1,
+      "failed": 1,
+      "skipped": 0,
+      "all_pins_unchanged": true,
+      "audit_denials": [],
+      "provider_calls": 0,
+      "database_access": 0,
+      "main_writes": 0,
+      "classification": "Focused reproduction of the same product branch omission."
+    },
+    {
+      "source": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-scope-context26-free-debug-b\\ACTUAL_SCOPE_CONTEXT26_FREE_RESULT.json",
+      "bytes": 28348,
+      "sha256": "4be07f80ff6cb31e682b6131761af6d6c9d301eaee07bf4276d13c50eca17bba",
+      "status": "PASS",
+      "collector_passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "all_pins_unchanged": true,
+      "audit_denials": [],
+      "provider_calls": 0,
+      "database_access": 0,
+      "main_writes": 0,
+      "classification": "Focused two-case pass after the conditional claim-patch branch fix."
+    },
+    {
+      "source": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-scope-context26-free-c\\ACTUAL_SCOPE_CONTEXT26_FREE_RESULT.json",
+      "bytes": 28441,
+      "sha256": "ecc925cabe10a6c273f3f0b7e08bcdcd3b48c88ccb6194ff43ec98d20446c26e",
+      "status": "PASS",
+      "collector_passed": 231,
+      "failed": 0,
+      "skipped": 0,
+      "all_pins_unchanged": true,
+      "audit_denials": [],
+      "provider_calls": 0,
+      "database_access": 0,
+      "main_writes": 0,
+      "classification": "Final complete run: 141 ordinary tests plus 90 subtests."
+    }
+  ],
+  "synthetic_wire_qualification": {
+    "saved_message_bytes": 539,
+    "conditional_native25_60443_minus_delta": 59904,
+    "actual_historical_native25_full_wire_replayed": false,
+    "actual_native26_third_repair_bytes": 59710,
+    "unchanged_limit_bytes": 60000
+  },
+  "preparation_operations": {
+    "provider_calls": 0,
+    "database_access": 0,
+    "main_writes": 0
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "schema": "phase88_normal_repair_v1",
+  "status": "READY_FROZEN_PUBLIC_CASES",
+  "authorization": "parent_phase88_independent24posts_1USD_normal_repair_20261011",
+  "cases": [
+    {
+      "case_id": "case03",
+      "question_id": "development85_03",
+      "question_text": "Does a molecule binding at an allosteric site necessarily inhibit an enzyme? Contrast how an allosteric inhibitor and an allosteric activator affect enzyme shape, substrate binding and enzyme activity.",
+      "question_sha256": "79e10aea43d34d5ec92aaa1d42a4123f94c4991e83cbfa6be3ae55e97891ffe5",
+      "purpose": "normal_regression"
+    },
+    {
+      "case_id": "case04",
+      "question_id": "development85_04",
+      "question_text": "For vinegar with a hydronium ion concentration of approximately 4 × 10^-3 M, a learner writes pH = 11.6 and pOH = 2.4. Are those assignments correct? Give the correct pair and identify which of the two quantities is normally measured directly with a pH meter.",
+      "question_sha256": "bc771dece3e6c2961dd8ed4aee766ba3b8b3034549ee19977f7b9c68db092bfd",
+      "purpose": "normal_regression"
+    },
+    {
+      "case_id": "case05",
+      "question_id": "development85_05",
+      "question_text": "Model a fixed amount of gas as ideal. It occupies 0.450 L at 300 K and is heated to 400 K while pressure stays constant. What final volume is expected, and why must the temperature be on the kelvin scale? If pressure were also allowed to change without its new value being given, would these temperatures alone determine the final volume?",
+      "question_sha256": "e159815e7046927e2c08025e57d0281f18aa174fc19c599a3c4f577c2757cc0f",
+      "purpose": "normal_regression"
+    },
+    {
+      "case_id": "case06",
+      "question_id": "development85_06",
+      "question_text": "Trace blood from the right ventricle through the pulmonary circulation back to the left atrium. Which pulmonary vessels carry deoxygenated blood and which return oxygenated blood, and where does the change in oxygenation occur? Explain why the word 'artery' alone is not enough to label pulmonary blood as oxygen-rich.",
+      "question_sha256": "ea0adda731dcc65c3190efb769fcd3f9ce5af66598fa77e861e9ff797db909c4",
+      "purpose": "normal_regression"
+    },
+    {
+      "case_id": "case07",
+      "question_id": "development85_07",
+      "question_text": "During translation, how does AUG differ from the stop codons UAA, UAG and UGA? Explain what happens to the growing polypeptide and the ribosome when a stop codon is reached, instead of treating the stop codon as an instruction to add another amino acid.",
+      "question_sha256": "bd615ce859d72da72075a72c25ffad9a476e20e8bd3293850cb705775620fafc",
+      "purpose": "normal_regression"
+    },
+    {
+      "case_id": "case08",
+      "question_id": "development85_08",
+      "question_text": "In a well-insulated bomb calorimeter, a reaction raises the temperature of its surrounding water by 5.0 °C. Taking the reacting material as the system, what sign should the reaction heat q have? Can its numerical heat in joules be obtained from this temperature change alone? Explain what additional calorimeter quantity is needed and why calibration matters.",
+      "question_sha256": "32cfb6093a0691704c5f389c7baacdcb19d00b3b4c9c99a69c3a124b66b089c1",
+      "purpose": "normal_regression"
+    },
+    {
+      "case_id": "case09",
+      "question_id": "phase88_buffer_response_capacity_fresh",
+      "question_text": "Consider two 1.0 L acetic-acid/sodium-acetate buffers under the textbook buffer model. One contains 1.0 M of each component; the other contains 0.10 M of each. Without calculating a numerical pH, compare their initial pH and buffer capacity and explain the reason for each comparison. Describe how the conjugate pair responds to a small addition of strong acid and, separately, to a small addition of strong base. Does buffering mean that either solution keeps its pH unchanged for arbitrarily large additions?",
+      "question_sha256": "35b6b772578058cf4d895637330300e4597b31becf98170eed5d6d498b1aeb77",
+      "purpose": "unseen"
+    }
+  ],
+  "maximum_physical_posts": 24,
+  "cost_cap_USD": "1.00",
+  "per_request_provider_calls_maximum": 4,
+  "whole_case_seconds_cap": 180,
+  "http_automatic_retries": false,
+  "automatic_case_replay_or_reclaim": false,
+  "default_output_policy": "lossless_unit_findings_v1",
+  "explicit_v2_allowed": true,
+  "expected_model_config": {
+    "provider": "openai_compatible",
+    "model": "anthropic/claude-haiku-5.5",
+    "base_url": "https://openrouter.ai/api/v1",
+    "api_key_env": null,
+    "window_tokens": 131072,
+    "max_tokens": 4096,
+    "timeout_seconds": 45.0,
+    "temperature": null,
+    "seed": null,
+    "token_limit_parameter": "max_tokens",
+    "structured_output_mode": "json_schema",
+    "reasoning_effort": null,
+    "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+    "api_version": null,
+    "auth_header": null,
+    "tokenizer_provider": "estimate",
+    "tokenizer_name": null,
+    "tokenizer_revision": null,
+    "tokenizer_local_path": null,
+    "token_count_fallback": "estimate",
+    "thinking_enabled": null,
+    "capability_version": "provider_capabilities_v1",
+    "capabilities": {
+      "profile": "openai_compatible_text_v1",
+      "api_style": "chat_completions",
+      "output_token_parameter": "max_tokens",
+      "temperature": true,
+      "seed": true,
+      "reasoning_effort": false,
+      "thinking_toggle": false,
+      "structured_modes": [
+        "json_schema",
+        "json_object",
+        "prompt"
+      ],
+      "probe_output_tokens": 512,
+      "output_token_ceiling": 32768,
+      "declaration": "runtime_protocol_defaults"
+    },
+    "openrouter_route_profile": "haiku55_google_vertex_low_v1"
+  },
+  "expected_checker_config": {
+    "provider": "openai_compatible",
+    "model": "google/gemini-3.5-flash-lite",
+    "base_url": "https://openrouter.ai/api/v1",
+    "api_key_env": null,
+    "window_tokens": 131072,
+    "max_tokens": 4096,
+    "timeout_seconds": 45.0,
+    "temperature": null,
+    "seed": null,
+    "token_limit_parameter": "max_tokens",
+    "structured_output_mode": "json_object",
+    "reasoning_effort": null,
+    "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+    "api_version": null,
+    "auth_header": null,
+    "tokenizer_provider": "estimate",
+    "tokenizer_name": null,
+    "tokenizer_revision": null,
+    "tokenizer_local_path": null,
+    "token_count_fallback": "estimate",
+    "thinking_enabled": null,
+    "capability_version": "provider_capabilities_v1",
+    "capabilities": {
+      "profile": "openai_compatible_text_v1",
+      "api_style": "chat_completions",
+      "output_token_parameter": "max_tokens",
+      "temperature": true,
+      "seed": true,
+      "reasoning_effort": false,
+      "thinking_toggle": false,
+      "structured_modes": [
+        "json_schema",
+        "json_object",
+        "prompt"
+      ],
+      "probe_output_tokens": 512,
+      "output_token_ceiling": 32768,
+      "declaration": "runtime_protocol_defaults"
+    },
+    "openrouter_route_profile": "gemini35_google_vertex_v1"
+  },
+  "public_source_boundary_sha256": "c7d6b28b6caee42d3d17879228f966411afba7db5eed53a7c0003d760263acdb",
+  "unseen_question_source_sha256": "450ee5e76e4fa5b68befc21ab9f50f5df5066ca5f3a1bc32849a105aa72e1eeb",
+  "unseen_question_source_file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker88-runtime\\case09-public.json",
+  "old85_86_87_ledgers_and_unknown_protection_unchanged": true,
+  "source_version_policy": "Each Root-selected unclaimed case freezes current sixteen-file Main pins."
+}

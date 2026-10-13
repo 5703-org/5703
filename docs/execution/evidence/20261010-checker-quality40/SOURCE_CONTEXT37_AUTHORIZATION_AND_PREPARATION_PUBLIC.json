@@ -1,0 +1,60 @@
+{
+  "project": "E:/5703/learning-assistant",
+  "scope": "Two reviewed business source files, supporting public evidence/documents, and a two-arm fixed-original-input checker comparison",
+  "user_authorization": {
+    "project_development_and_reviewed_fixes": "Explicitly authorized in the current conversation",
+    "OpenRouter": "Explicit standing authorization; continue experiments without repeated fee questions",
+    "test_binding_auth_access": "Explicit local test access authorization; authentication remains out of reports/model requests",
+    "model_content": "Public biology test question, saved answer and complete public textbook source fragments; no learner identity/history included"
+  },
+  "new_finite_comparison": {
+    "maximum_new_POSTs": 2,
+    "maximum_new_reserved_USD": 0.09,
+    "per_POST_reserved_USD": 0.045,
+    "prior_group_known_POSTs": 12,
+    "prior_group_known_USD": 0.0810289,
+    "original_group_monetary_cap_USD": 0.24,
+    "maximum_cumulative_known_plus_new_reserve_USD": 0.1710289,
+    "closed_historical_slots_reused": false,
+    "maximum_request_wire_bytes": 98304,
+    "maximum_output_tokens": 4096,
+    "automatic_retries_or_fallbacks": false
+  },
+  "denied_preparation_reads": [
+    {
+      "target": "run_ROOT_finite_rag_imports08_PREPARED.py",
+      "requested_action": "Read and output first 35 source lines",
+      "executed": false,
+      "automatic_approval_reason": "The command reads and outputs the first 35 lines of a prepared runner that contains an embedded database connection credential; that credential access is unnecessary for the stated adapter inspection and should be replaced with a redacted or narrowly filtered read."
+    },
+    {
+      "target": "diagnostic-preparation/component-rag-quality08/run_matched_component_generation08e.py",
+      "requested_action": "Select-String credential/config declarations with surrounding context",
+      "executed": false,
+      "automatic_approval_reason": "Although read-only, the Select-String patterns explicitly target credential/config declarations such as CRED and CONFIG, which may reveal secret values; this exceeds the authorized public metadata inspection and should be replaced with value-redacted filtering."
+    },
+    {
+      "target": "C:/Users/PC/Documents/Codex/2026-10-04/task-2/5703-week10-native-pair-20261009-01/diagnostic-preparation/scientific-native-closure-preparation36/native_checker_json_object_override_PREPARED01.py",
+      "requested_action": "AST scan printing matching string constants",
+      "executed": false,
+      "automatic_approval_reason": "The AST scan reads and prints string constants from a prepared runner that may contain credential or secret values; the requested prompt/source review does not authorize broad credential-bearing source inspection, and a narrower structural scan is available.",
+      "safer_followup": "Approved identifier-only structural inspection; literal/config/key values were not printed. Further checks of this target stopped."
+    }
+  ],
+  "approved_safer_inspection": {
+    "scripts": ["inspect_authorized_public_helper_paths37.py", "locate_public_credential_function37.py", "inspect_native36_public_config37.py"],
+    "output": "Public Python paths, imports, function names/source pins and whitelisted public runtime metadata only; other literal values suppressed",
+    "denied_runner_first_35_lines_read": false,
+    "credential_helper_executed_during_metadata_inspection": false,
+    "credential_or_URI_values_reported": false
+  },
+  "credential_preparation_boundary": {
+    "helper": "haiku_json_object_full_checker_probe_PREPARED08.py:approved_credential",
+    "helper_source_SHA256": "b19fdfd53bfccb64e617a8203ed7947bc73ae2c2897a22908de7380dd5e29b6c",
+    "only_permitted_database": "127.0.0.1:15433/cs30_week10_pair_b_20261009_01",
+    "operation": "At most one read-only existing model configuration/secret resolution preparation; close/dispose engine; memory-only key",
+    "component_answer_database_or_browser_access": false,
+    "actual_execution_counts": "Use the final runtime receipt; this preparation document does not assert execution"
+  },
+  "production_DB_protected_staging_other_projects_remote_publish_or_course_submission_authorized": false
+}

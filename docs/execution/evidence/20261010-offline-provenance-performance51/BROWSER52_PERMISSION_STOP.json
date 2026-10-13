@@ -1,0 +1,42 @@
+{
+  "status": "BROWSER_NOT_RUN_LOCAL_SOCKET_PERMISSION_STOP",
+  "observed_at_UTC": "2026-10-10T15:39:49.3318756Z",
+  "targets": [
+    {
+      "action": "Unauthenticated GET live probe",
+      "url": "http://127.0.0.1:18027/api/v1/health/live",
+      "result": "HttpRequestException:socket access forbidden by current execution permissions"
+    },
+    {
+      "action": "Unauthenticated GET HTML probe",
+      "url": "http://127.0.0.1:15197/",
+      "result": "HttpRequestException:socket access forbidden by current execution permissions"
+    }
+  ],
+  "browser_cases_executed": 0,
+  "authentication_operations": 0,
+  "database_operations": 0,
+  "model_requests": 0,
+  "service_starts": 0,
+  "retry_or_alternative_port": 0,
+  "new_automatic_approval_rejection": false,
+  "existing_fixture": {
+    "port": 15433,
+    "host": "127.0.0.1",
+    "seed_receipt_contents_read": false,
+    "old_frontend_dist_not_current_source": true,
+    "binder_status": "PREPARED_NOT_RELEASED",
+    "database_name": "cs30_week10_pair_b_20261009_01"
+  },
+  "Mock06_database": "cs30_test_8d9d697e36df was dropped;not reused or recreated",
+  "existing_test_choices": [
+    "lifecycle.spec.ts:5 stop/retry",
+    "lifecycle.spec.ts:35 failed replacement/feedback/reload",
+    "session-controls.spec.ts:5 archive/reload/restore/drafts",
+    "chat.spec.ts:6 mock chat/full DOM/history/relogin",
+    "chat.spec.ts:94 first-screen/layout/focus",
+    "login.spec.ts:4 login/short-height layout"
+  ],
+  "qualification": "Only a permission-blocked preflight;service availability remains UNKNOWN;not application failure or browser acceptance",
+  "stop_basis": "Current delegated instruction:stop the action if existing formal access restriction applies;no bypass of denied sockets or historical blocked controllers"
+}

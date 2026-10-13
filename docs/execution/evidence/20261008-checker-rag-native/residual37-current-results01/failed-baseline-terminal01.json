@@ -1,0 +1,146 @@
+{
+  "status": "ACTUAL_FIXED_INPUT_PAIR_STOPPED",
+  "at_UTC": "2026-10-08T01:17:53.281039+00:00",
+  "planned_physical_requests": 2,
+  "physical_requests": 1,
+  "claimed_slots": [
+    1
+  ],
+  "rows": [
+    {
+      "slot": 1,
+      "arm": "baseline",
+      "wire_sha256": "dc600c92226503c9f80ecd69e64453aa1ef82ad64c6c9bd23a607fa297ff573e",
+      "wire_bytes": 38118,
+      "input_tokens_bound": 12852,
+      "token_counting": {
+        "source": "unicode_character_estimate_v1",
+        "is_estimate": true,
+        "model": "google/gemini-3.5-flash-lite",
+        "fallback_reason": "explicit_estimate"
+      },
+      "frozen_file_sha256": "8d1abfd25c7f5630f8bca50d11c4e433842d10c6af3831faeed9b506d5d63148",
+      "at_UTC": "2026-10-08T01:17:54.137043+00:00",
+      "outcome": "STOP_TRANSPORT_OR_UNKNOWN",
+      "physical_POSTs": 1,
+      "request_submitted": true,
+      "observed_adapter_duration_ms": 31.9131,
+      "reported_adapter_latency_ms": 31,
+      "finish_reason": null,
+      "HTTP_status": null,
+      "provider_diagnostic": {
+        "stage": "network",
+        "http_status": null,
+        "provider_error_type": null,
+        "provider_error_code": null,
+        "provider_error_parameter": null,
+        "message": null,
+        "message_redacted": false,
+        "provider_request_id": null,
+        "finish_reason": null,
+        "network_error": "connection",
+        "request_submitted": true,
+        "latency_ms": 31,
+        "gateway_failure_category": "network_failure",
+        "gateway_classification_evidence": "local_validation"
+      },
+      "provider_error": {
+        "code": "PROVIDER_NETWORK_ERROR",
+        "message": "Provider endpoint could not be reached",
+        "retryable": false,
+        "details": {}
+      },
+      "usage": {
+        "input_tokens": null,
+        "output_tokens": null,
+        "total_tokens": null,
+        "reasoning_tokens": null,
+        "cache_hit_input_tokens": null,
+        "cache_miss_input_tokens": null,
+        "cost": null
+      },
+      "observed_cost_within_reserved_upper": false,
+      "raw_text": "",
+      "raw_text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "validation": null,
+      "independent_scientific_evaluation": false,
+      "native_publication": false
+    }
+  ],
+  "known_cost_USD": "0",
+  "unknown_holds_USD": "0.04956160",
+  "release_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\ROOT-checker_pair-release02.json",
+    "bytes": 14714,
+    "sha256": "ec08c7e395a5b54b240e0b1ff35a415ca22abe2f12d9c6d74923e34ba1631c14"
+  },
+  "budget_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\ROOT-new-batch-budget03.json",
+    "bytes": 24592,
+    "sha256": "59bde704e3337fc8a3159300ad82e9e1b9256a7d3821375f42d0211b610e301d"
+  },
+  "reservation_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-compact-repair-20261008-01\\ROOT-actual-followup-reservation01.json",
+    "bytes": 871,
+    "sha256": "bbe7ea71850473cd1ecb55e0ccff13f24d1ddc762a48ea73fbe846fcb2fa7999"
+  },
+  "source_pins": {
+    "generation/compact_findings_v3.py": "1aba7601543d2b08c5331a0e139726191e13948a7dd6343eb7292262e1e2de8a",
+    "generation/providers.py": "bbfb74558e1adf5e4850edad02bb117af221c804aaad6e6f260addfe05fb38f4",
+    "generation/google_schema_compiler04.py": "81523f87f315b6f8aecddffd2fda0271af9d306ae294973ecbdd400eb2e047ef",
+    "generation/probes.py": "642ba880a6dcd3448513b98c0699175cd2fa6b9dafdaa92b65ea3f513d336df2",
+    "generation/types.py": "de000ead20b00c09dcab7e1e7e0bad92685932a67b127731ff8cd8a9d86bd4bb",
+    "generation/capabilities.py": "590dac5cb82bf1494cd0db01af422800ce1dd227bae5e943d608c841401ebff0",
+    "generation/openrouter_routes.py": "7e9ec301cb0ef18dd0ea9a27dc9849c0e088ec1537ee1d58db010ef7c38f4557",
+    "backend/app/modules/model_settings/service.py": "e6e0a9d41846ff36a37bc1eef72892f9ddbc3f2c4648f36f2e9a714f07d5e39d",
+    "backend/app/modules/model_settings/compatibility.py": "107c3dcb2025e927244a77f4dc1734cbe49c2149b150a02c6314a93896bd3667",
+    "generation/adapters.py": "62819ed7a7b7282c2e26894cf5a1b19414f923da7e5f60525bc23f156d706834",
+    "generation/network_policy.py": "31ee11495949894073b292cd39b5d186f0ea21f5fd3f598b243e9f37b467bf02",
+    "generation/provider_diagnostics.py": "109f75fd2858c35530c93e3c4a663629bc143344e190bab42eec5458ff39c6b5",
+    "backend/app/worker.py": "4ac015176cc08524f054beafe78e9da56a02d831c858e079ef1d75074efa8634",
+    "backend/app/modules/answering/service.py": "4ff471baab3eeceef59634407a28b884118eb3d433752defacfd04abd4b462de",
+    "retrieval/embedding.py": "4bf84b63bddf93aa6d86f6c0f38726b222029ef5cb5a39a44f9e5e494498cdfa",
+    "retrieval/chat.py": "79bcc314e734acd77a02f8e70efa86a6d24f6f0ca6c2598d5d445d237a6b0267",
+    "generation/checked.py": "fb7c47b04253906aaa6c8753f0f907f9ff468dddd3280b5555048b1151ff3be2",
+    "generation/parser.py": "5eb3eabae06b786669a74cb362b2a387db873f0b05d8d461592886e7fe49e749",
+    "generation/reliability_v3.py": "33d72113ee45fa489adaaf274dbfa8f1b342d8cd0834cbb8188713f6c3254fa2",
+    "generation/reliability_v4.py": "0771dd38c821053788608a942033081433ab8ac2ef53afd3d14ed68987b9b56c",
+    "generation/reliability_v5.py": "7260e47e6b51e45834f660f5d0fabb3c142b760f40a6c791fff733c08fd1261d",
+    "generation/checker_encoding.py": "57e7fdc229e0732d827af1be3985db8c8ccff91d40e4a6699ad28784ccedf8e2",
+    "generation/checker_contract.py": "7b1c3b69d54586b99e14722c8c375bb1481bc452b64f5b2ec71e11052532537e"
+  },
+  "schema_provenance": "Recorded actual schema name; complete schema reconstructed from pinned current ReliableCheckV5",
+  "retry_calls": 0,
+  "contract_repair_calls": 0,
+  "generation_calls": 0,
+  "native_publications": 0,
+  "database_mutations": 0,
+  "Gold_reads": 0,
+  "E_writes": 0,
+  "fresh_role_or_course_qualification": false,
+  "exception_type": "ValueError",
+  "focused_source_unchanged": true,
+  "engine_disposed": true,
+  "cleanup_errors": [],
+  "shared_finished_receipts": [
+    {
+      "slot": 1,
+      "pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-batch38-claims\\checker_pair\\slot-01-finished01.json",
+        "bytes": 752,
+        "sha256": "925da9e5364f7a2664c751b66418be596ba72c57b81b613df24a0d450dac8543"
+      },
+      "status": "UNKNOWN_FULL_HOLD_STOP",
+      "known_API_cost_USD": null
+    }
+  ],
+  "in_flight_or_UNKNOWN_slots": [
+    1
+  ],
+  "known_costs_within_unresolved_holds_not_added_twice": true,
+  "memory_key_references_cleared": true,
+  "unstarted_count": 1,
+  "response_rows_missing": 0,
+  "finished_at_UTC": "2026-10-08T01:17:54.174757+00:00",
+  "exit_code": 1
+}

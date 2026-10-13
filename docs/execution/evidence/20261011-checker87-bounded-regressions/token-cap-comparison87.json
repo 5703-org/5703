@@ -1,0 +1,53 @@
+{
+  "schema": "bounded_saved_input_teacher_cap_comparison87_v1",
+  "scope": "One saved allostery teacher input; teacher only, no checker, API publication or browser",
+  "model": "anthropic/claude-haiku-5.5",
+  "route": "haiku55_google_vertex_low_v1",
+  "provider_route": "google-vertex/global",
+  "schema_transport": "json_schema",
+  "reasoning": "low",
+  "temperature_or_seed_fixed": false,
+  "same_saved_messages_and_schema_values": true,
+  "same_reported_input_tokens": 15981,
+  "structural_configuration_delta": "max_tokens2048 to4096 only",
+  "old_actual_unsorted_HTTP_wire_sha256": "792c8af779eee972a04d3dd34d8f731fed530a5b6007671f5e5e58ac56229fec",
+  "old_plan_reconstructed_HTTP_wire_sha256": "1da2a18ab75d097fdf620337f90bce3e66502d8442c3bf90a3638c4b9c3198dd",
+  "new_actual_HTTP_wire_sha256": "6eb14902eb83feb790c51b343d42436ddd82cf3c9a075d9000c11d821927caf7",
+  "old_byte_equality_established": false,
+  "byte_caveat": "The saved public messages/schema values match the compiler reconstruction, but the old actual wire hash differs. The exact serialization cause is unestablished. Do not claim identical old HTTP bytes.",
+  "observations": [
+    {
+      "attempt": "original86-case03r-teacher",
+      "requested_max_tokens": 2048,
+      "finish_reason": "length",
+      "output_tokens": 2048,
+      "reasoning_tokens": 1517,
+      "adapter_latency_ms": 9546,
+      "known_cost_USD": "0.0026221",
+      "complete_typed_teacher": false,
+      "checker_started": false
+    },
+    {
+      "attempt": "phase87-reserved4096-teacher-global-post09",
+      "requested_max_tokens": 4096,
+      "finish_reason": "stop",
+      "output_tokens": 529,
+      "reasoning_tokens": 0,
+      "adapter_latency_ms": 3722,
+      "outer_elapsed_ms": 3733.012,
+      "known_cost_USD": "0.0018626",
+      "complete_typed_teacher": true,
+      "checker_started": false
+    }
+  ],
+  "actual_phase87_POST": 1,
+  "shared_phase87_cap": {"physical_POST": 16, "USD": "1.00"},
+  "independent_quality": "Three core requirements stated, with uncited scientific opening and recap retained; standalone selected-source quality pass unestablished",
+  "causal_cap_speedup_established": false,
+  "stable_latency_or_p95_established": false,
+  "semantic_or_API_or_DOM_acceptance_established": false,
+  "sample_size_per_configuration": 1,
+  "old_journals_modified": false,
+  "raw_teacher_output_modified": false,
+  "authentication_exported": false
+}

@@ -1,0 +1,131 @@
+{
+  "status": "FREE_CURRENT_PUBLIC_SCHEMA_REPLAY_COMPLETE",
+  "schema": "generation.reliability_v5.ReliableCheckV5",
+  "records": [
+    {
+      "role": "historical_concise_failed",
+      "artifact_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-checker-pair-root-residual-checker-20261008-01\\concise-finished01.json",
+        "bytes": 7698,
+        "sha256": "8d515072a79e6712eccbef77588cf90e39a7b63ff243ddc03163971ca869fe13"
+      },
+      "response_sha256": "e463119e88e10538d34216779271b85ab16ab063fa1953d578edad81c31bf490",
+      "schema_valid": false,
+      "exact_public_field_errors": [
+        {
+          "path": [
+            "requirements",
+            0,
+            "evidence",
+            0,
+            "fragment_id"
+          ],
+          "error_type": "missing"
+        },
+        {
+          "path": [
+            "requirements",
+            0,
+            "evidence",
+            0,
+            "fragment_ids"
+          ],
+          "error_type": "extra_forbidden"
+        },
+        {
+          "path": [
+            "requirements",
+            0,
+            "evidence",
+            1,
+            "fragment_id"
+          ],
+          "error_type": "missing"
+        },
+        {
+          "path": [
+            "requirements",
+            0,
+            "evidence",
+            1,
+            "fragment_ids"
+          ],
+          "error_type": "extra_forbidden"
+        },
+        {
+          "path": [
+            "requirements",
+            0,
+            "evidence",
+            2,
+            "fragment_id"
+          ],
+          "error_type": "missing"
+        },
+        {
+          "path": [
+            "requirements",
+            0,
+            "evidence",
+            2,
+            "fragment_ids"
+          ],
+          "error_type": "extra_forbidden"
+        },
+        {
+          "path": [
+            "requirements",
+            0,
+            "evidence",
+            3,
+            "fragment_id"
+          ],
+          "error_type": "missing"
+        },
+        {
+          "path": [
+            "requirements",
+            0,
+            "evidence",
+            3,
+            "fragment_ids"
+          ],
+          "error_type": "extra_forbidden"
+        }
+      ]
+    },
+    {
+      "role": "current_smoke_normal",
+      "artifact_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-current-checker-smoke-current26-checker-smoke-20261008-01\\raw-synthetic-checker-response01.json",
+        "bytes": 5306,
+        "sha256": "184fe3193183175c91ba5fb337db2da65cb8d16fdc036e467a9330f35a5c4bca"
+      },
+      "response_sha256": "5eccfd5b0babc57042dc58f1d3fd91f961cf42a398ee707e3ee8a92ea0b9a328",
+      "schema_valid": true,
+      "exact_public_field_errors": []
+    }
+  ],
+  "historical_common_cause": "requirements[0].evidence[0..3] used fragment_ids; each object requires singular fragment_id.",
+  "not_case04_root_cause": true,
+  "case04_authorized_public_leaf_unavailable": true,
+  "prior_ten_controls_are_authored_not_actual_responses": true,
+  "empty_baseline_transport_is_not_normal_response": true,
+  "scope": {
+    "provider_calls": 0,
+    "DB_reads": 0,
+    "dependency_installs": 0,
+    "E_writes": 0,
+    "private_or_command_data_read": false,
+    "package_initializers_skipped": [
+      "generation",
+      "contracts"
+    ],
+    "pure_models_only_imported": true
+  },
+  "limits": [
+    "Exactly two retained public model responses replayed, one historical failed and one current normal smoke.",
+    "Typed validity does not certify scientific accuracy or publication gates.",
+    "No normalization, actual case04 reconstruction, repair, or paid retry authorization inferred."
+  ]
+}

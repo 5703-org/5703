@@ -1,0 +1,22 @@
+# Public software and private research catalogues
+
+The 21 September public delivery separates historical held-out research material from executable application and evaluation code. The earlier releases and original evidence are preserved; this change does not retract or regenerate their results.
+
+Two source modules previously embedded evaluator references: the September 20 catalogue contained 60 formal tasks, and the September 16 reliability catalogue produced 120 cases with 30 source-review targets. Their public replacements are lazy loaders. Importing either module and importing the verification commands requires no private catalogue. Preparing the corresponding research study requires the exact preserved private JSON; missing or changed bytes produce an explicit error, with no substitute fixture or reduced study denominator.
+
+The private research materials restore these paths:
+
+- `evaluation/enhancement/private/formal-catalogue.json`
+- `evaluation/reliability/private/catalogue.json`
+
+Both folders also retain the exact original source modules as text. The reliability folder contains byte-identical copies of the three original 120-case plans and the 37-case follow-up plan. Their original workspace paths remain unchanged for historical readers, but the public delivery explicitly excludes those files. The follow-up plan includes 12 historical held-out cases and three later review cases; it is not an independent new holdout. Research coordinators should restore private assets only in their separate research checkout, and distribute blinded reviewer materials separately from references and condition keys.
+
+The [preservation record](../../evidence/week08-memory-v2/20260921/answering/catalogue-private-preservation.json) records original and relocated hashes. The [local equivalence verification](../../evidence/week08-memory-v2/20260921/answering/private-catalogue-verification.json) compares every value returned by the old and new catalogue functions: all 60 formal tasks, 120 reliability cases and 30 topics match. All four historical plan files remain byte-identical. This verification used the private assets locally; it is distinct from public software tests.
+
+The thirty-seven focused catalogue checks use independently authored synthetic data and passed without skips. They cover missing private assets, modified bytes, schema/count/identity errors, family split isolation, source hashes and locators, and imports that must not read private data. The [JUnit record](../../evidence/week08-memory-v2/20260921/answering/private-catalogue-unit1.xml) retains this scope. These checks validate software boundaries and source identity.
+
+The full public-distribution run subsequently exposed 42 test dependencies on private fixtures: 24 SciQ-related tests, 17 question-catalogue tests and one memory-catalogue test. Five test modules now use two independent public fixture helpers in the isolated CPU installation. The correction preserves every existing test name and all 257 assertion expressions in those modules. It supplies independently authored software inputs; the formal catalogue and frozen result inputs retain their original bytes.
+
+The [successor public software gate](../../evidence/week08-memory-v2/20260921/public-distribution-attempt3/gate/software_gate.json) passed 828 Python tests, 86 frontend tests and all eight stages, with zero failures or skips. Installing the existing pinned evaluation dependency enabled the two PyArrow checks. Torch remained `2.8.0+cpu`, with CUDA unavailable. The [patch verification](../../evidence/week08-memory-v2/20260921/public-distribution-attempt3/test-patch-verification.json) records the exact test-only changes. The first two distribution attempts remain preserved. These observations concern the isolated public tree; integration into the main checkout follows completion and preservation of its live frozen study.
+
+The earlier twelve development tasks and explicitly labelled development memory scenarios remain public software fixtures. They are distinct from the held-out catalogues. The separate [privacy relocation inventory](../../evidence/week08-memory-v2/20260921/privacy-relocations/legacy-relocations.json) identifies excluded historical review/analysis artifacts and preserved private copies; numerical public companions do not contain evaluator reference text. No database, corpus, model prompt, provider call, generated answer or historical judgment was changed by this relocation.

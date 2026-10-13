@@ -1,0 +1,137 @@
+{
+  "schema": "5703_actual_native_relation_public_summary_v1",
+  "native_number": 28,
+  "actual_succeeded": false,
+  "actual_error": {
+    "code": "BATCH_SCOPE_BLOCKED",
+    "message": "The released shared physical request gate denied transport",
+    "retryable": false,
+    "details": {}
+  },
+  "outcome_available": true,
+  "browser_available": true,
+  "browser_status": "ACTUAL_LIVE_UI_JOURNEY_FAILED_OR_BLOCKED",
+  "provider_post_count": 0,
+  "known_cost_USD": "0",
+  "new_UNKNOWN": 0,
+  "fully_settled": true,
+  "open_claims": 0,
+  "stop_exists": true,
+  "stage_clocks": {
+    "generation": {
+      "status": "NOT_RUN",
+      "physical_POSTs": 0,
+      "latency_ms": null
+    },
+    "joint_check": {
+      "status": "NOT_RUN",
+      "physical_POSTs": 0,
+      "latency_ms": null
+    },
+    "semantic_repair": {
+      "status": "NOT_RUN",
+      "physical_POSTs": 0,
+      "latency_ms": null
+    },
+    "joint_recheck": {
+      "status": "NOT_RUN",
+      "physical_POSTs": 0,
+      "latency_ms": null
+    }
+  },
+  "slots": [],
+  "questions": [
+    {
+      "question_id": "Q2",
+      "status": "FAIL",
+      "answer_id": null,
+      "tfull_ms": null,
+      "tfailure_ms": 1930,
+      "citation_checked": false,
+      "citation_controls_checked": null,
+      "refresh_persisted": false,
+      "server_worker_timing": null
+    }
+  ],
+  "recorded_wire_sizes_bytes": [],
+  "wire_limit_bytes": 63688,
+  "wire_limit_basis": "fee-derived local guard, not provider byte cap",
+  "resources": {
+    "status": "CLEANUP_FAILED_OR_LEG_FAILED",
+    "batch_id": "6544a9fd-e5b6-4926-83d7-0098a5539e40",
+    "paired_leg_id": "B_startup_prewarm",
+    "browser_leg_passed": false,
+    "native_checked_completed": false,
+    "native_completed_question_ids": [],
+    "native_executed_question_ids": [
+      "Q2"
+    ],
+    "all_submitted_native_jobs_checked": false,
+    "continuation_mode": "SUCCESSFUL_Q2_DEVELOPMENT_REGRESSION_NEW_WORKER",
+    "single_Q2_development_regression_completed": false,
+    "old_Q2_request_job_or_answer_replayed": false,
+    "historical_failed_Q3_Q4_replayed": false,
+    "same_worker_across_Q1_Q2_demonstrated": false,
+    "independent_quality_acceptance": false,
+    "worker_pid": 135132,
+    "engine_object_identity": 2645276255840,
+    "database_target_public": {
+      "database_name": "cs30_week10_pair_b_20261009_01",
+      "host": "127.0.0.1",
+      "port": 15433
+    },
+    "active_pointers_unchanged": true,
+    "owned_threads_closed": true,
+    "owned_database_resources_closed": true,
+    "cleanup_error_classes": [],
+    "cleanup_guard_faults": [],
+    "raw_cleanup_errors_exported": false,
+    "leg_closed_after_advisory_unlock_connection_close_and_engine_dispose": false,
+    "local_models_loaded": true,
+    "provider_calls_are_guarded": true,
+    "no_old_job_recovery": true,
+    "retrieval_variant": "R2",
+    "embedding_provider": "native_e5",
+    "default_profile_pin": {
+      "bytes": 294,
+      "path": "E:\\5703\\learning-assistant\\configs\\retrieval\\chat_hybrid_minilm.json",
+      "sha256": "23ca72ddb737045259a04cbfc81c71969440f11cc2fa1a77bc7f8e7fc4364e17"
+    },
+    "model_cache_readonly": true,
+    "python_write_denials": [],
+    "historical_lock_handles_read_byte_only": true,
+    "cpu_threads": 4,
+    "native_cuda_allowed": true,
+    "no_runtime_retrieval_override": true
+  },
+  "check_summaries": [],
+  "evidence_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure28\\runtime\\budget-status-public01.json",
+      "bytes": 1297,
+      "sha256": "672c53fc3d73a38bbd9e63cdfe78c16c1a9ea9ee08a591e2c67dd43e09aa941c"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure28\\runtime\\runtime-closed-public01.json",
+      "bytes": 1793,
+      "sha256": "6e1bd1612d2fac4b21b6b204dc5cd6465b5a6e4f9037b8450095b5f753ba833d"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure28\\runtime\\retained-provider-diagnostics\\native-generation-outcome01.json",
+      "bytes": 68084,
+      "sha256": "e9cbe164a21ecf76772e9711084e3b8ee24ec747c37fcb134db4b5486cb593d1"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure28\\browser\\real-browser-live-qa-receipt01.json",
+      "bytes": 26616,
+      "sha256": "ecd8f92b7157dac0d46d2a1d07f0383d4d43ffb1516721c4bcbd2ccf8cffdfe9"
+    }
+  ],
+  "limitations": [
+    "Independent source quality requires a separate full-predicate review.",
+    "A repeated old question is development regression, not a formal quality test.",
+    "One new question is functional confirmation, not a held-out benchmark.",
+    "Nested worker and provider clocks must not be added together.",
+    "Missing outcome, browser receipt or stage clock remains missing."
+  ]
+}

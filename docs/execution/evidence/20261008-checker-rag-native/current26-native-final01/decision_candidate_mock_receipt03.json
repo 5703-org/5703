@@ -1,0 +1,64 @@
+{
+  "version": "decision_shadow_mock_receipt_v1",
+  "started_utc": "2026-10-08T07:23:30.368970+00:00",
+  "ended_utc": "2026-10-08T07:23:30.391974+00:00",
+  "python": "3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)]",
+  "command": "python -I -B -S run_mock.py --receipt MOCK_RECEIPT03.json",
+  "status": "PASS",
+  "tests": 43,
+  "subtests": 186,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "fixture_scope": "authored_synthetic_only",
+  "live_model_calls": 0,
+  "network_socket_guard": "socket.socket and socket.create_connection denied in every test",
+  "production_imports": false,
+  "real_database_used": false,
+  "credentials_read": false,
+  "gold_read": false,
+  "production_writes": false,
+  "meaning": "software contract/isolation verification only; no Jev semantic performance or production integration claim",
+  "verified_inputs": [
+    {
+      "path": "build_artifacts.py",
+      "bytes": 5336,
+      "sha256": "872063395e293a3d49ac1842514b515d4aafc979da6b459c2fef3869772c9d5c"
+    },
+    {
+      "path": "decision_shadow/__init__.py",
+      "bytes": 909,
+      "sha256": "ee1aa8ea0643b90e5ff14170dee451e49fa86055c60266a828ad87e07741829a"
+    },
+    {
+      "path": "decision_shadow/adapter.py",
+      "bytes": 18971,
+      "sha256": "78164f26f8992c2610ec0c2d637aa25de6a3a01636707c3240c8e273afd2bd51"
+    },
+    {
+      "path": "decision_shadow/contracts.py",
+      "bytes": 14457,
+      "sha256": "3ab94b76502d8afd8d2c2cabe26faa442e7cfb6dd95a9c23619459a1d6f3463e"
+    },
+    {
+      "path": "decision_shadow/observer.py",
+      "bytes": 9780,
+      "sha256": "e2d11f838fd691fd84a9153790724aae919bdb0ef6d446a5e0e7f037cda4d998"
+    },
+    {
+      "path": "run_mock.py",
+      "bytes": 2839,
+      "sha256": "903d3c90252c63b2eb9125422ca6ae5cb20d05f938a1aa27ee9087c6d0b8555a"
+    },
+    {
+      "path": "tests/__init__.py",
+      "bytes": 80,
+      "sha256": "d9c6d5d52baf372317218d5d6bde5f01ccf02ab29600376113dfc6dd344f2b3c"
+    },
+    {
+      "path": "tests/test_shadow.py",
+      "bytes": 45289,
+      "sha256": "36897ca6b6ae6323577ec8352e00431e1dbc66ed95bc759edefb5d0c93e5d5a0"
+    }
+  ]
+}

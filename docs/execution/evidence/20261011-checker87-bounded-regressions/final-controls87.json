@@ -1,0 +1,43 @@
+{
+  "schema": "affected_current_main_controls87_v1",
+  "status": "PASS",
+  "generation": {
+    "tests": 67,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "pytest_console_seconds": 7.25,
+    "junit_seconds": 7.202,
+    "junit_sha256": "0fca9df0fadd224524a8e41f857e149010944ce4c702a60d02035a0ba18891f0",
+    "command": "python -B -X utf8 -m pytest -q -p no:cacheprovider tests/unit/test_single_selection_findings_v2.py tests/unit/test_single_selection_output_integration.py tests/unit/test_single_selection_teacher_contract.py tests/unit/test_single_selection_wire_contract.py --basetemp=<W>/checker-wire-main-test-temp87 --junitxml=<W>/final-generation-main-controls87.xml",
+    "boundary": "Authored fake providers and original canonical/publication gates; no real models or database"
+  },
+  "query": {
+    "schema": "query_main_controls87_v1",
+    "status": "PASS",
+    "junit": {
+      "tests": 27,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "pytest_console_seconds": 0.53,
+    "ruff": "PASS",
+    "provider_posts": 0,
+    "DB_actions": 0,
+    "xml_sha256": "ef14a3dbf4daac1186bd36117bb5a1812b28e97875a888b98a33b2736425a298"
+  },
+  "distinct_targeted_Main_cases": 94,
+  "Ruff": {
+    "status": "PASS",
+    "final_files": 4,
+    "cache": "disabled",
+    "command": "python -B -X utf8 -m ruff check --no-cache generation/providers.py generation/lossless_unit_findings_v1.py generation/single_selection_findings_v2.py tests/unit/test_single_selection_wire_contract.py"
+  },
+  "earlier_overlap": "The earlier35 codec/integration and23 direct-null controls overlap by15; the final67 run includes their43 distinct generation cases and24 new wire controls. Do not add them again.",
+  "full_suite_or_full_verification_run": false,
+  "provider_posts": 0,
+  "DB_actions": 0,
+  "scientific_quality_certified": false,
+  "final_instruction_changes_live_retested": false
+}

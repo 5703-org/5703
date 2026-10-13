@@ -1,0 +1,145 @@
+{
+  "schema": "5703_offline_provenance_performance51_v1",
+  "status": "AFFECTED_SOFTWARE_PASS_REAL_MODELS_AND_NATIVE_ACCEPTANCE_PENDING",
+  "recorded_at_UTC": "2026-10-10T15:18:22.6033627Z",
+  "Main": "E:\\5703\\learning-assistant",
+  "source_pins": [
+    {
+      "relative_path": "generation/checked.py",
+      "bytes": 159567,
+      "sha256": "567c6809fa4edd1afb5faf1584f86965291d825499985db4ed9d8de21c0c1b5b"
+    },
+    {
+      "relative_path": "tests/unit/test_source_relation_units_v2.py",
+      "bytes": 16356,
+      "sha256": "9060f29d82dfb3e391b684072669a57f8a61621a43ba843daacf9fa05c247a73"
+    },
+    {
+      "relative_path": "frontend/src/Chat.tsx",
+      "bytes": 43076,
+      "sha256": "e15a0b56d7ee9d20c8312c05b7e86f60360c3127d930ce50f348c56b0c0a3ad7"
+    },
+    {
+      "relative_path": "frontend/src/ChatTranscriptRace.test.tsx",
+      "bytes": 10197,
+      "sha256": "d4806aa8cc509b6c821fdbbc8111192fa3d5b813ba3d2f8c02410bc9e13bcdb5"
+    },
+    {
+      "relative_path": "frontend/src/ChatTranscriptRecovery.test.tsx",
+      "bytes": 14259,
+      "sha256": "8b6bc84151167b7a0e35d4fffcbce0129de10fae2937d646e07001951b7e3101"
+    },
+    {
+      "relative_path": "generation/source_relations_v2.py",
+      "bytes": 25343,
+      "sha256": "1faed256cd212288a4e2facfb181392558f2f57e6da8dfde1bdad3ec5c846e3c"
+    },
+    {
+      "relative_path": "generation/types.py",
+      "bytes": 10131,
+      "sha256": "f74ce2c7295b7ee655577bc330791fbdd2c62447b8f7d4414af85b4aba7bcd69"
+    },
+    {
+      "relative_path": "backend/app/core/config.py",
+      "bytes": 6527,
+      "sha256": "3f618fcdad99ed82cccc647788c9e68c5c68eadf1c8df5ac15b2563982e38c39"
+    },
+    {
+      "relative_path": "backend/app/modules/answering/service.py",
+      "bytes": 95056,
+      "sha256": "478f379fc51f26944d45964952f4966f98450e39524f817a54db2992a0d0fa1a"
+    },
+    {
+      "relative_path": "tests/unit/test_source_relation_protection27.py",
+      "bytes": 14577,
+      "sha256": "390db71f923f1e32e7e84f81062114977b4ca00b75cab40b67764f06748937c0"
+    },
+    {
+      "relative_path": "generation/openrouter_routes.py",
+      "bytes": 11703,
+      "sha256": "eb2471e712bc92e5c04495b5353017dbcbc7aa8cdec5451b0ead9f05050588ee"
+    },
+    {
+      "relative_path": "docs/execution/tasks.json",
+      "bytes": 13277085,
+      "sha256": "c56119170b9fca1e7eadb1f91db0268c3f57ff25f332e068dfb8679b24aface7"
+    },
+    {
+      "relative_path": "docs/execution/acceptance.json",
+      "bytes": 7610741,
+      "sha256": "b36020cd2acd576fa071ce85c6007d116c7c0b73c8859875f047c44f59c80c73"
+    },
+    {
+      "relative_path": "docs/execution/20261010-proof46-50.md",
+      "bytes": 11124,
+      "sha256": "eac89ec92616c9a5f56d5fb1d131d29084b20d64d04c4c76387049b4ddaa5893"
+    },
+    {
+      "relative_path": "docs/execution/evidence/20261010-proof46-50/index.json",
+      "bytes": 16670,
+      "sha256": "e0940861ef4959d558b08cf2a82b3ccf559f90eaaa83ae9d704816867920dfd7"
+    },
+    {
+      "relative_path": "docs/execution/progress.md",
+      "bytes": 223773,
+      "sha256": "5e95cc34a9283a9d9f4dfbf87f15b2601c2326bbac32e1f3080687dbefe4addd"
+    },
+    {
+      "relative_path": "docs/foundation/handover_migration.md",
+      "bytes": 202786,
+      "sha256": "2ddef5ffe7f7eaa7197a007aef829ed8d4a7fca93c45ca91ae25a77f25c70e94"
+    }
+  ],
+  "python": {
+    "xml_testcases": 215,
+    "subtests": 25,
+    "seconds": 4.14,
+    "exit_code": 0,
+    "skips": 0,
+    "passed": true,
+    "failures": 0,
+    "cases": 215
+  },
+  "frontend": {
+    "failures": 0,
+    "cases": 57,
+    "pending": 0,
+    "exit_code": 0,
+    "first_attempt": "6 cases passed;3 suite import ENOENT errors;retained failed;source unchanged;rerun with owned TMP/TEMP/TMPDIR and one worker",
+    "passed": true,
+    "todo": 0,
+    "unhandled_errors_ignored": false
+  },
+  "typescript": {
+    "observed_tool_session": 58877,
+    "command": "frontend/node_modules/.bin/tsc.cmd --noEmit --incremental false",
+    "stdout": "",
+    "exit_code": 0
+  },
+  "ruff": {
+    "command": ".venv/Scripts/python.exe -B -m ruff check --no-cache generation/checked.py tests/unit/test_source_relation_units_v2.py",
+    "result": "All checks passed!",
+    "exit_code": 0
+  },
+  "pytest_command": ".venv/Scripts/python.exe -B -m pytest tests/unit/test_source_relation_units_v2.py tests/unit/test_source_relation_contract.py tests/unit/test_source_relation_protection27.py tests/unit/test_source_relation_audit27.py tests/unit/test_claim_feedback_transport_v1.py tests/unit/test_claim_feedback_transport_service_v1.py tests/unit/test_local_claim_patch.py tests/unit/test_bound_repair_patch.py tests/unit/test_bound_repair_pipeline.py tests/unit/test_bound_repair_public_projection.py -q -p no:cacheprovider --basetemp=<owned run directory>/pytest-temp --junitxml=<owned run directory>/pytest51.xml",
+  "vitest_command": "frontend/node_modules/.bin/vitest.cmd run src/Chat.test.tsx src/ChatTranscriptRace.test.tsx src/ChatTranscriptRecovery.test.tsx src/ChatRepairContract.test.tsx --config <owned run directory>/vitest-cache-only.config.mjs --configLoader runner --no-cache --attachmentsDir <owned run directory>/attachments --maxWorkers 1 --no-file-parallelism --reporter json --outputFile <owned run directory>/vitest51-results02.json",
+  "environment": {
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "CI": "true",
+    "NO_COLOR": "1",
+    "TEMP_TMP_TMPDIR": "owned frontend-temp",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "Main;Main/backend;Main/tests/unit",
+    "MODEL_MODE": "mock"
+  },
+  "new_requests": 0,
+  "new_fees_USD": 0,
+  "DB_auth_service_install": 0,
+  "old_counts_changed": false,
+  "project_complete": false,
+  "native_TFull_new_measurement": null,
+  "quality_or_p95_improvement_measured": false,
+  "required_whole_project_gate_rerun": false,
+  "whole_project_gate_boundary": "Fixed old output paths;foundation regenerates exports;all --mode mock discovers DB config and runs DB tests;not executed in this offline no-auth/no-DB task",
+  "E_free_GiB_at_151451UTC": 23.97
+}

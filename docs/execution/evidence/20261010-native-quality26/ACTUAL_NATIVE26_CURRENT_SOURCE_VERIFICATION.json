@@ -1,0 +1,56 @@
+{
+  "schema": "5703_actual_native26_current_source_verification_v1",
+  "at_UTC": "2026-10-10T04:18:36.728084+00:00",
+  "status": "CURRENT_TARGETED_FREE_AND_NATIVE_VERIFIED_FULL_PROJECT_OPEN",
+  "current_source_pins": [
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checked.py",
+      "bytes": 151288,
+      "sha256": "2399f5af49598622663f8ed4bd0193d4d6a7d05bcbbe328e15d964e461686e33"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\reliability_v5.py",
+      "bytes": 25521,
+      "sha256": "12410fac97c1031b277f63c08f71459e035e0d2bcee6d2ef9731d7243af37dcc"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\joint_check_v5.txt",
+      "bytes": 19985,
+      "sha256": "71dc02ee98ae43ad82e5cdfd459e46362cb17c58678861e6f1fc1f57db6e6771"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_scope_context.py",
+      "bytes": 8647,
+      "sha256": "3c3da191175d93eb0328fa89f03e72bb9a919eac0bb812bdc8a6c9eb74e087db"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_scope_context_service.py",
+      "bytes": 6722,
+      "sha256": "3788abcee8ac89ef6c412a65c3298d309c1a5df6c5303abb40e662c6ee697771"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_scope_repair_projection.py",
+      "bytes": 10606,
+      "sha256": "295c5ed4ce063b5e1dd93a13cae9f6b5335d6b470b3b8131fa4bfa47ee290146"
+    }
+  ],
+  "actual_free_receipt_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-scope-context26-free-c\\ACTUAL_SCOPE_CONTEXT26_FREE_RESULT.json",
+    "bytes": 28441,
+    "sha256": "ecc925cabe10a6c273f3f0b7e08bcdcd3b48c88ccb6194ff43ec98d20446c26e"
+  },
+  "ruff": {
+    "actual_exit_code": 0,
+    "stdout": "All checks passed!",
+    "command": "E:/5703/learning-assistant/.venv/Scripts/ruff.exe check --no-cache generation/checked.py generation/reliability_v5.py tests/unit/test_source_scope_context.py tests/unit/test_source_scope_context_service.py tests/unit/test_source_scope_repair_projection.py"
+  },
+  "provider_requests_during_this_record": 0,
+  "database_access_during_this_record": 0,
+  "full_current_project_gate_executed": false,
+  "project_complete": false,
+  "source_scope": "Only E:/5703/learning-assistant and owned public experimental receipts",
+  "git_check": {
+    "read_HEAD": "ref: refs/heads/master",
+    "fresh_git_commands": "Refused dubious ownership; no global Git configuration changed."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "arm": "Hybrid5",
+  "role": "generation",
+  "started_at_utc": "2026-10-09T20:21:41.052334+00:00",
+  "cost_status": "KNOWN",
+  "reported_cost_usd": "0.00417",
+  "complete": true,
+  "wire_proof": {
+    "body_bytes": 27562,
+    "body_sha256": "440661422d2224d8b8c193315c69bdccfcc87f73c780ac06734c9b2e06b96ad2",
+    "conservative_cost_upper_usd": "0.0188158",
+    "role": "generation",
+    "max_price": {
+      "prompt": 0.3,
+      "completion": 2.5
+    },
+    "output_limit": 4096,
+    "input_bound": "UTF8 body bytes+1024 protocol allowance; not actual tokens"
+  },
+  "raw_receipts": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\component-rag-quality08\\actual08e\\Hybrid5-generation-raw-provider-read01.json",
+      "bytes": 12652,
+      "sha256": "b21785b5a55d7c0521fe80499298cd7ecaf98fafa4355cf9d7a932ad887d3813"
+    }
+  ],
+  "network_trace": [
+    {
+      "event": "validated-resolver-host",
+      "host": "openrouter.ai",
+      "port": 443
+    },
+    {
+      "event": "original-Main-validated-IP",
+      "host": "104.18.2.115",
+      "port": 443
+    },
+    {
+      "event": "numeric-pinned-IP-resolution",
+      "host": "104.18.2.115",
+      "port": 443
+    },
+    {
+      "event": "connect-requested",
+      "host": "104.18.2.115",
+      "port": 443
+    }
+  ],
+  "finish_reason": "stop",
+  "error": null,
+  "usage": {
+    "input_tokens": 6150,
+    "output_tokens": 930,
+    "total_tokens": 7080,
+    "reasoning_tokens": 725,
+    "cache_hit_input_tokens": 0,
+    "cache_miss_input_tokens": 6150,
+    "cost": 0.00417
+  },
+  "latency_ms": 4301
+}

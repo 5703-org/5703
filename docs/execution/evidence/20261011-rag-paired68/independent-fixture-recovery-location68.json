@@ -1,0 +1,79 @@
+{
+  "schema": "5703_independent_static_fixture_recovery_location68_v1",
+  "status": "EXACT_EXISTING_15433_POSTGRES_OWNER_AND_RECOVERY_COMMAND_UNRESOLVED",
+  "useful_result": {
+    "endpoint": "127.0.0.1:15433",
+    "credential_target_database": "cs30_week10_pair_b_20261009_01",
+    "upstream_fixture_URI_database": "cs30_fixture_20261006_01",
+    "exact_Postgres_container_or_service_name": null,
+    "exact_existing_storage_volume": null,
+    "safe_existing_service_recovery_command": null,
+    "restoring_another_database_or_changing_the_key_not_supported": true
+  },
+  "root_reported_current_observation": {
+    "new_batch_POSTs": 0,
+    "original_credential_consumer_failed": true,
+    "single_exact_endpoint_TCP_probe_timeout_seconds": 2,
+    "independently_repeated": false
+  },
+  "public_evidence": [
+    {
+      "path": "5703-week10-native-pair-20261009-01/diagnostic-preparation/haiku_json_object_full_checker_probe_PREPARED08.py",
+      "sha256": "b19fdfd53bfccb64e617a8203ed7947bc73ae2c2897a22908de7380dd5e29b6c",
+      "finding": "The previously reviewed consumer pins localhost:15433 and the owned synthetic target database, but does not identify or start a Postgres service."
+    },
+    {
+      "path": "5703-docker-reboot-readonly-20261009-01/BEFORE_official_restart_report01.md",
+      "sha256": "ab114ab836c701ec6a4048ad57b3d91f9f7e846dd8f0c2d0d4cd64168d6f9fc2",
+      "line": 15,
+      "finding": "The dated public note explicitly identifies the same credential dependency and requires restoring the same installed daemon and existing owned test service, without naming that Postgres container or supplying its recovery command."
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\README.md",
+      "bytes": 115857,
+      "sha256": "f3f7e558aa685e4421912b14c664f5c651d8119ad894fc89f70cb6e77d8c4134",
+      "finding": "No15433 or either target fixture database name was located.15432 persistent Postgres and other fresh-install instructions cannot establish the15433 owner."
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\AGENTS.md",
+      "bytes": 2398,
+      "sha256": "7d226abe53d350fcda15a5b1f540fea558682de7e08bcdb6a98e82668708fe97",
+      "finding": "No15433 fixture owner or restoration command was recorded."
+    },
+    {
+      "path": "5703-successor-dedicated-pg-resource-prepare-20261006-01/resource-preparation-plan-01.json",
+      "sha256": "28aa5706ed6aeb8fa7f2ad4fa05fb047e0c2a58bc951e8613c3525543aefe309",
+      "finding": "This plan names cs30-task2-successor-20261006-01-db and its own volume on55459 as newly created resources. It is a different scope, not a15433 recovery mapping."
+    },
+    {
+      "path": "5703-docker-readonly-followup-20261005.json",
+      "sha256": "ddafca12dc5a93f0bafca73dffd900da83afbb4f0f506dc000810047b27bb7e5",
+      "finding": "The historical generic Docker service is com.docker.service. This does not identify the15433 Postgres container or establish current daemon state."
+    },
+    {
+      "path": "5703-latency-backend-fixture-20261006-01/rw/fixture_db_public_receipt01.py",
+      "sha256": "3759dea6ce2a24beb427e25b80834ba7a8ce1332393f3bb0f39c0bee276d35a7",
+      "finding": "Public receipt code verifies a fixed fixture database but exposes no container recovery command."
+    },
+    {
+      "path": "5703-latency-backend-fixture-20261006-01/rw/fixture_db_public_receipt02.py",
+      "sha256": "9cf617c80b11e358fb57421f5529c1bf7e3b8691329e9187214cbb1599b8073f",
+      "finding": "Public receipt code likewise does not establish the service owner."
+    }
+  ],
+  "missing_evidence": [
+    "A public existing-resource receipt binding127.0.0.1:15433 and its fixture databases to an exact existing Postgres container or service identity.",
+    "Original storage volume and ownership labels or equivalent service configuration sufficient to restore that same resource while preserving database contents.",
+    "An exact previously approved start-only recovery command, distinct from provisioning, seeding, migration, deletion, reset, alternate configuration or key replacement."
+  ],
+  "boundaries": {
+    "location_search_stopped_when_public_sources_were_insufficient": true,
+    "no_claim_that_TCP_timeout_proves_Docker_daemon_cause": true,
+    "historical_denied_actions_not_retried": true,
+    "Docker_or_CIM_or_process_or_network_commands_executed": 0,
+    "controller_or_runtime_entrypoints_executed": 0,
+    "auth_env_binder_key_or_database_contents_read": 0,
+    "Main_writes": 0,
+    "new_database_or_alternate_key_recommended": false
+  }
+}

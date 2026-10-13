@@ -1,0 +1,2995 @@
+{
+  "status": "ACTUAL_FREE_AUTHORED_COMPOUND_SOURCE_SELECTION_GATE_CONTROLS_PASS",
+  "controls_passed": 5,
+  "controls": [
+    {
+      "control": "saved_actual04_compound_only_F053_honest_partial_blocks",
+      "expected_fixture_pipeline_success": false,
+      "actual_fixture_pipeline_success": false,
+      "error": {
+        "code": "SEMANTIC_CHECK_FAILED",
+        "message": "The proposed answer did not pass its required support or teaching checks",
+        "retryable": false,
+        "details": {
+          "revision": 0,
+          "publication_block": {
+            "version": "semantic_publication_block_v1",
+            "stop_reason": "insufficient_calls_for_repair_and_recheck",
+            "remaining_provider_calls": 0,
+            "required_calls_for_repair_and_recheck": 2,
+            "checker_contract_repair_calls": 0,
+            "checker_reported_body_ok": false,
+            "checker_reported_non_supported_factual_claims": 1,
+            "failed_checker_gate_names": [
+              "body_ok"
+            ],
+            "checker_reported_coverage": "full",
+            "requirement_issue_codes": [],
+            "structural_issue_codes": []
+          }
+        }
+      },
+      "body_ok": false,
+      "checks": [
+        {
+          "revision": 0,
+          "checker_contract_revision": 0,
+          "checker_contract_policy": "single_contract_correction_v1",
+          "joint_checker_policy": "typed_joint_v5",
+          "accepted": false,
+          "validation_state": "validated",
+          "raw_text": "{\"claims\": [{\"claim_id\": \"claim_ed4c3499d8641d0f421ac3c8_1\", \"reason\": \"F036 establishes light-dependent production of ATP and NADPH.\", \"basis\": \"textbook\", \"status\": \"supported\", \"citations\": [{\"evidence_id\": \"ev_001\", \"fragment_ids\": [\"F001\"], \"relation\": \"supporting\"}]}, {\"claim_id\": \"claim_bfbf5b58994f2812bb13f03b_1\", \"reason\": \"F037 establishes carrier travel into the stroma and Calvin-cycle location.\", \"basis\": \"textbook\", \"status\": \"supported\", \"citations\": [{\"evidence_id\": \"ev_001\", \"fragment_ids\": [\"F002\"], \"relation\": \"supporting\"}]}, {\"claim_id\": \"claim_2e2e3ba2b43cbd571afa271b_1\", \"reason\": \"F053 supports ATP/NADPH-driven G3P formation; selected support does not establish the stroma qualifier or G3P's carbohydrate consequence.\", \"basis\": \"textbook\", \"status\": \"partial\", \"citations\": [{\"evidence_id\": \"ev_002\", \"fragment_ids\": [\"F004\"], \"relation\": \"supporting\"}]}], \"body_ok\": false, \"specific_help\": true, \"scope_ok\": true, \"suggestions_ok\": true, \"evidence_display_ok\": true, \"cumulative_ok\": true, \"complete_answer\": true, \"coverage\": \"full\", \"missing_facets\": [], \"limitations_explicit\": true, \"reason\": \"Authored fixture for contract and gate behavior; no live model-semantic measurement.\", \"repair_fragment_ids\": [], \"attempt_evaluation_ok\": true, \"tutor_question_ok\": true, \"requirements\": [{\"requirement_id\": \"requirement_01\", \"relevance\": \"related\", \"sufficiency\": \"sufficient\", \"evidence\": [{\"evidence_id\": \"ev_001\", \"fragment_id\": \"F001\", \"quote\": \"FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.\"}, {\"evidence_id\": \"ev_001\", \"fragment_id\": \"F002\", \"quote\": \"These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.\"}], \"conditions_preserved\": true, \"response_coverage\": \"covered\", \"missing_information\": \"\", \"reason\": \"Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions.\"}], \"non_repetitive_next_action\": true}",
+          "fragment_aliases": {
+            "F001": "span_84ac9a45ebe3b6892fbe0db421420d54",
+            "F002": "span_f2d6b6076a6e9e915ab97ed6fb4976fc",
+            "F003": "span_90558663dfa7f8f9ac49471f40149d6b",
+            "F004": "span_5196350d46b2b1222039a52fc5e9f7a1",
+            "F005": "span_22703bf8544c5ab001c15eb8217fef60",
+            "F006": "span_ec17966af6821bb142ef2fa6759e2e3b"
+          },
+          "policy": {
+            "version": "learning_enhancement_v1",
+            "condition": "T2",
+            "teaching_mode": "direct",
+            "task_type": "process_reasoning",
+            "help_level": 0,
+            "help_constraint": "Give the complete supported explanation requested, including relevant conditions, units and limits. Do not force hints.",
+            "online_check": true,
+            "control_evidence": false,
+            "check_suggestions": false,
+            "check_cumulative": false,
+            "human_rating": null
+          },
+          "check_scope": {
+            "body_and_short_answer": true,
+            "current_suggestions": false,
+            "current_evidence_display": false,
+            "prior_actual_exposure": false
+          },
+          "configuration_id": "mock-default-v1",
+          "model": "scripted_fixture",
+          "provider": "scripted_fixture",
+          "checked_at": "2026-10-09T18:23:39.396391+00:00",
+          "rubric_hash": "98cf91e622b002a4f8d0d305a7389940ec414a28fac494bcd0ef2f6ba4ed5a14",
+          "projection_hash": "2624af4fc3c17b89590de6ba4fc5868ef781b8325905cbd4db673f22c2f4c470",
+          "reliability_policy": "evidence_reliability_v5",
+          "human_rating": null,
+          "typed_judgment_raw_aliases": {
+            "claims": [
+              {
+                "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+                "reason": "F036 establishes light-dependent production of ATP and NADPH.",
+                "basis": "textbook",
+                "status": "supported",
+                "citations": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_ids": [
+                      "F001"
+                    ],
+                    "relation": "supporting"
+                  }
+                ]
+              },
+              {
+                "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+                "reason": "F037 establishes carrier travel into the stroma and Calvin-cycle location.",
+                "basis": "textbook",
+                "status": "supported",
+                "citations": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_ids": [
+                      "F002"
+                    ],
+                    "relation": "supporting"
+                  }
+                ]
+              },
+              {
+                "claim_id": "claim_2e2e3ba2b43cbd571afa271b_1",
+                "reason": "F053 supports ATP/NADPH-driven G3P formation; selected support does not establish the stroma qualifier or G3P's carbohydrate consequence.",
+                "basis": "textbook",
+                "status": "partial",
+                "citations": [
+                  {
+                    "evidence_id": "ev_002",
+                    "fragment_ids": [
+                      "F004"
+                    ],
+                    "relation": "supporting"
+                  }
+                ]
+              }
+            ],
+            "body_ok": false,
+            "specific_help": true,
+            "scope_ok": true,
+            "suggestions_ok": true,
+            "evidence_display_ok": true,
+            "cumulative_ok": true,
+            "complete_answer": true,
+            "coverage": "full",
+            "missing_facets": [],
+            "limitations_explicit": true,
+            "reason": "Authored fixture for contract and gate behavior; no live model-semantic measurement.",
+            "repair_fragment_ids": [],
+            "attempt_evaluation_ok": true,
+            "tutor_question_ok": true,
+            "requirements": [
+              {
+                "requirement_id": "requirement_01",
+                "relevance": "related",
+                "sufficiency": "sufficient",
+                "evidence": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F001",
+                    "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+                  },
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F002",
+                    "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+                  }
+                ],
+                "conditions_preserved": true,
+                "response_coverage": "covered",
+                "missing_information": "",
+                "reason": "Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions."
+              }
+            ],
+            "non_repetitive_next_action": true
+          },
+          "actual_citation_bindings": [
+            {
+              "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+              "citations": [
+                {
+                  "evidence_id": "ev_001",
+                  "allowed_fragment_ids": [
+                    "F001",
+                    "F002"
+                  ]
+                }
+              ]
+            },
+            {
+              "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+              "citations": [
+                {
+                  "evidence_id": "ev_001",
+                  "allowed_fragment_ids": [
+                    "F001",
+                    "F002"
+                  ]
+                }
+              ]
+            },
+            {
+              "claim_id": "claim_2e2e3ba2b43cbd571afa271b_1",
+              "citations": [
+                {
+                  "evidence_id": "ev_002",
+                  "allowed_fragment_ids": [
+                    "F003",
+                    "F004",
+                    "F005",
+                    "F006"
+                  ]
+                }
+              ]
+            }
+          ],
+          "semantic_sufficiency": {
+            "version": "semantic_requirements_v1",
+            "method": "online_checker_model",
+            "status": "sufficient",
+            "requirements": [
+              {
+                "requirement_id": "requirement_01",
+                "relevance": "related",
+                "sufficiency": "sufficient",
+                "evidence": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F001",
+                    "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+                  },
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F002",
+                    "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+                  }
+                ],
+                "conditions_preserved": true,
+                "response_coverage": "covered",
+                "missing_information": "",
+                "reason": "Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions."
+              }
+            ],
+            "human_rating": null,
+            "independent_evaluation": false
+          },
+          "repairable_verdict_inconsistencies": [],
+          "judgment_raw_aliases": {
+            "attempt_evaluation_ok": true,
+            "body_ok": false,
+            "claims": [
+              {
+                "basis": "textbook",
+                "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+                "derivation": null,
+                "factual": true,
+                "fragment_ids": [
+                  "F001"
+                ],
+                "problem_quote": null,
+                "reason": "F036 establishes light-dependent production of ATP and NADPH.",
+                "status": "supported"
+              },
+              {
+                "basis": "textbook",
+                "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+                "derivation": null,
+                "factual": true,
+                "fragment_ids": [
+                  "F002"
+                ],
+                "problem_quote": null,
+                "reason": "F037 establishes carrier travel into the stroma and Calvin-cycle location.",
+                "status": "supported"
+              },
+              {
+                "basis": "textbook",
+                "claim_id": "claim_2e2e3ba2b43cbd571afa271b_1",
+                "derivation": null,
+                "factual": true,
+                "fragment_ids": [
+                  "F004"
+                ],
+                "problem_quote": null,
+                "reason": "F053 supports ATP/NADPH-driven G3P formation; selected support does not establish the stroma qualifier or G3P's carbohydrate consequence.",
+                "status": "partial"
+              }
+            ],
+            "complete_answer": true,
+            "coverage": "full",
+            "cumulative_ok": true,
+            "evidence_display_ok": true,
+            "limitations_explicit": true,
+            "missing_facets": [],
+            "non_repetitive_next_action": true,
+            "reason": "Authored fixture for contract and gate behavior; no live model-semantic measurement.",
+            "repair_fragment_ids": [],
+            "requirements": [
+              {
+                "conditions_preserved": true,
+                "evidence": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F001",
+                    "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+                  },
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F002",
+                    "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+                  }
+                ],
+                "missing_information": "",
+                "reason": "Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions.",
+                "relevance": "related",
+                "requirement_id": "requirement_01",
+                "response_coverage": "covered",
+                "sufficiency": "sufficient"
+              }
+            ],
+            "scope_ok": true,
+            "specific_help": true,
+            "suggestions_ok": true,
+            "tutor_question_ok": true
+          },
+          "checker_inconsistencies": [],
+          "judgment": {
+            "claims": [
+              {
+                "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+                "basis": "textbook",
+                "factual": true,
+                "status": "supported",
+                "fragment_ids": [
+                  "span_84ac9a45ebe3b6892fbe0db421420d54"
+                ],
+                "problem_quote": null,
+                "derivation": null,
+                "reason": "F036 establishes light-dependent production of ATP and NADPH."
+              },
+              {
+                "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+                "basis": "textbook",
+                "factual": true,
+                "status": "supported",
+                "fragment_ids": [
+                  "span_f2d6b6076a6e9e915ab97ed6fb4976fc"
+                ],
+                "problem_quote": null,
+                "derivation": null,
+                "reason": "F037 establishes carrier travel into the stroma and Calvin-cycle location."
+              },
+              {
+                "claim_id": "claim_2e2e3ba2b43cbd571afa271b_1",
+                "basis": "textbook",
+                "factual": true,
+                "status": "partial",
+                "fragment_ids": [
+                  "span_5196350d46b2b1222039a52fc5e9f7a1"
+                ],
+                "problem_quote": null,
+                "derivation": null,
+                "reason": "F053 supports ATP/NADPH-driven G3P formation; selected support does not establish the stroma qualifier or G3P's carbohydrate consequence."
+              }
+            ],
+            "body_ok": false,
+            "specific_help": true,
+            "scope_ok": true,
+            "suggestions_ok": true,
+            "evidence_display_ok": true,
+            "cumulative_ok": true,
+            "complete_answer": true,
+            "coverage": "full",
+            "missing_facets": [],
+            "limitations_explicit": true,
+            "reason": "Authored fixture for contract and gate behavior; no live model-semantic measurement.",
+            "repair_fragment_ids": [],
+            "attempt_evaluation_ok": true,
+            "tutor_question_ok": true,
+            "requirements": [
+              {
+                "requirement_id": "requirement_01",
+                "relevance": "related",
+                "sufficiency": "sufficient",
+                "evidence": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F001",
+                    "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+                  },
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F002",
+                    "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+                  }
+                ],
+                "conditions_preserved": true,
+                "response_coverage": "covered",
+                "missing_information": "",
+                "reason": "Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions."
+              }
+            ],
+            "non_repetitive_next_action": true
+          },
+          "effective_body_ok": false,
+          "structural_issues": [],
+          "repair_plan": {
+            "version": "cause_specific_repair_v2",
+            "actions": [
+              {
+                "origin": "answer",
+                "claim_id": "claim_2e2e3ba2b43cbd571afa271b_1",
+                "code": "CLAIM_PARTIAL",
+                "action": "support_required_content_or_narrow_optional_assertion"
+              }
+            ],
+            "remaining_repair_pairs": 1
+          },
+          "publication_block": {
+            "version": "semantic_publication_block_v1",
+            "stop_reason": "insufficient_calls_for_repair_and_recheck",
+            "remaining_provider_calls": 0,
+            "required_calls_for_repair_and_recheck": 2,
+            "checker_contract_repair_calls": 0,
+            "checker_reported_body_ok": false,
+            "checker_reported_non_supported_factual_claims": 1,
+            "failed_checker_gate_names": [
+              "body_ok"
+            ],
+            "checker_reported_coverage": "full",
+            "requirement_issue_codes": [],
+            "structural_issue_codes": []
+          }
+        }
+      ],
+      "response": null,
+      "actual_checker_message_prompt_sha256": "98cf91e622b002a4f8d0d305a7389940ec414a28fac494bcd0ef2f6ba4ed5a14",
+      "captured_complete_claims": [
+        {
+          "answer_field": "answer_text",
+          "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+          "end": 88,
+          "evidence_ids": [
+            "ev_001"
+          ],
+          "start": 0,
+          "text": "Light-dependent reactions harness energy from the sun to produce ATP and NADPH [ev_001]."
+        },
+        {
+          "answer_field": "answer_text",
+          "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+          "end": 197,
+          "evidence_ids": [
+            "ev_001"
+          ],
+          "start": 89,
+          "text": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place [ev_001]."
+        },
+        {
+          "answer_field": "answer_text",
+          "claim_id": "claim_2e2e3ba2b43cbd571afa271b_1",
+          "end": 361,
+          "evidence_ids": [
+            "ev_002"
+          ],
+          "start": 198,
+          "text": "Once in the stroma, the Calvin cycle uses the energy in ATP and NADPH to convert the three-carbon molecules into G3P, which builds carbohydrate molecules [ev_002]."
+        }
+      ],
+      "actual_citation_bindings": [
+        {
+          "citations": [
+            {
+              "allowed_fragment_ids": [
+                "F001",
+                "F002"
+              ],
+              "evidence_id": "ev_001"
+            }
+          ],
+          "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1"
+        },
+        {
+          "citations": [
+            {
+              "allowed_fragment_ids": [
+                "F001",
+                "F002"
+              ],
+              "evidence_id": "ev_001"
+            }
+          ],
+          "claim_id": "claim_bfbf5b58994f2812bb13f03b_1"
+        },
+        {
+          "citations": [
+            {
+              "allowed_fragment_ids": [
+                "F003",
+                "F004",
+                "F005",
+                "F006"
+              ],
+              "evidence_id": "ev_002"
+            }
+          ],
+          "claim_id": "claim_2e2e3ba2b43cbd571afa271b_1"
+        }
+      ],
+      "submitted_exact_fragments": [
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_001",
+          "exact_text": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.",
+          "fragment_id": "F001"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_001",
+          "exact_text": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+          "fragment_id": "F002"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_002",
+          "exact_text": "Photosystem I absorbs a second photon, which results in the formation of an NADPH molecule, another energy carrier for the Calvin cycle reactions. 5.3 The Calvin Cycle Using the energy carriers formed in the first stage of photosynthesis, the Calvin cycle reactions fix CO2 from the environment to build carbohydrate molecules.",
+          "fragment_id": "F003"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_002",
+          "exact_text": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+          "fragment_id": "F004"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_002",
+          "exact_text": "One of the three-carbon molecules of G3P leaves the cycle to become a 5 \u2022 Key Terms 131",
+          "fragment_id": "F005"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_002",
+          "exact_text": "part of a carbohydrate molecule.",
+          "fragment_id": "F006"
+        }
+      ],
+      "authored_verdict_is_model_semantic_accuracy_evidence": false,
+      "authored_geometry_is_actual_retrieval_geometry": false,
+      "provider_POSTs": 0
+    },
+    {
+      "control": "split_G3P_carbohydrate_stroma_selected_complementary_support",
+      "expected_fixture_pipeline_success": true,
+      "actual_fixture_pipeline_success": true,
+      "error": null,
+      "body_ok": true,
+      "checks": [
+        {
+          "revision": 0,
+          "checker_contract_revision": 0,
+          "checker_contract_policy": "single_contract_correction_v1",
+          "joint_checker_policy": "typed_joint_v5",
+          "accepted": true,
+          "validation_state": "validated",
+          "raw_text": "{\"claims\": [{\"claim_id\": \"claim_ed4c3499d8641d0f421ac3c8_1\", \"reason\": \"F036 establishes light-dependent production of ATP and NADPH.\", \"basis\": \"textbook\", \"status\": \"supported\", \"citations\": [{\"evidence_id\": \"ev_001\", \"fragment_ids\": [\"F001\"], \"relation\": \"supporting\"}]}, {\"claim_id\": \"claim_bfbf5b58994f2812bb13f03b_1\", \"reason\": \"F037 establishes carrier travel into the stroma and Calvin-cycle location.\", \"basis\": \"textbook\", \"status\": \"supported\", \"citations\": [{\"evidence_id\": \"ev_001\", \"fragment_ids\": [\"F002\"], \"relation\": \"supporting\"}]}, {\"claim_id\": \"claim_a7661b9b7da4eead188cda39_1\", \"reason\": \"F053 establishes ATP/NADPH energy converting three-carbon compounds to G3P.\", \"basis\": \"textbook\", \"status\": \"supported\", \"citations\": [{\"evidence_id\": \"ev_002\", \"fragment_ids\": [\"F004\"], \"relation\": \"supporting\"}]}, {\"claim_id\": \"claim_b9bc041287af3a3491398a6b_1\", \"reason\": \"Distinct F054 and F055 jointly establish that G3P can leave the cycle and become part of carbohydrate; retained page furniture is not a scientific condition.\", \"basis\": \"textbook\", \"status\": \"supported\", \"citations\": [{\"evidence_id\": \"ev_002\", \"fragment_ids\": [\"F005\", \"F006\"], \"relation\": \"supporting\"}]}, {\"claim_id\": \"claim_978cbe77c3011e70174d5508_1\", \"reason\": \"F037 establishes that Calvin-cycle reactions occur in the stroma.\", \"basis\": \"textbook\", \"status\": \"supported\", \"citations\": [{\"evidence_id\": \"ev_001\", \"fragment_ids\": [\"F002\"], \"relation\": \"supporting\"}]}], \"body_ok\": true, \"specific_help\": true, \"scope_ok\": true, \"suggestions_ok\": true, \"evidence_display_ok\": true, \"cumulative_ok\": true, \"complete_answer\": true, \"coverage\": \"full\", \"missing_facets\": [], \"limitations_explicit\": true, \"reason\": \"Authored fixture for contract and gate behavior; no live model-semantic measurement.\", \"repair_fragment_ids\": [], \"attempt_evaluation_ok\": true, \"tutor_question_ok\": true, \"requirements\": [{\"requirement_id\": \"requirement_01\", \"relevance\": \"related\", \"sufficiency\": \"sufficient\", \"evidence\": [{\"evidence_id\": \"ev_001\", \"fragment_id\": \"F001\", \"quote\": \"FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.\"}, {\"evidence_id\": \"ev_001\", \"fragment_id\": \"F002\", \"quote\": \"These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.\"}], \"conditions_preserved\": true, \"response_coverage\": \"covered\", \"missing_information\": \"\", \"reason\": \"Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions.\"}], \"non_repetitive_next_action\": true}",
+          "fragment_aliases": {
+            "F001": "span_84ac9a45ebe3b6892fbe0db421420d54",
+            "F002": "span_f2d6b6076a6e9e915ab97ed6fb4976fc",
+            "F003": "span_90558663dfa7f8f9ac49471f40149d6b",
+            "F004": "span_5196350d46b2b1222039a52fc5e9f7a1",
+            "F005": "span_22703bf8544c5ab001c15eb8217fef60",
+            "F006": "span_ec17966af6821bb142ef2fa6759e2e3b"
+          },
+          "policy": {
+            "version": "learning_enhancement_v1",
+            "condition": "T2",
+            "teaching_mode": "direct",
+            "task_type": "process_reasoning",
+            "help_level": 0,
+            "help_constraint": "Give the complete supported explanation requested, including relevant conditions, units and limits. Do not force hints.",
+            "online_check": true,
+            "control_evidence": false,
+            "check_suggestions": false,
+            "check_cumulative": false,
+            "human_rating": null
+          },
+          "check_scope": {
+            "body_and_short_answer": true,
+            "current_suggestions": false,
+            "current_evidence_display": false,
+            "prior_actual_exposure": false
+          },
+          "configuration_id": "mock-default-v1",
+          "model": "scripted_fixture",
+          "provider": "scripted_fixture",
+          "checked_at": "2026-10-09T18:23:39.410985+00:00",
+          "rubric_hash": "98cf91e622b002a4f8d0d305a7389940ec414a28fac494bcd0ef2f6ba4ed5a14",
+          "projection_hash": "6439e633a431ecbcb872ed9d05558fde2e40777d50a163e7bcb2fc0f95149c91",
+          "reliability_policy": "evidence_reliability_v5",
+          "human_rating": null,
+          "typed_judgment_raw_aliases": {
+            "claims": [
+              {
+                "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+                "reason": "F036 establishes light-dependent production of ATP and NADPH.",
+                "basis": "textbook",
+                "status": "supported",
+                "citations": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_ids": [
+                      "F001"
+                    ],
+                    "relation": "supporting"
+                  }
+                ]
+              },
+              {
+                "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+                "reason": "F037 establishes carrier travel into the stroma and Calvin-cycle location.",
+                "basis": "textbook",
+                "status": "supported",
+                "citations": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_ids": [
+                      "F002"
+                    ],
+                    "relation": "supporting"
+                  }
+                ]
+              },
+              {
+                "claim_id": "claim_a7661b9b7da4eead188cda39_1",
+                "reason": "F053 establishes ATP/NADPH energy converting three-carbon compounds to G3P.",
+                "basis": "textbook",
+                "status": "supported",
+                "citations": [
+                  {
+                    "evidence_id": "ev_002",
+                    "fragment_ids": [
+                      "F004"
+                    ],
+                    "relation": "supporting"
+                  }
+                ]
+              },
+              {
+                "claim_id": "claim_b9bc041287af3a3491398a6b_1",
+                "reason": "Distinct F054 and F055 jointly establish that G3P can leave the cycle and become part of carbohydrate; retained page furniture is not a scientific condition.",
+                "basis": "textbook",
+                "status": "supported",
+                "citations": [
+                  {
+                    "evidence_id": "ev_002",
+                    "fragment_ids": [
+                      "F005",
+                      "F006"
+                    ],
+                    "relation": "supporting"
+                  }
+                ]
+              },
+              {
+                "claim_id": "claim_978cbe77c3011e70174d5508_1",
+                "reason": "F037 establishes that Calvin-cycle reactions occur in the stroma.",
+                "basis": "textbook",
+                "status": "supported",
+                "citations": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_ids": [
+                      "F002"
+                    ],
+                    "relation": "supporting"
+                  }
+                ]
+              }
+            ],
+            "body_ok": true,
+            "specific_help": true,
+            "scope_ok": true,
+            "suggestions_ok": true,
+            "evidence_display_ok": true,
+            "cumulative_ok": true,
+            "complete_answer": true,
+            "coverage": "full",
+            "missing_facets": [],
+            "limitations_explicit": true,
+            "reason": "Authored fixture for contract and gate behavior; no live model-semantic measurement.",
+            "repair_fragment_ids": [],
+            "attempt_evaluation_ok": true,
+            "tutor_question_ok": true,
+            "requirements": [
+              {
+                "requirement_id": "requirement_01",
+                "relevance": "related",
+                "sufficiency": "sufficient",
+                "evidence": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F001",
+                    "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+                  },
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F002",
+                    "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+                  }
+                ],
+                "conditions_preserved": true,
+                "response_coverage": "covered",
+                "missing_information": "",
+                "reason": "Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions."
+              }
+            ],
+            "non_repetitive_next_action": true
+          },
+          "actual_citation_bindings": [
+            {
+              "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+              "citations": [
+                {
+                  "evidence_id": "ev_001",
+                  "allowed_fragment_ids": [
+                    "F001",
+                    "F002"
+                  ]
+                }
+              ]
+            },
+            {
+              "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+              "citations": [
+                {
+                  "evidence_id": "ev_001",
+                  "allowed_fragment_ids": [
+                    "F001",
+                    "F002"
+                  ]
+                }
+              ]
+            },
+            {
+              "claim_id": "claim_a7661b9b7da4eead188cda39_1",
+              "citations": [
+                {
+                  "evidence_id": "ev_002",
+                  "allowed_fragment_ids": [
+                    "F003",
+                    "F004",
+                    "F005",
+                    "F006"
+                  ]
+                }
+              ]
+            },
+            {
+              "claim_id": "claim_b9bc041287af3a3491398a6b_1",
+              "citations": [
+                {
+                  "evidence_id": "ev_002",
+                  "allowed_fragment_ids": [
+                    "F003",
+                    "F004",
+                    "F005",
+                    "F006"
+                  ]
+                }
+              ]
+            },
+            {
+              "claim_id": "claim_978cbe77c3011e70174d5508_1",
+              "citations": [
+                {
+                  "evidence_id": "ev_001",
+                  "allowed_fragment_ids": [
+                    "F001",
+                    "F002"
+                  ]
+                }
+              ]
+            }
+          ],
+          "semantic_sufficiency": {
+            "version": "semantic_requirements_v1",
+            "method": "online_checker_model",
+            "status": "sufficient",
+            "requirements": [
+              {
+                "requirement_id": "requirement_01",
+                "relevance": "related",
+                "sufficiency": "sufficient",
+                "evidence": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F001",
+                    "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+                  },
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F002",
+                    "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+                  }
+                ],
+                "conditions_preserved": true,
+                "response_coverage": "covered",
+                "missing_information": "",
+                "reason": "Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions."
+              }
+            ],
+            "human_rating": null,
+            "independent_evaluation": false
+          },
+          "repairable_verdict_inconsistencies": [],
+          "judgment_raw_aliases": {
+            "attempt_evaluation_ok": true,
+            "body_ok": true,
+            "claims": [
+              {
+                "basis": "textbook",
+                "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+                "derivation": null,
+                "factual": true,
+                "fragment_ids": [
+                  "F001"
+                ],
+                "problem_quote": null,
+                "reason": "F036 establishes light-dependent production of ATP and NADPH.",
+                "status": "supported"
+              },
+              {
+                "basis": "textbook",
+                "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+                "derivation": null,
+                "factual": true,
+                "fragment_ids": [
+                  "F002"
+                ],
+                "problem_quote": null,
+                "reason": "F037 establishes carrier travel into the stroma and Calvin-cycle location.",
+                "status": "supported"
+              },
+              {
+                "basis": "textbook",
+                "claim_id": "claim_a7661b9b7da4eead188cda39_1",
+                "derivation": null,
+                "factual": true,
+                "fragment_ids": [
+                  "F004"
+                ],
+                "problem_quote": null,
+                "reason": "F053 establishes ATP/NADPH energy converting three-carbon compounds to G3P.",
+                "status": "supported"
+              },
+              {
+                "basis": "textbook",
+                "claim_id": "claim_b9bc041287af3a3491398a6b_1",
+                "derivation": null,
+                "factual": true,
+                "fragment_ids": [
+                  "F005",
+                  "F006"
+                ],
+                "problem_quote": null,
+                "reason": "Distinct F054 and F055 jointly establish that G3P can leave the cycle and become part of carbohydrate; retained page furniture is not a scientific condition.",
+                "status": "supported"
+              },
+              {
+                "basis": "textbook",
+                "claim_id": "claim_978cbe77c3011e70174d5508_1",
+                "derivation": null,
+                "factual": true,
+                "fragment_ids": [
+                  "F002"
+                ],
+                "problem_quote": null,
+                "reason": "F037 establishes that Calvin-cycle reactions occur in the stroma.",
+                "status": "supported"
+              }
+            ],
+            "complete_answer": true,
+            "coverage": "full",
+            "cumulative_ok": true,
+            "evidence_display_ok": true,
+            "limitations_explicit": true,
+            "missing_facets": [],
+            "non_repetitive_next_action": true,
+            "reason": "Authored fixture for contract and gate behavior; no live model-semantic measurement.",
+            "repair_fragment_ids": [],
+            "requirements": [
+              {
+                "conditions_preserved": true,
+                "evidence": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F001",
+                    "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+                  },
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F002",
+                    "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+                  }
+                ],
+                "missing_information": "",
+                "reason": "Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions.",
+                "relevance": "related",
+                "requirement_id": "requirement_01",
+                "response_coverage": "covered",
+                "sufficiency": "sufficient"
+              }
+            ],
+            "scope_ok": true,
+            "specific_help": true,
+            "suggestions_ok": true,
+            "tutor_question_ok": true
+          },
+          "checker_inconsistencies": [],
+          "judgment": {
+            "claims": [
+              {
+                "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+                "basis": "textbook",
+                "factual": true,
+                "status": "supported",
+                "fragment_ids": [
+                  "span_84ac9a45ebe3b6892fbe0db421420d54"
+                ],
+                "problem_quote": null,
+                "derivation": null,
+                "reason": "F036 establishes light-dependent production of ATP and NADPH."
+              },
+              {
+                "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+                "basis": "textbook",
+                "factual": true,
+                "status": "supported",
+                "fragment_ids": [
+                  "span_f2d6b6076a6e9e915ab97ed6fb4976fc"
+                ],
+                "problem_quote": null,
+                "derivation": null,
+                "reason": "F037 establishes carrier travel into the stroma and Calvin-cycle location."
+              },
+              {
+                "claim_id": "claim_a7661b9b7da4eead188cda39_1",
+                "basis": "textbook",
+                "factual": true,
+                "status": "supported",
+                "fragment_ids": [
+                  "span_5196350d46b2b1222039a52fc5e9f7a1"
+                ],
+                "problem_quote": null,
+                "derivation": null,
+                "reason": "F053 establishes ATP/NADPH energy converting three-carbon compounds to G3P."
+              },
+              {
+                "claim_id": "claim_b9bc041287af3a3491398a6b_1",
+                "basis": "textbook",
+                "factual": true,
+                "status": "supported",
+                "fragment_ids": [
+                  "span_22703bf8544c5ab001c15eb8217fef60",
+                  "span_ec17966af6821bb142ef2fa6759e2e3b"
+                ],
+                "problem_quote": null,
+                "derivation": null,
+                "reason": "Distinct F054 and F055 jointly establish that G3P can leave the cycle and become part of carbohydrate; retained page furniture is not a scientific condition."
+              },
+              {
+                "claim_id": "claim_978cbe77c3011e70174d5508_1",
+                "basis": "textbook",
+                "factual": true,
+                "status": "supported",
+                "fragment_ids": [
+                  "span_f2d6b6076a6e9e915ab97ed6fb4976fc"
+                ],
+                "problem_quote": null,
+                "derivation": null,
+                "reason": "F037 establishes that Calvin-cycle reactions occur in the stroma."
+              }
+            ],
+            "body_ok": true,
+            "specific_help": true,
+            "scope_ok": true,
+            "suggestions_ok": true,
+            "evidence_display_ok": true,
+            "cumulative_ok": true,
+            "complete_answer": true,
+            "coverage": "full",
+            "missing_facets": [],
+            "limitations_explicit": true,
+            "reason": "Authored fixture for contract and gate behavior; no live model-semantic measurement.",
+            "repair_fragment_ids": [],
+            "attempt_evaluation_ok": true,
+            "tutor_question_ok": true,
+            "requirements": [
+              {
+                "requirement_id": "requirement_01",
+                "relevance": "related",
+                "sufficiency": "sufficient",
+                "evidence": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F001",
+                    "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+                  },
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F002",
+                    "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+                  }
+                ],
+                "conditions_preserved": true,
+                "response_coverage": "covered",
+                "missing_information": "",
+                "reason": "Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions."
+              }
+            ],
+            "non_repetitive_next_action": true
+          },
+          "effective_body_ok": true,
+          "structural_issues": [],
+          "repair_plan": {
+            "version": "cause_specific_repair_v2",
+            "actions": [],
+            "remaining_repair_pairs": 1
+          },
+          "delivered_projection_hash": "3883bc0aa389f3f80534498e9511ff465e662a06b3334591377851413976f4ba"
+        }
+      ],
+      "response": {
+        "schema_version": "chat_response_v1",
+        "response_type": "answer",
+        "answer_text": "Light-dependent reactions harness energy from the sun to produce ATP and NADPH [ev_001]. These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place [ev_001]. The energy in ATP and NADPH is used to convert three-carbon compounds into G3P [ev_002]. G3P can leave the cycle and become part of a carbohydrate molecule [ev_002]. The Calvin cycle reactions take place in the stroma [ev_001].",
+        "short_answer": null,
+        "citations": [
+          "ev_001",
+          "ev_002"
+        ],
+        "refusal_reason": null,
+        "follow_up_questions": [],
+        "confidence": null
+      },
+      "actual_checker_message_prompt_sha256": "98cf91e622b002a4f8d0d305a7389940ec414a28fac494bcd0ef2f6ba4ed5a14",
+      "captured_complete_claims": [
+        {
+          "answer_field": "answer_text",
+          "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+          "end": 88,
+          "evidence_ids": [
+            "ev_001"
+          ],
+          "start": 0,
+          "text": "Light-dependent reactions harness energy from the sun to produce ATP and NADPH [ev_001]."
+        },
+        {
+          "answer_field": "answer_text",
+          "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+          "end": 197,
+          "evidence_ids": [
+            "ev_001"
+          ],
+          "start": 89,
+          "text": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place [ev_001]."
+        },
+        {
+          "answer_field": "answer_text",
+          "claim_id": "claim_a7661b9b7da4eead188cda39_1",
+          "end": 286,
+          "evidence_ids": [
+            "ev_002"
+          ],
+          "start": 198,
+          "text": "The energy in ATP and NADPH is used to convert three-carbon compounds into G3P [ev_002]."
+        },
+        {
+          "answer_field": "answer_text",
+          "claim_id": "claim_b9bc041287af3a3491398a6b_1",
+          "end": 363,
+          "evidence_ids": [
+            "ev_002"
+          ],
+          "start": 287,
+          "text": "G3P can leave the cycle and become part of a carbohydrate molecule [ev_002]."
+        },
+        {
+          "answer_field": "answer_text",
+          "claim_id": "claim_978cbe77c3011e70174d5508_1",
+          "end": 425,
+          "evidence_ids": [
+            "ev_001"
+          ],
+          "start": 364,
+          "text": "The Calvin cycle reactions take place in the stroma [ev_001]."
+        }
+      ],
+      "actual_citation_bindings": [
+        {
+          "citations": [
+            {
+              "allowed_fragment_ids": [
+                "F001",
+                "F002"
+              ],
+              "evidence_id": "ev_001"
+            }
+          ],
+          "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1"
+        },
+        {
+          "citations": [
+            {
+              "allowed_fragment_ids": [
+                "F001",
+                "F002"
+              ],
+              "evidence_id": "ev_001"
+            }
+          ],
+          "claim_id": "claim_bfbf5b58994f2812bb13f03b_1"
+        },
+        {
+          "citations": [
+            {
+              "allowed_fragment_ids": [
+                "F003",
+                "F004",
+                "F005",
+                "F006"
+              ],
+              "evidence_id": "ev_002"
+            }
+          ],
+          "claim_id": "claim_a7661b9b7da4eead188cda39_1"
+        },
+        {
+          "citations": [
+            {
+              "allowed_fragment_ids": [
+                "F003",
+                "F004",
+                "F005",
+                "F006"
+              ],
+              "evidence_id": "ev_002"
+            }
+          ],
+          "claim_id": "claim_b9bc041287af3a3491398a6b_1"
+        },
+        {
+          "citations": [
+            {
+              "allowed_fragment_ids": [
+                "F001",
+                "F002"
+              ],
+              "evidence_id": "ev_001"
+            }
+          ],
+          "claim_id": "claim_978cbe77c3011e70174d5508_1"
+        }
+      ],
+      "submitted_exact_fragments": [
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_001",
+          "exact_text": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.",
+          "fragment_id": "F001"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_001",
+          "exact_text": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+          "fragment_id": "F002"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_002",
+          "exact_text": "Photosystem I absorbs a second photon, which results in the formation of an NADPH molecule, another energy carrier for the Calvin cycle reactions. 5.3 The Calvin Cycle Using the energy carriers formed in the first stage of photosynthesis, the Calvin cycle reactions fix CO2 from the environment to build carbohydrate molecules.",
+          "fragment_id": "F003"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_002",
+          "exact_text": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+          "fragment_id": "F004"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_002",
+          "exact_text": "One of the three-carbon molecules of G3P leaves the cycle to become a 5 \u2022 Key Terms 131",
+          "fragment_id": "F005"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_002",
+          "exact_text": "part of a carbohydrate molecule.",
+          "fragment_id": "F006"
+        }
+      ],
+      "authored_verdict_is_model_semantic_accuracy_evidence": false,
+      "authored_geometry_is_actual_retrieval_geometry": false,
+      "provider_POSTs": 0
+    },
+    {
+      "control": "split_G3P_missing_F055_continuation_honest_partial_blocks",
+      "expected_fixture_pipeline_success": false,
+      "actual_fixture_pipeline_success": false,
+      "error": {
+        "code": "SEMANTIC_CHECK_FAILED",
+        "message": "The proposed answer did not pass its required support or teaching checks",
+        "retryable": false,
+        "details": {
+          "revision": 0,
+          "publication_block": {
+            "version": "semantic_publication_block_v1",
+            "stop_reason": "insufficient_calls_for_repair_and_recheck",
+            "remaining_provider_calls": 0,
+            "required_calls_for_repair_and_recheck": 2,
+            "checker_contract_repair_calls": 0,
+            "checker_reported_body_ok": false,
+            "checker_reported_non_supported_factual_claims": 1,
+            "failed_checker_gate_names": [
+              "body_ok"
+            ],
+            "checker_reported_coverage": "full",
+            "requirement_issue_codes": [],
+            "structural_issue_codes": []
+          }
+        }
+      },
+      "body_ok": false,
+      "checks": [
+        {
+          "revision": 0,
+          "checker_contract_revision": 0,
+          "checker_contract_policy": "single_contract_correction_v1",
+          "joint_checker_policy": "typed_joint_v5",
+          "accepted": false,
+          "validation_state": "validated",
+          "raw_text": "{\"claims\": [{\"claim_id\": \"claim_ed4c3499d8641d0f421ac3c8_1\", \"reason\": \"F036 establishes light-dependent production of ATP and NADPH.\", \"basis\": \"textbook\", \"status\": \"supported\", \"citations\": [{\"evidence_id\": \"ev_001\", \"fragment_ids\": [\"F001\"], \"relation\": \"supporting\"}]}, {\"claim_id\": \"claim_bfbf5b58994f2812bb13f03b_1\", \"reason\": \"F037 establishes carrier travel into the stroma and Calvin-cycle location.\", \"basis\": \"textbook\", \"status\": \"supported\", \"citations\": [{\"evidence_id\": \"ev_001\", \"fragment_ids\": [\"F002\"], \"relation\": \"supporting\"}]}, {\"claim_id\": \"claim_a7661b9b7da4eead188cda39_1\", \"reason\": \"F053 establishes ATP/NADPH energy converting three-carbon compounds to G3P.\", \"basis\": \"textbook\", \"status\": \"supported\", \"citations\": [{\"evidence_id\": \"ev_002\", \"fragment_ids\": [\"F004\"], \"relation\": \"supporting\"}]}, {\"claim_id\": \"claim_b9bc041287af3a3491398a6b_1\", \"reason\": \"F054 establishes G3P leaving the cycle but its selected truncated text does not supply the carbohydrate destination.\", \"basis\": \"textbook\", \"status\": \"partial\", \"citations\": [{\"evidence_id\": \"ev_002\", \"fragment_ids\": [\"F005\"], \"relation\": \"supporting\"}]}, {\"claim_id\": \"claim_978cbe77c3011e70174d5508_1\", \"reason\": \"F037 establishes that Calvin-cycle reactions occur in the stroma.\", \"basis\": \"textbook\", \"status\": \"supported\", \"citations\": [{\"evidence_id\": \"ev_001\", \"fragment_ids\": [\"F002\"], \"relation\": \"supporting\"}]}], \"body_ok\": false, \"specific_help\": true, \"scope_ok\": true, \"suggestions_ok\": true, \"evidence_display_ok\": true, \"cumulative_ok\": true, \"complete_answer\": true, \"coverage\": \"full\", \"missing_facets\": [], \"limitations_explicit\": true, \"reason\": \"Authored fixture for contract and gate behavior; no live model-semantic measurement.\", \"repair_fragment_ids\": [], \"attempt_evaluation_ok\": true, \"tutor_question_ok\": true, \"requirements\": [{\"requirement_id\": \"requirement_01\", \"relevance\": \"related\", \"sufficiency\": \"sufficient\", \"evidence\": [{\"evidence_id\": \"ev_001\", \"fragment_id\": \"F001\", \"quote\": \"FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.\"}, {\"evidence_id\": \"ev_001\", \"fragment_id\": \"F002\", \"quote\": \"These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.\"}], \"conditions_preserved\": true, \"response_coverage\": \"covered\", \"missing_information\": \"\", \"reason\": \"Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions.\"}], \"non_repetitive_next_action\": true}",
+          "fragment_aliases": {
+            "F001": "span_84ac9a45ebe3b6892fbe0db421420d54",
+            "F002": "span_f2d6b6076a6e9e915ab97ed6fb4976fc",
+            "F003": "span_90558663dfa7f8f9ac49471f40149d6b",
+            "F004": "span_5196350d46b2b1222039a52fc5e9f7a1",
+            "F005": "span_22703bf8544c5ab001c15eb8217fef60",
+            "F006": "span_ec17966af6821bb142ef2fa6759e2e3b"
+          },
+          "policy": {
+            "version": "learning_enhancement_v1",
+            "condition": "T2",
+            "teaching_mode": "direct",
+            "task_type": "process_reasoning",
+            "help_level": 0,
+            "help_constraint": "Give the complete supported explanation requested, including relevant conditions, units and limits. Do not force hints.",
+            "online_check": true,
+            "control_evidence": false,
+            "check_suggestions": false,
+            "check_cumulative": false,
+            "human_rating": null
+          },
+          "check_scope": {
+            "body_and_short_answer": true,
+            "current_suggestions": false,
+            "current_evidence_display": false,
+            "prior_actual_exposure": false
+          },
+          "configuration_id": "mock-default-v1",
+          "model": "scripted_fixture",
+          "provider": "scripted_fixture",
+          "checked_at": "2026-10-09T18:23:39.424608+00:00",
+          "rubric_hash": "98cf91e622b002a4f8d0d305a7389940ec414a28fac494bcd0ef2f6ba4ed5a14",
+          "projection_hash": "6439e633a431ecbcb872ed9d05558fde2e40777d50a163e7bcb2fc0f95149c91",
+          "reliability_policy": "evidence_reliability_v5",
+          "human_rating": null,
+          "typed_judgment_raw_aliases": {
+            "claims": [
+              {
+                "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+                "reason": "F036 establishes light-dependent production of ATP and NADPH.",
+                "basis": "textbook",
+                "status": "supported",
+                "citations": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_ids": [
+                      "F001"
+                    ],
+                    "relation": "supporting"
+                  }
+                ]
+              },
+              {
+                "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+                "reason": "F037 establishes carrier travel into the stroma and Calvin-cycle location.",
+                "basis": "textbook",
+                "status": "supported",
+                "citations": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_ids": [
+                      "F002"
+                    ],
+                    "relation": "supporting"
+                  }
+                ]
+              },
+              {
+                "claim_id": "claim_a7661b9b7da4eead188cda39_1",
+                "reason": "F053 establishes ATP/NADPH energy converting three-carbon compounds to G3P.",
+                "basis": "textbook",
+                "status": "supported",
+                "citations": [
+                  {
+                    "evidence_id": "ev_002",
+                    "fragment_ids": [
+                      "F004"
+                    ],
+                    "relation": "supporting"
+                  }
+                ]
+              },
+              {
+                "claim_id": "claim_b9bc041287af3a3491398a6b_1",
+                "reason": "F054 establishes G3P leaving the cycle but its selected truncated text does not supply the carbohydrate destination.",
+                "basis": "textbook",
+                "status": "partial",
+                "citations": [
+                  {
+                    "evidence_id": "ev_002",
+                    "fragment_ids": [
+                      "F005"
+                    ],
+                    "relation": "supporting"
+                  }
+                ]
+              },
+              {
+                "claim_id": "claim_978cbe77c3011e70174d5508_1",
+                "reason": "F037 establishes that Calvin-cycle reactions occur in the stroma.",
+                "basis": "textbook",
+                "status": "supported",
+                "citations": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_ids": [
+                      "F002"
+                    ],
+                    "relation": "supporting"
+                  }
+                ]
+              }
+            ],
+            "body_ok": false,
+            "specific_help": true,
+            "scope_ok": true,
+            "suggestions_ok": true,
+            "evidence_display_ok": true,
+            "cumulative_ok": true,
+            "complete_answer": true,
+            "coverage": "full",
+            "missing_facets": [],
+            "limitations_explicit": true,
+            "reason": "Authored fixture for contract and gate behavior; no live model-semantic measurement.",
+            "repair_fragment_ids": [],
+            "attempt_evaluation_ok": true,
+            "tutor_question_ok": true,
+            "requirements": [
+              {
+                "requirement_id": "requirement_01",
+                "relevance": "related",
+                "sufficiency": "sufficient",
+                "evidence": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F001",
+                    "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+                  },
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F002",
+                    "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+                  }
+                ],
+                "conditions_preserved": true,
+                "response_coverage": "covered",
+                "missing_information": "",
+                "reason": "Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions."
+              }
+            ],
+            "non_repetitive_next_action": true
+          },
+          "actual_citation_bindings": [
+            {
+              "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+              "citations": [
+                {
+                  "evidence_id": "ev_001",
+                  "allowed_fragment_ids": [
+                    "F001",
+                    "F002"
+                  ]
+                }
+              ]
+            },
+            {
+              "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+              "citations": [
+                {
+                  "evidence_id": "ev_001",
+                  "allowed_fragment_ids": [
+                    "F001",
+                    "F002"
+                  ]
+                }
+              ]
+            },
+            {
+              "claim_id": "claim_a7661b9b7da4eead188cda39_1",
+              "citations": [
+                {
+                  "evidence_id": "ev_002",
+                  "allowed_fragment_ids": [
+                    "F003",
+                    "F004",
+                    "F005",
+                    "F006"
+                  ]
+                }
+              ]
+            },
+            {
+              "claim_id": "claim_b9bc041287af3a3491398a6b_1",
+              "citations": [
+                {
+                  "evidence_id": "ev_002",
+                  "allowed_fragment_ids": [
+                    "F003",
+                    "F004",
+                    "F005",
+                    "F006"
+                  ]
+                }
+              ]
+            },
+            {
+              "claim_id": "claim_978cbe77c3011e70174d5508_1",
+              "citations": [
+                {
+                  "evidence_id": "ev_001",
+                  "allowed_fragment_ids": [
+                    "F001",
+                    "F002"
+                  ]
+                }
+              ]
+            }
+          ],
+          "semantic_sufficiency": {
+            "version": "semantic_requirements_v1",
+            "method": "online_checker_model",
+            "status": "sufficient",
+            "requirements": [
+              {
+                "requirement_id": "requirement_01",
+                "relevance": "related",
+                "sufficiency": "sufficient",
+                "evidence": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F001",
+                    "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+                  },
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F002",
+                    "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+                  }
+                ],
+                "conditions_preserved": true,
+                "response_coverage": "covered",
+                "missing_information": "",
+                "reason": "Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions."
+              }
+            ],
+            "human_rating": null,
+            "independent_evaluation": false
+          },
+          "repairable_verdict_inconsistencies": [],
+          "judgment_raw_aliases": {
+            "attempt_evaluation_ok": true,
+            "body_ok": false,
+            "claims": [
+              {
+                "basis": "textbook",
+                "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+                "derivation": null,
+                "factual": true,
+                "fragment_ids": [
+                  "F001"
+                ],
+                "problem_quote": null,
+                "reason": "F036 establishes light-dependent production of ATP and NADPH.",
+                "status": "supported"
+              },
+              {
+                "basis": "textbook",
+                "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+                "derivation": null,
+                "factual": true,
+                "fragment_ids": [
+                  "F002"
+                ],
+                "problem_quote": null,
+                "reason": "F037 establishes carrier travel into the stroma and Calvin-cycle location.",
+                "status": "supported"
+              },
+              {
+                "basis": "textbook",
+                "claim_id": "claim_a7661b9b7da4eead188cda39_1",
+                "derivation": null,
+                "factual": true,
+                "fragment_ids": [
+                  "F004"
+                ],
+                "problem_quote": null,
+                "reason": "F053 establishes ATP/NADPH energy converting three-carbon compounds to G3P.",
+                "status": "supported"
+              },
+              {
+                "basis": "textbook",
+                "claim_id": "claim_b9bc041287af3a3491398a6b_1",
+                "derivation": null,
+                "factual": true,
+                "fragment_ids": [
+                  "F005"
+                ],
+                "problem_quote": null,
+                "reason": "F054 establishes G3P leaving the cycle but its selected truncated text does not supply the carbohydrate destination.",
+                "status": "partial"
+              },
+              {
+                "basis": "textbook",
+                "claim_id": "claim_978cbe77c3011e70174d5508_1",
+                "derivation": null,
+                "factual": true,
+                "fragment_ids": [
+                  "F002"
+                ],
+                "problem_quote": null,
+                "reason": "F037 establishes that Calvin-cycle reactions occur in the stroma.",
+                "status": "supported"
+              }
+            ],
+            "complete_answer": true,
+            "coverage": "full",
+            "cumulative_ok": true,
+            "evidence_display_ok": true,
+            "limitations_explicit": true,
+            "missing_facets": [],
+            "non_repetitive_next_action": true,
+            "reason": "Authored fixture for contract and gate behavior; no live model-semantic measurement.",
+            "repair_fragment_ids": [],
+            "requirements": [
+              {
+                "conditions_preserved": true,
+                "evidence": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F001",
+                    "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+                  },
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F002",
+                    "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+                  }
+                ],
+                "missing_information": "",
+                "reason": "Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions.",
+                "relevance": "related",
+                "requirement_id": "requirement_01",
+                "response_coverage": "covered",
+                "sufficiency": "sufficient"
+              }
+            ],
+            "scope_ok": true,
+            "specific_help": true,
+            "suggestions_ok": true,
+            "tutor_question_ok": true
+          },
+          "checker_inconsistencies": [],
+          "judgment": {
+            "claims": [
+              {
+                "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+                "basis": "textbook",
+                "factual": true,
+                "status": "supported",
+                "fragment_ids": [
+                  "span_84ac9a45ebe3b6892fbe0db421420d54"
+                ],
+                "problem_quote": null,
+                "derivation": null,
+                "reason": "F036 establishes light-dependent production of ATP and NADPH."
+              },
+              {
+                "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+                "basis": "textbook",
+                "factual": true,
+                "status": "supported",
+                "fragment_ids": [
+                  "span_f2d6b6076a6e9e915ab97ed6fb4976fc"
+                ],
+                "problem_quote": null,
+                "derivation": null,
+                "reason": "F037 establishes carrier travel into the stroma and Calvin-cycle location."
+              },
+              {
+                "claim_id": "claim_a7661b9b7da4eead188cda39_1",
+                "basis": "textbook",
+                "factual": true,
+                "status": "supported",
+                "fragment_ids": [
+                  "span_5196350d46b2b1222039a52fc5e9f7a1"
+                ],
+                "problem_quote": null,
+                "derivation": null,
+                "reason": "F053 establishes ATP/NADPH energy converting three-carbon compounds to G3P."
+              },
+              {
+                "claim_id": "claim_b9bc041287af3a3491398a6b_1",
+                "basis": "textbook",
+                "factual": true,
+                "status": "partial",
+                "fragment_ids": [
+                  "span_22703bf8544c5ab001c15eb8217fef60"
+                ],
+                "problem_quote": null,
+                "derivation": null,
+                "reason": "F054 establishes G3P leaving the cycle but its selected truncated text does not supply the carbohydrate destination."
+              },
+              {
+                "claim_id": "claim_978cbe77c3011e70174d5508_1",
+                "basis": "textbook",
+                "factual": true,
+                "status": "supported",
+                "fragment_ids": [
+                  "span_f2d6b6076a6e9e915ab97ed6fb4976fc"
+                ],
+                "problem_quote": null,
+                "derivation": null,
+                "reason": "F037 establishes that Calvin-cycle reactions occur in the stroma."
+              }
+            ],
+            "body_ok": false,
+            "specific_help": true,
+            "scope_ok": true,
+            "suggestions_ok": true,
+            "evidence_display_ok": true,
+            "cumulative_ok": true,
+            "complete_answer": true,
+            "coverage": "full",
+            "missing_facets": [],
+            "limitations_explicit": true,
+            "reason": "Authored fixture for contract and gate behavior; no live model-semantic measurement.",
+            "repair_fragment_ids": [],
+            "attempt_evaluation_ok": true,
+            "tutor_question_ok": true,
+            "requirements": [
+              {
+                "requirement_id": "requirement_01",
+                "relevance": "related",
+                "sufficiency": "sufficient",
+                "evidence": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F001",
+                    "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+                  },
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F002",
+                    "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+                  }
+                ],
+                "conditions_preserved": true,
+                "response_coverage": "covered",
+                "missing_information": "",
+                "reason": "Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions."
+              }
+            ],
+            "non_repetitive_next_action": true
+          },
+          "effective_body_ok": false,
+          "structural_issues": [],
+          "repair_plan": {
+            "version": "cause_specific_repair_v2",
+            "actions": [
+              {
+                "origin": "answer",
+                "claim_id": "claim_b9bc041287af3a3491398a6b_1",
+                "code": "CLAIM_PARTIAL",
+                "action": "support_required_content_or_narrow_optional_assertion"
+              }
+            ],
+            "remaining_repair_pairs": 1
+          },
+          "publication_block": {
+            "version": "semantic_publication_block_v1",
+            "stop_reason": "insufficient_calls_for_repair_and_recheck",
+            "remaining_provider_calls": 0,
+            "required_calls_for_repair_and_recheck": 2,
+            "checker_contract_repair_calls": 0,
+            "checker_reported_body_ok": false,
+            "checker_reported_non_supported_factual_claims": 1,
+            "failed_checker_gate_names": [
+              "body_ok"
+            ],
+            "checker_reported_coverage": "full",
+            "requirement_issue_codes": [],
+            "structural_issue_codes": []
+          }
+        }
+      ],
+      "response": null,
+      "actual_checker_message_prompt_sha256": "98cf91e622b002a4f8d0d305a7389940ec414a28fac494bcd0ef2f6ba4ed5a14",
+      "captured_complete_claims": [
+        {
+          "answer_field": "answer_text",
+          "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+          "end": 88,
+          "evidence_ids": [
+            "ev_001"
+          ],
+          "start": 0,
+          "text": "Light-dependent reactions harness energy from the sun to produce ATP and NADPH [ev_001]."
+        },
+        {
+          "answer_field": "answer_text",
+          "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+          "end": 197,
+          "evidence_ids": [
+            "ev_001"
+          ],
+          "start": 89,
+          "text": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place [ev_001]."
+        },
+        {
+          "answer_field": "answer_text",
+          "claim_id": "claim_a7661b9b7da4eead188cda39_1",
+          "end": 286,
+          "evidence_ids": [
+            "ev_002"
+          ],
+          "start": 198,
+          "text": "The energy in ATP and NADPH is used to convert three-carbon compounds into G3P [ev_002]."
+        },
+        {
+          "answer_field": "answer_text",
+          "claim_id": "claim_b9bc041287af3a3491398a6b_1",
+          "end": 363,
+          "evidence_ids": [
+            "ev_002"
+          ],
+          "start": 287,
+          "text": "G3P can leave the cycle and become part of a carbohydrate molecule [ev_002]."
+        },
+        {
+          "answer_field": "answer_text",
+          "claim_id": "claim_978cbe77c3011e70174d5508_1",
+          "end": 425,
+          "evidence_ids": [
+            "ev_001"
+          ],
+          "start": 364,
+          "text": "The Calvin cycle reactions take place in the stroma [ev_001]."
+        }
+      ],
+      "actual_citation_bindings": [
+        {
+          "citations": [
+            {
+              "allowed_fragment_ids": [
+                "F001",
+                "F002"
+              ],
+              "evidence_id": "ev_001"
+            }
+          ],
+          "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1"
+        },
+        {
+          "citations": [
+            {
+              "allowed_fragment_ids": [
+                "F001",
+                "F002"
+              ],
+              "evidence_id": "ev_001"
+            }
+          ],
+          "claim_id": "claim_bfbf5b58994f2812bb13f03b_1"
+        },
+        {
+          "citations": [
+            {
+              "allowed_fragment_ids": [
+                "F003",
+                "F004",
+                "F005",
+                "F006"
+              ],
+              "evidence_id": "ev_002"
+            }
+          ],
+          "claim_id": "claim_a7661b9b7da4eead188cda39_1"
+        },
+        {
+          "citations": [
+            {
+              "allowed_fragment_ids": [
+                "F003",
+                "F004",
+                "F005",
+                "F006"
+              ],
+              "evidence_id": "ev_002"
+            }
+          ],
+          "claim_id": "claim_b9bc041287af3a3491398a6b_1"
+        },
+        {
+          "citations": [
+            {
+              "allowed_fragment_ids": [
+                "F001",
+                "F002"
+              ],
+              "evidence_id": "ev_001"
+            }
+          ],
+          "claim_id": "claim_978cbe77c3011e70174d5508_1"
+        }
+      ],
+      "submitted_exact_fragments": [
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_001",
+          "exact_text": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.",
+          "fragment_id": "F001"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_001",
+          "exact_text": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+          "fragment_id": "F002"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_002",
+          "exact_text": "Photosystem I absorbs a second photon, which results in the formation of an NADPH molecule, another energy carrier for the Calvin cycle reactions. 5.3 The Calvin Cycle Using the energy carriers formed in the first stage of photosynthesis, the Calvin cycle reactions fix CO2 from the environment to build carbohydrate molecules.",
+          "fragment_id": "F003"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_002",
+          "exact_text": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+          "fragment_id": "F004"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_002",
+          "exact_text": "One of the three-carbon molecules of G3P leaves the cycle to become a 5 \u2022 Key Terms 131",
+          "fragment_id": "F005"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_002",
+          "exact_text": "part of a carbohydrate molecule.",
+          "fragment_id": "F006"
+        }
+      ],
+      "authored_verdict_is_model_semantic_accuracy_evidence": false,
+      "authored_geometry_is_actual_retrieval_geometry": false,
+      "provider_POSTs": 0
+    },
+    {
+      "control": "one_complete_claim_with_two_actual_citations_complementary_support",
+      "expected_fixture_pipeline_success": true,
+      "actual_fixture_pipeline_success": true,
+      "error": null,
+      "body_ok": true,
+      "checks": [
+        {
+          "revision": 0,
+          "checker_contract_revision": 0,
+          "checker_contract_policy": "single_contract_correction_v1",
+          "joint_checker_policy": "typed_joint_v5",
+          "accepted": true,
+          "validation_state": "validated",
+          "raw_text": "{\"claims\": [{\"claim_id\": \"claim_ed4c3499d8641d0f421ac3c8_1\", \"reason\": \"F036 establishes light-dependent production of ATP and NADPH.\", \"basis\": \"textbook\", \"status\": \"supported\", \"citations\": [{\"evidence_id\": \"ev_001\", \"fragment_ids\": [\"F001\"], \"relation\": \"supporting\"}]}, {\"claim_id\": \"claim_bfbf5b58994f2812bb13f03b_1\", \"reason\": \"F037 establishes carrier travel into the stroma and Calvin-cycle location.\", \"basis\": \"textbook\", \"status\": \"supported\", \"citations\": [{\"evidence_id\": \"ev_001\", \"fragment_ids\": [\"F002\"], \"relation\": \"supporting\"}]}, {\"claim_id\": \"claim_4c97554f3877da4231b40e8f_1\", \"reason\": \"F037 establishes stroma location; F051 establishes first-stage carrier use for Calvin-cycle CO2 fixation into carbohydrate.\", \"basis\": \"textbook\", \"status\": \"supported\", \"citations\": [{\"evidence_id\": \"ev_001\", \"fragment_ids\": [\"F002\"], \"relation\": \"supporting\"}, {\"evidence_id\": \"ev_002\", \"fragment_ids\": [\"F003\"], \"relation\": \"supporting\"}]}], \"body_ok\": true, \"specific_help\": true, \"scope_ok\": true, \"suggestions_ok\": true, \"evidence_display_ok\": true, \"cumulative_ok\": true, \"complete_answer\": true, \"coverage\": \"full\", \"missing_facets\": [], \"limitations_explicit\": true, \"reason\": \"Authored fixture for contract and gate behavior; no live model-semantic measurement.\", \"repair_fragment_ids\": [], \"attempt_evaluation_ok\": true, \"tutor_question_ok\": true, \"requirements\": [{\"requirement_id\": \"requirement_01\", \"relevance\": \"related\", \"sufficiency\": \"sufficient\", \"evidence\": [{\"evidence_id\": \"ev_001\", \"fragment_id\": \"F001\", \"quote\": \"FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.\"}, {\"evidence_id\": \"ev_001\", \"fragment_id\": \"F002\", \"quote\": \"These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.\"}], \"conditions_preserved\": true, \"response_coverage\": \"covered\", \"missing_information\": \"\", \"reason\": \"Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions.\"}], \"non_repetitive_next_action\": true}",
+          "fragment_aliases": {
+            "F001": "span_84ac9a45ebe3b6892fbe0db421420d54",
+            "F002": "span_f2d6b6076a6e9e915ab97ed6fb4976fc",
+            "F003": "span_90558663dfa7f8f9ac49471f40149d6b",
+            "F004": "span_5196350d46b2b1222039a52fc5e9f7a1",
+            "F005": "span_22703bf8544c5ab001c15eb8217fef60",
+            "F006": "span_ec17966af6821bb142ef2fa6759e2e3b"
+          },
+          "policy": {
+            "version": "learning_enhancement_v1",
+            "condition": "T2",
+            "teaching_mode": "direct",
+            "task_type": "process_reasoning",
+            "help_level": 0,
+            "help_constraint": "Give the complete supported explanation requested, including relevant conditions, units and limits. Do not force hints.",
+            "online_check": true,
+            "control_evidence": false,
+            "check_suggestions": false,
+            "check_cumulative": false,
+            "human_rating": null
+          },
+          "check_scope": {
+            "body_and_short_answer": true,
+            "current_suggestions": false,
+            "current_evidence_display": false,
+            "prior_actual_exposure": false
+          },
+          "configuration_id": "mock-default-v1",
+          "model": "scripted_fixture",
+          "provider": "scripted_fixture",
+          "checked_at": "2026-10-09T18:23:39.438767+00:00",
+          "rubric_hash": "98cf91e622b002a4f8d0d305a7389940ec414a28fac494bcd0ef2f6ba4ed5a14",
+          "projection_hash": "c1972312dd62903bf9275f4dec82b043a136aabd5b8d51c2c8ecf7b8743d9b03",
+          "reliability_policy": "evidence_reliability_v5",
+          "human_rating": null,
+          "typed_judgment_raw_aliases": {
+            "claims": [
+              {
+                "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+                "reason": "F036 establishes light-dependent production of ATP and NADPH.",
+                "basis": "textbook",
+                "status": "supported",
+                "citations": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_ids": [
+                      "F001"
+                    ],
+                    "relation": "supporting"
+                  }
+                ]
+              },
+              {
+                "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+                "reason": "F037 establishes carrier travel into the stroma and Calvin-cycle location.",
+                "basis": "textbook",
+                "status": "supported",
+                "citations": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_ids": [
+                      "F002"
+                    ],
+                    "relation": "supporting"
+                  }
+                ]
+              },
+              {
+                "claim_id": "claim_4c97554f3877da4231b40e8f_1",
+                "reason": "F037 establishes stroma location; F051 establishes first-stage carrier use for Calvin-cycle CO2 fixation into carbohydrate.",
+                "basis": "textbook",
+                "status": "supported",
+                "citations": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_ids": [
+                      "F002"
+                    ],
+                    "relation": "supporting"
+                  },
+                  {
+                    "evidence_id": "ev_002",
+                    "fragment_ids": [
+                      "F003"
+                    ],
+                    "relation": "supporting"
+                  }
+                ]
+              }
+            ],
+            "body_ok": true,
+            "specific_help": true,
+            "scope_ok": true,
+            "suggestions_ok": true,
+            "evidence_display_ok": true,
+            "cumulative_ok": true,
+            "complete_answer": true,
+            "coverage": "full",
+            "missing_facets": [],
+            "limitations_explicit": true,
+            "reason": "Authored fixture for contract and gate behavior; no live model-semantic measurement.",
+            "repair_fragment_ids": [],
+            "attempt_evaluation_ok": true,
+            "tutor_question_ok": true,
+            "requirements": [
+              {
+                "requirement_id": "requirement_01",
+                "relevance": "related",
+                "sufficiency": "sufficient",
+                "evidence": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F001",
+                    "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+                  },
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F002",
+                    "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+                  }
+                ],
+                "conditions_preserved": true,
+                "response_coverage": "covered",
+                "missing_information": "",
+                "reason": "Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions."
+              }
+            ],
+            "non_repetitive_next_action": true
+          },
+          "actual_citation_bindings": [
+            {
+              "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+              "citations": [
+                {
+                  "evidence_id": "ev_001",
+                  "allowed_fragment_ids": [
+                    "F001",
+                    "F002"
+                  ]
+                }
+              ]
+            },
+            {
+              "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+              "citations": [
+                {
+                  "evidence_id": "ev_001",
+                  "allowed_fragment_ids": [
+                    "F001",
+                    "F002"
+                  ]
+                }
+              ]
+            },
+            {
+              "claim_id": "claim_4c97554f3877da4231b40e8f_1",
+              "citations": [
+                {
+                  "evidence_id": "ev_001",
+                  "allowed_fragment_ids": [
+                    "F001",
+                    "F002"
+                  ]
+                },
+                {
+                  "evidence_id": "ev_002",
+                  "allowed_fragment_ids": [
+                    "F003",
+                    "F004",
+                    "F005",
+                    "F006"
+                  ]
+                }
+              ]
+            }
+          ],
+          "semantic_sufficiency": {
+            "version": "semantic_requirements_v1",
+            "method": "online_checker_model",
+            "status": "sufficient",
+            "requirements": [
+              {
+                "requirement_id": "requirement_01",
+                "relevance": "related",
+                "sufficiency": "sufficient",
+                "evidence": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F001",
+                    "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+                  },
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F002",
+                    "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+                  }
+                ],
+                "conditions_preserved": true,
+                "response_coverage": "covered",
+                "missing_information": "",
+                "reason": "Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions."
+              }
+            ],
+            "human_rating": null,
+            "independent_evaluation": false
+          },
+          "repairable_verdict_inconsistencies": [],
+          "judgment_raw_aliases": {
+            "attempt_evaluation_ok": true,
+            "body_ok": true,
+            "claims": [
+              {
+                "basis": "textbook",
+                "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+                "derivation": null,
+                "factual": true,
+                "fragment_ids": [
+                  "F001"
+                ],
+                "problem_quote": null,
+                "reason": "F036 establishes light-dependent production of ATP and NADPH.",
+                "status": "supported"
+              },
+              {
+                "basis": "textbook",
+                "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+                "derivation": null,
+                "factual": true,
+                "fragment_ids": [
+                  "F002"
+                ],
+                "problem_quote": null,
+                "reason": "F037 establishes carrier travel into the stroma and Calvin-cycle location.",
+                "status": "supported"
+              },
+              {
+                "basis": "textbook",
+                "claim_id": "claim_4c97554f3877da4231b40e8f_1",
+                "derivation": null,
+                "factual": true,
+                "fragment_ids": [
+                  "F002",
+                  "F003"
+                ],
+                "problem_quote": null,
+                "reason": "F037 establishes stroma location; F051 establishes first-stage carrier use for Calvin-cycle CO2 fixation into carbohydrate.",
+                "status": "supported"
+              }
+            ],
+            "complete_answer": true,
+            "coverage": "full",
+            "cumulative_ok": true,
+            "evidence_display_ok": true,
+            "limitations_explicit": true,
+            "missing_facets": [],
+            "non_repetitive_next_action": true,
+            "reason": "Authored fixture for contract and gate behavior; no live model-semantic measurement.",
+            "repair_fragment_ids": [],
+            "requirements": [
+              {
+                "conditions_preserved": true,
+                "evidence": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F001",
+                    "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+                  },
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F002",
+                    "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+                  }
+                ],
+                "missing_information": "",
+                "reason": "Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions.",
+                "relevance": "related",
+                "requirement_id": "requirement_01",
+                "response_coverage": "covered",
+                "sufficiency": "sufficient"
+              }
+            ],
+            "scope_ok": true,
+            "specific_help": true,
+            "suggestions_ok": true,
+            "tutor_question_ok": true
+          },
+          "checker_inconsistencies": [],
+          "judgment": {
+            "claims": [
+              {
+                "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+                "basis": "textbook",
+                "factual": true,
+                "status": "supported",
+                "fragment_ids": [
+                  "span_84ac9a45ebe3b6892fbe0db421420d54"
+                ],
+                "problem_quote": null,
+                "derivation": null,
+                "reason": "F036 establishes light-dependent production of ATP and NADPH."
+              },
+              {
+                "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+                "basis": "textbook",
+                "factual": true,
+                "status": "supported",
+                "fragment_ids": [
+                  "span_f2d6b6076a6e9e915ab97ed6fb4976fc"
+                ],
+                "problem_quote": null,
+                "derivation": null,
+                "reason": "F037 establishes carrier travel into the stroma and Calvin-cycle location."
+              },
+              {
+                "claim_id": "claim_4c97554f3877da4231b40e8f_1",
+                "basis": "textbook",
+                "factual": true,
+                "status": "supported",
+                "fragment_ids": [
+                  "span_f2d6b6076a6e9e915ab97ed6fb4976fc",
+                  "span_90558663dfa7f8f9ac49471f40149d6b"
+                ],
+                "problem_quote": null,
+                "derivation": null,
+                "reason": "F037 establishes stroma location; F051 establishes first-stage carrier use for Calvin-cycle CO2 fixation into carbohydrate."
+              }
+            ],
+            "body_ok": true,
+            "specific_help": true,
+            "scope_ok": true,
+            "suggestions_ok": true,
+            "evidence_display_ok": true,
+            "cumulative_ok": true,
+            "complete_answer": true,
+            "coverage": "full",
+            "missing_facets": [],
+            "limitations_explicit": true,
+            "reason": "Authored fixture for contract and gate behavior; no live model-semantic measurement.",
+            "repair_fragment_ids": [],
+            "attempt_evaluation_ok": true,
+            "tutor_question_ok": true,
+            "requirements": [
+              {
+                "requirement_id": "requirement_01",
+                "relevance": "related",
+                "sufficiency": "sufficient",
+                "evidence": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F001",
+                    "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+                  },
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F002",
+                    "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+                  }
+                ],
+                "conditions_preserved": true,
+                "response_coverage": "covered",
+                "missing_information": "",
+                "reason": "Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions."
+              }
+            ],
+            "non_repetitive_next_action": true
+          },
+          "effective_body_ok": true,
+          "structural_issues": [],
+          "repair_plan": {
+            "version": "cause_specific_repair_v2",
+            "actions": [],
+            "remaining_repair_pairs": 1
+          },
+          "delivered_projection_hash": "c8953e3364c9ff51f00615c43d3a74a0f340ae78ae6228a0bd6b711948123502"
+        }
+      ],
+      "response": {
+        "schema_version": "chat_response_v1",
+        "response_type": "answer",
+        "answer_text": "Light-dependent reactions harness energy from the sun to produce ATP and NADPH [ev_001]. These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place [ev_001]. The Calvin cycle reactions take place in the stroma and use energy carriers from the first stage of photosynthesis to fix CO2 into carbohydrate molecules [ev_001][ev_002].",
+        "short_answer": null,
+        "citations": [
+          "ev_001",
+          "ev_002"
+        ],
+        "refusal_reason": null,
+        "follow_up_questions": [],
+        "confidence": null
+      },
+      "actual_checker_message_prompt_sha256": "98cf91e622b002a4f8d0d305a7389940ec414a28fac494bcd0ef2f6ba4ed5a14",
+      "captured_complete_claims": [
+        {
+          "answer_field": "answer_text",
+          "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+          "end": 88,
+          "evidence_ids": [
+            "ev_001"
+          ],
+          "start": 0,
+          "text": "Light-dependent reactions harness energy from the sun to produce ATP and NADPH [ev_001]."
+        },
+        {
+          "answer_field": "answer_text",
+          "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+          "end": 197,
+          "evidence_ids": [
+            "ev_001"
+          ],
+          "start": 89,
+          "text": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place [ev_001]."
+        },
+        {
+          "answer_field": "answer_text",
+          "claim_id": "claim_4c97554f3877da4231b40e8f_1",
+          "end": 369,
+          "evidence_ids": [
+            "ev_001",
+            "ev_002"
+          ],
+          "start": 198,
+          "text": "The Calvin cycle reactions take place in the stroma and use energy carriers from the first stage of photosynthesis to fix CO2 into carbohydrate molecules [ev_001][ev_002]."
+        }
+      ],
+      "actual_citation_bindings": [
+        {
+          "citations": [
+            {
+              "allowed_fragment_ids": [
+                "F001",
+                "F002"
+              ],
+              "evidence_id": "ev_001"
+            }
+          ],
+          "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1"
+        },
+        {
+          "citations": [
+            {
+              "allowed_fragment_ids": [
+                "F001",
+                "F002"
+              ],
+              "evidence_id": "ev_001"
+            }
+          ],
+          "claim_id": "claim_bfbf5b58994f2812bb13f03b_1"
+        },
+        {
+          "citations": [
+            {
+              "allowed_fragment_ids": [
+                "F001",
+                "F002"
+              ],
+              "evidence_id": "ev_001"
+            },
+            {
+              "allowed_fragment_ids": [
+                "F003",
+                "F004",
+                "F005",
+                "F006"
+              ],
+              "evidence_id": "ev_002"
+            }
+          ],
+          "claim_id": "claim_4c97554f3877da4231b40e8f_1"
+        }
+      ],
+      "submitted_exact_fragments": [
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_001",
+          "exact_text": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.",
+          "fragment_id": "F001"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_001",
+          "exact_text": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+          "fragment_id": "F002"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_002",
+          "exact_text": "Photosystem I absorbs a second photon, which results in the formation of an NADPH molecule, another energy carrier for the Calvin cycle reactions. 5.3 The Calvin Cycle Using the energy carriers formed in the first stage of photosynthesis, the Calvin cycle reactions fix CO2 from the environment to build carbohydrate molecules.",
+          "fragment_id": "F003"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_002",
+          "exact_text": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+          "fragment_id": "F004"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_002",
+          "exact_text": "One of the three-carbon molecules of G3P leaves the cycle to become a 5 \u2022 Key Terms 131",
+          "fragment_id": "F005"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_002",
+          "exact_text": "part of a carbohydrate molecule.",
+          "fragment_id": "F006"
+        }
+      ],
+      "authored_verdict_is_model_semantic_accuracy_evidence": false,
+      "authored_geometry_is_actual_retrieval_geometry": false,
+      "provider_POSTs": 0
+    },
+    {
+      "control": "explicit_existing_false_pass_dependency_reproduced_not_certified",
+      "expected_fixture_pipeline_success": true,
+      "actual_fixture_pipeline_success": true,
+      "error": null,
+      "body_ok": true,
+      "checks": [
+        {
+          "revision": 0,
+          "checker_contract_revision": 0,
+          "checker_contract_policy": "single_contract_correction_v1",
+          "joint_checker_policy": "typed_joint_v5",
+          "accepted": true,
+          "validation_state": "validated",
+          "raw_text": "{\"claims\": [{\"claim_id\": \"claim_ed4c3499d8641d0f421ac3c8_1\", \"reason\": \"F036 establishes light-dependent production of ATP and NADPH.\", \"basis\": \"textbook\", \"status\": \"supported\", \"citations\": [{\"evidence_id\": \"ev_001\", \"fragment_ids\": [\"F001\"], \"relation\": \"supporting\"}]}, {\"claim_id\": \"claim_bfbf5b58994f2812bb13f03b_1\", \"reason\": \"F037 establishes carrier travel into the stroma and Calvin-cycle location.\", \"basis\": \"textbook\", \"status\": \"supported\", \"citations\": [{\"evidence_id\": \"ev_001\", \"fragment_ids\": [\"F002\"], \"relation\": \"supporting\"}]}, {\"claim_id\": \"claim_2e2e3ba2b43cbd571afa271b_1\", \"reason\": \"AUTHORED FALSE-PASS CONTROL: central ATP/NADPH-to-G3P relation only.\", \"basis\": \"textbook\", \"status\": \"supported\", \"citations\": [{\"evidence_id\": \"ev_002\", \"fragment_ids\": [\"F004\"], \"relation\": \"supporting\"}]}], \"body_ok\": true, \"specific_help\": true, \"scope_ok\": true, \"suggestions_ok\": true, \"evidence_display_ok\": true, \"cumulative_ok\": true, \"complete_answer\": true, \"coverage\": \"full\", \"missing_facets\": [], \"limitations_explicit\": true, \"reason\": \"Authored fixture for contract and gate behavior; no live model-semantic measurement.\", \"repair_fragment_ids\": [], \"attempt_evaluation_ok\": true, \"tutor_question_ok\": true, \"requirements\": [{\"requirement_id\": \"requirement_01\", \"relevance\": \"related\", \"sufficiency\": \"sufficient\", \"evidence\": [{\"evidence_id\": \"ev_001\", \"fragment_id\": \"F001\", \"quote\": \"FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.\"}, {\"evidence_id\": \"ev_001\", \"fragment_id\": \"F002\", \"quote\": \"These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.\"}], \"conditions_preserved\": true, \"response_coverage\": \"covered\", \"missing_information\": \"\", \"reason\": \"Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions.\"}], \"non_repetitive_next_action\": true}",
+          "fragment_aliases": {
+            "F001": "span_84ac9a45ebe3b6892fbe0db421420d54",
+            "F002": "span_f2d6b6076a6e9e915ab97ed6fb4976fc",
+            "F003": "span_90558663dfa7f8f9ac49471f40149d6b",
+            "F004": "span_5196350d46b2b1222039a52fc5e9f7a1",
+            "F005": "span_22703bf8544c5ab001c15eb8217fef60",
+            "F006": "span_ec17966af6821bb142ef2fa6759e2e3b"
+          },
+          "policy": {
+            "version": "learning_enhancement_v1",
+            "condition": "T2",
+            "teaching_mode": "direct",
+            "task_type": "process_reasoning",
+            "help_level": 0,
+            "help_constraint": "Give the complete supported explanation requested, including relevant conditions, units and limits. Do not force hints.",
+            "online_check": true,
+            "control_evidence": false,
+            "check_suggestions": false,
+            "check_cumulative": false,
+            "human_rating": null
+          },
+          "check_scope": {
+            "body_and_short_answer": true,
+            "current_suggestions": false,
+            "current_evidence_display": false,
+            "prior_actual_exposure": false
+          },
+          "configuration_id": "mock-default-v1",
+          "model": "scripted_fixture",
+          "provider": "scripted_fixture",
+          "checked_at": "2026-10-09T18:23:39.452083+00:00",
+          "rubric_hash": "98cf91e622b002a4f8d0d305a7389940ec414a28fac494bcd0ef2f6ba4ed5a14",
+          "projection_hash": "2624af4fc3c17b89590de6ba4fc5868ef781b8325905cbd4db673f22c2f4c470",
+          "reliability_policy": "evidence_reliability_v5",
+          "human_rating": null,
+          "typed_judgment_raw_aliases": {
+            "claims": [
+              {
+                "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+                "reason": "F036 establishes light-dependent production of ATP and NADPH.",
+                "basis": "textbook",
+                "status": "supported",
+                "citations": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_ids": [
+                      "F001"
+                    ],
+                    "relation": "supporting"
+                  }
+                ]
+              },
+              {
+                "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+                "reason": "F037 establishes carrier travel into the stroma and Calvin-cycle location.",
+                "basis": "textbook",
+                "status": "supported",
+                "citations": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_ids": [
+                      "F002"
+                    ],
+                    "relation": "supporting"
+                  }
+                ]
+              },
+              {
+                "claim_id": "claim_2e2e3ba2b43cbd571afa271b_1",
+                "reason": "AUTHORED FALSE-PASS CONTROL: central ATP/NADPH-to-G3P relation only.",
+                "basis": "textbook",
+                "status": "supported",
+                "citations": [
+                  {
+                    "evidence_id": "ev_002",
+                    "fragment_ids": [
+                      "F004"
+                    ],
+                    "relation": "supporting"
+                  }
+                ]
+              }
+            ],
+            "body_ok": true,
+            "specific_help": true,
+            "scope_ok": true,
+            "suggestions_ok": true,
+            "evidence_display_ok": true,
+            "cumulative_ok": true,
+            "complete_answer": true,
+            "coverage": "full",
+            "missing_facets": [],
+            "limitations_explicit": true,
+            "reason": "Authored fixture for contract and gate behavior; no live model-semantic measurement.",
+            "repair_fragment_ids": [],
+            "attempt_evaluation_ok": true,
+            "tutor_question_ok": true,
+            "requirements": [
+              {
+                "requirement_id": "requirement_01",
+                "relevance": "related",
+                "sufficiency": "sufficient",
+                "evidence": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F001",
+                    "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+                  },
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F002",
+                    "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+                  }
+                ],
+                "conditions_preserved": true,
+                "response_coverage": "covered",
+                "missing_information": "",
+                "reason": "Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions."
+              }
+            ],
+            "non_repetitive_next_action": true
+          },
+          "actual_citation_bindings": [
+            {
+              "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+              "citations": [
+                {
+                  "evidence_id": "ev_001",
+                  "allowed_fragment_ids": [
+                    "F001",
+                    "F002"
+                  ]
+                }
+              ]
+            },
+            {
+              "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+              "citations": [
+                {
+                  "evidence_id": "ev_001",
+                  "allowed_fragment_ids": [
+                    "F001",
+                    "F002"
+                  ]
+                }
+              ]
+            },
+            {
+              "claim_id": "claim_2e2e3ba2b43cbd571afa271b_1",
+              "citations": [
+                {
+                  "evidence_id": "ev_002",
+                  "allowed_fragment_ids": [
+                    "F003",
+                    "F004",
+                    "F005",
+                    "F006"
+                  ]
+                }
+              ]
+            }
+          ],
+          "semantic_sufficiency": {
+            "version": "semantic_requirements_v1",
+            "method": "online_checker_model",
+            "status": "sufficient",
+            "requirements": [
+              {
+                "requirement_id": "requirement_01",
+                "relevance": "related",
+                "sufficiency": "sufficient",
+                "evidence": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F001",
+                    "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+                  },
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F002",
+                    "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+                  }
+                ],
+                "conditions_preserved": true,
+                "response_coverage": "covered",
+                "missing_information": "",
+                "reason": "Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions."
+              }
+            ],
+            "human_rating": null,
+            "independent_evaluation": false
+          },
+          "repairable_verdict_inconsistencies": [],
+          "judgment_raw_aliases": {
+            "attempt_evaluation_ok": true,
+            "body_ok": true,
+            "claims": [
+              {
+                "basis": "textbook",
+                "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+                "derivation": null,
+                "factual": true,
+                "fragment_ids": [
+                  "F001"
+                ],
+                "problem_quote": null,
+                "reason": "F036 establishes light-dependent production of ATP and NADPH.",
+                "status": "supported"
+              },
+              {
+                "basis": "textbook",
+                "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+                "derivation": null,
+                "factual": true,
+                "fragment_ids": [
+                  "F002"
+                ],
+                "problem_quote": null,
+                "reason": "F037 establishes carrier travel into the stroma and Calvin-cycle location.",
+                "status": "supported"
+              },
+              {
+                "basis": "textbook",
+                "claim_id": "claim_2e2e3ba2b43cbd571afa271b_1",
+                "derivation": null,
+                "factual": true,
+                "fragment_ids": [
+                  "F004"
+                ],
+                "problem_quote": null,
+                "reason": "AUTHORED FALSE-PASS CONTROL: central ATP/NADPH-to-G3P relation only.",
+                "status": "supported"
+              }
+            ],
+            "complete_answer": true,
+            "coverage": "full",
+            "cumulative_ok": true,
+            "evidence_display_ok": true,
+            "limitations_explicit": true,
+            "missing_facets": [],
+            "non_repetitive_next_action": true,
+            "reason": "Authored fixture for contract and gate behavior; no live model-semantic measurement.",
+            "repair_fragment_ids": [],
+            "requirements": [
+              {
+                "conditions_preserved": true,
+                "evidence": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F001",
+                    "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+                  },
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F002",
+                    "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+                  }
+                ],
+                "missing_information": "",
+                "reason": "Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions.",
+                "relevance": "related",
+                "requirement_id": "requirement_01",
+                "response_coverage": "covered",
+                "sufficiency": "sufficient"
+              }
+            ],
+            "scope_ok": true,
+            "specific_help": true,
+            "suggestions_ok": true,
+            "tutor_question_ok": true
+          },
+          "checker_inconsistencies": [],
+          "judgment": {
+            "claims": [
+              {
+                "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+                "basis": "textbook",
+                "factual": true,
+                "status": "supported",
+                "fragment_ids": [
+                  "span_84ac9a45ebe3b6892fbe0db421420d54"
+                ],
+                "problem_quote": null,
+                "derivation": null,
+                "reason": "F036 establishes light-dependent production of ATP and NADPH."
+              },
+              {
+                "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+                "basis": "textbook",
+                "factual": true,
+                "status": "supported",
+                "fragment_ids": [
+                  "span_f2d6b6076a6e9e915ab97ed6fb4976fc"
+                ],
+                "problem_quote": null,
+                "derivation": null,
+                "reason": "F037 establishes carrier travel into the stroma and Calvin-cycle location."
+              },
+              {
+                "claim_id": "claim_2e2e3ba2b43cbd571afa271b_1",
+                "basis": "textbook",
+                "factual": true,
+                "status": "supported",
+                "fragment_ids": [
+                  "span_5196350d46b2b1222039a52fc5e9f7a1"
+                ],
+                "problem_quote": null,
+                "derivation": null,
+                "reason": "AUTHORED FALSE-PASS CONTROL: central ATP/NADPH-to-G3P relation only."
+              }
+            ],
+            "body_ok": true,
+            "specific_help": true,
+            "scope_ok": true,
+            "suggestions_ok": true,
+            "evidence_display_ok": true,
+            "cumulative_ok": true,
+            "complete_answer": true,
+            "coverage": "full",
+            "missing_facets": [],
+            "limitations_explicit": true,
+            "reason": "Authored fixture for contract and gate behavior; no live model-semantic measurement.",
+            "repair_fragment_ids": [],
+            "attempt_evaluation_ok": true,
+            "tutor_question_ok": true,
+            "requirements": [
+              {
+                "requirement_id": "requirement_01",
+                "relevance": "related",
+                "sufficiency": "sufficient",
+                "evidence": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F001",
+                    "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+                  },
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_id": "F002",
+                    "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+                  }
+                ],
+                "conditions_preserved": true,
+                "response_coverage": "covered",
+                "missing_information": "",
+                "reason": "Authored question coverage: light-dependent ATP/NADPH production and carrier delivery to Calvin-cycle reactions."
+              }
+            ],
+            "non_repetitive_next_action": true
+          },
+          "effective_body_ok": true,
+          "structural_issues": [],
+          "repair_plan": {
+            "version": "cause_specific_repair_v2",
+            "actions": [],
+            "remaining_repair_pairs": 1
+          },
+          "delivered_projection_hash": "55b38cf110e578772f87e3af6b394af37312a1da766c54f0ddc780eeea16b53c"
+        }
+      ],
+      "response": {
+        "schema_version": "chat_response_v1",
+        "response_type": "answer",
+        "answer_text": "Light-dependent reactions harness energy from the sun to produce ATP and NADPH [ev_001]. These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place [ev_001]. Once in the stroma, the Calvin cycle uses the energy in ATP and NADPH to convert the three-carbon molecules into G3P, which builds carbohydrate molecules [ev_002].",
+        "short_answer": null,
+        "citations": [
+          "ev_001",
+          "ev_002"
+        ],
+        "refusal_reason": null,
+        "follow_up_questions": [],
+        "confidence": null
+      },
+      "actual_checker_message_prompt_sha256": "98cf91e622b002a4f8d0d305a7389940ec414a28fac494bcd0ef2f6ba4ed5a14",
+      "captured_complete_claims": [
+        {
+          "answer_field": "answer_text",
+          "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1",
+          "end": 88,
+          "evidence_ids": [
+            "ev_001"
+          ],
+          "start": 0,
+          "text": "Light-dependent reactions harness energy from the sun to produce ATP and NADPH [ev_001]."
+        },
+        {
+          "answer_field": "answer_text",
+          "claim_id": "claim_bfbf5b58994f2812bb13f03b_1",
+          "end": 197,
+          "evidence_ids": [
+            "ev_001"
+          ],
+          "start": 89,
+          "text": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place [ev_001]."
+        },
+        {
+          "answer_field": "answer_text",
+          "claim_id": "claim_2e2e3ba2b43cbd571afa271b_1",
+          "end": 361,
+          "evidence_ids": [
+            "ev_002"
+          ],
+          "start": 198,
+          "text": "Once in the stroma, the Calvin cycle uses the energy in ATP and NADPH to convert the three-carbon molecules into G3P, which builds carbohydrate molecules [ev_002]."
+        }
+      ],
+      "actual_citation_bindings": [
+        {
+          "citations": [
+            {
+              "allowed_fragment_ids": [
+                "F001",
+                "F002"
+              ],
+              "evidence_id": "ev_001"
+            }
+          ],
+          "claim_id": "claim_ed4c3499d8641d0f421ac3c8_1"
+        },
+        {
+          "citations": [
+            {
+              "allowed_fragment_ids": [
+                "F001",
+                "F002"
+              ],
+              "evidence_id": "ev_001"
+            }
+          ],
+          "claim_id": "claim_bfbf5b58994f2812bb13f03b_1"
+        },
+        {
+          "citations": [
+            {
+              "allowed_fragment_ids": [
+                "F003",
+                "F004",
+                "F005",
+                "F006"
+              ],
+              "evidence_id": "ev_002"
+            }
+          ],
+          "claim_id": "claim_2e2e3ba2b43cbd571afa271b_1"
+        }
+      ],
+      "submitted_exact_fragments": [
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_001",
+          "exact_text": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.",
+          "fragment_id": "F001"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_001",
+          "exact_text": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+          "fragment_id": "F002"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_002",
+          "exact_text": "Photosystem I absorbs a second photon, which results in the formation of an NADPH molecule, another energy carrier for the Calvin cycle reactions. 5.3 The Calvin Cycle Using the energy carriers formed in the first stage of photosynthesis, the Calvin cycle reactions fix CO2 from the environment to build carbohydrate molecules.",
+          "fragment_id": "F003"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_002",
+          "exact_text": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+          "fragment_id": "F004"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_002",
+          "exact_text": "One of the three-carbon molecules of G3P leaves the cycle to become a 5 \u2022 Key Terms 131",
+          "fragment_id": "F005"
+        },
+        {
+          "block_kind": "prose",
+          "complete_block": true,
+          "evidence_id": "ev_002",
+          "exact_text": "part of a carbohydrate molecule.",
+          "fragment_id": "F006"
+        }
+      ],
+      "authored_verdict_is_model_semantic_accuracy_evidence": false,
+      "authored_geometry_is_actual_retrieval_geometry": false,
+      "provider_POSTs": 0
+    }
+  ],
+  "input_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\attempt-evaluation-conditional-preparation01\\retained-checker-diagnostic-preparation01\\actual-final-field-review04\\ACTUAL_FREE_FINAL_SUPPORT_FIELD_REVIEW04.json",
+      "bytes": 21916,
+      "sha256": "b1a680810e7cdc9aefadf47b9870ab14b049e687b1484aed85b84290ede02f73"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\compound-predicate-root05\\joint_check_v5_predicate_audit_PROPOSED05.txt",
+      "bytes": 16953,
+      "sha256": "475d8bee5ba754c672be1b9a65f3b4b60777cc6bb0a23fdaea99381869a85c76"
+    }
+  ],
+  "frozen_source_texts": {
+    "F042": "Each pigment can absorb different wavelengths of light, which allows the plant to absorb any light that passes through the taller trees. (credit: Jason Hollinger) How Light-Dependent Reactions Work The overall purpose of the light-dependent reactions is to convert light energy into chemical energy.",
+    "F043": "This chemical energy will be used by the Calvin cycle to fuel the assembly of sugar molecules.",
+    "F007": "Photosystems absorb light and use electron transport chains to convert energy into the chemical energy of ATP and NADH.",
+    "F051": "Photosystem I absorbs a second photon, which results in the formation of an NADPH molecule, another energy carrier for the Calvin cycle reactions. 5.3 The Calvin Cycle Using the energy carriers formed in the first stage of photosynthesis, the Calvin cycle reactions fix CO2 from the environment to build carbohydrate molecules.",
+    "F012": "8.3 Using Light Energy to Make Organic Molecules LEARNING OBJECTIVES By the end of this section, you will be able to do the following: \u2022 Describe the Calvin cycle \u2022 Define carbon fixation \u2022 Explain how photosynthesis works in the energy cycle of all living organisms After the energy from the sun is converted into chemical energy and temporarily stored in ATP and NADPH molecules, the cell has the fuel needed to build carbohydrate molecules for long-term energy storage.",
+    "F036": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.",
+    "F037": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+    "F002": "The carriers that move energy from the light-dependent reactions to the Calvin cycle reactions can be thought of as \u201cfull\u201d because they bring energy.",
+    "F003": "After the energy is released, the \u201cempty\u201d energy carriers return to the light-dependent reactions to obtain more energy.",
+    "F030": "The energy carriers that move energy from light-dependent reactions to light-independent reactions can be thought of as \u201cfull\u201d because they are rich in energy.",
+    "F031": "After the energy is released, the \u201cempty\u201d energy carriers return to the light-dependent reaction to obtain more energy.",
+    "F053": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+    "F054": "One of the three-carbon molecules of G3P leaves the cycle to become a 5 \u2022 Key Terms 131",
+    "F055": "part of a carbohydrate molecule."
+  },
+  "actual04_original_compound_claim_text": "Once in the stroma, the Calvin cycle uses the energy in ATP and NADPH to convert the three-carbon molecules into G3P, which builds carbohydrate molecules [ev_010].",
+  "fixture_evidence_alias_lineage": {
+    "ev_001": "original_ev_007",
+    "ev_002": "original_ev_010"
+  },
+  "scientific_predicates_under_review": [
+    "ATP/NADPH-driven G3P formation",
+    "G3P carbohydrate contribution",
+    "Calvin-cycle stroma location"
+  ],
+  "source_paragraphs_remain_distinct_no_stitched_quote": true,
+  "authored_positive_semantic_basis": "Independent review of actual frozen neighboring F054/F055 identified a continued sentence with page furniture. This script supplies authored judgments and cannot independently establish that scientific interpretation.",
+  "elapsed_seconds": 0.144,
+  "provider_POSTs": 0,
+  "database_reads_or_writes": 0,
+  "Main_writes": 0,
+  "network_and_database_connections_blocked_before_import": true,
+  "dotenv_reads_disabled": true,
+  "prompt_overlay_local_process_only": true,
+  "live_prompt_fix_demonstrated": false,
+  "existing_model_false_PASS_can_still_publish": true,
+  "limits": [
+    "The original compound false-pass pattern is deliberately reproduced as an explicit known dependency, not accepted as scientific evidence.",
+    "The real pipeline blocks honest partial judgments and accepts structurally valid authored complementary support.",
+    "Only actual model regression followed by independent selected-source review can establish semantic correction.",
+    "No measured native publication, Send-to-full-DOM duration, retrieval quality improvement, human gold or p95 is provided by these free controls."
+  ]
+}

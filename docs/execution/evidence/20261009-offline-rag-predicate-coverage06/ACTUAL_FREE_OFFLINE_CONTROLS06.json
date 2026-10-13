@@ -1,0 +1,138 @@
+{
+  "status": "ACTUAL_FREE_CONTROLS_PASS",
+  "controls": [
+    {
+      "name": "compound missing F055 fails",
+      "PASS": true,
+      "independent_reference_and_Root_generic_helper_both_PASS": true
+    },
+    {
+      "name": "compound missing F054 fails",
+      "PASS": true,
+      "independent_reference_and_Root_generic_helper_both_PASS": true
+    },
+    {
+      "name": "compound both fragments pass",
+      "PASS": true,
+      "independent_reference_and_Root_generic_helper_both_PASS": true
+    },
+    {
+      "name": "available but unselected fragments do not count",
+      "PASS": true,
+      "independent_reference_and_Root_generic_helper_both_PASS": true
+    },
+    {
+      "name": "alternative complete bundle passes",
+      "PASS": true,
+      "independent_reference_and_Root_generic_helper_both_PASS": true
+    },
+    {
+      "name": "incomplete alternative fails",
+      "PASS": true,
+      "independent_reference_and_Root_generic_helper_both_PASS": true
+    },
+    {
+      "name": "all actual citation contributors required",
+      "PASS": true,
+      "independent_reference_and_Root_generic_helper_both_PASS": true
+    },
+    {
+      "name": "every actual citation contributor present",
+      "PASS": true,
+      "independent_reference_and_Root_generic_helper_both_PASS": true
+    },
+    {
+      "name": "unknown selected fragment rejected",
+      "PASS": true,
+      "independent_reference_and_Root_generic_helper_both_PASS": true
+    },
+    {
+      "name": "duplicate selected fragments rejected",
+      "PASS": true,
+      "independent_reference_and_Root_generic_helper_both_PASS": true
+    },
+    {
+      "name": "unknown required fragment rejected",
+      "PASS": true,
+      "independent_reference_and_Root_generic_helper_both_PASS": true
+    },
+    {
+      "name": "duplicate required fragments rejected",
+      "PASS": true,
+      "independent_reference_and_Root_generic_helper_both_PASS": true
+    },
+    {
+      "name": "empty bundle rejected",
+      "PASS": true,
+      "independent_reference_and_Root_generic_helper_both_PASS": true
+    },
+    {
+      "name": "duplicate requirement IDs rejected",
+      "PASS": true,
+      "independent_reference_and_Root_generic_helper_both_PASS": true
+    },
+    {
+      "name": "actual Main index and reference BM25 exact order/float scores equal",
+      "PASS": true
+    },
+    {
+      "name": "actual pool top1 preserves prefix of full ranking",
+      "PASS": true
+    },
+    {
+      "name": "actual pool top3 preserves prefix of full ranking",
+      "PASS": true
+    },
+    {
+      "name": "actual pool top5 preserves prefix of full ranking",
+      "PASS": true
+    },
+    {
+      "name": "actual pool top10 preserves prefix of full ranking",
+      "PASS": true
+    },
+    {
+      "name": "actual pool top13 preserves prefix of full ranking",
+      "PASS": true
+    },
+    {
+      "name": "zero-score tie follows original chunk-ID rule",
+      "PASS": true
+    },
+    {
+      "name": "duplicate candidate identities rejected",
+      "PASS": true
+    },
+    {
+      "name": "invalid k rejected",
+      "PASS": true
+    },
+    {
+      "name": "empty pool remains empty",
+      "PASS": true
+    },
+    {
+      "name": "actual source tokenizer preserves original lexical normalization",
+      "PASS": true
+    },
+    {
+      "name": "synthetic whole-fragment budget leaving F054 only fails F054 AND F055",
+      "PASS": true,
+      "whole_fragment_char_allowance": 87,
+      "production_budget_changed": false
+    },
+    {
+      "name": "synthetic budget with both complete exact fragments passes set coverage",
+      "PASS": true,
+      "whole_fragment_char_allowance": 120,
+      "scientific_entailment_inferred_from_chars": false,
+      "production_budget_changed": false
+    },
+    {
+      "name": "full unchanged source pool covers all declared complete bundles equally under both orders; no support declaration stays uncovered",
+      "PASS": true
+    }
+  ],
+  "model_gates_or_human_Gold_tested": false,
+  "actual_sources_mutated": false
+}

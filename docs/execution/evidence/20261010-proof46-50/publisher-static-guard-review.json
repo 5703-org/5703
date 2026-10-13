@@ -1,0 +1,49 @@
+{
+  "status": "W_GUARD_FIX_READY_FOR_ROOT_FINAL_REVIEW_NOT_EXECUTED",
+  "before": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\archive_5703_proof46_50_20261010.py.before_guard_review",
+    "bytes": 8365,
+    "sha256": "ee8784dc9971042e91c8b3a61301e95ef269aed50f6f081ad4b3962e5182376f"
+  },
+  "candidate_script": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\archive_5703_proof46_50_20261010.py",
+    "bytes": 9573,
+    "sha256": "9188e63e09b35eb47518be275f3312036f396d3e533a9ea01e542f4d05f623f6"
+  },
+  "full_diff": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-proof46-50-publication-guard-review\\ARCHIVE_PROOF46_50_GUARD_FIX.diff",
+    "bytes": 5265,
+    "sha256": "6e2fefdb565ff55b08b154f11797f29ce86bb92afaa2c0e5778965f170eb2665"
+  },
+  "approved_guard_changes": [
+    "safe walks through and checks the root itself; Windows reparse attribute checked even when is_junction is absent.",
+    "pin and checked guard every public input under exact Main/W roots before file reads. Freeze additionally stays in the reviewed DRAFT root.",
+    "All three output entries rejected by lstat if any entry exists, including dangling links; W delivery parent checked before mutations.",
+    "Freeze/index/append/report metadata have pre-read24KiB maximums; original report24000-byte cap remains. Payload cap remains1MiB and file count12..32.",
+    "Planned DEST links must resolve to exactly one direct child, named by the reviewed index or index.json/publication_receipt.json; final links still require actual existence.",
+    "Created Main files get path validation before exact readback."
+  ],
+  "preserved_guards": {
+    "constant_Main_W_packet_report_ledger_history_paths_and_hashes_AST_unchanged": true,
+    "create_only_evidence_index_report_and_receipt": true,
+    "ledger_predecessor_hashes_exact_prefix_append_and_readback_retained": true,
+    "history42_43_45_pre_post_hash_checks_retained": true,
+    "canonical_tasks_acceptance_before_after_pins_retained": true,
+    "current_Main_seven_plus_original_route_hash_checks_retained": true,
+    "existing_Main_append_and_W_receipt_write_calls_AST_unchanged": true,
+    "actual_candidate_source_adoption": false,
+    "project_complete_flag": false
+  },
+  "link_validation_scope": "Report local links and the generated ledger Report link. The same reviewed report filename resolves correctly from progress.md and handover_migration.md. No external URL is fetched.",
+  "remaining_root_steps": "Review and freeze this script hash and the final packet/report/index/freeze/append arguments; child has not run the publisher, read final packet contents, or performed Main publication. Current metadata caps and source guards must pass under Root execution.",
+  "boundaries": {
+    "publisher_executions": 0,
+    "API_requests": 0,
+    "DB_accesses": 0,
+    "authentication_target_reads": 0,
+    "Main_writes": 0,
+    "other_project_actions": 0,
+    "extra_tests": 0,
+    "review_method": "Static source and AST comparisons only; no script import, controller, installation or tests."
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "status": "ACTUAL_RESIDUAL_CONCISE_SLOT2_COMPLETE_DIAGNOSTIC_NOT_VALID_PAIR_COMPARISON",
+  "at_UTC": "2026-10-08T02:03:48.998928+00:00",
+  "planned_physical_requests": 1,
+  "physical_requests": 1,
+  "claimed_slots": [
+    2
+  ],
+  "rows": [
+    {
+      "slot": 2,
+      "arm": "concise",
+      "wire_sha256": "140b7bfa09f47e41e1f8da3127c15b763ad3a6c06695a182235441253b2a32b2",
+      "wire_bytes": 39469,
+      "input_tokens_bound": 13302,
+      "token_counting": {
+        "source": "unicode_character_estimate_v1",
+        "is_estimate": true,
+        "model": "google/gemini-3.5-flash-lite",
+        "fallback_reason": "explicit_estimate"
+      },
+      "frozen_file_sha256": "11faafbb217f405e2d578416b45dbcf4e837e17f988c82fbb32d3c20c2c38b78",
+      "at_UTC": "2026-10-08T02:03:54.682634+00:00",
+      "outcome": "RETURNED_JUDGMENT_INVALID",
+      "physical_POSTs": 1,
+      "request_submitted": true,
+      "observed_adapter_duration_ms": 4026.3563,
+      "reported_adapter_latency_ms": 4026,
+      "finish_reason": "stop",
+      "HTTP_status": 200,
+      "provider_diagnostic": {
+        "stage": "completed",
+        "http_status": 200,
+        "provider_error_type": null,
+        "provider_error_code": null,
+        "provider_error_parameter": null,
+        "message": null,
+        "message_redacted": false,
+        "provider_request_id": "gen-1791425030-1p93mccJksA0tT8c2GiR",
+        "finish_reason": "stop",
+        "network_error": null,
+        "request_submitted": true,
+        "latency_ms": 4026
+      },
+      "provider_error": null,
+      "usage": {
+        "input_tokens": 8436,
+        "output_tokens": 899,
+        "total_tokens": 9335,
+        "reasoning_tokens": 0,
+        "cache_hit_input_tokens": 0,
+        "cache_miss_input_tokens": 8436,
+        "cost": 0.0047783
+      },
+      "observed_cost_within_reserved_upper": true,
+      "raw_text": "{\"claims\":[{\"basis\":\"textbook\",\"claim_id\":\"claim_042972beceed356a8b58e73f_1\",\"citations\":[{\"evidence_id\":\"ev_005\",\"fragment_ids\":[\"F021\"],\"relation\":\"supporting\"},{\"evidence_id\":\"ev_008\",\"fragment_ids\":[\"F032\"],\"relation\":\"supporting\"}],\"reason\":\"Sources support that simple diffusion and facilitated diffusion are passive processes moving down concentration gradients.\",\"status\":\"supported\"},{\"basis\":\"textbook\",\"claim_id\":\"claim_2ce3df2a85558fc0cce9de5c_1\",\"citations\":[{\"evidence_id\":\"ev_001\",\"fragment_ids\":[\"F001\"],\"relation\":\"supporting\"},{\"evidence_id\":\"ev_002\",\"fragment_ids\":[\"F006\"],\"relation\":\"supporting\"},{\"evidence_id\":\"ev_005\",\"fragment_ids\":[\"F019\"],\"relation\":\"supporting\"}],\"reason\":\"Sources state simple diffusion involves direct movement through the bilayer while facilitated diffusion uses transmembrane proteins.\",\"status\":\"supported\"},{\"basis\":\"textbook\",\"claim_id\":\"claim_2fa3acca974b80280f18f6a7_1\",\"citations\":[{\"evidence_id\":\"ev_001\",\"fragment_ids\":[\"F002\"],\"relation\":\"supporting\"},{\"evidence_id\":\"ev_002\",\"fragment_ids\":[\"F008\"],\"relation\":\"supporting\"},{\"evidence_id\":\"ev_007\",\"fragment_ids\":[\"F027\"],\"relation\":\"supporting\"}],\"reason\":\"Sources show facilitated diffusion helps substances that cannot easily cross the hydrophobic lipid bilayer on their own.\",\"status\":\"supported\"},{\"basis\":\"textbook\",\"claim_id\":\"claim_f36b6ecaef401ac3d7af0ac2_1\",\"citations\":[{\"evidence_id\":\"ev_008\",\"fragment_ids\":[\"F032\"],\"relation\":\"supporting\"},{\"evidence_id\":\"ev_002\",\"fragment_ids\":[\"F006\"],\"relation\":\"supporting\"},{\"evidence_id\":\"ev_005\",\"fragment_ids\":[\"F019\"],\"relation\":\"supporting\"}],\"reason\":\"Short answer correctly summarizes the differences supported by the sources.\",\"status\":\"supported\"}],\"body_ok\":true,\"specific_help\":true,\"scope_ok\":true,\"suggestions_ok\":true,\"evidence_display_ok\":true,\"cumulative_ok\":true,\"complete_answer\":true,\"coverage\":\"full\",\"missing_facets\":[],\"limitations_explicit\":true,\"reason\":\"The response accurately and fully explains the differences between simple and facilitated diffusion using supported source evidence.\",\"repair_fragment_ids\":[],\"attempt_evaluation_ok\":true,\"tutor_question_ok\":true,\"requirements\":[{\"conditions_preserved\":true,\"evidence\":[{\"evidence_id\":\"ev_001\",\"fragment_ids\":[\"F001\"],\"quote\":\"Solutes dissolved in water on either side of the cell membrane will tend to diffuse down their concentration gradients, but because most substances cannot pass freely through the lipid bilayer of the cell membrane, their movement is restricted to protein channels and specialized transport mechanisms in the membrane.\"},{\"evidence_id\":\"ev_002\",\"fragment_ids\":[\"F006\"],\"quote\":\"In facilitated transport, also called facilitated diffusion, material moves across the plasma membrane with the assistance of transmembrane proteins down a concentration gradient (from high to low concentration) without the expenditure of cellular energy.\"},{\"evidence_id\":\"ev_005\",\"fragment_ids\":[\"F019\"],\"quote\":\"Their diffusion is facilitated by membrane proteins that form sodium channels (or “pores”), so that Na+ ions can move down their concentration gradient from outside the cells to inside the cells.\"},{\"evidence_id\":\"ev_008\",\"fragment_ids\":[\"F032\"],\"quote\":\"Diffusion is the movement of particles from an area of higher concentration to an area of lower concentration.\"}],\"missing_information\":\"\",\"reason\":\"Sources sufficiently explain the mechanisms and differences between simple and facilitated diffusion.\",\"relevance\":\"related\",\"requirement_id\":\"requirement_01\",\"response_coverage\":\"covered\",\"sufficiency\":\"sufficient\"}],\"non_repetitive_next_action\":true}",
+      "raw_text_sha256": "e463119e88e10538d34216779271b85ab16ab063fa1953d578edad81c31bf490",
+      "validation": {
+        "typed_valid": false,
+        "accepted_by_named_local_gates": false,
+        "human_rating": null,
+        "independent_scientific_evaluation": false,
+        "schema_issues": [
+          {
+            "code": "CHECKER_SCHEMA_INVALID",
+            "feedback_version": "checker_contract_feedback_v2",
+            "field_errors": [
+              {
+                "path": [
+                  "requirements",
+                  0,
+                  "evidence",
+                  0,
+                  "fragment_id"
+                ],
+                "error_type": "missing"
+              },
+              {
+                "path": [
+                  "requirements",
+                  0,
+                  "evidence",
+                  0,
+                  "fragment_ids"
+                ],
+                "error_type": "extra_forbidden"
+              },
+              {
+                "path": [
+                  "requirements",
+                  0,
+                  "evidence",
+                  1,
+                  "fragment_id"
+                ],
+                "error_type": "missing"
+              },
+              {
+                "path": [
+                  "requirements",
+                  0,
+                  "evidence",
+                  1,
+                  "fragment_ids"
+                ],
+                "error_type": "extra_forbidden"
+              },
+              {
+                "path": [
+                  "requirements",
+                  0,
+                  "evidence",
+                  2,
+                  "fragment_id"
+                ],
+                "error_type": "missing"
+              },
+              {
+                "path": [
+                  "requirements",
+                  0,
+                  "evidence",
+                  2,
+                  "fragment_ids"
+                ],
+                "error_type": "extra_forbidden"
+              },
+              {
+                "path": [
+                  "requirements",
+                  0,
+                  "evidence",
+                  3,
+                  "fragment_id"
+                ],
+                "error_type": "missing"
+              },
+              {
+                "path": [
+                  "requirements",
+                  0,
+                  "evidence",
+                  3,
+                  "fragment_ids"
+                ],
+                "error_type": "extra_forbidden"
+              }
+            ],
+            "total_error_count": 8
+          }
+        ]
+      },
+      "independent_scientific_evaluation": false,
+      "native_publication": false
+    }
+  ],
+  "known_cost_USD": "0.0047783",
+  "unknown_holds_USD": "0",
+  "release_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\ROOT-checker_pair-release03.json",
+    "bytes": 20470,
+    "sha256": "ba0de4690fe2d3c3309f9dba39db36a993f56f7a19c54baaa315024812af2161"
+  },
+  "budget_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\ROOT-residual37-budget01.json",
+    "bytes": 37520,
+    "sha256": "a14c5a9c37429bb6597365cfa79d84d92b899f699bb00f5b8447ff3077a1b8e8"
+  },
+  "reservation_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-compact-repair-20261008-01\\ROOT-actual-followup-reservation01.json",
+    "bytes": 871,
+    "sha256": "bbe7ea71850473cd1ecb55e0ccff13f24d1ddc762a48ea73fbe846fcb2fa7999"
+  },
+  "source_pins": {
+    "generation/compact_findings_v3.py": "1aba7601543d2b08c5331a0e139726191e13948a7dd6343eb7292262e1e2de8a",
+    "generation/providers.py": "bbfb74558e1adf5e4850edad02bb117af221c804aaad6e6f260addfe05fb38f4",
+    "generation/google_schema_compiler04.py": "81523f87f315b6f8aecddffd2fda0271af9d306ae294973ecbdd400eb2e047ef",
+    "generation/probes.py": "642ba880a6dcd3448513b98c0699175cd2fa6b9dafdaa92b65ea3f513d336df2",
+    "generation/types.py": "de000ead20b00c09dcab7e1e7e0bad92685932a67b127731ff8cd8a9d86bd4bb",
+    "generation/capabilities.py": "590dac5cb82bf1494cd0db01af422800ce1dd227bae5e943d608c841401ebff0",
+    "generation/openrouter_routes.py": "7e9ec301cb0ef18dd0ea9a27dc9849c0e088ec1537ee1d58db010ef7c38f4557",
+    "backend/app/modules/model_settings/service.py": "e6e0a9d41846ff36a37bc1eef72892f9ddbc3f2c4648f36f2e9a714f07d5e39d",
+    "backend/app/modules/model_settings/compatibility.py": "107c3dcb2025e927244a77f4dc1734cbe49c2149b150a02c6314a93896bd3667",
+    "generation/adapters.py": "62819ed7a7b7282c2e26894cf5a1b19414f923da7e5f60525bc23f156d706834",
+    "generation/network_policy.py": "31ee11495949894073b292cd39b5d186f0ea21f5fd3f598b243e9f37b467bf02",
+    "generation/provider_diagnostics.py": "109f75fd2858c35530c93e3c4a663629bc143344e190bab42eec5458ff39c6b5",
+    "backend/app/worker.py": "4ac015176cc08524f054beafe78e9da56a02d831c858e079ef1d75074efa8634",
+    "backend/app/modules/answering/service.py": "4ff471baab3eeceef59634407a28b884118eb3d433752defacfd04abd4b462de",
+    "retrieval/embedding.py": "4bf84b63bddf93aa6d86f6c0f38726b222029ef5cb5a39a44f9e5e494498cdfa",
+    "retrieval/chat.py": "79bcc314e734acd77a02f8e70efa86a6d24f6f0ca6c2598d5d445d237a6b0267",
+    "generation/checked.py": "fb7c47b04253906aaa6c8753f0f907f9ff468dddd3280b5555048b1151ff3be2",
+    "generation/parser.py": "5eb3eabae06b786669a74cb362b2a387db873f0b05d8d461592886e7fe49e749",
+    "generation/reliability_v3.py": "33d72113ee45fa489adaaf274dbfa8f1b342d8cd0834cbb8188713f6c3254fa2",
+    "generation/reliability_v4.py": "0771dd38c821053788608a942033081433ab8ac2ef53afd3d14ed68987b9b56c",
+    "generation/reliability_v5.py": "7260e47e6b51e45834f660f5d0fabb3c142b760f40a6c791fff733c08fd1261d",
+    "generation/checker_encoding.py": "57e7fdc229e0732d827af1be3985db8c8ccff91d40e4a6699ad28784ccedf8e2",
+    "generation/checker_contract.py": "7b1c3b69d54586b99e14722c8c375bb1481bc452b64f5b2ec71e11052532537e"
+  },
+  "schema_provenance": "Recorded actual schema name; complete schema reconstructed from pinned current ReliableCheckV5",
+  "retry_calls": 0,
+  "contract_repair_calls": 0,
+  "generation_calls": 0,
+  "native_publications": 0,
+  "database_mutations": 0,
+  "Gold_reads": 0,
+  "E_writes": 0,
+  "fresh_role_or_course_qualification": false,
+  "residual37_provenance": "ONLY_ORIGINAL38_UNSTARTED37_NO_BASELINE_RETRY",
+  "execution_allowed_original_slots": [
+    2
+  ],
+  "baseline_not_replayed": true,
+  "predecessor_failed_baseline_receipt_pin": {
+    "bytes": 1854,
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-checker-pair-root-checker-pair-20261008-02\\baseline-finished01.json",
+    "sha256": "4782e436cf2eca4ac017c49a94452f8eba95a384a3f5f7b1ff3ae0725eeaa979"
+  },
+  "valid_paired_latency_comparison": false,
+  "focused_source_unchanged": true,
+  "engine_disposed": true,
+  "cleanup_errors": [],
+  "shared_finished_receipts": [
+    {
+      "slot": 2,
+      "pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\checker_pair\\slot-02-finished01.json",
+        "bytes": 757,
+        "sha256": "2430c6a804a7dd8816fce96fb874b58076049c2d3014cc5d7446c86bdc74f2ac"
+      },
+      "status": "KNOWN_COST_RECORDED",
+      "known_API_cost_USD": "0.0047783"
+    }
+  ],
+  "in_flight_or_UNKNOWN_slots": [],
+  "known_costs_within_unresolved_holds_not_added_twice": true,
+  "memory_key_references_cleared": true,
+  "unstarted_count": 0,
+  "response_rows_missing": 0,
+  "finished_at_UTC": "2026-10-08T02:03:54.768163+00:00",
+  "exit_code": 0
+}

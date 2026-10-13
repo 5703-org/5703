@@ -1,0 +1,100 @@
+{
+  "schema": "5703_fixed_initial_checker_native_schema41_actual_v1",
+  "started_at_UTC": "2026-10-10T09:55:02.312380+00:00",
+  "status": "STOPPED_RETAINED",
+  "source_review_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-fixed-checker-native-schema41-candidate\\OFFLINE_CHECKER_NATIVE_SCHEMA41_PREPARATION01.json",
+    "bytes": 27693,
+    "sha256": "e1d9c7e398b04d5e21cb5c947010358f0069a4cd7703af4e3d469bbcfd7ef881"
+  },
+  "physical_POSTs": 1,
+  "known_cost_USD": "0",
+  "new_UNKNOWN_holds_USD": "0.04500000",
+  "open_claims": 0,
+  "credential_preparation_read_only_DB_legs": 1,
+  "experiment_DB_accesses": 0,
+  "credential_target_database": "cs30_week10_pair_b_20261009_01",
+  "arms": [
+    {
+      "arm": "native_schema41",
+      "status": "OBSERVED",
+      "physical_POSTs": 1,
+      "known_cost_USD": null,
+      "reported_cost_USD": null,
+      "fully_settled": false,
+      "latency_ms": 1297.5456,
+      "timing_boundary": "LLMAdapter.generate invocation to complete return",
+      "provider_result": {
+        "raw_text": "",
+        "provider": "openai_compatible",
+        "model": "google/gemini-3.5-flash-lite",
+        "finish_reason": null,
+        "provider_request_id": null,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null,
+          "total_tokens": null,
+          "reasoning_tokens": null,
+          "cache_hit_input_tokens": null,
+          "cache_miss_input_tokens": null,
+          "cost": null
+        },
+        "latency_ms": 1294,
+        "error": {
+          "code": "PROVIDER_HTTP_ERROR",
+          "message": "Provider returned HTTP 400",
+          "retryable": false,
+          "details": {
+            "http_status": 400,
+            "retry_after_seconds": null,
+            "provider_request_id": null
+          }
+        },
+        "request_submitted": true,
+        "diagnostic": {
+          "stage": "http",
+          "http_status": 400,
+          "provider_error_type": null,
+          "provider_error_code": "400",
+          "provider_error_parameter": null,
+          "message": "The gateway request failed. Category: unknown_provider_failure.",
+          "message_redacted": true,
+          "provider_request_id": null,
+          "finish_reason": null,
+          "network_error": null,
+          "request_submitted": true,
+          "latency_ms": 1294,
+          "gateway_failure_category": "unknown_provider_failure",
+          "gateway_classification_evidence": "http_status",
+          "gateway_embedded_error_code": 400
+        }
+      },
+      "raw_receipt_pins": [
+        {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-fixed-checker-native-schema41-candidate\\actual-native-schema41\\native_schema41-raw-provider-read01.json",
+          "bytes": 1778,
+          "sha256": "f51efd5ceae9b6ae94814405a798919382e19f37c02d0adfc59c3d0bba56114d"
+        }
+      ],
+      "validation": {
+        "schema_PASS": false,
+        "raw_text_available": false
+      }
+    }
+  ],
+  "automatic_retries": 0,
+  "teacher_calls": 0,
+  "JSON_repairs": 0,
+  "old_scope_reuse": false,
+  "historical_unknown_holds_released": false,
+  "fresh_question_or_course_qualification": false,
+  "cumulative_known_group_cost_USD": "0.17182790",
+  "fully_settled": false,
+  "independent_selected_source_quality_review_pending": true,
+  "closed_at_UTC": "2026-10-10T09:55:04.118085+00:00",
+  "adapter_credential_reference_cleared": true,
+  "credential_values_exported": false,
+  "memory_redaction_retained_until_process_exit": true,
+  "fresh_lock_released": true,
+  "no_followup_requests_authorized": true
+}

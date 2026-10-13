@@ -1,0 +1,176 @@
+{
+  "review_id": "proof61_authorization_outbound_review",
+  "date_utc": "2026-10-11",
+  "status": "STOP_BEFORE_AUTH_OR_POST_CURRENT_EXECUTION_PATH_NOT_ESTABLISHED",
+  "reviewer_executed_controllers": false,
+  "reviewer_accessed_credentials": false,
+  "reviewer_network_requests": 0,
+  "reviewer_database_operations": 0,
+  "reviewer_git_operations": 0,
+  "reviewer_main_writes": 0,
+  "evidence_boundary": "This review inspected published public evidence and source text only. It did not follow any old rejected controller, legacy helper, credential-consumer path, or its dependencies.",
+  "authorization": {
+    "source_thread_id": "01a0f370-5ef7-7414-a3c6-33f4e773f030",
+    "message_id_exposed": null,
+    "original_user_quote": "允许将同一71段教材、测试问题及已有回答发送到OpenRouter Gemini/Vertex，最多再8次、总额0.36美元，用于选证修复测试",
+    "grant_is_existing_not_new": true,
+    "settled_post_attempts": 7,
+    "known_cost_USD": "0.16526676",
+    "new_UNKNOWN_USD": "0",
+    "remaining_post_attempts": 1,
+    "remaining_USD": "0.19473324",
+    "current_new_action_platform_acceptance": null,
+    "prior_actions": "The published authorization58-59 record reports specific controlled phase58 and phase59 actions accepted and actually executed. Its phase59 execution session is 6273.",
+    "no_general_refusal_clearance": true
+  },
+  "recipient": {
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "model": "google/gemini-3.5-flash-lite",
+    "provider_order": [
+      "google-vertex/global"
+    ],
+    "provider_only": [
+      "google-vertex/global"
+    ],
+    "allow_fallbacks": false,
+    "require_parameters": true,
+    "reasoning_effort": "high",
+    "max_tokens": 16384,
+    "max_price_prompt_USD_per_million": "0.3",
+    "max_price_completion_USD_per_million": "2.5",
+    "schema_name": "joint_check_source_relations_v2",
+    "prior_timeout_seconds": 60
+  },
+  "exact_public_content_pins": {
+    "archive_receipt": "5703-integration58/archive58-59-published.json",
+    "authorization_record_sha256": "80d81adaec66875e042dc64961f88443e743d850736e61fca510fb06142d0006",
+    "original58_wire_sha256": "53a0c9f1e922496fd3f662e103db0f5a2f91885ef43398586febe2989126a586",
+    "original59_wire_sha256": "c14a0748a60e981f03d5f2d5731ba87048909514ac45d4e3d28828e656913b40",
+    "system_message": {
+      "role": "system",
+      "utf8_bytes": 33666,
+      "sha256": "210232c2dc764fd66afb22d6f4329fd5bb049ed88afb8d0d6a1af8152666f577"
+    },
+    "original_DATA_message": {
+      "role": "user",
+      "utf8_bytes": 45953,
+      "unicode_characters": 45933,
+      "sha256": "0899d02ac28f0e2755e87fe868f15f10caacd610bac5cadd2c3ce99ca6704f6a"
+    },
+    "historical_contract_correction_message": {
+      "role": "user",
+      "utf8_bytes": 764,
+      "sha256": "10ac3d23c3f49912b3025f2b0e95f51c52ff8c206b25ca33e7f144c36a055b8d"
+    },
+    "question": {
+      "text": "What happens to carbon fixed in the Calvin cycle: what does RuBisCO combine with CO2, how does the resulting compound become G3P, and why does some G3P leave while the rest remains?",
+      "utf8_bytes": 181,
+      "sha256": "1aba6b3d61922f14c26d0a1dfb3ba1df80f46c43d2f59e2ce9502eccc63e0baf"
+    },
+    "original_teacher_answer_text": {
+      "characters": 1118,
+      "sha256": "5dda2c9f5e779de73098ed46de9aee959037fbbff9b39f20815df9f885da29c4"
+    },
+    "original_teacher_short_answer": {
+      "characters": 250,
+      "sha256": "e91c482d2cbe5cbf8a2b3d320dfff390356270d36d82960bf8102b1f9767482f"
+    },
+    "original_complete_source_blocks": 71,
+    "original_claims": 10,
+    "original_syntactic_units": 19,
+    "same_three_message_strings_in_58_and_59": true,
+    "prior59_only_wire_change_from58": "max_tokens 8192 to 16384"
+  },
+  "current_saved_response_truth": {
+    "provider_result_file_sha256": "47a6ef6cc5e8da463b75955fc96510501ebaab6552a7a467693362b72e6dfc11",
+    "raw_text_sha256": "48c091c5861eac313e9c1931b7a87a0f91893b317414359c44085856149e6185",
+    "raw_text_characters": 10876,
+    "claim_count": 10,
+    "unit_count": 19,
+    "supported_units": 19,
+    "relation_preserved_false_units": 0,
+    "conditions_preserved_false_units": 0,
+    "expected_direct_proof60_helper_replay_proposals": 0,
+    "implication": "A faithful replay of the untouched59 model assessment does not exercise the negative-unit supplement branch. Do not label independent selected-proof gaps as a negative verdict returned by59.",
+    "independent_entailment_certified": false
+  },
+  "offline_replay_review": {
+    "file": "5703-proof61-quality/offline-replay61.json",
+    "sha256": "c04017d02b9bb626a8903428267c45aaa87e233de3485f45c1aa0e7f9a62e8ba",
+    "reviewed_without_execution": true,
+    "original59_proposal_count": 0,
+    "imported_authored_negative_cases": 5,
+    "previously_identified_candidate_groups_present": 3,
+    "candidate_inventory_denominator": 5,
+    "missed_cases": ["C9-U04: F059", "C10-U02: F020"],
+    "normal_supported_units_unmodified": 14,
+    "normal_units_receive_no_proposal": true,
+    "new_model_requests": 0,
+    "semantic_support_certified": false,
+    "qualification": "The5 negative labels are explicitly imported from an exposed independent diagnosis. The3/5 figure measures candidate inventory presence, not model quality, source entailment or noninferiority. The original19 supported labels and original inputs remain unchanged."
+  },
+  "controller_boundary": {
+    "published_capacity59_source_sha256": "52d8cac221f4d39d1547b2170f1079bc3a17b27b20e52f494bff37a42448ff92",
+    "capacity59_review_sha256": "8da3fea42534fdedf249b6acde3a0f9695c377354a7442f9b18ab60027dd5ac8",
+    "selection58_review_sha256": "371b4b4a1f5cacb9a15147ab566d4458f2f0601b95a30e79d5480fa4bdd80827",
+    "historical_entry_is_current_runnable_path": false,
+    "reasons": [
+      "The original entry owns a closed exclusive actual59 child and represents the previous one-shot action.",
+      "Its financial prerequisites are frozen at six prior requests and $0.13923046, not the current seven/$0.16526676.",
+      "Its prepare chain checks the old checked.py pin; the current development integration changed that source.",
+      "The published source is a byte-preserved archive. Relocating it changes its relative workspace paths and is not a reviewed executable replacement.",
+      "Its historical imports mention legacy paths that were not followed by this review and are not authorized for a new execution by this review."
+    ],
+    "required_new_controller": "A new finite controller must read public frozen wire/result inputs, avoid importing any old rejected controller, freeze its current executable and complete outbound wire, use only an explicitly reviewed unchanged original credential consumer if available, and receive approval for that concrete action before any credential or POST step.",
+    "denial_policy": "If the concrete action or original credential consumer is denied/unavailable, stop with zero new POST. Do not change endpoint/provider, seek another key, resurrect a rejected controller, or recast preparation success as approval."
+  },
+  "minimal_new_request_scope_recommendation": {
+    "authorization_interpretation": "The existing user wording covers selection-repair tests on the same71 source blocks/question/saved teacher answer and Gemini/Vertex. A bounded navigation instruction derived only from those inputs appears consistent with that purpose; this is an interpretation, not a platform approval or a new exact-wire acceptance.",
+    "unchanged": [
+      "Original system message and original DATA message at the exact hashes above",
+      "Original question and teacher answer body/short-answer strings",
+      "The71 complete source blocks,10 claims,19 syntactic units and immutable own-claim bindings",
+      "Original schema, model, Vertex-only recipient and no-fallback rule"
+    ],
+    "explicitly_declared_outbound_change": "Add or replace the historical correction message with a clearly labelled current candidate-only navigation instruction and the current proof60 bounded proposal metadata. Record every changed message hash and exact final body bytes.",
+    "allowed_derived_metadata_description": "Same-claim IDs and allowed fragment IDs, source/claim hashes and original offsets, indexed occurrence coverage, and bounded source-combination proposals. These are navigation, not a factual answer, semantic verdict, or Gold label.",
+    "excluded": [
+      "A newly generated teacher answer, any new question, or any additional textbook block",
+      "Full historical checker raw JSON or model responses, including59 raw_text",
+      "Full independent-review/taxonomy reports, repository documents or development-case data",
+      "Learner identity/history or any authentication values"
+    ],
+    "negative_branch_condition": "If nonempty proposals are wanted, first retain direct untouched59 replay showing zero proposals. Any independent-review-based negative overlay must be a separately named authored development fixture, preserve the original raw59 file and its labels, and explicitly declare the overlay's provenance and same-input scope in the new send review. Do not call it a59 model negative.",
+    "no_blind_repeat": "A zero-proposal instruction alone does not test the new negative branch and is insufficient reason to consume the final slot.",
+    "max_new_POSTs": 1,
+    "automatic_retries": 0,
+    "financial_guard": "Use the current7/$0.16526676 ledger and reserve a conservative bound before submission. Recompute (wire_utf8_bytes + 4096)*0.3/1000000 + 16384*2.5/1000000; the prior $0.075 hold cannot be assumed sufficient after adding metadata. The complete reserve must fit within remaining $0.19473324 and the original $0.36 total. Settle reported expense before local validation or saving optional provider output.",
+    "scope_drift_stop": "If the useful current test requires additional inputs, another route/provider, full historical checker JSON, an unapproved credential path, or an old denied execution path, retain offline evidence and do not execute it under this grant."
+  },
+  "final_execution_decision": {
+    "decision": "STOP_BEFORE_AUTH_OR_POST",
+    "user_data_and_fee_authorization_still_valid": true,
+    "repeat_fee_confirmation_needed": false,
+    "current_independent_controlled_execute_path_verified": false,
+    "path_limitations_reported_by_root": [
+      "Current Main route registration does not contain the historical high research profile required by the saved exact Vertex/high configuration.",
+      "Closed58/59 controllers depend on hardcoded historical grant positions, the old Main checked.py pin, and legacy/shadow-route installation or credential-loader paths that remain outside this new action.",
+      "There is no current independently reviewed execution path that avoids these closed/rejected/legacy dependencies while preserving the exact service and scope."
+    ],
+    "no_existing_usable_path_identified_by_reviewer": true,
+    "old_controller_or_legacy_dependencies_followed": false,
+    "authentication_attempted": false,
+    "POST_attempted": false,
+    "new_formal_platform_denial": false,
+    "new_reserve_or_cost_USD": "0",
+    "remaining_post_attempts_preserved": 1,
+    "remaining_USD_preserved": "0.19473324",
+    "meaning": "This stop is a current execution-path readiness limitation, not withdrawal of the user grant or a new platform rejection. Do not fabricate a live result, re-run a closed controller, or introduce another service/credential path."
+  },
+  "remaining_blockers": [
+    "No new61 controller or exact outbound payload has been reviewed by this agent.",
+    "No concrete61 execution action has been accepted by the tool approval reviewer.",
+    "Direct replay of the saved59 all-supported result cannot produce a negative-unit combination test; any separately authored negative overlay must remain explicit."
+  ],
+  "deliverable": "proof61quality/authorization-review61.json"
+}

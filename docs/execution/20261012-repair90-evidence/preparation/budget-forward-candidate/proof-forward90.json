@@ -1,0 +1,127 @@
+{
+  "schema": "repair90_prospective_component_pure_controls_v1",
+  "status": "PASS",
+  "controls": [
+    {
+      "control": "actual closed Phase90 task / prospective descriptor admission",
+      "status": "PASS"
+    },
+    {
+      "control": "other prospective diagnostic remains disabled",
+      "status": "PASS",
+      "expected_code": "EXACT_NEW_COMPONENT_LEDGER_REQUIRED"
+    },
+    {
+      "control": "ordinary claim refuses component",
+      "status": "PASS",
+      "expected_code": "FUTURE_COMPONENT_REQUIRES_SEPARATE_FROZEN_CONTROLLER"
+    },
+    {
+      "control": "one checker diagnostic reserves next global slot in memory only",
+      "status": "PASS"
+    },
+    {
+      "control": "teacher forbidden",
+      "status": "PASS",
+      "expected_code": "COMPONENT_SINGLE_CHECKER_DIAGNOSTIC_ONLY"
+    },
+    {
+      "control": "wrong purpose forbidden",
+      "status": "PASS",
+      "expected_code": "COMPONENT_SINGLE_CHECKER_DIAGNOSTIC_ONLY"
+    },
+    {
+      "control": "wire mismatch forbidden",
+      "status": "PASS",
+      "expected_code": "COMPONENT_RESERVED_WIRE_CHANGED"
+    },
+    {
+      "control": "second physical request forbidden",
+      "status": "PASS",
+      "expected_code": "CASE_POST_LIMIT"
+    },
+    {
+      "control": "UNKNOWN blocks reservation",
+      "status": "PASS",
+      "expected_code": "UNSETTLED_PROTECTION_BLOCKS_POSTS"
+    },
+    {
+      "control": "shared dollar cap retained",
+      "status": "PASS",
+      "expected_code": "COHORT_BUDGET_EXHAUSTED"
+    },
+    {
+      "control": "9 existing financial / normal / protocol core ASTs unchanged",
+      "status": "PASS"
+    }
+  ],
+  "actual_runtime_modified": false,
+  "actual_ledger_modified": false,
+  "auth_read": false,
+  "database_access": false,
+  "network_or_model_calls": 0,
+  "controller_run_invoked": false,
+  "main_writes": false,
+  "prospective_path_remapping_only": [
+    "descriptor W candidate",
+    "budget/controller W source pin candidates"
+  ],
+  "base_input_public_sha256": "59ccb532eae954d34e1d19837e27132dabca419d29d143c6804697218155e8e2",
+  "source_version_sha256": "369bba3c1ba0e0007b346142988ccc3a242e13505e22513a1a13166a2fe4b2fc",
+  "descriptor_candidate_sha256": "c62f2eee17e4219f30bd27542be39d6ced6b52e74b7d1c858904b6b679d7e61f",
+  "compiled_wire_bytes": 99721,
+  "full_context_sha256": "cb026d37e57903bbf41f4ce2879f8b3d02ca10ce00b6e209b74669efc1d91fde",
+  "full_task_messages_unchanged": true,
+  "canonical_schema_unchanged": "864212a5e636d2cadbc34328f431712a954c30130848a31e64e66e4bdedbc926",
+  "packet_counts": {
+    "CLAIMS": 9,
+    "SOURCE_FRAGMENTS": 69,
+    "CONTEXT_COVERAGE": 8
+  },
+  "config_delta": {
+    "model": {
+      "before": "google/gemini-3.5-flash-lite",
+      "after": "qwen/qwen3.8-flash"
+    },
+    "openrouter_route_profile": {
+      "before": "gemini35_google_vertex_high_research_v1",
+      "after": "qwen38_alibaba_v2"
+    },
+    "configuration_id": {
+      "before": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+      "after": "d78c2a1a-caac-4024-b5f5-2a652414cb0b"
+    }
+  },
+  "wire_delta_keys": [
+    "model",
+    "provider",
+    "reasoning"
+  ],
+  "snapshot_before": {
+    "authorization": "parent_repair90_independent24posts_1USD_same_input_validation_20261012",
+    "protocol_sha256": "55ed03ce4c99f75e8ab5f115ffe1c992254cc8e3c52387190bb83d42f640e97e",
+    "cases_claimed": 3,
+    "case_posts": {
+      "case01": 2,
+      "case06": 3,
+      "case08": 2
+    },
+    "claimed_physical_posts": 7,
+    "settled_posts": 7,
+    "terminal_exposures": 0,
+    "known_cost_USD": "0.0996846",
+    "unknown_full_hold_USD": "0",
+    "physical_posts_maximum": 24,
+    "cost_cap_USD": "1.00",
+    "reserved_extra_posts_authorized": false,
+    "ordinary_cases_claimed": 3,
+    "diagnostic_components_claimed": 0,
+    "supplemental_cases_claimed": 0,
+    "auxiliary_cases_claimed": 0,
+    "page_cases_claimed": 0,
+    "nonpage_posts_cap": 24,
+    "page_posts_reserved_from_nonpage": 0,
+    "cohort_stopped": false
+  },
+  "quality_certification": false
+}

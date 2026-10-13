@@ -1,0 +1,921 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "exact_active_owned_http_endpoint",
+      "passed": true,
+      "authored_response_sha256": "02202b1c26b5907766325c4519c471a75db08742fdbb0b589e44562be13606c6"
+    },
+    {
+      "name": "different_unowned_loopback_port",
+      "passed": true
+    },
+    {
+      "name": "localhost_alias_not_a_registered_literal",
+      "passed": true
+    },
+    {
+      "name": "closed_owned_endpoint_dns",
+      "passed": true
+    },
+    {
+      "name": "closed_owned_endpoint_connect",
+      "passed": true
+    },
+    {
+      "name": "postgres_port_5432_dns",
+      "passed": true
+    },
+    {
+      "name": "postgres_port_5432_connect",
+      "passed": true
+    },
+    {
+      "name": "postgres_port_15433_dns",
+      "passed": true
+    },
+    {
+      "name": "postgres_port_15433_connect",
+      "passed": true
+    },
+    {
+      "name": "external_dns",
+      "passed": true
+    },
+    {
+      "name": "external_numeric_connect",
+      "passed": true
+    },
+    {
+      "name": "reverse_dns",
+      "passed": true
+    },
+    {
+      "name": "unowned_new_listener",
+      "passed": true
+    },
+    {
+      "name": "native_libpq_module_connect",
+      "passed": true
+    },
+    {
+      "name": "native_libpq_class_connect",
+      "passed": true
+    },
+    {
+      "name": "sqlite_external_file_uri",
+      "passed": true
+    },
+    {
+      "name": "sqlite_plain_external_path",
+      "passed": true
+    },
+    {
+      "name": "normal_owned_W_sqlite",
+      "passed": true
+    },
+    {
+      "name": "sqlite_memory",
+      "passed": true
+    },
+    {
+      "name": "pinned_parser_exact_devnull_startup",
+      "passed": true
+    },
+    {
+      "name": "direct_devnull_without_parser",
+      "passed": true
+    },
+    {
+      "name": "qualified_devnull_alias",
+      "passed": true
+    },
+    {
+      "name": "destructive_devnull_flags",
+      "passed": true
+    },
+    {
+      "name": "foreign_main_file_write",
+      "passed": true
+    },
+    {
+      "name": "unreviewed_popen_devnull",
+      "passed": true
+    },
+    {
+      "name": "readonly_pytest_devnull_stdin",
+      "passed": true
+    },
+    {
+      "name": "stdlib_exact_socketpair",
+      "passed": true
+    }
+  ],
+  "guard": {
+    "blocked_events": [
+      "socket.connect",
+      "socket.getaddrinfo",
+      "socket.getaddrinfo",
+      "socket.connect",
+      "socket.getaddrinfo",
+      "socket.connect",
+      "socket.getaddrinfo",
+      "socket.connect",
+      "socket.getaddrinfo",
+      "socket.connect",
+      "socket.gethostbyaddr",
+      "socket.bind",
+      "postgres_connection",
+      "postgres_connection",
+      "sqlite_file_uri",
+      "sqlite3.connect",
+      "unreviewed_devnull_alias",
+      "unreviewed_devnull_alias",
+      "unreviewed_devnull_alias",
+      "open",
+      "unreviewed_devnull_alias"
+    ],
+    "external_network_allowed": false,
+    "blocked_event_context": [
+      {
+        "event": "socket.connect",
+        "pytest_current_test": null,
+        "python_stack": [
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\run-unit88-cwd-nul-candidate.py",
+            "function": "audit",
+            "line": 254
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "connect",
+            "line": 53
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<lambda>",
+            "line": 72
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "denied",
+            "line": 44
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "run_controls",
+            "line": 72
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "main",
+            "line": 146
+          }
+        ]
+      },
+      {
+        "event": "socket.getaddrinfo",
+        "pytest_current_test": null,
+        "python_stack": [
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\run-unit88-cwd-nul-candidate.py",
+            "function": "audit",
+            "line": 235
+          },
+          {
+            "file": "D:\\Python\\Lib\\socket.py",
+            "function": "getaddrinfo",
+            "line": 977
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<lambda>",
+            "line": 74
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "denied",
+            "line": 44
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "run_controls",
+            "line": 73
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "main",
+            "line": 146
+          }
+        ]
+      },
+      {
+        "event": "socket.getaddrinfo",
+        "pytest_current_test": null,
+        "python_stack": [
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\run-unit88-cwd-nul-candidate.py",
+            "function": "audit",
+            "line": 235
+          },
+          {
+            "file": "D:\\Python\\Lib\\socket.py",
+            "function": "getaddrinfo",
+            "line": 977
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<lambda>",
+            "line": 78
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "denied",
+            "line": 44
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "run_controls",
+            "line": 78
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "main",
+            "line": 146
+          }
+        ]
+      },
+      {
+        "event": "socket.connect",
+        "pytest_current_test": null,
+        "python_stack": [
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\run-unit88-cwd-nul-candidate.py",
+            "function": "audit",
+            "line": 254
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "connect",
+            "line": 53
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<lambda>",
+            "line": 79
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "denied",
+            "line": 44
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "run_controls",
+            "line": 79
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "main",
+            "line": 146
+          }
+        ]
+      },
+      {
+        "event": "socket.getaddrinfo",
+        "pytest_current_test": null,
+        "python_stack": [
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\run-unit88-cwd-nul-candidate.py",
+            "function": "audit",
+            "line": 235
+          },
+          {
+            "file": "D:\\Python\\Lib\\socket.py",
+            "function": "getaddrinfo",
+            "line": 977
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<lambda>",
+            "line": 82
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "denied",
+            "line": 44
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "run_controls",
+            "line": 81
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "main",
+            "line": 146
+          }
+        ]
+      },
+      {
+        "event": "socket.connect",
+        "pytest_current_test": null,
+        "python_stack": [
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\run-unit88-cwd-nul-candidate.py",
+            "function": "audit",
+            "line": 254
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "connect",
+            "line": 53
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<lambda>",
+            "line": 84
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "denied",
+            "line": 44
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "run_controls",
+            "line": 83
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "main",
+            "line": 146
+          }
+        ]
+      },
+      {
+        "event": "socket.getaddrinfo",
+        "pytest_current_test": null,
+        "python_stack": [
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\run-unit88-cwd-nul-candidate.py",
+            "function": "audit",
+            "line": 235
+          },
+          {
+            "file": "D:\\Python\\Lib\\socket.py",
+            "function": "getaddrinfo",
+            "line": 977
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<lambda>",
+            "line": 82
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "denied",
+            "line": 44
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "run_controls",
+            "line": 81
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "main",
+            "line": 146
+          }
+        ]
+      },
+      {
+        "event": "socket.connect",
+        "pytest_current_test": null,
+        "python_stack": [
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\run-unit88-cwd-nul-candidate.py",
+            "function": "audit",
+            "line": 254
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "connect",
+            "line": 53
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<lambda>",
+            "line": 84
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "denied",
+            "line": 44
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "run_controls",
+            "line": 83
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "main",
+            "line": 146
+          }
+        ]
+      },
+      {
+        "event": "socket.getaddrinfo",
+        "pytest_current_test": null,
+        "python_stack": [
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\run-unit88-cwd-nul-candidate.py",
+            "function": "audit",
+            "line": 235
+          },
+          {
+            "file": "D:\\Python\\Lib\\socket.py",
+            "function": "getaddrinfo",
+            "line": 977
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<lambda>",
+            "line": 85
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "denied",
+            "line": 44
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "run_controls",
+            "line": 85
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "main",
+            "line": 146
+          }
+        ]
+      },
+      {
+        "event": "socket.connect",
+        "pytest_current_test": null,
+        "python_stack": [
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\run-unit88-cwd-nul-candidate.py",
+            "function": "audit",
+            "line": 254
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "connect",
+            "line": 53
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<lambda>",
+            "line": 86
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "denied",
+            "line": 44
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "run_controls",
+            "line": 86
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "main",
+            "line": 146
+          }
+        ]
+      },
+      {
+        "event": "socket.gethostbyaddr",
+        "pytest_current_test": null,
+        "python_stack": [
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\run-unit88-cwd-nul-candidate.py",
+            "function": "audit",
+            "line": 238
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<lambda>",
+            "line": 87
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "denied",
+            "line": 44
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "run_controls",
+            "line": 87
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "main",
+            "line": 146
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<module>",
+            "line": 173
+          }
+        ]
+      },
+      {
+        "event": "socket.bind",
+        "pytest_current_test": null,
+        "python_stack": [
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\run-unit88-cwd-nul-candidate.py",
+            "function": "audit",
+            "line": 230
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<lambda>",
+            "line": 89
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "denied",
+            "line": 44
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "run_controls",
+            "line": 89
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "main",
+            "line": 146
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<module>",
+            "line": 173
+          }
+        ]
+      },
+      {
+        "event": "postgres_connection",
+        "pytest_current_test": null,
+        "python_stack": [
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\run-unit88-cwd-nul-candidate.py",
+            "function": "no_postgres",
+            "line": 306
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<lambda>",
+            "line": 92
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "denied",
+            "line": 44
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "run_controls",
+            "line": 92
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "main",
+            "line": 146
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<module>",
+            "line": 173
+          }
+        ]
+      },
+      {
+        "event": "postgres_connection",
+        "pytest_current_test": null,
+        "python_stack": [
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\run-unit88-cwd-nul-candidate.py",
+            "function": "no_postgres",
+            "line": 306
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<lambda>",
+            "line": 93
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "denied",
+            "line": 44
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "run_controls",
+            "line": 93
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "main",
+            "line": 146
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<module>",
+            "line": 173
+          }
+        ]
+      },
+      {
+        "event": "sqlite_file_uri",
+        "pytest_current_test": null,
+        "python_stack": [
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\run-unit88-cwd-nul-candidate.py",
+            "function": "audit",
+            "line": 263
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<lambda>",
+            "line": 94
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "denied",
+            "line": 44
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "run_controls",
+            "line": 94
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "main",
+            "line": 146
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<module>",
+            "line": 173
+          }
+        ]
+      },
+      {
+        "event": "sqlite3.connect",
+        "pytest_current_test": null,
+        "python_stack": [
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\run-unit88-cwd-nul-candidate.py",
+            "function": "audit",
+            "line": 265
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<lambda>",
+            "line": 95
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "denied",
+            "line": 44
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "run_controls",
+            "line": 95
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "main",
+            "line": 146
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<module>",
+            "line": 173
+          }
+        ]
+      },
+      {
+        "event": "unreviewed_devnull_alias",
+        "pytest_current_test": null,
+        "python_stack": [
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\run-unit88-cwd-nul-candidate.py",
+            "function": "audit",
+            "line": 277
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "open_and_close",
+            "line": 109
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<lambda>",
+            "line": 111
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "denied",
+            "line": 44
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "run_controls",
+            "line": 111
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "main",
+            "line": 146
+          }
+        ]
+      },
+      {
+        "event": "unreviewed_devnull_alias",
+        "pytest_current_test": null,
+        "python_stack": [
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\run-unit88-cwd-nul-candidate.py",
+            "function": "audit",
+            "line": 277
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "open_and_close",
+            "line": 109
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<lambda>",
+            "line": 112
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "denied",
+            "line": 44
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "run_controls",
+            "line": 112
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "main",
+            "line": 146
+          }
+        ]
+      },
+      {
+        "event": "unreviewed_devnull_alias",
+        "pytest_current_test": null,
+        "python_stack": [
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\run-unit88-cwd-nul-candidate.py",
+            "function": "audit",
+            "line": 277
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "open_and_close",
+            "line": 109
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<lambda>",
+            "line": 113
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "denied",
+            "line": 44
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "run_controls",
+            "line": 113
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "main",
+            "line": 146
+          }
+        ]
+      },
+      {
+        "event": "open",
+        "pytest_current_test": null,
+        "python_stack": [
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\run-unit88-cwd-nul-candidate.py",
+            "function": "audit",
+            "line": 282
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "open_and_close",
+            "line": 109
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<lambda>",
+            "line": 114
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "denied",
+            "line": 44
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "run_controls",
+            "line": 114
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "main",
+            "line": 146
+          }
+        ]
+      },
+      {
+        "event": "unreviewed_devnull_alias",
+        "pytest_current_test": null,
+        "python_stack": [
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\run-unit88-cwd-nul-candidate.py",
+            "function": "audit",
+            "line": 277
+          },
+          {
+            "file": "D:\\Python\\Lib\\subprocess.py",
+            "function": "_get_devnull",
+            "line": 1149
+          },
+          {
+            "file": "D:\\Python\\Lib\\subprocess.py",
+            "function": "_get_handles",
+            "line": 1371
+          },
+          {
+            "file": "D:\\Python\\Lib\\subprocess.py",
+            "function": "__init__",
+            "line": 1004
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "<lambda>",
+            "line": 115
+          },
+          {
+            "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\control-unit88-cwd-nul04.py",
+            "function": "denied",
+            "line": 44
+          }
+        ]
+      }
+    ],
+    "reviewed_parser_devnull_events": [
+      {
+        "event": "reviewed_parser_devnull",
+        "device": "nul",
+        "flags": 130,
+        "pytest_current_test": null
+      }
+    ],
+    "postgres_connections_allowed": false,
+    "owned_fixture_http_connects": 1,
+    "owned_fixture_dns_resolutions": 1,
+    "windows_socketpair_connects": 1,
+    "fixture_listeners": [
+      {
+        "fixture": "test_adapter_replacement.py",
+        "still_active": false
+      }
+    ],
+    "python_writes_confined_to_new_output": true
+  },
+  "full_suite_run": false,
+  "model_calls": 0,
+  "postgres_connections": 0,
+  "runner_sha256": "2ca132717a54ae107f820f2ee16a95647f2b1199eca8347e9580dc9dcdafa1b8"
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "phase85_programmatic_fallback_candidate_static_review_v1",
+  "status": "PREPARED_UNEXECUTED",
+  "reviewer": "/root/checker82_startup_prewarm/prewarm_safety_review",
+  "candidate": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-fallback-candidate\\checked.py",
+    "bytes": 166521,
+    "sha256": "35338a904cec0297ece096f94b83d986c7e7014216b246c09725febeeba8246c"
+  },
+  "before": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-fallback-candidate\\checked.py.before85",
+    "bytes": 166258,
+    "sha256": "fd8f18a8a7dbed449654310fb17086ddb4207069a394ca4ac55cf2db3a6fab8c"
+  },
+  "tests": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-fallback-candidate\\test_programmatic_fallback85.py",
+    "bytes": 9000,
+    "sha256": "fcecaa0e1863f53024c21dd5f4a36acfc2554aa6f126ac63fecc58a18b3f76cc",
+    "prepared_parametrized_controls": 8,
+    "executed_by_reviewer": 0,
+    "results": null
+  },
+  "static_review": {
+    "exact_original_block_replaced_once": true,
+    "entire_text_outside_expected_fallback_block_ordinal_identical": true,
+    "change": "Only the deterministic fallback-derived request clears checker_output_policy and restores legacy checker_payload_policy; both fallback paths now pass programmatic_only=True.",
+    "original_live_request_mutated": false,
+    "original_live_policy_gates_changed": false,
+    "pending_action_existing_field_resets_preserved": true
+  },
+  "prepared_controls": [
+    "Four pending/nonpending clarification and factual no-evidence cases: real GenerationService returns original zero-call programmatic origins; derived opt-ins cleared and original request unchanged.",
+    "Unexpected derived fallback state: real programmatic_only guard returns PROGRAMMATIC_STATE_INVALID without an adapter call.",
+    "Two invalid-original opt-in cases: real GenerationService upfront output/payload gates still reject before any adapter call.",
+    "Normal-evidence branch: fallback is not entered; candidate/before AST equality outside that fallback establishes unchanged original live code and typed checker gate."
+  ],
+  "execution_design": "Root imports public Main GenerationService/types during its future isolated run. Controls compile the exact pinned candidate fallback AST with the candidate filename, rather than copying the implementation or simulating a complete live checker.",
+  "limitations": [
+    "Pending-action boolean is an isolated branch input; no claim that lossless output is a compatible live pending-action policy.",
+    "No full pipeline, typed checker semantic PASS, quality result or provider result is manufactured."
+  ],
+  "reviewer_actions": {
+    "W_test_and_this_JSON_writes_only": true,
+    "pytest_runs": 0,
+    "Main_imports": 0,
+    "Main_writes": 0,
+    "frozen_runtime_source_writes": 0,
+    "auth_actions": 0,
+    "DB_actions": 0,
+    "network_actions": 0,
+    "model_loads": 0,
+    "real_ledger_reads": 0,
+    "question_or_rubric_edits": 0
+  },
+  "blockers": [],
+  "qualification": "Prepared controls only. Root owns isolated free execution; no test PASS is claimed."
+}

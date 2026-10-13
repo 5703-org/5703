@@ -1,0 +1,86 @@
+{
+  "case_id": "case04",
+  "arm": "dense",
+  "question": "How do simple diffusion and facilitated diffusion differ?",
+  "session_title": "root-native-four-20261008-05-case04",
+  "idempotency_key": "root-native-four-20261008-05-case04",
+  "physical_slots": [
+    13,
+    14,
+    15,
+    16
+  ],
+  "session_id": "4538f77c-0ce1-4ae6-9d56-55f9a06f5c04",
+  "status": "FAILED",
+  "poll_stages": [
+    {
+      "state": "queued",
+      "stage": "queued",
+      "observed_ms": 204.605
+    },
+    {
+      "state": "running",
+      "stage": "preparing",
+      "observed_ms": 324.649
+    },
+    {
+      "state": "running",
+      "stage": "generating",
+      "observed_ms": 644.167
+    },
+    {
+      "state": "running",
+      "stage": "generation",
+      "observed_ms": 721.331
+    },
+    {
+      "state": "running",
+      "stage": "joint_check",
+      "observed_ms": 5212.361
+    },
+    {
+      "state": "running",
+      "stage": "semantic_repair",
+      "observed_ms": 8778.0
+    },
+    {
+      "state": "running",
+      "stage": "joint_recheck",
+      "observed_ms": 10644.741
+    },
+    {
+      "state": "failed",
+      "stage": "failed",
+      "observed_ms": 13971.11
+    }
+  ],
+  "submit_receipt": {
+    "request_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792",
+    "job_id": "1c53c91c-d21e-4d98-9a6c-84f92074d2ae",
+    "user_message_id": "45eee994-d5c1-4c1f-bd14-ae7ce8265981",
+    "poll_url": "/api/v1/jobs/1c53c91c-d21e-4d98-9a6c-84f92074d2ae"
+  },
+  "submit_ack_ms": 130.508,
+  "last_job": {
+    "id": "1c53c91c-d21e-4d98-9a6c-84f92074d2ae",
+    "request_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792",
+    "state": "failed",
+    "stage": "failed",
+    "error": {
+      "code": "CHECKER_INCONSISTENT",
+      "message": "The checker returned inconsistent support metadata; no answer was published",
+      "details": {
+        "issue_codes": [
+          "CHECKER_SCHEMA_INVALID"
+        ]
+      }
+    },
+    "answer_id": null,
+    "can_retry": false,
+    "created_at": "2026-10-08T06:56:29.724165+00:00",
+    "updated_at": "2026-10-08T06:56:43.440719+00:00"
+  },
+  "terminal_observed_ms": 13971.116,
+  "checked_answer_published": false,
+  "observed_duration_ms": 13971.12
+}

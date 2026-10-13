@@ -1,0 +1,157 @@
+{
+  "schema": "phase88_reasoning_support_v1",
+  "read_utc": "2026-10-11 22:36:40 UTC",
+  "research_only": true,
+  "model_entry": {
+    "id": "google/gemini-3.5-flash-lite",
+    "canonical_slug": "google/gemini-3.5-flash-lite-20260721",
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "low",
+        "minimal"
+      ],
+      "default_effort": "minimal"
+    },
+    "supported_parameters": [
+      "include_reasoning",
+      "max_tokens",
+      "reasoning",
+      "reasoning_effort",
+      "response_format",
+      "seed",
+      "stop",
+      "structured_outputs",
+      "temperature",
+      "tool_choice",
+      "tools",
+      "top_p"
+    ]
+  },
+  "reasoning_supports_max_tokens_field": {
+    "state": "omitted_in_exact_GET_models_entry",
+    "no_true_or_false_value_inferred": true
+  },
+  "official_sources": [
+    {
+      "url": "https://openrouter.ai/api/v1/models",
+      "kind": "live_public_exact_model_metadata",
+      "document_update_date_not_provided": true
+    },
+    {
+      "url": "https://openrouter.ai/google/gemini-3.5-flash-lite",
+      "kind": "exact_model_page",
+      "model_release_date": "2026-07-21",
+      "document_update_date_not_provided": true
+    },
+    {
+      "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash-lite",
+      "kind": "exact_Google_model_page",
+      "last_updated_utc_date": "2026-10-10"
+    },
+    {
+      "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/thinking",
+      "kind": "exact_model_thinking_table_and_Gemini3_parameter_warning",
+      "last_updated_utc_date": "2026-10-10"
+    },
+    {
+      "url": "https://openrouter.ai/docs/guides/best-practices/reasoning-tokens",
+      "kind": "effort_mapping_and_max_tokens_contract",
+      "document_update_date_not_provided": true
+    }
+  ],
+  "confirmed_controls": {
+    "google_exact_supported_thinking_levels": [
+      "MINIMAL",
+      "LOW",
+      "MEDIUM",
+      "HIGH"
+    ],
+    "google_exact_default": "MINIMAL",
+    "openrouter_Gemini3_mapping": "reasoning.effort maps to Google's thinkingLevel",
+    "none_or_disabled": "Do not use: exact metadata marks reasoning mandatory; supported_efforts excludes none.",
+    "independent_numeric_reasoning_cap": "Not advertised by exact model metadata; Gemini3 docs say reasoning.max_tokens passes thinkingBudget and does not provide precise token control.",
+    "vertex_budget_warning": "thinking_budget is deprecated for Gemini3+ and can return intermittent400; combining it with thinking_level errors.",
+    "exclude_reasoning": "Hides returned reasoning, but still consumes/bills reasoning tokens and the shared output reservation.",
+    "nonreasoning_same_model_control": "Not supported by the exact model metadata; a different lightweight model would be a separately labelled cross-model control."
+  },
+  "local_serialization_read_only": {
+    "provider": "openai_compatible",
+    "api_base": "https://openrouter.ai/api/v1",
+    "model": "google/gemini-3.5-flash-lite",
+    "provider_only": [
+      "google-vertex/global"
+    ],
+    "existing_routes": {
+      "high": "gemini35_google_vertex_high_research_v1",
+      "low": "gemini35_google_vertex_v1",
+      "minimal": "gemini35_google_vertex_minimal_v1"
+    },
+    "existing_medium_route": false,
+    "generic_capabilities_reasoning_effort": false,
+    "route_owns_nested_reasoning": true,
+    "config_reasoning_effort_must_remain": null,
+    "compiler_sends": "reasoning:{effort:route.reasoning_effort}, max_tokens:config.max_tokens",
+    "independent_reasoning_budget_field_present": false,
+    "teacher_role": "Saved anthropic/claude-haiku-5.5 via haiku55_google_vertex_low_v1; do not regenerate or conflate with historical DeepSeek."
+  },
+  "minimal_recommendation": {
+    "comparison": "One frozen checker input, HIGH first then LOW, one checker POST each",
+    "arms": [
+      {
+        "effort": "high",
+        "route": "gemini35_google_vertex_high_research_v1",
+        "max_tokens": 8192
+      },
+      {
+        "effort": "low",
+        "route": "gemini35_google_vertex_v1",
+        "max_tokens": 8192
+      }
+    ],
+    "only_compiled_request_delta": "reasoning.effort",
+    "freeze": [
+      "original teacher answer",
+      "original checker messages",
+      "full canonical schema and wire schema",
+      "complete source packet",
+      "claim/unit/requirement sets",
+      "provider/model",
+      "json_object output format",
+      "all original negative and publication gates"
+    ],
+    "no_numeric_reasoning_budget": true,
+    "no_none_or_enabled_false": true,
+    "no_total_output_only_increase": true,
+    "no_automatic_retry_or_extra_arm": true,
+    "new_POSTs_for_fresh_pair_if_controller_verified": 2,
+    "reuse_existing_high_option": "If saved slot07's model/provider, complete input, schema and8192 reservation exactly match the frozen comparison, retain its observed high result as the existing baseline and run LOW once: one new checker POST. Do not call the old high observation a fresh run or alter its truncated raw. Otherwise the fresh pair requires two POSTs.",
+    "remaining_scope_from_parent": {
+      "physical_POSTs": 8,
+      "usd": 0.8256366
+    },
+    "cost_bound_method": "Reserve against the exact frozen input count plus8192 output tokens at existing route price caps before either call; no new charge or billing verification in this research.",
+    "controller_status": "Not inspected or qualified by this read-only documentation task.",
+    "feasibility_block": "Require an existing verified checker-only controller with a hard shared two-POST limit. Fresh normal max4 runs regenerate teachers and may consume all8 remaining slots; they do not implement this fixed-answer pair. If no such bounded controller is available, block execution instead of assuming feasibility.",
+    "evaluation": [
+      "complete output and finish_reason",
+      "strict decoding and unchanged full validation",
+      "honest unsupported/partial decisions and missing coverage",
+      "reasoning and visible token counts",
+      "latency, cost, cache-hit/cache-miss usage"
+    ],
+    "limits": [
+      "n=1 per arm cannot establish p95 or superiority",
+      "high-first order and automatic caching may affect the second arm; record rather than hide them",
+      "official support does not establish quality or a hard reasoning-token guarantee",
+      "no model calls, auth, PG or Main/runtime writes performed"
+    ]
+  },
+  "unavailable_read": {
+    "url": "https://openrouter.ai/api/v1/models/google/gemini-3.5-flash-lite-20260721/endpoints",
+    "result": "web tool Internal Error; not evidence that the model or endpoint is absent"
+  }
+}

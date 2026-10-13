@@ -1,0 +1,194 @@
+{
+  "status": "PUBLIC_SOURCE_CONSISTENCY_CONFIRMED_NO_DEMONSTRATED_IMPLEMENTATION_DEFECT",
+  "at_UTC": "2026-10-08T09:06:04.926295+00:00",
+  "assessment_scope": "Independent read-only public prompt/schema contract comparison against Root-emitted safe case04 replay metadata; not whole-project qualification.",
+  "pins": {
+    "prompt": {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\joint_check_v5.txt",
+      "bytes": 14853,
+      "sha256": "6304fd19b2c86f4c9670aacd29628922c95fd9ce4e453697976b0a0f8aca4a32"
+    },
+    "v3": {
+      "path": "E:\\5703\\learning-assistant\\generation\\reliability_v3.py",
+      "bytes": 16571,
+      "sha256": "33d72113ee45fa489adaaf274dbfa8f1b342d8cd0834cbb8188713f6c3254fa2"
+    },
+    "v4": {
+      "path": "E:\\5703\\learning-assistant\\generation\\reliability_v4.py",
+      "bytes": 10203,
+      "sha256": "0771dd38c821053788608a942033081433ab8ac2ef53afd3d14ed68987b9b56c"
+    },
+    "v5": {
+      "path": "E:\\5703\\learning-assistant\\generation\\reliability_v5.py",
+      "bytes": 8366,
+      "sha256": "7260e47e6b51e45834f660f5d0fabb3c142b760f40a6c791fff733c08fd1261d"
+    },
+    "safe_root_replay": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-main-default-off-diagnostic-integration-20261008-01\\case04-retained-exact-schema-replay03.json",
+      "bytes": 2160,
+      "sha256": "c2a23425c2e40af91e4019d28546802634ba5745201a15145502bd59c420643c"
+    }
+  },
+  "public_source_references": {
+    "prompt_basis_lines": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "v4_literal_lines": [
+      120,
+      126,
+      140,
+      147,
+      151
+    ],
+    "v4_discriminator_lines": [
+      155,
+      157
+    ],
+    "prompt_requirement_lines": [
+      24,
+      35,
+      40
+    ],
+    "v5_requirement_lines": [
+      64,
+      65,
+      66,
+      67,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      79,
+      80
+    ],
+    "strict_configuration_line": 23
+  },
+  "public_contract": {
+    "allowed_basis_values": [
+      "textbook",
+      "problem_input",
+      "derived_calculation",
+      "nonfactual",
+      "evidence_limitation",
+      "general_knowledge"
+    ],
+    "required_requirement_fields": [
+      "requirement_id",
+      "relevance",
+      "sufficiency",
+      "evidence",
+      "conditions_preserved",
+      "response_coverage",
+      "missing_information",
+      "reason"
+    ],
+    "allowed_relevance_values": [
+      "related",
+      "unrelated"
+    ],
+    "requirement_evidence_fields": [
+      "evidence_id",
+      "fragment_id",
+      "quote"
+    ],
+    "strict": true,
+    "extra": "forbid"
+  },
+  "actual_case04_evidence": {
+    "root_replay_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-main-default-off-diagnostic-integration-20261008-01\\case04-retained-exact-schema-replay03.json",
+      "bytes": 2160,
+      "sha256": "c2a23425c2e40af91e4019d28546802634ba5745201a15145502bd59c420643c"
+    },
+    "response_statuses": [
+      {
+        "sequence": 4,
+        "stage": "joint_check",
+        "strict_schema_status": "passed",
+        "schema_error_count": 0
+      },
+      {
+        "sequence": 8,
+        "stage": "joint_recheck",
+        "strict_schema_status": "failed",
+        "schema_error_count": 3
+      }
+    ],
+    "safe_recheck_errors": [
+      {
+        "path": [
+          "claims",
+          0
+        ],
+        "error_type": "union_tag_invalid"
+      },
+      {
+        "path": [
+          "requirements",
+          0,
+          "relevance"
+        ],
+        "error_type": "missing"
+      },
+      {
+        "path": [
+          "requirements",
+          0,
+          "redacted_field"
+        ],
+        "error_type": "extra_forbidden"
+      }
+    ],
+    "unknown_extra_field_name": "not exported; redacted_field is a marker",
+    "invalid_basis_value": "not exported; no hidden value inferred",
+    "error_cap_conclusion": "No too_long/too_short in the three reported schema errors; no evidence-cap defect demonstrated."
+  },
+  "structural_comparison_checks": {
+    "all_five_evidence_pins_match_expected": true,
+    "prompt_basis_six_exactly_equal_schema_literals": true,
+    "claim_union_discriminator_is_basis": true,
+    "requirement_relevance_has_no_default": true,
+    "relevance_literal_values_are_related_unrelated": true,
+    "prompt_requirement_section_names_relevance": true,
+    "legal_example_has_all_and_only_eight_requirement_fields": true,
+    "legal_example_relevance_is_allowed": true,
+    "requirement_evidence_example_has_exact_three_schema_fields": true,
+    "strict_configuration_forbids_extras_and_enables_strict": true,
+    "safe_root_replay_initial_pass_then_recheck_fail_three": true,
+    "safe_root_replay_contains_only_reported_error_shapes": true,
+    "no_too_long_or_too_short_in_reported_three_errors": true,
+    "root_replay_reports_no_provider_calls_database_writes_gold_reads_or_raw_export": true
+  },
+  "check_count": 14,
+  "all_checks_passed": true,
+  "conclusion": "Final joint_recheck violates the already documented strict schema. Available safe evidence shows no prompt/schema mismatch or deterministic implementation defect. An invalid model response alone is not proof of a checker implementation bug.",
+  "qualification": {
+    "code_or_prompt_patch_prepared": false,
+    "authored_defect_fix_red_green_proof": false,
+    "conditional_four_paid_calls_eligible": false,
+    "paid_blocker": "No reproducible actual implementation defect fixed; existing ledger STOP remains binding. Root alone owns future budget/authorization.",
+    "original_case04_failure_preserved": true,
+    "ledger_STOP_preserved": true
+  },
+  "this_assessment_execution": {
+    "public_source_reads_only": true,
+    "raw_checker_response_read": false,
+    "database_or_helper_execution": false,
+    "provider_calls": 0,
+    "database_writes": 0,
+    "Gold_reads": 0,
+    "E_writes": 0,
+    "new_tests_claimed_as_model_responses": 0,
+    "strict_schema_or_publication_gates_modified": false
+  },
+  "independent_review": "reuse_static_review independently reached the same public prompt/schema consistency conclusion."
+}

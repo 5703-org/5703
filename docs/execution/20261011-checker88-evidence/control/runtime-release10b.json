@@ -1,0 +1,83 @@
+{
+  "schema": "phase88_case10b_runtime_candidate_release_v1",
+  "status": "FROZEN_READY_FOR_INDEPENDENT_REVIEW",
+  "candidate_directory": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-page10b-runtime-candidate",
+  "actual_Runtime_or_Main_writes": 0,
+  "actual_auth_DB_API_or_model_actions": 0,
+  "permitted_successor_instance": "case10b",
+  "forbidden_later_page_instances": [
+    "case10c"
+  ],
+  "old_descriptor_schema_exact_keys": 18,
+  "new_descriptor_schema": "phase88_quality_page_successor_descriptor_v1",
+  "new_descriptor_schema_exact_keys": 20,
+  "reconciliation_path": "case10-no-send-reconciliation88.json",
+  "reconciliation_sha256": "d4ced1b5be3a552fb7c48ceac2e302ca24619b39e419aecda2ea0882b16a2817",
+  "old_artifacts_pinned_exactly": 9,
+  "original_absent_receipts_remain_uncertified": true,
+  "cohort_physical_posts_maximum": 24,
+  "cohort_cost_cap_USD": "1.00",
+  "per_case_maximum": 4,
+  "full_hold_USD": "0.0714688",
+  "source_table": [
+    {
+      "file": "budget88.py",
+      "before_sha256": "c2a152184ceeb8bbc4011062ac28c4583366bbc9f4281637589e6dda0a934b8d",
+      "before_bytes": 51867,
+      "after_sha256": "b92e3ea0f7e011fb634059f5e9dc733d28db39b52135bd6bbc8f5c064c10fe60",
+      "after_bytes": 62141,
+      "actual_runtime_before_match": true
+    },
+    {
+      "file": "normal_transport88.py",
+      "before_sha256": "a2cf026bba2545d394873bbc957c0008d770350904edbb9a3eb4e6995ecf0c90",
+      "before_bytes": 46966,
+      "after_sha256": "60d2d69113a064e76898b5864af498e7fc32c7a7de1f0775f762d47a433d8955",
+      "after_bytes": 47020,
+      "actual_runtime_before_match": true
+    },
+    {
+      "file": "prepare88.py",
+      "before_sha256": "e9f9dfb9cd657de202c69b92c1c9d4c62e47844fecaabaa29425f003491f3042",
+      "before_bytes": 29629,
+      "after_sha256": "88e3294db3cabe5b8ed1a3f627b99e9e18f2eadbf0487c7f8385b59f76bfce86",
+      "after_bytes": 31448,
+      "actual_runtime_before_match": true
+    },
+    {
+      "file": "journey88.cjs",
+      "before_sha256": "30d6053287d30be05319995227d518f36a3dab4d7adfee7d7ef34140862ffc6a",
+      "before_bytes": 22307,
+      "after_sha256": "95c7dc4d5fe9cf8bb3f23abeae52de047cbcd2d97c6adfd2640e03421f4ad33d",
+      "after_bytes": 28467,
+      "actual_runtime_before_match": true
+    },
+    {
+      "file": "targeted_answer88.py",
+      "before_sha256": "ed1a1493005b006f22d8ce277940cd5bf4b540ba78758ce9c903942ae8655193",
+      "before_bytes": 28064,
+      "after_sha256": "cf16ce3e4b689e96f9e1c2ec4a3737e34ab9ae5769fee796df0ff38076f39b96",
+      "after_bytes": 28075,
+      "actual_runtime_before_match": true
+    }
+  ],
+  "controls": {
+    "path": "controls10b-r2.json",
+    "sha256": "8d085003714b10db0b37c556f29ed65e553def13c24b56deea3a717e0b5b4536",
+    "tests_run": 13,
+    "passed": true,
+    "AST_passed": 4,
+    "Node_check_passed": 1
+  },
+  "preserved_first_failed_control": {
+    "path": "controls10b.json",
+    "sha256": "96b65f52a33ea7bed0dbc255c58e2327741d461617729047e2a2aa25532cb27b",
+    "explanation": "One negative fixture was malformed and reached existing WIRE_BYTES_INVALID first; valid pre-existing old POST fixture then rejects PAGE_SUCCESSOR_PRIOR_POST_PRESENT. No production source fix needed."
+  },
+  "external_executor_updates_required": [
+    "server88.py case10b dispatch and page-ready binding (parent owns)",
+    "outer wrapper literal case10b, final journey SHA, reconciliation helper calls (parent owns)"
+  ],
+  "unused_api_client88_not_modified": true,
+  "runtime_sources_frozen_no_further_edits": true
+}

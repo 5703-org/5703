@@ -1,0 +1,137 @@
+{
+  "at_UTC": "2026-10-08T06:56:43.472504+00:00",
+  "case_id": "case04",
+  "job_id": "1c53c91c-d21e-4d98-9a6c-84f92074d2ae",
+  "request_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792",
+  "state": "failed",
+  "answer_id": null,
+  "normal_checked_answer_published": false,
+  "actual_physical_POSTs": 4,
+  "actual_persisted_safe_usage_events": [
+    {
+      "sequence": 1,
+      "phase": "start",
+      "attempt_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792:attempt:1",
+      "stage": "generation",
+      "latency_ms": null,
+      "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+      "usage": {},
+      "request_submitted": null,
+      "error_present": false
+    },
+    {
+      "sequence": 2,
+      "phase": "finish",
+      "attempt_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792:attempt:1",
+      "stage": "generation",
+      "latency_ms": 4370,
+      "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+      "usage": {
+        "input_tokens": 7638,
+        "output_tokens": 1096,
+        "total_tokens": 8734,
+        "reasoning_tokens": 757,
+        "cache_hit_input_tokens": 0,
+        "cache_miss_input_tokens": 7638,
+        "cost": 0.0050314
+      },
+      "request_submitted": true,
+      "error_present": false
+    },
+    {
+      "sequence": 3,
+      "phase": "start",
+      "attempt_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792:attempt:2",
+      "stage": "joint_check",
+      "latency_ms": null,
+      "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+      "usage": {},
+      "request_submitted": null,
+      "error_present": false
+    },
+    {
+      "sequence": 4,
+      "phase": "finish",
+      "attempt_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792:attempt:2",
+      "stage": "joint_check",
+      "latency_ms": 3471,
+      "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+      "usage": {
+        "input_tokens": 8352,
+        "output_tokens": 737,
+        "total_tokens": 9089,
+        "reasoning_tokens": 0,
+        "cache_hit_input_tokens": 0,
+        "cache_miss_input_tokens": 8352,
+        "cost": 0.0043481
+      },
+      "request_submitted": true,
+      "error_present": false
+    },
+    {
+      "sequence": 5,
+      "phase": "start",
+      "attempt_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792:attempt:3",
+      "stage": "semantic_repair",
+      "latency_ms": null,
+      "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+      "usage": {},
+      "request_submitted": null,
+      "error_present": false
+    },
+    {
+      "sequence": 6,
+      "phase": "finish",
+      "attempt_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792:attempt:3",
+      "stage": "semantic_repair",
+      "latency_ms": 1890,
+      "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+      "usage": {
+        "input_tokens": 10281,
+        "output_tokens": 186,
+        "total_tokens": 10467,
+        "reasoning_tokens": 0,
+        "cache_hit_input_tokens": 0,
+        "cache_miss_input_tokens": 10281,
+        "cost": 0.0035493
+      },
+      "request_submitted": true,
+      "error_present": false
+    },
+    {
+      "sequence": 7,
+      "phase": "start",
+      "attempt_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792:attempt:4",
+      "stage": "joint_recheck",
+      "latency_ms": null,
+      "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+      "usage": {},
+      "request_submitted": null,
+      "error_present": false
+    },
+    {
+      "sequence": 8,
+      "phase": "finish",
+      "attempt_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792:attempt:4",
+      "stage": "joint_recheck",
+      "latency_ms": 3187,
+      "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+      "usage": {
+        "input_tokens": 8222,
+        "output_tokens": 694,
+        "total_tokens": 8916,
+        "reasoning_tokens": 0,
+        "cache_hit_input_tokens": 0,
+        "cache_miss_input_tokens": 8222,
+        "cost": 0.0042016
+      },
+      "request_submitted": true,
+      "error_present": false
+    }
+  ],
+  "known_cost_USD": "0.0171304",
+  "unknown_holds_USD": "0",
+  "unknown_costs_keep_full_call_set_hold": false,
+  "known_cost_within_unresolved_holds_not_added_twice": true,
+  "invoice_or_billing_settlement": null
+}

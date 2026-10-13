@@ -1,0 +1,20 @@
+--- generation/source_relations_v2.py (before)
++++ generation/source_relations_v2.py (candidate)
+@@ -312,6 +312,17 @@
+     "not support the predicate. Select all necessary same-claim blocks explicitly or "
+     "report the exact partial/unsupported gap; never auto-fill a citation from a hint. "
+     "return the unchanged output schema and preserve every existing publication gate."
++    " Return every required top-level field, including attempt_evaluation_ok, even for an inapplicabl"
++    "e task; use the unchanged schema and existing context/rubric rule for its value. Before emitting"
++    " units, verify every referenced fragment_id is explicitly in this SAME claim's citations under i"
++    "ts evidence_id; supported units require supporting relations. Assess each entire predicate with "
++    "its inherited subject, exact product identity, transformation/operation classification, quantity"
++    ", condition, negation and purpose. A block that ends before the asserted object, purpose or cond"
++    "ition is supplied does not establish that missing continuation: explicitly select each permitted"
++    " same-claim block needed for that relation part, or report partial/unsupported. Occurrence hints"
++    " and shared terms cannot supply a semantic bridge or auto-fill citations. Emit one complete mini"
++    "fied JSON object with every required field and record; omit only formatting whitespace outside s"
++    "tring values, never schema fields or required content."
+ )
+ 
+ 

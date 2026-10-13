@@ -1,0 +1,265 @@
+{
+  "small_controls_passed": 20,
+  "controls": [
+    {
+      "name": "authored_valid_control_uses_original_local_contract",
+      "passed": true,
+      "detail": {
+        "control_only": true,
+        "remote_model_calls": 0
+      }
+    },
+    {
+      "name": "missing_citations_rejected_without_autofill",
+      "passed": true,
+      "detail": {
+        "rejected_by": "ValidationError",
+        "schema_errors": [
+          {
+            "path": [
+              "claims",
+              0,
+              "textbook",
+              "citations"
+            ],
+            "type": "missing"
+          }
+        ]
+      }
+    },
+    {
+      "name": "wrong_claim_identity_rejected",
+      "passed": true,
+      "detail": {
+        "rejected_by": "unchanged_binding_relation_or_consistency_gates",
+        "codes": [
+          "ACTUAL_CITATION_ASSESSMENT_MISSING",
+          "ACTUAL_CITATION_FRAGMENT_INVALID",
+          "CLAIM_IDENTITY_MISMATCH",
+          "RELATION_CLAIM_UNKNOWN"
+        ]
+      }
+    },
+    {
+      "name": "omitted_claim_assessment_rejected",
+      "passed": true,
+      "detail": {
+        "rejected_by": "unchanged_binding_relation_or_consistency_gates",
+        "codes": [
+          "CLAIM_IDENTITY_MISMATCH"
+        ]
+      }
+    },
+    {
+      "name": "duplicate_claim_assessment_rejected",
+      "passed": true,
+      "detail": {
+        "rejected_by": "unchanged_binding_relation_or_consistency_gates",
+        "codes": [
+          "CLAIM_IDENTITY_MISMATCH"
+        ]
+      }
+    },
+    {
+      "name": "unknown_unit_identity_rejected",
+      "passed": true,
+      "detail": {
+        "rejected_by": "unchanged_binding_relation_or_consistency_gates",
+        "codes": [
+          "RELATION_UNIT_SET_MISMATCH"
+        ]
+      }
+    },
+    {
+      "name": "foreign_evidence_id_rejected",
+      "passed": true,
+      "detail": {
+        "rejected_by": "unchanged_binding_relation_or_consistency_gates",
+        "codes": [
+          "ACTUAL_CITATION_ASSESSMENT_MISSING",
+          "ACTUAL_CITATION_FRAGMENT_INVALID",
+          "RELATION_ASSESSED_FRAGMENT_MISMATCH"
+        ]
+      }
+    },
+    {
+      "name": "unknown_fragment_id_rejected",
+      "passed": true,
+      "detail": {
+        "rejected_by": "unchanged_binding_relation_or_consistency_gates",
+        "codes": [
+          "RELATION_SOURCE_FRAGMENT_INVALID"
+        ]
+      }
+    },
+    {
+      "name": "invalid_status_rejected_by_original_enum",
+      "passed": true,
+      "detail": {
+        "rejected_by": "ValidationError",
+        "schema_errors": [
+          {
+            "path": [
+              "claims",
+              0,
+              "textbook",
+              "status"
+            ],
+            "type": "literal_error"
+          }
+        ]
+      }
+    },
+    {
+      "name": "unknown_output_key_rejected",
+      "passed": true,
+      "detail": {
+        "rejected_by": "ValidationError",
+        "schema_errors": [
+          {
+            "path": [
+              "unexpected"
+            ],
+            "type": "extra_forbidden"
+          }
+        ]
+      }
+    },
+    {
+      "name": "spaced_citation_key_rejected_without_trimming",
+      "passed": true,
+      "detail": {
+        "rejected_by": "ValidationError",
+        "schema_errors": [
+          {
+            "path": [
+              "claims",
+              0,
+              "textbook",
+              "citations",
+              0,
+              "evidence_id"
+            ],
+            "type": "missing"
+          },
+          {
+            "path": [
+              "claims",
+              0,
+              "textbook",
+              "citations",
+              0,
+              " evidence_id"
+            ],
+            "type": "extra_forbidden"
+          }
+        ]
+      }
+    },
+    {
+      "name": "unit_source_not_in_own_citation_union_rejected",
+      "passed": true,
+      "detail": {
+        "rejected_by": "unchanged_binding_relation_or_consistency_gates",
+        "codes": [
+          "RELATION_ASSESSED_FRAGMENT_MISMATCH"
+        ]
+      }
+    },
+    {
+      "name": "required_remote_repair_list_not_defaulted_locally",
+      "passed": true,
+      "detail": {
+        "rejected_by": "CompatibleSchemaError"
+      }
+    },
+    {
+      "name": "deferred_reason_length_limit_still_locally_enforced",
+      "passed": true,
+      "detail": {
+        "rejected_by": "ValidationError",
+        "schema_errors": [
+          {
+            "path": [
+              "claims",
+              0,
+              "textbook",
+              "units",
+              0,
+              "reason"
+            ],
+            "type": "string_too_long"
+          }
+        ]
+      }
+    },
+    {
+      "name": "honest_condition_negative_remains_semantic_defect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "duplicate_json_key_remains_strictly_rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "general_basis_rejected_by_explicit_textbook_scope",
+      "passed": true,
+      "detail": {
+        "original_mixed_model_shape_valid": true,
+        "explicit_server_scope": "textbook",
+        "scope_guard_runs_before_unit_assessment": true
+      }
+    },
+    {
+      "name": "typed_valid_derivation_cannot_skip_diagnostic_units",
+      "passed": true,
+      "detail": {
+        "original_mixed_model_shape_valid": true,
+        "explicit_server_scope": "textbook",
+        "scope_guard_runs_before_unit_assessment": true
+      }
+    },
+    {
+      "name": "all_required_same_shape_fields_survive_simple_schema_lowering",
+      "passed": true,
+      "detail": {
+        "wire_keywords": [
+          "additionalProperties",
+          "enum",
+          "items",
+          "properties",
+          "required",
+          "type"
+        ],
+        "original_contract_constraints_retained_locally": true,
+        "textbook_only_explicit_diagnostic": true
+      }
+    },
+    {
+      "name": "canonical_schema_unchanged",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "authored_responses_are_not_remote_or_scientific_evidence": true,
+  "response_hydration_key_trimming_or_autofill": false,
+  "remote_wire_input_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-compatible42-candidate\\TEXTBOOK_DIAGNOSTIC42_PREPARED.json",
+    "bytes": 12442,
+    "sha256": "bbcf7a6152b8fe1873166091932fdcc67bd84ec85c147efde8ae8d136943aae5"
+  },
+  "local_adapter_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-compatible42-candidate\\source_relation_schema42_v2.py",
+    "bytes": 4377,
+    "sha256": "d4f90a1b12179e3a323b13abf873a3a66dda896e5f6eb22bd3ca5b8d8d10d634"
+  },
+  "canonical_schema_sha256": "864212a5e636d2cadbc34328f431712a954c30130848a31e64e66e4bdedbc926",
+  "textbook_diagnostic_only_not_mixed_basis_production_replacement": true,
+  "provider_requests": 0,
+  "database_accesses": 0,
+  "main_writes": 0,
+  "b_writes": 0,
+  "audit_denials": []
+}

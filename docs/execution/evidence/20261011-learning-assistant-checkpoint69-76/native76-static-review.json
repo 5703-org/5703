@@ -1,0 +1,139 @@
+{
+  "schema": "5703_native76_independent_narrow_static_review_v1",
+  "status": "PASS_FOR_BOUNDED_SAFE_DIAGNOSTICS_AND_UNCHANGED_NORMAL_JOURNEY",
+  "blocking_findings": [],
+  "review_scope": "Read-only exact helper and sealed-scope comparison; no controller imports, execution, fixture access or further startup probes",
+  "prepared_pin": {
+    "bytes": 3941,
+    "sha256": "88ededfb46192dc2ceea3bc54e57bd831d1af40f8fa3db87b6da0f5b59fca125"
+  },
+  "sealed_scope_pin": {
+    "bytes": 3963096,
+    "sha256": "5c5f7b8c38b621458c07aae6902fe6e09db9f3b4f6400f1c85a2e14a120a1313"
+  },
+  "runtime_helper_pin": {
+    "bytes": 36049,
+    "sha256": "d8daeb91d2a71659ab18daf611d5fdb61225789d944cdbc236da153bd53f65dc"
+  },
+  "sealer_sha256": "c5ddcdd8f5eb05fc96d0cf35f3c7ed939fca38b04aa1127ac520e6bcb60b0c80",
+  "exact_comparison": {
+    "prior74_scope_sha256": "febda8045913f683bce85ad27974eef7a7be78330af635779886114219592248",
+    "seven_other_helpers_byte_identical_to74": true,
+    "unchanged_helpers": [
+      "bootstrap_native70.py",
+      "browser70.cjs",
+      "normal_transport70.py",
+      "targeted_answer70.py",
+      "vite70.config.mjs",
+      "native70-cpu-r2-policy.json",
+      "preflight70.py"
+    ],
+    "changed_helper": "run_native70.py",
+    "changed_helper_regions": [
+      "Finite stderr error class, Node code and builtin frame whitelist constants",
+      "Finite stderr observation counts and tokens only",
+      "Owned stderr collector thread name",
+      "New diagnostic artifact filename and schema"
+    ],
+    "unchanged_admission_protocol_transport_budget_and_closure_code": true,
+    "sealed_scope_changed_keys": [
+      "started_at_UTC",
+      "continuation_phase",
+      "previous_zero_submit_scope_pin",
+      "previous_zero_submit_receipt_pins",
+      "continuation_freeze_pin",
+      "free_browser75_comparison_pins",
+      "helper_pins",
+      "expected_settings"
+    ],
+    "unexpected_scope_changes": [],
+    "expected_settings_only_relocated_to_new_W_prefix": true,
+    "seven_sealed_helper_pins_verified": true,
+    "Main_public_source_pins_verified": 26,
+    "Main_public_source_pin_mismatches": 0,
+    "current_public_sources_documents_and_hashes_unchanged": true
+  },
+  "safe_diagnostics": {
+    "optional_bracket_JS_classes_and_ERR_codes_captured": true,
+    "finite_SyntaxError_RangeError_and_NodeFatalError_classes": true,
+    "error_codes_exported_only_from_finite_whitelist": true,
+    "unknown_codes_and_numeric_errno_counted_without_values": true,
+    "builtin_stack_locations_require_exact_whitelist": true,
+    "stack_output_only_public_basename_and_numeric_line_column": true,
+    "raw_stream_private_message_path_value_or_hash_exported": false,
+    "noncontrol_stdout_remains_noise": true,
+    "normal_job_fields_and_known_STOP_events_unchanged": true
+  },
+  "free_counterexample_evidence": {
+    "script_bytes": 5198,
+    "script_sha256": "44b5094f2588e488ee42b9463ed4eca90fd24644019b3d3fa5105077ae165b71",
+    "receipt_bytes": 796,
+    "receipt_sha256": "5439d0ad2d1a00354301691547c00f27c8f8eef882dcfefd746ac27d37c0e4c6",
+    "status": "PASS",
+    "stderr_synthetic_cases": 15,
+    "stdout_noise_cases": 6,
+    "synthetic_private_marker_path_numeric_value_and_hash_absent_from_asserted_export": true,
+    "independent_review_reexecuted_counterexamples": false,
+    "review_method": "Read exact pinned pure-function counterexample source and receipt, and compare changed parser with the asserted expectations"
+  },
+  "previous74_closure": {
+    "closure_sha256": "82bfe452e7d5583e1f568c0731d6ece0649b4808cf31bc10652fbc0c7ce1e799",
+    "finance_sha256": "2e05b08759f4f8b902ba9a08c2ef7f0555b9ac27da6502d7c8f3665f31e35209",
+    "independent_closure_review_sha256": "8b450454291bc69ec5ac5147f8e738d052cac2d987fbab0acb6ca9c3223480fa",
+    "owned_threads_closed": true,
+    "old_metadata_before_after_byte_equal": true,
+    "old_metadata_sha256": "7ac8a7b3e8e20223f9ae73c557de0e76f5e158b946a07b91767e02085dd323a0",
+    "new_session_or_job_proven": false,
+    "new_target_claim_present": false,
+    "actual_provider_posts": 0,
+    "known_cost_USD": "0",
+    "unresolved_full_protection_USD": "0",
+    "exact_stop": "BROWSER_PIPE_CLOSED",
+    "browser_exit_code": 1,
+    "failure_cause": "UNKNOWN; stdout0 and stderr10 lines309 characters without captured class or frame"
+  },
+  "free75_limit": {
+    "four_attempt_summary_sha256": "be6a8cbb29bc9706794e16d1f418d8c7a54144c375f75542d2d2f5e4bd9e3c1f",
+    "independent_comparison_review_sha256": "5c14197234b99cb646482414d33843eace4996044bd1214f06ec22fab88998d1",
+    "exact_browser_reached_NEW_SESSION_PREPARED_in_synthetic_environment": true,
+    "messages_or_provider_requests": 0,
+    "first_attempt_cleanup_unconfirmed_preserved": true,
+    "does_not_establish_real_native_root_cause_or_acceptance": true
+  },
+  "unchanged_normal_journey_boundaries": {
+    "one_fresh_synthetic_session_and_exact_job_only": true,
+    "held_project_PG_lock_before_new_rows_and_through_owned_threads": true,
+    "old_queue_scan_recovery_cleanup_or_deletion": false,
+    "original_model_configuration_revision_and_hash_guard": true,
+    "disabled_profile_and_empty_history_contract": true,
+    "current_public_source_hash_and_literal_span_guard": true,
+    "teacher": "anthropic/claude-haiku-5.5; 2048 max output; json_schema",
+    "checker": "google/gemini-3.5-flash-lite; 4096 max output; json_object",
+    "native_provider_posts_maximum": 4,
+    "native_full_hold_bound_USD": "0.2858752",
+    "parent_already_closed_requests": 36,
+    "parent_already_known_cost_USD": "0.0185022",
+    "parent_scope_request_cap": 40,
+    "parent_scope_cost_cap_USD": "1",
+    "automatic_retries_or_paid_judges": 0,
+    "durable_hold_settle_UNKNOWN_stop_and_guard_lifecycle_unchanged": true,
+    "normal_project_activation_qualified": false
+  },
+  "qualification_limits": [
+    "This is a safe diagnostic improvement; it does not itself repair or identify the real startup failure.",
+    "No native question was submitted by the reviewed previous74 run.",
+    "The new76 scope was unstarted at this review and establishes no full-answer latency, TTFT, p95, quality or activation acceptance.",
+    "Root may proceed only with the already scoped normal single browser/API journey and existing financial protections; this review authorizes no additional scope."
+  ],
+  "review_operations": {
+    "live_DB": 0,
+    "auth_reads": 0,
+    "network": 0,
+    "browser": 0,
+    "controller_imports": 0,
+    "provider_requests": 0,
+    "Main_writes": 0,
+    "new_startup_probes": 0,
+    "W_output": "independent-narrow-review76.json"
+  }
+}

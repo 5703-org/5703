@@ -1,0 +1,369 @@
+{
+  "status": "CHECKER110_INSTALLED_FREE_CONTRACT_PASS_LIVE_NOT_RUN",
+  "recorded_at_UTC": "2026-10-12T17:50:45.919402+00:00",
+  "install": {
+    "status": "CHECKER110_TWO_FILE_INSTALL_READBACK_PASS",
+    "prompt_original_prefix_preserved": true,
+    "prompt_sha256": "af234cebbbfd5f2b4b5057c92e205df0ff859f3f72a44a1f908566c2b05dc251",
+    "test_sha256": "191cc0e80e40e76354196400d0516743412419d0eb9202e8970bc18ddf41ae8f",
+    "production_changes": [
+      "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_check_v2.txt"
+    ],
+    "new_tests": [
+      "E:\\5703\\learning-assistant\\tests\\unit\\test_checker_context_scope110.py"
+    ],
+    "protected_unchanged": 34,
+    "provider_calls": 0,
+    "DB_connections": 0,
+    "other_project_changes": 0,
+    "old_answers_rewritten": 0,
+    "live_quality_gain_verified": false
+  },
+  "post_install_repo_format": {
+    "status": "REPO_FORMAT_ONLY_AST_UNCHANGED_READBACK_PASS",
+    "before_sha256": "191cc0e80e40e76354196400d0516743412419d0eb9202e8970bc18ddf41ae8f",
+    "final_test_sha256": "11373e74b17875dbdf37b36e9577dd713483cc8c0a58da6c8a8ec9d6f7785ddd",
+    "final_test_bytes": 10480,
+    "config": "E:\\5703\\learning-assistant\\pyproject.toml",
+    "semantic_ast_unchanged": true,
+    "provider_calls": 0
+  },
+  "free_checks": [
+    {
+      "junit": "junit-candidate110-final.xml",
+      "tests": 55,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "duration_seconds": "1.063"
+    },
+    {
+      "junit": "junit-installed110-final.xml",
+      "tests": 55,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "duration_seconds": "0.843"
+    }
+  ],
+  "new_authored_controls": 12,
+  "existing_controls": 43,
+  "ruff_check": "PASS",
+  "ruff_format_check": "PASS",
+  "optimized_installer_guard": {
+    "status": "OPTIMIZED_INSTALLER_REFUSED_BEFORE_WRITE_PASS",
+    "installer_sha256": "b843afe9af0eef6908b126a3f4ae25cfa74fb505a288b35c085bb1f76777f596",
+    "exit_code": 1,
+    "stderr": "OPTIMIZED_INSTALLATION_REFUSED",
+    "main_preimages_unchanged": true,
+    "claims_tests_readback_not_created": true,
+    "provider_calls": 0
+  },
+  "semantic_judgments": "Authored scripted fixture values, not independent model scientific accuracy",
+  "initial_local_failure": "Candidate01:11 new controls failed on duplicate fixture citations argument;44 passed. Fixed the helper locally before installation; original XML retained. Later candidate02/03/final all55 passed. No provider dispatch occurred.",
+  "prepared_real_validation_inventory": {
+    "schema": "5703_native111_prepared_inventory_v1",
+    "status": "PREPARED_NOT_AUTHORIZED_FOR_LIVE_EXECUTION",
+    "prepared_at_UTC": "2026-10-12T17:47:12.526269+00:00",
+    "independent_batch_id": "5703-native111-proposed",
+    "question_id": "Q_NATIVE111_S01",
+    "question_text": "What is an enzyme, and what does a catalyst change about a chemical reaction?",
+    "source_pins": [
+      {
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\main.py",
+        "bytes": 3780,
+        "sha256": "ef671429abefbad54925e87613f4686877068de5137396b86d011fb519de473a"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\worker.py",
+        "bytes": 12018,
+        "sha256": "bda7c7ec99de6f30eb6e7d124d6dc8318752f4680a6d0c84106f65f013553df4"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\core\\config.py",
+        "bytes": 7563,
+        "sha256": "ae1d193ccbde984f02a8ec57dbef9979ce28438b7e38f50bf4bec6e9f55b31e2"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\db\\session.py",
+        "bytes": 1647,
+        "sha256": "c49d02fba805016dc940acd4e281f0717d9d88ff0ffc0687f4bbc5d7d5b0eeeb"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\answering\\service.py",
+        "bytes": 95993,
+        "sha256": "f302de879a270a5879adbc9374331c86d7b014dadca79c0a40a804647ceafeb0"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\answering\\models.py",
+        "bytes": 6923,
+        "sha256": "179e0a78c38a4c0224ad0b5846ca6d7731e97bef7cab6c0fb8bc21cbeaf9ef29"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\learning\\models.py",
+        "bytes": 1060,
+        "sha256": "b98af9973cf65593d30fb20bda08ccbbb0a8dc304aa9223f6f71aa49b85f80ac"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\identity\\models.py",
+        "bytes": 2932,
+        "sha256": "c11094b2642b9a13bab870ba6154aa302280836c8838a42f2566547ac01af80d"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\db\\base.py",
+        "bytes": 1052,
+        "sha256": "45b925d6ecbb31a10e68f415a93a271fded22e7a5a910be71ae8d0e74157920b"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\platform_core\\worker_locks.py",
+        "bytes": 3015,
+        "sha256": "b2d5c5284c3440e16dee05d2e41677a4a94390436aacab8e97e9508d3c38a4fb"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\learning_state\\models.py",
+        "bytes": 8894,
+        "sha256": "170ac23cfe6c4686ea6be837fa9db04007878fc8682e5a032d2f325bed0f26ec"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\model_settings\\service.py",
+        "bytes": 19093,
+        "sha256": "e6e0a9d41846ff36a37bc1eef72892f9ddbc3f2c4648f36f2e9a714f07d5e39d"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\model_settings\\models.py",
+        "bytes": 7198,
+        "sha256": "dd4aadd9910b1935149174d5d355a3ebc82c1aa0ce1e9ae030ab95e06dac24e4"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\knowledge\\service.py",
+        "bytes": 62130,
+        "sha256": "26b6e89f55902bfba8ca8302ab69ae54a65160193994ea204272964ae968c8e1"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\generation\\adapters.py",
+        "bytes": 29552,
+        "sha256": "99075cb07f4faf861119c5fa5113da6951408c02323c14452d090661fd0c3ddb"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\generation\\providers.py",
+        "bytes": 29380,
+        "sha256": "8411a08b94c57feac7d6ca068c6feae9193201c109f28d9b64d014d3199cd4ee"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\generation\\types.py",
+        "bytes": 10176,
+        "sha256": "757f907befeaa9300fdeb8ab5c8d03d205c142920cf3c2f5e72ee98988f53068"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\generation\\service.py",
+        "bytes": 29254,
+        "sha256": "c02d6b4cf0ee9d3aaf961a5b6639d6097f68b89c843221de637f42b4af352b23"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\generation\\checked.py",
+        "bytes": 173760,
+        "sha256": "ce58e5862a5657051725c84e77c4d65566f31b20f8cbe241e7f5aeaee5f076d7"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\generation\\prompt_builder.py",
+        "bytes": 10256,
+        "sha256": "d6cb2fefc3a98549b4193111cff5e1132e663d02198af1b8a9b3aee98325a606"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\generation\\openrouter_routes.py",
+        "bytes": 12356,
+        "sha256": "c82e86990476c0f95da650b38ef444e62c1dba6ae29f407a44c4af444ad2348e"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\frontend\\src\\Chat.tsx",
+        "bytes": 43076,
+        "sha256": "e15a0b56d7ee9d20c8312c05b7e86f60360c3127d930ce50f348c56b0c0a3ad7"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\frontend\\src\\App.tsx",
+        "bytes": 15036,
+        "sha256": "0fa3fa6a7afeb674c65f58be33d83d161ef54a7e543543bc698bf5a1975046bd"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\frontend\\src\\Markdown.tsx",
+        "bytes": 4549,
+        "sha256": "3edc21990e972fae30acc2b22fea1ddee014e8cc7e11b93c67dfa8d6081966d4"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\frontend\\src\\api.ts",
+        "bytes": 4059,
+        "sha256": "5492a02e628bdd7b189329e0d6e97026857ef1e8d6ed4fc32a983f4ed24e1f88"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\frontend\\package.json",
+        "bytes": 1134,
+        "sha256": "ae34299e3aae1b093395469121722889d73d475ab83d1bd75e6df4d23dd42baf"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\retrieval\\chat.py",
+        "bytes": 6963,
+        "sha256": "79bcc314e734acd77a02f8e70efa86a6d24f6f0ca6c2598d5d445d237a6b0267"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\retrieval\\ranking.py",
+        "bytes": 5195,
+        "sha256": "ba6a33904d180dc7d8f7af6ed6bb51248ddea0aded39426a4c97e831bdc98fb8"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\retrieval\\query_cache.py",
+        "bytes": 1715,
+        "sha256": "bd1c4efbbb6219b1bba07b72e58a3dab00dea0ec3e4206e9e0793a0e7304e8e8"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\knowledge\\cache.py",
+        "bytes": 4748,
+        "sha256": "85706e87b794b66a7c74a3f270d7ee77c68d3aa41602c9b6fc10374c605cf935"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\conversation\\query_v22.py",
+        "bytes": 1465,
+        "sha256": "96d385f076ee0457b0a72a85de88bb92d2ab49554e38e3108252db9882e4ef93"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_check_v2.txt",
+        "bytes": 8882,
+        "sha256": "af234cebbbfd5f2b4b5057c92e205df0ff859f3f72a44a1f908566c2b05dc251"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_generation_v2.txt",
+        "bytes": 3561,
+        "sha256": "783636de019da97e2b6b7ee7995c2bf41faf1e6a5b69ca6f2519ee71b757b95f"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_repair_v2.txt",
+        "bytes": 1655,
+        "sha256": "03c8fa82094f1d2c9e4e7fee95bfd6ec2f555cef72220bdf761a13679779b92c"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\generation\\prompts\\joint_check_v5.txt",
+        "bytes": 21673,
+        "sha256": "06763c8ce8ac3395f93b26fcf66131bb9fdad8370284e9ceb233a5b48afcf27e"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\generation\\source_relations_v2.py",
+        "bytes": 25459,
+        "sha256": "ab22171c03566ed1f8b97e67bb1d0d5f4b276e0ab0bcc40be487f3b296ceeb11"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\generation\\local_repair.py",
+        "bytes": 6729,
+        "sha256": "3115857478a71bbd8b4356355501e8bf3fff04ee1a7585ff7110c50578c5d03f"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\generation\\checker_encoding.py",
+        "bytes": 4294,
+        "sha256": "57e7fdc229e0732d827af1be3985db8c8ccff91d40e4a6699ad28784ccedf8e2"
+      }
+    ],
+    "checker_prompt_version": "checker110_complete_context_compatibility",
+    "generation_prompt_version": "science107_unchanged",
+    "prewarm_version": "native106_exact_worker_engine_unchanged",
+    "endpoint": "https://api.deepseek.com/v1/chat/completions",
+    "model": "deepseek-flash",
+    "configuration": {
+      "temperature": 0,
+      "thinking": "disabled",
+      "response_format": "json_object",
+      "window_tokens": 65536,
+      "teacher_and_patch_output_cap": 2048,
+      "checker_and_recheck_output_cap": 4096,
+      "provider_timeout_seconds": 60,
+      "profile": "disabled",
+      "history": [],
+      "reading_context": null,
+      "source_relation_policy": "source_relation_contract_v2",
+      "joint_checker_policy": "typed_joint_v5",
+      "repair_policy": "claim_patch_repair_v3"
+    },
+    "expected_isolated_binding_not_revalidated_this_phase": {
+      "fixed_workspace_id": "5ef0e22c-45f2-4c72-9ff8-acfee1e6b655",
+      "expected_release_id": "4f11bd70-a486-4d16-b216-78cfe499530a",
+      "expected_database": "cs30_week10_pair_b_20261009_01",
+      "database_host": "127.0.0.1",
+      "database_port": 15433
+    },
+    "retrieval": {
+      "version": "chat_hybrid_rerank_v1",
+      "retriever": "R2",
+      "candidate_count": 20,
+      "reranker_model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+      "reranker_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+      "reranker_device": "cpu",
+      "reranker_cache_folder": "E:\\5703\\learning-assistant\\artifacts\\huggingface"
+    },
+    "corpus": "Existing four public OpenStax books, original release with 10594 chunks; preserve all source text",
+    "wire_inventory": {
+      "generation": "Same question, freshly retrieved/packed public textbook passages and normal generation instructions; no learner identity/profile/history/auth or old answers",
+      "checker": "New proposed full body/short answer, immutable actual citation bindings, complete submitted fragments and existing check instructions with Checker110",
+      "conditional_patch": "New defective claims/reasons, protected compatible spans, original question and actual available source candidates; never send without room for full recheck",
+      "exact_wire_manifest": "Must freeze and validate actual selected public source texts/hashes at the normal pre-dispatch boundary; no new wire was built or sent here"
+    },
+    "budget": {
+      "max_official_POSTs": 3,
+      "cap_CNY": "0.40",
+      "new_POSTs": 0,
+      "new_known_cost_CNY": "0",
+      "new_UNKNOWN_CNY": "0",
+      "old97_UNKNOWN_CNY_retained": "0.10",
+      "old_native_six_slot_batch_closed": true,
+      "native108_closed_known_upper_CNY_retained": "0.081228",
+      "automatic_retry": false,
+      "old_batch_reopened": false,
+      "amount_is_not_an_invoice": true,
+      "tariff": "Use previously retained peak input2/output8 CNY per million as an upper only; verify current official tariff before any future dispatch",
+      "guard": "Per-stage actual wire/output bound plus unresolved full hold must fit this independent cap; ambiguous responses retain UNKNOWN and STOP"
+    },
+    "actual_request_graph": {
+      "direct_success": [
+        "generation",
+        "joint_check"
+      ],
+      "repair_success": [
+        "generation",
+        "joint_check",
+        "semantic_repair",
+        "joint_recheck"
+      ],
+      "direct_success_calls": 2,
+      "repair_success_calls": 4,
+      "repair_path_admitted_under_three_call_cap": false,
+      "checker_rejection_action": "STOP after two calls; existing service requires two remaining calls for patch plus full recheck, so do not dispatch patch or publish the defective answer",
+      "fourth_call": "Outside current prepared three-call scope; report graph before seeking any later amendment, never skip fresh recheck",
+      "format_or_contract_repair_calls": "Not included or authorized in this prepared scope; STOP if needed"
+    },
+    "future_preflight_required": [
+      "Separate explicit live execution instruction; this delegation authorizes free implementation/checklist only",
+      "New frozen controller/helper hashes and new independent durable budget journal; old controllers remain closed",
+      "Read-only validation of original isolated synthetic fixture, database/release/current epoch and unchanged active model pointers",
+      "Exact worker Engine/query matching read-only prewarm before Send; record startup separately",
+      "Actual public source/wire boundaries, no private/auth content; source membership/current publication fence",
+      "Finite dummy transport controls for new budget/request graph before model use"
+    ],
+    "acceptance": {
+      "scientific": "Independently inspect unchanged three concerns and full/short answer. Explicit supplied transient/net and definition/route restrictions must not be silently lost; force remains an open scientific review concern when no explicit counterexample exists",
+      "positive_proof": "Each supported unit keeps its own actual cited/selected proof; external context may locate a defect only, never certify it",
+      "repair": "If separately authorized with enough calls later, retain supported protected spans and perform complete fresh final check; no repair success claimed from compilation alone",
+      "native": "One fresh ordinary synthetic chat, complete persisted answer-ID matched DOM, citations, refresh and Sources reopen; failed draft never counts as published answer",
+      "timing": "Capture Send-to-complete DOM and full stage timings; startup excluded and reported. Single exposed S01 is not stable p95, single-factor causality or Human Gold"
+    },
+    "runtime_rebound": false,
+    "new_controller_created": false,
+    "credentials_read": false,
+    "database_connected": false,
+    "live_quality_verified": false,
+    "project_complete": false
+  },
+  "new_provider_calls": 0,
+  "new_database_connections": 0,
+  "new_credential_reads": 0,
+  "new_model_spend": 0,
+  "old_scientific_failures_reclassified": false,
+  "force_concern_resolved": false,
+  "live_scientific_quality_verified": false,
+  "project_complete": false
+}

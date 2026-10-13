@@ -1,0 +1,299 @@
+{
+  "schema": "dev89_independent_closed_case_review_v1",
+  "case_id": "case01",
+  "question_id": "development89_case01",
+  "question_sha256": "79e10aea43d34d5ec92aaa1d42a4123f94c4991e83cbfa6be3ae55e97891ffe5",
+  "status": "FAIL",
+  "independent_answer_QA": "FAIL",
+  "draft_scientific_truth": "QUALITATIVELY_CORRECT_WITH_OWN_SUPPORT_GAPS",
+  "draft_requested_coverage": "COMPLETE_CONTENT_3_OF_3_FACETS",
+  "published_requested_coverage": "NO_PUBLISHED_ANSWER",
+  "source_availability": "FULL_ACTUAL_PACKET_FOR_REQUESTED_FACETS",
+  "actual_packet_review": {
+    "claim_count": 6,
+    "unit_count": 16,
+    "fragment_count": 69,
+    "all_submitted_fragments_reviewed": true,
+    "slot02_slot03_original_decoded_packet_equal": true,
+    "original_decoded_packet_sha256": "54359d851b5574dd635f5a4ced3a27843580c9f06aa92b547b7320b46adac290",
+    "inhibitor_offsite_support_available_elsewhere": [
+      "ev_005/F040",
+      "ev_008/F069"
+    ],
+    "qualitative_activity_direction_support_available_elsewhere": [
+      "ev_006/F045-F047",
+      "ev_008/F065-F066"
+    ],
+    "RAG_MISS_for_requested_facets": false,
+    "missing_experimental_inputs": false,
+    "no_other_parent_evidence_borrowed_for_pass": true
+  },
+  "facet_assessment": [
+    {
+      "facet": "A1",
+      "content": "COMPLETE",
+      "own_support": "FAIL_UNCITED_OPENER",
+      "claims": [
+        "C001",
+        "C002"
+      ],
+      "detail": "The assertion that allosteric molecules can inhibit or activate is scientific and correct, but its sentence has empty actual citation bindings; later cited sentences do not retrospectively cite it."
+    },
+    {
+      "facet": "A2",
+      "content": "COMPLETE",
+      "own_support": "PARTIAL",
+      "claims": [
+        "C004"
+      ],
+      "support": [
+        "ev_001/F001",
+        "ev_001/F004",
+        "ev_001/F007"
+      ],
+      "detail": "Shape, affinity/binding and reduced activity supported. The added inhibitor-away-from-active-site unit is not supported by its own ev001 block: F009 gives activator location, not inhibitor location."
+    },
+    {
+      "facet": "A3",
+      "content": "COMPLETE",
+      "own_support": "PARTIAL_ACTIVITY_COMBINATION_NOT_ESTABLISHED_IN_OWN_EV002",
+      "claims": [
+        "C005"
+      ],
+      "support": [
+        "ev_002/F010-F014"
+      ],
+      "detail": "Activator away-site, shape, affinity and better substrate fit are supported. The explicit activity-increased conclusion has no activity/rate proposition in this own cited block; full packet contains the qualitative activity link in ev006, which cannot be borrowed. This is a proof limitation, not a finding that activation is scientifically false."
+    }
+  ],
+  "claim_unit_audit": [
+    {
+      "claim": "C001",
+      "units": [
+        "U01"
+      ],
+      "finding": "Direct No answer; no citation, interpreted with the following explanation, not a standalone new mechanistic fact."
+    },
+    {
+      "claim": "C002",
+      "units": [
+        "U01",
+        "U02",
+        "U03"
+      ],
+      "finding": "Correct scientific opener, empty actual citations: FAIL."
+    },
+    {
+      "claim": "C003",
+      "units": [
+        "U01",
+        "U02"
+      ],
+      "finding": "General off-site definition and bidirectional activity are qualitatively correct; own fragments establish activator location, inhibitor activity and activator existence, but the complete activity-direction combination needs sources outside its own selection. No retrospective parent borrowing."
+    },
+    {
+      "claim": "C004",
+      "units": [
+        "U01",
+        "U02",
+        "U03"
+      ],
+      "unit_findings": {
+        "U01": "FAIL_OWN_SOURCE_INHIBITOR_LOCATION",
+        "U02": "SUPPORTED_BY_F004_F007",
+        "U03": "SUPPORTED_BY_F001"
+      }
+    },
+    {
+      "claim": "C005",
+      "units": [
+        "U01",
+        "U02",
+        "U03"
+      ],
+      "unit_findings": {
+        "U01": "SUPPORTED_BY_F011_F012",
+        "U02": "SUPPORTED_BY_F011_F012_F014",
+        "U03": "OWN_SOURCE_ACTIVITY_LINK_NOT_ESTABLISHED"
+      }
+    },
+    {
+      "claim": "C006",
+      "units": [
+        "U01",
+        "U02",
+        "U03",
+        "U04"
+      ],
+      "finding": "Own ev001+ev002 summary shape/binding contrast supported; preserve the inhibitor/activator relation and both citations."
+    }
+  ],
+  "checker_observations": {
+    "slot02": "HTTP200 finish_stop, compact raw marks uncited C001/C002 unsupported but local codec rejects own-parent selection mismatch; no canonical hydration or semantic publication gates accepted.",
+    "slot03": "HTTP200 finish_stop, compact raw proposes bo=true and changes uncited scientific opener basis to general_knowledge; still codec-invalid. Proposed judgments have no accepted semantic authority.",
+    "proposed_selection_violations": [
+      {
+        "slot": 2,
+        "claim": "C003",
+        "unit": "U02",
+        "unit_fragments_not_selected_by_own_parent": [
+          "F008"
+        ]
+      },
+      {
+        "slot": 3,
+        "claim": "C003",
+        "unit": "U02",
+        "unit_fragments_not_selected_by_own_parent": [
+          "F001",
+          "F008",
+          "F010",
+          "F014"
+        ]
+      }
+    ],
+    "model_accepted_scientific_false_positive_observed": false,
+    "final_hydrated_checker_count": 0,
+    "full_semantic_or_publication_cause_recovered_from_DB": false,
+    "public_local_error": "Unit evidence was not selected by its own parent"
+  },
+  "false_refusal": {
+    "verdict": "NOT_ESTABLISHED",
+    "detail": "The system failed to deliver, but public evidence shows checker transport/contract failure rather than a validated semantic refusal. The teacher supplied a full draft. Do not call failed codec a semantic refusal, and do not treat absence of publication as scientific acceptance."
+  },
+  "publication": {
+    "API_status": "API_FAILED",
+    "job_state": "failed",
+    "answer_id": null,
+    "published_answer": false,
+    "independent_page_eligible": false
+  },
+  "clock": {
+    "started_utc": "2026-10-12T00:51:34.087885+00:00",
+    "finished_utc": "2026-10-12T00:52:16.730312+00:00",
+    "api_send_to_terminal_ms": 42402.150699999765,
+    "full_answer_API_sample_n": 0,
+    "complete_DOM_sample_n": 0,
+    "first_prose_ms": null,
+    "complete_DOM_ms": null,
+    "TTFT_ms": null,
+    "p95_ms": null
+  },
+  "finance": {
+    "actual_provider_POST": 3,
+    "known_cost_USD": "0.0534685",
+    "UNKNOWN_protection_USD": "0",
+    "numeric_settlements": 3,
+    "per_case_cap": 4,
+    "cohort_protocol_sha256": "704153b20e858e964314cb078c5773352428f26632df8e95cf0424963a25a483"
+  },
+  "closure": {
+    "owned_threads_closed": true,
+    "old_metadata_unchanged": {
+      "sessions": true,
+      "jobs": true,
+      "answer_requests": true,
+      "answers": true,
+      "active_model_configurations": true
+    },
+    "old_queue_consumed": false
+  },
+  "baseline": {
+    "source_version_sha256": "f7f03e32b3bab3f539002e53798cc5abdfc0f7816d37d78d85401eff8e1ce5d2",
+    "public_protocol_sha256": "704153b20e858e964314cb078c5773352428f26632df8e95cf0424963a25a483",
+    "private_frozen_rubric_sha256": "468ecce8dcd190c567d942c133731b6a52948994520c7e0d1529669a4b4f5c14"
+  },
+  "cohort_accounting": {
+    "frozen_denominator": 8,
+    "this_case": "FAILED_DELIVERY_AND_INDEPENDENT_OWN_PROOF",
+    "other_cases_not_assumed": true
+  },
+  "input_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case01\\journey-receipt88.json",
+      "bytes": 1700,
+      "sha256": "ceed6acf059ad7539bc59a83f31ad80fac4561d1e564a123a10c5c1de80b91a2"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case01\\api-closure77.json",
+      "bytes": 1187,
+      "sha256": "b5ba1b8de6bbfadb67213e32069b79f164ee1817d8d15363284559b2d8b27cf8"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case01\\checker-decode-error88.json",
+      "bytes": 996,
+      "sha256": "ca33783fec82190a174574319fd45a9054d7c72467d6adc92ad8271c3d132480"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case01\\native-provider70\\final-receipt.json",
+      "bytes": 1412,
+      "sha256": "3e53d06b29ddf6faa623a6f4c6fa53a11bfb7e422a7d376204291dae408a848a"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case01\\native-provider70\\slot-01-normal-outcome.json",
+      "bytes": 2386,
+      "sha256": "f1c0d06971417b21fa5c085dc50b182eac87aae09f08f9d998f024c5ececd272"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case01\\native-provider70\\slot-01-public-inputs.json",
+      "bytes": 92962,
+      "sha256": "3ee94e2dea27324ea5ddf16968d3ee608684f8551cac921af07232e510f3403d"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case01\\native-provider70\\slot-01-financial.json",
+      "bytes": 325,
+      "sha256": "a34bf9182f613320e406504fbb06cf7f9fea655d4a6e7036832229f145f108a3"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case01\\native-provider70\\slot-01-settlement.json",
+      "bytes": 247,
+      "sha256": "c3d1f0ed342d9ca89950022e5d687c8d0bac4d46ead4b70369febdf73e4cb581"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case01\\native-provider70\\slot-02-normal-outcome.json",
+      "bytes": 11126,
+      "sha256": "c724e8a77ecbd3f2f08d65d2688eb4ae7211b821883189bddc8e60f52f40312f"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case01\\native-provider70\\slot-02-public-inputs.json",
+      "bytes": 167946,
+      "sha256": "401d45091a46581a67ef403309d817aa98c6a5c01b390048a521e3af5b3de644"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case01\\native-provider70\\slot-02-financial.json",
+      "bytes": 325,
+      "sha256": "8b814a13f1c81c9547fa12c3f17d026866dda7081c83f334f9f50894bea240ba"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case01\\native-provider70\\slot-02-settlement.json",
+      "bytes": 247,
+      "sha256": "2759a97453b23292ee446b4fb9bf42484252f706cf7935044afc4951a3ca3f06"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case01\\native-provider70\\slot-03-normal-outcome.json",
+      "bytes": 9272,
+      "sha256": "c8a1612e11300a12cc0e86c3c64e69e72f890bf45e6629032a104e9f0ea61011"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case01\\native-provider70\\slot-03-public-inputs.json",
+      "bytes": 169542,
+      "sha256": "83f5fb94039802a8fffaab86e838cbd338b6306354a5840a757f6047777ac0ea"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case01\\native-provider70\\slot-03-financial.json",
+      "bytes": 325,
+      "sha256": "328a8d1fbbd62cad99a80c42a92a81272990bce9b45ab9b43265d854fe6f2dab"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case01\\native-provider70\\slot-03-settlement.json",
+      "bytes": 247,
+      "sha256": "042012c428bbb5e0789dc9bae812e6b0da05345c2536283acc3eec41bb9ca0a8"
+    }
+  ],
+  "limits": [
+    "Independent exposed AI source assessment, not HumanGold.",
+    "No actual textbook source content copied into review; fragment identifiers are scoped to this case.",
+    "No new model/auth/DB/network calls; no Main/runtime writes or tests.",
+    "Initial reviewer exec connection outage was recovered once in the original tool; it was not an actual case model cause."
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "schema": "offline_guard_controls08e",
+  "status": "PASS",
+  "controls": [
+    {
+      "id": "old-hostname-resolution-allowed",
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "exception_type": null,
+      "passed": true
+    },
+    {
+      "id": "old-legitimate-numeric-resolution-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "PermissionError",
+      "passed": true
+    },
+    {
+      "id": "old-unrelated-IP443-too-broad",
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "exception_type": null,
+      "passed": true
+    },
+    {
+      "id": "new-original-resolver-hostname443-stream-allowed",
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "exception_type": null,
+      "passed": true
+    },
+    {
+      "id": "new-hostname-wrong-port-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "PermissionError",
+      "passed": true
+    },
+    {
+      "id": "new-hostname-UDP-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "PermissionError",
+      "passed": true
+    },
+    {
+      "id": "new-unrelated-hostname-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "PermissionError",
+      "passed": true
+    },
+    {
+      "id": "new-numeric-before-validation-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "PermissionError",
+      "passed": true
+    },
+    {
+      "id": "new-hostname-outside-original-resolver-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "PermissionError",
+      "passed": true
+    },
+    {
+      "id": "new-exact-validated-numeric443-stream-allowed",
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "exception_type": null,
+      "passed": true
+    },
+    {
+      "id": "new-other-numeric-IP-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "PermissionError",
+      "passed": true
+    },
+    {
+      "id": "new-numeric-wrong-port-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "PermissionError",
+      "passed": true
+    },
+    {
+      "id": "new-numeric-UDP-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "PermissionError",
+      "passed": true
+    },
+    {
+      "id": "new-exact-validated-connect443-stream-allowed",
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "exception_type": null,
+      "passed": true
+    },
+    {
+      "id": "new-other-IP-connect443-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "PermissionError",
+      "passed": true
+    },
+    {
+      "id": "new-hostname-connect-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "PermissionError",
+      "passed": true
+    },
+    {
+      "id": "new-private-IP-connect-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "PermissionError",
+      "passed": true
+    },
+    {
+      "id": "new-connect-wrong-port-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "PermissionError",
+      "passed": true
+    },
+    {
+      "id": "new-connect-UDP-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "PermissionError",
+      "passed": true
+    },
+    {
+      "id": "new-wrong-active-URL-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "PermissionError",
+      "passed": true
+    },
+    {
+      "id": "new-no-started-receipt-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "PermissionError",
+      "passed": true
+    },
+    {
+      "id": "new-not-posted-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "PermissionError",
+      "passed": true
+    },
+    {
+      "id": "new-wrong-phase-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "PermissionError",
+      "passed": true
+    },
+    {
+      "id": "new-no-active-stage-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "PermissionError",
+      "passed": true
+    },
+    {
+      "id": "new-IPv6-canonical-pinned-resolution-allowed",
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "exception_type": null,
+      "passed": true
+    },
+    {
+      "id": "new-IPv6-unscoped-connect-allowed",
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "exception_type": null,
+      "passed": true
+    },
+    {
+      "id": "new-IPv6-nonzero-scope-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "PermissionError",
+      "passed": true
+    },
+    {
+      "id": "new-wrapper-unchanged-original-resolver-once",
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "exception_type": null,
+      "passed": true
+    },
+    {
+      "id": "new-wrapper-repeat-resolution-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "RuntimeError",
+      "passed": true
+    },
+    {
+      "id": "new-wrapper-wrong-URL-denied-before-resolver",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "RuntimeError",
+      "passed": true
+    },
+    {
+      "id": "new-wrapper-nonpublic-return-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "RuntimeError",
+      "passed": true
+    },
+    {
+      "id": "old-real-stdlib-chain-with-fake-primitives-reproduces-denial",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "PermissionError",
+      "passed": true
+    },
+    {
+      "id": "new-real-stdlib-chain-with-fake-primitives-passes",
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "exception_type": null,
+      "passed": true
+    },
+    {
+      "id": "existing-credential-loopback-DNS-preserved",
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "exception_type": null,
+      "passed": true
+    },
+    {
+      "id": "existing-credential-loopback-connect-preserved",
+      "expected_allowed": true,
+      "observed_allowed": true,
+      "exception_type": null,
+      "passed": true
+    },
+    {
+      "id": "credential-other-IP443-denied",
+      "expected_allowed": false,
+      "observed_allowed": false,
+      "exception_type": "PermissionError",
+      "passed": true
+    }
+  ],
+  "passed": 36,
+  "failed": 0,
+  "actual_DNS_socket_provider_DB_credential_model_calls": 0,
+  "method": "Extracted callback functions and installed stdlib create_connection AST executed with synthetic in-memory fake primitives only; no entire runner or Main modules executed.",
+  "diagnosis": "08d deterministically denies the numeric getaddrinfo required by Main pinned transport; actual08d did not retain the underlying exception, so this reproduces a local incompatibility and is not direct proof of the actual failed event.",
+  "prior08d_UNKNOWN": 1,
+  "prior08d_hold_usd": "0.03",
+  "UNKNOWN_not_reclassified": true,
+  "pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\component-rag-quality08\\run_matched_component_generation08d.py",
+      "bytes": 22264,
+      "sha256": "91e8adc84cb321e0d48e2e0ec6b789effd02c788005f2a74b97473ec64b0a94a"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\component-rag-quality08\\run_matched_component_generation08e.py",
+      "bytes": 25667,
+      "sha256": "b5915fab8d79c4e8797be936dc3ffe6096376a30c51b1e3f9170b4130818766d"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\adapters.py",
+      "bytes": 29552,
+      "sha256": "99075cb07f4faf861119c5fa5113da6951408c02323c14452d090661fd0c3ddb"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\network_policy.py",
+      "bytes": 3407,
+      "sha256": "31ee11495949894073b292cd39b5d186f0ea21f5fd3f598b243e9f37b467bf02"
+    },
+    {
+      "path": "D:\\Python\\Lib\\socket.py",
+      "bytes": 38741,
+      "sha256": "523695ac3383799547b421b4fe18004de1e80181e97181b6d7a10533b47f4c49"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\component-rag-quality08\\offline_network_guard_controls08e.py",
+      "bytes": 8965,
+      "sha256": "fce0d0d952d7d9c4b5b184cd90414da88253c6c829afd1a6d3dc02e56249818b"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "schema": "5703_actual43_curated_checkpoint_summary_v1",
+  "status": "FIXED_CONDITION_REPEATS_CLOSED",
+  "full_result": {
+    "file": "actual-checker-compatible43-result01.json",
+    "bytes": 132326,
+    "sha256": "16850d71dbb114856d0b2b21b561928a28c9ebe0193db187864d08c3a93143a2"
+  },
+  "independent_structure_review": {
+    "file": "ACTUAL43_INDEPENDENT_STRUCTURAL_REVIEW.json",
+    "status": "PASS_INDEPENDENT_PUBLIC_STRUCTURE_CONDITION_AND_BUDGET_REVIEW",
+    "sha256": "66c48db686970866a917f06916afe9713f1c6220ba5ff13887d01ab21506ba7e"
+  },
+  "independent_source_review": {
+    "file": "ACTUAL_COMPATIBLE43_INDEPENDENT_SOURCE_REVIEW01.json",
+    "status": "BOTH_STRUCTURALLY_VALID_SOURCE_COMPLETENESS_NOT_PASS",
+    "sha256": "ce75138dd1f4608fc564d350894563b3241a85afeb0b5fb8a0e9ebc0ceea2fa4"
+  },
+  "fixed_input_counts": {
+    "claims": 10,
+    "syntactic_units": 19,
+    "source_fragments": 71
+  },
+  "requested_model": "google/gemini-3.5-flash-lite",
+  "requested_only_route": "google-vertex/global",
+  "serving_region_certified": false,
+  "physical_POSTs": 2,
+  "known_cost_USD": "0.0310396",
+  "new_UNKNOWN_holds_USD": "0",
+  "open_claims": 0,
+  "fully_settled": true,
+  "credential_preparation_read_only_DB_legs": 1,
+  "experiment_DB_accesses": 0,
+  "automatic_retries": 0,
+  "teacher_calls": 0,
+  "JSON_repairs": 0,
+  "old_scope_reuse": false,
+  "historical_UNKNOWN_holds_released": false,
+  "fresh_lock_released": true,
+  "no_followup_requests_authorized_within_this_closed_scope": true,
+  "matched_pair": false,
+  "identical_condition_repeats": true,
+  "arms": [
+    {
+      "arm": "fixed_replay43_01",
+      "physical_POSTs": 1,
+      "component_latency_ms": 7768.5613,
+      "timing_boundary": "LLMAdapter.generate invocation to complete return",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "known_cost_USD": "0.0138473",
+      "fully_settled": true,
+      "schema_PASS": true,
+      "full_original_schema_PASS": true,
+      "repeat_structure_gate_PASS": true,
+      "source_and_unit_reference_structure_PASS": true,
+      "local_binding_and_relation_contract_PASS": true,
+      "semantic_consistency_PASS": true,
+      "source_support_defects_absent_local": true,
+      "independent_unit_counts": {
+        "complete": 14,
+        "partial": 5,
+        "unsupported": 0
+      },
+      "independent_all_unit_complete_claim_counts": {
+        "complete": 6,
+        "partial": 4,
+        "unsupported": 0
+      },
+      "independent_source_completeness_PASS": false,
+      "raw_model_supported_claims": 10,
+      "raw_model_supported_units": 19,
+      "raw_labels_preserved": true,
+      "native_TFull_ms": null,
+      "native_publication": false,
+      "usage": {
+        "input_tokens": 26541,
+        "output_tokens": 2354,
+        "total_tokens": 28895,
+        "reasoning_tokens": 0,
+        "cache_hit_input_tokens": 0,
+        "cache_miss_input_tokens": 26541,
+        "cost": 0.0138473
+      }
+    },
+    {
+      "arm": "fixed_replay43_02",
+      "physical_POSTs": 1,
+      "component_latency_ms": 10560.6593,
+      "timing_boundary": "LLMAdapter.generate invocation to complete return",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "known_cost_USD": "0.0171923",
+      "fully_settled": true,
+      "schema_PASS": true,
+      "full_original_schema_PASS": true,
+      "repeat_structure_gate_PASS": true,
+      "source_and_unit_reference_structure_PASS": true,
+      "local_binding_and_relation_contract_PASS": true,
+      "semantic_consistency_PASS": true,
+      "source_support_defects_absent_local": true,
+      "independent_unit_counts": {
+        "complete": 15,
+        "partial": 4,
+        "unsupported": 0
+      },
+      "independent_all_unit_complete_claim_counts": {
+        "complete": 7,
+        "partial": 3,
+        "unsupported": 0
+      },
+      "independent_source_completeness_PASS": false,
+      "raw_model_supported_claims": 10,
+      "raw_model_supported_units": 19,
+      "raw_labels_preserved": true,
+      "native_TFull_ms": null,
+      "native_publication": false,
+      "usage": {
+        "input_tokens": 26541,
+        "output_tokens": 3692,
+        "total_tokens": 30233,
+        "reasoning_tokens": 0,
+        "cache_hit_input_tokens": 0,
+        "cache_miss_input_tokens": 26541,
+        "cost": 0.0171923
+      }
+    }
+  ],
+  "limits": [
+    "Component durations are not browser Send-to-complete-answer TFull or p95.",
+    "Both selected-source completeness reviews are not PASS; raw supported model labels remain unchanged.",
+    "No biology-falsity, quality-noninferiority, human-Gold, native-publication or whole-project completion conclusion.",
+    "The earlier USD0.045 schema41 UNKNOWN hold remains protected."
+  ],
+  "summarizer_API_DB_auth_browser_or_Main_accesses": 0,
+  "project_complete": false
+}

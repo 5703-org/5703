@@ -1,0 +1,70 @@
+{
+  "schema": "repair90_component_finite_mock_controls_v1",
+  "status": "PASS",
+  "controls": [
+    {
+      "control": "single checker diagnostic reservation writes only to in-memory spy",
+      "status": "PASS"
+    },
+    {
+      "control": "teacher prohibited",
+      "status": "PASS",
+      "expected_code": "COMPONENT_SINGLE_CHECKER_DIAGNOSTIC_ONLY"
+    },
+    {
+      "control": "wrong purpose prohibited",
+      "status": "PASS",
+      "expected_code": "COMPONENT_SINGLE_CHECKER_DIAGNOSTIC_ONLY"
+    },
+    {
+      "control": "different wire prohibited",
+      "status": "PASS",
+      "expected_code": "COMPONENT_RESERVED_WIRE_CHANGED"
+    },
+    {
+      "control": "second request prohibited",
+      "status": "PASS",
+      "expected_code": "CASE_POST_LIMIT"
+    },
+    {
+      "control": "UNKNOWN prohibited",
+      "status": "PASS",
+      "expected_code": "UNSETTLED_PROTECTION_BLOCKS_POSTS"
+    },
+    {
+      "control": "shared dollar cap retained",
+      "status": "PASS",
+      "expected_code": "COHORT_BUDGET_EXHAUSTED"
+    },
+    {
+      "control": "shared 24POST cap retained",
+      "status": "PASS",
+      "expected_code": "BOUND_LOCAL_BUDGET"
+    },
+    {
+      "control": "STOP retained",
+      "status": "PASS",
+      "expected_code": "COHORT_PERMANENTLY_STOPPED"
+    },
+    {
+      "control": "9 financial/normal/protocol core ASTs unchanged",
+      "status": "PASS",
+      "functions": [
+        "settle_post",
+        "stop_cohort",
+        "_create",
+        "_amount",
+        "_next_steps",
+        "next_step_allowed",
+        "claim_case",
+        "validate_protocol",
+        "initialize_cohort"
+      ]
+    }
+  ],
+  "actual_ledger_or_runtime_mutated": false,
+  "auth_database_network_model_access": false,
+  "guards_are_pure_mocks": true,
+  "actual_runtime_path_preflight": "PENDING_ROOT: Path.resolve(strict=True) WinError5",
+  "synthetic_writes": "in-memory spy only"
+}

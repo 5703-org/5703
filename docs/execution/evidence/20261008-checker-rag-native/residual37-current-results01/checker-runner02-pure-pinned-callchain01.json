@@ -1,0 +1,80 @@
+{
+  "status": "PASS_PURE_REAL_FRAME_CALLCHAIN_WITH_MOCK_IO_ONLY",
+  "runner_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\run_ROOT_fixed_checker_pair_PREPARED02.py",
+    "bytes": 37215,
+    "sha256": "29df6f6ce3977499998a937131e3b64b798a6319be6115106069e3754237a2b0"
+  },
+  "source_pin_socket": {
+    "path": "D:\\Python\\Lib\\socket.py",
+    "bytes": 38741,
+    "sha256": "523695ac3383799547b421b4fe18004de1e80181e97181b6d7a10533b47f4c49"
+  },
+  "case_count": 6,
+  "cases": [
+    {
+      "case": "IPv4_product_pinned_full_mock_stack",
+      "allowed": true,
+      "error": null,
+      "numeric_ip": "1.1.1.1",
+      "audited_connect_count": 1,
+      "mock_backend_events": 2,
+      "actual_network": 0
+    },
+    {
+      "case": "IPv6_product_pinned_full_mock_stack",
+      "allowed": true,
+      "error": null,
+      "numeric_ip": "2606:4700:4700::1111",
+      "audited_connect_count": 1,
+      "mock_backend_events": 2,
+      "actual_network": 0
+    },
+    {
+      "case": "numeric_record_changes_selected_IP",
+      "allowed": false,
+      "error": "Only one connection to the just-approved pinned IP443 allowed",
+      "numeric_ip": "1.1.1.1",
+      "audited_connect_count": 0,
+      "mock_backend_events": 1,
+      "actual_network": 0
+    },
+    {
+      "case": "direct_stdlib_origin_without_product_rejected",
+      "allowed": false,
+      "error": "Only product pinned stdlib connection origin allowed",
+      "numeric_ip": null,
+      "audited_connect_count": 0,
+      "mock_backend_events": 0,
+      "actual_network": 0
+    },
+    {
+      "case": "private_product_selected_IP_rejected",
+      "allowed": false,
+      "error": "Only canonical global nonmapped pinned IP allowed",
+      "numeric_ip": null,
+      "audited_connect_count": 0,
+      "mock_backend_events": 0,
+      "actual_network": 0
+    },
+    {
+      "case": "second_mock_TCP_attempt_after_failure_rejected",
+      "allowed": false,
+      "error": "Only one connection to the just-approved pinned IP443 allowed",
+      "numeric_ip": "1.1.1.1",
+      "audited_connect_count": 1,
+      "mock_backend_events": 2,
+      "actual_network": 0
+    }
+  ],
+  "product_pinned_function_AST_unchanged_from_pinned_source": true,
+  "stdio_copies_instrumented_only_by_direct_callbacks_at_native_audit_positions": true,
+  "actual_sys_getframe_used_for_compiled_mock_call_stack": true,
+  "native_DNS_backend_and_socket_factory_replaced_by_in_memory_mocks": true,
+  "actual_socket_stdlib_function_invocations": 0,
+  "global_audit_hook_installed": false,
+  "constructor_not_executed": true,
+  "real_socket_created_DNS_TCP_HTTP_urllib_DB_key_Gold_E_operations": 0,
+  "provider_receipt_written": false,
+  "limits": "This proves frame-index/caller matching for the copied standard/product call chain with mock I/O. It is not a live Python audit-hook, DNS, TCP, HTTP or provider acceptance test; current original UNKNOWN/cost remains unknown."
+}

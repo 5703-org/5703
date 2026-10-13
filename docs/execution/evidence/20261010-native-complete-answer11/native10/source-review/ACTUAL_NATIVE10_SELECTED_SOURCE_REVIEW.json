@@ -1,0 +1,188 @@
+{
+  "status": "ACTUAL10_SELECTED_SOURCE_SEMANTIC_GAPS_IDENTIFIED",
+  "question": "How do light-dependent reactions provide the energy carriers used by the Calvin cycle?",
+  "answer_id": "815e95c5-140d-479e-8f01-46225e71501a",
+  "request_id": "53f4ca4f-a3d8-494a-a63f-549844dddbe9",
+  "inspection_route": "Independent assistant direct read of actual native10 public browser/provider/outcome artifacts and each exact checker-selected fragment union. A stdlib-only extraction independently verified source identity, aliases, text hashes, actual claim codepoint spans and published final answer identity before semantic assessment.",
+  "source_pack": {
+    "file": "ACTUAL_NATIVE10_SELECTED_SOURCE_PACK.json",
+    "bytes": 35922,
+    "sha256": "840b9d03121634ab6a165728e8d8655e3a858a272fc720969a5b8ba8d878cd3a",
+    "contents": "Input file pins; all 9 actual claim texts and positions; exact separate selected source fragments with actual source identities, hashes and offsets; physical response and cost receipts; raw/typed and browser status distinctions."
+  },
+  "preexisting_criteria_applied": {
+    "file": "../COMPONENT_QUALITY_REVIEW_CRITERIA08.md",
+    "bytes": 2743,
+    "sha256": "3a48637169217344cda68aed848abf45ab63a626929161458db184c65b188f19",
+    "scope": "The previously frozen every-compound-predicate/actually-selected-union/source-provenance rules are applied. The homeostasis-specific question requirement is not applied to this different biology question. No new Gold facet or comparative winner criterion was introduced."
+  },
+  "actual_claim_denominator": 9,
+  "independent_support_counts": {
+    "complete": 4,
+    "partial": 5,
+    "unsupported": 0,
+    "unassessed": 0,
+    "total": 9
+  },
+  "original_model_support_counts_preserved": {"supported": 9, "total": 9},
+  "selected_source_support_complete": false,
+  "human_gold": false,
+  "scientific_falsity_certified": false,
+  "source_truth_certified": false,
+  "claims": [
+    {
+      "ordinal": 1,
+      "claim_id": "claim_6c467d7958940cd0ba85b012_1",
+      "text": "The light-dependent reactions capture light energy in energy carriers that then move to the Calvin cycle [ev_008] [ev_001].",
+      "selected_union": ["ev_008/F042", "ev_008/F043", "ev_001/F001", "ev_001/F002"],
+      "independent_support": "complete",
+      "predicates": [
+        {"predicate": "Light-dependent reactions convert light energy into chemical energy.", "support": "complete", "selected_basis": ["F042"]},
+        {"predicate": "Energy carriers bring that energy from light-dependent reactions to Calvin-cycle reactions.", "support": "complete", "selected_basis": ["F001", "F002"]},
+        {"predicate": "The captured energy supplies Calvin-cycle sugar assembly.", "support": "complete", "selected_basis": ["F043"]}
+      ],
+      "reason": "The generic capture-in-carriers wording preserves the expressly selected light-to-chemical-energy conversion and carrier transfer. This claim does not name ATP/NADPH, so no unselected named-carrier antecedent is needed."
+    },
+    {
+      "ordinal": 2,
+      "claim_id": "claim_04ea5cccbfa22232f1c7ace1_1",
+      "text": "The overall purpose of the light-dependent reactions is to convert light energy into chemical energy, and this chemical energy will be used by the Calvin cycle to fuel the assembly of sugar molecules [ev_008].",
+      "selected_union": ["ev_008/F042", "ev_008/F043"],
+      "independent_support": "complete",
+      "predicates": [
+        {"predicate": "Light-dependent reactions convert light energy to chemical energy.", "support": "complete", "selected_basis": ["F042"]},
+        {"predicate": "The Calvin cycle uses this chemical energy to fuel sugar assembly.", "support": "complete", "selected_basis": ["F043"]}
+      ],
+      "reason": "Both clauses are explicit in the separately retained selected fragments."
+    },
+    {
+      "ordinal": 3,
+      "claim_id": "claim_37eb9395c8cbcb5721d36f6e_1",
+      "text": "Photosystems absorb light and use electron transport chains to convert energy into the chemical energy of ATP and NADPH [ev_002].",
+      "selected_union": ["ev_002/F007"],
+      "independent_support": "partial",
+      "predicates": [
+        {"predicate": "Photosystems absorb light and use electron transport chains.", "support": "complete", "selected_basis": ["F007"]},
+        {"predicate": "The resulting chemical energy is in ATP.", "support": "complete", "selected_basis": ["F007"]},
+        {"predicate": "The resulting chemical energy is in NADPH.", "support": "not_established_by_selected_union", "selected_basis": ["F007"]}
+      ],
+      "exact_discrepancy": "Selected F007 says ATP and NADH, whereas the actual claim says ATP and NADPH.",
+      "reason": "NADH and NADPH are distinct named substances. The raw checker reason writes NADH/NADPH and thereby silently treats the source mismatch as interchangeable; it is not interchangeable for selected-source entailment. Other available NADPH fragments cannot be borrowed. This identifies a source-binding gap, not a finding that the biological answer is scientifically false."
+    },
+    {
+      "ordinal": 4,
+      "claim_id": "claim_4a4ca54aedd714b6436ffa83_1",
+      "text": "The energy carriers that move energy from the light-dependent reactions to the Calvin cycle reactions are thought of as full because they bring energy [ev_001].",
+      "selected_union": ["ev_001/F002"],
+      "independent_support": "complete",
+      "predicates": [
+        {"predicate": "The carriers move energy from light-dependent reactions to Calvin-cycle reactions.", "support": "complete", "selected_basis": ["F002"]},
+        {"predicate": "They can be called full because they bring energy.", "support": "complete", "selected_basis": ["F002"]}
+      ],
+      "reason": "The actual selected sentence directly states both carrier movement and the full/energy explanation."
+    },
+    {
+      "ordinal": 5,
+      "claim_id": "claim_04b0f289f4d6b935328cf9a5_1",
+      "text": "These ATP and NADPH molecules travel into the stroma, where the Calvin cycle reactions take place [ev_007].",
+      "selected_union": ["ev_007/F037"],
+      "independent_support": "partial",
+      "predicates": [
+        {"predicate": "The selected energy-carrying molecules travel into the stroma.", "support": "complete", "selected_basis": ["F037"]},
+        {"predicate": "Calvin-cycle reactions take place in the stroma.", "support": "complete", "selected_basis": ["F037"]},
+        {"predicate": "The molecules referred to by these are specifically ATP and NADPH.", "support": "not_established_by_selected_union", "selected_basis": ["F037"]}
+      ],
+      "reason": "F037 begins These energy-carrying molecules without naming the antecedent. The named ATP/NADPH antecedent is in the separate available F036, which this actual claim did not select. Availability in the same evidence item or selection for some other claim would not establish this selected union's named-carrier predicate."
+    },
+    {
+      "ordinal": 6,
+      "claim_id": "claim_eea2cb42aca18c8a9da7c51d_1",
+      "text": "The Calvin cycle then uses the energy in ATP and NADPH to convert molecules into G3P, and the energy-carrying molecules are used in the fixation and reduction stages that build carbohydrates [ev_010].",
+      "selected_union": ["ev_010/F051", "ev_010/F053"],
+      "independent_support": "partial",
+      "predicates": [
+        {"predicate": "Energy in ATP and NADPH converts the stated three-carbon molecules into G3P.", "support": "complete", "selected_basis": ["F053"]},
+        {"predicate": "The Calvin-cycle process uses energy carriers while fixing CO2 and building carbohydrates.", "support": "complete", "selected_basis": ["F051"]},
+        {"predicate": "The energy-carrying molecules are specifically used in both the named fixation stage and the named reduction stage.", "support": "not_established_by_selected_union", "selected_basis": ["F051", "F053"]}
+      ],
+      "reason": "F051 describes the Calvin cycle as a whole fixing CO2/building carbohydrates; F053 states ATP/NADPH-driven G3P conversion. Neither selected text names the reduction stage or assigns these carrier roles to each of the two specific stages. Overall process participation and a conversion statement do not themselves certify the more specific stage-role assignment. No unselected stage description or outside biology fact was imported."
+    },
+    {
+      "ordinal": 7,
+      "claim_id": "claim_2a06afb0aa3b06d0dc75d7b7_1",
+      "text": "After the energy is released, the empty energy carriers return to the light-dependent reactions to obtain more energy [ev_001].",
+      "selected_union": ["ev_001/F003"],
+      "independent_support": "complete",
+      "predicates": [
+        {"predicate": "After releasing energy, the empty carriers return to light-dependent reactions.", "support": "complete", "selected_basis": ["F003"]},
+        {"predicate": "They return to obtain more energy.", "support": "complete", "selected_basis": ["F003"]}
+      ],
+      "reason": "The actual selected sentence directly expresses release, return destination, and recharge purpose."
+    },
+    {
+      "ordinal": 8,
+      "claim_id": "claim_8acb1040df8a7051dbfa0c6f_1",
+      "text": "The products ATP and NADPH have very short lifespans, in the range of millionths of seconds, which is why the cell stores their energy in carbohydrates for longer-term use [ev_003].",
+      "selected_union": ["ev_003/F013"],
+      "independent_support": "partial",
+      "predicates": [
+        {"predicate": "The source describes ATP/NADPH light-dependent products as having lifespans in millionths of seconds.", "support": "complete_as_source_entailment_only", "selected_basis": ["F013"]},
+        {"predicate": "The source contrasts these short-lived products with long-lived carbohydrates/reduced-carbon products.", "support": "complete", "selected_basis": ["F013"]},
+        {"predicate": "The cell stores their energy in carbohydrates for long-term use specifically because of that lifetime contrast.", "support": "not_fully_established_by_selected_union", "selected_basis": ["F013"]}
+      ],
+      "reason": "F013 explicitly supports the lifetime contrast. It does not expressly describe the cell storing their energy in carbohydrates or establish the causal which-is-why relation; that extension is plausible but is not a necessary entailment of product lifetime contrast alone. Separate available F012 describes temporary ATP/NADPH and long-term carbohydrate storage, but was not selected for this claim. The textbook's millionths-of-seconds assertion is not independently certified as scientifically true by this source-entailment review."
+    },
+    {
+      "ordinal": 9,
+      "claim_id": "claim_96f9ba025244a076de5ddff5_1",
+      "answer_field": "short_answer",
+      "text": "Light-dependent reactions capture light energy as ATP and NADPH, which carry that energy into the stroma to power the Calvin cycle's assembly of sugars [ev_008] [ev_007].",
+      "selected_union": ["ev_008/F042", "ev_008/F043", "ev_007/F037"],
+      "independent_support": "partial",
+      "predicates": [
+        {"predicate": "Light-dependent reactions convert light energy into chemical energy used for Calvin-cycle sugar assembly.", "support": "complete", "selected_basis": ["F042", "F043"]},
+        {"predicate": "The referenced energy-carrying molecules travel into the stroma where Calvin-cycle reactions take place.", "support": "complete", "selected_basis": ["F037"]},
+        {"predicate": "The captured/carried chemical energy is specifically in ATP and NADPH.", "support": "not_established_by_selected_union", "selected_basis": ["F042", "F043", "F037"]}
+      ],
+      "reason": "None of this short answer's actual selected fragments names ATP or NADPH. F037 contains an unresolved named-carrier antecedent. A short answer must meet the same per-predicate selected-union standard; the checker cannot certify it merely because it summarizes other claims."
+    }
+  ],
+  "response_scope": "The answer addresses the requested light-to-carrier-to-Calvin-energy pathway. This review does not invent extra question-level facets or certify complete selected-source support from responsiveness alone.",
+  "raw_and_normalized_result": {
+    "strict_json_PASS": true,
+    "conditional_full_Pydantic_PASS": true,
+    "final_business_PASS": true,
+    "final_pipeline_issues": [],
+    "raw_attempt_evaluation_ok_present": false,
+    "ordinary_question_server_predicate": true,
+    "typed_attempt_evaluation_ok": "not_applicable",
+    "limit": "The permitted missing-field normalization is recorded separately. The provider did not emit this supplemented field. No scientific claim or model supported label was rewritten by this review."
+  },
+  "native_and_cost_observations": {
+    "Q2_child_status": "PASS",
+    "Send_to_full_painted_cited_DOM_ms": 21844.900000002235,
+    "refresh_persisted": true,
+    "overall_browser_status": "ACTUAL_LIVE_UI_JOURNEY_FAILED_OR_BLOCKED",
+    "overall_regression_status": "FAIL",
+    "physical_POST_count": 4,
+    "four_physical_HTTP_statuses": [200, 200, 200, 200],
+    "four_physical_finish_reasons": ["stop", "stop", "stop", "stop"],
+    "known_API_cost_USD": "0.0186608",
+    "new_UNKNOWN_count": 0,
+    "open_claims": 0,
+    "fully_settled": true,
+    "final_budget_status": "STOPPED",
+    "stop_exists": true,
+    "limit": "The observed answer publication/paint and refresh are narrower than the failed whole browser journey. This semantic review does not resolve its liveness/admission failure or promote overall native PASS. Values concern native10 only."
+  },
+  "method_limits": [
+    "This is independent assistant selected-source semantic review of one actual development answer; it is not human Gold or a held-out RAG benchmark.",
+    "Partial source support is not a scientific falsity finding. The source text itself may contain inaccuracies that this review does not certify.",
+    "All original raw model outputs, nine supported labels, conditional normalized result, selected fragments, source offsets, native09/native10 failures and budget receipts remain unchanged.",
+    "No unselected fragment is counted as proof. Mentioning an available missing antecedent or storage fragment explains the gap and does not add it to the actual selected union.",
+    "No source quotation is stitched across fragments or source boundaries. Each immutable fragment remains separately retained in the source pack.",
+    "No complete-project, default retrieval-policy promotion, independent quality acceptance, provider strict checker grammar, human learning benefit, TTFT or p95 claim is made."
+  ],
+  "reviewer_operations": {"API": 0, "database": 0, "browser": 0, "model": 0, "private_auth_binding_reads": 0, "main_writes": 0},
+  "local_delivery": "New public review files only within U/native-quality-review10; no earlier prepared or failure review overwritten."
+}

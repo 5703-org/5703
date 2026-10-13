@@ -1,0 +1,33 @@
+{
+  "legacy_preserved_byte_for_byte": true,
+  "canonical_legacy_sha256": "7988037e08d52662a1b232f049776a42b6d10ad5d896f1a26c8c912b3efd79d4",
+  "canonical_current_sha256": "79efe6d486558f04f3bf39f9ea6a2d3336bcc829b188e67e9257e201498789b2",
+  "description_only_differences": [
+    {
+      "path": "/$defs/RequirementEvidence/properties/evidence_id/description",
+      "old_present": false,
+      "new_value": "The actual evidence item containing this one fragment."
+    },
+    {
+      "path": "/$defs/RequirementEvidence/properties/fragment_id/description",
+      "old_present": false,
+      "new_value": "One immutable fragment ID as a string; never a list of fragment IDs."
+    },
+    {
+      "path": "/$defs/RequirementEvidence/properties/quote/description",
+      "old_present": false,
+      "new_value": "One exact contiguous substring of this fragment only. Never concatenate text from separate fragments."
+    },
+    {
+      "path": "/$defs/RequirementCheck/properties/evidence/description",
+      "old_present": false,
+      "new_value": "Use a separate evidence object for every contributing fragment, including complementary fragments from the same evidence item. Each object has its own singular fragment_id and exact quote."
+    }
+  ],
+  "all_non_description_schema_content_equal": true,
+  "requirement_evidence_max_items": 8,
+  "quote_min_length": 1,
+  "quote_max_length": 1200,
+  "haiku_projected_bounds_removed_count_assertion": 42,
+  "production_source_modified": false
+}

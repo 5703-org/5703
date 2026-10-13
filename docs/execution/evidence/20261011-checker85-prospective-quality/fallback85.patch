@@ -1,0 +1,22 @@
+--- a/generation/checked.py
++++ b/generation/checked.py
+@@ -1013,10 +1013,15 @@
+                 if pending_action_gate
+                 else legacy_request
+             )
+-            result = (
+-                service.generate(programmatic_request, budget, on_attempt, programmatic_only=True)
+-                if pending_action_gate
+-                else service.generate(programmatic_request, budget, on_attempt)
++            # These opt-ins govern checked provider calls, not deterministic replies.
++            # Keep them on the original live request and clear only this derived fallback.
++            programmatic_request = replace(
++                programmatic_request,
++                checker_output_policy=None,
++                checker_payload_policy="legacy_fragment_table_v1",
++            )
++            result = service.generate(
++                programmatic_request, budget, on_attempt, programmatic_only=True
+             )
+             if pending_action_gate:
+                 result.token_budget["pending_action_programmatic"] = {

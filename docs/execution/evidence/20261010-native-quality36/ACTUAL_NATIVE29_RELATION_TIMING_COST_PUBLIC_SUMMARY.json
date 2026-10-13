@@ -1,0 +1,160 @@
+{
+  "schema": "5703_actual_native_relation_public_summary_v1",
+  "native_number": 29,
+  "actual_succeeded": null,
+  "actual_error": null,
+  "outcome_available": false,
+  "browser_available": true,
+  "browser_status": "ACTUAL_LIVE_UI_JOURNEY_FAILED_OR_BLOCKED",
+  "provider_post_count": 2,
+  "known_cost_USD": "0.0112078",
+  "new_UNKNOWN": 0,
+  "fully_settled": true,
+  "open_claims": 0,
+  "stop_exists": true,
+  "stage_clocks": {
+    "generation": {
+      "status": "OBSERVED",
+      "physical_POSTs": 1,
+      "latency_ms": 4380
+    },
+    "joint_check": {
+      "status": "OBSERVED",
+      "physical_POSTs": 1,
+      "latency_ms": 6182
+    },
+    "semantic_repair": {
+      "status": "NOT_RUN",
+      "physical_POSTs": 0,
+      "latency_ms": null
+    },
+    "joint_recheck": {
+      "status": "NOT_RUN",
+      "physical_POSTs": 0,
+      "latency_ms": null
+    }
+  },
+  "slots": [
+    {
+      "slot": 1,
+      "stage": "generation",
+      "latency_ms": 4380,
+      "http_status": 200,
+      "finish_reason": "stop",
+      "evidence_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure29\\runtime\\retained-provider-diagnostics\\slot-01-model-output01.json",
+        "bytes": 2666,
+        "sha256": "3d5da561668ce9b7016c82cdaed33c41a76feae527ec916b7a6d9e5d0583cfbc"
+      }
+    },
+    {
+      "slot": 2,
+      "stage": "joint_check",
+      "latency_ms": 6182,
+      "http_status": 200,
+      "finish_reason": "stop",
+      "evidence_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure29\\runtime\\retained-provider-diagnostics\\slot-02-model-output01.json",
+        "bytes": 41947,
+        "sha256": "15bc6afc759719c07698c8c2394f8ef9eb1c17d401dfe0f6d80c7e5b32ea4046"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "Q2",
+      "status": "FAIL",
+      "answer_id": null,
+      "tfull_ms": null,
+      "tfailure_ms": 13828.599853515625,
+      "citation_checked": false,
+      "citation_controls_checked": null,
+      "refresh_persisted": false,
+      "server_worker_timing": null
+    }
+  ],
+  "recorded_wire_sizes_bytes": [
+    45896,
+    60971
+  ],
+  "wire_limit_bytes": 63688,
+  "wire_limit_basis": "fee-derived local guard, not provider byte cap",
+  "resources": {
+    "status": "CLEANUP_FAILED_OR_LEG_FAILED",
+    "batch_id": "34a4eeca-09b8-423c-bbc6-49df7fe6f68f",
+    "paired_leg_id": "B_startup_prewarm",
+    "browser_leg_passed": false,
+    "native_checked_completed": false,
+    "native_completed_question_ids": [],
+    "native_executed_question_ids": [
+      "Q2"
+    ],
+    "all_submitted_native_jobs_checked": false,
+    "continuation_mode": "SUCCESSFUL_Q2_DEVELOPMENT_REGRESSION_NEW_WORKER",
+    "single_Q2_development_regression_completed": false,
+    "old_Q2_request_job_or_answer_replayed": false,
+    "historical_failed_Q3_Q4_replayed": false,
+    "same_worker_across_Q1_Q2_demonstrated": false,
+    "independent_quality_acceptance": false,
+    "worker_pid": 150776,
+    "engine_object_identity": 2278189737568,
+    "database_target_public": {
+      "database_name": "cs30_week10_pair_b_20261009_01",
+      "host": "127.0.0.1",
+      "port": 15433
+    },
+    "active_pointers_unchanged": true,
+    "owned_threads_closed": true,
+    "owned_database_resources_closed": true,
+    "cleanup_error_classes": [],
+    "cleanup_guard_faults": [],
+    "raw_cleanup_errors_exported": false,
+    "leg_closed_after_advisory_unlock_connection_close_and_engine_dispose": false,
+    "local_models_loaded": true,
+    "provider_calls_are_guarded": true,
+    "no_old_job_recovery": true,
+    "retrieval_variant": "R2",
+    "embedding_provider": "native_e5",
+    "default_profile_pin": {
+      "bytes": 294,
+      "path": "E:\\5703\\learning-assistant\\configs\\retrieval\\chat_hybrid_minilm.json",
+      "sha256": "23ca72ddb737045259a04cbfc81c71969440f11cc2fa1a77bc7f8e7fc4364e17"
+    },
+    "model_cache_readonly": true,
+    "python_write_denials": [],
+    "historical_lock_handles_read_byte_only": true,
+    "cpu_threads": 4,
+    "native_cuda_allowed": true,
+    "no_runtime_retrieval_override": true
+  },
+  "check_summaries": [],
+  "evidence_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure29\\runtime\\budget-status-public01.json",
+      "bytes": 1305,
+      "sha256": "2dfa8c1903210642c338525aff21c1ca30e8a4dabe25261bb7ba519e5d4d00de"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure29\\runtime\\runtime-closed-public01.json",
+      "bytes": 1793,
+      "sha256": "d972b4ae967a0bfc3155903acd86f606f6f9aa01237e23d770174add9b072dbf"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure29\\browser\\real-browser-live-qa-receipt01.json",
+      "bytes": 26678,
+      "sha256": "f977c67d8195b32c4db76c9609c6d66ee5b24bc0d5438cf76a9355b06d631f34"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure29\\runtime\\actual-model-inputs-public01.jsonl",
+      "bytes": 4917,
+      "sha256": "6d1dbfc1fb6e8d51968d4aa8cdd8c4389905d7a3323dd1ec9e952e5365880824"
+    }
+  ],
+  "limitations": [
+    "Independent source quality requires a separate full-predicate review.",
+    "A repeated old question is development regression, not a formal quality test.",
+    "One new question is functional confirmation, not a held-out benchmark.",
+    "Nested worker and provider clocks must not be added together.",
+    "Missing outcome, browser receipt or stage clock remains missing."
+  ]
+}

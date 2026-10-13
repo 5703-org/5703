@@ -1,0 +1,336 @@
+{
+  "schema": "5703_native36_saved_performance_review_v1",
+  "result": "READ_ONLY_PUBLIC_EVIDENCE_ANALYSIS_COMPLETE",
+  "actual_full_answer_ms": 41144.90000000596,
+  "actual_accepted": true,
+  "actual_final_text": {
+    "answer_text": "RuBisCO catalyzes a reaction between CO2 and RuBP, a molecule that has five carbon atoms and a phosphate group on each end [ev_007]. The resulting six-carbon compound is immediately broken down into two three-carbon compounds, 3-PGA [ev_007]. The energy in ATP and NADPH is then used to convert the three-carbon 3-PGA into G3P, a reduction reaction that involves the gain of electrons [ev_007] [ev_003]. Because CO2 is fixed from its inorganic form into organic molecules, this is called carbon fixation [ev_007]. Each turn makes two G3P molecules, and three turns fix enough net carbon to export one G3P, while the remaining G3P molecules are used to regenerate RuBP so the cycle can prepare for more CO2 to be fixed [ev_002]. One G3P leaves the cycle to contribute to the formation of a carbohydrate molecule, commonly glucose, which requires six turns of the cycle for six carbon atoms [ev_001]. The remaining G3P molecules stay in the cycle to be formed back into RuBP, which is ready to react with more CO2 [ev_003] [ev_001]. ATP is also used in the regeneration of RuBP [ev_001].",
+    "short_answer": "RuBisCO combines CO2 with RuBP; the six-carbon product splits into two 3-PGA, which ATP and NADPH reduce to G3P [ev_007]. Most G3P is recycled to regenerate RuBP, while one G3P per three turns is exported for carbohydrate formation [ev_002] [ev_003]."
+  },
+  "independent_source_quality": {
+    "initial_claims": {
+      "complete": 5,
+      "partial": 5,
+      "unsupported": 0
+    },
+    "final_claims": {
+      "complete": 7,
+      "partial": 3,
+      "unsupported": 0
+    },
+    "final_units": 21,
+    "sources": 71,
+    "remaining_gaps": [
+      "claim_9e6350bf8c8ac897dd6ce681_1: F056 does not name 3-PGA.",
+      "claim_b85b9fa953bffc184b48ae2d_1: U02 has the same entity gap; U04 selected F058 without reduction context F059.",
+      "claim_4bbb28fe7a90b6a3f87b6b75_1: U02 F009/F019 lacks one-per-three F011 and carbohydrate bridge F020."
+    ],
+    "evidence_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-native36-independent-quality\\ACTUAL_NEWQ36_INDEPENDENT_QUALITY_REVIEW.json",
+      "bytes": 187323,
+      "sha256": "73466461cba118abddebce272de2ab8fe88792611454d45f10d3eb0c662ecd92"
+    },
+    "publication_gate_PASS_is_not_independent_complete_source_support": true
+  },
+  "stages": [
+    {
+      "stage": "generation",
+      "recorded_provider_request_interval_ms": 5626,
+      "whole_request_wire_bytes": 44477,
+      "retained_HTTP_response_bytes": 2512,
+      "model_JSON_UTF8_bytes": 1644,
+      "model": "anthropic/claude-haiku-5.5",
+      "input_tokens": 16367,
+      "output_tokens": 677,
+      "reasoning_tokens": 0,
+      "cached_input_tokens": 0,
+      "known_cost_USD": 0.0019752,
+      "evidence_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\runtime\\retained-provider-diagnostics\\slot-01-generation-read01.json",
+        "bytes": 9389,
+        "sha256": "b1d6e308eadeb12331908b7151c0d9131f112a705c0cb742dd4f48292765fb7c"
+      }
+    },
+    {
+      "stage": "joint_check",
+      "recorded_provider_request_interval_ms": 10755,
+      "whole_request_wire_bytes": 68490,
+      "retained_HTTP_response_bytes": 14222,
+      "model_JSON_UTF8_bytes": 11770,
+      "model": "google/gemini-3.5-flash-lite",
+      "input_tokens": 17277,
+      "output_tokens": 3776,
+      "reasoning_tokens": 0,
+      "cached_input_tokens": 0,
+      "known_cost_USD": 0.0146231,
+      "evidence_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\runtime\\retained-provider-diagnostics\\slot-02-joint_check-read01.json",
+        "bytes": 50745,
+        "sha256": "bcbfc8a5a21c54884af8e2e75cf0a97cae88c46dd919e9a622852d74d2e94b6e"
+      }
+    },
+    {
+      "stage": "semantic_repair",
+      "recorded_provider_request_interval_ms": 9071,
+      "whole_request_wire_bytes": 73719,
+      "retained_HTTP_response_bytes": 7278,
+      "model_JSON_UTF8_bytes": 237,
+      "model": "anthropic/claude-haiku-5.5",
+      "input_tokens": 28335,
+      "output_tokens": 1268,
+      "reasoning_tokens": 1151,
+      "cached_input_tokens": 0,
+      "known_cost_USD": 0.0034675,
+      "evidence_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\runtime\\retained-provider-diagnostics\\slot-03-semantic_repair-read01.json",
+        "bytes": 25403,
+        "sha256": "58020861cad8db47450b43edd79020ebf1503378a2f333debc125a7f3ac1144f"
+      }
+    },
+    {
+      "stage": "joint_recheck",
+      "recorded_provider_request_interval_ms": 7740,
+      "whole_request_wire_bytes": 68461,
+      "retained_HTTP_response_bytes": 9655,
+      "model_JSON_UTF8_bytes": 7646,
+      "model": "google/gemini-3.5-flash-lite",
+      "input_tokens": 17319,
+      "output_tokens": 2366,
+      "reasoning_tokens": 0,
+      "cached_input_tokens": 0,
+      "known_cost_USD": 0.0111107,
+      "evidence_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\runtime\\retained-provider-diagnostics\\slot-04-joint_recheck-read01.json",
+        "bytes": 35125,
+        "sha256": "969590d7eb32e322f8e0ec1c10b2059eb8dc4d038e94dee693e0825851f0a873"
+      }
+    }
+  ],
+  "model_request_intervals_ms": {
+    "total": 33192,
+    "fraction_of_full_answer": 0.8067099446102722,
+    "checking_total": 18495,
+    "generation_and_repair_total": 14697,
+    "repair_plus_recheck": 16811,
+    "repair_plus_recheck_fraction_of_full_answer": 0.4085804072922176,
+    "not_pure_remote_compute_or_TTFT": true
+  },
+  "nested_server_and_browser_clocks": {
+    "worker_total_ms": 37777.65,
+    "preparation_ms": 40.872,
+    "query_preparation_ms": 3.464,
+    "retrieval_wrapper_ms": 463.534,
+    "teaching_plan_ms": 0.391,
+    "submission_to_worker_start_ms": 714.798,
+    "submission_clock_definition_not_yet_verified_do_not_label_pure_queue": true,
+    "generation_wall_ms": 37108.756,
+    "publication_before_commit_ms": 227.207,
+    "worker_before_commit_ms": 38001.252,
+    "retrieval_stages_ms": {
+      "embedding": 15.099,
+      "dense": 50.966,
+      "lexical": 9.243,
+      "retrieval_total": 101.057,
+      "release_validation": 4.05,
+      "rerank": 213.481
+    },
+    "rerank_device": "cuda",
+    "rerank_candidates": 20,
+    "browser_t202_ms": 404.300048828125,
+    "browser_terminal_ms": 39842.300048828125,
+    "browser_first_paint_ms": 41011.80000001192,
+    "browser_full_answer_ms": 41144.90000000596,
+    "terminal_to_first_paint_ms": 1169.5,
+    "terminal_to_full_answer_ms": 1302.6,
+    "nested_clocks_are_not_additive": true,
+    "unpartitioned_residual_is_not_a_root_cause": true
+  },
+  "actual_repair_trigger": {
+    "repair_plan": {
+      "version": "cause_specific_repair_v2",
+      "actions": [
+        {
+          "origin": "source_coverage",
+          "claim_id": "claim_9dd7ed3c15bfc4ae4368ad47_1",
+          "code": "SOURCE_SCOPE_CONTEXT_NOT_SELECTED",
+          "action": "resolve_exact_source_association"
+        }
+      ],
+      "remaining_repair_pairs": 1
+    },
+    "structural_issues": [
+      {
+        "code": "SOURCE_SCOPE_CONTEXT_NOT_SELECTED",
+        "claim_id": "claim_9dd7ed3c15bfc4ae4368ad47_1",
+        "leading_scope": "Calvin cycle",
+        "scope_start": 7,
+        "scope_end": 19,
+        "selected_fragment_ids": [
+          "F056",
+          "F065"
+        ],
+        "context_candidate_fragments": [
+          {
+            "evidence_id": "ev_007",
+            "fragment_id": "F053",
+            "scope_start": 4,
+            "scope_end": 16
+          },
+          {
+            "evidence_id": "ev_007",
+            "fragment_id": "F054",
+            "scope_start": 83,
+            "scope_end": 95
+          },
+          {
+            "evidence_id": "ev_008",
+            "fragment_id": "F063",
+            "scope_start": 39,
+            "scope_end": 51
+          }
+        ],
+        "binding_recheck_required": true,
+        "claim_relation_assessed": false,
+        "reason": "Leading scope absent from selected support; recheck allowed source context. Occurrence alone is not support.",
+        "source_entailment_certified": false,
+        "publication_override": false
+      }
+    ],
+    "patch_JSON": "{\"edits\":[{\"claim_id\":\"claim_9dd7ed3c15bfc4ae4368ad47_1\",\"replacement_text\":\"RuBisCO catalyzes a reaction between CO2 and RuBP, a molecule that has five carbon atoms and a phosphate group on each end [ev_007].\"}],\"append_answer_text\":\"\"}",
+    "nine_neighbor_claims_retained": true,
+    "negative_unit_reasons": [],
+    "protection_removed_claim_ids": [],
+    "protected_compound_negative_release_witness": false
+  },
+  "recheck_repetition": {
+    "full_claim_count": 10,
+    "same_claim_IDs": [
+      "claim_364664c975bdc00d74ab2a22_1",
+      "claim_4bbb28fe7a90b6a3f87b6b75_1",
+      "claim_4e19e4a486fe9dc923da7169_1",
+      "claim_8b458d38f4d30c5060c0957c_1",
+      "claim_9e6350bf8c8ac897dd6ce681_1",
+      "claim_9eace1a26f8e9d6071f0acb8_1",
+      "claim_b85b9fa953bffc184b48ae2d_1",
+      "claim_e042c515f904bec48279173e_1",
+      "claim_f9fe075af789df975cbeaea7_1"
+    ],
+    "byte_equivalent_parsed_claim_judgments": [
+      "claim_4e19e4a486fe9dc923da7169_1",
+      "claim_9eace1a26f8e9d6071f0acb8_1",
+      "claim_b85b9fa953bffc184b48ae2d_1",
+      "claim_e042c515f904bec48279173e_1"
+    ],
+    "all_sources_retained": 71,
+    "input_token_delta_from_initial": 42,
+    "mandatory_full_final_recheck_was_not_skipped": true,
+    "repeated_fields_are_required_contract_outputs_not_demonstrated_removable_redundancy": true
+  },
+  "current_v2_offline_schema_and_relation_proof": [
+    {
+      "stage": "joint_check",
+      "current_ReliableUnitCheck_validation": "PASS",
+      "claim_count": 10,
+      "unit_count": 19,
+      "source_fragment_count": 71,
+      "relation_contract_issues": [],
+      "relation_defects": [],
+      "raw_unmodified": true,
+      "semantic_source_entailment_certified": false,
+      "actual_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\runtime\\retained-provider-diagnostics\\slot-02-model-output01.json",
+        "bytes": 56525,
+        "sha256": "f3ed73ca40b0258998ef25d9d4d1fa74ace5e060cd1140b0ccca07bf831e1e67"
+      }
+    },
+    {
+      "stage": "joint_recheck",
+      "current_ReliableUnitCheck_validation": "PASS",
+      "claim_count": 10,
+      "unit_count": 21,
+      "source_fragment_count": 71,
+      "relation_contract_issues": [],
+      "relation_defects": [],
+      "raw_unmodified": true,
+      "semantic_source_entailment_certified": false,
+      "actual_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\runtime\\retained-provider-diagnostics\\slot-04-model-output01.json",
+        "bytes": 51850,
+        "sha256": "af450f2b56bb949f10bfcaf4f6fc64a7174ae4dbc2e663658afb2c4dcbfbaca4"
+      }
+    }
+  ],
+  "largest_actionable_branch": "The only repair was discovered after first checking because the leading scope was absent from actually selected support. The source allowlist already contained F053/F054/F063 in the same claim's cited evidence. A 237-byte patch then required a whole final recheck, an observed 16.811-second branch.",
+  "next_small_candidate_not_implemented": {
+    "paths": [
+      "generation/source_relations_v2.py:220 scoped_syntactic_units",
+      "generation/checked.py:1901 V2 input assembly",
+      "generation/reliability_v5.py:430 existing scope-candidate diagnostics"
+    ],
+    "change": "Expose the existing generic leading-scope and same-CID allowed-source context candidates in initial V2 claim entries, before checker selection. Preserve complete source blocks and immutable actual bindings. Candidate occurrences are hints only: the model must choose genuine complete support in its own citations, or report partial/unsupported.",
+    "must_not_change": [
+      "default policy",
+      "raw checker labels or judgments",
+      "output schema/parser",
+      "scope/source/citation/publication gates",
+      "foreign/unknown source rejection",
+      "full final recheck after a repair",
+      "requested knowledge or full source context"
+    ],
+    "free_local_paired_validation_plan_not_run": [
+      "Replay saved actual36 raw against unchanged evidence and gates for before/after input assembly; the old missing-context raw must still fail that scope gate, with no auto-filled selected citations.",
+      "Compare original/proposed input assembly for this retained case: same 71 source blocks, 10 claims and immutable allowlists; only generic same-CID candidate hints may differ. Use one authored stub checker response for truly selected scope context, explicitly separate from actual raw, to exercise the existing initial-check accepted branch.",
+      "Use one foreign-source negative control from actual35 and one missing-support negative control: hard rejection and bounded repair/final-recheck behavior must remain unchanged."
+    ],
+    "paid_latency_or_quality_improvement_proven": false
+  },
+  "limitations": [
+    "One same-question actual regression observation; no paired latency experiment or p95 improvement proved.",
+    "Avoiding this branch does not establish the 5-10 second target or complete independent source quality.",
+    "Token counts, output lengths and uncached inputs are observations, not isolated latency causes.",
+    "Repair reasoning profile changes were not assessed; no provider-support recommendation made.",
+    "No candidate edits, tests, installations, API or database calls, Main/B writes or auth reads."
+  ],
+  "evidence_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\ACTUAL_NATIVE36_RELATION_TIMING_COST_PUBLIC_SUMMARY.json",
+      "bytes": 12201,
+      "sha256": "ae94d82cdd9ae187c68bd16653c7bd47fd9fbcc0ca5f08aeff2b2e9e8eea7f03"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\runtime\\retained-provider-diagnostics\\native-generation-outcome01.json",
+      "bytes": 833871,
+      "sha256": "bb4a50a877a49a9103ea15e26ccb35b6000451c337989e3f46fad376e5abe517"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\browser\\real-browser-live-qa-receipt01.json",
+      "bytes": 95638,
+      "sha256": "0fc5fa5834743114048b19e2d7d74fbd89f01857d120c709b63ed7baa5071722"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\runtime\\native-retrieval-609300fd-9ff7-4004-adc0-4584c3784df1-public01.json",
+      "bytes": 9874,
+      "sha256": "7665ec82cbb91ee95a734b4266e97c9754ce9c4a1ca6364069d0d58b7fc2eaf8"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\source_relations_v2.py",
+      "bytes": 9726,
+      "sha256": "315695072e6236185fa0ddf128af55d6ea7d5fb0bbaf38712ec7605fba70b90a"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\reliability_v5.py",
+      "bytes": 25521,
+      "sha256": "12410fac97c1031b277f63c08f71459e035e0d2bcee6d2ef9731d7243af37dcc"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checked.py",
+      "bytes": 155519,
+      "sha256": "78f1d853495c46f86b7f53016b3f32222860a04bc63dc6aebd2fb1e3a8efab24"
+    }
+  ],
+  "audit_denials": [],
+  "network_or_database_calls": 0,
+  "new_tests": 0,
+  "main_or_B_writes": 0,
+  "analysis_first_attempt": "FileNotFoundError from a stage-suffixed output receipt filename; no output report or input changes occurred. Corrected to the existing slot-NN-model-output01.json filenames."
+}

@@ -1,0 +1,8 @@
+--- E/generation/prompts/joint_check_v5.txt (before)
++++ W/joint_check_v5.candidate.txt (prepared)
+@@ -33,3 +33,5 @@
+ 
+ Return every required top-level field. This is a legal JSON shape example only; replace every example ID, status and judgment with independently assessed values for the supplied draft, and include exactly the actual claim and requirement IDs:
+ {"claims":[{"claim_id":"EXAMPLE_CLAIM","basis":"nonfactual","reason":"Example procedural wording."}],"body_ok":true,"specific_help":true,"scope_ok":true,"suggestions_ok":true,"evidence_display_ok":true,"cumulative_ok":true,"complete_answer":true,"coverage":"supported_partial","missing_facets":["example facet"],"limitations_explicit":true,"reason":"Example only.","repair_fragment_ids":[],"attempt_evaluation_ok":true,"tutor_question_ok":true,"requirements":[{"requirement_id":"EXAMPLE_REQUIREMENT","relevance":"unrelated","sufficiency":"absent","evidence":[],"conditions_preserved":true,"response_coverage":"limitation","missing_information":"Example missing passage.","reason":"Example only."}],"non_repetitive_next_action":true}
++
++For quotes taken from SOURCE_FRAGMENTS, copy one exact contiguous substring of the immutable fragment text. Read the full fragment and choose enough verbatim text to preserve the scientific conditions needed for the assessment. Never insert an ellipsis, summarize, rewrite, normalize characters or whitespace, or stitch separate substrings.

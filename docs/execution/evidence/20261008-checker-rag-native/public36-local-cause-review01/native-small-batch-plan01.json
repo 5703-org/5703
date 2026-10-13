@@ -1,0 +1,148 @@
+{
+  "schema": "5703_current_native_six_answer_pilot_plan_v1",
+  "status": "PLAN_ONLY_NOT_EXECUTABLE_NOT_RESERVED_NOT_AUTHORIZED_FOR_NEW_CALLS",
+  "scope": "5703 only; no API, network, key, Gold or database action performed by preparation",
+  "current_entitlement": {
+    "remaining_authorized_provider_calls": 0,
+    "latest_batch_consumed_and_ceiling": [38, 38],
+    "followup_consumed_and_ceiling": [72, 72],
+    "global_consumed_and_ceiling": [202, 202],
+    "parent_this_round_instruction": "No new API calls",
+    "new_allocation_or_reservation_created": false
+  },
+  "actual_finance21": {
+    "path": "C:/Users/PC/Documents/Codex/2026-10-04/task-2/5703-failure-strata-checker-pair-20261008-02/actual-finance-projection21.json",
+    "sha256": "e26b8eaaddbcdb9acc7d8eff5df1eb2f188e3c3781240c5068c9221b9e6d7f04",
+    "authorization_total_USD": "10.00000000",
+    "cumulative_known_API_cost_USD": "0.489777050",
+    "cumulative_known_and_UNKNOWN_calls": [188, 14],
+    "followup_known_API_cost_USD": "0.07880540",
+    "followup_UNKNOWN_full_hold_USD": "0.19824640",
+    "internal_remaining_after_actual_costs_and_full_holds_USD": "1.66294820",
+    "new_reserve_retained_USD": "1.94000000",
+    "old_protected_USD": "8.03128969",
+    "combined_protected_USD": "9.97128969",
+    "unallocated_USD": "0.02871031",
+    "reserve_release_USD": "0",
+    "interpretation": "Internal headroom is protected accounting capacity, not an available call entitlement or verified account balance. Unallocated USD0.02871031 is a ledger allocation category, not cash balance. Known API cost is not an invoice. Prior UNKNOWN, STOP and protected holds remain unchanged. A new immutable bounded allocation and explicit additional call permission are required before execution."
+  },
+  "latest_candidate": {
+    "filename": "CS30-1_Current_Coherent_Candidate_Startup_Fixed_02_20261008.zip",
+    "path": "E:/5703/learning-assistant/deliverables/20261008-current-source-coherent-candidate-02/CS30-1_Current_Coherent_Candidate_Startup_Fixed_02_20261008.zip",
+    "sha256": "eaade2d1d1d52383e959ca73727124719feb2c91053dcfc28d7ef6f6ea24a2cd",
+    "bytes": 1856816535,
+    "bootstrap_preflight": "ACTUAL_NEW_ZIP_EXTRACTED_BOOTSTRAP_PREFLIGHT_PASS",
+    "existing_installed_receipt": "C:/Users/PC/Documents/Codex/2026-10-04/task-2/5703-coherent-local-candidate-20261008-01/runtime-acceptance-current-candidate-01/current-pg-runtime-http-receipt05.json",
+    "existing_installed_receipt_sha256": "cbcd34a5996b72056b13590af5ccf871fc572fa7929cd48c9be78a86735350e0",
+    "installed_limit": "Owned PostgreSQL mock runtime/restart PASS with zero saved models, credentials, active model roles and provider tests. Its 4-document/32639-chunk library differs from the 10594-chunk native experiment fixture. It supplies no qualified live role or live latency measurement; do not replace its mock configuration or transfer an old activation as a shortcut."
+  },
+  "model_and_route": {
+    "transport": "openai_compatible",
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "model": "google/gemini-3.5-flash-lite",
+    "route_profile": "gemini35_google_vertex_v1",
+    "provider_order_and_only": ["google-vertex/global"],
+    "allow_fallbacks": false,
+    "require_parameters": true,
+    "reasoning": {"effort": "low"},
+    "temperature": null,
+    "temperature_wire_parameter": "OMIT; frozen route explicitly does not support temperature. No temperature=0 or deterministic-output claim.",
+    "structured_output_mode": "json_object",
+    "teacher_output_tokens": 2048,
+    "checker_output_tokens": 4096,
+    "window_tokens": 131072,
+    "provider_timeout_seconds": 45,
+    "prompt_price_cap_USD_per_million": "0.30",
+    "completion_price_cap_USD_per_million": "2.50",
+    "qualification": "Freeze one exact public saved configuration and normal answer/checker roles under current source. Two project probes, one per role, at most one POST each and no retry. Only after both succeed may the normal activation CAS select the roles. This does not claim fresh basic/structured tiers or all course qualification."
+  },
+  "proposed_new_caps": {
+    "warm_scored_native_answers": 4,
+    "first_answer_warmup_native_answers": 2,
+    "native_answers_total": 6,
+    "provider_POSTs_per_native_answer_maximum": 4,
+    "native_provider_POSTs_maximum": 24,
+    "paid_project_role_probe_POSTs_maximum": 2,
+    "all_provider_POSTs_maximum": 26,
+    "per_POST_input_token_conservative_upper": 131072,
+    "per_POST_output_token_upper": 4096,
+    "per_POST_worst_case_USD": "0.04956160",
+    "all_provider_POSTs_worst_case_USD": "1.28860160",
+    "uncommitted_internal_headroom_after_proposed_upper_USD": "0.37434660",
+    "formula": "26 * ((131072 * 0.30 + 4096 * 2.50) / 1000000). Input/window bound and existing wire-byte guard are conservatively retained, not replaced by observed usage or guessed smaller inputs.",
+    "normal_native_product_budget": {"max_calls": 4, "max_active_seconds": 180},
+    "finite_repair_controls": "Current RequestBudget permits at most 4 total calls/180 active seconds; all teacher, checker, format repair, contract correction, semantic repair and eligible transient attempts consume the same 4. Teacher format repair at most 1; semantic revision at most 1; checker evaluations at most 2, or 3 under the explicitly selected schema-corrections policy; transient counter at most 2. These are intersecting limits, not additive call allowances.",
+    "no_shortened_quality_path": "Keep the current normal 4-call ceiling; do not copy the old native runner's special 3-call limit. A failed repair/recheck remains failed. No schema fields, evidence, scientific conditions, checking or teaching gates are removed to make time or quality pass.",
+    "transport_and_failure_accounting": "Persist a unique full hold before every provider POST. Observed errors and attempts count against caps. UNKNOWN cost retains the full hold, is never assigned zero, and stops the job/phase without replay. No timeout, transport error, failed question, regeneration, alternate provider or replacement question receives an extra allowance. A later new trial is allowed only if explicitly scheduled inside the frozen 6-answer plan."
+  },
+  "inputs_and_isolation": {
+    "questions": ["What is homeostasis?", "How do simple diffusion and facilitated diffusion differ?"],
+    "native_payload": {"use_profile": false, "answer_mode": "textbook", "teaching_mode": "direct", "task_action": "new"},
+    "session_conditions": "One fresh synthetic actor/session per answer; no prior chat, memory/profile, Gold, choices or evaluator prerequisites; no regeneration or answer reuse.",
+    "corpus": "New isolated owned PostgreSQL fixture rebuilt from the explicitly public source-only corpus defining the prior 4-document/10594-chunk native experiment. Do not read/copy a protected private DB, switch the installed 32639-chunk mock runtime, or silently compare different corpora. Record release/chunk/input hashes before any API call.",
+    "arms": ["dense", "hybrid_plus_rerank"],
+    "shared_retrieval_conditions": "Same current source, corpus, fixed chunking, token/context budget, top-5 submitted evidence, machine/device, queue/polling and teacher/checker configuration. Only the explicitly frozen Dense versus RRF+MiniLM retrieval policy differs. Reranker/embedding model revisions are pinned to existing public caches. Native retrieval runs per request; no precomputed model answer or bypass of packing/checker.",
+    "evidence_repeat_control": "Record candidates, packed submitted fragments, source/quote bounds and hashes. Repeated same-question/same-arm inputs must be reproducible. Any changed candidate/packing set is reported as input variation; no best answer or fastest run selection.",
+    "Gold": "No Gold/reference map is read by this plan or sent to a runtime/model. For these two free-text questions, freeze public-source rubrics locally before paid execution."
+  },
+  "schedule": [
+    {"phase": "project_probe", "role": "answer", "maximum_POSTs": 1},
+    {"phase": "project_probe", "role": "checker", "maximum_POSTs": 1},
+    {"phase": "first_answer_warmup", "arm": "dense", "question_index": 0, "maximum_POSTs": 4},
+    {"phase": "first_answer_warmup", "arm": "hybrid_plus_rerank", "question_index": 0, "maximum_POSTs": 4},
+    {"phase": "warm", "arm": "dense", "question_index": 0, "maximum_POSTs": 4},
+    {"phase": "warm", "arm": "hybrid_plus_rerank", "question_index": 1, "maximum_POSTs": 4},
+    {"phase": "warm", "arm": "hybrid_plus_rerank", "question_index": 0, "maximum_POSTs": 4},
+    {"phase": "warm", "arm": "dense", "question_index": 1, "maximum_POSTs": 4}
+  ],
+  "warmup_and_measurement": {
+    "local_preparation": "Load fixed local embedding/reranking weights for both arms using fresh owned processes; record readiness/model-load time separately. No model answer inference occurs before each timed message. No live connectivity probe outside the 2 admitted project role probes.",
+    "cold_limit": "Exactly one first native answer per arm, included in all call/cost/quality counts but reported separately from the warm timing summary. These are first-answer/warmup observations; do not claim truly cold OS/disk/provider caches. No repeated paid warmup or reset until a desired time appears.",
+    "primary_native_start": "Monotonic client timer immediately before normal POST /api/sessions/{session_id}/messages, including request serialization/transport.",
+    "primary_native_end": "After the same job is terminal succeeded, normal GET /api/answers/{answer_id} has fully returned, decoded, and passed complete response/job/request identity validation. Persist exact endpoint and boundary in the future runner.",
+    "included": "Native HTTP submit, queue wait, query preparation, local retrieval/reranking, packing, every teacher/checker/repair call, worker publication/DB commit, polling and complete answer GET/validation.",
+    "poll_seconds": 0.05,
+    "finite_driver_deadline_seconds": 240,
+    "finite_product_active_seconds": 180,
+    "excluded_and_reported_separately": "Service/model load and role qualification before message submission; optional expanded evidence/transcript reads and UI rendering after primary native end. This is complete native answer availability, not browser-render latency. A later browser render timer must be separately implemented before a UI latency claim.",
+    "observed_36_adapter_timing_for_interview": "Existing 36-answer timing starts before adapter.generate and ends when the complete provider result returns, before local response validation. Model google/gemini-3.5-flash-lite via OpenRouter google-vertex/global; it excludes retrieval, packing, checker, native HTTP/queue/polling and UI. Median/p95 seconds: E0 1.136159/1.53374121; Dense 1.1897339/1.81544283; Hybrid 1.07703885/1.321302825. Never present these as native complete-answer timings."
+  },
+  "preregistered_quality_and_latency_gate": {
+    "quality_denominators": "All 6 scheduled answers remain in strict publication/quality accounting; all 4 warm answers remain in warm comparisons. Failed, refused, partial, schema-invalid, checker-unavailable, unsupported, uncited, incomplete or timed-out answers are not dropped or treated as fast successes.",
+    "quality": "Every native answer must pass the unchanged complete teacher schema, full checker/evidence and teaching/publication contract. Separately perform local public-source semantic review, label it AI-assisted local review rather than human rating, preserve uncertainty and checker disagreement, and require scientifically correct complete answers for both questions. No per-question semantic quality downgrade is permitted for Hybrid relative to Dense.",
+    "homeostasis_rubric": "Correctly explain regulated relatively stable internal conditions despite change, with dynamic regulation rather than a fixed external environment or literal unchanging state. Any extra mechanism/example must be supported by actual submitted source evidence.",
+    "diffusion_rubric": "Distinguish direct membrane passage in simple diffusion from channel/carrier assistance in facilitated diffusion, both passive down their relevant gradient without direct ATP expenditure; qualify substrate and membrane conditions if stated, and do not turn facilitated diffusion into active uphill transport. Actual submitted citations must support the conditions claimed.",
+    "absolute_target": "Report each complete answer and descriptive warm p95 against <=10 seconds, with <=5 seconds as an additional marker. Faster than 5 seconds is not a failure.",
+    "relative_target": "Describe (Dense p95 - Hybrid p95)/Dense p95, but do not claim the >=30% warm p95 requirement or statistical quality non-inferiority is validated.",
+    "statistics": "Only 2 warm observations per arm, one per question. Linear quantile (n-1)*q may be reported descriptively with min/max, all values, failures and scheduled denominators. No confidence/significance/generalization or held-out claim; this tiny pilot cannot characterize tails or prove non-inferiority."
+  },
+  "entry_and_remaining_preparation": {
+    "current_source17_metadata_manifest": "C:/Users/PC/Documents/Codex/2026-10-04/task-2/5703-failure-strata-checker-pair-20261008-02/current-native-source17-pins02.json",
+    "current_source17_metadata_manifest_sha256": "9d5f2881fa21a1a0f7b9d282fff54ba17a4a07bd40c629a00459e78483aa4715",
+    "dated_readonly_result": "All 17 public code files matched source17-pins02 during this preparation. Source17 is not a fresh runtime/role qualification. Re-freeze all producer/consumer, prompts, schema, retrieval policy and runner files after the current local fix round.",
+    "available_historical_blueprints": [
+      "5703-checker-schema-compact-repair-20261008-01/coordinate_ROOT_native_four_PREPARED02.py",
+      "5703-checker-schema-compact-repair-20261008-01/run_current_scoped_native_GPU_worker_PREPARED06.py",
+      "5703-checker-schema-compact-repair-20261008-01/run_matched_four_native_HTTP_PREPARED03.py"
+    ],
+    "historical_entry_limit": "Historical runners bind exactly 4 jobs, old releases/claims, an old owned fixture, old source/qualification and a special 3-POST per-job cap. Do not execute or relabel them as this current 6-answer/4-call proposal.",
+    "new_runner": "run_current_native_six_answer_pilot_PREPARED01.py",
+    "new_runner_exists": false,
+    "executable_command_available": false,
+    "needed_before_launch": [
+      "Complete and free-test the local cause/contract fixes; freeze current public source and exact 2-question public rubrics.",
+      "Author a new 6-answer native coordinator/HTTP driver and 26-slot global guard; preserve normal 4-call budget and exact route/price/output bounds; synthetic-test normal, format/semantic correction, wrong identity, cap exhaustion, UNKNOWN, transport/timeouts and closure.",
+      "Specify and admit one fresh isolated owned fixture/resource set; verify fixed public corpus/model assets and ports without touching protected DBs or the running mock install.",
+      "Obtain explicit new <=26 POST permission and immutable <=USD1.28860160 allocation within authorized USD10, preserving every prior hold/STOP and reserve receipt. No reservation has been made here.",
+      "Perform the two explicitly budgeted current project role probes, activate only through normal qualified role CAS, then execute the frozen schedule once. Stop if preflight/probe/price/identity/quality/transport guards fail; do not add calls."
+    ]
+  },
+  "rejected_larger_pilot": {
+    "warm_answers": 12,
+    "first_answer_warmup_answers": 2,
+    "project_probe_POSTs": 2,
+    "total_provider_POST_cap": 58,
+    "worst_case_USD": "2.87457280",
+    "reason": "Exceeds existing internal USD1.66294820 under unchanged full 4-call path and conservative token bounds; not proposed for execution or funded by this plan."
+  }
+}

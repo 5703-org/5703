@@ -1,0 +1,86 @@
+--- generation/source_relations_v2.py (before38)
++++ generation/source_relations_v2.py (candidate39)
+@@ -256,38 +256,43 @@
+ 
+ 
+ def _context_candidates(entry, citations, fragments):
+-    """Locate neutral occurrences inside this claim's immutable source scope."""
++    """Index each original anchor's occurrences without selecting or joining sources."""
+     allowed = {citation["evidence_id"]: set(citation["allowed_fragment_ids"])
+                for citation in citations}
++    source = [fragment for fragment in fragments
++              if fragment["fragment_id"] in allowed.get(fragment["evidence_id"], set())
++              and fragment.get("complete_block", False)]
++    anchors = {}
++    for unit in entry["units"]:
++        for kind, anchor, start, end in _context_anchors(unit["text"]):
++            anchors.setdefault((kind, anchor), set()).add(
++                (unit["unit_id"], unit["start"] + start, unit["start"] + end)
++            )
+     rows = []
+-    for fragment in fragments:
+-        eid, fid = fragment["evidence_id"], fragment["fragment_id"]
+-        if fid not in allowed.get(eid, set()) or not fragment.get("complete_block", False):
+-            continue
+-        source_text = fragment["exact_text"]
+-        source_words = list(_CONTEXT_WORD.finditer(source_text))
+-        units, kinds, spans = set(), set(), set()
+-        for unit in entry["units"]:
+-            for kind, anchor, _, _ in _context_anchors(unit["text"]):
+-                literal = re.compile(r"(?<!\w)" + re.escape(anchor) + r"(?!\w)", re.I)
+-                matches = [(match.start(), match.end(), kind) for match in literal.finditer(source_text)]
+-                if kind == "predicate_term":
+-                    family = _context_word_family(anchor)
+-                    matches.extend((match.start(), match.end(), "word_family_candidate")
+-                                   for match in source_words
+-                                   if match.group().isalpha()
+-                                   and match.group().casefold() != anchor.casefold()
+-                                   and _context_word_family(match.group()) == family)
+-                for start, end, match_kind in matches:
+-                    units.add(unit["unit_id"])
+-                    kinds.add(match_kind)
+-                    spans.add((start, end))
+-        if units:
+-            rows.append([eid, fid, sorted(units), sorted(kinds), [list(span) for span in sorted(spans)]])
++    for (kind, anchor), occurrences in anchors.items():
++        literal = re.compile(r"(?<!\w)" + re.escape(anchor) + r"(?!\w)", re.I)
++        source_hits = []
++        for fragment in source:
++            text = fragment["exact_text"]
++            matches = {(match.start(), match.end(), "literal")
++                       for match in literal.finditer(text)}
++            if kind == "predicate_term":
++                family = _context_word_family(anchor)
++                matches.update((match.start(), match.end(), "word_family_candidate")
++                               for match in _CONTEXT_WORD.finditer(text)
++                               if match.group().isalpha()
++                               and match.group().casefold() != anchor.casefold()
++                               and _context_word_family(match.group()) == family)
++            if matches:
++                source_hits.append([
++                    fragment["evidence_id"], fragment["fragment_id"],
++                    [list(match) for match in sorted(matches)],
++                ])
++        rows.append([kind, anchor, [list(value) for value in sorted(occurrences)], source_hits])
+     return {
+         "candidate_only": True,
+         "source_entailment_certified": False,
+-        "columns": ["evidence_id", "fragment_id", "unit_ids", "anchor_kinds", "source_spans"],
++        "columns": ["kind", "anchor_text", "claim_occurrences", "source_hits"],
+         "rows": rows,
+     }
+ 
+@@ -326,6 +331,13 @@
+     " a semantic bridge or auto-fill citations. Emit one complete minified JSON object with every req"
+     "uired field and record; omit only formatting whitespace outside string values, never schema fiel"
+     "ds or required content."
++    " Index rows are [kind,anchor_text,claim_occurrences,source_hits]. Claim occurrences are [unit_id"
++    ",full_claim_start,full_claim_end]; source hits are [evidence_id,fragment_id,[[source_start,sourc"
++    "e_end,match_kind],...]]. Offsets use original Unicode code points, absolute in full_claim and lo"
++    "cal to each source block. literal is case-insensitive whole-token/phrase lookup; word_family_can"
++    "didate is only a lookup hint. An empty source_hits list means no indexed occurrence, not absent "
++    "semantic evidence. Grouping repeated anchors establishes no semantic bridge between units or sou"
++    "rces."
+ )
+ 
+ 

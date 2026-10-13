@@ -1,0 +1,1272 @@
+{
+  "schema": "5703_current26_final_independent_finance_latency_audit_v4",
+  "status": "ACTUAL_NEW26_SETTLED_CLOSED_WITH_NATIVE_FAILURES_STOP_RETAINED_FINANCE_AUDIT_PASS_NOT_PROJECT_COMPLETE",
+  "audit_snapshot_at_UTC": "2026-10-08T07:08:20Z",
+  "ROOT_bounded_public_native_result_summary_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\ROOT-actual-native-HTTP-result-summary01.json",
+    "bytes": 9301,
+    "sha256": "1dd75fa381642a4fffb4f1af7343ee5e6d4f756fde8c4fcc9a1c59446d5cd570"
+  },
+  "result": {
+    "new26_provider_POSTs": 13,
+    "new26_known_cost_calls": 13,
+    "new26_finished_claims": 13,
+    "new26_known_API_cost_USD": "0.05737480",
+    "native_provider_POSTs": 10,
+    "native_known_API_cost_USD": "0.04886620",
+    "new26_UNKNOWN_cost_calls": 0,
+    "new26_inflight_claims": 0,
+    "new26_UNKNOWN_or_inflight_full_hold_USD": "0.00000000",
+    "new26_claim_ledger_STOP_receipts": 1,
+    "STOP_requires_no_next_submission": true,
+    "native_unique_jobs": 4,
+    "native_eventually_checked_answers": 3,
+    "native_final_failed_jobs": 1,
+    "fresh_HTTP_POSTs": 3,
+    "fresh_checked_answers": 2,
+    "fresh_failed_jobs": 1,
+    "original_first_HTTP_attempt_timeout_retained": true,
+    "original_case_recovered_by_GET_only": true,
+    "project_complete": false
+  },
+  "financial_snapshot": {
+    "original_authorized_total_USD": "10.00000000",
+    "new26_maximum_calls": 26,
+    "new26_maximum_submitted_upper_USD": "1.28860160",
+    "initial_releaseable_calls": 19,
+    "used_releaseable_calls": 13,
+    "unconsumed_native_slots": [
+      3,
+      4,
+      7,
+      8,
+      11,
+      12
+    ],
+    "unconsumed_native_full_bounds_USD": "0.29736960",
+    "unreleased_spare_calls": 7,
+    "unreleased_spare_full_bounds_USD": "0.34693120",
+    "all_unstarted_calls": 13,
+    "all13_unstarted_full_bounds_USD": "0.64430080",
+    "per_call_full_upper_USD": "0.04956160",
+    "new26_started_full_bounds_USD": "0.64430080",
+    "new26_known_cost_plus_all_unstarted_full_bounds_USD": "0.70167560",
+    "project_provider_POSTs": 215,
+    "project_known_cost_calls": 201,
+    "project_UNKNOWN_calls": 14,
+    "project_known_API_cost_USD": "0.547151850",
+    "followup_provider_POSTs": 85,
+    "followup_known_cost_calls": 81,
+    "followup_UNKNOWN_calls": 4,
+    "followup_known_API_cost_USD": "0.13618020",
+    "followup_old_UNKNOWN_full_hold_USD": "0.19824640",
+    "internal_remaining_after_actual_costs_and_retained_old_holds_USD": "1.60557340",
+    "internal_remaining_after_all13_unstarted_full_bounds_USD": "0.96127260",
+    "retained_followup_reserve_USD": "1.94000000",
+    "reserve_release_USD": "0",
+    "old_protected_USD": "8.03128969",
+    "combined_protected_USD": "9.97128969",
+    "unallocated_projection_USD": "0.02871031",
+    "invoice_or_account_balance": null,
+    "unused_slots_are_protected_and_not_execution_permission": true,
+    "Decision_live_POSTs_in_this_batch": 0,
+    "no_inflight_native_reservation_transferred_to_Decision": true
+  },
+  "latency": {
+    "measurement_scope": "Immediately before a fresh message POST through terminal succeeded job, complete answer GET, decoding, request/job/session identity and complete publication validation.",
+    "fresh_POST_rows": [
+      {
+        "case_id": "case02",
+        "arm": "hybrid_rerank",
+        "status": "ANSWER_FETCHED",
+        "post_to_validated_complete_answer_GET_ms": "11682.472",
+        "observed_bookkeeping_duration_ms": "11682.477"
+      },
+      {
+        "case_id": "case03",
+        "arm": "hybrid_rerank",
+        "status": "ANSWER_FETCHED",
+        "post_to_validated_complete_answer_GET_ms": "9904.842",
+        "observed_bookkeeping_duration_ms": "9904.846"
+      },
+      {
+        "case_id": "case04",
+        "arm": "dense",
+        "status": "FAILED",
+        "post_to_observed_failed_terminal_ms": "13971.116",
+        "observed_bookkeeping_duration_ms": "13971.120",
+        "completed_answer_latency_ms": null
+      }
+    ],
+    "fresh_POST_started": 3,
+    "fresh_POST_completed": 2,
+    "fresh_POST_failed": 1,
+    "conditional_completed_only_median_ms": "10793.657",
+    "unconditional_completed_answer_median_ms": null,
+    "p95_completed_answer_ms": null,
+    "completed_within_10_seconds_count": 1,
+    "within_10_seconds_denominator": 3,
+    "within_10_seconds_fraction": "1/3",
+    "TTFT_ms": null,
+    "browser_visible_latency_ms": null,
+    "conditional_median_is_not_a_success_rate_or_3_request_overall_median": true,
+    "no_failure_removed_from_fresh_denominator": true,
+    "no_RAG_same_policy_native_arm_measured": false,
+    "Dense_vs_Hybrid_speed_improvement": null,
+    "warm_improvement_at_least_30_percent": null,
+    "cold_warm_order_confounding": {
+      "local_models_preloaded_before_timing": true,
+      "model_inference_precomputed": false,
+      "first_actual_retrieval_ms": "8393.568",
+      "case02_retrieval_ms": "454.024",
+      "case03_retrieval_ms": "169.471",
+      "interpretation": "The first actual retrieval, recovered original queue wait, execution order, questions, response lengths and repair path differ. These observations do not identify an arm speed effect or a warm-improvement percentage."
+    }
+  },
+  "original_first_attempt_and_GET_resume": {
+    "original_case_id": "case01",
+    "original_HTTP_nonce": "root-native-four-20261008-05",
+    "original_session_id": "f167910b-74b3-4884-839e-e1ba3fd108b7",
+    "original_request_id": "47e5cc96-7883-472c-a6f9-78212d9d0475",
+    "original_job_id": "fc8d48a3-a4c8-4099-89c0-893ce6ea45da",
+    "original_poll_url": "/api/v1/jobs/fc8d48a3-a4c8-4099-89c0-893ce6ea45da",
+    "original_HTTP_message_started_at_UTC": "2026-10-08T06:00:06.443545Z",
+    "original_TIMEOUT_ms": "240015.077",
+    "initial_run_denominator": {
+      "started": 1,
+      "completed": 0,
+      "timeout": 1,
+      "right_censored": 1,
+      "unstarted": 3
+    },
+    "original_failure_retained": true,
+    "original_four_file_pins_exactly_unchanged": true,
+    "original_case01_second_message_POST_permitted": false,
+    "original_session_creation_POSTs_on_resume": 0,
+    "recovered_checked_answer": true,
+    "same_original_session_request_job_identity_verified": true,
+    "GET_resume_to_validated_complete_answer_ms": "18181.815",
+    "GET_resume_observed_bookkeeping_ms": "18181.819",
+    "original_submission_to_worker_start_ms": "3343402.009",
+    "original_fresh_POST_completed_latency_ms": null,
+    "GET_resume_excluded_from_fresh_POST_sample": true,
+    "original_timeout_denominator_not_reset_by_recovery": true,
+    "original_message_POSTs": 1,
+    "fresh_message_POSTs": 3,
+    "total_unique_message_POSTs": 4,
+    "no_duplicate_case01_message_POST": true
+  },
+  "final_failure": {
+    "case_id": "case04",
+    "arm": "dense",
+    "request_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792",
+    "job_id": "1c53c91c-d21e-4d98-9a6c-84f92074d2ae",
+    "actual_provider_POSTs": 4,
+    "normal_job_physical_cap": 4,
+    "answer_published": false,
+    "error_code": "CHECKER_INCONSISTENT",
+    "issue_codes": [
+      "CHECKER_SCHEMA_INVALID"
+    ],
+    "persisted_provider_stages": [
+      "generation",
+      "joint_check",
+      "semantic_repair",
+      "joint_recheck"
+    ],
+    "final_check_stage": "joint_recheck",
+    "known_API_cost_USD": "0.01713040",
+    "UNKNOWN_full_hold_USD": "0.00000000",
+    "transport_denials": [],
+    "additional_paid_retry_or_gate_waiver": false,
+    "first_failed_schema_leaf_diagnosis": "Pending the separate free owned public-output diagnosis; this financial audit does not infer an unobserved first error.",
+    "STOP": {
+      "status": "STOP_NO_NEXT_SUBMISSION",
+      "reason": "NATIVE_QUALITY_TRANSPORT_OR_COST_FAILURE",
+      "at_original_string": "2026-10-08T06:56:43.474282+00:00",
+      "at_UTC": "2026-10-08T06:56:43.4742820Z",
+      "budget_sha256": "7f883791521683c99627bb19edfb91b2ff069057ea5afa2bbd66e9cad4e3681a",
+      "UNKNOWN_holds_retained_in_full": true
+    }
+  },
+  "source_and_configuration_evidence": {
+    "source25_manifest_sha256": "0c0807ad9b6709c9faabb3cac52baf945ba90dccdc2bf20eb6efbb49cc643902",
+    "actual_closed_source_count": 66,
+    "all25_manifest_paths_bytes_and_hashes_match_actual_closed_source_pins": true,
+    "closed_source_unchanged": true,
+    "closed_proof_at_UTC": "2026-10-08T06:56:45.212268Z",
+    "actual_Main_full_V5_prompt_bytes": 14853,
+    "actual_Main_full_V5_prompt_sha256": "6304fd19b2c86f4c9670aacd29628922c95fd9ce4e453697976b0a0f8aca4a32",
+    "expected_answer_and_checker_configuration_id": "74c8201e-aca0-400d-bcc5-5785e24c1c11",
+    "safe_native_provider_event_configuration_ids_all_match_expected": true,
+    "native_wire_public_configuration_hashes_all_match": "703c94a357ddd4b826d8b5fe25d503198d3d56e1e9130f6a37ed9e9c3396aa4a",
+    "native_wire_models_all_match": "google/gemini-3.5-flash-lite",
+    "normal_frozen_command_readback_scope": "Performed by the scoped worker and reported by Root. This finance auditor reads terminal safe identities and hashes; admitted commands are excluded from audit output and publication.",
+    "independent_scientific_accuracy": null,
+    "human_rating": null,
+    "scientific_noninferiority": null,
+    "learning_effect": null,
+    "request_scoped_acceptance_is_not_human_or_independent_scientific_acceptance": true
+  },
+  "closure": {
+    "final_coordinator_status": "ACTUAL_NATIVE_FOUR_COORDINATION_COMPLETE",
+    "final_coordinator_exit_code": 1,
+    "final_worker_status": "ACTUAL_CURRENT_SCOPED_NATIVE_WORKER_STOPPED",
+    "final_worker_exit_code": 1,
+    "final_timer_status": "ACTUAL_FOUR_NATIVE_HTTP_JOBS_COMPLETE_WITH_FAILURES",
+    "final_timer_exit_code": 1,
+    "final_owned_children": 4,
+    "all_owned_job_active_zero": true,
+    "all_process_and_job_handles_closed": true,
+    "cleanup_errors": [],
+    "memory_credentials_cleared": true,
+    "ordered_global_locks_closed": true,
+    "original_shared_budget_lock_closed": true,
+    "source_files_written_by_worker": false,
+    "final_closed_at_UTC": "2026-10-08T06:56:45.212268Z",
+    "completion_status_does_not_override_failed_job_or_exit_code": true
+  },
+  "independent_reconciliation_checks": {
+    "all13_started_finished_pins_match": true,
+    "all13_costs_recomputed_from_fixed_price_caps_match": true,
+    "all10_native_wire_digests_and_bytes_match_started_claims": true,
+    "all10_wire_receipts_first_attempt_and_lease_verified": true,
+    "raw_payload_and_headers_exported_by_wire_receipts": false,
+    "all_four_timer_worker_request_job_ids_match": true,
+    "four_provider_counts_match": "2+2+2+4=10",
+    "persisted_safe_stage_cost_sum_matches_native_total": true,
+    "counts_within_19_releaseable_and_26_total_caps": true,
+    "all_old_journal_finance_guard_budget_SHA256_pins_unchanged": true,
+    "old_project_14_UNKNOWN_and_followup_4_full_holds_retained": true,
+    "new_UNKNOWN_and_inflight_hold_zero": true,
+    "current_disk_STOP_count": 1,
+    "embedded_worker_tally_STOP_count": 0,
+    "STOP_snapshot_scope_note": "The embedded worker financial snapshot says zero STOP receipts, while the independently pinned current disk STOP receipt exists. The current disk STOP is authoritative for further execution; its presence is preserved and is not budget exhaustion.",
+    "timestamps_from_original_JSON_strings_normalized_to_UTC": true,
+    "monetary_math_uses_integer_nanodollars_or_decimal_arithmetic": true
+  },
+  "per_case_safe_metadata": [
+    {
+      "case_id": "case01",
+      "arm": "dense",
+      "status": "ANSWER_FETCHED",
+      "session_id": "f167910b-74b3-4884-839e-e1ba3fd108b7",
+      "request_id": "47e5cc96-7883-472c-a6f9-78212d9d0475",
+      "job_id": "fc8d48a3-a4c8-4099-89c0-893ce6ea45da",
+      "idempotency_key": "root-native-four-20261008-05-case01",
+      "normal_checked_answer_published": true,
+      "answer_id": "60a3a6d7-10f3-4b10-a61e-010164fab63b",
+      "POSTs": 2,
+      "known_cost_USD": "0.0090396",
+      "unknown_holds_USD": "0",
+      "post_to_answer_get_ms": null,
+      "terminal_observed_ms": null,
+      "observed_duration_ms": null,
+      "resume_to_answer_get_ms": 18181.815,
+      "original_observed_duration_ms": 240015.077,
+      "original_right_censored": true,
+      "timing": {
+        "total_ms": 17666.852,
+        "generation_ms": 4928,
+        "checking_ms": 3347,
+        "token_count_ms": 0,
+        "model_total_ms": 8275,
+        "attempts": 2,
+        "preparation_ms": 341.196,
+        "query_preparation_ms": 3.192,
+        "retrieval_ms": 8393.568,
+        "teaching_plan_ms": 0.269,
+        "submission_to_worker_start_ms": 3343402.009,
+        "generation_wall_ms": 8630.299,
+        "timing_scope": "worker_execution_before_answer_insert_v1",
+        "publication_before_commit_ms": 225.601,
+        "worker_before_commit_ms": 17889.077
+      },
+      "error_code": null,
+      "issue_codes": null,
+      "timer_worker_request_job_match": true,
+      "provider_stages": [
+        {
+          "stage": "generation",
+          "latency_ms": 4928,
+          "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+          "cost": 0.0047077,
+          "input_tokens": 6259,
+          "output_tokens": 1132,
+          "reasoning_tokens": 824,
+          "request_submitted": true,
+          "error_present": false
+        },
+        {
+          "stage": "joint_check",
+          "latency_ms": 3347,
+          "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+          "cost": 0.0043319,
+          "input_tokens": 7748,
+          "output_tokens": 803,
+          "reasoning_tokens": 0,
+          "request_submitted": true,
+          "error_present": false
+        }
+      ]
+    },
+    {
+      "case_id": "case02",
+      "arm": "hybrid_rerank",
+      "status": "ANSWER_FETCHED",
+      "session_id": "4d39cb8f-180c-492f-970c-6449ac82839c",
+      "request_id": "ef76155f-df9a-490d-a87e-89147c710d87",
+      "job_id": "84feeb05-b7db-49b3-aa7c-ef7a20a59592",
+      "idempotency_key": "root-native-four-20261008-05-case02",
+      "normal_checked_answer_published": true,
+      "answer_id": "ef3b7d64-8d8b-4ba5-9806-38c3c9ec5d78",
+      "POSTs": 2,
+      "known_cost_USD": "0.0122871",
+      "unknown_holds_USD": "0",
+      "post_to_answer_get_ms": 11682.472,
+      "terminal_observed_ms": 11457.759,
+      "observed_duration_ms": 11682.477,
+      "resume_to_answer_get_ms": null,
+      "original_observed_duration_ms": null,
+      "original_right_censored": null,
+      "timing": {
+        "total_ms": 10474.236,
+        "generation_ms": 5132,
+        "checking_ms": 4280,
+        "token_count_ms": 0,
+        "model_total_ms": 9412,
+        "attempts": 2,
+        "preparation_ms": 32.804,
+        "query_preparation_ms": 0.821,
+        "retrieval_ms": 454.024,
+        "teaching_plan_ms": 0.099,
+        "submission_to_worker_start_ms": 245.87300000000002,
+        "generation_wall_ms": 9625.939,
+        "timing_scope": "worker_execution_before_answer_insert_v1",
+        "publication_before_commit_ms": 408.284,
+        "worker_before_commit_ms": 10880.11
+      },
+      "error_code": null,
+      "issue_codes": null,
+      "timer_worker_request_job_match": true,
+      "provider_stages": [
+        {
+          "stage": "generation",
+          "latency_ms": 5132,
+          "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+          "cost": 0.0067791,
+          "input_tokens": 10947,
+          "output_tokens": 1398,
+          "reasoning_tokens": 1085,
+          "request_submitted": true,
+          "error_present": false
+        },
+        {
+          "stage": "joint_check",
+          "latency_ms": 4280,
+          "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+          "cost": 0.005508,
+          "input_tokens": 9860,
+          "output_tokens": 1020,
+          "reasoning_tokens": 0,
+          "request_submitted": true,
+          "error_present": false
+        }
+      ]
+    },
+    {
+      "case_id": "case03",
+      "arm": "hybrid_rerank",
+      "status": "ANSWER_FETCHED",
+      "session_id": "2d4c8cea-71c0-4bca-a858-bc59f5278d6d",
+      "request_id": "35ce7708-c022-49f8-9aa3-2e5c22128b99",
+      "job_id": "2e44c203-cccd-4c9a-8915-f3429f8aad99",
+      "idempotency_key": "root-native-four-20261008-05-case03",
+      "normal_checked_answer_published": true,
+      "answer_id": "c43a8153-6494-4c51-8cde-260fc7ffe518",
+      "POSTs": 2,
+      "known_cost_USD": "0.0104091",
+      "unknown_holds_USD": "0",
+      "post_to_answer_get_ms": 9904.842,
+      "terminal_observed_ms": 9793.412,
+      "observed_duration_ms": 9904.846,
+      "resume_to_answer_get_ms": null,
+      "original_observed_duration_ms": null,
+      "original_right_censored": null,
+      "timing": {
+        "total_ms": 8891.365,
+        "generation_ms": 3618,
+        "checking_ms": 4092,
+        "token_count_ms": 0,
+        "model_total_ms": 7710,
+        "attempts": 2,
+        "preparation_ms": 279.559,
+        "query_preparation_ms": 0.613,
+        "retrieval_ms": 169.471,
+        "teaching_plan_ms": 0.084,
+        "submission_to_worker_start_ms": 300.99199999999996,
+        "generation_wall_ms": 7917.196,
+        "timing_scope": "worker_execution_before_answer_insert_v1",
+        "publication_before_commit_ms": 592.755,
+        "worker_before_commit_ms": 9482.425
+      },
+      "error_code": null,
+      "issue_codes": null,
+      "timer_worker_request_job_match": true,
+      "provider_stages": [
+        {
+          "stage": "generation",
+          "latency_ms": 3618,
+          "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+          "cost": 0.0049457,
+          "input_tokens": 9769,
+          "output_tokens": 806,
+          "reasoning_tokens": 554,
+          "request_submitted": true,
+          "error_present": false
+        },
+        {
+          "stage": "joint_check",
+          "latency_ms": 4092,
+          "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+          "cost": 0.0054634,
+          "input_tokens": 9053,
+          "output_tokens": 1099,
+          "reasoning_tokens": 0,
+          "request_submitted": true,
+          "error_present": false
+        }
+      ]
+    },
+    {
+      "case_id": "case04",
+      "arm": "dense",
+      "status": "FAILED",
+      "session_id": "4538f77c-0ce1-4ae6-9d56-55f9a06f5c04",
+      "request_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792",
+      "job_id": "1c53c91c-d21e-4d98-9a6c-84f92074d2ae",
+      "idempotency_key": "root-native-four-20261008-05-case04",
+      "normal_checked_answer_published": false,
+      "answer_id": null,
+      "POSTs": 4,
+      "known_cost_USD": "0.0171304",
+      "unknown_holds_USD": "0",
+      "post_to_answer_get_ms": null,
+      "terminal_observed_ms": 13971.116,
+      "observed_duration_ms": 13971.12,
+      "resume_to_answer_get_ms": null,
+      "original_observed_duration_ms": null,
+      "original_right_censored": null,
+      "timing": null,
+      "error_code": "CHECKER_INCONSISTENT",
+      "issue_codes": [
+        "CHECKER_SCHEMA_INVALID"
+      ],
+      "timer_worker_request_job_match": true,
+      "provider_stages": [
+        {
+          "stage": "generation",
+          "latency_ms": 4370,
+          "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+          "cost": 0.0050314,
+          "input_tokens": 7638,
+          "output_tokens": 1096,
+          "reasoning_tokens": 757,
+          "request_submitted": true,
+          "error_present": false
+        },
+        {
+          "stage": "joint_check",
+          "latency_ms": 3471,
+          "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+          "cost": 0.0043481,
+          "input_tokens": 8352,
+          "output_tokens": 737,
+          "reasoning_tokens": 0,
+          "request_submitted": true,
+          "error_present": false
+        },
+        {
+          "stage": "semantic_repair",
+          "latency_ms": 1890,
+          "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+          "cost": 0.0035493,
+          "input_tokens": 10281,
+          "output_tokens": 186,
+          "reasoning_tokens": 0,
+          "request_submitted": true,
+          "error_present": false
+        },
+        {
+          "stage": "joint_recheck",
+          "latency_ms": 3187,
+          "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+          "cost": 0.0042016,
+          "input_tokens": 8222,
+          "output_tokens": 694,
+          "reasoning_tokens": 0,
+          "request_submitted": true,
+          "error_present": false
+        }
+      ]
+    }
+  ],
+  "paid_call_safe_metadata": [
+    {
+      "group": "fixed_input_old_new_checker_replay",
+      "slot": 1,
+      "nonce": "current26-checker-smoke-20261008-01",
+      "status": "KNOWN_COST_RECORDED",
+      "known_API_cost_USD": "0.005744",
+      "UNKNOWN_full_hold_USD": "0.00000000",
+      "input_tokens": 7630,
+      "output_tokens": 1382,
+      "reasoning_tokens": 0,
+      "computed_cost_USD": "0.00574400",
+      "submitted_upper_USD": "0.04956160",
+      "wire_sha256": "73c99e3441368b0b3a6338131aeb8833c7b3e44cc26b3363466739d9476668b7",
+      "wire_bytes": 35329,
+      "provider_route": "google-vertex/global",
+      "case_id": null,
+      "job_id": null,
+      "request_id": null
+    },
+    {
+      "group": "native",
+      "slot": 1,
+      "nonce": "root-native-four-20261008-05",
+      "status": "KNOWN_COST_RECORDED",
+      "known_API_cost_USD": "0.0047077",
+      "UNKNOWN_full_hold_USD": "0.00000000",
+      "input_tokens": 6259,
+      "output_tokens": 1132,
+      "reasoning_tokens": 824,
+      "computed_cost_USD": "0.00470770",
+      "submitted_upper_USD": "0.0495616",
+      "wire_sha256": "f04fdb3e43fcee081ef8a72395219accb53eda92ad898ea7991f5dba35523955",
+      "wire_bytes": 28228,
+      "provider_route": null,
+      "case_id": "case01",
+      "job_id": "fc8d48a3-a4c8-4099-89c0-893ce6ea45da",
+      "request_id": "47e5cc96-7883-472c-a6f9-78212d9d0475"
+    },
+    {
+      "group": "native",
+      "slot": 2,
+      "nonce": "root-native-four-20261008-05",
+      "status": "KNOWN_COST_RECORDED",
+      "known_API_cost_USD": "0.0043319",
+      "UNKNOWN_full_hold_USD": "0.00000000",
+      "input_tokens": 7748,
+      "output_tokens": 803,
+      "reasoning_tokens": 0,
+      "computed_cost_USD": "0.00433190",
+      "submitted_upper_USD": "0.0495616",
+      "wire_sha256": "298516609be2e9c928c7feacadde2e87505a1f4e550949d28d9ac83422a3cdaf",
+      "wire_bytes": 36533,
+      "provider_route": null,
+      "case_id": "case01",
+      "job_id": "fc8d48a3-a4c8-4099-89c0-893ce6ea45da",
+      "request_id": "47e5cc96-7883-472c-a6f9-78212d9d0475"
+    },
+    {
+      "group": "native",
+      "slot": 5,
+      "nonce": "root-native-four-20261008-05",
+      "status": "KNOWN_COST_RECORDED",
+      "known_API_cost_USD": "0.0067791",
+      "UNKNOWN_full_hold_USD": "0.00000000",
+      "input_tokens": 10947,
+      "output_tokens": 1398,
+      "reasoning_tokens": 1085,
+      "computed_cost_USD": "0.00677910",
+      "submitted_upper_USD": "0.0495616",
+      "wire_sha256": "fa728158592ebe177bfd9b1285c6f1a254962f8a9f5db8165addc65313c963e4",
+      "wire_bytes": 43575,
+      "provider_route": null,
+      "case_id": "case02",
+      "job_id": "84feeb05-b7db-49b3-aa7c-ef7a20a59592",
+      "request_id": "ef76155f-df9a-490d-a87e-89147c710d87"
+    },
+    {
+      "group": "native",
+      "slot": 6,
+      "nonce": "root-native-four-20261008-05",
+      "status": "KNOWN_COST_RECORDED",
+      "known_API_cost_USD": "0.005508",
+      "UNKNOWN_full_hold_USD": "0.00000000",
+      "input_tokens": 9860,
+      "output_tokens": 1020,
+      "reasoning_tokens": 0,
+      "computed_cost_USD": "0.00550800",
+      "submitted_upper_USD": "0.0495616",
+      "wire_sha256": "4eb5546d60ee83a73c6bd5024b80a68fe998534f8b05f12f3fa95a85b5c3af67",
+      "wire_bytes": 44510,
+      "provider_route": null,
+      "case_id": "case02",
+      "job_id": "84feeb05-b7db-49b3-aa7c-ef7a20a59592",
+      "request_id": "ef76155f-df9a-490d-a87e-89147c710d87"
+    },
+    {
+      "group": "native",
+      "slot": 9,
+      "nonce": "root-native-four-20261008-05",
+      "status": "KNOWN_COST_RECORDED",
+      "known_API_cost_USD": "0.0049457",
+      "UNKNOWN_full_hold_USD": "0.00000000",
+      "input_tokens": 9769,
+      "output_tokens": 806,
+      "reasoning_tokens": 554,
+      "computed_cost_USD": "0.00494570",
+      "submitted_upper_USD": "0.0495616",
+      "wire_sha256": "1673debd654f3a9b88a4d65df209e221eb9ea88b2cc8c39d6f2f29f349dd8dce",
+      "wire_bytes": 40239,
+      "provider_route": null,
+      "case_id": "case03",
+      "job_id": "2e44c203-cccd-4c9a-8915-f3429f8aad99",
+      "request_id": "35ce7708-c022-49f8-9aa3-2e5c22128b99"
+    },
+    {
+      "group": "native",
+      "slot": 10,
+      "nonce": "root-native-four-20261008-05",
+      "status": "KNOWN_COST_RECORDED",
+      "known_API_cost_USD": "0.0054634",
+      "UNKNOWN_full_hold_USD": "0.00000000",
+      "input_tokens": 9053,
+      "output_tokens": 1099,
+      "reasoning_tokens": 0,
+      "computed_cost_USD": "0.00546340",
+      "submitted_upper_USD": "0.0495616",
+      "wire_sha256": "01c0bbac9c13751cec73ece07d65e2594bee88f37f250f70ea400061a8ad0d0f",
+      "wire_bytes": 42425,
+      "provider_route": null,
+      "case_id": "case03",
+      "job_id": "2e44c203-cccd-4c9a-8915-f3429f8aad99",
+      "request_id": "35ce7708-c022-49f8-9aa3-2e5c22128b99"
+    },
+    {
+      "group": "native",
+      "slot": 13,
+      "nonce": "root-native-four-20261008-05",
+      "status": "KNOWN_COST_RECORDED",
+      "known_API_cost_USD": "0.0050314",
+      "UNKNOWN_full_hold_USD": "0.00000000",
+      "input_tokens": 7638,
+      "output_tokens": 1096,
+      "reasoning_tokens": 757,
+      "computed_cost_USD": "0.00503140",
+      "submitted_upper_USD": "0.0495616",
+      "wire_sha256": "0714bfbfca4bbb9748b04fe8eea159a929d52b03ef755c7d8ffa28210a1094b1",
+      "wire_bytes": 32949,
+      "provider_route": null,
+      "case_id": "case04",
+      "job_id": "1c53c91c-d21e-4d98-9a6c-84f92074d2ae",
+      "request_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792"
+    },
+    {
+      "group": "native",
+      "slot": 14,
+      "nonce": "root-native-four-20261008-05",
+      "status": "KNOWN_COST_RECORDED",
+      "known_API_cost_USD": "0.0043481",
+      "UNKNOWN_full_hold_USD": "0.00000000",
+      "input_tokens": 8352,
+      "output_tokens": 737,
+      "reasoning_tokens": 0,
+      "computed_cost_USD": "0.00434810",
+      "submitted_upper_USD": "0.0495616",
+      "wire_sha256": "4b689adfc1567f231168e587295388c612ad8ccbabf27f3c877d7a8fad905ade",
+      "wire_bytes": 38897,
+      "provider_route": null,
+      "case_id": "case04",
+      "job_id": "1c53c91c-d21e-4d98-9a6c-84f92074d2ae",
+      "request_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792"
+    },
+    {
+      "group": "native",
+      "slot": 15,
+      "nonce": "root-native-four-20261008-05",
+      "status": "KNOWN_COST_RECORDED",
+      "known_API_cost_USD": "0.0035493",
+      "UNKNOWN_full_hold_USD": "0.00000000",
+      "input_tokens": 10281,
+      "output_tokens": 186,
+      "reasoning_tokens": 0,
+      "computed_cost_USD": "0.00354930",
+      "submitted_upper_USD": "0.0495616",
+      "wire_sha256": "c0e8385ea558816fcb25eb181b0ddde431980f26d534812abdef81ba750aad6f",
+      "wire_bytes": 41630,
+      "provider_route": null,
+      "case_id": "case04",
+      "job_id": "1c53c91c-d21e-4d98-9a6c-84f92074d2ae",
+      "request_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792"
+    },
+    {
+      "group": "native",
+      "slot": 16,
+      "nonce": "root-native-four-20261008-05",
+      "status": "KNOWN_COST_RECORDED",
+      "known_API_cost_USD": "0.0042016",
+      "UNKNOWN_full_hold_USD": "0.00000000",
+      "input_tokens": 8222,
+      "output_tokens": 694,
+      "reasoning_tokens": 0,
+      "computed_cost_USD": "0.00420160",
+      "submitted_upper_USD": "0.0495616",
+      "wire_sha256": "31eb37cf8900d000c9bd13cdf2e179740035917cb479eec4163e933d350bcfcb",
+      "wire_bytes": 38647,
+      "provider_route": null,
+      "case_id": "case04",
+      "job_id": "1c53c91c-d21e-4d98-9a6c-84f92074d2ae",
+      "request_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792"
+    },
+    {
+      "group": "qualification",
+      "slot": 1,
+      "nonce": "current26-project-roles-20261008-02",
+      "status": "KNOWN_COST_RECORDED",
+      "known_API_cost_USD": "0.0005078",
+      "UNKNOWN_full_hold_USD": "0.00000000",
+      "input_tokens": 576,
+      "output_tokens": 134,
+      "reasoning_tokens": 0,
+      "computed_cost_USD": "0.00050780",
+      "submitted_upper_USD": "0.04956160",
+      "wire_sha256": "be7e5dc5e5331fec1899b231598af68ee9d86d9f0cab6fdb6d37ff842c12e34b",
+      "wire_bytes": 2985,
+      "provider_route": "google-vertex/global",
+      "case_id": null,
+      "job_id": null,
+      "request_id": null
+    },
+    {
+      "group": "qualification",
+      "slot": 2,
+      "nonce": "current26-project-roles-20261008-02",
+      "status": "KNOWN_COST_RECORDED",
+      "known_API_cost_USD": "0.0022568",
+      "UNKNOWN_full_hold_USD": "0.00000000",
+      "input_tokens": 2081,
+      "output_tokens": 653,
+      "reasoning_tokens": 0,
+      "computed_cost_USD": "0.00225680",
+      "submitted_upper_USD": "0.04956160",
+      "wire_sha256": "662a25338b8aa085a0ebff6d4285c04f1ae3eec7fc3161508900fd1c4dcf5ea3",
+      "wire_bytes": 9512,
+      "provider_route": "google-vertex/global",
+      "case_id": null,
+      "job_id": null,
+      "request_id": null
+    }
+  ],
+  "safe_native_wire_metadata": [
+    {
+      "slot": 1,
+      "case_id": "case01",
+      "job_id": "fc8d48a3-a4c8-4099-89c0-893ce6ea45da",
+      "request_id": "47e5cc96-7883-472c-a6f9-78212d9d0475",
+      "status": "MAY_BE_SUBMITTED_NEVER_RETRY",
+      "wire_bytes": 28228,
+      "wire_sha256": "f04fdb3e43fcee081ef8a72395219accb53eda92ad898ea7991f5dba35523955",
+      "model": "google/gemini-3.5-flash-lite",
+      "configuration_hash": "703c94a357ddd4b826d8b5fe25d503198d3d56e1e9130f6a37ed9e9c3396aa4a",
+      "job_physical_call": 1,
+      "actual_running_execution_lease_and_first_attempt_verified": true,
+      "raw_payload_and_headers_exported": false
+    },
+    {
+      "slot": 2,
+      "case_id": "case01",
+      "job_id": "fc8d48a3-a4c8-4099-89c0-893ce6ea45da",
+      "request_id": "47e5cc96-7883-472c-a6f9-78212d9d0475",
+      "status": "MAY_BE_SUBMITTED_NEVER_RETRY",
+      "wire_bytes": 36533,
+      "wire_sha256": "298516609be2e9c928c7feacadde2e87505a1f4e550949d28d9ac83422a3cdaf",
+      "model": "google/gemini-3.5-flash-lite",
+      "configuration_hash": "703c94a357ddd4b826d8b5fe25d503198d3d56e1e9130f6a37ed9e9c3396aa4a",
+      "job_physical_call": 2,
+      "actual_running_execution_lease_and_first_attempt_verified": true,
+      "raw_payload_and_headers_exported": false
+    },
+    {
+      "slot": 5,
+      "case_id": "case02",
+      "job_id": "84feeb05-b7db-49b3-aa7c-ef7a20a59592",
+      "request_id": "ef76155f-df9a-490d-a87e-89147c710d87",
+      "status": "MAY_BE_SUBMITTED_NEVER_RETRY",
+      "wire_bytes": 43575,
+      "wire_sha256": "fa728158592ebe177bfd9b1285c6f1a254962f8a9f5db8165addc65313c963e4",
+      "model": "google/gemini-3.5-flash-lite",
+      "configuration_hash": "703c94a357ddd4b826d8b5fe25d503198d3d56e1e9130f6a37ed9e9c3396aa4a",
+      "job_physical_call": 1,
+      "actual_running_execution_lease_and_first_attempt_verified": true,
+      "raw_payload_and_headers_exported": false
+    },
+    {
+      "slot": 6,
+      "case_id": "case02",
+      "job_id": "84feeb05-b7db-49b3-aa7c-ef7a20a59592",
+      "request_id": "ef76155f-df9a-490d-a87e-89147c710d87",
+      "status": "MAY_BE_SUBMITTED_NEVER_RETRY",
+      "wire_bytes": 44510,
+      "wire_sha256": "4eb5546d60ee83a73c6bd5024b80a68fe998534f8b05f12f3fa95a85b5c3af67",
+      "model": "google/gemini-3.5-flash-lite",
+      "configuration_hash": "703c94a357ddd4b826d8b5fe25d503198d3d56e1e9130f6a37ed9e9c3396aa4a",
+      "job_physical_call": 2,
+      "actual_running_execution_lease_and_first_attempt_verified": true,
+      "raw_payload_and_headers_exported": false
+    },
+    {
+      "slot": 9,
+      "case_id": "case03",
+      "job_id": "2e44c203-cccd-4c9a-8915-f3429f8aad99",
+      "request_id": "35ce7708-c022-49f8-9aa3-2e5c22128b99",
+      "status": "MAY_BE_SUBMITTED_NEVER_RETRY",
+      "wire_bytes": 40239,
+      "wire_sha256": "1673debd654f3a9b88a4d65df209e221eb9ea88b2cc8c39d6f2f29f349dd8dce",
+      "model": "google/gemini-3.5-flash-lite",
+      "configuration_hash": "703c94a357ddd4b826d8b5fe25d503198d3d56e1e9130f6a37ed9e9c3396aa4a",
+      "job_physical_call": 1,
+      "actual_running_execution_lease_and_first_attempt_verified": true,
+      "raw_payload_and_headers_exported": false
+    },
+    {
+      "slot": 10,
+      "case_id": "case03",
+      "job_id": "2e44c203-cccd-4c9a-8915-f3429f8aad99",
+      "request_id": "35ce7708-c022-49f8-9aa3-2e5c22128b99",
+      "status": "MAY_BE_SUBMITTED_NEVER_RETRY",
+      "wire_bytes": 42425,
+      "wire_sha256": "01c0bbac9c13751cec73ece07d65e2594bee88f37f250f70ea400061a8ad0d0f",
+      "model": "google/gemini-3.5-flash-lite",
+      "configuration_hash": "703c94a357ddd4b826d8b5fe25d503198d3d56e1e9130f6a37ed9e9c3396aa4a",
+      "job_physical_call": 2,
+      "actual_running_execution_lease_and_first_attempt_verified": true,
+      "raw_payload_and_headers_exported": false
+    },
+    {
+      "slot": 13,
+      "case_id": "case04",
+      "job_id": "1c53c91c-d21e-4d98-9a6c-84f92074d2ae",
+      "request_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792",
+      "status": "MAY_BE_SUBMITTED_NEVER_RETRY",
+      "wire_bytes": 32949,
+      "wire_sha256": "0714bfbfca4bbb9748b04fe8eea159a929d52b03ef755c7d8ffa28210a1094b1",
+      "model": "google/gemini-3.5-flash-lite",
+      "configuration_hash": "703c94a357ddd4b826d8b5fe25d503198d3d56e1e9130f6a37ed9e9c3396aa4a",
+      "job_physical_call": 1,
+      "actual_running_execution_lease_and_first_attempt_verified": true,
+      "raw_payload_and_headers_exported": false
+    },
+    {
+      "slot": 14,
+      "case_id": "case04",
+      "job_id": "1c53c91c-d21e-4d98-9a6c-84f92074d2ae",
+      "request_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792",
+      "status": "MAY_BE_SUBMITTED_NEVER_RETRY",
+      "wire_bytes": 38897,
+      "wire_sha256": "4b689adfc1567f231168e587295388c612ad8ccbabf27f3c877d7a8fad905ade",
+      "model": "google/gemini-3.5-flash-lite",
+      "configuration_hash": "703c94a357ddd4b826d8b5fe25d503198d3d56e1e9130f6a37ed9e9c3396aa4a",
+      "job_physical_call": 2,
+      "actual_running_execution_lease_and_first_attempt_verified": true,
+      "raw_payload_and_headers_exported": false
+    },
+    {
+      "slot": 15,
+      "case_id": "case04",
+      "job_id": "1c53c91c-d21e-4d98-9a6c-84f92074d2ae",
+      "request_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792",
+      "status": "MAY_BE_SUBMITTED_NEVER_RETRY",
+      "wire_bytes": 41630,
+      "wire_sha256": "c0e8385ea558816fcb25eb181b0ddde431980f26d534812abdef81ba750aad6f",
+      "model": "google/gemini-3.5-flash-lite",
+      "configuration_hash": "703c94a357ddd4b826d8b5fe25d503198d3d56e1e9130f6a37ed9e9c3396aa4a",
+      "job_physical_call": 3,
+      "actual_running_execution_lease_and_first_attempt_verified": true,
+      "raw_payload_and_headers_exported": false
+    },
+    {
+      "slot": 16,
+      "case_id": "case04",
+      "job_id": "1c53c91c-d21e-4d98-9a6c-84f92074d2ae",
+      "request_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792",
+      "status": "MAY_BE_SUBMITTED_NEVER_RETRY",
+      "wire_bytes": 38647,
+      "wire_sha256": "31eb37cf8900d000c9bd13cdf2e179740035917cb479eec4163e933d350bcfcb",
+      "model": "google/gemini-3.5-flash-lite",
+      "configuration_hash": "703c94a357ddd4b826d8b5fe25d503198d3d56e1e9130f6a37ed9e9c3396aa4a",
+      "job_physical_call": 4,
+      "actual_running_execution_lease_and_first_attempt_verified": true,
+      "raw_payload_and_headers_exported": false
+    }
+  ],
+  "evidence_index": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\ROOT-actual-native-HTTP-result-summary01.json",
+      "bytes": 9301,
+      "sha256": "1dd75fa381642a4fffb4f1af7343ee5e6d4f756fde8c4fcc9a1c59446d5cd570"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-overall-answer-latency-pilot-20261006-01\\cross-provider-checker-adaptation04\\actual-spend-journal21.json",
+      "bytes": 134196,
+      "sha256": "28759a47a109713b7e729455a6c257535d63e3af584e2bff8027edb24db14943"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-finance-projection21.json",
+      "bytes": 136726,
+      "sha256": "e26b8eaaddbcdb9acc7d8eff5df1eb2f188e3c3781240c5068c9221b9e6d7f04"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\ROOT-new-batch26-budget01.json",
+      "bytes": 51924,
+      "sha256": "7f883791521683c99627bb19edfb91b2ff069057ea5afa2bbd66e9cad4e3681a"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\shared_current26_claim_guard_PREPARED01.py",
+      "bytes": 35864,
+      "sha256": "8f0268a4be9972a8c32ab8a78a7509253b515259e03dbf6d9b7d4135a28899b3"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\current-native-full-v5-source-pins03.json",
+      "bytes": 5746,
+      "sha256": "0c0807ad9b6709c9faabb3cac52baf945ba90dccdc2bf20eb6efbb49cc643902"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\finance-evidence-review01\\current-finance-status-readonly-audit03.json",
+      "bytes": 16135,
+      "sha256": "19b4ed218e4a11c5ce84aa7ae75fe672053bc79c629112335beecdabe3b7f6d1"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-current-checker-smoke-current26-checker-smoke-20261008-01\\smoke-finished01.json",
+      "bytes": 14365,
+      "sha256": "47a083743960fdd75a2b5c846a295165f7b3457d9927e6dc3450b034b25a576b"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-current-project-roles-current26-project-roles-20261008-02\\roles-finished01.json",
+      "bytes": 13309,
+      "sha256": "eb214ac4f07ac8f624c85814da2155f5262bdcb81f7afc13c9ae86b2c5b5bd51"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\ROOT-owned-native-four-root-native-four-20261008-05\\closure.json",
+      "bytes": 17122,
+      "sha256": "2aadc2de3a6a2206c8c5931639329a362503d9260c0b96dd6e8b4b6e90cc50de"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\ROOT-owned-native-four-root-native-four-20261008-05-original-retest01\\closure.json",
+      "bytes": 17346,
+      "sha256": "87604d7f281e4d8d3ded6ae17ce5c9d51e641ff7c412aba0332ef1cb38101c75"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-current-native-worker-root-native-four-20261008-03\\worker-terminal01.json",
+      "bytes": 62868,
+      "sha256": "94559f3b5058de0b692a67262da3c47b18b03efba7fef074609ded5c738858c7"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\STOP-before-any-next-submission01.json",
+      "bytes": 301,
+      "sha256": "32286b74311f9a5e27fb2091f2602c83f2f7ceac66cfd912a0684431fa612cbf"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\fixed_input_old_new_checker_replay\\slot-01-started01.json",
+      "bytes": 2109,
+      "sha256": "3c2fdda31d703fa359e197bd928ec272e7c074aeb4a428ae01d9848c95b933a4"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\fixed_input_old_new_checker_replay\\slot-01-finished01.json",
+      "bytes": 779,
+      "sha256": "baee34d5f93f769d9f5cbfbd2ed32c17ac08ee473d8d52557d737711d91896de"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\native\\slot-01-started01.json",
+      "bytes": 3251,
+      "sha256": "b86ca1e29179175523c19dfd0000d8d7beadeac55e33231212aa78d9133bfc17"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\native\\slot-01-finished01.json",
+      "bytes": 753,
+      "sha256": "56077e42dbc7395839e9cdeeedd7d41cf048c221a54bdd290c87f165d86c2dc0"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\native\\slot-02-started01.json",
+      "bytes": 3251,
+      "sha256": "cbfc131baa84e545bb5c62ac0395dbcff5478b32ef3c1c9a1a908aa72413bae5"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\native\\slot-02-finished01.json",
+      "bytes": 750,
+      "sha256": "30d77ab0bab37e2e263029879866b333a9056ff6cae5c38dbec81f970cb147a2"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\native\\slot-05-started01.json",
+      "bytes": 3251,
+      "sha256": "5924d9c922313efee04334940b60d892e80fa644b664f1644a52d309aa328fd8"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\native\\slot-05-finished01.json",
+      "bytes": 757,
+      "sha256": "0a445033f7257953eccef4635d3488a17f62a3f1e49ac25c28fc7392b0db688f"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\native\\slot-06-started01.json",
+      "bytes": 3251,
+      "sha256": "aaa4879aabb8fb8c3cff7dc10fa333179d2c1df30e00fbfb6ec379384c24aba7"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\native\\slot-06-finished01.json",
+      "bytes": 750,
+      "sha256": "97dc0306bd721747a275c0ca729817337f0cd79a0a5a13738ddaa157fc0a6670"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\native\\slot-09-started01.json",
+      "bytes": 3251,
+      "sha256": "ca07d228a985476b417aeb3bb0b0d974768e6f6a8275a29188e2269243e6e2eb"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\native\\slot-09-finished01.json",
+      "bytes": 753,
+      "sha256": "eb4e6d5f64b987c86c526c9108ab29969e454459d8decccc7280e216f3cf5e19"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\native\\slot-10-started01.json",
+      "bytes": 3253,
+      "sha256": "2921e41332c26dffa2d24b646c362f3a5385b387e8c0dc01b2b50a62e785fd86"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\native\\slot-10-finished01.json",
+      "bytes": 752,
+      "sha256": "1f1c467fcd5a975e946195248b30d23d63107c1f6774de5d2d3c49fe76cceab4"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\native\\slot-13-started01.json",
+      "bytes": 3253,
+      "sha256": "be0659b6c0132de0d81f68e59668f3a1b616b9b41472b27e7558995f3652ba1a"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\native\\slot-13-finished01.json",
+      "bytes": 753,
+      "sha256": "7f8c15e108acd862da344851627d3553815ea28fcb485e75b98e243fb8e7366b"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\native\\slot-14-started01.json",
+      "bytes": 3254,
+      "sha256": "0737f2a3c379226cf0b984bdd232bff3e722da06720a52445d4079a918580122"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\native\\slot-14-finished01.json",
+      "bytes": 750,
+      "sha256": "ad4216bfd7749f171e722552d0e9900a94ede1ccceef0790c27acb14263ef00e"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\native\\slot-15-started01.json",
+      "bytes": 3254,
+      "sha256": "dd7db4ef65afd0fd8a6ade0b4c11a36ad4f2d71bd6822aa428b916e671b81875"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\native\\slot-15-finished01.json",
+      "bytes": 753,
+      "sha256": "f90b351916eeb43981f42788b4a0ba4ca3b26b0d3781b41dbaed736fe0df7637"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\native\\slot-16-started01.json",
+      "bytes": 3254,
+      "sha256": "1bc8eca74e1cb898cd41e0de39aacc67a4064c174e5d8565ad7bbfb959a39fea"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\native\\slot-16-finished01.json",
+      "bytes": 750,
+      "sha256": "2fa32b631a9ee65f27786535f97e9777b609d14dd2fa8d7490feb91976907b8c"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\qualification\\slot-01-started01.json",
+      "bytes": 2044,
+      "sha256": "efa9319a5232bce7620f8efc7f0baf030d1a3b8b52585a42ac3757e252c1661c"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\qualification\\slot-01-finished01.json",
+      "bytes": 736,
+      "sha256": "4c2bc90abce114b63c9727b189beeabf62e07fc54dbf384ea44e29bed5048c62"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\qualification\\slot-02-started01.json",
+      "bytes": 2044,
+      "sha256": "7f34bfecb7d3f0e832497eaff50c74c380d784a44d2486c94d39b4492d256845"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\qualification\\slot-02-finished01.json",
+      "bytes": 739,
+      "sha256": "aea0064691ca0491a5c1d772ab4683b4f092aa82ed199d52ee402d986cfaa865"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-current-native-worker-root-native-four-20261008-03\\native-01-wire-observed01.json",
+      "bytes": 3538,
+      "sha256": "6befac5d346c5caecace69834c4f8a48bd5a38239cfaeec667d8c37bca417f75"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-current-native-worker-root-native-four-20261008-03\\native-02-wire-observed01.json",
+      "bytes": 3538,
+      "sha256": "234c8a61e5fea477838fc7cf9a1c450bb9d02e5170d7ff74a7f0f10014b835c1"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-current-native-worker-root-native-four-20261008-03\\native-05-wire-observed01.json",
+      "bytes": 3538,
+      "sha256": "09cfeb85f2e2d431f4e390953390d0f78cef4343e2aa9a3f7ad5df7a657f7679"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-current-native-worker-root-native-four-20261008-03\\native-06-wire-observed01.json",
+      "bytes": 3538,
+      "sha256": "76fb5823039ab7e5d977b2413f9b18246f31429585d05f451c03bac8ebd1b9d8"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-current-native-worker-root-native-four-20261008-03\\native-09-wire-observed01.json",
+      "bytes": 3538,
+      "sha256": "b424c97173a332a31eb23cc40f17e9b5e7d2a952c69be7504de04a9a073026ad"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-current-native-worker-root-native-four-20261008-03\\native-10-wire-observed01.json",
+      "bytes": 3540,
+      "sha256": "febb82a07a7043ead0bc3a07359ce7af74915e0fe1bcc76f33076ff540589eeb"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-current-native-worker-root-native-four-20261008-03\\native-13-wire-observed01.json",
+      "bytes": 3540,
+      "sha256": "0f684d902811843f4b74b9fd7e67579c881eb1e94d74060d94fdbe2aef7032bb"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-current-native-worker-root-native-four-20261008-03\\native-14-wire-observed01.json",
+      "bytes": 3541,
+      "sha256": "483fd7a8cfe71f7ba997a4bfc989d56826ff97b99ed774f4d0482fa3cce3eb9e"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-current-native-worker-root-native-four-20261008-03\\native-15-wire-observed01.json",
+      "bytes": 3541,
+      "sha256": "c1455d5caf77b4a232409afd560c9a89449d1a4992c7d32a8fa59b399187112b"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-current-native-worker-root-native-four-20261008-03\\native-16-wire-observed01.json",
+      "bytes": 3541,
+      "sha256": "d2eab9aac31a556e13fe507e5e7287fc5f752b174bb8cc5873ccd19867b9d81a"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-native-timing-root-native-four-20261008-03\\case01-message-started01.json",
+      "bytes": 520,
+      "sha256": "5dae46fcbda9619a7117788ef38476745baadca36ef0ebf1bf52d11b16bcda95"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-native-timing-root-native-four-20261008-03\\case01-message-submitted01.json",
+      "bytes": 758,
+      "sha256": "c0369a77ce019037f35e27013474214c26e10c9b004eb61b4311f2a1f1e87e5f"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-native-timing-root-native-four-20261008-03\\case01-timing-finished01.json",
+      "bytes": 1201,
+      "sha256": "dfc8c95d3fce4ac7913afea0b8b68b19cb4544d70484dd97575513bb79bc49ea"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-native-timing-root-native-four-20261008-03\\terminal-receipt01.json",
+      "bytes": 13981,
+      "sha256": "f71fe709f39738023430323c966f6abc2f32e7bc83b405770c81e26274d7bdae"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-native-timing-root-native-four-20261008-03\\resume-start02.json",
+      "bytes": 520,
+      "sha256": "5c62d6846cbb5ccf615d6b1f71f5b752544730c5201aa06c6c3b5f94cde0da73"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-native-timing-root-native-four-20261008-03\\terminal-receipt02.json",
+      "bytes": 171478,
+      "sha256": "0b9421a26c83846bbcefc019abe0cfc288601da7f936bed715e5344414f64273"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-native-timing-root-native-four-20261008-03\\case01-timing-finished02.json",
+      "bytes": 39872,
+      "sha256": "796a3164352f199dd634ebb98d99f1d54153f156d53504c9dc3f3b4447e1d9d4"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-native-timing-root-native-four-20261008-03\\case02-message-started01.json",
+      "bytes": 565,
+      "sha256": "ec0f58bab48847c2995d3b8e5f071ae2e60f1c0690837c20b96bbe09e556ee30"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-native-timing-root-native-four-20261008-03\\case02-message-submitted01.json",
+      "bytes": 802,
+      "sha256": "f25983882744346d6caa93b57b46114928c3c3f75067dca71c03922b1807a32c"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-native-timing-root-native-four-20261008-03\\case02-timing-finished01.json",
+      "bytes": 61649,
+      "sha256": "9b0d576d38e4b2cf51092e8a40ebe4eb3fb146f21fc62320c99ac3e36fc78ca3"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-native-timing-root-native-four-20261008-03\\case03-message-started01.json",
+      "bytes": 531,
+      "sha256": "5d46918a43c9d3303d6528fdea588352a4ecb37616dba8496d6d1389ed430bec"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-native-timing-root-native-four-20261008-03\\case03-message-submitted01.json",
+      "bytes": 769,
+      "sha256": "4102468fc8a434fada0de9d5c06a493dd69870c086bf4cf44ad8c08b08a353b8"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-native-timing-root-native-four-20261008-03\\case03-timing-finished01.json",
+      "bytes": 43167,
+      "sha256": "f5528e6acbde96ec0ff26bdecdc08e388cbca07d4477d81eae96d93a86b3979f"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-native-timing-root-native-four-20261008-03\\case04-message-started01.json",
+      "bytes": 561,
+      "sha256": "ed6e497963e1aea419b8ef78c2c94cad1cf80d68756c712878e303c59777eb8e"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-native-timing-root-native-four-20261008-03\\case04-message-submitted01.json",
+      "bytes": 799,
+      "sha256": "76d2b81b355e9c22159c782bba85b32a292deceac8448b58c8b66ee7d30ac557"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-native-timing-root-native-four-20261008-03\\case04-timing-finished01.json",
+      "bytes": 2163,
+      "sha256": "c2018e0eb3dfe176b25b2b6858cbb9508f2fef5bd54e15869d7fb20dcfcdab36"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-current-native-worker-root-native-four-20261008-03\\case01-terminal01.json",
+      "bytes": 2445,
+      "sha256": "2fb1fbb8475a5a01eeb3bd0cfff7bd3c5a6faadd1c6a73923a9a05d9e8463cd3"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-current-native-worker-root-native-four-20261008-03\\case02-terminal01.json",
+      "bytes": 2450,
+      "sha256": "5d5642a42941db022cb54a1359d1bc07618e44b8064621d3c523f240299d1c97"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-current-native-worker-root-native-four-20261008-03\\case03-terminal01.json",
+      "bytes": 2447,
+      "sha256": "24879ee0bfdbc0ea4089585283ba14b61104f8553bf520c952048220bc05414d"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-current-native-worker-root-native-four-20261008-03\\case04-terminal01.json",
+      "bytes": 4274,
+      "sha256": "000e8308391df31deda473e2741020ba9dccf4b93219feea8fb4af823d0d547c"
+    }
+  ],
+  "audit_actions": {
+    "provider_POSTs": 0,
+    "database_reads": 0,
+    "database_writes": 0,
+    "credential_or_key_file_reads": 0,
+    "Gold_reads": 0,
+    "raw_API_log_reads": 0,
+    "admitted_command_artifact_reads": 0,
+    "E_writes": 0,
+    "product_guard_budget_claim_J21_finance21_writes": 0,
+    "only_new_W_audit_report_and_finite_public_meta_index_written": true
+  },
+  "remaining_blockers": [
+    "The fourth native answer was not published because the last checker returned invalid/inconsistent schema metadata at the four-call cap.",
+    "The initial first-run timeout remains a failed/censored observation. The later GET recovery cannot make the original run meet its completed-answer timing target.",
+    "Only two of three fresh native POSTs completed; only one of all three completed within ten seconds. No p95, TTFT, browser timing, arm speed gain or >=30 percent warm improvement is established.",
+    "Seven spare slots are unreleased and the current ledger STOP prevents further submissions. Unused native slots remain protected and are not transferable execution permission.",
+    "Independent scientific noninferiority, human evaluation, learning outcomes and whole-project/course acceptance remain unestablished.",
+    "Decision candidate mock work and any later live decision batch are outside this completed native batch and must preserve these settled results, STOP and all historical UNKNOWN holds."
+  ]
+}

@@ -1,0 +1,29 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.2, pytest-9.1.1, pluggy-1.6.0 -- E:\5703\learning-assistant\.venv\Scripts\python.exe
+rootdir: E:\5703\learning-assistant
+configfile: pytest.ini
+collecting ... collected 10 items
+
+E:\5703\learning-assistant\tests\unit\test_failure_diagnostics.py::test_provider_projection_keeps_typed_failure_without_echoed_payload PASSED [ 10%]
+E:\5703\learning-assistant\tests\unit\test_failure_diagnostics.py::test_publication_block_projection_rejects_non_scalar_control_fields PASSED [ 20%]
+E:\5703\learning-assistant\tests\unit\test_failure_diagnostics.py::test_diagnostics_scope_and_permissions PASSED [ 30%]
+E:\5703\learning-assistant\tests\unit\test_failure_diagnostics.py::test_actual_citations_and_distinct_evidence_counts PASSED [ 40%]
+E:\5703\learning-assistant\tests\unit\test_failure_diagnostics.py::test_unrecorded_counts_remain_unknown_and_errors_are_safe PASSED [ 50%]
+E:\5703\learning-assistant\tests\unit\test_failure_diagnostics.py::test_semantic_publication_block_is_admin_scoped_and_content_free PASSED [ 60%]
+E:\5703\learning-assistant\tests\unit\test_failure_diagnostics.py::test_paginated_failure_list PASSED [ 70%]
+E:\5703\learning-assistant\tests\unit\test_failure_diagnostics.py::test_processing_trace_projects_actual_stages_and_authoritative_timing PASSED [ 80%]
+E:\5703\learning-assistant\tests\unit\test_failure_diagnostics.py::test_trace_exclusions_are_bounded_and_invalid_numeric_observations_remain_unknown PASSED [ 90%]
+E:\5703\learning-assistant\tests\unit\test_failure_diagnostics.py::test_facet_fallback_uses_final_distinct_counts_and_keeps_score_queries_separate PASSED [100%]
+
+============================== warnings summary ===============================
+E:\5703\learning-assistant\.venv\Lib\site-packages\fastapi\testclient.py:1
+  E:\5703\learning-assistant\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+E:\5703\learning-assistant\.venv\Lib\site-packages\starlette\testclient.py:53
+  E:\5703\learning-assistant\.venv\Lib\site-packages\starlette\testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-ac44-free67\isolated-loopback05\pytest.xml -
+======================= 10 passed, 2 warnings in 4.87s ========================

@@ -1,0 +1,195 @@
+--- closed40/run_fixed_checker_pair40_CANDIDATE.py
++++ native-schema41/run_checker_native_schema41_CANDIDATE.py
+@@ -1,8 +1,8 @@
+-"""Two finite checker observations of one unchanged, previously exposed draft.
+-
+-The first arm reconstructs the actual36 initial checker wire.  The second adds
+-only the adopted generic context-candidate metadata and selection instruction.
+-Preparation is offline.  Root alone may execute the two calls.  The original
++"""One finite native-schema diagnostic of the unchanged candidate40 draft.
++
++The closed json_object baseline and candidate are reconstructed offline only.
++One request changes the output mode to full native json_schema.  This is not
++a matched pair.  Root alone may execute the one call.  The original
+ approved credential consumer performs one read-only isolated credential leg;
+ the experiment itself does not open a database, teacher, browser or model cache.
+ """
+@@ -46,12 +46,12 @@
+ ORIGINAL_CANONICAL_BODY_SHA = "9c43c122dcb6bbdc4599dcb0be0ee848e34d168807c6da89a9bff3eb20c5adf5"
+ ORIGINAL_CONTROLS_SHA = "9106c8c5dfd60ef22fdae09f3bb25db67e4bd6fb6cfbdf7eccea249b89960eff"
+ PER = Decimal("0.04500000")
+-TOTAL = Decimal("0.09000000")
+-PRIOR_COST = Decimal("0.14928810")
++TOTAL = Decimal("0.04500000")
++PRIOR_COST = Decimal("0.17182790")
+ GROUP_LIMIT = Decimal("0.24000000")
+ MAX_WIRE = 98304
+ OUTPUT = 4096
+-ARMS = ("baseline40", "candidate40")
++ARMS = ("native_schema41",)
+ PINS = {
+     "initial": (DATA36 / "slot-02-model-output01.json", 56525,
+                 "f3ed73ca40b0258998ef25d9d4d1fa74ace5e060cd1140b0ccca07bf831e1e67"),
+@@ -79,6 +79,14 @@
+                 "838b641549631ee365f0f2e9b534c9f08aa0c230dfe59745f5de3ca901145a4c"),
+     "source": (MAIN / "generation/source_relations_v2.py", 17079,
+                "4e3ef844eff23b77d83e850c32fdfa47c9504b7cec9a8edd7db3328851ba5a55"),
++    "prior_preparation40": (W / "5703-fixed-checker-pair40-candidate/OFFLINE_FIXED_CHECKER_PAIR40_PREPARATION01.json", 24434,
++                            "3aa7b71fc0a8c5ab84eb9a1ad70d2bda348798ecb5d17461f4a8394b81e2eab0"),
++    "native_schema_proof": (W / "5703-strict-schema41-candidate/STRICT_SCHEMA41_PURE_TRANSPORT_PROOF.json", 6181,
++                            "d2f0005e499b980a73d8ec437d038609812a492a94481a958d1020dfabf4d1ca"),
++    "native_schema_helper": (W / "5703-strict-schema41-candidate/strict_schema41_transport_contract.py", 4637,
++                             "e014043e07d60a5711756b1090a4e1e02b4788e21e6b2a71fe06cc5a7588522d"),
++    "full_native_schema": (W / "5703-strict-schema41-candidate/FULL_V2_CANONICAL_SCHEMA41.json", 7125,
++                           "864212a5e636d2cadbc34328f431712a954c30130848a31e64e66e4bdedbc926"),
+     "credential_helper": (D / "haiku_json_object_full_checker_probe_PREPARED08.py", 36687,
+                           "b19fdfd53bfccb64e617a8203ed7947bc73ae2c2897a22908de7380dd5e29b6c"),
+     "diagnostics": (D / "scientific-native-closure-preparation36/diagnostics01.py", 17258,
+@@ -331,8 +339,8 @@
+                       reasoning_effort=None, configuration_id="model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+                       openrouter_route_profile="gemini35_google_vertex_v1")
+     cfg.validate()
+-    plans = []
+-    for arm, data, check_system in zip(ARMS, (initial, candidate), (system, candidate_system), strict=True):
++    reference_plans = []
++    for arm, data, check_system in zip(("baseline40", "candidate40"), (initial, candidate), (system, candidate_system), strict=True):
+         messages = [{"role": "system", "content": check_system}, {"role": "user", "content": dumps(data)}]
+         body, transport = prepare_schema_wire(cfg, payload(cfg, messages, schema, SCHEMA_NAME), schema)
+         require(transport == {} and body["response_format"] == {"type": "json_object"}, "ORIGINAL_SCHEMA_HINT_WIRE_REQUIRED")
+@@ -341,18 +349,52 @@
+         bound = (Decimal(len(wire) + 512) * Decimal("0.3") + Decimal(OUTPUT) * Decimal("2.5")) / Decimal(1000000)
+         require(len(wire) <= MAX_WIRE and len(wire) + 512 < 100000 and len(wire) + 512 + OUTPUT <= cfg.window_tokens
+                 and bound < PER - Decimal("0.0005"), "UNIFORM_WIRE_FINANCIAL_TIER_WINDOW_LIMIT")
+-        plans.append({"arm": arm, "messages": messages, "data": data, "body": body,
++        reference_plans.append({"arm": arm, "messages": messages, "data": data, "body": body,
+                       "wire_bytes": len(wire), "wire_sha256": sha(wire),
+                       "canonical_complete_payload_sha256": digest(body, ascii=False),
+                       "messages_sha256": digest(body["messages"], ascii=False),
+                       "wire_controls_sha256": digest(controls, ascii=False),
+                       "schema_sha256": SCHEMA_SHA, "strict_cost_bound_USD": str(bound)})
+-    baseline = plans[0]
++    baseline = reference_plans[0]
+     require(baseline["wire_bytes"] == 68490 and baseline["wire_sha256"] == ORIGINAL_BODY_SHA and
+             baseline["canonical_complete_payload_sha256"] == ORIGINAL_CANONICAL_BODY_SHA and
+             baseline["messages_sha256"] == ORIGINAL_MESSAGES_SHA and
+             baseline["wire_controls_sha256"] == ORIGINAL_CONTROLS_SHA, "ACTUAL36_INITIAL_WIRE_RECONSTRUCTION_FAILED")
+-    require(plans[0]["wire_controls_sha256"] == plans[1]["wire_controls_sha256"], "PAIR_CONTROLS_DIFFERED")
++    require(reference_plans[0]["wire_controls_sha256"] == reference_plans[1]["wire_controls_sha256"], "OFFLINE_REFERENCE_CONTROLS_DIFFERED")
++    prior_preparation = read_json(PINS["prior_preparation40"])
++    reference_keys = ("wire_bytes", "wire_sha256", "canonical_complete_payload_sha256", "messages_sha256", "wire_controls_sha256", "schema_sha256")
++    require(all(actual[key] == expected[key] for actual, expected in
++                zip(reference_plans, prior_preparation["plans"], strict=True) for key in reference_keys),
++            "CLOSED40_REFERENCE_RECONSTRUCTION_CHANGED")
++    native_proof = read_json(PINS["native_schema_proof"])
++    require(native_proof["canonical_original_full_schema_sha256"] == SCHEMA_SHA and
++            native_proof["provider_schema_exactly_canonical"] is True and
++            native_proof["wire_projection_policy"] is None and
++            native_proof["observed_live_endpoint_schema_support"] is False and
++            read_json(PINS["full_native_schema"]) == schema, "FULL_UNPROJECTED_NATIVE_SCHEMA_REQUIRED")
++    native_helper = load_source("root_pure_native_schema41_transport", PINS["native_schema_helper"])
++    cfg41, body41, native_certificate = native_helper.prepare_full_native_schema41(
++        cfg, reference_plans[1]["messages"], schema)
++    old_config, new_config = cfg.to_dict(), cfg41.to_dict()
++    config_delta = {key: [old_config[key], new_config[key]] for key in old_config
++                    if old_config[key] != new_config[key]}
++    require(config_delta == {"structured_output_mode": ["json_object", "json_schema"]}, "MODE_ONLY_CONFIG_DELTA_REQUIRED")
++    require(body41["response_format"] == {"type": "json_schema", "json_schema": {
++        "name": SCHEMA_NAME, "strict": True, "schema": schema}}, "EXACT_FULL_NATIVE_RESPONSE_FORMAT_REQUIRED")
++    wire41 = json.dumps(body41, ensure_ascii=False, separators=(",", ":"), allow_nan=False).encode()
++    bound41 = (Decimal(len(wire41) + 512) * Decimal("0.3") + Decimal(OUTPUT) * Decimal("2.5")) / Decimal(1000000)
++    require(len(wire41) <= MAX_WIRE and len(wire41) + 512 < 100000 and
++            len(wire41) + 512 + OUTPUT <= cfg41.window_tokens and bound41 < PER - Decimal("0.0005"),
++            "NATIVE41_WIRE_FINANCIAL_TIER_WINDOW_LIMIT")
++    controls41 = {key: value for key, value in body41.items() if key != "messages"}
++    plans = [{"arm": ARMS[0], "messages": reference_plans[1]["messages"], "data": candidate, "body": body41,
++              "wire_bytes": len(wire41), "wire_sha256": sha(wire41),
++              "canonical_complete_payload_sha256": digest(body41, ascii=False),
++              "messages_sha256": digest(body41["messages"], ascii=False),
++              "wire_controls_sha256": digest(controls41, ascii=False),
++              "schema_sha256": SCHEMA_SHA, "strict_cost_bound_USD": str(bound41)}]
++    require(len(plans) == len(ARMS) == 1 and PRIOR_COST + TOTAL <= GROUP_LIMIT, "EXACT_ONE_POST_DIAGNOSTIC_REQUIRED")
++    cfg = cfg41
+     retained_observation = validate_output(read_json(PINS["initial"])["raw"]["retained_raw_text"], original)
+     require(retained_observation["schema_PASS"], "RETAINED_ORIGINAL_V2_SCHEMA_REPLAY_FAILED")
+     module_pins = []
+@@ -362,12 +404,19 @@
+             module_pins.append(metadata(Path(path)))
+     for name in prompt_names:
+         module_pins.append(metadata(prompt_root / name))
+-    summary = {"schema": "5703_fixed_initial_checker_pair40_preparation_v1", "status": "OFFLINE_PREPARED_NO_API_OR_CREDENTIAL_ACCESS",
++    summary = {"schema": "5703_fixed_initial_checker_native_schema41_preparation_v1", "status": "OFFLINE_PREPARED_NO_API_OR_CREDENTIAL_ACCESS",
+                "runner_pin": metadata(Path(__file__)), "input_pins": {k: {"path": str(v[0]), "bytes": v[1], "sha256": v[2]} for k, v in PINS.items()},
+                "main_source_and_prompt_pins": module_pins, "configuration": cfg.to_dict(),
+                "fixed_initial_claims": 10, "fixed_initial_units": 19, "fixed_source_fragments": 71,
+                "original_initial_packet_sha256": ORIGINAL_DATA_SHA, "candidate_projection_sha256": digest(projected),
+                "declared_changed_fields": ["SOURCE_SYNTACTIC_UNITS[*].source_context_candidates", "SOURCE_RELATION_SELECTION_INSTRUCTIONS removed from candidate DATA", "SYSTEM content via generation.checked.source_relation_checker_system"],
++               "new_diagnostic_delta_from_candidate40": "structured_output_mode only: automatic textual schema hint replaced with identical full native response_format schema",
++               "config_delta_from_candidate40": config_delta,
++               "native_schema_transport_certificate": native_certificate,
++               "offline_json_object_reference_plans_not_called": [{k: v for k, v in p.items() if k not in {"messages", "data", "body"}} for p in reference_plans],
++               "matched_pair": False,
++               "baseline_requests_this_scope": 0,
++               "upstream_full_keyword_enforcement_observed": False,
+                "source_system40_fresh_controls_passed": 15,
+                "production_system_helper_ast_sha256": helper_ast_sha,
+                "candidate_system_template_sha256": sha(candidate_system.encode()),
+@@ -386,9 +435,9 @@
+                "retained_initial_technical_entity_binding_issues": retained_observation["technical_entity_binding_issues"],
+                "accepted_rewrite_packet_not_a_pair_arm": True, "accepted_rewrite_packet_sha256": digest(final),
+                "plans": [{k: v for k, v in p.items() if k not in {"messages", "data", "body"}} for p in plans],
+-               "new_manual_POST_limit": 2, "new_manual_reserve_USD": str(TOTAL), "per_POST_reserve_USD": str(PER),
+-               "prior_closed_group_POSTs": 18, "prior_known_group_cost_USD": str(PRIOR_COST),
+-               "maximum_cumulative_manual_POSTs": 20, "maximum_known_group_plus_new_reserve_USD": str(PRIOR_COST + TOTAL),
++               "new_manual_POST_limit": 1, "new_manual_reserve_USD": str(TOTAL), "per_POST_reserve_USD": str(PER),
++               "prior_closed_group_POSTs": 20, "prior_known_group_cost_USD": str(PRIOR_COST),
++               "maximum_cumulative_manual_POSTs": 21, "maximum_known_group_plus_new_reserve_USD": str(PRIOR_COST + TOTAL),
+                "original_money_limit_USD": str(GROUP_LIMIT), "historical_unknown_holds_release_authorized": False,
+                "old_scope_reuse": False, "automatic_retries": False, "teacher_calls": 0,
+                "JSON_repairs": 0, "native_or_course_qualification": False,
+@@ -452,7 +501,7 @@
+     out = ordinary(out, HERE)
+     require(not out.exists(), "FRESH_WRITE_ONCE_SCOPE_REQUIRED")
+     out.mkdir()
+-    report = {"schema": "5703_fixed_initial_checker_pair40_actual_v1", "started_at_UTC": now(),
++    report = {"schema": "5703_fixed_initial_checker_native_schema41_actual_v1", "started_at_UTC": now(),
+               "status": "STARTED", "source_review_pin": metadata(Path(review_path)), "physical_POSTs": 0,
+               "known_cost_USD": "0", "new_UNKNOWN_holds_USD": "0", "open_claims": 0,
+               "credential_preparation_read_only_DB_legs": 0, "experiment_DB_accesses": 0,
+@@ -460,7 +509,7 @@
+               "teacher_calls": 0, "JSON_repairs": 0, "old_scope_reuse": False,
+               "historical_unknown_holds_released": False, "fresh_question_or_course_qualification": False}
+     save_new(out / "intent01.json", report)
+-    helper = load_source("root_original_approved_credential40", PINS["credential_helper"])
++    helper = load_source("root_original_approved_credential41", PINS["credential_helper"])
+     require(helper.TARGET_DB == SOLE_DB, "ORIGINAL_CREDENTIAL_HELPER_DATABASE_OUTSIDE_SOLE_SCOPE")
+     for path in (MAIN, MAIN / "backend"):
+         if str(path) not in sys.path:
+@@ -469,7 +518,7 @@
+     report["credential_preparation_read_only_DB_legs"] = 1
+     key = helper.approved_credential(helper.WORKSPACE_ID)
+     require(isinstance(key, str) and key, "APPROVED_CREDENTIAL_UNAVAILABLE")
+-    diagnostics = load_source("root_original_diagnostics40", PINS["diagnostics"])
++    diagnostics = load_source("root_original_diagnostics41", PINS["diagnostics"])
+     redactor = diagnostics.Redactor((key,))
+     from generation import adapters as adapter_module
+     from generation.adapters import LLMAdapter
+@@ -563,7 +612,7 @@
+                       "schema_name": SCHEMA_NAME, "headers_exported": False}, redactor)
+             began = time.perf_counter_ns()
+             result = adapter.generate(plan["messages"], response_schema=schema, response_schema_name=SCHEMA_NAME,
+-                                      request_context={"purpose": "joint_check", "request_id": "fixed-initial-pair40-" + plan["arm"]},
++                                      request_context={"purpose": "joint_check", "request_id": "fixed-initial-native-schema41-" + plan["arm"]},
+                                       timeout_seconds=cfg.timeout_seconds)
+             elapsed = (time.perf_counter_ns() - began) / 1_000_000
+             submitted = active["submitted"]
+@@ -610,8 +659,8 @@
+                       credential_values_exported=False, memory_redaction_retained_until_process_exit=True,
+                       fresh_lock_released=True,
+                       historical_unknown_holds_released=False, no_followup_requests_authorized=True)
+-        save_new(out / "STOP-before-any-next-submission01.json", {"schema": "fixed_pair40_terminal_stop_v1", "status": report["status"], "at_UTC": now()})
+-        final_pin = save_new(out / "actual-fixed-checker-pair40-result01.json", report, redactor)
++        save_new(out / "STOP-before-any-next-submission01.json", {"schema": "fixed_native_schema41_terminal_stop_v1", "status": report["status"], "at_UTC": now()})
++        final_pin = save_new(out / "actual-checker-native-schema41-result01.json", report, redactor)
+     print(json.dumps({"status": report["status"], "physical_POSTs": report["physical_POSTs"],
+                       "known_cost_USD": report["known_cost_USD"], "result_pin": final_pin}))
+     return 0 if report["status"] == "PAIRED_OBSERVATIONS_CLOSED" else 1

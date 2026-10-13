@@ -1,0 +1,129 @@
+{
+  "status": "PREREGISTERED_INDEPENDENT_AI_SEMANTIC_STANDARD_NO_MODEL_OUTPUT_OPENED",
+  "registered_at_utc": "2026-10-11T05:39:18.906639+00:00",
+  "reviewer_type": "INDEPENDENT_AI_REVIEWER_NOT_HUMAN",
+  "source_provenance": "AI_AUTHORED_INVENTED_DEVELOPMENT_CASES",
+  "not_human_ratings": true,
+  "not_gold_or_held_out": true,
+  "scope_sha256": "4005273fb75b90dc452ee301d565963a1d22794b7bc0bd19f6cd04dd9c5ac4c2",
+  "fixture_sha256": "2abc45cc2820e34cb154e2f11bd5b54b4ab4b37aff79ebeb08d07fc7660367ad",
+  "expectations_sha256": "33685a4adfdc603309e234e57cbb32c70766066f506e36e3e69ff8a3f5c94b2b",
+  "cases": [
+    {
+      "case_id": "DEV01_guarded_relay_positive",
+      "wire_sha256": "582bdf28b93ec0402c5b3b84749633f1a50b53b3bd0385fee3029401099f3ea6",
+      "wire_path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\20261011-atomic-support62\\next-scope\\DEV01_guarded_relay_positive.wire.json",
+      "expected_overall": "supported",
+      "independent_ai_rationale": "The single rule explicitly supplies the same sensor, threshold, key condition, and relay consequence.",
+      "condition_expectations": [
+        {
+          "condition_id": "C0",
+          "expected_verdict": "supported",
+          "independent_ai_rationale": "The single rule explicitly supplies the same sensor, threshold, key condition, and relay consequence.",
+          "expected_gap_kind": null
+        },
+        {
+          "condition_id": "C1",
+          "expected_verdict": "supported",
+          "independent_ai_rationale": "The sensor and strict threshold are explicit.",
+          "expected_gap_kind": null
+        },
+        {
+          "condition_id": "C2",
+          "expected_verdict": "supported",
+          "independent_ai_rationale": "The rule says the key is armed.",
+          "expected_gap_kind": null
+        },
+        {
+          "condition_id": "C3",
+          "expected_verdict": "supported",
+          "independent_ai_rationale": "Relay R closes under the stated conditions.",
+          "expected_gap_kind": null
+        }
+      ],
+      "additional_gaps_expected": [],
+      "local_source_slices_validated": true,
+      "expectations_manual_outputs_or_full_snapshots_in_wire": false
+    },
+    {
+      "case_id": "DEV03_dropped_guard_negative",
+      "wire_sha256": "8addf09d9613fc6d65b70a97163be7e36f4e3360bee41a76741dcae838749d15",
+      "wire_path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\20261011-atomic-support62\\next-scope\\DEV03_dropped_guard_negative.wire.json",
+      "expected_overall": "unsupported",
+      "independent_ai_rationale": "The assertion drops the safety-pin guard. The second sentence provides a direct counterexample to voltage-alone sufficiency.",
+      "condition_expectations": [
+        {
+          "condition_id": "C0",
+          "expected_verdict": "unsupported",
+          "independent_ai_rationale": "The assertion drops the safety-pin guard. The second sentence provides a direct counterexample to voltage-alone sufficiency.",
+          "expected_gap_kind": "contradiction"
+        },
+        {
+          "condition_id": "C1",
+          "expected_verdict": "unsupported",
+          "independent_ai_rationale": "Voltage can exceed the threshold while the removed pin keeps the gate closed.",
+          "expected_gap_kind": "contradiction"
+        },
+        {
+          "condition_id": "C2",
+          "expected_verdict": "unsupported",
+          "independent_ai_rationale": "The inserted safety pin is required.",
+          "expected_gap_kind": "contradiction"
+        }
+      ],
+      "additional_gaps_expected": [],
+      "local_source_slices_validated": true,
+      "expectations_manual_outputs_or_full_snapshots_in_wire": false
+    },
+    {
+      "case_id": "DEV11_missing_identity_bridge_uncertain",
+      "wire_sha256": "747940e82e8186abd4b7ff05cdad0390c3d43a32f2d6a524af2991bb6a557a32",
+      "wire_path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\20261011-atomic-support62\\next-scope\\DEV11_missing_identity_bridge_uncertain.wire.json",
+      "expected_overall": "uncertain",
+      "independent_ai_rationale": "Emission and receipt are explicit, but the identity bridge is missing. Shared trial timing does not resolve packet identity or origin when other gateways are active.",
+      "condition_expectations": [
+        {
+          "condition_id": "C0",
+          "expected_verdict": "uncertain",
+          "independent_ai_rationale": "Emission and receipt are explicit, but the identity bridge is missing. Shared trial timing does not resolve packet identity or origin when other gateways are active.",
+          "expected_gap_kind": "unresolved_identity"
+        },
+        {
+          "condition_id": "C1",
+          "expected_verdict": "supported",
+          "independent_ai_rationale": "Gateway G's emission is explicit.",
+          "expected_gap_kind": null
+        },
+        {
+          "condition_id": "C2",
+          "expected_verdict": "supported",
+          "independent_ai_rationale": "Node N's receipt of an Aster packet is explicit.",
+          "expected_gap_kind": null
+        },
+        {
+          "condition_id": "C3",
+          "expected_verdict": "uncertain",
+          "independent_ai_rationale": "No packet identifier or origin links the two events.",
+          "expected_gap_kind": "unresolved_identity"
+        }
+      ],
+      "additional_gaps_expected": [],
+      "local_source_slices_validated": true,
+      "expectations_manual_outputs_or_full_snapshots_in_wire": false
+    }
+  ],
+  "additional_review_requirements": [
+    "Inspect every overall and condition verdict, concise reason, exact subquote and original Unicode offset",
+    "A supported witness must semantically establish its condition; valid IDs or copied strings alone do not prove support",
+    "Keep explicit counterevidence for DEV03 and unresolved identity for DEV11; do not flatten all cases to supported",
+    "A right overall label with an irrelevant witness or hidden gap is not a complete semantic pass",
+    "Unexpected refusal/truncation/parse or binding failure is not a successful semantic result",
+    "No ratings or general quality metric may be inferred from this three-case AI-authored development pilot"
+  ],
+  "reviewer_authentication_attempts": 0,
+  "reviewer_database_accesses": 0,
+  "reviewer_external_requests": 0,
+  "sender_imports_or_executions": 0,
+  "main_writes": 0,
+  "actual_provider_result_opened": false
+}

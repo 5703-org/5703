@@ -1,0 +1,140 @@
+--- generation/source_relations_v2.py (before)
++++ generation/source_relations_v2.py (candidate)
+@@ -201,6 +201,97 @@
+     )
+ 
+ 
++
++# Leading-scope patterns and same-binding complete-block discovery follow the
++# existing reliability_v5 scope diagnostic. No fabricated checker verdict is used.
++_CONTEXT_SCOPE_PATTERNS = (
++    re.compile(r"^\s*(?:In|During) (?:the )?([A-Z][A-Za-z0-9]*(?:[ -][A-Za-z0-9]+){0,5})\s*[,;:]"),
++    re.compile(r"^\s*The ([A-Za-z]+(?:-[A-Za-z]+)+ [A-Za-z]+s)\b"),
++)
++_CONTEXT_WORD = re.compile(r"(?<!\w)[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*(?!\w)")
++_CONTEXT_QUANTITIES = frozenset(
++    "zero one two three four five six seven eight nine ten eleven twelve thirteen "
++    "fourteen fifteen sixteen seventeen eighteen nineteen twenty hundred thousand "
++    "half quarter each every per most remaining".split()
++)
++_CONTEXT_STOP_WORDS = frozenset(
++    "about after again also another back because before being between both called "
++    "does during enough from have into itself more other otherwise rather some "
++    "than that their them then there these they this those through together under "
++    "until used using very what when where which while with without would only "
++    "neither never not except above below".split()
++)
++
++
++def _context_word_family(word):
++    """A lookup hint for English inflections, never an alias or support verdict."""
++    word = word.casefold()
++    for suffix in ("ation", "ition", "tion", "ing", "ed", "es", "s", "e"):
++        if word.endswith(suffix) and len(word) - len(suffix) >= 4:
++            return word[:-len(suffix)]
++    return word
++
++
++def _context_anchors(text):
++    anchors = []
++    scope = next((found for pattern in _CONTEXT_SCOPE_PATTERNS
++                  if (found := pattern.match(text))), None)
++    if scope is not None:
++        anchors.append(("leading_scope", scope[1], scope.start(1), scope.end(1)))
++    for found in _CONTEXT_WORD.finditer(text):
++        word = found.group()
++        letters = [char for char in word if char.isalpha()]
++        if (letters and any(char.isdigit() for char in word)
++                or sum(char.isupper() for char in letters) >= 2
++                or any(char.isupper() for char in word[1:])):
++            kind = "technical_identifier"
++        elif word.isdigit() or word.casefold() in _CONTEXT_QUANTITIES:
++            kind = "quantity"
++        elif word.isalpha() and len(word) >= 4 and word.casefold() not in _CONTEXT_STOP_WORDS:
++            kind = "predicate_term"
++        else:
++            continue
++        anchors.append((kind, word, found.start(), found.end()))
++    return anchors
++
++
++def _context_candidates(entry, citations, fragments):
++    """Locate neutral occurrences inside this claim's immutable source scope."""
++    allowed = {citation["evidence_id"]: set(citation["allowed_fragment_ids"])
++               for citation in citations}
++    rows = []
++    for fragment in fragments:
++        eid, fid = fragment["evidence_id"], fragment["fragment_id"]
++        if fid not in allowed.get(eid, set()) or not fragment.get("complete_block", False):
++            continue
++        source_text = fragment["exact_text"]
++        source_words = list(_CONTEXT_WORD.finditer(source_text))
++        units, kinds, spans = set(), set(), set()
++        for unit in entry["units"]:
++            for kind, anchor, _, _ in _context_anchors(unit["text"]):
++                literal = re.compile(r"(?<!\w)" + re.escape(anchor) + r"(?!\w)", re.I)
++                matches = [(match.start(), match.end(), kind) for match in literal.finditer(source_text)]
++                if kind == "predicate_term":
++                    family = _context_word_family(anchor)
++                    matches.extend((match.start(), match.end(), "word_family_candidate")
++                                   for match in source_words
++                                   if match.group().isalpha()
++                                   and match.group().casefold() != anchor.casefold()
++                                   and _context_word_family(match.group()) == family)
++                for start, end, match_kind in matches:
++                    units.add(unit["unit_id"])
++                    kinds.add(match_kind)
++                    spans.add((start, end))
++        if units:
++            rows.append([eid, fid, sorted(units), sorted(kinds), [list(span) for span in sorted(spans)]])
++    return {
++        "candidate_only": True,
++        "source_entailment_certified": False,
++        "columns": ["evidence_id", "fragment_id", "unit_ids", "anchor_kinds", "source_spans"],
++        "rows": rows,
++    }
++
++
+ SOURCE_SELECTION_INSTRUCTIONS = (
+     "Each SOURCE_SYNTACTIC_UNITS entry's actual_citation_scope is this claim's "
+     "immutable evidence_id and allowed_fragment_ids table, repeated here for selection. "
+@@ -213,11 +304,18 @@
+     "Never borrow another claim's source or a globally adjacent fragment. If complete "
+     "support cannot be selected within this scope, return an honest partial/unsupported "
+     "unit and its exact gap. These scope and instruction fields are input data only; "
++    "source_context_candidates lists same-claim allowed-block occurrences, including "
++    "word-family lookup hints. These are neither selected citations nor support, aliases "
++    "or semantic continuations. Re-read the original full claim, inherited subject and "
++    "complete source blocks: preserve identity, operation, quantities, conditions and "
++    "negation. A matching term in a caption, option, footer or contrary statement does "
++    "not support the predicate. Select all necessary same-claim blocks explicitly or "
++    "report the exact partial/unsupported gap; never auto-fill a citation from a hint. "
+     "return the unchanged output schema and preserve every existing publication gate."
+ )
+ 
+ 
+-def scoped_syntactic_units(claims, bindings):
++def scoped_syntactic_units(claims, bindings, fragments=None):
+     """Place the existing immutable source allowlist next to each complete claim.
+ 
+     This selects no source, joins no text and makes no semantic judgment. The
+@@ -235,4 +333,8 @@
+     result = syntactic_units(claims)
+     for entry in result:
+         entry["actual_citation_scope"] = deepcopy(by_claim[entry["claim_id"]]["citations"])
++        if fragments is not None:
++            entry["source_context_candidates"] = _context_candidates(
++                entry, entry["actual_citation_scope"], fragments
++            )
+     return result
+--- generation/checked.py (before)
++++ generation/checked.py (candidate)
+@@ -1899,7 +1899,7 @@
+                 check_data["SOURCE_RELATION_POLICY"] = request.source_relation_policy
+                 if relation_v2:
+                     check_data["SOURCE_SYNTACTIC_UNITS"] = scoped_syntactic_units(
+-                        claims, binding_table
++                        claims, binding_table, full_aliased_fragments
+                     )
+                     check_data["SOURCE_RELATION_SELECTION_INSTRUCTIONS"] = (
+                         SOURCE_SELECTION_INSTRUCTIONS

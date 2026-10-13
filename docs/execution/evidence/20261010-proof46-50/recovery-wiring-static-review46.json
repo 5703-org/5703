@@ -1,0 +1,198 @@
+{
+  "version": "recovery_current_wiring46_static_review_v1",
+  "scope": "Current production schema-policy wiring, restart lease/budget fences and native transcript recovery code; no execution qualification",
+  "changes": [],
+  "reviewed_at": "2026-10-10T13:00:07.3243833Z",
+  "status": "PASS_STATIC_NO_NEW_CONFIRMED_PRODUCTION_DEFECT",
+  "confirmed_new_bugs": [],
+  "reviewer": "/root/recovery_current_wiring46",
+  "limits": [
+    "No current runtime readiness, native HTTP/browser path, real database transaction or paid-model qualification is established by static inspection.",
+    "Research schema is server opt-in and intentionally rejects attempts, compact transport and general-mode/nonordinary requests. It is not a generally qualified product default.",
+    "Explicit --recover-stale is required to reconcile stale running jobs; the code does not automatically replay uncertain external execution.",
+    "Unit own-source completeness and science quality require independent examination of actual returned selected sources; existing structural PASS does not establish entailment.",
+    "Existing recovery/race test files were read for coverage context only; historical tests were not rerun or upgraded to fresh PASS."
+  ],
+  "source_pins": [
+    {
+      "path": "generation\\checked.py",
+      "bytes": 159286,
+      "sha256": "8e3042a00e23a72e7ac06cebded3c12550db916d89c4cea24dd744a19c6217eb"
+    },
+    {
+      "path": "generation\\source_relations_v2.py",
+      "bytes": 25343,
+      "sha256": "1faed256cd212288a4e2facfb181392558f2f57e6da8dfde1bdad3ec5c846e3c"
+    },
+    {
+      "path": "generation\\types.py",
+      "bytes": 10131,
+      "sha256": "f74ce2c7295b7ee655577bc330791fbdd2c62447b8f7d4414af85b4aba7bcd69"
+    },
+    {
+      "path": "backend\\app\\core\\config.py",
+      "bytes": 6527,
+      "sha256": "3f618fcdad99ed82cccc647788c9e68c5c68eadf1c8df5ac15b2563982e38c39"
+    },
+    {
+      "path": "backend\\app\\modules\\answering\\service.py",
+      "bytes": 95056,
+      "sha256": "478f379fc51f26944d45964952f4966f98450e39524f817a54db2992a0d0fa1a"
+    },
+    {
+      "path": "backend\\app\\worker.py",
+      "bytes": 11785,
+      "sha256": "64f712d0c6c1e58a7a0a44aa0aaaa61883fcd5386ca18e5d889d0507200aba3b"
+    },
+    {
+      "path": "frontend\\src\\Chat.tsx",
+      "bytes": 42676,
+      "sha256": "1becbfb17c1f8dcce050b434a49cf23ae9d4a3077c5b5e188e23d66db3043661"
+    },
+    {
+      "path": "frontend\\src\\chat-submission.ts",
+      "bytes": 1207,
+      "sha256": "960005bed394f85bc621abcd3bf1780c53b2f85cc372543f3926d5f42fae2cb3"
+    },
+    {
+      "path": "frontend\\src\\api.ts",
+      "bytes": 4059,
+      "sha256": "5492a02e628bdd7b189329e0d6e97026857ef1e8d6ed4fc32a983f4ed24e1f88"
+    },
+    {
+      "path": "generation\\providers.py",
+      "bytes": 26220,
+      "sha256": "bbfb74558e1adf5e4850edad02bb117af221c804aaad6e6f260addfe05fb38f4"
+    }
+  ],
+  "execution": {
+    "service_starts": 0,
+    "w_writes": [
+      "RECOVERY_CURRENT_WIRING46_STATIC_REVIEW01.json"
+    ],
+    "api_calls": 0,
+    "main_writes": 0,
+    "browser_runs": 0,
+    "credential_file_or_value_reads": 0,
+    "new_controllers": 0,
+    "dependency_installs": 0,
+    "tests_run": 0,
+    "database_access": 0
+  },
+  "findings": [
+    {
+      "check": "Explicit frozen policy",
+      "anchors": [
+        "backend/app/core/config.py:62",
+        "backend/app/core/config.py:107",
+        "backend/app/modules/answering/service.py:486",
+        "backend/app/modules/answering/service.py:1940"
+      ],
+      "evidence": "Default None; settings validate paired V2 policy; producer freezes policy; consumer reads only durable command.",
+      "result": "PASS_STATIC"
+    },
+    {
+      "check": "Scope, encoding and whole window",
+      "anchors": [
+        "generation/checked.py:290",
+        "generation/source_relations_v2.py:81",
+        "generation/source_relations_v2.py:113",
+        "generation/checked.py:1951",
+        "generation/checked.py:1997",
+        "generation/checked.py:2031",
+        "generation/checked.py:472"
+      ],
+      "evidence": "Admit declared ordinary textbook E1 scope; validate every full original packet; selected wire schema shared by lossless encoding, token accounting and invoke.",
+      "result": "PASS_STATIC"
+    },
+    {
+      "check": "Strict raw and canonical output",
+      "anchors": [
+        "generation/checked.py:2070",
+        "generation/checked.py:2072",
+        "generation/checked.py:2084",
+        "generation/checked.py:2090",
+        "generation/checked.py:2371"
+      ],
+      "evidence": "Strict JSON and all original raw fields precede canonical validation; returned textbook basis checked; invalid research scope stops without contract correction.",
+      "result": "PASS_STATIC"
+    },
+    {
+      "check": "Source and unit ownership gates",
+      "anchors": [
+        "generation/source_relations_v2.py:261",
+        "generation/source_relations_v2.py:294",
+        "generation/source_relations_v2.py:306",
+        "generation/source_relations_v2.py:321",
+        "generation/checked.py:2124",
+        "generation/checked.py:2691"
+      ],
+      "evidence": "Exact unit set, allowed same-claim source ownership, supporting relations and nonempty supported-unit sources checked; partial/unsupported and changed relation/condition remain defects; structural issues prevent accepted publication. Binding validation does not certify scientific entailment.",
+      "result": "PASS_STATIC"
+    },
+    {
+      "check": "Finite repair and failure closure",
+      "anchors": [
+        "generation/checked.py:2933",
+        "generation/checked.py:2958",
+        "generation/checked.py:3020",
+        "generation/checked.py:3183",
+        "generation/checked.py:3201"
+      ],
+      "evidence": "Repairs require remaining shared calls/time and fresh check; terminal failures clear response and delivered projection; time overrun cannot publish.",
+      "result": "PASS_STATIC"
+    },
+    {
+      "check": "Restart and retry budget",
+      "anchors": [
+        "backend/app/worker.py:86",
+        "backend/app/worker.py:161",
+        "backend/app/worker.py:202",
+        "backend/app/worker.py:276",
+        "backend/app/modules/answering/service.py:1963",
+        "backend/app/modules/answering/service.py:639"
+      ],
+      "evidence": "Workers claim queued jobs atomically. Explicit stale recovery marks leases failed with uncertainty and invalidates token; it does not queue them. Attempt events persist consumed budget; explicit retry preserves frozen request and remaining budget.",
+      "result": "PASS_STATIC"
+    },
+    {
+      "check": "Atomic publication and current visibility",
+      "anchors": [
+        "backend/app/modules/answering/service.py:2053",
+        "backend/app/modules/answering/service.py:2113",
+        "backend/app/modules/answering/service.py:2121",
+        "backend/app/modules/answering/service.py:2132",
+        "backend/app/modules/answering/service.py:2183",
+        "backend/app/modules/answering/service.py:2253"
+      ],
+      "evidence": "Execution token/state, error, session and live document visibility are fenced before one transaction publishes answer/evidence/citations/message/task updates.",
+      "result": "PASS_STATIC"
+    },
+    {
+      "check": "No live-to-mock fallback or secret data export found",
+      "anchors": [
+        "backend/app/modules/answering/service.py:283",
+        "backend/app/modules/answering/service.py:1924",
+        "generation/types.py:11",
+        "backend/app/modules/answering/service.py:2001",
+        "backend/app/modules/answering/service.py:2031"
+      ],
+      "evidence": "Live settings reject mock provider; worker loads frozen model configuration; ModelConfig serializes environment name/configuration identity rather than key value; secret consumers remain outside prompt model and local references cleared in finally. No credential file or value was inspected.",
+      "result": "PASS_STATIC_IN_INSPECTED_PATHS"
+    },
+    {
+      "check": "Native transcript and submission recovery",
+      "anchors": [
+        "frontend/src/Chat.tsx:95",
+        "frontend/src/Chat.tsx:123",
+        "frontend/src/Chat.tsx:139",
+        "frontend/src/Chat.tsx:167",
+        "frontend/src/Chat.tsx:220",
+        "backend/app/modules/answering/service.py:918"
+      ],
+      "evidence": "Transcript request identity rejects old snapshots; durable terminal job reloads published history; uncertain submission reuses frozen content/idempotency key; failed refresh exposes explicit reload. History embeds only saved active answer references.",
+      "result": "PASS_STATIC"
+    }
+  ],
+  "main": "E:\\5703\\learning-assistant"
+}

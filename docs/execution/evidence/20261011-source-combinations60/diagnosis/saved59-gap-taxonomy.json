@@ -1,0 +1,952 @@
+{
+  "status": "COMPLETE_LOCAL_SOURCE_GAP_TAXONOMY",
+  "scope": "Previously exposed saved59 development diagnostics; five definite selected-proof gaps plus one conditional ATP predicate-ownership case. No new model observation.",
+  "human_gold": false,
+  "held_out": false,
+  "new_paid_requests": 0,
+  "last_authorized_slot_consumed": false,
+  "original59_files_rewritten": false,
+  "inputs": [
+    {
+      "relative_path": "independent59-review.md",
+      "bytes": 9607,
+      "sha256": "1b569d0a83d51904ca1847f12b75643df2d46d71badae67819055e844fee9f9c",
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-capacity59\\independent59-review.md"
+    },
+    {
+      "relative_path": "independent59-review.json",
+      "bytes": 44235,
+      "sha256": "e70843d0bc08b5a8e50d6e25061391ad560b27fe81a4639592384eec7ffc80b9",
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-capacity59\\independent59-review.json"
+    },
+    {
+      "relative_path": "wire59-PREPARED-UNVERIFIED.json",
+      "bytes": 88704,
+      "sha256": "c14a0748a60e981f03d5f2d5731ba87048909514ac45d4e3d28828e656913b40",
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-capacity59\\wire59-PREPARED-UNVERIFIED.json"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\20261010-offline-provenance-performance51\\remaining-unit-evidence.json",
+      "bytes": 75290,
+      "sha256": "af4ead0d425e53420ea4569fa1bc1a2965ab3fe674aa602c7f52c84904e1a4b4"
+    }
+  ],
+  "counts": {
+    "definite_selected_proof_gaps": 5,
+    "conditional_predicate_ownership_cases": 1,
+    "total_cases": 6,
+    "knowledge_not_retrieved_confirmed": 0,
+    "candidate_present_not_selected_definite_gaps": 5,
+    "selected_combination_insufficient_definite_gaps": 5,
+    "strict_extra_selected_combination_insufficiency": 1,
+    "syntactic_predicate_ownership_cases": 1,
+    "category_counts_are_nonexclusive": true
+  },
+  "minimal_public_data_interface": {
+    "SOURCE_FRAGMENTS": [
+      "fragment_id",
+      "evidence_id",
+      "exact_text",
+      "block_kind",
+      "complete_block"
+    ],
+    "BINDING_BANK": [
+      "binding_id",
+      "evidence_id",
+      "allowed_fragment_ids"
+    ],
+    "ACTUAL_CITATION_BINDINGS": [
+      "claim_id",
+      "binding_ids"
+    ],
+    "SOURCE_SYNTACTIC_UNITS": [
+      "claim_id",
+      "full_claim",
+      "units: unit_id/start/end/text/text_hash",
+      "actual_citation_scope",
+      "source_context_candidates"
+    ],
+    "existing_public_span_card_fields": [
+      "fragment_id",
+      "evidence_id",
+      "original_source_row_index",
+      "original_exact_text_column_index",
+      "exact_full_fragment",
+      "fragment_UTF8_sha256",
+      "proof_quote",
+      "quote_code_point_offsets",
+      "quote_UTF8_byte_offsets",
+      "offsets_are_not_original_PDF_HTML_offsets"
+    ],
+    "interface_boundaries": [
+      "Unit start/end/text_hash locate the answer slice, not the original source.",
+      "source_context_candidates.source_hits offsets locate tokens within exact_text; candidate_only=true and source_entailment_certified=false.",
+      "Historical source_span_cards locate quotes inside frozen serialized fragments; row/column are serialized SOURCE_FRAGMENTS positions and explicitly not original PDF/HTML offsets.",
+      "Fifteen historical span cards match59 fragment identity, exact text, UTF8 SHA and proof quote code-point slice.",
+      "Neither authorized input records full parent source text, a parent ID, original-source page/location, or child start/end relative to a complete parent.",
+      "complete_block=true is a retained mechanical flag; it does not certify a grammatical or scientifically self-sufficient source span."
+    ]
+  },
+  "taxonomy_definitions": {
+    "knowledge_not_retrieved": "Required knowledge unavailable in the retrieved/allowed pool. Not established for these saved59 cases: original allowed candidates contain the missing witness components. This is not a claim that retrieval is sufficient for arbitrary questions.",
+    "candidate_present_not_selected": "A relevant original candidate is allowed for this claim but absent from this unit's selection.",
+    "syntactic_predicate_ownership": "The original lossless unit split leaves shared predicate obligations policy-sensitive; source selection cannot silently rewrite that ownership.",
+    "selected_combination_insufficient": "The unit's actually selected original fragment combination does not establish all asserted parts; legal additional candidates do not retrospectively alter59."
+  },
+  "F019_F020_layout_diagnosis": {
+    "same_evidence_id": true,
+    "original_binding_id": "B003",
+    "allowed_fragment_ids": [
+      "F016",
+      "F017",
+      "F018",
+      "F019",
+      "F020",
+      "F021",
+      "F022"
+    ],
+    "serialized_table_rows_adjacent": true,
+    "original_document_adjacency_certified": false,
+    "complete_original_parent_available": false,
+    "child_spans_relative_to_complete_parent_available": false,
+    "original_PDF_HTML_spans_available": false,
+    "source_card_offsets_are_within_each_fragment": true,
+    "legal_operation": "Present exact F019 [0,69) and F020 [0,32) proof quotes as separate located original fragment candidates, with the full F019 record/header pollution retained and F011 for the turn condition.",
+    "disallowed_operations": [
+      "Concatenate or clean source fragments into a supposedly original joined quote",
+      "Derive a parent from consecutive F numbers or serialized row indices",
+      "Use source_hits or answer offsets as source-global offsets",
+      "Mark the original59 unit supported by adding unselected F020 after the fact",
+      "Borrow direct F001 proof from ev_001, which is outside this claim's binding"
+    ],
+    "prior59_continuation_wording": "The earlier review's 'continuation' wording describes lexical compatibility. It is not a certification of original-document adjacency, a recovered parent, or a new source record.",
+    "F019_source_location_ref": "source_location_records.F019",
+    "F020_source_location_ref": "source_location_records.F020"
+  },
+  "legal_local_candidate_policy": [
+    "Preserve every original source/evidence/fragment identity and its exact stored text; additions must be within the same claim's actual binding bank.",
+    "Provide bounded multi-fragment witness candidates as separate exact records; selection legality is not an entailment verdict.",
+    "Use explicit negative/partial or actual contract failures for a runtime corrective path. Current59 raw supported labels do not by themselves trigger live re-selection; this saved case is an offline seen development fixture.",
+    "Keep missing metadata unknown. Parent restoration requires an actual source record/parent/child spans; do not synthesize those from IDs.",
+    "Do not hardcode these fragment IDs, claim IDs or a biology-specific Gold recipe into a general helper.",
+    "Do not make entity occurrence in multiple-choice options into source truth; F041/F067 and their options have no saved answer key and are outside these claim scopes.",
+    "Do not use the remaining paid request for an automatic same-case retry."
+  ],
+  "source_location_checks": [
+    {
+      "fragment_id": "F001",
+      "evidence_id": "ev_001",
+      "row_index": 0,
+      "column_index": 3,
+      "exact_text_equal": true,
+      "identity_equal": true,
+      "fragment_sha_equal": true,
+      "proof_quote_offset_equal": true,
+      "original_source_global_offsets": false
+    },
+    {
+      "fragment_id": "F011",
+      "evidence_id": "ev_002",
+      "row_index": 10,
+      "column_index": 3,
+      "exact_text_equal": true,
+      "identity_equal": true,
+      "fragment_sha_equal": true,
+      "proof_quote_offset_equal": true,
+      "original_source_global_offsets": false
+    },
+    {
+      "fragment_id": "F019",
+      "evidence_id": "ev_003",
+      "row_index": 18,
+      "column_index": 3,
+      "exact_text_equal": true,
+      "identity_equal": true,
+      "fragment_sha_equal": true,
+      "proof_quote_offset_equal": true,
+      "original_source_global_offsets": false
+    },
+    {
+      "fragment_id": "F020",
+      "evidence_id": "ev_003",
+      "row_index": 19,
+      "column_index": 3,
+      "exact_text_equal": true,
+      "identity_equal": true,
+      "fragment_sha_equal": true,
+      "proof_quote_offset_equal": true,
+      "original_source_global_offsets": false
+    },
+    {
+      "fragment_id": "F053",
+      "evidence_id": "ev_007",
+      "row_index": 52,
+      "column_index": 3,
+      "exact_text_equal": true,
+      "identity_equal": true,
+      "fragment_sha_equal": true,
+      "proof_quote_offset_equal": true,
+      "original_source_global_offsets": false
+    },
+    {
+      "fragment_id": "F054",
+      "evidence_id": "ev_007",
+      "row_index": 53,
+      "column_index": 3,
+      "exact_text_equal": true,
+      "identity_equal": true,
+      "fragment_sha_equal": true,
+      "proof_quote_offset_equal": true,
+      "original_source_global_offsets": false
+    },
+    {
+      "fragment_id": "F055",
+      "evidence_id": "ev_007",
+      "row_index": 54,
+      "column_index": 3,
+      "exact_text_equal": true,
+      "identity_equal": true,
+      "fragment_sha_equal": true,
+      "proof_quote_offset_equal": true,
+      "original_source_global_offsets": false
+    },
+    {
+      "fragment_id": "F056",
+      "evidence_id": "ev_007",
+      "row_index": 55,
+      "column_index": 3,
+      "exact_text_equal": true,
+      "identity_equal": true,
+      "fragment_sha_equal": true,
+      "proof_quote_offset_equal": true,
+      "original_source_global_offsets": false
+    },
+    {
+      "fragment_id": "F057",
+      "evidence_id": "ev_007",
+      "row_index": 56,
+      "column_index": 3,
+      "exact_text_equal": true,
+      "identity_equal": true,
+      "fragment_sha_equal": true,
+      "proof_quote_offset_equal": true,
+      "original_source_global_offsets": false
+    },
+    {
+      "fragment_id": "F058",
+      "evidence_id": "ev_007",
+      "row_index": 57,
+      "column_index": 3,
+      "exact_text_equal": true,
+      "identity_equal": true,
+      "fragment_sha_equal": true,
+      "proof_quote_offset_equal": true,
+      "original_source_global_offsets": false
+    },
+    {
+      "fragment_id": "F059",
+      "evidence_id": "ev_007",
+      "row_index": 58,
+      "column_index": 3,
+      "exact_text_equal": true,
+      "identity_equal": true,
+      "fragment_sha_equal": true,
+      "proof_quote_offset_equal": true,
+      "original_source_global_offsets": false
+    },
+    {
+      "fragment_id": "F060",
+      "evidence_id": "ev_007",
+      "row_index": 59,
+      "column_index": 3,
+      "exact_text_equal": true,
+      "identity_equal": true,
+      "fragment_sha_equal": true,
+      "proof_quote_offset_equal": true,
+      "original_source_global_offsets": false
+    },
+    {
+      "fragment_id": "F063",
+      "evidence_id": "ev_008",
+      "row_index": 62,
+      "column_index": 3,
+      "exact_text_equal": true,
+      "identity_equal": true,
+      "fragment_sha_equal": true,
+      "proof_quote_offset_equal": true,
+      "original_source_global_offsets": false
+    },
+    {
+      "fragment_id": "F064",
+      "evidence_id": "ev_008",
+      "row_index": 63,
+      "column_index": 3,
+      "exact_text_equal": true,
+      "identity_equal": true,
+      "fragment_sha_equal": true,
+      "proof_quote_offset_equal": true,
+      "original_source_global_offsets": false
+    },
+    {
+      "fragment_id": "F065",
+      "evidence_id": "ev_008",
+      "row_index": 64,
+      "column_index": 3,
+      "exact_text_equal": true,
+      "identity_equal": true,
+      "fragment_sha_equal": true,
+      "proof_quote_offset_equal": true,
+      "original_source_global_offsets": false
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "C1-U01",
+      "claim_index": 1,
+      "claim_id": "claim_9dd7ed3c15bfc4ae4368ad47_1",
+      "unit_id": "U01",
+      "original_answer_literal": "In the Calvin cycle, RuBisCO catalyzes the fixation reaction by combining CO2 with RuBP, a five-carbon molecule with a phosphate group on each end [ev_007] [ev_008].",
+      "raw_checker_label": "supported",
+      "independent59_classification": {
+        "compatible": "partial",
+        "strict_shared_predicate": "partial"
+      },
+      "missing_selected_proof": [
+        "RuBP five-carbon attribute",
+        "phosphate group on each end"
+      ],
+      "current_selected_fragment_ids": [
+        "F056",
+        "F064"
+      ],
+      "taxonomy": {
+        "knowledge_not_retrieved": "not_established; related witness components are already in the frozen binding scope",
+        "candidate_present_not_selected": true,
+        "syntactic_predicate_ownership": false,
+        "selected_combination_insufficient": true
+      },
+      "original_binding_ids": [
+        "B001",
+        "B002"
+      ],
+      "original_scope": [
+        {
+          "allowed_fragment_ids": [
+            "F053",
+            "F054",
+            "F055",
+            "F056",
+            "F057",
+            "F058",
+            "F059",
+            "F060",
+            "F061"
+          ],
+          "binding_id": "B001",
+          "evidence_id": "ev_007"
+        },
+        {
+          "allowed_fragment_ids": [
+            "F062",
+            "F063",
+            "F064",
+            "F065"
+          ],
+          "binding_id": "B002",
+          "evidence_id": "ev_008"
+        }
+      ],
+      "legal_candidate_groups": [
+        {
+          "fragment_ids": [
+            "F056",
+            "F064",
+            "F055"
+          ],
+          "all_fragments_in_original_claim_scope": true,
+          "identity_preserved": true,
+          "new_text_generated": false,
+          "classification": "local selection/recheck candidate; not an automatic PASS or Gold selection",
+          "source_location_refs": [
+            "source_location_records.F056",
+            "source_location_records.F064",
+            "source_location_records.F055"
+          ]
+        },
+        {
+          "fragment_ids": [
+            "F056",
+            "F064",
+            "F065"
+          ],
+          "all_fragments_in_original_claim_scope": true,
+          "identity_preserved": true,
+          "new_text_generated": false,
+          "classification": "local selection/recheck candidate; not an automatic PASS or Gold selection",
+          "source_location_refs": [
+            "source_location_records.F056",
+            "source_location_records.F064",
+            "source_location_records.F065"
+          ]
+        }
+      ],
+      "interpretation": "F055 directly supplies the omitted carbon/phosphate attributes. F065 is another original attribute candidate using 'flanked by two phosphates'. Preserve selected reaction/stage context. Both additions are legal within the existing claim bindings; do not force one fixed fragment as a universal Gold label.",
+      "raw59_record_rewritten": false,
+      "paid_retest_performed": false
+    },
+    {
+      "case_id": "C2-U01",
+      "claim_index": 2,
+      "claim_id": "claim_9e6350bf8c8ac897dd6ce681_1",
+      "unit_id": "U01",
+      "original_answer_literal": "The resulting six-carbon compound is immediately broken down into two three-carbon compounds, 3-PGA [ev_007].",
+      "raw_checker_label": "supported",
+      "independent59_classification": {
+        "compatible": "partial",
+        "strict_shared_predicate": "partial"
+      },
+      "missing_selected_proof": [
+        "named 3-PGA identity of the two three-carbon products"
+      ],
+      "current_selected_fragment_ids": [
+        "F056"
+      ],
+      "taxonomy": {
+        "knowledge_not_retrieved": "not_established; related witness components are already in the frozen binding scope",
+        "candidate_present_not_selected": true,
+        "syntactic_predicate_ownership": false,
+        "selected_combination_insufficient": true
+      },
+      "original_binding_ids": [
+        "B001"
+      ],
+      "original_scope": [
+        {
+          "allowed_fragment_ids": [
+            "F053",
+            "F054",
+            "F055",
+            "F056",
+            "F057",
+            "F058",
+            "F059",
+            "F060",
+            "F061"
+          ],
+          "binding_id": "B001",
+          "evidence_id": "ev_007"
+        }
+      ],
+      "legal_candidate_groups": [
+        {
+          "fragment_ids": [
+            "F056",
+            "F058"
+          ],
+          "all_fragments_in_original_claim_scope": true,
+          "identity_preserved": true,
+          "new_text_generated": false,
+          "classification": "local selection/recheck candidate; not an automatic PASS or Gold selection",
+          "source_location_refs": [
+            "source_location_records.F056",
+            "source_location_records.F058"
+          ]
+        }
+      ],
+      "interpretation": "F056 supplies the immediate six-to-two-three-carbon relation; F058 supplies the named three-carbon compound 3-PGA. Their distinct original texts can be offered as complementary evidence, not a fabricated sentence. F058 alone does not reproduce the entire product/stoichiometry assertion. The named-product co-reference remains a semantic assessment for the combined witness, not a keyword-based PASS.",
+      "raw59_record_rewritten": false,
+      "paid_retest_performed": false
+    },
+    {
+      "case_id": "C9-U02",
+      "claim_index": 9,
+      "claim_id": "claim_b85b9fa953bffc184b48ae2d_1",
+      "unit_id": "U02",
+      "original_answer_literal": "; the six-carbon product splits into two 3-PGA,",
+      "raw_checker_label": "supported",
+      "independent59_classification": {
+        "compatible": "partial",
+        "strict_shared_predicate": "partial"
+      },
+      "missing_selected_proof": [
+        "named 3-PGA identity of the two three-carbon products"
+      ],
+      "current_selected_fragment_ids": [
+        "F056"
+      ],
+      "taxonomy": {
+        "knowledge_not_retrieved": "not_established; related witness components are already in the frozen binding scope",
+        "candidate_present_not_selected": true,
+        "syntactic_predicate_ownership": false,
+        "selected_combination_insufficient": true
+      },
+      "original_binding_ids": [
+        "B001"
+      ],
+      "original_scope": [
+        {
+          "allowed_fragment_ids": [
+            "F053",
+            "F054",
+            "F055",
+            "F056",
+            "F057",
+            "F058",
+            "F059",
+            "F060",
+            "F061"
+          ],
+          "binding_id": "B001",
+          "evidence_id": "ev_007"
+        }
+      ],
+      "legal_candidate_groups": [
+        {
+          "fragment_ids": [
+            "F056",
+            "F058"
+          ],
+          "all_fragments_in_original_claim_scope": true,
+          "identity_preserved": true,
+          "new_text_generated": false,
+          "classification": "local selection/recheck candidate; not an automatic PASS or Gold selection",
+          "source_location_refs": [
+            "source_location_records.F056",
+            "source_location_records.F058"
+          ]
+        }
+      ],
+      "interpretation": "The same complementary witness is in the original claim binding. F058 was already assessed at claim level and selected for other C9 units, but that does not support U02 until it is explicitly selected and judged for U02. No sibling credit or retrospective change to59 is allowed.",
+      "raw59_record_rewritten": false,
+      "paid_retest_performed": false
+    },
+    {
+      "case_id": "C9-U04",
+      "claim_index": 9,
+      "claim_id": "claim_b85b9fa953bffc184b48ae2d_1",
+      "unit_id": "U04",
+      "original_answer_literal": " and NADPH reduce to G3P [ev_007].",
+      "raw_checker_label": "supported",
+      "independent59_classification": {
+        "compatible": "partial",
+        "strict_shared_predicate": "partial"
+      },
+      "missing_selected_proof": [
+        "classification of the 3-PGA-to-G3P conversion as reduction"
+      ],
+      "current_selected_fragment_ids": [
+        "F058"
+      ],
+      "taxonomy": {
+        "knowledge_not_retrieved": "not_established; related witness components are already in the frozen binding scope",
+        "candidate_present_not_selected": true,
+        "syntactic_predicate_ownership": false,
+        "selected_combination_insufficient": true
+      },
+      "original_binding_ids": [
+        "B001"
+      ],
+      "original_scope": [
+        {
+          "allowed_fragment_ids": [
+            "F053",
+            "F054",
+            "F055",
+            "F056",
+            "F057",
+            "F058",
+            "F059",
+            "F060",
+            "F061"
+          ],
+          "binding_id": "B001",
+          "evidence_id": "ev_007"
+        }
+      ],
+      "legal_candidate_groups": [
+        {
+          "fragment_ids": [
+            "F058",
+            "F059"
+          ],
+          "all_fragments_in_original_claim_scope": true,
+          "identity_preserved": true,
+          "new_text_generated": false,
+          "classification": "local selection/recheck candidate; not an automatic PASS or Gold selection",
+          "source_location_refs": [
+            "source_location_records.F058",
+            "source_location_records.F059"
+          ]
+        }
+      ],
+      "interpretation": "F058 supplies joint ATP/NADPH energy conversion; F059 supplies 'This type of reaction' as reduction. Offer both unmodified source identities to preserve the antecedent/classification combination. F060 alone defines reduction but does not identify this specific conversion. This unit does not separately require an electron count or ATP alone donating electrons.",
+      "raw59_record_rewritten": false,
+      "paid_retest_performed": false
+    },
+    {
+      "case_id": "C10-U02",
+      "claim_index": 10,
+      "claim_id": "claim_4bbb28fe7a90b6a3f87b6b75_1",
+      "unit_id": "U02",
+      "original_answer_literal": " while one G3P per three turns is exported for carbohydrate formation [ev_002] [ev_003].",
+      "raw_checker_label": "supported",
+      "independent59_classification": {
+        "compatible": "partial",
+        "strict_shared_predicate": "partial"
+      },
+      "missing_selected_proof": [
+        "purpose of exported G3P: carbohydrate formation"
+      ],
+      "current_selected_fragment_ids": [
+        "F011",
+        "F019"
+      ],
+      "taxonomy": {
+        "knowledge_not_retrieved": "not_established; related witness components are already in the frozen binding scope",
+        "candidate_present_not_selected": true,
+        "syntactic_predicate_ownership": false,
+        "selected_combination_insufficient": true
+      },
+      "original_binding_ids": [
+        "B004",
+        "B003"
+      ],
+      "original_scope": [
+        {
+          "allowed_fragment_ids": [
+            "F016",
+            "F017",
+            "F018",
+            "F019",
+            "F020",
+            "F021",
+            "F022"
+          ],
+          "binding_id": "B003",
+          "evidence_id": "ev_003"
+        },
+        {
+          "allowed_fragment_ids": [
+            "F008",
+            "F009",
+            "F010",
+            "F011",
+            "F012",
+            "F013",
+            "F014",
+            "F015"
+          ],
+          "binding_id": "B004",
+          "evidence_id": "ev_002"
+        }
+      ],
+      "legal_candidate_groups": [
+        {
+          "fragment_ids": [
+            "F011",
+            "F019",
+            "F020"
+          ],
+          "all_fragments_in_original_claim_scope": true,
+          "identity_preserved": true,
+          "new_text_generated": false,
+          "classification": "local selection/recheck candidate; not an automatic PASS or Gold selection",
+          "source_location_refs": [
+            "source_location_records.F011",
+            "source_location_records.F019",
+            "source_location_records.F020"
+          ]
+        }
+      ],
+      "interpretation": "F011 already supplies the required three-turn/export-one condition. F019 supplies G3P leaving/to-become-a but retains a page/header artifact; F020 supplies the carbohydrate object. Exact separate proof quotes can be located in the frozen fragments. Preserve the full raw source records and do not invent a cleaned joined quote or full parent. The same ev_003 and serialized row adjacency are not original-document parent/span metadata.",
+      "raw59_record_rewritten": false,
+      "paid_retest_performed": false
+    },
+    {
+      "case_id": "C9-U03",
+      "claim_index": 9,
+      "claim_id": "claim_b85b9fa953bffc184b48ae2d_1",
+      "unit_id": "U03",
+      "original_answer_literal": " which ATP",
+      "raw_checker_label": "supported",
+      "independent59_classification": {
+        "compatible": "complete",
+        "strict_shared_predicate": "partial"
+      },
+      "missing_selected_proof": [
+        "strict reading only: ownership of the later shared reduction predicate"
+      ],
+      "current_selected_fragment_ids": [
+        "F058"
+      ],
+      "taxonomy": {
+        "knowledge_not_retrieved": "not_established; related witness components are already in the frozen binding scope",
+        "candidate_present_not_selected": true,
+        "syntactic_predicate_ownership": true,
+        "selected_combination_insufficient": "only under strict shared-predicate ownership"
+      },
+      "original_binding_ids": [
+        "B001"
+      ],
+      "original_scope": [
+        {
+          "allowed_fragment_ids": [
+            "F053",
+            "F054",
+            "F055",
+            "F056",
+            "F057",
+            "F058",
+            "F059",
+            "F060",
+            "F061"
+          ],
+          "binding_id": "B001",
+          "evidence_id": "ev_007"
+        }
+      ],
+      "legal_candidate_groups": [
+        {
+          "fragment_ids": [
+            "F058",
+            "F059"
+          ],
+          "all_fragments_in_original_claim_scope": true,
+          "identity_preserved": true,
+          "new_text_generated": false,
+          "classification": "local selection/recheck candidate; not an automatic PASS or Gold selection",
+          "source_location_refs": [
+            "source_location_records.F058",
+            "source_location_records.F059"
+          ]
+        }
+      ],
+      "interpretation": "Literal ' which ATP' cuts a coordinated subject before the next slice's 'and NADPH reduce'. Under energy-role ownership F058 suffices; under shared reduction ownership explicit classification is needed. Record a policy-sensitive obligation, not a sixth unconditional factual gap. Do not copy every full-claim predicate to every lossless segment, and never infer ATP independently donates electrons.",
+      "raw59_record_rewritten": false,
+      "paid_retest_performed": false
+    }
+  ],
+  "limitations": [
+    "This taxonomy is agent-generated analysis of a seen saved case, not human Gold, held-out accuracy, a new scientific observation or an end-to-end acceptance.",
+    "The source metadata establishes serialized fragment identity/quote slices, not an original full-parent reconstruction or original PDF/HTML provenance.",
+    "No source_pins paths in the historical evidence were followed; no old controller was executed.",
+    "No Git, auth/key, protected data, real database, network, Main mutation or59 rewrite was performed."
+  ],
+  "source_location_records": {
+    "F011": {
+      "fragment_id": "F011",
+      "evidence_id": "ev_002",
+      "source_fragment_table_row_zero_based": 10,
+      "exact_text_column_zero_based": 3,
+      "exact_text": "chloroplast has three carbon atoms, it takes three “turns” of the Calvin cycle to fix enough net carbon to export one G3P.",
+      "fragment_UTF8_sha256": "1fbe6dd179067254251d2be7ec2a14d5f7d6b64ee88453a66241981a323fb32a",
+      "proof_quote": "it takes three “turns” of the Calvin cycle to fix enough net carbon to export one G3P.",
+      "quote_code_point_offsets": [
+        36,
+        122
+      ],
+      "quote_UTF8_byte_offsets": [
+        36,
+        126
+      ],
+      "location_kind": "frozen serialized fragment; offsets within fragment only",
+      "metadata_identity_and_text_match59": true,
+      "original_parent_id": null,
+      "original_parent_exact_text": null,
+      "original_source_global_span": null
+    },
+    "F019": {
+      "fragment_id": "F019",
+      "evidence_id": "ev_003",
+      "source_fragment_table_row_zero_based": 18,
+      "exact_text_column_zero_based": 3,
+      "exact_text": "One of the three-carbon molecules of G3P leaves the cycle to become a 5 • Key Terms 131",
+      "fragment_UTF8_sha256": "89f58060b3f0936bc12d967bc682b0e35cb99ccfd34a3b40657e132ef914524b",
+      "proof_quote": "One of the three-carbon molecules of G3P leaves the cycle to become a",
+      "quote_code_point_offsets": [
+        0,
+        69
+      ],
+      "quote_UTF8_byte_offsets": [
+        0,
+        69
+      ],
+      "location_kind": "frozen serialized fragment; offsets within fragment only",
+      "metadata_identity_and_text_match59": true,
+      "original_parent_id": null,
+      "original_parent_exact_text": null,
+      "original_source_global_span": null
+    },
+    "F020": {
+      "fragment_id": "F020",
+      "evidence_id": "ev_003",
+      "source_fragment_table_row_zero_based": 19,
+      "exact_text_column_zero_based": 3,
+      "exact_text": "part of a carbohydrate molecule.",
+      "fragment_UTF8_sha256": "c1a3b48806142a30bd23bc23fb441bd6a5b341e414f4665f186a9b86b60a22bb",
+      "proof_quote": "part of a carbohydrate molecule.",
+      "quote_code_point_offsets": [
+        0,
+        32
+      ],
+      "quote_UTF8_byte_offsets": [
+        0,
+        32
+      ],
+      "location_kind": "frozen serialized fragment; offsets within fragment only",
+      "metadata_identity_and_text_match59": true,
+      "original_parent_id": null,
+      "original_parent_exact_text": null,
+      "original_source_global_span": null
+    },
+    "F055": {
+      "fragment_id": "F055",
+      "evidence_id": "ev_007",
+      "source_fragment_table_row_zero_based": 54,
+      "exact_text_column_zero_based": 3,
+      "exact_text": "RuBP has five atoms of carbon and a phosphate group on each end.",
+      "fragment_UTF8_sha256": "5a1e9c22c8d2ae068bf5129527f9eec4c851884e635074794f8ae9b087cdb448",
+      "proof_quote": "RuBP has five atoms of carbon and a phosphate group on each end.",
+      "quote_code_point_offsets": [
+        0,
+        64
+      ],
+      "quote_UTF8_byte_offsets": [
+        0,
+        64
+      ],
+      "location_kind": "frozen serialized fragment; offsets within fragment only",
+      "metadata_identity_and_text_match59": true,
+      "original_parent_id": null,
+      "original_parent_exact_text": null,
+      "original_source_global_span": null
+    },
+    "F056": {
+      "fragment_id": "F056",
+      "evidence_id": "ev_007",
+      "source_fragment_table_row_zero_based": 55,
+      "exact_text_column_zero_based": 3,
+      "exact_text": "RuBisCO catalyzes a reaction between CO2 and RuBP, which forms a six-carbon compound that is immediately converted into two three-carbon compounds.",
+      "fragment_UTF8_sha256": "f8ee38f00b9f739a3cc529f7a9b912e61bbe42a3f033cd597fd3af7c323158bf",
+      "proof_quote": "RuBisCO catalyzes a reaction between CO2 and RuBP, which forms a six-carbon compound that is immediately converted into two three-carbon compounds.",
+      "quote_code_point_offsets": [
+        0,
+        147
+      ],
+      "quote_UTF8_byte_offsets": [
+        0,
+        147
+      ],
+      "location_kind": "frozen serialized fragment; offsets within fragment only",
+      "metadata_identity_and_text_match59": true,
+      "original_parent_id": null,
+      "original_parent_exact_text": null,
+      "original_source_global_span": null
+    },
+    "F058": {
+      "fragment_id": "F058",
+      "evidence_id": "ev_007",
+      "source_fragment_table_row_zero_based": 57,
+      "exact_text_column_zero_based": 3,
+      "exact_text": "ATP and NADPH use their stored energy to convert the three-carbon compound, 3-PGA, into another three-carbon compound called G3P.",
+      "fragment_UTF8_sha256": "a42ee2eaa63a6814202ef6aab939fd18d2aac95422b54e6cf416dbab74d9e12c",
+      "proof_quote": "ATP and NADPH use their stored energy to convert the three-carbon compound, 3-PGA, into another three-carbon compound called G3P.",
+      "quote_code_point_offsets": [
+        0,
+        129
+      ],
+      "quote_UTF8_byte_offsets": [
+        0,
+        129
+      ],
+      "location_kind": "frozen serialized fragment; offsets within fragment only",
+      "metadata_identity_and_text_match59": true,
+      "original_parent_id": null,
+      "original_parent_exact_text": null,
+      "original_source_global_span": null
+    },
+    "F059": {
+      "fragment_id": "F059",
+      "evidence_id": "ev_007",
+      "source_fragment_table_row_zero_based": 58,
+      "exact_text_column_zero_based": 3,
+      "exact_text": "This type of reaction is called a reduction reaction, because it involves the gain of electrons.",
+      "fragment_UTF8_sha256": "544b9dbfc6b0c39832d9238c607decd0cc3f7a994edb609f73d8b06875852822",
+      "proof_quote": "This type of reaction is called a reduction reaction, because it involves the gain of electrons.",
+      "quote_code_point_offsets": [
+        0,
+        96
+      ],
+      "quote_UTF8_byte_offsets": [
+        0,
+        96
+      ],
+      "location_kind": "frozen serialized fragment; offsets within fragment only",
+      "metadata_identity_and_text_match59": true,
+      "original_parent_id": null,
+      "original_parent_exact_text": null,
+      "original_source_global_span": null
+    },
+    "F064": {
+      "fragment_id": "F064",
+      "evidence_id": "ev_008",
+      "source_fragment_table_row_zero_based": 63,
+      "exact_text_column_zero_based": 3,
+      "exact_text": "Stage 1: Fixation In the stroma, in addition to CO2, two other components are present to initiate the light-independent reactions: an enzyme called ribulose-1,5-bisphosphate carboxylase/oxygenase (RuBisCO), and three molecules of ribulose bisphosphate (RuBP), as shown in Figure 8.19.",
+      "fragment_UTF8_sha256": "5ea99e3d5ea314a164f7717bd11730a2a0d295bfcf21a96d2bdb4283d0f78585",
+      "proof_quote": "Stage 1: Fixation In the stroma, in addition to CO2, two other components are present to initiate the light-independent reactions: an enzyme called ribulose-1,5-bisphosphate carboxylase/oxygenase (RuBisCO), and three molecules of ribulose bisphosphate (RuBP), as shown in Figure 8.19.",
+      "quote_code_point_offsets": [
+        0,
+        284
+      ],
+      "quote_UTF8_byte_offsets": [
+        0,
+        284
+      ],
+      "location_kind": "frozen serialized fragment; offsets within fragment only",
+      "metadata_identity_and_text_match59": true,
+      "original_parent_id": null,
+      "original_parent_exact_text": null,
+      "original_source_global_span": null
+    },
+    "F065": {
+      "fragment_id": "F065",
+      "evidence_id": "ev_008",
+      "source_fragment_table_row_zero_based": 64,
+      "exact_text_column_zero_based": 3,
+      "exact_text": "RuBP has five atoms of carbon, flanked by two phosphates.",
+      "fragment_UTF8_sha256": "e75f21bdfd6d021ea97d384d878627fff2708a80de5d4d23f4ca4f5e3237c432",
+      "proof_quote": "RuBP has five atoms of carbon, flanked by two phosphates.",
+      "quote_code_point_offsets": [
+        0,
+        57
+      ],
+      "quote_UTF8_byte_offsets": [
+        0,
+        57
+      ],
+      "location_kind": "frozen serialized fragment; offsets within fragment only",
+      "metadata_identity_and_text_match59": true,
+      "original_parent_id": null,
+      "original_parent_exact_text": null,
+      "original_source_global_span": null
+    }
+  },
+  "secondary_readonly_metadata_review": {
+    "completed": true,
+    "reviewer_task": "/root/selection58_plan_readonly/candidate58_readonly_review",
+    "fragment_ids": [
+      "F019",
+      "F020",
+      "F055",
+      "F056",
+      "F058",
+      "F059",
+      "F065"
+    ],
+    "identity_exact_text_SHA_and_codepoint_byte_quote_slices_match59": true,
+    "source_pins_followed": false,
+    "extra_paid_requests": 0,
+    "human_gold": false
+  }
+}

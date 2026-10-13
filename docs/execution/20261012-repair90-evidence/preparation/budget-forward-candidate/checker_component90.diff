@@ -1,0 +1,23 @@
+--- checker_component90.before.py
++++ checker_component90.py
+@@ -134,8 +134,8 @@
+             and scope["cohort_protocol_sha256"] == descriptor["protocol_sha256"],
+             "COMPONENT_ORIGINAL_CHECKER_TASK_REQUIRED")
+     messages = inputs["messages"]
+-    require(type(messages) is list and len(messages) == 2
+-            and [row.get("role") for row in messages] == ["system", "user"]
++    require(type(messages) is list and len(messages) in {2, 3}
++            and [row.get("role") for row in messages] == (["system", "user"] if len(messages) == 2 else ["system", "user", "user"])
+             and all(type(row) is dict and set(row) == {"role", "content"}
+                     and type(row["content"]) is str for row in messages), "COMPONENT_MESSAGES_CHANGED")
+     messages = [{"role": row["role"], "content": row["content"]} for row in messages]
+@@ -374,8 +374,8 @@
+         try:
+             return ObservedResponse(original_open(envelope, timeout=timeout))
+         except HTTPError as exc:
+-            raw = exc.read(MAX_RESPONSE + 1)
+             try:
++                raw = exc.read(MAX_RESPONSE + 1)
+                 observe(raw, exc.code)
+             finally:
+                 exc.close()

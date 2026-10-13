@@ -1,0 +1,52 @@
+{
+  "schema": "5703_source_relation_prompt31_main_adoption_v1",
+  "status": "ACTUALLY_ADOPTED_AND_READBACK_VERIFIED",
+  "files": [
+    {
+      "relative_path": "generation/prompts/source_relation_generation_v2.txt",
+      "target_path": "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_generation_v2.txt",
+      "candidate_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-relation-prompt31-candidate\\source_relation_generation_v2.txt",
+      "backup_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-relation-prompt31-candidate\\source_relation_generation_v2.txt.before31",
+      "before_bytes": 1559,
+      "before_sha256": "2088f476e0fe6b7295e5c91fb1ef33e0c1cceb468d49280083ac30fa4b991c6c",
+      "after_bytes": 2026,
+      "after_sha256": "46652cca63edc6c7e2cd83ed96f593485d536e8523df18b26058771a32ecd763",
+      "append_text": "SENTENCE SUPPORT: In a summary with several factual sentences, place each sentence's own supporting citation on that sentence; a citation only at the end cannot bind earlier sentences. Remove redundant restatements while keeping required response fields and all requested knowledge or its explicit source gap. Assert quantities, named substances and causal links only when the cited sources support the exact entities, complete predicates and applicable conditions.",
+      "append_utf8_bytes_including_separator_and_terminal_lf": 467,
+      "additional_utf8_bytes_if_embedded_as_one_json_string": 469,
+      "original_prefix_preserved": true,
+      "current_main_unchanged": true
+    },
+    {
+      "relative_path": "generation/prompts/source_relation_check_v2.txt",
+      "target_path": "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_check_v2.txt",
+      "candidate_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-relation-prompt31-candidate\\source_relation_check_v2.txt",
+      "backup_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-relation-prompt31-candidate\\source_relation_check_v2.txt.before31",
+      "before_bytes": 4472,
+      "before_sha256": "83a0dfc12be997ed043c912da9772c0eff00abba9e0678d82edbb0bedc8abeed",
+      "after_bytes": 5332,
+      "after_sha256": "30078107048050fcb5a162a8628377de1476b9ec0a4e5a2f80fdfb4837f3a226",
+      "append_text": "JSON CITATION GRAMMAR: citations is a comma-separated JSON array of objects. Each object contains exactly evidence_id (one string), fragment_ids (an array of strings), and relation (one permitted schema value). Close each object before the next comma. Never put the CLAIMS evidence_ids array or other claim/unit keys inside a citation object or string array. Return exactly one JSON object without surrounding prose or fences.\n\nCOMPLETE UNIT SUPPORT: Evaluate every predicate of each unit with its inherited subject and full claim. Use only this claim's allowed and actually assessed source fragments, including necessary source context and all applicable conditions, quantities and named entities. Shared words or a related category are insufficient. Select the necessary bound fragments or return honest partial/unsupported units with the exact source gap.",
+      "append_utf8_bytes_including_separator_and_terminal_lf": 860,
+      "additional_utf8_bytes_if_embedded_as_one_json_string": 864,
+      "original_prefix_preserved": true,
+      "current_main_unchanged": true
+    }
+  ],
+  "independent_risk_notes": [
+    "Prompt instructions cannot guarantee valid provider JSON or correct scientific assessment. Actual30 remains INVALID_JSON; its raw text is neither repaired nor accepted.",
+    "These additions increase each applicable request's actual serialized input size. The recorded JSON-string deltas are measurements of these strings only, not a complete future provider wire size or tokenizer count. Root must freeze and check each new request against the existing finite input, call and cost limits.",
+    "Removing redundant restatements must preserve required response fields and requested knowledge or its explicit source gap. It does not justify shortening needed scientific content or declaring complete coverage when source support is absent.",
+    "A selected source ID and true preservation flags establish neither complete scientific support nor correctness. Every predicate, named entity, inherited subject and applicable condition still requires honest model assessment and independent inspection where requested.",
+    "The singular evidence_id citation grammar already belongs to the current schema. This addition distinguishes it from input CLAIMS.evidence_ids without allowing new keys, source ownership, automatic coercion, relabeling or contract retries."
+  ],
+  "schema_parser_and_final_source_gates_changed": false,
+  "question_specific_rule_added": false,
+  "actual30_original_response_remains_rejected": true,
+  "main_writes": 2,
+  "API_requests": 0,
+  "database_accesses": 0,
+  "at_UTC": "2026-10-10T06:11:00.143384+00:00",
+  "normal_default_policy_changed": false,
+  "native_model_success_claimed": false
+}

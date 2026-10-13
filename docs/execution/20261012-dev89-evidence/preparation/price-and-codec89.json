@@ -1,0 +1,154 @@
+{
+  "schema": "phase89_public_price_and_existing_codec_preparation_v1",
+  "created_UTC": "2026-10-12 00:18:25 UTC",
+  "result": "Conditional guard arithmetic verified; current public catalogue prices unverified because both allowed official GET targets were inaccessible via web tool.",
+  "authorized_scope": "Read-only preparation for8BASE DEV, retain existing HIGH8192 checker and teacher4096; no new codec or Main repair before common baseline failures.",
+  "public_price_verification": {
+    "tool": "tools.web.open",
+    "official_primary_GET_attempts": 2,
+    "authenticated_requests": 0,
+    "paid_POSTs": 0,
+    "attempts": [
+      {
+        "model": "anthropic/claude-haiku-5.5",
+        "url": "https://openrouter.ai/api/v1/models/anthropic/claude-haiku-5.5/endpoints",
+        "result": "URL is not accessible via this tool.",
+        "public_model_price": null,
+        "Vertex_route_price": null
+      },
+      {
+        "model": "google/gemini-3.5-flash-lite",
+        "url": "https://openrouter.ai/api/v1/models/google/gemini-3.5-flash-lite/endpoints",
+        "result": "URL is not accessible via this tool.",
+        "public_model_price": null,
+        "Vertex_route_price": null
+      }
+    ],
+    "blocker": "Tool retrieval/access failure; not an authorization shortage. No HTTP status or catalogue pricing fields were returned.",
+    "retries_or_alternate_tool_attempts": 0,
+    "inference_limit": "Do not infer model absence, current price or endpoint availability from this failure. No catalogue price guessed; independent source/local work continued."
+  },
+  "existing_wire_guard": {
+    "basis": "Main route profiles and both immutable actual case10b compiled provider payloads.",
+    "source_lines": "openrouter_routes.py:48-56 (Haiku),97-105 (Gemini HIGH),203-215 (provider wire)",
+    "route": "google-vertex/global",
+    "fallbacks": false,
+    "require_parameters": true,
+    "provider_max_price_USD_per_million": {
+      "prompt": "0.3",
+      "completion": "2.5"
+    },
+    "per_POST_hold_USD": "0.0714688",
+    "full_wire_byte_proxy_ceiling": 160000,
+    "cost_formula": "160000*0.3/1000000 + output_cap*2.5/1000000",
+    "teacher": {
+      "profile": "haiku55_google_vertex_low_v1",
+      "output_cap": 4096,
+      "input_proxy_USD": "0.048",
+      "output_cap_USD": "0.01024",
+      "conditional_upper_USD": "0.05824",
+      "hold_margin_USD": "0.0132288"
+    },
+    "checker": {
+      "profile": "gemini35_google_vertex_high_research_v1",
+      "reasoning": "high",
+      "output_cap": 8192,
+      "input_proxy_USD": "0.048",
+      "output_cap_USD": "0.02048",
+      "conditional_upper_USD": "0.06848",
+      "hold_margin_USD": "0.0029888"
+    },
+    "prerequisites": "Conditional on the existing provider max_price and output-cap guards being honored and input tokens being bounded by the selected full-wire byte proxy. Wire bytes are not a provider-tokenizer proof.",
+    "does_not_certify": [
+      "current public or Vertex catalogue price",
+      "route/model availability",
+      "provider-tokenizer exact count",
+      "complete32POST batch affordability at every POST hold maximum"
+    ],
+    "financial_policy": "Retain existing hold, reserve before each POST, settle trusted numeric usage.cost once; missing/unsafe cost retains UNKNOWN protection. Do not alter old budgets, release historical unknowns or enable failed Gemini checker LOW."
+  },
+  "historical_actual_evidence": {
+    "case": "case10b",
+    "scope": "2026-10-11 historical observations, not a current catalogue quote",
+    "teacher": {
+      "prompt_tokens": 17589,
+      "completion_tokens": 449,
+      "cached_tokens": 0,
+      "usage_cost_USD": "0.0019834",
+      "upstream_prompt_cost_USD": "0.0017589",
+      "upstream_completion_cost_USD": "0.0002245"
+    },
+    "checker": {
+      "prompt_tokens": 22687,
+      "completion_tokens": 5892,
+      "reasoning_tokens_included": 4709,
+      "cached_tokens": 0,
+      "usage_cost_USD": "0.0215361",
+      "upstream_prompt_cost_USD": "0.0068061",
+      "upstream_completion_cost_USD": "0.0147300"
+    },
+    "case_numeric_cost_USD": "0.0235195",
+    "case_POSTs": 2,
+    "preserved_phase88_cohort": {
+      "POSTs": 21,
+      "known_cost_USD": "0.2307916",
+      "UNKNOWN_USD": "0",
+      "basis": "prior independent exact Decimal/lineage closure; immutable case10b final receipt agrees"
+    }
+  },
+  "existing_compression": {
+    "reuse_first": "lossless_unit_findings_v1.build_context/_tables/OutputContext.descriptor and source_relations_v2.scoped_syntactic_units. v2 already delegates v1 context; no second C/U/F/R generator needed.",
+    "identity_scope": "C/F/R are deterministic aliases in a frozen packet order; U is parent-local. Cross-request provenance uses canonical IDs/context digest and(claim_id,unit_id).",
+    "v1": {
+      "lines": "lossless_unit_findings_v1.py:79,123,327,369,387",
+      "already_implemented": "Abbreviated canonical fields, C/R aliases, exact original quote IDs. Long fragments have each-sentence-start maximal consecutive complete-sentence quote catalogue <=1200 characters; complete source input remains retained.",
+      "existing_short_reason_instruction": true
+    },
+    "v2": {
+      "lines": "single_selection_findings_v2.py:65,129,140,163,229,237",
+      "already_implemented": "Same-parent/unit selected fragments form first-occurrence pool; explicit parent extras plus complete fragment_order permutation reconstruct exact parent citation order. Unit selections need not be restated as parent citation objects.",
+      "limitation": "No cross-claim source pooling, lost selection, duplicated permutation entry or sibling borrowing."
+    },
+    "maximal_repetition": "Per-claim/unit/requirement reasons and explicit relations to the same source across different units. Shared text can represent distinct support obligations; these records cannot be removed.",
+    "prospective_local_prompt_only_candidate": "Only after8BASE common failures justify it: request decisive own-source support or exact missing condition in a short reason, avoid restating whole claim/source in reasons, use minified JSON and do not echo the input codebook. Retain every necessary qualifier, quantity, negation, relation, condition and record; mandatory given/calculation quotations stay exact.",
+    "already_present_or_unproven": "V1 already requests short reasons without omitted records. No current evidence justifies structural change, harder reason truncation or a new codec.",
+    "strict_safeguards": {
+      "lines": "v1:460,500,503,523,534,554; v2:140,163",
+      "required": "Exact fields and strict types, complete unique claims/requirements/textbook units, actual own-source selected fragments/quotes, independently model-judged parent/unit status and relation/condition flags, root gates, original typed semantic/derivation/publication checks.",
+      "forbidden": [
+        "sparse status/reason-only PASS",
+        "default-fill omitted fields or judgments",
+        "derive parent/root PASS from unit successes",
+        "convert factual guidance to nonfactual",
+        "merge/delete necessary units/requirements/evidence",
+        "partial-quote or content-truncation fallback"
+      ]
+    },
+    "Main_codec_or_prompt_changes": 0,
+    "next_gate": "Root completes8BASE and retains failures; at most one justified Main local repair plus affected/control verification afterward."
+  },
+  "source_roots": {
+    "Main": "E:/5703/learning-assistant",
+    "R": "C:/Users/PC/Documents/Codex/2026-10-04/task-2/5703-checker88-runtime"
+  },
+  "source_sha256": {
+    "Main/generation/openrouter_routes.py": "c82e86990476c0f95da650b38ef444e62c1dba6ae29f407a44c4af444ad2348e",
+    "Main/generation/lossless_unit_findings_v1.py": "81045fec9ddc851eda6f445bdd99b20c056de07c36a8acb7264fdbc5c2f5d459",
+    "Main/generation/single_selection_findings_v2.py": "91ebe1c011c5d82ccc722c33ab34cf11efb65a17ad3637e4a6bb4052508cd53a",
+    "R/case10b/native-provider70/slot-01-public-inputs.json": "ca92d0f05f220d451f5a0ca26af76db9cd177f3c29e8cfec4ee85b91f2e20491",
+    "R/case10b/native-provider70/slot-02-public-inputs.json": "f9901f75408d539d8d94c85b9216383c3877a5e91a5c16299d32e503f74d8ae9",
+    "R/case10b/native-provider70/final-receipt.json": "1a497bd7a764924a7d963ea8817566562a0dd8dc46d914386e47f22ca1734975",
+    "R/case10b/native-provider70/slot-01-raw-response.json": "777dc6a263705466ff5d062f770ac4b6fcce19cfdc4a5e0a896168f766ce03eb",
+    "R/case10b/native-provider70/slot-02-raw-response.json": "f771140e2c44d7b4f568450c5f76000df5645e8cab56658c9e9da02b31667766"
+  },
+  "actions": {
+    "new_W_preparation_JSON": 1,
+    "Main_writes": 0,
+    "runtime88_writes": 0,
+    "auth_reads": 0,
+    "DB_access": 0,
+    "model_POSTs": 0,
+    "service_starts": 0,
+    "project_test_runs": 0
+  }
+}

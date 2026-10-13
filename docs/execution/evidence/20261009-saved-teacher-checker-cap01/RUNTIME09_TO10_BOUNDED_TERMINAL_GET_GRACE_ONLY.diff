@@ -1,0 +1,73 @@
+--- launch_week10_native_json_object_regression_PREPARED09.py
++++ launch_week10_native_json_object_regression_PREPARED10.py
+@@ -491,6 +491,8 @@
+     qualification_path = work / "role-qualification-public01.json"
+     adapter_audit_path = work / "adapter-public01.jsonl"
+     stop = threading.Event()
++    terminal_job_delivered = threading.Event()
++    scope_stop_path = Path(guard_release["claims_root"]) / "STOP-before-any-next-submission01.json"
+ 
+     def pointer_snapshot(db):
+         pointer = db.get(ActiveModelConfiguration, workspace, populate_existing=True)
+@@ -883,6 +885,8 @@
+                 raise PermissionError("Only a new owned job in its actual UI scope is released")
+             executed_question_ids.add(question_id)
+             execution_questions[job_id] = question_id
++            with state_lock:
++                binding.update(job_id=job_id, request_id=req_id)
+             epoch_before_sha256 = digest(native_release_cache.epoch(db).encode())
+             request.trace = {**request.trace, "browser_harness_retrieval": {
+                 "variant": "R2", "binding": "current_public_default_hybrid_minilm_v1", "batch_id": nonce,
+@@ -1004,6 +1008,9 @@
+     async def released_ui_scope(request, call_next):
+         nonlocal session_creation_posts
+         path, method = request.url.path, request.method
++        if method != "GET" and scope_stop_path.exists():
++            return JSONResponse({"error": {"code": "OWNED_SCOPE_STOPPED",
++                "message": "This run has stopped. Only saved status can be read."}}, status_code=409)
+         if method == "GET" and path in {"/live", "/ready", "/health"}:
+             return await call_next(request)
+         if method == "GET" and path in {"/__week10/status", "/__week10/readiness"}:
+@@ -1236,6 +1243,8 @@
+             self.wfile.write(content)
+ 
+         def proxy(self):
++            if self.command != "GET" and scope_stop_path.exists():
++                return self.send_error(409, "Run stopped; only GET is permitted")
+             length = int(self.headers.get("Content-Length", "0"))
+             if length > 1048576:
+                 return self.send_error(413)
+@@ -1260,6 +1269,24 @@
+                 self.send_header("Content-Length", str(len(content)))
+                 self.end_headers()
+                 self.wfile.write(content)
++                self.wfile.flush()
++                job_route = re.fullmatch(r"/api/v1/jobs/([a-f0-9-]{36})", urlsplit(self.path).path)
++                if self.command == "GET" and response.status == 200 and job_route:
++                    try:
++                        delivered = json.loads(content)
++                    except (ValueError, UnicodeDecodeError):
++                        delivered = None
++                    delivered_job = delivered.get("data") if isinstance(delivered, dict) else None
++                    if (isinstance(delivered_job, dict) and delivered_job.get("id") == job_route.group(1)
++                            and delivered_job.get("state") in {"failed", "cancelled"}):
++                        with state_lock:
++                            bound_terminal = (execution_questions.get(delivered_job["id"]) == "Q2"
++                                and any(binding.get("question_id") == "Q2"
++                                    and binding.get("job_id") == delivered_job["id"]
++                                    and binding.get("request_id") == delivered_job.get("request_id")
++                                    for binding in submitted_question_keys.values()))
++                        if bound_terminal:
++                            terminal_job_delivered.set()
+ 
+         do_POST = proxy
+         do_PATCH = proxy
+@@ -1275,6 +1302,8 @@
+             if not marker.exists():
+                 if (Path(guard_release["claims_root"]) / "STOP-before-any-next-submission01.json").exists():
+                     # Stop requests are failures, not a browser/native completion attestation.
++                    # STOP already denies every new non-GET; allow only bounded terminal delivery.
++                    terminal_job_delivered.wait(timeout=3.0)
+                     stop.set()
+                     server.should_exit = True
+                     frontend.shutdown()

@@ -1,0 +1,50 @@
+{
+  "DB_writes": 0,
+  "answer_id": null,
+  "database_target": "cs30_week10_pair_b_20261009_01",
+  "error_code": "CHECKER_INCONSISTENT",
+  "issue_codes": [
+    "CHECKER_SCHEMA_INVALID"
+  ],
+  "job_id": "42dab830-cd5b-4702-87b3-8b8e256f0102",
+  "provider_POSTs": 0,
+  "raw_error_messages_output_provider_responses_keys_DSN_exported": false,
+  "request_id": "86ccea30-76ee-47b5-bbad-d8b431728fb5",
+  "schema": "5703_mixed_failed_job_safe_readonly_diagnosis_v1",
+  "schema_diagnostics": {
+    "issues": {
+      "issues": [
+        {
+          "code": "CHECKER_SCHEMA_INVALID",
+          "field_errors": [
+            {
+              "error_type": "missing",
+              "path": [
+                "attempt_evaluation_ok"
+              ]
+            }
+          ]
+        }
+      ],
+      "redaction_counts": {
+        "error_types_redacted": 0,
+        "field_rows_omitted": 0,
+        "invalid_rows": 0,
+        "issue_rows_omitted": 0,
+        "parse_codes_redacted": 0,
+        "path_tokens_omitted": 0,
+        "path_tokens_redacted": 0
+      },
+      "schema": "PUBLIC_SCHEMA_DIAGNOSTIC_OBSERVER_MAIN_V1"
+    },
+    "public_keys": [
+      "issues",
+      "redaction_counts",
+      "schema"
+    ]
+  },
+  "stage": "failed",
+  "state": "failed",
+  "status": "ACTUAL_READONLY_SAFE_ERROR_PROJECTION",
+  "transaction_read_only": true
+}

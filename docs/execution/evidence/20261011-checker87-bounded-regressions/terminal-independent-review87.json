@@ -1,0 +1,188 @@
+{
+  "schema": "phase87_terminal_independent_review_v1",
+  "reviewed_utc": "2026-10-11T20:55:23.831573+00:00",
+  "status": "PASS_ACCOUNTING_AND_RECORDED_CLOSURE_ONLY",
+  "scope": "Read-only public claims, settlements, seven API closures, journey receipts, the reserved outcome digest, budget source, and the exact previously published strict86 receipt. No DB, auth, model, raw response, or archive access.",
+  "accounting": {
+    "unique_contiguous_global_claims": 15,
+    "matching_settlements": 15,
+    "known_cost_USD": "0.0918119",
+    "UNKNOWN_USD": "0",
+    "terminal_exposures": 0,
+    "physical_post_cap": 16,
+    "cost_cap_USD": "1.00",
+    "remaining_physical_slots": 1,
+    "remaining_cost_headroom_USD": "0.9081881",
+    "fresh_teacher_checker_pair_fits_remaining_slots": false,
+    "cohort_stopped": false
+  },
+  "closures": {
+    "unique_new_sessions": 7,
+    "unique_new_jobs": 7,
+    "owned_threads_closed_attestations": 7,
+    "five_old_metadata_groups_unchanged_attestations": 7,
+    "old_jobs_selected": 0,
+    "automatic_retries": 0,
+    "auth_exported": false,
+    "successful_API_jobs": 2,
+    "failed_API_jobs": 5,
+    "browser_runs": 0,
+    "per_case": [
+      {
+        "case_id": "case01",
+        "physical_posts": 2,
+        "known_cost_USD": "0.0108074",
+        "API_job_state": "succeeded",
+        "closure_sha256": "d7e8f96e921431c54a280bd8d5b8fef0cef1557a1806852f06a17e749901a1c8",
+        "journey_receipt_sha256": "3620f3bc42766bd004e819ba2c7e717070b5edac4285b119eb67934fab0c88b9"
+      },
+      {
+        "case_id": "case03",
+        "physical_posts": 2,
+        "known_cost_USD": "0.0147281",
+        "API_job_state": "failed",
+        "closure_sha256": "5c0d4da41640e72b96c88774537840afb90b24750b757bf759df72f207212efa",
+        "journey_receipt_sha256": "fec91c019cb2705032adf46a2e2284246f2944eac74f04f3f688f85b71fcd338"
+      },
+      {
+        "case_id": "case04",
+        "physical_posts": 2,
+        "known_cost_USD": "0.0121614",
+        "API_job_state": "failed",
+        "closure_sha256": "4f6b91fdb5a81ee95c3a73eef86b4790c02c117f105be41feb5f603e8e5b165c",
+        "journey_receipt_sha256": "60705c673175ef44c8a5592c7d539afbceb1791544ab570c370fb08285333363"
+      },
+      {
+        "case_id": "case05",
+        "physical_posts": 2,
+        "known_cost_USD": "0.0128710",
+        "API_job_state": "failed",
+        "closure_sha256": "866cfc2c3e51b4c3fa66d479bf03a7363c8fd158b5fc776fd7adc7961383eb49",
+        "journey_receipt_sha256": "583e3fac24acc360256ff8f3da005c85c01b8e36b6179760e739acc6fe1a0556"
+      },
+      {
+        "case_id": "case06",
+        "physical_posts": 2,
+        "known_cost_USD": "0.0151368",
+        "API_job_state": "failed",
+        "closure_sha256": "644775f55a86dd54d26586134783f61b9b71260d07f9f047a11b19639d68c399",
+        "journey_receipt_sha256": "bf08ce5555dc5267a44c3964c23b06918f6fe4b0fc86b783096395fef407eca7"
+      },
+      {
+        "case_id": "case07",
+        "physical_posts": 2,
+        "known_cost_USD": "0.0115190",
+        "API_job_state": "failed",
+        "closure_sha256": "287dcfa7474063556de6683b264f54e4d70974dee36fd78680a05072e0a22030",
+        "journey_receipt_sha256": "359190e0ed6151cf1411c5f23cbaa9fda1fb8e620a788538ddd39dac33228dad"
+      },
+      {
+        "case_id": "case08",
+        "physical_posts": 2,
+        "known_cost_USD": "0.0127256",
+        "API_job_state": "succeeded",
+        "closure_sha256": "60baed46af42c9c6865ab16421e99566e657d34c88af3c3201bbcc6171a1c973",
+        "journey_receipt_sha256": "5163673a4f2ea2f481707c777a7a43f036923256c337e1ad93da4a1c899046ea"
+      }
+    ]
+  },
+  "reserved_allocation": {
+    "global_slot": 9,
+    "case_id": "reserved4096",
+    "role": "teacher",
+    "known_cost_USD": "0.0018626",
+    "allocation_authorization": "parent_phase87_saved_case03r_teacher4096_optional_checker_reserved2_20261011",
+    "allocation_plan_sha256": "135afa0c665fda944440f0f36792434475c15ba2038914405f1922ea860b949e",
+    "allocation_limit": 2,
+    "used_reserved_posts": 1,
+    "initial_marker_reserved_extra_posts_authorized": false,
+    "interpretation": "The initial marker remains frozen. The appended exact allocation permits the reserved teacher while the same global claim namespace, shared caps, settlement validation and UNKNOWN blocking remain in force. The false legacy marker is not a new accounting exemption.",
+    "teacher_complete_marker_verified_against_normal_outcome": true,
+    "optional_checker_automatically_started": false
+  },
+  "old_strict86": {
+    "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\20261011-checker86-diagnosis\\strict-checker-component86.json",
+    "bytes": 535,
+    "sha256": "fe812044187ea05b6c1519489e8a05044038ab5acf22389c2439694f4f0f5561",
+    "matches_preexisting_published_sha256": true,
+    "UNKNOWN_full_hold_USD": "0.0714688",
+    "separate_from_phase87": true,
+    "released_or_transferred": false,
+    "stop_code": "UNKNOWN_OR_UNSAFE_RESPONSE_RETAIN_PROTECTION"
+  },
+  "key_hashes": {
+    "protocol87.json": "b85a487f8228089b9e1548c36e3d5d6884348aa92a045a3a8e800329cd634f77",
+    "budget87.py": "5a6c869cfb84191602948b5109b42ae2627b2b19c7b163e580f703fc01521c9c",
+    "cohort-claim.json": "f24d884b34c5ea1dfecaad0605e02e3e1c9f8ad1d0236f3ceafb80ac576d72ea",
+    "reserved-allocation87.json": "d60e3f61512f4cce8beb92ae4740b22669ad8fb48d2b80665ec6ea3ac3bae7bf",
+    "reserved-teacher-complete87.json": "8317b671cd3497926b7184fe64153cfbd10dd2d6cf0b6ce7e347817e1d3ea0be"
+  },
+  "journal_digest": {
+    "files": 40,
+    "algorithm": "SHA256 of sorted filename, TAB, raw-file-SHA256, LF for each public ledger file",
+    "sha256": "d63e724e04b2104deaf7d839bed4352e0d0c1a9b8466f4e8f34d4df2ae6a2d1d"
+  },
+  "limits": [
+    "Closure preservation is independently checked from recorded attestations, not a new database comparison.",
+    "Journal correspondence is not an independent network billing reconciliation.",
+    "API success, complete teacher typing and zero UNKNOWN do not certify scientific quality, selected-source entailment, browser completion or latency p95."
+  ],
+  "writes": "This single workspace review JSON only; no source, runtime, ledger, old evidence or database mutation.",
+  "candidate_wire_contract_review87": {
+    "reviewed_utc": "2026-10-11T21:01:37.212818+00:00",
+    "status": "RELEASE_NO_BLOCKING_FINDINGS",
+    "method": "Read-only unified diff and independent AST comparison against Main preimages, exact candidate manifest hashes, portable test source and recorded focused JUnit. No new tests or fixture/provider execution.",
+    "source_pins": [
+      {
+        "path": "generation/lossless_unit_findings_v1.py",
+        "reviewed_preimage_sha256": "4fe11286153a6c53531214c6c9c40c81b64298f3d6644d83fdf9b20e7532a5bd",
+        "candidate_sha256": "81045fec9ddc851eda6f445bdd99b20c056de07c36a8acb7264fdbc5c2f5d459",
+        "candidate_bytes": 33944,
+        "changed_function": "reference_instructions"
+      },
+      {
+        "path": "generation/single_selection_findings_v2.py",
+        "reviewed_preimage_sha256": "8f78266ec88077ed59f451baab1948a39cd0c18539f503786311a7376d7b0bb5",
+        "candidate_sha256": "91ebe1c011c5d82ccc722c33ab34cf11efb65a17ad3637e4a6bb4052508cd53a",
+        "candidate_bytes": 13862,
+        "changed_function": "reference_instructions"
+      },
+      {
+        "path": "generation/providers.py",
+        "reviewed_preimage_sha256": "bcd870227d0c8bf58d554953ea50a4f419b61f6f491b91553034c50cdcdac7e1",
+        "candidate_sha256": "8411a08b94c57feac7d6ca068c6feae9193201c109f28d9b64d014d3199cd4ee",
+        "candidate_bytes": 29380,
+        "changed_function": "_checker_decode_failure"
+      }
+    ],
+    "scope_proof": "ASTs identical outside reference_instructions in each codec and _checker_decode_failure in providers. No decode, hydration, context, schema, request guard, default or publication gate changes.",
+    "instruction_findings": [
+      "v1 emits exact v/h constants, c/k alias-map keys Cnnn/Rnnn, and independently required parent s for every factual basis. These agree with the existing canonical schema and alias map.",
+      "v2 emits exact version/context_sha256 constants and claim/requirement reference keys, with complete records and same-parent units, explicit required basis fields and honest negative judgments.",
+      "Guidance and limitation variants retain their schema: only required fields are requested; no unconditional status injection or missing-field recovery is implemented.",
+      "Neither prose change alters the original full source input or certifies entailment/model compliance. No live improvement or token-saving finding."
+    ],
+    "diagnostic_findings": {
+      "new_fixed_codes": [
+        "SINGLE_SELECTION_METADATA_INVALID",
+        "SINGLE_SELECTION_CLAIM_REFERENCE_INVALID"
+      ],
+      "trusted_classification_guard": "Only exact ValueError with exactly one exact str argument matching one of two static decoder messages.",
+      "dynamic_or_subclass_errors_exported": false,
+      "exception_text_locations_or_values_exported": false,
+      "legacy_classification_and_default_fallback_preserved": true
+    },
+    "portable_controls_review": {
+      "path": "test_wire_contract87.py",
+      "bytes": 10825,
+      "sha256": "0f600782008fe42abd93beaf8ca9e378bea521d6adfa181ffa6d58b0309544e7",
+      "recorded_tests": 24,
+      "recorded_failures_errors_skips": 0,
+      "junit_seconds": 4.539,
+      "junit_sha256": "630a021d7092f539945d58f15de727b5fee8661580d07b6fd8f7f857cfa0d6e5",
+      "reviewed_coverage": "Authored support/unsupported judgments compared to default-policy real adapter and unchanged original full validators; exact raw preservation and no publication for missing/stale metadata, original-ID aliases, absent parent status/citations/claim/unit and foreign source. Dynamic text, multi-argument errors, wrong exception types and subclasses keep the bounded fallback.",
+      "not_rerun_by_reviewer": true
+    },
+    "blocking_findings": []
+  }
+}

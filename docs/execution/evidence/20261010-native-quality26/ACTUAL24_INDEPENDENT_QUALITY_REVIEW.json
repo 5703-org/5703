@@ -1,0 +1,121 @@
+{
+  "review_version": "actual24_accepted_selected_union_independent_review_v1",
+  "main_point": "The accepted revision has a consistent ATP/NADPH account and no selected NADH mechanism. Its source support is still partial: one statement lacks an explicit reaction-stage attribution, and the G3P statement adds a carbohydrate-use predicate absent from its selected fragment.",
+  "reviewed_version": {
+    "revision": 1,
+    "actual_succeeded": true,
+    "actual_error": null,
+    "checker_accepted": true,
+    "final_business_pass": true,
+    "strict_json_pass": true,
+    "conditional_full_pydantic_pass": true,
+    "claim_count": 5,
+    "all_reviewed_claim_texts_match_exact_final_response_spans": true,
+    "outcome_snapshot_draft_published": false,
+    "outcome_native_publication_claimed": false,
+    "publication_evidence_boundary": "The parent reported controller/native-browser completion separately. This public generation outcome proves acceptance of revision 1; its snapshot flags do not independently certify the browser publication or persistence step."
+  },
+  "method": "Review each final factual claim, including the short answer, against only its actually returned selected supporting-fragment union and immutable alias map. Other available fragments and other claims' selections cannot backfill missing predicates. Do not infer scientific falsehood merely from missing source wording.",
+  "counts": {"complete": 3, "partial": 2, "unsupported": 0, "total": 5},
+  "claims": [
+    {
+      "claim_id": "claim_527610ff834beb5490755ddd_1",
+      "answer_field": "answer_text",
+      "selected": [{"evidence_id": "ev_003", "fragment_ids": ["F012"]}],
+      "rating": "partial",
+      "supported_predicates": ["Solar energy converted to chemical energy", "Temporary storage in ATP and NADPH"],
+      "missing_predicates": ["Explicit attribution of that conversion/storage to the light-dependent reactions"],
+      "reason": "F012 states the conversion and storage in a clause beginning 'After', but does not identify the converting reaction stage. The same response's F036 supports that attribution for another claim; it was not selected for this claim.",
+      "scientific_note": "The statement is scientifically plausible and consistent with the other final claims. This strict attribution gap is not a falsehood verdict."
+    },
+    {
+      "claim_id": "claim_bf98bcc1a31532e9a72b1e6e_1",
+      "answer_field": "answer_text",
+      "selected": [{"evidence_id": "ev_007", "fragment_ids": ["F036", "F037"]}],
+      "rating": "complete",
+      "supported_predicates": ["Light-dependent ATP/NADPH production", "Named carriers as the antecedent of transport", "Transport into the stroma", "Calvin-cycle reaction location"],
+      "missing_predicates": [],
+      "reason": "F036 names ATP and NADPH as products of light-dependent reactions. The actually selected following F037 links those energy-carrying molecules to travel into the stroma where Calvin reactions take place. The prior unselected-antecedent gap is resolved for this claim."
+    },
+    {
+      "claim_id": "claim_8cd7b13097db1301a18c28c6_1",
+      "answer_field": "answer_text",
+      "selected": [{"evidence_id": "ev_001", "fragment_ids": ["F002", "F003"]}],
+      "rating": "complete",
+      "supported_predicates": ["Carriers bring energy from light-dependent reactions to Calvin reactions", "Release of energy", "Empty carriers return to obtain more energy"],
+      "missing_predicates": [],
+      "reason": "The two selected fragments cover the asserted full/empty-carrier cycle. This generic transport account does not by itself establish every named-carrier biochemical detail."
+    },
+    {
+      "claim_id": "claim_82ce740c6dbf4426f1afb603_1",
+      "answer_field": "answer_text",
+      "selected": [{"evidence_id": "ev_010", "fragment_ids": ["F053"]}],
+      "rating": "partial",
+      "supported_predicates": ["ATP/NADPH energy use to convert the resulting three-carbon compounds into G3P"],
+      "missing_predicates": ["Calvin-cycle stage context for that conversion", "G3P subsequently used to build carbohydrate molecules"],
+      "reason": "F053 has neither the Calvin-cycle heading/context nor the later G3P-to-carbohydrate predicate. Its complete_block flag cannot supply either. The final statement's carbohydrate clause is new compared with the narrower earlier reviewed claim.",
+      "scientific_note": "The mechanism and G3P precursor relation are plausible. The selected-source gap does not establish that the mechanism is scientifically false."
+    },
+    {
+      "claim_id": "claim_da9649056174023a8e01eaac_1",
+      "answer_field": "short_answer",
+      "selected": [{"evidence_id": "ev_007", "fragment_ids": ["F036", "F037"]}],
+      "rating": "complete",
+      "supported_predicates": ["Light-dependent ATP/NADPH production from light energy", "Those energy-carrying molecules travel to the Calvin-cycle location"],
+      "missing_predicates": [],
+      "reason": "The actual short answer says 'carry energy to the Calvin cycle', rather than the earlier 'power' or 'supply energy for' formulations. The selected caption sentences name the carriers and their movement into the stroma where Calvin reactions occur. This is completeness for the narrower asserted production/transport summary.",
+      "coverage_boundary": "F036/F037 do not explicitly describe ATP/NADPH consumption or the Calvin conversion step. The short answer does not explicitly assert that use predicate, so it is not charged with the old wording's missing predicate. It is also not a stand-alone source certificate for the full energy-use mechanism.",
+      "scientific_note": "The body clarifies that light energy becomes chemical energy stored in these molecules. The short phrasing is read as that conventional shorthand, not conversion of photon energy into molecular matter."
+    }
+  ],
+  "science_and_coherence": {
+    "final_body_and_short_use_nadph_consistently": true,
+    "selected_fragments_contain_nadh": false,
+    "mechanical_nadph_to_nadh_replacement_observed": false,
+    "transport_antecedent_resolved_in_claim_bf98_and_short": true,
+    "full_selected_calvin_stage_and_g3p_carbohydrate_chain_complete": false,
+    "note": "The NADH source anomaly has been avoided through different source bindings, not by correcting or deleting the immutable source. An absence of local diagnostics does not establish scientific or semantic completeness."
+  },
+  "available_only_repair_context": [
+    {
+      "gap": "Reaction-stage attribution for claim_527610ff834beb5490755ddd_1",
+      "available_fragments": [{"evidence_id": "ev_003", "fragment_ids": ["F013"]}, {"evidence_id": "ev_007", "fragment_ids": ["F036"]}],
+      "boundary": "These can inform a future selection only; they do not retrospectively support this claim. F013's separate lifespan assertion is not thereby certified."
+    },
+    {
+      "gap": "Calvin context and G3P-to-carbohydrate relation for claim_82ce740c6dbf4426f1afb603_1",
+      "available_fragments": [{"evidence_id": "ev_010", "fragment_ids": ["F051", "F052", "F054", "F055"]}],
+      "boundary": "F051/F052 provide surrounding stage/fixation context. F054 is interrupted by page furniture and F055 is a continuation from another source unit. Keep their identities and original text distinct; do not invent one clean quote or treat complete_block as proof of semantic completeness. These fragments were not selected for the reviewed claim."
+    }
+  ],
+  "raw_final_checker_observation": {
+    "supported_labels": 5,
+    "schema_issues": [],
+    "technical_binding_issues": [],
+    "structural_issues": [],
+    "requirement_evidence_fragments": ["F036", "F037"],
+    "requirement_record_shape": "Separate singular fragment_id and exact quote records",
+    "note": "The raw checker marks the requirement sufficient. Its requirement selections cover production and transport, not an explicit Calvin energy-use step. Acceptance and supported labels remain separate from this independent source-completeness review."
+  },
+  "provider_receipt_accounting": {
+    "retained_response_count": 4,
+    "total_cost_usd": "0.0171776",
+    "cost_method": "Decimal sum of parsed_JSON_when_possible.usage.cost from the four retained public receipts.",
+    "requests": [
+      {"slot": 1, "stage": "generation", "model": "anthropic/claude-haiku-5.5", "http_status": 200, "finish_reason": "stop", "prompt_tokens": 16743, "completion_tokens": 464, "total_tokens": 17207, "cost_usd": "0.0019063"},
+      {"slot": 2, "stage": "joint_check", "model": "google/gemini-3.5-flash-lite", "http_status": 200, "finish_reason": "stop", "prompt_tokens": 11113, "completion_tokens": 1267, "total_tokens": 12380, "cost_usd": "0.0065014"},
+      {"slot": 3, "stage": "semantic_repair", "model": "anthropic/claude-haiku-5.5", "http_status": 200, "finish_reason": "stop", "prompt_tokens": 21145, "completion_tokens": 989, "total_tokens": 22134, "cost_usd": "0.0026090"},
+      {"slot": 4, "stage": "joint_recheck", "model": "google/gemini-3.5-flash-lite", "http_status": 200, "finish_reason": "stop", "prompt_tokens": 10978, "completion_tokens": 1147, "total_tokens": 12125, "cost_usd": "0.0061609"}
+    ]
+  },
+  "evidence_directory": "C:/Users/PC/Documents/Codex/2026-10-04/task-2/5703-week10-native-pair-20261009-01/scientific-native-closure24/runtime/retained-provider-diagnostics",
+  "source_pins": [
+    {"file": "native-generation-outcome01.json", "bytes": 450746, "sha256": "4087a4105c362ccbdc9c8b8bc0556400225e701a0dd2a8f694ecb740c59bf3cd"},
+    {"file": "slot-01-generation-read01.json", "bytes": 8174, "sha256": "e20ee80f4cce2495a1c9e286060ea899e8973f5d31cddf951d4ad2b99da52763"},
+    {"file": "slot-02-joint_check-read01.json", "bytes": 19966, "sha256": "c55e6e7b7288c2dce918ccfba523184920a00f8ae5e5db5de4e7f805490d28d4"},
+    {"file": "slot-03-semantic_repair-read01.json", "bytes": 22691, "sha256": "8d2759c59f9e71efe4017886bfd72d58358411400bd340f7bd8e4ced7bfab9f9"},
+    {"file": "slot-04-joint_recheck-read01.json", "bytes": 18431, "sha256": "998cbd42881a6040016354bd7700773e9bc05b233943af3f16fc5357cca6a065"}
+  ],
+  "review_operations": {"new_provider_calls": 0, "database_access": 0, "main_writes": 0, "raw_outcome_modified": false, "independent_labels_sent_to_model": false},
+  "limitation": "This is a source-completeness review of one accepted answer, not Gold, a human scientific certification, causal proof of a prompt fix, or acceptance of the whole project."
+}

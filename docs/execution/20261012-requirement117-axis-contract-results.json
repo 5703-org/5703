@@ -1,0 +1,108 @@
+{
+  "status": "OFFLINE_PATCH_VERIFIED",
+  "tests_passed": 137,
+  "new_controls": 32,
+  "existing_controls": 105,
+  "free_verification": {
+    "status": "PASS",
+    "commands": [
+      {
+        "command": [
+          "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-X",
+          "utf8",
+          "-m",
+          "pytest",
+          "-q",
+          "-p",
+          "no:cacheprovider",
+          "tests/unit/test_requirement_axes117.py",
+          "tests/unit/test_context_qualification_v1.py",
+          "tests/unit/test_qualification_decision_transport115.py",
+          "tests/unit/test_source_relation_units_v2.py",
+          "tests/unit/test_checker_context_scope110.py",
+          "tests/unit/test_single_selection_output_integration.py",
+          "--tb=short"
+        ],
+        "exit_code": 0,
+        "log": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-requirement117-free\\final-free-complete-v2\\free117-1.log",
+        "log_sha256": "edf96437af6591191b93da7dc1ff7ff64af67f8c0669297ccec1e41dae9d67a1"
+      },
+      {
+        "command": [
+          "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-X",
+          "utf8",
+          "-m",
+          "ruff",
+          "check",
+          "generation/checked.py",
+          "generation/qualification_v1.py",
+          "generation/requirement_axes_v1.py",
+          "tests/unit/test_requirement_axes117.py"
+        ],
+        "exit_code": 0,
+        "log": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-requirement117-free\\final-free-complete-v2\\free117-2.log",
+        "log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      },
+      {
+        "command": [
+          "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-X",
+          "utf8",
+          "-m",
+          "ruff",
+          "format",
+          "--check",
+          "generation/qualification_v1.py",
+          "generation/requirement_axes_v1.py",
+          "tests/unit/test_requirement_axes117.py"
+        ],
+        "exit_code": 0,
+        "log": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-requirement117-free\\final-free-complete-v2\\free117-3.log",
+        "log_sha256": "eee76f865de5a9f2456950f710ae5d5f9b5bd0ea02aa54f614c5eed6642a0bfd"
+      }
+    ],
+    "source_pins": {
+      "generation/checked.py": "731138bd56dc62ed8359b7a818c6ee4512344d130f1be82e51fe0ae35fdd492d",
+      "generation/qualification_v1.py": "f7d43ca3ebb8cf706a1b3654e395766e105414957ed65cffa72e4334dd1174b0",
+      "generation/requirement_axes_v1.py": "9c29ba3ad09e8797dd923884e3a5660c3cca95b8b5ba8ea8dcc6756a27db2b26",
+      "generation/prompts/qualification_check_v1.txt": "c48677ff8eddaf8a84ff7f56dfad76f371f7a2de7ea889195f634d518f435a0f",
+      "tests/unit/test_requirement_axes117.py": "ae11a260326eb7e38c67a7a1d55cabdd3c8df0da54be1065ab98aa56f6903765",
+      "tests/fixtures/qualification116_requirement_response.json": "2e146d8e63acc94ba8e0882166342547050135e47c4fbd3bb290071df0d3d585"
+    },
+    "unchanged_default_or_previous_source_pins": {
+      "E:\\5703\\learning-assistant\\generation\\source_relations_v2.py": "5e05e481bca165e954d80926d936b63c59e76a53a8c06af91274347ba0a7e21e",
+      "E:\\5703\\learning-assistant\\backend\\app\\core\\config.py": "20211d6a68f6df7fb502838381bd078ace03227c71b1bdfa3a74eff33b95c8be",
+      "E:\\5703\\learning-assistant\\generation\\prompts\\qualification_repair_v1.txt": "f42fdbf8fbea2f58a5ea8735dca4d266bb1a4c9ba8ea3f7f8ef4e365c3ea34b2",
+      "E:\\5703\\learning-assistant\\tests\\unit\\test_context_qualification_v1.py": "5d13c2a1391d5c6ba2d188dca6dc928ebc2a4c72470d761e326f08f405ee5241",
+      "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_check_v2.txt": "af234cebbbfd5f2b4b5057c92e205df0ff859f3f72a44a1f908566c2b05dc251",
+      "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_generation_v2.txt": "783636de019da97e2b6b7ee7995c2bf41faf1e6a5b69ca6f2519ee71b757b95f"
+    },
+    "provider_requests": 0,
+    "key_reads": 0,
+    "DB_operations": 0,
+    "scientific_accuracy_inferred": false,
+    "patch_sha256": "2948854d59908987be38fc2cbae75006607be3e0bd36c800bf105bf5425449d0"
+  },
+  "historical_replay": {
+    "technical_valid": false,
+    "semantic_accept": null,
+    "issue_codes": [
+      "REQUIREMENT_GAP_UNSPECIFIED"
+    ],
+    "raw_preserved": true,
+    "semantic_decisions_changed": false
+  },
+  "current_eight_scope_preserved": true,
+  "baseline_A_wires_unchanged": 4,
+  "old_B_wires_superseded": 4,
+  "provider_requests": 0,
+  "key_reads": 0,
+  "DB_operations": 0,
+  "source_review": "RELEASE",
+  "source_review_receipt": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-requirement117-free\\source-review117.json"
+}

@@ -1,0 +1,1125 @@
+{
+  "status": "ACTUAL_ROOT_LOCAL_OPENQA36_SCORED_AFTER_ROOT_CONFIRMED_CLOSURE",
+  "seen_dev": true,
+  "held_out_claim": false,
+  "scheduled_count": 36,
+  "question_count": 12,
+  "conditions": [
+    "E0_none",
+    "E1_dense",
+    "hybrid_plus_rerank"
+  ],
+  "by_arm": {
+    "E0_none": {
+      "scheduled_count": 12,
+      "schema_valid_count": 12,
+      "schema_success_rate": 1.0,
+      "valid_answer_count": 12,
+      "em": 0.5833333333333334,
+      "token_f1": 0.638888888888889,
+      "em_or_preregistered_whole_answer_equivalence": 0.6666666666666666,
+      "adapter_generate_return_duration_ms": {
+        "n": 12,
+        "min": 934.7493999994185,
+        "median": 1136.1589999978605,
+        "p95": 1533.7412099996068,
+        "max": 1813.017899999977
+      }
+    },
+    "E1_dense": {
+      "scheduled_count": 12,
+      "schema_valid_count": 12,
+      "schema_success_rate": 1.0,
+      "valid_answer_count": 12,
+      "em": 0.5,
+      "token_f1": 0.611111111111111,
+      "em_or_preregistered_whole_answer_equivalence": 0.5,
+      "adapter_generate_return_duration_ms": {
+        "n": 12,
+        "min": 1000.9200999993482,
+        "median": 1189.7338999988278,
+        "p95": 1815.4428300005748,
+        "max": 1891.832000001159
+      }
+    },
+    "hybrid_plus_rerank": {
+      "scheduled_count": 12,
+      "schema_valid_count": 12,
+      "schema_success_rate": 1.0,
+      "valid_answer_count": 12,
+      "em": 0.5,
+      "token_f1": 0.7083333333333334,
+      "em_or_preregistered_whole_answer_equivalence": 0.6666666666666666,
+      "adapter_generate_return_duration_ms": {
+        "n": 12,
+        "min": 878.3285999998043,
+        "median": 1077.0388499986439,
+        "p95": 1321.3028250002026,
+        "max": 1334.2721000008169
+      }
+    }
+  },
+  "per_question_arm": [
+    {
+      "slot": 1,
+      "question_id": "sciq:test:000008",
+      "arm": "E0_none",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 0.0,
+      "token_f1": 0.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": false,
+      "em_or_preregistered_whole_answer_equivalence": false,
+      "observed_duration_ms": 1305.2420999993046
+    },
+    {
+      "slot": 2,
+      "question_id": "sciq:test:000008",
+      "arm": "E1_dense",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 0.0,
+      "token_f1": 0.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": false,
+      "em_or_preregistered_whole_answer_equivalence": false,
+      "observed_duration_ms": 1891.832000001159
+    },
+    {
+      "slot": 3,
+      "question_id": "sciq:test:000008",
+      "arm": "hybrid_plus_rerank",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 0.0,
+      "token_f1": 0.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": false,
+      "em_or_preregistered_whole_answer_equivalence": false,
+      "observed_duration_ms": 1334.2721000008169
+    },
+    {
+      "slot": 4,
+      "question_id": "sciq:test:000015",
+      "arm": "E1_dense",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 0.0,
+      "token_f1": 0.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": false,
+      "em_or_preregistered_whole_answer_equivalence": false,
+      "observed_duration_ms": 1435.126799999125
+    },
+    {
+      "slot": 5,
+      "question_id": "sciq:test:000015",
+      "arm": "hybrid_plus_rerank",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 0.0,
+      "token_f1": 0.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": false,
+      "em_or_preregistered_whole_answer_equivalence": false,
+      "observed_duration_ms": 1310.6915999997
+    },
+    {
+      "slot": 6,
+      "question_id": "sciq:test:000015",
+      "arm": "E0_none",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 0.0,
+      "token_f1": 0.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": false,
+      "em_or_preregistered_whole_answer_equivalence": false,
+      "observed_duration_ms": 1813.017899999977
+    },
+    {
+      "slot": 7,
+      "question_id": "sciq:test:000003",
+      "arm": "hybrid_plus_rerank",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 1.0,
+      "token_f1": 1.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": true,
+      "em_or_preregistered_whole_answer_equivalence": true,
+      "observed_duration_ms": 1133.1664999997884
+    },
+    {
+      "slot": 8,
+      "question_id": "sciq:test:000003",
+      "arm": "E0_none",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 1.0,
+      "token_f1": 1.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": true,
+      "em_or_preregistered_whole_answer_equivalence": true,
+      "observed_duration_ms": 1102.328100001614
+    },
+    {
+      "slot": 9,
+      "question_id": "sciq:test:000003",
+      "arm": "E1_dense",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 1.0,
+      "token_f1": 1.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": true,
+      "em_or_preregistered_whole_answer_equivalence": true,
+      "observed_duration_ms": 1079.5827999972971
+    },
+    {
+      "slot": 10,
+      "question_id": "sciq:validation:000040",
+      "arm": "E0_none",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 0.0,
+      "token_f1": 0.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": false,
+      "em_or_preregistered_whole_answer_equivalence": false,
+      "observed_duration_ms": 1173.8318999996409
+    },
+    {
+      "slot": 11,
+      "question_id": "sciq:validation:000040",
+      "arm": "E1_dense",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 0.0,
+      "token_f1": 0.6666666666666666,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": false,
+      "em_or_preregistered_whole_answer_equivalence": false,
+      "observed_duration_ms": 1000.9200999993482
+    },
+    {
+      "slot": 12,
+      "question_id": "sciq:validation:000040",
+      "arm": "hybrid_plus_rerank",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 0.0,
+      "token_f1": 0.6666666666666666,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": false,
+      "em_or_preregistered_whole_answer_equivalence": false,
+      "observed_duration_ms": 1070.171699997445
+    },
+    {
+      "slot": 13,
+      "question_id": "sciq:validation:000013",
+      "arm": "E1_dense",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 1.0,
+      "token_f1": 1.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": true,
+      "em_or_preregistered_whole_answer_equivalence": true,
+      "observed_duration_ms": 1752.9426000000967
+    },
+    {
+      "slot": 14,
+      "question_id": "sciq:validation:000013",
+      "arm": "hybrid_plus_rerank",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 1.0,
+      "token_f1": 1.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": true,
+      "em_or_preregistered_whole_answer_equivalence": true,
+      "observed_duration_ms": 1183.1457000007504
+    },
+    {
+      "slot": 15,
+      "question_id": "sciq:validation:000013",
+      "arm": "E0_none",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 1.0,
+      "token_f1": 1.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": true,
+      "em_or_preregistered_whole_answer_equivalence": true,
+      "observed_duration_ms": 1074.318700000731
+    },
+    {
+      "slot": 16,
+      "question_id": "sciq:test:000019",
+      "arm": "hybrid_plus_rerank",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 1.0,
+      "token_f1": 1.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": true,
+      "em_or_preregistered_whole_answer_equivalence": true,
+      "observed_duration_ms": 987.5439999996161
+    },
+    {
+      "slot": 17,
+      "question_id": "sciq:test:000019",
+      "arm": "E0_none",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 1.0,
+      "token_f1": 1.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": true,
+      "em_or_preregistered_whole_answer_equivalence": true,
+      "observed_duration_ms": 973.8279999983206
+    },
+    {
+      "slot": 18,
+      "question_id": "sciq:test:000019",
+      "arm": "E1_dense",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 1.0,
+      "token_f1": 1.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": true,
+      "em_or_preregistered_whole_answer_equivalence": true,
+      "observed_duration_ms": 1189.9464999987686
+    },
+    {
+      "slot": 19,
+      "question_id": "sciq:validation:000002",
+      "arm": "E0_none",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 1.0,
+      "token_f1": 1.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": true,
+      "em_or_preregistered_whole_answer_equivalence": true,
+      "observed_duration_ms": 934.7493999994185
+    },
+    {
+      "slot": 20,
+      "question_id": "sciq:validation:000002",
+      "arm": "E1_dense",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 1.0,
+      "token_f1": 1.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": true,
+      "em_or_preregistered_whole_answer_equivalence": true,
+      "observed_duration_ms": 1107.47690000062
+    },
+    {
+      "slot": 21,
+      "question_id": "sciq:validation:000002",
+      "arm": "hybrid_plus_rerank",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 1.0,
+      "token_f1": 1.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": true,
+      "em_or_preregistered_whole_answer_equivalence": true,
+      "observed_duration_ms": 1083.9059999998426
+    },
+    {
+      "slot": 22,
+      "question_id": "sciq:validation:000047",
+      "arm": "E1_dense",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 0.0,
+      "token_f1": 0.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": false,
+      "em_or_preregistered_whole_answer_equivalence": false,
+      "observed_duration_ms": 1210.9934000000067
+    },
+    {
+      "slot": 23,
+      "question_id": "sciq:validation:000047",
+      "arm": "hybrid_plus_rerank",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 0.0,
+      "token_f1": 0.6666666666666666,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": true,
+      "em_or_preregistered_whole_answer_equivalence": true,
+      "observed_duration_ms": 1043.4046000009403
+    },
+    {
+      "slot": 24,
+      "question_id": "sciq:validation:000047",
+      "arm": "E0_none",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 0.0,
+      "token_f1": 0.6666666666666666,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": true,
+      "em_or_preregistered_whole_answer_equivalence": true,
+      "observed_duration_ms": 1025.887599997077
+    },
+    {
+      "slot": 25,
+      "question_id": "sciq:test:000014",
+      "arm": "hybrid_plus_rerank",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 1.0,
+      "token_f1": 1.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": true,
+      "em_or_preregistered_whole_answer_equivalence": true,
+      "observed_duration_ms": 1002.4210999981733
+    },
+    {
+      "slot": 26,
+      "question_id": "sciq:test:000014",
+      "arm": "E0_none",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 1.0,
+      "token_f1": 1.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": true,
+      "em_or_preregistered_whole_answer_equivalence": true,
+      "observed_duration_ms": 1228.4738999987894
+    },
+    {
+      "slot": 27,
+      "question_id": "sciq:test:000014",
+      "arm": "E1_dense",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 1.0,
+      "token_f1": 1.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": true,
+      "em_or_preregistered_whole_answer_equivalence": true,
+      "observed_duration_ms": 1146.7133999976795
+    },
+    {
+      "slot": 28,
+      "question_id": "sciq:validation:000060",
+      "arm": "E0_none",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 1.0,
+      "token_f1": 1.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": true,
+      "em_or_preregistered_whole_answer_equivalence": true,
+      "observed_duration_ms": 1133.627199997136
+    },
+    {
+      "slot": 29,
+      "question_id": "sciq:validation:000060",
+      "arm": "E1_dense",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 0.0,
+      "token_f1": 0.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": false,
+      "em_or_preregistered_whole_answer_equivalence": false,
+      "observed_duration_ms": 1140.6180999983917
+    },
+    {
+      "slot": 30,
+      "question_id": "sciq:validation:000060",
+      "arm": "hybrid_plus_rerank",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 1.0,
+      "token_f1": 1.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": true,
+      "em_or_preregistered_whole_answer_equivalence": true,
+      "observed_duration_ms": 878.3285999998043
+    },
+    {
+      "slot": 31,
+      "question_id": "sciq:test:000052",
+      "arm": "E1_dense",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 0.0,
+      "token_f1": 0.6666666666666666,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": false,
+      "em_or_preregistered_whole_answer_equivalence": false,
+      "observed_duration_ms": 1524.0169000026071
+    },
+    {
+      "slot": 32,
+      "question_id": "sciq:test:000052",
+      "arm": "hybrid_plus_rerank",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 0.0,
+      "token_f1": 0.6666666666666666,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": false,
+      "em_or_preregistered_whole_answer_equivalence": false,
+      "observed_duration_ms": 959.390699998039
+    },
+    {
+      "slot": 33,
+      "question_id": "sciq:test:000052",
+      "arm": "E0_none",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 0.0,
+      "token_f1": 0.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": false,
+      "em_or_preregistered_whole_answer_equivalence": false,
+      "observed_duration_ms": 1234.0292000008048
+    },
+    {
+      "slot": 34,
+      "question_id": "sciq:validation:000052",
+      "arm": "hybrid_plus_rerank",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 0.0,
+      "token_f1": 0.5,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": true,
+      "em_or_preregistered_whole_answer_equivalence": true,
+      "observed_duration_ms": 1225.49699999945
+    },
+    {
+      "slot": 35,
+      "question_id": "sciq:validation:000052",
+      "arm": "E0_none",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 1.0,
+      "token_f1": 1.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": true,
+      "em_or_preregistered_whole_answer_equivalence": true,
+      "observed_duration_ms": 1138.6907999985851
+    },
+    {
+      "slot": 36,
+      "question_id": "sciq:validation:000052",
+      "arm": "E1_dense",
+      "status": "completed",
+      "schema_valid": true,
+      "em": 1.0,
+      "token_f1": 1.0,
+      "valid_answer_response": true,
+      "compact_answer_present": true,
+      "preregistered_whole_answer_equivalence": true,
+      "em_or_preregistered_whole_answer_equivalence": true,
+      "observed_duration_ms": 1189.5212999988871
+    }
+  ],
+  "paired_same_question": {
+    "E0_none__vs__E1_dense": {
+      "arm_A": "E0_none",
+      "arm_B": "E1_dense",
+      "question_count": 12,
+      "per_question": [
+        {
+          "question_id": "sciq:test:000008",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": 586.5899000018544
+        },
+        {
+          "question_id": "sciq:test:000015",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": -377.891100000852
+        },
+        {
+          "question_id": "sciq:test:000003",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": -22.74530000431696
+        },
+        {
+          "question_id": "sciq:validation:000040",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.6666666666666666,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": -172.91180000029271
+        },
+        {
+          "question_id": "sciq:validation:000013",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": 678.6238999993657
+        },
+        {
+          "question_id": "sciq:test:000019",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": 216.11850000044797
+        },
+        {
+          "question_id": "sciq:validation:000002",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": 172.7275000012014
+        },
+        {
+          "question_id": "sciq:validation:000047",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": -0.6666666666666666,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": -1,
+          "observed_duration_ms_delta_B_minus_A": 185.10580000292975
+        },
+        {
+          "question_id": "sciq:test:000014",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": -81.7605000011099
+        },
+        {
+          "question_id": "sciq:validation:000060",
+          "em_delta_B_minus_A": -1.0,
+          "token_f1_delta_B_minus_A": -1.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": -1,
+          "observed_duration_ms_delta_B_minus_A": 6.990900001255795
+        },
+        {
+          "question_id": "sciq:test:000052",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.6666666666666666,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": 289.9877000018023
+        },
+        {
+          "question_id": "sciq:validation:000052",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": 50.83050000030198
+        }
+      ],
+      "em": {
+        "mean_delta_B_minus_A": -0.08333333333333333,
+        "B_wins": 0,
+        "ties": 11,
+        "B_losses": 1
+      },
+      "token_f1": {
+        "mean_delta_B_minus_A": -0.02777777777777778,
+        "B_wins": 2,
+        "ties": 8,
+        "B_losses": 2
+      },
+      "em_or_preregistered_whole_answer_equivalence": {
+        "mean_delta_B_minus_A": -0.16666666666666666,
+        "B_wins": 0,
+        "ties": 10,
+        "B_losses": 2
+      }
+    },
+    "E0_none__vs__hybrid_plus_rerank": {
+      "arm_A": "E0_none",
+      "arm_B": "hybrid_plus_rerank",
+      "question_count": 12,
+      "per_question": [
+        {
+          "question_id": "sciq:test:000008",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": 29.030000001512235
+        },
+        {
+          "question_id": "sciq:test:000015",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": -502.3263000002771
+        },
+        {
+          "question_id": "sciq:test:000003",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": 30.838399998174282
+        },
+        {
+          "question_id": "sciq:validation:000040",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.6666666666666666,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": -103.66020000219578
+        },
+        {
+          "question_id": "sciq:validation:000013",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": 108.82700000001932
+        },
+        {
+          "question_id": "sciq:test:000019",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": 13.71600000129547
+        },
+        {
+          "question_id": "sciq:validation:000002",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": 149.15660000042408
+        },
+        {
+          "question_id": "sciq:validation:000047",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": 17.51700000386336
+        },
+        {
+          "question_id": "sciq:test:000014",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": -226.05280000061612
+        },
+        {
+          "question_id": "sciq:validation:000060",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": -255.29859999733162
+        },
+        {
+          "question_id": "sciq:test:000052",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.6666666666666666,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": -274.6385000027658
+        },
+        {
+          "question_id": "sciq:validation:000052",
+          "em_delta_B_minus_A": -1.0,
+          "token_f1_delta_B_minus_A": -0.5,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": 86.80620000086492
+        }
+      ],
+      "em": {
+        "mean_delta_B_minus_A": -0.08333333333333333,
+        "B_wins": 0,
+        "ties": 11,
+        "B_losses": 1
+      },
+      "token_f1": {
+        "mean_delta_B_minus_A": 0.06944444444444443,
+        "B_wins": 2,
+        "ties": 9,
+        "B_losses": 1
+      },
+      "em_or_preregistered_whole_answer_equivalence": {
+        "mean_delta_B_minus_A": 0.0,
+        "B_wins": 0,
+        "ties": 12,
+        "B_losses": 0
+      }
+    },
+    "E1_dense__vs__hybrid_plus_rerank": {
+      "arm_A": "E1_dense",
+      "arm_B": "hybrid_plus_rerank",
+      "question_count": 12,
+      "per_question": [
+        {
+          "question_id": "sciq:test:000008",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": -557.5599000003422
+        },
+        {
+          "question_id": "sciq:test:000015",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": -124.4351999994251
+        },
+        {
+          "question_id": "sciq:test:000003",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": 53.58370000249124
+        },
+        {
+          "question_id": "sciq:validation:000040",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": 69.25159999809694
+        },
+        {
+          "question_id": "sciq:validation:000013",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": -569.7968999993464
+        },
+        {
+          "question_id": "sciq:test:000019",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": -202.4024999991525
+        },
+        {
+          "question_id": "sciq:validation:000002",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": -23.57090000077733
+        },
+        {
+          "question_id": "sciq:validation:000047",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.6666666666666666,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 1,
+          "observed_duration_ms_delta_B_minus_A": -167.5887999990664
+        },
+        {
+          "question_id": "sciq:test:000014",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": -144.2922999995062
+        },
+        {
+          "question_id": "sciq:validation:000060",
+          "em_delta_B_minus_A": 1.0,
+          "token_f1_delta_B_minus_A": 1.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 1,
+          "observed_duration_ms_delta_B_minus_A": -262.2894999985874
+        },
+        {
+          "question_id": "sciq:test:000052",
+          "em_delta_B_minus_A": 0.0,
+          "token_f1_delta_B_minus_A": 0.0,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": -564.6262000045681
+        },
+        {
+          "question_id": "sciq:validation:000052",
+          "em_delta_B_minus_A": -1.0,
+          "token_f1_delta_B_minus_A": -0.5,
+          "em_or_preregistered_whole_answer_equivalence_delta_B_minus_A": 0,
+          "observed_duration_ms_delta_B_minus_A": 35.97570000056294
+        }
+      ],
+      "em": {
+        "mean_delta_B_minus_A": 0.0,
+        "B_wins": 1,
+        "ties": 10,
+        "B_losses": 1
+      },
+      "token_f1": {
+        "mean_delta_B_minus_A": 0.09722222222222221,
+        "B_wins": 2,
+        "ties": 9,
+        "B_losses": 1
+      },
+      "em_or_preregistered_whole_answer_equivalence": {
+        "mean_delta_B_minus_A": 0.16666666666666666,
+        "B_wins": 2,
+        "ties": 10,
+        "B_losses": 0
+      }
+    }
+  },
+  "input_pins": {
+    "terminal": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\terminal-receipt01.json",
+      "bytes": 43094,
+      "sha256": "f2712ed9ae60914374e4fc67e0ba2ce3931dce9be918dd61d0ccd8989d4db26e"
+    },
+    "finished_records": [
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-01-finished01.json",
+        "bytes": 863,
+        "sha256": "0f3112d1b4cdfc723b372e3dbbaa54b522f3a0e66ec23acde331246fad05d4f7"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-02-finished01.json",
+        "bytes": 1079,
+        "sha256": "6420ffee084cfe563f5b2ca526acb1332d56210e74bea3720eb39feefb222d59"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-03-finished01.json",
+        "bytes": 1089,
+        "sha256": "1f5085e248932fe4b9b3f254f2a37473013326bc11db954a0b6d164657d32fd7"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-04-finished01.json",
+        "bytes": 1328,
+        "sha256": "b7c1917f4295eff8e3f595b31c1ad08f05cd40b6857c827949d0d381337bb473"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-05-finished01.json",
+        "bytes": 1376,
+        "sha256": "3248afb23dceb0da96c808c47829a6e8e8f67c48ff88805e542ca592de799141"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-06-finished01.json",
+        "bytes": 1231,
+        "sha256": "6e2c5fe2827c5ae6c62d8fed23162580361a3ac0fb53b4175a425b3dd22a6cf9"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-07-finished01.json",
+        "bytes": 1075,
+        "sha256": "9cb0ed12b7cfef1c6108d6b4ef387e489ff03969f75aba21dd8a11ebf98d8e03"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-08-finished01.json",
+        "bytes": 839,
+        "sha256": "7b82e31b3e0061d1ab1cb43d3fec050e7687d913b96d31de46ab1fd96c52c97f"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-09-finished01.json",
+        "bytes": 1066,
+        "sha256": "0a61b3c4ee4c3745584f9aa1fb870accccbd1cfde63f75c96e0889a989ebb289"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-10-finished01.json",
+        "bytes": 846,
+        "sha256": "76003e97f4d6bc583fde388e14cf8c90ce57dfa974b46e0798ba4b8d2fd1d90c"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-11-finished01.json",
+        "bytes": 1085,
+        "sha256": "e24393f159049ce78bcc99d9488aaab2ffcb85e21cdd547f3acdbfa142c2ffca"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-12-finished01.json",
+        "bytes": 1102,
+        "sha256": "173ccd07de5ec7b6bceaee02e58fa9c01a4ae02efefa75bc842f857d5b70ae30"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-13-finished01.json",
+        "bytes": 1077,
+        "sha256": "6e3a37a345f09688cefddb8405cb172eaa14720c378c2b33f197c58114fdc4d2"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-14-finished01.json",
+        "bytes": 1086,
+        "sha256": "3bc6805a92a69be8656c3b2f8ec8fbda459d302bc851a1bbd9e39edab7a21689"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-15-finished01.json",
+        "bytes": 850,
+        "sha256": "f5fc80a54bb03c16c1e6744bdfe05abe85ea19378283810a0b54ea4f981ede2a"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-16-finished01.json",
+        "bytes": 1074,
+        "sha256": "7ebc80a014956f9f989dcf12d95cc15e642505823d3a7b61023b5a2175af39df"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-17-finished01.json",
+        "bytes": 839,
+        "sha256": "ace0eb4c12cdea144d0d056aeff42193cab11b8178c6d8adcfe103fc644beaf8"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-18-finished01.json",
+        "bytes": 1068,
+        "sha256": "00318f2d9d9453c3ffc50dcbef29178d9a6014dbf3716286fac1db8a9a416f1b"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-19-finished01.json",
+        "bytes": 849,
+        "sha256": "8c47aaf64ae3685f13aff54c00e949492fe8261609bc0feb4d8c085e3a32b271"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-20-finished01.json",
+        "bytes": 1078,
+        "sha256": "d7fd6a20d43301a59891cb9ebfe6313ca0cf355eebd1e7f7c499f19c892c5125"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-21-finished01.json",
+        "bytes": 1090,
+        "sha256": "fdc996123350d3a6209973e3048f61b897a3e1732f7a5a3fba5e6095a29ff775"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-22-finished01.json",
+        "bytes": 1070,
+        "sha256": "a8ab6193b5d80b08bfdac1abd5f332693ac8f73fdb151eac82d5086da1b0e13c"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-23-finished01.json",
+        "bytes": 1089,
+        "sha256": "99b831a1536a93a921839cd006908f08712fd0c0b3548fb58ad54883ffbf807b"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-24-finished01.json",
+        "bytes": 863,
+        "sha256": "8a65f48e28a350b766f67c3475e409f9b90a40864a7be20fca36ae7d1290f002"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-25-finished01.json",
+        "bytes": 1091,
+        "sha256": "4acebe9ee5f3292ce7d693651923c76760bc37e54061eebc99653fadd9284db2"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-26-finished01.json",
+        "bytes": 864,
+        "sha256": "74ecfb239bb0c5171327f9a2969082061bf8a956b0652ae669d6135cf18e0b68"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-27-finished01.json",
+        "bytes": 1081,
+        "sha256": "5de5b87dcfe9809f3c6a0852f6c32f0cd59b6d8c45e77f5dcc3140cfb2dffd08"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-28-finished01.json",
+        "bytes": 849,
+        "sha256": "60a59a85ade2faefc324f9a436b31529d08d2c9b912af56cd9be49b983043196"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-29-finished01.json",
+        "bytes": 1073,
+        "sha256": "af3f55308e010ce1f8ce32549b6f661925c86d8212a71c349e94d69089471b8b"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-30-finished01.json",
+        "bytes": 1087,
+        "sha256": "1d7288107f172a3e97365986cbd525ecdceb8ca2d52a4b87c009d77c19872c9e"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-31-finished01.json",
+        "bytes": 1084,
+        "sha256": "b3bdb68c03df6798effd1710b1827d7746025ed9dbb822c20b07ee2fd96b28ea"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-32-finished01.json",
+        "bytes": 1089,
+        "sha256": "a90929de1ff3ee50db4b4bd7c2936eb10b590b843634502a1358e6ace457d37c"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-33-finished01.json",
+        "bytes": 866,
+        "sha256": "b7dee2d46441a66eed99a64171338293b67d64890c9aca5c58723140716e1431"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-34-finished01.json",
+        "bytes": 1097,
+        "sha256": "57c4f3d88b8fa6a3bb6ed50cd9dc9d12f072b5411cdfb6825721fd9e39704a36"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-35-finished01.json",
+        "bytes": 860,
+        "sha256": "c3b134b4c9fe5a82a119d3243757c1bc6169d89295d408e12d4060418ffe9ee0"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-36-finished01.json",
+        "bytes": 1089,
+        "sha256": "991fd993347e0a33ac7c5b60d0a10bc33acfe45244333b8605aa5446ee8668a9"
+      }
+    ],
+    "frozen_inputs": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\public12-openqa36-frozen-inputs01.json",
+      "bytes": 249942,
+      "sha256": "17d0135cc0e348e3336c39b878078808ab9dfea0178f29f5a247335830e80e3e"
+    },
+    "reference_map": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\public12-reference-map01.json",
+      "bytes": 496,
+      "sha256": "4c8567cdba6442d2745289c22ba1b59de9834563eabcc620c0e05c3e2d851acd"
+    },
+    "preregistration": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\ROOT-preregistered-quality-judgments01.json",
+      "bytes": 5987,
+      "sha256": "ec2f5430331f0155ac6b77a9909defee6df9e03de671ea82e001d960972d515e"
+    },
+    "scorer": {
+      "path": "E:\\5703\\learning-assistant\\evaluation\\metrics\\scoring.py",
+      "bytes": 6178,
+      "sha256": "d9e2427b7f61e0cd82760bf0f2129576185239d43ef685c35ed7dd2fb9453a89"
+    },
+    "duration_producer": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\run_public_openqa36_PREPARED01.py",
+      "bytes": 28485,
+      "sha256": "2fea524f7b9f932d863dde0760f65a95c5d44a6c7e42a15bb2b652a0d2522bfe"
+    },
+    "inherited_retrieval_diagnostics": null
+  },
+  "root_all_paid_owned_processes_closed_confirmation": true,
+  "closure_confirmation_is_ROOT_assertion_not_an_independent_process_probe": true,
+  "reference_values_exported": false,
+  "Gold_reads": 0,
+  "provider_calls": 0,
+  "DB_access": 0,
+  "E_writes": 0,
+  "retrieval_labels_recomputed": false,
+  "duration_scope": "adapter_only: perf_counter around adapter.generate until return; excludes runner post-return JSON/schema validation, retrieval, checker and production HTTP",
+  "duration_statistic": "All 12 adapter returns per arm, including invalid responses; original quantile linear interpolation at (n-1)*q. Descriptive DEV p95 only.",
+  "schema_success_definition": "Runner completed schema+stop finish / 12; valid refusal counts as schema success but is not an answer and scores zero EM/F1.",
+  "secondary_definition": "Primary EM OR full prediction/reference membership in the SAME unchanged preregistered equivalence class after original normalization.",
+  "quality_scope": "Original conservative lexical EM/token F1 and fixed whole-answer classes; twelve already-seen diagnostic questions, no semantic correctness or learning-gain claim."
+}

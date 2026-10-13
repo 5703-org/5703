@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="53" failures="0" errors="0" time="4.2343723">
+    <testsuite name="src/Chat.test.tsx" timestamp="2026-10-07T22:44:46.052Z" hostname="SK-20250314EJIZ" tests="44" failures="0" errors="0" skipped="0" time="2.7756325">
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; shows the polled queued/queued request status without inventing another phase" time="0.047601">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; shows the polled running/queued request status without inventing another phase" time="0.0125707">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; shows the polled running/generation request status without inventing another phase" time="0.0151592">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; shows the polled running/joint_check request status without inventing another phase" time="0.0158123">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; shows the polled running/semantic_repair request status without inventing another phase" time="0.0154562">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; shows the polled retry_wait/joint_check request status without inventing another phase" time="0.0157278">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; does not present a stale phase as current when the status poll fails" time="0.0161155">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; keeps a saved answer separate from the active request status after reopening a conversation" time="0.0309621">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; persists the complete submission before transport and replays its original tutor binding after remount" time="0.209988">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; recovers a newly created session without creating a second session after a lost receipt" time="0.1119847">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; keeps selected reading context and the same request key after submission failure" time="0.1105642">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; labels a saved partial answer without converting model assessment to a correctness score" time="0.0162853">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; binds a learner response to the persisted tutor question after reloading a hint" time="0.0938053">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; keeps direct teaching as the default and stores an explicit hint choice with a failed draft" time="0.0838688">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; sends the explicit Another hint action against the persisted task" time="0.0623359">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; sends the explicit Show full explanation action against the persisted task" time="0.06309">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; lets the server resolve ordinary continuation and explicitly resets a new problem to direct" time="0.186233">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; keeps physical-page and graphical limitations readable without repeating the same locator" time="0.0036974">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; shows only actually cited sources, excluding additional submitted passages" time="0.1013898">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; treats an explicitly empty citation array as zero even when evidence was submitted" time="0.029802">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; labels missing historical citation usage and rejects an uncited initial selection" time="0.0241907">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; renders stored legacy MCQ by its schema while keeping the natural-language composer" time="0.0494171">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; renders a refused legacy MCQ without inventing a selected option" time="0.0313379">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; preserves a draft when the server rejects a busy session" time="0.0290973">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; reveals a rejected submission unless the user started reading older messages: false" time="0.0650047">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; reveals a rejected submission unless the user started reading older messages: true" time="0.0858667">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; does not submit Enter while composing IME or Shift+Enter" time="0.0103467">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; deduplicates rapid submissions and reuses a key after a lost response" time="0.0282751">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; sends natural text with the explicit source choice and profile flag after turning profiles off" time="0.0298237">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; defaults to textbook sources and sends general knowledge only after an explicit accessible selection" time="0.7113388">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; retains a lost-receipt identity and requires reconciliation before a changed mode can create a new request" time="0.1711041">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; labels saved general knowledge independently of the current selection and offers no textbook source controls" time="0.0622644">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="chat lifecycle controls &gt; keeps the previous successful answer when regeneration fails" time="0.063387">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="evidence availability &gt; uses the original evidence endpoint and never substitutes cached source text on 410" time="0.0143781">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="evidence availability &gt; displays complete original source content and provenance" time="0.0024713">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="evidence availability &gt; attributes the saved official source https://openstax.org/books/chemistry-2e/pages/preface and preserves its extraction note" time="0.0340251">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="evidence availability &gt; attributes the saved official source https://assets.openstax.org/oscms-prodcms/media/documents/chemistry-2e_-_WEB.pdf and preserves its extraction note" time="0.0269694">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="evidence availability &gt; does not infer publisher attribution from a title or invalid source URL null" time="0.0143591">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="evidence availability &gt; does not infer publisher attribution from a title or invalid source URL https://example.org/authored-fixture" time="0.0153846">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="evidence availability &gt; does not infer publisher attribution from a title or invalid source URL https://openstax.org.example.com/source" time="0.0161149">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="evidence availability &gt; does not infer publisher attribution from a title or invalid source URL https://example.com/?source=openstax.org" time="0.0155178">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="evidence availability &gt; does not infer publisher attribution from a title or invalid source URL http://openstax.org/source" time="0.0160187">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="evidence availability &gt; does not infer publisher attribution from a title or invalid source URL javascript:alert(1)" time="0.0025272">
+        </testcase>
+        <testcase classname="src/Chat.test.tsx" name="evidence availability &gt; does not infer publisher attribution from a title or invalid source URL not a URL" time="0.0126318">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/ChatTranscriptRace.test.tsx" timestamp="2026-10-07T22:44:46.059Z" hostname="SK-20250314EJIZ" tests="3" failures="0" errors="0" skipped="0" time="0.5391743">
+        <testcase classname="src/ChatTranscriptRace.test.tsx" name="same-conversation transcript request races &gt; keeps the completed answer and does not revive an old job when an earlier Stop snapshot arrives last" time="0.2636177">
+        </testcase>
+        <testcase classname="src/ChatTranscriptRace.test.tsx" name="same-conversation transcript request races &gt; ignores an older history rejection after the newer completion has loaded successfully" time="0.1379933">
+        </testcase>
+        <testcase classname="src/ChatTranscriptRace.test.tsx" name="same-conversation transcript request races &gt; ignores late history after unmount without fetching its obsolete job or disturbing the next conversation" time="0.136763">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/ChatTranscriptRecovery.test.tsx" timestamp="2026-10-07T22:44:46.060Z" hostname="SK-20250314EJIZ" tests="6" failures="0" errors="0" skipped="0" time="0.9195655">
+        <testcase classname="src/ChatTranscriptRecovery.test.tsx" name="conversation transcript recovery &gt; retries an initial session lookup failure for the same conversation without submitting work" time="0.2121302">
+        </testcase>
+        <testcase classname="src/ChatTranscriptRecovery.test.tsx" name="conversation transcript recovery &gt; retries an initial history failure and retains the saved composer draft" time="0.0690819">
+        </testcase>
+        <testcase classname="src/ChatTranscriptRecovery.test.tsx" name="conversation transcript recovery &gt; keeps transcript recovery while the draft changes and binds only an explicitly submitted learner reply to the recovered task" time="0.1350569">
+        </testcase>
+        <testcase classname="src/ChatTranscriptRecovery.test.tsx" name="conversation transcript recovery &gt; keeps a failed retry recoverable and prevents another reload while the current retry is pending" time="0.2076537">
+        </testcase>
+        <testcase classname="src/ChatTranscriptRecovery.test.tsx" name="conversation transcript recovery &gt; recovers a completed job history refresh without losing the prior answer or unsent draft" time="0.0935281">
+        </testcase>
+        <testcase classname="src/ChatTranscriptRecovery.test.tsx" name="conversation transcript recovery &gt; retains an independent submission failure when the pending transcript reload later succeeds" time="0.2012104">
+        </testcase>
+    </testsuite>
+</testsuites>

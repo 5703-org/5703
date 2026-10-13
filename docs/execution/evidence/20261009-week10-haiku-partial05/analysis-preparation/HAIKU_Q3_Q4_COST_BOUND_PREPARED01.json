@@ -1,0 +1,115 @@
+{
+  "schema": "5703_week10_haiku_four_POST_prepared_cost_bound_v1",
+  "status": "PREPARED_HAIKU_COST_BOUND_ONLY_NOT_EXECUTED",
+  "recorded_utc": "2026-10-09T06:35:47.4150224Z",
+  "subbatch_id": "cs30-week10-haiku-persistent-general-20261009-01",
+  "actual_subbatch_POSTs": 0,
+  "actual_subbatch_cost_USD": null,
+  "actual_runtime_or_compatibility_PASS": false,
+  "model": "anthropic/claude-haiku-5.5",
+  "provider_service": "OpenRouter",
+  "only_provider_route": "google-vertex/global",
+  "maximum_new_question_jobs": 2,
+  "maximum_new_physical_POSTs": 4,
+  "new_independent_full_protection_USD": "0.12000000",
+  "maximum_wire_bytes": 60000,
+  "input_token_upper_bound_method": "Complete UTF-8 wire bytes plus 512, preserved from the existing guard.",
+  "input_token_upper_bound": 60512,
+  "teacher_output_cap": 2048,
+  "checker_output_cap": 4096,
+  "uniform_output_protection": 4096,
+  "no_explicit_cache_write_or_WebSearch_in_scope": true,
+  "cache_discount_relied_on": false,
+  "metadata_tariff": {
+    "base_prompt_USD_per_token": "0.0000001",
+    "base_completion_USD_per_token": "0.0000005",
+    "high_prompt_tier_starts_at_tokens": 100000,
+    "high_tier_prompt_USD_per_token": "0.0000005",
+    "high_tier_completion_USD_per_token": "0.0000025",
+    "high_tier_reachable_under_preserved_input_bound": false,
+    "teacher_strict_USD": "0.00707520",
+    "checker_uniform_strict_USD": "0.00809920",
+    "Q3_two_POST_role_strict_USD": "0.01517440",
+    "Q3_two_POST_uniform4096_strict_USD": "0.01619840",
+    "Q3_Q4_four_POST_role_strict_USD": "0.03034880",
+    "Q3_Q4_four_POST_uniform4096_strict_USD": "0.03239680"
+  },
+  "retained_guard_protection": {
+    "provider_max_price_USD_per_million": {
+      "prompt": "0.3",
+      "completion": "2.5"
+    },
+    "conservative_strict_upper_per_POST_USD": "0.02839360",
+    "conservative_strict_upper_four_POSTs_USD": "0.11357440",
+    "full_hold_per_POST_USD": "0.03000000",
+    "four_POST_full_hold_USD": "0.12000000",
+    "tariff_and_guard_cap_are_distinct": true,
+    "retained_guard_upper_bound_is_more_conservative_than_metadata_tariff": true
+  },
+  "math_fits_new_independent_USD_0_12": true,
+  "question_counting": {
+    "Q3_is_real_normal_teacher_plus_full_checker_compatibility_probe": true,
+    "Q3_normal_POSTs": 2,
+    "Q4_normal_POSTs": 2,
+    "Q4_requires_Q3_full_PASS_and_at_least_two_slots": true,
+    "extra_probe_job_added": false,
+    "native_repairs_share_same_four_POST_limit": true,
+    "Q1_Q2_replayed": false
+  },
+  "prior_closed_scope_context": {
+    "prior_consumed_POSTs": 8,
+    "prior_known_cost_USD": "0.03987014",
+    "prior_new_UNKNOWN_count": 0,
+    "prior_open_claims": 0,
+    "prior_eight_sent_slot_full_protection_USD": "0.24000000",
+    "new_four_full_protection_USD": "0.12000000",
+    "maximum_total_POSTs_with_new_scope": 12,
+    "total_conservative_full_protection_USD": "0.36000000",
+    "prior_known_plus_new_tariff_uniform_strict_USD": "0.07226694",
+    "prior_known_plus_new_retained_guard_strict_USD": "0.15344454",
+    "prior_known_plus_new_full_protection_USD": "0.15987014",
+    "old_closed_STOPs_and_claims_modified": false,
+    "old_UNKNOWN_count_unchanged_policy": 14,
+    "old_raw_ledger_reads": 0,
+    "old_ledger_writes": 0
+  },
+  "implementation_state": "New guard/template issuance and formal review pending; this receipt is mathematical preparation, not a released gate.",
+  "other_model_runs_or_qualifications_authorized_by_this_receipt": false,
+  "source_pins": {
+    "authority": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\continuous-preparation\\CONTINUATION_AUTHORIZATION_SCOPE04.json",
+      "bytes": 5533,
+      "sha256": "5120797cdb2e4fda5179c8155d50876032c776a1d0cc4a0b7c206958f389a9ee"
+    },
+    "official_anonymous_metadata": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\continuous-preparation\\PRIMARY_MODEL_PUBLIC_METADATA_ACTUAL01.json",
+      "bytes": 47230,
+      "sha256": "ef37c4b752447b5156ffc79b1535258e10c7ecc9de093cb1221d1fbe59a24f45"
+    },
+    "existing_guard_bound_source": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\continuous-preparation\\continuous_worker_guard_PREPARED03.py",
+      "bytes": 83359,
+      "sha256": "7c16134da6f10c6ce7659d064326f1bf90a248ccaf4c637f9b697f2083b0efa7"
+    },
+    "predecessor_finance_already_verified": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\analysis-preparation\\ACTUAL_CONTINUOUS03_Q2_ONLY_FINANCIAL_RESULT01.json",
+      "bytes": 10926,
+      "sha256": "8d04ee732f7377e3211ad0086879fe4535589a393388c88719c33aafe1c66116"
+    }
+  },
+  "limitations": [
+    "Bounds use the original 60000-byte request / 60512 input-token cap; a larger context requires a fresh tier-aware derivation.",
+    "Metadata parameter support is not an actual native teacher/full-checker compatibility PASS; Q3 is that first paid normal request pair.",
+    "Q3 probe is within the planned four POSTs, not an additional job. Q4 is conditional on Q3 complete quality acceptance and remaining slots.",
+    "No other model receives slots or runtime qualification from this Haiku-only scope.",
+    "No wallet/invoice balance or settled cost for this unexecuted scope is claimed."
+  ],
+  "observer_actions": {
+    "API_DB_or_credentials_access": 0,
+    "tests_or_guards_executed": 0,
+    "model_calls": 0,
+    "service_operations": 0,
+    "old_files_written": 0,
+    "create_only_prepared_receipts": 1
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "schema": "checker84-output-candidate-final-receipt-v4",
+  "current_module_frozen": true,
+  "supersedes": "codec84-final-receipt-v3.json for fixed-ID wire and correction-message layout; original snapshots retained",
+  "candidate_policy": "lossless_unit_findings_v1",
+  "default_policy": null,
+  "wire_representation": "fixed_original_text_id_v1",
+  "wire_catalogue_fingerprint_bound_to_context": true,
+  "arbitrary_quote_roundtrip": false,
+  "uncatalogued_quote_handling": "reject exact unmapped quote; never widen, truncate or summarize",
+  "minimal_main_relative_changes": [
+    "generation/lossless_unit_findings_v1.py",
+    "tests/unit/test_checker_output_projection_v1.py",
+    "tests/unit/test_checker_output_fixed_ids_v4.py",
+    "tests/unit/test_checker_output_packet_feedback_v4.py"
+  ],
+  "main_before_pins": {
+    "generation/lossless_unit_findings_v1.py": {
+      "bytes": 27701,
+      "sha256": "8eac286e0fcc88d51a694f9523345bc47b82087c36a57a5561ac645270cc9773"
+    },
+    "tests/unit/test_checker_output_projection_v1.py": {
+      "bytes": 22852,
+      "sha256": "af3eac1822f124c20563cd35018498dc84e1a97f6c3149dfdde34555059a25c4"
+    },
+    "tests/unit/test_checker_output_fixed_ids_v4.py": {
+      "expected_absent": true
+    },
+    "tests/unit/test_checker_output_packet_feedback_v4.py": {
+      "expected_absent": true
+    }
+  },
+  "previous_revision3_pins": {
+    "generation/lossless_unit_findings_v1.py": {
+      "bytes": 27701,
+      "sha256": "8eac286e0fcc88d51a694f9523345bc47b82087c36a57a5561ac645270cc9773"
+    },
+    "tests/unit/test_checker_output_projection_v1.py": {
+      "bytes": 22852,
+      "sha256": "af3eac1822f124c20563cd35018498dc84e1a97f6c3149dfdde34555059a25c4"
+    }
+  },
+  "frozen_current_pins": {
+    "generation/lossless_unit_findings_v1.py": {
+      "bytes": 32988,
+      "sha256": "0d60cc97701b624e733838ae09abb91e42c4aee6dd63cf2a4c663ae9a8f14ae1"
+    },
+    "tests/unit/test_checker_output_projection_v1.py": {
+      "bytes": 22788,
+      "sha256": "2bfa8498aac811efe55de7f25868f80505c3a1937b7ee2725a6bd9847553ed65"
+    },
+    "tests/unit/test_checker_output_fixed_ids_v4.py": {
+      "bytes": 9501,
+      "sha256": "f71776523ac3d7ad5ca967ab1f6e2e38cf324fc2e063972770330afbb65bb072"
+    },
+    "tests/unit/test_checker_output_packet_feedback_v4.py": {
+      "bytes": 4619,
+      "sha256": "04cc7e819967579e4dc6212fabfc6d9a6471362d82441ef6fb6ce1ce23585c4b"
+    },
+    "tests/unit/test_lossless_output_integration84.py": {
+      "bytes": 16948,
+      "sha256": "d7b1eaa5a65de04273303494065e57b921d512d18172e9649c540eb1048408d9"
+    },
+    "measure_burden84.py": {
+      "bytes": 7983,
+      "sha256": "285de1fd285605fa006da41f7d5871685523b906e541f203317c667a6b4971c5"
+    },
+    "schema-burden84.json": {
+      "bytes": 4408,
+      "sha256": "42eb9395c1bacb998e2873a3950345e72dbe60b1605d366a22ba0711a056dd2e"
+    },
+    "fixed-id-revision4-review.md": {
+      "bytes": 5010,
+      "sha256": "bfbed290234f37cc89cf3d561cb1c449983218936a9101c35e442969f50bfd31"
+    },
+    "architecture-and-limits84.md": {
+      "bytes": 6823,
+      "sha256": "63e25ae3722405bad502a27882fa4c43f0b4eb2769c54792c277f94cdbca07d7"
+    }
+  },
+  "minimal_patch": {
+    "file": "codec84-revision4-minimal.patch",
+    "bytes": 34080,
+    "sha256": "2b53360dfe66aad3b14724ff3644cc5ccc7e1fb4231565c342269aa35efb1a2e"
+  },
+  "actual_validation": [
+    {
+      "purpose": "fixed_id_and_migrated_fixture_controls_before_layout_fix",
+      "file": "pytest-fixedids-revision4.xml",
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bytes": 3703,
+      "sha256": "216933b6f74c29418f1a680ea7f872de8376ca17c0518ad31ec1a62001b2e7f1"
+    },
+    {
+      "purpose": "selected_integration_controls_before_layout_fix",
+      "file": "pytest-fixedids-integration-revision4.xml",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bytes": 1889,
+      "sha256": "389d28d3c8da132586a3b658b45f55c060aaa5d75facea9287dd4bdf411a40c2"
+    },
+    {
+      "purpose": "final_packet_feedback_controls",
+      "file": "pytest-feedback-revision4-final.xml",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bytes": 865,
+      "sha256": "c4c7611555a62896dc7a6e921419a47a0b76d62ff5392d602de126bef2410ee8"
+    },
+    {
+      "purpose": "final_selected_prepare_integrations",
+      "file": "pytest-feedback-integration-revision4-final.xml",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bytes": 854,
+      "sha256": "686cc950288657e16450510cf933960c018357b29be743a4d384b8bb54e94d89"
+    }
+  ],
+  "final_module_guard_change": "unique strict original packet among user messages; all feedback retained unchanged, wrappers/pseudopackets rejected",
+  "first_feedback_fixture_failure_preserved": {
+    "file": "pytest-feedback-revision4-first.xml",
+    "tests": 3,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0,
+    "bytes": 2819,
+    "sha256": "cc7f7634fa1f5b07b71c5af2a28f10ceea57db286ea33250514ff1d4cdc66485",
+    "cause": "new synthetic fixture lacked actual ordinary textbook scope fields; fixture aligned to existing prepare positive, no production guard or semantic assertion weakened"
+  },
+  "ruff": {
+    "check": "PASS",
+    "format_check": "PASS",
+    "config": "E:\\5703\\learning-assistant\\pyproject.toml",
+    "files": 6
+  },
+  "full_75_105_29_batches_repeated": false,
+  "all_original_semantic_judgments_schema_caps_and_publication_gates_retained": true,
+  "repair_policy_guard_restriction_added": false,
+  "claim_patch_repair_v3": "still opt-in; every changed draft requires new immutable context and original complete terminal checker; no loop/call budget changes",
+  "same_saved83_wire_bytes": {
+    "original": 101143,
+    "projection": 105256,
+    "delta": 4113
+  },
+  "schema_bytes": {
+    "canonical": 7125,
+    "projection": 6902
+  },
+  "source_packet_user_and_nonmessage_wire_options_unchanged": true,
+  "actual83_raw_truncated_output_available": false,
+  "model_tokens_latency_quality_or_publication_improvement_claimed": false,
+  "main_writes_by_this_agent": 0,
+  "database_calls": 0,
+  "auth_reads": 0,
+  "network_calls": 0,
+  "paid_requests": 0,
+  "remaining_blocker": "None for W candidate/free controls; Root owns review/adoption/live budget and actual production CAS"
+}

@@ -1,0 +1,473 @@
+{
+  "schema": "5703_fixed_initial_checker_pair37_actual_v1",
+  "started_at_UTC": "2026-10-10T08:37:36.462151+00:00",
+  "status": "PAIRED_OBSERVATIONS_CLOSED",
+  "source_review_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-fixed-checker-pair37-candidate\\OFFLINE_FIXED_CHECKER_PAIR37_PREPARATION01.json",
+    "bytes": 21563,
+    "sha256": "66e03935dd8e2169061d5794bf70b434ccbf81ad81d895be2ecb81dee6d1da23"
+  },
+  "physical_POSTs": 2,
+  "known_cost_USD": "0.0270689",
+  "new_UNKNOWN_holds_USD": "0",
+  "open_claims": 0,
+  "credential_preparation_read_only_DB_legs": 1,
+  "experiment_DB_accesses": 0,
+  "credential_target_database": "cs30_week10_pair_b_20261009_01",
+  "automatic_retries": 0,
+  "teacher_calls": 0,
+  "JSON_repairs": 0,
+  "old_scope_reuse": false,
+  "historical_unknown_holds_released": false,
+  "fresh_question_or_course_qualification": false,
+  "cumulative_known_group_cost_USD": "0.10809780",
+  "fully_settled": true,
+  "independent_selected_source_quality_review_pending": true,
+  "closed_at_UTC": "2026-10-10T08:37:53.558182+00:00",
+  "adapter_credential_reference_cleared": true,
+  "credential_values_exported": false,
+  "memory_redaction_retained_until_process_exit": true,
+  "fresh_lock_released": true,
+  "no_followup_requests_authorized": true,
+  "arms": [
+    {
+      "arm": "baseline37",
+      "status": "OBSERVED",
+      "physical_POSTs": 1,
+      "known_cost_USD": "0.0109556",
+      "reported_cost_USD": "0.0109556",
+      "fully_settled": true,
+      "latency_ms": 6878.3071,
+      "timing_boundary": "LLMAdapter.generate invocation to complete return",
+      "raw_receipt_pins": [
+        {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-fixed-checker-pair37-candidate\\actual-fixed-pair37\\baseline37-raw-provider-read01.json",
+          "bytes": 35575,
+          "sha256": "1771d6811e696e08ed35e99628db68e6bd2f22be8398aed9da2c574bfa8f115b"
+        }
+      ],
+      "provider": {
+        "provider": "openai_compatible",
+        "model": "google/gemini-3.5-flash-lite",
+        "finish_reason": "stop",
+        "provider_request_id": "gen-1791621457-3fS01vJjPknmyamPXyOx",
+        "usage": {
+          "input_tokens": 17277,
+          "output_tokens": 2309,
+          "total_tokens": 19586,
+          "reasoning_tokens": 0,
+          "cache_hit_input_tokens": 0,
+          "cache_miss_input_tokens": 17277,
+          "cost": 0.0109556
+        },
+        "latency_ms": 6875,
+        "error": null,
+        "request_submitted": true,
+        "diagnostic": {
+          "stage": "completed",
+          "http_status": 200,
+          "provider_error_type": null,
+          "provider_error_code": null,
+          "provider_error_parameter": null,
+          "message": null,
+          "message_redacted": false,
+          "provider_request_id": "gen-1791621457-3fS01vJjPknmyamPXyOx",
+          "finish_reason": "stop",
+          "network_error": null,
+          "request_submitted": true,
+          "latency_ms": 6875
+        }
+      },
+      "raw_output_UTF8_bytes": 7828,
+      "raw_output_SHA256": "d9241f4708bcf22a754474da5397f506022e73fecbdba12e8e9859b771f0e951",
+      "output_field_keys": [
+        "schema_PASS",
+        "local_binding_and_relation_contract_PASS",
+        "independent_source_entailment_certified",
+        "native_publication",
+        "exact_claim_identity_PASS",
+        "binding_issues",
+        "source_contract_issues",
+        "source_semantic_defects",
+        "model_relation_assessment",
+        "checker_inconsistencies",
+        "repairable_verdict_inconsistencies",
+        "technical_entity_binding_issues",
+        "scope_repair_triggered",
+        "typed_judgment",
+        "model_all_units_supported_without_local_contract_errors",
+        "acceptance_contract_observer_review_pending",
+        "all_product_publication_gates_replayed"
+      ],
+      "gates": {
+        "schema_PASS": true,
+        "local_binding_and_relation_contract_PASS": true,
+        "independent_source_entailment_certified": false,
+        "native_publication": false,
+        "exact_claim_identity_PASS": true,
+        "binding_issues": [],
+        "source_contract_issues": [],
+        "source_semantic_defects": [],
+        "checker_inconsistencies": [],
+        "repairable_verdict_inconsistencies": [],
+        "technical_entity_binding_issues": [
+          {
+            "code": "SOURCE_SCOPE_CONTEXT_NOT_SELECTED",
+            "claim_id": "claim_9dd7ed3c15bfc4ae4368ad47_1",
+            "leading_scope": "Calvin cycle",
+            "scope_start": 7,
+            "scope_end": 19,
+            "selected_fragment_ids": [
+              "F056",
+              "F064"
+            ],
+            "context_candidate_fragments": [
+              {
+                "evidence_id": "ev_007",
+                "fragment_id": "F053",
+                "scope_start": 4,
+                "scope_end": 16
+              },
+              {
+                "evidence_id": "ev_007",
+                "fragment_id": "F054",
+                "scope_start": 83,
+                "scope_end": 95
+              },
+              {
+                "evidence_id": "ev_008",
+                "fragment_id": "F063",
+                "scope_start": 39,
+                "scope_end": 51
+              }
+            ],
+            "binding_recheck_required": true,
+            "claim_relation_assessed": false,
+            "reason": "Leading scope absent from selected support; recheck allowed source context. Occurrence alone is not support.",
+            "source_entailment_certified": false,
+            "publication_override": false
+          }
+        ],
+        "scope_repair_triggered": true,
+        "model_all_units_supported_without_local_contract_errors": true,
+        "acceptance_contract_observer_review_pending": true,
+        "all_product_publication_gates_replayed": false
+      },
+      "raw_model_claim_labels": [
+        {
+          "claim_id": "claim_9dd7ed3c15bfc4ae4368ad47_1",
+          "reason": "Supported by evidence ev_007 and ev_008 regarding RuBisCO combining CO2 with RuBP.",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_007",
+              "fragment_ids": [
+                "F056"
+              ],
+              "relation": "supporting"
+            },
+            {
+              "evidence_id": "ev_008",
+              "fragment_ids": [
+                "F064"
+              ],
+              "relation": "supporting"
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_9e6350bf8c8ac897dd6ce681_1",
+          "reason": "Supported by evidence ev_007.",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_007",
+              "fragment_ids": [
+                "F056"
+              ],
+              "relation": "supporting"
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_f9fe075af789df975cbeaea7_1",
+          "reason": "Supported by evidence ev_007 and ev_003.",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_007",
+              "fragment_ids": [
+                "F058",
+                "F059"
+              ],
+              "relation": "supporting"
+            },
+            {
+              "evidence_id": "ev_003",
+              "fragment_ids": [
+                "F018"
+              ],
+              "relation": "supporting"
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_364664c975bdc00d74ab2a22_1",
+          "reason": "Supported by evidence ev_007.",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_007",
+              "fragment_ids": [
+                "F057"
+              ],
+              "relation": "supporting"
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_8b458d38f4d30c5060c0957c_1",
+          "reason": "Supported by evidence ev_002.",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_002",
+              "fragment_ids": [
+                "F011",
+                "F012",
+                "F013"
+              ],
+              "relation": "supporting"
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_9eace1a26f8e9d6071f0acb8_1",
+          "reason": "Supported by evidence ev_001.",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_001",
+              "fragment_ids": [
+                "F001",
+                "F002"
+              ],
+              "relation": "supporting"
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_e042c515f904bec48279173e_1",
+          "reason": "Supported by evidence ev_003 and ev_001.",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_003",
+              "fragment_ids": [
+                "F021"
+              ],
+              "relation": "supporting"
+            },
+            {
+              "evidence_id": "ev_001",
+              "fragment_ids": [
+                "F003"
+              ],
+              "relation": "supporting"
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_4e19e4a486fe9dc923da7169_1",
+          "reason": "Supported by evidence ev_001.",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_001",
+              "fragment_ids": [
+                "F004"
+              ],
+              "relation": "supporting"
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_b85b9fa953bffc184b48ae2d_1",
+          "reason": "Supported by evidence ev_007.",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_007",
+              "fragment_ids": [
+                "F056",
+                "F058"
+              ],
+              "relation": "supporting"
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_4bbb28fe7a90b6a3f87b6b75_1",
+          "reason": "Supported by evidence ev_002 and ev_003.",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_002",
+              "fragment_ids": [
+                "F009",
+                "F011",
+                "F013"
+              ],
+              "relation": "supporting"
+            },
+            {
+              "evidence_id": "ev_003",
+              "fragment_ids": [
+                "F019"
+              ],
+              "relation": "supporting"
+            }
+          ]
+        }
+      ],
+      "raw_model_global_labels": {
+        "body_ok": true,
+        "specific_help": true,
+        "scope_ok": true,
+        "suggestions_ok": true,
+        "evidence_display_ok": true,
+        "cumulative_ok": true,
+        "complete_answer": true,
+        "coverage": "full",
+        "missing_facets": [],
+        "limitations_explicit": false,
+        "reason": "All parts of the requested explanation are fully supported by the provided textbook sources.",
+        "repair_fragment_ids": [],
+        "attempt_evaluation_ok": true,
+        "tutor_question_ok": true,
+        "requirements": [
+          {
+            "requirement_id": "requirement_01",
+            "relevance": "related",
+            "sufficiency": "sufficient",
+            "evidence": [
+              {
+                "evidence_id": "ev_007",
+                "fragment_id": "F056",
+                "quote": "RuBisCO catalyzes a reaction between CO2 and RuBP"
+              },
+              {
+                "evidence_id": "ev_007",
+                "fragment_id": "F058",
+                "quote": "ATP and NADPH use their stored energy to convert the three-carbon compound, 3-PGA, into another three-carbon compound called G3P."
+              }
+            ],
+            "conditions_preserved": true,
+            "response_coverage": "covered",
+            "missing_information": "",
+            "reason": "Fully addressed by the text describing RuBisCO combining CO2 with RuBP and ATP/NADPH converting 3-PGA to G3P."
+          },
+          {
+            "requirement_id": "requirement_02",
+            "relevance": "related",
+            "sufficiency": "sufficient",
+            "evidence": [
+              {
+                "evidence_id": "ev_002",
+                "fragment_id": "F009",
+                "quote": "only one of the G3P molecules leaves the Calvin cycle and is sent to the cytoplasm to contribute to the formation of other compounds needed by the plant."
+              },
+              {
+                "evidence_id": "ev_002",
+                "fragment_id": "F013",
+                "quote": "One is exported while the remaining five G3P molecules remain in the cycle and are used to regenerate RuBP"
+              }
+            ],
+            "conditions_preserved": true,
+            "response_coverage": "covered",
+            "missing_information": "",
+            "reason": "Fully addressed by explanations of G3P export for carbohydrates and retention for RuBP regeneration."
+          }
+        ],
+        "non_repetitive_next_action": true
+      }
+    },
+    {
+      "arm": "candidate37",
+      "status": "OBSERVED",
+      "physical_POSTs": 1,
+      "known_cost_USD": "0.0161133",
+      "reported_cost_USD": "0.0161133",
+      "fully_settled": true,
+      "latency_ms": 9675.6703,
+      "timing_boundary": "LLMAdapter.generate invocation to complete return",
+      "raw_receipt_pins": [
+        {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-fixed-checker-pair37-candidate\\actual-fixed-pair37\\candidate37-raw-provider-read01.json",
+          "bytes": 52038,
+          "sha256": "87417d0b4b699a6b86b5470d39ce92b6c07206dba707ead9cbddfe4ad363c0cc"
+        }
+      ],
+      "provider": {
+        "provider": "openai_compatible",
+        "model": "google/gemini-3.5-flash-lite",
+        "finish_reason": "stop",
+        "provider_request_id": "gen-1791621463-oMJ00lAdI554vO9xQVmm",
+        "usage": {
+          "input_tokens": 22486,
+          "output_tokens": 3747,
+          "total_tokens": 26233,
+          "reasoning_tokens": 0,
+          "cache_hit_input_tokens": 0,
+          "cache_miss_input_tokens": 22486,
+          "cost": 0.0161133
+        },
+        "latency_ms": 9675,
+        "error": null,
+        "request_submitted": true,
+        "diagnostic": {
+          "stage": "completed",
+          "http_status": 200,
+          "provider_error_type": null,
+          "provider_error_code": null,
+          "provider_error_parameter": null,
+          "message": null,
+          "message_redacted": false,
+          "provider_request_id": "gen-1791621463-oMJ00lAdI554vO9xQVmm",
+          "finish_reason": "stop",
+          "network_error": null,
+          "request_submitted": true,
+          "latency_ms": 9675
+        }
+      },
+      "raw_output_UTF8_bytes": 12182,
+      "raw_output_SHA256": "19eb66cb0bd4765cce7de23c877f40b44c79d4bd951ad15ae89745cf6bc40fa3",
+      "output_field_keys": [
+        "schema_PASS",
+        "local_binding_and_relation_contract_PASS",
+        "independent_source_entailment_certified",
+        "native_publication",
+        "schema_error_class"
+      ],
+      "gates": {
+        "schema_PASS": false,
+        "local_binding_and_relation_contract_PASS": false,
+        "independent_source_entailment_certified": false,
+        "native_publication": false,
+        "schema_error_class": "ValidationError"
+      },
+      "raw_model_claim_labels": [],
+      "raw_model_global_labels": {}
+    }
+  ]
+}

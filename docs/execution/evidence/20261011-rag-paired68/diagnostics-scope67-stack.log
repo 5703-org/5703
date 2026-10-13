@@ -1,0 +1,72 @@
+Failed to find real location of D:\Python\python.exe
+============================= test session starts =============================
+platform win32 -- Python 3.13.2, pytest-9.1.1, pluggy-1.6.0 -- E:\5703\learning-assistant\.venv\Scripts\python.exe
+rootdir: E:\5703\learning-assistant
+configfile: pytest.ini
+collecting ... collected 1 item
+
+E:\5703\learning-assistant\tests\unit\test_failure_diagnostics.py::test_diagnostics_scope_and_permissions Timeout (0:00:15)!
+Thread 0x0000fd74 (most recent call first):
+  File "D:\Python\Lib\socket.py", line 295 in accept
+  File "D:\Python\Lib\socket.py", line 627 in _fallback_socketpair
+  File "D:\Python\Lib\asyncio\proactor_events.py", line 784 in _make_self_pipe
+  File "D:\Python\Lib\asyncio\proactor_events.py", line 637 in __init__
+  File "D:\Python\Lib\asyncio\windows_events.py", line 316 in __init__
+  File "D:\Python\Lib\asyncio\events.py", line 734 in new_event_loop
+  File "D:\Python\Lib\asyncio\events.py", line 837 in new_event_loop
+  File "D:\Python\Lib\asyncio\runners.py", line 137 in _lazy_init
+  File "D:\Python\Lib\asyncio\runners.py", line 58 in __enter__
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2547 in run
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\anyio\_core\_eventloop.py", line 83 in run
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\anyio\from_thread.py", line 538 in run_blocking_portal
+  File "D:\Python\Lib\threading.py", line 992 in run
+  File "D:\Python\Lib\threading.py", line 1041 in _bootstrap_inner
+  File "D:\Python\Lib\threading.py", line 1012 in _bootstrap
+
+Thread 0x00003f28 (most recent call first):
+  File "D:\Python\Lib\threading.py", line 359 in wait
+  File "D:\Python\Lib\concurrent\futures\_base.py", line 451 in result
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\anyio\from_thread.py", line 554 in start_blocking_portal
+  File "D:\Python\Lib\contextlib.py", line 141 in __enter__
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\starlette\testclient.py", line 427 in _portal_factory
+  File "D:\Python\Lib\contextlib.py", line 141 in __enter__
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\starlette\testclient.py", line 349 in handle_request
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\httpx\_client.py", line 1014 in _send_single_request
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\httpx\_client.py", line 979 in _send_handling_redirects
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\httpx\_client.py", line 942 in _send_handling_auth
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\httpx\_client.py", line 914 in send
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\httpx\_client.py", line 825 in request
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\starlette\testclient.py", line 455 in request
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\httpx\_client.py", line 1053 in get
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\starlette\testclient.py", line 483 in get
+  File "E:\5703\learning-assistant\tests\unit\test_failure_diagnostics.py", line 222 in test_diagnostics_scope_and_permissions
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\_pytest\python.py", line 167 in pytest_pyfunc_call
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\pluggy\_callers.py", line 121 in _multicall
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\pluggy\_hooks.py", line 512 in __call__
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\_pytest\python.py", line 1707 in runtest
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\_pytest\runner.py", line 184 in pytest_runtest_call
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\pluggy\_callers.py", line 121 in _multicall
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\pluggy\_hooks.py", line 512 in __call__
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\_pytest\runner.py", line 250 in <lambda>
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\_pytest\runner.py", line 361 in from_call
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\_pytest\runner.py", line 249 in call_and_report
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\_pytest\runner.py", line 139 in runtestprotocol
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\_pytest\runner.py", line 118 in pytest_runtest_protocol
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\pluggy\_callers.py", line 121 in _multicall
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\pluggy\_hooks.py", line 512 in __call__
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\_pytest\main.py", line 408 in pytest_runtestloop
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\pluggy\_callers.py", line 121 in _multicall
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\pluggy\_hooks.py", line 512 in __call__
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\_pytest\main.py", line 384 in _main
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\_pytest\main.py", line 330 in wrap_session
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\_pytest\main.py", line 377 in pytest_cmdline_main
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\pluggy\_callers.py", line 121 in _multicall
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\pluggy\_manager.py", line 120 in _hookexec
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\pluggy\_hooks.py", line 512 in __call__
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\_pytest\config\__init__.py", line 229 in _main
+  File "E:\5703\learning-assistant\.venv\Lib\site-packages\_pytest\config\__init__.py", line 201 in main
+  File "C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-ac44-free67\pytest_no_network67.py", line 21 in <module>

@@ -1,0 +1,308 @@
+{
+  "schema": "5703_week10_matched_native_browser_pair_prepared_v1",
+  "status": "PREPARED_ONLY_BLOCKED_NEW_INDEPENDENT_024_AUTHORIZATION_AND_EXECUTION_BINDINGS",
+  "week": "Week10",
+  "sample_size_pairs": 1,
+  "physical_POSTs_executed_for_this_plan": 0,
+  "no_paid_API_DB_or_test_execution_in_preparation": true,
+  "source04": {
+    "source_id": "CS30-1_Main_20261008_b94f69f894ce",
+    "canonical_source_rows_sha256": "b94f69f894ceade54fb51f08dede301cc1a9058fc5b80728417209c52efb6f78",
+    "source_index_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week09-deadline-release-20261008-01\\FINAL_PUBLIC_SOURCE_INDEX04.json",
+      "bytes": 291462,
+      "sha256": "88451d11075975db45e2102ffadf5e26f2190d4d03060ca6c3721993448ab890"
+    },
+    "frozen_week09_unchanged": true
+  },
+  "implementation_comparison": {
+    "same_reviewed_week10_code_for_both_legs": true,
+    "prepared_patch_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-cache-ready-preparation-20261009-01\\WEEK10_STARTUP_CACHE_PREWARM_PREPARED01.patch",
+      "bytes": 4827,
+      "sha256": "fafb11d4e67d2ea7769f1dbb1e7b92369ef4f7d0f7a9e7f9a549652eec615273"
+    },
+    "execution_source_manifest_pin": null,
+    "only_runtime_flag_difference": "worker_prewarm_retrieval_cache",
+    "legs": [
+      {
+        "id": "A_baseline",
+        "worker_prewarm_retrieval_cache": false
+      },
+      {
+        "id": "B_startup_prewarm",
+        "worker_prewarm_retrieval_cache": true
+      }
+    ],
+    "predeclared_order": [
+      "A_baseline",
+      "B_startup_prewarm"
+    ],
+    "no_automatic_replacement_or_extra_pair": true
+  },
+  "fixed_question_history": {
+    "prior_first_question": "What does photosynthesis require, and what does it produce?",
+    "prior_first_question_utf8_sha256": "c594ef5428369e19735e8935a039b8fc5517cba504a855ce901a4b26da7d1fac",
+    "measured_followup_question": "Why is light necessary for this process?",
+    "measured_question_utf8_sha256": "c6437bbeb45b83c75a18d503e28e0b235a600f8f3884e23aba944c6bd6940caf",
+    "prior_answer_id_reference": "9e77cb9f-fffb-4cd7-a2e4-f68fa7095509",
+    "prior_session_id_reference": "e97e51d6-8297-4808-808e-aa8e5e1a5c9c",
+    "history_recipe": "Copy the same frozen accepted first exchange into two owned synthetic sessions; do not regenerate the first answer or consume a model call for setup. Never reuse a measured followup result.",
+    "canonical_history_sha256_required_before_POST": null,
+    "resolved_retrieval_query_sha256_required_before_POST": null,
+    "both_legs_require_identical_history_and_resolved_query": true,
+    "no_answer_or_history_response_text_exported": true
+  },
+  "fixed_corpus_and_retrieval": {
+    "book_title": "Biology 2e",
+    "book_id_reference": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+    "release_id_reference": "4f11bd70-a486-4d16-b216-78cfe499530a",
+    "release_epoch_sha256_required_before_POST": null,
+    "release_content_manifest_sha256_required_before_POST": null,
+    "same_active_release_id_epoch_and_rows_for_both_legs": true,
+    "profile_pin": {
+      "bytes": 294,
+      "path": "E:\\5703\\learning-assistant\\configs\\retrieval\\chat_hybrid_minilm.json",
+      "sha256": "23ca72ddb737045259a04cbfc81c71969440f11cc2fa1a77bc7f8e7fc4364e17"
+    },
+    "profile": {
+      "version": "chat_hybrid_rerank_v1",
+      "retriever": "R2",
+      "candidate_count": 20,
+      "reranker_model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+      "reranker_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+      "reranker_device": "cuda",
+      "reranker_cache_folder": "artifacts/huggingface"
+    },
+    "native_embedding": {
+      "provider": "e5",
+      "model": "intfloat/e5-small-v2",
+      "revision": "ffb93f3bd4047442299a41ebb6fa998a38507c52",
+      "dimension": 384,
+      "device": "cuda"
+    },
+    "native_reranker": {
+      "model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+      "revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+      "device": "cuda"
+    },
+    "query_vector_cache_hit_required": false,
+    "query_result_cache_populated_before_measurement": false,
+    "fresh_process_and_Engine_per_leg": true,
+    "same_database_contents_and_Engine_configuration": true,
+    "startup_prewarm_uses_same_Engine_as_measured_worker": true,
+    "baseline_release_snapshot_cache_cold": true,
+    "optimized_release_snapshot_prewarmed_before_Send": true,
+    "normal_per_request_epoch_validation_preserved": true
+  },
+  "fixed_models_and_quality": {
+    "provider": "openai_compatible",
+    "model": "google/gemini-3.5-flash-lite",
+    "route_profile": "gemini35_google_vertex_v1",
+    "active_model_version_reference": 26,
+    "configuration_hash_reference": "703c94a357ddd4b826d8b5fe25d503198d3d56e1e9130f6a37ed9e9c3396aa4a",
+    "effective_parameters": {
+      "answer": {
+        "model": "google/gemini-3.5-flash-lite",
+        "max_tokens": 2048,
+        "provider": {
+          "order": [
+            "google-vertex/global"
+          ],
+          "only": [
+            "google-vertex/global"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true,
+          "max_price": {
+            "prompt": 0.3,
+            "completion": 2.5
+          }
+        },
+        "reasoning": {
+          "effort": "low"
+        }
+      },
+      "checker": {
+        "model": "google/gemini-3.5-flash-lite",
+        "max_tokens": 4096,
+        "provider": {
+          "order": [
+            "google-vertex/global"
+          ],
+          "only": [
+            "google-vertex/global"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true,
+          "max_price": {
+            "prompt": 0.3,
+            "completion": 2.5
+          }
+        },
+        "reasoning": {
+          "effort": "low"
+        }
+      }
+    },
+    "sampling_parameters_omitted_as_before": true,
+    "warm_local_models_both_legs": true,
+    "identical_authored_non_measured_local_warmup_query_both_legs": true,
+    "warmup_does_not_retrieve_corpus_or_populate_measured_query_cache": true,
+    "normal_strict_schema_parser_and_joint_checker_preserved": true,
+    "lossless_checker_evidence_tables_preserved": true,
+    "provider_role_qualification_and_owner_lease_gates_preserved": true,
+    "no_prompt_compression_no_evidence_truncation_no_checker_bypass": true,
+    "native_finite_format_and_checker_contract_repairs_preserved": true,
+    "maximum_native_calls_per_job": 4,
+    "transport_attempts_per_physical_POST": 1,
+    "transient_retries": 0,
+    "redirects": false,
+    "no_fallbacks": true
+  },
+  "paired_invariant_gates": {
+    "required_equal_before_each_POST": [
+      "question_utf8_sha256",
+      "canonical_history_sha256",
+      "resolved_retrieval_query_sha256",
+      "active_release_id",
+      "release_epoch_sha256",
+      "release_content_manifest_sha256",
+      "profile_sha256",
+      "model_configuration_sha256",
+      "route_and_effective_parameters",
+      "native_model_and_device_pins"
+    ],
+    "required_equal_before_claiming_cache_only_speedup": [
+      "candidate_ids_and_order_sha256",
+      "submitted_candidate_ids_and_order_sha256",
+      "ranked_ids_and_order_sha256",
+      "generator_input_evidence_bundle_sha256",
+      "checker_source_evidence_bundle_sha256"
+    ],
+    "candidate_hash_encoding": "UTF-8 compact JSON array, ensure_ascii=False, separators=(comma,colon)",
+    "evidence_hash_encoding": "UTF-8 canonical JSON of the identical ordered complete evidence records as supplied to the normal generator/checker; sort dictionary keys and preserve arrays. Store numeric/hash metadata publicly, not evidence text.",
+    "mismatch_action": "Stop the comparison, record the mismatch and any already-submitted calls, retain all holds, and do not claim a controlled cache speedup.",
+    "old_reference_only_candidate_order_sha256": "94544eb64d6445fa2111d54cc5a87ee64145f0e4743783d13197794192ee1030",
+    "old_reference_only_ranked_order_sha256": "41b188b901064f19022cdea703bbd8ad32b33cc0ccd6a53a623b4732bf5580b4",
+    "old_reference_is_not_new_execution_evidence": true
+  },
+  "timing": {
+    "primary_metric": "Send click to final complete answer and terminal success rendered in native browser DOM",
+    "full_answer_UI_ms": null,
+    "first_visible_answer_UI_ms": null,
+    "provider_TTFT_ms": null,
+    "TTFT_not_measured_by_first_visible_UI_and_not_substituted_for_full_answer": true,
+    "startup_prepare_ms_separate": true,
+    "model_warmup_ms_separate": true,
+    "worker_ready_to_Send_wait_ms_separate": true,
+    "prewarm_time_not_removed_from_startup_or_total_user_journey_accounting": true,
+    "record_also": [
+      "worker_total_ms",
+      "native_retrieval_total_ms",
+      "release_cache_hit",
+      "release_cache_validation_ms",
+      "query_embedding_ms",
+      "dense_ms",
+      "lexical_ms",
+      "rerank_ms",
+      "each_physical_role_POST_and_known_cost",
+      "terminal_error_or_success",
+      "evidence_and_history_refresh_readback"
+    ],
+    "incomplete_or_failed_answer_full_time": null,
+    "historical_context_only": {
+      "original_followup_full_UI_ms": 22713.1,
+      "original_cache_miss_validation_ms": 6081.2484,
+      "historical_run_is_not_one_leg_of_this_pair": true
+    }
+  },
+  "financial": {
+    "checkpoint_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-v32-disabled-matched4-20261008-01\\ACTUAL_POST_CLOSURE_FINANCE_CHECKPOINT01.json",
+      "bytes": 2520,
+      "sha256": "06968c586e5e822a572dbc6f95ed7ac1f2cefbc7c5edc8cc3a78ec9550dd5c91"
+    },
+    "original_authorization_USD": "10.00000000",
+    "old_UNKNOWN_count_retained": 14,
+    "old_unstarted_slots_full_holds_retained": 13,
+    "retain_all_original_allocations_and_STOP_records_in_full": true,
+    "current_project_physical_POSTs": 233,
+    "current_followup_physical_POSTs": 103,
+    "old_historical_caps_unchanged": [
+      228,
+      98
+    ],
+    "current_caps_unchanged_until_new_release": [
+      233,
+      103
+    ],
+    "proposed_new_separate_batch_max_POSTs": 8,
+    "proposed_new_aggregate_max_counts": [
+      241,
+      111
+    ],
+    "maximum_wire_bytes_per_POST": 60000,
+    "input_token_upper_per_POST": 60512,
+    "uniform_output_token_protection_per_POST": 4096,
+    "maximum_price_per_million_USD": {
+      "prompt": "0.3",
+      "completion": "2.5"
+    },
+    "strict_upper_per_POST_USD": "0.02839360",
+    "strict_eight_POST_upper_USD": "0.22714880",
+    "rounded_full_hold_per_POST_USD": "0.03000000",
+    "new_independent_full_hold_required_USD": "0.24000000",
+    "new_independent_024_authorization_received": false,
+    "protected_followup_remaining_USD": "0.00127260",
+    "separate_unallocated_scope_USD_untouched": "0.02871031",
+    "use_or_transfer_old_remaining_scope": false,
+    "release_recycle_old_holds_or_spare_slots": false,
+    "account_or_invoice_balances": null,
+    "actual_total_including_historical_UNKNOWN_USD": null,
+    "any_UNKNOWN_or_integrity_error_or_open_claim_stops_new_transport": true,
+    "own_new_claims_and_lock_release_required": true
+  },
+  "execution_prerequisites": [
+    "Complete and verify frozen Week09 delivery separately.",
+    "Review the Week10 cache-only patch and affected free controls.",
+    "Receive explicit new independent USD0.24 authorization and create a finite release/financial record preserving old ledgers and full holds.",
+    "Create a new owned synthetic fixture and pin identical history, epoch, content, execution sources and configuration before either paid POST.",
+    "Bind all physical roles and native repairs to a fail-closed new eight-slot guard and exact route/price/output/wire protections.",
+    "Record both clean process starts, identical local-model warmup and opposite prewarm flag before browser Send."
+  ],
+  "analysis_limits": [
+    "n=1 paired diagnostic; no p95 or service SLA conclusion.",
+    "No model superiority or held-out quality conclusion.",
+    "Provider latency and OS/GPU cache conditions can vary; retain component timings and report this limitation.",
+    "Do not claim cache-only improvement if paired candidate, ranking or input evidence hashes differ.",
+    "No full regression, repeat paid pair or replacement run is authorized by this plan."
+  ],
+  "provenance_pins": {
+    "old_binder": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-real-browser-warm4-20261008-01\\ROOT_BINDER_RELEASE05.json",
+      "bytes": 90090,
+      "sha256": "d23361b24f16affef4a022116dbc3f9e7a9c3368cb12e4d08a373cb7a75db6f1"
+    },
+    "old_role_qualification": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-real-browser-warm4-20261008-01\\runtime-warm05\\role-qualification-public01.json",
+      "bytes": 5134,
+      "sha256": "2f1e3919d0b4cbcdccf5f604755908eaafe603bf1f772bc5149608b824a70537"
+    },
+    "old_readiness": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-real-browser-warm4-20261008-01\\runtime-warm05\\readiness-public01.json",
+      "bytes": 2241,
+      "sha256": "d28894bf32da9c58c4c4a96d9e4bd5e4c4dca355ce3fdf571fa5ee1b023ca6bd"
+    },
+    "old_public_native_trace": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-real-browser-warm4-20261008-01\\runtime-warm05\\native-retrieval-762f8c69-8309-4b22-832f-3cefb5d7a0a9-public01.json",
+      "bytes": 5096,
+      "sha256": "351dca8f580c5fa2ff474b0dd1c9ef8ecef6d747bfa70a8398dda078e58698f1"
+    }
+  },
+  "privacy": {
+    "keys_credentials_DSN_and_raw_provider_payloads_in_plan": false,
+    "real_database_access_in_preparation": false,
+    "E_drive_or_existing_evidence_writes": false
+  }
+}

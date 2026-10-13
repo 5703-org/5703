@@ -1,0 +1,200 @@
+{
+  "actual_raw_checker_claim_unchanged": {
+    "basis": "textbook",
+    "citations": [
+      {
+        "evidence_id": "ev_001",
+        "fragment_ids": [
+          "F001",
+          "F002"
+        ],
+        "relation": "supporting"
+      }
+    ],
+    "claim_id": "claim_diagnostic42_1",
+    "reason": "The claim accurately reflects the source fragments regarding the voltage conditions for AX10.",
+    "status": "supported",
+    "units": [
+      {
+        "conditions_preserved": true,
+        "fragment_ids": [
+          "F001"
+        ],
+        "reason": "Supported by F001.",
+        "relation_preserved": true,
+        "status": "supported",
+        "unit_id": "U01"
+      },
+      {
+        "conditions_preserved": true,
+        "fragment_ids": [
+          "F002"
+        ],
+        "reason": "Supported by F002.",
+        "relation_preserved": true,
+        "status": "supported",
+        "unit_id": "U02"
+      }
+    ]
+  },
+  "actual_whole_raw_checker_text": "{\n  \"claims\": [\n    {\n      \"claim_id\": \"claim_diagnostic42_1\",\n      \"reason\": \"The claim accurately reflects the source fragments regarding the voltage conditions for AX10.\",\n      \"basis\": \"textbook\",\n      \"status\": \"supported\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"ev_001\",\n          \"fragment_ids\": [\"F001\", \"F002\"],\n          \"relation\": \"supporting\"\n        }\n      ],\n      \"units\": [\n        {\n          \"unit_id\": \"U01\",\n          \"status\": \"supported\",\n          \"fragment_ids\": [\"F001\"],\n          \"relation_preserved\": true,\n          \"conditions_preserved\": true,\n          \"reason\": \"Supported by F001.\"\n        },\n        {\n          \"unit_id\": \"U02\",\n          \"status\": \"supported\",\n          \"fragment_ids\": [\"F002\"],\n          \"relation_preserved\": true,\n          \"conditions_preserved\": true,\n          \"reason\": \"Supported by F002.\"\n        }\n      ]\n    }\n  ],\n  \"body_ok\": true,\n  \"specific_help\": true,\n  \"scope_ok\": true,\n  \"suggestions_ok\": true,\n  \"evidence_display_ok\": true,\n  \"cumulative_ok\": true,\n  \"complete_answer\": true,\n  \"coverage\": \"full\",\n  \"missing_facets\": [],\n  \"limitations_explicit\": false,\n  \"reason\": \"The claims are fully supported by the provided source fragments.\",\n  \"repair_fragment_ids\": [],\n  \"attempt_evaluation_ok\": true,\n  \"tutor_question_ok\": true,\n  \"requirements\": [],\n  \"non_repetitive_next_action\": true\n}",
+  "closed_observation": {
+    "JSON_repairs": 0,
+    "automatic_retries": 0,
+    "component_latency_ms": 2670.6127,
+    "finish_reason": "stop",
+    "fresh_lock_released": true,
+    "fully_settled": true,
+    "known_cost_USD": "0.0017338",
+    "native_UI_TFull": null,
+    "new_UNKNOWN_holds_USD": "0",
+    "open_claims": 0,
+    "physical_POSTs": 1,
+    "provider_error": null,
+    "teacher_calls": 0,
+    "timing_boundary": "LLMAdapter.generate invocation to complete return",
+    "usage": {
+      "cache_hit_input_tokens": 0,
+      "cache_miss_input_tokens": 2121,
+      "cost": 0.0017338,
+      "input_tokens": 2121,
+      "output_tokens": 439,
+      "reasoning_tokens": 0,
+      "total_tokens": 2560
+    }
+  },
+  "current_local_validation_metadata": {
+    "diagnostic_server_basis_and_claim_identity_PASS": true,
+    "full_original_schema_PASS": true,
+    "local_binding_and_relation_contract_PASS": true,
+    "native_publication": false,
+    "original17_root_required_fields_present": true,
+    "overall_scoped_validation_PASS": true,
+    "raw_autofill_key_trimming_or_rewrite": false,
+    "source_entailment_locally_certified_by_code": false,
+    "typed_schema_PASS": true
+  },
+  "exact_authored_fixture_claim": {
+    "answer_field": "short_answer",
+    "claim_id": "claim_diagnostic42_1",
+    "evidence_ids": [
+      "ev_001"
+    ],
+    "text": "AX10 opens only above five volts and remains closed at most five volts [ev_001]."
+  },
+  "limitations": [
+    "AX10 is a neutral authored threshold fixture, not the real biology question or a course result. Its one claim/two sources do not establish full10/19 source coverage.",
+    "Success of this explicit textbook3031-byte schema on the selected model/route does not identify any exact field responsible for prior full-schema41 HTTP400.",
+    "No mixed-basis transport support, production default change, final native UI publication, heldout quality or generalized schema reliability is inferred.",
+    "Component2670.6127ms is not send-to-full-answer UI TFull. Actual43 still requires its own closed raw answer/source review."
+  ],
+  "method": {
+    "actual_raw_labels_not_changed": true,
+    "complete_block_or_general_schema_success_not_semantic_guarantee": true,
+    "each_actual_unit_only_its_own_assessed_same_claim_listed_allowed_sources": true,
+    "no_Main_B_API_DB_auth_service_guard_browser_calls_or_writes": true,
+    "only_condition_and_equality_negation_state_direction_checked": true,
+    "strict_whole_raw_JSON_no_duplicate_or_nonfinite_values": true
+  },
+  "schema": "5703_compatible42_small_conditional_fixture_independent_review_v1",
+  "source_pins": [
+    {
+      "bytes": 12442,
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-compatible42-candidate\\TEXTBOOK_DIAGNOSTIC42_PREPARED.json",
+      "sha256": "bbcf7a6152b8fe1873166091932fdcc67bd84ec85c147efde8ae8d136943aae5"
+    },
+    {
+      "bytes": 11479,
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-compatible42-probe-candidate\\actual-compatible42\\actual-checker-compatible42-result01.json",
+      "sha256": "04130f019bb8eecb07fe8cffec93190df92ef00a0c09ab95dbf0c3c65f6da1b7"
+    }
+  ],
+  "status": "ONE_CLAIM_TWO_UNIT_NARROW_SOURCE_WITNESS_COMPLETE_NOT_BIOLOGY_OR_PRODUCTION_QUALIFICATION",
+  "transport_shape_boundary": {
+    "all_mixed_claim_bases_supported": false,
+    "diagnostic_schema_bytes": 3031,
+    "diagnostic_schema_sha256": "da548389e9bace0395f7c60b457d4e787b2fdb415ca9efaa4b10eebe601d4871",
+    "explicit_textbook_only_schema": true,
+    "local_original_full_schema_remains_required": true,
+    "one_successful_small_request_witness_only": true,
+    "production_default_changed": false
+  },
+  "units": [
+    {
+      "actual_own_listed_sources": [
+        {
+          "complete_block": true,
+          "evidence_id": "ev_001",
+          "exact_text": "AX10 opens only when voltage is above five volts.",
+          "fragment_id": "F001"
+        }
+      ],
+      "actual_unit": {
+        "end": 32,
+        "start": 0,
+        "text": "AX10 opens only above five volts",
+        "text_hash": "28afe3bcb4c0693407951a61cb1cdfb35645152415d63a412f4ba8c0c9d5be2b",
+        "unit_id": "U01"
+      },
+      "independent_source_assessment": "complete",
+      "raw_checker_unit": {
+        "conditions_preserved": true,
+        "fragment_ids": [
+          "F001"
+        ],
+        "reason": "Supported by F001.",
+        "relation_preserved": true,
+        "status": "supported",
+        "unit_id": "U01"
+      },
+      "why": "The subject AX10, opening state, only condition and strict above-five-volts bound are explicit in its own F001. This does not turn only-if into always-opens-above-five."
+    },
+    {
+      "actual_own_listed_sources": [
+        {
+          "complete_block": true,
+          "evidence_id": "ev_001",
+          "exact_text": "AX10 remains closed whenever voltage is at most five volts.",
+          "fragment_id": "F002"
+        }
+      ],
+      "actual_unit": {
+        "end": 80,
+        "start": 32,
+        "text": " and remains closed at most five volts [ev_001].",
+        "text_hash": "aaa86922f34189717c3ea972b00ebd27a11b7bfd7fc3f37cbda03cc5713b738c",
+        "unit_id": "U02"
+      },
+      "independent_source_assessment": "complete",
+      "raw_checker_unit": {
+        "conditions_preserved": true,
+        "fragment_ids": [
+          "F002"
+        ],
+        "reason": "Supported by F002.",
+        "relation_preserved": true,
+        "status": "supported",
+        "unit_id": "U02"
+      },
+      "why": "The full inherited AX10 subject is explicit in own F002; remains closed whenever voltage is at most five volts includes equality at exactly five and preserves the closed-state direction."
+    }
+  ],
+  "useful_results_first": {
+    "actual_CID_unit_and_own_binding_PASS": true,
+    "actual_full_original_local_V2_schema_PASS": true,
+    "independent_claim_counts": {
+      "complete": 1,
+      "partial": 0,
+      "unsupported": 0
+    },
+    "independent_unit_counts": {
+      "complete": 2,
+      "partial": 0,
+      "unsupported": 0
+    },
+    "native_biology_quality_proven": false,
+    "prior41_HTTP400_offending_field_cause_inferred": false,
+    "production_or_native_publication_proven": false,
+    "threshold_five_inclusive_closed_boundary_preserved": true
+  }
+}

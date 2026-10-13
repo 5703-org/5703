@@ -1,0 +1,164 @@
+{
+  "schema": "paired66_preparation_checkpoint_v1",
+  "recorded_at_utc": "2026-10-11T07:48:59.137019+00:00",
+  "status": "FREE_PREPARATION_VERIFIED_NO_PAID_ADMISSION",
+  "questions": 12,
+  "normal_requests_frozen": 36,
+  "request_ceiling": 40,
+  "arms": [
+    "E0",
+    "E1",
+    "HYBRID_R2_MINILM"
+  ],
+  "normal36_cost_upper_hold_USD": "0.1837320",
+  "limited40_cost_upper_hold_USD": "0.2096568",
+  "phase_authorized_cap_USD": "1",
+  "project_remaining_USD": null,
+  "project_budget_admitted": false,
+  "financial_lookup_completed": "Finite public config and existing ledger lookup; scoped parent/child overlaps identified; current global reconciliation still incomplete",
+  "minimum_missing_financial_information": [
+    "A precise current project-wide monetary ceiling, and the relation of later separately authorized scopes to that ceiling.",
+    "A financial-only scope/request map covering later allocations and settlements, preserving every earlier UNKNOWN and unused reservation and identifying nested duplicates.",
+    "The remaining protected amount after that reconciliation must cover the new .1837320 hold, plus any separately planned repair holds. No raw prompts, credentials, database or network query are needed."
+  ],
+  "new_provider_requests": 0,
+  "new_API_cost_USD": "0",
+  "auth_DB_network_operations": 0,
+  "automatic_retries": 0,
+  "automatic_external_judges": 0,
+  "normal_adapter_wires_verified": 36,
+  "free_original_scorer_synthetic_assertions_passed": 48,
+  "actual_wire_evidence_slots": 120,
+  "unique_public_chunks": 84,
+  "frozen_required_facts": 38,
+  "generated_quality": {
+    "EM": null,
+    "token_F1": null,
+    "evidence_support": null,
+    "completeness": null
+  },
+  "generation_latency_ms": null,
+  "human_gold": null,
+  "component_runtime_credential_verified": false,
+  "fresh_current_native_page_ms": null,
+  "retained_native": {
+    "measurement_date_utc": "2026-10-10",
+    "n": 1,
+    "send_to_complete_display_ms": 41144.90000000596,
+    "teacher_model": "anthropic/claude-haiku-5.5",
+    "runtime_closed": true,
+    "stable_p95_ms": null,
+    "TTFT_ms": null
+  },
+  "retained_designated_support_recall_at5": {
+    "E1": "10/12",
+    "HYBRID_R2_MINILM": "10/12",
+    "full_corpus_recall": null
+  },
+  "retained_other_SciQ_DEV_quality": {
+    "status": "Dated different dataset; reported in existing 20261008 report, not newly rescored here",
+    "questions": 12,
+    "scheduled": 36,
+    "E0": {
+      "EM": "7/12",
+      "token_F1": "0.6388889"
+    },
+    "E1": {
+      "EM": "6/12",
+      "token_F1": "0.6111111"
+    },
+    "HYBRID": {
+      "EM": "6/12",
+      "token_F1": "0.7083333"
+    }
+  },
+  "corrected_free_preparation_failure": {
+    "source": "Root actual command result; summarized independently in preparation review",
+    "first_exit": 1,
+    "error": "ImportError: prepare_schema_transport",
+    "occurred_before_wire_creation": true,
+    "paid_calls": 0,
+    "correction": "Use actual prepare_schema_wire(config, payload(...), schema)",
+    "subsequent_prepare_exit": 0
+  },
+  "root_script_Ruff": {
+    "result": "passed",
+    "files": [
+      "prepare_paired66.py",
+      "verify_normal_adapter_wires66.py",
+      "read_latest_native66.py"
+    ],
+    "no_cache": true
+  },
+  "remaining_blocker": {
+    "action": "36 normal model POSTs to https://openrouter.ai/api/v1/chat/completions using the frozen manifest",
+    "missing": "Current project-wide available headroom after all retained allocations, UNKNOWN and inflight obligations; the stage USD1 authorization is already explicit",
+    "current_phase_auto_review_rejection": false,
+    "no_blanket_fee_reauthorization_needed": true
+  },
+  "limitations": [
+    "Previously exposed source-conditioned synthetic development questions; not heldout or human Gold",
+    "Single predesignated support per question; 10/12 is not exhaustive semantic full-corpus recall",
+    "Short-answer protocol has no model citations; offline reviewer witnesses are separate",
+    "Normal shared adapter component preparation is not the native teacher/checker/publication/UI workflow",
+    "Pending metrics remain null; failed/refused/missing finalized outcomes get zero only in an actually executed scheduled cohort",
+    "No new controller execution, current model loading, credential probe, provider response or browser experiment"
+  ],
+  "project_complete": false,
+  "input_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-rag-paired66-preparation\\frozen-paired66-inputs.json",
+      "bytes": 243050,
+      "sha256": "c1b4c60cefc9777f75f3d63be37bab22fa280ec2f006c2eaf78823a652bb321c",
+      "target_name": "frozen-paired66-inputs.json"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-rag-paired66-preparation\\independent-preparation-review66.json",
+      "bytes": 6600,
+      "sha256": "ce2ad38f596a534ad1c96f8e36f9dec301d1093c50547a3caaabf5ef4e985fee",
+      "target_name": "independent-preparation-review66.json"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-rag-paired66-preparation\\normal-adapter-wire-verification66.json",
+      "bytes": 6408,
+      "sha256": "523c50945fb170ac569b463ca03008a95e8f46ab6500e5987ced15a7d84a3a0a",
+      "target_name": "normal-adapter-wire-verification66.json"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-rag-paired66-preparation\\latest-native-readback66.json",
+      "bytes": 1713,
+      "sha256": "576cf7c4386b8e0d04bd0101448ab40fd2397779aa4a9fe3db71870d8dd5c471",
+      "target_name": "latest-native-readback66.json"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-rag-paired66-standards\\preregistered-offline-scoring.json",
+      "bytes": 64051,
+      "sha256": "9c1f506b970a191b7187c3ad6e09f2264191a7607a83c6dfbadf795886f8e201",
+      "target_name": "preregistered-offline-scoring.json"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-rag-readonly-locator\\public-retrieval-inputs66-receipt.json",
+      "bytes": 51001,
+      "sha256": "30b9d1b27a38347cd64920b850e014ee5f570e5fcde285411ed0bdb7699d3913",
+      "target_name": "public-retrieval-inputs66-receipt.json"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-rag-unified-budget-audit\\budget-readiness.json",
+      "bytes": 7931,
+      "sha256": "bd75ff58a7a7f92cc0650c31d9006f9334cbc94ba370d9ba804ab0228b5e0a34",
+      "target_name": "budget-readiness.json"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-rag-paired66-standards\\offline-scoring-validation66.json",
+      "bytes": 21864,
+      "sha256": "8afe42b7ed5f7d01a4a5f9b2f6348cc1873c42af8a9b9b42bae54715ca930300",
+      "target_name": "offline-scoring-validation66.json"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-rag-unified-budget-audit\\scatter-ledger-summary01.json",
+      "bytes": 6016,
+      "sha256": "bf8d6575b440fcb9af256d1d4f3374243c8ed7f547a0c8edb2694564a16ac718",
+      "target_name": "scatter-ledger-summary01.json"
+    }
+  ]
+}

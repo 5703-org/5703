@@ -1,0 +1,64 @@
+{
+  "schema": "phase88_independent_unit_test_contract_fixes_v1",
+  "status": "STATIC_CANDIDATES_NO_TESTS_RUN",
+  "files": [
+    {
+      "path": "tests/unit/test_v22_integration.py",
+      "before_bytes": 24315,
+      "before_sha256": "e06c5996559b0092d5a99a09185b17e3e0b4ad9c87944a6cccfff0b7003b2ff6",
+      "candidate_bytes": 24687,
+      "candidate_sha256": "b0ff8b09890860de6b76b5cc0c842d054772b2b1ca7941a4d13a46d7008aae7e"
+    },
+    {
+      "path": "tests/unit/test_lossless_output_integration84.py",
+      "before_bytes": 16948,
+      "before_sha256": "d7b1eaa5a65de04273303494065e57b921d512d18172e9649c540eb1048408d9",
+      "candidate_bytes": 17928,
+      "candidate_sha256": "aa07bcf78ba4208cca6016a6960510bac31bae5115588d31b186116e0125aea2"
+    }
+  ],
+  "production_preimage_pins": [
+    {
+      "path": "backend/app/modules/answering/service.py",
+      "bytes": 95993,
+      "sha256": "f302de879a270a5879adbc9374331c86d7b014dadca79c0a40a804647ceafeb0"
+    },
+    {
+      "path": "generation/checked.py",
+      "bytes": 170833,
+      "sha256": "2b675807b299c2d802eda90ef6dfd10beaeac9a7737ec2dfe40279f66862515b"
+    },
+    {
+      "path": "generation/providers.py",
+      "bytes": 29380,
+      "sha256": "8411a08b94c57feac7d6ca068c6feae9193201c109f28d9b64d014d3199cd4ee"
+    },
+    {
+      "path": "generation/checker_encoding.py",
+      "bytes": 4294,
+      "sha256": "57e7fdc229e0732d827af1be3985db8c8ccff91d40e4a6699ad28784ccedf8e2"
+    },
+    {
+      "path": "generation/checker_encoding_v2.py",
+      "bytes": 8946,
+      "sha256": "60eafb9111ac6ec9008b913e296edd771f1cbd99729928dc20aa163e4ab68860"
+    }
+  ],
+  "scope": "Two existing test files only; no production edits, provider/DB/auth access or test execution.",
+  "diagnosis": {
+    "v22_integration": {
+      "failed_cases": 18,
+      "cause": "Actual AST dispatch now references registered query_v23; synthetic namespace ended at v22. Production imports query_v23."
+    },
+    "lossless84": {
+      "failed_cases": 7,
+      "rubric_failures": 3,
+      "diagnostic_failures": 4,
+      "cause": "Actual opt-in checker system prose differs, requiring independent rubric hashes. Finite internal decode detail intentionally exists; public failure shape remains exact."
+    }
+  },
+  "controls_preserved": "All source/claim/status/citation/raw/negative/publication and private diagnostic assertions remain; only each proven exact rubric hash is normalized before full audit equality.",
+  "new_coverage": "V23 submission/restatement registration, saved v23/v8 under changed live policies, all predecessors under live v23 and mismatched v23/v7 rejection.",
+  "pytest_or_ruff_run": false,
+  "Main_writes": 0
+}

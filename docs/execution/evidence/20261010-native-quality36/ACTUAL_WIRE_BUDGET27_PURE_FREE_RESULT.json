@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "at_UTC": "2026-10-10T04:44:05.390713+00:00",
+  "candidate_and_test_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-wire-budget27-candidate\\wire_budget_contract27_CANDIDATE.py",
+      "bytes": 5003,
+      "sha256": "4e9c2b8957a7350eae121813b1b98db953e0bf096e67139e11b3e33a55c0fd64"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-wire-budget27-candidate\\test_wire_budget_contract27.py",
+      "bytes": 5148,
+      "sha256": "46859142a87f4b90505f618510755cd7862c02df684acb618e844ba24c8117c8"
+    }
+  ],
+  "all_pins_unchanged": true,
+  "tests_run": 6,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "test_output": "test_derivation_does_not_mutate_inputs_and_uniform_output_is_conservative (wire_budget27_portable.WireBudgetTests.test_derivation_does_not_mutate_inputs_and_uniform_output_is_conservative) ... ok\ntest_exact_price_math_accepts_cap_and_next_byte_breaks_selected_margin (wire_budget27_portable.WireBudgetTests.test_exact_price_math_accepts_cap_and_next_byte_breaks_selected_margin) ... ok\ntest_no_affordable_positive_wire_rejects (wire_budget27_portable.WireBudgetTests.test_no_affordable_positive_wire_rejects) ... ok\ntest_nonfinite_floats_booleans_and_invalid_counts_reject (wire_budget27_portable.WireBudgetTests.test_nonfinite_floats_booleans_and_invalid_counts_reject) ... ok\ntest_selected_uniform_contract_keeps_real_stage_caps_and_full_reserve (wire_budget27_portable.WireBudgetTests.test_selected_uniform_contract_keeps_real_stage_caps_and_full_reserve) ... ok\ntest_smaller_windows_and_strict_input_tier_independently_bound_wire (wire_budget27_portable.WireBudgetTests.test_smaller_windows_and_strict_input_tier_independently_bound_wire) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.001s\n\nOK\n",
+  "audit_denials": [],
+  "maximum_wire_bytes": 63688,
+  "input_token_upper_at_max_wire": 64200,
+  "uniform_bound_output_tokens": 4096,
+  "strict_upper_per_physical_POST_USD": "0.02950000",
+  "reserve_margin_USD": "0.00050000",
+  "per_POST_full_reserve_USD": "0.03000000",
+  "maximum_POSTs_per_finite_scope": 4,
+  "maximum_reserve_per_finite_scope_USD": "0.12000000",
+  "63689_breaks_selected_safety_margin": true,
+  "provider_native_token_count_claimed": false,
+  "Main_imports_or_writes": 0,
+  "native_guard_or_runtime_executed": false,
+  "provider_calls": 0,
+  "database_accesses": 0,
+  "limitation": "Pure local byte-accounting arithmetic; Root must embed the same functions/contract in guard wire, persisted starts and MONEY before separate native validation."
+}

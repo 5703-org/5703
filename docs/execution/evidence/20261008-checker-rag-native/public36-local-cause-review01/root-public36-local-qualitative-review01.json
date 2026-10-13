@@ -1,0 +1,1427 @@
+{
+  "status": "ACTUAL_ROOT_LOCAL_QUALITATIVE_36_REVIEW_WITH_UNCHANGED_SCORES",
+  "at_UTC": "2026-10-08T03:24:54.501137+00:00",
+  "method": "Root Codex qualitative AI review of public stems, actual predictions and frozen textbook passages; existing score flags are retained. This is not a human rating, fresh scientific expert study, paid model judge, blinded holdout or measured learning effect.",
+  "raw_reference_values_read_or_exported_in_this_round": false,
+  "original_EM_F1_and_preregistered_classes_unchanged": true,
+  "semantic_accuracy_aggregate": null,
+  "unchanged_by_arm": {
+    "E0_none": {
+      "scheduled_count": 12,
+      "schema_valid_count": 12,
+      "schema_success_rate": 1.0,
+      "valid_answer_count": 12,
+      "em": 0.5833333333333334,
+      "token_f1": 0.638888888888889,
+      "em_or_preregistered_whole_answer_equivalence": 0.6666666666666666,
+      "adapter_generate_return_duration_ms": {
+        "n": 12,
+        "min": 934.7493999994185,
+        "median": 1136.1589999978605,
+        "p95": 1533.7412099996068,
+        "max": 1813.017899999977
+      }
+    },
+    "E1_dense": {
+      "scheduled_count": 12,
+      "schema_valid_count": 12,
+      "schema_success_rate": 1.0,
+      "valid_answer_count": 12,
+      "em": 0.5,
+      "token_f1": 0.611111111111111,
+      "em_or_preregistered_whole_answer_equivalence": 0.5,
+      "adapter_generate_return_duration_ms": {
+        "n": 12,
+        "min": 1000.9200999993482,
+        "median": 1189.7338999988278,
+        "p95": 1815.4428300005748,
+        "max": 1891.832000001159
+      }
+    },
+    "hybrid_plus_rerank": {
+      "scheduled_count": 12,
+      "schema_valid_count": 12,
+      "schema_success_rate": 1.0,
+      "valid_answer_count": 12,
+      "em": 0.5,
+      "token_f1": 0.7083333333333334,
+      "em_or_preregistered_whole_answer_equivalence": 0.6666666666666666,
+      "adapter_generate_return_duration_ms": {
+        "n": 12,
+        "min": 878.3285999998043,
+        "median": 1077.0388499986439,
+        "p95": 1321.3028250002026,
+        "max": 1334.2721000008169
+      }
+    }
+  },
+  "input_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\terminal-receipt01.json",
+      "bytes": 43094,
+      "sha256": "f2712ed9ae60914374e4fc67e0ba2ce3931dce9be918dd61d0ccd8989d4db26e"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\public12-openqa36-frozen-inputs01.json",
+      "bytes": 249942,
+      "sha256": "17d0135cc0e348e3336c39b878078808ab9dfea0178f29f5a247335830e80e3e"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-openqa36-scored-summary01\\quality-and-adapter-duration-summary01.json",
+      "bytes": 44872,
+      "sha256": "f265655b9955c25ae39804d6899747f12abb573b247a29e8593d546c9135cbab"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-finance-projection21.json",
+      "bytes": 136726,
+      "sha256": "e26b8eaaddbcdb9acc7d8eff5df1eb2f188e3c3781240c5068c9221b9e6d7f04"
+    }
+  ],
+  "extraction_invariance": {
+    "raw_json_matches_saved_response": 36,
+    "refusals": 0,
+    "duplicate_key_errors": 0,
+    "new_provider_calls": 0
+  },
+  "rows": [
+    {
+      "slot": 1,
+      "question_id": "sciq:test:000008",
+      "arm": "E0_none",
+      "public_question": "What kind of viscosity is found in long-chain hydrocarbons?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "High viscosity"
+      },
+      "unchanged_metric_row": {
+        "slot": 1,
+        "question_id": "sciq:test:000008",
+        "arm": "E0_none",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 0.0,
+        "token_f1": 0.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": false,
+        "em_or_preregistered_whole_answer_equivalence": false,
+        "observed_duration_ms": 1305.2420999993046
+      },
+      "root_local_AI_label": "correct_general_relation",
+      "subjective_confidence": "medium",
+      "rationale": "High viscosity is a plausible comparative answer for longer chains under comparable conditions. The stem omits the comparison and temperature. A lexical zero is not proof of a scientific error.",
+      "limitation": "Comparable material and temperature are unstated; saved evidence is uneven across arms.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 0,
+      "source_chunk_ids": [],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 2,
+      "question_id": "sciq:test:000008",
+      "arm": "E1_dense",
+      "public_question": "What kind of viscosity is found in long-chain hydrocarbons?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "high viscosity"
+      },
+      "unchanged_metric_row": {
+        "slot": 2,
+        "question_id": "sciq:test:000008",
+        "arm": "E1_dense",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 0.0,
+        "token_f1": 0.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": false,
+        "em_or_preregistered_whole_answer_equivalence": false,
+        "observed_duration_ms": 1891.832000001159
+      },
+      "root_local_AI_label": "correct_general_relation",
+      "subjective_confidence": "medium",
+      "rationale": "High viscosity is a plausible comparative answer for longer chains under comparable conditions. The stem omits the comparison and temperature. A lexical zero is not proof of a scientific error.",
+      "limitation": "Comparable material and temperature are unstated; saved evidence is uneven across arms.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "a9951f2a7b0b0e7b11bf1455837c74c91c1e",
+        "d2457e590be1f4824dc3158710726903d564",
+        "d82b4bf5f3b89421fa1b90b565eb8c2445c4",
+        "5f23d232e86e8b7a343866212a9d8a44f2e6",
+        "bef31098dae7d50a42dc96a1e4e48a8de869"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 3,
+      "question_id": "sciq:test:000008",
+      "arm": "hybrid_plus_rerank",
+      "public_question": "What kind of viscosity is found in long-chain hydrocarbons?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "high viscosity"
+      },
+      "unchanged_metric_row": {
+        "slot": 3,
+        "question_id": "sciq:test:000008",
+        "arm": "hybrid_plus_rerank",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 0.0,
+        "token_f1": 0.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": false,
+        "em_or_preregistered_whole_answer_equivalence": false,
+        "observed_duration_ms": 1334.2721000008169
+      },
+      "root_local_AI_label": "correct_general_relation",
+      "subjective_confidence": "medium",
+      "rationale": "High viscosity is a plausible comparative answer for longer chains under comparable conditions. The stem omits the comparison and temperature. A lexical zero is not proof of a scientific error.",
+      "limitation": "Comparable material and temperature are unstated; saved evidence is uneven across arms.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "26a375e3594f4a0d9ca922914334105ad90f",
+        "93a7084196cdbc36abcb08b962d545002dfa",
+        "eb1af717467e0e878ff8cab051b683fe1688",
+        "15a6d024a7c9a3b16333f06115b3b8aa1866",
+        "a9951f2a7b0b0e7b11bf1455837c74c91c1e"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 4,
+      "question_id": "sciq:test:000015",
+      "arm": "E1_dense",
+      "public_question": "How does a neon light produce visible light?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "By passing an electrical current through neon gas at a low pressure, which excites the neon atoms and causes them to emit photons of light."
+      },
+      "unchanged_metric_row": {
+        "slot": 4,
+        "question_id": "sciq:test:000015",
+        "arm": "E1_dense",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 0.0,
+        "token_f1": 0.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": false,
+        "em_or_preregistered_whole_answer_equivalence": false,
+        "observed_duration_ms": 1435.126799999125
+      },
+      "root_local_AI_label": "correct_mechanism",
+      "subjective_confidence": "high",
+      "rationale": "All answers describe electrical excitation of neon gas followed by photon emission. E0/Hybrid explicitly describe return to a lower state; Dense states the causal excitation/emission mechanism.",
+      "limitation": "Mechanistic prose is longer than a benchmark label; no score rule is changed.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "3d955960b9fcf2c319617d2d86e32eafa00a",
+        "7a91b80d2c65e3650fe416b7635a28397c71",
+        "346b3ffbd2f2af181039439fdb1f74c8885b",
+        "8cadc83d7296174dbfcd7d8ec9d4c0b42c65",
+        "d438938faee506b297d458598e1395e974cd"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 5,
+      "question_id": "sciq:test:000015",
+      "arm": "hybrid_plus_rerank",
+      "public_question": "How does a neon light produce visible light?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "An electrical current passes through neon gas at low pressure, exciting the neon atoms and causing them to emit photons as they return to a lower energy state."
+      },
+      "unchanged_metric_row": {
+        "slot": 5,
+        "question_id": "sciq:test:000015",
+        "arm": "hybrid_plus_rerank",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 0.0,
+        "token_f1": 0.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": false,
+        "em_or_preregistered_whole_answer_equivalence": false,
+        "observed_duration_ms": 1310.6915999997
+      },
+      "root_local_AI_label": "correct_mechanism",
+      "subjective_confidence": "high",
+      "rationale": "All answers describe electrical excitation of neon gas followed by photon emission. E0/Hybrid explicitly describe return to a lower state; Dense states the causal excitation/emission mechanism.",
+      "limitation": "Mechanistic prose is longer than a benchmark label; no score rule is changed.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "3d955960b9fcf2c319617d2d86e32eafa00a",
+        "7a91b80d2c65e3650fe416b7635a28397c71",
+        "8cadc83d7296174dbfcd7d8ec9d4c0b42c65",
+        "ce801b5a3a28b7b7cac58b762ae715e3add7",
+        "f48ac53772badd225852cd6ff8186786a357"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 6,
+      "question_id": "sciq:test:000015",
+      "arm": "E0_none",
+      "public_question": "How does a neon light produce visible light?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "A neon light produces visible light when an electrical current passes through the neon gas inside the tube, causing the atoms to become excited and release photons as they return to a lower energy state."
+      },
+      "unchanged_metric_row": {
+        "slot": 6,
+        "question_id": "sciq:test:000015",
+        "arm": "E0_none",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 0.0,
+        "token_f1": 0.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": false,
+        "em_or_preregistered_whole_answer_equivalence": false,
+        "observed_duration_ms": 1813.017899999977
+      },
+      "root_local_AI_label": "correct_mechanism",
+      "subjective_confidence": "high",
+      "rationale": "All answers describe electrical excitation of neon gas followed by photon emission. E0/Hybrid explicitly describe return to a lower state; Dense states the causal excitation/emission mechanism.",
+      "limitation": "Mechanistic prose is longer than a benchmark label; no score rule is changed.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 0,
+      "source_chunk_ids": [],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 7,
+      "question_id": "sciq:test:000003",
+      "arm": "hybrid_plus_rerank",
+      "public_question": "What is the height above or below sea level called?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "elevation"
+      },
+      "unchanged_metric_row": {
+        "slot": 7,
+        "question_id": "sciq:test:000003",
+        "arm": "hybrid_plus_rerank",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 1.0,
+        "token_f1": 1.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": true,
+        "em_or_preregistered_whole_answer_equivalence": true,
+        "observed_duration_ms": 1133.1664999997884
+      },
+      "root_local_AI_label": "correct_core_term",
+      "subjective_confidence": "high",
+      "rationale": "Elevation is the appropriate height relative to sea level. No evidence-grounding credit is inferred where the submitted passage lacks that definition.",
+      "limitation": "Source support and answer plausibility are separate flags.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "738bfed1b9b0bb0dcdac01cb4ae072cff365",
+        "715a3890bf8dcff17e108021e3d99e720d20",
+        "a53d571f078d38deaea6361a1c7cde5b5ba7",
+        "06ab6b1045ab6d5a3f478ae35dea6c0226fe",
+        "886ae15c641b34bf035437a6753c3957ab83"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 8,
+      "question_id": "sciq:test:000003",
+      "arm": "E0_none",
+      "public_question": "What is the height above or below sea level called?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "elevation"
+      },
+      "unchanged_metric_row": {
+        "slot": 8,
+        "question_id": "sciq:test:000003",
+        "arm": "E0_none",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 1.0,
+        "token_f1": 1.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": true,
+        "em_or_preregistered_whole_answer_equivalence": true,
+        "observed_duration_ms": 1102.328100001614
+      },
+      "root_local_AI_label": "correct_core_term",
+      "subjective_confidence": "high",
+      "rationale": "Elevation is the appropriate height relative to sea level. No evidence-grounding credit is inferred where the submitted passage lacks that definition.",
+      "limitation": "Source support and answer plausibility are separate flags.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 0,
+      "source_chunk_ids": [],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 9,
+      "question_id": "sciq:test:000003",
+      "arm": "E1_dense",
+      "public_question": "What is the height above or below sea level called?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "elevation"
+      },
+      "unchanged_metric_row": {
+        "slot": 9,
+        "question_id": "sciq:test:000003",
+        "arm": "E1_dense",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 1.0,
+        "token_f1": 1.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": true,
+        "em_or_preregistered_whole_answer_equivalence": true,
+        "observed_duration_ms": 1079.5827999972971
+      },
+      "root_local_AI_label": "correct_core_term",
+      "subjective_confidence": "high",
+      "rationale": "Elevation is the appropriate height relative to sea level. No evidence-grounding credit is inferred where the submitted passage lacks that definition.",
+      "limitation": "Source support and answer plausibility are separate flags.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "06ab6b1045ab6d5a3f478ae35dea6c0226fe",
+        "16c51d1c9a036f2e7f90ea4646cd646ee996",
+        "5d12a1bf8c35d3fd60828841281345dcd298",
+        "738bfed1b9b0bb0dcdac01cb4ae072cff365",
+        "92b26ed436b41ccca1ce99a4ab25fd6f1ca5"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 10,
+      "question_id": "sciq:validation:000040",
+      "arm": "E0_none",
+      "public_question": "What force makes objects seem lighter in water?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "Buoyancy"
+      },
+      "unchanged_metric_row": {
+        "slot": 10,
+        "question_id": "sciq:validation:000040",
+        "arm": "E0_none",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 0.0,
+        "token_f1": 0.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": false,
+        "em_or_preregistered_whole_answer_equivalence": false,
+        "observed_duration_ms": 1173.8318999996409
+      },
+      "root_local_AI_label": "correct_concept_or_synonym",
+      "subjective_confidence": "high",
+      "rationale": "Buoyancy denotes the upward effect; buoyant force names the force directly. These expressions answer the conceptual question. Surface tension in a retrieved passage is not support for an immersed object's reduced apparent weight.",
+      "limitation": "The corpus excludes the retired physics book; unsupported retrieval is not itself an incorrect answer.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 0,
+      "source_chunk_ids": [],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 11,
+      "question_id": "sciq:validation:000040",
+      "arm": "E1_dense",
+      "public_question": "What force makes objects seem lighter in water?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "buoyant force"
+      },
+      "unchanged_metric_row": {
+        "slot": 11,
+        "question_id": "sciq:validation:000040",
+        "arm": "E1_dense",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 0.0,
+        "token_f1": 0.6666666666666666,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": false,
+        "em_or_preregistered_whole_answer_equivalence": false,
+        "observed_duration_ms": 1000.9200999993482
+      },
+      "root_local_AI_label": "correct_concept_or_synonym",
+      "subjective_confidence": "high",
+      "rationale": "Buoyancy denotes the upward effect; buoyant force names the force directly. These expressions answer the conceptual question. Surface tension in a retrieved passage is not support for an immersed object's reduced apparent weight.",
+      "limitation": "The corpus excludes the retired physics book; unsupported retrieval is not itself an incorrect answer.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "cf0c39a14597cafbef96f56f4932ffaca7a8",
+        "78ecab9b25ce726dafe46b1201f14ba2393c",
+        "b68da44189d126be74adeb5b64927080ce9c",
+        "bf4ecfcc07153910870e435eb024534f1daf",
+        "e29fbab3ca2c1e5915ff9d6fee11ced73432"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 12,
+      "question_id": "sciq:validation:000040",
+      "arm": "hybrid_plus_rerank",
+      "public_question": "What force makes objects seem lighter in water?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "buoyant force"
+      },
+      "unchanged_metric_row": {
+        "slot": 12,
+        "question_id": "sciq:validation:000040",
+        "arm": "hybrid_plus_rerank",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 0.0,
+        "token_f1": 0.6666666666666666,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": false,
+        "em_or_preregistered_whole_answer_equivalence": false,
+        "observed_duration_ms": 1070.171699997445
+      },
+      "root_local_AI_label": "correct_concept_or_synonym",
+      "subjective_confidence": "high",
+      "rationale": "Buoyancy denotes the upward effect; buoyant force names the force directly. These expressions answer the conceptual question. Surface tension in a retrieved passage is not support for an immersed object's reduced apparent weight.",
+      "limitation": "The corpus excludes the retired physics book; unsupported retrieval is not itself an incorrect answer.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "e8f05f0b6a44cccad8333ec4fbba2ab8fc49",
+        "78ecab9b25ce726dafe46b1201f14ba2393c",
+        "8ed5c301f2c625b86eb4ed7b50349acde67a",
+        "cf0c39a14597cafbef96f56f4932ffaca7a8",
+        "5eecae35ea55baf3cc8b600b61958ffc3b8f"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 13,
+      "question_id": "sciq:validation:000013",
+      "arm": "E1_dense",
+      "public_question": "During telophase , the chromosomes begin to uncoil and form what?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "chromatin"
+      },
+      "unchanged_metric_row": {
+        "slot": 13,
+        "question_id": "sciq:validation:000013",
+        "arm": "E1_dense",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 1.0,
+        "token_f1": 1.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": true,
+        "em_or_preregistered_whole_answer_equivalence": true,
+        "observed_duration_ms": 1752.9426000000967
+      },
+      "root_local_AI_label": "correct_core_term",
+      "subjective_confidence": "high",
+      "rationale": "Chromatin is the appropriate term for the less condensed chromosome material in telophase; the question's form wording is a simplification of decondensation.",
+      "limitation": "This local label does not validate every detail of the premise.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "6a4cebbf5cf83fc003437075828534bd8454",
+        "62e86cc7500db1c021f0fc29beb84d5e18ac",
+        "1bc7573106904911958d71b597152464ede5",
+        "c8462e6309ea3c9e398539fabe438abd37a1",
+        "898c72570b194fb7725fe767a9c38d25a228"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 14,
+      "question_id": "sciq:validation:000013",
+      "arm": "hybrid_plus_rerank",
+      "public_question": "During telophase , the chromosomes begin to uncoil and form what?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "chromatin"
+      },
+      "unchanged_metric_row": {
+        "slot": 14,
+        "question_id": "sciq:validation:000013",
+        "arm": "hybrid_plus_rerank",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 1.0,
+        "token_f1": 1.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": true,
+        "em_or_preregistered_whole_answer_equivalence": true,
+        "observed_duration_ms": 1183.1457000007504
+      },
+      "root_local_AI_label": "correct_core_term",
+      "subjective_confidence": "high",
+      "rationale": "Chromatin is the appropriate term for the less condensed chromosome material in telophase; the question's form wording is a simplification of decondensation.",
+      "limitation": "This local label does not validate every detail of the premise.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "6a4cebbf5cf83fc003437075828534bd8454",
+        "1bc7573106904911958d71b597152464ede5",
+        "e8bc2e294338924472084e0bb86c3633eb15",
+        "572adbcaa145c597150683d307fcb780a39e",
+        "62e86cc7500db1c021f0fc29beb84d5e18ac"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 15,
+      "question_id": "sciq:validation:000013",
+      "arm": "E0_none",
+      "public_question": "During telophase , the chromosomes begin to uncoil and form what?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "chromatin"
+      },
+      "unchanged_metric_row": {
+        "slot": 15,
+        "question_id": "sciq:validation:000013",
+        "arm": "E0_none",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 1.0,
+        "token_f1": 1.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": true,
+        "em_or_preregistered_whole_answer_equivalence": true,
+        "observed_duration_ms": 1074.318700000731
+      },
+      "root_local_AI_label": "correct_core_term",
+      "subjective_confidence": "high",
+      "rationale": "Chromatin is the appropriate term for the less condensed chromosome material in telophase; the question's form wording is a simplification of decondensation.",
+      "limitation": "This local label does not validate every detail of the premise.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 0,
+      "source_chunk_ids": [],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 16,
+      "question_id": "sciq:test:000019",
+      "arm": "hybrid_plus_rerank",
+      "public_question": "What term means the amount of water vapor in the air?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "Humidity"
+      },
+      "unchanged_metric_row": {
+        "slot": 16,
+        "question_id": "sciq:test:000019",
+        "arm": "hybrid_plus_rerank",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 1.0,
+        "token_f1": 1.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": true,
+        "em_or_preregistered_whole_answer_equivalence": true,
+        "observed_duration_ms": 987.5439999996161
+      },
+      "root_local_AI_label": "correct_core_term",
+      "subjective_confidence": "high",
+      "rationale": "Humidity names water-vapor content in air. The stem does not request a distinction between absolute and relative humidity.",
+      "limitation": "No quantitative humidity claim is made.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "a69ff5f25a28145b41ee5a2dfa15fab1a868",
+        "507c00695b1743ecb7dea3b3eda08eb483df",
+        "737fbeb72ff74e224a8fc296a1e58bfbd233",
+        "4d64ec3fe38f866dabd97b188972d345a8fd",
+        "8445a35918b6c9715da45230e7bf7d9e95f6"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 17,
+      "question_id": "sciq:test:000019",
+      "arm": "E0_none",
+      "public_question": "What term means the amount of water vapor in the air?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "Humidity"
+      },
+      "unchanged_metric_row": {
+        "slot": 17,
+        "question_id": "sciq:test:000019",
+        "arm": "E0_none",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 1.0,
+        "token_f1": 1.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": true,
+        "em_or_preregistered_whole_answer_equivalence": true,
+        "observed_duration_ms": 973.8279999983206
+      },
+      "root_local_AI_label": "correct_core_term",
+      "subjective_confidence": "high",
+      "rationale": "Humidity names water-vapor content in air. The stem does not request a distinction between absolute and relative humidity.",
+      "limitation": "No quantitative humidity claim is made.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 0,
+      "source_chunk_ids": [],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 18,
+      "question_id": "sciq:test:000019",
+      "arm": "E1_dense",
+      "public_question": "What term means the amount of water vapor in the air?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "humidity"
+      },
+      "unchanged_metric_row": {
+        "slot": 18,
+        "question_id": "sciq:test:000019",
+        "arm": "E1_dense",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 1.0,
+        "token_f1": 1.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": true,
+        "em_or_preregistered_whole_answer_equivalence": true,
+        "observed_duration_ms": 1189.9464999987686
+      },
+      "root_local_AI_label": "correct_core_term",
+      "subjective_confidence": "high",
+      "rationale": "Humidity names water-vapor content in air. The stem does not request a distinction between absolute and relative humidity.",
+      "limitation": "No quantitative humidity claim is made.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "a69ff5f25a28145b41ee5a2dfa15fab1a868",
+        "56ec5323a9f2fc4761fe9a9f63417ffa38a6",
+        "9c440e1f3d3749a34924c87e0d66305391f4",
+        "3cd29df554720ae997a0ef1493ba1b1e3322",
+        "f80e714b29354fa253353c684f3feed8730b"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 19,
+      "question_id": "sciq:validation:000002",
+      "arm": "E0_none",
+      "public_question": "A frameshift mutation is a deletion or insertion of one or more of what that changes the reading frame of the base sequence?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "nucleotides"
+      },
+      "unchanged_metric_row": {
+        "slot": 19,
+        "question_id": "sciq:validation:000002",
+        "arm": "E0_none",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 1.0,
+        "token_f1": 1.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": true,
+        "em_or_preregistered_whole_answer_equivalence": true,
+        "observed_duration_ms": 934.7493999994185
+      },
+      "root_local_AI_label": "correct_core_term",
+      "subjective_confidence": "high",
+      "rationale": "Nucleotides are the inserted or deleted units. The stem explicitly requires a changed reading frame; an arbitrary multiple-of-three insertion/deletion need not cause a frameshift.",
+      "limitation": "The insertion/deletion condition matters; no distractors or reference labels were supplied.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 0,
+      "source_chunk_ids": [],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 20,
+      "question_id": "sciq:validation:000002",
+      "arm": "E1_dense",
+      "public_question": "A frameshift mutation is a deletion or insertion of one or more of what that changes the reading frame of the base sequence?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "nucleotides"
+      },
+      "unchanged_metric_row": {
+        "slot": 20,
+        "question_id": "sciq:validation:000002",
+        "arm": "E1_dense",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 1.0,
+        "token_f1": 1.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": true,
+        "em_or_preregistered_whole_answer_equivalence": true,
+        "observed_duration_ms": 1107.47690000062
+      },
+      "root_local_AI_label": "correct_core_term",
+      "subjective_confidence": "high",
+      "rationale": "Nucleotides are the inserted or deleted units. The stem explicitly requires a changed reading frame; an arbitrary multiple-of-three insertion/deletion need not cause a frameshift.",
+      "limitation": "The insertion/deletion condition matters; no distractors or reference labels were supplied.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "19402d8538afb0e0037ec5f5051251730fb8",
+        "aeeb24a751c6528f214122fe19cc84d851de",
+        "b2d4be6a47b066eb12e957ee9a4430428ad5",
+        "5a017656d0db91e29cfa06036fcb6431e943",
+        "78bbbb0d6af15b3f14c1236dac482857e4d4"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 21,
+      "question_id": "sciq:validation:000002",
+      "arm": "hybrid_plus_rerank",
+      "public_question": "A frameshift mutation is a deletion or insertion of one or more of what that changes the reading frame of the base sequence?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "nucleotides"
+      },
+      "unchanged_metric_row": {
+        "slot": 21,
+        "question_id": "sciq:validation:000002",
+        "arm": "hybrid_plus_rerank",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 1.0,
+        "token_f1": 1.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": true,
+        "em_or_preregistered_whole_answer_equivalence": true,
+        "observed_duration_ms": 1083.9059999998426
+      },
+      "root_local_AI_label": "correct_core_term",
+      "subjective_confidence": "high",
+      "rationale": "Nucleotides are the inserted or deleted units. The stem explicitly requires a changed reading frame; an arbitrary multiple-of-three insertion/deletion need not cause a frameshift.",
+      "limitation": "The insertion/deletion condition matters; no distractors or reference labels were supplied.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "19402d8538afb0e0037ec5f5051251730fb8",
+        "aeeb24a751c6528f214122fe19cc84d851de",
+        "060040789953a6233d101ee904d4636f6725",
+        "cec0ace0409a57bcbf2151a0542dd9f756c0",
+        "b2d4be6a47b066eb12e957ee9a4430428ad5"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 22,
+      "question_id": "sciq:validation:000047",
+      "arm": "E1_dense",
+      "public_question": "The air pressure is about 80% that of ________ pressure at sea level.",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "normal"
+      },
+      "unchanged_metric_row": {
+        "slot": 22,
+        "question_id": "sciq:validation:000047",
+        "arm": "E1_dense",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 0.0,
+        "token_f1": 0.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": false,
+        "em_or_preregistered_whole_answer_equivalence": false,
+        "observed_duration_ms": 1210.9934000000067
+      },
+      "root_local_AI_label": "underspecified_stem",
+      "subjective_confidence": "medium",
+      "rationale": "Atmospheric pressure and normal sea-level pressure are plausible baseline completions. The 80 percent assertion has no supplied altitude/location, so that numerical relation cannot be independently checked from the question. Normal is shorthand, not a proved scientific error.",
+      "limitation": "All three answers retain unresolved premise/context uncertainty.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "06ab6b1045ab6d5a3f478ae35dea6c0226fe",
+        "56ec5323a9f2fc4761fe9a9f63417ffa38a6",
+        "4a8eb6996b3058db3e60d329cfe719a4fffb",
+        "5eecae35ea55baf3cc8b600b61958ffc3b8f",
+        "3b77b75bf70047aa5ebfff2f5d24e4c3a0d5"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 23,
+      "question_id": "sciq:validation:000047",
+      "arm": "hybrid_plus_rerank",
+      "public_question": "The air pressure is about 80% that of ________ pressure at sea level.",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "atmospheric"
+      },
+      "unchanged_metric_row": {
+        "slot": 23,
+        "question_id": "sciq:validation:000047",
+        "arm": "hybrid_plus_rerank",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 0.0,
+        "token_f1": 0.6666666666666666,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": true,
+        "em_or_preregistered_whole_answer_equivalence": true,
+        "observed_duration_ms": 1043.4046000009403
+      },
+      "root_local_AI_label": "underspecified_stem",
+      "subjective_confidence": "medium",
+      "rationale": "Atmospheric pressure and normal sea-level pressure are plausible baseline completions. The 80 percent assertion has no supplied altitude/location, so that numerical relation cannot be independently checked from the question. Normal is shorthand, not a proved scientific error.",
+      "limitation": "All three answers retain unresolved premise/context uncertainty.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "56ec5323a9f2fc4761fe9a9f63417ffa38a6",
+        "738bfed1b9b0bb0dcdac01cb4ae072cff365",
+        "70b50daa7af0f7ee8b19a68f0ec12842c040",
+        "4a8eb6996b3058db3e60d329cfe719a4fffb",
+        "3b77b75bf70047aa5ebfff2f5d24e4c3a0d5"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 24,
+      "question_id": "sciq:validation:000047",
+      "arm": "E0_none",
+      "public_question": "The air pressure is about 80% that of ________ pressure at sea level.",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "atmospheric"
+      },
+      "unchanged_metric_row": {
+        "slot": 24,
+        "question_id": "sciq:validation:000047",
+        "arm": "E0_none",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 0.0,
+        "token_f1": 0.6666666666666666,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": true,
+        "em_or_preregistered_whole_answer_equivalence": true,
+        "observed_duration_ms": 1025.887599997077
+      },
+      "root_local_AI_label": "underspecified_stem",
+      "subjective_confidence": "medium",
+      "rationale": "Atmospheric pressure and normal sea-level pressure are plausible baseline completions. The 80 percent assertion has no supplied altitude/location, so that numerical relation cannot be independently checked from the question. Normal is shorthand, not a proved scientific error.",
+      "limitation": "All three answers retain unresolved premise/context uncertainty.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 0,
+      "source_chunk_ids": [],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 25,
+      "question_id": "sciq:test:000014",
+      "arm": "hybrid_plus_rerank",
+      "public_question": "Only about one percent of plants have lost what ability, turning them into consumers and even predators, instead of producers?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "photosynthesis"
+      },
+      "unchanged_metric_row": {
+        "slot": 25,
+        "question_id": "sciq:test:000014",
+        "arm": "hybrid_plus_rerank",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 1.0,
+        "token_f1": 1.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": true,
+        "em_or_preregistered_whole_answer_equivalence": true,
+        "observed_duration_ms": 1002.4210999981733
+      },
+      "root_local_AI_label": "correct_requested_term_with_premise_warning",
+      "subjective_confidence": "high",
+      "rationale": "Photosynthesis supplies the requested lost producer ability. The passage about nonphotosynthetic parasites supports the term, but carnivory does not generally mean loss of photosynthesis; the predator wording is overbroad.",
+      "limitation": "Do not treat agreement on the requested label as validation of the whole premise.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "421c26b824ce6bdf62699b79bf6faff5fa3e",
+        "b4e4fb2929b1df7fa74dfdbf17e577277205",
+        "0befad53a8fa5a6eebf80a4a96f327fc0768",
+        "197157a7b1cffe82c43e9ed6041b8a13b590",
+        "992cd4dde85edb6bc864b8f311238000aa6a"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 26,
+      "question_id": "sciq:test:000014",
+      "arm": "E0_none",
+      "public_question": "Only about one percent of plants have lost what ability, turning them into consumers and even predators, instead of producers?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "photosynthesis"
+      },
+      "unchanged_metric_row": {
+        "slot": 26,
+        "question_id": "sciq:test:000014",
+        "arm": "E0_none",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 1.0,
+        "token_f1": 1.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": true,
+        "em_or_preregistered_whole_answer_equivalence": true,
+        "observed_duration_ms": 1228.4738999987894
+      },
+      "root_local_AI_label": "correct_requested_term_with_premise_warning",
+      "subjective_confidence": "high",
+      "rationale": "Photosynthesis supplies the requested lost producer ability. The passage about nonphotosynthetic parasites supports the term, but carnivory does not generally mean loss of photosynthesis; the predator wording is overbroad.",
+      "limitation": "Do not treat agreement on the requested label as validation of the whole premise.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 0,
+      "source_chunk_ids": [],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 27,
+      "question_id": "sciq:test:000014",
+      "arm": "E1_dense",
+      "public_question": "Only about one percent of plants have lost what ability, turning them into consumers and even predators, instead of producers?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "photosynthesis"
+      },
+      "unchanged_metric_row": {
+        "slot": 27,
+        "question_id": "sciq:test:000014",
+        "arm": "E1_dense",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 1.0,
+        "token_f1": 1.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": true,
+        "em_or_preregistered_whole_answer_equivalence": true,
+        "observed_duration_ms": 1146.7133999976795
+      },
+      "root_local_AI_label": "correct_requested_term_with_premise_warning",
+      "subjective_confidence": "high",
+      "rationale": "Photosynthesis supplies the requested lost producer ability. The passage about nonphotosynthetic parasites supports the term, but carnivory does not generally mean loss of photosynthesis; the predator wording is overbroad.",
+      "limitation": "Do not treat agreement on the requested label as validation of the whole premise.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "992cd4dde85edb6bc864b8f311238000aa6a",
+        "7f11b86ca13bab06c120fb3b886d0c96535e",
+        "0e405796aa098551c3aa7ba011503db64318",
+        "c73af95b58e9077133d8167a6ae940466d88",
+        "1233111b90497bb9e029a8ec71fdebf76340"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 28,
+      "question_id": "sciq:validation:000060",
+      "arm": "E0_none",
+      "public_question": "The protein without the prosthetic group is known as the what?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "apoprotein"
+      },
+      "unchanged_metric_row": {
+        "slot": 28,
+        "question_id": "sciq:validation:000060",
+        "arm": "E0_none",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 1.0,
+        "token_f1": 1.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": true,
+        "em_or_preregistered_whole_answer_equivalence": true,
+        "observed_duration_ms": 1133.627199997136
+      },
+      "root_local_AI_label": "correct_core_term",
+      "subjective_confidence": "high",
+      "rationale": "E0/Hybrid use the standard apoprotein term. Dense's aprotein is a nonstandard/misspelled term. This is a terminology error, not evidence of a different well-defined scientific proposition.",
+      "limitation": "The submitted Dense passages do not contain the standard term or its malformed output, so its causal origin cannot be assigned to source copying or packing.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 0,
+      "source_chunk_ids": [],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 29,
+      "question_id": "sciq:validation:000060",
+      "arm": "E1_dense",
+      "public_question": "The protein without the prosthetic group is known as the what?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "aprotein"
+      },
+      "unchanged_metric_row": {
+        "slot": 29,
+        "question_id": "sciq:validation:000060",
+        "arm": "E1_dense",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 0.0,
+        "token_f1": 0.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": false,
+        "em_or_preregistered_whole_answer_equivalence": false,
+        "observed_duration_ms": 1140.6180999983917
+      },
+      "root_local_AI_label": "scientific_terminology_error",
+      "subjective_confidence": "high",
+      "rationale": "E0/Hybrid use the standard apoprotein term. Dense's aprotein is a nonstandard/misspelled term. This is a terminology error, not evidence of a different well-defined scientific proposition.",
+      "limitation": "The submitted Dense passages do not contain the standard term or its malformed output, so its causal origin cannot be assigned to source copying or packing.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "e50644abcab4c0580d83c237055e06a82d29",
+        "8cd314fe78def34b6ccce2867f82f3a479ad",
+        "afd703ff36c0d3fa331497707cd5294be029",
+        "dfb6c33b1a6fc90fe061a6f2ed9a7189c75f",
+        "53ccba47341f47c5a1974acb764bcf690986"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 30,
+      "question_id": "sciq:validation:000060",
+      "arm": "hybrid_plus_rerank",
+      "public_question": "The protein without the prosthetic group is known as the what?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "apoprotein"
+      },
+      "unchanged_metric_row": {
+        "slot": 30,
+        "question_id": "sciq:validation:000060",
+        "arm": "hybrid_plus_rerank",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 1.0,
+        "token_f1": 1.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": true,
+        "em_or_preregistered_whole_answer_equivalence": true,
+        "observed_duration_ms": 878.3285999998043
+      },
+      "root_local_AI_label": "correct_core_term",
+      "subjective_confidence": "high",
+      "rationale": "E0/Hybrid use the standard apoprotein term. Dense's aprotein is a nonstandard/misspelled term. This is a terminology error, not evidence of a different well-defined scientific proposition.",
+      "limitation": "The submitted Dense passages do not contain the standard term or its malformed output, so its causal origin cannot be assigned to source copying or packing.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "8cd314fe78def34b6ccce2867f82f3a479ad",
+        "afd703ff36c0d3fa331497707cd5294be029",
+        "59510b62a66102777527b2a0b7168780f34e",
+        "636ebcb1dc22f5133c337733665e02cfa1b8",
+        "0884b712dc046251221dc896ebe960da8afc"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 31,
+      "question_id": "sciq:test:000052",
+      "arm": "E1_dense",
+      "public_question": "Collateral ganglia controls organs in which cavity in the body?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "abdominal cavity"
+      },
+      "unchanged_metric_row": {
+        "slot": 31,
+        "question_id": "sciq:test:000052",
+        "arm": "E1_dense",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 0.0,
+        "token_f1": 0.6666666666666666,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": false,
+        "em_or_preregistered_whole_answer_equivalence": false,
+        "observed_duration_ms": 1524.0169000026071
+      },
+      "root_local_AI_label": "source_supported_scope_term",
+      "subjective_confidence": "high",
+      "rationale": "Dense/Hybrid abdominal cavity is directly supported by submitted Anatomy and Physiology 2e collateral-ganglia text. E0 abdominopelvic cavity is broader; the stem has no exhaustive-organ requirement, so this is a scope variance rather than demonstrated RAG harm.",
+      "limitation": "The broader E0 response is not independently established as fully equivalent by this frozen source alone.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "5db7b59164a2cb0ae100aed58fd79e325e5b",
+        "346609cc8a4916137076ef024d307387b157",
+        "161b373132837c0ec9cc5f4867aaeba6b397",
+        "c14f39094fc0bb306c9a4ebd3797ef9798a3",
+        "fdcc16cf76e470068e24b039be79e1daca4e"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 32,
+      "question_id": "sciq:test:000052",
+      "arm": "hybrid_plus_rerank",
+      "public_question": "Collateral ganglia controls organs in which cavity in the body?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "abdominal cavity"
+      },
+      "unchanged_metric_row": {
+        "slot": 32,
+        "question_id": "sciq:test:000052",
+        "arm": "hybrid_plus_rerank",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 0.0,
+        "token_f1": 0.6666666666666666,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": false,
+        "em_or_preregistered_whole_answer_equivalence": false,
+        "observed_duration_ms": 959.390699998039
+      },
+      "root_local_AI_label": "source_supported_scope_term",
+      "subjective_confidence": "high",
+      "rationale": "Dense/Hybrid abdominal cavity is directly supported by submitted Anatomy and Physiology 2e collateral-ganglia text. E0 abdominopelvic cavity is broader; the stem has no exhaustive-organ requirement, so this is a scope variance rather than demonstrated RAG harm.",
+      "limitation": "The broader E0 response is not independently established as fully equivalent by this frozen source alone.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "5db7b59164a2cb0ae100aed58fd79e325e5b",
+        "161b373132837c0ec9cc5f4867aaeba6b397",
+        "346609cc8a4916137076ef024d307387b157",
+        "015942cad44e6446d5c5d3966f5ffb9fb498",
+        "704d4c10d7be7479516a98b7df0eeabc8011"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 33,
+      "question_id": "sciq:test:000052",
+      "arm": "E0_none",
+      "public_question": "Collateral ganglia controls organs in which cavity in the body?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "abdominopelvic cavity"
+      },
+      "unchanged_metric_row": {
+        "slot": 33,
+        "question_id": "sciq:test:000052",
+        "arm": "E0_none",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 0.0,
+        "token_f1": 0.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": false,
+        "em_or_preregistered_whole_answer_equivalence": false,
+        "observed_duration_ms": 1234.0292000008048
+      },
+      "root_local_AI_label": "broader_scope_uncertain",
+      "subjective_confidence": "medium",
+      "rationale": "Dense/Hybrid abdominal cavity is directly supported by submitted Anatomy and Physiology 2e collateral-ganglia text. E0 abdominopelvic cavity is broader; the stem has no exhaustive-organ requirement, so this is a scope variance rather than demonstrated RAG harm.",
+      "limitation": "The broader E0 response is not independently established as fully equivalent by this frozen source alone.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 0,
+      "source_chunk_ids": [],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 34,
+      "question_id": "sciq:validation:000052",
+      "arm": "hybrid_plus_rerank",
+      "public_question": "During what part of a person's development are they generally at their physical peak?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "young adulthood"
+      },
+      "unchanged_metric_row": {
+        "slot": 34,
+        "question_id": "sciq:validation:000052",
+        "arm": "hybrid_plus_rerank",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 0.0,
+        "token_f1": 0.5,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": true,
+        "em_or_preregistered_whole_answer_equivalence": true,
+        "observed_duration_ms": 1225.49699999945
+      },
+      "root_local_AI_label": "correct_phase_or_synonym",
+      "subjective_confidence": "medium",
+      "rationale": "Early adulthood and young adulthood name the same broad developmental phase in this context. Peak depends on the physical capacity considered; the submitted passages do not establish a general peak definition.",
+      "limitation": "No new alias is added to the original scorer.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "0667628f109b6ef0ed92db2db8614ae9e415",
+        "b03b6a90e2429453e6b4d7bd0712ab20cab1",
+        "e667354480ebf98072ecab9febb99cf69f73",
+        "f7a5a83306431667602cf8daba8a3fb7a127",
+        "baea3f5ada59857953db369a8f1bf933e4a3"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 35,
+      "question_id": "sciq:validation:000052",
+      "arm": "E0_none",
+      "public_question": "During what part of a person's development are they generally at their physical peak?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "early adulthood"
+      },
+      "unchanged_metric_row": {
+        "slot": 35,
+        "question_id": "sciq:validation:000052",
+        "arm": "E0_none",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 1.0,
+        "token_f1": 1.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": true,
+        "em_or_preregistered_whole_answer_equivalence": true,
+        "observed_duration_ms": 1138.6907999985851
+      },
+      "root_local_AI_label": "correct_phase_or_synonym",
+      "subjective_confidence": "medium",
+      "rationale": "Early adulthood and young adulthood name the same broad developmental phase in this context. Peak depends on the physical capacity considered; the submitted passages do not establish a general peak definition.",
+      "limitation": "No new alias is added to the original scorer.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 0,
+      "source_chunk_ids": [],
+      "checker_invoked_in_original_36_generation": false
+    },
+    {
+      "slot": 36,
+      "question_id": "sciq:validation:000052",
+      "arm": "E1_dense",
+      "public_question": "During what part of a person's development are they generally at their physical peak?",
+      "unchanged_prediction": {
+        "response_type": "answer",
+        "short_answer": "early adulthood"
+      },
+      "unchanged_metric_row": {
+        "slot": 36,
+        "question_id": "sciq:validation:000052",
+        "arm": "E1_dense",
+        "status": "completed",
+        "schema_valid": true,
+        "em": 1.0,
+        "token_f1": 1.0,
+        "valid_answer_response": true,
+        "compact_answer_present": true,
+        "preregistered_whole_answer_equivalence": true,
+        "em_or_preregistered_whole_answer_equivalence": true,
+        "observed_duration_ms": 1189.5212999988871
+      },
+      "root_local_AI_label": "correct_phase_or_synonym",
+      "subjective_confidence": "medium",
+      "rationale": "Early adulthood and young adulthood name the same broad developmental phase in this context. Peak depends on the physical capacity considered; the submitted passages do not establish a general peak definition.",
+      "limitation": "No new alias is added to the original scorer.",
+      "scoring_extraction_error_observed": false,
+      "refusal": false,
+      "submitted_evidence_count": 5,
+      "source_chunk_ids": [
+        "017d3a2bbdbf2968f0976f6083c73b1e7161",
+        "b03b6a90e2429453e6b4d7bd0712ab20cab1",
+        "4fc4a369187a2f0c63bb221c6f24b52b5166",
+        "b1dae51b8eb9bbf482b836703541c0eeb7de",
+        "d5f2b9e16780c2a4cb7991953e4edaccacf0"
+      ],
+      "checker_invoked_in_original_36_generation": false
+    }
+  ],
+  "causal_limit": "One realization per seen DEV question/arm. The observed Dense terminology error is not attributable to retrieval/packing without further counterfactual evidence. Synonym/scope differences cannot establish scientific RAG regressions.",
+  "production_RAG_or_adapter_change_justified_by_this_review": false,
+  "candidate_prompt_change": "An unadopted W-only append clarifies requirement.evidence singular fragment_id versus claims.citations plural fragment_ids. Its actual generation effect is unmeasured; unchanged malformed raw output must still fail.",
+  "Gold_reads": 0,
+  "provider_calls": 0,
+  "DB_access": 0,
+  "E_writes": 0
+}

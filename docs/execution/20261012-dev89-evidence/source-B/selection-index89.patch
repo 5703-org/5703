@@ -1,0 +1,78 @@
+--- a/generation/lossless_unit_findings_v1.py
++++ b/generation/lossless_unit_findings_v1.py
+@@ -324,6 +324,47 @@
+     return packet, claims, requirements, fragments
+ 
+ 
++def _selection_index(context):
++    """Index immutable input domains and existing required keys, never judgments."""
++    packet, claims, _, fragments = _tables(context)
++    catalogue, _ = _quote_catalogue(packet)
++    schema = wire_schema(context)
++    definitions = schema["$defs"]
++    claim_keys = {}
++    for branch in schema["properties"]["cs"]["items"]["anyOf"]:
++        definition = definitions[branch["$ref"].split("/")[-1]]
++        basis = definition["properties"]["b"]
++        labels = [basis["const"]] if "const" in basis else basis["enum"]
++        for label in labels:
++            claim_keys[label] = list(definition["required"])
++    by_claim = {row["claim_id"]: row for row in packet["SOURCE_SYNTACTIC_UNITS"]}
++    bindings = {row["claim_id"]: row for row in packet["ACTUAL_CITATION_BINDINGS"]}
++    quotes = {fid: [] for fid in fragments}
++    for quote_id, reference in catalogue.items():
++        quotes[reference["fragment_id"]].append(quote_id)
++    return {
++        "input_only": True,
++        "root_required_short_keys": list(schema["required"]),
++        "claim_required_short_keys_by_basis": claim_keys,
++        "record_required_short_keys": {
++            name: list(definition["required"])
++            for name, definition in definitions.items()
++            if definition.get("type") == "object"
++        },
++        "parent_scopes_by_C": {
++            alias: {
++                "actual_unit_ids": [unit["unit_id"] for unit in by_claim[cid]["units"]],
++                "own_source_domains": {
++                    row["evidence_id"]: list(row["allowed_fragment_ids"])
++                    for row in bindings[cid]["citations"]
++                },
++            }
++            for alias, cid in claims.items()
++        },
++        "valid_quote_ids_by_fragment": quotes,
++    }
++
++
+ def reference_instructions(context):
+     packet, claims, requirements, _ = _tables(context)
+     catalogue, unavailable = _quote_catalogue(packet)
+@@ -334,6 +375,7 @@
+         "field_aliases": KEYS,
+         "claim_aliases": claims,
+         "requirement_aliases": requirements,
++        "selection_index": _selection_index(context),
+         "whole_fragment_quote_ids": [
+             qid for qid, row in catalogue.items() if row["sentence_start"] is None
+         ],
+@@ -376,6 +418,19 @@
+         "including honest negative judgments. Copy these exact metadata fields into the "
+         "output root: " + _json({"v": VERSION, "h": context.digest})
+         + ". Claim/requirement aliases identify only their original records. "
++        "selection_index is input-only; do not emit it as output. Its required-key lists "
++        "describe the existing schema, never values or defaults. Use these exact short "
++        "wire keys instead of canonical field names in other instructions or examples: "
++        "citation e/fs/rl, unit u/s/fs/rp/cp/r, requirement evidence e/f/p. Use the "
++        "required claim keys for the independently chosen basis; nonfactual and "
++        "evidence_limitation have no s. Independently classify "
++        "the unchanged claims; the index assigns no basis or support. For textbook "
++        "claims, return every actual_unit_id listed for that C alias. own_source_domains "
++        "are allowlists, not selected evidence: explicitly select every needed same-parent "
++        "fragment in ci under its own e, then require each unit's fs to occur "
++        "in that same parent's returned ci. In requirement ev, p must be one of the "
++        "valid_quote_ids_by_fragment for its f; f itself is a valid p only when listed. "
++        "An empty domain supplies no default reference. IDs never establish entailment. "
+         "In requirement evidence, p is one fixed quote ID from this codebook, never "
+         "coordinates. A whole-fragment ID equals f and restores that complete "
+         "original SOURCE_FRAGMENTS text. Long Q IDs identify the listed consecutive "

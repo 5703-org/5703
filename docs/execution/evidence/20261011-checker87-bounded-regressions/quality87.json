@@ -1,0 +1,1717 @@
+{
+  "schema": "independent_incremental_quality87_v1",
+  "updated_utc": "2026-10-11T20:56:22.401688+00:00",
+  "scope": "Independent offline review of current public saved outputs only; no new provider requests, DB, credentials, Main writes or full-suite runs",
+  "assessment_type": "exposed AI source/rubric assessment; not Human Gold or scientific certification",
+  "prospective_rubric_pins": [
+    {
+      "path": "5703-checker85-quality/questions85-frozen.json",
+      "bytes": 4261,
+      "sha256": "9d35553d2b973e082152e0d119c1bdbff3102ef55a4936d47fe93d337d6f19da"
+    },
+    {
+      "path": "5703-checker85-quality/rubric85-frozen.json",
+      "bytes": 44448,
+      "sha256": "7b083b29202be757683944e08ec508844440403dcbccf1c85f44e983f97964d6"
+    }
+  ],
+  "prior_cohorts_modified": false,
+  "phase87_limits": {
+    "provider_request_cap": 16,
+    "cost_cap_USD": "1.00",
+    "prior_closed_batches_not_reused": true
+  },
+  "observed_summary": {
+    "cases_reviewed": 7,
+    "actual_provider_POST": 15,
+    "known_settled_USD": "0.0918119",
+    "UNKNOWN_full_protection_USD": "0",
+    "published_factual_API_answers": 2,
+    "normal_gate_nonpublication": 1,
+    "DOM_samples": 0,
+    "formal_scientific_quality_qualified": false,
+    "stable_p95_qualified": false,
+    "project_or_course_completion_claimed": false,
+    "all_five_protected_old_metadata_unchanged_each": true,
+    "future_planned_cases_are_not_silent_successes": true,
+    "components_reviewed": 1,
+    "snapshot_basis": "Seven reviewed normal-case final receipts plus reserved4096 component; no new model requests made by reviewer",
+    "API_failed_cases": 5,
+    "confirmed_ordinary_gate_nonpublication": 1,
+    "case04_precise_failure_cause_pending": false,
+    "complete_teacher_components_without_checker_API_DOM_acceptance": 1,
+    "unconditional_quality_PASS_cases": 0,
+    "normal_case_questions_attempted": 7,
+    "confirmed_ordinary_semantic_gate_nonpublication": 1,
+    "checker_consistency_gate_nonpublication": 1,
+    "checker_transport_decode_nonpublication": 3,
+    "original_phase85_cohort_fixed8_outcomes_unchanged": true
+  },
+  "cases": [
+    {
+      "case_id": "01",
+      "question_sha256": "9196b34afff52d3c6a660e413b3321d7778a5b1823ff102089c2ead993401ea5",
+      "actual_stage": {
+        "api_status": "API_COMPLETED",
+        "job_state": "succeeded",
+        "published_factual_answer": true,
+        "checker_hydrated": true,
+        "raw_checker_labels_are_independent_scientific_proof": false
+      },
+      "finance": {
+        "actual_provider_POST": 2,
+        "settled_known_USD": "0.0108074",
+        "UNKNOWN_full_protection_USD": "0E-7",
+        "closure": "CLOSED_NUMERIC_NO_UNKNOWN",
+        "automatic_retries": 0,
+        "prior_batches_occupancy": 0
+      },
+      "timing": {
+        "API_complete_response_ms": 8436.494500001572,
+        "failed_API_terminal_ms": null,
+        "backend_worker_reported_ms": 8023.095,
+        "DOM_n": 0,
+        "full_DOM_ms": null,
+        "valid_page_sample": false,
+        "stable_p95_qualified": false
+      },
+      "owned_closure": {
+        "threads_closed": true,
+        "all_five_old_metadata_unchanged": true
+      },
+      "saved_evidence": {
+        "source_count": 8,
+        "fragment_count": 64,
+        "claims": 5,
+        "syntactic_units": 9,
+        "input_canonical_sha256": "18ca12e79d71e1a3c71e6226e50097f517f0be691ff29dd86ad4c502ba2d38cd",
+        "hydrated_judgment_canonical_sha256": "6b2cf4733d6331f491c4a79be7cfa76baec0cc211b17950a8d4c14c4ff4b1634"
+      },
+      "input_pins": [
+        {
+          "path": "5703-checker87-runtime/case01/journey-receipt87.json",
+          "bytes": 3440,
+          "sha256": "3620f3bc42766bd004e819ba2c7e717070b5edac4285b119eb67934fab0c88b9"
+        },
+        {
+          "path": "5703-checker87-runtime/case01/api-closure77.json",
+          "bytes": 1207,
+          "sha256": "d7e8f96e921431c54a280bd8d5b8fef0cef1557a1806852f06a17e749901a1c8"
+        },
+        {
+          "path": "5703-checker87-runtime/case01/native-provider70/final-receipt.json",
+          "bytes": 1107,
+          "sha256": "0c3e05f9430802f6d848b67a1986692b49106082823a2f458bf2155da02e0dda"
+        },
+        {
+          "path": "5703-checker87-runtime/case01/native-provider70/slot-01-public-inputs.json",
+          "bytes": 89567,
+          "sha256": "cf1b9d7dfe275434e85b294f6dab5a51452916028c5b6284b189d288831099a2"
+        },
+        {
+          "path": "5703-checker87-runtime/case01/native-provider70/slot-01-normal-outcome.json",
+          "bytes": 1985,
+          "sha256": "a444b61b1fd6434203395868d03976467b4ab00140fa8befe640ab24ee79a050"
+        },
+        {
+          "path": "5703-checker87-runtime/case01/native-provider70/slot-02-public-inputs.json",
+          "bytes": 149929,
+          "sha256": "185cd8211eff468f018a3aad8d610041d6c875a7adc1311397c7c13c92519540"
+        },
+        {
+          "path": "5703-checker87-runtime/case01/native-provider70/slot-02-normal-outcome.json",
+          "bytes": 10829,
+          "sha256": "a08dcbd14e0ba90e386f67d18948136e6a38cc00bb1f20b964a1800d23bf8fc0"
+        }
+      ],
+      "rubric": "Baseline prompt requirements; separate from original prospective eight-question cohort",
+      "teacher_short_answer": null,
+      "independent_status": "CORE_CORRECT_WITH_LITERAL_CITATION_SCOPE_CAVEAT",
+      "all_published_factual_clauses_literal_support_PASS": false,
+      "science_or_course_acceptance_PASS": false,
+      "sentence_assessment": [
+        {
+          "sentence": 1,
+          "fact": "Enzyme composition protein or RNA",
+          "own_evidence": [
+            "ev_001"
+          ],
+          "selected_fragments": [
+            "F006"
+          ],
+          "assessment": "explicitly_supported"
+        },
+        {
+          "sentence": 2,
+          "fact": "Most enzymes are proteins and catalyze biochemical reactions inside cells",
+          "own_evidence": [
+            "ev_003",
+            "ev_005"
+          ],
+          "selected_fragments": [
+            "F021",
+            "F022",
+            "F037",
+            "F038",
+            "F039"
+          ],
+          "assessment": "explicitly_supported_including_legitimate_cross_fragment_union"
+        },
+        {
+          "sentence": 3,
+          "fact": "Catalyst increases reaction rate without itself undergoing change",
+          "own_evidence": [
+            "ev_001"
+          ],
+          "selected_fragments": [
+            "F002"
+          ],
+          "assessment": "explicitly_supported"
+        },
+        {
+          "sentence": 4,
+          "fact": "Generic catalyst preserves exergonic/endergonic classification and reactant/product free energy",
+          "own_evidence": [
+            "ev_003",
+            "ev_005"
+          ],
+          "selected_fragments": [
+            "F027",
+            "F028",
+            "F041",
+            "F042",
+            "F043"
+          ],
+          "assessment": "generic_class_scope_not_explicit_in_own_quoted_fragments",
+          "limitation": "Own sources phrase these thermodynamic statements about enzymes. Generalizing to all catalysts is scientifically plausible, but the selected own passages do not literally assert the broader class. No biochemical contradiction established."
+        },
+        {
+          "sentence": 5,
+          "fact": "Catalysts lower activation energy",
+          "own_evidence": [
+            "ev_001",
+            "ev_003",
+            "ev_005",
+            "ev_004"
+          ],
+          "selected_fragments": [
+            "F007",
+            "F029",
+            "F033",
+            "F044"
+          ],
+          "assessment": "explicitly_supported"
+        }
+      ],
+      "initial_client_only_error": {
+        "before_model_submission": true,
+        "classification": "Root-reported initial client regex failure followed by patched allowlist/direct client on same owned server",
+        "separate_new_model_question": false,
+        "initial_driver_exit_is_not_model_or_job_failure": true,
+        "initial_error_receipt_independently_pinned": false
+      },
+      "reviewed_fragment_pins": [
+        {
+          "fragment_id": "F006",
+          "evidence_id": "ev_001",
+          "text_bytes": 125,
+          "text_sha256": "5cc796e42304e39305a398202f46c783b17a83764013f6f45cc5528d0ae59c82",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F007",
+          "evidence_id": "ev_001",
+          "text_bytes": 114,
+          "text_sha256": "a236b06061f59c9fab76269e2b9319622cc73e4c6918db1b449ce9819f77678e",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F027",
+          "evidence_id": "ev_003",
+          "text_bytes": 115,
+          "text_sha256": "9890906c6a771269547534528a1adce83f1a6dfc1ed52128e9882292af39900b",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F028",
+          "evidence_id": "ev_003",
+          "text_bytes": 80,
+          "text_sha256": "9d38bc957a0e8f9d6dba15eb705cd3a1807274cd17ad6b2bc70d735ae1a54520",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F041",
+          "evidence_id": "ev_005",
+          "text_bytes": 75,
+          "text_sha256": "797d77780987096cb5919010ac29ce1205bf194630c77a93f9f72312ca974f13",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F042",
+          "evidence_id": "ev_005",
+          "text_bytes": 95,
+          "text_sha256": "9e8db6c9c39acb2676021223511f78a626f45b60b5ba3bec7e0c9324dd66fff9",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F043",
+          "evidence_id": "ev_005",
+          "text_bytes": 75,
+          "text_sha256": "d495d53597cff9c6fbb8d4eba3198e1a53fb8b7e970a898f13b24b40491da8f6",
+          "complete_block": true
+        }
+      ]
+    },
+    {
+      "case_id": "03",
+      "rubric_question_id": "development85_03",
+      "question_sha256": "79e10aea43d34d5ec92aaa1d42a4123f94c4991e83cbfa6be3ae55e97891ffe5",
+      "actual_stage": {
+        "api_status": "API_FAILED",
+        "job_state": "failed",
+        "published_factual_answer": false,
+        "teacher_complete": true,
+        "checker_raw_legal_JSON": true,
+        "checker_hydrated": false,
+        "original_semantic_gates_reached": false,
+        "raw_proposed_verdicts_are_gate_PASS_or_refusal": false,
+        "earliest_failed_boundary": "lossless output transport structural decode before original semantic gates"
+      },
+      "actual_failure": {
+        "code": "CHECKER_TRANSPORT_INVALID",
+        "client_observed_code": "TERMINAL_WORKER_FAILED",
+        "adapter_diagnostic_stage": "decode",
+        "exact_job_recovery_pin": {
+          "path": "exact-job-errors87.json",
+          "bytes": 1508,
+          "sha256": "c61e053d89e1846255b534e9b35bf223f70dac5cb6dd284e908e5e240b919fc6"
+        }
+      },
+      "finance": {
+        "actual_provider_POST": 2,
+        "settled_known_USD": "0.0147281",
+        "UNKNOWN_full_protection_USD": "0E-7",
+        "closure": "CLOSED_NUMERIC_NO_UNKNOWN",
+        "automatic_retries": 0,
+        "prior_batches_occupancy": 0
+      },
+      "timing": {
+        "API_complete_response_ms": null,
+        "failed_API_terminal_ms": 11628.383499999472,
+        "backend_worker_reported_ms": null,
+        "DOM_n": 0,
+        "full_DOM_ms": null,
+        "valid_page_sample": false,
+        "stable_p95_qualified": false
+      },
+      "owned_closure": {
+        "threads_closed": true,
+        "all_five_old_metadata_unchanged": true
+      },
+      "saved_evidence": {
+        "source_count": 8,
+        "fragment_count": 69,
+        "claims": 10,
+        "syntactic_units": 20,
+        "input_canonical_sha256": "567d9a043e100f935d98ad05ca54686f3f35ae20e9653c7c6b01cfdff4a82bd5",
+        "raw_checker_JSON_sha256": "9ce1654dc51f51dde76b774d5027b32fb2f70652dc482ee1fd1d4d3b1a0af808",
+        "raw_checker_version": "lossless_unit_findings_v1",
+        "teacher_answer_codepoints": 1512,
+        "teacher_short_answer": null
+      },
+      "input_pins": [
+        {
+          "path": "5703-checker87-runtime/case03/journey-receipt87.json",
+          "bytes": 1695,
+          "sha256": "fec91c019cb2705032adf46a2e2284246f2944eac74f04f3f688f85b71fcd338"
+        },
+        {
+          "path": "5703-checker87-runtime/case03/api-closure77.json",
+          "bytes": 1170,
+          "sha256": "5c0d4da41640e72b96c88774537840afb90b24750b757bf759df72f207212efa"
+        },
+        {
+          "path": "5703-checker87-runtime/case03/native-provider70/final-receipt.json",
+          "bytes": 1107,
+          "sha256": "ff32dd366148c60fc471822d8f2e13116fdede1458903516626a9bd9c3d3ab5e"
+        },
+        {
+          "path": "5703-checker87-runtime/case03/native-provider70/slot-01-public-inputs.json",
+          "bytes": 91726,
+          "sha256": "c9820ec1b6835955f19fdf7eb419495c3ea4472866f879fe0a74a90a439b3826"
+        },
+        {
+          "path": "5703-checker87-runtime/case03/native-provider70/slot-01-normal-outcome.json",
+          "bytes": 2885,
+          "sha256": "0ba986e1a7dd39a43cdfa0be0c577fe307a0c1d774c460d2418be8efea4fec31"
+        },
+        {
+          "path": "5703-checker87-runtime/case03/native-provider70/slot-02-public-inputs.json",
+          "bytes": 187715,
+          "sha256": "1d629dd74c895dc1c4060dca3070ec6441876ff16ea11f95aa1dd2044d321e82"
+        },
+        {
+          "path": "5703-checker87-runtime/case03/native-provider70/slot-02-normal-outcome.json",
+          "bytes": 13919,
+          "sha256": "856cc89eeeb6c9372839fbacb7460c1199b8f45ccfdace377e580bca9a06bd9a"
+        }
+      ],
+      "critical_published_false_positive_observed": false,
+      "quality_PASS": false,
+      "science_or_course_acceptance_PASS": false,
+      "no_history_or_auth_exported": true,
+      "structural_failure": {
+        "policy": "lossless_unit_findings_v1",
+        "missing_parent_status_aliases": [
+          "C002",
+          "C003",
+          "C004",
+          "C005",
+          "C006",
+          "C007",
+          "C008",
+          "C009",
+          "C010"
+        ],
+        "first_failure": "C002 textbook parent lacks required compact status s",
+        "nonfactual_C001_status_omission_legal": true,
+        "raw_claim_rows": 10,
+        "semantic_judgment_not_recovered": true
+      },
+      "independent_status": "THREE_REQUESTED_CONTRASTS_DRAFTED_WITH_UNCITED_FACTUAL_CLAUSES_NO_PUBLICATION",
+      "essential_facts": [
+        {
+          "fact_id": "Q03_F1",
+          "draft_coverage": "covered",
+          "support": "Own-cited body describes activators as well as inhibitors; negated necessarily-inhibitory conclusion is a bounded contrast",
+          "own_sources": [
+            "ev_001/F009",
+            "ev_002/F014"
+          ],
+          "citation_limit": "Separate location/activator and can-inhibit-or-activate sentences lack own citations"
+        },
+        {
+          "fact_id": "Q03_F2",
+          "draft_coverage": "covered",
+          "support": "Own sources describe inhibitor-induced conformational change, less-efficient binding and poor substrate fit",
+          "own_sources": [
+            "ev_001/F004",
+            "ev_001/F007",
+            "ev_002/F013"
+          ],
+          "citation_limit": "Separate conclusion that inhibitor reduces binding/activity has no own citation; activity consequence is a bounded mechanistic join, not a quantitative rate law"
+        },
+        {
+          "fact_id": "Q03_F3",
+          "draft_coverage": "covered_with_activity_inference_limit",
+          "support": "Own sources explicitly describe activation away from active site, shape change and increased affinity/better fit",
+          "own_sources": [
+            "ev_001/F009",
+            "ev_002/F014"
+          ],
+          "citation_limit": "Increased activity is a bounded functional inference; F009 alone does not literally assert an activity increase. Do not convert affinity support into an unrestricted rate guarantee."
+        }
+      ],
+      "uncited_factual_claims": [
+        {
+          "claim_id": "claim_aae3aa4bbd4826f458092357_1",
+          "content": "Sites away from active site; activators bind there too"
+        },
+        {
+          "claim_id": "claim_1659062e9d36a24933186656_1",
+          "content": "Allosteric binding can inhibit or activate depending on molecule"
+        },
+        {
+          "claim_id": "claim_3ec94033a3419330314103fd_1",
+          "content": "Inhibitor reduces substrate binding and activity"
+        }
+      ],
+      "standalone_No": {
+        "claim_id": "claim_1367db799613cb49ca9e3c2d_1",
+        "nonfactual_dialogue_acceptable": true,
+        "not_counted_as_a_scientific_citation_failure": true
+      },
+      "proposed_selected_item_limit": {
+        "claim_alias": "C009",
+        "unit_id": "U02",
+        "fragment": "F009",
+        "limitation": "Affinity increase direct; activity inference is not an exact quoted proposition; proposal never validated"
+      },
+      "reviewed_fragment_pins": [
+        {
+          "fragment_id": "F004",
+          "evidence_id": "ev_001",
+          "text_bytes": 160,
+          "text_sha256": "c88bcaa427e83e0f9bd82d49cd6e7f210d0af07cfbebbcf529c5ddb9df0701c4",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F007",
+          "evidence_id": "ev_001",
+          "text_bytes": 164,
+          "text_sha256": "3ef813f9e1217015612bc3b303b1996d76b48ea577df4124939262cac64396fb",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F009",
+          "evidence_id": "ev_001",
+          "text_bytes": 195,
+          "text_sha256": "678a28daf367010cb775487d57f527376953c80784dd958abcd7660bec270f10",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F013",
+          "evidence_id": "ev_002",
+          "text_bytes": 144,
+          "text_sha256": "b29393684ea53770cfbd18a1025e68132dfa701495363ba9ad93853b2ed0184d",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F014",
+          "evidence_id": "ev_002",
+          "text_bytes": 139,
+          "text_sha256": "e6ecd6524ed57c7d7ce7704fe7061e8bd294762974babe8ac7312d56e278ee7e",
+          "complete_block": true
+        }
+      ]
+    },
+    {
+      "case_id": "04",
+      "rubric_question_id": "development85_04",
+      "question_sha256": "bc771dece3e6c2961dd8ed4aee766ba3b8b3034549ee19977f7b9c68db092bfd",
+      "actual_stage": {
+        "api_status": "API_FAILED",
+        "job_state": "failed",
+        "published_factual_answer": false,
+        "teacher_complete": true,
+        "checker_hydrated": true,
+        "raw_checker_labels_are_independent_scientific_proof": false,
+        "earliest_established_failed_boundary": "Ordinary post-hydration checker consistency gate before publication"
+      },
+      "finance": {
+        "actual_provider_POST": 2,
+        "settled_known_USD": "0.0121614",
+        "UNKNOWN_full_protection_USD": "0E-7",
+        "closure": "CLOSED_NUMERIC_NO_UNKNOWN",
+        "automatic_retries": 0,
+        "prior_batches_occupancy": 0
+      },
+      "timing": {
+        "API_complete_response_ms": null,
+        "failed_API_terminal_ms": 14749.061999998958,
+        "backend_worker_reported_ms": null,
+        "DOM_n": 0,
+        "full_DOM_ms": null,
+        "valid_page_sample": false,
+        "stable_p95_qualified": false
+      },
+      "owned_closure": {
+        "threads_closed": true,
+        "all_five_old_metadata_unchanged": true
+      },
+      "saved_evidence": {
+        "source_count": 9,
+        "fragment_count": 48,
+        "claims": 6,
+        "syntactic_units": 13,
+        "input_canonical_sha256": "e0e0c63662b4ed65caab01aad474a467414ff4f9e8060ab58eb521063c41e1db",
+        "hydrated_judgment_canonical_sha256": "782f1ffb74b3e5f002f2dae2862c2372ba73328cd96c36c77c5fae97c50b60d2",
+        "teacher_answer_codepoints": 525,
+        "teacher_short_answer_present": true
+      },
+      "input_pins": [
+        {
+          "path": "5703-checker87-runtime/case04/journey-receipt87.json",
+          "bytes": 1695,
+          "sha256": "60705c673175ef44c8a5592c7d539afbceb1791544ab570c370fb08285333363"
+        },
+        {
+          "path": "5703-checker87-runtime/case04/api-closure77.json",
+          "bytes": 1170,
+          "sha256": "4f6b91fdb5a81ee95c3a73eef86b4790c02c117f105be41feb5f603e8e5b165c"
+        },
+        {
+          "path": "5703-checker87-runtime/case04/native-provider70/final-receipt.json",
+          "bytes": 1107,
+          "sha256": "04c35c7da7e7a6470819ebea68ef63fdb91c10d40093b416ab62fa4a9a6dce2d"
+        },
+        {
+          "path": "5703-checker87-runtime/case04/native-provider70/slot-01-public-inputs.json",
+          "bytes": 93945,
+          "sha256": "3e3179184c763bc2a465502464e99e8d679d4b160d2620db6c2923011d9f8522"
+        },
+        {
+          "path": "5703-checker87-runtime/case04/native-provider70/slot-01-normal-outcome.json",
+          "bytes": 2001,
+          "sha256": "0258400550311517aec75da5b1af471096394c364dd948b34692636a794943c8"
+        },
+        {
+          "path": "5703-checker87-runtime/case04/native-provider70/slot-02-public-inputs.json",
+          "bytes": 147139,
+          "sha256": "757e0251cfa12ac69545f36985709482d82b893f33b2e0cc81d79be07a2b7279"
+        },
+        {
+          "path": "5703-checker87-runtime/case04/native-provider70/slot-02-normal-outcome.json",
+          "bytes": 11157,
+          "sha256": "5c05f1b7b74e49a56bf4e5dd10a89246c2da8b47cbbc5b7bd7edcf51c05ed955"
+        },
+        {
+          "path": "exact-job-errors87.json",
+          "bytes": 1508,
+          "sha256": "c61e053d89e1846255b534e9b35bf223f70dac5cb6dd284e908e5e240b919fc6"
+        }
+      ],
+      "independent_status": "CORE_DRAFT_CORRECT_BUT_UNCITED_FACTS_MISCLASSIFIED_NO_PUBLIC_ANSWER",
+      "actual_failure": {
+        "client_observed_code": "TERMINAL_WORKER_FAILED",
+        "exact_job_code_recovered": true,
+        "semantic_rejection_inferred_from_labels_only": false,
+        "code": "CHECKER_INCONSISTENT",
+        "issue_codes": [
+          "GENERAL_KNOWLEDGE_BASIS_INVALID"
+        ]
+      },
+      "essential_facts": [
+        {
+          "fact_id": "Q04_F1",
+          "draft_coverage": "present_and_correct",
+          "fact": "Learner assignment is reversed; correct pH2.4 and pOH11.6",
+          "own_support": "Cited check-answer sentence has ev_001/F003; isolated opening verdict has no own citation"
+        },
+        {
+          "fact_id": "Q04_F2",
+          "draft_coverage": "present_and_correct",
+          "fact": "pH2.4/pOH11.6 for stated vinegar hydronium concentration",
+          "own_support": "ev_001/F003 directly gives the pair; factual duplicate sentence has no own citation",
+          "source_extraction_limit": "ev_001/F001 has damaged exponent typography; the question supplies clear 4x10^-3 M, so no clean exponent quote is claimed"
+        },
+        {
+          "fact_id": "Q04_F3",
+          "draft_coverage": "present_and_correct",
+          "fact": "A pH meter directly measures pH; pOH is normally calculated from pH",
+          "own_support": "ev_001/F004 and F005; separate uncited concluding sentence remains factual"
+        }
+      ],
+      "own_cited_short_answer_supported": true,
+      "uncited_factual_claims": [
+        {
+          "claim_id": "claim_ef9bd17313264f9c46a7e974_1",
+          "content": "Learner values are wrong/swapped",
+          "own_citations": [],
+          "checker_basis": "nonfactual",
+          "issue": "This is a factual correctness verdict, not merely dialogue or formatting"
+        },
+        {
+          "claim_id": "claim_d8cfe9b0227f57e6f646109f_1",
+          "content": "Correct numerical pair pH2.4/pOH11.6",
+          "own_citations": [],
+          "checker_basis": "nonfactual",
+          "issue": "Numerical scientific result remains factual despite the label"
+        },
+        {
+          "claim_id": "claim_ec0f6a23da19a8d8bfd179bb_1",
+          "content": "pH is measured directly with a pH meter",
+          "own_citations": [],
+          "checker_basis": "general_knowledge",
+          "issue": "Textbook mode requires own source support; a general-knowledge label cannot substitute"
+        }
+      ],
+      "runtime_source_unavailability_established": false,
+      "budget_lost_requirement03_is_only_lexical_packing_diagnostic": true,
+      "actual_measurement_source_F005_retained": true,
+      "critical_published_false_positive_observed": false,
+      "quality_PASS": false,
+      "science_or_course_acceptance_PASS": false,
+      "reviewed_fragment_pins": [
+        {
+          "fragment_id": "F001",
+          "evidence_id": "ev_001",
+          "text_bytes": 280,
+          "text_sha256": "050f53cd4533186457af8156d308186d0eb9bd28e6fe826f4b2798c57682eb91",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F003",
+          "evidence_id": "ev_001",
+          "text_bytes": 117,
+          "text_sha256": "e23c3fd679860b8913a2cfb14c037476c26a585b80ad1e03b366e4b529a61dc0",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F004",
+          "evidence_id": "ev_001",
+          "text_bytes": 117,
+          "text_sha256": "9830e8e2175ab8b8121ddb51465fc4ebe959598e7b948b0d4f7af31ca02a5c0d",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F005",
+          "evidence_id": "ev_001",
+          "text_bytes": 77,
+          "text_sha256": "c0bd7bc540eb2f3a6102d8ca0b25e5d4a285f62bb262ef72dee66d0efd153447",
+          "complete_block": true
+        }
+      ]
+    },
+    {
+      "case_id": "05",
+      "question_sha256": "e159815e7046927e2c08025e57d0281f18aa174fc19c599a3c4f577c2757cc0f",
+      "actual_stage": {
+        "api_status": "API_FAILED",
+        "job_state": "failed",
+        "published_factual_answer": false,
+        "checker_hydrated": true,
+        "raw_checker_labels_are_independent_scientific_proof": false
+      },
+      "finance": {
+        "actual_provider_POST": 2,
+        "settled_known_USD": "0.0128710",
+        "UNKNOWN_full_protection_USD": "0E-7",
+        "closure": "CLOSED_NUMERIC_NO_UNKNOWN",
+        "automatic_retries": 0,
+        "prior_batches_occupancy": 0
+      },
+      "timing": {
+        "API_complete_response_ms": null,
+        "failed_API_terminal_ms": 11768.649699999514,
+        "backend_worker_reported_ms": null,
+        "DOM_n": 0,
+        "full_DOM_ms": null,
+        "valid_page_sample": false,
+        "stable_p95_qualified": false
+      },
+      "owned_closure": {
+        "threads_closed": true,
+        "all_five_old_metadata_unchanged": true
+      },
+      "saved_evidence": {
+        "source_count": 10,
+        "fragment_count": 57,
+        "claims": 6,
+        "syntactic_units": 16,
+        "input_canonical_sha256": "8dc952990aaf9c3d37da3d0a2da71335fd8f68ab9dcba93d2bd54e1052089a70",
+        "hydrated_judgment_canonical_sha256": "64d955cd4886210629bd05ca2d335be17afb069e3a012d3c9578bf7e6a794b22"
+      },
+      "input_pins": [
+        {
+          "path": "5703-checker87-runtime/case05/journey-receipt87.json",
+          "bytes": 1695,
+          "sha256": "583e3fac24acc360256ff8f3da005c85c01b8e36b6179760e739acc6fe1a0556"
+        },
+        {
+          "path": "5703-checker87-runtime/case05/api-closure77.json",
+          "bytes": 1170,
+          "sha256": "866cfc2c3e51b4c3fa66d479bf03a7363c8fd158b5fc776fd7adc7961383eb49"
+        },
+        {
+          "path": "5703-checker87-runtime/case05/native-provider70/final-receipt.json",
+          "bytes": 1107,
+          "sha256": "300f811818407946fd794dd2c91795c25fe3ed67ec8a52dd2ed639c6c78d584f"
+        },
+        {
+          "path": "5703-checker87-runtime/case05/native-provider70/slot-01-public-inputs.json",
+          "bytes": 100838,
+          "sha256": "b9f5e73a44a73a723926b4c055bdc12447e7a8e9a8b3efd5971795992bbe8910"
+        },
+        {
+          "path": "5703-checker87-runtime/case05/native-provider70/slot-01-normal-outcome.json",
+          "bytes": 2662,
+          "sha256": "4946d219b5f5269f04b11f67af201c0493799873cc27f4ec08b373b82b4a8150"
+        },
+        {
+          "path": "5703-checker87-runtime/case05/native-provider70/slot-02-public-inputs.json",
+          "bytes": 163411,
+          "sha256": "42fd50296db93daba0fa5c5d8703899d4a05e163eb534a16fbba71568462c460"
+        },
+        {
+          "path": "5703-checker87-runtime/case05/native-provider70/slot-02-normal-outcome.json",
+          "bytes": 17469,
+          "sha256": "05f36fd954c25a1acd981b9e2b8db6fa2452c2d9d1e707e6f3354e56fbc375fa"
+        },
+        {
+          "path": "case05-exact-job-error87.json",
+          "bytes": 867,
+          "sha256": "126ae257434b6631eda22d9560cfe5ae7957c88b60cbcfa7a95812ff387fd2ec"
+        }
+      ],
+      "rubric_question_id": "development85_05",
+      "teacher_draft_published": false,
+      "independent_status": "ORDINARY_PROVENANCE_GATE_REJECTED_WITH_ADDITIONAL_DRAFT_SELECTED_SUPPORT_LIMITS",
+      "actual_failure": {
+        "code": "SEMANTIC_CHECK_FAILED",
+        "structural_issue_codes": [
+          "CHECK_PROBLEM_QUOTE_MISMATCH"
+        ],
+        "requirement_issue_codes": [],
+        "failed_checker_gate_names": [],
+        "stop_reason": "insufficient_calls_for_repair_and_recheck",
+        "remaining_provider_calls": 0,
+        "required_repair_and_recheck_calls": 2,
+        "unexpected_worker_crash": false
+      },
+      "essential_facts": [
+        {
+          "fact_id": "Q05_F1",
+          "draft_coverage": "present_and_numeric_result_correct",
+          "value": "0.600 L = 600 mL",
+          "conditions_retained": [
+            "fixed amount",
+            "constant pressure",
+            "kelvin temperatures"
+          ],
+          "source_limit": "Calculation claim itself is uncited; formula_basis=problem_input quotes the numeric/constant-pressure sentence, not a given formula. A conditional arithmetic check does not establish formula provenance."
+        },
+        {
+          "fact_id": "Q05_F2",
+          "draft_coverage": "present",
+          "own_support": "F025 defines T on kelvin scale; F057 defines absolute zero",
+          "source_limit": "Selected F057 alone does not support the additional proportionality clause."
+        },
+        {
+          "fact_id": "Q05_F3",
+          "draft_coverage": "present_as_bounded_insufficiency",
+          "conditions_retained": [
+            "pressure allowed to vary without its new value",
+            "no invented final pressure or unique final volume"
+          ],
+          "source_limit": "F025 retains ideal-gas variable relationship but equation extraction is incomplete; do not call the equation PV=nRT a literal recovered quote."
+        }
+      ],
+      "pure_saved_field_checks": {
+        "reviewer": "delegated independent quote_controls80",
+        "network_DB_auth_model_Main_write": 0,
+        "given_matches_short_answer_quote": false,
+        "short_answer_quote_equals_teacher_short_answer": true,
+        "short_answer_quote_is_original_problem_substring": false,
+        "short_claim_id": "claim_dedcb82dca410e6a206c31dc_1",
+        "derivation_valid": true,
+        "derivation_computed": "0.600",
+        "derivation_tolerance": "0.0005",
+        "derivation_conditional_on_given_rule": true,
+        "full_GenerationService_replay_performed": false
+      },
+      "additional_selected_item_limits": [
+        {
+          "claim_id": "claim_891954e551a0386037febe58_1",
+          "unit_id": "U01",
+          "selected": "ev_003/F023",
+          "issue": "Supports qualitative increase at constant pressure, not the specific derived final value. Do not borrow the sibling calculation as textbook support."
+        },
+        {
+          "claim_id": "claim_c3d3c6260a6e887b5c214036_1",
+          "unit_id": "U03",
+          "selected": "ev_010/F057",
+          "issue": "Defines absolute zero; does not state volume proportional to absolute temperature."
+        }
+      ],
+      "possible_future_generic_short_null": {
+        "removes_optional_duplicate_only": true,
+        "does_not_repair_formula_or_selected_item_support": true,
+        "old_output_modified": false,
+        "new_live_verified": false
+      },
+      "critical_published_false_positive_observed": false,
+      "quality_PASS": false,
+      "reviewed_fragment_pins": [
+        {
+          "fragment_id": "F023",
+          "evidence_id": "ev_003",
+          "text_bytes": 230,
+          "text_sha256": "31418bbbd7053522c0cb28e2375619c64f856b331cbf038ee48afc54828ae935",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F025",
+          "evidence_id": "ev_004",
+          "text_bytes": 557,
+          "text_sha256": "4be707224ec37a5266b57bf2e1550379598446bae62597f16f98f80789e713d8",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F056",
+          "evidence_id": "ev_009",
+          "text_bytes": 167,
+          "text_sha256": "af5c3ca0b90145e560904a7b20ff5be14afbc8023cf3315f9cea534b6ea25714",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F057",
+          "evidence_id": "ev_010",
+          "text_bytes": 108,
+          "text_sha256": "7df4bf9a972c731e9165500f48d011abab2bed7992c9ff641fb9e40e5b2ae486",
+          "complete_block": true
+        }
+      ]
+    },
+    {
+      "case_id": "06",
+      "rubric_question_id": "development85_06",
+      "question_sha256": "ea0adda731dcc65c3190efb769fcd3f9ce5af66598fa77e861e9ff797db909c4",
+      "actual_stage": {
+        "api_status": "API_FAILED",
+        "job_state": "failed",
+        "published_factual_answer": false,
+        "teacher_complete": true,
+        "checker_raw_legal_JSON": true,
+        "checker_hydrated": false,
+        "original_semantic_gates_reached": false,
+        "raw_proposed_verdicts_are_gate_PASS_or_refusal": false,
+        "earliest_failed_boundary": "lossless output transport structural decode before original semantic gates"
+      },
+      "actual_failure": {
+        "code": "CHECKER_TRANSPORT_INVALID",
+        "client_observed_code": "TERMINAL_WORKER_FAILED",
+        "adapter_diagnostic_stage": "decode",
+        "exact_job_recovery_pin": {
+          "path": "exact-job-errors87.json",
+          "bytes": 1508,
+          "sha256": "c61e053d89e1846255b534e9b35bf223f70dac5cb6dd284e908e5e240b919fc6"
+        }
+      },
+      "finance": {
+        "actual_provider_POST": 2,
+        "settled_known_USD": "0.0151368",
+        "UNKNOWN_full_protection_USD": "0E-7",
+        "closure": "CLOSED_NUMERIC_NO_UNKNOWN",
+        "automatic_retries": 0,
+        "prior_batches_occupancy": 0
+      },
+      "timing": {
+        "API_complete_response_ms": null,
+        "failed_API_terminal_ms": 16174.851100000524,
+        "backend_worker_reported_ms": null,
+        "DOM_n": 0,
+        "full_DOM_ms": null,
+        "valid_page_sample": false,
+        "stable_p95_qualified": false
+      },
+      "owned_closure": {
+        "threads_closed": true,
+        "all_five_old_metadata_unchanged": true
+      },
+      "saved_evidence": {
+        "source_count": 7,
+        "fragment_count": 62,
+        "claims": 8,
+        "syntactic_units": 16,
+        "input_canonical_sha256": "7010385bebabf1d74925707ef93986391e8292e59eee0af4ea5496534a7f52f9",
+        "raw_checker_JSON_sha256": "8a5eab34d313a2f61e1046ecb187a3bb51a87fe6a41e5ac5aa1bd0b3fd53cbf2",
+        "raw_checker_version": "single_selection_findings_v2",
+        "teacher_answer_codepoints": 1193,
+        "teacher_short_answer": null
+      },
+      "input_pins": [
+        {
+          "path": "5703-checker87-runtime/case06/journey-receipt87.json",
+          "bytes": 1695,
+          "sha256": "bf08ce5555dc5267a44c3964c23b06918f6fe4b0fc86b783096395fef407eca7"
+        },
+        {
+          "path": "5703-checker87-runtime/case06/api-closure77.json",
+          "bytes": 1170,
+          "sha256": "644775f55a86dd54d26586134783f61b9b71260d07f9f047a11b19639d68c399"
+        },
+        {
+          "path": "5703-checker87-runtime/case06/native-provider70/final-receipt.json",
+          "bytes": 1249,
+          "sha256": "854f20c6b47ac455b4deb9dae447cfaa5261c9707640032a5b4f78bd9f473807"
+        },
+        {
+          "path": "5703-checker87-runtime/case06/native-provider70/slot-01-public-inputs.json",
+          "bytes": 90688,
+          "sha256": "a92db23ce95565e81e7a141cc330ef6b576e597f42a3c97e041a2690cf592bcd"
+        },
+        {
+          "path": "5703-checker87-runtime/case06/native-provider70/slot-01-normal-outcome.json",
+          "bytes": 2578,
+          "sha256": "4a4ef9512833f36a156387ea01c9f3b9bd8edfbea096467882166530b803161c"
+        },
+        {
+          "path": "5703-checker87-runtime/case06/native-provider70/slot-02-public-inputs.json",
+          "bytes": 180455,
+          "sha256": "d9d618fe9d0bd685fc46c0a2a2145856918389508b961f34ac4335f65d76ee33"
+        },
+        {
+          "path": "5703-checker87-runtime/case06/native-provider70/slot-02-normal-outcome.json",
+          "bytes": 15707,
+          "sha256": "4442044fb48343f8278e156cb183b3faeae46d9bc42e18f3beda23feff342318"
+        }
+      ],
+      "critical_published_false_positive_observed": false,
+      "quality_PASS": false,
+      "science_or_course_acceptance_PASS": false,
+      "no_history_or_auth_exported": true,
+      "structural_failure": {
+        "policy": "single_selection_findings_v2",
+        "version_matches": true,
+        "first_failure": "Missing context_sha256 metadata field",
+        "raw_claim_rows": 8,
+        "later_unit_selection_and_semantic_gates_not_reached": true
+      },
+      "independent_status": "PATH_OXYGENATION_DRAFT_CORRECT_BUT_ALVEOLI_ESSENTIAL_OBJECT_OMITTED_AND_EXCLUSIVE_SCOPE_LIMIT",
+      "essential_facts": [
+        {
+          "fact_id": "Q06_F1",
+          "draft_coverage": "covered",
+          "support": "Right ventricle to pulmonary trunk/arteries; relatively deoxygenated blood",
+          "own_sources": [
+            "ev_001/F002",
+            "ev_002/F008",
+            "ev_002/F010"
+          ]
+        },
+        {
+          "fact_id": "Q06_F2",
+          "draft_coverage": "incomplete_required_alveoli_object",
+          "support": "Pulmonary capillary gas exchange/oxygen entry stated",
+          "own_sources": [
+            "ev_002/F009"
+          ],
+          "missing": "Explicit alveoli location absent from answer text",
+          "actual_source_availability": "ev_001/F002 contains lung alveoli, but the oxygenation-location claim itself is only bound to ev_002; retrieved availability does not repair omitted answer text"
+        },
+        {
+          "fact_id": "Q06_F3",
+          "draft_coverage": "covered",
+          "support": "Oxygenated blood via pulmonary veins to left atrium",
+          "own_sources": [
+            "ev_001/F002",
+            "ev_002/F011",
+            "ev_004/F028"
+          ]
+        },
+        {
+          "fact_id": "Q06_F4",
+          "draft_coverage": "covered",
+          "support": "Post-natal pulmonary arteries are relatively deoxygenated despite being arteries",
+          "own_sources": [
+            "ev_002/F010"
+          ]
+        }
+      ],
+      "all_eight_claims_have_own_teacher_citations": true,
+      "additional_scope_limit": {
+        "claim_id": "claim_c4ff8f7e197bafcede5dee42_1",
+        "teacher_clause": "Pulmonary blood oxygen-rich only in returning veins, not pulmonary arteries",
+        "source_scope": "F011 says pulmonary veins are the only post-natal veins carrying highly oxygenated blood; only scopes vein categories, not every place where blood becomes oxygenated",
+        "risk": "Literal exclusive-location reading is stronger than that source, especially after the answer correctly places oxygenation in capillaries. Preserve category/condition scope.",
+        "raw_proposed_selection": [
+          "F011"
+        ],
+        "complementary_same_own_source_needed_for_not_arteries": "F010",
+        "ordinary_model_verdict_not_validated": true
+      },
+      "reviewed_fragment_pins": [
+        {
+          "fragment_id": "F002",
+          "evidence_id": "ev_001",
+          "text_bytes": 1217,
+          "text_sha256": "4a5a23dca1be02d5ef4cd5eb29e41813a537a67889adebb4101d9568b617a080",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F008",
+          "evidence_id": "ev_002",
+          "text_bytes": 158,
+          "text_sha256": "cebc905501bf916f05ca12fa546b61e4926bb1a6b9f5bda4f710d38a3f84fed9",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F009",
+          "evidence_id": "ev_002",
+          "text_bytes": 159,
+          "text_sha256": "1778af2c356883eac2bed73af1d0b4852e7ee0f4ed94b4f87768db7071c43fdc",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F010",
+          "evidence_id": "ev_002",
+          "text_bytes": 134,
+          "text_sha256": "9ccc3b82be794cce4c16b2f23f811e7b25d44955315155577eb5257364ff5de2",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F011",
+          "evidence_id": "ev_002",
+          "text_bytes": 235,
+          "text_sha256": "948802daa964a3f12eb840045ddcaf3c646de2cd8c8d2618caaa64adc2863d2b",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F028",
+          "evidence_id": "ev_004",
+          "text_bytes": 91,
+          "text_sha256": "1708c9b74e45948bbb9bc76c816f13816a555c420f751f197628fc5934330bb2",
+          "complete_block": true
+        }
+      ]
+    },
+    {
+      "case_id": "07",
+      "rubric_question_id": "development85_07",
+      "question_sha256": "bd615ce859d72da72075a72c25ffad9a476e20e8bd3293850cb705775620fafc",
+      "actual_stage": {
+        "api_status": "API_FAILED",
+        "job_state": "failed",
+        "published_factual_answer": false,
+        "teacher_complete": true,
+        "checker_raw_legal_JSON": true,
+        "checker_hydrated": false,
+        "original_semantic_gates_reached": false,
+        "raw_proposed_verdicts_are_gate_PASS_or_refusal": false,
+        "earliest_failed_boundary": "lossless output transport structural decode before original semantic gates"
+      },
+      "actual_failure": {
+        "code": "CHECKER_TRANSPORT_INVALID",
+        "client_observed_code": "TERMINAL_WORKER_FAILED",
+        "adapter_diagnostic_stage": "decode",
+        "exact_job_recovery_pin": {
+          "path": "exact-job-errors87.json",
+          "bytes": 1508,
+          "sha256": "c61e053d89e1846255b534e9b35bf223f70dac5cb6dd284e908e5e240b919fc6"
+        }
+      },
+      "finance": {
+        "actual_provider_POST": 2,
+        "settled_known_USD": "0.0115190",
+        "UNKNOWN_full_protection_USD": "0E-7",
+        "closure": "CLOSED_NUMERIC_NO_UNKNOWN",
+        "automatic_retries": 0,
+        "prior_batches_occupancy": 0
+      },
+      "timing": {
+        "API_complete_response_ms": null,
+        "failed_API_terminal_ms": 11055.453200002376,
+        "backend_worker_reported_ms": null,
+        "DOM_n": 0,
+        "full_DOM_ms": null,
+        "valid_page_sample": false,
+        "stable_p95_qualified": false
+      },
+      "owned_closure": {
+        "threads_closed": true,
+        "all_five_old_metadata_unchanged": true
+      },
+      "saved_evidence": {
+        "source_count": 10,
+        "fragment_count": 76,
+        "claims": 10,
+        "syntactic_units": 18,
+        "input_canonical_sha256": "dba28c7d20a28bbe7059522fec83a863e27e85344c1eeb1e8828d02fed15d798",
+        "raw_checker_JSON_sha256": "6239a93ff5dfa43f4acfb872cacc152e023a2a5cee7a6707875b5b3d285a132e",
+        "raw_checker_version": "single_selection_findings_v2",
+        "teacher_answer_codepoints": 1096,
+        "teacher_short_answer": null
+      },
+      "input_pins": [
+        {
+          "path": "5703-checker87-runtime/case07/journey-receipt87.json",
+          "bytes": 1695,
+          "sha256": "359190e0ed6151cf1411c5f23cbaa9fda1fb8e620a788538ddd39dac33228dad"
+        },
+        {
+          "path": "5703-checker87-runtime/case07/api-closure77.json",
+          "bytes": 1170,
+          "sha256": "287dcfa7474063556de6683b264f54e4d70974dee36fd78680a05072e0a22030"
+        },
+        {
+          "path": "5703-checker87-runtime/case07/native-provider70/final-receipt.json",
+          "bytes": 1249,
+          "sha256": "3ff63a9a00f012e7be48638fafa916d2b8ad7000a8e7cb9c59dee379893f81e4"
+        },
+        {
+          "path": "5703-checker87-runtime/case07/native-provider70/slot-01-public-inputs.json",
+          "bytes": 99816,
+          "sha256": "11b66e8ded8af772ac8026278fb48d1679b5f847ba99c94b8ff00b0c4f12b26b"
+        },
+        {
+          "path": "5703-checker87-runtime/case07/native-provider70/slot-01-normal-outcome.json",
+          "bytes": 2502,
+          "sha256": "3303e31306958a55eef4b79b99ff3a9545758a6a6c07db226d98a662e84d0ff1"
+        },
+        {
+          "path": "5703-checker87-runtime/case07/native-provider70/slot-02-public-inputs.json",
+          "bytes": 177213,
+          "sha256": "a7367eb5979acab3b1a053dba3370730e853d2c15b58d48d9062eefc867ce60a"
+        },
+        {
+          "path": "5703-checker87-runtime/case07/native-provider70/slot-02-normal-outcome.json",
+          "bytes": 7145,
+          "sha256": "ed09d4f96ff9403debff3288d83d03c8ff81cc365483c5d9120c0b3b6b65f0b0"
+        }
+      ],
+      "critical_published_false_positive_observed": false,
+      "quality_PASS": false,
+      "science_or_course_acceptance_PASS": false,
+      "no_history_or_auth_exported": true,
+      "structural_failure": {
+        "policy": "single_selection_findings_v2",
+        "version_matches": true,
+        "context_sha256_present": true,
+        "first_failure_reported_from_exact_decoder_review": "Unknown claim reference",
+        "returned_full_claim_id": "claim_d28561456bb9e91dc1d1e907_1",
+        "required_compact_alias": "C001",
+        "raw_claim_rows": 1,
+        "expected_claim_rows": 10,
+        "first_claim_citations_field_missing": true,
+        "completeness_or_semantic_checks_preempted_by_alias_failure": true
+      },
+      "independent_status": "THREE_REQUIRED_TRANSLATION_FACTS_COVERED_BUT_UNCITED_OPENER_AND_ADDED_CAUSAL_SCOPE",
+      "essential_facts": [
+        {
+          "fact_id": "Q07_F1",
+          "draft_coverage": "covered",
+          "support": "AUG methionine and initiation role; eukaryotic scanning explicitly scoped",
+          "own_sources": [
+            "ev_009/F065",
+            "ev_009/F066",
+            "ev_009/F067",
+            "ev_003/F022"
+          ],
+          "legitimate_cross_fragment_subject_join": true,
+          "every_internal_AUG_restarts_translation_not_claimed": true
+        },
+        {
+          "fact_id": "Q07_F2",
+          "draft_coverage": "covered",
+          "support": "Named UAA/UAG/UGA termination and no added amino acid through release-factor event",
+          "own_sources": [
+            "ev_002/F012",
+            "ev_006/F042",
+            "ev_002/F011",
+            "ev_002/F013"
+          ],
+          "support_kind": "bounded contrast/termination event join; not an unrelated general-knowledge assertion"
+        },
+        {
+          "fact_id": "Q07_F3",
+          "draft_coverage": "covered",
+          "support": "Protein/polypeptide release; subunits dissociate and leave mRNA",
+          "own_sources": [
+            "ev_001/F002",
+            "ev_001/F003",
+            "ev_001/F004",
+            "ev_002/F013"
+          ]
+        }
+      ],
+      "uncited_factual_claims": [
+        {
+          "claim_id": "claim_d28561456bb9e91dc1d1e907_1",
+          "content": "AUG start/coding role versus named stop termination signals",
+          "own_citations": [],
+          "raw_checker_proposal": "unsupported",
+          "proposal_is_not_validated_semantic_refusal": true
+        }
+      ],
+      "extra_relation_limit": {
+        "claim_id": "claim_9fb42ac81c8bbc0d3a8ee51c_1",
+        "teacher_clause": "Release factors recognize stop codons because they resemble tRNAs",
+        "own_source": "ev_001/F001",
+        "source_relation": "Stop codons recognized by protein release factors that resemble tRNAs",
+        "issue": "Source states recognition and resemblance; it does not explicitly say the resemblance causes recognition. This added causal explanation lacks direct support in the selected own passage.",
+        "biochemical_contradiction_established": false
+      },
+      "additional_cited_facts_supported": [
+        "Peptidyl transferase water-addition mechanism in ev_001/F002",
+        "P-site detach/protein release in F003",
+        "Post-translation mRNA degradation/reuse in F005 with after-many-ribosomes condition"
+      ],
+      "reviewed_fragment_pins": [
+        {
+          "fragment_id": "F001",
+          "evidence_id": "ev_001",
+          "text_bytes": 115,
+          "text_sha256": "5da0ffd89ef3f7ec270e971f413dbaa8b8b4a2f029fccecc24e272a8ba016a9d",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F002",
+          "evidence_id": "ev_001",
+          "text_bytes": 156,
+          "text_sha256": "ee299ec28471ff7d483b4151bf412bf6e470456e72735f99a827725d7a453e28",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F003",
+          "evidence_id": "ev_001",
+          "text_bytes": 107,
+          "text_sha256": "d330a96769dfe9d1d04d0fc3bd88371a49d2dd2e379cf73453684979f34e9c9a",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F004",
+          "evidence_id": "ev_001",
+          "text_bytes": 167,
+          "text_sha256": "728c3bdeb89dfbebecf32613a8f1285e029ea7ecd20fe8f4c9b274e340980f9f",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F005",
+          "evidence_id": "ev_001",
+          "text_bytes": 137,
+          "text_sha256": "8dd83611920856698a3a56e825b554a5ac2193399f811869e55b5ada08e029e9",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F011",
+          "evidence_id": "ev_002",
+          "text_bytes": 95,
+          "text_sha256": "84e1e0ce62bacfbb08fa31127f2141654983f556e1b834ad7773457e238a6a51",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F012",
+          "evidence_id": "ev_002",
+          "text_bytes": 86,
+          "text_sha256": "1123ae534e8085e6cd116de99d56c8edd186d556b45a28058273b2a6c09d71f8",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F013",
+          "evidence_id": "ev_002",
+          "text_bytes": 137,
+          "text_sha256": "3a802148e28da87ad48e7897927819791ce5b1c5fcd4cfea65ee99e19f8c0c1e",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F022",
+          "evidence_id": "ev_003",
+          "text_bytes": 123,
+          "text_sha256": "5cc820452ad288ecac5d33b0ce0a89d81b54c74bba29e5b8f7cfa7834b71538a",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F042",
+          "evidence_id": "ev_006",
+          "text_bytes": 333,
+          "text_sha256": "03b0d9fd42281aced49406e7465f25c4368f83e2841da567e013a8b21d990ea6",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F065",
+          "evidence_id": "ev_009",
+          "text_bytes": 48,
+          "text_sha256": "fedcc814adb4a0f303f6ed6661f7a0d5e9639016bde1738c8648476be6708e40",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F066",
+          "evidence_id": "ev_009",
+          "text_bytes": 111,
+          "text_sha256": "974f139f3c7673625c55e369faa12adc3d5de818edb6013774576ca2071e6030",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F067",
+          "evidence_id": "ev_009",
+          "text_bytes": 92,
+          "text_sha256": "de84104a57d8aa13a9d2bdf2b437dbaafa721c00a514332d7da458b7be9b197b",
+          "complete_block": true
+        }
+      ]
+    },
+    {
+      "case_id": "08",
+      "question_sha256": "32cfb6093a0691704c5f389c7baacdcb19d00b3b4c9c99a69c3a124b66b089c1",
+      "actual_stage": {
+        "api_status": "API_COMPLETED",
+        "job_state": "succeeded",
+        "published_factual_answer": true,
+        "checker_hydrated": true,
+        "raw_checker_labels_are_independent_scientific_proof": false
+      },
+      "finance": {
+        "actual_provider_POST": 2,
+        "settled_known_USD": "0.0127256",
+        "UNKNOWN_full_protection_USD": "0E-7",
+        "closure": "CLOSED_NUMERIC_NO_UNKNOWN",
+        "automatic_retries": 0,
+        "prior_batches_occupancy": 0
+      },
+      "timing": {
+        "API_complete_response_ms": 11442.657700001291,
+        "failed_API_terminal_ms": null,
+        "backend_worker_reported_ms": 10879.828,
+        "DOM_n": 0,
+        "full_DOM_ms": null,
+        "valid_page_sample": false,
+        "stable_p95_qualified": false
+      },
+      "owned_closure": {
+        "threads_closed": true,
+        "all_five_old_metadata_unchanged": true
+      },
+      "saved_evidence": {
+        "source_count": 8,
+        "fragment_count": 54,
+        "claims": 6,
+        "syntactic_units": 18,
+        "input_canonical_sha256": "d6328b819ba57c2603b237f73418822e8f42c415ace83e6e1236dc1270e7051f",
+        "hydrated_judgment_canonical_sha256": "4774da3a8a3694cbf2e1a12fe5d3da006972109f4394d0d4ad041238d85df55a"
+      },
+      "input_pins": [
+        {
+          "path": "5703-checker87-runtime/case08/journey-receipt87.json",
+          "bytes": 4118,
+          "sha256": "5163673a4f2ea2f481707c777a7a43f036923256c337e1ad93da4a1c899046ea"
+        },
+        {
+          "path": "5703-checker87-runtime/case08/api-closure77.json",
+          "bytes": 1207,
+          "sha256": "60baed46af42c9c6865ab16421e99566e657d34c88af3c3201bbcc6171a1c973"
+        },
+        {
+          "path": "5703-checker87-runtime/case08/native-provider70/final-receipt.json",
+          "bytes": 1107,
+          "sha256": "bfb2878a788ae681ffd7b36ab7fc85defa31fc292392d8498e7fa20d791006e2"
+        },
+        {
+          "path": "5703-checker87-runtime/case08/native-provider70/slot-01-public-inputs.json",
+          "bytes": 92339,
+          "sha256": "610b4140f9cdee0e1d46d80c564761fecc51e7225ec5033c517a9c0fc846e72e"
+        },
+        {
+          "path": "5703-checker87-runtime/case08/native-provider70/slot-01-normal-outcome.json",
+          "bytes": 2665,
+          "sha256": "95365f3e8e412568c4f2d185430ce762f4061d0339e4b0a6c62423f8eb9ab0b9"
+        },
+        {
+          "path": "5703-checker87-runtime/case08/native-provider70/slot-02-public-inputs.json",
+          "bytes": 168810,
+          "sha256": "6a4fd82951389ae7ec68e7a8ffed2ecf69882b30d682be34bf6261c5b0ca7ae9"
+        },
+        {
+          "path": "5703-checker87-runtime/case08/native-provider70/slot-02-normal-outcome.json",
+          "bytes": 14901,
+          "sha256": "6ab4ee3a21aa8ade91af21796d756715f7161d01590b4a30cf0f7b0ddcfefa3c"
+        }
+      ],
+      "rubric_question_id": "development85_08",
+      "teacher_short_answer": null,
+      "independent_status": "CORE_REQUIREMENTS_COVERED_BUT_PUBLISHED_CONDITION_SCOPE_AND_SELECTED_SUPPORT_FAIL",
+      "essential_facts": [
+        {
+          "fact_id": "Q08_F1",
+          "status": "supported_by_frozen_bounded_sign_derivation",
+          "own_evidence": "ev_004",
+          "selected": "F029",
+          "limitation": "Sign inference combines specified reacting system and warming surroundings with the source exothermic/negative-q statement; not an inference of a numerical heat."
+        },
+        {
+          "fact_id": "Q08_F2",
+          "status": "supported_by_frozen_bounded_insufficiency_derivation",
+          "own_evidence": [
+            "ev_004",
+            "ev_008",
+            "ev_001"
+          ],
+          "selected": [
+            "F025",
+            "F053",
+            "F054",
+            "F001"
+          ],
+          "conditions_units_retained": [
+            "5.0 degC is temperature change, not energy in J",
+            "steel bomb and water absorb energy",
+            "effective calorimeter heat capacity needed",
+            "no invented water mass or heat capacity"
+          ]
+        },
+        {
+          "fact_id": "Q08_F3",
+          "status": "explicitly_supported_by_own_calibration_source",
+          "own_evidence": "ev_001",
+          "selected": [
+            "F002",
+            "F003",
+            "F005"
+          ],
+          "conditions_retained": [
+            "known reaction heat",
+            "measured benzoic-acid quantity",
+            "generally calibrate before research use"
+          ]
+        }
+      ],
+      "frozen_essential_facts_present_correct": true,
+      "all_published_factual_clauses_condition_support_PASS": false,
+      "model_publication_succeeded": true,
+      "published_checker_false_positive_observed": true,
+      "issues": [
+        {
+          "code": "BOMB_HEAT_BALANCE_SCOPE_LOST",
+          "claim_id": "claim_00c1439d589748d4f7514f4a_1",
+          "units": [
+            "U01",
+            "U02",
+            "U03"
+          ],
+          "teacher_clause": "Heat absorbed by solution equals reaction heat in magnitude and opposite sign",
+          "own_selected": "ev_002/F011",
+          "checker_status": "supported",
+          "checker_conditions_preserved": true,
+          "independent_issue": "For a bomb calorimeter, water/solution alone excludes heat absorbed by the steel bomb. External insulation does not imply zero calorimeter heat absorption. The unqualified solution-only equality drops a necessary condition and conflicts with the later correct whole-bomb explanation.",
+          "actual_saved_condition_witness": "ev_004/F025 explicitly conditions this relationship on calorimeter not absorbing reaction heat and no external heat exchange",
+          "actual_saved_counter_scope_witness": "ev_008/F053 explicitly states that both steel bomb and surrounding water absorb reaction energy",
+          "minimum_scientific_statement": "Energy balance must include the whole calorimeter; qreaction is opposite to its total absorbed heat under the stated insulation, not generally opposite to water/solution heat alone.",
+          "published_source_rubric_limit": "Core requested sign/insufficiency/calibration facts remain covered; this additional published factual clause fails condition preservation."
+        },
+        {
+          "code": "SELECTED_FRAGMENT_CALIBRATION_UNSUPPORTED",
+          "claim_id": "claim_3cce935fd5b7119b854b14e9_1",
+          "unit_id": "U02",
+          "own_selected": "ev_001/F001",
+          "checker_status": "supported",
+          "checker_conditions_preserved": true,
+          "independent_issue": "F001 states known calorimeter heat capacity and temperature increase are used to calculate energy; it does not state how heat capacity is determined.",
+          "actual_same_own_source_support": "ev_001/F002 explicitly states calibration determines heat capacity. This supports the teacher citation as a whole but was not selected by the checker for this unit.",
+          "not_a_foreign_or_missing_teacher_citation": true
+        }
+      ],
+      "quality_PASS": false,
+      "science_or_course_acceptance_PASS": false,
+      "recommended_activation_decision": "KEEP_DEFAULT_OUTPUT_POLICY_OFF; do not treat model-complete/API success as full scientific or selected-item qualification",
+      "reviewed_fragment_pins": [
+        {
+          "fragment_id": "F001",
+          "evidence_id": "ev_001",
+          "text_bytes": 154,
+          "text_sha256": "df6e0c6b19feb16be619d7dbd28601e191cf8c2c3426fa443317351156789a94",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F002",
+          "evidence_id": "ev_001",
+          "text_bytes": 116,
+          "text_sha256": "a9065b36bb4a47fddab9260079edffb09bdf1937c35fc00fb274452fd890b38f",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F011",
+          "evidence_id": "ev_002",
+          "text_bytes": 466,
+          "text_sha256": "c090765a972672832ec64aea0771e8544df078d72dc359bdad11e0e6d203d537",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F025",
+          "evidence_id": "ev_004",
+          "text_bytes": 436,
+          "text_sha256": "fd84f0fa4439795839907e7370638a03a77c364fb4fb33aa1fa268179ae2dcc6",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F029",
+          "evidence_id": "ev_004",
+          "text_bytes": 165,
+          "text_sha256": "a6bbd4891713cd9bd18210c953221838b39dc6eafa0d9ec9663ca7b24127e1d3",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F053",
+          "evidence_id": "ev_008",
+          "text_bytes": 92,
+          "text_sha256": "5cd0bf93af5c7be2da7c6390345458db2339ca742ec73c90876671dd4d8c560c",
+          "complete_block": true
+        },
+        {
+          "fragment_id": "F054",
+          "evidence_id": "ev_008",
+          "text_bytes": 154,
+          "text_sha256": "df6e0c6b19feb16be619d7dbd28601e191cf8c2c3426fa443317351156789a94",
+          "complete_block": true
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Case05 exact runtime failure comes from the scoped actual job error saved by Root; offline pure checks confirm quote mismatch and conditional arithmetic, not a complete service replay.",
+    "Baseline source passages about enzyme thermodynamics do not literally assert every generic catalyst; no contradiction was established.",
+    "API-complete latency is not page Send-to-complete-DOM timing.",
+    "No blanket source entailment is inferred from hydrated quote IDs or model flags.",
+    "No raw textbook blocks, response envelopes/user identifiers, authentication, history, or private scopes exported here.",
+    "Current03/06/07 legal raw JSON never passed structural hydration; readable proposed labels cannot establish an original semantic-gate rejection or PASS. Old85/86 causes/results remain separate and immutable."
+  ],
+  "components": [
+    {
+      "component_id": "reserved4096",
+      "question_id": "development85_03",
+      "type": "same_saved_teacher_input_output_cap_comparison",
+      "input_proof": {
+        "saved_input_exact_sha256_match": true,
+        "messages_exact_canonical_sha256_match": true,
+        "messages_sha256": "468dba1544fa6242500af43d07f2c19808a7810096c5d0086c271f438b7673cd",
+        "logical_schema_sha256": "149a9433de28318e6c1d1174c06937762e7db073977ab125d48ae80232f4ae2b",
+        "input_tokens_old_new": [
+          15981,
+          15981
+        ],
+        "only_config_delta": {
+          "max_tokens": [
+            2048,
+            4096
+          ]
+        },
+        "same_json_structure_except_cap_verified_by_root_plan": true,
+        "seed": null,
+        "temperature": null,
+        "single_observation_each": true,
+        "legacy_actual_wire_sha256": "792c8af779eee972a04d3dd34d8f731fed530a5b6007671f5e5e58ac56229fec",
+        "legacy_actual_wire_bytes": 44976,
+        "plan_reconstructed_old_wire_sha256": "1da2a18ab75d097fdf620337f90bce3e66502d8442c3bf90a3638c4b9c3198dd",
+        "legacy_actual_wire_matches_plan_reconstructed_old": false,
+        "new_actual_wire_sha256": "6eb14902eb83feb790c51b343d42436ddd82cf3c9a075d9000c11d821927caf7",
+        "new_actual_wire_bytes": 44976,
+        "new_actual_wire_matches_plan": true,
+        "byte_identity_except_cap_vs_old_network_request_established": false,
+        "wire_hash_limit": "Saved public JSON sorted nested object keys; the plan rebuilt a structurally equal compiler payload with insertion-order serialization. Old actual wire claim differs from reconstructed old wire. Specific old byte-order difference not recovered; do not equate structural input equality to byte-identical old network wire."
+      },
+      "observed_old_teacher": {
+        "budget_tokens": 2048,
+        "finish_reason": "length",
+        "error_code": "OUTPUT_TRUNCATED",
+        "output_tokens": 2048,
+        "reasoning_tokens": 1517,
+        "adapter_latency_ms": 9546,
+        "settled_known_USD": "0.0026221",
+        "complete_typed_teacher": false,
+        "old_batch_immutable": true,
+        "charged_to_current_batch": false
+      },
+      "observed_new_teacher": {
+        "budget_tokens": 4096,
+        "finish_reason": "stop",
+        "error": null,
+        "output_tokens": 529,
+        "reasoning_tokens": 0,
+        "adapter_latency_ms": 3722,
+        "component_elapsed_ms": 3733.012,
+        "actual_provider_POST": 1,
+        "settled_known_USD": "0.0018626",
+        "complete_typed_teacher": true,
+        "answer_body_codepoints": 1337,
+        "answer_body_UTF8_bytes": 1337,
+        "short_answer": null,
+        "actual_citations": [
+          "ev_001",
+          "ev_002"
+        ],
+        "optional_checker_started": false,
+        "API_answer_published": false,
+        "DOM_n": 0
+      },
+      "independent_draft_review": {
+        "all_three_requested_contrasts_covered": true,
+        "essential_facts": [
+          {
+            "fact_id": "Q03_F1",
+            "coverage": "No necessary inhibition; cited body explicitly distinguishes allosteric activators and inhibitors",
+            "own_support": [
+              "ev_001",
+              "ev_002"
+            ],
+            "support_kind": "direct contrast plus bounded negation; the separate opening negative factual clause is uncited"
+          },
+          {
+            "fact_id": "Q03_F2",
+            "coverage": "Inhibitor binds away from active site, changes enzyme shape, reduces affinity and substrate-binding efficiency/activity",
+            "own_support": [
+              "ev_001",
+              "ev_002"
+            ],
+            "support_kind": "direct binding/shape/affinity and bounded depicted functional consequence"
+          },
+          {
+            "fact_id": "Q03_F3",
+            "coverage": "Activator binds away from active site, changes shape and raises active-site substrate affinity/binding/activity",
+            "own_support": [
+              "ev_001",
+              "ev_002"
+            ],
+            "support_kind": "direct shape/affinity and bounded better-fit consequence; no general quantitative rate claimed"
+          }
+        ],
+        "own_source_text_sha256_verified": [
+          {
+            "evidence_id": "ev_001",
+            "chunk_id": "8b5b98d71bef10564d87f66de5bb02c20ab6",
+            "text_sha256": "e0b6763da3aebbb6633e43187a61d270398d90c0a5e9250a2061162f08070982"
+          },
+          {
+            "evidence_id": "ev_002",
+            "chunk_id": "7fc79afc078898cf9ef035c06a3b56c7fd28",
+            "text_sha256": "3ebb91b77e1d073781415c05a34da3d8b3c037e544332ed014eecf93c11d3fee"
+          }
+        ],
+        "uncited_factual_opener_remains": true,
+        "uncited_opener": "The evidence does not support saying that every molecule binding at an allosteric site necessarily inhibits an enzyme.",
+        "uncited_final_scope_comment": "The evidence on enzyme shape and substrate fit is specific to allosteric regulation and does not address every other possible binding event.",
+        "all_scientific_clauses_own_citation_PASS": false,
+        "not_checker_validated": true,
+        "science_or_course_acceptance_PASS": false
+      },
+      "comparison_limits": [
+        "Changing output cap produced a complete typed teacher in this one observation; no seed and distinct sampled output/reasoning prevent attribution of latency or reasoning changes solely to the cap.",
+        "Prior9546ms and new3722ms are adapter generation observations, not complete answers or DOM timings.",
+        "No matched successful answer samples, p95, semantic acceptance or guaranteed truncation cure claimed.",
+        "Optional checker was not executed; remaining uncited opener has not passed the original support gates."
+      ],
+      "input_pins": [
+        {
+          "path": "5703-checker87-reserved-root/comparison-plan87.json",
+          "bytes": 4945,
+          "sha256": "135afa0c665fda944440f0f36792434475c15ba2038914405f1922ea860b949e"
+        },
+        {
+          "path": "5703-checker87-runtime/reserved4096/normal-outcome.json",
+          "bytes": 2710,
+          "sha256": "7dd9c184d7e7ea60184224ff2585a6c8c0ad55796359a60743af2e6bc3f2d370"
+        },
+        {
+          "path": "5703-checker87-runtime/reserved4096/component-receipt.json",
+          "bytes": 2834,
+          "sha256": "fce298ef44b6b914e20671604540242bac637c77ecc31bb5420e96caff20db28"
+        },
+        {
+          "path": "5703-checker87-runtime/reserved4096/financial.json",
+          "bytes": 154,
+          "sha256": "4efd82638481249cb68cc6bd8e93e046eaea7db3aa4b432523a70db8f9aaf0ad"
+        },
+        {
+          "path": "5703-checker86-runtime/case03r/native-provider70/slot-01-public-inputs.json",
+          "bytes": 91726,
+          "sha256": "c9820ec1b6835955f19fdf7eb419495c3ea4472866f879fe0a74a90a439b3826"
+        },
+        {
+          "path": "5703-checker86-runtime/case03r/native-provider70/slot-01-normal-outcome.json",
+          "bytes": 2906,
+          "sha256": "00149a87ef104b52c395142d118ca2b32027f64d5d3eb9bba9d0ab95a77a8f11"
+        },
+        {
+          "path": "5703-checker86-runtime/case03r/native-provider70/slot-01-claim.json",
+          "bytes": 297,
+          "sha256": "6b969c3b248cb363d5ec53e0d344685bac407ab50bbb990b091b515e35ef3e94"
+        },
+        {
+          "path": "5703-checker87-runtime/cohort-ledger/post-09-claim.json",
+          "bytes": 436,
+          "sha256": "daa7bec7c700c117d4860fe82031f1e9e1b852fe006130bf2224365790bf2967"
+        }
+      ]
+    }
+  ],
+  "revision_history": [
+    {
+      "previous_quality87_bytes": 26677,
+      "previous_quality87_sha256": "175365c64d626d5087ab1696ab5e6d641b7b3beed1cd39ef5b6ef7c33dda9aaf",
+      "change": "Added actual case04 and reserved same-input4096 teacher component; existing three case assessments retained"
+    },
+    {
+      "previous_quality87_bytes": 42257,
+      "previous_quality87_sha256": "f095541307b2f6e117114fb02d26a41c3cdfaea5dad4d3233e512f1a7d9770ac",
+      "change": "Added actual normal cases03,06,07 and exact owned errors for03/04/06/07. Prior case/body assessments and reserved wire mismatch preserved."
+    }
+  ]
+}

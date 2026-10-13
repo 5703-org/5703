@@ -1,0 +1,48 @@
+{
+  "schema": "5703_haiku_route_targeted_free_validation_v1",
+  "recorded_at_UTC": "2026-10-09T06:35:47.296470+00:00",
+  "status": "PASS",
+  "unit": {
+    "command": [
+      "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+      "-I",
+      "-B",
+      "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-cache-ready-verification-20261009-01\\run_haiku_route_isolated_PREPARED08.py"
+    ],
+    "exit_code": 0,
+    "log": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-cache-ready-verification-20261009-01\\ACTUAL_HAIKU_ROUTE_FREE08.log",
+      "bytes": 192,
+      "sha256": "c644e7dc9841eb6cf80a14ffac28cca26d9084b560303118cd5282b4d72f5d3f"
+    },
+    "junit": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-cache-ready-verification-20261009-01\\haiku-route-junit08.xml",
+      "bytes": 26696,
+      "sha256": "4e8dd3af577e0d274461c1260993aa72e4c3cf7793fef5cd377eb22d6a2ca1e9"
+    }
+  },
+  "static": {
+    "command": [
+      "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+      "-I",
+      "-B",
+      "-m",
+      "ruff",
+      "check",
+      "--no-cache",
+      "E:\\5703\\learning-assistant\\generation\\openrouter_routes.py"
+    ],
+    "exit_code": 0,
+    "output": "All checks passed!\n"
+  },
+  "Main_route": {
+    "path": "E:\\5703\\learning-assistant\\generation\\openrouter_routes.py",
+    "bytes": 7411,
+    "sha256": "97769022a282df53ec5d1048c6c257211e4e82dad7a923a2e45ff3cad97b4da7"
+  },
+  "provider_POSTs": 0,
+  "real_database_connections": 0,
+  "network_and_DNS_denied": true,
+  "dotenv_reads_denied": true,
+  "full_suite_rerun": false
+}

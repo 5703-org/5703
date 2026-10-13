@@ -1,0 +1,754 @@
+{
+  "status": "ACTUAL_OFFLINE_EXACT_RESPONSE_REPLAY_AND_AUTHORED_CONTROLS_PASS",
+  "at_UTC": "2026-10-08T03:20:36.641567+00:00",
+  "actual_model_response_unchanged": true,
+  "actual_raw_sha256": "e463119e88e10538d34216779271b85ab16ab063fa1953d578edad81c31bf490",
+  "original_wire_reconstruction": {
+    "bytes": 39469,
+    "sha256": "140b7bfa09f47e41e1f8da3127c15b763ad3a6c06695a182235441253b2a32b2",
+    "exact_saved_wire_match": true
+  },
+  "transport": {
+    "model": "google/gemini-3.5-flash-lite",
+    "route_profile": "gemini35_google_vertex_v1",
+    "json_format": "json_object",
+    "schema_name": "joint_check_v5",
+    "compact_findings_v3_enabled": false
+  },
+  "frozen_schema_current_typed_contract_and_wire_schema_consistent": true,
+  "requirement_evidence_required_keys": [
+    "evidence_id",
+    "fragment_id",
+    "quote"
+  ],
+  "claim_citation_required_keys": [
+    "evidence_id",
+    "fragment_ids",
+    "relation"
+  ],
+  "exact_original_result": {
+    "typed_valid": false,
+    "accepted_by_named_local_gates": false,
+    "human_rating": null,
+    "independent_scientific_evaluation": false,
+    "schema_issues": [
+      {
+        "code": "CHECKER_SCHEMA_INVALID",
+        "feedback_version": "checker_contract_feedback_v2",
+        "field_errors": [
+          {
+            "path": [
+              "requirements",
+              0,
+              "evidence",
+              0,
+              "fragment_id"
+            ],
+            "error_type": "missing"
+          },
+          {
+            "path": [
+              "requirements",
+              0,
+              "evidence",
+              0,
+              "fragment_ids"
+            ],
+            "error_type": "extra_forbidden"
+          },
+          {
+            "path": [
+              "requirements",
+              0,
+              "evidence",
+              1,
+              "fragment_id"
+            ],
+            "error_type": "missing"
+          },
+          {
+            "path": [
+              "requirements",
+              0,
+              "evidence",
+              1,
+              "fragment_ids"
+            ],
+            "error_type": "extra_forbidden"
+          },
+          {
+            "path": [
+              "requirements",
+              0,
+              "evidence",
+              2,
+              "fragment_id"
+            ],
+            "error_type": "missing"
+          },
+          {
+            "path": [
+              "requirements",
+              0,
+              "evidence",
+              2,
+              "fragment_ids"
+            ],
+            "error_type": "extra_forbidden"
+          },
+          {
+            "path": [
+              "requirements",
+              0,
+              "evidence",
+              3,
+              "fragment_id"
+            ],
+            "error_type": "missing"
+          },
+          {
+            "path": [
+              "requirements",
+              0,
+              "evidence",
+              3,
+              "fragment_ids"
+            ],
+            "error_type": "extra_forbidden"
+          }
+        ],
+        "total_error_count": 8
+      }
+    ]
+  },
+  "same_raw_with_candidate_result": {
+    "typed_valid": false,
+    "accepted_by_named_local_gates": false,
+    "human_rating": null,
+    "independent_scientific_evaluation": false,
+    "schema_issues": [
+      {
+        "code": "CHECKER_SCHEMA_INVALID",
+        "feedback_version": "checker_contract_feedback_v2",
+        "field_errors": [
+          {
+            "path": [
+              "requirements",
+              0,
+              "evidence",
+              0,
+              "fragment_id"
+            ],
+            "error_type": "missing"
+          },
+          {
+            "path": [
+              "requirements",
+              0,
+              "evidence",
+              0,
+              "fragment_ids"
+            ],
+            "error_type": "extra_forbidden"
+          },
+          {
+            "path": [
+              "requirements",
+              0,
+              "evidence",
+              1,
+              "fragment_id"
+            ],
+            "error_type": "missing"
+          },
+          {
+            "path": [
+              "requirements",
+              0,
+              "evidence",
+              1,
+              "fragment_ids"
+            ],
+            "error_type": "extra_forbidden"
+          },
+          {
+            "path": [
+              "requirements",
+              0,
+              "evidence",
+              2,
+              "fragment_id"
+            ],
+            "error_type": "missing"
+          },
+          {
+            "path": [
+              "requirements",
+              0,
+              "evidence",
+              2,
+              "fragment_ids"
+            ],
+            "error_type": "extra_forbidden"
+          },
+          {
+            "path": [
+              "requirements",
+              0,
+              "evidence",
+              3,
+              "fragment_id"
+            ],
+            "error_type": "missing"
+          },
+          {
+            "path": [
+              "requirements",
+              0,
+              "evidence",
+              3,
+              "fragment_ids"
+            ],
+            "error_type": "extra_forbidden"
+          }
+        ],
+        "total_error_count": 8
+      }
+    ]
+  },
+  "candidate_does_not_relax_validation": true,
+  "controls": [
+    {
+      "name": "authored_singular_evidence_plural_claim_citations",
+      "kind": "authored_structural_positive",
+      "result": {
+        "typed_valid": true,
+        "accepted_by_named_local_gates": true,
+        "human_rating": null,
+        "independent_scientific_evaluation": false,
+        "all_eleven_independent_flags": {
+          "body_ok": true,
+          "specific_help": true,
+          "scope_ok": true,
+          "suggestions_ok": true,
+          "evidence_display_ok": true,
+          "cumulative_ok": true,
+          "complete_answer": true,
+          "limitations_explicit": true,
+          "attempt_evaluation_ok": true,
+          "tutor_question_ok": true,
+          "non_repetitive_next_action": true
+        },
+        "exact_claim_count": 4,
+        "returned_claim_count": 4,
+        "binding_issues": [],
+        "requirement_contract_issues": [],
+        "requirement_defects": [],
+        "coherence_issues": [],
+        "identity_issues": [],
+        "basis_issues": [],
+        "optimistic_body_diagnostics": [],
+        "derivation_validations": [],
+        "original_applicable_surface_gates": {
+          "effective_body_ok": true,
+          "all_factual_support": true,
+          "attempt_evaluation_ok": true,
+          "tutor_question_ok": true,
+          "permitted_help": true,
+          "enabled_suggestions": true,
+          "enabled_evidence_display": true,
+          "enabled_cumulative": true
+        }
+      }
+    },
+    {
+      "name": "mixed_singular_and_plural_requirement_keys",
+      "kind": "authored_negative",
+      "result": {
+        "typed_valid": false,
+        "accepted_by_named_local_gates": false,
+        "human_rating": null,
+        "independent_scientific_evaluation": false,
+        "schema_issues": [
+          {
+            "code": "CHECKER_SCHEMA_INVALID",
+            "feedback_version": "checker_contract_feedback_v2",
+            "field_errors": [
+              {
+                "path": [
+                  "requirements",
+                  0,
+                  "evidence",
+                  0,
+                  "fragment_ids"
+                ],
+                "error_type": "extra_forbidden"
+              }
+            ],
+            "total_error_count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "unknown_requirement_evidence_key",
+      "kind": "authored_negative",
+      "result": {
+        "typed_valid": false,
+        "accepted_by_named_local_gates": false,
+        "human_rating": null,
+        "independent_scientific_evaluation": false,
+        "schema_issues": [
+          {
+            "code": "CHECKER_SCHEMA_INVALID",
+            "feedback_version": "checker_contract_feedback_v2",
+            "field_errors": [
+              {
+                "path": [
+                  "requirements",
+                  0,
+                  "evidence",
+                  0,
+                  "reason_detail"
+                ],
+                "error_type": "extra_forbidden"
+              }
+            ],
+            "total_error_count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "singular_requirement_field_with_array_value",
+      "kind": "authored_negative",
+      "result": {
+        "typed_valid": false,
+        "accepted_by_named_local_gates": false,
+        "human_rating": null,
+        "independent_scientific_evaluation": false,
+        "schema_issues": [
+          {
+            "code": "CHECKER_SCHEMA_INVALID",
+            "feedback_version": "checker_contract_feedback_v2",
+            "field_errors": [
+              {
+                "path": [
+                  "requirements",
+                  0,
+                  "evidence",
+                  0,
+                  "fragment_id"
+                ],
+                "error_type": "string_type"
+              }
+            ],
+            "total_error_count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "missing_required_requirement_field",
+      "kind": "authored_negative",
+      "result": {
+        "typed_valid": false,
+        "accepted_by_named_local_gates": false,
+        "human_rating": null,
+        "independent_scientific_evaluation": false,
+        "schema_issues": [
+          {
+            "code": "CHECKER_SCHEMA_INVALID",
+            "feedback_version": "checker_contract_feedback_v2",
+            "field_errors": [
+              {
+                "path": [
+                  "requirements",
+                  0,
+                  "evidence",
+                  0,
+                  "fragment_id"
+                ],
+                "error_type": "missing"
+              }
+            ],
+            "total_error_count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "singular_claim_citation_key_wrong_contract",
+      "kind": "authored_negative",
+      "result": {
+        "typed_valid": false,
+        "accepted_by_named_local_gates": false,
+        "human_rating": null,
+        "independent_scientific_evaluation": false,
+        "schema_issues": [
+          {
+            "code": "CHECKER_SCHEMA_INVALID",
+            "feedback_version": "checker_contract_feedback_v2",
+            "field_errors": [
+              {
+                "path": [
+                  "claims",
+                  0,
+                  "textbook",
+                  "citations",
+                  0,
+                  "fragment_id"
+                ],
+                "error_type": "extra_forbidden"
+              }
+            ],
+            "total_error_count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "nine_requirement_evidence_rows_rejected",
+      "kind": "authored_negative",
+      "result": {
+        "typed_valid": false,
+        "accepted_by_named_local_gates": false,
+        "human_rating": null,
+        "independent_scientific_evaluation": false,
+        "schema_issues": [
+          {
+            "code": "CHECKER_SCHEMA_INVALID",
+            "feedback_version": "checker_contract_feedback_v2",
+            "field_errors": [
+              {
+                "path": [
+                  "requirements",
+                  0,
+                  "evidence"
+                ],
+                "error_type": "too_long"
+              }
+            ],
+            "total_error_count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "structurally_valid_but_nonexact_quote",
+      "kind": "authored_negative",
+      "result": {
+        "typed_valid": true,
+        "accepted_by_named_local_gates": false,
+        "human_rating": null,
+        "independent_scientific_evaluation": false,
+        "all_eleven_independent_flags": {
+          "body_ok": true,
+          "specific_help": true,
+          "scope_ok": true,
+          "suggestions_ok": true,
+          "evidence_display_ok": true,
+          "cumulative_ok": true,
+          "complete_answer": true,
+          "limitations_explicit": true,
+          "attempt_evaluation_ok": true,
+          "tutor_question_ok": true,
+          "non_repetitive_next_action": true
+        },
+        "exact_claim_count": 4,
+        "returned_claim_count": 4,
+        "binding_issues": [],
+        "requirement_contract_issues": [
+          {
+            "code": "REQUIREMENT_SOURCE_QUOTE_INVALID",
+            "requirement_id": "requirement_01"
+          }
+        ],
+        "requirement_defects": [],
+        "coherence_issues": [],
+        "identity_issues": [],
+        "basis_issues": [],
+        "optimistic_body_diagnostics": [],
+        "derivation_validations": [],
+        "original_applicable_surface_gates": {
+          "effective_body_ok": true,
+          "all_factual_support": true,
+          "attempt_evaluation_ok": true,
+          "tutor_question_ok": true,
+          "permitted_help": true,
+          "enabled_suggestions": true,
+          "enabled_evidence_display": true,
+          "enabled_cumulative": true
+        }
+      }
+    },
+    {
+      "name": "structurally_valid_wrong_source_identity",
+      "kind": "authored_negative",
+      "result": {
+        "typed_valid": true,
+        "accepted_by_named_local_gates": false,
+        "human_rating": null,
+        "independent_scientific_evaluation": false,
+        "all_eleven_independent_flags": {
+          "body_ok": true,
+          "specific_help": true,
+          "scope_ok": true,
+          "suggestions_ok": true,
+          "evidence_display_ok": true,
+          "cumulative_ok": true,
+          "complete_answer": true,
+          "limitations_explicit": true,
+          "attempt_evaluation_ok": true,
+          "tutor_question_ok": true,
+          "non_repetitive_next_action": true
+        },
+        "exact_claim_count": 4,
+        "returned_claim_count": 4,
+        "binding_issues": [],
+        "requirement_contract_issues": [
+          {
+            "code": "REQUIREMENT_SOURCE_QUOTE_INVALID",
+            "requirement_id": "requirement_01"
+          }
+        ],
+        "requirement_defects": [],
+        "coherence_issues": [],
+        "identity_issues": [],
+        "basis_issues": [],
+        "optimistic_body_diagnostics": [],
+        "derivation_validations": [],
+        "original_applicable_surface_gates": {
+          "effective_body_ok": true,
+          "all_factual_support": true,
+          "attempt_evaluation_ok": true,
+          "tutor_question_ok": true,
+          "permitted_help": true,
+          "enabled_suggestions": true,
+          "enabled_evidence_display": true,
+          "enabled_cumulative": true
+        }
+      }
+    },
+    {
+      "name": "unsupported_claim_positive_body_cannot_publish",
+      "kind": "authored_negative",
+      "result": {
+        "typed_valid": true,
+        "accepted_by_named_local_gates": false,
+        "human_rating": null,
+        "independent_scientific_evaluation": false,
+        "all_eleven_independent_flags": {
+          "body_ok": true,
+          "specific_help": true,
+          "scope_ok": true,
+          "suggestions_ok": true,
+          "evidence_display_ok": true,
+          "cumulative_ok": true,
+          "complete_answer": true,
+          "limitations_explicit": true,
+          "attempt_evaluation_ok": true,
+          "tutor_question_ok": true,
+          "non_repetitive_next_action": true
+        },
+        "exact_claim_count": 4,
+        "returned_claim_count": 4,
+        "binding_issues": [],
+        "requirement_contract_issues": [],
+        "requirement_defects": [],
+        "coherence_issues": [],
+        "identity_issues": [],
+        "basis_issues": [],
+        "optimistic_body_diagnostics": [
+          {
+            "code": "BODY_SUPPORT_CONTRADICTION",
+            "claim_ids": [
+              "claim_042972beceed356a8b58e73f_1"
+            ],
+            "raw_body_ok": true,
+            "effective_body_ok": false,
+            "route": "bounded_semantic_repair",
+            "publication_override": false
+          }
+        ],
+        "derivation_validations": [],
+        "original_applicable_surface_gates": {
+          "effective_body_ok": false,
+          "all_factual_support": false,
+          "attempt_evaluation_ok": true,
+          "tutor_question_ok": true,
+          "permitted_help": true,
+          "enabled_suggestions": true,
+          "enabled_evidence_display": true,
+          "enabled_cumulative": true
+        }
+      }
+    }
+  ],
+  "authored_control_is_not_model_output_repair": true,
+  "normal_control_has_identical_claim_citations_and_all_scientific_values": true,
+  "diagnosis": "The saved model output copied the claim-citation plural fragment_ids layout into four requirement evidence objects. The submitted wire schema explicitly required singular fragment_id and forbade unknown fields; the strict local validator correctly rejected eight defects. No adapter/schema mismatch or truncation is evidenced.",
+  "minimal_candidate": {
+    "scope": "W-only, append-only clarification on unadopted frozen concise system prompt; no current product changes",
+    "reason": "The prompt has concrete populated claim citation examples but its legal requirement example contains an empty evidence list. A concrete nonempty structural example may reduce singular/plural confusion without any default scientific verdict.",
+    "actual_generation_improvement": "UNMEASURED",
+    "scientific_acceptance": "NOT_ASSESSED",
+    "artifacts": [
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\compact-response-replay-20261008-01\\append-only-requirement-field-clarification01.txt",
+        "bytes": 870,
+        "sha256": "9320ae2b1e3bb8a4c6a093c6469e76945021cd90f41b43bb8f0221df238c1342"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\compact-response-replay-20261008-01\\unadopted-concise-system-prompt-candidate01.txt",
+        "bytes": 19675,
+        "sha256": "3f3d6585790aa5216923319589657a134d6b60b6b82b2f556304c40bd8b78ef2"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\compact-response-replay-20261008-01\\unadopted-concise-system-prompt-exact-append01.diff",
+        "bytes": 4006,
+        "sha256": "78416358f95ba150bdc14999f59ccd455af4f6dc2905d58dabd699e6e76a3a46"
+      }
+    ]
+  },
+  "validation_function": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\run_ROOT_fixed_checker_pair_PREPARED02.py",
+    "name": "validate_output",
+    "line": 108,
+    "function_source_sha256": "d0a0072eb55e5592455f41678830cfbec371acb194b9826640ee2dd760c9f561",
+    "only_pure_function_compiled": true
+  },
+  "source_before": [
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\reliability_v3.py",
+      "bytes": 16571,
+      "sha256": "33d72113ee45fa489adaaf274dbfa8f1b342d8cd0834cbb8188713f6c3254fa2"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\reliability_v4.py",
+      "bytes": 10203,
+      "sha256": "0771dd38c821053788608a942033081433ab8ac2ef53afd3d14ed68987b9b56c"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\reliability_v5.py",
+      "bytes": 8366,
+      "sha256": "7260e47e6b51e45834f660f5d0fabb3c142b760f40a6c791fff733c08fd1261d"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checker_contract.py",
+      "bytes": 2958,
+      "sha256": "7b1c3b69d54586b99e14722c8c375bb1481bc452b64f5b2ec71e11052532537e"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checker_encoding.py",
+      "bytes": 4294,
+      "sha256": "57e7fdc229e0732d827af1be3985db8c8ccff91d40e4a6699ad28784ccedf8e2"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\parser.py",
+      "bytes": 7035,
+      "sha256": "5eb3eabae06b786669a74cb362b2a387db873f0b05d8d461592886e7fe49e749"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\providers.py",
+      "bytes": 26220,
+      "sha256": "bbfb74558e1adf5e4850edad02bb117af221c804aaad6e6f260addfe05fb38f4"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\types.py",
+      "bytes": 10086,
+      "sha256": "de000ead20b00c09dcab7e1e7e0bad92685932a67b127731ff8cd8a9d86bd4bb"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\joint_check_v5.txt",
+      "bytes": 13981,
+      "sha256": "de1cd3f969d157ce8447f0e02bef7967bdad7a425941047fcf6284a684587148"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-checker-pair-root-residual-checker-20261008-01\\terminal-receipt01.json",
+      "bytes": 13534,
+      "sha256": "b329f8a10d24d4205b3c5453a723c9b80a05c0476700d62c8f273eb5b58fb0b7"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-compact-repair-20261008-01\\round2-latency-pair-preparation02\\frozen-concise-checker01.json",
+      "bytes": 45575,
+      "sha256": "11faafbb217f405e2d578416b45dbcf4e837e17f988c82fbb32d3c20c2c38b78"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\run_ROOT_fixed_checker_pair_PREPARED02.py",
+      "bytes": 37215,
+      "sha256": "29df6f6ce3977499998a937131e3b64b798a6319be6115106069e3754237a2b0"
+    }
+  ],
+  "source_after": [
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\reliability_v3.py",
+      "bytes": 16571,
+      "sha256": "33d72113ee45fa489adaaf274dbfa8f1b342d8cd0834cbb8188713f6c3254fa2"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\reliability_v4.py",
+      "bytes": 10203,
+      "sha256": "0771dd38c821053788608a942033081433ab8ac2ef53afd3d14ed68987b9b56c"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\reliability_v5.py",
+      "bytes": 8366,
+      "sha256": "7260e47e6b51e45834f660f5d0fabb3c142b760f40a6c791fff733c08fd1261d"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checker_contract.py",
+      "bytes": 2958,
+      "sha256": "7b1c3b69d54586b99e14722c8c375bb1481bc452b64f5b2ec71e11052532537e"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checker_encoding.py",
+      "bytes": 4294,
+      "sha256": "57e7fdc229e0732d827af1be3985db8c8ccff91d40e4a6699ad28784ccedf8e2"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\parser.py",
+      "bytes": 7035,
+      "sha256": "5eb3eabae06b786669a74cb362b2a387db873f0b05d8d461592886e7fe49e749"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\providers.py",
+      "bytes": 26220,
+      "sha256": "bbfb74558e1adf5e4850edad02bb117af221c804aaad6e6f260addfe05fb38f4"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\types.py",
+      "bytes": 10086,
+      "sha256": "de000ead20b00c09dcab7e1e7e0bad92685932a67b127731ff8cd8a9d86bd4bb"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\joint_check_v5.txt",
+      "bytes": 13981,
+      "sha256": "de1cd3f969d157ce8447f0e02bef7967bdad7a425941047fcf6284a684587148"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-checker-pair-root-residual-checker-20261008-01\\terminal-receipt01.json",
+      "bytes": 13534,
+      "sha256": "b329f8a10d24d4205b3c5453a723c9b80a05c0476700d62c8f273eb5b58fb0b7"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-compact-repair-20261008-01\\round2-latency-pair-preparation02\\frozen-concise-checker01.json",
+      "bytes": 45575,
+      "sha256": "11faafbb217f405e2d578416b45dbcf4e837e17f988c82fbb32d3c20c2c38b78"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\run_ROOT_fixed_checker_pair_PREPARED02.py",
+      "bytes": 37215,
+      "sha256": "29df6f6ce3977499998a937131e3b64b798a6319be6115106069e3754237a2b0"
+    }
+  ],
+  "source_unchanged": true,
+  "provider_calls": 0,
+  "network_attempts": [],
+  "keys_read": 0,
+  "Gold_reads": 0,
+  "database_actions": 0,
+  "E_writes": 0,
+  "human_rating": null,
+  "independent_scientific_evaluation": false
+}

@@ -1,0 +1,350 @@
+{
+  "status": "SAVED_ACTUAL_OUTPUT_AUDIT_NOT_FACT_CERTIFICATION",
+  "source_pins": {
+    "E:\\5703\\learning-assistant\\generation\\atomic_support_v1.py": "9964f60756cfa462a48fa80366a30d43617406d3423f1248e287852201306e87",
+    "E:\\5703\\learning-assistant\\generation\\prompts\\atomic_support_v1.txt": "fbd40b59c1fb0df8808392d99fca7f912424c68cabf92e462e1985db68bc4949",
+    "E:\\5703\\learning-assistant\\tests\\fixtures\\atomic_support_v1\\development_cases.json": "2abc45cc2820e34cb154e2f11bd5b54b4ab4b37aff79ebeb08d07fc7660367ad",
+    "E:\\5703\\learning-assistant\\tests\\fixtures\\atomic_support_v1\\independent_ai_expectations.json": "33685a4adfdc603309e234e57cbb32c70766066f506e36e3e69ff8a3f5c94b2b",
+    "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\20261011-atomic-support62\\next-scope\\scope.json": "4005273fb75b90dc452ee301d565963a1d22794b7bc0bd19f6cd04dd9c5ac4c2",
+    "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\20261011-atomic-support62\\next-scope\\DEV01_guarded_relay_positive.wire.json": "582bdf28b93ec0402c5b3b84749633f1a50b53b3bd0385fee3029401099f3ea6",
+    "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\20261011-atomic-support62\\next-scope\\DEV03_dropped_guard_negative.wire.json": "8addf09d9613fc6d65b70a97163be7e36f4e3360bee41a76741dcae838749d15",
+    "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\20261011-atomic-support62\\next-scope\\DEV11_missing_identity_bridge_uncertain.wire.json": "747940e82e8186abd4b7ff05cdad0390c3d43a32f2d6a524af2991bb6a557a32"
+  },
+  "provenance": "Three invented development cases seen by independent AI before this actual run; not held-out or gold.",
+  "validator_provider_requests": 0,
+  "production_writes": 0,
+  "semantic_truth_verified": false,
+  "planned_case_count": 3,
+  "requested_case_numbers": [
+    1,
+    2,
+    3
+  ],
+  "observed_saved_case_count": 3,
+  "planned_cases_not_audited": [],
+  "cases": [
+    {
+      "case_id": "DEV01_guarded_relay_positive",
+      "number": 1,
+      "result_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic64-candidate\\actual64\\case01\\result64.json",
+      "result_sha256": "e859940a525e0552afbad22ff43a11e8ef8cfae19aa3cbff2861f22054f56646",
+      "wire_sha256": "582bdf28b93ec0402c5b3b84749633f1a50b53b3bd0385fee3029401099f3ea6",
+      "capacity_amendment": null,
+      "frozen_expected_overall": "supported",
+      "validation_status": "STRUCTURE_PROVENANCE_AND_REPORT_CONSISTENCY_ONLY",
+      "validation_error": null,
+      "reported_overall": "supported",
+      "overall_label_agreement_with_authored_expectation": true,
+      "condition_audits": [
+        {
+          "condition_id": "C0",
+          "input_condition": {
+            "condition_id": "C0",
+            "description": "If Sensor A reports pressure above 5 kPa and the key is armed, Relay R closes.",
+            "kind": "proposition"
+          },
+          "actual_reported_verdict": "supported",
+          "frozen_authored_verdict": "supported",
+          "label_agreement_with_authored_expectation": true,
+          "actual_evidence_spans": [
+            {
+              "fragment_id": "F1",
+              "start": 67,
+              "end": 160,
+              "quote": "Test rule: when Sensor A reports pressure above 5 kPa while the key is armed, Relay R closes."
+            }
+          ],
+          "quote_offsets_bound": true,
+          "actual_semantic_reason": "The cited text explicitly states the complete proposition that when Sensor A reports pressure above 5 kPa while the key is armed, Relay R closes.",
+          "actual_reported_gap": null,
+          "frozen_authored_gap": null,
+          "semantic_entailment_certified": false
+        },
+        {
+          "condition_id": "C1",
+          "input_condition": {
+            "condition_id": "C1",
+            "description": "The pressure report is from Sensor A and its threshold is above 5 kPa.",
+            "kind": "applicability"
+          },
+          "actual_reported_verdict": "supported",
+          "frozen_authored_verdict": "supported",
+          "label_agreement_with_authored_expectation": true,
+          "actual_evidence_spans": [
+            {
+              "fragment_id": "F1",
+              "start": 67,
+              "end": 160,
+              "quote": "Test rule: when Sensor A reports pressure above 5 kPa while the key is armed, Relay R closes."
+            }
+          ],
+          "quote_offsets_bound": true,
+          "actual_semantic_reason": "The cited text specifies that the pressure report originates from Sensor A and has a threshold above 5 kPa.",
+          "actual_reported_gap": null,
+          "frozen_authored_gap": null,
+          "semantic_entailment_certified": false
+        },
+        {
+          "condition_id": "C2",
+          "input_condition": {
+            "condition_id": "C2",
+            "description": "The stated implication includes the armed-key condition.",
+            "kind": "applicability"
+          },
+          "actual_reported_verdict": "supported",
+          "frozen_authored_verdict": "supported",
+          "label_agreement_with_authored_expectation": true,
+          "actual_evidence_spans": [
+            {
+              "fragment_id": "F1",
+              "start": 67,
+              "end": 160,
+              "quote": "Test rule: when Sensor A reports pressure above 5 kPa while the key is armed, Relay R closes."
+            }
+          ],
+          "quote_offsets_bound": true,
+          "actual_semantic_reason": "The cited text explicitly incorporates the armed-key condition in the implication.",
+          "actual_reported_gap": null,
+          "frozen_authored_gap": null,
+          "semantic_entailment_certified": false
+        },
+        {
+          "condition_id": "C3",
+          "input_condition": {
+            "condition_id": "C3",
+            "description": "The consequence is the closing of Relay R.",
+            "kind": "applicability"
+          },
+          "actual_reported_verdict": "supported",
+          "frozen_authored_verdict": "supported",
+          "label_agreement_with_authored_expectation": true,
+          "actual_evidence_spans": [
+            {
+              "fragment_id": "F1",
+              "start": 67,
+              "end": 160,
+              "quote": "Test rule: when Sensor A reports pressure above 5 kPa while the key is armed, Relay R closes."
+            }
+          ],
+          "quote_offsets_bound": true,
+          "actual_semantic_reason": "The cited text establishes that the consequence of the rule is the closing of Relay R.",
+          "actual_reported_gap": null,
+          "frozen_authored_gap": null,
+          "semantic_entailment_certified": false
+        }
+      ],
+      "additional_gaps": [],
+      "semantic_truth_verified": false,
+      "independent_actual_semantic_review": null,
+      "saved_case_and_wire_binding_verified": true,
+      "provider_stage_metadata": {
+        "status": "OBSERVATION_RETAINED",
+        "transport_attempts": 1,
+        "physical_POSTs_confirmed": 1,
+        "known_cost_USD": "0.0094622",
+        "UNKNOWN_hold_USD": "0",
+        "complete_adapter_return_ms": 9849.5493,
+        "fully_settled": true
+      },
+      "provider_observation": {
+        "provider": "openai_compatible",
+        "model": "google/gemini-3.5-flash-lite",
+        "finish_reason": "stop",
+        "provider_request_id": "gen-1791697352-G70qwQYu6YQYxxASgRif",
+        "request_submitted": true,
+        "latency_ms": 9846,
+        "usage": {
+          "input_tokens": 1599,
+          "output_tokens": 3593,
+          "total_tokens": 5192,
+          "reasoning_tokens": 3195,
+          "cache_hit_input_tokens": 0,
+          "cache_miss_input_tokens": 1599,
+          "cost": 0.0094622
+        },
+        "raw_text_characters": 1513
+      },
+      "validated_result": {
+        "status": "STRUCTURALLY_BOUND_REPORTED_JUDGMENT",
+        "judgment": {
+          "schema_version": "atomic_support_judgment_v1",
+          "atom_id": "A1",
+          "verdict": "supported",
+          "condition_judgments": [
+            {
+              "condition_id": "C0",
+              "verdict": "supported",
+              "evidence_spans": [
+                {
+                  "fragment_id": "F1",
+                  "start": 67,
+                  "end": 160,
+                  "quote": "Test rule: when Sensor A reports pressure above 5 kPa while the key is armed, Relay R closes."
+                }
+              ],
+              "semantic_reason": "The cited text explicitly states the complete proposition that when Sensor A reports pressure above 5 kPa while the key is armed, Relay R closes.",
+              "gap": null
+            },
+            {
+              "condition_id": "C1",
+              "verdict": "supported",
+              "evidence_spans": [
+                {
+                  "fragment_id": "F1",
+                  "start": 67,
+                  "end": 160,
+                  "quote": "Test rule: when Sensor A reports pressure above 5 kPa while the key is armed, Relay R closes."
+                }
+              ],
+              "semantic_reason": "The cited text specifies that the pressure report originates from Sensor A and has a threshold above 5 kPa.",
+              "gap": null
+            },
+            {
+              "condition_id": "C2",
+              "verdict": "supported",
+              "evidence_spans": [
+                {
+                  "fragment_id": "F1",
+                  "start": 67,
+                  "end": 160,
+                  "quote": "Test rule: when Sensor A reports pressure above 5 kPa while the key is armed, Relay R closes."
+                }
+              ],
+              "semantic_reason": "The cited text explicitly incorporates the armed-key condition in the implication.",
+              "gap": null
+            },
+            {
+              "condition_id": "C3",
+              "verdict": "supported",
+              "evidence_spans": [
+                {
+                  "fragment_id": "F1",
+                  "start": 67,
+                  "end": 160,
+                  "quote": "Test rule: when Sensor A reports pressure above 5 kPa while the key is armed, Relay R closes."
+                }
+              ],
+              "semantic_reason": "The cited text establishes that the consequence of the rule is the closing of Relay R.",
+              "gap": null
+            }
+          ],
+          "additional_gaps": []
+        },
+        "local_validation": "structure_identity_and_exact_citation_offsets_only",
+        "semantic_truth_verified": false,
+        "atomic_decomposition_verified": false,
+        "necessary_conditions_complete_verified": false,
+        "human_rating": null,
+        "production_publication_authorized": false
+      },
+      "raw_text_sha256": "dc6365817bac24e7e52c24e84cbd28b7e37c5ae9aca68c8d890271a8ab85d91b"
+    },
+    {
+      "case_id": "DEV03_dropped_guard_negative",
+      "number": 2,
+      "result_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic64-candidate\\actual64\\case02\\result64.json",
+      "result_sha256": "ee68524b6de9c40993cb6f8059ce3d0eaad14b8caabefe38f21fda9c20bc035a",
+      "wire_sha256": "8addf09d9613fc6d65b70a97163be7e36f4e3360bee41a76741dcae838749d15",
+      "capacity_amendment": null,
+      "frozen_expected_overall": "unsupported",
+      "validation_status": "NOT_VALIDATED",
+      "validation_error": "OUTPUT_TRUNCATED",
+      "reported_overall": null,
+      "overall_label_agreement_with_authored_expectation": null,
+      "condition_audits": [],
+      "additional_gaps": null,
+      "semantic_truth_verified": false,
+      "independent_actual_semantic_review": null,
+      "saved_case_and_wire_binding_verified": true,
+      "provider_stage_metadata": {
+        "status": "OBSERVATION_RETAINED",
+        "transport_attempts": 1,
+        "physical_POSTs_confirmed": 1,
+        "known_cost_USD": "0.010675",
+        "UNKNOWN_hold_USD": "0",
+        "complete_adapter_return_ms": 13133.6101,
+        "fully_settled": true
+      },
+      "provider_observation": {
+        "provider": "openai_compatible",
+        "model": "google/gemini-3.5-flash-lite",
+        "finish_reason": "length",
+        "provider_request_id": "gen-1791697361-lfLrtY8WXn6NmbNg5cVC",
+        "request_submitted": true,
+        "latency_ms": 13133,
+        "usage": {
+          "input_tokens": 1575,
+          "output_tokens": 4081,
+          "total_tokens": 5656,
+          "reasoning_tokens": 3931,
+          "cache_hit_input_tokens": 0,
+          "cache_miss_input_tokens": 1575,
+          "cost": 0.010675
+        },
+        "raw_text_characters": 444
+      }
+    },
+    {
+      "case_id": "DEV11_missing_identity_bridge_uncertain",
+      "number": 3,
+      "result_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic64-completion-candidate\\actual64completion\\result64.json",
+      "result_sha256": "74289433e778a839253c9e1ade38e574345ed845be67bf3cae15322225778a5b",
+      "wire_sha256": "dd31e7473003b65f078c25d024a64bf5a992133a4705f201f1f1abbad21501a5",
+      "capacity_amendment": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic64-completion-candidate\\wire64-third8192.json",
+        "amended_wire_sha256": "dd31e7473003b65f078c25d024a64bf5a992133a4705f201f1f1abbad21501a5",
+        "original_wire_sha256": "747940e82e8186abd4b7ff05cdad0390c3d43a32f2d6a524af2991bb6a557a32",
+        "restored_exact_original_body_sha256": "747940e82e8186abd4b7ff05cdad0390c3d43a32f2d6a524af2991bb6a557a32",
+        "sole_change": {
+          "field": "max_tokens",
+          "from": 4096,
+          "to": 8192
+        },
+        "messages_data_schema_model_route_reasoning_unchanged": true,
+        "expectation_and_condition_standards_unchanged": true,
+        "provider_requests_by_validator": 0
+      },
+      "frozen_expected_overall": "uncertain",
+      "validation_status": "NOT_VALIDATED",
+      "validation_error": "JUDGMENT_SLICE_MISMATCH",
+      "reported_overall": null,
+      "overall_label_agreement_with_authored_expectation": null,
+      "condition_audits": [],
+      "additional_gaps": null,
+      "semantic_truth_verified": false,
+      "independent_actual_semantic_review": null,
+      "saved_case_and_wire_binding_verified": true,
+      "provider_stage_metadata": {
+        "status": "OBSERVATION_RETAINED",
+        "transport_attempts": 1,
+        "physical_POSTs_confirmed": 1,
+        "known_cost_USD": "0.0113754",
+        "UNKNOWN_hold_USD": "0",
+        "complete_adapter_return_ms": 13084.0855,
+        "fully_settled": true
+      },
+      "provider_observation": {
+        "provider": "openai_compatible",
+        "model": "google/gemini-3.5-flash-lite",
+        "finish_reason": "stop",
+        "provider_request_id": "gen-1791697667-jDct6buCkEKI2tncUYol",
+        "request_submitted": true,
+        "latency_ms": 13080,
+        "usage": {
+          "input_tokens": 1643,
+          "output_tokens": 4353,
+          "total_tokens": 5996,
+          "reasoning_tokens": 3695,
+          "cache_hit_input_tokens": 0,
+          "cache_miss_input_tokens": 1643,
+          "cost": 0.0113754
+        },
+        "raw_text_characters": 2374
+      }
+    }
+  ],
+  "valid_structure_count": 1,
+  "overall_label_agreement_count": 1,
+  "label_comparison_denominator_complete_validated_cases": 1,
+  "independent_actual_semantic_review": null
+}

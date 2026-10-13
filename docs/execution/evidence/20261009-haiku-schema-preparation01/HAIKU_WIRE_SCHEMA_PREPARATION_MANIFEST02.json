@@ -1,0 +1,163 @@
+{
+  "schema": "5703_haiku_wire_schema_preparation_v1",
+  "status": "W_ONLY_CANDIDATE_ACTUAL_24_FREE_TESTS_PASS_MAIN_NOT_ADOPTED",
+  "not_established_HTTP400_root_cause": true,
+  "profile_only": "haiku55_google_vertex_low_v1",
+  "policy_id": "anthropic_structured_bounds_v1",
+  "documented_array_exception": "minItems integer 0 or 1 only; all maxItems removed",
+  "preserved": [
+    "original local validators and checker prompt",
+    "all fields/types/required/enums/local refs/additionalProperties false/strict",
+    "other profiles original wire and metadata",
+    "stored probes, production default, credentials, database state"
+  ],
+  "actual_fixture_before_projection": {
+    "canonical_schema_sha256": "7988037e08d52662a1b232f049776a42b6d10ad5d896f1a26c8c912b3efd79d4",
+    "bounds": {
+      "maxLength": 18,
+      "minLength": 15,
+      "maxItems": 9
+    },
+    "total_unsupported_bounds": 42
+  },
+  "projection_actual_wire_sha256": "70355e166c78f69ccd65927c425ff3ba93daf18e7e0bd1d9490c7ea6c1746c9b",
+  "files": [
+    {
+      "main_relative_path": "generation/adapters.py",
+      "candidate_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-haiku-wire-schema-preparation-20261009-01\\candidate\\generation\\adapters.py",
+      "bytes": 29552,
+      "sha256": "99075cb07f4faf861119c5fa5113da6951408c02323c14452d090661fd0c3ddb",
+      "existing_main_file_changed": true,
+      "baseline": {
+        "path": "E:\\5703\\learning-assistant\\generation\\adapters.py",
+        "bytes": 29192,
+        "sha256": "62819ed7a7b7282c2e26894cf5a1b19414f923da7e5f60525bc23f156d706834"
+      }
+    },
+    {
+      "main_relative_path": "generation/openrouter_routes.py",
+      "candidate_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-haiku-wire-schema-preparation-20261009-01\\candidate\\generation\\openrouter_routes.py",
+      "bytes": 11703,
+      "sha256": "eb2471e712bc92e5c04495b5353017dbcbc7aa8cdec5451b0ead9f05050588ee",
+      "existing_main_file_changed": true,
+      "baseline": {
+        "path": "E:\\5703\\learning-assistant\\generation\\openrouter_routes.py",
+        "bytes": 7411,
+        "sha256": "97769022a282df53ec5d1048c6c257211e4e82dad7a923a2e45ff3cad97b4da7"
+      }
+    },
+    {
+      "main_relative_path": "generation/probes.py",
+      "candidate_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-haiku-wire-schema-preparation-20261009-01\\candidate\\generation\\probes.py",
+      "bytes": 25431,
+      "sha256": "b9cccc3ae40886da1c327c9721d5d1e1511d200ec72e0e8fbd100c037c12923e",
+      "existing_main_file_changed": true,
+      "baseline": {
+        "path": "E:\\5703\\learning-assistant\\generation\\probes.py",
+        "bytes": 25176,
+        "sha256": "642ba880a6dcd3448513b98c0699175cd2fa6b9dafdaa92b65ea3f513d336df2"
+      }
+    },
+    {
+      "main_relative_path": "tests/unit/test_haiku_wire_schema.py",
+      "candidate_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-haiku-wire-schema-preparation-20261009-01\\test-candidate02\\tests\\unit\\test_haiku_wire_schema.py",
+      "bytes": 14587,
+      "sha256": "bb3a39184d348104d365d2e2cb1e24886b6fd39d41906aa89ae47a32372bae6e",
+      "existing_main_file_changed": false
+    },
+    {
+      "main_relative_path": "tests/unit/test_native_wire_schema_regression.py",
+      "candidate_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-haiku-wire-schema-preparation-20261009-01\\candidate\\tests\\unit\\test_native_wire_schema_regression.py",
+      "bytes": 1610,
+      "sha256": "8fa1712745609f59ae39fb12193294cc7c02895c0876db942d302cca16fce61f",
+      "existing_main_file_changed": false
+    },
+    {
+      "main_relative_path": "tests/unit/fixtures/haiku_actual05_checker_schema.json",
+      "candidate_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-haiku-wire-schema-preparation-20261009-01\\candidate\\tests\\unit\\fixtures\\haiku_actual05_checker_schema.json",
+      "bytes": 6047,
+      "sha256": "08195238e12de5a2e49a575625af7ecd8e4f1bed776ac57853c63a0c7bb80524",
+      "existing_main_file_changed": false
+    }
+  ],
+  "patch_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-haiku-wire-schema-preparation-20261009-01\\HAIKU_WIRE_SCHEMA_PREPARED01.patch",
+    "bytes": 7680,
+    "sha256": "d489d2101ae34daa4fdedf1edd7390cfcb768c041b35ae1a648527f20b8d6480"
+  },
+  "readme_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-haiku-wire-schema-preparation-20261009-01\\README_PREPARED01.md",
+    "bytes": 4859,
+    "sha256": "2bba16f05f71e36404107f7c44e35af87ba0f39e7fbf521485b5cf114cd6c9e2"
+  },
+  "public_source_evidence": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\continuous-preparation\\haiku-schema-analysis\\ACTUAL05_SCHEMA_RECONSTRUCTION01.json",
+      "bytes": 10467,
+      "sha256": "cc7983614605f18ccbcf14f5ea2e466b8ba1a157a40d64a89464e392cfd0c37d"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\model_settings\\compatibility.py",
+      "sha256": "107c3dcb2025e927244a77f4dc1734cbe49c2149b150a02c6314a93896bd3667",
+      "basis": "independent public fingerprint audit; no protected service read"
+    }
+  ],
+  "fingerprint_risks": {
+    "direct_adapter_SHA_in_public_probe_or_activation_gate_observed": false,
+    "configuration_hash_constructor_source_influence": "NOT_PROVEN_PROHIBITED_INTERFACE_NOT_READ",
+    "frozen_source_manifest_successor_required_after_adoption": true,
+    "Haiku_probe_effective_parameters_changes_intentionally_only_for_new_wire_policy": true,
+    "non_Haiku_probe_metadata_changes_intended": false
+  },
+  "execution": {
+    "AST_parse": "PASS_SOURCE_SYNTAX_ONLY",
+    "pytest": "ACTUAL_24_PASS_EXIT0_0.12_SECONDS",
+    "ruff": "NOT_EXECUTED",
+    "API_POSTs": 0,
+    "DB_accesses": 0,
+    "Main_writes": 0,
+    "installs": 0,
+    "forbidden_source_reads": 0
+  },
+  "suggested_affected_tests_after_Root_review": [
+    "tests/unit/test_haiku_wire_schema.py",
+    "tests/unit/test_native_wire_schema_regression.py",
+    "tests/unit/test_openrouter_fixed_routes.py",
+    "tests/unit/test_adapter_replacement.py"
+  ],
+  "supersedes_preparation_manifest_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-haiku-wire-schema-preparation-20261009-01\\HAIKU_WIRE_SCHEMA_PREPARATION_MANIFEST01.json",
+    "bytes": 6103,
+    "sha256": "38cb7f84a572688dd4079024850af3ae7132d5dccd8f51f106bec6ef7c78dbfc"
+  },
+  "actual_validation_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-haiku-wire-schema-preparation-20261009-01\\free-validation04\\ACTUAL_HAIKU_WIRE_SCHEMA_FREE_VALIDATION04.json",
+    "bytes": 1850,
+    "sha256": "3cd78bbf6579909ac13099699496fd01af5eb754dd9f1abbf81be27deeafef58"
+  },
+  "actual_JUnit_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-haiku-wire-schema-preparation-20261009-01\\free-validation04\\junit.xml",
+    "bytes": 3605,
+    "sha256": "9a5552af5e322b70eee17d8802f516970b63e3c83ed5ace8382626803f887acf"
+  },
+  "actual_structural_comparison_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-haiku-wire-schema-preparation-20261009-01\\ACTUAL_HAIKU_FULL_SCHEMA_STRUCTURAL_COMPARISON01.json",
+    "bytes": 3713,
+    "sha256": "c15a0256e7c14df6838e8129ed8ce43bff521b30a46ad948ead937555704374c"
+  },
+  "test_only_keyword_call_fix_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-haiku-wire-schema-preparation-20261009-01\\HAIKU_SYNTHETIC_TEST_KEYWORD_CALL_FIX02.diff",
+    "bytes": 798,
+    "sha256": "95ac4d1c3dc710e2e342e498e0607f609863bc9f553d0f24927e3a526c243256"
+  },
+  "actual_runner_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-haiku-wire-schema-preparation-20261009-01\\run_isolated_haiku_wire_tests_PREPARED04.py",
+    "bytes": 6052,
+    "sha256": "fe38f089431c069af74262eab150482f9655ca8301011e9ca4d6f2fe1115ad2c"
+  },
+  "prior_attempts_preserved": {
+    "01": "ssl bootstrap TypeError before pytest",
+    "02": "local hostname audit blocked pytest JUnit; no final receipt",
+    "03": "22 passed and2 test-call TypeError failures; production source unchanged"
+  }
+}

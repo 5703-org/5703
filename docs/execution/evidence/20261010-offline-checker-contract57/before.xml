@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="5" skipped="0" tests="5" time="1.672" timestamp="2026-10-11T04:07:40.759866+11:00" hostname="SK-20250314EJIZ"><testcase classname="5703-offline-contract57.test_source_relation_correction_feedback" name="test_source_contract_correction_keeps_its_actual_schema_and_honest_verdict[False-source_relation_contract_v1-mismatched_quote-relation_checker-joint_check_source_relations_v1]" time="0.092"><failure message="assert (('Return the complete ' + 'joint_check_source_relations_v1') + ' schema') in 'Re-evaluate exactly the same unchanged draft and source display. Your previous check had contract contradictions. Cor...ES_JSON:\n[{&quot;claim_id&quot;: &quot;claim_84e4f786051c17a7b927816d_1&quot;, &quot;code&quot;: &quot;RELATION_ASSESSED_FRAGMENT_MISMATCH&quot;, &quot;unit&quot;: 1}]'">policy = 'source_relation_contract_v1'
+invalid = &lt;function mismatched_quote at 0x000001815A8E4C20&gt;
+checker = &lt;function relation_checker at 0x000001815A8AED40&gt;
+schema = 'joint_check_source_relations_v1', negative = False
+
+    @pytest.mark.parametrize("policy,invalid,checker,schema", [
+        (V1, mismatched_quote, relation_checker, "joint_check_source_relations_v1"),
+        (V2, unassessed_unit, unit_checker, "joint_check_source_relations_v2"),
+    ])
+    @pytest.mark.parametrize("negative", [False, True])
+    def test_source_contract_correction_keeps_its_actual_schema_and_honest_verdict(
+        policy, invalid, checker, schema, negative
+    ):
+        def corrected(messages):
+            feedback = messages[-1]["content"]
+            assert "Return the complete " + schema + " schema" in feedback
+            assert "Return the complete joint_check_v5 schema." not in feedback
+            value = checker(messages)
+            if negative:
+                row = value["claims"][0]
+                unit = row["units"][0] if policy == V2 else row["obligations"][0]
+                unit.update(status="partial", reason="Authored honest partial; preserve this verdict.")
+            return value
+    
+        adapter = Script([answer(), invalid, corrected])
+        request = req(source_relation_policy=policy,
+            config=ModelConfig(window_tokens=32768, tokenizer_provider="estimate"))
+&gt;       out = GenerationService(adapter).generate(request, RequestBudget(max_calls=3))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+5703-offline-contract57\test_source_relation_correction_feedback.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+E:\5703\learning-assistant\generation\service.py:125: in generate
+    return generate_checked(self, request, budget, on_attempt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E:\5703\learning-assistant\generation\checked.py:2031: in generate_checked
+    checked = invoke(
+E:\5703\learning-assistant\generation\checked.py:668: in invoke
+    result = transport(stage)
+             ^^^^^^^^^^^^^^^^
+E:\5703\learning-assistant\generation\checked.py:556: in transport
+    result = adapter.generate(
+E:\5703\learning-assistant\tests\unit\test_enhancement_generation.py:107: in generate
+    value = value(messages)
+            ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+messages = [{'role': 'system', 'content': 'Independently check the exact proposed answer and its actual source display. Return on..._JSON:\n[{"claim_id": "claim_84e4f786051c17a7b927816d_1", "code": "RELATION_ASSESSED_FRAGMENT_MISMATCH", "unit": 1}]'}]
+
+    def corrected(messages):
+        feedback = messages[-1]["content"]
+&gt;       assert "Return the complete " + schema + " schema" in feedback
+E       assert (('Return the complete ' + 'joint_check_source_relations_v1') + ' schema') in 'Re-evaluate exactly the same unchanged draft and source display. Your previous check had contract contradictions. Cor...ES_JSON:\n[{"claim_id": "claim_84e4f786051c17a7b927816d_1", "code": "RELATION_ASSESSED_FRAGMENT_MISMATCH", "unit": 1}]'
+
+5703-offline-contract57\test_source_relation_correction_feedback.py:36: AssertionError</failure></testcase><testcase classname="5703-offline-contract57.test_source_relation_correction_feedback" name="test_source_contract_correction_keeps_its_actual_schema_and_honest_verdict[False-source_relation_contract_v2-unassessed_unit-unit_checker-joint_check_source_relations_v2]" time="0.014"><failure message="assert (('Return the complete ' + 'joint_check_source_relations_v2') + ' schema') in 'Re-evaluate exactly the same unchanged draft and source display. Your previous check had contract contradictions. Cor...:\n[{&quot;claim_id&quot;: &quot;claim_84e4f786051c17a7b927816d_1&quot;, &quot;code&quot;: &quot;RELATION_ASSESSED_FRAGMENT_MISMATCH&quot;, &quot;unit_id&quot;: &quot;U01&quot;}]'">policy = 'source_relation_contract_v2'
+invalid = &lt;function unassessed_unit at 0x000001815A1C8CC0&gt;
+checker = &lt;function unit_checker at 0x000001815A8E5A80&gt;
+schema = 'joint_check_source_relations_v2', negative = False
+
+    @pytest.mark.parametrize("policy,invalid,checker,schema", [
+        (V1, mismatched_quote, relation_checker, "joint_check_source_relations_v1"),
+        (V2, unassessed_unit, unit_checker, "joint_check_source_relations_v2"),
+    ])
+    @pytest.mark.parametrize("negative", [False, True])
+    def test_source_contract_correction_keeps_its_actual_schema_and_honest_verdict(
+        policy, invalid, checker, schema, negative
+    ):
+        def corrected(messages):
+            feedback = messages[-1]["content"]
+            assert "Return the complete " + schema + " schema" in feedback
+            assert "Return the complete joint_check_v5 schema." not in feedback
+            value = checker(messages)
+            if negative:
+                row = value["claims"][0]
+                unit = row["units"][0] if policy == V2 else row["obligations"][0]
+                unit.update(status="partial", reason="Authored honest partial; preserve this verdict.")
+            return value
+    
+        adapter = Script([answer(), invalid, corrected])
+        request = req(source_relation_policy=policy,
+            config=ModelConfig(window_tokens=32768, tokenizer_provider="estimate"))
+&gt;       out = GenerationService(adapter).generate(request, RequestBudget(max_calls=3))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+5703-offline-contract57\test_source_relation_correction_feedback.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+E:\5703\learning-assistant\generation\service.py:125: in generate
+    return generate_checked(self, request, budget, on_attempt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E:\5703\learning-assistant\generation\checked.py:2031: in generate_checked
+    checked = invoke(
+E:\5703\learning-assistant\generation\checked.py:668: in invoke
+    result = transport(stage)
+             ^^^^^^^^^^^^^^^^
+E:\5703\learning-assistant\generation\checked.py:556: in transport
+    result = adapter.generate(
+E:\5703\learning-assistant\tests\unit\test_enhancement_generation.py:107: in generate
+    value = value(messages)
+            ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+messages = [{'role': 'system', 'content': 'Independently check the exact proposed answer and its actual source display. Return on...n[{"claim_id": "claim_84e4f786051c17a7b927816d_1", "code": "RELATION_ASSESSED_FRAGMENT_MISMATCH", "unit_id": "U01"}]'}]
+
+    def corrected(messages):
+        feedback = messages[-1]["content"]
+&gt;       assert "Return the complete " + schema + " schema" in feedback
+E       assert (('Return the complete ' + 'joint_check_source_relations_v2') + ' schema') in 'Re-evaluate exactly the same unchanged draft and source display. Your previous check had contract contradictions. Cor...:\n[{"claim_id": "claim_84e4f786051c17a7b927816d_1", "code": "RELATION_ASSESSED_FRAGMENT_MISMATCH", "unit_id": "U01"}]'
+
+5703-offline-contract57\test_source_relation_correction_feedback.py:36: AssertionError</failure></testcase><testcase classname="5703-offline-contract57.test_source_relation_correction_feedback" name="test_source_contract_correction_keeps_its_actual_schema_and_honest_verdict[True-source_relation_contract_v1-mismatched_quote-relation_checker-joint_check_source_relations_v1]" time="0.013"><failure message="assert (('Return the complete ' + 'joint_check_source_relations_v1') + ' schema') in 'Re-evaluate exactly the same unchanged draft and source display. Your previous check had contract contradictions. Cor...ES_JSON:\n[{&quot;claim_id&quot;: &quot;claim_84e4f786051c17a7b927816d_1&quot;, &quot;code&quot;: &quot;RELATION_ASSESSED_FRAGMENT_MISMATCH&quot;, &quot;unit&quot;: 1}]'">policy = 'source_relation_contract_v1'
+invalid = &lt;function mismatched_quote at 0x000001815A8E4C20&gt;
+checker = &lt;function relation_checker at 0x000001815A8AED40&gt;
+schema = 'joint_check_source_relations_v1', negative = True
+
+    @pytest.mark.parametrize("policy,invalid,checker,schema", [
+        (V1, mismatched_quote, relation_checker, "joint_check_source_relations_v1"),
+        (V2, unassessed_unit, unit_checker, "joint_check_source_relations_v2"),
+    ])
+    @pytest.mark.parametrize("negative", [False, True])
+    def test_source_contract_correction_keeps_its_actual_schema_and_honest_verdict(
+        policy, invalid, checker, schema, negative
+    ):
+        def corrected(messages):
+            feedback = messages[-1]["content"]
+            assert "Return the complete " + schema + " schema" in feedback
+            assert "Return the complete joint_check_v5 schema." not in feedback
+            value = checker(messages)
+            if negative:
+                row = value["claims"][0]
+                unit = row["units"][0] if policy == V2 else row["obligations"][0]
+                unit.update(status="partial", reason="Authored honest partial; preserve this verdict.")
+            return value
+    
+        adapter = Script([answer(), invalid, corrected])
+        request = req(source_relation_policy=policy,
+            config=ModelConfig(window_tokens=32768, tokenizer_provider="estimate"))
+&gt;       out = GenerationService(adapter).generate(request, RequestBudget(max_calls=3))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+5703-offline-contract57\test_source_relation_correction_feedback.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+E:\5703\learning-assistant\generation\service.py:125: in generate
+    return generate_checked(self, request, budget, on_attempt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E:\5703\learning-assistant\generation\checked.py:2031: in generate_checked
+    checked = invoke(
+E:\5703\learning-assistant\generation\checked.py:668: in invoke
+    result = transport(stage)
+             ^^^^^^^^^^^^^^^^
+E:\5703\learning-assistant\generation\checked.py:556: in transport
+    result = adapter.generate(
+E:\5703\learning-assistant\tests\unit\test_enhancement_generation.py:107: in generate
+    value = value(messages)
+            ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+messages = [{'role': 'system', 'content': 'Independently check the exact proposed answer and its actual source display. Return on..._JSON:\n[{"claim_id": "claim_84e4f786051c17a7b927816d_1", "code": "RELATION_ASSESSED_FRAGMENT_MISMATCH", "unit": 1}]'}]
+
+    def corrected(messages):
+        feedback = messages[-1]["content"]
+&gt;       assert "Return the complete " + schema + " schema" in feedback
+E       assert (('Return the complete ' + 'joint_check_source_relations_v1') + ' schema') in 'Re-evaluate exactly the same unchanged draft and source display. Your previous check had contract contradictions. Cor...ES_JSON:\n[{"claim_id": "claim_84e4f786051c17a7b927816d_1", "code": "RELATION_ASSESSED_FRAGMENT_MISMATCH", "unit": 1}]'
+
+5703-offline-contract57\test_source_relation_correction_feedback.py:36: AssertionError</failure></testcase><testcase classname="5703-offline-contract57.test_source_relation_correction_feedback" name="test_source_contract_correction_keeps_its_actual_schema_and_honest_verdict[True-source_relation_contract_v2-unassessed_unit-unit_checker-joint_check_source_relations_v2]" time="0.014"><failure message="assert (('Return the complete ' + 'joint_check_source_relations_v2') + ' schema') in 'Re-evaluate exactly the same unchanged draft and source display. Your previous check had contract contradictions. Cor...:\n[{&quot;claim_id&quot;: &quot;claim_84e4f786051c17a7b927816d_1&quot;, &quot;code&quot;: &quot;RELATION_ASSESSED_FRAGMENT_MISMATCH&quot;, &quot;unit_id&quot;: &quot;U01&quot;}]'">policy = 'source_relation_contract_v2'
+invalid = &lt;function unassessed_unit at 0x000001815A1C8CC0&gt;
+checker = &lt;function unit_checker at 0x000001815A8E5A80&gt;
+schema = 'joint_check_source_relations_v2', negative = True
+
+    @pytest.mark.parametrize("policy,invalid,checker,schema", [
+        (V1, mismatched_quote, relation_checker, "joint_check_source_relations_v1"),
+        (V2, unassessed_unit, unit_checker, "joint_check_source_relations_v2"),
+    ])
+    @pytest.mark.parametrize("negative", [False, True])
+    def test_source_contract_correction_keeps_its_actual_schema_and_honest_verdict(
+        policy, invalid, checker, schema, negative
+    ):
+        def corrected(messages):
+            feedback = messages[-1]["content"]
+            assert "Return the complete " + schema + " schema" in feedback
+            assert "Return the complete joint_check_v5 schema." not in feedback
+            value = checker(messages)
+            if negative:
+                row = value["claims"][0]
+                unit = row["units"][0] if policy == V2 else row["obligations"][0]
+                unit.update(status="partial", reason="Authored honest partial; preserve this verdict.")
+            return value
+    
+        adapter = Script([answer(), invalid, corrected])
+        request = req(source_relation_policy=policy,
+            config=ModelConfig(window_tokens=32768, tokenizer_provider="estimate"))
+&gt;       out = GenerationService(adapter).generate(request, RequestBudget(max_calls=3))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+5703-offline-contract57\test_source_relation_correction_feedback.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+E:\5703\learning-assistant\generation\service.py:125: in generate
+    return generate_checked(self, request, budget, on_attempt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E:\5703\learning-assistant\generation\checked.py:2031: in generate_checked
+    checked = invoke(
+E:\5703\learning-assistant\generation\checked.py:668: in invoke
+    result = transport(stage)
+             ^^^^^^^^^^^^^^^^
+E:\5703\learning-assistant\generation\checked.py:556: in transport
+    result = adapter.generate(
+E:\5703\learning-assistant\tests\unit\test_enhancement_generation.py:107: in generate
+    value = value(messages)
+            ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+messages = [{'role': 'system', 'content': 'Independently check the exact proposed answer and its actual source display. Return on...n[{"claim_id": "claim_84e4f786051c17a7b927816d_1", "code": "RELATION_ASSESSED_FRAGMENT_MISMATCH", "unit_id": "U01"}]'}]
+
+    def corrected(messages):
+        feedback = messages[-1]["content"]
+&gt;       assert "Return the complete " + schema + " schema" in feedback
+E       assert (('Return the complete ' + 'joint_check_source_relations_v2') + ' schema') in 'Re-evaluate exactly the same unchanged draft and source display. Your previous check had contract contradictions. Cor...:\n[{"claim_id": "claim_84e4f786051c17a7b927816d_1", "code": "RELATION_ASSESSED_FRAGMENT_MISMATCH", "unit_id": "U01"}]'
+
+5703-offline-contract57\test_source_relation_correction_feedback.py:36: AssertionError</failure></testcase><testcase classname="5703-offline-contract57.test_source_relation_correction_feedback" name="test_missing_assessment_identifies_exact_source_without_filling_or_changing_units" time="0.001"><failure message="AssertionError: assert [{'code': 'RE...t_id': 'U02'}] == [{'code': 'RE... 'F002', ...}]&#10;  &#10;  At index 0 diff: {'code': 'RELATION_ASSESSED_FRAGMENT_MISMATCH', 'claim_id': 'c', 'unit_id': 'U02'} != {'code': 'RELATION_ASSESSED_FRAGMENT_MISMATCH', 'claim_id': 'c', 'unit_id': 'U02', 'fragment_id': 'F002', 'evidence_id': 'ev_001'}&#10;  Use -v to get more diff">def test_missing_assessment_identifies_exact_source_without_filling_or_changing_units():
+        values = local_fixture()
+        values[0]["claims"][0]["units"][1]["fragment_ids"] = ["F002"]
+        original = deepcopy(values)
+        contract, defects, assessment = assess_source_relations(*values)
+&gt;       assert contract == [{"code": "RELATION_ASSESSED_FRAGMENT_MISMATCH", "claim_id": "c",
+            "unit_id": "U02", "fragment_id": "F002", "evidence_id": "ev_001"}]
+E       AssertionError: assert [{'code': 'RE...t_id': 'U02'}] == [{'code': 'RE... 'F002', ...}]
+E         
+E         At index 0 diff: {'code': 'RELATION_ASSESSED_FRAGMENT_MISMATCH', 'claim_id': 'c', 'unit_id': 'U02'} != {'code': 'RELATION_ASSESSED_FRAGMENT_MISMATCH', 'claim_id': 'c', 'unit_id': 'U02', 'fragment_id': 'F002', 'evidence_id': 'ev_001'}
+E         Use -v to get more diff
+
+5703-offline-contract57\test_source_relation_correction_feedback.py:68: AssertionError</failure></testcase></testsuite></testsuites>

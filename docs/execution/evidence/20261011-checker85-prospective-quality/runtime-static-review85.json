@@ -1,0 +1,193 @@
+{
+  "schema": "5703_phase85_independent_runtime_static_review_v1",
+  "status": "STATIC_FINAL_PASS",
+  "reviewed_utc": "2026-10-11T17:52:57.607137+00:00",
+  "scope": "Seven named runtime/client sources and pinned public recovery dependency; static source, AST and public source hashes only.",
+  "files": [
+    {
+      "path": "5703-checker85-runtime/budget85.py",
+      "bytes": 15754,
+      "sha256": "44d2c0373c40bfcbf395571108cf6bf8eddf0a911bc8579df2234426c1e8f525"
+    },
+    {
+      "path": "5703-checker85-runtime/normal_transport85.py",
+      "bytes": 29163,
+      "sha256": "e642397dd59da8a3e62eb65a1e56800166de5607b708ca6fd38d91fa1abdfb1d"
+    },
+    {
+      "path": "5703-checker85-runtime/server85.py",
+      "bytes": 17905,
+      "sha256": "8db33cbd90922febd6c08f885bfce367d4b3fafdecfe516cf001a2104ca56851"
+    },
+    {
+      "path": "5703-checker85-runtime/targeted_answer85.py",
+      "bytes": 26871,
+      "sha256": "6abde033b0ec8da3f3567388df6c213fc5d8efacdadb61e7a334e0d83611f91f"
+    },
+    {
+      "path": "5703-checker85-runtime/prepare_runtime85.py",
+      "bytes": 7778,
+      "sha256": "be433cc0ea34cb9243a895e461d87037e64380be52c86e2511f820fb480db99c"
+    },
+    {
+      "path": "5703-checker85-client/api_client85.py",
+      "bytes": 18825,
+      "sha256": "3cda9c216426c48b4081e487cef653be6f649d5e8401ffefb824d703795a7875"
+    },
+    {
+      "path": "5703-checker85-client/recovery85_public.py",
+      "bytes": 12329,
+      "sha256": "f30733500264e24f8274ffd7cf6e453ca619841ae469264f8a6de89928206733"
+    }
+  ],
+  "public_Main_source_manifest": {
+    "path": "5703-checker85-runtime/source-pins85.json",
+    "bytes": 6708,
+    "sha256": "54a9b260ec51339151c905c297b427a7b7a11682074f7da820a893b216717b51",
+    "current_Main_verified_files": 39,
+    "mismatches": 0,
+    "active_source_relation_prompts_verified": true
+  },
+  "runtime_freeze": {
+    "path": "5703-checker85-runtime/runtime-freeze85.json",
+    "bytes": 1940,
+    "sha256": "c51774989e767509c253c58f1340084f275c10197797a1eecb793558e1e82588",
+    "protocol_sha256": "98bb01db0bd3eaa651707de7c18d7dffe58603b180d4621744c2f9d103899273",
+    "five_file_hashes_verified": true,
+    "files": [
+      {
+        "file": "normal_transport85.py",
+        "bytes": 29163,
+        "sha256": "e642397dd59da8a3e62eb65a1e56800166de5607b708ca6fd38d91fa1abdfb1d"
+      },
+      {
+        "file": "targeted_answer85.py",
+        "bytes": 26871,
+        "sha256": "6abde033b0ec8da3f3567388df6c213fc5d8efacdadb61e7a334e0d83611f91f"
+      },
+      {
+        "file": "server85.py",
+        "bytes": 17905,
+        "sha256": "8db33cbd90922febd6c08f885bfce367d4b3fafdecfe516cf001a2104ca56851"
+      },
+      {
+        "file": "budget85.py",
+        "bytes": 15754,
+        "sha256": "44d2c0373c40bfcbf395571108cf6bf8eddf0a911bc8579df2234426c1e8f525"
+      },
+      {
+        "file": "outcome_observer82.py",
+        "bytes": 1916,
+        "sha256": "bc5f8341e98298b064d4c0db93266efda697662429fda050dcec9986ee1c05a2"
+      }
+    ],
+    "case_scope_hashes_in_manifest": 8,
+    "case_scope_contents_not_read": true
+  },
+  "freeze_constant_only_checks": [
+    {
+      "file": "normal_transport85.py",
+      "assignment": "TRANSPORT_PINS",
+      "before_bytes": 28904,
+      "before_sha256": "48b272a9282470e453245a75ba6f0a7e2642a3eeb58e0503ccb78d92364091a0",
+      "after_bytes": 29163,
+      "after_sha256": "e642397dd59da8a3e62eb65a1e56800166de5607b708ca6fd38d91fa1abdfb1d",
+      "only_AST_change_is_pin_assignment": true,
+      "added_pins": [
+        "generation/prompts/source_relation_check_v2.txt",
+        "generation/prompts/source_relation_generation_v2.txt"
+      ],
+      "AST_excluding_pin_assignment_sha256": "a01bf6ce281b0052bfb9d7f4492b877441e12433d7e0214748293a5a2f59120e"
+    },
+    {
+      "file": "targeted_answer85.py",
+      "assignment": "SOURCE_PINS",
+      "before_bytes": 26612,
+      "before_sha256": "90e2c0037b1aeafbfa13843c9eb6551398698eb5b9194eccd34aa615ada9850e",
+      "after_bytes": 26871,
+      "after_sha256": "6abde033b0ec8da3f3567388df6c213fc5d8efacdadb61e7a334e0d83611f91f",
+      "only_AST_change_is_pin_assignment": true,
+      "added_pins": [
+        "generation/prompts/source_relation_check_v2.txt",
+        "generation/prompts/source_relation_generation_v2.txt"
+      ],
+      "AST_excluding_pin_assignment_sha256": "c2618676c699121ff66d4612afc90b52a3deb306f079422dc3d49c78fa548dd1"
+    }
+  ],
+  "shared_public_recovery_source": {
+    "path": "5703-checker84/recovery84_public.py",
+    "bytes": 40262,
+    "sha256": "b6999aa0c7bcba8cd7854f493ecf4e4daa9fe1219ce578c570d9a97d4e59e7eb"
+  },
+  "client_freeze_sha256": "1d49674467e9646784acb7cab62acc605c40445894554f5439e23c69d812290c",
+  "checked_contracts": {
+    "fixed_model_route": {
+      "teacher": [
+        "anthropic/claude-haiku-5.5",
+        "haiku55_google_vertex_low_v1",
+        2048
+      ],
+      "checker": [
+        "google/gemini-3.5-flash-lite",
+        "gemini35_google_vertex_v1",
+        4096
+      ],
+      "provider": "google-vertex/global",
+      "fallbacks": false,
+      "checker_response_format": "json_object"
+    },
+    "post_order": [
+      "teacher/generation",
+      "checker/joint_check"
+    ],
+    "per_case_post_cap": 2,
+    "cohort_post_cap": 20,
+    "cohort_cost_cap_USD": "1.00",
+    "per_post_full_hold_USD": "0.0714688",
+    "initial_extra_four_enabled": false,
+    "shared_budget": "Exclusive fsynced flat ledger; unsafe/unresolved records retain full or greater protection; any UNKNOWN blocks new case/post claims; no retry or reclaim.",
+    "old_closed12": "Provenance only; no old requests or unknown protection reclaimed into this cohort.",
+    "permanent_stop": "Exclusive protocol-bound first marker; future case/post claims deny its presence. Transport stop/context errors and raised/stopped targets call stop_cohort. Root critical-quality stop requires review SHA.",
+    "normal_valid_checker_negative": "Counted and preserved; no automatic semantic STOP, as explicitly directed by Root. Client is not quality decision owner.",
+    "Root_sequence_required": "Finish case, close owned worker, recover read-only, independently review necessary facts/citations, then explicit GO before next case. Critical falsepositive writes review SHA and permanent stop.",
+    "preparation": "Prewarm before listener and Send; query_encoded=False; freeze-only preparer no longer regenerates stale controller templates.",
+    "deadline": "180 seconds anchored at transport case claim after prewarm; bounded normal provider timeout and 200000-byte compiled wire cap.",
+    "worker": "One freshly accepted exact job with owned lock/token and frozen command; no queue scan, old-job takeover, retry or regeneration.",
+    "client": "Loopback18029; one question POST; 210-second work poll deadline, 15-second idle closure; API-only n=0 and no browser/quality claim.",
+    "public_scope": "Disabled profile/history; exact current public corpus release/chunk/span checks; auth remains memory-only and never enters wire/export.",
+    "recovery": "Closed exact job/request/session binding; read-only bounded queries; original teacher text and checker inputs/judgment preserved; double privacy checks and no provider calls."
+  },
+  "resolved_pre_final_findings": [
+    {
+      "finding": "Permanent STOP was only checked, never created.",
+      "resolution": "Existing-budget stop_cohort and transport/server calls added; Root owns the pinned independent quality stop."
+    },
+    {
+      "finding": "Initial preparer could regenerate stale ledger-path/snapshot templates.",
+      "resolution": "One-time generator archived; current preparer only freezes reviewed sources/public inputs."
+    }
+  ],
+  "Root_reported_separate_checks": {
+    "source": "Root release message, not independent re-execution",
+    "eight_case_scopes": "PASS",
+    "old_closed12_two_receipts": "UNCHANGED",
+    "three_registries": "UNCHANGED"
+  },
+  "blockers": [],
+  "remaining_execution_requirement": "Runtime guard owner final controls receipt and Root per-case independent GO remain separate from this static review; no actual runtime/model execution was performed here.",
+  "review_limits": {
+    "static_only": true,
+    "target_modules_imported": 0,
+    "tests_run": 0,
+    "auth_reads": 0,
+    "database_reads": 0,
+    "database_writes": 0,
+    "network_calls": 0,
+    "provider_calls": 0,
+    "Main_writes": 0,
+    "Git_metadata_reads": 0,
+    "unseen_question_contents_read": false,
+    "unseen_rubric_contents_read": false,
+    "scientific_quality_or_latency_claim": false
+  }
+}

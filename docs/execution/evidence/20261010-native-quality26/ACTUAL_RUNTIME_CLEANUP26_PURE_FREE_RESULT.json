@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "authoritative_runtime_candidate": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-native26-cleanup-candidate\\runtime26_cleanup_CANDIDATE.py",
+    "bytes": 105099,
+    "sha256": "74d635b4b74ad31ab0534f32b65e7ee875a89324a71a5daebafbd033c953309e"
+  },
+  "portable_test": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-runtime-cleanup26-regression\\test_runtime_cleanup26.py",
+    "bytes": 8013,
+    "sha256": "869f6a5f374250b4e2422d2965ab15a419c9df58f38d0843599f6b9d4846f8b3"
+  },
+  "extracted_region": "main outer Try.finalbody only",
+  "cleanup_AST_sha256": "5829fb20689bb4e53f534831607fed392a202a9d6c80414a94bea71ef75d093f",
+  "cleanup_line_start": 1501,
+  "cleanup_line_end": 1618,
+  "baseline25_source": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation25\\launch_week10_scientific_native_closure_PREPARED09.py",
+    "bytes": 103167,
+    "sha256": "32957ed39600d6ab062c19118ec29b550b6e2147052e438015455ac44a046c9f"
+  },
+  "baseline25_sticky_stop_premature_abort_reproduced": true,
+  "tests_run": 6,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "resource_error_subtests": 10,
+  "test_output": "test_guard_failure_during_public_refresh_is_separate_from_resource_failure (cleanup26_portable.CleanupTests.test_guard_failure_during_public_refresh_is_separate_from_resource_failure) ... ok\ntest_normal_failed_leg_reaches_receipt_without_success_attestation (cleanup26_portable.CleanupTests.test_normal_failed_leg_reaches_receipt_without_success_attestation) ... ok\ntest_resource_errors_remain_visible_and_do_not_prevent_remaining_releases (cleanup26_portable.CleanupTests.test_resource_errors_remain_visible_and_do_not_prevent_remaining_releases) ... ok\ntest_sticky_guard_stop_does_not_interrupt_physical_cleanup (cleanup26_portable.CleanupTests.test_sticky_guard_stop_does_not_interrupt_physical_cleanup) ... ok\ntest_sticky_stop_and_readonly_status_failure_still_write_receipt (cleanup26_portable.CleanupTests.test_sticky_stop_and_readonly_status_failure_still_write_receipt) ... ok\ntest_success_attests_only_after_unlock_close_and_dispose (cleanup26_portable.CleanupTests.test_success_attests_only_after_unlock_close_and_dispose) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.209s\n\nOK\n",
+  "all_resources_are_in_memory_stubs": true,
+  "public_writes_are_in_memory_collectors": true,
+  "full_runtime_or_Main_imported": false,
+  "actual_network_server_threads_processes_started": false,
+  "provider_calls": 0,
+  "database_accesses": 0,
+  "node_calls": 0,
+  "Main_writes": 0,
+  "audit_denials": [],
+  "only_allowed_output_write": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-runtime-cleanup26-regression\\ACTUAL_RUNTIME_CLEANUP26_PURE_FREE_RESULT.json",
+  "limitation": "Tests prove control flow through the actual candidate cleanup AST using stubs; they do not prove real resource closure. Root must require generated runtime26 cleanup AST equality before use."
+}

@@ -1,0 +1,75 @@
+{
+  "status": "PREPARED_NOT_EXECUTED",
+  "direct_user_quote": "允许将同一71段教材、测试问题及已有回答发送到OpenRouter Gemini/Vertex，最多再8次、总额0.36美元，用于选证修复测试",
+  "repeated_quote_creates_new_grant": false,
+  "prior_slots": 5,
+  "prior_known_USD": "0.11072166",
+  "prior_new_UNKNOWN_USD": "0",
+  "grant_cap_USD": "0.36",
+  "max_new_POSTs": 1,
+  "complete_single_request_hold_USD": "0.055",
+  "conservative_price_bound_USD": "0.0483197",
+  "remaining_slots_before": 3,
+  "remaining_USD_before": "0.24927834",
+  "automatic_retries": 0,
+  "wire_bytes": 88703,
+  "wire_sha256": "53a0c9f1e922496fd3f662e103db0f5a2f91885ef43398586febe2989126a586",
+  "recipient": "https://openrouter.ai/api/v1/chat/completions",
+  "input_pins": {
+    "base_wire": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-selection54\\wire54.json",
+      "sha256": "0e5a761599e224f50a800718f19216198680923e8c8ac617b4f9b5c384c0344c"
+    },
+    "seed": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-selection54\\guided56\\actual54\\selection54_1-result.json",
+      "sha256": "d6b5fc6738107b9ec5b1ca08015a53d22e1264573c188eac95dde93afee8a274"
+    },
+    "index": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-selection54\\index54-56.json",
+      "sha256": "222605cf218df37788814f8f467eecfbafc66231d875135273273204c1b872b9"
+    },
+    "prior54": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-selection54\\actual54\\result54.json",
+      "sha256": "900227ca70d946431a0a39aaa1ad1f0a4d74a9d2bf5d3c4fae88c4894b773b0f"
+    },
+    "prior55": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-selection54\\guided55\\actual54\\result54.json",
+      "sha256": "fd1496cfdfa3fdada4b15bfa264deb896cdd44d5eb9b51e9e955ec6c99ae199d"
+    },
+    "prior56": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-selection54\\guided56\\actual54\\result54.json",
+      "sha256": "165ffa49e52c54ea5b044515c43a0c78dff3f4be1d94bc119d180a6ab2d2edac"
+    },
+    "checked": {
+      "path": "E:\\5703\\learning-assistant\\generation\\checked.py",
+      "sha256": "b4e0cfddbac5ccc96e15aa217f3e26f649782d7bf545bb8dedc6d667b8b5e770"
+    },
+    "relations": {
+      "path": "E:\\5703\\learning-assistant\\generation\\source_relations_v2.py",
+      "sha256": "ab22171c03566ed1f8b97e67bb1d0d5f4b276e0ab0bcc40be487f3b296ceeb11"
+    },
+    "legacy": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-unit-proof-high50-replay-candidate\\run_checker_compatible43_CANDIDATE.py",
+      "sha256": "805d042d61f265d305bda0d29ae7114a7d58f3fc6ac72f32d855c701f0d624ac"
+    }
+  },
+  "controller_sha256": "b5aabe0cabfc730826c9e13e76032c6ec0b1706da1c296f5fc38c80c402164a0",
+  "correction_source_lines": [
+    2424,
+    2440
+  ],
+  "correction_feedback": {
+    "role": "user",
+    "content": "Re-evaluate exactly the same unchanged draft and source display. Your previous check had contract contradictions. Correct only the judgment using the supplied exact claims and aliases; do not assume that supported science is false because its record was malformed. Preserve honest unsupported/partial decisions. The field_errors list gives schema paths and error types only; check every required field, including requirements and non_repetitive_next_action, and use only the fields allowed by each claim basis. Return the complete joint_check_source_relations_v2 schema. CHECKER_CONTRACT_ISSUES_JSON:\n[{\"claim_id\": \"claim_4bbb28fe7a90b6a3f87b6b75_1\", \"code\": \"RELATION_ASSESSED_FRAGMENT_MISMATCH\", \"evidence_id\": \"ev_002\", \"fragment_id\": \"F011\", \"unit_id\": \"U02\"}]"
+  },
+  "original_DATA_unchanged": true,
+  "prior_checker_JSON_outbound": false,
+  "exposed_plans_outbound": false,
+  "source_fragments": 71,
+  "claims": 10,
+  "syntactic_units": 19,
+  "historical_grants_UNKNOWN_and_ledgers": "Unmodified; not settled or reused by this child",
+  "free_prepare_auth_DB_network_operations": 0,
+  "semantic_acceptance": "PENDING_INDEPENDENT_REVIEW",
+  "limitation": "One diagnostic correction; not native integration, held-out quality, RAG or full-DOM timing"
+}

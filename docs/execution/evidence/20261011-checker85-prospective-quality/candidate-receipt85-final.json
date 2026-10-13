@@ -1,0 +1,140 @@
+{
+  "schema": "checker85-W-only-frozen-proposal-receipt-v1",
+  "candidate_frozen": true,
+  "main_write_owner": "root",
+  "production_changes": [
+    {
+      "main_relative_path": "generation/prompts/source_relation_generation_v2.txt",
+      "before_sha256": "46652cca63edc6c7e2cd83ed96f593485d536e8523df18b26058771a32ecd763",
+      "before_bytes": 2026,
+      "after_sha256": "79f9933cc4a74cedab05dee07fef53c619f52657bef66c730374167c25a28597",
+      "after_bytes": 2475
+    },
+    {
+      "main_relative_path": "generation/prompts/source_relation_check_v2.txt",
+      "before_sha256": "30078107048050fcb5a162a8628377de1476b9ec0a4e5a2f80fdfb4837f3a226",
+      "before_bytes": 5332,
+      "after_sha256": "7a4a2bb4ccb036121985bb2c041976a7bb2342690e46c8e7d2ecfb61219232e7",
+      "after_bytes": 5884
+    }
+  ],
+  "test_is_W_only": true,
+  "test_snapshots": "Two prior prompt files allow same pinned before/after transport comparison after Main adoption, without modifying other prompts",
+  "root_review_blocking_wording_addressed": {
+    "supporting_ids_guard_applies_only_before_supported_decision": true,
+    "negative_contradictory_irrelevant_selections_preserved": true,
+    "necessary_joint_inferences_paraphrases_allowed": true,
+    "given_and_derivation_rules_preserved": true,
+    "numeric_answer_need_not_be_verbatim_in_source": true
+  },
+  "frozen_W_pins": {
+    "generation/prompts/source_relation_generation_v2.txt": {
+      "bytes": 2475,
+      "sha256": "79f9933cc4a74cedab05dee07fef53c619f52657bef66c730374167c25a28597"
+    },
+    "generation/prompts/source_relation_check_v2.txt": {
+      "bytes": 5884,
+      "sha256": "7a4a2bb4ccb036121985bb2c041976a7bb2342690e46c8e7d2ecfb61219232e7"
+    },
+    "tests/unit/test_source_scope_prompt85.py": {
+      "bytes": 9453,
+      "sha256": "f6143abcdb285fbf8748d00550bf32f7f57933a287087471ee71e4b1bab6338a"
+    },
+    "before-prompts/source_relation_generation_v2.txt": {
+      "bytes": 2026,
+      "sha256": "46652cca63edc6c7e2cd83ed96f593485d536e8523df18b26058771a32ecd763"
+    },
+    "before-prompts/source_relation_check_v2.txt": {
+      "bytes": 5332,
+      "sha256": "30078107048050fcb5a162a8628377de1476b9ec0a4e5a2f80fdfb4837f3a226"
+    },
+    "scope85-prompt-minimal.patch": {
+      "bytes": 4219,
+      "sha256": "463ad4ca50591c9b5b86969ef7d9be960bec6cfa86b58424f93df06b9ae5a5d8"
+    },
+    "source-adoption-plan85.json": {
+      "bytes": 862,
+      "sha256": "fac508ffbc3c81a6e79a6e84eb24a23dcdbf0be77f9f88b45de6c93c46562e01"
+    },
+    "source-quality85-defect-classification.json": {
+      "bytes": 2984,
+      "sha256": "c59faa071d76bf6a8cbb884a0baf2a2610d02105d2b58381799ef7d868029cf0"
+    },
+    "review85.md": {
+      "bytes": 5344,
+      "sha256": "83f50bab4540069fd64155c3e09dcf11c239e9338ac500c96f55ed0fd017ae81"
+    },
+    "pytest-scope85-first.xml": {
+      "bytes": 8543,
+      "sha256": "e824a87e5b3fa3caf6deb787d12b51879745127fc3ac729ecfc49fba0489ec42"
+    },
+    "pytest-scope85-diagnostic.xml": {
+      "bytes": 4334,
+      "sha256": "f3f9b0a8ae193e2dad814f80155b6b6881360d88eefb188916c25ef8ab17f906"
+    }
+  },
+  "unchanged_Main_boundary_pins": {
+    "generation/lossless_unit_findings_v1.py": {
+      "bytes": 32988,
+      "sha256": "0d60cc97701b624e733838ae09abb91e42c4aee6dd63cf2a4c663ae9a8f14ae1"
+    },
+    "generation/source_relations_v2.py": {
+      "bytes": 25459,
+      "sha256": "ab22171c03566ed1f8b97e67bb1d0d5f4b276e0ab0bcc40be487f3b296ceeb11"
+    },
+    "generation/reliability_v5.py": {
+      "bytes": 26253,
+      "sha256": "f1cf5db78bb8f07996e8f56f48db8542a82591e92b90d233d0a58dd1a73f169d"
+    },
+    "generation/checked.py": {
+      "bytes": 166258,
+      "sha256": "fd8f18a8a7dbed449654310fb17086ddb4207069a394ca4ac55cf2db3a6fab8c"
+    },
+    "generation/types.py": {
+      "bytes": 10176,
+      "sha256": "757f907befeaa9300fdeb8ab5c8d03d205c142920cf3c2f5e72ee98988f53068"
+    }
+  },
+  "verification": [
+    {
+      "file": "pytest-scope85-final.xml",
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bytes": 2111,
+      "sha256": "883399c9a4f13e4bbbd18f7b01d64a1d470f8453356ce46787c04101573a11d1"
+    },
+    {
+      "file": "pytest-scope85-pinned-baseline.xml",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bytes": 649,
+      "sha256": "9083ac101be59090304e1a55f3fee952135286f6296cd0a1ad67ed155439b91e"
+    }
+  ],
+  "verification_boundary": "12-case final prompt/gate cohort, then only 2 normal transport cases rechecked after baseline snapshot relocation; same semantic comparisons retained, no full suite",
+  "first_failures_preserved": {
+    "cases": 2,
+    "exact_difference_paths": "/claims/{0..7}/support/rubric_hash",
+    "actual_initial_old_sha256": "a99eb2125605022e681218711ef657021169caeb8f81b057ac58444f26374b42",
+    "actual_initial_candidate_sha256": "1b83c67ecd98c38be29a74c7b1285a19f17fef24a8f1ab8b5d2758348f1a1f92",
+    "fix": "Assert hashes against actual old/new checker systems and exact allowed audit-only paths; every full semantic comparator retained"
+  },
+  "ruff_check": "PASS explicit Main/pyproject.toml",
+  "ruff_format_check": "PASS explicit Main/pyproject.toml",
+  "observed_model_semantic_accuracy_improvement": null,
+  "quality_or_latency_improvement_claimed": false,
+  "source_defaults_codec_full_sources_canonical_schema_unit_negative_and_publication_gates_changed": false,
+  "unseen8_question_or_answer_access": false,
+  "canonical_registry_writes": 0,
+  "Git_metadata_access": 0,
+  "main_writes": 0,
+  "DB_calls": 0,
+  "auth_reads": 0,
+  "network_calls": 0,
+  "paid_requests": 0,
+  "remaining_blocker": "None for local proposal; Root final review/CAS and separate frozen actual development acceptance remain"
+}

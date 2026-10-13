@@ -1,0 +1,127 @@
+{
+  "status": "PASS_STATIC_FIXTURE_PRECONDITION_CHANGE_WITH_EXPLICIT_TOKENIZER_DETAIL",
+  "reviewed_frozen_manifest": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-fixture-window-candidate\\SOURCE_FIXTURE_WINDOW_FROZEN_REVIEW.json",
+    "bytes": 4768,
+    "sha256": "33472c2cc99e619fd7faaa9d76c81b886ddab09ab777c4e089d953584edf538b"
+  },
+  "reviewed_diff": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-fixture-window-candidate\\SOURCE_FIXTURE_WINDOW.diff",
+    "bytes": 3529,
+    "sha256": "1a730483e0a09818967e5cbf1ed50c0f2180337a589cc8d89fecbd1296c5595e"
+  },
+  "files": [
+    {
+      "relative_path": "tests/unit/test_source_relation_protection27.py",
+      "pins": {
+        "main_before": {
+          "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_relation_protection27.py",
+          "bytes": 14556,
+          "sha256": "12fdfd0d3c3b857cad3ef4ba42b8ca16f12a1a55dc31fb5b13300d501d2a409b"
+        },
+        "before_backup": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-fixture-window-candidate\\tests\\unit\\test_source_relation_protection27.py.before",
+          "bytes": 14556,
+          "sha256": "12fdfd0d3c3b857cad3ef4ba42b8ca16f12a1a55dc31fb5b13300d501d2a409b"
+        },
+        "candidate": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-fixture-window-candidate\\tests\\unit\\test_source_relation_protection27.py",
+          "bytes": 14577,
+          "sha256": "390db71f923f1e32e7e84f81062114977b4ca00b75cab40b67764f06748937c0"
+        }
+      },
+      "original_assertions_ast_identical": true,
+      "assertions": 88
+    },
+    {
+      "relative_path": "tests/unit/test_source_relation_units_v2.py",
+      "pins": {
+        "main_before": {
+          "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_source_relation_units_v2.py",
+          "bytes": 10950,
+          "sha256": "4612d442513ec4e21314b30cd95237e191c07fd6e26f0a198f885ad39c6af256"
+        },
+        "before_backup": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-fixture-window-candidate\\tests\\unit\\test_source_relation_units_v2.py.before",
+          "bytes": 10950,
+          "sha256": "4612d442513ec4e21314b30cd95237e191c07fd6e26f0a198f885ad39c6af256"
+        },
+        "candidate": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-fixture-window-candidate\\tests\\unit\\test_source_relation_units_v2.py",
+          "bytes": 11228,
+          "sha256": "a7f9209ff295c868dadfd5716dafd5fd9397e305f28ec342e4a2ab299891d642"
+        }
+      },
+      "original_assertions_ast_identical": true,
+      "assertions": 26
+    }
+  ],
+  "original_assertions_total": 114,
+  "unit_pipeline_call_sites": 5,
+  "unit_pipeline_arguments_ast_identical": true,
+  "dedicated_context_limit_files_unchanged": [
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_checker_contract_v9.py",
+      "bytes": 11972,
+      "sha256": "c0606ac29f7eea6dd5a346821bfd5e72858eddc6fdb5e65b15e89ff18fd3316b"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_checker_encoding.py",
+      "bytes": 6677,
+      "sha256": "c39a07b8da5c6547af24bc135dbe3e23ff15fed6fc14e8d384d9d3e02032cc50"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_generation_providers.py",
+      "bytes": 16883,
+      "sha256": "82633c5db2ab357347e4c26c71ada23ab3f25a696286b223d4b1d566be534d05"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_response_field_contract_v2.py",
+      "bytes": 8295,
+      "sha256": "c492033381777ef1e2852ec94cccd7074b621341f00984fe5b87ddd2a2297c25"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_teaching_token_budget.py",
+      "bytes": 5670,
+      "sha256": "bc5079e8d48198c0e1b95a2a543436245612daeec6300e55234a3f60e56cf32d"
+    }
+  ],
+  "default_config_source": {
+    "path": "E:\\5703\\learning-assistant\\generation\\types.py",
+    "bytes": 10086,
+    "sha256": "de000ead20b00c09dcab7e1e7e0bad92685932a67b127731ff8cd8a9d86bd4bb"
+  },
+  "token_counter_source": {
+    "path": "E:\\5703\\learning-assistant\\generation\\token_counting.py",
+    "bytes": 7186,
+    "sha256": "6e74bc67b04e587005ee77fcdf7d34456b61f48e1e3e959cac8fedad57540fe1"
+  },
+  "fixture_config_review": {
+    "protection27": "Previously explicit tokenizer_provider=estimate; only finite window_tokens changes from default 16384 to 32768.",
+    "units_v2_before": {
+      "window_tokens": 16384,
+      "tokenizer_provider": "auto",
+      "token_count_fallback": "estimate",
+      "provider": "mock",
+      "max_tokens": 1024
+    },
+    "units_v2_after": {
+      "window_tokens": 32768,
+      "tokenizer_provider": "estimate",
+      "token_count_fallback": "estimate",
+      "provider": "mock",
+      "max_tokens": 1024
+    },
+    "auto_mock_selection": "TokenCounter attempts local tiktoken cl100k_base; when unavailable it falls back to Unicode-character estimation. Explicit estimate returns immediately with Unicode-character estimation.",
+    "equivalent_counts_claimed": false,
+    "installed_tiktoken_or_actual_count_probed": false,
+    "scope": "The explicit estimator makes source/unit/repair fixtures deterministic. Its counts can differ from an available tiktoken surrogate. No dedicated tokenizer/context-limit assertions or production default/config/gates are changed by these two test-file candidates.",
+    "frozen_manifest_clarification": "remaining_model_config_defaults_unchanged applies only to fields other than the explicitly supplied window_tokens and tokenizer_provider; units_v2 explicitly changes tokenizer_provider from the former auto default."
+  },
+  "assessment": "No original expectations removed or relaxed; exact source/unit/repair assertions and finite product context gating remain. Acceptable scoped test precondition change. Actual controlled Main test rerun remains required before claiming runtime PASS.",
+  "project_tests_executed": 0,
+  "provider_requests": 0,
+  "database_accesses": 0,
+  "main_writes": 0,
+  "existing_frozen_files_modified": false
+}

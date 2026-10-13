@@ -1,0 +1,377 @@
+{
+  "schema": "5703_actual_native24_public_summary_v1",
+  "status": "NATIVE_UI_PASS_INDEPENDENT_QUALITY_PENDING",
+  "actual_succeeded": true,
+  "actual_error": null,
+  "provider_post_count": 4,
+  "known_cost_USD": "0.0171776",
+  "UNKNOWN": 0,
+  "all_settled": true,
+  "stop_exists": false,
+  "open_claims": 0,
+  "integrity_errors": 0,
+  "cleanup_pending": 0,
+  "prior_UNKNOWN_hold_USD": "0.09000000",
+  "native_stages": [
+    "generation",
+    "joint_check",
+    "semantic_repair",
+    "joint_recheck"
+  ],
+  "slots": [
+    {
+      "slot": 1,
+      "stage": "generation",
+      "latency_ms": 3455,
+      "http_status": 200,
+      "finish_reason": "stop",
+      "pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure24\\runtime\\retained-provider-diagnostics\\slot-01-model-output01.json",
+        "bytes": 2582,
+        "sha256": "d981277665c9b0e5d304689b6324c7916cf93126e946fb04e5b487044a90cf86"
+      }
+    },
+    {
+      "slot": 2,
+      "stage": "joint_check",
+      "latency_ms": 4395,
+      "http_status": 200,
+      "finish_reason": "stop",
+      "pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure24\\runtime\\retained-provider-diagnostics\\slot-02-model-output01.json",
+        "bytes": 30200,
+        "sha256": "db4e39c2bb2164b9d03e6ae176a01767d4384ec625406e5a3df127026dfcd2d0"
+      }
+    },
+    {
+      "slot": 3,
+      "stage": "semantic_repair",
+      "latency_ms": 7492,
+      "http_status": 200,
+      "finish_reason": "stop",
+      "pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure24\\runtime\\retained-provider-diagnostics\\slot-03-model-output01.json",
+        "bytes": 1597,
+        "sha256": "6ffa2d69c80d45ee919c22a4cd3f5ddd20f2536e2ba6e0cea0916da650e97270"
+      }
+    },
+    {
+      "slot": 4,
+      "stage": "joint_recheck",
+      "latency_ms": 4565,
+      "http_status": 200,
+      "finish_reason": "stop",
+      "pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure24\\runtime\\retained-provider-diagnostics\\slot-04-model-output01.json",
+        "bytes": 29211,
+        "sha256": "183274cd7f881e7e68b26b1c13c5affd354096b87cfa6ff6ce3c9ed974e156ed"
+      }
+    }
+  ],
+  "check_summaries": [
+    {
+      "revision": 0,
+      "accepted": false,
+      "validation_state": "validated",
+      "structural_issue_codes": [
+        "UNRESOLVED_TECHNICAL_ENTITY_COLLISION"
+      ],
+      "entity_issues": [
+        {
+          "code": "UNRESOLVED_TECHNICAL_ENTITY_COLLISION",
+          "claim_id": "claim_37eb9395c8cbcb5721d36f6e_1",
+          "claimed_identifier": "NADPH",
+          "source_identifiers": [
+            "NADH"
+          ],
+          "reason_source_identifiers": [
+            "NADH"
+          ],
+          "selected_fragment_ids": [
+            "F007"
+          ],
+          "reason": "The claimed identifier is absent from its selected supporting union; a model reason cannot establish a source alias. A selected source supplies the same proposition with a one-edit different identifier in that slot. The model reason cannot exempt this source-binding conflict. Resolve this binding before publication; this is not a scientific falsehood verdict or an entailment certificate.",
+          "source_entailment_certified": false,
+          "publication_override": false
+        }
+      ]
+    },
+    {
+      "revision": 1,
+      "accepted": true,
+      "validation_state": "validated",
+      "structural_issue_codes": [],
+      "entity_issues": []
+    }
+  ],
+  "final_generation_revision": 1,
+  "generation_snapshot_native_publication_claimed": false,
+  "browser": {
+    "status": "PASS",
+    "answer_id": "0b57e387-f5a1-4a7d-bbad-6a6dbb9cbbdd",
+    "tfull_ms": 24328.39999999851,
+    "tfailure_ms": null,
+    "citation_checked": true,
+    "citation_controls_checked": 4,
+    "citation_checks": [
+      {
+        "occurrence": 1,
+        "evidence_id": "ev_003",
+        "claim_id": "claim_527610ff834beb5490755ddd_1",
+        "status": "PASS",
+        "exposure_id": "69516d25-4069-464d-9320-fe31f12abf01",
+        "source_dto_sha256": "680d479d6aa6792ea5b5bb1924f545ad5f3a819ab88b8c74ea32d50f6e346be6",
+        "http_status": 200,
+        "route": "/api/v1/answers/0b57e387-f5a1-4a7d-bbad-6a6dbb9cbbdd/exposures",
+        "title": "Biology 2e",
+        "source_title": "Biology 2e",
+        "section": "Chapter 8 Photosynthesis / 8.3 Using Light Energy to Make Organic Molecules",
+        "pages": [
+          246
+        ],
+        "fragment_ids": [
+          "span_d2960701c4a65824af9ef629cc2d3ae3"
+        ],
+        "source_excerpt_sha256": "7e5350ba2191336abf2c41dc6cb283780f3835f58de7f7a78ef83124bae2018c",
+        "source_excerpt_character_count": 472,
+        "source_excerpt": "8.3 Using Light Energy to Make Organic Molecules LEARNING OBJECTIVES By the end of this section, you will be able to do the following: • Describe the Calvin cycle • Define carbon fixation • Explain how photosynthesis works in the energy cycle of all living organisms After the energy from the sun is converted into chemical energy and temporarily stored in ATP and NADPH molecules, the cell has the fuel needed to build carbohydrate molecules for long-term energy storage.",
+        "source_segments": [
+          {
+            "text": "8.3 Using Light Energy to Make Organic Molecules LEARNING OBJECTIVES By the end of this section, you will be able to do the following: • Describe the Calvin cycle • Define carbon fixation • Explain how photosynthesis works in the energy cycle of all living organisms After the energy from the sun is converted into chemical energy and temporarily stored in ATP and NADPH molecules, the cell has the fuel needed to build carbohydrate molecules for long-term energy storage.",
+            "text_sha256": "7e5350ba2191336abf2c41dc6cb283780f3835f58de7f7a78ef83124bae2018c",
+            "highlight": true,
+            "fragment_ids": [
+              "span_d2960701c4a65824af9ef629cc2d3ae3"
+            ]
+          }
+        ],
+        "source_dialog_text": "Sources\n\nSource passages linked to this claim.\n\nSOURCE PASSAGE\nBiology 2e\n\nChapter 8 Photosynthesis / 8.3 Using Light Energy to Make Organic Molecules · PDF physical pages 246\n\nHighlighted text is linked to the selected claim.\n\n8.3 Using Light Energy to Make Organic Molecules LEARNING OBJECTIVES By the end of this section, you will be able to do the following: • Describe the Calvin cycle • Define carbon fixation • Explain how photosynthesis works in the energy cycle of all living organisms After the energy from the sun is converted into chemical energy and temporarily stored in ATP and NADPH molecules, the cell has the fuel needed to build carbohydrate molecules for long-term energy storage.\n\nThe complete source may reveal the answer to this problem.\n\nShow complete source\n\nOpenStax / Rice University · Access for free at openstax.org\n\nView original source\nSource record\n{\n  \"presentation_id\": \"99da9abe-91d5-4503-96ef-f5630e9f15af\",\n  \"policy_version\": \"learning_enhancement_v1\",\n  \"evidence_id\": \"ev_003\",\n  \"claim_id\": \"claim_527610ff834beb5490755ddd_1\",\n  \"fragment_ids\": [\n    \"span_d2960701c4a65824af9ef629cc2d3ae3\"\n  ],\n  \"license\": \"Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.\"\n}\nExact source positions\n[\n  {\n    \"fragment_id\": \"span_d2960701c4a65824af9ef629cc2d3ae3\",\n    \"source_unit_id\": \"3da964e1be54bf48cb1566f7dd0f18737437\",\n    \"processing_id\": \"242be583-8e03-448f-8009-9db23179fdb9\",\n    \"document_version_id\": \"bb336e9b-ef43-466f-9e65-ca6d1d196c4b\",\n    \"start\": 0,\n    \"end\": 472,\n    \"text_hash\": \"7e5350ba2191336abf2c41dc6cb283780f3835f58de7f7a78ef83124bae2018c\",\n    \"block_kind\": \"prose\",\n    \"mapping_quality\": \"sentence\"\n  }\n]\n\nSupport assessment: model check. Independent review is separate.\n\nModel support check"
+      },
+      {
+        "occurrence": 2,
+        "evidence_id": "ev_007",
+        "claim_id": "claim_bf98bcc1a31532e9a72b1e6e_1",
+        "status": "PASS",
+        "exposure_id": "84e2550e-e624-4e60-b59c-e6b616322595",
+        "source_dto_sha256": "bd2e21055b5fef6c506a52ddcfdbb45092bc964845d4e5046842d25ef339b49c",
+        "http_status": 200,
+        "route": "/api/v1/answers/0b57e387-f5a1-4a7d-bbad-6a6dbb9cbbdd/exposures",
+        "title": "Concepts of Biology",
+        "source_title": "Concepts of Biology",
+        "section": "Chapter 5 Photosynthesis / 5.3 The Calvin Cycle",
+        "pages": [
+          141
+        ],
+        "fragment_ids": [
+          "span_1d77ba72ab25e9f04b8f13fc0e2bb0c2",
+          "span_8f1a62f750cb3a80f992bbac985e92d6"
+        ],
+        "source_excerpt_sha256": "64bb090247cdb1b485f8c43278dd5f1e2ae6798c191f368a318316cbf87e6756",
+        "source_excerpt_character_count": 193,
+        "source_excerpt": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.\n…\nThese energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+        "source_segments": [
+          {
+            "text": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.",
+            "text_sha256": "4165a545e507a6b32094143b577105ff897e3eddc5b2c9b13e41d41c16eec272",
+            "highlight": true,
+            "fragment_ids": [
+              "span_1d77ba72ab25e9f04b8f13fc0e2bb0c2"
+            ]
+          },
+          {
+            "text": "\n…\n",
+            "text_sha256": "a95283d596e4c1cd8dc608acf74dca55f5d576e7551db83d914ac9f2524216e9",
+            "highlight": false,
+            "fragment_ids": []
+          },
+          {
+            "text": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+            "text_sha256": "606fdcf5a3064a4d77ffbad85c4b56f0002123b63ac5b5df981b58ec2dee1933",
+            "highlight": true,
+            "fragment_ids": [
+              "span_8f1a62f750cb3a80f992bbac985e92d6"
+            ]
+          }
+        ],
+        "source_dialog_text": "Sources\n\nSource passages linked to this claim.\n\nSOURCE PASSAGE\nConcepts of Biology\n\nChapter 5 Photosynthesis / 5.3 The Calvin Cycle · PDF physical pages 141\n\nHighlighted text is linked to the selected claim.\n\nFIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.\n…\nThese energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.\n\nThe complete source may reveal the answer to this problem.\n\nShow complete source\n\nOpenStax / Rice University · Access for free at openstax.org\n\nView original source\nSource record\n{\n  \"presentation_id\": \"99da9abe-91d5-4503-96ef-f5630e9f15af\",\n  \"policy_version\": \"learning_enhancement_v1\",\n  \"evidence_id\": \"ev_007\",\n  \"claim_id\": \"claim_bf98bcc1a31532e9a72b1e6e_1\",\n  \"fragment_ids\": [\n    \"span_1d77ba72ab25e9f04b8f13fc0e2bb0c2\",\n    \"span_8f1a62f750cb3a80f992bbac985e92d6\"\n  ],\n  \"license\": \"Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.\"\n}\nExact source positions\n[\n  {\n    \"fragment_id\": \"span_1d77ba72ab25e9f04b8f13fc0e2bb0c2\",\n    \"source_unit_id\": \"8bd9edcf0207e2fb714c2840ecc6398bfbff\",\n    \"processing_id\": \"82fb328d-a383-43c2-a6eb-b91b61d05069\",\n    \"document_version_id\": \"35d45deb-de7f-4194-9ce2-1861ae84434d\",\n    \"start\": 771,\n    \"end\": 862,\n    \"text_hash\": \"4165a545e507a6b32094143b577105ff897e3eddc5b2c9b13e41d41c16eec272\",\n    \"block_kind\": \"prose\",\n    \"mapping_quality\": \"sentence\"\n  },\n  {\n    \"fragment_id\": \"span_8f1a62f750cb3a80f992bbac985e92d6\",\n    \"source_unit_id\": \"8bd9edcf0207e2fb714c2840ecc6398bfbff\",\n    \"processing_id\": \"82fb328d-a383-43c2-a6eb-b91b61d05069\",\n    \"document_version_id\": \"35d45deb-de7f-4194-9ce2-1861ae84434d\",\n    \"start\": 863,\n    \"end\": 962,\n    \"text_hash\": \"606fdcf5a3064a4d77ffbad85c4b56f0002123b63ac5b5df981b58ec2dee1933\",\n    \"block_kind\": \"prose\",\n    \"mapping_quality\": \"sentence\"\n  }\n]\n\nSupport assessment: model check. Independent review is separate.\n\nModel support check"
+      },
+      {
+        "occurrence": 3,
+        "evidence_id": "ev_001",
+        "claim_id": "claim_8cd7b13097db1301a18c28c6_1",
+        "status": "PASS",
+        "exposure_id": "8a20031c-1115-4a62-a8e4-91894d641bb4",
+        "source_dto_sha256": "4ac33c5e4ceb21a34ff184d011d31629724210351fd598f1ec77fede2240c2d2",
+        "http_status": 200,
+        "route": "/api/v1/answers/0b57e387-f5a1-4a7d-bbad-6a6dbb9cbbdd/exposures",
+        "title": "Concepts of Biology",
+        "source_title": "Concepts of Biology",
+        "section": "Chapter 5 Photosynthesis / 5.1 Overview of Photosynthesis",
+        "pages": [
+          135
+        ],
+        "fragment_ids": [
+          "span_13d8f9a35661f0fb624af18c220292d6",
+          "span_d79a5dd8adc00070817b948e6abf25b3"
+        ],
+        "source_excerpt_sha256": "6554a66be82f650b8ae9d9009f3930036523f34e7cea4e1796d781add8cbe884",
+        "source_excerpt_character_count": 272,
+        "source_excerpt": "The carriers that move energy from the light-dependent reactions to the Calvin cycle reactions can be thought of as “full” because they bring energy.\n…\nAfter the energy is released, the “empty” energy carriers return to the light-dependent reactions to obtain more energy.",
+        "source_segments": [
+          {
+            "text": "The carriers that move energy from the light-dependent reactions to the Calvin cycle reactions can be thought of as “full” because they bring energy.",
+            "text_sha256": "6ea81195b4c83fd36a8abea39e89795c4930011cecf5715a4d1b0f10cd8c182b",
+            "highlight": true,
+            "fragment_ids": [
+              "span_13d8f9a35661f0fb624af18c220292d6"
+            ]
+          },
+          {
+            "text": "\n…\n",
+            "text_sha256": "a95283d596e4c1cd8dc608acf74dca55f5d576e7551db83d914ac9f2524216e9",
+            "highlight": false,
+            "fragment_ids": []
+          },
+          {
+            "text": "After the energy is released, the “empty” energy carriers return to the light-dependent reactions to obtain more energy.",
+            "text_sha256": "42f47d41240c5b2ef75be23fcbb6d8b71ecb76cac7a90fe9d0330c6a0a049cb2",
+            "highlight": true,
+            "fragment_ids": [
+              "span_d79a5dd8adc00070817b948e6abf25b3"
+            ]
+          }
+        ],
+        "source_dialog_text": "Sources\n\nSource passages linked to this claim.\n\nSOURCE PASSAGE\nConcepts of Biology\n\nChapter 5 Photosynthesis / 5.1 Overview of Photosynthesis · PDF physical pages 135\n\nHighlighted text is linked to the selected claim.\n\nThe carriers that move energy from the light-dependent reactions to the Calvin cycle reactions can be thought of as “full” because they bring energy.\n…\nAfter the energy is released, the “empty” energy carriers return to the light-dependent reactions to obtain more energy.\n\nThe complete source may reveal the answer to this problem.\n\nShow complete source\n\nOpenStax / Rice University · Access for free at openstax.org\n\nView original source\nSource record\n{\n  \"presentation_id\": \"99da9abe-91d5-4503-96ef-f5630e9f15af\",\n  \"policy_version\": \"learning_enhancement_v1\",\n  \"evidence_id\": \"ev_001\",\n  \"claim_id\": \"claim_8cd7b13097db1301a18c28c6_1\",\n  \"fragment_ids\": [\n    \"span_13d8f9a35661f0fb624af18c220292d6\",\n    \"span_d79a5dd8adc00070817b948e6abf25b3\"\n  ],\n  \"license\": \"Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.\"\n}\nExact source positions\n[\n  {\n    \"fragment_id\": \"span_13d8f9a35661f0fb624af18c220292d6\",\n    \"source_unit_id\": \"70a0305c9d11b854d54c558bd1ab3cb153b1\",\n    \"processing_id\": \"82fb328d-a383-43c2-a6eb-b91b61d05069\",\n    \"document_version_id\": \"35d45deb-de7f-4194-9ce2-1861ae84434d\",\n    \"start\": 1416,\n    \"end\": 1565,\n    \"text_hash\": \"6ea81195b4c83fd36a8abea39e89795c4930011cecf5715a4d1b0f10cd8c182b\",\n    \"block_kind\": \"prose\",\n    \"mapping_quality\": \"sentence\"\n  },\n  {\n    \"fragment_id\": \"span_d79a5dd8adc00070817b948e6abf25b3\",\n    \"source_unit_id\": \"70a0305c9d11b854d54c558bd1ab3cb153b1\",\n    \"processing_id\": \"82fb328d-a383-43c2-a6eb-b91b61d05069\",\n    \"document_version_id\": \"35d45deb-de7f-4194-9ce2-1861ae84434d\",\n    \"start\": 1566,\n    \"end\": 1686,\n    \"text_hash\": \"42f47d41240c5b2ef75be23fcbb6d8b71ecb76cac7a90fe9d0330c6a0a049cb2\",\n    \"block_kind\": \"prose\",\n    \"mapping_quality\": \"sentence\"\n  }\n]\n\nSupport assessment: model check. Independent review is separate.\n\nModel support check"
+      },
+      {
+        "occurrence": 4,
+        "evidence_id": "ev_010",
+        "claim_id": "claim_82ce740c6dbf4426f1afb603_1",
+        "status": "PASS",
+        "exposure_id": "2267a5fa-e26e-4244-88aa-bd2a53e0ee52",
+        "source_dto_sha256": "2d7785e654b57e6f6edb7e539e7f6ac646b62e6817010704b3673e1025c1d2c0",
+        "http_status": 200,
+        "route": "/api/v1/answers/0b57e387-f5a1-4a7d-bbad-6a6dbb9cbbdd/exposures",
+        "title": "Concepts of Biology",
+        "source_title": "Concepts of Biology",
+        "section": "Chapter 5 Photosynthesis / Chapter Summary",
+        "pages": [
+          145,
+          146
+        ],
+        "fragment_ids": [
+          "span_0daa77759f0a36e4197e28c3a7df8a5e"
+        ],
+        "source_excerpt_sha256": "8f2ee0ffdf8145c06f89c4db9b4d5df0defc3c916d8fa99c5c9ade22fbea2e22",
+        "source_excerpt_character_count": 158,
+        "source_excerpt": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+        "source_segments": [
+          {
+            "text": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+            "text_sha256": "8f2ee0ffdf8145c06f89c4db9b4d5df0defc3c916d8fa99c5c9ade22fbea2e22",
+            "highlight": true,
+            "fragment_ids": [
+              "span_0daa77759f0a36e4197e28c3a7df8a5e"
+            ]
+          }
+        ],
+        "source_dialog_text": "Sources\n\nSource passages linked to this claim.\n\nSOURCE PASSAGE\nConcepts of Biology\n\nChapter 5 Photosynthesis / Chapter Summary · PDF physical pages 145, 146\n\nHighlighted text is linked to the selected claim.\n\nThe resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.\n\nThe complete source may reveal the answer to this problem.\n\nShow complete source\n\nOpenStax / Rice University · Access for free at openstax.org\n\nView original source\nSource record\n{\n  \"presentation_id\": \"99da9abe-91d5-4503-96ef-f5630e9f15af\",\n  \"policy_version\": \"learning_enhancement_v1\",\n  \"evidence_id\": \"ev_010\",\n  \"claim_id\": \"claim_82ce740c6dbf4426f1afb603_1\",\n  \"fragment_ids\": [\n    \"span_0daa77759f0a36e4197e28c3a7df8a5e\"\n  ],\n  \"license\": \"Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.\"\n}\nExact source positions\n[\n  {\n    \"fragment_id\": \"span_0daa77759f0a36e4197e28c3a7df8a5e\",\n    \"source_unit_id\": \"9384d80eee75aac546751fdd4d6708b70e6c\",\n    \"processing_id\": \"82fb328d-a383-43c2-a6eb-b91b61d05069\",\n    \"document_version_id\": \"35d45deb-de7f-4194-9ce2-1861ae84434d\",\n    \"start\": 1901,\n    \"end\": 2059,\n    \"text_hash\": \"8f2ee0ffdf8145c06f89c4db9b4d5df0defc3c916d8fa99c5c9ade22fbea2e22\",\n    \"block_kind\": \"prose\",\n    \"mapping_quality\": \"sentence\"\n  }\n]\n\nSupport assessment: model check. Independent review is separate.\n\nModel support check"
+      }
+    ],
+    "refresh_persisted": true,
+    "server_worker_timing": {
+      "timing_scope": "worker_execution_before_answer_insert_v1",
+      "units": "milliseconds",
+      "excludes": "HTTP admission, queue wait, answer insertion/commit, browser loading/paint",
+      "total_ms": 22477.977,
+      "generation_ms": 10947,
+      "checking_ms": 8960,
+      "token_count_ms": 0,
+      "model_total_ms": 19907,
+      "preparation_ms": 46.557,
+      "query_preparation_ms": 2.55,
+      "retrieval_ms": 191.698,
+      "teaching_plan_ms": 0.327,
+      "submission_to_worker_start_ms": 413.879,
+      "generation_wall_ms": 22014.807,
+      "publication_before_commit_ms": 217.438,
+      "worker_before_commit_ms": 22692.411
+    }
+  },
+  "resources": {
+    "status": "CLOSED",
+    "batch_id": "b85bc0f9-d580-4620-9cf0-b18b5d2eaf4b",
+    "paired_leg_id": "B_startup_prewarm",
+    "browser_leg_passed": true,
+    "native_checked_completed": true,
+    "native_completed_question_ids": [
+      "Q2"
+    ],
+    "native_executed_question_ids": [
+      "Q2"
+    ],
+    "all_submitted_native_jobs_checked": true,
+    "continuation_mode": "SUCCESSFUL_Q2_DEVELOPMENT_REGRESSION_NEW_WORKER",
+    "single_Q2_development_regression_completed": true,
+    "old_Q2_request_job_or_answer_replayed": false,
+    "historical_failed_Q3_Q4_replayed": false,
+    "same_worker_across_Q1_Q2_demonstrated": false,
+    "independent_quality_acceptance": false,
+    "worker_pid": 146392,
+    "engine_object_identity": 2436403258976,
+    "database_target_public": {
+      "database_name": "cs30_week10_pair_b_20261009_01",
+      "host": "127.0.0.1",
+      "port": 15433
+    },
+    "active_pointers_unchanged": true,
+    "owned_threads_closed": true,
+    "owned_database_resources_closed": true,
+    "cleanup_error_classes": [],
+    "raw_cleanup_errors_exported": false,
+    "leg_closed_after_advisory_unlock_connection_close_and_engine_dispose": true,
+    "local_models_loaded": true,
+    "provider_calls_are_guarded": true,
+    "no_old_job_recovery": true,
+    "retrieval_variant": "R2",
+    "embedding_provider": "native_e5",
+    "default_profile_pin": {
+      "bytes": 294,
+      "path": "E:\\5703\\learning-assistant\\configs\\retrieval\\chat_hybrid_minilm.json",
+      "sha256": "23ca72ddb737045259a04cbfc81c71969440f11cc2fa1a77bc7f8e7fc4364e17"
+    },
+    "model_cache_readonly": true,
+    "python_write_denials": [],
+    "historical_lock_handles_read_byte_only": true,
+    "cpu_threads": 4,
+    "native_cuda_allowed": true,
+    "no_runtime_retrieval_override": true
+  },
+  "evidence_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure24\\runtime\\retained-provider-diagnostics\\native-generation-outcome01.json",
+      "bytes": 450746,
+      "sha256": "4087a4105c362ccbdc9c8b8bc0556400225e701a0dd2a8f694ecb740c59bf3cd"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure24\\browser\\real-browser-live-qa-receipt01.json",
+      "bytes": 50141,
+      "sha256": "8521b18a40abd54135558d114f262b812d514e525ddf84c4f6216819ccef39c2"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure24\\runtime\\budget-status-public01.json",
+      "bytes": 1362,
+      "sha256": "d7369e5662281ff46d27bcec11b58ddfc34887a59127064c824c755cfe005ae4"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure24\\runtime\\runtime-closed-public01.json",
+      "bytes": 1749,
+      "sha256": "b04f3ee26ecad637d31cac6ab8483106ce525f212bc0fc16a5c4042d92895950"
+    }
+  ],
+  "limits": [
+    "Generation snapshots precede publication; actual answer persistence/display evidence is the separate browser receipt.",
+    "UI/citation-source equality does not certify complete predicate support or scientific correctness.",
+    "A single Send-to-full observation is not a warm p95 or a same-worker multi-module benchmark."
+  ]
+}

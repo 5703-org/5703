@@ -1,0 +1,354 @@
+{
+  "status": "ACTUAL_CURRENT_FULL_V5_SYNTHETIC_CHECKER_SMOKE_PASS_NOT_QUALIFICATION",
+  "at_UTC": "2026-10-08T04:21:29.235349+00:00",
+  "group": "fixed_input_old_new_checker_replay",
+  "slot": 1,
+  "configuration_id": "74c8201e-aca0-400d-bcc5-5785e24c1c11",
+  "configuration_hash": "703c94a357ddd4b826d8b5fe25d503198d3d56e1e9130f6a37ed9e9c3396aa4a",
+  "model": "google/gemini-3.5-flash-lite",
+  "provider_route": "google-vertex/global",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "output_cap": 4096,
+  "timeout_seconds": 45,
+  "diagnostic_POSTs": 1,
+  "known_cost_USD": "0.005744",
+  "unknown_hold_USD": "0",
+  "Gold_reads": 0,
+  "private_learner_data": false,
+  "database_writes": 0,
+  "E_writes": 0,
+  "qualification_calls": 0,
+  "activation_posts": 0,
+  "validation": {
+    "schema_valid": true,
+    "contract_valid": true,
+    "component_accepted": true,
+    "schema_issues": [],
+    "contract_issues": [],
+    "semantic_issues": [],
+    "independent_scientific_accuracy": null,
+    "human_rating": null,
+    "gate_values": {
+      "body_ok": true,
+      "specific_help": true,
+      "scope_ok": true,
+      "suggestions_ok": true,
+      "evidence_display_ok": true,
+      "cumulative_ok": true,
+      "complete_answer": true,
+      "attempt_evaluation_ok": true,
+      "tutor_question_ok": true,
+      "limitations_explicit": true,
+      "non_repetitive_next_action": true
+    },
+    "coverage": "full",
+    "factual_statuses": [
+      "supported",
+      "supported",
+      "supported",
+      "supported"
+    ],
+    "semantic_requirement_summary": {
+      "version": "semantic_requirements_v1",
+      "method": "online_checker_model",
+      "status": "sufficient",
+      "requirements": [
+        {
+          "requirement_id": "requirement_01",
+          "relevance": "related",
+          "sufficiency": "sufficient",
+          "evidence": [
+            {
+              "evidence_id": "ev_001",
+              "fragment_id": "F002",
+              "quote": "Facilitated diffusion is the diffusion process used for those substances that cannot cross the lipid bilayer due to their size, charge, and/or polarity (Figure 3.6)."
+            },
+            {
+              "evidence_id": "ev_002",
+              "fragment_id": "F006",
+              "quote": "In facilitated transport, also called facilitated diffusion, material moves across the plasma membrane with the assistance of transmembrane proteins down a concentration gradient (from high to low concentration) without the expenditure of cellular energy."
+            },
+            {
+              "evidence_id": "ev_008",
+              "fragment_id": "F032",
+              "quote": "Diffusion is the movement of particles from an area of higher concentration to an area of lower concentration."
+            }
+          ],
+          "conditions_preserved": true,
+          "response_coverage": "covered",
+          "missing_information": "",
+          "reason": "The sources provide sufficient details explaining how simple and facilitated diffusion differ."
+        }
+      ],
+      "human_rating": null,
+      "independent_evaluation": false
+    },
+    "typed_judgment": {
+      "claims": [
+        {
+          "claim_id": "claim_042972beceed356a8b58e73f_1",
+          "reason": "The source fragments support that both simple and facilitated diffusion involve passive movement down a concentration gradient without cellular energy.",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_005",
+              "fragment_ids": [
+                "F021"
+              ],
+              "relation": "supporting"
+            },
+            {
+              "evidence_id": "ev_008",
+              "fragment_ids": [
+                "F032"
+              ],
+              "relation": "supporting"
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_2ce3df2a85558fc0cce9de5c_1",
+          "reason": "The sources show that simple diffusion occurs directly through the lipid bilayer, whereas facilitated diffusion uses transmembrane proteins.",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_001",
+              "fragment_ids": [
+                "F001",
+                "F002"
+              ],
+              "relation": "supporting"
+            },
+            {
+              "evidence_id": "ev_002",
+              "fragment_ids": [
+                "F006"
+              ],
+              "relation": "supporting"
+            },
+            {
+              "evidence_id": "ev_005",
+              "fragment_ids": [
+                "F019"
+              ],
+              "relation": "supporting"
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_2fa3acca974b80280f18f6a7_1",
+          "reason": "Facilitated diffusion assists substances such as polar or large molecules that do not easily cross the lipid bilayer.",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_001",
+              "fragment_ids": [
+                "F002"
+              ],
+              "relation": "supporting"
+            },
+            {
+              "evidence_id": "ev_002",
+              "fragment_ids": [
+                "F007",
+                "F008"
+              ],
+              "relation": "supporting"
+            },
+            {
+              "evidence_id": "ev_007",
+              "fragment_ids": [
+                "F027"
+              ],
+              "relation": "supporting"
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_f36b6ecaef401ac3d7af0ac2_1",
+          "reason": "The short answer accurately summarizes the differences supported by the text fragments.",
+          "basis": "textbook",
+          "status": "supported",
+          "citations": [
+            {
+              "evidence_id": "ev_008",
+              "fragment_ids": [
+                "F032"
+              ],
+              "relation": "supporting"
+            },
+            {
+              "evidence_id": "ev_002",
+              "fragment_ids": [
+                "F006"
+              ],
+              "relation": "supporting"
+            },
+            {
+              "evidence_id": "ev_005",
+              "fragment_ids": [
+                "F019",
+                "F021"
+              ],
+              "relation": "supporting"
+            }
+          ]
+        }
+      ],
+      "body_ok": true,
+      "specific_help": true,
+      "scope_ok": true,
+      "suggestions_ok": true,
+      "evidence_display_ok": true,
+      "cumulative_ok": true,
+      "complete_answer": true,
+      "coverage": "full",
+      "missing_facets": [],
+      "limitations_explicit": true,
+      "reason": "All claims are fully supported by the provided text fragments, and the question is completely answered.",
+      "repair_fragment_ids": [],
+      "attempt_evaluation_ok": true,
+      "tutor_question_ok": true,
+      "requirements": [
+        {
+          "requirement_id": "requirement_01",
+          "relevance": "related",
+          "sufficiency": "sufficient",
+          "evidence": [
+            {
+              "evidence_id": "ev_001",
+              "fragment_id": "F002",
+              "quote": "Facilitated diffusion is the diffusion process used for those substances that cannot cross the lipid bilayer due to their size, charge, and/or polarity (Figure 3.6)."
+            },
+            {
+              "evidence_id": "ev_002",
+              "fragment_id": "F006",
+              "quote": "In facilitated transport, also called facilitated diffusion, material moves across the plasma membrane with the assistance of transmembrane proteins down a concentration gradient (from high to low concentration) without the expenditure of cellular energy."
+            },
+            {
+              "evidence_id": "ev_008",
+              "fragment_id": "F032",
+              "quote": "Diffusion is the movement of particles from an area of higher concentration to an area of lower concentration."
+            }
+          ],
+          "conditions_preserved": true,
+          "response_coverage": "covered",
+          "missing_information": "",
+          "reason": "The sources provide sufficient details explaining how simple and facilitated diffusion differ."
+        }
+      ],
+      "non_repetitive_next_action": true
+    }
+  },
+  "native_end_to_end_ms": null,
+  "raw_payload_headers_credentials_exported": false,
+  "stage": "one_exact_current_full_v5_POST",
+  "http_status": 200,
+  "single_transport_elapsed_ms": 4733.6778,
+  "response_body_sha256": "c9a1975cc472a7f6e38ec04edce05f8f3b469e68cc64c09d8efba604caeace45",
+  "safe_usage": {
+    "input_tokens": 7630,
+    "output_tokens": 1382,
+    "total_tokens": 9012,
+    "reasoning_tokens": 0,
+    "cache_hit_input_tokens": 0,
+    "cache_miss_input_tokens": 7630,
+    "cost": null
+  },
+  "upstream_schema_error": null,
+  "finish_reason": "stop",
+  "raw_text_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-current-checker-smoke-current26-checker-smoke-20261008-01\\raw-synthetic-checker-response01.json",
+    "bytes": 5306,
+    "sha256": "184fe3193183175c91ba5fb337db2da65cb8d16fdc036e467a9330f35a5c4bca"
+  },
+  "focused_source_after": {
+    "generation\\compact_findings_v3.py": "1aba7601543d2b08c5331a0e139726191e13948a7dd6343eb7292262e1e2de8a",
+    "generation\\providers.py": "bbfb74558e1adf5e4850edad02bb117af221c804aaad6e6f260addfe05fb38f4",
+    "generation\\google_schema_compiler04.py": "81523f87f315b6f8aecddffd2fda0271af9d306ae294973ecbdd400eb2e047ef",
+    "generation\\probes.py": "642ba880a6dcd3448513b98c0699175cd2fa6b9dafdaa92b65ea3f513d336df2",
+    "generation\\types.py": "de000ead20b00c09dcab7e1e7e0bad92685932a67b127731ff8cd8a9d86bd4bb",
+    "generation\\capabilities.py": "590dac5cb82bf1494cd0db01af422800ce1dd227bae5e943d608c841401ebff0",
+    "generation\\openrouter_routes.py": "7e9ec301cb0ef18dd0ea9a27dc9849c0e088ec1537ee1d58db010ef7c38f4557",
+    "backend\\app\\modules\\model_settings\\service.py": "e6e0a9d41846ff36a37bc1eef72892f9ddbc3f2c4648f36f2e9a714f07d5e39d",
+    "backend\\app\\modules\\model_settings\\compatibility.py": "107c3dcb2025e927244a77f4dc1734cbe49c2149b150a02c6314a93896bd3667",
+    "generation\\adapters.py": "62819ed7a7b7282c2e26894cf5a1b19414f923da7e5f60525bc23f156d706834",
+    "generation\\network_policy.py": "31ee11495949894073b292cd39b5d186f0ea21f5fd3f598b243e9f37b467bf02",
+    "generation\\provider_diagnostics.py": "109f75fd2858c35530c93e3c4a663629bc143344e190bab42eec5458ff39c6b5",
+    "backend\\app\\worker.py": "4ac015176cc08524f054beafe78e9da56a02d831c858e079ef1d75074efa8634",
+    "backend\\app\\modules\\answering\\service.py": "4ff471baab3eeceef59634407a28b884118eb3d433752defacfd04abd4b462de",
+    "retrieval\\embedding.py": "4bf84b63bddf93aa6d86f6c0f38726b222029ef5cb5a39a44f9e5e494498cdfa",
+    "retrieval\\chat.py": "79bcc314e734acd77a02f8e70efa86a6d24f6f0ca6c2598d5d445d237a6b0267",
+    "generation\\checked.py": "fb7c47b04253906aaa6c8753f0f907f9ff468dddd3280b5555048b1151ff3be2",
+    "generation\\reliability_v3.py": "33d72113ee45fa489adaaf274dbfa8f1b342d8cd0834cbb8188713f6c3254fa2",
+    "generation\\reliability_v4.py": "0771dd38c821053788608a942033081433ab8ac2ef53afd3d14ed68987b9b56c",
+    "generation\\reliability_v5.py": "7260e47e6b51e45834f660f5d0fabb3c142b760f40a6c791fff733c08fd1261d",
+    "generation\\parser.py": "5eb3eabae06b786669a74cb362b2a387db873f0b05d8d461592886e7fe49e749",
+    "generation\\prompt_builder.py": "d6cb2fefc3a98549b4193111cff5e1132e663d02198af1b8a9b3aee98325a606",
+    "generation\\checker_contract.py": "7b1c3b69d54586b99e14722c8c375bb1481bc452b64f5b2ec71e11052532537e",
+    "generation\\checker_encoding.py": "57e7fdc229e0732d827af1be3985db8c8ccff91d40e4a6699ad28784ccedf8e2",
+    "generation\\prompts\\joint_check_v5.txt": "6304fd19b2c86f4c9670aacd29628922c95fd9ce4e453697976b0a0f8aca4a32"
+  },
+  "focused_source_unchanged": true,
+  "sensitive_memory_references_dropped": true,
+  "owned_database_engine_disposed": true,
+  "owned_response_handles_closed": true,
+  "cleanup_errors": [],
+  "shared_finish": {
+    "status": "KNOWN_COST_RECORDED",
+    "at_UTC": "2026-10-08T04:21:36.401631+00:00",
+    "started_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\fixed_input_old_new_checker_replay\\slot-01-started01.json",
+      "bytes": 2109,
+      "sha256": "3c2fdda31d703fa359e197bd928ec272e7c074aeb4a428ae01d9848c95b933a4"
+    },
+    "outcome": "CURRENT_FULL_V5_SMOKE_COMPONENT_PASS",
+    "known_API_cost_USD": "0.005744",
+    "UNKNOWN_full_hold_USD": "0.00000000",
+    "usage": {
+      "input_tokens": 7630,
+      "output_tokens": 1382,
+      "total_tokens": 9012,
+      "reasoning_tokens": 0,
+      "cache_hit_input_tokens": 0,
+      "cache_miss_input_tokens": 7630,
+      "cost": null
+    },
+    "invoice_or_account_balance": null,
+    "finished_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\fixed_input_old_new_checker_replay\\slot-01-finished01.json",
+      "bytes": 779,
+      "sha256": "baee34d5f93f769d9f5cbfbd2ed32c17ac08ee473d8d52557d737711d91896de"
+    },
+    "immediate_tally": {
+      "counts": {
+        "fixed_input_old_new_checker_replay": 1,
+        "qualification": 0,
+        "native": 0,
+        "unassigned-spare": 0,
+        "quality": 0,
+        "reference": 0,
+        "schema-probe": 0,
+        "requalification": 0
+      },
+      "new_started_calls": 1,
+      "new_started_full_bounds_USD": "0.04956160",
+      "unstarted_maximum_USD": "1.23904000",
+      "prior_known_plus_UNKNOWN_USD": "0.27705180",
+      "worst_with_unstarted_USD": "1.52183580",
+      "maximum_planned_with_unstarted_USD": "1.56565340",
+      "retained_reserve_USD": "1.94000000",
+      "remaining_worst_case_USD": "0.41816420",
+      "new_known_receipt_cost_USD": "0.00574400",
+      "new_UNKNOWN_or_inflight_hold_USD": "0.00000000",
+      "stop_receipts": 0,
+      "actual_cost_exceeds_retained_reserve": false
+    },
+    "must_stop": false
+  },
+  "completed_UTC": "2026-10-08T04:21:36.405086+00:00",
+  "exit_code": 0
+}

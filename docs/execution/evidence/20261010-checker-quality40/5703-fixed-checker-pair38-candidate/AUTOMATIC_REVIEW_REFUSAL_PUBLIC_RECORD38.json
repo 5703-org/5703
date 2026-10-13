@@ -1,0 +1,30 @@
+{
+  "schema": "automatic_review_refusal_public_record38_v1",
+  "status": "REFUSED_SCAN_NOT_EXECUTED_APPROVED_STRUCTURAL_ALTERNATIVE_COMPLETED_TARGET_INSPECTION_STOPPED",
+  "refused_target": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation36\\native_checker_json_object_override_PREPARED01.py",
+  "refused_tool": "tools.exec_command",
+  "refused_shell": "powershell",
+  "refused_action": "Read the prepared override through stdlib AST and print string constants whose lowercase values contain reason, characters, schema, prompt, selection, or frozen; also print function/class names and lines. The same rejected command would list public pair37 source/prompt filenames.",
+  "original_tool_cmd": "$base='C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2'; foreach($d in @('5703-fixed-checker-pair37-candidate','5703-source-context37-candidate')){Get-ChildItem -LiteralPath (Join-Path $base $d) -File | Where-Object {$_.Extension -in @('.py','.txt') -and $_.Name -notmatch 'private|auth|config'} | ForEach-Object {$_.FullName.Substring($base.Length+1)}}; $code=@'\nimport ast,pathlib\np=pathlib.Path(r'C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation36\\native_checker_json_object_override_PREPARED01.py')\nt=ast.parse(p.read_text(encoding='utf-8'))\nfor n in ast.walk(t):\n    if isinstance(n,(ast.FunctionDef,ast.ClassDef)):print('DEF',n.name,n.lineno,n.end_lineno)\n    if isinstance(n,ast.Constant) and isinstance(n.value,str) and any(w in n.value.lower() for w in ('reason','characters','schema','prompt','selection','frozen')):\n        if len(n.value)<1000:print('PUBLIC_INSTRUCTION_OR_MARKER',n.lineno,repr(n.value))\n        else:print('LONG_PUBLIC_INSTRUCTION',n.lineno,len(n.value))\n'@\n$code | python -",
+  "reason_literal": "The AST scan reads and prints string constants from a prepared runner that may contain credential or secret values; the requested prompt/source review does not authorize broad credential-bearing source inspection, and a narrower structural scan is available.",
+  "command_unexecuted": true,
+  "rejected_command_executed_in_part": false,
+  "approved_alternative": {
+    "status": "APPROVED_AND_EXECUTED",
+    "same_public_target": true,
+    "action": "Parse the override with stdlib AST and output only function/class identifiers and source line ranges, call function/attribute identifiers and source lines, and prompt/schema/instruction/frozen reference identifiers and source lines.",
+    "string_constants_printed": false,
+    "literal_values_printed": false,
+    "configuration_values_printed": false,
+    "credential_values_printed": false,
+    "target_imported_or_invoked": false
+  },
+  "all_target_inspection_now_stopped": true,
+  "this_receipt_action": {
+    "scope": "Create only this explicitly authorized W public receipt, using prior tool-call records.",
+    "target_reopened": false,
+    "new_tests": 0,
+    "API_calls": 0,
+    "DB_calls": 0
+  }
+}

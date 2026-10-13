@@ -1,0 +1,198 @@
+{
+  "candidate_repair_boundary": {
+    "candidate_not_implemented_or_executed_by_reviewer": true,
+    "forbidden_shortcuts": [
+      "skipping a locked pin",
+      "temporarily releasing a lock",
+      "accepting PermissionError as a successful pin check",
+      "reading auth or seed files to diagnose this public lock collision"
+    ],
+    "preserve": [
+      "ordered nonblocking locks",
+      "all locks held for full validation and operation",
+      "metadata/content hash checks",
+      "STOP and cleanup behavior",
+      "budget and authorization contracts"
+    ],
+    "scope": "Fresh public guard helper only; do not modify preserved native33 or any historical ledger.",
+    "suggestion": "For every verification of a lock pin currently held by this guard, reuse that owned held stream and retain exact path/pin identity, expected one-byte content, fstat size and SHA-256 validation. Apply this to the static financial loop as well as _verify_prior."
+  },
+  "existing_safe_parent_lock_read": [
+    {
+      "exact_line_stripped": "held = self._held_parent_phase_streams.get(q[\"path\"])",
+      "line": 671,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py"
+    },
+    {
+      "exact_line_stripped": "if q == phase[\"lock_pin\"] and held is not None:",
+      "line": 672,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py"
+    },
+    {
+      "exact_line_stripped": "held.seek(0)",
+      "line": 673,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py"
+    },
+    {
+      "exact_line_stripped": "raw = held.read(2)",
+      "line": 674,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py"
+    },
+    {
+      "exact_line_stripped": "_need(raw == b\"0\" and os.fstat(held.fileno()).st_size == 1 and",
+      "line": 675,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py"
+    },
+    {
+      "exact_line_stripped": "hashlib.sha256(raw).hexdigest() == q[\"sha256\"], \"PARENT_HELD_LOCK_CHANGED\")",
+      "line": 676,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py"
+    }
+  ],
+  "final_answer_quality_score": null,
+  "fit_with_parent_reported_observation": {
+    "all_ordered_locks_acquired": true,
+    "caller_frames_reported": [
+      1705,
+      348,
+      128
+    ],
+    "constructor_static_checks_passed": true,
+    "explanation": "Construction calls the same static verifier before acquiring the byte locks. Locked preflight then repeats static verification and opens a different read handle for the already held native32 lock. Windows byte locking makes this a concrete PermissionError candidate; no inner native traceback or causal reproduction was obtained by this review.",
+    "parent_report_only_not_independently_replayed": true,
+    "preflight_permission_error": true,
+    "provider_POST_count_reported": 0
+  },
+  "limits": [
+    "Static code and literal metadata only; no guard import, preflight, lock acquisition, DB, API or test execution.",
+    "The locked target itself was not opened. Authority files, binders, auth, seed, env and learner data were not read.",
+    "No native33 answer exists per parent notification. No final source-quality score or UI pass is assigned.",
+    "No B or Main writes. Only this new exclusive public W receipt and its writer are created.",
+    "A later fresh closed run and real accepted-answer audit remain required. This static result cannot certify model quality or full runtime success."
+  ],
+  "local_checker_public_pin_count": 116,
+  "lock_acquisition_and_held_handle_registration": [
+    {
+      "exact_line_stripped": "[phase[\"lock_pin\"] for phase in PARENT_PHASES] + [self.release[\"new_lock_pin\"]])",
+      "line": 557,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py"
+    },
+    {
+      "exact_line_stripped": "stream = path.open(\"r+b\")",
+      "line": 564,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py"
+    },
+    {
+      "exact_line_stripped": "msvcrt.locking(stream.fileno(), msvcrt.LK_NBLCK, 1)",
+      "line": 567,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py"
+    },
+    {
+      "exact_line_stripped": "raw = stream.read(2)",
+      "line": 573,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py"
+    },
+    {
+      "exact_line_stripped": "self._held_parent_phase_streams[pin[\"path\"]] = stream",
+      "line": 577,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py"
+    },
+    {
+      "exact_line_stripped": "acquired_all = True",
+      "line": 578,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py"
+    },
+    {
+      "exact_line_stripped": "yield",
+      "line": 582,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py"
+    }
+  ],
+  "locked_preflight_call_chain": [
+    {
+      "exact_line_stripped": "return attribute(*args, **kwargs)",
+      "line": 128,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\launch_week10_scientific_native_closure_PREPARED09.py"
+    },
+    {
+      "exact_line_stripped": "guard = SerializedGuard(guard_module.Guard(gate_path, gate_pin[\"sha256\"]))",
+      "line": 347,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\launch_week10_scientific_native_closure_PREPARED09.py"
+    },
+    {
+      "exact_line_stripped": "guard.preflight()",
+      "line": 348,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\launch_week10_scientific_native_closure_PREPARED09.py"
+    },
+    {
+      "exact_line_stripped": "self._verify_static()",
+      "line": 359,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py"
+    },
+    {
+      "exact_line_stripped": "with self._locks(mutate=True):",
+      "line": 836,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py"
+    },
+    {
+      "exact_line_stripped": "self._verify_static()",
+      "line": 837,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py"
+    },
+    {
+      "exact_line_stripped": "self._verify_financial_authorization()",
+      "line": 393,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py"
+    },
+    {
+      "exact_line_stripped": "for q in MIXED_PAID_PRIOR_PUBLIC_PINS + LOCAL_CHECKER_PUBLIC_PINS:",
+      "line": 495,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py"
+    },
+    {
+      "exact_line_stripped": "_verify_pin(q, scope=\"batch\")",
+      "line": 496,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py"
+    },
+    {
+      "exact_line_stripped": "_need(_pin(pin[\"path\"], scope=scope) == pin, \"PIN_CHANGED\")",
+      "line": 280,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py"
+    },
+    {
+      "exact_line_stripped": "raw = p.read_bytes()",
+      "line": 271,
+      "source_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py"
+    }
+  ],
+  "parent_phase_count": 32,
+  "result": "The financial static verification loop reopens one parent lock already held by _locks. Its held-stream protection is implemented only in _verify_prior, not this static financial read path.",
+  "schema": "5703_independent_native33_lock_path_static_review_v1",
+  "source_pins": [
+    {
+      "bytes": 298454,
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\scientific_native_closure_guard_PREPARED09.py",
+      "sha256": "28b3797a8b1b87bdba57234b787c8ab82bc6d0b9410645527b03b2c8abac94be"
+    },
+    {
+      "bytes": 113785,
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation33\\launch_week10_scientific_native_closure_PREPARED09.py",
+      "sha256": "0e8c014c3ab77d6590236fc2853873446302223edceb86025fd7404ab52c02ec"
+    }
+  ],
+  "static_exact_lock_intersections": [
+    {
+      "parent_file_pin_has_exact_lock_pin": true,
+      "parent_phase_index": 27,
+      "pin": {
+        "bytes": 1,
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-scientific-native-closure32\\global-pair-budget.lock",
+        "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+      },
+      "pin_matches_parent_lock_metadata": true,
+      "public_list": "LOCAL_CHECKER_PUBLIC_PINS",
+      "public_list_index": 114
+    }
+  ],
+  "status": "STATIC_HELD_LOCK_REOPEN_ENTRY_IDENTIFIED_NOT_NATIVE_CAUSAL_TRACE"
+}

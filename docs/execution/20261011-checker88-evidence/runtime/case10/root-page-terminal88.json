@@ -1,0 +1,58 @@
+{
+  "schema": "phase88_owned_outer_page_v1",
+  "case_id": "case10",
+  "started_utc": "2026-10-11T23:21:38.860332+00:00",
+  "scope_sha256": "1547563d6679aaa8c28fbbf256b8533cb9b66dc62f2e9494ff157f721c745d53",
+  "qa_sha256": "4bdcd508e94a5ce99966c2cf4ec15a325b08f3bd71e6f87f889592edda493c7f",
+  "runtime_pins": {
+    "server88.py": "d9691a7b77c122c978bbc5e29d4a9dcac483eb5c2e199aa0dc1a58edc9819251",
+    "normal_transport88.py": "a2cf026bba2545d394873bbc957c0008d770350904edbb9a3eb4e6995ecf0c90",
+    "targeted_answer88.py": "ed1a1493005b006f22d8ce277940cd5bf4b540ba78758ce9c903942ae8655193",
+    "budget88.py": "c2a152184ceeb8bbc4011062ac28c4583366bbc9f4281637589e6dda0a934b8d",
+    "journey88.cjs": "30d6053287d30be05319995227d518f36a3dab4d7adfee7d7ef34140862ffc6a",
+    "completion-observer88.cjs": "15598675a59337ed2e02dba99d99b512a1456ee38e4c0326e7d0497c4ca9eb42",
+    "vite.config88.mjs": "4c079db25d8a650b34cb08b4ead32c54c3260e414ade2e77150dc6bdbf9c2aab"
+  },
+  "status": "STOPPED_PRESERVE_QA_PENDING",
+  "auth_exported": false,
+  "outer_deadline_seconds": 270,
+  "independent_quality_status": "PENDING",
+  "qualified_complete_answer_n": 0,
+  "valid_page_latency_sample": false,
+  "error_class": "PageStop",
+  "safe_code": "LISTENER_PID_NOT_OWNED",
+  "outer_idle_close_unconfirmed": true,
+  "owned_process_cleanup": {
+    "api": {
+      "owned_pid": 129160,
+      "exit_code": 1,
+      "closed": true,
+      "was_running_at_cleanup": true,
+      "owned_tree_stop_requested": true,
+      "reader_closed": true,
+      "discarded_output_bytes": 79,
+      "safe_events": [
+        "NORMAL_ISOLATED_API_STARTING"
+      ]
+    },
+    "vite": {
+      "owned_pid": 129152,
+      "exit_code": 1,
+      "closed": true,
+      "was_running_at_cleanup": true,
+      "owned_tree_stop_requested": true,
+      "reader_closed": true,
+      "discarded_output_bytes": 73,
+      "safe_events": []
+    }
+  },
+  "complete_answer_latency_ms": null,
+  "TTFT_ms": null,
+  "stable_p95_ms": null,
+  "technical_completion_observed": false,
+  "journey_available": false,
+  "closure_available": false,
+  "financial_available": false,
+  "finished_utc": "2026-10-11T23:21:51.982807+00:00",
+  "outer_wall_seconds": 13.138375099995756
+}

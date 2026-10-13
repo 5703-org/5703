@@ -1,0 +1,252 @@
+{
+  "schema": "5703_native76_public_scope_projection_v1",
+  "scope_pin": {
+    "bytes": 3963096,
+    "sha256": "5c5f7b8c38b621458c07aae6902fe6e09db9f3b4f6400f1c85a2e14a120a1313"
+  },
+  "projection_only": true,
+  "auth_or_binding_data_exported": false,
+  "question_id": "Q_NATIVE70",
+  "question_text": "What happens to carbon fixed in the Calvin cycle: what does RuBisCO combine with CO2, how does the resulting compound become G3P, and why does some G3P leave while the rest remains?",
+  "question_descriptor_sha256": "1aba6b3d61922f14c26d0a1dfb3ba1df80f46c43d2f59e2ce9502eccc63e0baf",
+  "continuation_phase": "76_NORMAL_NATIVE_JOURNEY_AFTER_ZERO_SUBMIT_STOP74",
+  "use_profile": false,
+  "reading_context": null,
+  "normal_project_activation_qualified": false,
+  "current_native_evidence_count": null,
+  "original_71_evidence_equivalence_claimed": false,
+  "source_boundary_mode": "normal_fresh_retrieval_current_public_release_only",
+  "full_hold_bound_USD": "0.2858752",
+  "native_requests_maximum": 4,
+  "parent_already_closed_requests": 36,
+  "parent_already_known_cost_USD": "0.0185022",
+  "parent_scope_request_cap": 40,
+  "parent_scope_cost_cap_USD": "1",
+  "retries": 0,
+  "paid_judges": 0,
+  "new_databases": 0,
+  "cleanup_or_delete_rows": false,
+  "scan_old_jobs_or_recover_stale": false,
+  "expected_settings": {
+    "api_v1_prefix": "/api/v1",
+    "chat_checker_schema_policy": null,
+    "chat_coverage_query_policy": "off",
+    "chat_joint_checker_policy": "typed_joint_v5",
+    "chat_provider_output_policy": "json_field_contract_v2",
+    "chat_query_preparation_policy": "anchored_reference_v22",
+    "chat_relevance_gate": true,
+    "chat_retrieval_cache": true,
+    "chat_retrieval_config": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-native76-preparation\\native70-cpu-r2-policy.json",
+    "chat_source_block_policy": "raw_definition_block_partition_v2",
+    "chat_source_relation_policy": "source_relation_contract_v2",
+    "cors_origins": "http://127.0.0.1:15198",
+    "embedding_dimension": 384,
+    "embedding_model": "intfloat/e5-small-v2",
+    "embedding_provider": "e5",
+    "embedding_revision": "ffb93f3bd4047442299a41ebb6fa998a38507c52",
+    "env": "test",
+    "feature_flags": "multi_workspace:false,lms_sync:false,agent_tools:false",
+    "llm_api_base": "https://openrouter.ai/api/v1",
+    "llm_model": "anthropic/claude-haiku-5.5",
+    "llm_provider": "openai_compatible",
+    "local_model_device": "cpu",
+    "max_provider_calls": 4,
+    "memory_semantic_policy_file": null,
+    "mock_delay_seconds": 0.25,
+    "model_mode": "live",
+    "model_output_tokens": 1024,
+    "model_window_tokens": 131072,
+    "provider_timeout_seconds": 60,
+    "request_timeout_seconds": 180,
+    "seed_demo_users": false,
+    "storage_root": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-native76-preparation\\native-storage70",
+    "visual_catalog_staging_root": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-native76-preparation\\native-visual-staging70",
+    "worker_prewarm_retrieval_cache": false
+  },
+  "source_pins": [
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\main.py",
+      "bytes": 3780,
+      "sha256": "ef671429abefbad54925e87613f4686877068de5137396b86d011fb519de473a"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\worker.py",
+      "bytes": 11785,
+      "sha256": "64f712d0c6c1e58a7a0a44aa0aaaa61883fcd5386ca18e5d889d0507200aba3b"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\core\\config.py",
+      "bytes": 6527,
+      "sha256": "3f618fcdad99ed82cccc647788c9e68c5c68eadf1c8df5ac15b2563982e38c39"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\db\\session.py",
+      "bytes": 1647,
+      "sha256": "c49d02fba805016dc940acd4e281f0717d9d88ff0ffc0687f4bbc5d7d5b0eeeb"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\answering\\service.py",
+      "bytes": 95056,
+      "sha256": "478f379fc51f26944d45964952f4966f98450e39524f817a54db2992a0d0fa1a"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\answering\\models.py",
+      "bytes": 6923,
+      "sha256": "179e0a78c38a4c0224ad0b5846ca6d7731e97bef7cab6c0fb8bc21cbeaf9ef29"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\learning\\models.py",
+      "bytes": 1060,
+      "sha256": "b98af9973cf65593d30fb20bda08ccbbb0a8dc304aa9223f6f71aa49b85f80ac"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\identity\\models.py",
+      "bytes": 2932,
+      "sha256": "c11094b2642b9a13bab870ba6154aa302280836c8838a42f2566547ac01af80d"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\db\\base.py",
+      "bytes": 1052,
+      "sha256": "45b925d6ecbb31a10e68f415a93a271fded22e7a5a910be71ae8d0e74157920b"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\platform_core\\worker_locks.py",
+      "bytes": 3015,
+      "sha256": "b2d5c5284c3440e16dee05d2e41677a4a94390436aacab8e97e9508d3c38a4fb"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\learning_state\\models.py",
+      "bytes": 8894,
+      "sha256": "170ac23cfe6c4686ea6be837fa9db04007878fc8682e5a032d2f325bed0f26ec"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\model_settings\\service.py",
+      "bytes": 19093,
+      "sha256": "e6e0a9d41846ff36a37bc1eef72892f9ddbc3f2c4648f36f2e9a714f07d5e39d"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\model_settings\\models.py",
+      "bytes": 7198,
+      "sha256": "dd4aadd9910b1935149174d5d355a3ebc82c1aa0ce1e9ae030ab95e06dac24e4"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\knowledge\\service.py",
+      "bytes": 60529,
+      "sha256": "6170d5b38ae9aea264eb3fa738e567cdaacb5dbead8b32cfb74abd92c9550b10"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\adapters.py",
+      "bytes": 29552,
+      "sha256": "99075cb07f4faf861119c5fa5113da6951408c02323c14452d090661fd0c3ddb"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\providers.py",
+      "bytes": 26220,
+      "sha256": "bbfb74558e1adf5e4850edad02bb117af221c804aaad6e6f260addfe05fb38f4"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\types.py",
+      "bytes": 10131,
+      "sha256": "f74ce2c7295b7ee655577bc330791fbdd2c62447b8f7d4414af85b4aba7bcd69"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\service.py",
+      "bytes": 27867,
+      "sha256": "9a74fe59f9ba5e6b671a46fa214bdbee879595661ea13298a6699e39196b0365"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checked.py",
+      "bytes": 160956,
+      "sha256": "88509d22466095e5761bd247269a4dd03432fcb4dd2511ed02739e29da2e5d30"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompt_builder.py",
+      "bytes": 10256,
+      "sha256": "d6cb2fefc3a98549b4193111cff5e1132e663d02198af1b8a9b3aee98325a606"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\openrouter_routes.py",
+      "bytes": 12356,
+      "sha256": "c82e86990476c0f95da650b38ef444e62c1dba6ae29f407a44c4af444ad2348e"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\frontend\\src\\Chat.tsx",
+      "bytes": 43076,
+      "sha256": "e15a0b56d7ee9d20c8312c05b7e86f60360c3127d930ce50f348c56b0c0a3ad7"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\frontend\\src\\App.tsx",
+      "bytes": 15036,
+      "sha256": "0fa3fa6a7afeb674c65f58be33d83d161ef54a7e543543bc698bf5a1975046bd"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\frontend\\src\\Markdown.tsx",
+      "bytes": 4549,
+      "sha256": "3edc21990e972fae30acc2b22fea1ddee014e8cc7e11b93c67dfa8d6081966d4"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\frontend\\src\\api.ts",
+      "bytes": 4059,
+      "sha256": "5492a02e628bdd7b189329e0d6e97026857ef1e8d6ed4fc32a983f4ed24e1f88"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\frontend\\package.json",
+      "bytes": 1134,
+      "sha256": "ae34299e3aae1b093395469121722889d73d475ab83d1bd75e6df4d23dd42baf"
+    }
+  ],
+  "helper_pins": {
+    "bootstrap_native70.py": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-native76-preparation\\bootstrap_native70.py",
+      "bytes": 17007,
+      "sha256": "784bf65222faf3a427eb48ac73b2d4d3649ff2f46f82c3a4c74610e6167717a5"
+    },
+    "browser70.cjs": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-native76-preparation\\browser70.cjs",
+      "bytes": 21612,
+      "sha256": "ce644c5a3b283da77a0a87601fff16f6b8e02768f4e0287c089bfb0b9c396c49"
+    },
+    "native70-cpu-r2-policy.json": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-native76-preparation\\native70-cpu-r2-policy.json",
+      "bytes": 324,
+      "sha256": "d0c9683bfa659963ddc98cc2e1a5aef5475a55f2852e44526faa64d7156158f1"
+    },
+    "normal_transport70.py": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-native76-preparation\\normal_transport70.py",
+      "bytes": 21809,
+      "sha256": "de03ee2fba425992cdbd25f7d90da83ef23e0120349e0cdef69409bd222ff38e"
+    },
+    "run_native70.py": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-native76-preparation\\run_native70.py",
+      "bytes": 36049,
+      "sha256": "d8daeb91d2a71659ab18daf611d5fdb61225789d944cdbc236da153bd53f65dc"
+    },
+    "targeted_answer70.py": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-native76-preparation\\targeted_answer70.py",
+      "bytes": 24763,
+      "sha256": "c403b032a95be6b663a07fea1dfd740c41dd60b68414a54fd58a79b0b62e2bea"
+    },
+    "vite70.config.mjs": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-native76-preparation\\vite70.config.mjs",
+      "bytes": 662,
+      "sha256": "b0f670d6349d320fda3a4ec2dc5521399b8cea7c51577f9e4b1091637ce6ba7b"
+    }
+  },
+  "browser_executable_pin": {
+    "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "bytes": 4496024,
+    "sha256": "e57b884ec7ddd663a43e3f82f87723e93709766475014ab0e63accd9eb3be7f0"
+  },
+  "browser_version": "154.0.8037.99",
+  "actual_result": "STARTUP_ONLY_ZERO_SUBMIT_STOP",
+  "actual_provider_posts": 0,
+  "fresh_send_to_complete_display_ms": null,
+  "actual_failure_cause": "UNKNOWN",
+  "models": {
+    "teacher": "anthropic/claude-haiku-5.5",
+    "checker": "google/gemini-3.5-flash-lite",
+    "provider": "openrouter",
+    "route": "google-vertex/global",
+    "reasoning": "low"
+  }
+}

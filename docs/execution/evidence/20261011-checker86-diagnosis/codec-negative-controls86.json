@@ -1,0 +1,95 @@
+{
+  "network_calls": 0,
+  "model_calls": 0,
+  "database_calls": 0,
+  "auth_reads": 0,
+  "runtime_claims": 0,
+  "Main_writes": 0,
+  "cases": [
+    {
+      "case_id": "case06",
+      "saved_real_hydrate_negative": "PASS",
+      "reproduced_error": "Unit evidence was not selected by its own parent",
+      "unknown_keys": [],
+      "parent_unit_selection_conflicts": [
+        {
+          "claim_alias": "C006",
+          "original_claim_id": "claim_13eb10f7fbf5153f4bc136d1_1",
+          "unit_id": "U03",
+          "fragment_id": "F011",
+          "parent_selected_fragments": [
+            "F010",
+            "F052"
+          ],
+          "allowed_by_original_parent_binding": true,
+          "source_evidence_id": "ev_002"
+        }
+      ],
+      "strict_wire_compilation": "PASS_OFFLINE_ONLY",
+      "route_schema_projection": {},
+      "schema_rejects_unknown_citation_keys": true,
+      "schema_enforces_dynamic_parent_selected_subset": false
+    },
+    {
+      "case_id": "case07",
+      "saved_real_hydrate_negative": "PASS",
+      "reproduced_error": "Unknown full or projected field key",
+      "unknown_keys": [
+        {
+          "path": "$.cs[1].ci[0].relation",
+          "value": "supporting"
+        },
+        {
+          "path": "$.cs[2].ci[0].relation",
+          "value": "supporting"
+        },
+        {
+          "path": "$.cs[3].ci[0].relation",
+          "value": "supporting"
+        },
+        {
+          "path": "$.cs[4].ci[0].relpath",
+          "value": null
+        },
+        {
+          "path": "$.cs[4].ci[0].relation",
+          "value": "supporting"
+        },
+        {
+          "path": "$.cs[4].ci[1].relation",
+          "value": "supporting"
+        },
+        {
+          "path": "$.cs[5].ci[0].relation",
+          "value": "supporting"
+        },
+        {
+          "path": "$.cs[6].ci[0].relation",
+          "value": "supporting"
+        },
+        {
+          "path": "$.cs[7].ci[0].relation",
+          "value": "supporting"
+        },
+        {
+          "path": "$.cs[8].ci[0].relation",
+          "value": "supporting"
+        },
+        {
+          "path": "$.cs[9].ci[0].relation",
+          "value": "supporting"
+        },
+        {
+          "path": "$.cs[9].ci[1].relation",
+          "value": "supporting"
+        }
+      ],
+      "parent_unit_selection_conflicts": [],
+      "strict_wire_compilation": "PASS_OFFLINE_ONLY",
+      "route_schema_projection": {},
+      "schema_rejects_unknown_citation_keys": true,
+      "schema_enforces_dynamic_parent_selected_subset": false
+    }
+  ],
+  "analysis_note": "The fixed requirement-evidence p pointer is legal and hydrated into q before the generic alias walk; it is excluded from unknown_keys. Negative controls were not rerun for this reporting correction."
+}

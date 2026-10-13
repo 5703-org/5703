@@ -483,3 +483,11 @@ The dated 858-source checkpoint passed 2,929 Python cases plus two subtests and 
 ## Real practice assessment observation — 3 October 2026
 
 Sixteen real DeepSeek calls and six deterministic controls completed against the fixed official-source development population. Model outcomes were six correct, two incorrect, two partial and six pending reviews caused by invalid evidence coordinates. All eight contradictory responses avoided a correct grade. This direct preparation/validation trial used unpersisted learning objects; real API progression, independent human ratings and source-disjoint quality evaluation remain pending. [Actual results and usage](docs/execution/week09-real-practice-assessment-results-20261003.md).
+
+
+## Week10 product implementation addendum - 9 October 2026
+
+The [Week10 plan](docs/execution/20261009-week10-implementation-plan.md) prioritizes a reproducible source-grounded tutoring journey and measured improvements to reliability, retrieval and complete-answer time. Ordinary textbook Q&A uses an explicit not_applicable attempt-evaluation state when the server confirms there is no learner attempt; actual practice attempts still require their assessment. Scientific support, citations, learner isolation and failure/recovery behavior remain release gates.
+
+The 5-10 second complete usable answer and at least 30% warm p95 improvement are prospective targets under declared workloads and quality noninferiority, not acceptance established by one pair. New retrieval/teacher candidates, BKT and visual/prompt pilots require their own versioned evidence. [Current Week10 status](docs/execution/20261009-week10-implementation-status.md) distinguishes these plans from actual results. Original product modules, Week09 obligations, numbered acceptance and the joint pedagogy/source-control study remain in scope.
+

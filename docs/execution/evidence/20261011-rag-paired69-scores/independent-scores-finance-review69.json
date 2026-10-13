@@ -1,0 +1,985 @@
+{
+  "schema": "paired69_independent_lexical_financial_audit_v1",
+  "status": "PASS_SAVED_36_CLOSED_EVIDENCE",
+  "dataset_label": "DEV/source-conditioned public twelve-question cohort",
+  "reviewer": "Independent AI, not human Gold",
+  "created_at_UTC": "2026-10-11T09:41:47.346429+00:00",
+  "source_pins": {
+    "lexical_sha256": "0116ec02446b00bbeaf3e7a17256146069ff11fdcdd56ef74c43aa1f0482cf99",
+    "wrapper_sha256": "c7a1f03bb5357a1e9413261c01f93524b736f9a399fa1e195123c6994ae8b258",
+    "final_receipt_sha256": "9c6d9852d7ae449e126e92485f6f70a0f113d7b42f84a3deba9fc8e8fc2d9f70",
+    "controller_sha256": "be82acb950b891672d880899290d34ae70c8d1ef44bfa74cef149d371970cb27",
+    "standards_sha256": "9c1f506b970a191b7187c3ad6e09f2264191a7607a83c6dfbadf795886f8e201",
+    "frozen_schedule_sha256": "c1b4c60cefc9777f75f3d63be37bab22fa280ec2f006c2eaf78823a652bb321c",
+    "original_scorer_sha256": "d9e2427b7f61e0cd82760bf0f2129576185239d43ef685c35ed7dd2fb9453a89",
+    "this_script_sha256": "706858a1fafb8ab616a3d9b5c256b4891b94eccd09c99de326bbb0d301c12a4a"
+  },
+  "checks": {
+    "slots": 36,
+    "questions_per_arm": 12,
+    "completed_answers": 36,
+    "raw_exact_two_key_compact_JSON": 36,
+    "duplicate_raw_keys": 0,
+    "observed_auth_fields_or_secret_patterns": 0,
+    "claim_finance_result_settlement_consistent": 36,
+    "token_multiset_math_and_original_scorer_equal": 36,
+    "failed_or_truncated": 0
+  },
+  "financial": {
+    "API_reported_known_USD": "0.0185022",
+    "UNKNOWN_USD": "0",
+    "normal_36_original_maximum_hold_USD": "0.1837320",
+    "current_requests": 36,
+    "previous68_requests": 0,
+    "cumulative40_cap_used": 36,
+    "retries_or_judges": 0,
+    "historic_protection_released_USD": "0",
+    "scope_cap_USD": "1",
+    "account_balance_or_billing_reconciliation": null
+  },
+  "arms": {
+    "E0": {
+      "n": 12,
+      "metrics": {
+        "em": 0.0,
+        "token_f1": 0.4774556002282546
+      },
+      "API_reported_cost_USD": "0.0026398",
+      "provider_latency_ms": {
+        "n": 12,
+        "p50_ms": 1223.5,
+        "p95_ms": 1750.8999999999999
+      },
+      "normal_adapter_wall_ms": {
+        "n": 12,
+        "p50_ms": 1225.452099999984,
+        "p95_ms": 1752.9274350001285
+      }
+    },
+    "E1": {
+      "n": 12,
+      "metrics": {
+        "em": 0.0,
+        "token_f1": 0.5420380173767149
+      },
+      "API_reported_cost_USD": "0.0079143",
+      "provider_latency_ms": {
+        "n": 12,
+        "p50_ms": 1158.5,
+        "p95_ms": 1293.95
+      },
+      "normal_adapter_wall_ms": {
+        "n": 12,
+        "p50_ms": 1162.1489500003008,
+        "p95_ms": 1295.7365299999992
+      }
+    },
+    "HYBRID_R2_MINILM": {
+      "n": 12,
+      "metrics": {
+        "em": 0.0,
+        "token_f1": 0.5441463916951023
+      },
+      "API_reported_cost_USD": "0.0079481",
+      "provider_latency_ms": {
+        "n": 12,
+        "p50_ms": 1164.0,
+        "p95_ms": 1457.3999999999999
+      },
+      "normal_adapter_wall_ms": {
+        "n": 12,
+        "p50_ms": 1165.4915000001438,
+        "p95_ms": 1459.6146499998895
+      }
+    }
+  },
+  "paired_lexical_comparisons": {
+    "E1_minus_E0": {
+      "paired_questions": 12,
+      "token_f1_mean_delta": 0.0645824171484602,
+      "token_f1_wins": 8,
+      "token_f1_ties": 1,
+      "token_f1_losses": 3,
+      "em_wins": 0,
+      "em_ties": 12,
+      "em_losses": 0,
+      "per_question": [
+        {
+          "question_id": "designated_support_01",
+          "token_f1_delta": 0.10779436152570482
+        },
+        {
+          "question_id": "designated_support_02",
+          "token_f1_delta": 0.08923126303964057
+        },
+        {
+          "question_id": "designated_support_03",
+          "token_f1_delta": -0.056456456456456416
+        },
+        {
+          "question_id": "designated_support_04",
+          "token_f1_delta": -0.02777777777777779
+        },
+        {
+          "question_id": "designated_support_05",
+          "token_f1_delta": 0.0776796973518285
+        },
+        {
+          "question_id": "designated_support_06",
+          "token_f1_delta": 0.12199434229137202
+        },
+        {
+          "question_id": "designated_support_07",
+          "token_f1_delta": 0.024653312788906034
+        },
+        {
+          "question_id": "designated_support_08",
+          "token_f1_delta": 0.1581920903954802
+        },
+        {
+          "question_id": "designated_support_09",
+          "token_f1_delta": 0.0
+        },
+        {
+          "question_id": "designated_support_10",
+          "token_f1_delta": 0.2515074579498572
+        },
+        {
+          "question_id": "designated_support_11",
+          "token_f1_delta": -0.11982082866741323
+        },
+        {
+          "question_id": "designated_support_12",
+          "token_f1_delta": 0.14799154334038056
+        }
+      ]
+    },
+    "HYBRID_R2_MINILM_minus_E0": {
+      "paired_questions": 12,
+      "token_f1_mean_delta": 0.06669079146684768,
+      "token_f1_wins": 8,
+      "token_f1_ties": 0,
+      "token_f1_losses": 4,
+      "em_wins": 0,
+      "em_ties": 12,
+      "em_losses": 0,
+      "per_question": [
+        {
+          "question_id": "designated_support_01",
+          "token_f1_delta": 0.07855459544383342
+        },
+        {
+          "question_id": "designated_support_02",
+          "token_f1_delta": -0.0688844086021505
+        },
+        {
+          "question_id": "designated_support_03",
+          "token_f1_delta": -0.05410628019323671
+        },
+        {
+          "question_id": "designated_support_04",
+          "token_f1_delta": -0.02777777777777779
+        },
+        {
+          "question_id": "designated_support_05",
+          "token_f1_delta": 0.04395604395604394
+        },
+        {
+          "question_id": "designated_support_06",
+          "token_f1_delta": 0.15659340659340665
+        },
+        {
+          "question_id": "designated_support_07",
+          "token_f1_delta": 0.013958125623130646
+        },
+        {
+          "question_id": "designated_support_08",
+          "token_f1_delta": 0.21152542372881356
+        },
+        {
+          "question_id": "designated_support_09",
+          "token_f1_delta": -0.09722222222222221
+        },
+        {
+          "question_id": "designated_support_10",
+          "token_f1_delta": 0.2903076780929502
+        },
+        {
+          "question_id": "designated_support_11",
+          "token_f1_delta": 0.11702127659574468
+        },
+        {
+          "question_id": "designated_support_12",
+          "token_f1_delta": 0.13636363636363635
+        }
+      ]
+    },
+    "HYBRID_R2_MINILM_minus_E1": {
+      "paired_questions": 12,
+      "token_f1_mean_delta": 0.0021083743183874814,
+      "token_f1_wins": 5,
+      "token_f1_ties": 1,
+      "token_f1_losses": 6,
+      "em_wins": 0,
+      "em_ties": 12,
+      "em_losses": 0,
+      "per_question": [
+        {
+          "question_id": "designated_support_01",
+          "token_f1_delta": -0.0292397660818714
+        },
+        {
+          "question_id": "designated_support_02",
+          "token_f1_delta": -0.15811567164179108
+        },
+        {
+          "question_id": "designated_support_03",
+          "token_f1_delta": 0.0023501762632197054
+        },
+        {
+          "question_id": "designated_support_04",
+          "token_f1_delta": 0.0
+        },
+        {
+          "question_id": "designated_support_05",
+          "token_f1_delta": -0.033723653395784564
+        },
+        {
+          "question_id": "designated_support_06",
+          "token_f1_delta": 0.03459906430203463
+        },
+        {
+          "question_id": "designated_support_07",
+          "token_f1_delta": -0.010695187165775388
+        },
+        {
+          "question_id": "designated_support_08",
+          "token_f1_delta": 0.053333333333333344
+        },
+        {
+          "question_id": "designated_support_09",
+          "token_f1_delta": -0.09722222222222221
+        },
+        {
+          "question_id": "designated_support_10",
+          "token_f1_delta": 0.038800220143093034
+        },
+        {
+          "question_id": "designated_support_11",
+          "token_f1_delta": 0.2368421052631579
+        },
+        {
+          "question_id": "designated_support_12",
+          "token_f1_delta": -0.011627906976744207
+        }
+      ]
+    }
+  },
+  "slots": [
+    {
+      "slot": 1,
+      "question_id": "designated_support_01",
+      "arm": "E0",
+      "em": 0,
+      "token_f1": 0.44776119402985076,
+      "overlap_tokens": 15,
+      "prediction_tokens": 29,
+      "reference_tokens": 38,
+      "provider_latency_ms": 1571,
+      "normal_adapter_wall_ms": 1583.4469999999783,
+      "API_reported_cost_USD": "0.0001982"
+    },
+    {
+      "slot": 2,
+      "question_id": "designated_support_01",
+      "arm": "E1",
+      "em": 0,
+      "token_f1": 0.5555555555555556,
+      "overlap_tokens": 20,
+      "prediction_tokens": 34,
+      "reference_tokens": 38,
+      "provider_latency_ms": 1108,
+      "normal_adapter_wall_ms": 1111.4268000001175,
+      "API_reported_cost_USD": "0.0007189"
+    },
+    {
+      "slot": 3,
+      "question_id": "designated_support_01",
+      "arm": "HYBRID_R2_MINILM",
+      "em": 0,
+      "token_f1": 0.5263157894736842,
+      "overlap_tokens": 20,
+      "prediction_tokens": 38,
+      "reference_tokens": 38,
+      "provider_latency_ms": 1150,
+      "normal_adapter_wall_ms": 1151.2818000001062,
+      "API_reported_cost_USD": "0.0007274"
+    },
+    {
+      "slot": 4,
+      "question_id": "designated_support_02",
+      "arm": "E1",
+      "em": 0,
+      "token_f1": 0.6268656716417911,
+      "overlap_tokens": 21,
+      "prediction_tokens": 37,
+      "reference_tokens": 30,
+      "provider_latency_ms": 1220,
+      "normal_adapter_wall_ms": 1221.8643999999586,
+      "API_reported_cost_USD": "0.0006277"
+    },
+    {
+      "slot": 5,
+      "question_id": "designated_support_02",
+      "arm": "HYBRID_R2_MINILM",
+      "em": 0,
+      "token_f1": 0.46875,
+      "overlap_tokens": 15,
+      "prediction_tokens": 34,
+      "reference_tokens": 30,
+      "provider_latency_ms": 1178,
+      "normal_adapter_wall_ms": 1179.7012000001814,
+      "API_reported_cost_USD": "0.0006232"
+    },
+    {
+      "slot": 6,
+      "question_id": "designated_support_02",
+      "arm": "E0",
+      "em": 0,
+      "token_f1": 0.5376344086021505,
+      "overlap_tokens": 25,
+      "prediction_tokens": 63,
+      "reference_tokens": 30,
+      "provider_latency_ms": 1243,
+      "normal_adapter_wall_ms": 1245.2749000003678,
+      "API_reported_cost_USD": "0.000262"
+    },
+    {
+      "slot": 7,
+      "question_id": "designated_support_03",
+      "arm": "HYBRID_R2_MINILM",
+      "em": 0,
+      "token_f1": 0.43478260869565216,
+      "overlap_tokens": 10,
+      "prediction_tokens": 26,
+      "reference_tokens": 20,
+      "provider_latency_ms": 971,
+      "normal_adapter_wall_ms": 973.2419000001755,
+      "API_reported_cost_USD": "0.0006413"
+    },
+    {
+      "slot": 8,
+      "question_id": "designated_support_03",
+      "arm": "E0",
+      "em": 0,
+      "token_f1": 0.4888888888888889,
+      "overlap_tokens": 11,
+      "prediction_tokens": 25,
+      "reference_tokens": 20,
+      "provider_latency_ms": 1214,
+      "normal_adapter_wall_ms": 1215.4955999999402,
+      "API_reported_cost_USD": "0.0001642"
+    },
+    {
+      "slot": 9,
+      "question_id": "designated_support_03",
+      "arm": "E1",
+      "em": 0,
+      "token_f1": 0.43243243243243246,
+      "overlap_tokens": 8,
+      "prediction_tokens": 17,
+      "reference_tokens": 20,
+      "provider_latency_ms": 1196,
+      "normal_adapter_wall_ms": 1199.5608000001994,
+      "API_reported_cost_USD": "0.0005903"
+    },
+    {
+      "slot": 10,
+      "question_id": "designated_support_04",
+      "arm": "E0",
+      "em": 0,
+      "token_f1": 0.9166666666666666,
+      "overlap_tokens": 11,
+      "prediction_tokens": 11,
+      "reference_tokens": 13,
+      "provider_latency_ms": 1007,
+      "normal_adapter_wall_ms": 1009.1698000001088,
+      "API_reported_cost_USD": "0.0001358"
+    },
+    {
+      "slot": 11,
+      "question_id": "designated_support_04",
+      "arm": "E1",
+      "em": 0,
+      "token_f1": 0.8888888888888888,
+      "overlap_tokens": 12,
+      "prediction_tokens": 14,
+      "reference_tokens": 13,
+      "provider_latency_ms": 1156,
+      "normal_adapter_wall_ms": 1159.986100000424,
+      "API_reported_cost_USD": "0.0006329"
+    },
+    {
+      "slot": 12,
+      "question_id": "designated_support_04",
+      "arm": "HYBRID_R2_MINILM",
+      "em": 0,
+      "token_f1": 0.8888888888888888,
+      "overlap_tokens": 12,
+      "prediction_tokens": 14,
+      "reference_tokens": 13,
+      "provider_latency_ms": 953,
+      "normal_adapter_wall_ms": 955.449999999928,
+      "API_reported_cost_USD": "0.0006161"
+    },
+    {
+      "slot": 13,
+      "question_id": "designated_support_05",
+      "arm": "E1",
+      "em": 0,
+      "token_f1": 0.26229508196721313,
+      "overlap_tokens": 8,
+      "prediction_tokens": 34,
+      "reference_tokens": 27,
+      "provider_latency_ms": 1083,
+      "normal_adapter_wall_ms": 1090.5453000000307,
+      "API_reported_cost_USD": "0.0007131"
+    },
+    {
+      "slot": 14,
+      "question_id": "designated_support_05",
+      "arm": "HYBRID_R2_MINILM",
+      "em": 0,
+      "token_f1": 0.22857142857142856,
+      "overlap_tokens": 8,
+      "prediction_tokens": 43,
+      "reference_tokens": 27,
+      "provider_latency_ms": 1486,
+      "normal_adapter_wall_ms": 1488.53199999985,
+      "API_reported_cost_USD": "0.0007012"
+    },
+    {
+      "slot": 15,
+      "question_id": "designated_support_05",
+      "arm": "E0",
+      "em": 0,
+      "token_f1": 0.18461538461538463,
+      "overlap_tokens": 6,
+      "prediction_tokens": 38,
+      "reference_tokens": 27,
+      "provider_latency_ms": 1261,
+      "normal_adapter_wall_ms": 1262.4946000000818,
+      "API_reported_cost_USD": "0.0002151"
+    },
+    {
+      "slot": 16,
+      "question_id": "designated_support_06",
+      "arm": "HYBRID_R2_MINILM",
+      "em": 0,
+      "token_f1": 0.5494505494505495,
+      "overlap_tokens": 25,
+      "prediction_tokens": 55,
+      "reference_tokens": 36,
+      "provider_latency_ms": 1434,
+      "normal_adapter_wall_ms": 1435.9549999999217,
+      "API_reported_cost_USD": "0.0007494"
+    },
+    {
+      "slot": 17,
+      "question_id": "designated_support_06",
+      "arm": "E0",
+      "em": 0,
+      "token_f1": 0.39285714285714285,
+      "overlap_tokens": 22,
+      "prediction_tokens": 76,
+      "reference_tokens": 36,
+      "provider_latency_ms": 1233,
+      "normal_adapter_wall_ms": 1235.408600000028,
+      "API_reported_cost_USD": "0.0003447"
+    },
+    {
+      "slot": 18,
+      "question_id": "designated_support_06",
+      "arm": "E1",
+      "em": 0,
+      "token_f1": 0.5148514851485149,
+      "overlap_tokens": 26,
+      "prediction_tokens": 65,
+      "reference_tokens": 36,
+      "provider_latency_ms": 1311,
+      "normal_adapter_wall_ms": 1312.8532999999152,
+      "API_reported_cost_USD": "0.0007622"
+    },
+    {
+      "slot": 19,
+      "question_id": "designated_support_07",
+      "arm": "E0",
+      "em": 0,
+      "token_f1": 0.3389830508474576,
+      "overlap_tokens": 10,
+      "prediction_tokens": 26,
+      "reference_tokens": 33,
+      "provider_latency_ms": 1174,
+      "normal_adapter_wall_ms": 1175.987499999792,
+      "API_reported_cost_USD": "0.0001798"
+    },
+    {
+      "slot": 20,
+      "question_id": "designated_support_07",
+      "arm": "E1",
+      "em": 0,
+      "token_f1": 0.36363636363636365,
+      "overlap_tokens": 10,
+      "prediction_tokens": 22,
+      "reference_tokens": 33,
+      "provider_latency_ms": 1161,
+      "normal_adapter_wall_ms": 1164.3118000001778,
+      "API_reported_cost_USD": "0.0005978"
+    },
+    {
+      "slot": 21,
+      "question_id": "designated_support_07",
+      "arm": "HYBRID_R2_MINILM",
+      "em": 0,
+      "token_f1": 0.35294117647058826,
+      "overlap_tokens": 9,
+      "prediction_tokens": 18,
+      "reference_tokens": 33,
+      "provider_latency_ms": 1232,
+      "normal_adapter_wall_ms": 1236.04400000022,
+      "API_reported_cost_USD": "0.0006364"
+    },
+    {
+      "slot": 22,
+      "question_id": "designated_support_08",
+      "arm": "E1",
+      "em": 0,
+      "token_f1": 0.6666666666666666,
+      "overlap_tokens": 19,
+      "prediction_tokens": 32,
+      "reference_tokens": 25,
+      "provider_latency_ms": 1186,
+      "normal_adapter_wall_ms": 1188.8047000002189,
+      "API_reported_cost_USD": "0.0006839"
+    },
+    {
+      "slot": 23,
+      "question_id": "designated_support_08",
+      "arm": "HYBRID_R2_MINILM",
+      "em": 0,
+      "token_f1": 0.72,
+      "overlap_tokens": 18,
+      "prediction_tokens": 25,
+      "reference_tokens": 25,
+      "provider_latency_ms": 1193,
+      "normal_adapter_wall_ms": 1195.0590000001284,
+      "API_reported_cost_USD": "0.0006548"
+    },
+    {
+      "slot": 24,
+      "question_id": "designated_support_08",
+      "arm": "E0",
+      "em": 0,
+      "token_f1": 0.5084745762711864,
+      "overlap_tokens": 15,
+      "prediction_tokens": 34,
+      "reference_tokens": 25,
+      "provider_latency_ms": 1074,
+      "normal_adapter_wall_ms": 1076.1701999999786,
+      "API_reported_cost_USD": "0.0002017"
+    },
+    {
+      "slot": 25,
+      "question_id": "designated_support_09",
+      "arm": "HYBRID_R2_MINILM",
+      "em": 0,
+      "token_f1": 0.7777777777777778,
+      "overlap_tokens": 14,
+      "prediction_tokens": 21,
+      "reference_tokens": 15,
+      "provider_latency_ms": 901,
+      "normal_adapter_wall_ms": 903.6991000002672,
+      "API_reported_cost_USD": "0.000642"
+    },
+    {
+      "slot": 26,
+      "question_id": "designated_support_09",
+      "arm": "E0",
+      "em": 0,
+      "token_f1": 0.875,
+      "overlap_tokens": 14,
+      "prediction_tokens": 17,
+      "reference_tokens": 15,
+      "provider_latency_ms": 1026,
+      "normal_adapter_wall_ms": 1027.7155000003404,
+      "API_reported_cost_USD": "0.0001776"
+    },
+    {
+      "slot": 27,
+      "question_id": "designated_support_09",
+      "arm": "E1",
+      "em": 0,
+      "token_f1": 0.875,
+      "overlap_tokens": 14,
+      "prediction_tokens": 17,
+      "reference_tokens": 15,
+      "provider_latency_ms": 985,
+      "normal_adapter_wall_ms": 987.2184000000743,
+      "API_reported_cost_USD": "0.0006003"
+    },
+    {
+      "slot": 28,
+      "question_id": "designated_support_10",
+      "arm": "E0",
+      "em": 0,
+      "token_f1": 0.291970802919708,
+      "overlap_tokens": 20,
+      "prediction_tokens": 99,
+      "reference_tokens": 38,
+      "provider_latency_ms": 1669,
+      "normal_adapter_wall_ms": 1670.8455000002687,
+      "API_reported_cost_USD": "0.0003848"
+    },
+    {
+      "slot": 29,
+      "question_id": "designated_support_10",
+      "arm": "E1",
+      "em": 0,
+      "token_f1": 0.5434782608695652,
+      "overlap_tokens": 25,
+      "prediction_tokens": 54,
+      "reference_tokens": 38,
+      "provider_latency_ms": 1280,
+      "normal_adapter_wall_ms": 1281.731900000068,
+      "API_reported_cost_USD": "0.0007632"
+    },
+    {
+      "slot": 30,
+      "question_id": "designated_support_10",
+      "arm": "HYBRID_R2_MINILM",
+      "em": 0,
+      "token_f1": 0.5822784810126582,
+      "overlap_tokens": 23,
+      "prediction_tokens": 41,
+      "reference_tokens": 38,
+      "provider_latency_ms": 1234,
+      "normal_adapter_wall_ms": 1235.8315999999832,
+      "API_reported_cost_USD": "0.0007144"
+    },
+    {
+      "slot": 31,
+      "question_id": "designated_support_11",
+      "arm": "E1",
+      "em": 0,
+      "token_f1": 0.2631578947368421,
+      "overlap_tokens": 5,
+      "prediction_tokens": 22,
+      "reference_tokens": 16,
+      "provider_latency_ms": 1156,
+      "normal_adapter_wall_ms": 1159.3330999999125,
+      "API_reported_cost_USD": "0.0006156"
+    },
+    {
+      "slot": 32,
+      "question_id": "designated_support_11",
+      "arm": "HYBRID_R2_MINILM",
+      "em": 0,
+      "token_f1": 0.5,
+      "overlap_tokens": 9,
+      "prediction_tokens": 20,
+      "reference_tokens": 16,
+      "provider_latency_ms": 1097,
+      "normal_adapter_wall_ms": 1100.0941000002058,
+      "API_reported_cost_USD": "0.0005901"
+    },
+    {
+      "slot": 33,
+      "question_id": "designated_support_11",
+      "arm": "E0",
+      "em": 0,
+      "token_f1": 0.3829787234042553,
+      "overlap_tokens": 9,
+      "prediction_tokens": 31,
+      "reference_tokens": 16,
+      "provider_latency_ms": 1851,
+      "normal_adapter_wall_ms": 1853.2497999999578,
+      "API_reported_cost_USD": "0.0001957"
+    },
+    {
+      "slot": 34,
+      "question_id": "designated_support_12",
+      "arm": "HYBRID_R2_MINILM",
+      "em": 0,
+      "token_f1": 0.5,
+      "overlap_tokens": 11,
+      "prediction_tokens": 28,
+      "reference_tokens": 16,
+      "provider_latency_ms": 1090,
+      "normal_adapter_wall_ms": 1092.0146999997087,
+      "API_reported_cost_USD": "0.0006518"
+    },
+    {
+      "slot": 35,
+      "question_id": "designated_support_12",
+      "arm": "E0",
+      "em": 0,
+      "token_f1": 0.36363636363636365,
+      "overlap_tokens": 8,
+      "prediction_tokens": 28,
+      "reference_tokens": 16,
+      "provider_latency_ms": 1152,
+      "normal_adapter_wall_ms": 1153.703200000109,
+      "API_reported_cost_USD": "0.0001802"
+    },
+    {
+      "slot": 36,
+      "question_id": "designated_support_12",
+      "arm": "E1",
+      "em": 0,
+      "token_f1": 0.5116279069767442,
+      "overlap_tokens": 11,
+      "prediction_tokens": 27,
+      "reference_tokens": 16,
+      "provider_latency_ms": 978,
+      "normal_adapter_wall_ms": 980.037700000139,
+      "API_reported_cost_USD": "0.0006084"
+    }
+  ],
+  "financial_pins": [
+    {
+      "slot": 1,
+      "claim_sha256": "df99b101cbb9b8816a6110a960c38d25f53cb600b020a3e394382cbf4af70d4f",
+      "financial_sha256": "da16f4322f82c3e92a4716c66cdf7c454e597f118de87e749931720e44f994b6",
+      "settlement_sha256": "362868aba4edd94108d6e14abd0d899e824c24e3bd2fb88e18546f0acccbe381"
+    },
+    {
+      "slot": 2,
+      "claim_sha256": "9f28a66d7a8b8c6228700e94eb777298e85202b62d0283854519237c94ec15cb",
+      "financial_sha256": "2150268f907f858e6c94f4dbfeca7053c5e47e87f037b060f834cbdbd97aaf5b",
+      "settlement_sha256": "fc61d0821de0fc03370abc830d8cb0f9fe24ade54dc3df1d9acadd83c2cfb779"
+    },
+    {
+      "slot": 3,
+      "claim_sha256": "acfc0b0e33607a3be27241ffee3dc09cd3310e6ba3e52fdc18c8bc0df7bd7198",
+      "financial_sha256": "85f4c02a88d5f809d64c0003dc5ab28d15b54934ed5d981bc2020df5eaa196d2",
+      "settlement_sha256": "7d5f0471f58642ee8686e1ba6c7a0645dc9f138e0d952266d071f68bd68ab01e"
+    },
+    {
+      "slot": 4,
+      "claim_sha256": "5d99b092efee1303a3ed829ea4aa21ce5d8453cc28603178073a780a14582192",
+      "financial_sha256": "904fba8b94d1f6b27dc3ea64742a10cb57ffbfd2e7a936d8a26469e24a781f7f",
+      "settlement_sha256": "82db4d79a0aced070557285d773ef90e3df349410db4f75661a0d743dc6e9e1c"
+    },
+    {
+      "slot": 5,
+      "claim_sha256": "1f73bbc9c2eced8dc847fb182c677a15717c2495ca132d7d41405fcd2eee9f11",
+      "financial_sha256": "daae8602490c1e070e8b37f30939f16b94225e5d81431795d8e0d6941b32ab23",
+      "settlement_sha256": "530abd17ba358854401de3bf515c6c400ea2064c55547404f00b662857011c72"
+    },
+    {
+      "slot": 6,
+      "claim_sha256": "af0d31e99a970268ecb2e61739cffec1363e2dfe2ceae2b4c8781f246ab91a43",
+      "financial_sha256": "61c712ff966f00d45004f377f44b5261236de99467dc11a1c367701dd197a4a0",
+      "settlement_sha256": "08b93400186f7aedde7d57a51d3ef20e70e5256f1b7212ef8a976cc642d7be2b"
+    },
+    {
+      "slot": 7,
+      "claim_sha256": "8a5b49d0e4528b58613a8ae6d0f884c1efea1a0c6a35fe51fcd481ad8d26f6f3",
+      "financial_sha256": "3cfb25682d42ea40d46b73fe6ce8b0a1bd4da5e9b7b8fc23e808e375294471ed",
+      "settlement_sha256": "96ebcaf44cc5ee7ed84584dbdd9406d565247d81b3e2d62a244f3fa26f0de531"
+    },
+    {
+      "slot": 8,
+      "claim_sha256": "c808fda2c764aacbbc0e65bec14c29b11242b2aa3debdf4ea841c5e143bc584d",
+      "financial_sha256": "9b2d995c6f001376e6df1c94c0da0f7a22160cea231ed0c41a98232801f53983",
+      "settlement_sha256": "e8e2881bec0817bf36176884570de815de511c230e0a6d138edea65b5f61ad3f"
+    },
+    {
+      "slot": 9,
+      "claim_sha256": "2a157e7f9379e8c2e515e117c55d9fedf039cc44f9d9caf2d02c43a00de9dd27",
+      "financial_sha256": "405b5da672323bd59950de67fe447da486e33c1b759ff50209b1a3e93eb25832",
+      "settlement_sha256": "1f830f0ac4048657aac2e9360a2e547c0b51b2bc5fd0096fc2b17fcea8b6772c"
+    },
+    {
+      "slot": 10,
+      "claim_sha256": "65473ea2d67f06e731037c011b51d92714645bd54bbaac7b25f1588aedebae93",
+      "financial_sha256": "49022c2e0fe907a77690925faa3f0c0b814c53b2ccc5e171fd4b0bd9385807f7",
+      "settlement_sha256": "7dac0c5be9e89280899b23b54cced9bc752ea5af7c3e9b7b04782d6bb266e83d"
+    },
+    {
+      "slot": 11,
+      "claim_sha256": "44a173304cebc0111f5bd350c7a816d9b2debc0c7df66b1be1310fc7c5dfeeba",
+      "financial_sha256": "073d1749b3f387f93ec844faf5aee8357d8cbdbc7c433aa413b9b4c7c4277225",
+      "settlement_sha256": "495e621f1123733a312a57230eda38782b91f8472dd9f7390b0c1f86254e6921"
+    },
+    {
+      "slot": 12,
+      "claim_sha256": "22d3e23c0cb655fe81d9ad9afcca188310b5f5c65c860e7d510815c5180a4f1f",
+      "financial_sha256": "96684a1cfeaad18b10bacd485fa2ba90bf22e5aaf68be73955bfd1bc584de3da",
+      "settlement_sha256": "b64d32176127f864226dc0221924e13d22807673ed7e0af6960d2e2dd1b80660"
+    },
+    {
+      "slot": 13,
+      "claim_sha256": "8fd35a2359df3de1004f01e23408ff67b22e9de4bc2af1366bba0ca62647e59c",
+      "financial_sha256": "6c0b5d6e972f648c148af3c1193720a9d8657218fc15b6e4d8c4fc19f9623e06",
+      "settlement_sha256": "30301f6f28a5ba6df925117ba319a7887744e5b09957f083ab71a7288fe122f0"
+    },
+    {
+      "slot": 14,
+      "claim_sha256": "c2ff23a26119048f14894285b6a741a470c76e3f36649535957059f2880d2256",
+      "financial_sha256": "f22c922c46669b4443fa47ff2eeb20050facfc7fb0f83ce4134e91e556d8c1ea",
+      "settlement_sha256": "c4efa7f23c9ea3481680861f9dd7cf243af8463fa9372a965d0c7046ccd1933e"
+    },
+    {
+      "slot": 15,
+      "claim_sha256": "a2326e91690db293edea435bb09cbdc997ecef78a0de9eb865e41413342e874d",
+      "financial_sha256": "176d5244c8ef1ed544997856b06c8ebcd3c49c9b233feb4c962a2f1f37b265c4",
+      "settlement_sha256": "cf80ce0b206ebdc2da2054753674d56f0864cbddd9c6042dbbe5d2f5b77e4aa5"
+    },
+    {
+      "slot": 16,
+      "claim_sha256": "a51d9b5b2b4e27d4150bc6e7783050f317fb340c0e290402401bffded13d0a9c",
+      "financial_sha256": "1c8d096a88159129350eced633be58157dd87b3da29e1acc1946f5b25c59ff0a",
+      "settlement_sha256": "a28b2402d583ff1e28eb8b8ad6a909b0d1d6c9abbbeb9e3b44ef99ddddfdbadf"
+    },
+    {
+      "slot": 17,
+      "claim_sha256": "f310ffa805c5572a384fd26b2b7bb40450eca70227993f7225d75db77d3ae6ab",
+      "financial_sha256": "1e3716cff26f4c51a03ffaa5f5ac480129e6058f84b8e7f1f62c6fcd491b41d6",
+      "settlement_sha256": "60724a24513ec9ccfa81f18d37652b708d433f5b28ddf5690419cf8ef8621637"
+    },
+    {
+      "slot": 18,
+      "claim_sha256": "7a3e9e6c8c73c81d024911e86d26557bb51193f6d53ef9c6f66f59382e77365b",
+      "financial_sha256": "d0282358d779e8cb53ac1023388673bd745542a1e285cbd189cdc7fb0266d653",
+      "settlement_sha256": "6c3b5ac36638bd865d3db41134d986d3f30b00abe8b18781c94b9e0c64a2b073"
+    },
+    {
+      "slot": 19,
+      "claim_sha256": "21ebbf5c8f101f77369627e0a4c403456f638e24c3feacecdc9e7edf1041dcbb",
+      "financial_sha256": "24871ee21bccb968e5038849d8b35d8b067c5f70bedd4534e46ee14e1bf2c844",
+      "settlement_sha256": "7688700b163c7d303c557ba1aa5cbe470d015b7388d0e94cd3ac193684a517a3"
+    },
+    {
+      "slot": 20,
+      "claim_sha256": "053ffe25350c0821bc3b959b0abc30a51c4274e6b2559454de4dc1912c8202dc",
+      "financial_sha256": "1380d0145a28deb505dcec4e867e2ab826fc3281b563ba4e7f62237a46fc8839",
+      "settlement_sha256": "835bf4eb7878788ce5cd54bd1a76d1da11c07c87955243393385a7c3a672a73d"
+    },
+    {
+      "slot": 21,
+      "claim_sha256": "bf1e35a8b6e693a982b1bc7c8f737049e7fee1feba7c311d65eccc81b275ed8d",
+      "financial_sha256": "cc6fe98b4a510a90970844b4d377babd109d024462941dbce9d980a5307996bd",
+      "settlement_sha256": "719cd1a1da68d7bb0677921d09b9a24f5eab36fb42998fdf47626d00f85ce7c7"
+    },
+    {
+      "slot": 22,
+      "claim_sha256": "dae767443317c18322fbed3a38d349a821cc1f19d04676aa092a6a4245420631",
+      "financial_sha256": "8802fa4ae0dbc1fca91f535d17e253bc9d5cd01b2dc3a646bd47760750a6a39b",
+      "settlement_sha256": "c532bf4230d1c9e2eef0c4438d9944fecb7f8d4eca03c9afcc3cebfa2dc18f69"
+    },
+    {
+      "slot": 23,
+      "claim_sha256": "8e488847a575c56c46ef7791003ef2a4a626c847abbd50cafa0ee979abf025a2",
+      "financial_sha256": "f99d3747c06a80d3424e6df6fceb240c744bb0e695109b5b809eb5d8dba87e3b",
+      "settlement_sha256": "979f4da4f95eb2efed1706cbd8fcf2980c6b433884a74f616ca6c7536b72f702"
+    },
+    {
+      "slot": 24,
+      "claim_sha256": "4ce3802ad838b55e51e2c4d9de9d412853833d274ff806a98a9a47653664447a",
+      "financial_sha256": "8fd0a852ba509fda0583528844f1925b756c34c718c41145d720ca5eceaa24d6",
+      "settlement_sha256": "30ada6e6390a77dd399c61b97fc6c9f9d24d99d88147e6e091e99b27b505284d"
+    },
+    {
+      "slot": 25,
+      "claim_sha256": "63d61b1ba46f334f4534757de5dd5d87f9c07e9e62a9d68224b51690e852f526",
+      "financial_sha256": "d7fa3500b1291b4e46e320ad0957422367b399ee11259518791785210e51fe95",
+      "settlement_sha256": "3c2f4074c6c6f4f0e2f4c02809ee7b75c611a6420d36e1154e7ff26373e8c958"
+    },
+    {
+      "slot": 26,
+      "claim_sha256": "b962abe0c52d5d9dcee92197d22dfb492d36832f67f296a22dddddf8e55ba362",
+      "financial_sha256": "a581982960962766ad29db9c6ae0c633fe74e0fab3a7efb5dc240159389c7e47",
+      "settlement_sha256": "668a6517d2dc9d9ddfe3f70d40dc81c99449956fc41c81bbc272afe235dd24a2"
+    },
+    {
+      "slot": 27,
+      "claim_sha256": "d80e9df8f9ac45263091e368e9d682ba184e279192a77ff381baa64cc38dab55",
+      "financial_sha256": "e575d6f735c877ff65afd136767a23f43c0b59d4dc33a23329938d219501cf4a",
+      "settlement_sha256": "ccda66d5408d7721bf0e523c92efbd0c1764bb87333e889c26acd645a32d5a4e"
+    },
+    {
+      "slot": 28,
+      "claim_sha256": "4341c4b9d88412f4b9157fad4a2985a5e337517e61e036def3e9aaea3809ff4e",
+      "financial_sha256": "5ec0220798d6d8af340455927d99206bf08237d60db8c9cb808a0517d8b246e9",
+      "settlement_sha256": "3177f96013d3f05a482d95488dc530d0853292a2449bc5e6139bf6c5c86903eb"
+    },
+    {
+      "slot": 29,
+      "claim_sha256": "65ecb3d37d3f9433688028598f5fcee2ea57278fb27b58d9d65656146f5a8577",
+      "financial_sha256": "2a05730572f5da6aa15bb22edcb7291a9a4513a06fcae7dc94da5dcd9b2ff54f",
+      "settlement_sha256": "cd4eadf4d582d4fe3acc18614f05a325434dd6ab30da77900a84567ece3a8381"
+    },
+    {
+      "slot": 30,
+      "claim_sha256": "f418af839dd3c1d6345180ab7f2b33bd7bcf9feeb94dfc4e34843f953dd3174c",
+      "financial_sha256": "f619ea4e40f87565d0fea563daa927018f6dd495b0a05e7ff6f7cd09dc0c56f3",
+      "settlement_sha256": "3359fe1f03e17c7229f884e0f49dd7d7e75f4f0352f98ee2cf9b053bc76a2c3a"
+    },
+    {
+      "slot": 31,
+      "claim_sha256": "1c99fed2063e9d2fade3277cf1c7c60a5bde36ece5868dd743f9211aee1ceeff",
+      "financial_sha256": "5cbcc37d7640bc795a049890f088411853c2167017344341bd26981d43cbb3d1",
+      "settlement_sha256": "0b42d7b6b85cf541cf87889bda759018c9aa0b37b6880c967258f1133ab806c0"
+    },
+    {
+      "slot": 32,
+      "claim_sha256": "c1979c318f5ef7a3b6de439ad54e9c5c6e8e0276b0de7c54630e51ab3e5f6988",
+      "financial_sha256": "ea3428dc55d91c75e8628ab0fc11d5be990023feddae750fab65c0cf02b5fdea",
+      "settlement_sha256": "6a8fc5900d37cf32e46dec639454cc7271d3f8123b881d3065fe26e04d647256"
+    },
+    {
+      "slot": 33,
+      "claim_sha256": "5ca7b4b37d5d27ae018d4423c94570be0c640db590fb2b5b657c72fa59e4b2da",
+      "financial_sha256": "108298ed47423ff1f6a45e1ebcc0936f7ac4427b652ff20e5d3b4acd831f6bd1",
+      "settlement_sha256": "e7ab65bb8e159da523176068015a9ef3a6cc75906993cfe5e924be59cc45a2e7"
+    },
+    {
+      "slot": 34,
+      "claim_sha256": "b4fd0e67f61b27797401446bfa0d121a1db9dd6058039a3443cb11a17e03d1c7",
+      "financial_sha256": "5fef4bf10e6509ac4d7160e60139fe4a644b93ac174ead23ebe4ecfa87bee074",
+      "settlement_sha256": "4f938a8615787c2bb6f965f82a150872a0b7d5e5c40e263565cf77c884e87619"
+    },
+    {
+      "slot": 35,
+      "claim_sha256": "2455e8cd6eea3b4a2b3796a36f258552c5dd964dd720cfb1c91210cba98d9025",
+      "financial_sha256": "49fe7836a32bbaaf6cee5a5e80dc5489b119ca7c3e19207463113c06013560d7",
+      "settlement_sha256": "74ddc50e121fb6dc09b369d5d35e1c126472b6fea133a852e9411a00690d2a01"
+    },
+    {
+      "slot": 36,
+      "claim_sha256": "6f1efff0c9abcd82c5a05db74aec135249ff292934b011eb095c3e7f1cc299f7",
+      "financial_sha256": "61b4c4ad7ef820c6ab26ae9d48674491f9d8904dcf880ece2b382cd0d2f88d28",
+      "settlement_sha256": "1287265ff2f6234c487b3e8af69a77ab920da46ab1e4ca0c244a3824f1b829b3"
+    }
+  ],
+  "timing_definition": {
+    "primary": "provider_latency_ms, original Main normal-adapter generation measurement; excludes retrieval and native page",
+    "controller_observation": "normal_adapter_wall_ms includes post-adapter fsync, JSON decode and local operations",
+    "percentiles": "Original scorer linear interpolation at (n-1)*fraction; n=12 p95 index=10.45, not nearest-rank",
+    "total_ms": null,
+    "native_full_page_ms": null,
+    "ttft_ms": null
+  },
+  "limits": [
+    "DEV twelve-question public source-conditioned comparison, not held-out research or product acceptance.",
+    "EM/F1 use one frozen reference, no aliases, punctuation retained. They do not establish correctness.",
+    "Raw compact-shape and known secret-pattern checks found no authentication content; no secret file was read for comparison.",
+    "Financial sums reconcile provider-reported costs in saved receipts, not external account billing or historic holds.",
+    "Required-fact semantic coverage is reviewed separately by the parent's independent AI reviewer."
+  ],
+  "human_gold": null,
+  "semantic_truth_verified": false,
+  "Main_writes": 0,
+  "auth_DB_API_operations": 0
+}

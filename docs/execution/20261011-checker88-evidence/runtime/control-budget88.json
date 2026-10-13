@@ -1,0 +1,124 @@
+{
+  "ast_parse": "PASS",
+  "budget_groups_executed_source_sha256": "91d2c60bf4fc15234490e0b2b8bb21b212755da92a74d75a26c24dc1e7dcf962",
+  "budget_groups_rerun_after_graph_change": false,
+  "control_groups": [
+    {
+      "executed_source_sha256": "91d2c60bf4fc15234490e0b2b8bb21b212755da92a74d75a26c24dc1e7dcf962",
+      "legal_paths": [
+        [
+          [
+            "teacher",
+            "generation"
+          ],
+          [
+            "checker",
+            "joint_check"
+          ],
+          [
+            "teacher",
+            "semantic_repair"
+          ],
+          [
+            "checker",
+            "joint_recheck"
+          ]
+        ],
+        [
+          [
+            "teacher",
+            "generation"
+          ],
+          [
+            "teacher",
+            "generation_format_repair"
+          ],
+          [
+            "checker",
+            "joint_check"
+          ],
+          [
+            "checker",
+            "checker_contract_repair"
+          ]
+        ],
+        [
+          [
+            "teacher",
+            "generation"
+          ],
+          [
+            "checker",
+            "joint_check"
+          ],
+          [
+            "checker",
+            "checker_contract_repair"
+          ],
+          [
+            "teacher",
+            "semantic_repair"
+          ]
+        ]
+      ],
+      "name": "legal_main_paths_and_four_post_limit",
+      "status": "PASS"
+    },
+    {
+      "checks": [
+        "first_teacher_generation",
+        "bad_role_purpose",
+        "case_replay",
+        "duplicate_question",
+        "fixed_case_ids",
+        "unsettled_hold_blocks",
+        "unsafe_cost_greater_than_hold",
+        "terminal_exposure_cannot_settle",
+        "fifth_post_denied",
+        "global_24_post_cap",
+        "one_USD_cap_at_pending_checker",
+        "permanent_stop_first_bytes_preserved"
+      ],
+      "executed_source_sha256": "91d2c60bf4fc15234490e0b2b8bb21b212755da92a74d75a26c24dc1e7dcf962",
+      "name": "invalid_path_unknown_replay_and_shared_caps_denied",
+      "status": "PASS"
+    }
+  ],
+  "final_graph_compatibility_control": {
+    "assertions": [
+      "semantic_repair_allows_fourth_generation_format_repair",
+      "fifth_joint_recheck_remains_forbidden"
+    ],
+    "graph_change": "generation_format_repair chooses joint_recheck after prior semantic_repair, otherwise joint_check",
+    "kind": "one_pure_combined_assertion_no_journal",
+    "source_sha256": "43ef77296a8655157bd384953eac31902e6ba7c96d1d289dfe6e9cb98eb00807",
+    "status": "PASS"
+  },
+  "native_only_before_sha256": "cf06afe7bd43ae2854bbfeba2f5063427301189c102c2c2cb22a9f02ff8c2a92",
+  "prior_harness_attempts": [
+    {
+      "reason": "default_sandbox_temporary_directory_not_writable",
+      "resolution": "explicit_W_temporary_directory",
+      "status": "BLOCKED_BEFORE_FIRST_SYNTHETIC_CLAIM"
+    },
+    {
+      "reason": "retained_teacher_pair_headroom_denied_teacher_at_12_full_cost_settlements",
+      "resolution": "pending_checker_boundary_at_13_full_cost_settlements",
+      "source_changed": false,
+      "status": "FAILED_FIXTURE_EXPECTATION"
+    }
+  ],
+  "schema": "phase88_budget_synthetic_controls_v1",
+  "scope": {
+    "auth_access": false,
+    "database_access": false,
+    "main_imports": false,
+    "models_loaded": false,
+    "network_or_provider_calls": 0,
+    "real_ledger_access": false,
+    "runtime_launch": false,
+    "temporary_synthetic_journals_only": true
+  },
+  "source_sha256": "43ef77296a8655157bd384953eac31902e6ba7c96d1d289dfe6e9cb98eb00807",
+  "status": "PASS"
+}

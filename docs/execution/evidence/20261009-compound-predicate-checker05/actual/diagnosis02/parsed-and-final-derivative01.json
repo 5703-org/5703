@@ -1,0 +1,537 @@
+{
+  "status": "PUBLIC_DERIVATIVE_EXACT_RETAINED_VERDICT_FIELDS",
+  "source_diagnostic_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\attempt-evaluation-conditional-preparation01\\actual-checker-retained02\\private-diagnostic\\checker-full-diagnosis01.json",
+  "source_diagnostic_bytes": 146966,
+  "source_diagnostic_sha256": "155f39b0d99928ec0ec7e21c6ac0e661ba0f4deb28a2fc9ab1f5e9c2583dfdd9",
+  "full_private_input_messages_and_source_map_excluded": true,
+  "original_model_verdict_not_overwritten": true,
+  "strict_json_PASS": true,
+  "conditional_full_Pydantic_PASS": true,
+  "parsed_original": {
+    "claims": [
+      {
+        "claim_id": "claim_1ad094406c5a0d4221904d72_1",
+        "basis": "textbook",
+        "status": "unsupported",
+        "citations": [],
+        "reason": "This claim is uncited in the draft and lacks direct source support for the specific mechanism stated here."
+      },
+      {
+        "claim_id": "claim_843e45c501deb6048e9271db_1",
+        "basis": "textbook",
+        "status": "supported",
+        "citations": [
+          {
+            "evidence_id": "ev_008",
+            "fragment_ids": [
+              "F042",
+              "F043"
+            ],
+            "relation": "supporting"
+          }
+        ],
+        "reason": "Supported by F042 and F043 stating the overall purpose is to convert light energy into chemical energy used by the Calvin cycle."
+      },
+      {
+        "claim_id": "claim_8c3369c13449744ca7b21a20_1",
+        "basis": "textbook",
+        "status": "partial",
+        "citations": [
+          {
+            "evidence_id": "ev_002",
+            "fragment_ids": [
+              "F007"
+            ],
+            "relation": "supporting"
+          },
+          {
+            "evidence_id": "ev_003",
+            "fragment_ids": [
+              "F012"
+            ],
+            "relation": "contradictory"
+          }
+        ],
+        "reason": "F007 mentions ATP and NADH, but ev_003 / F012 refers to ATP and NADPH. The claim conflates NADH and NADPH."
+      },
+      {
+        "claim_id": "claim_1c71ec2df3c08732f8f68cd7_1",
+        "basis": "textbook",
+        "status": "supported",
+        "citations": [
+          {
+            "evidence_id": "ev_007",
+            "fragment_ids": [
+              "F036",
+              "F037"
+            ],
+            "relation": "supporting"
+          }
+        ],
+        "reason": "Supported by F036 and F037 regarding light-dependent reactions producing ATP and NADPH which travel into the stroma."
+      },
+      {
+        "claim_id": "claim_8cd7b13097db1301a18c28c6_1",
+        "basis": "textbook",
+        "status": "supported",
+        "citations": [
+          {
+            "evidence_id": "ev_001",
+            "fragment_ids": [
+              "F002",
+              "F003"
+            ],
+            "relation": "supporting"
+          },
+          {
+            "evidence_id": "ev_005",
+            "fragment_ids": [
+              "F030",
+              "F031"
+            ],
+            "relation": "supporting"
+          }
+        ],
+        "reason": "Supported by fragments describing full and empty carriers moving between reactions."
+      },
+      {
+        "claim_id": "claim_2e2e3ba2b43cbd571afa271b_1",
+        "basis": "textbook",
+        "status": "supported",
+        "citations": [
+          {
+            "evidence_id": "ev_010",
+            "fragment_ids": [
+              "F053"
+            ],
+            "relation": "supporting"
+          }
+        ],
+        "reason": "Supported by F053 indicating ATP and NADPH convert molecules into G3P in the Calvin cycle."
+      },
+      {
+        "claim_id": "claim_a6a2652d20ee17bbe5f3e20d_1",
+        "basis": "textbook",
+        "status": "supported",
+        "citations": [
+          {
+            "evidence_id": "ev_007",
+            "fragment_ids": [
+              "F036",
+              "F037"
+            ],
+            "relation": "supporting"
+          }
+        ],
+        "reason": "Short answer supported by F036 and F037."
+      }
+    ],
+    "body_ok": false,
+    "specific_help": true,
+    "scope_ok": true,
+    "suggestions_ok": true,
+    "evidence_display_ok": true,
+    "cumulative_ok": true,
+    "complete_answer": true,
+    "coverage": "full",
+    "missing_facets": [],
+    "limitations_explicit": false,
+    "reason": "The draft answers the prompt using textbook sources, but contains an unsupported uncited claim and a conflicting/partial citation regarding NADH versus NADPH.",
+    "repair_fragment_ids": [
+      "F007",
+      "F012",
+      "F036",
+      "F037",
+      "F042",
+      "F043"
+    ],
+    "attempt_evaluation_ok": "not_applicable",
+    "tutor_question_ok": true,
+    "requirements": [
+      {
+        "conditions_preserved": true,
+        "evidence": [
+          {
+            "evidence_id": "ev_007",
+            "fragment_id": "F036",
+            "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+          },
+          {
+            "evidence_id": "ev_007",
+            "fragment_id": "F037",
+            "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+          }
+        ],
+        "missing_information": "",
+        "reason": "The sources sufficiently cover how light-dependent reactions produce energy carriers for the Calvin cycle.",
+        "relevance": "related",
+        "requirement_id": "requirement_01",
+        "response_coverage": "covered",
+        "sufficiency": "sufficient"
+      }
+    ],
+    "non_repetitive_next_action": true
+  },
+  "typed_after_conditional_normalization": {
+    "claims": [
+      {
+        "claim_id": "claim_1ad094406c5a0d4221904d72_1",
+        "reason": "This claim is uncited in the draft and lacks direct source support for the specific mechanism stated here.",
+        "basis": "textbook",
+        "status": "unsupported",
+        "citations": []
+      },
+      {
+        "claim_id": "claim_843e45c501deb6048e9271db_1",
+        "reason": "Supported by F042 and F043 stating the overall purpose is to convert light energy into chemical energy used by the Calvin cycle.",
+        "basis": "textbook",
+        "status": "supported",
+        "citations": [
+          {
+            "evidence_id": "ev_008",
+            "fragment_ids": [
+              "F042",
+              "F043"
+            ],
+            "relation": "supporting"
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_8c3369c13449744ca7b21a20_1",
+        "reason": "F007 mentions ATP and NADH, but ev_003 / F012 refers to ATP and NADPH. The claim conflates NADH and NADPH.",
+        "basis": "textbook",
+        "status": "partial",
+        "citations": [
+          {
+            "evidence_id": "ev_002",
+            "fragment_ids": [
+              "F007"
+            ],
+            "relation": "supporting"
+          },
+          {
+            "evidence_id": "ev_003",
+            "fragment_ids": [
+              "F012"
+            ],
+            "relation": "contradictory"
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_1c71ec2df3c08732f8f68cd7_1",
+        "reason": "Supported by F036 and F037 regarding light-dependent reactions producing ATP and NADPH which travel into the stroma.",
+        "basis": "textbook",
+        "status": "supported",
+        "citations": [
+          {
+            "evidence_id": "ev_007",
+            "fragment_ids": [
+              "F036",
+              "F037"
+            ],
+            "relation": "supporting"
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_8cd7b13097db1301a18c28c6_1",
+        "reason": "Supported by fragments describing full and empty carriers moving between reactions.",
+        "basis": "textbook",
+        "status": "supported",
+        "citations": [
+          {
+            "evidence_id": "ev_001",
+            "fragment_ids": [
+              "F002",
+              "F003"
+            ],
+            "relation": "supporting"
+          },
+          {
+            "evidence_id": "ev_005",
+            "fragment_ids": [
+              "F030",
+              "F031"
+            ],
+            "relation": "supporting"
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_2e2e3ba2b43cbd571afa271b_1",
+        "reason": "Supported by F053 indicating ATP and NADPH convert molecules into G3P in the Calvin cycle.",
+        "basis": "textbook",
+        "status": "supported",
+        "citations": [
+          {
+            "evidence_id": "ev_010",
+            "fragment_ids": [
+              "F053"
+            ],
+            "relation": "supporting"
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_a6a2652d20ee17bbe5f3e20d_1",
+        "reason": "Short answer supported by F036 and F037.",
+        "basis": "textbook",
+        "status": "supported",
+        "citations": [
+          {
+            "evidence_id": "ev_007",
+            "fragment_ids": [
+              "F036",
+              "F037"
+            ],
+            "relation": "supporting"
+          }
+        ]
+      }
+    ],
+    "body_ok": false,
+    "specific_help": true,
+    "scope_ok": true,
+    "suggestions_ok": true,
+    "evidence_display_ok": true,
+    "cumulative_ok": true,
+    "complete_answer": true,
+    "coverage": "full",
+    "missing_facets": [],
+    "limitations_explicit": false,
+    "reason": "The draft answers the prompt using textbook sources, but contains an unsupported uncited claim and a conflicting/partial citation regarding NADH versus NADPH.",
+    "repair_fragment_ids": [
+      "F007",
+      "F012",
+      "F036",
+      "F037",
+      "F042",
+      "F043"
+    ],
+    "attempt_evaluation_ok": "not_applicable",
+    "tutor_question_ok": true,
+    "requirements": [
+      {
+        "requirement_id": "requirement_01",
+        "relevance": "related",
+        "sufficiency": "sufficient",
+        "evidence": [
+          {
+            "evidence_id": "ev_007",
+            "fragment_id": "F036",
+            "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+          },
+          {
+            "evidence_id": "ev_007",
+            "fragment_id": "F037",
+            "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+          }
+        ],
+        "conditions_preserved": true,
+        "response_coverage": "covered",
+        "missing_information": "",
+        "reason": "The sources sufficiently cover how light-dependent reactions produce energy carriers for the Calvin cycle."
+      }
+    ],
+    "non_repetitive_next_action": true
+  },
+  "schema_issues": [],
+  "local_binding_issues": [
+    {
+      "code": "ACTUAL_CITATION_CONTRADICTORY",
+      "claim_id": "claim_8c3369c13449744ca7b21a20_1"
+    }
+  ],
+  "all_actual_pipeline_issues": [
+    {
+      "path": [
+        "checks",
+        0,
+        "structural_issues",
+        0
+      ],
+      "code": "ACTUAL_CITATION_CONTRADICTORY",
+      "claim_id": "claim_8c3369c13449744ca7b21a20_1"
+    },
+    {
+      "path": [
+        "checks",
+        0,
+        "repair_plan",
+        "actions",
+        0
+      ],
+      "origin": "citation_binding",
+      "claim_id": "claim_8c3369c13449744ca7b21a20_1",
+      "code": "ACTUAL_CITATION_CONTRADICTORY",
+      "action": "bind_or_split_claim_citations"
+    },
+    {
+      "path": [
+        "checks",
+        0,
+        "repair_plan",
+        "actions",
+        1
+      ],
+      "origin": "answer",
+      "claim_id": "claim_1ad094406c5a0d4221904d72_1",
+      "code": "CLAIM_UNSUPPORTED",
+      "action": "support_required_content_or_narrow_optional_assertion"
+    },
+    {
+      "path": [
+        "checks",
+        0,
+        "repair_plan",
+        "actions",
+        2
+      ],
+      "origin": "answer",
+      "claim_id": "claim_8c3369c13449744ca7b21a20_1",
+      "code": "CLAIM_PARTIAL",
+      "action": "support_required_content_or_narrow_optional_assertion"
+    },
+    {
+      "path": [
+        "error"
+      ],
+      "code": "SEMANTIC_CHECK_FAILED",
+      "message": "The proposed answer did not pass its required support or teaching checks",
+      "retryable": false,
+      "details": {
+        "revision": 0,
+        "publication_block": {
+          "version": "semantic_publication_block_v1",
+          "stop_reason": "insufficient_calls_for_repair_and_recheck",
+          "remaining_provider_calls": 0,
+          "required_calls_for_repair_and_recheck": 2,
+          "checker_contract_repair_calls": 0,
+          "checker_reported_body_ok": false,
+          "checker_reported_non_supported_factual_claims": 2,
+          "failed_checker_gate_names": [
+            "body_ok"
+          ],
+          "checker_reported_coverage": "full",
+          "requirement_issue_codes": [],
+          "structural_issue_codes": [
+            "ACTUAL_CITATION_CONTRADICTORY"
+          ]
+        }
+      }
+    }
+  ],
+  "global_issues": [
+    {
+      "path": [
+        "error"
+      ],
+      "code": "SEMANTIC_CHECK_FAILED",
+      "message": "The proposed answer did not pass its required support or teaching checks",
+      "retryable": false,
+      "details": {
+        "revision": 0,
+        "publication_block": {
+          "version": "semantic_publication_block_v1",
+          "stop_reason": "insufficient_calls_for_repair_and_recheck",
+          "remaining_provider_calls": 0,
+          "required_calls_for_repair_and_recheck": 2,
+          "checker_contract_repair_calls": 0,
+          "checker_reported_body_ok": false,
+          "checker_reported_non_supported_factual_claims": 2,
+          "failed_checker_gate_names": [
+            "body_ok"
+          ],
+          "checker_reported_coverage": "full",
+          "requirement_issue_codes": [],
+          "structural_issue_codes": [
+            "ACTUAL_CITATION_CONTRADICTORY"
+          ]
+        }
+      }
+    }
+  ],
+  "full_final_error": {
+    "code": "SEMANTIC_CHECK_FAILED",
+    "message": "The proposed answer did not pass its required support or teaching checks",
+    "retryable": false,
+    "details": {
+      "revision": 0,
+      "publication_block": {
+        "version": "semantic_publication_block_v1",
+        "stop_reason": "insufficient_calls_for_repair_and_recheck",
+        "remaining_provider_calls": 0,
+        "required_calls_for_repair_and_recheck": 2,
+        "checker_contract_repair_calls": 0,
+        "checker_reported_body_ok": false,
+        "checker_reported_non_supported_factual_claims": 2,
+        "failed_checker_gate_names": [
+          "body_ok"
+        ],
+        "checker_reported_coverage": "full",
+        "requirement_issue_codes": [],
+        "structural_issue_codes": [
+          "ACTUAL_CITATION_CONTRADICTORY"
+        ]
+      }
+    }
+  },
+  "final_business_PASS": false,
+  "final_response": null,
+  "protected_claims_under_actual_judgment": [
+    {
+      "claim_id": "claim_843e45c501deb6048e9271db_1",
+      "answer_field": "answer_text",
+      "start": 145,
+      "end": 349,
+      "text": "The overall purpose of the light-dependent reactions is to convert light energy into chemical energy, and this chemical energy is used by the Calvin cycle to fuel the assembly of sugar molecules [ev_008].",
+      "evidence_ids": [
+        "ev_008"
+      ]
+    },
+    {
+      "claim_id": "claim_1c71ec2df3c08732f8f68cd7_1",
+      "answer_field": "answer_text",
+      "start": 552,
+      "end": 758,
+      "text": "Specifically, light-dependent reactions harness energy from the sun to produce ATP and NADPH, and these energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place [ev_007].",
+      "evidence_ids": [
+        "ev_007"
+      ]
+    },
+    {
+      "claim_id": "claim_8cd7b13097db1301a18c28c6_1",
+      "answer_field": "answer_text",
+      "start": 759,
+      "end": 1025,
+      "text": "The carriers that move energy from the light-dependent reactions to the Calvin cycle are described as \"full\" because they bring energy; after the energy is released, the \"empty\" carriers return to the light-dependent reactions to obtain more energy [ev_001][ev_005].",
+      "evidence_ids": [
+        "ev_001",
+        "ev_005"
+      ]
+    },
+    {
+      "claim_id": "claim_2e2e3ba2b43cbd571afa271b_1",
+      "answer_field": "answer_text",
+      "start": 1026,
+      "end": 1189,
+      "text": "Once in the stroma, the Calvin cycle uses the energy in ATP and NADPH to convert the three-carbon molecules into G3P, which builds carbohydrate molecules [ev_010].",
+      "evidence_ids": [
+        "ev_010"
+      ]
+    },
+    {
+      "claim_id": "claim_a6a2652d20ee17bbe5f3e20d_1",
+      "answer_field": "short_answer",
+      "start": 0,
+      "end": 138,
+      "text": "Light-dependent reactions store light energy in ATP and NADPH, which carry that energy into the stroma to power the Calvin cycle [ev_007].",
+      "evidence_ids": [
+        "ev_007"
+      ]
+    }
+  ],
+  "diagnostics_do_not_certify_entailment": true
+}

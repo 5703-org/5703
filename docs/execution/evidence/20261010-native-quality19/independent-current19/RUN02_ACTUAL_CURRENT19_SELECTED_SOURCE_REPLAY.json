@@ -1,0 +1,50 @@
+{
+  "original_status": "supported",
+  "original_reason": "Fragment F007 states that photosystems absorb light and use electron transport chains to convert energy into the chemical energy of ATP and NADPH.",
+  "claim": {
+    "answer_field": "answer_text",
+    "claim_id": "claim_37eb9395c8cbcb5721d36f6e_1",
+    "end": 409,
+    "evidence_ids": [
+      "ev_002"
+    ],
+    "start": 280,
+    "text": "Photosystems absorb light and use electron transport chains to convert energy into the chemical energy of ATP and NADPH [ev_002]."
+  },
+  "selected_fragment": {
+    "block_kind": "prose",
+    "complete_block": true,
+    "evidence_id": "ev_002",
+    "exact_text": "Photosystems absorb light and use electron transport chains to convert energy into the chemical energy of ATP and NADH.",
+    "fragment_id": "F007"
+  },
+  "old_guard_issues": [],
+  "current_guard_issues": [
+    {
+      "code": "UNRESOLVED_TECHNICAL_ENTITY_COLLISION",
+      "claim_id": "claim_37eb9395c8cbcb5721d36f6e_1",
+      "claimed_identifier": "NADPH",
+      "source_identifiers": [
+        "NADH"
+      ],
+      "reason_source_identifiers": [
+        "NADH"
+      ],
+      "selected_fragment_ids": [
+        "F007"
+      ],
+      "reason": "The claimed identifier is absent from its selected supporting union; a model reason cannot establish a source alias. A selected source supplies the same proposition with a one-edit different identifier in that slot. The model reason cannot exempt this source-binding conflict. Resolve this binding before publication; this is not a scientific falsehood verdict or an entailment certificate.",
+      "source_entailment_certified": false,
+      "publication_override": false
+    }
+  ],
+  "raw_judgment_unchanged": true,
+  "full_raw_schema_observation": {
+    "field": "attempt_evaluation_ok",
+    "raw_value": "not_applicable",
+    "expected_type": "bool",
+    "direct_schema_result": "rejected",
+    "target_claim_row_schema_valid": true,
+    "contract_normalization_executed_by_this_review": false
+  }
+}

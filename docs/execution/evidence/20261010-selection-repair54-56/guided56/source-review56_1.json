@@ -1,0 +1,1535 @@
+{
+  "version": "independent_source_review56_1_v1",
+  "development_phase": "guided56",
+  "arm_as_returned": "selection54_1",
+  "review_type": "Same-case nonblind AI source audit of an ineligible response; no human Gold",
+  "inputs_actually_read": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-selection54\\guided56\\wire56.json",
+      "bytes": 92077,
+      "sha256": "1931797cadec8dfd7a69bab080bf4d86fab515f6236ffa8fa05ed111111b7681"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-selection54\\guided56\\actual54\\selection54_1-result.json",
+      "bytes": 59267,
+      "sha256": "d6b5fc6738107b9ec5b1ca08015a53d22e1264573c188eac95dde93afee8a274"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-selection54\\guided56\\actual54\\result54.json",
+      "bytes": 64572,
+      "sha256": "165ffa49e52c54ea5b044515c43a0c78dff3f4be1d94bc119d180a6ab2d2edac"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-selection54\\wire54.json",
+      "bytes": 87889,
+      "sha256": "0e5a761599e224f50a800718f19216198680923e8c8ac617b4f9b5c384c0344c"
+    }
+  ],
+  "read_scope": "Full wire56 instructions and user tables; reconstructed original question/answer, 71 complete exact source fragments, 10 claims, 19 syntactic units and actual allowed bindings. Parsed original provider raw_text without mutation; local validation receipt and result54 stop/financial/arm metadata; original wire54 banks for exact equality. Exposed plans are hypotheses, not proof.",
+  "provider_raw_text_utf8_sha256": "989852fbc6448944f519a40ef20e8142d264fb011bb4edcc2261e988338d4e39",
+  "original_input_unchanged_comparison": {
+    "SOURCE_FRAGMENTS": true,
+    "CLAIMS": true,
+    "ACTUAL_CITATION_BINDINGS": true,
+    "BINDING_BANK": true,
+    "19_units_text_spans_hashes_scopes_and_full_claims": true
+  },
+  "first_finding": {
+    "code": "RELATION_ASSESSED_FRAGMENT_MISMATCH",
+    "claim_id": "claim_4bbb28fe7a90b6a3f87b6b75_1",
+    "unit_id": "U02",
+    "missing_fragment_id": "F011",
+    "owning_evidence_id": "ev_002",
+    "returned_unit_fragment_ids": [
+      "F011",
+      "F019",
+      "F020"
+    ],
+    "returned_ev_002_claim_citation_fragment_ids": [
+      "F013"
+    ],
+    "returned_ev_003_claim_citation_fragment_ids": [
+      "F019",
+      "F020"
+    ],
+    "F019_and_F020_are_assessed": true,
+    "citation_not_autofilled": true
+  },
+  "additional_semantic_finding": {
+    "claim_id": "claim_9dd7ed3c15bfc4ae4368ad47_1",
+    "unit_id": "U01",
+    "returned_unit_fragment_ids": [
+      "F054",
+      "F055",
+      "F056"
+    ],
+    "missing_assertion": "Classification of the RuBisCO-catalyzed CO2/RuBP reaction as fixation.",
+    "attributes_now_supported": "F055 explicitly establishes RuBP five-carbon/end-phosphate attributes.",
+    "claim_union_not_borrowed": "F053/F063/F064/F065 are in the claim citation union but are not own unit selections; they do not implicitly fill this unit’s fixation classification."
+  },
+  "structure": {
+    "observed_full_original_schema_PASS": true,
+    "observed_source_and_unit_reference_structure_PASS": false,
+    "observed_repeat_structure_gate_PASS": false,
+    "observed_overall_scoped_validation_PASS": false,
+    "independent_exact_span_and_own_reference_structure_PASS": false,
+    "independent_structure_issues": [
+      {
+        "code": "RELATION_ASSESSED_FRAGMENT_MISMATCH",
+        "claim_id": "claim_4bbb28fe7a90b6a3f87b6b75_1",
+        "unit_id": "U02",
+        "fragment_id": "F011",
+        "owning_evidence_id": "ev_002",
+        "returned_owning_claim_citation_fragment_ids": [
+          "F013"
+        ],
+        "missing_from_owning_claim_citation": true
+      }
+    ],
+    "observed_relation_contract_issues": [
+      {
+        "code": "RELATION_ASSESSED_FRAGMENT_MISMATCH",
+        "claim_id": "claim_4bbb28fe7a90b6a3f87b6b75_1",
+        "unit_id": "U02"
+      }
+    ],
+    "schema_PASS_does_not_certify_reference_structure_or_entailment": true
+  },
+  "qualified_quality": {
+    "eligible_samples": 0,
+    "eligible_unit_denominator": 0,
+    "eligible_claim_denominator": 0,
+    "complete_rate": null,
+    "quality_PASS": null,
+    "reason": "The single observed response fails source-reference structure. No part of this response enters qualified quality denominators."
+  },
+  "ineligible_diagnostic_counts": {
+    "using_only_valid_own_claim_assessed_supporting_fragments": {
+      "units": {
+        "complete": 15,
+        "partial": 4,
+        "unsupported": 0,
+        "total": 19
+      },
+      "claims": {
+        "complete": 7,
+        "partial": 3,
+        "unsupported": 0,
+        "total": 10
+      }
+    },
+    "using_all_raw_unit_listed_allowed_texts_even_when_unassessed": {
+      "units": {
+        "complete": 16,
+        "partial": 3,
+        "unsupported": 0,
+        "total": 19
+      },
+      "claims": {
+        "complete": 8,
+        "partial": 2,
+        "unsupported": 0,
+        "total": 10
+      },
+      "qualification": "Unassessed F011 may be read solely for source-text diagnosis. This does not qualify the response, certify support or repair its citation."
+    },
+    "observed_checker_supported_units": 19,
+    "observed_checker_supported_claims": 10,
+    "observed_checker_body_ok": true,
+    "observed_checker_body_ok_certified": false,
+    "literal_actual_part_to_FID_reason_units": 0,
+    "FIDs_only_reason_units": 19
+  },
+  "method": {
+    "own_proof_only": "Only complete fragments actually selected by the unit and assessed supporting by this same claim count in the strict diagnosis. Original full claim resolves inheritance but is not source proof. No sibling or claim-union borrowing.",
+    "raw_text_scope": "The second diagnosis examines the physically returned own-allowed text set, including the unassessed F011, as explicitly ineligible analysis only.",
+    "classification_rule": "Inputs/products and general plausibility do not establish a scientific classification. A named classification must be supported by the selected source set.",
+    "predicate_rule": "Lossless syntactic units are not atomic propositions. Explicit appositions are assigned to their containing unit; an object-only segment inherits the shared predicate necessary for its meaning. ATP U03 is qualified below.",
+    "claim_rule": "Complete iff every unit is complete under the same diagnostic scope.",
+    "reason_rule": "Reasons and exposed repair plans cannot provide scientific proof; literal actual-part:FID mappings are checked separately."
+  },
+  "qualifications": [
+    {
+      "claim_id": "claim_b85b9fa953bffc184b48ae2d_1",
+      "unit_id": "U03",
+      "primary": "partial",
+      "issue": "Under semantic inheritance, which ATP shares reduce-to-G3P; F058 proves conversion only. If the reduction-classification obligation is assigned solely to textual U04, U03 becomes complete.",
+      "alternative_valid_assessed_unit_counts": {
+        "complete": 16,
+        "partial": 3,
+        "unsupported": 0
+      },
+      "alternative_raw_listed_text_unit_counts": {
+        "complete": 17,
+        "partial": 2,
+        "unsupported": 0
+      },
+      "claim_counts_unchanged_under_each_scope": true,
+      "qualified_denominator_remains_zero": true,
+      "historical_statistics_not_rewritten": true
+    },
+    {
+      "claim_id": "claim_9eace1a26f8e9d6071f0acb8_1",
+      "unit_id": "U02",
+      "primary": "complete",
+      "issue": "F002 proves the carbohydrate six-carbon/six-turn relationship. Commonly glucose belongs to U01. A stricter duplicated-antecedent-attribute scope would require F001 explicitly selected by U02, not sibling borrowing.",
+      "stricter_valid_assessed_unit_counts": {
+        "complete": 14,
+        "partial": 5,
+        "unsupported": 0
+      },
+      "stricter_raw_listed_text_unit_counts": {
+        "complete": 15,
+        "partial": 4,
+        "unsupported": 0
+      },
+      "qualified_denominator_remains_zero": true
+    },
+    {
+      "fragment_id": "F011",
+      "issue": "Its clipped opening does not certify the unrelated chloroplast/carbon property. Its independent main clause explicitly states the three-turn/one-G3P export relationship. This can prove another structurally valid unit where F011 is assessed, but not the final U02 where its claim citation omits it."
+    }
+  ],
+  "stop_and_financial_receipt": {
+    "source": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-selection54\\guided56\\actual54\\result54.json",
+    "status": "STOPPED_RETAINED",
+    "arm_statuses": [
+      {
+        "arm": "selection54_1",
+        "status": "OBSERVED"
+      },
+      {
+        "arm": 2,
+        "status": "NOT_RUN_GLOBAL_STOP"
+      }
+    ],
+    "second_arm_NOT_RUN_GLOBAL_STOP": true,
+    "model_requests_in_this_guided_batch": 1,
+    "automatic_retries": 0,
+    "batch_known_cost_USD": "0.0220109",
+    "batch_UNKNOWN_hold_USD": "0",
+    "aggregate_grant_slots": 5,
+    "aggregate_known_cost_USD": "0.11072166",
+    "historical_records_changed": false,
+    "production_adoption": false,
+    "reviewer_model_requests": 0
+  },
+  "claims": [
+    {
+      "claim_id": "claim_9dd7ed3c15bfc4ae4368ad47_1",
+      "full_original_claim": "In the Calvin cycle, RuBisCO catalyzes the fixation reaction by combining CO2 with RuBP, a five-carbon molecule with a phosphate group on each end [ev_007] [ev_008].",
+      "actual_citation_scope": [
+        {
+          "allowed_fragment_ids": [
+            "F053",
+            "F054",
+            "F055",
+            "F056",
+            "F057",
+            "F058",
+            "F059",
+            "F060",
+            "F061"
+          ],
+          "evidence_id": "ev_007"
+        },
+        {
+          "allowed_fragment_ids": [
+            "F062",
+            "F063",
+            "F064",
+            "F065"
+          ],
+          "evidence_id": "ev_008"
+        }
+      ],
+      "observed_claim_status": "supported",
+      "observed_claim_citations": [
+        {
+          "evidence_id": "ev_007",
+          "fragment_ids": [
+            "F053",
+            "F054",
+            "F055",
+            "F056"
+          ],
+          "relation": "supporting"
+        },
+        {
+          "evidence_id": "ev_008",
+          "fragment_ids": [
+            "F063",
+            "F064",
+            "F065"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "partial",
+      "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "partial",
+      "complete_iff_all_units_complete": true,
+      "qualified_quality_eligible": false,
+      "units": [
+        {
+          "unit_id": "U01",
+          "original_unit_text": "In the Calvin cycle, RuBisCO catalyzes the fixation reaction by combining CO2 with RuBP, a five-carbon molecule with a phosphate group on each end [ev_007] [ev_008].",
+          "original_span": {
+            "start": 0,
+            "end": 165,
+            "unicode_code_point_basis": true
+          },
+          "original_unit_text_sha256": "536b454a40dd0a3e21afcce75bd3670dd77536d3c51e0b4406e9224eb31ac735",
+          "contextualized_assertions": "In the Calvin cycle RuBisCO catalyzes fixation by combining CO2 with five-carbon RuBP bearing an end phosphate on each side.",
+          "returned_unit_fragment_ids": [
+            "F054",
+            "F055",
+            "F056"
+          ],
+          "valid_own_claim_assessed_supporting_fragment_ids": [
+            "F054",
+            "F055",
+            "F056"
+          ],
+          "invalid_unassessed_unit_fragment_ids": [],
+          "observed_checker_status": "supported",
+          "observed_checker_reason": "Supported by F054, F055, F056.",
+          "observed_relation_preserved": true,
+          "observed_conditions_preserved": true,
+          "reason_has_literal_actual_part_to_FID_mapping": false,
+          "reason_only_lists_FIDs": true,
+          "reason_is_scientific_proof": false,
+          "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "partial",
+          "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "partial",
+          "independent_review_reason": "F054 supplies Calvin-cycle context, RuBisCO and RuBP identity; F055 explicitly supplies five-carbon/end-phosphate attributes; F056 supplies catalysis and the CO2/RuBP reaction. None labels that reaction fixation. F053/F063/F064 in the claim union are not selected by this unit and cannot certify the missing classification.",
+          "valid_selected_parts_to_FIDs": {
+            "Calvin-cycle scope and participants": [
+              "F054"
+            ],
+            "RuBP five-carbon/end-phosphate attributes": [
+              "F055"
+            ],
+            "catalysis and CO2/RuBP reaction": [
+              "F056"
+            ]
+          },
+          "missing_assertions_under_valid_assessed_scope": [
+            "Classification of the catalyzed CO2/RuBP reaction as fixation."
+          ],
+          "sibling_or_claim_union_used_as_proof": false,
+          "qualified_quality_eligible": false
+        }
+      ]
+    },
+    {
+      "claim_id": "claim_9e6350bf8c8ac897dd6ce681_1",
+      "full_original_claim": "The resulting six-carbon compound is immediately broken down into two three-carbon compounds, 3-PGA [ev_007].",
+      "actual_citation_scope": [
+        {
+          "allowed_fragment_ids": [
+            "F053",
+            "F054",
+            "F055",
+            "F056",
+            "F057",
+            "F058",
+            "F059",
+            "F060",
+            "F061"
+          ],
+          "evidence_id": "ev_007"
+        }
+      ],
+      "observed_claim_status": "supported",
+      "observed_claim_citations": [
+        {
+          "evidence_id": "ev_007",
+          "fragment_ids": [
+            "F056",
+            "F058"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "complete",
+      "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+      "complete_iff_all_units_complete": true,
+      "qualified_quality_eligible": false,
+      "units": [
+        {
+          "unit_id": "U01",
+          "original_unit_text": "The resulting six-carbon compound is immediately broken down into two three-carbon compounds, 3-PGA [ev_007].",
+          "original_span": {
+            "start": 0,
+            "end": 109,
+            "unicode_code_point_basis": true
+          },
+          "original_unit_text_sha256": "7c35733b79e00fda86c4e42cbab0772c68594af6eec93d6abbf7a6ef7e6845ac",
+          "contextualized_assertions": "The resulting six-carbon reaction product immediately splits into two three-carbon 3-PGA compounds.",
+          "returned_unit_fragment_ids": [
+            "F056",
+            "F058"
+          ],
+          "valid_own_claim_assessed_supporting_fragment_ids": [
+            "F056",
+            "F058"
+          ],
+          "invalid_unassessed_unit_fragment_ids": [],
+          "observed_checker_status": "supported",
+          "observed_checker_reason": "Supported by F056 and F058.",
+          "observed_relation_preserved": true,
+          "observed_conditions_preserved": true,
+          "reason_has_literal_actual_part_to_FID_mapping": false,
+          "reason_only_lists_FIDs": true,
+          "reason_is_scientific_proof": false,
+          "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "complete",
+          "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+          "independent_review_reason": "F056 supplies the generating reaction, six-carbon product, immediacy and quantity two three-carbon products. F058 supplies the definite starting-compound name 3-PGA, distinguished from another three-carbon product G3P; the selected topical reference gives the identity bridge.",
+          "valid_selected_parts_to_FIDs": {
+            "reaction product, immediate split and quantity two": [
+              "F056"
+            ],
+            "three-carbon starting-compound identity 3-PGA": [
+              "F056",
+              "F058"
+            ]
+          },
+          "missing_assertions_under_valid_assessed_scope": [],
+          "sibling_or_claim_union_used_as_proof": false,
+          "qualified_quality_eligible": false
+        }
+      ]
+    },
+    {
+      "claim_id": "claim_f9fe075af789df975cbeaea7_1",
+      "full_original_claim": "The energy in ATP and NADPH is then used to convert the three-carbon 3-PGA into G3P, a reduction reaction that involves the gain of electrons [ev_007] [ev_003].",
+      "actual_citation_scope": [
+        {
+          "allowed_fragment_ids": [
+            "F053",
+            "F054",
+            "F055",
+            "F056",
+            "F057",
+            "F058",
+            "F059",
+            "F060",
+            "F061"
+          ],
+          "evidence_id": "ev_007"
+        },
+        {
+          "allowed_fragment_ids": [
+            "F016",
+            "F017",
+            "F018",
+            "F019",
+            "F020",
+            "F021",
+            "F022"
+          ],
+          "evidence_id": "ev_003"
+        }
+      ],
+      "observed_claim_status": "supported",
+      "observed_claim_citations": [
+        {
+          "evidence_id": "ev_007",
+          "fragment_ids": [
+            "F058",
+            "F059"
+          ],
+          "relation": "supporting"
+        },
+        {
+          "evidence_id": "ev_003",
+          "fragment_ids": [
+            "F018"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "complete",
+      "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+      "complete_iff_all_units_complete": true,
+      "qualified_quality_eligible": false,
+      "units": [
+        {
+          "unit_id": "U01",
+          "original_unit_text": "The energy in ATP",
+          "original_span": {
+            "start": 0,
+            "end": 17,
+            "unicode_code_point_basis": true
+          },
+          "original_unit_text_sha256": "f44858ef7e4c0df6b883a6a02b552a7e982e3abd119cc21f702f1e7d6c6429a8",
+          "contextualized_assertions": "ATP stored energy is used to convert three-carbon 3-PGA into G3P.",
+          "returned_unit_fragment_ids": [
+            "F058"
+          ],
+          "valid_own_claim_assessed_supporting_fragment_ids": [
+            "F058"
+          ],
+          "invalid_unassessed_unit_fragment_ids": [],
+          "observed_checker_status": "supported",
+          "observed_checker_reason": "Supported by F058.",
+          "observed_relation_preserved": true,
+          "observed_conditions_preserved": true,
+          "reason_has_literal_actual_part_to_FID_mapping": false,
+          "reason_only_lists_FIDs": true,
+          "reason_is_scientific_proof": false,
+          "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "complete",
+          "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+          "independent_review_reason": "This object-only segment inherits the energy-use/conversion predicate. F058 directly establishes ATP stored energy, three-carbon 3-PGA and conversion to G3P. The reduction/electron-gain apposition is assigned to U02; no sibling evidence is borrowed.",
+          "valid_selected_parts_to_FIDs": {
+            "ATP energy and named 3-PGA-to-G3P conversion": [
+              "F058"
+            ]
+          },
+          "missing_assertions_under_valid_assessed_scope": [],
+          "sibling_or_claim_union_used_as_proof": false,
+          "qualified_quality_eligible": false
+        },
+        {
+          "unit_id": "U02",
+          "original_unit_text": " and NADPH is then used to convert the three-carbon 3-PGA into G3P, a reduction reaction that involves the gain of electrons [ev_007] [ev_003].",
+          "original_span": {
+            "start": 17,
+            "end": 160,
+            "unicode_code_point_basis": true
+          },
+          "original_unit_text_sha256": "37e5578e7286c7f6f7ae6ebd9f3984eafbddc4ff86457dc9d4b42082abe67b04",
+          "contextualized_assertions": "NADPH energy then converts three-carbon 3-PGA into G3P, a reduction involving electron gain.",
+          "returned_unit_fragment_ids": [
+            "F018",
+            "F058",
+            "F059"
+          ],
+          "valid_own_claim_assessed_supporting_fragment_ids": [
+            "F018",
+            "F058",
+            "F059"
+          ],
+          "invalid_unassessed_unit_fragment_ids": [],
+          "observed_checker_status": "supported",
+          "observed_checker_reason": "Supported by F018, F058, F059.",
+          "observed_relation_preserved": true,
+          "observed_conditions_preserved": true,
+          "reason_has_literal_actual_part_to_FID_mapping": false,
+          "reason_only_lists_FIDs": true,
+          "reason_is_scientific_proof": false,
+          "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "complete",
+          "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+          "independent_review_reason": "F058 supplies the named energy-driven conversion. F059 supplies the reduction/electron-gain classification and has its selected conversion antecedent in F058. F018 explicitly supplies the preceding six-carbon breakdown and subsequent energy-driven conversion.",
+          "valid_selected_parts_to_FIDs": {
+            "NADPH energy and named conversion": [
+              "F058"
+            ],
+            "reduction and electron gain with selected antecedent": [
+              "F058",
+              "F059"
+            ],
+            "breakdown then conversion sequence": [
+              "F018"
+            ]
+          },
+          "missing_assertions_under_valid_assessed_scope": [],
+          "sibling_or_claim_union_used_as_proof": false,
+          "qualified_quality_eligible": false
+        }
+      ]
+    },
+    {
+      "claim_id": "claim_364664c975bdc00d74ab2a22_1",
+      "full_original_claim": "Because CO2 is fixed from its inorganic form into organic molecules, this is called carbon fixation [ev_007].",
+      "actual_citation_scope": [
+        {
+          "allowed_fragment_ids": [
+            "F053",
+            "F054",
+            "F055",
+            "F056",
+            "F057",
+            "F058",
+            "F059",
+            "F060",
+            "F061"
+          ],
+          "evidence_id": "ev_007"
+        }
+      ],
+      "observed_claim_status": "supported",
+      "observed_claim_citations": [
+        {
+          "evidence_id": "ev_007",
+          "fragment_ids": [
+            "F057"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "complete",
+      "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+      "complete_iff_all_units_complete": true,
+      "qualified_quality_eligible": false,
+      "units": [
+        {
+          "unit_id": "U01",
+          "original_unit_text": "Because CO2 is fixed from its inorganic form into organic molecules, this is called carbon fixation [ev_007].",
+          "original_span": {
+            "start": 0,
+            "end": 109,
+            "unicode_code_point_basis": true
+          },
+          "original_unit_text_sha256": "91123c2fddf5e3119d5fc41b9899fe8ff19843b07b2ae2476ac9b8e4a0b7d7b8",
+          "contextualized_assertions": "CO2 is fixed from inorganic form into organic molecules, called carbon fixation.",
+          "returned_unit_fragment_ids": [
+            "F057"
+          ],
+          "valid_own_claim_assessed_supporting_fragment_ids": [
+            "F057"
+          ],
+          "invalid_unassessed_unit_fragment_ids": [],
+          "observed_checker_status": "supported",
+          "observed_checker_reason": "Supported by F057.",
+          "observed_relation_preserved": true,
+          "observed_conditions_preserved": true,
+          "reason_has_literal_actual_part_to_FID_mapping": false,
+          "reason_only_lists_FIDs": true,
+          "reason_is_scientific_proof": false,
+          "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "complete",
+          "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+          "independent_review_reason": "F057 directly states the complete CO2 inorganic-to-organic relationship and carbon-fixation classification.",
+          "valid_selected_parts_to_FIDs": {
+            "CO2 fixation relation and named classification": [
+              "F057"
+            ]
+          },
+          "missing_assertions_under_valid_assessed_scope": [],
+          "sibling_or_claim_union_used_as_proof": false,
+          "qualified_quality_eligible": false
+        }
+      ]
+    },
+    {
+      "claim_id": "claim_8b458d38f4d30c5060c0957c_1",
+      "full_original_claim": "Each turn makes two G3P molecules, and three turns fix enough net carbon to export one G3P, while the remaining G3P molecules are used to regenerate RuBP so the cycle can prepare for more CO2 to be fixed [ev_002].",
+      "actual_citation_scope": [
+        {
+          "allowed_fragment_ids": [
+            "F008",
+            "F009",
+            "F010",
+            "F011",
+            "F012",
+            "F013",
+            "F014",
+            "F015"
+          ],
+          "evidence_id": "ev_002"
+        }
+      ],
+      "observed_claim_status": "supported",
+      "observed_claim_citations": [
+        {
+          "evidence_id": "ev_002",
+          "fragment_ids": [
+            "F011",
+            "F012",
+            "F013"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "complete",
+      "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+      "complete_iff_all_units_complete": true,
+      "qualified_quality_eligible": false,
+      "units": [
+        {
+          "unit_id": "U01",
+          "original_unit_text": "Each turn makes two G3P molecules,",
+          "original_span": {
+            "start": 0,
+            "end": 34,
+            "unicode_code_point_basis": true
+          },
+          "original_unit_text_sha256": "8e507cfed32ecba3b587aed8e60fec23f934b442b7fb3c03508c75a122727568",
+          "contextualized_assertions": "Each turn produces two G3P molecules.",
+          "returned_unit_fragment_ids": [
+            "F012"
+          ],
+          "valid_own_claim_assessed_supporting_fragment_ids": [
+            "F012"
+          ],
+          "invalid_unassessed_unit_fragment_ids": [],
+          "observed_checker_status": "supported",
+          "observed_checker_reason": "Supported by F012.",
+          "observed_relation_preserved": true,
+          "observed_conditions_preserved": true,
+          "reason_has_literal_actual_part_to_FID_mapping": false,
+          "reason_only_lists_FIDs": true,
+          "reason_is_scientific_proof": false,
+          "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "complete",
+          "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+          "independent_review_reason": "F012 states the exact production relationship and quantity directly.",
+          "valid_selected_parts_to_FIDs": {
+            "two G3Ps made per turn": [
+              "F012"
+            ]
+          },
+          "missing_assertions_under_valid_assessed_scope": [],
+          "sibling_or_claim_union_used_as_proof": false,
+          "qualified_quality_eligible": false
+        },
+        {
+          "unit_id": "U02",
+          "original_unit_text": " and three turns fix enough net carbon to export one G3P,",
+          "original_span": {
+            "start": 34,
+            "end": 91,
+            "unicode_code_point_basis": true
+          },
+          "original_unit_text_sha256": "9ca4973b77233e9c0de77945b35ff9b4eda3f6f96fcb2ce7723038a8be821a59",
+          "contextualized_assertions": "Three Calvin-cycle turns fix enough net carbon to export one G3P.",
+          "returned_unit_fragment_ids": [
+            "F011"
+          ],
+          "valid_own_claim_assessed_supporting_fragment_ids": [
+            "F011"
+          ],
+          "invalid_unassessed_unit_fragment_ids": [],
+          "observed_checker_status": "supported",
+          "observed_checker_reason": "Supported by F011.",
+          "observed_relation_preserved": true,
+          "observed_conditions_preserved": true,
+          "reason_has_literal_actual_part_to_FID_mapping": false,
+          "reason_only_lists_FIDs": true,
+          "reason_is_scientific_proof": false,
+          "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "complete",
+          "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+          "independent_review_reason": "The independent main clause of the actually selected and assessed F011 explicitly states this three-turn/net-carbon/one-G3P relationship. Its clipped opening is not treated as proof that a chloroplast has three carbon atoms; this unit does not assert that property.",
+          "valid_selected_parts_to_FIDs": {
+            "three turns, net carbon and one G3P exported": [
+              "F011"
+            ]
+          },
+          "missing_assertions_under_valid_assessed_scope": [],
+          "sibling_or_claim_union_used_as_proof": false,
+          "qualified_quality_eligible": false
+        },
+        {
+          "unit_id": "U03",
+          "original_unit_text": " while the remaining G3P molecules are used to regenerate RuBP so the cycle can prepare for more CO2 to be fixed [ev_002].",
+          "original_span": {
+            "start": 91,
+            "end": 213,
+            "unicode_code_point_basis": true
+          },
+          "original_unit_text_sha256": "0773275901fb72beae0e37db81cdaa769310abaa99d6826df4e4dc1096ccefa1",
+          "contextualized_assertions": "The remaining G3P regenerates RuBP so the cycle prepares for more CO2 fixation.",
+          "returned_unit_fragment_ids": [
+            "F013"
+          ],
+          "valid_own_claim_assessed_supporting_fragment_ids": [
+            "F013"
+          ],
+          "invalid_unassessed_unit_fragment_ids": [],
+          "observed_checker_status": "supported",
+          "observed_checker_reason": "Supported by F013.",
+          "observed_relation_preserved": true,
+          "observed_conditions_preserved": true,
+          "reason_has_literal_actual_part_to_FID_mapping": false,
+          "reason_only_lists_FIDs": true,
+          "reason_is_scientific_proof": false,
+          "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "complete",
+          "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+          "independent_review_reason": "F013 names remaining G3P, RuBP regeneration and its purpose of preparing for more CO2 fixation within the same selected block.",
+          "valid_selected_parts_to_FIDs": {
+            "remaining G3P and RuBP regeneration": [
+              "F013"
+            ],
+            "more CO2 fixation purpose": [
+              "F013"
+            ]
+          },
+          "missing_assertions_under_valid_assessed_scope": [],
+          "sibling_or_claim_union_used_as_proof": false,
+          "qualified_quality_eligible": false
+        }
+      ]
+    },
+    {
+      "claim_id": "claim_9eace1a26f8e9d6071f0acb8_1",
+      "full_original_claim": "One G3P leaves the cycle to contribute to the formation of a carbohydrate molecule, commonly glucose, which requires six turns of the cycle for six carbon atoms [ev_001].",
+      "actual_citation_scope": [
+        {
+          "allowed_fragment_ids": [
+            "F001",
+            "F002",
+            "F003",
+            "F004",
+            "F005",
+            "F006",
+            "F007"
+          ],
+          "evidence_id": "ev_001"
+        }
+      ],
+      "observed_claim_status": "supported",
+      "observed_claim_citations": [
+        {
+          "evidence_id": "ev_001",
+          "fragment_ids": [
+            "F001",
+            "F002"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "complete",
+      "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+      "complete_iff_all_units_complete": true,
+      "qualified_quality_eligible": false,
+      "units": [
+        {
+          "unit_id": "U01",
+          "original_unit_text": "One G3P leaves the cycle to contribute to the formation of a carbohydrate molecule, commonly glucose,",
+          "original_span": {
+            "start": 0,
+            "end": 101,
+            "unicode_code_point_basis": true
+          },
+          "original_unit_text_sha256": "96b64ef11ef91687ea240d6784ab9c7afa22ac2d8c61a2a3536f4e9063a349d0",
+          "contextualized_assertions": "One G3P exits the cycle for carbohydrate formation, commonly glucose.",
+          "returned_unit_fragment_ids": [
+            "F001"
+          ],
+          "valid_own_claim_assessed_supporting_fragment_ids": [
+            "F001"
+          ],
+          "invalid_unassessed_unit_fragment_ids": [],
+          "observed_checker_status": "supported",
+          "observed_checker_reason": "Supported by F001.",
+          "observed_relation_preserved": true,
+          "observed_conditions_preserved": true,
+          "reason_has_literal_actual_part_to_FID_mapping": false,
+          "reason_only_lists_FIDs": true,
+          "reason_is_scientific_proof": false,
+          "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "complete",
+          "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+          "independent_review_reason": "F001 directly supplies one G3P leaving the Calvin cycle, carbohydrate formation and the commonly-glucose description.",
+          "valid_selected_parts_to_FIDs": {
+            "one G3P exits the cycle": [
+              "F001"
+            ],
+            "carbohydrate purpose and commonly-glucose description": [
+              "F001"
+            ]
+          },
+          "missing_assertions_under_valid_assessed_scope": [],
+          "sibling_or_claim_union_used_as_proof": false,
+          "qualified_quality_eligible": false
+        },
+        {
+          "unit_id": "U02",
+          "original_unit_text": " which requires six turns of the cycle for six carbon atoms [ev_001].",
+          "original_span": {
+            "start": 101,
+            "end": 170,
+            "unicode_code_point_basis": true
+          },
+          "original_unit_text_sha256": "7e3feeaf1d7dcc3558464dc57b977555631a743ce3bef6e2386f0fb22149f767",
+          "contextualized_assertions": "The carbohydrate molecule requires six Calvin-cycle turns for its six carbon atoms.",
+          "returned_unit_fragment_ids": [
+            "F002"
+          ],
+          "valid_own_claim_assessed_supporting_fragment_ids": [
+            "F002"
+          ],
+          "invalid_unassessed_unit_fragment_ids": [],
+          "observed_checker_status": "supported",
+          "observed_checker_reason": "Supported by F002.",
+          "observed_relation_preserved": true,
+          "observed_conditions_preserved": true,
+          "reason_has_literal_actual_part_to_FID_mapping": false,
+          "reason_only_lists_FIDs": true,
+          "reason_is_scientific_proof": false,
+          "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "complete",
+          "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+          "independent_review_reason": "F002 directly supplies the carbohydrate referent, six carbon atoms and six turns. The commonly-glucose apposition is assigned to U01, not duplicated into this relative clause; sibling F001 is not used as U02 evidence.",
+          "valid_selected_parts_to_FIDs": {
+            "carbohydrate referent, six carbons and six turns": [
+              "F002"
+            ]
+          },
+          "missing_assertions_under_valid_assessed_scope": [],
+          "sibling_or_claim_union_used_as_proof": false,
+          "qualified_quality_eligible": false
+        }
+      ]
+    },
+    {
+      "claim_id": "claim_e042c515f904bec48279173e_1",
+      "full_original_claim": "The remaining G3P molecules stay in the cycle to be formed back into RuBP, which is ready to react with more CO2 [ev_003] [ev_001].",
+      "actual_citation_scope": [
+        {
+          "allowed_fragment_ids": [
+            "F016",
+            "F017",
+            "F018",
+            "F019",
+            "F020",
+            "F021",
+            "F022"
+          ],
+          "evidence_id": "ev_003"
+        },
+        {
+          "allowed_fragment_ids": [
+            "F001",
+            "F002",
+            "F003",
+            "F004",
+            "F005",
+            "F006",
+            "F007"
+          ],
+          "evidence_id": "ev_001"
+        }
+      ],
+      "observed_claim_status": "supported",
+      "observed_claim_citations": [
+        {
+          "evidence_id": "ev_003",
+          "fragment_ids": [
+            "F021"
+          ],
+          "relation": "supporting"
+        },
+        {
+          "evidence_id": "ev_001",
+          "fragment_ids": [
+            "F003"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "complete",
+      "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+      "complete_iff_all_units_complete": true,
+      "qualified_quality_eligible": false,
+      "units": [
+        {
+          "unit_id": "U01",
+          "original_unit_text": "The remaining G3P molecules stay in the cycle to be formed back into RuBP,",
+          "original_span": {
+            "start": 0,
+            "end": 74,
+            "unicode_code_point_basis": true
+          },
+          "original_unit_text_sha256": "d352bff0cf0e92415868f53c0fbb4f90c55d6de2787a40cd736f59f1c36d233a",
+          "contextualized_assertions": "Remaining G3P stays in the cycle and is formed back into RuBP.",
+          "returned_unit_fragment_ids": [
+            "F003",
+            "F021"
+          ],
+          "valid_own_claim_assessed_supporting_fragment_ids": [
+            "F003",
+            "F021"
+          ],
+          "invalid_unassessed_unit_fragment_ids": [],
+          "observed_checker_status": "supported",
+          "observed_checker_reason": "Supported by F003 and F021.",
+          "observed_relation_preserved": true,
+          "observed_conditions_preserved": true,
+          "reason_has_literal_actual_part_to_FID_mapping": false,
+          "reason_only_lists_FIDs": true,
+          "reason_is_scientific_proof": false,
+          "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "complete",
+          "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+          "independent_review_reason": "F021 explicitly states retained G3P, staying in the cycle and being formed back into RuBP; F003 independently confirms regeneration.",
+          "valid_selected_parts_to_FIDs": {
+            "retained G3P stays and forms RuBP": [
+              "F021"
+            ],
+            "G3P-to-RuBP regeneration": [
+              "F003"
+            ]
+          },
+          "missing_assertions_under_valid_assessed_scope": [],
+          "sibling_or_claim_union_used_as_proof": false,
+          "qualified_quality_eligible": false
+        },
+        {
+          "unit_id": "U02",
+          "original_unit_text": " which is ready to react with more CO2 [ev_003] [ev_001].",
+          "original_span": {
+            "start": 74,
+            "end": 131,
+            "unicode_code_point_basis": true
+          },
+          "original_unit_text_sha256": "f52f88840613ca231dfb9be02a4cb30ae5397557726e4ac14be57631675e3165",
+          "contextualized_assertions": "The regenerated RuBP is ready to react with more CO2.",
+          "returned_unit_fragment_ids": [
+            "F021"
+          ],
+          "valid_own_claim_assessed_supporting_fragment_ids": [
+            "F021"
+          ],
+          "invalid_unassessed_unit_fragment_ids": [],
+          "observed_checker_status": "supported",
+          "observed_checker_reason": "Supported by F021.",
+          "observed_relation_preserved": true,
+          "observed_conditions_preserved": true,
+          "reason_has_literal_actual_part_to_FID_mapping": false,
+          "reason_only_lists_FIDs": true,
+          "reason_is_scientific_proof": false,
+          "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "complete",
+          "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+          "independent_review_reason": "F021 contains both the named RuBP antecedent and its readiness to react with more CO2.",
+          "valid_selected_parts_to_FIDs": {
+            "RuBP antecedent and readiness for more CO2": [
+              "F021"
+            ]
+          },
+          "missing_assertions_under_valid_assessed_scope": [],
+          "sibling_or_claim_union_used_as_proof": false,
+          "qualified_quality_eligible": false
+        }
+      ]
+    },
+    {
+      "claim_id": "claim_4e19e4a486fe9dc923da7169_1",
+      "full_original_claim": "ATP is also used in the regeneration of RuBP [ev_001].",
+      "actual_citation_scope": [
+        {
+          "allowed_fragment_ids": [
+            "F001",
+            "F002",
+            "F003",
+            "F004",
+            "F005",
+            "F006",
+            "F007"
+          ],
+          "evidence_id": "ev_001"
+        }
+      ],
+      "observed_claim_status": "supported",
+      "observed_claim_citations": [
+        {
+          "evidence_id": "ev_001",
+          "fragment_ids": [
+            "F004"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "complete",
+      "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+      "complete_iff_all_units_complete": true,
+      "qualified_quality_eligible": false,
+      "units": [
+        {
+          "unit_id": "U01",
+          "original_unit_text": "ATP is also used in the regeneration of RuBP [ev_001].",
+          "original_span": {
+            "start": 0,
+            "end": 54,
+            "unicode_code_point_basis": true
+          },
+          "original_unit_text_sha256": "f0f29238f956f439fb0e59f4b4b45b448f7b3ef5ce830dfd7459191cb1a173b4",
+          "contextualized_assertions": "ATP is also used in RuBP regeneration.",
+          "returned_unit_fragment_ids": [
+            "F004"
+          ],
+          "valid_own_claim_assessed_supporting_fragment_ids": [
+            "F004"
+          ],
+          "invalid_unassessed_unit_fragment_ids": [],
+          "observed_checker_status": "supported",
+          "observed_checker_reason": "Supported by F004.",
+          "observed_relation_preserved": true,
+          "observed_conditions_preserved": true,
+          "reason_has_literal_actual_part_to_FID_mapping": false,
+          "reason_only_lists_FIDs": true,
+          "reason_is_scientific_proof": false,
+          "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "complete",
+          "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+          "independent_review_reason": "F004 states the same named input, regeneration role and RuBP target directly.",
+          "valid_selected_parts_to_FIDs": {
+            "ATP use in RuBP regeneration": [
+              "F004"
+            ]
+          },
+          "missing_assertions_under_valid_assessed_scope": [],
+          "sibling_or_claim_union_used_as_proof": false,
+          "qualified_quality_eligible": false
+        }
+      ]
+    },
+    {
+      "claim_id": "claim_b85b9fa953bffc184b48ae2d_1",
+      "full_original_claim": "RuBisCO combines CO2 with RuBP; the six-carbon product splits into two 3-PGA, which ATP and NADPH reduce to G3P [ev_007].",
+      "actual_citation_scope": [
+        {
+          "allowed_fragment_ids": [
+            "F053",
+            "F054",
+            "F055",
+            "F056",
+            "F057",
+            "F058",
+            "F059",
+            "F060",
+            "F061"
+          ],
+          "evidence_id": "ev_007"
+        }
+      ],
+      "observed_claim_status": "supported",
+      "observed_claim_citations": [
+        {
+          "evidence_id": "ev_007",
+          "fragment_ids": [
+            "F054",
+            "F056",
+            "F058"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "partial",
+      "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "partial",
+      "complete_iff_all_units_complete": true,
+      "qualified_quality_eligible": false,
+      "units": [
+        {
+          "unit_id": "U01",
+          "original_unit_text": "RuBisCO combines CO2 with RuBP",
+          "original_span": {
+            "start": 0,
+            "end": 30,
+            "unicode_code_point_basis": true
+          },
+          "original_unit_text_sha256": "a6406e3a7a330f88d01247ffa17fecb50695c3bb0211bc951801a1606dfdfa9c",
+          "contextualized_assertions": "RuBisCO combines CO2 with RuBP.",
+          "returned_unit_fragment_ids": [
+            "F054",
+            "F056"
+          ],
+          "valid_own_claim_assessed_supporting_fragment_ids": [
+            "F054",
+            "F056"
+          ],
+          "invalid_unassessed_unit_fragment_ids": [],
+          "observed_checker_status": "supported",
+          "observed_checker_reason": "Supported by F054 and F056.",
+          "observed_relation_preserved": true,
+          "observed_conditions_preserved": true,
+          "reason_has_literal_actual_part_to_FID_mapping": false,
+          "reason_only_lists_FIDs": true,
+          "reason_is_scientific_proof": false,
+          "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "complete",
+          "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+          "independent_review_reason": "F056 supplies the RuBisCO-catalyzed CO2/RuBP reaction; combines is a meaning-preserving paraphrase. F054 confirms the named participants.",
+          "valid_selected_parts_to_FIDs": {
+            "named RuBisCO/CO2/RuBP reaction": [
+              "F056"
+            ],
+            "participant identity": [
+              "F054"
+            ]
+          },
+          "missing_assertions_under_valid_assessed_scope": [],
+          "sibling_or_claim_union_used_as_proof": false,
+          "qualified_quality_eligible": false
+        },
+        {
+          "unit_id": "U02",
+          "original_unit_text": "; the six-carbon product splits into two 3-PGA,",
+          "original_span": {
+            "start": 30,
+            "end": 77,
+            "unicode_code_point_basis": true
+          },
+          "original_unit_text_sha256": "20843773a2275aa64c9460daac892f1f4322bbbbb46c826290bed7dddf3bbafc",
+          "contextualized_assertions": "The RuBisCO reaction six-carbon product splits into two 3-PGA compounds.",
+          "returned_unit_fragment_ids": [
+            "F056",
+            "F058"
+          ],
+          "valid_own_claim_assessed_supporting_fragment_ids": [
+            "F056",
+            "F058"
+          ],
+          "invalid_unassessed_unit_fragment_ids": [],
+          "observed_checker_status": "supported",
+          "observed_checker_reason": "Supported by F056 and F058.",
+          "observed_relation_preserved": true,
+          "observed_conditions_preserved": true,
+          "reason_has_literal_actual_part_to_FID_mapping": false,
+          "reason_only_lists_FIDs": true,
+          "reason_is_scientific_proof": false,
+          "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "complete",
+          "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+          "independent_review_reason": "F056 supplies the reaction antecedent, six-carbon product and quantity two three-carbon products. F058 gives the definite starting-compound name 3-PGA. Only these own selected fragments provide the reference bridge.",
+          "valid_selected_parts_to_FIDs": {
+            "six-carbon reaction product and two-three-carbon split": [
+              "F056"
+            ],
+            "three-carbon starting-compound identity 3-PGA": [
+              "F056",
+              "F058"
+            ]
+          },
+          "missing_assertions_under_valid_assessed_scope": [],
+          "sibling_or_claim_union_used_as_proof": false,
+          "qualified_quality_eligible": false
+        },
+        {
+          "unit_id": "U03",
+          "original_unit_text": " which ATP",
+          "original_span": {
+            "start": 77,
+            "end": 87,
+            "unicode_code_point_basis": true
+          },
+          "original_unit_text_sha256": "d31fe89198569a807e247e6b7a209596d707e5a42e917be329dded4d941a82ec",
+          "contextualized_assertions": "ATP participates with NADPH in reducing the preceding 3-PGA to G3P.",
+          "returned_unit_fragment_ids": [
+            "F058"
+          ],
+          "valid_own_claim_assessed_supporting_fragment_ids": [
+            "F058"
+          ],
+          "invalid_unassessed_unit_fragment_ids": [],
+          "observed_checker_status": "supported",
+          "observed_checker_reason": "Supported by F058.",
+          "observed_relation_preserved": true,
+          "observed_conditions_preserved": true,
+          "reason_has_literal_actual_part_to_FID_mapping": false,
+          "reason_only_lists_FIDs": true,
+          "reason_is_scientific_proof": false,
+          "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "partial",
+          "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "partial",
+          "independent_review_reason": "Primary diagnostic inherits the shared reduce-to-G3P predicate into this object-only ATP segment. F058 proves ATP involvement and named conversion but not reduction classification. Shared predicate ownership across U03/U04 remains explicitly ambiguous.",
+          "valid_selected_parts_to_FIDs": {
+            "ATP involvement and named 3-PGA-to-G3P conversion": [
+              "F058"
+            ]
+          },
+          "missing_assertions_under_valid_assessed_scope": [
+            "Reduction classification under inherited shared predicate."
+          ],
+          "sibling_or_claim_union_used_as_proof": false,
+          "qualified_quality_eligible": false
+        },
+        {
+          "unit_id": "U04",
+          "original_unit_text": " and NADPH reduce to G3P [ev_007].",
+          "original_span": {
+            "start": 87,
+            "end": 121,
+            "unicode_code_point_basis": true
+          },
+          "original_unit_text_sha256": "1336642c786d28d77ad3221d23d48bb64014798a79d655b965ac3ae1bcf5334b",
+          "contextualized_assertions": "NADPH, with ATP, reduces 3-PGA to G3P.",
+          "returned_unit_fragment_ids": [
+            "F058"
+          ],
+          "valid_own_claim_assessed_supporting_fragment_ids": [
+            "F058"
+          ],
+          "invalid_unassessed_unit_fragment_ids": [],
+          "observed_checker_status": "supported",
+          "observed_checker_reason": "Supported by F058.",
+          "observed_relation_preserved": true,
+          "observed_conditions_preserved": true,
+          "reason_has_literal_actual_part_to_FID_mapping": false,
+          "reason_only_lists_FIDs": true,
+          "reason_is_scientific_proof": false,
+          "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "partial",
+          "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "partial",
+          "independent_review_reason": "F058 supplies the named actors and conversion but never classifies the conversion as reduction. F059 selected in another claim cannot be borrowed.",
+          "valid_selected_parts_to_FIDs": {
+            "NADPH/ATP involvement and named conversion": [
+              "F058"
+            ]
+          },
+          "missing_assertions_under_valid_assessed_scope": [
+            "Reduction classification."
+          ],
+          "sibling_or_claim_union_used_as_proof": false,
+          "qualified_quality_eligible": false
+        }
+      ]
+    },
+    {
+      "claim_id": "claim_4bbb28fe7a90b6a3f87b6b75_1",
+      "full_original_claim": "Most G3P is recycled to regenerate RuBP, while one G3P per three turns is exported for carbohydrate formation [ev_002] [ev_003].",
+      "actual_citation_scope": [
+        {
+          "allowed_fragment_ids": [
+            "F008",
+            "F009",
+            "F010",
+            "F011",
+            "F012",
+            "F013",
+            "F014",
+            "F015"
+          ],
+          "evidence_id": "ev_002"
+        },
+        {
+          "allowed_fragment_ids": [
+            "F016",
+            "F017",
+            "F018",
+            "F019",
+            "F020",
+            "F021",
+            "F022"
+          ],
+          "evidence_id": "ev_003"
+        }
+      ],
+      "observed_claim_status": "supported",
+      "observed_claim_citations": [
+        {
+          "evidence_id": "ev_002",
+          "fragment_ids": [
+            "F013"
+          ],
+          "relation": "supporting"
+        },
+        {
+          "evidence_id": "ev_003",
+          "fragment_ids": [
+            "F019",
+            "F020"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "partial",
+      "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+      "complete_iff_all_units_complete": true,
+      "qualified_quality_eligible": false,
+      "units": [
+        {
+          "unit_id": "U01",
+          "original_unit_text": "Most G3P is recycled to regenerate RuBP,",
+          "original_span": {
+            "start": 0,
+            "end": 40,
+            "unicode_code_point_basis": true
+          },
+          "original_unit_text_sha256": "efc5ff702ba81096d05acf530d263f17141200c24c473741edc61183690d100e",
+          "contextualized_assertions": "Most G3P is recycled to regenerate RuBP.",
+          "returned_unit_fragment_ids": [
+            "F013"
+          ],
+          "valid_own_claim_assessed_supporting_fragment_ids": [
+            "F013"
+          ],
+          "invalid_unassessed_unit_fragment_ids": [],
+          "observed_checker_status": "supported",
+          "observed_checker_reason": "Supported by F013.",
+          "observed_relation_preserved": true,
+          "observed_conditions_preserved": true,
+          "reason_has_literal_actual_part_to_FID_mapping": false,
+          "reason_only_lists_FIDs": true,
+          "reason_is_scientific_proof": false,
+          "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "complete",
+          "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+          "independent_review_reason": "F013 supplies one exported versus the remaining five G3Ps retained for RuBP regeneration. Five of the six described molecules is most; staying in the cycle for regeneration supports recycled.",
+          "valid_selected_parts_to_FIDs": {
+            "most: five retained versus one exported": [
+              "F013"
+            ],
+            "retained G3P for RuBP regeneration": [
+              "F013"
+            ]
+          },
+          "missing_assertions_under_valid_assessed_scope": [],
+          "sibling_or_claim_union_used_as_proof": false,
+          "qualified_quality_eligible": false
+        },
+        {
+          "unit_id": "U02",
+          "original_unit_text": " while one G3P per three turns is exported for carbohydrate formation [ev_002] [ev_003].",
+          "original_span": {
+            "start": 40,
+            "end": 128,
+            "unicode_code_point_basis": true
+          },
+          "original_unit_text_sha256": "68fbc7e4850c308e3a743ac09462cb79c1ff12e47b70d4a1d7500cf8fb37bc7f",
+          "contextualized_assertions": "One G3P per three turns is exported for carbohydrate formation.",
+          "returned_unit_fragment_ids": [
+            "F011",
+            "F019",
+            "F020"
+          ],
+          "valid_own_claim_assessed_supporting_fragment_ids": [
+            "F019",
+            "F020"
+          ],
+          "invalid_unassessed_unit_fragment_ids": [
+            "F011"
+          ],
+          "observed_checker_status": "supported",
+          "observed_checker_reason": "Supported by F011, F019, F020.",
+          "observed_relation_preserved": true,
+          "observed_conditions_preserved": true,
+          "reason_has_literal_actual_part_to_FID_mapping": false,
+          "reason_only_lists_FIDs": true,
+          "reason_is_scientific_proof": false,
+          "ineligible_diagnostic_quality_using_only_valid_own_assessed_fragments": "partial",
+          "ineligible_diagnostic_quality_using_all_raw_unit_listed_allowed_texts": "complete",
+          "independent_review_reason": "F019 and F020 jointly establish one G3P leaving the cycle to become part of a carbohydrate, despite page furniture in F019. The strict diagnostic excludes F011 because the owning ev_002 claim citation contains only F013; neither F019 nor F020 gives the three-turn ratio. Pure raw-listed-text diagnosis sees that ratio in the returned F011, but the result remains ineligible and this does not repair its citation.",
+          "valid_selected_parts_to_FIDs": {
+            "one G3P leaving the cycle for carbohydrate formation": [
+              "F019",
+              "F020"
+            ]
+          },
+          "missing_assertions_under_valid_assessed_scope": [
+            "One G3P per three turns: F011 is returned in the unit but absent from its owning claim citation."
+          ],
+          "sibling_or_claim_union_used_as_proof": false,
+          "qualified_quality_eligible": false
+        }
+      ]
+    }
+  ],
+  "returned_complete_fragment_texts": [
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_001",
+      "exact_text": "One of the G3P molecules leaves the Calvin cycle to contribute to the formation of the carbohydrate molecule, which is commonly glucose (C6H12O6).",
+      "fragment_id": "F001"
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_001",
+      "exact_text": "Because the carbohydrate molecule has six carbon atoms, it takes six turns of the Calvin cycle to make one carbohydrate molecule (one for each carbon dioxide molecule fixed).",
+      "fragment_id": "F002"
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_001",
+      "exact_text": "The remaining G3P molecules regenerate RuBP, which enables the system to prepare for the carbon-fixation step.",
+      "fragment_id": "F003"
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_001",
+      "exact_text": "ATP is also used in the regeneration of RuBP.",
+      "fragment_id": "F004"
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_002",
+      "exact_text": "chloroplast has three carbon atoms, it takes three “turns” of the Calvin cycle to fix enough net carbon to export one G3P.",
+      "fragment_id": "F011"
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_002",
+      "exact_text": "But each turn makes two G3Ps, thus three turns make six G3Ps.",
+      "fragment_id": "F012"
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_002",
+      "exact_text": "One is exported while the remaining five G3P molecules remain in the cycle and are used to regenerate RuBP, which enables the system to prepare for more CO2 to be fixed.",
+      "fragment_id": "F013"
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_003",
+      "exact_text": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+      "fragment_id": "F018"
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_003",
+      "exact_text": "One of the three-carbon molecules of G3P leaves the cycle to become a 5 • Key Terms 131",
+      "fragment_id": "F019"
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_003",
+      "exact_text": "part of a carbohydrate molecule.",
+      "fragment_id": "F020"
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_003",
+      "exact_text": "The remaining G3P molecules stay in the cycle to be formed back into RuBP, which is ready to react with more CO2.",
+      "fragment_id": "F021"
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_007",
+      "exact_text": "In the stroma, in addition to CO2, two other chemicals are present to initiate the Calvin cycle: an enzyme abbreviated RuBisCO, and the molecule ribulose bisphosphate (RuBP).",
+      "fragment_id": "F054"
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_007",
+      "exact_text": "RuBP has five atoms of carbon and a phosphate group on each end.",
+      "fragment_id": "F055"
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_007",
+      "exact_text": "RuBisCO catalyzes a reaction between CO2 and RuBP, which forms a six-carbon compound that is immediately converted into two three-carbon compounds.",
+      "fragment_id": "F056"
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_007",
+      "exact_text": "This process is called carbon fixation, because CO2 is “fixed” from its inorganic form into organic molecules.",
+      "fragment_id": "F057"
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_007",
+      "exact_text": "ATP and NADPH use their stored energy to convert the three-carbon compound, 3-PGA, into another three-carbon compound called G3P.",
+      "fragment_id": "F058"
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_007",
+      "exact_text": "This type of reaction is called a reduction reaction, because it involves the gain of electrons.",
+      "fragment_id": "F059"
+    }
+  ],
+  "limitations": [
+    "Same-case nonblind AI audit with visible development hypotheses; no human Gold or general selection-accuracy certification.",
+    "The observed response is entirely ineligible; all semantic complete/partial counts are diagnostic, not qualified quality results.",
+    "No client citation repair, raw rewrite, model retry, Main modification, old-artifact write, network, database or authentication operation was performed.",
+    "Only this single review JSON was written; original question, answer, 71 fragments, 19 units and their bindings were not changed.",
+    "Historical frozen statistics are preserved; no native publication, browser lifecycle acceptance or new timing metric is certified."
+  ]
+}

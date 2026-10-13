@@ -1,0 +1,54 @@
+{
+  "schema": "5703_checker85_client_fix1_independent_static_review_v1",
+  "status": "STATIC_REVIEW_PASS",
+  "reviewed_utc": "2026-10-11T18:01:44.887183+00:00",
+  "scope": "Read-only diff of the frozen new client against the previously reviewed preserved original; no execution.",
+  "candidate": {
+    "path": "api_client85_fix1.py",
+    "bytes": 20051,
+    "sha256": "57f097950960fcfa942d630ea56b5f8125788a9c66f95accc984e13da802020d"
+  },
+  "freeze": {
+    "path": "client-fix1-freeze85.json",
+    "bytes": 4201,
+    "sha256": "7ea949ba8c4a188543835c6232c1b49cf29a3449abb2b58e062aa8ff241d4f32"
+  },
+  "original_preserved": {
+    "path": "api_client85.py",
+    "bytes": 18825,
+    "sha256": "3cda9c216426c48b4081e487cef653be6f649d5e8401ffefb824d703795a7875",
+    "original_freeze_sha256": "1d49674467e9646784acb7cab62acc605c40445894554f5439e23c69d812290c"
+  },
+  "checked_changes": [
+    "Idempotency-Key only appears when explicitly supplied to the single POST /api/v1/sessions/<fresh-session>/messages; its validated shape is checker85- followed by 64 lowercase hex digits.",
+    "Key material binds case directory ID, exact frozen scope SHA256 and canonical fresh session UUID; only its SHA256 enters the receipt.",
+    "Login, session creation, polling, answer fetch and closure calls receive no idempotency keyword/header.",
+    "Unexpected HTTP diagnostics export validated numeric status100..599 plus the finite local method/path; response body and exception text are not exported.",
+    "Question JSON body, model/checker/source policies, cost caps, one-send claim, deadlines, idle closure, no retry and API-only quality/latency limits are unchanged.",
+    "Original and new client share the existing durable claim path; this patch adds no replay/reopen mechanism."
+  ],
+  "Root_scope_required": "Use new candidate only for case02 onward; failed case01 remains in the cohort denominator, with no retry or request/ledger reclamation.",
+  "Root_reported_separate_checks": {
+    "Main_router_required_header_and_body_compatible": true,
+    "focused_controls_pass": 6,
+    "Ruff": "PASS",
+    "original20_repeated": false,
+    "reviewer_reran_controls": false
+  },
+  "blockers": [],
+  "review_limits": {
+    "static_only": true,
+    "target_modules_imported": 0,
+    "tests_run": 0,
+    "network_calls": 0,
+    "auth_reads": 0,
+    "database_reads": 0,
+    "database_writes": 0,
+    "provider_calls": 0,
+    "Main_writes": 0,
+    "unseen_question_contents_read": false,
+    "unseen_rubric_contents_read": false,
+    "actual_case_receipts_read": false,
+    "scientific_quality_or_latency_claim": false
+  }
+}

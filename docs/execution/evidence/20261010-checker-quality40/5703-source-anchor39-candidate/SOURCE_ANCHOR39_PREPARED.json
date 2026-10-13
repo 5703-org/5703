@@ -1,0 +1,57 @@
+{
+  "status": "W_ONLY_ANCHOR39_PREPARED_NOT_ADOPTED",
+  "before": [
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\source_relations_v2.py",
+      "bytes": 16317,
+      "sha256": "cc89ad7c7d91ee04c660a8b0eab5dfc714ac037a9b99f102b83f53519b48edbe"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checked.py",
+      "bytes": 155543,
+      "sha256": "5b62005af2263600d6c9485aedf73613acd825bade85f41fc33ba88b0b39994c"
+    }
+  ],
+  "before_backup_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-anchor39-candidate\\source_relations_v2.py.before",
+    "bytes": 16317,
+    "sha256": "cc89ad7c7d91ee04c660a8b0eab5dfc714ac037a9b99f102b83f53519b48edbe"
+  },
+  "candidate_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-anchor39-candidate\\source_relations_v2.py",
+    "bytes": 17079,
+    "sha256": "4e3ef844eff23b77d83e850c32fdfa47c9504b7cec9a8edd7db3328851ba5a55"
+  },
+  "diff_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-anchor39-candidate\\SOURCE_ANCHOR39.diff",
+    "bytes": 4828,
+    "sha256": "510f99bc13540a3260a077f75c5af0d3ad915b260d7411bd30c7182cbae961d3"
+  },
+  "metadata_key": "source_context_candidates",
+  "columns": [
+    "kind",
+    "anchor_text",
+    "claim_occurrences",
+    "source_hits"
+  ],
+  "claim_occurrence_shape": [
+    "unit_id",
+    "full_claim_start",
+    "full_claim_end"
+  ],
+  "source_hit_shape": [
+    "evidence_id",
+    "fragment_id",
+    [
+      [
+        "source_start",
+        "source_end",
+        "literal|word_family_candidate"
+      ]
+    ]
+  ],
+  "format_instruction_append": " Index rows are [kind,anchor_text,claim_occurrences,source_hits]. Claim occurrences are [unit_id,full_claim_start,full_claim_end]; source hits are [evidence_id,fragment_id,[[source_start,source_end,match_kind],...]]. Offsets use original Unicode code points, absolute in full_claim and local to each source block. literal is case-insensitive whole-token/phrase lookup; word_family_candidate is only a lookup hint. An empty source_hits list means no indexed occurrence, not absent semantic evidence. Grouping repeated anchors establishes no semantic bridge between units or sources.",
+  "original_discovery_rules_and_allowlists_unchanged": true,
+  "original_aggregated_FID_table_replaced_not_duplicated": true,
+  "Main_B_API_DB_auth_calls_or_writes": 0
+}

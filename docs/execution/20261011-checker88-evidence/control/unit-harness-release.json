@@ -1,0 +1,150 @@
+{
+  "schema": "phase88_unit_harness_affected_release_v1",
+  "status": "FROZEN_RELEASED_FOR_ROOT_REVIEW",
+  "candidate": "run-unit88-cwd-nul-candidate.py",
+  "candidate_sha256": "2ca132717a54ae107f820f2ee16a95647f2b1199eca8347e9580dc9dcdafa1b8",
+  "original_runner_sha256": "b43730f35c7a4132a99ad63bb41fcf26d8b0a23666ebf237688acfbbd3f00f05",
+  "AST": "PASS",
+  "full_suite_not_executed": true,
+  "finite_guard_controls": {
+    "passed": 27,
+    "failed": 0,
+    "path": "5703-unit88-cwd-nul-controls05\\controls.json",
+    "sha256": "43188b55c722656a9fb1e9b6b6b38106a5efab0d0f3d3e1748a068ec45fc909d"
+  },
+  "affected_verification": {
+    "passed": 139,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "pytest_seconds": 14.757,
+    "parent_seconds": 16.16249890000472,
+    "prior_r3_nodes": 46,
+    "prior_r3_nodes_all_now_passed": true,
+    "passed_prior_node_ids": [
+      "tests/unit/test_cpu_adaptive.py::test_int8_does_not_inherit_torch_relevance_threshold",
+      "tests/unit/test_cpu_adaptive.py::test_legacy_policy_and_frozen_copy_are_preserved",
+      "tests/unit/test_cpu_adaptive.py::test_shadow_retains_all_candidates_and_experimental_records_removed_ids",
+      "tests/unit/test_evaluation_backend.py::test_actual_shared_worker_persists_typed_benchmark_without_dialogue_or_gold[sciq_mcq]",
+      "tests/unit/test_evaluation_backend.py::test_actual_shared_worker_persists_typed_benchmark_without_dialogue_or_gold[sciq_openqa]",
+      "tests/unit/test_evaluation_backend.py::test_admin_api_create_freeze_start_results_and_role_denial",
+      "tests/unit/test_evaluation_backend.py::test_registered_hash_rejects_post_freeze_question_or_gold_injection",
+      "tests/unit/test_evaluation_backend.py::test_server_cancellation_retains_all_scheduled_items",
+      "tests/unit/test_lossless_output_integration84.py::test_invalid_provider_wire_fails_closed_before_original_publication[foreign_claim]",
+      "tests/unit/test_lossless_output_integration84.py::test_invalid_provider_wire_fails_closed_before_original_publication[foreign_source]",
+      "tests/unit/test_lossless_output_integration84.py::test_invalid_provider_wire_fails_closed_before_original_publication[foreign_unit]",
+      "tests/unit/test_lossless_output_integration84.py::test_invalid_provider_wire_fails_closed_before_original_publication[missing_units]",
+      "tests/unit/test_lossless_output_integration84.py::test_opt_in_preserves_complete_response_and_every_original_gate[json_object]",
+      "tests/unit/test_lossless_output_integration84.py::test_opt_in_preserves_complete_response_and_every_original_gate[json_schema]",
+      "tests/unit/test_lossless_output_integration84.py::test_vertex_json_object_sends_actual_projection_schema_and_hydrates_original_gates",
+      "tests/unit/test_parse_isolation.py::test_cancellation_stops_real_child",
+      "tests/unit/test_parse_isolation.py::test_input_limit_refuses_before_child_and_source_change_is_rejected",
+      "tests/unit/test_parse_isolation.py::test_isolated_parser_matches_legacy_units_and_cleans_temporary_output",
+      "tests/unit/test_parse_isolation.py::test_malformed_pdf_is_a_bounded_parser_failure",
+      "tests/unit/test_parse_isolation.py::test_output_limit_refuses_partial_result_and_cleans_temporary_output",
+      "tests/unit/test_parse_isolation.py::test_real_child_keeps_complete_units_with_large_output_ceiling[268435456]",
+      "tests/unit/test_parse_isolation.py::test_real_child_keeps_complete_units_with_large_output_ceiling[536870912]",
+      "tests/unit/test_parse_isolation.py::test_wall_timeout_kills_real_child",
+      "tests/unit/test_v22_integration.py::test_execution_uses_saved_pair_even_after_live_setting_changes[anchored_reference_v21-14-question_requirements_v4]",
+      "tests/unit/test_v22_integration.py::test_execution_uses_saved_pair_even_after_live_setting_changes[anchored_reference_v21-16-question_requirements_v4]",
+      "tests/unit/test_v22_integration.py::test_execution_uses_saved_pair_even_after_live_setting_changes[anchored_reference_v21-17-question_requirements_v5]",
+      "tests/unit/test_v22_integration.py::test_execution_uses_saved_pair_even_after_live_setting_changes[anchored_reference_v21-18-question_requirements_v5]",
+      "tests/unit/test_v22_integration.py::test_execution_uses_saved_pair_even_after_live_setting_changes[anchored_reference_v21-19-question_requirements_v5]",
+      "tests/unit/test_v22_integration.py::test_execution_uses_saved_pair_even_after_live_setting_changes[anchored_reference_v21-20-question_requirements_v6]",
+      "tests/unit/test_v22_integration.py::test_execution_uses_saved_pair_even_after_live_setting_changes[anchored_reference_v21-21-question_requirements_v7]",
+      "tests/unit/test_v22_integration.py::test_execution_uses_saved_pair_even_after_live_setting_changes[anchored_reference_v21-22-question_requirements_v8]",
+      "tests/unit/test_v22_integration.py::test_execution_uses_saved_pair_even_after_live_setting_changes[anchored_reference_v22-14-question_requirements_v4]",
+      "tests/unit/test_v22_integration.py::test_execution_uses_saved_pair_even_after_live_setting_changes[anchored_reference_v22-16-question_requirements_v4]",
+      "tests/unit/test_v22_integration.py::test_execution_uses_saved_pair_even_after_live_setting_changes[anchored_reference_v22-17-question_requirements_v5]",
+      "tests/unit/test_v22_integration.py::test_execution_uses_saved_pair_even_after_live_setting_changes[anchored_reference_v22-18-question_requirements_v5]",
+      "tests/unit/test_v22_integration.py::test_execution_uses_saved_pair_even_after_live_setting_changes[anchored_reference_v22-19-question_requirements_v5]",
+      "tests/unit/test_v22_integration.py::test_execution_uses_saved_pair_even_after_live_setting_changes[anchored_reference_v22-20-question_requirements_v6]",
+      "tests/unit/test_v22_integration.py::test_execution_uses_saved_pair_even_after_live_setting_changes[anchored_reference_v22-21-question_requirements_v7]",
+      "tests/unit/test_v22_integration.py::test_execution_uses_saved_pair_even_after_live_setting_changes[anchored_reference_v22-22-question_requirements_v8]",
+      "tests/unit/test_v22_integration.py::test_mismatched_saved_pairs_cannot_accidentally_select_v22_requirements[conversation_preparer_v21-question_requirements_v8]",
+      "tests/unit/test_v22_integration.py::test_mismatched_saved_pairs_cannot_accidentally_select_v22_requirements[conversation_preparer_v22-question_requirements_v7]",
+      "tests/unit/test_week09_memory_calibration.py::test_cutoff_is_chosen_on_development_only_and_reports_held_out_counts",
+      "tests/unit/test_week09_memory_calibration.py::test_rule_false_selection_rejects_activation_but_preserves_holdout",
+      "tests/unit/test_week09_memory_formal.py::test_current_instruction_removes_saved_preference_in_both_arms",
+      "tests/unit/test_week09_memory_formal.py::test_freeze_detects_private_label_tamper",
+      "tests/unit/test_week09_memory_formal.py::test_private_labels_do_not_enter_runner_tasks_and_reserved_requires_pilot"
+    ],
+    "evidence": {
+      "pytest.xml": {
+        "path": "5703-unit88-affected02\\pytest.xml",
+        "sha256": "908ba4e47a3a072fe882ce3cd10d9c4c2a5fafc927900d94c5e47fd2ba21a878"
+      },
+      "receipt.json": {
+        "path": "5703-unit88-affected02\\receipt.json",
+        "sha256": "dbe6583733a2813e8104beca72d8b37528977d9aecb5c37ee9e75c51f8aa21e3"
+      },
+      "tripwire.json": {
+        "path": "5703-unit88-affected02\\tripwire.json",
+        "sha256": "08a9ef82e64e8a50502aac9733b38e2c79882813b31567fabbb95fa8f5160f9b"
+      },
+      "pytest.log": {
+        "path": "5703-unit88-affected02\\pytest.log",
+        "sha256": "e8982fe37d0592e40b7d0615aa92abcabb1e36766d6f06762bd692bf90b1dce8"
+      }
+    },
+    "five_Main_pins_unchanged": true
+  },
+  "full_modified_Main_source_chain": [
+    {
+      "path": "generation/checked.py",
+      "initial_preimage_path": "5703-checker88-runtime/main-preimages/generation/checked.py",
+      "before_sha256": "ab4f799c66ac08667a03c08e57d3900fc24820bdfd5a99190587b3dc265e3e53",
+      "before_bytes": 167488,
+      "after_sha256": "2b675807b299c2d802eda90ef6dfd10beaeac9a7737ec2dfe40279f66862515b",
+      "after_bytes": 170833
+    },
+    {
+      "path": "tests/unit/test_single_selection_teacher_contract.py",
+      "initial_preimage_path": "5703-checker88-runtime/main-preimages/tests/unit/test_single_selection_teacher_contract.py",
+      "before_sha256": "7066debbe240eecd808e08f9949bbc257d47b8bbf65d5b6aff401935123c2de4",
+      "before_bytes": 7449,
+      "after_sha256": "910f812fd96bc729e64ec6eb37696848a743bf8b12d909c65c07f0c08a275efa",
+      "after_bytes": 9563
+    },
+    {
+      "path": "tests/unit/test_single_selection_wire_contract.py",
+      "initial_preimage_path": "5703-checker88-runtime/main-preimages/contract-repair/tests/unit/test_single_selection_wire_contract.py",
+      "before_sha256": "0f600782008fe42abd93beaf8ca9e378bea521d6adfa181ffa6d58b0309544e7",
+      "before_bytes": 10825,
+      "after_sha256": "7d06eb097df4612f258e34efbbfbd2c2b754ab973b0c8255d15e101995e1ddae",
+      "after_bytes": 17380
+    },
+    {
+      "path": "tests/unit/test_v22_integration.py",
+      "initial_preimage_path": "5703-unit88-contract-test-fixes/root-preimages/tests/unit/test_v22_integration.py",
+      "before_sha256": "e06c5996559b0092d5a99a09185b17e3e0b4ad9c87944a6cccfff0b7003b2ff6",
+      "before_bytes": 24315,
+      "after_sha256": "b0ff8b09890860de6b76b5cc0c842d054772b2b1ca7941a4d13a46d7008aae7e",
+      "after_bytes": 24687
+    },
+    {
+      "path": "tests/unit/test_lossless_output_integration84.py",
+      "initial_preimage_path": "5703-unit88-contract-test-fixes/root-preimages/tests/unit/test_lossless_output_integration84.py",
+      "before_sha256": "d7b1eaa5a65de04273303494065e57b921d512d18172e9649c540eb1048408d9",
+      "before_bytes": 16948,
+      "after_sha256": "aa07bcf78ba4208cca6016a6960510bac31bae5115588d31b186116e0125aea2",
+      "after_bytes": 17928
+    }
+  ],
+  "harness_diagnosis_confirmed": {
+    "cwd_relative_path_nodes": 8,
+    "parser_devnull_nodes": 8,
+    "evaluation_setup_devnull_nodes": 5,
+    "allowed_parser_devnull_events": 13,
+    "all13_attributed_to_exact_test_nodes": true,
+    "source_test_contract_namespace_nodes": 25,
+    "remaining_socket_bind_event": "urllib3.util.connection._has_ipv6 during local-only tokenizer import; it is caught by urllib3 and same test passed. No real connection, no allowance widened."
+  },
+  "static_classification_preserved": {
+    "path": "5703-unit88-harness-classification.json",
+    "sha256": "1d89a798163666830ecd91dfa8077a8661bb4c869d6fd8faf04169a069952f88"
+  },
+  "Main_R_writes_by_this_agent": 0,
+  "real_PG_or_model_calls": 0,
+  "remaining_action": "Root review/CAS the W runner, then run one complete suite in a new W directory using require_escalated."
+}

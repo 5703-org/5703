@@ -1,0 +1,95 @@
+{
+  "schema": "phase85_exact_job_public_literal_diagnostic_v1",
+  "case_id": "case02",
+  "job_state": "failed",
+  "database_read_only": true,
+  "database_writes": 0,
+  "provider_posts": 0,
+  "auth_exported": false,
+  "raw_error_exported": false,
+  "diagnostic_strings": [
+    {
+      "path": "error.code",
+      "public_source_literal": "CHECKER_OUTPUT_POLICY_INCOMPATIBLE",
+      "public_literal_source": "generation\\checked.py",
+      "string_bytes": 34,
+      "sha256": "b663370e308e5355936d6b0b9b3ff339cb97a65de259b827bb7dab676671ec7b"
+    },
+    {
+      "path": "error.message",
+      "public_source_literal": "Lossless output requires the unchanged ordinary typed V2 publication gate",
+      "public_literal_source": "generation\\checked.py",
+      "string_bytes": 73,
+      "sha256": "9f1b74b6059fecafbf24d93a7680da0af23a5817481cd946d25111860eddbb01"
+    }
+  ],
+  "policy_checks": {
+    "mode_interactive_chat": true,
+    "condition_E1": true,
+    "enhancement_present": true,
+    "answer_mode_textbook": true,
+    "source_relation_v2": true,
+    "reliability_v5": true,
+    "joint_typed_v5": true,
+    "checker_schema_none": true,
+    "ordinary_question_without_attempt": true,
+    "checker_structured_mode_valid": true,
+    "checker_transport_disabled": true,
+    "route_schema_transport_compatible": true,
+    "checker_config_matches_frozen": true,
+    "teacher_config_matches_frozen": true,
+    "teaching_turn_user_question": true
+  },
+  "attempt_field_shapes_without_values": {
+    "pending_tutor_question_id": {
+      "type": "NoneType",
+      "is_none": true,
+      "is_empty_container": false
+    },
+    "pending_tutor_question": {
+      "type": "NoneType",
+      "is_none": true,
+      "is_empty_container": false
+    },
+    "pending_validation_id": {
+      "type": "NoneType",
+      "is_none": true,
+      "is_empty_container": false
+    },
+    "expected_response_kind": {
+      "type": "NoneType",
+      "is_none": true,
+      "is_empty_container": false
+    },
+    "learner_attempt_context": {
+      "type": "NoneType",
+      "is_none": true,
+      "is_empty_container": false
+    },
+    "attempt_context": {
+      "type": "NoneType",
+      "is_none": true,
+      "is_empty_container": false
+    },
+    "learner_attempt_evaluation": {
+      "type": "NoneType",
+      "is_none": true,
+      "is_empty_container": false
+    },
+    "attempt_evaluation": {
+      "type": "NoneType",
+      "is_none": true,
+      "is_empty_container": false
+    },
+    "learner_attempt": {
+      "type": "NoneType",
+      "is_none": true,
+      "is_empty_container": false
+    },
+    "last_attempt_evaluation": {
+      "type": "NoneType",
+      "is_none": true,
+      "is_empty_container": false
+    }
+  }
+}

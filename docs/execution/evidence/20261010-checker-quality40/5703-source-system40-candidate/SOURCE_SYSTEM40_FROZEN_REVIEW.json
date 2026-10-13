@@ -1,0 +1,130 @@
+{
+  "candidate_id": "source_system_priority40",
+  "scope": "One checked.py candidate; W only. Existing source39 algorithm and all 10/19/71 fixed inputs retained.",
+  "before": {
+    "path": "E:\\5703\\learning-assistant\\generation\\checked.py",
+    "bytes": 155543,
+    "sha256": "5b62005af2263600d6c9485aedf73613acd825bade85f41fc33ba88b0b39994c"
+  },
+  "candidate": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-system40-candidate\\checked.py",
+    "bytes": 155924,
+    "sha256": "838b641549631ee365f0f2e9b534c9f08aa0c230dfe59745f5de3ca901145a4c"
+  },
+  "backup": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-system40-candidate\\checked.py.before",
+    "bytes": 155543,
+    "sha256": "5b62005af2263600d6c9485aedf73613acd825bade85f41fc33ba88b0b39994c"
+  },
+  "source_unchanged": {
+    "path": "E:\\5703\\learning-assistant\\generation\\source_relations_v2.py",
+    "bytes": 17079,
+    "sha256": "4e3ef844eff23b77d83e850c32fdfa47c9504b7cec9a8edd7db3328851ba5a55"
+  },
+  "diff": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-system40-candidate\\SOURCE_SYSTEM40.diff",
+    "bytes": 1417,
+    "sha256": "dac5488abc05cc5d3e962c14a459a44213807950058545f42eb85cfcce144cda"
+  },
+  "free_controls": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-system40-candidate\\SOURCE_SYSTEM40_SMALL_FREE_CONTROLS.json",
+    "bytes": 5981,
+    "sha256": "d5d04370f185d102af654dc66b75eb9c3a1e33e98818d6939215e440dd8772b0"
+  },
+  "ruff": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-system40-candidate\\SOURCE_SYSTEM40_RUFF_RESULT.json",
+    "bytes": 369,
+    "sha256": "d6d06e78ddf2f4f1f385859b211a50fe066ae5c3107c4195140deff29c24952f"
+  },
+  "small_controls_passed": 15,
+  "production_renderer": {
+    "module": "generation.checked",
+    "helper": "source_relation_checker_system",
+    "argument": "existing check_template string",
+    "system_tail": "original check_template + newline + unchanged SOURCE_SELECTION_INSTRUCTIONS + final_schema_audit",
+    "final_schema_audit": "\nFinal schema audit: copy property names verbatim, including evidence_id, without added whitespace in keys. Keep every required field. Emit complete minified JSON and preserve all string meanings.",
+    "call_site": "relation_contract and relation_v2, before check_messages construction",
+    "user_data_delta": "Do not add SOURCE_RELATION_SELECTION_INSTRUCTIONS; every other original data field is unchanged.",
+    "provider_schema_hint": "The existing providers.payload OUTPUT FORMAT/schema hint follows the helper output. No provider logic is changed.",
+    "rubric_hash": "Both existing _sha(check_template) consumers retain the actual promoted system template hash. They execute after the V2 helper call.",
+    "initial_and_recheck": "Existing per-revision template construction is retained; trusted rules are added once per newly constructed V2 checker request.",
+    "untrusted_source_or_learner_values_promoted": false
+  },
+  "existing_test_assertion_read_only_search": {
+    "patterns": [
+      "SOURCE_RELATION_SELECTION_INSTRUCTIONS",
+      "SOURCE_SELECTION_INSTRUCTIONS",
+      "source_relation_checker_system",
+      "check_template"
+    ],
+    "directories": [
+      {
+        "path": "E:\\5703\\learning-assistant\\tests",
+        "python_files_searched": 288,
+        "matching_lines": 0
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\scripts\\verify",
+        "python_files_searched": 82,
+        "matching_lines": 0
+      }
+    ],
+    "tests_changed": 0,
+    "suites_started": 0,
+    "interpretation": "No existing Python assertions for these instruction placement names were found in the searched test and verification directories."
+  },
+  "payload_measurement": {
+    "old_encoded_data_bytes": 49386,
+    "new_encoded_data_bytes": 45953,
+    "old_compact_messages_bytes": 59230,
+    "new_compact_messages_bytes": 59381,
+    "compact_messages_delta_bytes": 151,
+    "final_audit_utf8_bytes": 196,
+    "whole_provider_wire_not_measured_here": true
+  },
+  "actual39_unmodified_schema_failure": {
+    "errors": [
+      {
+        "path": [
+          "claims",
+          0,
+          "textbook",
+          "citations",
+          0,
+          "evidence_id"
+        ],
+        "type": "missing"
+      },
+      {
+        "path": [
+          "claims",
+          0,
+          "textbook",
+          "citations",
+          0,
+          " evidence_id"
+        ],
+        "type": "extra_forbidden"
+      }
+    ],
+    "scope_and_relation_execution": "NOT_RUN",
+    "raw_key_trimming_or_autofill": false
+  },
+  "compact_schema_sha256": "864212a5e636d2cadbc34328f431712a954c30130848a31e64e66e4bdedbc926",
+  "output_schema_parser_assessor_gates_default_policy_changed": false,
+  "whole_other_business_ast_unchanged": true,
+  "generic_only": true,
+  "question_claim_fragment_hardcoding": false,
+  "limitations": [
+    "Offline placement and schema controls do not establish model compliance, scientific support, repaired partial claims, publication, or latency improvement.",
+    "Actual39 remains schema-invalid. Its previous raw scientific partial judgments and stopped experiment are preserved.",
+    "Anchor occurrences remain discovery metadata, not entailment certificates. Full selected-source quality must still be independently reviewed.",
+    "The reported +151-byte compact-message delta is not a whole provider wire measurement. The launcher must enforce its actual whole-wire and finite budget guards.",
+    "The existing provider schema hint remains after the new system selection rules; provider behavior is unchanged."
+  ],
+  "main_adopted_by_this_agent": false,
+  "provider_requests": 0,
+  "database_accesses": 0,
+  "main_writes": 0,
+  "b_writes": 0
+}

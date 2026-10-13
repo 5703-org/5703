@@ -1,0 +1,203 @@
+{
+  "schema": "phase85_independent_closed_cohort_quality_summary_v1",
+  "created_utc": "2026-10-11T18:24:34.248588+00:00",
+  "status": "STOPPED_INCOMPLETE_DEVELOPMENT_ACCEPTANCE_DEFAULT_OFF",
+  "frozen_denominator": 8,
+  "attempted_failed_cases": 3,
+  "unrun_cases": 5,
+  "published_successes": 0,
+  "valid_DOM_samples": 0,
+  "all_failures_retained": true,
+  "question_replacements": 0,
+  "cohort_permanent_stop": "UNSAFE_NORMAL_TRANSPORT",
+  "cases": [
+    {
+      "case_id": "case01",
+      "question_id": "development85_01",
+      "question_sha256": "9a5b5edb9fc79fc6f9da2ed9f631ba9c574827d1220ada7de82064592d538b08",
+      "execution_status": "FAILED_PRE_PROVIDER_API_REJECTION",
+      "overall_case_pass": false,
+      "quality_status": "ALL_ESSENTIAL_FACTS_UNASSESSED_NO_ANSWER",
+      "essential_fact_count": 3
+    },
+    {
+      "case_id": "case02",
+      "question_id": "development85_02",
+      "question_sha256": "0d5d4aa98b479de78b5b3a6264504a12812f9fd6c9ef46f738bce6938608ef4c",
+      "execution_status": "FAILED_PRE_PROVIDER_PREPARATION_POLICY_INCOMPATIBILITY",
+      "overall_case_pass": false,
+      "quality_status": "ALL_ESSENTIAL_FACTS_UNASSESSED_NO_ANSWER",
+      "essential_fact_count": 3
+    },
+    {
+      "case_id": "case03",
+      "question_id": "development85_03",
+      "question_sha256": "79e10aea43d34d5ec92aaa1d42a4123f94c4991e83cbfa6be3ae55e97891ffe5",
+      "execution_status": "FAILED_AFTER_2_POSTS_UNRECOGNIZED_CHECKER_ADAPTER_ERROR",
+      "overall_case_pass": false,
+      "quality_status": "TEACHER_DRAFT_ONLY_CORE_COVERAGE_WITH_CITATION_GAPS_NO_FINAL_JUDGMENT",
+      "essential_fact_count": 3
+    },
+    {
+      "case_id": "case04",
+      "question_id": "development85_04",
+      "question_sha256": "bc771dece3e6c2961dd8ed4aee766ba3b8b3034549ee19977f7b9c68db092bfd",
+      "execution_status": "UNRUN_AFTER_PERMANENT_COHORT_STOP",
+      "overall_case_pass": null,
+      "quality_status": "UNASSESSED_NOT_RUN",
+      "essential_fact_count": 3
+    },
+    {
+      "case_id": "case05",
+      "question_id": "development85_05",
+      "question_sha256": "e159815e7046927e2c08025e57d0281f18aa174fc19c599a3c4f577c2757cc0f",
+      "execution_status": "UNRUN_AFTER_PERMANENT_COHORT_STOP",
+      "overall_case_pass": null,
+      "quality_status": "UNASSESSED_NOT_RUN",
+      "essential_fact_count": 3
+    },
+    {
+      "case_id": "case06",
+      "question_id": "development85_06",
+      "question_sha256": "ea0adda731dcc65c3190efb769fcd3f9ce5af66598fa77e861e9ff797db909c4",
+      "execution_status": "UNRUN_AFTER_PERMANENT_COHORT_STOP",
+      "overall_case_pass": null,
+      "quality_status": "UNASSESSED_NOT_RUN",
+      "essential_fact_count": 4
+    },
+    {
+      "case_id": "case07",
+      "question_id": "development85_07",
+      "question_sha256": "bd615ce859d72da72075a72c25ffad9a476e20e8bd3293850cb705775620fafc",
+      "execution_status": "UNRUN_AFTER_PERMANENT_COHORT_STOP",
+      "overall_case_pass": null,
+      "quality_status": "UNASSESSED_NOT_RUN",
+      "essential_fact_count": 3
+    },
+    {
+      "case_id": "case08",
+      "question_id": "development85_08",
+      "question_sha256": "32cfb6093a0691704c5f389c7baacdcb19d00b3b4c9c99a69c3a124b66b089c1",
+      "execution_status": "UNRUN_AFTER_PERMANENT_COHORT_STOP",
+      "overall_case_pass": null,
+      "quality_status": "UNASSESSED_NOT_RUN",
+      "essential_fact_count": 3
+    }
+  ],
+  "financial": {
+    "receipt_pins": [
+      {
+        "path": "5703-checker85-runtime\\case01\\native-provider70\\final-receipt.json",
+        "bytes": 1019,
+        "sha256": "fbb37f0f78ef4bf9f38e467c4b093bce8856aab5925c9331b7c0911786f5bb66"
+      },
+      {
+        "path": "5703-checker85-runtime\\case02\\native-provider70\\final-receipt.json",
+        "bytes": 1019,
+        "sha256": "fa506d6adae71486869c6859585b4bece6bb8c21ac79dfa55bd300dba7f4746f"
+      },
+      {
+        "path": "5703-checker85-runtime\\case03\\native-provider70\\final-receipt.json",
+        "bytes": 1063,
+        "sha256": "643da9b21ed1cb0508353a0a81c2d543aa4fed0fdaf85b97508399d0249d1bc6"
+      }
+    ],
+    "provider_posts": 2,
+    "known_cost_USD": "0.0135132",
+    "UNKNOWN_cost_USD": "0",
+    "closure_status": "CLOSED_NUMERIC_NO_UNKNOWN",
+    "cohort_request_cap": 20,
+    "cohort_cost_cap_USD": "1.00",
+    "unused_budget_does_not_authorize_resume": true,
+    "old_closed12_requests": 12,
+    "old_closed12_known_cost_USD": "0.1085513",
+    "old_closed12_new_budget_occupancy": 0,
+    "old_batch_immutability_evidence_scope": "This summary does not re-read old ledgers; new final receipts show old occupancy0. Old batch preservation is Root guarded/runtime attestation."
+  },
+  "input_pins": [
+    {
+      "path": "5703-checker85-quality\\questions85-frozen.json",
+      "bytes": 4261,
+      "sha256": "9d35553d2b973e082152e0d119c1bdbff3102ef55a4936d47fe93d337d6f19da"
+    },
+    {
+      "path": "5703-checker85-quality\\rubric85-frozen.json",
+      "bytes": 44448,
+      "sha256": "7b083b29202be757683944e08ec508844440403dcbccf1c85f44e983f97964d6"
+    },
+    {
+      "path": "5703-checker85-quality\\freeze85-manifest.json",
+      "bytes": 3397,
+      "sha256": "ecbb497f1be19c56a0b9dcb9f27c606097375c34d12c106700ef2d32ef14497e"
+    },
+    {
+      "path": "5703-checker85-quality\\quality-case01.json",
+      "bytes": 6142,
+      "sha256": "8b0f2536117e4e32c8c95ce67f4379133d4d24ea8d536e72ebd1e5ed4957ce92"
+    },
+    {
+      "path": "5703-checker85-quality\\quality-case01-finance-supplement.json",
+      "bytes": 1307,
+      "sha256": "0db6fdf2f308b5985c3468c204dc5aca0cccc6d895f235e67fd68db57453232a"
+    },
+    {
+      "path": "5703-checker85-quality\\quality-case02.json",
+      "bytes": 8658,
+      "sha256": "e53337a79e347d64025771cd94f27deab023fd6f181b560a76e7cae485fe7318"
+    },
+    {
+      "path": "5703-checker85-quality\\quality-case03.json",
+      "bytes": 22119,
+      "sha256": "7ec3539f9f441a1f51260616ca7ace711f70218301eedbabc174651e988b2a51"
+    },
+    {
+      "path": "5703-checker85-runtime\\runtime-freeze85.json",
+      "bytes": 1940,
+      "sha256": "c51774989e767509c253c58f1340084f275c10197797a1eecb793558e1e82588"
+    },
+    {
+      "path": "5703-checker85-runtime\\cohort-ledger\\cohort-stop.json",
+      "bytes": 199,
+      "sha256": "791db2f293b85cf19a73e02e622aa08518fdcfd1de783235cabfe3d35c3b30eb"
+    },
+    {
+      "path": "5703-checker85-runtime\\cohort-ledger\\post-01-settlement.json",
+      "bytes": 261,
+      "sha256": "0e31594a53986c315f2276c645128beda617f70d12ca0747bbe9a48977393fc6"
+    },
+    {
+      "path": "5703-checker85-runtime\\cohort-ledger\\post-02-settlement.json",
+      "bytes": 261,
+      "sha256": "9fa30697ae6f65959a596086b21b5ef744b713c913ab0c717ec1242c94b12506"
+    }
+  ],
+  "acceptance": {
+    "delivery_acceptance": false,
+    "independent_source_citation_acceptance": false,
+    "scientific_or_formal_acceptance": false,
+    "general_quality_superiority": false,
+    "stable_p95_or_5_to_10s_qualification": false,
+    "project_completion": false,
+    "modelPASS_seen_for_any_case": false,
+    "critical_model_false_positive_observed": false,
+    "default_feature_enabled": false
+  },
+  "material_findings": [
+    "Case01 single-send API rejection before provider; remains failure, no retry.",
+    "Case02 self-contained this antecedent was unnecessarily routed to clarification; no retrieval ran. Ordinary V2 policy incompatibility stopped before models; remains failure, no retry.",
+    "Case03 relevant support retrieved and teacher mechanisms covered, but uncited factual opener/recap and activator activity attribution gap remain. There is no final checker raw/judgment to diagnose its UNRECOGNIZED error or assess a modelPASS false positive.",
+    "All3 jobs produced no published answer/DOM sample;5 frozen questions were never run because the cohort stopped permanently."
+  ],
+  "limits": [
+    "Exposed AI rubric/source assessment, not blind, heldout or Human Gold.",
+    "Do not treat absence of final checker output as a quality PASS or proof of a specific codec error.",
+    "Do not treat failure-terminal timers or teacher token counts as complete-answer latency or speedup.",
+    "No further questions, retries, repair calls or use of residual20/$1 allowance in this stopped cohort."
+  ],
+  "reviewer_activity": {
+    "Main_writes": 0,
+    "DB_auth_network_model_calls": 0,
+    "tests": 0,
+    "code_fix_agent_case_feedback": false
+  }
+}

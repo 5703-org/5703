@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-11T19:59:01.328742+00:00",
+  "main_query_control": {
+    "command": "python -B -X utf8; pytest.main([tests/unit/test_query_v23.py, --noconftest, -p no:cacheprovider, -p no:logging, --basetemp W/pytest-main-assignment86, --junitxml W/pytest-main-assignment86.xml, -q])",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "passed": 13,
+    "seconds_reported": 0.4,
+    "database_accessed": false,
+    "provider_requests": 0
+  },
+  "ruff": {
+    "command": "python -B -X utf8 -m ruff check --no-cache conversation/query_v23.py tests/unit/test_query_v23.py",
+    "exit_code": 0,
+    "result": "All checks passed!"
+  },
+  "source_adoption_receipt": "main-adoption-query86.json",
+  "whole_project_gate_run": false
+}

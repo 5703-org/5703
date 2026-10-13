@@ -1,0 +1,31 @@
+REVIEW ONLY: symbolic fresh42+ financial policy delta; not an apply-ready runtime patch.
+No old native36 source, authority, STOP, UNKNOWN receipt or slot is modified.
+FRESH_POOL must be recomputed from exact CLOSED post-diagnostic41 current-group receipts.
+
+@@ def claim(self, wire, context):  [public G36 line946, inside existing locks]
+- _need(Decimal(slot) * UPPER <= RESERVE, "BATCH_RESERVE_BOUND")
++ _need(_decimal(before["known_API_cost_USD"]) + _decimal(before["full_unknown_hold_USD"]) + UPPER <= RESERVE, "BATCH_RESERVE_BOUND")
+  Existing READY, fully_settled, lifetime/per-leg cap, immutable START and readback gates remain.
+
+@@ def _verify_financial_authorization(self):  [public G36 line501]
+- MAX_POSTS * UPPER == RESERVE
++ MAX_POSTS == 2 and UPPER <= RESERVE
++ and RESERVE == _decimal(WIRE_BUDGET_CONTRACT["new_scope_reserve_USD"])
++ and _decimal(WIRE_BUDGET_CONTRACT["previous_spent_USD"]) + RESERVE
++     <= _decimal(WIRE_BUDGET_CONTRACT["original_total_budget_USD"])
+  Existing exact fresh authority/pins and immutable predecessor/UNKNOWN gates remain.
+  Fresh WIRE previous_spent/count must be validated against exact latest CLOSED receipts.
+
+@@ def derive_native_guard_wire_contract():  [public pure wire line80]
+- new_scope = reserve * 4
++ new_scope = FRESH_POOL
+  Require reserve=0.041, max_new_POSTs=2, reserve<=FRESH_POOL and spent+FRESH_POOL<=0.24.
+  Freeze actual latest spent/count and release/authority exact same FRESH_POOL.
+
+@@ current fresh scope constants and amount mirrors only
+- MAX_POSTS=4; MAX_POSTS_PER_LEG=4; UPPER=0.045; RESERVE=0.18
++ MAX_POSTS=2; MAX_POSTS_PER_LEG=2; UPPER=0.041; RESERVE=FRESH_POOL
+  START/full UNKNOWN/readback hold mirrors become0.041; status/release/browser totals FRESH_POOL.
+  Historical authority/old UNKNOWN holds/STOPs/settled receipts remain byte-identical.
+  Route98304 UTF8 bytes +512 accounting overhead/output4096 and price caps retained.
+  Repair required with zero remaining calls => failure; no third call and no unchecked draft.

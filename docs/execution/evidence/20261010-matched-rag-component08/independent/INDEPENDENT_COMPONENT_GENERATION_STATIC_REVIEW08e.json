@@ -1,0 +1,37 @@
+{
+  "review_id": "independent_component_generation_static_review08e_targeted_diff",
+  "status": "PASS_TARGETED_DIFF_WITH_EVIDENCE_ROUTE_LIMITATIONS",
+  "reviewed_input": "component-rag-quality08/FROZEN08d_TO_SUCCESSOR08e.diff",
+  "input_read": "independent read-only tool output of the complete targeted diff",
+  "runner": "component-rag-quality08/run_matched_component_generation08e.py",
+  "runner_bytes_reported_by_producer": 25667,
+  "runner_sha256_reported_by_producer": "b5915fab8d79c4e8797be936dc3ffe6096376a30c51b1e3f9170b4130818766d",
+  "manifest_sha256_reported_by_producer": "5cdae4fb8b2df5d26d83cdfb14ba9dc69d4a7b2afb53012c6c27ca82b579e03a",
+  "independent_successor_full_hash_or_manifest_verification": false,
+  "findings": [
+    "The successor saves the unchanged Main am.pinned_address and invokes it for the active exact URL only after a POST has been reserved and retained.",
+    "During original hostname resolution the guard admits only openrouter.ai:443 SOCK_STREAM; it records a pinned IP only after the original resolver succeeds and additionally rejects non-global or IPv4-mapped results.",
+    "The standard library's subsequent numeric getaddrinfo is admitted only for that canonical pinned IP at port 443 and SOCK_STREAM. The original TLS hostname and Main URL/private-address policy are unchanged.",
+    "Connection admission is tightened from any port-443 destination to the same pinned IP at port 443 with AF_INET/AF_INET6, SOCK_STREAM, and no nonzero IPv6 flow/scope fields.",
+    "Each role begins with empty pinned/transport state. The transport finally clears URL, resolving flag, and IP; the outer finally restores both original Main aliases and clears active state.",
+    "The targeted diff does not add retries, widen credential/native file allowances, change route/prices/caps/payload contracts, or modify Main.",
+    "Safe event traces add exception types and numeric error metadata without dumping arbitrary exception text or credential data. Existing pre-transport UNKNOWN reservation and global stop remain intact.",
+    "The old08d UNKNOWN1 and 0.03 hold are explicitly preserved; successor 0.12 plus prior hold is reported as 0.15. This does not prove the old request incurred zero billing."
+  ],
+  "unresolved_concrete_guard_blocker_in_reviewed_diff": null,
+  "offline_controls": {
+    "receipt": "component-rag-quality08/offline-network-guard-controls08e/OFFLINE_NETWORK_GUARD_CONTROLS08e.json",
+    "producer_reported_sha256": "574de787b1ffe72d9893f61ecc15741afcc388dafb265c857221c1f7e65b6f35",
+    "producer_reported_pass": 36,
+    "producer_reported_network_calls": 0,
+    "independently_read_or_executed_by_this_reviewer": false
+  },
+  "limitations": [
+    "This is a targeted static diff assessment against the previously reviewed08d design, not an independently verified full successor source/manifest receipt.",
+    "Control counts, all161 Main pin equality, unchanged teacher bodies/config, and actual execution observations are producer/Root reports, not independently replayed here.",
+    "The runner uses one global active state in a sequential synchronous transport workflow; the targeted diff does not add concurrency or certify thread isolation.",
+    "A static PASS does not prove network success, provider submission/billing, raw scientific quality, native workflow completion, or human Gold. The actual08e source review is separately reported."
+  ],
+  "reviewer_actions": {"target_runner_execution": false, "network": 0, "API": 0, "DB": 0, "models": 0, "credential_data": 0, "native_data": 0, "Main_writes": 0},
+  "old08d_static_and_actual_receipts_modified": false
+}

@@ -1,0 +1,184 @@
+--- a/generation/checked.py
++++ b/generation/checked.py
+@@ -2750,6 +2750,11 @@
+                 relation_assessment = json.loads(_json(relation_assessment))
+                 for assessment in relation_assessment["claims"]:
+                     for obligation in assessment["obligations"]:
++                        if relation_v2:
++                            obligation["fragment_ids"] = [
++                                fragment_aliases.get(fid, "unknown_alias:" + fid)
++                                for fid in obligation["fragment_ids"]
++                            ]
+                         for source in obligation["source_quotes"]:
+                             source["fragment_id"] = fragment_aliases[source["fragment_id"]]
+                 private_check["source_relation_assessment"] = relation_assessment
+--- a/tests/unit/test_source_relation_units_v2.py
++++ b/tests/unit/test_source_relation_units_v2.py
+@@ -1,6 +1,7 @@
+ """Compact producer/gate regressions; all semantic judgments are authored fixtures."""
+ 
+ from copy import deepcopy
++import hashlib
+ import json
+ import pytest
+ from generation import GenerationService, ModelConfig, RequestBudget
+@@ -37,6 +38,41 @@
+                 for unit in units[row["claim_id"]]
+             ]
+     return value
++
++
++def assert_assessed_sources_are_canonical(out, request, check_index=0):
++    """Join stored unit selections to the exact immutable source-unit slices."""
++    check = out.checks[check_index]
++    stored = check["source_relation_assessment"]
++    originals = {
++        row["claim_id"]: row
++        for row in check["source_relation_assessment_raw_aliases"]["claims"]
++    }
++    raw_claims = {row["claim_id"]: row for row in check["typed_judgment_raw_aliases"]["claims"]}
++    fragments = {row["fragment_id"]: row for row in out.attribution["fragments"]}
++    assert not stored["source_entailment_locally_certified"]
++    for claim in stored["claims"]:
++        original = originals[claim["claim_id"]]
++        raw_units = {row["unit_id"]: row for row in raw_claims[claim["claim_id"]]["units"]}
++        for unit, raw in zip(claim["obligations"], original["obligations"], strict=True):
++            assert unit["fragment_ids"] == [row["fragment_id"] for row in unit["source_quotes"]]
++            assert raw["fragment_ids"] == raw_units[unit["unit_id"]]["fragment_ids"]
++            assert all(fid.startswith("F") for fid in raw["fragment_ids"])
++            for field in ("status", "relation_preserved", "conditions_preserved", "reason"):
++                assert unit[field] == raw[field]
++            for quote in unit["source_quotes"]:
++                fragment = fragments[quote["fragment_id"]]
++                assert (quote["evidence_id"], quote["quote"]) == (
++                    fragment["evidence_id"], fragment["exact_text"]
++                )
++                source_unit = next(
++                    row for row in request.source_map[fragment["chunk_id"]]["units"]
++                    if row["id"] == fragment["source_unit_id"]
++                )
++                exact = source_unit["cleaned_text"][fragment["start"] : fragment["end"]]
++                assert exact == quote["quote"]
++                assert fragment["text_hash"] == hashlib.sha256(exact.encode("utf-8")).hexdigest()
++                assert fragment["offset_basis"] == "cleaned_source_unit_unicode"
+ 
+ 
+ @pytest.mark.parametrize(
+@@ -171,9 +207,10 @@
+ 
+ def test_pipeline_reconstructs_exact_claim_and_sources_and_uses_matching_final_highlight():
+     adapter = Script([answer(), unit_checker])
+-    out = GenerationService(adapter).generate(
+-        request_fixture(source_relation_policy=VERSION, generation_policy=freeze_generation_policy())
+-    )
++    request = request_fixture(
++        source_relation_policy=VERSION, generation_policy=freeze_generation_policy()
++    )
++    out = GenerationService(adapter).generate(request)
+     assert out.succeeded, out.error
+     assert out.budget["consumed_calls"] == 2
+     assert adapter.calls[1][1]["response_schema_name"] == "joint_check_source_relations_v2"
+@@ -185,6 +222,28 @@
+     assert unit["claim_quote"] == out.response["answer_text"]
+     ids = {q["fragment_id"] for q in unit["source_quotes"]}
+     assert ids == set(out.delivered_projection["citation_views"][0]["fragment_ids"])
++    assert set(unit["fragment_ids"]) == ids
++    assert_assessed_sources_are_canonical(out, request)
++
++
++@pytest.mark.parametrize(
++    "text,short_answer",
++    [
++        ("Light energy is used by photosynthesis. [ev_001]", None),
++        (
++            "Photosynthesis uses light energy and carbon dioxide supplies carbon. [ev_001]",
++            "Photosynthesis uses light energy. [ev_001]",
++        ),
++    ],
++)
++def test_pipeline_source_unit_trace_covers_reworded_compound_and_short_answer(text, short_answer):
++    request = request_fixture(source_relation_policy=VERSION)
++    out = GenerationService(Script([answer(text, short_answer=short_answer), unit_checker])).generate(
++        request
++    )
++    assert out.succeeded, out.error
++    assert out.budget["consumed_calls"] == 2
++    assert_assessed_sources_are_canonical(out, request)
+ 
+ 
+ @pytest.mark.parametrize("defect", ["missing", "duplicate", "foreign", "unassessed"])
+@@ -229,6 +288,12 @@
+     def patch(messages):
+         assert "SOURCE RELATION REPAIR V2" in messages[-1]["content"]
+         data = json.loads(messages[-1]["content"].split("REPAIR_DATA_JSON:\n")[-1])
++        for claim in data["source_relation_assessment"]["claims"]:
++            for unit in claim["obligations"]:
++                assert unit["fragment_ids"] == [
++                    quote["fragment_id"] for quote in unit["source_quotes"]
++                ]
++                assert all(fid.startswith("span_") for fid in unit["fragment_ids"])
+         protected = {row["claim_id"] for row in data["protected_exact_claims"]}
+         return {
+             "edits": [
+@@ -251,16 +316,54 @@
+     assert out.checks[-1]["source_relation_assessment"]["accepted"]
+ 
+ 
+-def test_factual_body_and_short_answer_are_both_checked_in_v2():
++@pytest.mark.parametrize("answer_field", ["answer_text", "short_answer"])
++def test_factual_body_and_short_answer_are_both_checked_in_v2(answer_field):
++    def rejected(messages):
++        data = check_input(messages)
++        value = unit_checker(messages)
++        cid = next(row["claim_id"] for row in data["CLAIMS"] if row["answer_field"] == answer_field)
++        row = next(row for row in value["claims"] if row["claim_id"] == cid)
++        row["units"][0]["conditions_preserved"] = False
++        return value
++
++    request = request_fixture(source_relation_policy=VERSION)
++    out = GenerationService(
++        Script([answer(short_answer="Photosynthesis uses light energy. [ev_001]"), rejected])
++    ).generate(request, RequestBudget(max_calls=2))
++    assert out.response is None and out.error["code"] == "SEMANTIC_CHECK_FAILED"
++    assert out.budget["consumed_calls"] == 2
++    assert "SOURCE_CONDITION_CHANGED" in out.checks[0]["source_relation_assessment"]["semantic_defect_codes"]
++    assert_assessed_sources_are_canonical(out, request)
++
++
++@pytest.mark.parametrize("status", ["partial", "unsupported"])
++def test_negative_unit_source_trace_never_fills_empty_selection_or_rewrites_reason(status):
++    reason = "Authored F001 reason; preserve literally."
++
+     def rejected(messages):
+         value = unit_checker(messages)
+-        value["claims"][-1]["units"][0]["conditions_preserved"] = False
+-        return value
+-
+-    out = GenerationService(
+-        Script([answer(short_answer="Photosynthesis uses light energy. [ev_001]"), rejected])
+-    ).generate(request_fixture(source_relation_policy=VERSION), RequestBudget(max_calls=2))
++        unit = value["claims"][0]["units"][0]
++        unit.update(status=status, reason=reason)
++        if status == "unsupported":
++            unit["fragment_ids"] = []
++        return value
++
++    request = request_fixture(source_relation_policy=VERSION)
++    out = GenerationService(Script([answer(), rejected])).generate(request, RequestBudget(max_calls=2))
+     assert out.response is None and out.error["code"] == "SEMANTIC_CHECK_FAILED"
++    assert out.budget["consumed_calls"] == 2
++    assessment = out.checks[0]["source_relation_assessment"]
++    assert not assessment["accepted"]
++    assert "SOURCE_RELATION_" + status.upper() in assessment["semantic_defect_codes"]
++    claim = assessment["claims"][0]
++    assert claim["checker_claim_status"] == "supported"
++    unit = claim["obligations"][0]
++    assert unit["status"] == status and unit["reason"] == reason
++    if status == "unsupported":
++        assert unit["fragment_ids"] == [] and unit["source_quotes"] == []
++    else:
++        assert unit["fragment_ids"]
++    assert_assessed_sources_are_canonical(out, request)
+ 
+ 
+ def test_genuine_partial_context_guard_remains_active_in_v2():

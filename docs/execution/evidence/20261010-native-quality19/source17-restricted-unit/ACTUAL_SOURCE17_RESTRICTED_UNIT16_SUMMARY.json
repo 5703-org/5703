@@ -1,0 +1,774 @@
+{
+  "schema": "source17-restricted-unit16-summary-v1",
+  "recorded_at": "2026-10-10T01:07:28.987156+00:00",
+  "status": "FAIL_RETAINED",
+  "full_unit_pass_certificate": false,
+  "source_version": "Source17 current public snapshot at copy time; not Source18",
+  "Source18_changes_are_outside_this_validation": true,
+  "critical_tested_source_pins": {
+    "generation/checked.py": "8a23ecef2f43d4e8d6fd43f1015c6636ef95fb3146d50c8757318f9ab71d1d2d",
+    "generation/reliability_v5.py": "dc8af40d6975da5378531335e93e2deb928f97b150b576773ef8270482d5ce21",
+    "generation/prompts/joint_check_v5.txt": "00592221afa33050cc5cd56d0a6985093296ef48499611a2413eac0a73e106a4"
+  },
+  "copied_files": 833,
+  "copied_bytes": 36757596,
+  "collected_items": 3859,
+  "pytest_exit_code": 1,
+  "actual_pytest_console_summary": "95 failed, 3710 passed, 27 skipped, 47 warnings, 29 errors, 127 subtests passed in 80.42s (0:01:20)",
+  "console_metrics": {
+    "failed": 95,
+    "passed": 3710,
+    "skipped": 27,
+    "warnings": 47,
+    "errors": 29,
+    "subtests passed": 127
+  },
+  "failed_reports_by_phase": {
+    "setup": 29,
+    "call": 95
+  },
+  "failure_group_counts": {
+    "direct_audit_denial": 105,
+    "missing_resource": 7,
+    "audit_associated_wrapped_failure": 12,
+    "unresolved": 0
+  },
+  "failure_groups": {
+    "direct_audit_denial": [
+      {
+        "nodeid": "tests/unit/test_adapter_replacement.py::test_configuration_switch_keeps_shared_consumer_modes_context_and_citations[interactive_chat]",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_adapter_replacement.py::test_configuration_switch_keeps_shared_consumer_modes_context_and_citations[benchmark_openqa]",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_adapter_replacement.py::test_configuration_switch_keeps_shared_consumer_modes_context_and_citations[benchmark_mcq]",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_adapter_replacement.py::test_configured_http_failures_use_shared_error_and_repair_bounds[401-False-PROVIDER_HTTP_ERROR-1]",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_adapter_replacement.py::test_configured_http_failures_use_shared_error_and_repair_bounds[200-True-INVALID_CITATIONS-2]",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_api_security_headers.py::test_api_responses_disable_cache_and_browser_content_execution",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_error_log_safety.py::test_unexpected_database_error_omits_sql_parameters_and_exception_chain",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_failure_diagnostics.py::test_diagnostics_scope_and_permissions",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_failure_diagnostics.py::test_actual_citations_and_distinct_evidence_counts",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_failure_diagnostics.py::test_unrecorded_counts_remain_unknown_and_errors_are_safe",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_failure_diagnostics.py::test_semantic_publication_block_is_admin_scoped_and_content_free",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_failure_diagnostics.py::test_paginated_failure_list",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_failure_diagnostics.py::test_processing_trace_projects_actual_stages_and_authoritative_timing",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_failure_diagnostics.py::test_trace_exclusions_are_bounded_and_invalid_numeric_observations_remain_unknown",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_failure_diagnostics.py::test_facet_fallback_uses_final_distinct_counts_and_keeps_score_queries_separate",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_generation_providers.py::test_actual_http_protocol_roles_auth_usage[openai_compatible]",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_generation_providers.py::test_actual_http_protocol_roles_auth_usage[anthropic]",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_generation_providers.py::test_actual_http_protocol_roles_auth_usage[gemini]",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_generation_providers.py::test_actual_http_protocol_roles_auth_usage[azure_openai]",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_generation_providers.py::test_actual_http_protocol_roles_auth_usage[ollama]",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_generation_providers.py::test_redirect_does_not_forward_secret_or_issue_second_call",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_memory_v2_delivery.py::test_actual_nine_zips_reconstruct_public_project_without_private_research",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_memory_v2_delivery.py::test_plan_only_never_creates_archives_and_reports_missing_word_inputs",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_memory_v2_delivery.py::test_actual_reconstruction_rejects_tampered_member_bytes",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_memory_v2_delivery.py::test_secret_scan_checks_decompressed_docx_and_resource_identity",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_memory_v2_delivery.py::test_retained_baseline_corruption_and_ownership_reassignment_rejected",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_activation_eligibility.py::test_current_role_receipts_enable_existing_pair_without_retest",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_activation_eligibility.py::test_nonpassing_run_never_has_activation_eligibility[failed]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_activation_eligibility.py::test_nonpassing_run_never_has_activation_eligibility[uncertain]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_activation_eligibility.py::test_nonpassing_run_never_has_activation_eligibility[running]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_activation_eligibility.py::test_passed_run_without_passed_project_stage_remains_ineligible[failed]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_activation_eligibility.py::test_passed_run_without_passed_project_stage_remains_ineligible[not_run]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_activation_eligibility.py::test_newer_nonproject_receipt_invalidates_prior_pass[basic]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_activation_eligibility.py::test_newer_nonproject_receipt_invalidates_prior_pass[structured]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_activation_eligibility.py::test_stale_hash_or_protocol_receipt_remains_visible_but_ineligible[different-saved-hash]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_activation_eligibility.py::test_stale_hash_or_protocol_receipt_remains_visible_but_ineligible[old-protocol]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_activation_eligibility.py::test_each_current_contract_fingerprint_gates_projection_and_activation[schema]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_activation_eligibility.py::test_each_current_contract_fingerprint_gates_projection_and_activation[prompt]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_activation_eligibility.py::test_each_current_contract_fingerprint_gates_projection_and_activation[configuration]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_activation_eligibility.py::test_each_current_contract_fingerprint_gates_projection_and_activation[capability]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_activation_eligibility.py::test_each_current_contract_fingerprint_gates_projection_and_activation[output]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_activation_eligibility.py::test_each_current_contract_fingerprint_gates_projection_and_activation[parameters]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_activation_eligibility.py::test_different_model_configuration_and_role_do_not_share_eligibility",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_activation_eligibility.py::test_legacy_connection_receipt_defaults_ineligible",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_activation_eligibility.py::test_invalid_runtime_contract_projects_false_and_keeps_conflict",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_settings.py::test_admin_only_and_workspace_scope",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_settings.py::test_save_test_activate_actual_http_and_frozen_secret",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_model_settings.py::test_invalid_and_failed_probe_cannot_activate_and_no_secret_leak",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_model_settings.py::test_key_destination_change_requires_explicit_action_and_clear_never_inherits_env",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_model_settings.py::test_successor_conflict_immutability_and_explicit_environment_revert",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_settings.py::test_base_url_never_accepts_inline_credentials[https://user:private-value@example.com/v1]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_settings.py::test_base_url_never_accepts_inline_credentials[https://example.com/v1?api_key=private-value]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_settings.py::test_base_url_never_accepts_inline_credentials[https://example.com/v1#private-value]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_settings.py::test_base_url_never_accepts_inline_credentials[file:///private-value]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_settings.py::test_accounts_are_scoped_and_reset_revokes_existing_login",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_settings.py::test_three_tiers_role_gate_and_idempotency",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_model_settings.py::test_uncertain_started_probe_is_not_replayed",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_settings.py::test_distinct_checker_config_is_frozen_and_workspace_scoped",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_settings.py::test_legacy_or_changed_schema_receipt_cannot_enable_new_activation[schema_hash]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_settings.py::test_legacy_or_changed_schema_receipt_cannot_enable_new_activation[prompt_hash]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_settings.py::test_model_profile_is_a_declaration_and_preflight_failure_has_no_hidden_transport",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_model_settings_key_readiness.py::KeyReadinessTests::test_invalid_environment_key_does_not_fall_back_to_existing_file",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_settings_key_readiness.py::KeyReadinessTests::test_invalid_environment_key_does_not_fall_back_to_existing_file",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_settings_key_readiness.py::KeyReadinessTests::test_invalid_existing_file_is_retained_and_not_replaced",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_parse_isolation.py::test_isolated_parser_matches_legacy_units_and_cleans_temporary_output",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_parse_isolation.py::test_cancellation_stops_real_child",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_parse_isolation.py::test_real_child_keeps_complete_units_with_large_output_ceiling[268435456]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_parse_isolation.py::test_real_child_keeps_complete_units_with_large_output_ceiling[536870912]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_portable_credentials.py::test_windows_powershell51_credential_retry_and_owner_only_acl",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_portable_credentials.py::test_concurrent_launchers_never_overwrite_winning_credential",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_portable_credentials.py::test_invalid_existing_credential_is_preserved_and_rejected",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_portable_credentials.py::test_icacls_fallback_protects_directory_and_file_before_secret_write",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_private_model_file.py::test_real_module_cli_on_authored_files_outputs_only_safe_aggregate_fields",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_provider_switching_matrix.py::test_openai_and_local_actual_http_success_preserves_roles_schema_and_accounting[openai-authored-loopback-key]",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_provider_switching_matrix.py::test_openai_and_local_actual_http_success_preserves_roles_schema_and_accounting[local-None]",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_provider_switching_matrix.py::test_openai_and_local_http_error_is_one_call_with_safe_retry_accounting[401-False-openai]",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_provider_switching_matrix.py::test_openai_and_local_http_error_is_one_call_with_safe_retry_accounting[401-False-local]",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_provider_switching_matrix.py::test_openai_and_local_http_error_is_one_call_with_safe_retry_accounting[429-True-openai]",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_provider_switching_matrix.py::test_openai_and_local_http_error_is_one_call_with_safe_retry_accounting[429-True-local]",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_provider_switching_matrix.py::test_openai_and_local_http_error_is_one_call_with_safe_retry_accounting[503-True-openai]",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_provider_switching_matrix.py::test_openai_and_local_http_error_is_one_call_with_safe_retry_accounting[503-True-local]",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_continuation_delivery.py::test_actual_nine_archives_reconstruct_and_preserve_input_bytes",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_continuation_delivery.py::test_dated_nine_archives_reconstruct_with_current_report_parity",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_continuation_delivery.py::test_plan_reports_missing_artifacts_without_creating_destination",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_continuation_delivery.py::test_private_inputs_excluded_even_when_candidates_supply_them[evaluation/week09_continuation/pilot-labels.json]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_continuation_delivery.py::test_private_inputs_excluded_even_when_candidates_supply_them[evidence/week09-continuation/20260930/pilots/response.json]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_continuation_delivery.py::test_private_inputs_excluded_even_when_candidates_supply_them[evidence/week09-learning/20260930/runtime-credentials.json]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_continuation_delivery.py::test_private_inputs_excluded_even_when_candidates_supply_them[artifacts/reports/frontend/session/storage_state.json]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_continuation_delivery.py::test_private_inputs_excluded_even_when_candidates_supply_them[evidence/week09-learning/20260930/local.private.json]",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_continuation_delivery.py::test_nested_provider_body_rejected_before_archive_creation",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_continuation_delivery.py::test_portable_credential_test_source_included_without_allowing_credentials",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_continuation_delivery.py::test_allowed_portable_credential_source_still_rejects_configured_secret",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_continuation_delivery.py::test_configured_secret_inside_docx_rejected_before_archive_creation",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_continuation_delivery.py::test_independent_verifier_rejects_duplicate_archive_rows",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_continuation_delivery.py::test_independent_verifier_rejects_unchanged_file_claimed_as_delta",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_continuation_delivery.py::test_independent_verifier_reads_payload_even_if_archive_sidecar_rehashed",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_continuation_delivery.py::test_visual_runtime_exception_is_exact_and_hash_bound",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_continuation_delivery.py::test_prior_visual_catalogue_requires_exact_path_and_bytes",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_continuation_delivery.py::test_blank_visual_review_sheet_cannot_be_replaced_with_scores",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_continuation_delivery.py::test_visual_manifest_cannot_substitute_original_source",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_continuation_delivery.py::test_visual_decompressed_content_is_scanned",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_delivery.py::test_nine_archives_preserve_latest_files_resource_bytes_and_report_identity",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_delivery.py::test_raw_provider_payload_cannot_hide_in_numeric_public_report",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_delivery.py::test_configured_secret_is_scanned_inside_compressed_docx",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_delivery.py::test_previous_optional_resource_corruption_stops_reconstruction",
+        "when": "call"
+      }
+    ],
+    "missing_resource": [
+      {
+        "nodeid": "tests/unit/test_week09_continuation.py::test_real_old_retrieval_import_is_development_only_and_source_hashed",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_injection_pilot.py::test_official_anchor_is_exact_real_chunk_and_original_pdf",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_injection_pilot.py::test_frozen_messages_reach_each_attack_boundary_without_hidden_key",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_injection_pilot.py::test_source_attack_stays_inside_data_segment_and_is_not_authority",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_memory_formal.py::test_private_labels_do_not_enter_runner_tasks_and_reserved_requires_pilot",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_memory_formal.py::test_freeze_detects_private_label_tamper",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_week09_memory_formal.py::test_current_instruction_removes_saved_preference_in_both_arms",
+        "when": "call"
+      }
+    ],
+    "audit_associated_wrapped_failure": [
+      {
+        "nodeid": "tests/unit/test_evaluation_backend.py::test_actual_shared_worker_persists_typed_benchmark_without_dialogue_or_gold[sciq_openqa]",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_evaluation_backend.py::test_actual_shared_worker_persists_typed_benchmark_without_dialogue_or_gold[sciq_mcq]",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_evaluation_backend.py::test_registered_hash_rejects_post_freeze_question_or_gold_injection",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_evaluation_backend.py::test_server_cancellation_retains_all_scheduled_items",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_evaluation_backend.py::test_admin_api_create_freeze_start_results_and_role_denial",
+        "when": "setup"
+      },
+      {
+        "nodeid": "tests/unit/test_model_settings.py::test_bootstrap_key_is_atomic_and_not_created_in_production",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_settings_key_readiness.py::KeyReadinessTests::test_existing_key_and_ciphertext_are_preserved",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_model_settings_key_readiness.py::KeyReadinessTests::test_first_development_readiness_creates_usable_key",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_parse_isolation.py::test_input_limit_refuses_before_child_and_source_change_is_rejected",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_parse_isolation.py::test_output_limit_refuses_partial_result_and_cleans_temporary_output",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_parse_isolation.py::test_malformed_pdf_is_a_bounded_parser_failure",
+        "when": "call"
+      },
+      {
+        "nodeid": "tests/unit/test_parse_isolation.py::test_wall_timeout_kills_real_child",
+        "when": "call"
+      }
+    ],
+    "unresolved": []
+  },
+  "classification_limit": "Node association identifies a refused operation observed in that test; it does not prove that every later assertion would pass after authorization. No boundary was relaxed.",
+  "blocked_event_counts": {
+    "socket.bind": 65,
+    "open": 50,
+    "subprocess.Popen": 9
+  },
+  "copied_sources_changed_during_run04": [],
+  "skipped_reports": [
+    {
+      "nodeid": "tests/unit/test_openrouter_fixed_routes.py::test_actual_native_request_crosses_installed_sdk_mock_boundary_once[haiku55_google_vertex_low_v1]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_openrouter_fixed_routes.py', 337, 'Skipped: Optional SDK bridge; production uses urllib')"
+    },
+    {
+      "nodeid": "tests/unit/test_openrouter_fixed_routes.py::test_actual_native_request_crosses_installed_sdk_mock_boundary_once[openai_luna_v2]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_openrouter_fixed_routes.py', 337, 'Skipped: Optional SDK bridge; production uses urllib')"
+    },
+    {
+      "nodeid": "tests/unit/test_openrouter_fixed_routes.py::test_actual_native_request_crosses_installed_sdk_mock_boundary_once[qwen38_alibaba_v2]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_openrouter_fixed_routes.py', 337, 'Skipped: Optional SDK bridge; production uses urllib')"
+    },
+    {
+      "nodeid": "tests/unit/test_openrouter_fixed_routes.py::test_actual_native_request_crosses_installed_sdk_mock_boundary_once[glm53_deepinfra_fp4_v1]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_openrouter_fixed_routes.py', 337, 'Skipped: Optional SDK bridge; production uses urllib')"
+    },
+    {
+      "nodeid": "tests/unit/test_openrouter_fixed_routes.py::test_actual_native_request_crosses_installed_sdk_mock_boundary_once[gemini35_google_vertex_v1]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_openrouter_fixed_routes.py', 337, 'Skipped: Optional SDK bridge; production uses urllib')"
+    },
+    {
+      "nodeid": "tests/unit/test_openrouter_fixed_routes.py::test_actual_native_request_crosses_installed_sdk_mock_boundary_once[gemini35_google_vertex_compact_checker_v3]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_openrouter_fixed_routes.py', 337, 'Skipped: Optional SDK bridge; production uses urllib')"
+    },
+    {
+      "nodeid": "tests/unit/test_openrouter_fixed_routes.py::test_actual_native_request_crosses_installed_sdk_mock_boundary_once[gemini35_google_vertex_minimal_v1]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_openrouter_fixed_routes.py', 337, 'Skipped: Optional SDK bridge; production uses urllib')"
+    },
+    {
+      "nodeid": "tests/unit/test_openrouter_fixed_routes.py::test_actual_native_request_crosses_installed_sdk_mock_boundary_once[openai_luna_v1]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_openrouter_fixed_routes.py', 337, 'Skipped: Optional SDK bridge; production uses urllib')"
+    },
+    {
+      "nodeid": "tests/unit/test_openrouter_fixed_routes.py::test_actual_native_request_crosses_installed_sdk_mock_boundary_once[qwen38_alibaba_v1]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_openrouter_fixed_routes.py', 337, 'Skipped: Optional SDK bridge; production uses urllib')"
+    },
+    {
+      "nodeid": "tests/unit/test_openrouter_fixed_routes.py::test_actual_native_request_crosses_installed_sdk_mock_boundary_once[openai_nano_v1]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_openrouter_fixed_routes.py', 337, 'Skipped: Optional SDK bridge; production uses urllib')"
+    },
+    {
+      "nodeid": "tests/unit/test_openrouter_fixed_routes.py::test_actual_native_request_crosses_installed_sdk_mock_boundary_once[qwen_streamlake_v1]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_openrouter_fixed_routes.py', 337, 'Skipped: Optional SDK bridge; production uses urllib')"
+    },
+    {
+      "nodeid": "tests/unit/test_openrouter_fixed_routes.py::test_actual_native_request_crosses_installed_sdk_mock_boundary_once[mistral_deepinfra_fp8_v1]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_openrouter_fixed_routes.py', 337, 'Skipped: Optional SDK bridge; production uses urllib')"
+    },
+    {
+      "nodeid": "tests/unit/test_openrouter_fixed_routes.py::test_native_and_sdk_error_boundary_preserves_status_unknown_cost_and_zero_retry[401-authentication_rejected]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_openrouter_fixed_routes.py', 409, 'Skipped: Optional SDK bridge; production uses urllib')"
+    },
+    {
+      "nodeid": "tests/unit/test_openrouter_fixed_routes.py::test_native_and_sdk_error_boundary_preserves_status_unknown_cost_and_zero_retry[402-credit_or_budget_rejected]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_openrouter_fixed_routes.py', 409, 'Skipped: Optional SDK bridge; production uses urllib')"
+    },
+    {
+      "nodeid": "tests/unit/test_openrouter_fixed_routes.py::test_native_and_sdk_error_boundary_preserves_status_unknown_cost_and_zero_retry[403-access_or_policy_denied]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_openrouter_fixed_routes.py', 409, 'Skipped: Optional SDK bridge; production uses urllib')"
+    },
+    {
+      "nodeid": "tests/unit/test_openrouter_fixed_routes.py::test_native_and_sdk_error_boundary_preserves_status_unknown_cost_and_zero_retry[404-resource_or_route_not_found]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_openrouter_fixed_routes.py', 409, 'Skipped: Optional SDK bridge; production uses urllib')"
+    },
+    {
+      "nodeid": "tests/unit/test_openrouter_fixed_routes.py::test_native_and_sdk_error_boundary_preserves_status_unknown_cost_and_zero_retry[429-rate_or_quota_limited]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_openrouter_fixed_routes.py', 409, 'Skipped: Optional SDK bridge; production uses urllib')"
+    },
+    {
+      "nodeid": "tests/unit/test_openrouter_fixed_routes.py::test_native_and_sdk_error_boundary_preserves_status_unknown_cost_and_zero_retry[502-model_or_provider_unavailable]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_openrouter_fixed_routes.py', 409, 'Skipped: Optional SDK bridge; production uses urllib')"
+    },
+    {
+      "nodeid": "tests/unit/test_openrouter_fixed_routes.py::test_native_and_sdk_error_boundary_preserves_status_unknown_cost_and_zero_retry[503-route_unavailable]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_openrouter_fixed_routes.py', 409, 'Skipped: Optional SDK bridge; production uses urllib')"
+    },
+    {
+      "nodeid": "tests/unit/test_openrouter_fixed_routes.py::test_native_and_sdk_error_boundary_preserves_status_unknown_cost_and_zero_retry[500-unknown_provider_failure]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_openrouter_fixed_routes.py', 409, 'Skipped: Optional SDK bridge; production uses urllib')"
+    },
+    {
+      "nodeid": "tests/unit/test_visual_regions_v4_official_source_fixtures.py::test_exact_official_source_retains_body_or_distinct_reference[biology-2e-1429-Table 47.2-None-1429]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_visual_regions_v4_official_source_fixtures.py', 48, 'Skipped: Exact official original is not present; synthetic fixtures still run')"
+    },
+    {
+      "nodeid": "tests/unit/test_visual_regions_v4_official_source_fixtures.py::test_exact_official_source_retains_body_or_distinct_reference[anatomy-and-physiology-2e-858-Table 20.2-body_shape1-None]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_visual_regions_v4_official_source_fixtures.py', 48, 'Skipped: Exact official original is not present; synthetic fixtures still run')"
+    },
+    {
+      "nodeid": "tests/unit/test_visual_regions_v4_official_source_fixtures.py::test_exact_official_source_retains_body_or_distinct_reference[anatomy-and-physiology-2e-905-Table 20.11-None-906]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_visual_regions_v4_official_source_fixtures.py', 48, 'Skipped: Exact official original is not present; synthetic fixtures still run')"
+    },
+    {
+      "nodeid": "tests/unit/test_visual_regions_v4_official_source_fixtures.py::test_exact_official_source_retains_body_or_distinct_reference[anatomy-and-physiology-2e-1062-Table 23.6-None-1063]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_visual_regions_v4_official_source_fixtures.py', 48, 'Skipped: Exact official original is not present; synthetic fixtures still run')"
+    },
+    {
+      "nodeid": "tests/unit/test_visual_regions_v4_official_source_fixtures.py::test_exact_official_source_retains_body_or_distinct_reference[anatomy-and-physiology-2e-1169-Table 25.3-body_shape4-None]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_visual_regions_v4_official_source_fixtures.py', 48, 'Skipped: Exact official original is not present; synthetic fixtures still run')"
+    },
+    {
+      "nodeid": "tests/unit/test_visual_regions_v4_official_source_fixtures.py::test_exact_official_source_retains_body_or_distinct_reference[anatomy-and-physiology-2e-1309-Table 28.4-None-1310]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_visual_regions_v4_official_source_fixtures.py', 48, 'Skipped: Exact official original is not present; synthetic fixtures still run')"
+    },
+    {
+      "nodeid": "tests/unit/test_visual_regions_v4_official_source_fixtures.py::test_exact_official_source_retains_body_or_distinct_reference[chemistry-2e-1058-Table 21.4-None-1059]",
+      "when": "call",
+      "reason": "('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-current-free-unit16\\\\snapshot\\\\tests\\\\unit\\\\test_visual_regions_v4_official_source_fixtures.py', 48, 'Skipped: Exact official original is not present; synthetic fixtures still run')"
+    }
+  ],
+  "prior_failures": [
+    {
+      "attempt": "preparation16A",
+      "reason": "25 MiB precopy size guard refused unnecessary large registries; no snapshot created at that attempt"
+    },
+    {
+      "attempt": "run01",
+      "reason": "pytest default file logging attempted Windows NUL outside the owned output; collection never began"
+    },
+    {
+      "attempt": "run02",
+      "reason": "three collection errors from omitted real public tests/authored_evaluation.py"
+    },
+    {
+      "attempt": "run03",
+      "reason": "strict connect/DNS/secret/process failures and omitted public inputs; local HTTP test fixtures could bind because bind was not yet audited"
+    }
+  ],
+  "run03_scope_correction": "Run03 interpreter ended. Its test loopback fixtures may have bound local ports; it cannot be described as having zero local test service starts. Run04 additionally refused socket.bind before fixture service creation.",
+  "remaining_limits": [
+    "95 failing test calls and 29 error reports remain; full unit suite is not passing",
+    "No tests/integration or PostgreSQL service executed; temporary SQLite unit fixtures remain inside the owned directory",
+    "No live or paid provider endpoint reached; no authorization or network boundary relaxed",
+    "Four unit cases require excluded historical retrieval-verification evidence; three require uncopied pinned local DeepSeek tokenizer resources",
+    "Twenty-seven skips remain recorded; optional official PDF inputs were not copied",
+    "This is not the complete eight-stage software gate, Source18 validation, scientific-answer correctness, human acceptance or project completion"
+  ],
+  "evidence_pins": {
+    "ACTUAL_CURRENT_PUBLIC_SNAPSHOT16.json": {
+      "bytes": 284674,
+      "sha256": "509f046f71a25631ad8dc4006b955b50d3e1a135fdcf5648897d26580a3d42ce"
+    },
+    "ACTUAL_PUBLIC_UNIT_HELPER_SUPPLEMENT16.json": {
+      "bytes": 604,
+      "sha256": "006961bf470be058f4f1ec42fdff235a027fe6a0c1aa25312b6376b053f2d0f7"
+    },
+    "ACTUAL_PUBLIC_UNIT_INPUT_SUPPLEMENT16C.json": {
+      "bytes": 3879,
+      "sha256": "56c0fba03f820af500d3d046abdca555a9883d30b9f606bc194e376a38810283"
+    },
+    "ACTUAL_SNAPSHOT_PREPARATION_SIZE_FAILURE16A.json": {
+      "bytes": 1648,
+      "sha256": "c6a3f910359c01041c298155b11f34ca6d9e5382372bdc0906394659c7e23f07"
+    },
+    "run01/ACTUAL_CURRENT_OFFLINE_UNIT16.json": {
+      "bytes": 2033,
+      "sha256": "7cd65191a9223fbd5e25b12c4864b6ac87f4fce099242bbe0223eb6837860b6a"
+    },
+    "run01/pytest-console.log": {
+      "bytes": 3074,
+      "sha256": "c664bfaa3df232ae8cf840704b1d849531fd29cfd1819a84a9e9bda21a83ffca"
+    },
+    "run02/ACTUAL_CURRENT_OFFLINE_UNIT16.json": {
+      "bytes": 514090,
+      "sha256": "3e7eb5930f1228c6002eae0f173f74fce9e578cb6af153835c7cd765ddb972e3"
+    },
+    "run02/pytest-console.log": {
+      "bytes": 3396,
+      "sha256": "bc9c43e41e18c7ec0e25cdb34cae1c795a1f9cb4bee7cedcdf9852e0202d2eac"
+    },
+    "run03/ACTUAL_CURRENT_OFFLINE_UNIT16.json": {
+      "bytes": 3996589,
+      "sha256": "798848f7b391fe02b80f3eafe1366b747df2e1614ba843a0e62dc10071e973e2"
+    },
+    "run03/pytest-console.log": {
+      "bytes": 500668,
+      "sha256": "f510d46da45c383889b35aefc5a36487bf269c687010a21db7d10f1bc05dc04c"
+    },
+    "run04/ACTUAL_CURRENT_OFFLINE_UNIT16.json": {
+      "bytes": 3981444,
+      "sha256": "fd39089ee07f93184145c2620e379b64afa0cc76e3c0cb04cdb52193e510fffa"
+    },
+    "run04/pytest-console.log": {
+      "bytes": 476691,
+      "sha256": "b66971cd8e3dd5b5dd718d11dd5633cbcdae2a63043644d28c6bb049c27ee5a6"
+    },
+    "run04/pytest.xml": {
+      "bytes": 1544165,
+      "sha256": "de247b1495ddfd3c66ee04f33c478423ebb8e3bf3a21dc5d1606b759fec63e55"
+    },
+    "run04/pytest-runtime.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "run_offline_units16.py": {
+      "bytes": 9193,
+      "sha256": "57ae1fa81a1e2e19c569d71c3484fd7562e2b05eb00734dd66a0fcda18eef7fe"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "API_requests": 0,
+  "DB_writes": 0,
+  "baseline_public_config_selected": {
+    "capabilities": {
+      "api_style": "chat_completions",
+      "declaration": "runtime_protocol_defaults",
+      "output_token_ceiling": 32768,
+      "output_token_parameter": "max_tokens",
+      "probe_output_tokens": 512,
+      "profile": "openai_compatible_text_v1",
+      "reasoning_effort": false,
+      "seed": true,
+      "structured_modes": [
+        "json_schema",
+        "json_object",
+        "prompt"
+      ],
+      "temperature": true,
+      "thinking_toggle": false
+    },
+    "capability_version": "provider_capabilities_v1",
+    "max_tokens": 2048,
+    "model": "google/gemini-3.5-flash-lite",
+    "openrouter_route_profile": "gemini35_google_vertex_v1",
+    "provider": "openai_compatible",
+    "reasoning_effort": null,
+    "seed": null,
+    "structured_output_mode": "json_object",
+    "temperature": null,
+    "thinking_enabled": null,
+    "token_limit_parameter": "max_tokens",
+    "window_tokens": 131072
+  },
+  "capabilities_inherited_without_replacement": true,
+  "effective_Haiku_overrides_from_reviewed_runtime": {
+    "model": "anthropic/claude-haiku-5.5",
+    "observed_checker_max_tokens": 4096,
+    "openrouter_route_profile": "haiku55_google_vertex_low_v1",
+    "provider": "openai_compatible",
+    "reasoning_effort": null,
+    "structured_output_mode": "json_schema",
+    "teacher_max_tokens": 2048,
+    "temperature": null,
+    "thinking_enabled": null
+  },
+  "fixed_baseline_config_hash": "703c94a357ddd4b826d8b5fe25d503198d3d56e1e9130f6a37ed9e9c3396aa4a",
+  "fixed_baseline_revision": 1,
+  "secret_OR_URI_exported": false,
+  "source_only_readonly_DB_connections": 1,
+  "status": "ACTUAL_READ_ONLY_EFFECTIVE_CAPABILITY_SOURCE_METADATA"
+}

@@ -1,0 +1,224 @@
+{
+  "schema": "5703_independent_checker_compatible42_actual_v1",
+  "started_at_UTC": "2026-10-10T10:33:13.877173+00:00",
+  "status": "ONE_SHOT_DIAGNOSTIC_CLOSED",
+  "source_review_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-compatible42-probe-candidate\\OFFLINE_COMPATIBLE42_PREPARATION03.json",
+    "bytes": 26873,
+    "sha256": "b907d4c789408269703142436fce9defca9845f0f16102cf1343c513b48f3d12"
+  },
+  "physical_POSTs": 1,
+  "known_cost_USD": "0.0017338",
+  "new_UNKNOWN_holds_USD": "0",
+  "open_claims": 0,
+  "credential_preparation_read_only_DB_legs": 1,
+  "experiment_DB_accesses": 0,
+  "credential_target_database": "cs30_week10_pair_b_20261009_01",
+  "arms": [
+    {
+      "arm": "compatible_schema42",
+      "status": "OBSERVED",
+      "physical_POSTs": 1,
+      "known_cost_USD": "0.0017338",
+      "reported_cost_USD": "0.0017338",
+      "fully_settled": true,
+      "latency_ms": 2670.6127,
+      "timing_boundary": "LLMAdapter.generate invocation to complete return",
+      "provider_result": {
+        "raw_text": "{\n  \"claims\": [\n    {\n      \"claim_id\": \"claim_diagnostic42_1\",\n      \"reason\": \"The claim accurately reflects the source fragments regarding the voltage conditions for AX10.\",\n      \"basis\": \"textbook\",\n      \"status\": \"supported\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"ev_001\",\n          \"fragment_ids\": [\"F001\", \"F002\"],\n          \"relation\": \"supporting\"\n        }\n      ],\n      \"units\": [\n        {\n          \"unit_id\": \"U01\",\n          \"status\": \"supported\",\n          \"fragment_ids\": [\"F001\"],\n          \"relation_preserved\": true,\n          \"conditions_preserved\": true,\n          \"reason\": \"Supported by F001.\"\n        },\n        {\n          \"unit_id\": \"U02\",\n          \"status\": \"supported\",\n          \"fragment_ids\": [\"F002\"],\n          \"relation_preserved\": true,\n          \"conditions_preserved\": true,\n          \"reason\": \"Supported by F002.\"\n        }\n      ]\n    }\n  ],\n  \"body_ok\": true,\n  \"specific_help\": true,\n  \"scope_ok\": true,\n  \"suggestions_ok\": true,\n  \"evidence_display_ok\": true,\n  \"cumulative_ok\": true,\n  \"complete_answer\": true,\n  \"coverage\": \"full\",\n  \"missing_facets\": [],\n  \"limitations_explicit\": false,\n  \"reason\": \"The claims are fully supported by the provided source fragments.\",\n  \"repair_fragment_ids\": [],\n  \"attempt_evaluation_ok\": true,\n  \"tutor_question_ok\": true,\n  \"requirements\": [],\n  \"non_repetitive_next_action\": true\n}",
+        "provider": "openai_compatible",
+        "model": "google/gemini-3.5-flash-lite",
+        "finish_reason": "stop",
+        "provider_request_id": "gen-1791628394-zsh02SR1Z5wJHUCSCwiQ",
+        "usage": {
+          "input_tokens": 2121,
+          "output_tokens": 439,
+          "total_tokens": 2560,
+          "reasoning_tokens": 0,
+          "cache_hit_input_tokens": 0,
+          "cache_miss_input_tokens": 2121,
+          "cost": 0.0017338
+        },
+        "latency_ms": 2668,
+        "error": null,
+        "request_submitted": true,
+        "diagnostic": {
+          "stage": "completed",
+          "http_status": 200,
+          "provider_error_type": null,
+          "provider_error_code": null,
+          "provider_error_parameter": null,
+          "message": null,
+          "message_redacted": false,
+          "provider_request_id": "gen-1791628394-zsh02SR1Z5wJHUCSCwiQ",
+          "finish_reason": "stop",
+          "network_error": null,
+          "request_submitted": true,
+          "latency_ms": 2668
+        }
+      },
+      "raw_receipt_pins": [
+        {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-compatible42-probe-candidate\\actual-compatible42\\compatible_schema42-raw-provider-read01.json",
+          "bytes": 10007,
+          "sha256": "f9a94f188a4741c973d9c1625f3c7913bd26e746bd7013e7e8d6c11a3364f446"
+        }
+      ],
+      "validation": {
+        "schema_PASS": true,
+        "source_entailment_certified": false,
+        "native_publication": false,
+        "raw_autofill_key_trimming_or_rewrite": false,
+        "typed_schema_PASS": true,
+        "overall_scoped_validation_PASS": true,
+        "full_original_schema_PASS": true,
+        "diagnostic_server_basis_and_claim_identity_PASS": true,
+        "original_full_local_checker_result": {
+          "typed": {
+            "claims": [
+              {
+                "claim_id": "claim_diagnostic42_1",
+                "reason": "The claim accurately reflects the source fragments regarding the voltage conditions for AX10.",
+                "basis": "textbook",
+                "status": "supported",
+                "citations": [
+                  {
+                    "evidence_id": "ev_001",
+                    "fragment_ids": [
+                      "F001",
+                      "F002"
+                    ],
+                    "relation": "supporting"
+                  }
+                ],
+                "units": [
+                  {
+                    "unit_id": "U01",
+                    "status": "supported",
+                    "fragment_ids": [
+                      "F001"
+                    ],
+                    "relation_preserved": true,
+                    "conditions_preserved": true,
+                    "reason": "Supported by F001."
+                  },
+                  {
+                    "unit_id": "U02",
+                    "status": "supported",
+                    "fragment_ids": [
+                      "F002"
+                    ],
+                    "relation_preserved": true,
+                    "conditions_preserved": true,
+                    "reason": "Supported by F002."
+                  }
+                ]
+              }
+            ],
+            "body_ok": true,
+            "specific_help": true,
+            "scope_ok": true,
+            "suggestions_ok": true,
+            "evidence_display_ok": true,
+            "cumulative_ok": true,
+            "complete_answer": true,
+            "coverage": "full",
+            "missing_facets": [],
+            "limitations_explicit": false,
+            "reason": "The claims are fully supported by the provided source fragments.",
+            "repair_fragment_ids": [],
+            "attempt_evaluation_ok": true,
+            "tutor_question_ok": true,
+            "requirements": [],
+            "non_repetitive_next_action": true
+          },
+          "binding_issues": [],
+          "consistency_issues": [],
+          "relation_contract_issues": [],
+          "relation_defects": [],
+          "assessment": {
+            "version": "source_relation_contract_v2",
+            "method": "online_checker_lossless_syntactic_units_and_exact_binding_validation",
+            "accepted": true,
+            "claims": [
+              {
+                "claim_id": "claim_diagnostic42_1",
+                "checker_claim_status": "supported",
+                "exact_claim_content_covered": true,
+                "obligations": [
+                  {
+                    "unit_id": "U01",
+                    "status": "supported",
+                    "fragment_ids": [
+                      "F001"
+                    ],
+                    "relation_preserved": true,
+                    "conditions_preserved": true,
+                    "reason": "Supported by F001.",
+                    "claim_quote": "AX10 opens only above five volts",
+                    "claim_start": 0,
+                    "claim_end": 32,
+                    "source_quotes": [
+                      {
+                        "evidence_id": "ev_001",
+                        "fragment_id": "F001",
+                        "quote": "AX10 opens only when voltage is above five volts."
+                      }
+                    ],
+                    "defect_codes": []
+                  },
+                  {
+                    "unit_id": "U02",
+                    "status": "supported",
+                    "fragment_ids": [
+                      "F002"
+                    ],
+                    "relation_preserved": true,
+                    "conditions_preserved": true,
+                    "reason": "Supported by F002.",
+                    "claim_quote": " and remains closed at most five volts [ev_001].",
+                    "claim_start": 32,
+                    "claim_end": 80,
+                    "source_quotes": [
+                      {
+                        "evidence_id": "ev_001",
+                        "fragment_id": "F002",
+                        "quote": "AX10 remains closed whenever voltage is at most five volts."
+                      }
+                    ],
+                    "defect_codes": []
+                  }
+                ]
+              }
+            ],
+            "contract_issue_codes": [],
+            "semantic_defect_codes": [],
+            "independent_evaluation": false,
+            "human_rating": null,
+            "source_entailment_locally_certified": false,
+            "semantic_atomicity_locally_certified": false
+          },
+          "raw_text": "{\n  \"claims\": [\n    {\n      \"claim_id\": \"claim_diagnostic42_1\",\n      \"reason\": \"The claim accurately reflects the source fragments regarding the voltage conditions for AX10.\",\n      \"basis\": \"textbook\",\n      \"status\": \"supported\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"ev_001\",\n          \"fragment_ids\": [\"F001\", \"F002\"],\n          \"relation\": \"supporting\"\n        }\n      ],\n      \"units\": [\n        {\n          \"unit_id\": \"U01\",\n          \"status\": \"supported\",\n          \"fragment_ids\": [\"F001\"],\n          \"relation_preserved\": true,\n          \"conditions_preserved\": true,\n          \"reason\": \"Supported by F001.\"\n        },\n        {\n          \"unit_id\": \"U02\",\n          \"status\": \"supported\",\n          \"fragment_ids\": [\"F002\"],\n          \"relation_preserved\": true,\n          \"conditions_preserved\": true,\n          \"reason\": \"Supported by F002.\"\n        }\n      ]\n    }\n  ],\n  \"body_ok\": true,\n  \"specific_help\": true,\n  \"scope_ok\": true,\n  \"suggestions_ok\": true,\n  \"evidence_display_ok\": true,\n  \"cumulative_ok\": true,\n  \"complete_answer\": true,\n  \"coverage\": \"full\",\n  \"missing_facets\": [],\n  \"limitations_explicit\": false,\n  \"reason\": \"The claims are fully supported by the provided source fragments.\",\n  \"repair_fragment_ids\": [],\n  \"attempt_evaluation_ok\": true,\n  \"tutor_question_ok\": true,\n  \"requirements\": [],\n  \"non_repetitive_next_action\": true\n}",
+          "publication_override": false
+        },
+        "local_binding_and_relation_contract_PASS": true,
+        "publication_override": false
+      }
+    }
+  ],
+  "automatic_retries": 0,
+  "teacher_calls": 0,
+  "JSON_repairs": 0,
+  "old_scope_reuse": false,
+  "historical_unknown_holds_released": false,
+  "fresh_question_or_course_qualification": false,
+  "new_batch_known_cost_USD": "0.0017338",
+  "fully_settled": true,
+  "production_source_quality_or_native_publication_proven": false,
+  "closed_at_UTC": "2026-10-10T10:33:16.986191+00:00",
+  "adapter_credential_reference_cleared": true,
+  "credential_values_exported": false,
+  "memory_redaction_retained_until_process_exit": true,
+  "fresh_lock_released": true,
+  "no_followup_requests_authorized": true
+}

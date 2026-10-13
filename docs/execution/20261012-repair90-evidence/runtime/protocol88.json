@@ -1,0 +1,320 @@
+{
+  "schema": "repair90_bound_development_validation_v1",
+  "status": "READY_FROZEN_PUBLIC_CASES",
+  "authorization": "parent_repair90_independent24posts_1USD_same_input_validation_20261012",
+  "cases": [
+    {
+      "case_id": "case01",
+      "question_id": "development89_case01",
+      "question_text": "Does a molecule binding at an allosteric site necessarily inhibit an enzyme? Contrast how an allosteric inhibitor and an allosteric activator affect enzyme shape, substrate binding and enzyme activity.",
+      "question_sha256": "79e10aea43d34d5ec92aaa1d42a4123f94c4991e83cbfa6be3ae55e97891ffe5",
+      "purpose": "baseline_repair",
+      "classification": "affected"
+    },
+    {
+      "case_id": "case08",
+      "question_id": "development89_case08",
+      "question_text": "For the gas-phase H2, I2 and HI equilibrium at constant temperature and volume, explain the effects of adding H2 and removing HI as separate changes. Give the direction of the temporary net reaction and state whether Kc changes. Compare the final HI concentration after removing HI with the HI concentration before removing HI.",
+      "question_sha256": "13647efbbe84e35b34cda64c38a6cb8362621af1e5e1a2824be1cef6d583182d",
+      "purpose": "baseline_repair",
+      "classification": "affected"
+    },
+    {
+      "case_id": "case06",
+      "question_id": "development89_case06",
+      "question_text": "For a red blood cell whose membrane permits water movement but not movement of the relevant solutes, compare isotonic, hypertonic and hypotonic extracellular solutions. Describe net water movement and the resulting cell-volume changes. In an isotonic solution, does \"no net water movement\" mean individual water molecules stop crossing the membrane?",
+      "question_sha256": "891bac98f85541efd0e4e421ed5df4255c5c9310a559add805ec3760df273c94",
+      "purpose": "baseline_repair",
+      "classification": "positive_control"
+    }
+  ],
+  "maximum_physical_posts": 24,
+  "cost_cap_USD": "1.00",
+  "per_request_provider_calls_maximum": 4,
+  "whole_case_seconds_cap": 180,
+  "http_automatic_retries": false,
+  "automatic_case_replay_or_reclaim": false,
+  "default_output_policy": "lossless_unit_findings_v1",
+  "explicit_v2_allowed": true,
+  "planned_instances": [
+    {
+      "instance_id": "case01",
+      "kind": "base",
+      "base_case_id": null,
+      "maximum_posts": 4
+    },
+    {
+      "instance_id": "case08",
+      "kind": "base",
+      "base_case_id": null,
+      "maximum_posts": 4
+    },
+    {
+      "instance_id": "case06",
+      "kind": "base",
+      "base_case_id": null,
+      "maximum_posts": 4
+    },
+    {
+      "instance_id": "case01r",
+      "kind": "affected_or_control",
+      "base_case_id": null,
+      "maximum_posts": 4
+    },
+    {
+      "instance_id": "case08r",
+      "kind": "affected_or_control",
+      "base_case_id": null,
+      "maximum_posts": 4
+    },
+    {
+      "instance_id": "case06r",
+      "kind": "affected_or_control",
+      "base_case_id": null,
+      "maximum_posts": 4
+    },
+    {
+      "instance_id": "component01qwen",
+      "kind": "diagnostic",
+      "base_case_id": null,
+      "maximum_posts": 1
+    },
+    {
+      "instance_id": "component08qwen",
+      "kind": "diagnostic",
+      "base_case_id": null,
+      "maximum_posts": 1
+    },
+    {
+      "instance_id": "component06qwen",
+      "kind": "diagnostic",
+      "base_case_id": null,
+      "maximum_posts": 1
+    },
+    {
+      "instance_id": "component_positiveqwen",
+      "kind": "diagnostic",
+      "base_case_id": null,
+      "maximum_posts": 1
+    },
+    {
+      "instance_id": "component_negativeqwen",
+      "kind": "diagnostic",
+      "base_case_id": null,
+      "maximum_posts": 1
+    }
+  ],
+  "source_pins": [
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\adapters.py",
+      "bytes": 29552,
+      "sha256": "99075cb07f4faf861119c5fa5113da6951408c02323c14452d090661fd0c3ddb"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\lossless_unit_findings_v1.py",
+      "bytes": 36893,
+      "sha256": "8c830694093b41e9f6250939de2cf9f72b24726bddbc1cba0141a6b8cb9efa56"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\network_policy.py",
+      "bytes": 3407,
+      "sha256": "31ee11495949894073b292cd39b5d186f0ea21f5fd3f598b243e9f37b467bf02"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\openrouter_routes.py",
+      "bytes": 12356,
+      "sha256": "c82e86990476c0f95da650b38ef444e62c1dba6ae29f407a44c4af444ad2348e"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_check_v2.txt",
+      "bytes": 6730,
+      "sha256": "21987e8aaaafb96715cd3b20a1e91b901a732140cf95148de7353a62aa2d2f99"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_generation_v2.txt",
+      "bytes": 2475,
+      "sha256": "79f9933cc4a74cedab05dee07fef53c619f52657bef66c730374167c25a28597"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\providers.py",
+      "bytes": 29380,
+      "sha256": "8411a08b94c57feac7d6ca068c6feae9193201c109f28d9b64d014d3199cd4ee"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\types.py",
+      "bytes": 10176,
+      "sha256": "757f907befeaa9300fdeb8ab5c8d03d205c142920cf3c2f5e72ee98988f53068"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\personalisation\\compiler.py",
+      "bytes": 3519,
+      "sha256": "f61c6af6fcd2ffc030dc5a91292bbf8927d61d6768c29dc240c1ba08640a55bd"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checked.py",
+      "bytes": 170833,
+      "sha256": "2b675807b299c2d802eda90ef6dfd10beaeac9a7737ec2dfe40279f66862515b"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\core\\config.py",
+      "bytes": 7563,
+      "sha256": "ae1d193ccbde984f02a8ec57dbef9979ce28438b7e38f50bf4bec6e9f55b31e2"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\answering\\service.py",
+      "bytes": 95993,
+      "sha256": "f302de879a270a5879adbc9374331c86d7b014dadca79c0a40a804647ceafeb0"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\conversation\\query_v23.py",
+      "bytes": 11008,
+      "sha256": "b8801e073195b51ac4e49d1d06479fb19ac9cc35d260fe7d8bf5a673f2eb8215"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\conversation\\practice_context.py",
+      "bytes": 6440,
+      "sha256": "5145e2dd4563098320ae74d3757612c00700495daed9b9fece2f6044541382b4"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\service.py",
+      "bytes": 29254,
+      "sha256": "c02d6b4cf0ee9d3aaf961a5b6639d6097f68b89c843221de637f42b4af352b23"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\single_selection_findings_v2.py",
+      "bytes": 13862,
+      "sha256": "91ebe1c011c5d82ccc722c33ab34cf11efb65a17ad3637e4a6bb4052508cd53a"
+    }
+  ],
+  "source_version_sha256": "369bba3c1ba0e0007b346142988ccc3a242e13505e22513a1a13166a2fe4b2fc",
+  "frozen_settings": {
+    "api_v1_prefix": "/api/v1",
+    "chat_checker_schema_policy": null,
+    "chat_coverage_query_policy": "off",
+    "chat_joint_checker_policy": "typed_joint_v5",
+    "chat_provider_output_policy": "json_field_contract_v2",
+    "chat_query_preparation_policy": "anchored_reference_v23",
+    "chat_relevance_gate": true,
+    "chat_retrieval_cache": true,
+    "chat_retrieval_config": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-native76-preparation\\native70-cpu-r2-policy.json",
+    "chat_source_block_policy": "raw_definition_block_partition_v2",
+    "chat_source_relation_policy": "source_relation_contract_v2",
+    "cors_origins": "http://127.0.0.1:15198",
+    "embedding_dimension": 384,
+    "embedding_model": "intfloat/e5-small-v2",
+    "embedding_provider": "e5",
+    "embedding_revision": "ffb93f3bd4047442299a41ebb6fa998a38507c52",
+    "env": "test",
+    "feature_flags": "multi_workspace:false,lms_sync:false,agent_tools:false",
+    "llm_api_base": "https://openrouter.ai/api/v1",
+    "llm_model": "anthropic/claude-haiku-5.5",
+    "llm_provider": "openai_compatible",
+    "local_model_device": "cpu",
+    "max_provider_calls": 4,
+    "memory_semantic_policy_file": null,
+    "mock_delay_seconds": 0.25,
+    "model_mode": "live",
+    "model_output_tokens": 1024,
+    "model_window_tokens": 131072,
+    "provider_timeout_seconds": 60,
+    "request_timeout_seconds": 180,
+    "seed_demo_users": false,
+    "worker_prewarm_retrieval_cache": false,
+    "chat_checker_payload_policy": "lossless_full_checker_tables_v2",
+    "chat_checker_output_policy": "lossless_unit_findings_v1"
+  },
+  "base_config_sha256": "22ae720ae20828cf62fa921b2793db12d8f229e33512b7b904c221fa39832047",
+  "expected_model_config": {
+    "provider": "openai_compatible",
+    "model": "anthropic/claude-haiku-5.5",
+    "base_url": "https://openrouter.ai/api/v1",
+    "api_key_env": null,
+    "window_tokens": 131072,
+    "max_tokens": 4096,
+    "timeout_seconds": 45.0,
+    "temperature": null,
+    "seed": null,
+    "token_limit_parameter": "max_tokens",
+    "structured_output_mode": "json_schema",
+    "reasoning_effort": null,
+    "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+    "api_version": null,
+    "auth_header": null,
+    "tokenizer_provider": "estimate",
+    "tokenizer_name": null,
+    "tokenizer_revision": null,
+    "tokenizer_local_path": null,
+    "token_count_fallback": "estimate",
+    "thinking_enabled": null,
+    "capability_version": "provider_capabilities_v1",
+    "capabilities": {
+      "profile": "openai_compatible_text_v1",
+      "api_style": "chat_completions",
+      "output_token_parameter": "max_tokens",
+      "temperature": true,
+      "seed": true,
+      "reasoning_effort": false,
+      "thinking_toggle": false,
+      "structured_modes": [
+        "json_schema",
+        "json_object",
+        "prompt"
+      ],
+      "probe_output_tokens": 512,
+      "output_token_ceiling": 32768,
+      "declaration": "runtime_protocol_defaults"
+    },
+    "openrouter_route_profile": "haiku55_google_vertex_low_v1"
+  },
+  "expected_checker_config": {
+    "provider": "openai_compatible",
+    "model": "google/gemini-3.5-flash-lite",
+    "base_url": "https://openrouter.ai/api/v1",
+    "api_key_env": null,
+    "window_tokens": 131072,
+    "max_tokens": 8192,
+    "timeout_seconds": 45.0,
+    "temperature": null,
+    "seed": null,
+    "token_limit_parameter": "max_tokens",
+    "structured_output_mode": "json_object",
+    "reasoning_effort": null,
+    "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+    "api_version": null,
+    "auth_header": null,
+    "tokenizer_provider": "estimate",
+    "tokenizer_name": null,
+    "tokenizer_revision": null,
+    "tokenizer_local_path": null,
+    "token_count_fallback": "estimate",
+    "thinking_enabled": null,
+    "capability_version": "provider_capabilities_v1",
+    "capabilities": {
+      "profile": "openai_compatible_text_v1",
+      "api_style": "chat_completions",
+      "output_token_parameter": "max_tokens",
+      "temperature": true,
+      "seed": true,
+      "reasoning_effort": false,
+      "thinking_toggle": false,
+      "structured_modes": [
+        "json_schema",
+        "json_object",
+        "prompt"
+      ],
+      "probe_output_tokens": 512,
+      "output_token_ceiling": 32768,
+      "declaration": "runtime_protocol_defaults"
+    },
+    "openrouter_route_profile": "gemini35_google_vertex_high_research_v1"
+  },
+  "public_source_boundary_sha256": "c7d6b28b6caee42d3d17879228f966411afba7db5eed53a7c0003d760263acdb",
+  "private_rubric_sha256_not_sent_to_models": "468ecce8dcd190c567d942c133731b6a52948994520c7e0d1529669a4b4f5c14",
+  "baseline_denominator": 3,
+  "new_topic_count": 2,
+  "novelty_and_sampling": "Three previously exposed DEV89 public questions selected for repair validation: two affected and one positive control; no new sampling, blinded, heldout or HumanGold claim.",
+  "execution_order": "Three BASE API cases once under B; at most one later justified common fix with finite affected/control supplements. Five diagnostic IDs are prospective metadata only; each needs a separately frozen same-input checker-only controller and descriptor before claim. No page instances or fixed quota reserve.",
+  "individual_known_settled_failure_disables_other_cases": false,
+  "checker_LOW_enabled": false,
+  "old_ledgers_mutated": false
+}

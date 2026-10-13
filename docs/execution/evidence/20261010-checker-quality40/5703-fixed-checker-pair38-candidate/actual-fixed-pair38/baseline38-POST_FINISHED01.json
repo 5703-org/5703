@@ -1,0 +1,62 @@
+{
+  "arm": "baseline38",
+  "status": "OBSERVED",
+  "physical_POSTs": 1,
+  "known_cost_USD": "0",
+  "reported_cost_USD": "0",
+  "fully_settled": true,
+  "latency_ms": 7134.5511,
+  "timing_boundary": "LLMAdapter.generate invocation to complete return",
+  "provider_result": {
+    "raw_text": "",
+    "provider": "openai_compatible",
+    "model": "google/gemini-3.5-flash-lite",
+    "finish_reason": null,
+    "provider_request_id": null,
+    "usage": {
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "reasoning_tokens": 0,
+      "cache_hit_input_tokens": null,
+      "cache_miss_input_tokens": null,
+      "cost": 0
+    },
+    "latency_ms": 7132,
+    "error": {
+      "code": "PROVIDER_GATEWAY_ERROR",
+      "message": "The gateway returned a failed response envelope",
+      "retryable": false,
+      "details": {}
+    },
+    "request_submitted": true,
+    "diagnostic": {
+      "stage": "http",
+      "http_status": 200,
+      "provider_error_type": "rate_limit_exceeded",
+      "provider_error_code": "429",
+      "provider_error_parameter": null,
+      "message": "The gateway request failed. Category: rate_or_quota_limited.",
+      "message_redacted": true,
+      "provider_request_id": null,
+      "finish_reason": null,
+      "network_error": null,
+      "request_submitted": true,
+      "latency_ms": 7132,
+      "gateway_failure_category": "rate_or_quota_limited",
+      "gateway_classification_evidence": "recognized_error_type",
+      "gateway_embedded_error_code": 429
+    }
+  },
+  "raw_receipt_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-fixed-checker-pair38-candidate\\actual-fixed-pair38\\baseline38-raw-provider-read01.json",
+      "bytes": 33986,
+      "sha256": "ee5974345a500a7cff6036d15b0f967a0f3fbba07c4d1d2b9dc30a5006f4389b"
+    }
+  ],
+  "validation": {
+    "schema_PASS": false,
+    "raw_text_available": false
+  }
+}

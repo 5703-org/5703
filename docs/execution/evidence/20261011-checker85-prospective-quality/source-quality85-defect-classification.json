@@ -1,0 +1,82 @@
+{
+  "schema": "checker85-exposed-B-defect-classification-v1",
+  "method": "AI review of saved public source, draft and selected judgment; no unseen answer access",
+  "inputs": {
+    "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker84\\stage02\\recovered84-B-public.json": {
+      "bytes": 187449,
+      "sha256": "80c7c7794058cb56bdb90e6afc41c247139da83fa0af558e9ef23d77fc230822"
+    },
+    "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker84\\stage02\\source-quality84-B-independent.json": {
+      "bytes": 8564,
+      "sha256": "17edd12f7aacba2f8991ee9cbbbcdb222fcf0c3e64d85e1148ba9476bc27f1bd"
+    }
+  },
+  "original_online_publication_preserved": true,
+  "online_selected_supported_verdict_not_rewritten": true,
+  "actual_B_defects": [
+    {
+      "class": "quantity_referent_scope",
+      "claim_id": "claim_2d21e1de5cdad7b913744c07_1",
+      "unit_id": "U01",
+      "selected_fragment_ids": [
+        "F001",
+        "F002"
+      ],
+      "gap": "Draft omits source antecedent restricting product/glucose qualifier; checker reason adds a six-carbon qualification absent from displayed wording.",
+      "source_missing": false
+    },
+    {
+      "class": "direct_predicate_vs_entity_only_selection",
+      "claim_id": "claim_4430b4ecc4095009c8cc6dd0_1",
+      "unit_id": "U01",
+      "selected_fragment_ids": [
+        "F053",
+        "F054"
+      ],
+      "same_parent_available_but_unit_unselected": [
+        "F056"
+      ],
+      "gap": "Selected introduction names stages and entities but does not establish the asserted catalytic predicate.",
+      "source_missing": false
+    },
+    {
+      "class": "cross_fragment_context_and_local_citation",
+      "claim_id": "claim_9c256c4578ed1a36aef9e4b0_1",
+      "unit_id": "U01",
+      "selected_fragment_ids": [
+        "F009",
+        "F011"
+      ],
+      "unselected_needed_context": [
+        "F010",
+        "F012",
+        "F013"
+      ],
+      "outside_actual_parent_citation": [
+        "ev_001/F001"
+      ],
+      "gap": "Per-turn/regeneration premises are absent from this unit selection; carbohydrate purpose is in another evidence item not actually cited by this sentence.",
+      "complete_block_flag_is_not_semantic_self_containment": true
+    }
+  ],
+  "neighboring_risks_not_claimed_as_observed_B_errors": {
+    "net_vs_gross_reversal": false,
+    "explicit_stage_transfer": false
+  },
+  "forbidden_repair_inference": [
+    "No borrowing another unit/claim proof",
+    "No locally appending citations",
+    "No reason-based repair of draft qualifier",
+    "No optional detail promoted to question requirement",
+    "No lexical overlap certification"
+  ],
+  "scientific_overall_PASS": false,
+  "human_gold": false,
+  "heldout_evaluation": false,
+  "unseen8_questions_or_answers_accessed": false,
+  "main_writes": 0,
+  "DB_calls": 0,
+  "auth_reads": 0,
+  "network_calls": 0,
+  "paid_requests": 0
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "5703_mixed_role_ast_fake_db_free_proof_v1",
+  "status": "PASS",
+  "candidate_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\native-json-object-regression-preparation01\\launch_week10_haiku_teacher_gemini_checker_PREPARED01.py",
+    "bytes": 96594,
+    "sha256": "55ff216932a27224b403c6e973e618ac5b281bbe81cb7a2d969cdb09cb44cac5"
+  },
+  "extracted_candidate_functions": [
+    "released_model_config",
+    "released_checker_resolution"
+  ],
+  "main_checker_resolver_lines": [
+    418,
+    432
+  ],
+  "main_as_model_config_lines": [
+    139,
+    140
+  ],
+  "checks": [
+    "teacher_Haiku_json_schema_2048_valid",
+    "checker_native_Gemini_json_object_4096_valid",
+    "credential_configuration_identity_retained",
+    "capability_metadata_unchanged",
+    "role_reset_on_success",
+    "missing_pointer_returns_None_and_resets",
+    "role_reset_on_native_resolution_failure",
+    "identity_rejection_and_reset_workspace_id",
+    "identity_rejection_and_reset_revision",
+    "identity_rejection_and_reset_config_hash",
+    "checker_binding_rejection_and_reset_model",
+    "checker_binding_rejection_and_reset_openrouter_route_profile",
+    "checker_binding_rejection_and_reset_structured_output_mode",
+    "nonbaseline_configuration_passes_through",
+    "nested_context_restored",
+    "teacher_isolated_while_checker_context_active",
+    "overlapping_checker_remains_Gemini",
+    "forty_parallel_pair_resolutions_isolated",
+    "fake_DB_row_and_pointer_unchanged",
+    "final_default_role_teacher"
+  ],
+  "check_count": 20,
+  "parallel_pair_count": 40,
+  "fixture": "public metadata plus synthetic fake row and official public endpoint; no real DB read",
+  "candidate_full_module_imported": false,
+  "Main_model_service_imported": false,
+  "Main_writes": 0,
+  "real_DB_connections": 0,
+  "provider_POSTs": 0,
+  "credential_reads": 0,
+  "raw_logs_or_private_files_read": false,
+  "Main_pycache_writes": 0
+}

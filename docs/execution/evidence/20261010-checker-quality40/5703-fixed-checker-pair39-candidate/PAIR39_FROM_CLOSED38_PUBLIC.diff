@@ -1,0 +1,261 @@
+--- closed38/run_fixed_checker_pair38_CANDIDATE.py
++++ candidate39/run_fixed_checker_pair39_CANDIDATE.py
+@@ -22,6 +22,7 @@
+ import math
+ import os
+ from pathlib import Path
++import re
+ import stat
+ import sys
+ import time
+@@ -46,11 +47,11 @@
+ ORIGINAL_CONTROLS_SHA = "9106c8c5dfd60ef22fdae09f3bb25db67e4bd6fb6cfbdf7eccea249b89960eff"
+ PER = Decimal("0.04500000")
+ TOTAL = Decimal("0.09000000")
+-PRIOR_COST = Decimal("0.10809780")
++PRIOR_COST = Decimal("0.12483360")
+ GROUP_LIMIT = Decimal("0.24000000")
+ MAX_WIRE = 98304
+ OUTPUT = 4096
+-ARMS = ("baseline38", "candidate38")
++ARMS = ("baseline39", "candidate39")
+ PINS = {
+     "initial": (DATA36 / "slot-02-model-output01.json", 56525,
+                 "f3ed73ca40b0258998ef25d9d4d1fa74ace5e060cd1140b0ccca07bf831e1e67"),
+@@ -60,10 +61,12 @@
+                 "bb4a50a877a49a9103ea15e26ccb35b6000451c337989e3f46fad376e5abe517"),
+     "acceptance": (W / "5703-native36-fixed-pair-acceptance/ACTUAL36_FIXED_PACKET_PAIRED_SOURCE_ACCEPTANCE_CONTRACT.json", 33356,
+                    "272c62478698ff5bc213c44e8ad0724508451b1b45fc48f4193d87b208e7b7bc"),
+-    "adoption": (W / "ACTUAL_SOURCE_SELECTION38_MAIN_ADOPTION.json", 1422,
+-                 "b10ea6ac2295e70984ee1a14bf787c1fa0488303e81abd3f82ed205b4d405f33"),
+-    "review": (W / "5703-source-context37-candidate/SOURCE_CONTEXT37_FROZEN_REVIEW.json", 5197,
+-               "fe0fbf635e35c1ad035026a6601eb3b60e43af18ff1790c529fcd3ff06b4dd7e"),
++    "adoption": (W / "ACTUAL_SOURCE_ANCHOR39_MAIN_ADOPTION.json", 1637,
++                 "0b5b5f733b6bb2be2ccbaf9cf42b32eefbde46393791deeda6e10d0f175264d2"),
++    "review": (W / "5703-source-anchor39-candidate/SOURCE_ANCHOR39_FROZEN_REVIEW.json", 6692,
++               "977e6ebee9b425e21b38318b34a946dacf122e6595c15ecfb32796c85e1ef50b"),
++    "controls": (W / "5703-source-anchor39-candidate/SOURCE_ANCHOR39_SMALL_FREE_CONTROLS.json", 8314,
++                 "76a4902ecb136f5580c3b126c3a5cacee125eadb28dc7f75a21439b3fb265a04"),
+     "instruction_review": (W / "5703-source-selection38-candidate/SOURCE_SELECTION38_FROZEN_REVIEW.json", 6341,
+                            "97ef5d8962255531048f470c5e5f174fc433759d495947a878941b35dc8d0875"),
+     "checked": (MAIN / "generation/checked.py", 155543,
+@@ -154,13 +157,64 @@
+     sys.modules["generation"] = package
+ 
+ 
++def validate_grouped_context_hints(entry, hints, by_cid, fragments, word_family):
++    require(hints["candidate_only"] is True and hints["source_entailment_certified"] is False and
++            hints["columns"] == ["kind", "anchor_text", "claim_occurrences", "source_hits"],
++            "GROUPED_HINT_MUST_NOT_CERTIFY_SUPPORT")
++    allowed = {r["evidence_id"]: set(r["allowed_fragment_ids"])
++               for r in by_cid[entry["claim_id"]]["citations"]}
++    units = {r["unit_id"]: r for r in entry["units"]}
++    full_claim = entry["full_claim"]
++    groups = set()
++    occurrences = hits = source_spans = empty_groups = 0
++    for kind, anchor, claim_occurrences, source_hits in hints["rows"]:
++        require(isinstance(kind, str) and isinstance(anchor, str) and bool(anchor) and
++                (kind, anchor) not in groups and bool(claim_occurrences), "EXACT_ANCHOR_GROUP_REQUIRED")
++        groups.add((kind, anchor))
++        empty_groups += not source_hits
++        seen_occurrences = set()
++        for uid, start, end in claim_occurrences:
++            unit = units.get(uid)
++            require(unit is not None and type(start) is int and type(end) is int and
++                    unit["start"] <= start < end <= unit["end"] and
++                    full_claim[start:end] == anchor and (uid, start, end) not in seen_occurrences,
++                    "ANCHOR_UNIT_ORIGINAL_OFFSET_CHANGED")
++            seen_occurrences.add((uid, start, end))
++            occurrences += 1
++        seen_hits = set()
++        for eid, fid, spans in source_hits:
++            fragment = fragments.get(fid)
++            require(fragment is not None and fragment["evidence_id"] == eid and
++                    fid in allowed.get(eid, set()) and fragment["complete_block"] and
++                    fid not in seen_hits and bool(spans), "ANCHOR_SOURCE_OWNERSHIP_CHANGED")
++            seen_hits.add(fid)
++            source = fragment["exact_text"]
++            seen_spans = set()
++            for start, end, matching_rule in spans:
++                require(type(start) is int and type(end) is int and 0 <= start < end <= len(source) and
++                        (start, end, matching_rule) not in seen_spans,
++                        "ANCHOR_SOURCE_ORIGINAL_OFFSET_CHANGED")
++                selected = source[start:end]
++                boundary = (start == 0 or not re.match(r"\w", source[start - 1])) and (
++                    end == len(source) or not re.match(r"\w", source[end]))
++                literal = matching_rule == "literal" and selected.casefold() == anchor.casefold()
++                family = (matching_rule == "word_family_candidate" and kind == "predicate_term" and
++                          selected.casefold() != anchor.casefold() and bool(word_family(anchor)) and
++                          word_family(selected) == word_family(anchor))
++                require(boundary and (literal or family), "DECLARED_ANCHOR_MATCH_RULE_CHANGED")
++                seen_spans.add((start, end, matching_rule))
++                source_spans += 1
++            hits += 1
++    return len(groups), occurrences, hits, source_spans, empty_groups
++
++
+ def prepare():
+     install_public_implementation()
+     from generation.types import ModelConfig
+     from generation.providers import payload
+     from generation.openrouter_routes import prepare_schema_wire
+     from generation.checker_encoding import decode, encode, dumps
+-    from generation.source_relations_v2 import ReliableUnitCheck, scoped_syntactic_units, SOURCE_SELECTION_INSTRUCTIONS
++    from generation.source_relations_v2 import ReliableUnitCheck, scoped_syntactic_units, SOURCE_SELECTION_INSTRUCTIONS, _context_word_family
+     from generation.reliability_v4 import compact_schema
+ 
+     initial = read_json(PINS["initial"])["check_data"]
+@@ -168,19 +222,27 @@
+     acceptance = read_json(PINS["acceptance"])
+     adoption = read_json(PINS["adoption"])
+     review = read_json(PINS["review"])
++    controls = read_json(PINS["controls"])
+     instruction_review = read_json(PINS["instruction_review"])
+     read_tuple(PINS["checked"])
+-    require(adoption["output_schema_or_gates_changed"] is False, "UNCHANGED_GATES_REQUIRED")
+-    require(review["small_controls_passed"] == 16 and review["output_schema_parser_assessor_gates_default_policy_changed"] is False,
++    require(adoption["output_schema_parser_assessor_gates_default_policy_changed"] is False and
++            adoption["discovery_rules_changed"] is False, "UNCHANGED_GATES_AND_DISCOVERY_RULES_REQUIRED")
++    require(review["small_controls_passed"] == controls["small_controls_passed"] == 22 and
++            len(controls["controls"]) == 22 and all(row["passed"] is True for row in controls["controls"]) and
++            review["output_schema_parser_assessor_gates_default_policy_changed"] is False and
++            review["schema_compact_sha256"] == SCHEMA_SHA and
++            review["every_anchor_claim_and_source_offset_owned_and_exact"] is True and
++            review["duplicate_anchor_across_units_grouped"] is True and
++            review["original_discovery_rules_all_other_AST_nodes_unchanged"] is True and
++            bool(review["specific_group_alignment_proof"]),
+             "REVIEWED_BUSINESS_DELTA_REQUIRED")
+-    require(adoption["noninstruction_AST_changed"] is False and
+-            instruction_review["all_noninstruction_AST_nodes_unchanged"] is True and
++    require(instruction_review["all_noninstruction_AST_nodes_unchanged"] is True and
+             instruction_review["fresh_affected_controls_passed"] == 6 and
+             len(instruction_review["fresh_affected_controls"]) == 6 and
+             all(row["passed"] is True for row in instruction_review["fresh_affected_controls"]) and
+             instruction_review["schema_compact_sha256"] == SCHEMA_SHA and
+             instruction_review["schema_parser_assessor_gates_defaults_changed"] is False,
+-            "REVIEWED_GENERIC_INSTRUCTION38_DELTA_REQUIRED")
++            "RETAINED_GENERIC_INSTRUCTION38_PROOF_REQUIRED")
+     for row in adoption["files"]:
+         after = row["after"]
+         read_tuple((Path(row["path"]), after["bytes"], after["sha256"]))
+@@ -198,26 +260,24 @@
+         original["CLAIMS"], original["ACTUAL_CITATION_BINDINGS"], original["SOURCE_FRAGMENTS"])
+     candidate["SOURCE_RELATION_SELECTION_INSTRUCTIONS"] = SOURCE_SELECTION_INSTRUCTIONS
+     projected = deepcopy(candidate)
+-    hint_rows = 0
++    hint_rows = hint_occurrences = hint_source_hits = hint_source_spans = hint_empty_groups = 0
+     by_cid = {r["claim_id"]: r for r in original["ACTUAL_CITATION_BINDINGS"]}
+     fragments = {r["fragment_id"]: r for r in original["SOURCE_FRAGMENTS"]}
+     for entry in projected["SOURCE_SYNTACTIC_UNITS"]:
+         hints = entry.pop("source_context_candidates")
+-        require(hints["candidate_only"] is True and hints["source_entailment_certified"] is False,
+-                "CANDIDATE_HINT_MUST_NOT_CERTIFY_SUPPORT")
+-        allowed = {r["evidence_id"]: set(r["allowed_fragment_ids"]) for r in by_cid[entry["claim_id"]]["citations"]}
+-        units = {r["unit_id"] for r in entry["units"]}
+-        for eid, fid, ids, kinds, spans in hints["rows"]:
+-            f = fragments.get(fid)
+-            require(f is not None and f["evidence_id"] == eid and fid in allowed.get(eid, set()) and
+-                    f["complete_block"] and set(ids) <= units, "CONTEXT_HINT_OWNERSHIP_CHANGED")
+-            require(all(type(a) is int and type(b) is int and 0 <= a < b <= len(f["exact_text"])
+-                        for a, b in spans), "CONTEXT_HINT_OFFSETS_CHANGED")
+-        hint_rows += len(hints["rows"])
++        groups, occurrences, hits, spans, empty_groups = validate_grouped_context_hints(
++            entry, hints, by_cid, fragments, _context_word_family)
++        hint_rows += groups
++        hint_occurrences += occurrences
++        hint_source_hits += hits
++        hint_source_spans += spans
++        hint_empty_groups += empty_groups
+     projected["SOURCE_RELATION_SELECTION_INSTRUCTIONS"] = initial["SOURCE_RELATION_SELECTION_INSTRUCTIONS"]
+     require(projected == initial and digest(projected) == ORIGINAL_DATA_SHA, "EXACT_HINT_REMOVAL_PROJECTION_FAILED")
+-    require(hint_rows == review["payload_measurement"]["context_candidate_rows"] == 89,
+-            "REVIEWED_CONTEXT_HINT_ROWS_CHANGED")
++    measured = review["payload_measurement"]
++    require((hint_rows, hint_occurrences, hint_source_hits, hint_source_spans, hint_empty_groups) ==
++            tuple(measured[key] for key in ("anchor_group_rows", "claim_occurrences", "source_hits", "source_spans", "empty_lookup_groups")),
++            "REVIEWED_GROUPED_ANCHOR_COUNTS_CHANGED")
+     require(decode(candidate)["CLAIMS"] == original["CLAIMS"] and
+             candidate["SOURCE_FRAGMENTS"] == initial["SOURCE_FRAGMENTS"], "ORIGINAL_CLAIMS_OR_SOURCES_CHANGED")
+     schema = compact_schema(ReliableUnitCheck)
+@@ -264,23 +324,29 @@
+             module_pins.append(metadata(Path(path)))
+     for name in prompt_names:
+         module_pins.append(metadata(prompt_root / name))
+-    summary = {"schema": "5703_fixed_initial_checker_pair38_preparation_v1", "status": "OFFLINE_PREPARED_NO_API_OR_CREDENTIAL_ACCESS",
++    summary = {"schema": "5703_fixed_initial_checker_pair39_preparation_v1", "status": "OFFLINE_PREPARED_NO_API_OR_CREDENTIAL_ACCESS",
+                "runner_pin": metadata(Path(__file__)), "input_pins": {k: {"path": str(v[0]), "bytes": v[1], "sha256": v[2]} for k, v in PINS.items()},
+                "main_source_and_prompt_pins": module_pins, "configuration": cfg.to_dict(),
+                "fixed_initial_claims": 10, "fixed_initial_units": 19, "fixed_source_fragments": 71,
+                "original_initial_packet_sha256": ORIGINAL_DATA_SHA, "candidate_projection_sha256": digest(projected),
+                "declared_changed_fields": ["SOURCE_SYNTACTIC_UNITS[*].source_context_candidates", "SOURCE_RELATION_SELECTION_INSTRUCTIONS"],
+                "context_hint_rows": hint_rows, "accepted_rewrite_packet_separately_retained": True,
+-               "generic_instruction38_fresh_controls_passed": 6,
+-               "context37_business_controls_retained_not_rerun": 16,
++               "context_hint_claim_occurrences": hint_occurrences,
++               "context_hint_source_hits": hint_source_hits,
++               "context_hint_source_spans": hint_source_spans,
++               "context_hint_empty_lookup_groups": hint_empty_groups,
++               "empty_lookup_does_not_certify_semantic_absence": True,
++               "source_anchor39_fresh_controls_passed": 22,
++               "generic_instruction38_controls_retained_not_rerun": 6,
++               "frozen_group_alignment_lookup_proof_not_semantic_certificate": review["specific_group_alignment_proof"],
+                "retained_initial_model_schema_PASS": retained_observation["schema_PASS"],
+                "retained_initial_scope_repair_triggered": retained_observation["scope_repair_triggered"],
+                "retained_initial_technical_entity_binding_issues": retained_observation["technical_entity_binding_issues"],
+                "accepted_rewrite_packet_not_a_pair_arm": True, "accepted_rewrite_packet_sha256": digest(final),
+                "plans": [{k: v for k, v in p.items() if k not in {"messages", "data", "body"}} for p in plans],
+                "new_manual_POST_limit": 2, "new_manual_reserve_USD": str(TOTAL), "per_POST_reserve_USD": str(PER),
+-               "prior_closed_group_POSTs": 14, "prior_known_group_cost_USD": str(PRIOR_COST),
+-               "maximum_cumulative_manual_POSTs": 16, "maximum_known_group_plus_new_reserve_USD": str(PRIOR_COST + TOTAL),
++               "prior_closed_group_POSTs": 16, "prior_known_group_cost_USD": str(PRIOR_COST),
++               "maximum_cumulative_manual_POSTs": 18, "maximum_known_group_plus_new_reserve_USD": str(PRIOR_COST + TOTAL),
+                "original_money_limit_USD": str(GROUP_LIMIT), "historical_unknown_holds_release_authorized": False,
+                "old_scope_reuse": False, "automatic_retries": False, "teacher_calls": 0,
+                "JSON_repairs": 0, "native_or_course_qualification": False,
+@@ -344,7 +410,7 @@
+     out = ordinary(out, HERE)
+     require(not out.exists(), "FRESH_WRITE_ONCE_SCOPE_REQUIRED")
+     out.mkdir()
+-    report = {"schema": "5703_fixed_initial_checker_pair38_actual_v1", "started_at_UTC": now(),
++    report = {"schema": "5703_fixed_initial_checker_pair39_actual_v1", "started_at_UTC": now(),
+               "status": "STARTED", "source_review_pin": metadata(Path(review_path)), "physical_POSTs": 0,
+               "known_cost_USD": "0", "new_UNKNOWN_holds_USD": "0", "open_claims": 0,
+               "credential_preparation_read_only_DB_legs": 0, "experiment_DB_accesses": 0,
+@@ -352,7 +418,7 @@
+               "teacher_calls": 0, "JSON_repairs": 0, "old_scope_reuse": False,
+               "historical_unknown_holds_released": False, "fresh_question_or_course_qualification": False}
+     save_new(out / "intent01.json", report)
+-    helper = load_source("root_original_approved_credential38", PINS["credential_helper"])
++    helper = load_source("root_original_approved_credential39", PINS["credential_helper"])
+     require(helper.TARGET_DB == SOLE_DB, "ORIGINAL_CREDENTIAL_HELPER_DATABASE_OUTSIDE_SOLE_SCOPE")
+     for path in (MAIN, MAIN / "backend"):
+         if str(path) not in sys.path:
+@@ -361,7 +427,7 @@
+     report["credential_preparation_read_only_DB_legs"] = 1
+     key = helper.approved_credential(helper.WORKSPACE_ID)
+     require(isinstance(key, str) and key, "APPROVED_CREDENTIAL_UNAVAILABLE")
+-    diagnostics = load_source("root_original_diagnostics38", PINS["diagnostics"])
++    diagnostics = load_source("root_original_diagnostics39", PINS["diagnostics"])
+     redactor = diagnostics.Redactor((key,))
+     from generation import adapters as adapter_module
+     from generation.adapters import LLMAdapter
+@@ -455,7 +521,7 @@
+                       "schema_name": SCHEMA_NAME, "headers_exported": False}, redactor)
+             began = time.perf_counter_ns()
+             result = adapter.generate(plan["messages"], response_schema=schema, response_schema_name=SCHEMA_NAME,
+-                                      request_context={"purpose": "joint_check", "request_id": "fixed-initial-pair38-" + plan["arm"]},
++                                      request_context={"purpose": "joint_check", "request_id": "fixed-initial-pair39-" + plan["arm"]},
+                                       timeout_seconds=cfg.timeout_seconds)
+             elapsed = (time.perf_counter_ns() - began) / 1_000_000
+             submitted = active["submitted"]
+@@ -502,8 +568,8 @@
+                       credential_values_exported=False, memory_redaction_retained_until_process_exit=True,
+                       fresh_lock_released=True,
+                       historical_unknown_holds_released=False, no_followup_requests_authorized=True)
+-        save_new(out / "STOP-before-any-next-submission01.json", {"schema": "fixed_pair38_terminal_stop_v1", "status": report["status"], "at_UTC": now()})
+-        final_pin = save_new(out / "actual-fixed-checker-pair38-result01.json", report, redactor)
++        save_new(out / "STOP-before-any-next-submission01.json", {"schema": "fixed_pair39_terminal_stop_v1", "status": report["status"], "at_UTC": now()})
++        final_pin = save_new(out / "actual-fixed-checker-pair39-result01.json", report, redactor)
+     print(json.dumps({"status": report["status"], "physical_POSTs": report["physical_POSTs"],
+                       "known_cost_USD": report["known_cost_USD"], "result_pin": final_pin}))
+     return 0 if report["status"] == "PAIRED_OBSERVATIONS_CLOSED" else 1

@@ -1,0 +1,73 @@
+{
+  "schema": "5703_limited_scattered_finance_readback_v1",
+  "status": "NEW_RAG_HOLD_NOT_ADMISSIBLE_FROM_PROVEN_GLOBAL_BASELINE",
+  "new_normal_36_hold_USD": "0.1837320",
+  "current_project_ceiling_USD": null,
+  "current_project_remaining_USD": null,
+  "fee_permission_reasked": false,
+  "approval_rejection_in_this_review": false,
+  "blocker": "Finite local scopes and dated cumulative ledgers do not prove a current project ceiling and sufficient unallocated protection for this new hold. This is missing financial evidence, not a claim of insufficient provider balance or revoked user fee permission.",
+  "historical_cutoff": {
+    "original_project_ceiling_USD": "10.00000000",
+    "known_API_cost_USD": "0.58138393",
+    "retained_protection_USD": "9.97001709",
+    "then_unallocated_USD": "0.02998291",
+    "UNKNOWN_count": 14,
+    "all_UNKNOWN_standalone_bound_USD": null,
+    "not_current_balance": true
+  },
+  "scope_chain": [
+    {"scope": "native_pair06", "new_POSTs": 4, "new_known_USD": "0.01936904"},
+    {"scope": "continuous02", "new_POSTs": 2, "new_known_USD": "0.00870200", "cumulative_known_USD": "0.02807104"},
+    {"scope": "continuous03", "new_POSTs": 2, "new_known_USD": "0.01179910", "cumulative_known_USD": "0.03987014"},
+    {"scope": "same_native_grant", "used_POSTs": 8, "cap_USD": "0.24", "remaining_slots": 0, "full_allocation_retained": true},
+    {"scope": "haiku04", "new_POSTs": 0, "new_known_USD": "0", "inherited_known_USD": "0.03987014"},
+    {"scope": "haiku05", "new_POSTs": 2, "new_known_USD": "0.00163590", "new_UNKNOWN_count": 1, "new_UNKNOWN_hold_USD": "0.03", "local_allocation_USD": "0.12", "unused_slots": 2, "unused_slots_automatically_reusable": false, "cumulative_selected_known_USD": "0.04150604", "cumulative_selected_POSTs": 10},
+    {"scope": "renewed_same71_final63", "used_POSTs": 8, "known_USD": "0.19758306"},
+    {"scope": "atomic64", "used_POSTs": 3, "known_USD": "0.0315126"},
+    {"scope": "atomic65", "initial8_USD": "0.0527026", "followup4_USD": "0.0270267", "used_POSTs": 12, "grant_known_USD": "0.0797293", "remaining_slots": 0},
+    {"scope": "recent63_to65_only", "known_USD": "0.30882496", "UNKNOWN_USD": "0", "is_project_total": false}
+  ],
+  "limited_identity_readback": {
+    "provider_request_ids": 16,
+    "provider_request_missing": 0,
+    "provider_request_duplicates": 0,
+    "native_claim_start_SHA_identities": 10,
+    "native_claim_missing": 0,
+    "native_claim_duplicates": 0,
+    "known_subtotal_USD": "0.18506424",
+    "UNKNOWN_hold_USD": "0.03000000",
+    "coverage": "Native06/02/03/Haiku05 ten claims; final63 one request; atomic64 three requests; atomic65 twelve requests.",
+    "limits": "Native summaries lack upstream request IDs. Cross-framework identity aliases, the seven earlier renewed63 requests, and other project scopes remain outside this finite check. This subtotal is not project spend or remaining admission space."
+  },
+  "overlap_and_missing": [
+    "Native .01936904/.02807104/.03987014/.04150604 are cumulative snapshots; sum only distinct increments.",
+    "Recent .30882496 already includes63+64+65; final65 .0797293 includes initial8 and followup4.",
+    "Old v32 one/four financial reviews are constituents of the dated Oct9 total; do not add them again.",
+    "Haiku05 .03 UNKNOWN may already be a member of later campaign .09. The identity mapping needed to add or deduplicate them is absent from this check.",
+    "Native11 reports globalbaseline_freshly_validated=false. Its local READY and closed4/4 slots do not prove global financial admission.",
+    "Parent allocations, child holds and conservative combined caps overlap; they cannot all be summed as disjoint global reservations.",
+    "Configs public examples and evaluation fixtures expose no monetary ceiling or ledger index. chat_cpu_shadow_budget top-level fields describe retrieval runtime, not a monetary ledger. Latest numbered spend journal21 predates the Oct9 total audit."
+  ],
+  "minimum_missing_information": [
+    "A precise current project-wide monetary ceiling, and the relation of later separately authorized scopes to that ceiling.",
+    "A financial-only scope/request map covering later allocations and settlements, preserving every earlier UNKNOWN and unused reservation and identifying nested duplicates.",
+    "The remaining protected amount after that reconciliation must cover the new .1837320 hold, plus any separately planned repair holds. No raw prompts, credentials, database or network query are needed."
+  ],
+  "existing_non_sensitive_evidence": {
+    "old_total": "W/5703-week10-budget-reconciliation-20261009-01/WEEK10_TOTAL_AUTHORIZATION_RECONCILIATION_ACTUAL01.json",
+    "old_total_sha256": "4cfa864f0a0de25a8757372064d8d09d56510fb7eb9b0e668c504afb3c0cce9a",
+    "native_final": "Main/docs/execution/evidence/20261009-week10-q2-singleton03/analysis-preparation/ACTUAL_CONTINUOUS03_Q2_ONLY_FINANCIAL_RESULT01.json",
+    "native_final_sha256": "8d04ee732f7377e3211ad0086879fe4535589a393388c88719c33aafe1c66116",
+    "haiku_new": "Main/docs/execution/evidence/20261009-week10-haiku-partial05/analysis-preparation/ACTUAL_CONTINUOUS05_HAIKU_Q3_Q4_FINANCIAL_RESULT01.json",
+    "haiku_new_sha256": "d0e437d520e50e3a545979470ff1b22fe53313eea7a70b55e7141f3878c20e64",
+    "native_global_flag": "Main/docs/execution/evidence/20261010-native-complete-answer11/native11/runtime/budget-status-public01.json",
+    "native_global_flag_sha256": "95b299172614be50878d796d0c8e32dabcb14ea256eb479c9481db1f6e45f4ff"
+  },
+  "fixed_prior_report_sha256": "bd75ff58a7a7f92cc0650c31d9006f9334cbc94ba370d9ba804ab0228b5e0a34",
+  "original65_ledger_sha256": "332394c79386e290dca3365eac5604215de64463396a222b628e1828c45762f5",
+  "historical_protection_released_USD": "0",
+  "old_ledger_writes": 0,
+  "Main_writes_auth_DB_env_network_API_tests_install": 0,
+  "permitted_next_step": "Continue free packet preparation, conservative pricing and source-backed scoring. Keep the paid gate closed until the financial evidence is sufficient."
+}

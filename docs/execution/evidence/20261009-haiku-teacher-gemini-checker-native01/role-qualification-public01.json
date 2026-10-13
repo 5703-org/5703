@@ -1,0 +1,110 @@
+{
+  "schema": "5703_week10_native_pair_role_qualification_v1",
+  "status": "PENDING_NOT_EXECUTED",
+  "batch_id": "91353fcd-33d9-47df-a9cc-fbabce7684cd",
+  "source_version": "4139027b244d44466205b109312deb004706e13d1543072f4c5b5d4c0e4ebc02",
+  "source_label": "5703-haiku-teacher-gemini-checker-20261009-01",
+  "configuration_id": "74c8201e-aca0-400d-bcc5-5785e24c1c11",
+  "config_revision": 1,
+  "config_hash": "703c94a357ddd4b826d8b5fe25d503198d3d56e1e9130f6a37ed9e9c3396aa4a",
+  "provider": "openai_compatible",
+  "model": "anthropic/claude-haiku-5.5",
+  "openrouter_route_profile": "haiku55_google_vertex_low_v1",
+  "teacher_model": "anthropic/claude-haiku-5.5",
+  "checker_model": "google/gemini-3.5-flash-lite",
+  "teacher_effective_config_sha256": "2d7f37048e7e1d0369f67e3f424843501eb30dda5b5054723d0f8c2d8b5b2e5e",
+  "checker_effective_config_sha256": "49275ffb736f84b8f50f4407f1703a0cbd3baf6febcb63ae97a00d7f33b0261d",
+  "mixed_route": true,
+  "Haiku_checker_qualification_claimed": false,
+  "provider_route": "google-vertex/global",
+  "reused_existing": false,
+  "newly_submitted_provider_posts": 0,
+  "separate_qualification_provider_posts": 0,
+  "observed_Q2_provider_posts": 0,
+  "roles": [
+    {
+      "role": "answer",
+      "status": "PENDING_NOT_EXECUTED",
+      "run_id": null,
+      "require_project_pass": false,
+      "current_fingerprints": {
+        "schema_hash": "149a9433de28318e6c1d1174c06937762e7db073977ab125d48ae80232f4ae2b",
+        "prompt_hash": "f85fc94c2afd66c03c9ec9d66323da729b604c37642777a5f408125c7c1b257a",
+        "configuration_hash": "631bc9b1e07347b75292654ee64f038b0e0cbbbb17df0966e8b25b3b13c1b4ac",
+        "capability_hash": "e6648a497ab770f07c85308a947728d380795522e59ca79a5b9b31074a607fac",
+        "reserved_output_tokens": 2048,
+        "effective_parameters": {
+          "model": "anthropic/claude-haiku-5.5",
+          "max_tokens": 2048,
+          "provider": {
+            "order": [
+              "google-vertex/global"
+            ],
+            "only": [
+              "google-vertex/global"
+            ],
+            "allow_fallbacks": false,
+            "require_parameters": true,
+            "max_price": {
+              "prompt": 0.3,
+              "completion": 2.5
+            }
+          },
+          "reasoning": {
+            "effort": "low"
+          },
+          "schema_transport": {
+            "policy_id": "anthropic_structured_bounds_v1",
+            "original_response_schema_sha256": "149a9433de28318e6c1d1174c06937762e7db073977ab125d48ae80232f4ae2b",
+            "provider_schema_before_projection_sha256": "149a9433de28318e6c1d1174c06937762e7db073977ab125d48ae80232f4ae2b",
+            "wire_schema_sha256": "178366c17b7ff57c9fcd0f68f14fe7752871eacd398b5c245046deada688b187",
+            "removed_bound_count": 11
+          }
+        }
+      },
+      "stored_fingerprints": null
+    },
+    {
+      "role": "checker",
+      "status": "PENDING_NOT_EXECUTED",
+      "run_id": null,
+      "require_project_pass": false,
+      "current_fingerprints": {
+        "schema_hash": "7988037e08d52662a1b232f049776a42b6d10ad5d896f1a26c8c912b3efd79d4",
+        "prompt_hash": "3a9c4ef6feac70fbdc8cdd8c6d9521815d69d4639351f5be60c417d48a31e923",
+        "configuration_hash": "bcf21bb9d8b643a11368faa05634cedc7131b1a8302bf9a8201fbcc9f6cc4fae",
+        "capability_hash": "e6648a497ab770f07c85308a947728d380795522e59ca79a5b9b31074a607fac",
+        "reserved_output_tokens": 4096,
+        "effective_parameters": {
+          "model": "google/gemini-3.5-flash-lite",
+          "max_tokens": 4096,
+          "provider": {
+            "order": [
+              "google-vertex/global"
+            ],
+            "only": [
+              "google-vertex/global"
+            ],
+            "allow_fallbacks": false,
+            "require_parameters": true,
+            "max_price": {
+              "prompt": 0.3,
+              "completion": 2.5
+            }
+          },
+          "reasoning": {
+            "effort": "low"
+          }
+        }
+      },
+      "stored_fingerprints": null
+    }
+  ],
+  "qualification_basis": "EXPERIMENTAL_Q2_NATIVE_TEACHER_FULL_CHECKER_PUBLICATION",
+  "normal_project_activation_qualified": false,
+  "saved_configuration_hash_is_provenance_not_effective_override_hash": true,
+  "actual_q2_job_id": null,
+  "actual_q2_request_id": null,
+  "actual_q2_answer_id": null,
+  "actual_q2_full_checker_publication_passed": false
+}

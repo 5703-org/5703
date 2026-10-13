@@ -1,0 +1,24 @@
+--- R89/targeted_answer88.py
++++ candidate/targeted_answer88.py
+@@ -39,7 +39,7 @@
+     policy = settings.get("chat_checker_output_policy")
+     variant = scope.get("phase88_checker_output_variant")
+     if policy == "single_selection_findings_v2":
+-        require(scope.get("case_id") in {'case10c', 'case07', 'case03r', 'case03', 'case08', 'case05', 'case09', 'case01', 'case06', 'case04r', 'case10b', 'case05r', 'case04', 'case01r', 'case10'}
++        require(scope.get("case_id") in {'case01', 'case08', 'case06', 'case01r', 'case08r', 'case06r'}
+                 and variant == "single_selection_findings_v2"
+                 and scope.get("phase88_v2_execution_authorized") is True,
+                 "EXPLICIT_PHASE88_V2_CASE_REQUIRED")
+@@ -110,10 +110,10 @@
+ 
+ def verify_preparation_pins(scope):
+     """Historical fresh12 smoke descriptors are never eligible in the new cohort."""
+-    require(scope.get("case_id") in {'case10c', 'case07', 'case03r', 'case03', 'case08', 'case05', 'case09', 'case01', 'case06', 'case04r', 'case10b', 'case05r', 'case04', 'case01r', 'case10'}
++    require(scope.get("case_id") in {'case01', 'case08', 'case06', 'case01r', 'case08r', 'case06r'}
+             and scope.get("fresh_preparation_source_pins") is None
+             and scope.get("fresh_validation_descriptor_sha256") is None,
+-            "OLD_SPECIAL_METADATA_FORBIDDEN_IN_DEV89")
++            "OLD_SPECIAL_METADATA_FORBIDDEN_IN_REPAIR90")
+ 
+ 
+ def verify_source_pins(scope):

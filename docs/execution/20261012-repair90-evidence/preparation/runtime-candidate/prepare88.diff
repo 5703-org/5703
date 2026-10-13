@@ -1,0 +1,119 @@
+--- R89/prepare88.py
++++ candidate/prepare88.py
+@@ -1,4 +1,4 @@
+-"""Root-owned Phase89 static freeze/preparation; no credentials, service or model calls."""
++"""Root-owned Repair90 static freeze/preparation; no credentials, service or model calls."""
+ from datetime import datetime, timezone
+ from decimal import Decimal
+ from pathlib import Path
+@@ -10,7 +10,7 @@
+ 
+ HERE = Path(__file__).resolve().parent
+ PREVIOUS = HERE.parent / "5703-checker88-runtime"
+-AUTH = "parent_dev89_independent32posts_2USD_quality_pages_20261012"
++AUTH = "parent_repair90_independent24posts_1USD_same_input_validation_20261012"
+ TEMPLATE_SHA256 = "8a92770cffda58f62d9fa3bd444eda9267255fcd6359a4c6f3208b9a4e42cd24"
+ 
+ 
+@@ -50,7 +50,7 @@
+         os.fsync(stream.fileno())
+     pin = sha(raw)
+     create(HERE / "runtime-freeze88.json", {
+-        "schema": "dev89_runtime_freeze_v1", "authorization": AUTH,
++        "schema": "repair90_runtime_freeze_v1", "authorization": AUTH,
+         "protocol_sha256": pin, "shared_public_source_boundary_sha256": protocol["public_source_boundary_sha256"],
+         "source_version_sha256": protocol["source_version_sha256"], "base_config_sha256": protocol["base_config_sha256"],
+         "old_ledgers_mutated": False, "actual_claims": 0, "provider_posts": 0})
+@@ -84,8 +84,8 @@
+     scope.update(case_id=case_id, question_id=row["question_id"], question_text=row["question_text"],
+         question_sha256=row["question_sha256"], question_descriptor_sha256=row["question_sha256"],
+         phase88_authorization=AUTH, phase88_case_execution_authorized=True,
+-        phase89_planned_kind=planned["kind"], phase89_frozen_profile_sha256=protocol["base_config_sha256"],
+-        cohort_protocol_sha256=protocol_pin, continuation_phase="dev89", api_origin="http://127.0.0.1:18029",
++        phase90_planned_kind=planned["kind"], phase90_frozen_profile_sha256=protocol["base_config_sha256"],
++        cohort_protocol_sha256=protocol_pin, continuation_phase="repair90", api_origin="http://127.0.0.1:18029",
+         started_at_UTC=datetime.now(timezone.utc).isoformat(),
+         expected_model_config=copy.deepcopy(protocol["expected_model_config"]),
+         expected_checker_config=copy.deepcopy(protocol["expected_checker_config"]),
+@@ -99,8 +99,8 @@
+     scope["root_binding_targets"] = [
+         "Original isolated synthetic fixture and normal API; memory-only credentials",
+         "Same frozen stable teacher4096 and checker HIGH8192, full original source packet and release",
+-        "Original eight baseline cases retain one immutable sixteen-file Main source version",
+-        "Independent shared32POST/USD2; two pages retain eight POST headroom; each instance at most four calls",
++        "Three same-question repair validation cases retain the current B sixteen-file Main source version",
++        "Independent shared24POST/USD1; no page reserve; each API instance at most four calls",
+         "No HTTP retry, old claim reuse, full-batch replay, checker LOW activation or automatic page entitlement"]
+     return scope
+ 
+@@ -134,7 +134,7 @@
+                        checker_high8192=False, zero_post_reconciliation_sha256=None):
+     """Root selects one bounded affected/control run or a distinct QA-qualified page question."""
+     import budget88
+-    assert instance_id in budget88.AUX_CASES | budget88.PAGE_CASES
++    assert instance_id in budget88.AUX_CASES
+     assert base_case_id in budget88.BASE_CASES | budget88.AUX_CASES and base_case_id != instance_id
+     assert not checker_high and not checker_high8192 and zero_post_reconciliation_sha256 is None
+     protocol, protocol_pin = _protocol()
+@@ -153,7 +153,7 @@
+         assert base_case_id in budget88.BASE_CASES and kind in ("affected", "control") and qa_receipt_path is None
+         plan, repair_pin = budget88._fix_plan(HERE / "cohort-ledger", protocol, protocol_pin)
+         assert repair_review_sha256 == repair_pin
+-        repair_path = "common-fix-plan89.json"
++        repair_path = "common-fix-plan90.json"
+         assert {"instance_id": instance_id, "kind": kind, "base_case_id": base_case_id,
+                 "question_sha256": base["question_sha256"]} in plan["instances"]
+         source_pins = plan["source_pins_after"]
+@@ -188,7 +188,7 @@
+         assert budget88.page_quality_matches(qa, base, response, base_scope_sha256=base_pin,
+             source_version_sha256=instance_version, journey=journey, journey_sha256=journey_pin)
+         assert base_version == instance_version
+-        if (HERE / "common-fix-plan89.json").exists():
++        if (HERE / "common-fix-plan90.json").exists():
+             plan, _ = budget88._fix_plan(HERE / "cohort-ledger", protocol, protocol_pin)
+             assert instance_version == plan["source_version_after_sha256"]
+         else:
+@@ -200,7 +200,7 @@
+         qa_receipt_path = Path(qa_receipt_path).as_posix()
+     else:
+         assert base_version == protocol["source_version_sha256"] and instance_version != base_version
+-    descriptor = {"schema": "dev89_planned_instance_descriptor_v1", "authorization": AUTH,
++    descriptor = {"schema": "repair90_planned_instance_descriptor_v1", "authorization": AUTH,
+         "instance_id": instance_id, "kind": kind, "base_case_id": base_case_id, "protocol_sha256": protocol_pin,
+         "question_id": base["question_id"], "question_sha256": base["question_sha256"],
+         "base_scope_sha256": base_pin, "base_source_version_sha256": base_version,
+@@ -217,7 +217,7 @@
+ 
+ 
+ def write_final_results():
+-    """Write one result once; all eight baseline questions remain visible, including unrun cases."""
++    """Write one result once; all three baseline questions remain visible, including unrun cases."""
+     import budget88
+     protocol, protocol_pin = _protocol()
+     totals = budget88.snapshot(HERE / "cohort-ledger")
+@@ -243,11 +243,11 @@
+         if "actual_journey" in row:
+             row["status"] = row["actual_journey"].get("status", "UNKNOWN_LOCAL_JOURNEY_STATE")
+         cases.append(row)
+-    result = {"schema": "dev89_unified_results_v1", "authorization": AUTH, "protocol_sha256": protocol_pin,
+-        "finished_UTC": datetime.now(timezone.utc).isoformat(), "baseline_denominator": 8,
++    result = {"schema": "repair90_unified_results_v1", "authorization": AUTH, "protocol_sha256": protocol_pin,
++        "finished_UTC": datetime.now(timezone.utc).isoformat(), "baseline_denominator": 3,
+         "cohort_financial": totals, "cases": cases, "semantic_quality_independently_certified": False,
+         "raw_text_not_duplicated_here": True, "old_runtime_or_ledgers_written": False, "auth_exported": False}
+-    create(HERE / "results89.json", result)
++    create(HERE / "results90.json", result)
+     return result
+ 
+ 
+@@ -255,8 +255,8 @@
+     if len(sys.argv) == 3 and sys.argv[1] == "--freeze":
+         print(json.dumps(freeze_protocol(sys.argv[2])))
+     elif len(sys.argv) == 2 and sys.argv[1] == "--results":
+-        print(json.dumps({"cases": len(write_final_results()["cases"]), "output": "results89.json"}))
++        print(json.dumps({"cases": len(write_final_results()["cases"]), "output": "results90.json"}))
+     elif len(sys.argv) == 2 and sys.argv[1].startswith("case"):
+         print(json.dumps(prepare_case(sys.argv[1])))
+     else:
+-        raise SystemExit("EXACT_DEV89_PREPARATION_ACTION_REQUIRED")
++        raise SystemExit("EXACT_REPAIR90_PREPARATION_ACTION_REQUIRED")

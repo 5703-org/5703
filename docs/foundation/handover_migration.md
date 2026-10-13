@@ -1,3 +1,38 @@
+## Haiku-specific six-file source to target adoption - 9 October 2026
+
+Root adopted exactly three production files and three new test/fixture files. Source root: `C:/Users/PC/Documents/Codex/2026-10-04/task-2/5703-haiku-wire-schema-preparation-20261009-01`; target root: `E:/5703/learning-assistant`. The [exact adoption receipt](/C:/Users/PC/Documents/Codex/2026-10-04/task-2/5703-haiku-wire-schema-preparation-20261009-01/ACTUAL_HAIKU_WIRE_SCHEMA_MAIN_ADOPTION01.json) records backups and committed hashes. Original local validation and its eight-item evidence limit remain unchanged; local adoption adds no remote compatibility or RAG PASS.
+
+| Source under W root | Target under Main root | Previous SHA256 | Adopted SHA256 |
+| --- | --- | --- | --- |
+| `candidate/generation/adapters.py` | `generation/adapters.py` | `62819ed7a7b7282c2e26894cf5a1b19414f923da7e5f60525bc23f156d706834` | `99075cb07f4faf861119c5fa5113da6951408c02323c14452d090661fd0c3ddb` |
+| `candidate/generation/openrouter_routes.py` | `generation/openrouter_routes.py` | `97769022a282df53ec5d1048c6c257211e4e82dad7a923a2e45ff3cad97b4da7` | `eb2471e712bc92e5c04495b5353017dbcbc7aa8cdec5451b0ead9f05050588ee` |
+| `candidate/generation/probes.py` | `generation/probes.py` | `642ba880a6dcd3448513b98c0699175cd2fa6b9dafdaa92b65ea3f513d336df2` | `b9cccc3ae40886da1c327c9721d5d1e1511d200ec72e0e8fbd100c037c12923e` |
+| `test-candidate02/tests/unit/test_haiku_wire_schema.py` | `tests/unit/test_haiku_wire_schema.py` | `NEW_FILE` | `bb3a39184d348104d365d2e2cb1e24886b6fd39d41906aa89ae47a32372bae6e` |
+| `candidate/tests/unit/test_native_wire_schema_regression.py` | `tests/unit/test_native_wire_schema_regression.py` | `NEW_FILE` | `8fa1712745609f59ae39fb12193294cc7c02895c0876db942d302cca16fce61f` |
+| `candidate/tests/unit/fixtures/haiku_actual05_checker_schema.json` | `tests/unit/fixtures/haiku_actual05_checker_schema.json` | `NEW_FILE` | `08195238e12de5a2e49a575625af7ecd8e4f1bed776ac57853c63a0c7bb80524` |
+
+The prior migration record below is preserved in full, with an exact W backup.
+
+## Current Week10 Haiku route and stopped experiment migration - 9 October 2026
+
+The reviewed source migration changed only generation/openrouter_routes.py: 6992 bytes / SHA256 7e9ec301cb0ef18dd0ea9a27dc9849c0e088ec1537ee1d58db010ef7c38f4557 to 7411 bytes / SHA256 97769022a282df53ec5d1048c6c257211e4e82dad7a923a2e45ff3cad97b4da7. The adoption receipt retains the original-byte backup. Browser10 to browser11 is a local evidence-harness migration, not a production UI or API change; old candidates and failed evidence remain immutable.
+
+The reviewed opt-in OpenRouter profile 'haiku55_google_vertex_low_v1' selects 'anthropic/claude-haiku-5.5' on 'google-vertex/global'; existing production default profiles and activation eligibility are unchanged. Saved isolated verification passed 101 cases with 20 skipped cases and Ruff, with zero provider requests or real-database connections. These targeted software checks do not establish live-model qualification.
+
+Actual04 stopped before any model POST because an unscoped New chat locator also matched the newly created history item; its failed receipt and STOP remain preserved. Browser11 scopes normal creation to the desktop creation button and waits for conversation loading. Actual05 then passed the free preflight for two distinct ordinary chat sessions on the same live worker/Engine before the first paid POST. Both prepared pages had no reading context; Q3's actual normal submission used all active-corpus RAG without a chapter filter.
+
+Q3 received teacher HTTP 200, followed by checker HTTP 400. Complete checker parsing, publication, cited-answer rendering and refresh acceptance did not pass. Q4's original conditional authorization remains recorded; the unmet Q3 publication gate prevented its submission. The public receipts do not establish the remote HTTP 400 cause. No Haiku compatibility PASS, six-role qualification, complete-answer latency, TTFT or p95 measurement is added. The 300,022.2001 ms browser wait is right-censored, with complete-answer time and answer ID null. The isolated experiment's normal_project_activation_qualified flag remains false.
+
+The new batch made two physical POSTs: known teacher cost USD0.00163590 and one UNKNOWN checker cost retaining the full USD0.03 hold. Budget status is STOPPED, open claims are zero and fully_settled is false; two unused slots do not authorize automatic retry or replacement. Both owned processes and stream collectors, browser/context, worker threads and database resources closed; active pointers are unchanged. This is failed-leg resource closure, not successful native acceptance. Old STOPs, UNKNOWN protections, databases, experiments and deliveries remain preserved.
+
+Earlier Q1/Q2 results remain two independently successful cited-answer journeys on different workers, not a completed two-question same-worker test. The 53-row matrix stays 5 verified / 38 pending / 8 incomplete / 2 external; original canonical task/check statuses are unchanged and project_complete=false. Human ratings, independent source/semantic quality, formal warm-p95 and remaining course acceptance stay open.
+
+[Actual Haiku result and limits](../execution/20261009-week10-haiku-Q3-Q4-partial-results.md); [public evidence index](../execution/evidence/20261009-week10-haiku-partial05/index.json).
+
+---
+
+Earlier document bytes follow unchanged as historical evidence.
+
 ## Actual source publication and minimum delivery - 7 October 2026
 
 The exact Main activation fix, matching rebuilt frontend and English documents
@@ -1858,3 +1893,917 @@ Actual GET-only first-answer restore/citations/refresh plus one original follow-
 Actual base5 CLOSED with five known POSTs/USD0.00033868 and zero open/new UNKNOWN: all HTTP200/DeepInfra/deepseek-v3.2/stop, all invalid PROVIDER_RESPONSE_ERROR at existing non-string-content decoder. Saved raw_text='' and absent original JSON do not identify precise provider content shape; no recovery/extra request. Gemini saved5/5 valid pipeline EM2/5/F1.4; DeepSeek0/5 valid pipeline EM/F1zero including failures, semantic model scoresNULL. Token input1221/output231/reasoning237 retains row2 reasoning172>output162. Frozen release/transport deepinfra/fp4/USD0.02 is authoritative; preserve inherited wrong guard display Vertex/USD0.12 metadata. Final audit227project/97follow-up calls retains14 oldUNKNOWN and all warm/base bounds under228/98. Original finite paid scopes are closed; this append grants no new call.
 
 Actual complete source03 ZIP1,861,377,387B/SHA256 `c55981ae9c35768e87f330fe7196c2f3eac400ef22269c015635679fed9d3692` plus eight owner archives passed member hashes/CRC/disjoint source coverage. The complete candidate has1488 source/85 resources/3 status manifests and no final reports; parent reports nine formal reports ready for final metadata binding. Extracted factory health/auth/OpenAPI124paths234schemas passed on existing dependencies/disposable SQLite only, not a fresh installer/PostgreSQL/browser test. Append this report and both ledgers preserving original bytes, then capture source04 and bind final one-complete-project/eight-module/nine-report deliveries through separate manifests. One new report gives 1,489 public paths, owner counts575/66/52/139/16/167/109/365; actual final capture is authoritative. No report self-hash is embedded. Preserve actual failures and honest NULL research fields; unfinished formal/human or planned authored12-case study is not a packaging gate. `project_complete=false`, Current53 remains5/38/8/2. No deployment/course submission/private upload is authorized by this handover. [Current public report](../execution/20261008-default-rag-browser-and-matched-quality-evidence.md).
+
+
+## Actual Week10 opt-in worker cache prewarm - 2026-10-09
+
+Three reviewed production files were adopted through exact-baseline hash checks with separate original-byte backups; one new synthetic unit test was added. The startup flag is default false. Enabled interactive PostgreSQL workers reuse their own Engine to prepare the existing validated active-release cache in a read-only Session before first claim, then roll back/close and recheck the active pointer and epoch. Ordinary retrieval/checker/source gates remain unchanged. The affected three unit files actually passed48/0fail/0skip in1.44s; four-file Ruff correctness/formatting passed. Tests used only synthetic transport and new temporary SQLite, with pre-import network/database/dotenv guards. No paid call, real database connection, installation or full-suite rerun occurred.
+
+Week09 nine final archives are already verified in the new `final_source04_with_reports_matched5_and_token_cache_20261009_01` directory: original nine reports, existing matched5 and both original tiktoken files are included; complete resources87. Older directories remain preserved. Week10 does not mutate the frozen Source04 archives or reports.
+
+A same-question/quality native-browser pair is prepared but NOT_EXECUTED_BUDGET_PROTECTION_INSUFFICIENT: max8POST, strict USD0.22714880/full USD0.24 independent protection. Original USD10 authorization and all old UNKNOWN/full holds/unused slots remain unchanged; new independent USD0.24 authorization is pending. No new latency/quality/p95/TTFT claim is made. Current53 counts remain5/38/8/2 and `project_complete=false`. [Actual change and bounded validation](../execution/20261009-week10-worker-cache-prewarm.md).
+
+
+## Actual Week10 paired native-browser result - 2026-10-09
+
+The previously prepared pair has now executed with the separately approved max8POST/USD0.24 allocation. Both normal native R2/full-checker/browser legs passed and closed. Same question, frozen synthetic history/profile/memory, complete initial teacher wire and ordered candidates/evidence matched. Send-to-complete cited-answer DOM: A18.7143s, B12.1465s; process launch-to-completion: A30.2040s, B29.4479s. The observed Send difference is35.10%, but startup rose8.4283s to14.0966s; net launch-to-completion difference is only2.50%. n=1/AthenB is diagnostic, not p95, independent scientific quality or causal cache acceptance.
+
+Four actual known-cost POSTs cost USD0.01936904, newUNKNOWN0/open0; both owned runtimes/browser Jobs and database resources closed. Success STOP closes this batch; no unused slot is automatically reused. All old UNKNOWN/STOP/full protections and Week09 deliveries remain preserved. The default startup flag remains false. Normal login was repaired only in the already-owned synthetic fixture email; a cross-representation response-hash prerequisite was removed only from the browser harness. Existing48 affected free tests/Ruff checks are reused rather than rerun unchanged. Earlier prepared-only or access/budget pauses are dated historical checkpoints, superseded for this completed execution. Current53 remains5/38/8/2; project_complete=false.
+
+[Actual result and evidence](../execution/20261009-week10-native-pair-result.md). Continue from these closed results; do not replay this batch or its earlier failed setup paths. Preserve the normal checker/publication rules and use existing controls for unchanged code.
+
+
+## Actual Week10 continuous-worker partial result - 2026-10-09
+
+Current Week10 handover includes continuous02 partial evidence: Q1 accepted, Q2 `NOT_EXECUTED_PRE_SEND_FAILURE` / `SINGLE_NORMAL_CHAPTER_CONTROL_REQUIRED`, and aggregate 6 POSTs/$0.02807104 under the existing 8/$0.24 ceiling. Use the new English partial report and byte-pinned public index; do not replace the original closed paired-run report or evidence. Resource closure after failure must not be described as normal native PASS/CLOSED. Browser05 is a prepared one-line loading-wait fix with local syntax PASS only; it does not establish Q2 completion. The current STOP and old fourteen UNKNOWN protections remain intact. No additional runner, binder, budget, API execution, installation or database action is authorized by this documentation append.
+
+[Actual partial result and evidence](../execution/20261009-week10-continuous-worker-partial-result.md). [Closed paired-run Library archive](https://chatgpt.com/api/library/files/libfile_3f052252ff808191abf55ac4b3efd56b/download); Library ID `libfile_3f052252ff808191abf55ac4b3efd56b`, version0, 34 public evidence files, ZIP154748B/SHA256 `ff2bb66e8fee9341a580ba3d461723ffd79a33d5f669dbcd495aaad25fe27f15`. Current matrix remains5 verified/38 pending/8 incomplete/2 external; project_complete=false.
+
+
+## Actual Week10 Q1/Q2 independent results - 2026-10-09
+
+2026-10-09 independent Q1/Q2 result: both original requests have complete cited answers, source dialogs and refresh persistence. Q1 passed inside the earlier overall failed continuous02 leg; that report, failure evidence and STOP remain unchanged. Q2's authorized first execution passed on a new worker and reached normal native CLOSED. Worker PIDs were 66652 and 13352, so the original two-question same-worker/Engine objective remains unverified. Send-to-complete DOM was 9047.7 ms / 12146.8 ms; each worker independently observed a business release-cache hit after its startup preparation. Both normal UI requests removed reading context and used all active-corpus RAG, without chapter filters. Q2's awaited chapter-control path passed; production code was unchanged. Source-body review remains finite/partial, especially Q2's unopened supporting bodies; no human rating, scientific acceptance, cross-scope quality, causal speedup or p95 claim is added. Campaign totals are 8 settled POSTs/$0.03987014, zero new UNKNOWN/open claims, all authorized slots consumed and STOPs preserved. See `20261009-week10-Q1-Q2-independent-results.md` and the new Q2 public evidence index. Project/course completion remains false; do not alter prior matrix counts solely from these observations.
+
+[Actual results and public evidence](../execution/20261009-week10-Q1-Q2-independent-results.md). Current matrix remains5 verified/38 pending/8 incomplete/2 external; project_complete=false.
+
+[Q1/Q2 sanitized original evidence archive](https://chatgpt.com/api/library/files/libfile_8402191335588191be4702caab60e52f/download): Library ID `libfile_8402191335588191be4702caab60e52f`, version0, ZIP520174B/SHA256 `5379c7cc4c47ec0d81b1b3d3e5e2f569db0ce6e802526bc37cd7a0afa4c68c96`. The archive records two independent worker observations and preserves the earlier failed leg; it does not establish same-worker reuse or independent scientific acceptance.
+
+
+## Actual conditional attempt checker result - 2026-10-09
+
+The ordinary Full-V5 QA attempt gate now supports explicit `not_applicable` only under frozen no-attempt context, never a fabricated true evaluation. Real attempts, unknown/conflicting contexts and independent compact wire keep the strict bool contract; scientific and citation gates remain unchanged. Eight runtime/prompt files plus one authored test were adopted with exact baselines and byte backups. Focused tests passed198/0fail/0skip and Ruff passed after preserving four initial authored-fixture failures and a test-only correction. Old saved checker replay resolves its missing field but still fails source support.
+
+Exactly one fresh Gemini checker reused the unchanged Haiku teacher and20 evidence records: HTTP200/stop, strictJSON/fullconditional schema PASS, explicitNA, businessFAIL `SEMANTIC_CHECK_FAILED` with `CHECK_PROBLEM_QUOTE_MISMATCH` and `UNEXPECTED_CITATION_FOR_BASIS`, body_ok=false. Adapter4736ms is not full-answer DOM latency. Known USD0.0059893, newUNKNOWN0, remaining physical slots0; no new teacher, DB writes, browser question or native publication. Original failed mixed result/14296.4ms failure detection, old UNKNOWN/STOP and Week09 delivery remain preserved. Current53 remains5/38/8/2; project_complete=false.
+
+[Actual result and exact evidence](../execution/20261009-conditional-attempt-checker-result.md).
+
+
+## Week10 plan import and current-status links - 9 October 2026
+
+Source: official Library file libfile_a79a8e639ad081918a290b061c26ee19, COMP5703_Week10_Implementation_Plan_EN.md, 30,726 bytes, SHA256 b59901bc0b50f1e09f02e4a9db47aa81614cf6ff533747f0f35364a37a4bc49b. The current official download helper returned HTTP 403; that action stopped without retry or bypass. The supported official Library full-read route returned all 209 lines with has_more=false. Saving that actual returned text with its original terminal newline reproduced the exact original bytes and hash. Library extended attributes were not applied; binary materialization is not claimed.
+
+Target: docs/execution/20261009-week10-implementation-plan.md receives those exact plan bytes. docs/execution/20261009-week10-implementation-status.md is a new concise source-grounded status companion. PLANS.md, PRD.md and SPEC.md receive additive links and implementation boundaries, retaining their predecessor bytes in full. The import preserves Week09, original 108/60 identifiers, eight owner domains and A/B/C/D/seven-study definitions. The status records structural checker success and retained semantic failure without inventing publication, quality, device or project completion.
+
+Preparation executor: Codex /root/week10_library_readonly. Main adoption executor and byte verification are recorded by the integrating root task; preparation alone is not adoption. Before/after document pins and retained originals are provided in the scoped candidate manifest. No database, provider, credential or deployment action belongs to this document import.
+
+
+
+<!-- BEGIN CS30_COMPOUND_PREDICATE_CHECKER_20261009_05 -->
+
+## Compound-predicate checker checkpoint - 9 October 2026
+
+The latest Main checker prompt is 16,953 bytes, SHA256 475d8bee5ba754c672be1b9a65f3b4b60777cc6bb0a23fdaea99381869a85c76. Its two narrow clarifications distinguish extracted block completeness from semantic completeness and require a per-predicate audit against the fragment IDs actually returned for each claim. Original bytes are backed up; source text, source geometry, schema, citation rules and scientific gates remain unchanged. The current affected source-entailment/conditional tests passed 81 cases. Five additional authored controls passed and explicitly reproduce the dependency on an honest model verdict; they do not establish live checker accuracy.
+
+An independently reviewed local candidate replaces only the failed G3P compound claim with three separately cited statements: ATP/NADPH energy to G3P (F053), G3P leaving the cycle to become a carbohydrate component (the distinct complementary F054/F055 fragments), and Calvin-cycle stroma location (ev_007/F037). The verified source sequence preserves the cross-page layout-noise caveat without inventing a joined exact quote. All other seven claims, the short answer and the original scientific contributions are preserved. The actual free GenerationService input capture matches the normalized ten-claim candidate with zero differences; 28 scoped file pins match. Read-only operations used only the existing isolated test request; there were no database writes or provider calls in that preparation.
+
+The proposed third paid checker request was rejected by automatic approval before process creation because the user's explicit maximum of two requests was exhausted and an assistant delegation cannot expand it. This action remains BLOCKED pending the separately requested user approval for one additional request, maximum USD0.03, with no automatic retries. The rejected action added zero POSTs, fees or UNKNOWN. The actual retained pair remains two POSTs / USD0.0129782 / zero new UNKNOWN. Its final automatic business PASS and the independent missed-predicate limitation remain historical facts; the prepared repaired candidate has not received a fresh real verdict. Existing USD0.09 UNKNOWN protection and old STOPs remain unchanged.
+
+The unified Dense/Hybrid RAG protocol and free reconciliation of 18 stored quality cells, 12 ranking cells and four historical HTTP receipts are delivered. A new matched RAG experiment and Send-to-complete-answer DOM timing are NOT_RUN. Three native-startup metadata/binder access denials remain BLOCKED; the public current-prompt delta is prepared but not bound to a new native release. No protected seed/binder field was recovered through another consumer. Independent human ratings, final native scientific acceptance and overall course/project completion remain open. W10-03 and W10-06 remain IN_PROGRESS; the original 108-task, 60-check and 53-row status counts are unchanged, and project_complete=false.
+
+[Current repair, actual results and exact blockers](../execution/20261009-compound-predicate-checker-result.md); [unified RAG protocol](../execution/20261009-same-condition-rag-protocol.md); [scoped evidence index](../execution/evidence/20261009-compound-predicate-checker05/index.json).
+
+<!-- END CS30_COMPOUND_PREDICATE_CHECKER_20261009_05 -->
+
+
+<!-- BEGIN CS30_OFFLINE_RAG_FRAGMENT_BUNDLES_20261009_06 -->
+
+## Offline fragment-support comparison and formal re-review - 9 October 2026
+
+The new evaluator fragment-coverage module and its 20 unit controls are adopted; Ruff passed. A bounded actual free comparison completed ten cells and 28 controls on one exposed biology question: 13 actual wire evidence items, 67 immutable fragments, ten full-claim support bundles and four analyst-defined question facets. At k5, retained-order/BM25 facet coverage is 2/4 versus 3/4, while complete-claim coverage is 3/10 versus 2/10. At k10, complete-claim coverage is 10/10 versus 9/10. This tradeoff supports explicit coverage checks, not a default retrieval change, model accuracy, human Gold, full-corpus recall or complete-answer speed claims.
+
+The single permitted formal re-review of the identical third checker invocation was again rejected before CreateProcess: the explicit two-request limit is exhausted and delegated/tool expansion was judged insufficient for that exact outbound request. No process, POST, new fee or UNKNOWN occurred. The original pair remains two POSTs/USD0.0129782/zero new UNKNOWN; older holds and STOPs remain unchanged. Further action requires direct user confirmation for one additional request up to USD0.03 with the same question, repaired answer and 67 original fragments. Native seed/auth metadata reading remains blocked and was not retried.
+
+W10-01/W10-03 continue with source-set and checker limitations explicit. New model-backed Dense/Hybrid testing, native publication and Send-to-complete-answer timing remain unrun/blocked. Original 108/60/53 identifiers and status counts are unchanged; project_complete=false. [Actual free results and exact blocker](../execution/20261009-offline-rag-predicate-coverage-result.md); [new evidence](../execution/evidence/20261009-offline-rag-predicate-coverage06/index.json).
+
+<!-- END CS30_OFFLINE_RAG_FRAGMENT_BUNDLES_20261009_06 -->
+
+
+<!-- BEGIN CS30_DIRECT_USER_CHECKER_VERIFIED_20261010_07 -->
+
+## Direct authorization and actual checker acceptance - 10 October 2026
+
+The user's latest direct instruction authorizes continued 5703 OpenRouter development and experiments without repeated fee confirmation. The unchanged prepared checker05A was formally approved and actually executed once: HTTP200/stop, strict JSON/full conditional schema/business PASS, ten textbook-supported claims, no actual issues, USD0.0082304 and zero new UNKNOWN. The related three calls total USD0.0212086. Actual repaired selections are F053, complementary F054/F055, and ev_007/F037; all seven other claims remain unchanged. Independent actual-selected-source review is retained. Earlier two-request STOP/denial wording is historical and superseded for this authorized additional check; old artifacts, older USD0.09 UNKNOWN and registries remain unchanged. The runner's older delegated authorization-origin label is historical; the direct-user receipt is the effective authority. This is a saved-answer development case, not fresh teacher generation, native publication, held-out accuracy or full-answer timing. Protected native metadata denials remain untouched; current new Dense/Hybrid generation and full native timing remain unrun, project_complete=false.
+
+The archived06 producer runner requires its original workspace fixtures and helper path; the Main copied evidence is retained original-run evidence rather than a portable rerun package. [Current actual result and evidence](../execution/20261010-compound-predicate-checker-verified.md).
+
+<!-- END CS30_DIRECT_USER_CHECKER_VERIFIED_20261010_07 -->
+
+
+<!-- BEGIN CS30_MATCHED_RAG_COMPONENT_RESULT_20261010_08 -->
+
+## Matched component RAG experiment - 10 October 2026
+
+Two real matched GenerationService arms completed for What is homeostasis?: Dense5 6437.308 ms and Hybrid5 7719.444 ms, one teacher and one checker each, USD0.0152063 known cost and zero new UNKNOWN in successor08e. Shared visible corpus10594/public documents4 and top5 inputs are frozen; five cropped teacher ranges differ from five full raw chunks. Required definition is covered by both. Exact provided-excerpt source assessment is Dense3 complete plus1 partial versus Hybrid4 complete; Dense claim2 selects only F014 and cannot borrow F016 from another claim for its added equilibrium-maintenance goal. Original four-supported/accepted model labels remain unchanged. The agent did not independently read/hash-verify files because its tool approvals timed out; Root separately verified actual wires and161 source/prompt pins. One earlier failed attempt08d retains UNKNOWN and USD0.03 hold; older USD0.09 protection remains unchanged. These are single-case component observations, not a benchmark winner, native Send-to-DOM time, human Gold or registry promotion. The latest user explicitly approved original-path native seed/auth binding reads and local controller preparation; same-path schema/reference projections passed without exporting authentication values. Native execution continues separately, whole-current883 remains unverified and project_complete=false. OpenRouter continuing fee authorization is retained without repeated fee questions.
+
+[Actual results, exact inputs and retained evidence](../execution/20261010-matched-rag-component-result.md).
+
+<!-- END CS30_MATCHED_RAG_COMPONENT_RESULT_20261010_08 -->
+
+
+<!-- BEGIN CS30_NATIVE_COMPLETE_ANSWER_RESULT_20261010_11 -->
+
+## Native complete-answer acceptance - 9 October 2026 UTC
+
+Native11 passed one fresh-chat Q2 whole UI/controller regression at 2026-10-09T21:57:41.528927+00:00: complete cited DOM 24.246 seconds, citation opening/refresh PASS, four settled POSTs/$0.0173608, zero new UNKNOWN and closed resources. Separate selected-source review is 5 complete/3 partial of 8; model support labels remain unchanged. The 5–10 second target, full latest-source/multimodule/same-worker qualification and human/course evidence remain open; project_complete=false. Native09/10 failures, exact prompt adoption, 19 units and 29 liveness controls are retained. No registry promotion or release-pointer change is implied.
+
+[Actual results, exact inputs and retained evidence](../execution/20261010-native-complete-answer-acceptance.md).
+
+<!-- END CS30_NATIVE_COMPLETE_ANSWER_RESULT_20261010_11 -->
+
+
+<!-- BEGIN CS30_NATIVE_QUALITY_CHECKPOINT_20261010_19 -->
+
+## Native controller and answer-quality checkpoint - 10 October 2026 UTC
+
+Current `generation/checked.py`, `generation/reliability_v5.py` and `generation/prompts/joint_check_v5.txt` close the actual protected-patch producer boundary, preserve literal source identifiers, require a complete checker JSON root and remove reason-wording exemptions from a narrow single-selected-fragment copied-proposition collision guard. All original parser/schema/publication checks and prior failure records remain. A new portable `tests/unit/test_technical_entity_binding_reason.py` has14PASS; current scoped Main45PASS, separate independent45PASS and no-cache RuffPASS are retained with actual hashes. Counts describe separate runs, not90 unique cases.
+
+Actual native19 source `0152e4fac42589d51d015c54261cb87d3b9db287c82baa3cd853db7693f848ab` passed READY-to-browser Send/full cited DOM/citation/refresh at26.5466seconds with4settled POSTs/USD0.0180670/zero new UNKNOWN and resources closed. Independent actual selected-source review is4complete/3partial of7, and bodyNADH versus short-answerNADPH remains a scientific consistency risk. No correct-answer/project qualification follows. Original17 UI20.2292s/5complete3partial and18INVALID_JSON failure/4POSTs/USD0.0167862 remain immutable. The14/15/17/18/19 group totals17settled POSTs/USD0.06959890; prior STOPs and UNKNOWN holds remain protected.
+
+The source17 restricted full-unit snapshot isFAIL_RETAINED (3710passed,95failed,29errors,27skipped,127subtests passed), with105direct/12associated audit restrictions and7missing inputs. It does not validate current19 or constitute a complete software pass. Current full software/integration, actual source quality,5-10second/warm-p95/human/package/course gates remain open. The108/60 canonical registry counts and `project_complete=false` remain unchanged. Standing OpenRouter and exact original fixture access are already authorized; no new fee question is required. Other projects, real learner DBs and protected staging were untouched.
+
+[Actual repairs, commands, results and next actions](../execution/20261010-native-controller-and-quality-result19.md); [public evidence and hashes](../execution/evidence/20261010-native-quality19/index.json).
+
+<!-- END CS30_NATIVE_QUALITY_CHECKPOINT_20261010_19 -->
+
+
+## 2026-10-10 — Native26 handover
+
+Checkpoint: CS30_NATIVE_QUALITY_CHECKPOINT_20261010_26
+
+Current product pins: generation/checked.py is 151,288 B, SHA256 2399f5af49598622663f8ed4bd0193d4d6a7d05bcbbe328e15d964e461686e33; generation/reliability_v5.py is 25,521 B, SHA256 12410fac97c1031b277f63c08f71459e035e0d2bcee6d2ef9731d7243af37dcc. Actual free-C's 11 Main pins are authoritative; the supplementary current-source receipt covers a narrower set. The portable maintained repair test is tests/unit/test_source_scope_repair_projection.py.
+
+Do not rerun or reuse stopped/write-once scopes. Preserve native25 STOP/failure, native26 raw outputs, protected claims and all source text. Native26 is one fresh Q2 page pass: 31.0968 seconds, 10 citation controls plus refresh passed, 4 settled POSTs/USD 0.0174422, zero new UNKNOWN and closed owned resources. Snapshot publication=false precedes commit; the separate browser answer/persistence receipt proves publication.
+
+Independent native26 support is 7 complete/1 partial/0 unsupported across 8 claims. Protected ev_010/F053 still lacks Calvin-cycle context and the G3P-to-carbohydrate predicate despite its raw supported label. Structural validity and source-presentation equality do not close general semantic entailment. Historical native24 remains 3 complete/2 partial with a 24.3284-second UI observation; changed wording/denominators are not causal quality or speed evidence.
+
+Selected native phases 14/15/17/18/19/21/22/24/25/26 total 34 settled POSTs/USD 0.13916600, not wallet/campaign total. Older USD 0.09 native and USD 0.03 component UNKNOWN holds remain unchanged. No more provider phases are planned for this checkpoint.
+
+Report: docs/execution/20261010-source-context-native-result26.md; evidence: docs/execution/evidence/20261010-native-quality26. Finish general selected-source predicates, common current software/integration and measured delivery gates. Matched RAG08 remains one homeostasis component case, not a unified native winner; default retrieval is unchanged. Keep project_complete=false, canonical acceptance unchanged and human ratings null. Clean installation, coherent delivery and course evidence remain open. This checkpoint authorizes no remote push/upload/deployment/course submission.
+
+
+### 2026-10-10 - Current source-scoped native36 checkpoint
+
+The exact two-file opt-in checker input repair was adopted with predecessor-byte backups. Current affected Free-F passed 245 ordinary tests and 115 subtests; the two changed Python files passed no-cache Ruff. Raw invalid/foreign-binding failures from native29/30/35 remain rejected and archived.
+
+The fresh same-question native36 regression completed all four model stages, accepted revision 1, displayed the full answer in 41.145 seconds and passed ten citation controls plus refresh persistence. Four settled POSTs cost USD0.0311765; there were no new UNKNOWNs or open reservations. Owned threads and the sole isolated database resources closed, and active pointers were unchanged. The continuation group has twelve actual POSTs/USD0.0810289 within its original USD0.24 monetary allowance; original eight-call caps and STOPs were not reused. The response time does not meet the 5-10 second goal. Selected-source semantic quality and its limits are recorded in the separate independent review.
+
+See [current report](../execution/20261010-source-relation-native-result36.md) and [exact public evidence index](../execution/evidence/20261010-native-quality36/index.json). Only small public evidence records were copied; credentials, protected staging, databases, raw experiment inputs and old deliveries remain intact. Canonical task/check statuses and ordinary retrieval/default policies were not promoted. Human ratings remain zero/null and project_complete=false; common-current integration, general semantic reliability, performance p95/non-inferiority, human evaluation, clean installation and course delivery remain open.
+
+
+### 2026-10-10 - Checker evidence selection and strict-output checkpoint 40/41
+
+Reviewed generic source-anchor indexing and V2-only trusted system instructions are adopted. Current checked.py SHA256 is 838b641549631ee365f0f2e9b534c9f08aa0c230dfe59745f5de3ca901145a4c; source_relations_v2.py SHA256 is 4e3ef844eff23b77d83e850c32fdfa47c9504b7cec9a8edd7db3328851ba5a55. The 15 affected instruction controls and no-cache Ruff passed; the unchanged index retains its 22 controls. No current comprehensive 883-test, model-science or course-completion claim is made.
+
+Fixed comparisons preserve the original Native36 10 claims/19 units/71 sources. Both actual40 outputs omitted all ten required citations; valid quality denominators are zero. One full-schema41 diagnostic returned HTTP400 INVALID_ARGUMENT with no model output or cost. Its USD0.045 UNKNOWN hold remains; current group has 21 physical POSTs, USD0.17182790 known fees, USD0.21682790 known fees plus this hold and USD0.02317210 unheld capacity within the original USD0.24 limit. Historical holds, stopped scopes, raw results and protected data remain preserved.
+
+No new native run started. Native36 41.1449 seconds remains the latest actual Send-to-full-answer time. Full selected-source quality, native timing/RAG acceptance, current comprehensive software qualification and human/course checks remain open; project_complete=false. The next step is to resolve the exact full-schema endpoint incompatibility and UNKNOWN accounting using authoritative evidence, then qualify all full predicates before a fresh finite native scope. Standing API authorization remains valid; no fee permission was re-requested.
+
+Report: docs/execution/20261010-source-relation-checker40.md. Evidence: docs/execution/evidence/20261010-checker-quality40/index.json.
+
+
+### 2026-10-10 - Default-off checker schema research integration 42
+
+Five reviewed product files and two reviewed source-test fixtures were adopted with exact predecessor backups and readback. The explicit textbook_checker_schema_research_v1 setting remains None by default and is frozen into the normal command only when enabled. Remote schema complexity is reduced to 3031 bytes; the original local 7125-byte schema, all 17 raw required fields, exact claim/unit/citation/source, requirement and publication gates remain mandatory. Focused policy controls passed 39 cases and Ruff; independent static reviews passed.
+
+Actual Main affected regression passed 245 cases and 115 subtests using real Main module paths, with no failures, setup errors, skips or audit denials. All seven before/after runtime pins matched, with zero API/DB/authentication/Main writes during the run. Earlier candidate and Main failures remain preserved: eight failures were identical in both; three explicitly reported context limits and five immediate errors were not instrumented. Source fixtures now use a finite 32768 window; protection already used estimate, while five units fixtures explicitly change auto to estimate without a numerical-equivalence claim. All 114 original assertions and dedicated context-limit tests remain intact. This is scoped software validation, not complete eight-stage or live native qualification.
+
+Actual tiny42 is one settled checker POST/USD0.0017338, zero new UNKNOWN, with one independently complete claim/two units. The 2670.6127-ms component observation is not UI TFull. Current43 preparation02 changes Main pins only, preserving original 10/19/71 and identical 86938-byte requests. Two automatic approval rejections occurred before process creation: zero actual43 POSTs/DB/authentication/cost. Standing fee authorization is retained; the pending question concerns the exact 71-fragment saved-answer disclosure. Earlier schema41 USD0.045 UNKNOWN and all historical STOPs remain protected.
+
+Latest prior native36 TFull remains 41.1449 seconds; no current native timing is added. Full original-input source quality, unified RAG comparison, current complete qualification, p95/noninferiority, human ratings (zero/null), clean installation and coherent course delivery remain open. Canonical registries are unchanged; project_complete=false. No protected datasets, databases, other projects, old deliveries or Git branches were reset, deleted or published.
+
+Current report: [../execution/20261010-checker-schema-policy42.md](../execution/20261010-checker-schema-policy42.md). Public evidence: docs/execution/evidence/20261010-checker-schema-policy42/index.json.
+
+
+### 2026-10-10 - Original-input checker compatibility43 result
+
+The user explicitly approved the exact 71-fragment saved-answer disclosure. The two earlier automatic approval stops are historical and resolved for this scope; their receipts and the prior42 delivery remain unchanged. Two same-condition requests completed on the original 10-claim/19-unit/71-fragment case. Both unmodified raw outputs pass all 17 required fields, the full local schema, claim/unit/owned-source bindings and independent structural review.
+
+The batch is closed at two settled POSTs/USD0.0310396, zero new UNKNOWN/open claims, no retry, JSON repair or teacher call. Checker component durations are 7768.5613 and 10560.6593 ms, not native TFull. Independent unit-own-source completeness fails: repeat01 14 complete/5 partial units and 6 complete/4 partial claims; repeat02 15 complete/4 partial units and 7 complete/3 partial claims. All original supported labels are preserved. No biological-falsity, quality-noninferiority, human-Gold or native-publication conclusion follows. Do not reuse the closed43 slots; the schema41 USD0.045 UNKNOWN hold and all earlier STOPs remain protected.
+
+Main's prior245 cases/115 subtests remain scoped software PASS. General selected-source quality, uniform RAG comparison, current native complete-answer timing, complete eight-stage qualification, p95/noninferiority, human evaluation (zero recorded ratings/null), clean installation and course delivery remain open. Canonical registries are unchanged and project_complete=false. No protected data, databases, other projects, branches or old deliveries were modified.
+
+Report: [../execution/20261010-checker-compatible43.md](../execution/20261010-checker-compatible43.md); public evidence: docs/execution/evidence/20261010-checker-compatible43/index.json.
+
+
+### 2026-10-10 - Source-unit-proof45 software checkpoint
+
+Adopted the independently reviewed generic own-unit proof instruction in the existing V2 checked.py system renderer. The 1018-byte instruction requires each supported unit's explicitly selected allowed fragments to entail all asserted identities, attributes, qualifiers, operations, conditions and purposes. Explicitly shared/adjacent allowed fragments and partial/contrary evidence remain legitimate; no sibling-unit or claim-only implicit proof is added. Existing instructions, final schema audit and every other checked.py AST node remain unchanged. Canonical/wire schemas, parsers, source assessor, defaults, binding and publication/repair gates are intact. The preserved predecessor backup and actual adoption receipt establish the one-file change.
+
+One fresh actual Main regression passed245 cases and115 subtests (exit0, zero failures/skips/setup errors/audit denials); all seven tracked Main pins remained exact. Actual Main module paths were used without injection/spoofing. V1 preparation stopped on an owned-log-basename AST assertion before any tests; V2 permits exactly that log name change, retaining every other pytest argument and audit/finder AST. Only one test execution occurred. No API, DB, authentication, installation or Main-write call occurred during regression.
+
+Software45 added no provider requests or fees. Actual43 remains closed at two settled requests/USD0.0310396 with its original supported labels and independent5/4 partial-unit failures preserved. No new source-quality, native TFull or RAG improvement follows from the local PASS. The one additional changed-prompt request is only a public proposal awaiting the user's request-count scope reply; standing fee authorization is unchanged. Do not reuse closed43 slots or release historical UNKNOWN holds. Full source quality, unified RAG comparison, current native complete-answer timing, complete eight-stage qualification, p95/noninferiority, human evaluation (zero recorded ratings/null), clean installation and course delivery remain open. Canonical registries and project_complete=false are unchanged.
+
+Report: [../execution/20261010-source-unit-proof45.md](../execution/20261010-source-unit-proof45.md); evidence: docs/execution/evidence/20261010-source-unit-proof45/index.json.
+
+
+
+
+## 2026-10-10 proof46-50 checkpoint
+
+Proof46-50 is closed at 8 physical requests/$0.13136218, fully settled with 0 new UNKNOWN holds/open claims. The8 / $0.36 grant has 0 physical slots and $0.22863782 arithmetic unspent; this money is not ninth-request authority. Closed47's unsubmitted arm remains locked and old 41 $0.045 UNKNOWN stays protected. Eligible source-unit counts:46 each 14C5P; 48 first 15C4P; 49 first 14C5P/second18C1P; 50 single high17C2P. Corresponding claim counts:6C4P,6C4P,6C4P/9C1P,8C2P. Provenance-invalid47 first and 48 second have0 eligible denominator; their 16C3P/8C2P diagnostic counts are excluded from quality scoring. All raw supported labels remain preserved; no all-source PASS, human Gold, stability or noninferiority is established.
+
+No Main candidate adoption: source 45 checked.py 159286/8e3042a00e23a72e7ac06cebded3c12550db916d89c4cea24dd744a19c6217eb and routes 11703/eb2471e712bc92e5c04495b5353017dbcbc7aa8cdec5451b0ead9f05050588ee remain pinned. Prior 245-case/115-subtest affected-regression PASS is retained without rerun. Mock06 supplies one isolated backend lifecycle PASS with an audit-clean wrapper,48 stable source pins and its new test DB dropped; 05 test PASS/wrapper FAIL and 01-04 stops remain preserved. Earlier49-pin reporting error is corrected to48. Owned container 02 is stopped/Exited with volume/data retained; failed01 retained; original 15433 fixture running/untouched.
+
+Checker completion14.5654867s for 50 is not native Send-to-full-answer TFull. Current unified generation/RAG/native full-DOM measurement needs a concrete additional teacher/checker scope beyond the closed 8 replay requests; standing fee authorization remains retained. Source completeness, RAG quality, native TFull, formal p95/noninferiority, human evaluation, clean-install and course-final acceptance remain open. Canonical statuses remain unchanged; project_complete=false. Prior42/43/45 reports, protected DB/experiment data and earlier drafts remain preserved.
+
+Report: [20261010-proof46-50.md](../execution/20261010-proof46-50.md).
+
+
+## 2026-10-10 offline provenance/performance51 checkpoint
+
+Applied two reviewed minimal production fixes: V2 stored obligation fragment_ids now use canonical immutable source IDs, matching source_quotes and existing attribution source spans/hashes; Chat transcript session/first-page reads start together while preserving session-error priority, ordered pagination, stale/unmount guards and all-or-nothing commit. Five added Python production lines reuse existing repair/persistence/codec mappings; no source selection, prompt, schema, default, budget or verdict changes. Both promotions verified exact predecessors/readbacks and preserved all five old files.
+
+Fresh actual Main validation passed215 Python cases/25 subtests,57 frontend cases,TypeScript and affected-file Ruff. The first frontend attempt retained6 passing recovery cases plus3 suite import ENOENT failures; owned TEMP/TMP/TMPDIR and one worker produced the complete57-case PASS without source changes. Root readback checked10 original claims/71 fragments,15 immutable input pins,6 evidence-table rows and15 exact source-span cards. No model/API/auth/DB/service/install/push/upload/deploy/course-submission action occurred.
+
+All five previously partial unit IDs have proof inside their original claim scopes; selection omissions remain. Actual47_01/48_02 still fail returned F011 citation linkage. ATP U03 has shared-obligation attribution ambiguity; historical aggregates, raw labels and reasons remain unchanged, including50's17C2P. The namespace fix does not certify semantic atomicity or automatically fill missing evidence. Existing reliable-negative repair targets defective claims, protects passed text and requires a complete fresh check; all-supported replay outputs supply no reliable generic semantic-gap trigger.
+
+Native36 historical TFull41144.9ms contains33192ms of four provider stages (80.671%); repair/recheck16811ms (40.858%). Transcript read overlap is behaviorally verified; saved latency/current TFull is unmeasured. Current source quality, unified RAG comparison, native full-answer timing, eight-stage qualification,p95/noninferiority,human evaluation,clean installation and course-final acceptance remain independent pending items. Required whole-project fixed-output/DB-discovering gates were not rerun in this offline checkpoint. Registries remain exact; project_complete=false; zero/null human ratings. Closed8 replay requests/$0.13136218 and historical41 $0.045 UNKNOWN are untouched. Git worktree inspection remains unavailable; no Git mutation occurs. Protected data, old deliveries and other projects remain unchanged.
+
+Report: [20261010-offline-provenance-performance51.md](../execution/20261010-offline-provenance-performance51.md); evidence: docs/execution/evidence/20261010-offline-provenance-performance51/index.json.
+
+### 2026-10-10 - Phase52 saved-response replay and browser permission stop
+
+Offline current/predecessor production mapping replay passes all8 retained10-claim/19-unit responses against the real native36 map:71 exact fragments/10 original claim spans, no new model effect. Six label-based assessments remain accepted;47_01/48_02 retain binding rejection. Authored unsupported/empty-source and missing-condition controls remain blocked. All10 full-feedback codec round trips and production PrivateAnswerDraft commit/new-session JSON reloads pass in fresh in-memory SQLite; parent FKs/PostgreSQL restart are not exercised. Current215 Python cases/25 subtests and57 frontend cases from phase51 remain scoped evidence, without redundant reruns or source changes.
+
+Browser supplement is NOT_RUN: unauthenticated probes of127.0.0.1:18027/api/v1/health/live and127.0.0.1:15197/ failed with local socket-permission denial. Stopped both actions; no login, DB read/write, task submission, browser/service start, retry/alternative port, historical denied-controller bypass or model POST. Service availability remains UNKNOWN. No fee/new scope is consumed; the8-request external scope stays exhausted. No independent new production defect is observed.
+
+The existing [Week10 status](../execution/20261009-week10-implementation-status.md) now appends these facts to W10-03/GEN-07/BE-09, W10-06/FE-08/FE-04, and W10-10/FE-12/QA-12/INT-10/CHAT-12, with original acceptance IDs and minimal current-source mock browser/real-model native configuration. Canonical108/60 statuses and project_complete=false remain unchanged. Existing phase51 report/index and all old prefixes remain exact.
+
+Supplement: docs/execution/evidence/20261010-offline-provenance-performance51/followup52-index.json.
+
+<!-- CS30_SELECTION_REPAIR54_56_NEW_GRANT_20261010 -->
+
+### 2026-10-10 - New selection-repair grant54-56
+
+The user's separate renewed same71-fragment/question/saved-answer grant permits at most8 OpenRouter Gemini/Vertex requests/USD0.36. Actual54-56 made5 settled requests/USD0.11072166/zero new UNKNOWN;3 slots/USD0.24927834 remain unused. Three structure-eligible responses lack complete independent selected-source proof;55_2 and56_1 retain RELATION_ASSESSED_FRAGMENT_MISMATCH for lastU02/F011.56's second arm is NOT_RUN_GLOBAL_STOP. No raw citation autofill, automatic retry, production prompt adoption, source edit or verdict override occurred. Exposed55/56 hypotheses are not Gold or held-out evidence; ATP shared-predicate ownership ambiguity remains explicit.
+
+W10-03/GEN-07/BE-09 and GEN-05/QA-11 retain semantic acceptance open (AC-08/10/14/41,HC-09). W10-06/FE-08/FE-04/BE-05/QA-12/QA-13 retain current native-browser acceptance open (AC-16/43/44/45); no original-port retry or native run occurred. W10-10/FE-12/QA-12/INT-10/CHAT-12 retain common-package/native/course acceptance open (AC-37/44/48). Existing phase51 software tests are unchanged historical scoped results. Component adapter clocks are not Send-to-complete-DOM, a RAG comparison or a performance improvement. Canonical108/60/53 statuses, zero/null human ratings and project_complete=false stay unchanged. The old exhausted8/USD0.13136218 grant, UNKNOWN holds, ledger prefixes, protected data and deliveries remain exact. Phase53's blocked archive is not executed or copied.
+
+[Actual settled results, limits and evidence](../execution/20261010-selection-repair54-56.md).
+
+
+<!-- CS30_OFFLINE_CHECKER_CONTRACT57_20261010 -->
+
+### 2026-10-10 - Offline correction-feedback fix57
+
+Offline raw/typed comparison confirms F011 was omitted from the model's own claim assessment before decoding; the dual claim/unit contract is redundant but satisfiable. Parent-reported formal refusal pauses further external transmission; this work made zero external model/network/DB operations and adds no fee or UNKNOWN. A separate three-line production fix aligns correction feedback with the actual existing checker_schema_name and adds original fragment/evidence identities to V2 mismatch diagnostics. Three changed paths are generation/checked.py, generation/source_relations_v2.py and the new source-relation correction-feedback test. Five regressions failed before the fix, five passed in the isolated candidate, and actual Main passed104 affected tests plus repository-configured Ruff. Original byte backups are retained in the workspace. No citation/status/selection autofill, semantic proof certification, correction/budget change or publication override occurs.
+
+Original fixation/quantity/purpose assertions require their actual selected proof; ATP shared-predicate ownership remains ambiguous rather than certified atomic Gold. Span IDs support exact source location, not semantic entailment. Existing claim-level local repair does not provide a generic unit-level selected-proof patch preserving sibling selections; a reliable defect trigger and full fresh semantic check remain necessary. W10-03/GEN-07/BE-09 and GEN-05/QA-11 remain IN_PROGRESS; native/current RAG/TFull and final course acceptance remain pending. Canonical task/check/matrix statuses, human ratings, prior5/USD0.11072166 settlement and old holds are unchanged; project_complete=false. Further paid transmission is NOT_RUN_PAUSED_AFTER_PARENT_FORMAL_REFUSAL.
+
+[Root cause, software regression evidence and remaining blocker](../execution/20261010-offline-checker-contract57.md).
+
+
+<!-- CS30_CHECKER_RECOVERY58_59_20261011 -->
+
+### 2026-10-11 UTC - Current correction integration and capacity result58/59
+
+Two additive current Main tests now exercise the phase57 correction-feedback
+change through actual PostgreSQL/generation/worker/private persistence/HTTP
+and through the real frontend API decoder. Two backend cases, one frontend
+component case, configured Ruff and TypeScript pass. A current Edge UI-only
+failure/reload case and a separate current Edge -> API -> worker mock
+publication/source/reload journey pass. The latter matches this fresh
+fixture's browser answer/evidence to its PostgreSQL rows. Only new random
+`cs30_test_*` databases were created; the successful native fixture database
+and owned threads closed, and the owned Vite process was stopped. Docker
+Desktop and the original synthetic PG15433 container were normally started;
+the original volume/data were preserved. No dependency installation occurred.
+Initial F811, native01 pre-launch environment failure and free encoding stop
+remain recorded. These five software cases do not establish live source quality.
+
+The explicit same71-fragment authorization and approved concrete tool actions
+allowed one58 correction replay and one59 capacity observation; the historical
+phase57 external refusal remains a historical record.58 was truncated at8192
+and has zero quality-eligible denominator/N/A.59 changes only output capacity
+to16384 and returns complete typed/full/repeated-unit JSON. Current local V2
+binding/contract checks accept its raw19 supported labels and the original
+F011 assessed-fragment mismatch is absent. Independent selected-source
+review still finds incomplete proof:14 complete/5 partial, or13/6 under strict
+ATP shared-predicate ownership, with6 complete/4 partial claims. No all-source
+PASS, Gold, held-out quality or production-profile
+adoption is recorded, and no last-slot automatic replay is scheduled.
+
+58 settled at$0.0285088 and59 at$0.0260363, both with zero new UNKNOWN.
+The renewed8/$0.36 grant now totals7 requests/$0.16526676;1 slot/$0.19473324
+remain. Old exhausted grants, unsubmitted arms, UNKNOWN holds and all earlier
+experimental inputs/results remain protected. The20,713.7674ms and17,479.3151ms
+observations measure the checker adapter only.
+
+W10-03/GEN-07/BE-09 and GEN-05/QA-11 retain semantic acceptance open
+(AC-08/10/14/41, HC-09); W10-06/FE-08/FE-04/BE-05/QA-12/QA-13 gain the
+above current mock/software evidence but retain live model/native acceptance
+open (AC-16/43/44/45). W10-10/FE-12/QA-12/INT-10/CHAT-12 retain current
+common-package/course qualification open (AC-37/44/48). A fresh whole-project
+eight-stage gate, matched current RAG comparison, real-model full-DOM
+timing, p95/noninferiority, human evaluation, clean-install and final course
+qualification are not established by this checkpoint. Canonical108/60/53
+statuses and zero/null human ratings remain unchanged; project_complete=false.
+Git status/branch/worktree inspection was denied; no alternate Git action or
+mutation was attempted. Protected private runtimes/DBs, old deliveries and
+the other two projects are preserved.
+
+[Actual results, exact source pins, limits and next acceptance gaps](../execution/20261011-checker-recovery58-59.md).
+Evidence: `docs/execution/evidence/20261011-checker-recovery58-59/index.json`.
+
+<!-- END CS30_CHECKER_RECOVERY58_59_20261011 -->
+
+
+<!-- CS30_SOURCE_COMBINATIONS60_20261011 -->
+
+### 2026-10-11 UTC - Generic negative-unit source combinations60
+
+Current Main adds a pure bounded candidate planner to existing V2 semantic-repair feedback/private checks. Validated negative units can receive complete precise blocks from their own original binding, with original claim/unit/source references. Partial judgments and exact source text remain intact. Supplement limits are 4 IDs per unit, 12 unique IDs and 6000 Unicode code points globally; plan metadata is bounded to 18 KiB using ordinary spaced UTF-8 JSON. Capacity removes whole records. Lookup coverage/common locations are navigation-only and certify neither entailment, semantic absence, predicate ownership nor parent continuation. No hardcoded biology answer, new regular expression, provider stage, budget change, threshold reduction or publication override is added. The existing permitted patch/full-draft contract, protected spans and complete fresh checker remain required.
+
+Actual current Main passes 209 primary unit cases plus 25 subtests, including 39 new authored cases across chemistry, DNS, mechanics and coordinated metals with supported controls. Configured Ruff passes. Four actual PostgreSQL/worker/HTTP cases pass, including two new combination/final-partial cases; only fresh random `cs30_test_*` databases are used. A current Edge test passes with two actual API/worker outcomes: canonical supported publication/source/reload, then final partial with zero Answer rows and preservation of the earlier answer/edited draft through reload. Both requests retain four real stages and two private check revisions, with 2 normal message POSTs and 0 retry/provider POSTs. The mock Send-to-complete-DOM observation is 1574.2219 ms; live-model TFull remains null. Native DB/owned API-worker threads close. The retained native01 FAIL was an authored Retry expectation inconsistent with normal `can_retry=false` at budget4/4; only the workspace spec changed before fresh native02 PASS, with no production retry-rule change.
+
+Saved59 taxonomy has five definite candidate-present/selected-combination gaps, one conditional shared-predicate case and zero confirmed knowledge-not-retrieved cases; categories overlap. It is seen development evidence, not Gold, held-out accuracy or a new model result. Incorrect all-supported model labels do not trigger this negative-only helper. Independent complete selected-proof assessment remains necessary.
+
+This checkpoint makes zero external model POSTs. The renewed same71 grant remains 7 requests/$0.16526676 used, 1 slot/$0.19473324 unused, with no scope extension or automatic last-slot call. Historical denied controllers/Git remain paused. Canonical 108/60/53 statuses, zero/null human ratings and project_complete=false remain unchanged. Focused repair/current mock-browser evidence is added; semantic, matched current RAG, real-model TFull/p95, fresh eight-stage/common-package/human/course qualification remain open at their existing scope. Prior results, protected private runtimes/DBs, old deliveries and the other two projects are preserved.
+
+[Current change, exact pins, actual verification and remaining gaps](../execution/20261011-source-combinations60.md). Evidence: `docs/execution/evidence/20261011-source-combinations60/index.json`.
+
+<!-- END CS30_SOURCE_COMBINATIONS60_20261011 -->
+
+
+<!-- CS30_SOURCE_COMBINATIONS61_QUALITY_20261011 -->
+
+### 2026-10-11 UTC - Actual saved71 quality replay61
+
+Current source-combination efficacy is not established. Exact saved59 public-wire
+replay retains all 71 blocks/10 claims/19 units and the original all-supported
+provider judgment, which produces zero negative-unit proposals. A separate exposed
+development fixture imports five independent partial diagnostics, passes the local
+binding contract and obtains all five proposals. Only 3/5 include the identified
+candidate components; independent reading of the hypothetical augmented sets gives
+1 potentially complete, 2 partial and 2 unresolved coreference bridges. These are
+not new model judgments or newly selected sources. C9-U04 misses the conversion-to-
+reduction bridge F059; C10-U02 misses exported-G3P/carbohydrate continuation F020.
+Seven added IDs/1114 Unicode chars and zero omitted proposals rule out a capacity
+cut as the cause. The greedy lexical ranking cannot certify relation support.
+
+Fourteen remaining units preserve their original judgment/selection and receive no
+proposal. This is unchanged replay behavior, not measured semantic noninferiority;
+the compatible ATP unit still has a strict shared-predicate ambiguity (13 stable
+normal units). Old59 response, checkpoint60 software evidence and source bytes stay
+intact. No new simulated suite, provider request, auth operation or database query
+is used to claim efficacy. Canonical statuses/human ratings stay unchanged and
+project_complete=false.
+
+The same71/teacher-answer user scope and fee grant remain valid. Current high
+Vertex sender readiness is unresolved: previous58/59 entries are closed and depend
+on historical pins/legacy paths; the required high research profile is absent from
+Main's route registry. Stop is before auth/POST, not a new platform rejection or
+withdrawal of authorization. No old refused/closed controller or alternative route
+is used. The original grant remains7/$0.16526676 used,1/$0.19473324 left; no new
+UNKNOWN, spend or automatic last-slot invocation is recorded.
+
+Next paired quality/native work requires frozen question/source/retrieval/role
+configuration, reference/rubric, N/R, timing/order/cache conditions and a current
+reviewed sender. Formal E0/no retrieval and E1/basic dense remain distinct from
+current product R2/reranking/general-knowledge variants. New question/excerpt and
+newly generated E0/E1 answer/checker payloads are outside the final single same71
+saved-answer allowance. Completed valid baselines plan4*N*R requests; a single local patch/full recheck
+per arm caps it at8*N*R with local query preparation and no extra paid role. No
+arm may exceed4 provider calls in total; format/contract corrections consume that
+same cap and cannot add requests. Exhaustion remains an observed failure. No
+early failed/refused case is removed from the denominator; fewer submitted calls
+are possible for those cases. No
+next batch, real TFull/p95, held-out quality or course qualification is fabricated.
+
+[Actual replay, per-unit interpretation, sender blocker and next-batch scope](../execution/20261011-source-combinations61-quality.md).
+Evidence: `docs/execution/evidence/20261011-source-combinations61/index.json`.
+
+<!-- END CS30_SOURCE_COMBINATIONS61_QUALITY_20261011 -->
+
+
+<!-- CS30_ATOMIC_SUPPORT62_20261011 -->
+
+### 2026-10-11 UTC - Runnable atomic-support candidate and same-route repair
+
+The missing gemini35_google_vertex_high_research_v1 profile caused a reproduced
+pre-auth ValueError/CONFIGURATION_ERROR, not a new formal refusal. Main now adds
+only that opt-in profile. Current Main rebuilds approved59 wire byte-for-byte with
+the same destination/model/Vertex-only/high policy. Old closed controllers and
+credential loaders are not followed or rerun; a current one-shot sender and the
+same approved credential consumer remain unverified.
+
+Main adds a default-offline single-atom contract, prompt, CLI and separate invented
+development inputs/independent AI expectations. Supported binds actual subquotes
+and all conditions; explicit counterevidence is distinct from uncertain missing
+support. Reported conflict requires uncertain; strict identity, offsets, JSON and
+Unicode failures retain errors. Exact quote matching never certifies semantic
+truth/decomposition/condition completeness. The production checker is unchanged.
+Actual Main passes128 targeted tests (19 atomic+109 routes),21 optional SDK skips,
+configured Ruff and default/saved-opinion offline CLI checks. Twelve independent
+AI-authored reply cases are3 supported/3 counterevidence/6 uncertain, not model or
+human measurements. Real source quality/RAG/native model timing remain unmeasured.
+
+Three concrete new atomic input wires are prepared offline with neutral source IDs,
+no expected labels/local judgments/full snapshots/auth; same Vertex/high, max3
+POSTs/no retry, suggested finite capUSD0.06, conservative saved-cap total0.0397527.
+This new input scope is for parent handling, not an extension of same71's final
+slot. Current scope stays7/USD0.16526676 used,1/USD0.19473324 unused, zero new
+requests/reservations/UNKNOWN/expense. General fee authorization persists.
+Canonical states/human-null fields and project_complete=false remain unchanged.
+
+[Code, runnable command, exact root cause and new send scope](../execution/20261011-atomic-support62.md).
+
+<!-- END CS30_ATOMIC_SUPPORT62_20261011 -->
+
+
+<!-- BEGIN CS30_CHECKER_CONFIRMATION63_20261011 -->
+Latest same71 confirmation, 11 October 2026: current Main and the original read-only credential consumer completed one exact saved59 POST. Full schema/10 claims/19 units and actual bindings passed; model still declared all units supported. Independent AI review found 15 complete / 1 partial / 3 unresolved bridges (strict ATP: 14 / 2 / 3), so semantic quality acceptance remains false. Complete checker adapter return was 24091.9026 ms, not native complete-answer latency or p95. This batch is 8/8 requests used, USD0.19758306 known, new UNKNOWN0, zero request slots remaining. General fee authorization and all historical holds/data remain unchanged. The new three invented atomic-input scope is prepared, unsent and awaits parent handling. Canonical statuses, human ratings and project_complete=false are unchanged. See [current confirmation report](../execution/20261011-checker-confirmation63.md).
+<!-- END CS30_CHECKER_CONFIRMATION63_20261011 -->
+
+
+<!-- BEGIN CS30_ATOMIC_SUPPORT64_20261011 -->
+### 11 October 2026 - atomic64 pilot and explicit local quote binding
+
+The separate three-case synthetic pilot is closed: 3 POSTs, USD0.0315126,
+UNKNOWN0, no remaining request slots. Original qualification is 1/3: a valid
+positive, a truncated counterexample and an identity-uncertain response with an
+invalid C1 end offset. The old eight-call batch remains USD0.19758306; combined
+known cost is USD0.22909566 within USD0.36. Output caps differ (4096/4096/8192).
+
+Added `generation/atomic_quote_binding_v1.py` and
+`tests/unit/test_atomic_quote_binding_v1.py`: explicit same-fragment unique exact
+quote coordinate normalization, with original strict validation retained.
+28 targeted tests and touched-file Ruff checks passed. A separate free Main
+replay changes only C1 end 125 to 123, retains uncertain and identity gaps, and
+passes strict binding. Original raw response and default execution still fail;
+historical qualification is unchanged. Default production integration is absent.
+
+See `docs/execution/20261011-atomic-support64.md` and its bounded public evidence.
+Canonical tasks/acceptance and existing checked/source-relation code are unchanged.
+No human/Gold, held-out, unified RAG or native page latency claim is established;
+project completion remains false. Next: complete negative-response evidence and
+the remaining scientific/native/RAG acceptance work within a new bounded scope.
+<!-- END CS30_ATOMIC_SUPPORT64_20261011 -->
+
+
+<!-- BEGIN CS30_ATOMIC_SUPPORT65_20261011 -->
+### 11 October 2026 - compact atomic65 development batch
+
+Completed all eight preregistered synthetic base checks on the fixed Gemini/Vertex
+high route with a uniform 4096 total-output token cap. Complete format and unique
+same-fragment strict binding are 8/8; no truncation repair was needed. Independent
+AI review found overall-label agreement 8/8 and condition-label agreement 31/32:
+case08 C2 falsely supports attribution of an unidentified validation entry to R7/V.
+Selected mandatory witness trails are complete for 20/23 conditions and 5/8 cases;
+case01/07 C3 cite only one side of the two-entry identity bridge. All 33 quotes
+bind literally; gap tags are allowed in 13/13 instances. Labels and literal
+bindings do not establish complete witness trails or human Gold.
+
+Added the explicitly called offline `generation/atomic_support_compact_v1.py`,
+its prompt and nine tests. Main verification passed 37 targeted tests and Ruff;
+eight free replays exactly reproduce the original saved bindings. Existing strict
+core, default checked workflow and route settings are unchanged. No model opinion
+is promoted to semantic truth; default production integration remains absent.
+
+New actual cost is USD0.0527026 with UNKNOWN0; prior immutable cost USD0.22909566
+gives USD0.28179826 combined. Eight of at most twelve allowed requests were used;
+four conditional repair slots expired unused at closure. Adapter complete-return
+median is 6.6166847 s; nearest-rank sample p95 is 8.6864077 s (n=8, the maximum).
+These are synthetic checker timings, not native page or unified RAG acceptance.
+
+See `docs/execution/20261011-atomic-support65.md` and the single aggregate public
+JSON `docs/execution/evidence/20261011-atomic-support65.json`. Canonical task and
+acceptance files, old records and data are preserved. Human ratings remain null
+and project completion remains false. Next: fix entity attribution and selected
+identity witness coverage before default semantic integration; finish the existing
+human/scientific RAG and native-page acceptance work under its own controls.
+<!-- END CS30_ATOMIC_SUPPORT65_20261011 -->
+
+
+<!-- BEGIN CS30_ATOMIC_SUPPORT65_CONTINUATION_20261011 -->
+### 11 October 2026 - atomic65 remaining four and deterministic workflow integration
+
+Latest explicit authorization reused four unused slots in the original grant;
+it closes at 12/12 POSTs, USD0.0797293, UNKNOWN0 (earlier-series combined
+USD0.30882496). Seen regressions: labels 2/2 overall and 8/8 conditions, proof
+cases 2/2. New controls: labels 2/2 and 8/8, proof cases 1/2. Missing actual
+pass-premise citation and one gap-type mismatch remain, so the semantic candidate
+stays outside default automatic acceptance. No more prompt/request iteration.
+
+Integrated same-fragment unique quote-coordinate repair into existing atomic core
+and CLI with explicit bind_quotes/--bind-quotes; default strict and product checked
+paths are preserved. Added nine integration tests; Main46 tests/Ruff and12 free
+saved-output replays passed. The existing atomic65 report and aggregate JSON were
+extended; no new report files. Original results/JSON fields and document prefixes
+are retained. Human/native/RAG/global completion remains unestablished.
+<!-- END CS30_ATOMIC_SUPPORT65_CONTINUATION_20261011 -->
+
+<!-- BEGIN CS30_RAG_PAIRED66_20261011 -->
+### 11 October 2026 - paired RAG66 free preparation and dated page readback
+
+Closed atomic prompt iteration remains closed. The separate 12-question public
+DEV evaluation has 36 frozen matched E0/dense/hybrid request bodies, 120 exact
+public evidence slots and 38 preregistered required facts. Free normal-adapter
+capture verifies all 36 body bytes; independent review has zero mismatches;
+three Root preparation scripts passed Ruff. The initial free ImportError and
+successful actual-interface correction are preserved. New provider/auth/DB/
+network operations are 0; new quality and generation timing are null.
+The unchanged original scorer passed 48 synthetic math/failure-denominator checks;
+pending cohorts stay null under the explicitly documented caller lifecycle rule.
+
+Earlier different SciQ DEV results are mixed (E0 F1 .6388889, dense .6111111,
+hybrid .7083333; EM 7/12,6/12,6/12). Latest retained native full-page display is
+41.1449 seconds on 10 October, n=1, Haiku 5.5; that runtime is closed and current
+runtime, stable p95 and independent quality remain unqualified. Designated
+support Recall@5 is 10/12 for each retained retrieval arm, not corpus recall.
+
+The stage's authorized USD1/40-POST cap must fit verified project headroom;
+36-request hold is USD0.1837320 (limited40 USD0.2096568). Current global usable
+headroom is unresolved; no fee authorization is requested again and old holds
+are not released. Finite configuration/ledger lookup identified cumulative
+overlaps but did not prove current headroom. The recent .30882496 is only a
+scoped subtotal; the Haiku .03 UNKNOWN/later .09 campaign relationship is
+unresolved. Next: obtain the current global financial-only reconciliation and
+execute the frozen ordinary workflow only after financial admission. Evidence:
+`docs/execution/evidence/20261011-rag-paired66/phase-status66.json`; extended
+existing report `docs/execution/20261009-same-condition-rag-protocol.md`.
+Canonical registries, historical evidence and all protected data are unchanged.
+<!-- END CS30_RAG_PAIRED66_20261011 -->
+
+
+<!-- BEGIN CS30_RAG_PAIRED67_68_LEDGER_20261011 -->
+### 11 October 2026 - diagnostics67 passed; matched RAG68 stopped before submission
+
+The approved matched execution stopped at the original credential/transport
+entry: `ORIGINAL_CREDENTIAL_OR_PUBLIC_TRANSPORT_UNAVAILABLE`. Its retained
+terminal receipt records zero provider attempts/closed answers, 36 unexecuted
+slots and this scope's known API cost/UNKNOWN transport hold USD0. This is an
+execution stop, not automatic-approval rejection or a project-wide zero-spend
+claim. The same original `127.0.0.1:15433` endpoint timed out in one approved
+TCP-only probe after 2.0169574s; no application bytes/auth/DB query/provider
+request were used by that probe. The service/database's deletion and complete
+credential failure cause are not established. Preserve the stopped directory;
+no alternative key/fixture/fallback/retry or old denied-controller restart.
+
+The 12-question E0/E1/HYBRID_R2_MINILM public DEV study retains matched frozen
+normal Gemini/Vertex low short-answer packets and source-only AI standards.
+Quality, paired changes, support/completeness and generation latency are null;
+unexecuted outcomes are not converted to zero-score completed experiments.
+Offline audit confirmed all36 slot scores and arm/paired cost comparisons null;
+it did not call the original aggregate with pending rows.
+Before execution, four free synthetic controller counterexamples passed for
+durable numeric-cost protection and literal/JSON-escaped secret withholding;
+independent final static review passed. These are experiment infrastructure
+repairs, with no Main product-function change. `provider_latency_ms` would be
+the Main adapter timing; `normal_adapter_wall_ms` is controller-inclusive and
+both exclude native full-answer page time. No calls reached that boundary.
+
+Ten unchanged synthetic failure-diagnostics tests separately passed: 10/10,
+zero failures/errors/skips, pytest 4.87s, wrapper 5.4420293s. Independent
+read-only review confirms JUnit/log/receipt and four unchanged Main sources.
+Old timeouts/interruption remain preserved. The observed local Windows asyncio
+self-pipe hang preceded the first TestClient route; the approved local-loopback
+run required no product fix, installation or further reboot. This does not
+upgrade AC-44 native real-flow acceptance.
+
+The successful `/key` GET at 08:17 UTC reported USD49.8018967 daily key
+allowance, not cash. Account cash and exact global retained obligations remain
+unknown. The previous inference that missing optional measurements must block
+the independently authorized batch is superseded: current scope is maximum
+40 POSTs/USD1, with 36 planned and no retries/extras/judges, retaining all old
+UNKNOWN/reservations/STOPs. Actual current-scope failures stop execution.
+Original phase66/quota files remain immutable historical evidence.
+
+The finite public recovery lookup could not bind 15433 to the exact original
+existing service/container, persistent volume and start-only command. Records
+for 15432/55459 cannot substitute. Recovery ownership/command remain unknown,
+without proving deletion or a Docker-daemon cause; startup-state clarification
+is pending and fee authorization is unchanged. No recovery command was chosen
+or run. Next: establish that original resource binding/startup state before a
+start-only restoration; preserve the closed scope and real/protected databases.
+Latest retained native page is still 41.1449s on 10 October, n=1, runtime closed;
+fresh native qualification, stable p95 and human quality remain open. No project
+completion claim or canonical registry change is made. Existing report:
+`docs/execution/20261009-same-condition-rag-protocol.md`; new evidence:
+`docs/execution/evidence/20261011-rag-paired68/`. Every old prefix, evidence,
+database, experiment input/result and delivery remains preserved.
+<!-- END CS30_RAG_PAIRED67_68_LEDGER_20261011 -->
+
+
+<!-- BEGIN CS30_FINAL_CHECKPOINT69_76_20261011 -->
+### 11 October 2026 - completed matched RAG results and remaining native-page blocker
+
+The [formal RAG69 results](../execution/20261011-rag-paired69-results.md) are now in Main with all 36 complete public answer records and frozen scoring evidence. Each condition has 12 scheduled, closed, valid answers. E0/E1/HYBRID_R2_MINILM token F1 is 0.4774556002/0.5420380174/0.5441463917; strict EM is 0/12 in every arm. The unblinded AI source-fact review finds explicit coverage 27/38, 32/38 and 32/38, with all required facts explicit in 7/12 questions in every arm. These exposed, source-conditioned DEV observations do not establish heldout correctness, human Gold, quality non-inferiority or hybrid superiority. Current-cohort known cost is USD0.0185022 for exactly 36 normal compact-generation requests; current-cohort UNKNOWN is zero. Component times and native page time have separate boundaries and denominators.
+
+The original existing PostgreSQL container and volume were restored start-only and their isolated fixture identity verified; no database was recreated. Native startup scopes 70, 71, 73, 74 and 76 remain stopped and preserved. No real question, fresh session/job or model POST was submitted in these attempts. In the latest normal-page attempt, the Node child exited 1 after its start receipt, with stdout zero and stderr 10 lines/309 characters; safe class/code/frame extraction yielded no diagnosis. The concrete observed blocker is premature child exit, with its exact cause UNKNOWN. Owned threads/resources closed, all five tracked old metadata arrays remain byte-identical, active pointers are unchanged, and this native scope's known cost and UNKNOWN hold are zero. Fresh Send-to-complete-answer time remains null; a startup failure is not a model-quality result.
+
+Four synthetic pre-send browser comparisons reached fresh-session preparation and deliberately denied sending; they made zero real DB/model requests. Their first cleanup-unconfirmed receipt is retained; later three owned processes closed, and the stdin-thread-at-receipt caveat remains explicit. These comparisons did not reproduce the real failure. Further repeated controller startup probes were stopped. The next local fix is to simplify the bespoke control channel and capture the premature process failure while observing the original normal product login/chat path, retaining exact new-session/new-job restrictions and the approved provider envelope. There was no automatic-approval rejection in these current execution actions; earlier denials are not bypassed.
+
+The new Main source is [frontend/tests/e2e/composer-route-mock.spec.ts](../../frontend/tests/e2e/composer-route-mock.spec.ts), exactly the reviewed 17,083-byte candidate (SHA256 6776bccd5645e5ddffa3945c9f4e44d63a1bace15f7b4a0695405048bf0b0fbe). Its actual six Playwright tests passed with strict no-emit TypeScript, zero retries/failures/skips; a separate eight-case synthetic browser run also passed. The integration preserved 68 prior frontend source pins. These results cover route-mocked composer Enter/Shift+Enter/IME guards and follow-up behavior; AC-44 remains IMPLEMENTED_UNVERIFIED for real-flow acceptance. Human ratings, physical IME/independent hardware checks, common-version clean installation and formal warm native p95 acceptance remain open. Project completion is false.
+
+The [checkpoint evidence](../execution/evidence/20261011-learning-assistant-checkpoint69-76/index.json) joins the actual stopped-native receipts, source-only scope projection, independent closure/score-publication reviews and exact UI test integration evidence. All previous document bytes, canonical registries, old STOPs/UNKNOWN fee protections, protected Week09 databases, experimental inputs/results and prior deliveries are preserved. No installation, database deletion, remote push/upload, deployment or course submission was performed.
+<!-- END CS30_FINAL_CHECKPOINT69_76_20261011 -->
+
+
+<!-- BEGIN CS30_MINIMAL_NATIVE79_20261011 -->
+### 11 October 2026 - direct product browser channel and checker publication blocker
+
+The [compact terminal evidence](../execution/evidence/20261011-native-minimal79.json) records the completed direct-Node/official-Playwright static interaction and current product read-only login checks. The normal product channel subsequently logged in, created a fresh empty session and submitted the authorized public Calvin-cycle question. Local test selectors and response-wait handling were corrected. A read-only replay of the first failed task's nine public evidence records reproduced the nonexistent ReleaseChunk.eligible attribute and verified the corrected current active release/member checks and asset_id mapping. No Main product source was changed in this continuation.
+
+Two fresh message tasks for one distinct public question text are preserved: the first stopped before any model POST on the local boundary incompatibility; it was not replayed. The second used exactly four normal model requests (generation, joint check, semantic repair, joint recheck) and ended CHECKER_INCONSISTENT with REQUIREMENT_SOURCE_QUOTE_INVALID. The product published no answer. The worker-to-failure observation is 39,960.702 ms; this is not complete-answer page latency. Send-to-first-prose, Send-to-complete DOM, refreshed answer/citation recovery, TTFT and stable p95 remain unmeasured; completed-answer n is zero. The browser's 210-second observation bound is a failure timeout, not a successful latency sample.
+
+All four native POSTs settled at USD0.0362947 with native UNKNOWN protection zero. This period now has 40/40 requests and known USD0.0547969 including unchanged RAG69's 36 requests/USD0.0185022. No further online request was made after the cap. Inspect the saved final checker source quote offline before any new bounded online scope; preserve strict quote validation rather than publishing the rejected draft. API, exact worker, browser and owned Vite closed; both test ports have no listener, while original PostgreSQL15433 remains running. Five tracked old metadata groups stayed unchanged, including the prior failed task and active pointers. Canonical registries/AC-44, prior STOPs/UNKNOWN fee protections, protected Week09 data, experimental inputs/results and old deliveries remain preserved. Project completion remains false.
+<!-- END CS30_MINIMAL_NATIVE79_20261011 -->
+
+
+<!-- BEGIN CS30_CHECKER80_NATIVE81_20261011 -->
+### 11 October 2026 - source provenance repair, native publication and retained quality gaps
+
+The [source and native results](../execution/20261011-checker80-native81-results.md) and [terminal evidence](../execution/evidence/20261011-checker80-native81.json) supersede the earlier native publication blocker only at this single-case scope. Original79's final checker output was already persisted in the isolated DB; exact bytes and all 71 public fragments were recovered. A cross-fragment quote under one fragment caused its strict rejection. Main now has bounded reason diagnostics and per-fragment literal evidence instructions in reliability_v5.py, checked.py and joint_check_v5.txt, plus 17 regression cases. Related units passed 142/142; the original saved reply remains rejected. No gate, source-fragment identity, wire schema or four-call/180-second task bound was loosened.
+
+The separately authorized eight-request/USD0.50 envelope is closed at six physical requests/USD0.0666352 with UNKNOWN zero: native80 failed strict checking after three requests, while native81 published after three. Old40/USD0.0547969 remains closed and unchanged. Native80's async-observer negative latency is excluded and its valid completed-answer count is zero. Native81's actual normal Send-to-complete-DOM observation is 35.8717s, n=1; reload retained body and all 11 displayed citation buttons, and Sources reopened. TTFT, stable p95 and comparative speed remain unmeasured.
+
+Independent exposed-case AI source review confirms the core functional explanation, while retaining incomplete literal support for the named 3-PGA predicate, an ambiguous G3P-export/six-turn antecedent and an unnecessary partial-answer caveat. No explicit scientific contradiction was established; standalone correct-answer quality remains unestablished. Any revised answer requires normal checking; no failed draft or published answer was silently rewritten. Human/heldout quality, common-version clean installation, formal native p95 and AC-44 real-flow acceptance stay open. Canonical registries remain unchanged and project completion is false. Owned runtime resources closed, original isolated PostgreSQL15433 stays running, and all prior data, evidence, old protections and deliveries are preserved.
+<!-- END CS30_CHECKER80_NATIVE81_20261011 -->
+
+
+## CS30_CHECKER82_NATIVE83_20261011
+
+Checkpoint82/83: [report](../execution/20261011-checker82-native83-results.md) and [public evidence](../execution/evidence/20261011-checker82-native83.json). Generic prompts, optional default-off CPU preparation and explicit opt-in full-input v2 are adopted; default v1 and all publication/source gates remain. Post-live legacy compatibility and test-fixture repairs passed 4286 unit tests plus 215 subtests, 21 optional SDK skips, zero failures/errors; focused119/27 and six-file Ruff passed. Three wrapped interface functions passed with27 schema files byte-identical; original scripts.verify.all was not run.
+
+Four native tasks failed; ten actual requests settled at USD0.0963751, numeric UNKNOWN0, independent ledger audit PASS. Latest checker OUTPUT_TRUNCATED at4096 cap; no final validated checker or answer, complete-DOM n0. The5-10s native target, human Gold, heldout scientific/RAG acceptance, AC44 and project completion remain unqualified. RAG69 remains exposed DEV comparison only; its36 requests/USD0.0185022 are separate and are not charged again. Current paid period is closed without further requests. All owned runtime processes closed; original isolated DB, protected Week09 staging, experiment inputs/results, old reports and canonical registries are retained.
+
+Handover: runtime source pins and final post-live pins are distinct in the evidence; legacy getter/test fixes were not live-retested. Preserve closed82 remainder-consumption marker and all old financial/STOP/UNKNOWN receipts. Do not infer model correctness from structural rejection or treat failed worker duration as completed-answer latency. Cold-empty delivery self-reference behavior, original full verification and fresh permission-denied Git metadata read remain documented limitations.
+
+
+## CS30_CHECKER84_FIXED_EVIDENCE_20261011
+
+Fixed original-text IDs are adopted behind the explicit, default-off output policy; full original input, joint evidence, coverage, negative judgments and original publication gates remain. Final Main targeted verification passed 24 tests in 1.43 s; four-file Ruff and format checks passed. The earlier coordinate 105-test and checkpoint83 whole-suite results remain historical, not final-B reruns.
+
+One fresh normal page journey published a complete answer in 11.0384 s (n=1), preserved body and five citation buttons after refresh, and reopened Sources. Both provider replies finished with stop; checker output was 1386/4096 tokens. Two physical requests settled at USD0.0121762, UNKNOWN0, with no repair or retry. The original envelope is now closed at 12 requests/USD0.1085513/UNKNOWN0; stage01 zero-use closure and all prior allocation markers are preserved. Original unsorted HTTP byte equality is NOT_ESTABLISHED.
+
+Independent exposed-case source review supports the three core topics, including literal 3-PGA, but retains unit-level selected-evidence gaps and an omitted glucose/six-carbon-product qualifier. Overall scientific qualification, unseen/human quality, the 5-10 s target, formal latency qualification, common-version clean installation, original full verification, AC-44 and project completion remain open. RAG69 remains the separate exposed DEV cohort: 12 answers per arm, all-required-facts 7/12 per arm; no superiority or pooled native timing claim. API, exact worker, browser and owned Vite closed; original PostgreSQL15433 remains running. Protected Week09 data, all original experiments and prior deliveries are untouched; canonical task, acceptance and reporting registries remain unchanged.
+
+See [report](../execution/20261011-checker84-fixed-evidence-results.md) and its portable evidence index for exact pins, failed-receipt preservation and remaining acceptance. Next work is a bounded citation/scope repair with full fresh checking on a new version and a frozen unseen cohort, followed by free common-version verification; no closed numeric request scope is reopened.
+
+
+## 2026-10-11 — Phase85 preserves executed and post-trial source versions
+
+Pre-trial CAS changed the two source-relation V2 prompts to retain quantity scope and each supported unit's own selected proof. Exact preimages and the executed39-source descriptor remain preserved. The frozen eight-question trial ended with three attempted failures/five unrun under permanent unsafe-transport stop, two requests/USD0.0135132/UNKNOWN0, zero published answers and zero DOM samples. Independent teacher-draft citation gaps remain; no final checker raw/typed result, model PASS or exact checker parse cause exists.
+
+After closure, Root adopted generation/checked.py's derived-only zero-call fallback repair, followed by opt-in conversation/query_v23.py and integration in config, answering service and practice context. Original live opt-ins/gates remain unchanged; programmatic_only prevents unchecked fallback generation. Query V23 preserves original text/coordinates, delegates unmatched forms to V22 and retains semantic clarification. Default remains V22; no old command, trial or policy is migrated or enabled.
+
+Post-trial migration totals five code targets/two durable tests. Actual Main GenerationService entry3 and direct query6 controls pass; seven targets pass Ruff. Candidate10 hooks/13 affected/6 portable are separately qualified. These are free local controls, without full SQL/API/model quality or page acceptance. Exact CAS preimages and failures, including the corrected VERSION fixture, remain preserved.
+
+The current43-source snapshot has three changed members of frozen39 (checked/config/answering service), separately adopted existing practice consumer and three added files (query/two tests). Independent current-Main readback is recorded. The finite observer5-PASS candidate remains W-only, outside frozen/current Main. All stopped claims, old phase84 evidence, experiment inputs/results, user changes and protected databases are preserved; original PG15433 is retained and owned API18029 closed.
+
+Supporting checkpoint: [report](../execution/20261011-checker85-prospective-quality-results.md), [trial source39](../execution/evidence/20261011-checker85-prospective-quality/source-pins85.json), [post-trial source43](../execution/evidence/20261011-checker85-prospective-quality/source-pins85-posttrial.json), [readback](../execution/evidence/20261011-checker85-prospective-quality/independent-posttrial-readback85.json) and [permanent stop](../execution/evidence/20261011-checker85-prospective-quality/cohort-stop85.json). Canonical registries remain unchanged; no project-wide completion or reopened model window is recorded.
+
+
+## 2026-10-11 — Phase86 scoped source migration
+
+CAS adopted generation/lossless_unit_findings_v1.py's complete-record instructions and generation/providers.py's trusted decode classification/stage; preimages and original refusal semantics remain retained. Added a bounded assignment-reference branch to opt-in conversation/query_v23.py and appended actual source/provenance/negative regressions to tests/unit/test_query_v23.py. DefaultV22 and semantic gates remain unchanged. Main query13 PASS/0.40s and Ruff PASS verify local software only.
+
+The [Phase86 checkpoint](../execution/20261011-checker86-diagnosis-and-local-repairs.md) records seven unsuccessful quality rows/six questions, followed by one strict-schema HTTP400 component: combined8 attempts/knownUSD0.0465392/UNKNOWN protectionUSD0.0714688. No later paid attempt or numerical zero settlement occurred. Rows05/08 and answer citation gaps remain open. Old results, raw inputs, preimages, original journals, protected Week09 resources and canonical registries remain retained. Nine small supporting records/current four-file pins were published locally; there was no remote upload or deployment.
+
+
+## CS30_CHECKER87_LOCAL_SOURCE_MIGRATION_20261011
+
+Root CAS-adopted conversation/query_v23.py's generic fresh current-message eligibility, the explicit generation/single_selection_findings_v2.py codec and finite dispatch in generation/providers.py, generation/service.py, generation/checked.py and backend/app/core/config.py. Direct textbook V2 teaching now requires short_answer:null without suppressing full body content. Appended generic literal given-rule provenance to generation/prompts/source_relation_check_v2.txt. Added five portable unit test files for query eligibility, codec preservation, dispatch, teacher contract and wire failure controls. Default V22/default checker policy and original full input/validators/publication gates stay unchanged.
+
+After all live runtimes closed, changed only reference_instructions in lossless_unit_findings_v1.py/single_selection_findings_v2.py and trusted finite classification in providers.py. Every preimage is retained in W; exact CAS paths/hashes and final13 pins are in [source changes](../execution/evidence/20261011-checker87-bounded-regressions/source-changes87.json). Live06/07 used earlier source pins; final instruction compliance is not live-verified. Free final generation67/7.25s, query27/0.53s and Ruff4 pass; overlapping earlier test totals are not added again. Failed original raw outputs remain rejected.
+
+The [checkpoint](../execution/20261011-checker87-bounded-regressions.md) preserves all seven stage-specific API outcomes, independent scientific gaps, 15POST/USD0.0918119/UNKNOWN0, the separate old strict86 UNKNOWN0.0714688, old/candidate wire-byte mismatch and DOMn0. All runtime-owned threads closed and five old metadata arrays stayed unchanged. Canonical registries were not marked complete; protected Week09 data, original experiment inputs/results and old deliveries remain. One current request slot remains and is not enough for a fresh two-call checked answer. Continue known-source condition/citation/completeness repairs under a new complete normal check scope; do not treat structural PASS as scientific truth or reopen old claims.
+
+
+### 2026-10-11 — Phase88 continuation and evidence
+
+Current `generation/checked.py` SHA2b675807b299c2d802eda90ef6dfd10beaeac9a7737ec2dfe40279f66862515b; current unit suite 4,532 PASS/21 skips/40 warnings plus 215 subtests. Two fixture-only corrections retain production eligibility. Case12 independent answer QA PASS; Case10b's fresh answer passed independent scientific and own-source review (four claims, nine units and four requested facets); one qualified Send-to-complete-DOM sample is 20.4371 s. Refresh preserved all prose and nine citation labels, and Sources reopened. This exceeds the 5–10 s target; n=1 establishes no stable p95, LLM TTFT or speedup. LOW component codec FAIL and recognizer negative missed; no LOW default activation. Final Phase88 21 POSTs/USD0.2307916/UNKNOWN0; no retry or new trial entitlement. Old case10 startup-stop records and missing API/financial closure remain preserved with separate zero-POST reconciliation.
+
+Report: `docs/execution/20261011-checker88-common-contract-results.md`; one evidence folder `docs/execution/20261011-checker88-evidence/`, unified results SHA256 `e665bb53c1c92eb252410653a708fbee31bf2243e0701551895521ddfa85aa03`. Protected inputs/results, prior deliveries and existing document prefixes retained. Course/project completion remains false: scientific false-release/false-block reliability, heldout RAG and Human Gold, AC-44 warm-p95/quality margin, clean/full-workflow verification, physical-device and final owner deliveries remain open. Continue from these exact source/configuration/quality bindings; do not reuse old claims or promote historical DEV/API timings to heldout/page acceptance.
+
+
+## 2026-10-12 DEV89 source B software repair and bounded A results
+
+One input-only lossless V1 selection-index repair is current in Main (codec 8c830694...efa56; sixteen-file B source 369bba3c...b2fc). Free B verification passed 198 relevant tests and the full 4532 tests plus 215 subtests, with 21 skips/40 warnings and Ruff PASS. The first native 0xC0000005 unit crash is preserved; a finite sys-capture retry passed under the unchanged isolation guard.
+
+Actual model evidence remains source A: eight frozen DEV cases/32 facets, 4/8 published and 2/8 independent science QA passed; two distinct pages had 0/2 quality-qualified complete DOM results. The 17.9623-second DNA DOM result failed required unit proof, while the older 20.4371-second qualified page remains one historical sample. New cohort 28 POST/USD0.4056684/UNKNOWN0; all owned processes/threads closed and old metadata retained. The frozen nonpage24 reservation blocks B affected/control retesting; fee authorization is present and USD2 was not exhausted. No B quality/speedup, 5–10-second/p95/HumanGold/full-course success is claimed. No additional requests or cap changes occurred.
+
+See [DEV89 unified report](../execution/20261012-dev89-quality-latency.md) and its single final evidence archive. Keep all original user changes, protected databases/experiment data, old deliveries and unresolved prior financial records. Next model work needs a revised finite allocation, affected/control-only B evaluation and fresh independent page QA.
+
+
+Repair90 source-to-target handover (2026-10-12 UTC): the existing production B16 index repair was actually retested on three exposed DEV89 questions in a new independent 24-POST/$1 cohort. Outcomes: QA 0/3, technical publication 1/3; exact-input Qwen/Alibaba disabled-reasoning contrasts versus Gemini/Vertex HIGH preserved context/schema/evidence and did not justify default adoption. Actual total 9 POSTs/$0.108428272, settled9/UNKNOWN0. No further production code edit or prompt loop; prior B 4532-test evidence retained without rerun. Local candidate controllers were prospectively frozen and old 18 ledger records preserved; before future Main/controller changes, revise historical scan live-pin coupling without retagging historical evidence. Append-only report/evidence delivery is `docs/execution/20261012-repair90-checker-retest.md` and `20261012-repair90-evidence`. Previous DEV89 2/8 and 28/$0.4056684 remain separate. Full learning-assistant/course and qualified latency acceptance remain open.
+
+
+Checker91 implementation checkpoint (2026-10-12 UTC): one new default-off generation/experimental_fixed_id_checker_v1.py (cfa5948069edcbddcc504a59fac7cf178c58bb743ac13d2b691974e9397e991f) freezes targets and legal reference maps in program code; no application hook/default change. Existing B16 version 369bba3c1ba0e0007b346142988ccc3a242e13505e22513a1a13166a2fe4b2fc is retained. 64 finite contract controls and ten runner groups passed; six real-source positive/negative pairs were labeled offline. Actual six POSTs/USD0.0605504 settled6/UNKNOWN0 stopped on one invalid inner JSON at case08/b02 (line6/column7/offset79, stray hyphen before refs). No retry, more same-direction request or full-suite rerun.
+
+33 legal decisions: 28 agree, three false support certifications, one false insufficiency, one direct-No substantive N/A; eight invalid and twenty NOT_RUN targets remain unassessed. No new answer/publication/DOM quality or latency qualification; old answer QA0/3 remains separate. Selected-evidence entailment and strict JSON reliability block default adoption; full project/course completion remains false. See docs/execution/20261012-checker91-fixed-id-results.md and its single small reproduction zip/readback. Source-to-target copy is recorded; existing document prefixes, old experiments/reports, protected DB/data and other projects are preserved.
+
+
+Checker92 configured-model comparison (2026-10-12 UTC): fixed-ID candidate remains default-off/cfa5948069edcbddcc504a59fac7cf178c58bb743ac13d2b691974e9397e991f; production B16 and private profiles unchanged. Only the new standalone Week10 controller and frozen fixtures are delivered inside docs/execution/20261012-checker92-reproduction.zip, with report 20261012-checker92-configured-model-comparison.md. Actual configured deepseek-flash and gpt-6-luna received identical six-task messages without teacher/gold labels. 12/12 requests were structural/legal; all20 rows independently reviewed. DS6/10 correct+4 false certification; OpenAI6/10 correct+3 false certification+1 false insufficiency (status-only7/10 is not selected-proof PASS).
+
+Original inhibitor-unit false refusal and joint-continuation controls passed both; generic negatives failed both. Activity missing-bridge negative passed OpenAI but its complete bridge positive was falsely refused; DS showed the opposite pair limitation. Neither checker is eligible for adoption. Separate usage-derived cost upper bounds: CNY0.011802 and USD0.00093060, six observations each/UNKNOWN0; no invoice claim or currency conversion. All12 physical slots closed, no retry/additional request/full-suite rerun. Old UNKNOWN and prior answers/data preserved. No DB, default, teacher/app publication/DOM or other window Week9 report change. Complete local negative and full-answer acceptance, heldout RAG/HumanGold and qualified latency remain open; course/project complete=false. Existing ledger prefixes retained exactly.
+
+
+Checker93 offline contract checkpoint (2026-10-12 UTC): copied the reviewed isolated scoped_assertions93.py to generation/scoped_support_contract_v1.py, SHA adcadddb0efee912348e7c132c7e1db42b81e53f9b8396ca29ebffdb93a0af20, default-off and unregistered. Full parents/anchors, actor/scope/direction/conditions/causal premises, own selected proof and four server-bound basis kinds are preserved; derivations reuse the pinned existing AST-only Decimal calculator with operand object/scope, applicability and units. Fresh 13 control groups/Ruff2 pass; 16 new diagnostics and all8 paired controls pass, new-positive admission8/8. Original10 guard outcomes are READY4/BLOCKED5/UNRESOLVED1, old-positive admission4/5; actual20 selected-only projections are READY7/BLOCKED11/UNRESOLVED2, blocking all7 old false support certificates. Original full-bridge science labels and both historical model6/10 results remain unchanged; implicit-condition representation is unresolved, not scientifically disproved. Digest integrity is not source entailment, decomposition or condition-completeness proof. No model/auth/DB/install/full-suite/default/other-project/Week9-report/remote action. B16 and old candidate/registries/deliveries retained. The first schema-failure receipt is kept separate from adapter and final-source proof. See 20261012-checker93-scoped-support-candidate.md and its single small reproduction zip/readback. Trustworthy annotation production, full-answer semantic/publication checks, heldout RAG/HumanGold and qualified latency/course acceptance remain open; project_complete=false. Git metadata recheck was Permission denied and not retried. Existing ledger prefixes retained byte-for-byte.
+
+
+### 2026-10-12 — Phase94 local verification handover
+
+Phase94 raw-field extraction shadow prepared; actual execution blocked before process creation by automatic approval twice, including the sole unchanged-action retry with additional source/authorization evidence. 8 planned sample views (6 distinct parent/focus pairs, 5 questions), 0 POSTs, 0 assessed, 8 NOT_RUN; CNY0 new spend/UNKNOWN protection. Quality, false certification/rejection, recall/abstention and actual latency remain unmeasured, not zero or model failures. Free isolated controls 8/8 PASS; no credential loader, DB or Git retry. Old unresolved activity replay remains SOURCE_SEMANTICS_UNRESOLVED from the authored application leaf; original qualitative scientific judgment retained. All48/56 source texts/views belong to the exact four-book public OpenStax release; saved URLs, version/date/hash and embedded CC BY-NC-SA4.0 license checked. 39 individual-book mappings and all fragment physical-page locators remain open. No learner identity/history observed in sendable messages; gold/server annotations and credentials are excluded. Historical blanket possibly-nonpublic wording corrected in a separate audit without altering original send bytes. Further egress is stopped pending exact user scope authorization; no further retry/alternate provider under the supplied general transcript evidence. Fee authority remains valid. No default activation or project-completion claim.
+
+Source-to-target: isolated `5703-checker94` report and bounded evidence package to the new dated execution documents, plus computed readback and two append-only ledger entries. No Main source/runtime, protected Week09 data, previous evidence, other project, install, upload, deployment or course submission changed. Continue from the same frozen v2 inputs only after exact send-scope approval; otherwise retain NOT_RUN metrics.
+
+
+### 2026-10-12 — Phase94 actual-result handover
+
+The exact send-scope user reply enabled the original frozen official DeepSeek shadow. 2 physical POSTs completed HTTP200/finishstop; the first two ownership failures closed the once-only run and left6 NOT_RUN. Original contract binding0/2; all15 quotes are exact/unique, with5 supplied focus .A owners where the interface requires parent .P. Independent blind field review frozen before model/guard reveal:14 target slots6 faithful/5 omitted/3 N/A;77 emitted source slots49 faithful/2 overall-qualifier omissions/1 method-as-condition/25 N/A. These correlated slot counts are not population accuracy. PolI target preserves1/3 explicit components; unused anchors/source frames cannot complete its missing target actions. Catalyst versus enzyme population difference is preserved. Actual selected proof stays distinct from offered-unselected F014. Both semantic guards NOT_RUN: certification/rejection/recall/abstention metrics remain null. Added complete POST times3.4339061/4.6465711s; early local failure0.0573/0.0681ms is not full guard cost. No native DOM/TTFT/p95/5-10s qualification. Valid usage protective upperCNY0.021882, UNKNOWN0, saved tariff not invoice. Actually sent23 source views/23 distinct texts/2601 UTF8B;6 views never sent. No new teacher generation, retry, provider switch, field repair, DB/Git/other-project operation or default activation. The previously delivered blocked checkpoint/rejections and all old finance stay intact. Candidate gate not passed; owner-domain, compound target coverage and source qualifier/role repair require controlled separate verification. Full Q&A/RAG/Human Gold/qualified native latency remain open; project_complete=false.
+
+Source-to-target: separate actual report/evidence ZIP/computed readback from isolated5703-checker94 to three new execution documents, plus two append-only ledger entries. No Main production-source, protected Week09 data, previous evidence, deployment, upload or course submission changed.
+
+
+### 2026-10-12 - Phase95 explicit focus binding and failed finite regression
+
+Added four unregistered experimental field-extraction modules. Input-generated .A-to-.P mapping fixes all five original/current claim-anchor owner mismatches without raw or semantic repair. Fifteen binding controls, five fake runner groups, five paired manual semantic controls, four raw package replays and eight compiled-input comparisons pass; targeted AST/Ruff pass. Actual unchanged S01/S02 two POSTs completed but strict structure0/2 and independent descriptive semantic fidelity0/2: S01 all-null-array anchoring/cause attachment; S02 record-list shape, means-as-causal/temporal-role errors despite3/3 target actions. Remaining6 NOT_RUN; gate closed. New saved-rate cost upperCNY0.021334, UNKNOWN0, not invoice; full extraction POST3.6685342/2.9560024s, no native answer/p95 qualification. Original Phase94 failures, raw responses, selected-proof limitations and old finance preserved. Free-only literal-format-v2 candidate passes3 shape controls/eight wire checks and retains real failures; live/semantic pass unmeasured. No default/app hook, DB/Git/install/other-project/remote/course action; project_complete=false. See docs/execution/20261012-checker95-focus-binding-and-format.md and 20261012-checker95-evidence.zip.
+
+Source-to-target changes: isolated Phase94 baseline/Phase95 adapter and generic prompt become four new generation/experimental_field_extraction_* modules by reviewed relative-import transforms. Scope/calculator dependencies match existing repository bytes. Current production files, default registration and original evidence are not replaced.
+
+
+### 2026-10-12 - Phase96 closed format test and smaller span boundary
+
+Completed format-v2 same-input two-request official DeepSeek regression. Original strict parser unchanged; all5 claim bridges/6 source quotes valid, but structure0/2 and independent raw semantics0/2. Both first failures TARGET_SLOT_NOT_ANCHORED; static non-derived calculation objects also invalid. S02 core3/3 actions present but exonuclease method absent from values, temporal condition misrole and direction omissions; S01 because attachment still wrong. Remaining6 NOT_RUN, guards NOT_RUN/support rates null. New saved-rate cost upperCNY0.019214, UNKNOWN0, not invoice; complete added POST3.6770459/2.3612982s. Stopped prompt direction without retry. Added unregistered/default-off span and quote-span prototype modules: program-owned IDs/containers/coordinates; finite semantic labels remain unreviewed, lexical closure/selected eligibility do not certify support. Corrected overlapping quotes and full explanatory dependency selection closure, preserved before-fix code/receipts;32 core+8 quote controls pass, legacy6 outputs not rewritten,38 quotes recoverable only. Same-setting compiled quote wires6277/6186B vs actual10221/10036B; no model latency/accuracy gain claimed. Extra observed serial2.36-4.65s not justified by current zero passing pair. Proposed same-case native inventory10POST/CNY1.70 is blocked, not reserved/run; no native/p95/HumanGold/full-project completion. Old delivery/finance/DB/user data and production defaults preserved; no Git/install/other-project/remote/course action. See 20261012-checker96-format-results-and-span-prototype.md, evidence zip and full-path inventory.
+
+Source-to-target: reviewed span_interface96.py copied exactly to experimental_span_extraction_v1.py; quote_span_interface96.py copied with only its relative package import changed. No registered consumer or default hook.
+
+
+### 2026-10-12 - Phase97 single quote candidate and exact execution blocker
+
+Single reviewed quote-only candidate frozen for unchanged S01/S02; five offline controller groups and independent narrow admission PASS. Automatic approval review rejected actual_root97 before execution because trusted authorization was not recognized as specifying original answers/textbook payload to official DeepSeek. New physical POSTs0/costCNY0/UNKNOWN0; first2 NOT_RUN, remaining6 NOT_ADMITTED, exact sending question pending, no retry or bypass. Format/localization/proposition/support actual results NOT_RUN, no model or native improvement claimed. Original claims/selection, prior real failures/finance and defaults preserved. Recovered only original isolated named-volume PostgreSQL15433 after exited/refused state; now healthy/TCPtrue, no authenticated fixture verification or DB tests. Native templates found but old different-model/question batch closed; current S01/S02 runtimeprofile and consumer unresolved. Existing light checker/citation repair feasibility recorded only; broader proposed hook withdrawn after canonical shared source view inspection and seven affected pure controls, no reachable leak reproduced. No additional extractor or production code introduced, no unsupported claim narrowed. No full-answer DOM/RAG/p95/human/project completion. See 20261012-checker97-quote-interface-readiness.md, exact sending review, evidence and readback.
+
+
+### 2026-10-12 - Phase97 exact authorization and interrupted-batch recovery
+
+Verified S01/S02 scientific input is original authorized subset: original fullparents already in actual P94 messages, samequestions/foci/23sourceviews/selection, no new scientific content. Generic quote format differs; wholebodies notbyteidentical. Historical same-action reviewretry still rejected beforeprocess. New direct user exact12+11block/fullparent scope approval received; normalapproval accepted unchanged action. Accepted launchsession73088 then terminated1073807364; readonly recovery finds sealpresent, oneS01claim/holdCNY0.05, no settlements/usage, responses0B, summaryabsent. Actualdispatch/providerchargeUNKNOWN; retainfullCNY0.10 protection, notzero-spend/current0calls. S02no recordedclaim atreadback, remaining6NOT_ADMITTED, no persistentoutput for4axisreview. Exactownedprocessquery failedCimException, closureunverified; noaccessbypass/blindkill/controllerresume/APIreplay. Oldruntime logs/seal/zero-callcheckpoint preserved without backfilledsummary. No newproductioncode/DBtests/defaultactivation/RAG/nativecompleteanswer/p95/projectcompletion. Further batch must separatelybind identity and accountforoldunknown; do notresendunfinalizedrequest. See 20261012-checker97-interruption-recovery.md, recovery-evidence.json and recovery-readback.json.
+
+
+### 2026-10-12 - Phase98 free durable-request recovery and independent two-case preparation
+
+Final inactive helper persists reservation, intent, actual local body handoff, response commit and saved-tariff observation. Eight independent affected edge probes pass (six durability/type/corruption gaps plus two injected-callback hardening checks); Root final-source real ephemeral localhost fixture sends one dummy HTTP request and passes five stages. No provider/key/DB/new real lease. Old Phase97 remains interrupted/unsettled, dispatch and cost UNKNOWN, full CNY0.10 protection retained; no live-log reconstruction or replay. Exact original S01/S02 data scope accepted; new 99_S01/99_S02 plan has proposed CNY0.10 cap uncommitted, scoped old-plus-new CNY0.20 only if admitted. Format/localization/proposition coverage/source support remain separately unmeasured; six cases closed. Full native complete and qualified DOM answer times, TTFT and p95 unmeasured. Production/default/canonical registrations unchanged; project_complete=false. See 20261012-checker98-durable-request-recovery.md, evidence.zip, next-two-checklist.json and readback.json.
+
+
+### 2026-10-12 - Phase99 two actual quote-only samples: NO_GO
+
+Separately admitted independent99 batch completed2 direct officialDeepSeek requests, HTTP200/stop/complete savedraw and ordered five-stage response-before-meter journals. Both unchangeddecoder results QUOTE_SPAN_SCHEMA (wrapped role entries instead of bare pairs); structuralpass0/2, no output/schema adaptation or retries. New saved-tariff upper CNY0.028212 (.014998/.013214), newUNKNOWN0; old97fullUNKNOWNCNY0.10retained, no oldlog reclassification or globalinvoice claim. Complete extraction exchange6.0368702/5.1744139s and earlydecode.4144/.3422ms; not nativeDOM/TTFT/p95 or controlledspeedcomparison. Independent raw localization/coverage diagnostics do not promote runtime admission or semantic support. OriginalS01genericcatalyst scope and S02allthreefocusactions/selectedF013 preserved; no narrowing/borrowingunselectedF014. Remaining6/extraquoteextraction/conditionalnativeQA CLOSED. Alternative reusesexistingnormalchecker plus existinglocalclaimpatch/fullfreshrecheck; solebadordinary-sourceclaim protected-empty localitycandidate underisolatedverification only. No production/default/canonical changes claimedhere; projectcompletefalse. See 20261012-checker99-two-sample-outcome.md, actual-results.json, evidence.zip and readback.json.
+
+
+### 2026-10-12 - Localrepair100 bounded ordinary source-only claim patch installed
+
+Applied reviewedgeneration/checked.py eligibilityfix ce58 and appended5nativecases4965 to existing source-relation testfile via exactCAS/twooriginalpreimages. Eligible empty-protected ordinary no-attempt direct E1 textbook typedV5/sourceV2 drafts with healthy non-body gates and source-only defects now use existingClaimPatch instead of fullanswerrewrite; hint/metadata/requirement/mixed/unknowncontexts unchanged. Existingcompiler/parser/protectedtext/alloriginalquestionrequirements/fullfreshjoint_recheck/publication/callbudget retained; no newextractor/schema/provider/defaultconfig. 14authoredin-memorybeforeaftergroups and5prospectivecasesPASS; installedactualMain2affectedfiles43passed0.97s incl5newcases, Ruff2PASS. These are fakeadapter orchestration/negativegate controls, not modelscientific accuracy or nativeDOMlatency. NoAPI/realDB/protectedstaging/otherproject operations after99. OriginalS01/S02questions/targets/selections/failedgraphs unchanged; remaining6/extractioncontinuationclosed. Prior99newupperCNY0.028212/newUNKNOWN0 andold97UNKNOWNCNY0.10retained, no invoice/globalledger claim. Nativecomplete/qualifiedDOM/TTFT/p95unmeasured; projectcompletefalse. See 20261012-localrepair100-empty-protected-claim.md, evidence.zip and readback.json.
+
+
+### 2026-10-13 Australia/Sydney - Native105 S01 page and matched retrieval evidence
+
+Four synthetic browser journeys retained: initial16K CONTEXT_LIMIT before any provider call, then three live checked published/refreshed/source-reopened answers. Cold-reference DOM24.3501s; primary query-vector-warm R0/R2 DOM21.5363/19.4613s, one exposed S01 per arm. Actual query matches and vector hits verified; both release-index hits false, so not fully warm or causal/p95 evidence. Online requested-help completeness passed; limited AI source review raises collision-force/no-change simplification concerns, no independent quality winner/human grade. Exactly6 HTTP200/stop calls, conservative official peak-tariff upper CNY0.252778, newUNKNOWN0, shared6/.50 cap's request ceiling exhausted, no retries; prior97UNKNOWNCNY.10 retained. All owned browsers/API/worker/frontend resources closed and old records/active pointers preserved. Free future Engine-bound readonly prewarm proves same-release miss-to-hit11.1884ms, no API/DBwrites and unchanged production cache source. Main production/defaults unchanged; all module/formal-study/current-common-package gaps retained, project_complete=false. Added3 new local report/results/evidence leaves only, preserving old ledgers/evidence/data. See docs/execution/20261013-native105-s01-rag-and-page-timing.md and its results/evidence siblings.
+
+
+### 2026-10-13 - Native106 free quality and wait diagnosis
+
+Joined all three saved S01 native answers, citation text and phase timings: online source fidelity/requested fact coverage PASS, but limited offline scientific rigor NOT_ACCEPTED due collision-force/absolute invariance simplifications (and narrow activation-energy definition in102/104), human scores null. R0 dense5/term screen, inherited BM25 branch not executed; R2 dense/BM25 RRF20 plus pinned CPU MiniLM then relevance/packing8. No live local patch occurred; exactly generation+joint_check each. R0/R2 21.5363/19.4613s include release validation6.5070/6.7963s and checker10.710/7.928s. Native105 11ms is second release snapshot prewarm only, not retrieval/answer. Added future controller helper/patch using exact worker Engine and first read-only transaction with existing source/epoch gates, preserving historical controllers and production cache/defaults. Final80 affected synthetic controls PASS1.06s/Ruff PASS; zero new provider/key/DB connection. Three new local report/results/evidence leaves; previous105/source/data preserved. Future one fresh R2 page inventory proposes2 POSTs/CNY.32 with exact rebinding, NOT_RUN; old6-slot batch closed. No new extractor, early publication, speed/quality/p95/general RAG or project-complete claim. See docs/execution/20261013-native106-free-quality-and-wait-diagnosis.md.
+
+Source-to-target: new W-only matched_prewarm106.py/future integration patch and frozen saved-evidence diagnosis into new public report/results/ZIP; production files unchanged, ledger prefixes preserved.
+
+
+### 2026-10-13 - Science107 generic source-context generation scope
+
+Installed one reviewed V2 generation-prompt paragraph: old2475B prefix79f993 preserved plus1086B generic contextual subject/condition, overall-vs-intermediate change and definition-vs-example guidance; new783636. No S01 answer, new extractor, checker/repair eligibility/compiler/schema/budget or default-policy change. Shared V2 system rule reaches generation and existing localpatch; fresh complete checker unchanged. Added9 authored adjacent science/default/patch controls d838d4; installed43 affected tests (34existing+9new) PASS0.71s and RuffPASS. Native105 historical wording is traceable to source teaching simplification plus unqualified generation; old source-only online PASS is not scientific qualification. No old answer rewritten, no current live quality/repair/speed gain claimed; human ratings null. Engine prewarm106 is a separate version, unchanged. Zero new provider/key/DB connections/dependency installation/remote/other-project actions. Added3 new local report/results/evidence leaves; current27 protected pins verified. Future source pins must rebind107; old6-slot batch stays closed and no paid request admitted here; project_complete=false. See docs/execution/20261013-science107-source-context-scope.md.
+
+Source-to-target: exact W candidate append to generation/prompts/source_relation_generation_v2.txt and new tests/unit/test_source_context_scope107.py, installation preimages/readback retained in W; independent reviewed docs/ZIP copied as new leaves and ledger prefixes preserved. Native105/106 evidence and all original source/data/experiments remain unchanged.
+
+
+### 2026-10-13 - Native108 actual combined-version S01 result
+
+New independently authorized2POST/CNY.32 batch completed generation+fulljointcheck only, no retry/extractor; teacher/checker HTTP200/stop and returneddeepseek-flash. Normal synthetic browser fullDOM12.7217s PASS with complete persisted text/citations, refresh/source reopen. Native106 exactEngine prewarm10.5459s outsideSend; measured release-cache HIT3.5075ms/queryhit/queryjointrue, retrieval0.6294s inclMiniLM0.5155, teacher2.326/checker8.413s. Science107 paragraph actually present once but fullbody byte-identical104; collision-force/absolute invariance/bond-breaking-only Ea unchanged, shortanswer repeatsnarrowdefinition. Limited independent scientific effect NO_GO, no core omission; online7source-literal supported/full is not scientific certification. CNYupper.081228/newUNKNOWN0/requestceiling2 exhausted; old97fullUNKNOWN.10 and oldsixslotclosure retained, no invoice/globalbalance. Owned browsers/API/threads/Engine closed and newfrontend stopped after PID/config verification; originalPG retainedhealthy, old5metadatagroups/activepointers unchanged. Preserved zero-call initialrunpy localimportfailure; fixedlauncher only. No Mainprod/defaults or otherproject/DBschema/data deletion/dependencyinstall/remote/course change. Added3 new report/results/evidence leaves with fullraw inputs/outputs/timing/budget/closures;27prior plus3science107pins protected. Combinedversion observation is not single-factor causal speedup, stablep95,5-10s or scientific noninferiority; projectcompletefalse. See docs/execution/20261013-native108-combined-version-real-result.md.
+
+Source-to-target: isolated Native108 fresh scope/controller/rawresponse/closedjournals and bounded readonlytrace into new public experiment artifacts; priorNative105/106/Science107 reports and generationprompt remain unchanged, ledger prefixes preserved.
+
+
+### 2026-10-13 - Checker110 free complete-context compatibility
+
+Installed one opt-in V2 checker prompt append with original6730B prefix retained; final8882B af234ce. Positive proof remains each claim/unit's actual cited selected allowed fragments. Explicit relevant complete-context restrictions/counterexamples may locate subject/condition/time/net-vs-transient/definition-vs-route defects in existing reason/status/flags and recommend repair IDs; uncited context never becomes positive proof. Different conditions/no explicit counterexample are not automatic failures; no model familiarity, source deletion, S01 answer key, new extractor/schema/repair eligibility/compiler/default change. Force remains an open scientific concern without an explicit supplied counterexample; old Native108 NO_GO and answers retained. Added12 authored controls, final55 software tests PASS0.89s plus Main Ruff/format; judgments scripted, no live model-effect claim. Test repo formatting fixed with exact AST equality and both original/final receipts preserved. New provider/key/DB/remote/dependency-install actions0, spend0. Prepared native111 sameS01 inventory pins38selected sources, max3officialPOST/CNY.40, NOT_AUTHORIZED_FOR_LIVE and runtime_NOT_REBOUND. Direct generation/check=2; required patch/fullrecheck graph=4. Under3 cap reject after2 and do not send patch or skip full recheck. Old97 fullCNY.10UNKNOWN/native1082calls.081228upper/prior6slotclosure unchanged; no paid batch reopened. project_complete=false. See docs/execution/20261013-checker110-context-compatibility.md.
+
+Source-to-target: W reviewed checker candidate to generation/prompts/source_relation_check_v2.txt and authored test to tests/unit/test_checker_context_scope110.py; one-time CAS/fstat/fsync/exclusive install with34 predecessor protections, then repo-format-only AST-equal test adjustment. Separate public report/results/evidence and append-only ledgers preserve every old source/data/experiment/delivery. Full native and scientific validation NOT_RUN.
+
+
+### 2026-10-13 - Native111 real Checker110 S01 result and invalid continuous DOM observation
+
+New separately authorized4officialDSPOST/CNY.40 scope ran exactly generation/check2requests, bothHTTP200/stop/deepseek-flash; knownpeakupperCNY.081148/newUNKNOWN0/no retry/fifth/extractor. Newbatch closed; old97fullUNKNOWN.10/oldbatches unchanged. Actual compiled wire/response hashes match and Checker110af234 fullsystem exactlyonce with all8texts/64fragments retained. Checker8claims/18units allsupported/true, own-citation proof valid; independent limitedAI scientificscope NO_GO for net-vs-temporary change and generalEa bond-breaking definition, body3/4 plus short8. Force assertion absent in this teacher draft, not causal checker correction; useful protein/RNA/rate/Ea/bondmaking/freeenergy core retained. No reject/patch/recheck occurred, live repair unvalidated. Original browser asyncwait predicate prematurely acceptedPromise, nulltimestamps yielded invalid-991.5ms/PERSISTED_JOINfailure; raw retained, normalized Send-to-complete answer/refusal null, no native timing/PASS/p95 claim. Backend answer persisted, separately0model ordinarybrowser readback verified samebody/6citations/refresh/Sources. Fake3observercontrols reproduce error and verify synchronous futurehelper without rerunning paidbatch. Actual worker retrieval.970302s/teacher2.123s/checker8.134s/beforeinsert12.055614s/beforecommit12.247912s; prewarm10.172280s outsideSend, not substitutes for DOM. OriginalAPI busyclose409 lateridle200, worker/Engine/browsers/readbackAPI closed; newfrontend stopped afterexactPID/exe/config; originalPG retained. Old5metadata groups/activepointers and38Mainsourcepins unchanged. OfficialpublicHTTP200 pricingpeaks2/8 verified afterwebtimeouts(notpermissiondenials), engineeringupper notinvoice. No Mainproduction/dependencyinstall/remote/otherproject/course change, no authentication content exported. Three new public report/results/54entryevidence leaves plus appendledgers; project_complete=false. See docs/execution/20261013-native111-checker110-real-result.md.
+
+Source-to-target: new WNative111 bounded controller/rawjournals and invalid browser receipt plus readonly exacttrace/free persistedUI recovery/futureobserver controls/limitedscience review into new local report evidence. No original answer/source/protected staging/database/experiment/delivery rewritten or deleted. Remaining scientific false-positive/context qualification and unavailable continuous browser latency are explicit; unused slots not repurposed for paidretry.
+
+
+### 2026-10-12 UTC - Observer112 lifecycle fix and unregistered qualification proposal
+
+Installed three reviewed verification helpers: browser_terminal_observer.cjs, observe_one_submission.cjs and test_browser_terminal_observer.cjs. Candidate and installed copies pass15 route.fulfill Chrome controls: durable job/request/answer/status joins, full visible reference-rendered prose/citation order, stale/truncated/hidden rejection, refusal vs visible matching failure, invalid/restored candidate reset, denial stop and bounded exit cleanup. Two-frame reset confirmed by source review; gap control checks restoration instant only. Frozen renderer guard/preload occurs beforeSend. Seven proposal unittests with24 authored cross-concept binding combinations PASS; semantic model predictions/false-acceptance/false-rejection/science remain null. Proposal keeps original own-citation support separate from complete-context clear/needs_qualification/conflict/insufficient_evidence, exact locally resolved quotes and separately assessed candidate revision; one existing checker call, no extractor. Unregistered: no production checker prompt/schema/default/repair gate change. Offline example wire+4912B/output+3582–4614B, byte/4 only; latency scenarios not measurements/p95. Original111 raw/billing/scientificNO_GO and null continuous DOM time retained; no oldbatch reopened. Zero provider/DB/credential/remote/dependency installation/course submission actions. Git branch/worktree inspection blocked by dubious ownership; no safe.directory bypass. Project_complete=false; live observer and structured semantic integration/quality/RAG/latency acceptance remain open. Report: docs/execution/20261012-qualification112-observer-and-contract.md; results and24-entry evidence archive accompany it.
+
+Source-to-target: reviewed W112 helper candidates -> three new scripts/verify leaves, exact exclusive install/readback; separate unregistered schema/contract/pair prototype and free receipts -> three new report/results/evidence leaves. Two ledgers appended with exact original prefixes retained;72 protected predecessor/helper files hash-checked. No database, experimental inputs/results, old delivery or protected staging directory rewritten/deleted.
+
+
+### 2026-10-12 UTC - Qualification113 opt-in pipeline integration
+
+Integrated textbook_context_qualification_v1 through existing trusted settings freeze/replay, one joint checker per draft revision, canonical source quote resolution, context publication/protection gate, local repair feedback and full fresh final check. Default remains None with original107/110 prompts unchanged; old research schema constraints retained; new lane ordinary E1 textbook V2, no compact output/transport, JSONobject/schema. Explicit opt-in context-only prompt precedence keeps source judgments separate; no enzyme answer key, fabricated limit, coordinates from model, extractor, automatic candidate rewrite or verdict override. Malformed outputs fail before correction request. Correct claims remain protected and are fully rechecked. Final81 targeted controls PASS (20 new including actual-adapter fake-provider compile/parser plus61 relevant), Ruff PASS, newfiles formatting PASS. Semantic efficacy/science/native latency NOT_RUN. Prepared identical frozen S01 catalysis64/S02 osmosis54/S03 equilibrium50 source blocks; balanced12 initial checks, conditional max36 physical requests, proposed new USD0.90 cap at verified official peak0.30/1.20 perM. NOT_DISPATCHED, original coordinate fixture join pending, replay not Send/TTFT/p95. Zero real model/DB/dependency installation/remote write/course submission, no old closed budgets or UNKNOWN holds reopened. Git ownership blocks optional branch metadata only; source editing succeeded, no Git/security bypass. project_complete=false. Report: docs/execution/20261012-qualification113-opt-in-integration.md; results/evidence/comparison plan accompany it.
+
+Source-to-target: qualification112 prototype -> new generation/qualification_v1.py plus two opt-in prompts and tests/unit/test_context_qualification_v1.py; scoped changes generation/checked.py, generation/source_relations_v2.py, backend/app/core/config.py. Three exact changed-file preimages retained in W113. Four new documentary leaves and two original-prefix-preserving ledger appends; scoped7 source+2 defaultprompt pins checked without full inventory rehash. All databases, protected staging directories, experimental inputs/results, old deliveries and billing retained.
+
+
+### 2026-10-12 UTC - Qualification114 controlled checker result
+
+Resolved the frozen source preparation blocker without corpus replacement: selected-slice versus full-chunk hashes are distinct, and original S01 snapshot coordinates are preserved. All168 original blocks (64/54/50) bind with original versions; fixed full questions, six independently reviewed synthetic negative/positive controls and exact actual packet aliases frozen. Normal compiled frozen-draft checker replay retains full evidence identically with legacy_context_v1; default remains unchanged. New finite officialDeepSeek nonthinking/T0/JSONobject4096 scope max12 checker requests/CNY1.00, rolling complete-A/B-pair protective reservation; no generation, repair or retry. Twelve dummy budget/privacy/framing controls and12 normal compiler/local-gate replays PASS, no real keys/DB/network during free checks.
+
+Actual exactly3 checker POSTs: S01negative A/B valid reject (tokens17262/1194 and18463/1872; API5.878s/8.558s); S02negative B HTTP200/stop/usage18689/2541 but local QUALIFICATION_CONTRACT_INVALID due1006-character reason>800 and citation_support_exists=true with no supporting quote. Raw conflict limiter F018 is exact but invalid metadata excluded from metrics. Technical stop preserves9 NOT_RUN, no retries or batch reopening. Peak no-cache upper CNY0.153684; new UNKNOWN0; old UNKNOWN holds unchanged. Only1 valid complete negative pair,0 positives: false-accept0/1 pervariant; false-reject undefined. S01 B qualification metadata itself marked all context clear and accepted; existing source/unit/coverage gates rejected the added all-stage scope. No new context-qualification detection or incremental benefit is established; contextual reasoning gap retained. No demonstrated policy improvement, broad accuracy, full12 completion, complete browser DOM latency or p95. Source/default pins unchanged after real run; source/labels/controller/terminal financial independent reviews RELEASE within bounded scopes. Project_complete=false; remaining work is response-contract robustness and valid complete paired quality/latency acceptance.
+
+Source-to-target: W114 exact report/results/46-entry public evidence -> three exclusive docs/execution leaves; two ledger appends retain original byte prefixes. No Main code/default change, database writes, source replacement, protected staging/old experiment/delivery/billing modification, dependency installation, remote publication or course submission. Commands: prepare_packets114.py; free_controller114.py; free_replay114.py; controller114.py --execute; build_outcome114.py (ZIP index separator failure preserved, corrected final CRC/index verified). Report: docs/execution/20261012-qualification114-controlled-checker.md.
+
+
+### 2026-10-12 UTC - Qualification115 free decision transport repair
+
+Opt-in only: explanatory reasons derive bounded800/200-character records while complete raw_text, original length/hash, statuses, quotes and decisions remain retained. Hard reason16384/aggregate65536 resources, existing response/output/quote/candidate bounds kept. Qualification quotes now text-only, server uniquely binds eligible complete original source occurrence/IDs/Unicode coordinates; own positives restricted to actual selected supporting citations, supported originals require bound quotes, ambiguous/nonexistent/forged coordinates or mismatching legacy aliases reject. Redundant provider support boolean removed from new wire; historical values remain observable, never manufacture proof. Explicit technical_valid/context_accepted/rejection_kind and source/overall gate decisions expose context-clear/source-reject and old flag/quote disagreement without semantic status or answer rewriting. Strict list/dict container checks restore finite QUALIFICATION_CONTRACT_INVALID/no correction rather than TypeError; no None-to-empty filling. Default None/config/prompts and actual baseline compiled request bytes unchanged.
+
+Final105 focused tests PASS (24new+20existing qualification+61relevant), Ruff/changedmodule/newtestformat PASS; network/DNS fenced new controls. Three immutable114 reply replays technicalvalid and originalsemanticreject: S01A unchanged; S01B stillclear/contextaccept but source/unit/coverage reject, unresolved semantic gap visible; S02B1006reason derivative800 with fullraw retained, oldsupporttrue/emptyquote diagnostic retained, source/contextconflict stillreject. Replay is not a new live success, scientific efficacy or browser latency. One new S02negativeB exact checker packet prepared, operationalID115-S02-negative-B-single-check/max1/holdCNY.203632 within existing remaining scoped.846316 after closed114.153684 upper; dispatchfalse/no lease/key/intent/no oldcontroller or budget reopening. No new model/DB/credential/remote/install/corpus audit/archive action or old UNKNOWN release. Independent source review RELEASE; project_complete=false. Commands verify115.py and replay_and_prepare115.py; final receipts W115/final-free-verification and final-replay.
+
+Source-to-target: saved114 raw response diagnosis -> scoped generation/qualification_v1.py, generation/checked.py, generation/prompts/qualification_check_v1.txt and new tests/unit/test_qualification_decision_transport115.py; three exact prior source preimages retained in W115. Three concise report/results/prepared-request leaves plus two full-prefix-preserving ledger appends; all prior reports/raw/billing, databases, staging inputs/results and default source protections retained. Report docs/execution/20261012-qualification115-decision-transport.md. Remaining: smallest real single-check transport/schema-versus-semantics recheck and full quality/native complete-answer acceptance; no real dispatch authorized in this step.
+
+
+## 2026-10-12 qualification116 single real recheck
+
+One authorized request, HTTP200, API8.849s, off-peak conservative upper CNY0.027718, new UNKNOWN0; no generation/repair/retry. Qualification decision schema and five deterministic quote bindings (four distinct ranges) passed. Source verdict rejected; qualification context clear/clear/clear/conflict rejected. Complete checker remains invalid solely REQUIREMENT_GAP_UNSPECIFIED: requirement_01 partial evidence sufficiency, covered response, empty missing_information. No overall semantic sample/pair or native-page latency claim. Source/default pins and previous experiments preserved; phase95_runner terminal review RELEASE.
+
+Evidence: [report](20261012-qualification116-single-recheck.md), results and separate continuation-blocked JSON in docs/execution. Eight-request/CNY0.80 proposal is prepared only; dispatch disabled pending coverage contract resolution, refreshed controls/controller review and current pricing/window guard. No old UNKNOWN hold released.
+
+
+## 2026-10-12 UTC - Requirement117 offline axis contract repair
+
+Historical116 raw partial/covered/empty gap is provider metadata conflation, not a normalizer-created missing requirement. Submitted F015 establishes isotonic normal volume; F021/F023 establish directional movement, and the fixed draft already states these alleged missing facets. Full-bank requirement sufficiency, delivered/omitted answer parts, actual selected citation proof and context/overbroad wording now have matching opt-in schema/prompt semantics. Required explicit empty versus absent/null/whitespace is strict; derivative observes and never fills or changes semantic fields. Scoped assessor keeps every V5 gate and appends nearby proof/gap/facet contradictions. Permitted hint deferral is explicitly not a missing facet at current help level; real within-scope omission remains negative.
+
+Final137 controls PASS (32new+105existing), Ruff and three-file format PASS; source independent reviewer checker87_terminal_review RELEASE. Complete original116 replay still technicalinvalid solely REQUIREMENT_GAP_UNSPECIFIED/semantic_accept null; raw, claims/units/source/context judgments unchanged. Runnable patch W117/final-free-complete-v2/requirement117.patch, SHA2948854d59908987be38fc2cbae75006607be3e0bd36c800bf105bf5425449d0. Report docs/execution/20261012-requirement117-axis-contract.md.
+
+All8 rows/four full pairs (S02negative,S03negative,S01positive,S02positive) keep questions/drafts/sources/labels; A4bodyhashes exact, oldB4wires superseded by freshly compiled117 packets. S03positive deferred; no old116 sample reused as valid pair. Saved-rate upfront holds.822584 exceed old.80cap and originalremaining.818598; no eight-upfront admission or completion guarantee. Future normal rolling complete-pair controller must protect each pair and stop before an unfunded pair; no automatic budget expansion.
+
+Source-to-target: three exact115 source preimages -> scoped checked.py/qualification_v1.py/qualification_check_v1.txt, new requirement_axes_v1.py/test_requirement_axes117.py/public historical fixture; concise three report/result/prepared-status leaves plus two original-prefix-preserving ledger appends. Zero real provider/key/DB/lease/hold/remote/install operations; all old billing/UNKNOWN, database/staging/experiment data and deliveries preserved. Production defaults and original base V5 unchanged. Commands verify117_complete_v2.py/replay_prepare117_final.py. Project_complete=false; live semantic efficacy and native full-answer latency remain unmeasured in this step.
+
+
+## 2026-10-12 UTC - Paired118 independent batch technical stop
+
+New independent CNY1.00 cap authorizes up to8 fixed checker requests in4complete pairs (S02negative B,A;S03negative A,B;S01positive B,A;S02positive A,B), with upfront protection.822584. Old.80draft supersededthisbatchonly; no oldhold/accountlimit change. One-time wire verification retains A4exact baseline hashes/B4current117axis contract, fixed questions/drafts/sources/labels. Currentofficial1/4offpeak receipt and30min/overnight audit guard;8narrow financial/counter controlsPASS; normalcontroller review RELEASE. No broad free sweep/archive before dispatch.
+
+Actual1POST S02negativeB HTTP200/stop, tokens20026+2106,total22132, API8495.862ms, conservative newupperCNY.028450,newUNKNOWN0,unusednewreservation.714764; no gen/repair/paidretry/oldUNKNOWNrelease. Original runtime stoppedKeyError because prepared118 omitted existing public config required by local evaluator; original reviewed controller/prepared/manifest/final preserved. Free exactraw replay adds only frozenoriginal public config and independently finds wholecheckerinvalid sole MISSING_FACETS_WITH_NO_REQUIREMENT_GAP: bothrequirements sufficient/covered/empty, aggregate stillsupported_partial/completefalse names ownselected-citation proof deficits asmissingfacets. Raw/claims/units/statuses remain unchanged; qualification componentvalid clear3/conflict1, primarysource reject. Recovery doesnotreplaceoriginalstopcause oraddPOST.
+
+Sevenexactunrun slots: S02negativeA,S03negativeA/B,S01positiveB/A,S02positiveA/B; noneintent/raw/settlement. Zero valid fullchecker samples/pairs; correctness/falseaccept/falsereject undefined withdenominator0. No A/B ornativecomplete-answer latency/p95/globalmetric claim. New localcontroller-configpreflight patch+3narrowcontrols rejectmissingconfig beforekey/claim/send; correctedlocal plan dispatchfalse, stoppedclaimnotreopened. Terminalfinance/layerreview phase95_runner RELEASE.
+
+Source-to-target: frozen117eightpackets -> new independentW118controller/claim/raw/settlement/originalterminal +separatefreeevaluation/configfix; Main117code/defaultsource unchanged. Threeconcise report/results/evidence-pointer leaves plus2rawprefixpreservingledgerappends, nofullarchive. Reports docs/execution/20261012-paired118-technical-stop.md; W118actual118/originalfinal and recovered-local-evaluation118.json separate. All olddatabase/staging/experiments/holds/raw/deliveriespreserved; no remote/install/submission. Project_complete=false; aggregate axesmetadata conflict and fullquality/native latency acceptance remain open. No automaticcontinuation aftertechnicalstop.
+
+
+## 2026-10-12 UTC - Checker119 offline controller and primitive contract
+
+Source-to-target: 117 opt-in checker plus118 config/fake-path defect -> one scripts/dev/checker_fixture_runner.py actual serialization/transport/raw/durable simulated settlement/native parse/gates/score/terminal path, and dedicated opt-in prompt/wire with separate source gap and answer omission. Server derives three redundant summaries; unknown/malformed judgments reject without scientific-point invention. Original A/default prompt and old raw/paid failure/billing/holds remain unchanged. 243 tests PASS, Ruff PASS; eight intended units complete and all five recent114/116/118 saved replies use same entry. One authored FA/two FR are plumbing controls, not measured quality. Exact source/evidence hashes and receipts W5703-runner119-offline/source-evidence119-closed.json and closed-evidence/end-to-end119.json.
+
+Zero real provider/key/DB/generation/repair/retry calls; no install/remote/submission/archive. One Main report docs/execution/20261012-checker119-offline-contract.md plus byte-preserving progress/migration appends. Git ownership denial respected without bypass. Historical118 terminal/config defect unchanged;116/118 semantic contradictions remain invalid, legacy absent omission unknown. Paid batches paused; old B packets stale; actual RAG quality/native full-answer latency and project completion remain open. Separate reviewer/readback receipts verify this checkpoint, not model science.
+
+
+## 2026-10-12 UTC - Paired120 new controlled real diagnostic
+
+NewCNY1/max8 official checker batch using119core+explicit reviewed live boundary; exact119 eightcompiledpayloads/labels/sourcebindings; fixedpairs S02negativeB/A,S03negativeA/B,S01positiveB/A,S02positiveA/B; upfront.800252. Actual5POST,4validnegative results(two completepairs, A/B falseaccept0/2 each),5thS01positiveB invalidsource/quote binding(F048assignedev002instead ofactualev006), stoppedno retry;3NOT_RUN,positive falserejectundefined. Knownupper.132658,newUNKNOWN0,unusednewreservation.297102;cacheawareusageestimate.09665672 notinvoice. Generation/repair/retry/DB0, oldholds/rawfailures preserved, default unchanged. Narrowboundary key-after-public-preflight and actualurllibsend clock/pins/exactnextPOST guard;92focusedcontrolsPASS,RuffPASS,independentexecutionRELEASEmanifest8a5ffee553f070883872ae40537aad56c20239276376656f835239328f501e7a. One report docs/execution/20261012-paired120-real-diagnostic.md; W5703-paired120-real/result120.json andactual120 immutable receipts. Source-to-target: offline119runner -> optionalexplicitapprovedlive transport; onepathsame nativeparser/scorer. No archive/remote/install/submission; no automaticsealedbatch continuation;fullfourpairs/positivequality/nativefullanswerlatency/projectcompletion remainopen.
+
+
+## 2026-10-12 UTC - Source121 opaque reference interface, offline only
+
+Source-to-target:120ev/F origin mixup -> versionedsource_refs_v3 ID+quote contract; programderivesorigins/coordinates, neverstatus/science. Positiveactualclaimscope/assessed-support/unitrelation gatespreserved; separatecontextlimitingbank role; requirementfullbank;repairhints sameguard/citedunion. Strictnewversion/nofallback admission, duplicate/ambiguous/wrongorigin refusal. Defaultlegacy/A andtemplatesunchanged.272testsPASS5.26s/Ruff;6same-runner authoredcontrols;old120raw/wireexact/same2bindingerrors/nullscore,noautoheal. OnlyS01positiveB/S02positiveB prepared,121newprepidentity/no stale8pairs/offlineTrue/dispatchFalse/maxfuture2;prospective.201460savedengineeringprotectionnotfee/reservation. Independentcontract/runnerRELEASEsource-evidenceSHA1be75d965cb4a67d6b4d37cf3c61469ac2f8008bb441abedaf2c84301cef52aa. Report docs/execution/20261012-source121-opaque-reference-contract.md; W5703-source121-offline/prepared-positive121-reviewed.json andevidence121-reviewed.json. ZeroAPI/key/DB/spend/install/archive/remote/submission; oldraw/holds/databases/staging/experimentsretained; positivequality/nativefullanswerlatency/projectacceptance stillopen;no livecalleractivated.
+
+
+## 2026-10-12 UTC - Positive122 bounded real diagnostic contract stop
+
+NewCNY.25/max2 Bpositive diagnostic exact121S01B/S02B wires/source_refs interface andprogram actualcitationallowlists verified; upfront.201460 fits,currentofficial1/4prices+sendboundaryguard, independentnormalreviewRELEASEmanifest83aa93b32d4d2f73e4fb5bf27ccfe089cd7cbf9d401b4ff0fb0e4eaa74c0f9c4. Actual1POST HTTP200/stop,10630.3496ms,21228input/2849output/24077total; knownupper.032624,UNKNOWN0,unusednewreserve.098290,cacheawareestimate.03249856(notinvoice). S01positiveB technicallyinvalid CHECKER_SCHEMA_INVALID attempt_evaluation_ok bool_type: modelstringnot_applicable, exactcompiledboolean/no enablingapplicabilitymarker. Score/FRnull; S02NOT_RUN no intent/raw/settle; no retry/gen/repair. Read-onlyunchangedraw lookup additionallyobservesclaim2ev005 outsideactualev001/ev004,missingorigincitations andunscoredconformation/shapepartial; no corrected evaluation/aliasheal. One report docs/execution/20261012-positive122-contract-stop.md; W5703-positive122-real/result122.json,actual122anddiagnostic122-final.json immutable receipts. Source-to-target:121preparedtwo -> newboundedrealcaller/outcomes only; Main121code/defaultunchanged. Oldholds/raw/databases/staging/experimentspreserved; noDB/install/archive/remote/submission orsealedbatchreopen. Zero validpositive samples, noA/B/fullanswerlatency/projectcompletionclaim; actualtechnicalblockerreported,nocallerresume.
+
+
+## 2026-10-13 UTC - Ordinary123 minimal QA, offline checkpoint
+
+Source-to-target: source121 rich ordinary packet and122 inactive-field failure -> explicit ordinary_qa_v1 module/prompt with qualification/checked/source_relations integration and dedicated tests. Direct/help0 ordinary E1 only; unsupported reading/attempt/hint/controls reject before generation; program attempt not_applicable, learner evaluation success null. Active answer_only remains an independent required decision mapped to native tutor gate; support/unit/qualification/requirement gates remain native. Full64/54source passages and actualclaimscopes retained; duplicate views removed, wires84738->35769 and79858->34595bytes (57.79/56.68%); local token estimates only, no speedup. 286focusedtests PASS6.10s, RuffPASS, four authored positive/negative native controls match; six explicit saved failures through minimal adapter, missingactivefields unknown/nooriginrepair,122 fullnative still OUTSIDE_ACTUAL_CITATIONS. Originals/livefailures/scores/holds unchanged. W5703-ordinary123-offline/source-evidence123.json SHA1ee37f0f96757985056eb29be547d0b37e836fbac3d98a428a4ec326504b075b binds source/artifacts/logs; final-evidence/prepared-positive123.json onlytwoDeepSeek offline/preparation inputs. OpenAI existingconfig not verified frompublicinventory; no guessedmodel/request/key. Report docs/execution/20261013-ordinary123-minimal-qa.md. ZeroAPI/credential/DB/install/archive/remote/submission, paidpaused; protecteddata/default/richteaching retained. Smallrealcomparison, unifiedRAGquality/nativefullanswerelapsedtime andglobalprojectcompletion remainopen.
+
+
+## 2026-10-13 UTC - Ordinary125 two actual positive checker diagnostics
+
+Source-to-target:123/124 compiled audit found legacy relation prompt append -> checked.py ordinary-only skip and compiled-system/schema regression test; native/default/rich unchanged, preimages/124preflight preserved0calls. 287focusedtestsPASS10.87s/Ruff; exact2offlinepositive controlsacceptTrue; independentcontract/normalcallerRELEASEmanifest5d8c131143eee7170a5f5dc88a7eedc5290307ac01a4c97054cb65be66c3cb69. Actual2officialDeepSeekPOST/max2/newCNY.25, full64/54passages/question/answers/scopes unchanged; minimal6fields/nolegacygrammar verified beforedispatch. Wire12184738/79858 ->12526811/25637B, no causal speed claim. S01HTTP200/stop7305input2845output11101.2174ms, validnativejudgment butpublicationFalse/FRTrue: selectedrefs ownscope, missingoriginalclaim3ev002, ACTUAL_CITATION_ASSESSMENT_MISSING; no auto-fill, completebindingFalse, modelscientificsupported/clear/covered notindependentPASS. S02HTTP200/length6729input4096output15994.5826ms, PROVIDER_RESPONSE_CONTRACT_INVALID/unscored/FRnull. Exactly2intent/raw/settlements; knownupper.041798,UNKNOWN0,undispatchedreserve0,cacheestimate.04016728notinvoice; gen/repair/retry/DB0, oldholds/raw/defaults/protecteddataunchanged. TerminalreviewRELEASEbindsresult63b4903bb9646ffd18b6c2b03a39838a5a95baa985e2d75e5a45aa70d93ed32a andterminalfda354b407de93ec951281cb55e123be833a0c5d660bc9d6daa9cc2a5346f5c6. W5703-ordinary125-real/analysis125-final.json correctsscopecompleteness, earlieranalysispreserved; final-evidence125.json andreportdocs/execution/20261013-ordinary125-real-positive-diagnostic.md. Authorizedpublicfields-onlyprojectprofileinventoryfoundofficialOpenAIgpt-6-luna,unprobed/noOpenAIcall/nosecretexport/profilechange. No install/archive/remote/submission;2callallocationconsumed/nofurtherpaidaction. Open: completeoriginalcitationassessment, boundedcompleteS02output, unifiedRAGquality/nativefullanswerDOMtiming/globalprojectcompletion.
+
+
+## 2026-10-13 UTC - Compact126 structural citation/output checkpoint
+
+Source-to-target:125 missing original citation assessment and length-stop output -> explicit ordinary_qa_compact_v2 pre-enumerated G/C/unit/R contract, pointer-only evidence carrier, native normalization integration and QA-only incomplete-verification classification. S01 exact replay now INCOMPLETE_VERIFICATION with acceptance/FA/FR/correctness null; omitted C3ev_002 supports shape-change clause, no scientific rejection inferred. S02 exact length replay remains technical/unscored; old125 raw/results/holds unchanged. Full64/54 source passages/default/rich preserved. New-only context12/requirement16 pointers, normalizer default8 unchanged; nine-proof fullnative control passes. 298testsPASS12.97s/Ruff; authored actual-case positives pass, missing/unknown/irrelevant/truncation/offscope/ambiguity controls verified. Compact positives370/350 local tokens; stress2971/2835 cl100k, canonical byte bounds5878/5894 are not provider token bounds. Keep4096, no larger arm/speed guarantee. Existing public nonsecret inventory/docs verified DeepSeek deepseek-flash/OpenAI gpt-6-luna; actual fenced serializers prepare2cases x2providers with identicalmessages/schema/fullsources/T0/4096, OpenAI max_completion_tokens/reasoningnone; account access untested, no real calls or credentials. Inherited prep pending-inventory wording is superseded by completed inventory/capability/comparison artifacts. Independent contract and runner RELEASE source-evidence126 SHA86ff7fad28f3f450c8b1a3715ebb48e4a040e6c79ebc3b6f9c4d15727c029f42. Report docs/execution/20261013-compact126-citation-output-contract.md. NoDB/install/archive/remote/submission; protecteddata unchanged. Live compact quality, unifiedRAGquality/nativefullanswerDOMtiming/globalcompletion remain open.
+
+
+## 2026-10-13 UTC - Compact127 actual same-input provider diagnostic
+
+Source-to-target:126 offline frozen compact fixtures -> bounded actual checker-only127 diagnostic, existing deepseek-flash/gpt-6-luna official endpoints, same questions/answers/full64/54 sources/schema/T0/4096 and positive labels. Separate CNY0.25/USD0.05 caps; protective reservations .183806CNY/.02379595USD. Actual checker requests 4; no generation/repair/retry/DB. Outcomes [{"id": "deepseek-S01-positive-B", "status": "VALID_SEMANTIC_RESULT", "technical_valid": true, "complete_citation_assessment": true, "semantic_accept": true, "false_reject": false}, {"id": "deepseek-S02-positive-B", "status": "TECHNICAL_STOP", "technical_valid": false, "complete_citation_assessment": true, "semantic_accept": null, "false_reject": null}, {"id": "openai-S01-positive-B", "status": "VALID_SEMANTIC_RESULT", "technical_valid": true, "complete_citation_assessment": true, "semantic_accept": false, "false_reject": true}, {"id": "openai-S02-positive-B", "status": "TECHNICAL_STOP", "technical_valid": false, "complete_citation_assessment": true, "semantic_accept": null, "false_reject": null}]; totals {"deepseek": {"currency": "CNY", "known_upper": "0.037508", "unknown_hold": "0"}, "openai": {"currency": "USD", "known_upper": "0.00466700", "unknown_hold": "0"}}. Missing/invalid/truncated assessments unscored, original125 raw/results/holds unchanged. Independent predispatch reviews,5metering+2strictcontrols; exactwire audit/TTL/pins, larger-observed UNKNOWN protection and affected-provider stop. Maincode/defaults/profile/protecteddata untouched. Report docs/execution/20261013-compact127-provider-diagnostic.md; W5703-compact127-real resultSHA ef4abd1a70d60754969a938f87cec498757f30be445b7e3aa403d12381b9da48. Smallpositive-only diagnostic not providerwinner/globalquality/speedup; unifiedRAG/nativefullDOMtiming/globalcompletion remain open.
+
+
+## 2026-10-13 UTC - Citation128 free scope diagnosis and detached repair
+
+Source-to-target:127 sharedS02 quote-scope failure -> exact9pointer/source/role diagnosis, independent science/citation review and body-only detached citation preparation helper +tests. Scientifictext sound under membrane assumptions; originalcitation-positive label provisional, no old labels/scores/raw altered. DScredit/tonicity andwrongcontextquotes unsupported; validnormal-volume caption outsideoriginalC1 needscitationaddition; OAsameev004unselecteddefinition notfullproof andC2/C3Q19length1132violates600role. Minimalcandidate addsC1ev003/C2,C3ev004, C4same; globalcites andalloriginalscientificbytes/shortanswer preserved; fresh7groups,54fullsources/60quote pointers unchanged, fullfinalrecheck mandatory/publicationFalse/nooldverdictreuse. 312testsPASS9.66s/Ruff; actualS02 authored completepositivePASS, outsideproofNullscore, genuinelywrongdirectioncompletevalidnegative. OA01G5I contradictsavailableS18shape-clause support, sevenfminus remainunchanged; no modelwinner. Existingcompactoutput/default/runtime source unchanged. Finalprepared onefutureS02checker capCNY.10hold.093266; proposedonebrowserS01live gen1024+checker4096 max2 capCNY.25 worst.190112, currentmodelcalls0. Browsernotready: nativeGenerationRequest omitsqualification_source_transport; needs free-tested question/session-boundisolatedoverride andnormalcurrentservice/owner/isolation/budgetpreflight. NoDB/credentials/install/archive/remote/submission; oldholds/protecteddata preserved. Report docs/execution/20261013-citation128-scope-diagnosis-repair.md; W5703-citation128-offline/source-evidence128-final SHA c0ff37ab6cbd830cb7723bb39d54946f56e45f5418c4ebee7a11e2146e1327e6. Live recheck/RAG/browser/globalcompletion remainopen.
+
+
+## 2026-10-13 UTC - Task129 closed for urgent Week10 release
+
+Source-to-target: session/question-bound compact opt-in through normal API command and worker; config.py, answering/service.py, new qualification_transport.py and test_native_compact_transport129.py. 202 affected tests PASS9.67s/Ruff; reviewed evidence f7684342815f0b32fafc81740102f7ca03948101458d13ad1d33c120e140f9a5. One actual S02 recheck HTTP200/stop but SOURCE_REFERENCE_OUTSIDE_ACTUAL_CITATIONS, TECHNICAL_STOP and null semantic/correctness/false-reject; 8023input/439output, API2223.083ms, protective CNY0.019558, UNKNOWN0, no retry/publication. Browser S01 never dispatched; prototypes unready and not released. No paid request in flight. Week10 deadline06:00UTC, staging E:/5703/Week10-delivery-20261013, exact final_source04_with_reports_matched5_and_token_cache_20261009_01 baseline found. Snapshot/package/report work pending; no complete-project claim. Report docs/execution/20261013-native129-recheck-and-week10-release-handoff.md. Old receipts, holds, databases, experiments and deliveries preserved. After snapshot all development is Week11.

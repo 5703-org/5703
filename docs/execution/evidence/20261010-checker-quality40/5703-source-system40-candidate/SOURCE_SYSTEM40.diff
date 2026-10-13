@@ -1,0 +1,30 @@
+--- a/generation/checked.py
++++ b/generation/checked.py
+@@ -175,6 +175,16 @@
+     return json.dumps(value, ensure_ascii=False, sort_keys=True)
+ 
+ 
++def source_relation_checker_system(check_template):
++    """Keep trusted V2 selection rules in the final checker system instruction."""
++    return (
++        check_template + "\n" + SOURCE_SELECTION_INSTRUCTIONS
++        + "\nFinal schema audit: copy property names verbatim, including evidence_id, "
++        "without added whitespace in keys. Keep every required field. Emit complete "
++        "minified JSON and preserve all string meanings."
++    )
++
++
+ def _compact_claim_patch_feedback(feedback):
+     """Shorten only derived binding prose on the repair wire; retain raw checks."""
+     revised = dict(feedback)
+@@ -1901,9 +1911,7 @@
+                     check_data["SOURCE_SYNTACTIC_UNITS"] = scoped_syntactic_units(
+                         claims, binding_table, full_aliased_fragments
+                     )
+-                    check_data["SOURCE_RELATION_SELECTION_INSTRUCTIONS"] = (
+-                        SOURCE_SELECTION_INSTRUCTIONS
+-                    )
++                    check_template = source_relation_checker_system(check_template)
+                 check_data["REQUESTED_KNOWLEDGE_SCOPE"] = {
+                     "literal_learner_question": (request.prepared_query or {}).get(
+                         "original_message", request.question

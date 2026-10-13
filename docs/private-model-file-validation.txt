@@ -1,0 +1,114 @@
+Explicit offline private model-file validation
+
+This command reads only the input JSON and independent public policy JSON that
+the caller explicitly supplies. It performs parsing, schema validation and a
+static policy check. Its successful status is validated_parse_only. It does not
+authenticate a credential, verify account access/model availability, resolve DNS,
+connect to an API/database, persist a key, save/activate a model, watch a file or
+discover a private file automatically.
+
+Run from the repository root in PowerShell with explicit absolute input/policy
+paths. Add the backend import root because the command uses the repository's
+ModelValues and ConfigurationSave contracts; an editable installation is not
+assumed. The paths below refer only to independently authored example files.
+
+    $projectRoot = (Get-Location).Path
+    $priorModelValidationPath = $env:PYTHONPATH
+    try {
+        $env:PYTHONPATH = "$projectRoot;$projectRoot\backend"
+        & "$projectRoot\.venv\Scripts\python.exe" -B -m scripts.model_configs.private_file --input "$projectRoot\configs\model-file-input.example.json" --policy "$projectRoot\configs\model-file-policy.example.json"
+    } finally {
+        $env:PYTHONPATH = $priorModelValidationPath
+    }
+
+The command has no default input or policy path. It writes safe aggregate JSON
+to stdout and uses exit 0 for successful static validation or exit 2 for failure.
+Diagnostics contain fixed codes, canonical field paths and numeric entry indices.
+They omit file paths, private names/models/URLs, unknown field names, source JSON,
+Pydantic error text, provider responses and keys. Treat in-memory configuration
+objects as private: credentials stay SecretStr and result wrappers hide payloads
+from repr. Do not dump or log the returned private configuration objects.
+
+The accompanying input example is independently authored and contains blank
+credentials. Its primary selection is the explicit authored mock. The public
+policy approves only that deterministic mock identity. This example demonstrates
+parsing; it neither represents a real account nor authorizes a hosted model.
+Every key in the example is blank at creation. No statement is made about any
+other file's current key contents.
+
+Input format
+
+The input must be one strict UTF-8 JSON object with exactly format,
+consumer_status, primary_provider and configurations. The supported format is
+5703_local_private_configuration_draft_v1, and its retained consumer_status is
+draft_only_no_current_bulk_file_consumer. The consumer does not edit either field.
+Each configuration accepts exactly the existing ConfigurationSave field names:
+name, preset, config, api_key and clear_api_key. The config object uses precisely
+ModelValues fields. Empty-string or absent/null api_key becomes None before
+ConfigurationSave validation. Actual nonempty key bytes are never trimmed.
+
+Untouched secondary entries from the public twenty-entry template may be skipped.
+The eight presets, local option and eleven extended labels remain distinct public
+draft identities. A skipped placeholder never becomes a validated configuration.
+Changing a placeholder prevents that skip. The primary entry always requires
+complete schema and public-policy validation. Mock uses no key; hosted nonblank
+model configurations require a key. Local/Ollama remain restricted to explicit
+loopback destinations and approved ports. The parser never guesses model IDs,
+replaces URLs/credentials, loads tokenizers or updates model settings.
+
+Public policy format
+
+The separate public policy has exactly format, reviewed and routes. Its format is
+5703_private_configuration_public_policy_v1. reviewed must be true and records
+the caller's independent policy-review attestation, not an authenticated approval
+receipt or account/model availability. Every active route must explicitly list:
+
+  name                     Exact configuration name.
+  provider                 One existing provider enum.
+  models                   Exact independently reviewed model/deployment IDs.
+  destinations             Exact scheme, host, port and base path records.
+  destination_reviewed     Explicit destination-review attestation.
+  auth_headers             Allowed effective authentication headers (or null).
+  api_versions             Allowed API versions (or null).
+  api_styles               Allowed native/chat-completions/Responses style.
+  token_limit_parameters   Allowed ModelValues output-limit field identities.
+
+Do not copy credentials into this policy. Review the selected public IDs and
+destinations independently; the private input cannot supply its own approval.
+The approved model list is a static whitelist, not proof the account can use it.
+Authentication-header and API-version checks use the existing pure wire helper
+with a fixed authored key-presence marker, never actual credential bytes. A
+keyless local/Ollama route has no authentication header and requires null in
+auth_headers. An omitted Anthropic API version effectively sends 2023-06-01;
+the public policy must allow that version. These checks do not edit the DTO.
+Only Azure uses a declared API version in the request query. Its wire helper
+treats empty as no query version, but the existing runtime contract rejects blank
+optional metadata; use null for an absent version. Other protocols, including
+mock, have no effective API version and require null in api_versions even if the
+DTO declares an unused value.
+Custom destinations with destination_reviewed false remain blocked. Hosted routes
+require HTTPS port 443 and exact approved base paths. Local routes require an
+explicit localhost/127.0.0.1/::1 host and approved port. Credentials in URL userinfo,
+query/fragment data, unsafe addresses, URL controls and explicit port zero fail.
+
+Azure may use host "*.openai.azure.com" only when the destination also contains
+reviewed_hosts with the exact reviewed resource host(s). Matching one syntactically
+valid DNS resource label under that suffix is necessary but insufficient: the
+actual hostname must also be in reviewed_hosts. Nested labels, suffix tricks,
+leading/trailing hyphens and unreviewed Azure resources do not pass.
+
+File and schema boundaries
+
+Both paths must identify absolute regular files. UNC/device paths and alternate
+data streams are rejected on Windows. Parent and final symlinks/junctions/reparse
+points are rejected; file identity is checked again after opening. Reads are
+bounded to 256 KiB. The input supports at most 64 entries and JSON depth 16.
+Duplicate JSON keys at any level, duplicate configuration names, unsupported
+versions, unknown fields, NaN/Infinity and malformed JSON fail safely. Capability
+version/profile metadata must be paired, use strict nested primitive types and
+agree with the configured provider and output settings. No provider/tokenizer
+transport is used to validate these declarations.
+
+This command does not import or activate the validated configurations. Any later
+import, live connection test, account/model verification, activation or experiment
+execution is a separate explicit workflow with its own recorded outcomes.

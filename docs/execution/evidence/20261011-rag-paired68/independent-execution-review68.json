@@ -1,0 +1,72 @@
+{
+  "schema": "5703_independent_execution_review68_v1",
+  "status": "STATIC_BOUNDED_NORMAL36_EXECUTION_REVIEW_PASS",
+  "controller": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-rag-paired68\\run_paired68.py",
+    "bytes": 15263,
+    "sha256": "7346a1ad30a2c3a09005b37e674b3f21eb5314f3d97b397e78328e652f0fbe93"
+  },
+  "fixed_inputs_sha256": "c1b4c60cefc9777f75f3d63be37bab22fa280ec2f006c2eaf78823a652bb321c",
+  "authorization_correction_sha256": "052e50c45c1b8bd485a75f00981c98529b9bb7595ef1e9d026a7473a063b2456",
+  "approved_credential_consumer_sha256": "b19fdfd53bfccb64e617a8203ed7947bc73ae2c2897a22908de7380dd5e29b6c",
+  "free_counterexamples": {
+    "path": "free-controller-validation68-04.json",
+    "bytes": 1064,
+    "sha256": "be75e7927cfe330bc20052afa6676dd75e47306e69172b48f429542c5b0102a4",
+    "source_pin_matches": true,
+    "cases": 4,
+    "reported_status": "FOUR_SYNTHETIC_COUNTEREXAMPLES_PASS",
+    "rerun_by_this_reviewer": false,
+    "real_auth_DB_POSTs": 0
+  },
+  "boundaries": {
+    "parent_maximum_requests_including_retries": 40,
+    "parent_cap_USD": "1",
+    "this_controller_maximum_POSTs": 36,
+    "this_controller_retries": 0,
+    "extra_four_requests_used": 0,
+    "external_judges": 0,
+    "planned_full_hold_USD": "0.1837320",
+    "independent_new_scope_not_recycled_historical_allocation": true,
+    "historical_UNKNOWN_and_full_protections_unchanged": true,
+    "historical_USD10_not_used_as_latest_binding_cap_for_this_scope": true,
+    "cash_screenshot_not_added_as_gate": true,
+    "normal_LLMAdapter_with_original_memory_key": true,
+    "exact_36_frozen_packets_checked_again_at_each_transport_boundary": true,
+    "destination": "https://openrouter.ai/api/v1/chat/completions",
+    "model": "google/gemini-3.5-flash-lite",
+    "route": "google-vertex/global",
+    "reasoning_effort": "low",
+    "max_output_tokens": 768,
+    "timeout_seconds": 45,
+    "unique_scope_directory_and_fsynced_scope_claim_before_auth": true,
+    "fsynced_exclusive_slot_claim_before_each_transport": true,
+    "restart_or_duplicate_slot_cannot_silently_resume": true,
+    "UNKNOWN_cost_or_provider_error_including_402_stops_without_retry": true
+  },
+  "fixes_verified": {
+    "observed_numeric_cost_fsynced_before_answer_decode_or_result_save": true,
+    "unresolved_protection_is_max_original_hold_and_observed_cost": true,
+    "settlement_fsynced_before_reducing_UNKNOWN": true,
+    "result_write_failure_preserves_observed_finance": true,
+    "literal_and_all_parseable_JSON_strings_checked_for_original_key": true,
+    "decoded_scan_includes_schema_invalid_extra_fields_and_duplicate_key_values": true,
+    "secret_echo_clears_both_raw_and_parsed_response_and_stops": true,
+    "billing_facts_survive_secret_redaction": true,
+    "finish_reason_and_safe_numeric_HTTP_status_retained": true
+  },
+  "blockers": [],
+  "limits": [
+    "Static review and readback of root's pinned synthetic test receipt only; no live entry point, auth, binder, key, environment value, database, or network was accessed by this reviewer.",
+    "Unexpected storage/process failure stops execution. Preserve the scope/slot claims and any financial receipts; no restart or hold release is justified by a missing final receipt.",
+    "The confidentiality checks cover literal key echo and parseable JSON strings, including duplicate keys. They do not certify every possible transformed or non-JSON representation of a secret.",
+    "normal_adapter_wall_ms is sampled during row construction and includes post-return financial fsync, redaction, and local parsing. It is controller-inclusive rather than pure adapter or native-page timing; provider_latency_ms is the existing normal adapter measurement.",
+    "No actual model output, semantic quality, current native-page timing, p95, causal RAG improvement, human Gold, or held-out success follows from this pre-execution review."
+  ],
+  "independent_operations": {
+    "controller_execution": 0,
+    "auth_DB_reads": 0,
+    "network": 0,
+    "Main_writes": 0
+  }
+}

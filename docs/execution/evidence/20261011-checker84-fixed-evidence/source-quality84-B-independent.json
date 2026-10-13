@@ -1,0 +1,225 @@
+{
+  "schema": "native84_B_independent_source_review_v1",
+  "status": "CORE_OVERVIEW_SUPPORTED_WITH_LOCAL_CITATION_AND_QUANTITY_SCOPE_GAPS",
+  "reviewer": "native76_narrow_review",
+  "method": {
+    "unblinded_AI_source_review": true,
+    "independent_from_online_checker": true,
+    "human_gold": false,
+    "held_out": false,
+    "external_fact_lookup": false,
+    "scientific_certification": false
+  },
+  "inputs": [
+    {
+      "path": "5703-checker84/stage02/recovered84-B-public.json",
+      "bytes": 187449,
+      "sha256": "80c7c7794058cb56bdb90e6afc41c247139da83fa0af558e9ef23d77fc230822"
+    },
+    {
+      "path": "5703-checker84/stage02/journey-receipt84.json",
+      "bytes": 5176,
+      "sha256": "2f77f4e8a0498a5003244ac4d79101ae3999b5bc101a86c4c20817d6dee7975c"
+    }
+  ],
+  "scope": {
+    "main_writes": 0,
+    "tests": 0,
+    "DB_access": 0,
+    "auth_access": 0,
+    "network_requests": 0,
+    "paid_requests": 0,
+    "identity_or_history_exported": false
+  },
+  "delivery": {
+    "job_succeeded": true,
+    "answer_and_job_and_request_ids_match": true,
+    "question_hash_matches": true,
+    "journey_response_equals_recovered_answer_DTO": true,
+    "answer_claims": 5,
+    "syntactic_units": 15,
+    "saved_source_fragments": 71,
+    "unique_response_citation_ids": 4,
+    "rendered_citation_buttons": 5,
+    "complete_DOM_ms": 11038.400000000373,
+    "completed_answer_n": 1,
+    "TTFT_ms": null,
+    "stable_p95_ms": null,
+    "refresh_answer_and_citations_preserved": true,
+    "sources_reopened": true,
+    "short_answer": null,
+    "normal_activation_qualified": false
+  },
+  "persisted_model_gate": {
+    "validation_state": "validated",
+    "checker_contract_revision": 0,
+    "checker_inconsistencies": [],
+    "all_five_claims_and_fifteen_units_model_supported": true,
+    "body_ok": true,
+    "complete_answer": true,
+    "coverage": "full",
+    "semantic_sufficiency": "sufficient",
+    "answer_completeness": "complete_at_requested_help",
+    "human_rating": null,
+    "independent_scientific_PASS": false
+  },
+  "manual_three_subrequirements": [
+    {
+      "question_part": "What RuBisCO combines with CO2",
+      "assessment": "Core explanation supported at cited-source/parent-claim level",
+      "claim_id": "claim_4430b4ecc4095009c8cc6dd0_1",
+      "evidence_id": "ev_007",
+      "support_fragments": [
+        "F054",
+        "F055",
+        "F056",
+        "F057"
+      ],
+      "support": "RuBP is the five-carbon reactant; the reaction forms an unstable six-carbon product converted into two three-carbon compounds, fixing inorganic carbon.",
+      "selected_unit_gap": "U01 selects F053/F054, which identify stages/reactants/enzyme but not the catalytic predicate. Direct support F056 exists in the same cited parent and is selected by U02; it is absent from U01's own selection."
+    },
+    {
+      "question_part": "How the resulting compound becomes G3P",
+      "assessment": "Literal introductory explanation supported",
+      "claim_id": "claim_ca7b6a2c92a3c289dba399a0_1",
+      "evidence_id": "ev_007",
+      "support_fragments": [
+        "F056",
+        "F058",
+        "F059",
+        "F060"
+      ],
+      "support": "F058 explicitly names 3-PGA, G3P, ATP and NADPH; F059/F060 explicitly explain reduction as electron gain.",
+      "terminology_3_PGA_literal_support": true,
+      "depth_limit": "This is an introductory overview; individual phosphorylation intermediates and enzyme steps are not described by the displayed answer or these supplied explanatory fragments."
+    },
+    {
+      "question_part": "Why some G3P leaves while the rest remains",
+      "assessment": "Core export/regeneration purpose supported, with compound local-citation gaps",
+      "claim_ids": [
+        "claim_9c256c4578ed1a36aef9e4b0_1",
+        "claim_fdddb3affffe9e51bebc52a1_1"
+      ],
+      "evidence_fragments": {
+        "ev_002": [
+          "F009",
+          "F010",
+          "F011",
+          "F012",
+          "F013",
+          "F014"
+        ],
+        "ev_003": [
+          "F021"
+        ],
+        "ev_001": [
+          "F001"
+        ]
+      },
+      "support": "A net G3P is exported per three turns; retained G3P regenerates RuBP to allow further CO2 fixation.",
+      "selected_unit_gap": "The compound U01 selects F009/F011. F012/F013 supply its per-turn production/regeneration premises; carbohydrate is explicit in ev_001/F001, outside this claim's sole ev_002 actual citation.",
+      "core_user_requirement_covered": true
+    }
+  ],
+  "claim_by_claim": [
+    {
+      "claim_id": "claim_4430b4ecc4095009c8cc6dd0_1",
+      "verdict": "Parent cited source supports scientific overview; U01 selection lacks catalytic predicate",
+      "source_fragments": [
+        "F054",
+        "F055",
+        "F056",
+        "F057"
+      ]
+    },
+    {
+      "claim_id": "claim_ca7b6a2c92a3c289dba399a0_1",
+      "verdict": "Literal support present, including 3-PGA and the reduction explanation",
+      "source_fragments": [
+        "F058",
+        "F059",
+        "F060"
+      ]
+    },
+    {
+      "claim_id": "claim_9c256c4578ed1a36aef9e4b0_1",
+      "verdict": "Net export/regeneration supported; compound unit selection and carbohydrate local citation need qualification",
+      "source_fragments": [
+        "F009",
+        "F010",
+        "F011",
+        "F012",
+        "F013"
+      ],
+      "outside_actual_parent_citation": [
+        "ev_001/F001"
+      ]
+    },
+    {
+      "claim_id": "claim_2d21e1de5cdad7b913744c07_1",
+      "verdict": "Six-turn statement is supported for the referenced six-carbon product, commonly glucose; answer omits that object qualification",
+      "source_fragments": [
+        "F001",
+        "F002"
+      ],
+      "quantity_scope_gap": true
+    },
+    {
+      "claim_id": "claim_fdddb3affffe9e51bebc52a1_1",
+      "verdict": "Retained G3P regenerating RuBP for more CO2 fixation has direct literal support",
+      "source_fragments": [
+        "F017",
+        "F021"
+      ]
+    }
+  ],
+  "quantity_and_conditions": {
+    "three_turn_net_export_one_G3P_preserved": true,
+    "gross_two_G3P_per_turn_not_misreported_as_net_yield": true,
+    "gross_two_per_turn_gross_six_per_three_turns_retained_five_not_explicit_in_answer": true,
+    "six_turn_six_carbon_product_glucose_qualification_missing": true,
+    "cannot_generalize_all_carbohydrates_have_six_carbons": true,
+    "explicit_source_negation_reversal_observed": false,
+    "F010_F011_are_complementary_sentence_parts_despite_complete_block_flags": true,
+    "literal_whole_source_availability_does_not_repair_unit_selection_or_parent_citation_scope": true
+  },
+  "omissions_with_scope": [
+    {
+      "topic": "ATP used during RuBP regeneration",
+      "fragments": [
+        "F004",
+        "F014"
+      ],
+      "classification": "mechanistic depth omission; the user's introductory purpose question does not explicitly require ATP stoichiometry"
+    },
+    {
+      "topic": "ADP/NADP+ return to light-dependent reactions",
+      "fragments": [
+        "F061"
+      ],
+      "classification": "recycling detail omitted; not an explicit requested subrequirement"
+    },
+    {
+      "topic": "Gross and retained G3P counts",
+      "fragments": [
+        "F012",
+        "F013"
+      ],
+      "classification": "would clarify quantitative cause; actual net export statement is preserved"
+    }
+  ],
+  "remaining_quality_gaps": [
+    "U01 catalytic-predicate fragment selection is narrower than its own assertion.",
+    "The compound G3P unit's per-turn/regeneration premises are not fully selected, and its carbohydrate predicate lacks local ev_001 citation.",
+    "The extra six-carbon carbohydrate sentence should identify the six-carbon/common-glucose object; generic carbohydrates cannot be certified as six-carbon."
+  ],
+  "metadata_limitation": {
+    "recovered_top_level_provider_posts": 0,
+    "persisted_budget_consumed_calls": 2,
+    "persisted_generation_and_joint_check_usage_rows": 2,
+    "authoritative_financial_ledger_not_reviewed_in_this_source_task": true,
+    "note": "The recovery field provider_posts=0 is not suitable evidence for actual POST accounting; use Root's independently closed financial ledger.",
+    "no_cost_or_global_POST_total_independently_certified_here": true
+  },
+  "conclusion": "The native page succeeded for one observed answer and the three introductory user requirements are covered by available cited source material. Local unit/citation and quantity-scope gaps remain; the saved online checker PASS is preserved, and an independent overall scientific PASS is not asserted."
+}

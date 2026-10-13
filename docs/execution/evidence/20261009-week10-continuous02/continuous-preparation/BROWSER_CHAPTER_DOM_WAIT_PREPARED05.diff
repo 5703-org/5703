@@ -1,0 +1,11 @@
+--- real_browser_week10_continuous_scopes_PREPARED04.cjs
++++ real_browser_week10_continuous_scopes_PREPARED05.cjs
+@@ -564,7 +564,7 @@
+     const chapters = page.getByRole('navigation', { name: 'Textbook chapters', exact: true });
+     await chapters.getByLabel('Search chapters', { exact: true }).fill(section.title);
+     const chapterButton = chapters.getByRole('button').filter({ hasText: section.title });
+-    requireTrue(await chapterButton.count() === 1, 'SINGLE_NORMAL_CHAPTER_CONTROL_REQUIRED');
++    await expect(chapterButton).toHaveCount(1, { timeout: 15000 });
+     await chapterButton.click();
+     await expect.poll(() => observedReadingPages.has(book.id + ':' + section.id), { timeout: 15000 }).toBe(true);
+     const reading = observedReadingPages.get(book.id + ':' + section.id);

@@ -1,0 +1,40 @@
+--- R89/server88.py
++++ candidate/server88.py
+@@ -14,7 +14,7 @@
+ sys.dont_write_bytecode = True
+ BASE = Path(__file__).resolve().parent
+ STAGE = sys.argv[1]
+-if not re.fullmatch(r"(?:case01|case0[3-9]|case01r|case03r|case04r|case05r|case10|case10b|case10c)", STAGE):
++if not re.fullmatch(r"(?:case01|case08|case06|case01r|case08r|case06r)", STAGE):
+     raise SystemExit("FIXED_STAGE_REQUIRED")
+ HERE = BASE / STAGE
+ PREVIOUS = BASE.parent / "5703-native76-preparation"
+@@ -72,7 +72,7 @@
+             == case_pin.get("protocol_sha256") == protocol_pin,
+             "FROZEN_PROTOCOL_CHANGED")
+     protocol = json.loads(protocol_raw)
+-    require(type(protocol) is dict and protocol.get("maximum_physical_posts") == 32
++    require(type(protocol) is dict and protocol.get("maximum_physical_posts") == 24
+             and protocol.get("per_request_provider_calls_maximum") == 4,
+             "ROOT_INITIAL_RUNNABLE_CASE_BINDING_REQUIRED")
+     raw_scope = scope_path.read_bytes()
+@@ -141,8 +141,8 @@
+     abort = Event()
+     workers = []
+     result = {"session_id": None, "accepted": None, "worker": None, "route_stops": [],
+-              "model_calls_limit": 4, "same_period_cap_USD": "2.00", "old_queue_consumed": False,
+-              "auth_exported": False, "source_scope": "Independent DEV89 public case; normal teacher/checker/repair/recheck within four calls; shared cohort32/$2 cap; bound public question, sources, model route and privacy envelope"}
++              "model_calls_limit": 4, "same_period_cap_USD": "1.00", "old_queue_consumed": False,
++              "auth_exported": False, "source_scope": "Independent REPAIR90 public case; normal teacher/checker/repair/recheck within four calls; shared cohort24/$1 cap; bound public question, sources, model route and privacy envelope"}
+     create(HERE / "api-claim77.json", {"started_utc": scope["started_at_UTC"],
+         "new_questions_max": 1, "original_database_only": True, "old_claims_reopened": 0,
+         "case_id": scope["case_id"], "scope_sha256": case_pin["scope_sha256"],
+@@ -266,7 +266,7 @@
+         stack.enter_context(patch.object(model_service, "resolve_active_model_config", selector("expected_model_config")))
+         stack.enter_context(patch.object(model_service, "resolve_active_checker_model_config", selector("expected_checker_config")))
+         if settings.chat_checker_output_policy == "single_selection_findings_v2":
+-            require(STAGE in {"case01", "case03", "case04", "case05", "case06", "case07", "case08", "case09", "case01r", "case03r", "case04r", "case05r", "case10", "case10b", "case10c"}
++            require(STAGE in {'case01', 'case08', 'case06', 'case01r', 'case08r', 'case06r'}
+                     and scope["expected_settings"].get("chat_checker_output_policy")
+                     == "single_selection_findings_v2",
+                     "EXPLICIT_SINGLE_SELECTION_CASE_SCOPE_REQUIRED")

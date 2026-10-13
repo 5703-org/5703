@@ -1,0 +1,123 @@
+{
+  "status": "INDEPENDENT_PROVIDED_EXCERPT_SELECTED_SOURCE_ASSESSMENT08e",
+  "reviewer": "/root/answer_coverage_free_review",
+  "input_route": "Root provided unmodified exact claim/selected-fragment excerpts from ROOT_SELECTED_SOURCE_PACK08e.json through collaboration messages after child public-file reads hit automatic approval deadlines.",
+  "input_pack_sha256": "2ee4dc9be3e763f1e23dee06ab20a02817f57b9652bdf10dad2af2ce3da9fe1e",
+  "independently_read_original_files": false,
+  "independently_verified_provenance_or_hashes": false,
+  "Root_provenance_extraction_separately_retained": true,
+  "human_gold": false,
+  "actual_original_checker_labels_changed": false,
+  "required_relative_stability_definition_facet": {
+    "Dense5": "SATISFIED",
+    "Hybrid5": "SATISFIED"
+  },
+  "counts": {
+    "Dense5": {
+      "complete": 3,
+      "partial": 1,
+      "unsupported": 0,
+      "unassessed": 0,
+      "total": 4
+    },
+    "Hybrid5": {
+      "complete": 4,
+      "partial": 0,
+      "unsupported": 0,
+      "unassessed": 0,
+      "total": 4
+    }
+  },
+  "claims": [
+    {
+      "arm": "Dense5",
+      "ordinal": 1,
+      "status": "COMPLETE",
+      "selected": [
+        "ev_005/F018"
+      ],
+      "reason": "F018 directly defines the relatively stable state inside the body of an animal."
+    },
+    {
+      "arm": "Dense5",
+      "ordinal": 2,
+      "status": "PARTIAL_SELECTED_SOURCE_SUPPORT",
+      "selected": [
+        "ev_004/F014"
+      ],
+      "reason": "F014 directly supports continual organ/system adjustment to internal and external changes through homeostasis ('steady state'). It does not itself establish the added explicit goal 'to maintain a dynamic equilibrium'. That goal may be a plausible biological paraphrase, and another claim selects supporting F016, but this claim cannot borrow its unselected F016.",
+      "scientifically_false_not_claimed": true,
+      "missing_predicate": "Explicit dynamic-equilibrium maintenance goal",
+      "available_but_unselected_reference": "ev_004/F016"
+    },
+    {
+      "arm": "Dense5",
+      "ordinal": 3,
+      "status": "COMPLETE",
+      "selected": [
+        "ev_003/F010",
+        "ev_003/F011"
+      ],
+      "reason": "Continuous monitoring and each physiological condition's set point jointly cover the bounded summary."
+    },
+    {
+      "arm": "Dense5",
+      "ordinal": 4,
+      "status": "COMPLETE",
+      "field": "short_answer",
+      "selected": [
+        "ev_004/F016",
+        "ev_005/F018"
+      ],
+      "reason": "Dynamic equilibrium plus relative internal stability cover the short-answer definitions."
+    },
+    {
+      "arm": "Hybrid5",
+      "ordinal": 1,
+      "status": "COMPLETE",
+      "selected": [
+        "ev_002/F007"
+      ],
+      "reason": "Direct definition, literal meaning and life requirement."
+    },
+    {
+      "arm": "Hybrid5",
+      "ordinal": 2,
+      "status": "COMPLETE",
+      "selected": [
+        "ev_004/F017",
+        "ev_005/F020",
+        "ev_005/F022",
+        "ev_005/F023"
+      ],
+      "reason": "Dynamic balance, life-compatible parameters, adjustment, equilibrium and continuing adjustment jointly cover the compound predicates and both citations."
+    },
+    {
+      "arm": "Hybrid5",
+      "ordinal": 3,
+      "status": "COMPLETE",
+      "selected": [
+        "ev_003/F011"
+      ],
+      "reason": "Direct equilibrium-around-set-point goal."
+    },
+    {
+      "arm": "Hybrid5",
+      "ordinal": 4,
+      "status": "COMPLETE",
+      "field": "short_answer",
+      "selected": [
+        "ev_002/F007",
+        "ev_005/F022"
+      ],
+      "reason": "Life-compatible stable internal environment plus dynamic equilibrium cover the short answer."
+    }
+  ],
+  "limits": [
+    "One exposed development question",
+    "A semantic assessment of exact provided excerpts; not independently read or hash-verified by the reviewing agent",
+    "No winner, statistical accuracy, human Gold, native timing, learner benefit or whole-project completion inference",
+    "Raw four-supported/accepted labels each remain unchanged",
+    "Ordinary raw not_applicable, unchanged normalization and null learner evaluation are separate from scientific support"
+  ]
+}

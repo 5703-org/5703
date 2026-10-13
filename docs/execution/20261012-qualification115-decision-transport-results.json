@@ -1,0 +1,145 @@
+{
+  "status": "FREE_TECHNICAL_PATCH_VERIFIED",
+  "tests_passed": 105,
+  "new_controls": 24,
+  "saved_replays": [
+    {
+      "id": "S01-negative-A",
+      "original_raw_sha256": "7f25316c5c1ba2638b1587d91f348cd4478c4b99b600c8403fb66275d37932e1",
+      "original_content_sha256": "6bf2e080b1b9d8bbdb6294d8a9bbbe3173c73dc0f4ac472cac1ee3e2315462ab",
+      "technical_valid": true,
+      "semantic_accept": false,
+      "decision_fields_unchanged": true,
+      "original_raw_text_retained": true,
+      "bounded_prose": [],
+      "gate_decisions": null,
+      "local_validation_ms": 25.65340000001015,
+      "original_packet_user_data_unchanged": true,
+      "baseline_wire_unchanged": true
+    },
+    {
+      "id": "S01-negative-B",
+      "original_raw_sha256": "5ea075fa501f9554eca27a33b753e49d0c136161dc498d279280ec80c09860ce",
+      "original_content_sha256": "bdd134849ea2b73ad849ecbfad5e61d9974fba33a50f86802a27c1ac9b08334f",
+      "technical_valid": true,
+      "semantic_accept": false,
+      "decision_fields_unchanged": true,
+      "original_raw_text_retained": true,
+      "bounded_prose": [],
+      "gate_decisions": {
+        "qualification_context_accepted": true,
+        "qualification_technical_valid": true,
+        "qualification_accepted": true,
+        "qualification_rejection_kind": "none",
+        "source_relation_accepted": false,
+        "overall_answer_accepted": false,
+        "semantic_disagreements": [
+          {
+            "claim_id": "claim_19b9e595808de6beb9f1697d_1",
+            "kind": "context_clear_with_source_rejection",
+            "context_status": "clear",
+            "source_status": "partial",
+            "semantic_judgment_rewritten": false
+          },
+          {
+            "claim_id": "claim_eee180277f923411b6918542_1",
+            "kind": "context_clear_with_source_rejection",
+            "context_status": "clear",
+            "source_status": "partial",
+            "semantic_judgment_rewritten": false
+          },
+          {
+            "claim_id": "claim_8dae5758618d4b99b4b3caeb_1",
+            "kind": "context_clear_with_source_rejection",
+            "context_status": "clear",
+            "source_status": "partial",
+            "semantic_judgment_rewritten": false
+          }
+        ]
+      },
+      "local_validation_ms": 32.02980000060052,
+      "original_packet_user_data_unchanged": true,
+      "baseline_wire_unchanged": false
+    },
+    {
+      "id": "S02-negative-B",
+      "original_raw_sha256": "a573f245d8f3fbd0428a14d0acf810974a6f24e7c73f5e797858a045161ce46e",
+      "original_content_sha256": "aaf62ae1fa17097665c4061d904c9670d2c49945043499dc36ceb087aa48c2d9",
+      "technical_valid": true,
+      "semantic_accept": false,
+      "decision_fields_unchanged": true,
+      "original_raw_text_retained": true,
+      "bounded_prose": [
+        {
+          "path": [
+            "claims",
+            0,
+            "reason"
+          ],
+          "original_chars": 1006,
+          "derivative_chars": 800,
+          "original_sha256": "07abebe5898429884e92748351ec6df41984d61e73c00c2901a65d7ff5694d3b",
+          "original_retained_in": "raw_text",
+          "decision_fields_changed": false
+        }
+      ],
+      "gate_decisions": {
+        "qualification_context_accepted": false,
+        "qualification_technical_valid": true,
+        "qualification_accepted": false,
+        "qualification_rejection_kind": "context",
+        "source_relation_accepted": false,
+        "overall_answer_accepted": false,
+        "semantic_disagreements": [
+          {
+            "claim_id": "claim_586790123345b6305e02020e_1",
+            "kind": "legacy_support_flag_vs_bound_quotes",
+            "raw_support_flag": true,
+            "bound_support_quote_present": false
+          }
+        ]
+      },
+      "local_validation_ms": 33.44020000076853,
+      "original_packet_user_data_unchanged": true,
+      "baseline_wire_unchanged": false
+    }
+  ],
+  "default_changed": false,
+  "new_real_requests": 0,
+  "new_spend_CNY": "0",
+  "real_key_reads": 0,
+  "DB_operations": 0,
+  "corpus_version_changed": false,
+  "raw114_responses_modified": false,
+  "old_UNKNOWN_holds_released": 0,
+  "semantic_verdicts_rewritten": false,
+  "source_pins": {
+    "generation/checked.py": "7c2ce56cd2f34cc71e7c01127e372b808a6c2a2fc50f5a79441f4a0c61ac6958",
+    "generation/qualification_v1.py": "baa914545351cc74f48fa5224af7126f5b525d8739bd41eafe13063a54ea4346",
+    "generation/prompts/qualification_check_v1.txt": "965126a1b8bd45f9b20db542aa48be23a554501a64bd8b3fe02d9b883bbadb37",
+    "tests/unit/test_qualification_decision_transport115.py": "5391c586534475b3ad66d95c8939c6aa815dc9983c689ed2119557bd46cda9f1"
+  },
+  "default_and_predecessor_pins": {
+    "E:\\5703\\learning-assistant\\generation\\source_relations_v2.py": "5e05e481bca165e954d80926d936b63c59e76a53a8c06af91274347ba0a7e21e",
+    "E:\\5703\\learning-assistant\\backend\\app\\core\\config.py": "20211d6a68f6df7fb502838381bd078ace03227c71b1bdfa3a74eff33b95c8be",
+    "E:\\5703\\learning-assistant\\generation\\prompts\\qualification_repair_v1.txt": "f42fdbf8fbea2f58a5ea8735dca4d266bb1a4c9ba8ea3f7f8ef4e365c3ea34b2",
+    "E:\\5703\\learning-assistant\\tests\\unit\\test_context_qualification_v1.py": "5d13c2a1391d5c6ba2d188dca6dc928ebc2a4c72470d761e326f08f405ee5241",
+    "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_check_v2.txt": "af234cebbbfd5f2b4b5057c92e205df0ff859f3f72a44a1f908566c2b05dc251",
+    "E:\\5703\\learning-assistant\\generation\\prompts\\source_relation_generation_v2.txt": "783636de019da97e2b6b7ee7995c2bf41faf1e6a5b69ca6f2519ee71b757b95f"
+  },
+  "prepared_single_recheck": {
+    "maximum_requests": 1,
+    "dispatch_enabled": false,
+    "case": "S02-negative-B",
+    "protective_hold_CNY": "0.203632",
+    "wire_sha256": "664fb6bfe5aac04334763cd774e502230cb049ef685984bee1216cdd2a88a2f6",
+    "prior_closed114_peak_upper_CNY": "0.153684",
+    "existing_scope_upper_cap_CNY": "1.00",
+    "new_hold_created": 0
+  },
+  "semantic_improvement_established": false,
+  "native_complete_answer_DOM_ms": null,
+  "project_complete": false,
+  "replay_evidence": "W115/final-replay/saved-response-replay115.json",
+  "focused_verification": "W115/final-free-verification/free-verification115.json"
+}

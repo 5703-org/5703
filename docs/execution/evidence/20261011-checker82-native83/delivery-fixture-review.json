@@ -1,0 +1,107 @@
+{
+  "schema": "delivery_fixture_candidate83_v1",
+  "frozen_at_utc": "2026-10-11T15:18:48.201738+00:00",
+  "status": "READY_FOR_ROOT_INTEGRATION",
+  "diagnosis": "Both original failures were cross-drive fixture ROOT/DESTINATION mismatch (E: source, C: basetemp), not missing report files or course-configuration drift.",
+  "scope": "One test file; existing-view regeneration and unexpected-directory rejection. No production generator change.",
+  "before": {
+    "path": "E:\\5703\\learning-assistant\\tests\\unit\\test_delivery_supplements.py",
+    "bytes": 3560,
+    "sha256": "38f574832379c6194d2d048c6f773540377a4983a97ae5b0912a3eae64410ede"
+  },
+  "after": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-delivery83-candidate\\tests\\unit\\test_delivery_supplements.py",
+    "bytes": 5723,
+    "sha256": "52fe0b5648bfb2d9a9efd393352b73dfdc5f028cf9cc4148e394bd64d19ac0a6"
+  },
+  "diff": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-delivery83-candidate\\delivery-fixture83.diff",
+    "bytes": 4039,
+    "sha256": "f5f60feabdd2ec41ab2c6118f13bd5cbcd10b398aaac974ade6f387159f3010e"
+  },
+  "change_summary": [
+    "Copy only three input ledgers into one temporary repository and use its docs/delivery topology for ROOT and DESTINATION.",
+    "Assert copied and original input bytes remain unchanged.",
+    "Preserve six report directories plus synthetic nested experiment input/result bytes through original generation and --check.",
+    "Seed synthetic generated-view placeholders only for the existing-view positive case, using original render keys.",
+    "Assert unknown-directory negative retains the whole destination byte mapping and creates no manifest."
+  ],
+  "validation": {
+    "pytest": {
+      "tests": 3,
+      "passed": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "junit_time_seconds": "8.032",
+      "console_time_seconds": 8.18,
+      "original_cli_executed": false,
+      "command": [
+        "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-delivery83-candidate\\run-isolated-delivery83.py"
+      ],
+      "junit": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-delivery83-candidate\\pytest-delivery83.xml",
+        "bytes": 573,
+        "sha256": "d3c006ca2f86aab73b257fb575cb859f91e3bf1f3682f8b7505cb610b6bac3a3"
+      }
+    },
+    "ruff": {
+      "check": "PASS",
+      "format_check": "PASS; one file already formatted",
+      "config": "E:\\5703\\learning-assistant\\pyproject.toml",
+      "no_cache": true
+    },
+    "audit_guards": {
+      "database_attempts": 0,
+      "network_attempts": 0,
+      "auth_reads": 0,
+      "outside_W_mutations": 0
+    },
+    "protected_main_files": {
+      "scripts/release/generate_delivery.py": "68fbc8834c618d6b38f099d890381a764dab06553368721c24af98ffce2ca837",
+      "tests/unit/test_delivery_supplements.py": "38f574832379c6194d2d048c6f773540377a4983a97ae5b0912a3eae64410ede",
+      "docs/execution/tasks.json": "c56119170b9fca1e7eadb1f91db0268c3f57ff25f332e068dfb8679b24aface7",
+      "docs/execution/reporting_plan.json": "32bf5ffdd1e8d6bfcfd91ba30b2bd88e4f2e29de05ef7a299ab479d1efa1ddb3",
+      "docs/execution/acceptance.json": "b36020cd2acd576fa071ce85c6007d116c7c0b73c8859875f047c44f59c80c73"
+    },
+    "main_hash_changes": [],
+    "provider_requests": 0,
+    "database_access": false,
+    "auth_access": false,
+    "real_delivery_rebuild": false,
+    "production_files_changed": false,
+    "independent_review": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-delivery83-candidate\\independent-review83.json",
+      "bytes": 1169,
+      "sha256": "6f0b2a46e7341db2cc4fd816315aa19dba7bb41d316fb1347bea03aa45b009a6"
+    }
+  },
+  "retained_failed_attempt": {
+    "junit": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-delivery83-candidate\\pytest-delivery83-failed01.xml",
+      "bytes": 4534,
+      "sha256": "d7a99500db06b337e366bb2f19f9721dfea4561cec4c205009241ce9d3a6e1c0"
+    },
+    "run": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-delivery83-candidate\\isolated-run83-failed01.json",
+      "bytes": 1767,
+      "sha256": "81f0479e36e1e5bc1bee3a77cc093cb12fe2fe5fc575d2671dd0f37fc1f56aff"
+    },
+    "reason": "An empty synthetic repository lacked the pre-existing generated views present in Main; first generation changed self-references from path absent to links, making immediate --check stale.",
+    "repair_scope": "Positive case now accurately represents existing-view regeneration. No generator or unknown-directory gate repair was applied."
+  },
+  "remaining_scope": [
+    "Cold-from-empty first generation determinism remains unproven and the observed absent-to-link behavior is unfixed.",
+    "Root must integrate using the before hash and rerun the required full unit gate; no full-suite PASS is claimed here."
+  ],
+  "line_endings": {
+    "before_crlf": 0,
+    "before_lf": 82,
+    "after_crlf": 0,
+    "after_lf": 129
+  }
+}

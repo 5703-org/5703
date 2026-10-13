@@ -1,0 +1,86 @@
+{
+  "schema": "unit_proof_prompt44_independent_static_review_v1",
+  "status": "PASS_SCOPED_STATIC_REVIEW",
+  "reviewer": "/root/actual29_relation_contract_review/source35_context_scope_readonly",
+  "reviewed_at_UTC": "2026-10-10T12:28:47.589483+00:00",
+  "manifest": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-unit-proof-prompt44-candidate\\UNIT_PROOF_PROMPT44_FROZEN_REVIEW.json",
+    "bytes": 6284,
+    "sha256": "797c831833eb3a198458c4742072acc311e73b8d859660f1462c8c85f197af4a"
+  },
+  "pins": {
+    "candidate": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-unit-proof-prompt44-candidate\\generation\\checked.py",
+      "bytes": 159286,
+      "sha256": "8e3042a00e23a72e7ac06cebded3c12550db916d89c4cea24dd744a19c6217eb"
+    },
+    "before_backup": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-unit-proof-prompt44-candidate\\generation\\checked.py.before",
+      "bytes": 158122,
+      "sha256": "b191b4e87ca675939898bb89b5d8f506673fb38fb429ac473c11e6e4836cc6c8"
+    },
+    "diff": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-unit-proof-prompt44-candidate\\UNIT_PROOF_PROMPT44.diff",
+      "bytes": 1653,
+      "sha256": "520385b4f007d718d89ebc131057e7abb49b323a526a0134182ce230ecf4a8d3"
+    },
+    "exact_added_instruction": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-unit-proof-prompt44-candidate\\UNIT_PROOF_PROMPT44_EXACT.txt",
+      "bytes": 1018,
+      "sha256": "f398d20ea773fb130aa2a5e26dd0009397097843578cd955b7c0da1c383b0d02"
+    },
+    "source_relation_module_unchanged": {
+      "path": "E:\\5703\\learning-assistant\\generation\\source_relations_v2.py",
+      "bytes": 25343,
+      "sha256": "1faed256cd212288a4e2facfb181392558f2f57e6da8dfde1bdad3ec5c846e3c"
+    },
+    "main_before": {
+      "path": "E:\\5703\\learning-assistant\\generation\\checked.py",
+      "bytes": 158122,
+      "sha256": "b191b4e87ca675939898bb89b5d8f506673fb38fb429ac473c11e6e4836cc6c8"
+    }
+  },
+  "checks": {
+    "frozen_manifest_and_all_source_pins_verified": true,
+    "current_main_exactly_matches_preserved_before": true,
+    "actual_diff_exactly_matches_frozen_diff": true,
+    "entire_module_outside_helper_AST_unchanged": true,
+    "helper_signature_and_decorators_unchanged": true,
+    "helper_docstring_unchanged": true,
+    "existing_instruction_prefix_and_final_schema_audit_exactly_preserved": true,
+    "only_one_trusted_static_instruction_added": true,
+    "added_instruction_matches_frozen_exact_text": true,
+    "supported_unit_qualification_present": true,
+    "only_applies_to_both_sibling_and_claim_only_selection": true,
+    "unselected_neighboring_text_exclusion_present": true,
+    "honest_partial_or_unsupported_still_explicitly_required": true,
+    "existing_allowed_surrounding_blocks_rule_remains": true,
+    "original_unit_statuses_include_partial_and_unsupported": true,
+    "existing_non_supporting_relation_guard_is_supported_only": true
+  },
+  "manual_semantic_scope_review": {
+    "negative_assessments": "The added support proof requirement is qualified to supported units. Partial or unsupported units may retain legitimate contrary or insufficient source records under unchanged canonical validation.",
+    "shared_fragments": "The same allowed FID may be explicitly selected for multiple units. A sibling-unit or claim-only selection does not implicitly add it to this unit.",
+    "adjacent_context": "Explicitly selected same-claim allowed adjacent/context fragments remain valid candidates. Only unselected neighboring text is excluded as missing proof; no automatic continuation or joined quote is established.",
+    "scope": "Only trusted V2 system prompt wording changes. Candidate changes no field, schema, default policy, parser, source identity, source selection, or publication gate outside the reviewed helper."
+  },
+  "limitations": {
+    "model_requests_executed": false,
+    "model_quality_improvement_proven": false,
+    "scientific_entailment_certified": false,
+    "latency_improvement_proven": false,
+    "project_completion_proven": false,
+    "Main_adoption_or_tests_executed": false
+  },
+  "actions": {
+    "receipt_write_only": true,
+    "main_writes": 0,
+    "b_writes": 0,
+    "api_requests": 0,
+    "database_accesses": 0,
+    "auth_seed_env_access": false,
+    "candidate_or_controller_execution": false,
+    "tests_executed": false,
+    "denied_scripts_read_imported_or_executed": false
+  }
+}

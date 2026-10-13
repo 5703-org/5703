@@ -1,0 +1,40 @@
+{
+  "schema": "phase97_exact_sending_manifest_v1",
+  "provider": "Official DeepSeek",
+  "endpoint": "https://api.deepseek.com/v1/chat/completions",
+  "maximum_POSTs": 2,
+  "CNY_cap": "0.10",
+  "retries": 0,
+  "bundle_sha256": "f8d183d8b3c18622475f859c777ffd41082f3775feea6a5d297a456a044f5202",
+  "items": [
+    {
+      "request_id": "S01",
+      "question": "What is an enzyme, and what does a catalyst change about a chemical reaction?",
+      "includes": [
+        "unchanged original full parent answer and focused assertion",
+        "all original offered textbook blocks with ownership IDs",
+        "original actual selected/allowed IDs",
+        "quote-only extraction instruction"
+      ],
+      "source_blocks": 12,
+      "wire_bytes": 6277,
+      "wire_sha256": "978f331d15a4e0a6a02809f4bfa59ce2b8fc111597f4cb5da72508f2846546f1"
+    },
+    {
+      "request_id": "S02",
+      "question": "In bacterial DNA replication, explain why leading-strand synthesis is continuous while lagging-strand synthesis produces Okazaki fragments, including the direction in which new DNA is synthesized. How are RNA primers replaced and the remaining nicks between DNA fragments sealed?",
+      "includes": [
+        "unchanged original full parent answer and focused assertion",
+        "all original offered textbook blocks with ownership IDs",
+        "original actual selected/allowed IDs",
+        "quote-only extraction instruction"
+      ],
+      "source_blocks": 11,
+      "wire_bytes": 6186,
+      "wire_sha256": "1ad4b89d147776fc2e6e09afd25336b661a6b8634efa4398738ff7f87cc544a1"
+    }
+  ],
+  "learner_identity_or_history": false,
+  "authentication": "request header only; not part of model messages or artifacts",
+  "external_processing_disclosed": true
+}

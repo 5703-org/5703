@@ -1,0 +1,93 @@
+{
+  "status": "PARTIAL_ATOMIC64_PILOT_ONE_ELIGIBLE_POSITIVE_TWO_FAILURES",
+  "reviewed_at_utc": "2026-10-11T05:51:31.413298+00:00",
+  "reviewer_type": "INDEPENDENT_AI_REVIEWER_NOT_HUMAN",
+  "preregistered_standard_sha256": "f2b269012d85e8817c4896ab759fb8fee4dd53695a06baa7f06001651c01585d",
+  "sources": "AI_AUTHORED_INVENTED_DEVELOPMENT_CASES_NO_PRIVATE_LEARNER_DATA",
+  "actual_case_count": 3,
+  "eligible_complete_count": 1,
+  "cases": [
+    {
+      "case_id": "DEV01_guarded_relay_positive",
+      "expected_overall": "supported",
+      "raw_model_overall": "supported",
+      "result_kind": "COMPLETE_POSITIVE_SEMANTIC_CONCORDANCE_WITH_VALID_BINDINGS",
+      "eligible_complete_result": true,
+      "independent_ai_overall_concur": true,
+      "independent_ai_condition_review": {
+        "C0": "Concur: same complete Sensor A / threshold / armed-key implication and Relay R consequence.",
+        "C1": "Concur: the pressure report belongs to Sensor A and the threshold is strictly above 5 kPa.",
+        "C2": "Concur: the armed-key guard is explicitly retained.",
+        "C3": "Concur: the rule's consequence is Relay R closing, not another device or state."
+      },
+      "witness_semantics": "The complete F1 conditional rule genuinely supplies all four conditions. All witnesses bind exactly to 67-160; empty gaps are appropriate.",
+      "output_ceiling": 4096,
+      "actual_result_sha256": "e859940a525e0552afbad22ff43a11e8ef8cfae19aa3cbff2861f22054f56646"
+    },
+    {
+      "case_id": "DEV03_dropped_guard_negative",
+      "expected_overall": "unsupported",
+      "raw_model_overall": null,
+      "result_kind": "TRUNCATED_EXECUTION_NO_COMPLETE_SEMANTIC_VERDICT",
+      "eligible_complete_result": false,
+      "independent_ai_overall_concur": null,
+      "independent_ai_condition_review": null,
+      "witness_semantics": null,
+      "failure": "finish_reason=length; provider error present; incomplete JSON. The expected removed-pin counterexample remains untested by a complete output.",
+      "output_ceiling": 4096,
+      "actual_result_sha256": "ee68524b6de9c40993cb6f8059ce3d0eaad14b8caabefe38f21fda9c20bc035a"
+    },
+    {
+      "case_id": "DEV11_missing_identity_bridge_uncertain",
+      "expected_overall": "uncertain",
+      "raw_model_overall": "uncertain",
+      "result_kind": "COMPLETE_RAW_SEMANTIC_CONCORDANCE_BUT_REFERENCE_BINDING_FAILURE",
+      "eligible_complete_result": false,
+      "independent_ai_overall_concur": true,
+      "independent_ai_condition_review": {
+        "C0": "Concur semantically: the unrecorded origin/identifier and other active gateways leave origin unresolved.",
+        "C1": "Concur semantically: Gateway G's emission is explicitly stated. Its provided end offset is wrong, so this condition fails citation binding.",
+        "C2": "Concur semantically: Node N's receipt of an Aster packet is explicitly stated and correctly bound.",
+        "C3": "Concur semantically: no identifier or origin bridges the emitted and received packets; unresolved_identity is retained."
+      },
+      "witness_semantics": "The witness texts are relevant to their reported conditions, and C0/C3 correctly keep unresolved_identity. No invented bridge or hidden source conflict was observed. C1's exact source interval nevertheless fails.",
+      "binding_failure": {
+        "condition_id": "C1",
+        "fragment_id": "F1",
+        "reported_start": 78,
+        "reported_end": 125,
+        "reported_quote": "During Trial T, Gateway G emitted one packet.",
+        "quote_unicode_characters": 45,
+        "actual_reported_source_slice": "During Trial T, Gateway G emitted one packet. I",
+        "end_that_would_match_unchanged_quote": 123,
+        "raw_result_repaired_or_overwritten": false,
+        "interpretation": "Diagnostic endpoint calculation only; this review does not repair, revalidate as accepted, replay, or erase the original failed model output."
+      },
+      "output_ceiling": 8192,
+      "actual_result_sha256": "74289433e778a839253c9e1ade38e574345ed845be67bf3cae15322225778a5b"
+    }
+  ],
+  "all_supported_hypothesis_on_eligible_results": {
+    "eligible_overall_opinions": [
+      "supported"
+    ],
+    "conclusion": "UNRESOLVED_ELIGIBLE_SET_CONTAINS_ONLY_THE_EXPECTED_POSITIVE_CASE",
+    "explanation": "The raw third JSON preserves uncertain, but its source-binding failure excludes it from contract-eligible results. The truncated negative is also excluded. There is no eligible complete overclaim/identity-negative result proving that the historical all-supported failure is resolved."
+  },
+  "capacity_difference": "Third request max_tokens=8192; first two=4096. Independent wire comparison confirmed no other input/schema/model/route difference. This is not a uniform-cap comparison.",
+  "no_three_case_pass_claim": true,
+  "remaining_evidence_gaps": [
+    "No complete accepted explicit-counterevidence response: DEV03 was truncated.",
+    "No accepted identity-unknown response: DEV11 had an incorrect C1 end offset.",
+    "No held-out, human-rated, native-page, RAG comparison or general model-quality evidence is established by this pilot."
+  ],
+  "automatic_semantic_truth_verification": false,
+  "human_rating": null,
+  "not_gold_or_held_out": true,
+  "production_publication_authorized": false,
+  "reviewer_authentication_attempts": 0,
+  "reviewer_database_accesses": 0,
+  "reviewer_external_requests": 0,
+  "sender_imports_or_executions": 0,
+  "main_writes": 0
+}

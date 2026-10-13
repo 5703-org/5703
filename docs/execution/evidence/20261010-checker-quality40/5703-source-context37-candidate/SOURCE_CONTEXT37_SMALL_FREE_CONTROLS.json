@@ -1,0 +1,206 @@
+{
+  "status": "SMALL_OFFLINE_CONTROLS_PASS_NOT_MODEL_QUALITY_OR_LATENCY_CERTIFICATE",
+  "controls_passed": 16,
+  "controls": [
+    {
+      "name": "actual36_original_initial_packet_core_unchanged",
+      "passed": true,
+      "detail": {
+        "claims": 10,
+        "units": 19,
+        "sources": 71,
+        "initial_only_not_accepted_rewrite_arm": true
+      }
+    },
+    {
+      "name": "backward_compatible_helper_without_fragments",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "actual36_initial_leading_scope_candidates_visible",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "actual36_partial_source_context_candidates_visible",
+      "passed": true,
+      "detail": {
+        "original_partial_targets": "one body plus two short-answer claims",
+        "F059_is_word_family_lookup_only_not_entailment": true
+      }
+    },
+    {
+      "name": "actual36_old_raw_still_requires_scope_repair",
+      "passed": true,
+      "detail": {
+        "issues": [
+          {
+            "code": "SOURCE_SCOPE_CONTEXT_NOT_SELECTED",
+            "claim_id": "claim_9dd7ed3c15bfc4ae4368ad47_1",
+            "leading_scope": "Calvin cycle",
+            "scope_start": 7,
+            "scope_end": 19,
+            "selected_fragment_ids": [
+              "F056",
+              "F065"
+            ],
+            "context_candidate_fragments": [
+              {
+                "evidence_id": "ev_007",
+                "fragment_id": "F053",
+                "scope_start": 4,
+                "scope_end": 16
+              },
+              {
+                "evidence_id": "ev_007",
+                "fragment_id": "F054",
+                "scope_start": 83,
+                "scope_end": 95
+              },
+              {
+                "evidence_id": "ev_008",
+                "fragment_id": "F063",
+                "scope_start": 39,
+                "scope_end": 51
+              }
+            ],
+            "binding_recheck_required": true,
+            "claim_relation_assessed": false,
+            "reason": "Leading scope absent from selected support; recheck allowed source context. Occurrence alone is not support.",
+            "source_entailment_certified": false,
+            "publication_override": false
+          }
+        ],
+        "raw_judgment_was_not_edited": true
+      }
+    },
+    {
+      "name": "lossless_checker_packet_round_trip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "negated_claim_positive_source_remains_negative",
+      "passed": true,
+      "detail": {
+        "candidate_occurrences_do_not_override_authored_negative": true,
+        "contract_codes": [],
+        "defect_codes": [
+          "SOURCE_CONDITION_CHANGED",
+          "SOURCE_RELATION_CHANGED",
+          "SOURCE_RELATION_UNSUPPORTED"
+        ]
+      }
+    },
+    {
+      "name": "condition_above_below_not_lost",
+      "passed": true,
+      "detail": {
+        "candidate_occurrences_do_not_override_authored_negative": true,
+        "contract_codes": [],
+        "defect_codes": [
+          "SOURCE_CONDITION_CHANGED",
+          "SOURCE_RELATION_CHANGED",
+          "SOURCE_RELATION_PARTIAL"
+        ]
+      }
+    },
+    {
+      "name": "option_or_footer_occurrence_is_not_support",
+      "passed": true,
+      "detail": {
+        "candidate_occurrences_do_not_override_authored_negative": true,
+        "contract_codes": [],
+        "defect_codes": [
+          "SOURCE_CONDITION_CHANGED",
+          "SOURCE_RELATION_CHANGED",
+          "SOURCE_RELATION_UNSUPPORTED"
+        ]
+      }
+    },
+    {
+      "name": "uncited_claim_has_no_hint_candidates",
+      "passed": true,
+      "detail": {
+        "candidate_occurrences_do_not_override_authored_negative": true,
+        "contract_codes": [],
+        "defect_codes": [
+          "SOURCE_CONDITION_CHANGED",
+          "SOURCE_RELATION_CHANGED",
+          "SOURCE_RELATION_UNSUPPORTED"
+        ]
+      }
+    },
+    {
+      "name": "no_source_has_no_hint_candidates",
+      "passed": true,
+      "detail": {
+        "candidate_occurrences_do_not_override_authored_negative": true,
+        "contract_codes": [],
+        "defect_codes": [
+          "SOURCE_CONDITION_CHANGED",
+          "SOURCE_RELATION_CHANGED",
+          "SOURCE_RELATION_UNSUPPORTED"
+        ]
+      }
+    },
+    {
+      "name": "digits_inside_identifier_are_not_quantity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "same_words_in_nonowned_source_produce_no_hint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "actual35_foreign_F001_still_hard_rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown_fragment_still_hard_rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Main_two_file_pins_unchanged",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "payload_measurement": {
+    "old_lossless_checker_packet_UTF8_bytes": 28294,
+    "new_lossless_checker_packet_UTF8_bytes": 39415,
+    "packet_delta_UTF8_bytes": 11121,
+    "context_candidate_rows": 89,
+    "initial_source_texts_retained": 71,
+    "initial_claims_retained": 10,
+    "whole_wire_not_measured_here": true
+  },
+  "fixed_initial_evidence_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\runtime\\retained-provider-diagnostics\\slot-02-model-output01.json",
+    "bytes": 56525,
+    "sha256": "f3ed73ca40b0258998ef25d9d4d1fa74ace5e060cd1140b0ccca07bf831e1e67"
+  },
+  "current_model_schema_sha256": "b37b523346e4a418564ed23f84103bb277a83f6880fed2f73b708cd30a6d6e93",
+  "candidate_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-context37-candidate\\source_relations_v2.py",
+      "bytes": 14948,
+      "sha256": "8a20a6c54d2631315d7bd494df2eb0a7b2f62488e1f5e770de4ed6fd4016a1e8"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-context37-candidate\\checked.py",
+      "bytes": 155543,
+      "sha256": "5b62005af2263600d6c9485aedf73613acd825bade85f41fc33ba88b0b39994c"
+    }
+  ],
+  "default_policy_schema_parser_assessor_gates_changed": false,
+  "real_API_or_DB_calls": 0,
+  "Main_B_writes": 0,
+  "audit_denials": [],
+  "scientific_support_or_latency_improvement_proven": false
+}

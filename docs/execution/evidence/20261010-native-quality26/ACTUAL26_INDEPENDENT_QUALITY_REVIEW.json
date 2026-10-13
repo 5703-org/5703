@@ -1,0 +1,550 @@
+{
+  "review_version": "actual26_accepted_selected_union_independent_review_v1",
+  "main_point": "The accepted revision resolves the initial uncited opening and NADPH/NADH source conflict. Seven final claims have complete selected-source support. One G3P claim remains partially supported because its only selected fragment does not cover the Calvin-stage attribution or G3P-to-carbohydrate relation.",
+  "method": "Review each exact final factual claim against only its own actually returned supporting eid/fid union and immutable exact text. Do not backfill from available fragments, headings, complete_block flags, model reasons, or another claim's selected sources. Missing source wording is not proof of scientific falsehood.",
+  "reviewed_version": {
+    "revision": 1,
+    "actual_succeeded": true,
+    "actual_error": null,
+    "checker_accepted": true,
+    "server_validation_state": "validated",
+    "current_Main_Pydantic_validation_run_by_this_reviewer": false,
+    "claim_count": 8,
+    "all_reviewed_claim_texts_match_exact_final_response_spans": true,
+    "outcome_snapshot_draft_published": false,
+    "outcome_native_publication_claimed": false,
+    "publication_evidence_boundary": "This generation outcome establishes acceptance of revision 1. Browser publication, persistence, resource closure, and Send-to-full-answer time have separate controller/browser/closed receipts and are not independently certified by this reviewer."
+  },
+  "counts": {
+    "complete": 7,
+    "partial": 1,
+    "unsupported": 0,
+    "total": 8
+  },
+  "claims": [
+    {
+      "claim_id": "claim_13aa30069496b0f2d13d01e7_1",
+      "answer_field": "answer_text",
+      "exact_final_claim_text": "The light-dependent reactions convert light energy into chemical energy [ev_008], which is temporarily stored in energy carriers [ev_005] that move into the stroma for the Calvin cycle [ev_007].",
+      "raw_checker_status": "supported",
+      "raw_checker_reason": "The fragments support that light-dependent reactions convert light energy to chemical energy stored in energy carriers that move into the stroma for the Calvin cycle.",
+      "actual_selected_supporting_fragments": [
+        {
+          "evidence_id": "ev_008",
+          "fragment_id": "F042",
+          "actual_fragment_id": "span_aef88da7210ccdb7eaec2d299b5e7c3f",
+          "exact_text": "Each pigment can absorb different wavelengths of light, which allows the plant to absorb any light that passes through the taller trees. (credit: Jason Hollinger) How Light-Dependent Reactions Work The overall purpose of the light-dependent reactions is to convert light energy into chemical energy.",
+          "text_hash": "1290ddf491f21c69a15bc1f56b212dda4efea694324ca84433ff091a0552019e",
+          "source_unit_id": "d4f2c268aabe6d35a8e1bb794f91abbc2ee7",
+          "start": 1267,
+          "end": 1566
+        },
+        {
+          "evidence_id": "ev_005",
+          "fragment_id": "F029",
+          "actual_fragment_id": "span_da05e15e378bb8d7ff72296587cd5412",
+          "exact_text": "The light-dependent reactions utilize certain molecules to temporarily store the energy: These are referred to as energy carriers.",
+          "text_hash": "aed87a03a12217ca921a100aed423b96cc268b216f80d009bf393bf43a3076aa",
+          "source_unit_id": "072fb74e256184e4e568fa976f69bdc6d2c5",
+          "start": 1863,
+          "end": 1993
+        },
+        {
+          "evidence_id": "ev_007",
+          "fragment_id": "F037",
+          "actual_fragment_id": "span_8f1a62f750cb3a80f992bbac985e92d6",
+          "exact_text": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+          "text_hash": "606fdcf5a3064a4d77ffbad85c4b56f0002123b63ac5b5df981b58ec2dee1933",
+          "source_unit_id": "8bd9edcf0207e2fb714c2840ecc6398bfbff",
+          "start": 863,
+          "end": 962
+        }
+      ],
+      "strict_review": "complete",
+      "supported_predicates": [
+        "Light-dependent conversion of light energy into chemical energy",
+        "Temporary storage in generic energy carriers",
+        "Generic carriers travel into the stroma where Calvin reactions occur"
+      ],
+      "missing_predicates": [],
+      "reason": "The own selected union supplies conversion in F042, temporary storage and generic carrier identity in F029, and the generic transport/destination clause in F037. This claim does not name ATP or NADPH; no unselected F036 or another claim's selection is used to identify those molecules.",
+      "coverage_boundary": "Completeness is for the generic carrier wording. It does not certify an ATP/NADPH biochemical identity or consumption mechanism for this claim."
+    },
+    {
+      "claim_id": "claim_78b5f4cd410afad4e8aae852_1",
+      "answer_field": "answer_text",
+      "exact_final_claim_text": "The light-dependent reactions harness energy from the sun to produce ATP and NADPH [ev_007].",
+      "raw_checker_status": "supported",
+      "raw_checker_reason": "Fragment F036 states that light-dependent reactions harness energy from the sun to produce ATP and NADPH.",
+      "actual_selected_supporting_fragments": [
+        {
+          "evidence_id": "ev_007",
+          "fragment_id": "F036",
+          "actual_fragment_id": "span_1d77ba72ab25e9f04b8f13fc0e2bb0c2",
+          "exact_text": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.",
+          "text_hash": "4165a545e507a6b32094143b577105ff897e3eddc5b2c9b13e41d41c16eec272",
+          "source_unit_id": "8bd9edcf0207e2fb714c2840ecc6398bfbff",
+          "start": 771,
+          "end": 862
+        }
+      ],
+      "strict_review": "complete",
+      "supported_predicates": [
+        "Light-dependent ATP and NADPH production from solar energy"
+      ],
+      "missing_predicates": [],
+      "reason": "F036 explicitly supplies the asserted production and reaction stage.",
+      "coverage_boundary": "The immutable NADH source F007 was avoided through a different binding, not altered or reinterpreted."
+    },
+    {
+      "claim_id": "claim_7b64455512b43eaa7d77cc06_1",
+      "answer_field": "answer_text",
+      "exact_final_claim_text": "The light-dependent reactions use certain molecules to temporarily store energy; these are the energy carriers [ev_005].",
+      "raw_checker_status": "supported",
+      "raw_checker_reason": "Fragment F029 supports that light-dependent reactions utilize molecules called energy carriers to temporarily store energy.",
+      "actual_selected_supporting_fragments": [
+        {
+          "evidence_id": "ev_005",
+          "fragment_id": "F029",
+          "actual_fragment_id": "span_da05e15e378bb8d7ff72296587cd5412",
+          "exact_text": "The light-dependent reactions utilize certain molecules to temporarily store the energy: These are referred to as energy carriers.",
+          "text_hash": "aed87a03a12217ca921a100aed423b96cc268b216f80d009bf393bf43a3076aa",
+          "source_unit_id": "072fb74e256184e4e568fa976f69bdc6d2c5",
+          "start": 1863,
+          "end": 1993
+        }
+      ],
+      "strict_review": "complete",
+      "supported_predicates": [
+        "Light-dependent temporary energy storage",
+        "Storage molecules called energy carriers"
+      ],
+      "missing_predicates": [],
+      "reason": "F029 directly supplies both predicates.",
+      "coverage_boundary": "No named-carrier identity is asserted by this generic claim."
+    },
+    {
+      "claim_id": "claim_b7f9e15645de941723449704_1",
+      "answer_field": "answer_text",
+      "exact_final_claim_text": "The energy carriers that move energy from the light-dependent reactions to the Calvin cycle are described as \"full\" because they bring energy [ev_001].",
+      "raw_checker_status": "supported",
+      "raw_checker_reason": "Fragment F002 supports that carriers moving energy from light-dependent reactions to Calvin cycle reactions are thought of as full because they bring energy.",
+      "actual_selected_supporting_fragments": [
+        {
+          "evidence_id": "ev_001",
+          "fragment_id": "F002",
+          "actual_fragment_id": "span_13d8f9a35661f0fb624af18c220292d6",
+          "exact_text": "The carriers that move energy from the light-dependent reactions to the Calvin cycle reactions can be thought of as \u201cfull\u201d because they bring energy.",
+          "text_hash": "6ea81195b4c83fd36a8abea39e89795c4930011cecf5715a4d1b0f10cd8c182b",
+          "source_unit_id": "70a0305c9d11b854d54c558bd1ab3cb153b1",
+          "start": 1416,
+          "end": 1565
+        }
+      ],
+      "strict_review": "complete",
+      "supported_predicates": [
+        "Carriers move energy from light-dependent reactions to Calvin reactions",
+        "Full carriers bring energy"
+      ],
+      "missing_predicates": [],
+      "reason": "F002 directly supplies the complete generic full-carrier statement.",
+      "coverage_boundary": "This general transport account does not independently certify biochemical details of particular carriers."
+    },
+    {
+      "claim_id": "claim_df265f14f5567f97bcef7b81_1",
+      "answer_field": "answer_text",
+      "exact_final_claim_text": "The Calvin cycle uses the energy in ATP and NADPH to convert molecules into G3P, which is used to build carbohydrates [ev_010].",
+      "raw_checker_status": "supported",
+      "raw_checker_reason": "Fragment F053 supports that the energy in ATP and NADPH is used to convert molecules into G3P to build carbohydrates.",
+      "actual_selected_supporting_fragments": [
+        {
+          "evidence_id": "ev_010",
+          "fragment_id": "F053",
+          "actual_fragment_id": "span_0daa77759f0a36e4197e28c3a7df8a5e",
+          "exact_text": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+          "text_hash": "8f2ee0ffdf8145c06f89c4db9b4d5df0defc3c916d8fa99c5c9ade22fbea2e22",
+          "source_unit_id": "9384d80eee75aac546751fdd4d6708b70e6c",
+          "start": 1901,
+          "end": 2059
+        }
+      ],
+      "strict_review": "partial",
+      "supported_predicates": [
+        "ATP and NADPH energy converts the resulting three-carbon molecules into G3P"
+      ],
+      "missing_predicates": [
+        "Calvin-cycle stage context for the conversion",
+        "G3P subsequently used to build carbohydrates"
+      ],
+      "reason": "The only selected fragment F053 supplies the conversion into G3P but contains neither explicit Calvin-stage context nor the downstream G3P-to-carbohydrate relation. The raw checker reason adds the carbohydrate relation; that reason cannot add source evidence. Available context, headings, complete_block, and other claims' sources are not selected support.",
+      "coverage_boundary": "This is a selected-source completeness gap, not a verdict that the scientifically plausible statement is false."
+    },
+    {
+      "claim_id": "claim_e45389bfcf498be266c5354e_1",
+      "answer_field": "answer_text",
+      "exact_final_claim_text": "The light-dependent reactions harness energy from the sun to produce ATP and NADPH, and these energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place [ev_008] [ev_007].",
+      "raw_checker_status": "supported",
+      "raw_checker_reason": "Fragments support that light-dependent reactions produce ATP and NADPH which travel into the stroma for the Calvin cycle.",
+      "actual_selected_supporting_fragments": [
+        {
+          "evidence_id": "ev_008",
+          "fragment_id": "F042",
+          "actual_fragment_id": "span_aef88da7210ccdb7eaec2d299b5e7c3f",
+          "exact_text": "Each pigment can absorb different wavelengths of light, which allows the plant to absorb any light that passes through the taller trees. (credit: Jason Hollinger) How Light-Dependent Reactions Work The overall purpose of the light-dependent reactions is to convert light energy into chemical energy.",
+          "text_hash": "1290ddf491f21c69a15bc1f56b212dda4efea694324ca84433ff091a0552019e",
+          "source_unit_id": "d4f2c268aabe6d35a8e1bb794f91abbc2ee7",
+          "start": 1267,
+          "end": 1566
+        },
+        {
+          "evidence_id": "ev_007",
+          "fragment_id": "F036",
+          "actual_fragment_id": "span_1d77ba72ab25e9f04b8f13fc0e2bb0c2",
+          "exact_text": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.",
+          "text_hash": "4165a545e507a6b32094143b577105ff897e3eddc5b2c9b13e41d41c16eec272",
+          "source_unit_id": "8bd9edcf0207e2fb714c2840ecc6398bfbff",
+          "start": 771,
+          "end": 862
+        },
+        {
+          "evidence_id": "ev_007",
+          "fragment_id": "F037",
+          "actual_fragment_id": "span_8f1a62f750cb3a80f992bbac985e92d6",
+          "exact_text": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+          "text_hash": "606fdcf5a3064a4d77ffbad85c4b56f0002123b63ac5b5df981b58ec2dee1933",
+          "source_unit_id": "8bd9edcf0207e2fb714c2840ecc6398bfbff",
+          "start": 863,
+          "end": 962
+        }
+      ],
+      "strict_review": "complete",
+      "supported_predicates": [
+        "Light-dependent ATP and NADPH production",
+        "Named molecules as antecedent of transport",
+        "Travel into the stroma where Calvin reactions occur"
+      ],
+      "missing_predicates": [],
+      "reason": "The own selected F036 and F037 supply the named-carrier production followed by their transport and destination. The additional F042 does not need to establish those names.",
+      "coverage_boundary": "These sources support production and transport, not a stand-alone account of ATP/NADPH consumption or the complete Calvin chemical sequence."
+    },
+    {
+      "claim_id": "claim_1d43516889b5d53f4e881ef9_1",
+      "answer_field": "answer_text",
+      "exact_final_claim_text": "After the energy is released, the \"empty\" carriers return to the light-dependent reactions to obtain more energy [ev_001].",
+      "raw_checker_status": "supported",
+      "raw_checker_reason": "Fragment F003 supports that after energy is released, empty carriers return to obtain more energy.",
+      "actual_selected_supporting_fragments": [
+        {
+          "evidence_id": "ev_001",
+          "fragment_id": "F003",
+          "actual_fragment_id": "span_d79a5dd8adc00070817b948e6abf25b3",
+          "exact_text": "After the energy is released, the \u201cempty\u201d energy carriers return to the light-dependent reactions to obtain more energy.",
+          "text_hash": "42f47d41240c5b2ef75be23fcbb6d8b71ecb76cac7a90fe9d0330c6a0a049cb2",
+          "source_unit_id": "70a0305c9d11b854d54c558bd1ab3cb153b1",
+          "start": 1566,
+          "end": 1686
+        }
+      ],
+      "strict_review": "complete",
+      "supported_predicates": [
+        "Energy release followed by empty carriers returning to obtain more energy"
+      ],
+      "missing_predicates": [],
+      "reason": "F003 directly supplies the asserted return-after-release clause.",
+      "coverage_boundary": "No new named-carrier chemistry is inferred."
+    },
+    {
+      "claim_id": "claim_688abf47b80fbcc99c9568e6_1",
+      "answer_field": "short_answer",
+      "exact_final_claim_text": "Light-dependent reactions convert light energy into ATP and NADPH, which carry energy into the stroma for the Calvin cycle [ev_007].",
+      "raw_checker_status": "supported",
+      "raw_checker_reason": "Fragments F036 and F037 support that light-dependent reactions produce ATP and NADPH which carry energy into the stroma.",
+      "actual_selected_supporting_fragments": [
+        {
+          "evidence_id": "ev_007",
+          "fragment_id": "F036",
+          "actual_fragment_id": "span_1d77ba72ab25e9f04b8f13fc0e2bb0c2",
+          "exact_text": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.",
+          "text_hash": "4165a545e507a6b32094143b577105ff897e3eddc5b2c9b13e41d41c16eec272",
+          "source_unit_id": "8bd9edcf0207e2fb714c2840ecc6398bfbff",
+          "start": 771,
+          "end": 862
+        },
+        {
+          "evidence_id": "ev_007",
+          "fragment_id": "F037",
+          "actual_fragment_id": "span_8f1a62f750cb3a80f992bbac985e92d6",
+          "exact_text": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+          "text_hash": "606fdcf5a3064a4d77ffbad85c4b56f0002123b63ac5b5df981b58ec2dee1933",
+          "source_unit_id": "8bd9edcf0207e2fb714c2840ecc6398bfbff",
+          "start": 863,
+          "end": 962
+        }
+      ],
+      "strict_review": "complete",
+      "supported_predicates": [
+        "Light-dependent ATP and NADPH production using solar energy",
+        "Those carriers travel into the stroma for Calvin reactions"
+      ],
+      "missing_predicates": [],
+      "reason": "The own selected F036 and F037 name both carriers and link their production to transport into the stroma. The short answer asserts the narrower production/transport account rather than an explicit Calvin energy-use step.",
+      "coverage_boundary": "Read conversion of light energy into ATP/NADPH as chemical-energy storage shorthand in the context of the body, not conversion of photons into molecular matter. This claim's completeness does not certify the full energy-use mechanism."
+    }
+  ],
+  "structural_observations": {
+    "source_fragments": 67,
+    "final_claim_ID_order_matches_raw_checker_exactly": true,
+    "all_selected_pairs_owned_allowed_existing": true,
+    "selected_exact_text_hashes_and_unicode_lengths_verified": true,
+    "actual_selected_span_order_matches_attribution_exactly": true,
+    "strict_model_output_checks": [
+      {
+        "slot": 1,
+        "strict_JSON_without_duplicate_keys": true,
+        "raw_text_hash_and_bytes_verified": true,
+        "receipt_content_matches_model_output": true
+      },
+      {
+        "slot": 2,
+        "strict_JSON_without_duplicate_keys": true,
+        "raw_text_hash_and_bytes_verified": true,
+        "receipt_content_matches_model_output": true
+      },
+      {
+        "slot": 3,
+        "strict_JSON_without_duplicate_keys": true,
+        "raw_text_hash_and_bytes_verified": true,
+        "receipt_content_matches_model_output": true
+      },
+      {
+        "slot": 4,
+        "strict_JSON_without_duplicate_keys": true,
+        "raw_text_hash_and_bytes_verified": true,
+        "receipt_content_matches_model_output": true
+      }
+    ],
+    "requirement_quote_records": [
+      {
+        "evidence_id": "ev_008",
+        "fragment_id": "F042",
+        "literal_contiguous_quote_verified": true
+      },
+      {
+        "evidence_id": "ev_007",
+        "fragment_id": "F036",
+        "literal_contiguous_quote_verified": true
+      },
+      {
+        "evidence_id": "ev_007",
+        "fragment_id": "F037",
+        "literal_contiguous_quote_verified": true
+      },
+      {
+        "evidence_id": "ev_005",
+        "fragment_id": "F029",
+        "literal_contiguous_quote_verified": true
+      },
+      {
+        "evidence_id": "ev_001",
+        "fragment_id": "F002",
+        "literal_contiguous_quote_verified": true
+      }
+    ]
+  },
+  "science_and_coherence": {
+    "final_body_and_short_use_NADPH_consistently": true,
+    "selected_final_fragments_contain_NADH": false,
+    "immutable_F007_not_modified_or_selected_finally": true,
+    "complete_selected_Calvin_stage_and_G3P_carbohydrate_chain": false,
+    "limitation": "Source completeness and coherent identifiers do not constitute Gold, independent human scientific certification, or causal proof of a code/prompt fix."
+  },
+  "actual_repair_observation": {
+    "initial_checker_accepted": false,
+    "initial_structural_issues": [
+      {
+        "code": "UNRESOLVED_TECHNICAL_ENTITY_COLLISION",
+        "claim_id": "claim_37eb9395c8cbcb5721d36f6e_1",
+        "claimed_identifier": "NADPH",
+        "source_identifiers": [
+          "NADH"
+        ],
+        "reason_source_identifiers": [
+          "NADH"
+        ],
+        "selected_fragment_ids": [
+          "F007"
+        ],
+        "reason": "The claimed identifier is absent from its selected supporting union; a model reason cannot establish a source alias. A selected source supplies the same proposition with a one-edit different identifier in that slot. The model reason cannot exempt this source-binding conflict. Resolve this binding before publication; this is not a scientific falsehood verdict or an entailment certificate.",
+        "source_entailment_certified": false,
+        "publication_override": false
+      },
+      {
+        "claim_id": "claim_3f93f42f74e5f38c3ea5029d_1",
+        "code": "CHECK_SUPPORT_WITHOUT_SOURCE"
+      }
+    ],
+    "final_structural_issues": [],
+    "final_technical_binding_issues": [],
+    "repair_edits": [
+      {
+        "version": "claim_patch_repair_v3",
+        "operation": "apply_unapproved_claim_edits_before_full_check",
+        "protected_claim_ids": [
+          "claim_1d43516889b5d53f4e881ef9_1",
+          "claim_688abf47b80fbcc99c9568e6_1",
+          "claim_7b64455512b43eaa7d77cc06_1",
+          "claim_b7f9e15645de941723449704_1",
+          "claim_df265f14f5567f97bcef7b81_1",
+          "claim_e45389bfcf498be266c5354e_1"
+        ],
+        "edits": [
+          {
+            "claim_id": "claim_37eb9395c8cbcb5721d36f6e_1",
+            "answer_field": "answer_text",
+            "original_start": 126,
+            "original_end": 255,
+            "replacement_sha256": "793ee36543a7be7881dc41a12a7b90fa7c4e312170f57839453853a86e190fa8"
+          },
+          {
+            "claim_id": "claim_3f93f42f74e5f38c3ea5029d_1",
+            "answer_field": "answer_text",
+            "original_start": 0,
+            "original_end": 125,
+            "replacement_sha256": "8f80ee76f96fe7f0727372129685248bd3c0ca007a9cd7492e74646856ada32f"
+          }
+        ],
+        "append_answer_text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "requires_full_check": true,
+        "source_entailment_certified": false
+      }
+    ],
+    "partial_G3P_claim_was_protected_from_local_patch": true,
+    "boundary": "The server allowed the G3P claim with its raw supported label and no final structural issue. This review does not rewrite that label, certify absence of semantic gaps, or authorize mutation of protected claims."
+  },
+  "raw_final_checker_observation": {
+    "supported_labels": 8,
+    "body_ok": true,
+    "coverage": "full",
+    "complete_answer": true,
+    "requirement_support_boundary": "Selected requirement records cover conversion, named-carrier production, generic storage and transport/full-carrier description. They do not explicitly cover the Calvin ATP/NADPH energy-use step or G3P-to-carbohydrate relation.",
+    "independent_labels_do_not_replace_model_output": true
+  },
+  "provider_receipt_accounting": {
+    "retained_response_count": 4,
+    "total_cost_usd": "0.0174422",
+    "cost_method": "Decimal sum of usage.cost from four retained public receipts.",
+    "requests": [
+      {
+        "slot": 1,
+        "stage": "generation",
+        "model": "anthropic/claude-haiku-5.5",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "cost_usd": "0.0019328",
+        "prompt_tokens": 16743,
+        "completion_tokens": 517,
+        "model_output_reported_latency_ms": 4075
+      },
+      {
+        "slot": 2,
+        "stage": "joint_check",
+        "model": "google/gemini-3.5-flash-lite",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "cost_usd": "0.0062548",
+        "prompt_tokens": 11441,
+        "completion_tokens": 1129,
+        "model_output_reported_latency_ms": 5548
+      },
+      {
+        "slot": 3,
+        "stage": "semantic_repair",
+        "model": "anthropic/claude-haiku-5.5",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "cost_usd": "0.0027429",
+        "prompt_tokens": 22094,
+        "completion_tokens": 1067,
+        "model_output_reported_latency_ms": 8570
+      },
+      {
+        "slot": 4,
+        "stage": "joint_recheck",
+        "model": "google/gemini-3.5-flash-lite",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "cost_usd": "0.0065117",
+        "prompt_tokens": 11464,
+        "completion_tokens": 1229,
+        "model_output_reported_latency_ms": 5531
+      }
+    ],
+    "timing_limit": "Per-model diagnostic latency is not Send-to-full-answer paint time. This reviewer did not independently certify batch UNKNOWN count or wallet total."
+  },
+  "source_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure26\\runtime\\retained-provider-diagnostics\\native-generation-outcome01.json",
+      "bytes": 538066,
+      "sha256": "4afa6ef2a056e6324f8b643a7cba38f7bdefd8e7cc3261bbab51e5cc5d236d3b",
+      "bytes_and_hash_reverified_before_report_write": true
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure26\\runtime\\retained-provider-diagnostics\\slot-01-generation-read01.json",
+      "bytes": 8620,
+      "sha256": "2068f42018e66280f7882b188af32e11881407b73d70b15a69c27917d6377bb5",
+      "bytes_and_hash_reverified_before_report_write": true
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure26\\runtime\\retained-provider-diagnostics\\slot-01-model-output01.json",
+      "bytes": 2712,
+      "sha256": "556c02a0c46e6797e73ef92eb10fbd6c41181eeb963ba998c2b859f3dd9d90be",
+      "bytes_and_hash_reverified_before_report_write": true
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure26\\runtime\\retained-provider-diagnostics\\slot-02-joint_check-read01.json",
+      "bytes": 20082,
+      "sha256": "f2ff2d628ed5eea8b24f39b34743fc41cf35a283aab281b3cc8dda0873650612",
+      "bytes_and_hash_reverified_before_report_write": true
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure26\\runtime\\retained-provider-diagnostics\\slot-02-model-output01.json",
+      "bytes": 31471,
+      "sha256": "e54dde02d7e810b285c13a205309618c08889b88f871a01d0e0b4cd35893f39d",
+      "bytes_and_hash_reverified_before_report_write": true
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure26\\runtime\\retained-provider-diagnostics\\slot-03-semantic_repair-read01.json",
+      "bytes": 23615,
+      "sha256": "4da39433fe5df3aba66eac01d99fce82c1c4b34ce1425ef10d9a2230809c3ff8",
+      "bytes_and_hash_reverified_before_report_write": true
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure26\\runtime\\retained-provider-diagnostics\\slot-03-model-output01.json",
+      "bytes": 1748,
+      "sha256": "820bf58b1b3cbaf3dd7cd24a4b6e3d1c0c8f98a1477330a512778ca8bdeaa1eb",
+      "bytes_and_hash_reverified_before_report_write": true
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure26\\runtime\\retained-provider-diagnostics\\slot-04-joint_recheck-read01.json",
+      "bytes": 21412,
+      "sha256": "35bc8ffb9ad6ce9fabc4256c9b56d2d5e415f6ccdc0ac32b01740670f0c23430",
+      "bytes_and_hash_reverified_before_report_write": true
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure26\\runtime\\retained-provider-diagnostics\\slot-04-model-output01.json",
+      "bytes": 31821,
+      "sha256": "bdda6a81be4476c439da11d4a66b7994be3af10ce32f8a72af3f6cdf300f1304",
+      "bytes_and_hash_reverified_before_report_write": true
+    }
+  ],
+  "review_operations": {
+    "new_provider_calls": 0,
+    "database_access": 0,
+    "Main_writes": 0,
+    "model_or_service_tests_run": 0,
+    "private_authentication_or_child_logs_read": false,
+    "raw_outcome_modified": false,
+    "independent_labels_sent_to_model": false
+  },
+  "limitation": "One accepted answer under this exact frozen source/input condition. Do not generalize a 7/8 source-completeness count to whole-project acceptance, human learning benefit, p95 latency, RAG superiority, or full scientific certification. Counts also differ in denominator and wording from earlier native runs."
+}

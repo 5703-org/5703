@@ -1,0 +1,213 @@
+--- closed39/run_fixed_checker_pair39_CANDIDATE.py
++++ candidate40/run_fixed_checker_pair40_CANDIDATE.py
+@@ -47,11 +47,11 @@
+ ORIGINAL_CONTROLS_SHA = "9106c8c5dfd60ef22fdae09f3bb25db67e4bd6fb6cfbdf7eccea249b89960eff"
+ PER = Decimal("0.04500000")
+ TOTAL = Decimal("0.09000000")
+-PRIOR_COST = Decimal("0.12483360")
++PRIOR_COST = Decimal("0.14928810")
+ GROUP_LIMIT = Decimal("0.24000000")
+ MAX_WIRE = 98304
+ OUTPUT = 4096
+-ARMS = ("baseline39", "candidate39")
++ARMS = ("baseline40", "candidate40")
+ PINS = {
+     "initial": (DATA36 / "slot-02-model-output01.json", 56525,
+                 "f3ed73ca40b0258998ef25d9d4d1fa74ace5e060cd1140b0ccca07bf831e1e67"),
+@@ -61,16 +61,24 @@
+                 "bb4a50a877a49a9103ea15e26ccb35b6000451c337989e3f46fad376e5abe517"),
+     "acceptance": (W / "5703-native36-fixed-pair-acceptance/ACTUAL36_FIXED_PACKET_PAIRED_SOURCE_ACCEPTANCE_CONTRACT.json", 33356,
+                    "272c62478698ff5bc213c44e8ad0724508451b1b45fc48f4193d87b208e7b7bc"),
+-    "adoption": (W / "ACTUAL_SOURCE_ANCHOR39_MAIN_ADOPTION.json", 1637,
+-                 "0b5b5f733b6bb2be2ccbaf9cf42b32eefbde46393791deeda6e10d0f175264d2"),
++    "adoption": (W / "ACTUAL_SOURCE_SYSTEM40_MAIN_ADOPTION.json", 2877,
++                 "a27d4ee8cad68eb3e928560d447a4899105e2045f31d28a83be6e31ccc8309f3"),
++    "anchor_adoption": (W / "ACTUAL_SOURCE_ANCHOR39_MAIN_ADOPTION.json", 1637,
++                        "0b5b5f733b6bb2be2ccbaf9cf42b32eefbde46393791deeda6e10d0f175264d2"),
+     "review": (W / "5703-source-anchor39-candidate/SOURCE_ANCHOR39_FROZEN_REVIEW.json", 6692,
+                "977e6ebee9b425e21b38318b34a946dacf122e6595c15ecfb32796c85e1ef50b"),
+     "controls": (W / "5703-source-anchor39-candidate/SOURCE_ANCHOR39_SMALL_FREE_CONTROLS.json", 8314,
+                  "76a4902ecb136f5580c3b126c3a5cacee125eadb28dc7f75a21439b3fb265a04"),
+     "instruction_review": (W / "5703-source-selection38-candidate/SOURCE_SELECTION38_FROZEN_REVIEW.json", 6341,
+                            "97ef5d8962255531048f470c5e5f174fc433759d495947a878941b35dc8d0875"),
+-    "checked": (MAIN / "generation/checked.py", 155543,
+-                "5b62005af2263600d6c9485aedf73613acd825bade85f41fc33ba88b0b39994c"),
++    "system_review": (W / "5703-source-system40-candidate/SOURCE_SYSTEM40_FROZEN_REVIEW.json", 5817,
++                      "216b119c6740169d06963354fbf8f575c30d137225aaab5005134c1c2f549015"),
++    "system_controls": (W / "5703-source-system40-candidate/SOURCE_SYSTEM40_SMALL_FREE_CONTROLS.json", 5981,
++                        "d5d04370f185d102af654dc66b75eb9c3a1e33e98818d6939215e440dd8772b0"),
++    "checked": (MAIN / "generation/checked.py", 155924,
++                "838b641549631ee365f0f2e9b534c9f08aa0c230dfe59745f5de3ca901145a4c"),
++    "source": (MAIN / "generation/source_relations_v2.py", 17079,
++               "4e3ef844eff23b77d83e850c32fdfa47c9504b7cec9a8edd7db3328851ba5a55"),
+     "credential_helper": (D / "haiku_json_object_full_checker_probe_PREPARED08.py", 36687,
+                           "b19fdfd53bfccb64e617a8203ed7947bc73ae2c2897a22908de7380dd5e29b6c"),
+     "diagnostics": (D / "scientific-native-closure-preparation36/diagnostics01.py", 17258,
+@@ -155,6 +163,19 @@
+     package.__path__ = [str(MAIN / "generation")]
+     package.__package__ = "generation"
+     sys.modules["generation"] = package
++
++
++def sealed_source_relation_checker_system(trusted_instructions):
++    # Execute only the pinned production pure function, avoiding service imports.
++    path = PINS["checked"][0]
++    tree = ast.parse(read_tuple(PINS["checked"]), filename=str(path))
++    functions = [node for node in tree.body if isinstance(node, ast.FunctionDef) and
++                 node.name == "source_relation_checker_system"]
++    require(len(functions) == 1, "EXACT_PRODUCTION_SYSTEM_HELPER_REQUIRED")
++    namespace = {"SOURCE_SELECTION_INSTRUCTIONS": trusted_instructions}
++    pure = ast.Module(body=functions, type_ignores=[])
++    exec(compile(pure, str(path), "exec"), namespace)
++    return namespace["source_relation_checker_system"], digest(ast.dump(functions[0], include_attributes=False))
+ 
+ 
+ def validate_grouped_context_hints(entry, hints, by_cid, fragments, word_family):
+@@ -221,12 +242,17 @@
+     final = read_json(PINS["final"])["check_data"]
+     acceptance = read_json(PINS["acceptance"])
+     adoption = read_json(PINS["adoption"])
++    anchor_adoption = read_json(PINS["anchor_adoption"])
+     review = read_json(PINS["review"])
+     controls = read_json(PINS["controls"])
+     instruction_review = read_json(PINS["instruction_review"])
++    system_review = read_json(PINS["system_review"])
++    system_controls = read_json(PINS["system_controls"])
+     read_tuple(PINS["checked"])
++    read_tuple(PINS["source"])
+     require(adoption["output_schema_parser_assessor_gates_default_policy_changed"] is False and
+-            adoption["discovery_rules_changed"] is False, "UNCHANGED_GATES_AND_DISCOVERY_RULES_REQUIRED")
++            adoption["whole_other_business_ast_unchanged"] is True and
++            anchor_adoption["discovery_rules_changed"] is False, "UNCHANGED_GATES_AND_DISCOVERY_RULES_REQUIRED")
+     require(review["small_controls_passed"] == controls["small_controls_passed"] == 22 and
+             len(controls["controls"]) == 22 and all(row["passed"] is True for row in controls["controls"]) and
+             review["output_schema_parser_assessor_gates_default_policy_changed"] is False and
+@@ -243,9 +269,17 @@
+             instruction_review["schema_compact_sha256"] == SCHEMA_SHA and
+             instruction_review["schema_parser_assessor_gates_defaults_changed"] is False,
+             "RETAINED_GENERIC_INSTRUCTION38_PROOF_REQUIRED")
+-    for row in adoption["files"]:
+-        after = row["after"]
+-        read_tuple((Path(row["path"]), after["bytes"], after["sha256"]))
++    require(system_review["small_controls_passed"] == 15 and
++            len(system_controls["controls"]) == 15 and all(row["passed"] is True for row in system_controls["controls"]) and
++            system_review["compact_schema_sha256"] == SCHEMA_SHA and
++            system_review["output_schema_parser_assessor_gates_default_policy_changed"] is False and
++            system_review["whole_other_business_ast_unchanged"] is True and
++            system_review["question_claim_fragment_hardcoding"] is False,
++            "REVIEWED_PRODUCTION_SYSTEM40_DELTA_REQUIRED")
++    for receipt in (adoption, anchor_adoption):
++        for row in receipt["files"]:
++            after = row["after"]
++            read_tuple((Path(row["path"]), after["bytes"], after["sha256"]))
+     require(digest(initial) == ORIGINAL_DATA_SHA == acceptance["fixed_initial_packet"]["whole_check_data_canonical_sha256"],
+             "ORIGINAL_INITIAL_PACKET_CHANGED")
+     for field, expected in acceptance["fixed_initial_packet"]["frozen_field_hashes"].items():
+@@ -258,7 +292,7 @@
+     candidate = deepcopy(initial)
+     candidate["SOURCE_SYNTACTIC_UNITS"] = scoped_syntactic_units(
+         original["CLAIMS"], original["ACTUAL_CITATION_BINDINGS"], original["SOURCE_FRAGMENTS"])
+-    candidate["SOURCE_RELATION_SELECTION_INSTRUCTIONS"] = SOURCE_SELECTION_INSTRUCTIONS
++    candidate.pop("SOURCE_RELATION_SELECTION_INSTRUCTIONS")
+     projected = deepcopy(candidate)
+     hint_rows = hint_occurrences = hint_source_hits = hint_source_spans = hint_empty_groups = 0
+     by_cid = {r["claim_id"]: r for r in original["ACTUAL_CITATION_BINDINGS"]}
+@@ -287,6 +321,10 @@
+     system = "\n".join((prompt_root / n).read_text(encoding="utf-8") for n in prompt_names)
+     old_check = read_json(PINS["outcome"])["checks"][0]
+     require(sha(system.encode()) == old_check["rubric_hash"], "ACTUAL_INITIAL_RUBRIC_CHANGED")
++    renderer, helper_ast_sha = sealed_source_relation_checker_system(SOURCE_SELECTION_INSTRUCTIONS)
++    candidate_system = renderer(system)
++    require(candidate_system == system + "\n" + SOURCE_SELECTION_INSTRUCTIONS +
++            system_review["production_renderer"]["final_schema_audit"], "EXACT_TRUSTED_SYSTEM_DELIVERY_CHANGED")
+     cfg = ModelConfig(provider="openai_compatible", model="google/gemini-3.5-flash-lite",
+                       base_url="https://openrouter.ai/api/v1", window_tokens=131072, max_tokens=4096,
+                       timeout_seconds=60.0, temperature=None, structured_output_mode="json_object",
+@@ -294,8 +332,8 @@
+                       openrouter_route_profile="gemini35_google_vertex_v1")
+     cfg.validate()
+     plans = []
+-    for arm, data in zip(ARMS, (initial, candidate), strict=True):
+-        messages = [{"role": "system", "content": system}, {"role": "user", "content": dumps(data)}]
++    for arm, data, check_system in zip(ARMS, (initial, candidate), (system, candidate_system), strict=True):
++        messages = [{"role": "system", "content": check_system}, {"role": "user", "content": dumps(data)}]
+         body, transport = prepare_schema_wire(cfg, payload(cfg, messages, schema, SCHEMA_NAME), schema)
+         require(transport == {} and body["response_format"] == {"type": "json_object"}, "ORIGINAL_SCHEMA_HINT_WIRE_REQUIRED")
+         wire = json.dumps(body, ensure_ascii=False, separators=(",", ":"), allow_nan=False).encode()
+@@ -324,12 +362,16 @@
+             module_pins.append(metadata(Path(path)))
+     for name in prompt_names:
+         module_pins.append(metadata(prompt_root / name))
+-    summary = {"schema": "5703_fixed_initial_checker_pair39_preparation_v1", "status": "OFFLINE_PREPARED_NO_API_OR_CREDENTIAL_ACCESS",
++    summary = {"schema": "5703_fixed_initial_checker_pair40_preparation_v1", "status": "OFFLINE_PREPARED_NO_API_OR_CREDENTIAL_ACCESS",
+                "runner_pin": metadata(Path(__file__)), "input_pins": {k: {"path": str(v[0]), "bytes": v[1], "sha256": v[2]} for k, v in PINS.items()},
+                "main_source_and_prompt_pins": module_pins, "configuration": cfg.to_dict(),
+                "fixed_initial_claims": 10, "fixed_initial_units": 19, "fixed_source_fragments": 71,
+                "original_initial_packet_sha256": ORIGINAL_DATA_SHA, "candidate_projection_sha256": digest(projected),
+-               "declared_changed_fields": ["SOURCE_SYNTACTIC_UNITS[*].source_context_candidates", "SOURCE_RELATION_SELECTION_INSTRUCTIONS"],
++               "declared_changed_fields": ["SOURCE_SYNTACTIC_UNITS[*].source_context_candidates", "SOURCE_RELATION_SELECTION_INSTRUCTIONS removed from candidate DATA", "SYSTEM content via generation.checked.source_relation_checker_system"],
++               "source_system40_fresh_controls_passed": 15,
++               "production_system_helper_ast_sha256": helper_ast_sha,
++               "candidate_system_template_sha256": sha(candidate_system.encode()),
++               "candidate_SYSTEM_contains_only_original_rubric_and_trusted_rules": True,
+                "context_hint_rows": hint_rows, "accepted_rewrite_packet_separately_retained": True,
+                "context_hint_claim_occurrences": hint_occurrences,
+                "context_hint_source_hits": hint_source_hits,
+@@ -345,8 +387,8 @@
+                "accepted_rewrite_packet_not_a_pair_arm": True, "accepted_rewrite_packet_sha256": digest(final),
+                "plans": [{k: v for k, v in p.items() if k not in {"messages", "data", "body"}} for p in plans],
+                "new_manual_POST_limit": 2, "new_manual_reserve_USD": str(TOTAL), "per_POST_reserve_USD": str(PER),
+-               "prior_closed_group_POSTs": 16, "prior_known_group_cost_USD": str(PRIOR_COST),
+-               "maximum_cumulative_manual_POSTs": 18, "maximum_known_group_plus_new_reserve_USD": str(PRIOR_COST + TOTAL),
++               "prior_closed_group_POSTs": 18, "prior_known_group_cost_USD": str(PRIOR_COST),
++               "maximum_cumulative_manual_POSTs": 20, "maximum_known_group_plus_new_reserve_USD": str(PRIOR_COST + TOTAL),
+                "original_money_limit_USD": str(GROUP_LIMIT), "historical_unknown_holds_release_authorized": False,
+                "old_scope_reuse": False, "automatic_retries": False, "teacher_calls": 0,
+                "JSON_repairs": 0, "native_or_course_qualification": False,
+@@ -410,7 +452,7 @@
+     out = ordinary(out, HERE)
+     require(not out.exists(), "FRESH_WRITE_ONCE_SCOPE_REQUIRED")
+     out.mkdir()
+-    report = {"schema": "5703_fixed_initial_checker_pair39_actual_v1", "started_at_UTC": now(),
++    report = {"schema": "5703_fixed_initial_checker_pair40_actual_v1", "started_at_UTC": now(),
+               "status": "STARTED", "source_review_pin": metadata(Path(review_path)), "physical_POSTs": 0,
+               "known_cost_USD": "0", "new_UNKNOWN_holds_USD": "0", "open_claims": 0,
+               "credential_preparation_read_only_DB_legs": 0, "experiment_DB_accesses": 0,
+@@ -418,7 +460,7 @@
+               "teacher_calls": 0, "JSON_repairs": 0, "old_scope_reuse": False,
+               "historical_unknown_holds_released": False, "fresh_question_or_course_qualification": False}
+     save_new(out / "intent01.json", report)
+-    helper = load_source("root_original_approved_credential39", PINS["credential_helper"])
++    helper = load_source("root_original_approved_credential40", PINS["credential_helper"])
+     require(helper.TARGET_DB == SOLE_DB, "ORIGINAL_CREDENTIAL_HELPER_DATABASE_OUTSIDE_SOLE_SCOPE")
+     for path in (MAIN, MAIN / "backend"):
+         if str(path) not in sys.path:
+@@ -427,7 +469,7 @@
+     report["credential_preparation_read_only_DB_legs"] = 1
+     key = helper.approved_credential(helper.WORKSPACE_ID)
+     require(isinstance(key, str) and key, "APPROVED_CREDENTIAL_UNAVAILABLE")
+-    diagnostics = load_source("root_original_diagnostics39", PINS["diagnostics"])
++    diagnostics = load_source("root_original_diagnostics40", PINS["diagnostics"])
+     redactor = diagnostics.Redactor((key,))
+     from generation import adapters as adapter_module
+     from generation.adapters import LLMAdapter
+@@ -521,7 +563,7 @@
+                       "schema_name": SCHEMA_NAME, "headers_exported": False}, redactor)
+             began = time.perf_counter_ns()
+             result = adapter.generate(plan["messages"], response_schema=schema, response_schema_name=SCHEMA_NAME,
+-                                      request_context={"purpose": "joint_check", "request_id": "fixed-initial-pair39-" + plan["arm"]},
++                                      request_context={"purpose": "joint_check", "request_id": "fixed-initial-pair40-" + plan["arm"]},
+                                       timeout_seconds=cfg.timeout_seconds)
+             elapsed = (time.perf_counter_ns() - began) / 1_000_000
+             submitted = active["submitted"]
+@@ -568,8 +610,8 @@
+                       credential_values_exported=False, memory_redaction_retained_until_process_exit=True,
+                       fresh_lock_released=True,
+                       historical_unknown_holds_released=False, no_followup_requests_authorized=True)
+-        save_new(out / "STOP-before-any-next-submission01.json", {"schema": "fixed_pair39_terminal_stop_v1", "status": report["status"], "at_UTC": now()})
+-        final_pin = save_new(out / "actual-fixed-checker-pair39-result01.json", report, redactor)
++        save_new(out / "STOP-before-any-next-submission01.json", {"schema": "fixed_pair40_terminal_stop_v1", "status": report["status"], "at_UTC": now()})
++        final_pin = save_new(out / "actual-fixed-checker-pair40-result01.json", report, redactor)
+     print(json.dumps({"status": report["status"], "physical_POSTs": report["physical_POSTs"],
+                       "known_cost_USD": report["known_cost_USD"], "result_pin": final_pin}))
+     return 0 if report["status"] == "PAIRED_OBSERVATIONS_CLOSED" else 1

@@ -1,0 +1,705 @@
+{
+  "actual_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure29\\runtime\\retained-provider-diagnostics\\slot-02-model-output01.json",
+    "bytes": 41947,
+    "sha256": "15bc6afc759719c07698c8c2394f8ef9eb1c17d401dfe0f6d80c7e5b32ea4046"
+  },
+  "current_source_pins": [
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\source_relations_v2.py",
+      "bytes": 7734,
+      "sha256": "41813b7a8eb223d65ff609eb61f517151278ce21c6f2823e395acdf601826d31"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\reliability_v4.py",
+      "bytes": 10203,
+      "sha256": "0771dd38c821053788608a942033081433ab8ac2ef53afd3d14ed68987b9b56c"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\reliability_v5.py",
+      "bytes": 25521,
+      "sha256": "12410fac97c1031b277f63c08f71459e035e0d2bcee6d2ef9731d7243af37dcc"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checked.py",
+      "bytes": 155256,
+      "sha256": "82b9236eb8894c050fc8b9c823002c662c98bbccd4b408e61de2debb0ad23757"
+    }
+  ],
+  "check_data_structure": {
+    "ACTUAL_CITATION_BINDINGS": {
+      "type": "dict",
+      "keys": [
+        "columns",
+        "rows"
+      ],
+      "columns": [
+        "binding_ids",
+        "claim_id"
+      ]
+    },
+    "ATTEMPT_EVALUATION": {
+      "type": "NoneType",
+      "keys": null,
+      "columns": null
+    },
+    "BINDING_BANK": {
+      "type": "dict",
+      "keys": [
+        "columns",
+        "rows"
+      ],
+      "columns": [
+        "allowed_fragment_ids",
+        "binding_id",
+        "evidence_id"
+      ]
+    },
+    "CHECKER_INPUT_ENCODING": {
+      "type": "dict",
+      "keys": [
+        "instructions",
+        "version"
+      ],
+      "columns": null
+    },
+    "CHECK_SCOPE": {
+      "type": "dict",
+      "keys": [
+        "body_and_short_answer",
+        "current_evidence_display",
+        "current_suggestions",
+        "prior_actual_exposure"
+      ],
+      "columns": null
+    },
+    "CLAIMS": {
+      "type": "dict",
+      "keys": [
+        "columns",
+        "rows"
+      ],
+      "columns": [
+        "answer_field",
+        "claim_id",
+        "end",
+        "evidence_ids",
+        "start",
+        "text"
+      ]
+    },
+    "CONTEXT_COVERAGE": {
+      "type": "dict",
+      "keys": [
+        "budget_lost_requirement_ids",
+        "context_sufficiency_estimate",
+        "requirements",
+        "response_guidance",
+        "semantic_evaluation_required",
+        "semantic_sufficiency",
+        "transport_version",
+        "version"
+      ],
+      "columns": null
+    },
+    "LEARNER_TURN": {
+      "type": "dict",
+      "keys": [
+        "current_step",
+        "expected_response_kind",
+        "pending_tutor_question",
+        "pending_tutor_question_id",
+        "turn_role"
+      ],
+      "columns": null
+    },
+    "POLICY": {
+      "type": "dict",
+      "keys": [
+        "check_cumulative",
+        "check_suggestions",
+        "condition",
+        "control_evidence",
+        "help_constraint",
+        "help_level",
+        "human_rating",
+        "online_check",
+        "task_type",
+        "teaching_mode",
+        "version"
+      ],
+      "columns": null
+    },
+    "PRIOR_EXPOSURE": {
+      "type": "dict",
+      "keys": [
+        "disabled"
+      ],
+      "columns": null
+    },
+    "PROPOSED_DELIVERY": {
+      "type": "dict",
+      "keys": [
+        "citation_views",
+        "response",
+        "source_display_control_disabled"
+      ],
+      "columns": null
+    },
+    "REQUESTED_KNOWLEDGE_SCOPE": {
+      "type": "dict",
+      "keys": [
+        "current_problem",
+        "literal_learner_question",
+        "style_preferences_add_required_facts"
+      ],
+      "columns": null
+    },
+    "SOURCE_FRAGMENTS": {
+      "type": "dict",
+      "keys": [
+        "columns",
+        "rows"
+      ],
+      "columns": [
+        "block_kind",
+        "complete_block",
+        "evidence_id",
+        "exact_text",
+        "fragment_id"
+      ]
+    },
+    "SOURCE_RELATION_POLICY": {
+      "type": "str",
+      "keys": null,
+      "columns": null
+    },
+    "SOURCE_SYNTACTIC_UNITS": {
+      "type": "list",
+      "keys": null,
+      "columns": null
+    },
+    "TUTOR_QUESTION": {
+      "type": "NoneType",
+      "keys": null,
+      "columns": null
+    },
+    "answer_mode": {
+      "type": "str",
+      "keys": null,
+      "columns": null
+    },
+    "current_problem": {
+      "type": "str",
+      "keys": null,
+      "columns": null
+    },
+    "question": {
+      "type": "str",
+      "keys": null,
+      "columns": null
+    }
+  },
+  "schema_validation": {
+    "passed": true,
+    "errors": [],
+    "claims": 8,
+    "units": 17
+  },
+  "actual_question": "How do light-dependent reactions provide the energy carriers used by the Calvin cycle?",
+  "decoded_binding_counts": {
+    "claims": 8,
+    "bindings": 8,
+    "fragments": 67,
+    "bank_entries": 6
+  },
+  "source_syntactic_units_exactly_match_reconstruction": true,
+  "relation_contract_issues": [
+    {
+      "code": "RELATION_SUPPORT_FRAGMENT_MISSING",
+      "claim_id": "claim_ee163c3ff65bd200bdb9ade7_1",
+      "unit_id": "U01"
+    },
+    {
+      "code": "RELATION_SUPPORT_FRAGMENT_MISSING",
+      "claim_id": "claim_ee163c3ff65bd200bdb9ade7_1",
+      "unit_id": "U02"
+    },
+    {
+      "code": "RELATION_SUPPORT_FRAGMENT_MISSING",
+      "claim_id": "claim_ee163c3ff65bd200bdb9ade7_1",
+      "unit_id": "U03"
+    }
+  ],
+  "relation_defects": [],
+  "relation_assessment": {
+    "version": "source_relation_contract_v2",
+    "method": "online_checker_lossless_syntactic_units_and_exact_binding_validation",
+    "accepted": false,
+    "claims": [
+      {
+        "claim_id": "claim_ee163c3ff65bd200bdb9ade7_1",
+        "checker_claim_status": "supported",
+        "exact_claim_content_covered": true,
+        "obligations": [
+          {
+            "unit_id": "U01",
+            "status": "supported",
+            "fragment_ids": [],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "Supported by the general process described in the text and subsequent units.",
+            "claim_quote": "The light-dependent reactions capture light energy",
+            "claim_start": 0,
+            "claim_end": 50,
+            "source_quotes": [],
+            "defect_codes": []
+          },
+          {
+            "unit_id": "U02",
+            "status": "supported",
+            "fragment_ids": [],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "Supported by text stating energy is temporarily stored in carriers.",
+            "claim_quote": " and temporarily store it in energy carriers,",
+            "claim_start": 50,
+            "claim_end": 95,
+            "source_quotes": [],
+            "defect_codes": []
+          },
+          {
+            "unit_id": "U03",
+            "status": "supported",
+            "fragment_ids": [],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "Supported by text describing carriers moving to the Calvin cycle.",
+            "claim_quote": " which then move to the Calvin cycle.",
+            "claim_start": 95,
+            "claim_end": 132,
+            "source_quotes": [],
+            "defect_codes": []
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_bef39ebeaf31e71fd4134552_1",
+        "checker_claim_status": "supported",
+        "exact_claim_content_covered": true,
+        "obligations": [
+          {
+            "unit_id": "U01",
+            "status": "supported",
+            "fragment_ids": [
+              "F043"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "Supported by fragment F043.",
+            "claim_quote": "The light-dependent reactions convert light energy into chemical energy that the Calvin cycle uses to fuel the assembly of sugar molecules [ev_008].",
+            "claim_start": 0,
+            "claim_end": 148,
+            "source_quotes": [
+              {
+                "evidence_id": "ev_008",
+                "fragment_id": "F043",
+                "quote": "This chemical energy will be used by the Calvin cycle to fuel the assembly of sugar molecules."
+              }
+            ],
+            "defect_codes": []
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_37eb9395c8cbcb5721d36f6e_1",
+        "checker_claim_status": "supported",
+        "exact_claim_content_covered": true,
+        "obligations": [
+          {
+            "unit_id": "U01",
+            "status": "supported",
+            "fragment_ids": [
+              "F007"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "Supported by F007.",
+            "claim_quote": "Photosystems absorb light",
+            "claim_start": 0,
+            "claim_end": 25,
+            "source_quotes": [
+              {
+                "evidence_id": "ev_002",
+                "fragment_id": "F007",
+                "quote": "Photosystems absorb light and use electron transport chains to convert energy into the chemical energy of ATP and NADH."
+              }
+            ],
+            "defect_codes": []
+          },
+          {
+            "unit_id": "U02",
+            "status": "supported",
+            "fragment_ids": [
+              "F007"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "Supported by F007.",
+            "claim_quote": " and use electron transport chains to convert energy into the chemical energy of ATP",
+            "claim_start": 25,
+            "claim_end": 109,
+            "source_quotes": [
+              {
+                "evidence_id": "ev_002",
+                "fragment_id": "F007",
+                "quote": "Photosystems absorb light and use electron transport chains to convert energy into the chemical energy of ATP and NADH."
+              }
+            ],
+            "defect_codes": []
+          },
+          {
+            "unit_id": "U03",
+            "status": "supported",
+            "fragment_ids": [
+              "F007"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "Supported by F007 mentioning ATP and equivalent energy carriers.",
+            "claim_quote": " and NADPH [ev_002].",
+            "claim_start": 109,
+            "claim_end": 129,
+            "source_quotes": [
+              {
+                "evidence_id": "ev_002",
+                "fragment_id": "F007",
+                "quote": "Photosystems absorb light and use electron transport chains to convert energy into the chemical energy of ATP and NADH."
+              }
+            ],
+            "defect_codes": []
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_d5ccefbc42fc42739dca1c3d_1",
+        "checker_claim_status": "supported",
+        "exact_claim_content_covered": true,
+        "obligations": [
+          {
+            "unit_id": "U01",
+            "status": "supported",
+            "fragment_ids": [
+              "F037"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "Supported by F037.",
+            "claim_quote": "These energy-carrying molecules travel into the stroma, where the Calvin cycle reactions take place [ev_007].",
+            "claim_start": 0,
+            "claim_end": 109,
+            "source_quotes": [
+              {
+                "evidence_id": "ev_007",
+                "fragment_id": "F037",
+                "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+              }
+            ],
+            "defect_codes": []
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_cb28b021f1a6130e702d259b_1",
+        "checker_claim_status": "supported",
+        "exact_claim_content_covered": true,
+        "obligations": [
+          {
+            "unit_id": "U01",
+            "status": "supported",
+            "fragment_ids": [
+              "F002"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "Supported by F002.",
+            "claim_quote": "The carriers that move energy from the light-dependent reactions to the Calvin cycle are described as \"full\"",
+            "claim_start": 0,
+            "claim_end": 108,
+            "source_quotes": [
+              {
+                "evidence_id": "ev_001",
+                "fragment_id": "F002",
+                "quote": "The carriers that move energy from the light-dependent reactions to the Calvin cycle reactions can be thought of as “full” because they bring energy."
+              }
+            ],
+            "defect_codes": []
+          },
+          {
+            "unit_id": "U02",
+            "status": "supported",
+            "fragment_ids": [
+              "F002"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "Supported by F002.",
+            "claim_quote": " because they bring energy [ev_001].",
+            "claim_start": 108,
+            "claim_end": 144,
+            "source_quotes": [
+              {
+                "evidence_id": "ev_001",
+                "fragment_id": "F002",
+                "quote": "The carriers that move energy from the light-dependent reactions to the Calvin cycle reactions can be thought of as “full” because they bring energy."
+              }
+            ],
+            "defect_codes": []
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_505ea865a19065719d7eb2c7_1",
+        "checker_claim_status": "supported",
+        "exact_claim_content_covered": true,
+        "obligations": [
+          {
+            "unit_id": "U01",
+            "status": "supported",
+            "fragment_ids": [
+              "F053"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "Supported by F053.",
+            "claim_quote": "In the Calvin cycle, the energy in ATP",
+            "claim_start": 0,
+            "claim_end": 38,
+            "source_quotes": [
+              {
+                "evidence_id": "ev_010",
+                "fragment_id": "F053",
+                "quote": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P."
+              }
+            ],
+            "defect_codes": []
+          },
+          {
+            "unit_id": "U02",
+            "status": "supported",
+            "fragment_ids": [
+              "F053"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "Supported by F053.",
+            "claim_quote": " and NADPH is used to convert three-carbon molecules into G3P [ev_010].",
+            "claim_start": 38,
+            "claim_end": 109,
+            "source_quotes": [
+              {
+                "evidence_id": "ev_010",
+                "fragment_id": "F053",
+                "quote": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P."
+              }
+            ],
+            "defect_codes": []
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_1d43516889b5d53f4e881ef9_1",
+        "checker_claim_status": "supported",
+        "exact_claim_content_covered": true,
+        "obligations": [
+          {
+            "unit_id": "U01",
+            "status": "supported",
+            "fragment_ids": [
+              "F031"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "Supported by F031.",
+            "claim_quote": "After the energy is released, the \"empty\" carriers return to the light-dependent reactions to obtain more energy [ev_005].",
+            "claim_start": 0,
+            "claim_end": 122,
+            "source_quotes": [
+              {
+                "evidence_id": "ev_005",
+                "fragment_id": "F031",
+                "quote": "After the energy is released, the “empty” energy carriers return to the light-dependent reaction to obtain more energy."
+              }
+            ],
+            "defect_codes": []
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_5a5b28758dda18ae2cb4ff4f_1",
+        "checker_claim_status": "supported",
+        "exact_claim_content_covered": true,
+        "obligations": [
+          {
+            "unit_id": "U01",
+            "status": "supported",
+            "fragment_ids": [
+              "F036",
+              "F051"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "Supported by F036 and F051.",
+            "claim_quote": "Light-dependent reactions store captured light energy in ATP",
+            "claim_start": 0,
+            "claim_end": 60,
+            "source_quotes": [
+              {
+                "evidence_id": "ev_007",
+                "fragment_id": "F036",
+                "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+              },
+              {
+                "evidence_id": "ev_010",
+                "fragment_id": "F051",
+                "quote": "Photosystem I absorbs a second photon, which results in the formation of an NADPH molecule, another energy carrier for the Calvin cycle reactions. 5.3 The Calvin Cycle Using the energy carriers formed in the first stage of photosynthesis, the Calvin cycle reactions fix CO2 from the environment to build carbohydrate molecules."
+              }
+            ],
+            "defect_codes": []
+          },
+          {
+            "unit_id": "U02",
+            "status": "supported",
+            "fragment_ids": [
+              "F036",
+              "F051"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "Supported by F036 and F051.",
+            "claim_quote": " and NADPH,",
+            "claim_start": 60,
+            "claim_end": 71,
+            "source_quotes": [
+              {
+                "evidence_id": "ev_007",
+                "fragment_id": "F036",
+                "quote": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH."
+              },
+              {
+                "evidence_id": "ev_010",
+                "fragment_id": "F051",
+                "quote": "Photosystem I absorbs a second photon, which results in the formation of an NADPH molecule, another energy carrier for the Calvin cycle reactions. 5.3 The Calvin Cycle Using the energy carriers formed in the first stage of photosynthesis, the Calvin cycle reactions fix CO2 from the environment to build carbohydrate molecules."
+              }
+            ],
+            "defect_codes": []
+          },
+          {
+            "unit_id": "U03",
+            "status": "supported",
+            "fragment_ids": [
+              "F037"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "Supported by F037.",
+            "claim_quote": " which travel to the stroma",
+            "claim_start": 71,
+            "claim_end": 98,
+            "source_quotes": [
+              {
+                "evidence_id": "ev_007",
+                "fragment_id": "F037",
+                "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+              }
+            ],
+            "defect_codes": []
+          },
+          {
+            "unit_id": "U04",
+            "status": "supported",
+            "fragment_ids": [
+              "F037",
+              "F053"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "Supported by F037 and F053.",
+            "claim_quote": " and supply the energy the Calvin cycle uses to make G3P [ev_007][ev_010].",
+            "claim_start": 98,
+            "claim_end": 172,
+            "source_quotes": [
+              {
+                "evidence_id": "ev_007",
+                "fragment_id": "F037",
+                "quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place."
+              },
+              {
+                "evidence_id": "ev_010",
+                "fragment_id": "F053",
+                "quote": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P."
+              }
+            ],
+            "defect_codes": []
+          }
+        ]
+      }
+    ],
+    "contract_issue_codes": [
+      "RELATION_SUPPORT_FRAGMENT_MISSING"
+    ],
+    "semantic_defect_codes": [],
+    "independent_evaluation": false,
+    "human_rating": null,
+    "source_entailment_locally_certified": false,
+    "semantic_atomicity_locally_certified": false
+  },
+  "binding_issues": [],
+  "checker_inconsistencies_before_relation_contract": [],
+  "all_relation_contract_issue_count": 3,
+  "contract_issue_counts": {
+    "RELATION_SUPPORT_FRAGMENT_MISSING": 3
+  },
+  "expected_next_stage_from_existing_checked_loop": "checker_contract_repair",
+  "protected_claims_if_existing_binding_and_relation_defects_reached_selector": [
+    "claim_ee163c3ff65bd200bdb9ade7_1",
+    "claim_bef39ebeaf31e71fd4134552_1",
+    "claim_37eb9395c8cbcb5721d36f6e_1",
+    "claim_d5ccefbc42fc42739dca1c3d_1",
+    "claim_cb28b021f1a6130e702d259b_1",
+    "claim_505ea865a19065719d7eb2c7_1",
+    "claim_1d43516889b5d53f4e881ef9_1",
+    "claim_5a5b28758dda18ae2cb4ff4f_1"
+  ],
+  "local_semantic_certificate": false,
+  "network_or_database_calls": 0,
+  "main_writes": 0,
+  "audit_denials": [],
+  "public_main_reads": [
+    "E:\\5703\\learning-assistant\\contracts\\__init__.py",
+    "E:\\5703\\learning-assistant\\contracts\\models.py",
+    "E:\\5703\\learning-assistant\\conversation\\__init__.py",
+    "E:\\5703\\learning-assistant\\conversation\\context.py",
+    "E:\\5703\\learning-assistant\\conversation\\query.py",
+    "E:\\5703\\learning-assistant\\conversation\\summary.py",
+    "E:\\5703\\learning-assistant\\conversation\\understanding.py",
+    "E:\\5703\\learning-assistant\\generation\\__init__.py",
+    "E:\\5703\\learning-assistant\\generation\\adapters.py",
+    "E:\\5703\\learning-assistant\\generation\\checked.py",
+    "E:\\5703\\learning-assistant\\generation\\evidence_budget.py",
+    "E:\\5703\\learning-assistant\\generation\\network_policy.py",
+    "E:\\5703\\learning-assistant\\generation\\parser.py",
+    "E:\\5703\\learning-assistant\\generation\\prompt_builder.py",
+    "E:\\5703\\learning-assistant\\generation\\providers.py",
+    "E:\\5703\\learning-assistant\\generation\\reliability_v3.py",
+    "E:\\5703\\learning-assistant\\generation\\reliability_v4.py",
+    "E:\\5703\\learning-assistant\\generation\\reliability_v5.py",
+    "E:\\5703\\learning-assistant\\generation\\response_field_contract_v2.py",
+    "E:\\5703\\learning-assistant\\generation\\service.py",
+    "E:\\5703\\learning-assistant\\generation\\source_relations_v2.py",
+    "E:\\5703\\learning-assistant\\generation\\support_audit.py",
+    "E:\\5703\\learning-assistant\\generation\\teaching.py",
+    "E:\\5703\\learning-assistant\\generation\\token_counting.py",
+    "E:\\5703\\learning-assistant\\generation\\types.py"
+  ]
+}

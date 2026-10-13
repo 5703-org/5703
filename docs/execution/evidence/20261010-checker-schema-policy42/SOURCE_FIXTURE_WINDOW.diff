@@ -1,0 +1,77 @@
+--- tests/unit/test_source_relation_protection27.py.before
++++ tests/unit/test_source_relation_protection27.py
+@@ -46,7 +46,7 @@
+         joint_checker_policy="typed_joint_v5",
+         source_relation_policy=VERSION,
+         repair_policy=CLAIM_PATCH_POLICY,
+-        config=ModelConfig(tokenizer_provider="estimate"),
++        config=ModelConfig(window_tokens=32768, tokenizer_provider="estimate"),
+     )
+     evidence, mapping = deepcopy(value.evidence), deepcopy(value.source_map)
+     evidence[0].update(text=SOURCE, text_hash=text_hash(SOURCE), section="Authored device")
+--- tests/unit/test_source_relation_units_v2.py.before
++++ tests/unit/test_source_relation_units_v2.py
+@@ -3,13 +3,18 @@
+ from copy import deepcopy
+ import json
+ import pytest
+-from generation import GenerationService, RequestBudget
++from generation import GenerationService, ModelConfig, RequestBudget
+ from generation.local_repair import VERSION as REPAIR
+ from generation.source_relations_v2 import VERSION, syntactic_units, assess_source_relations
+ from generation.teaching_plan_v6 import freeze_generation_policy
+ from test_answer_core_v5 import checker, req
+ from test_enhancement_generation import Script, answer
+ from test_source_relation_contract import check_input, mismatched_quote
++
++
++def request_fixture(**values):
++    """Keep source-gate fixtures within a fixed finite 32K test window."""
++    return req(config=ModelConfig(window_tokens=32768, tokenizer_provider="estimate"), **values)
+ 
+ 
+ def unit_checker(messages, **updates):
+@@ -167,7 +172,7 @@
+ def test_pipeline_reconstructs_exact_claim_and_sources_and_uses_matching_final_highlight():
+     adapter = Script([answer(), unit_checker])
+     out = GenerationService(adapter).generate(
+-        req(source_relation_policy=VERSION, generation_policy=freeze_generation_policy())
++        request_fixture(source_relation_policy=VERSION, generation_policy=freeze_generation_policy())
+     )
+     assert out.succeeded, out.error
+     assert out.budget["consumed_calls"] == 2
+@@ -206,7 +211,7 @@
+         return value
+ 
+     out = GenerationService(Script([answer(), invalid])).generate(
+-        req(source_relation_policy=VERSION), RequestBudget(max_calls=2)
++        request_fixture(source_relation_policy=VERSION), RequestBudget(max_calls=2)
+     )
+     assert out.response is None and out.error["code"] == "CHECKER_INCONSISTENT"
+ 
+@@ -238,7 +243,7 @@
+         }
+ 
+     out = GenerationService(Script([original, rejected, patch, unit_checker])).generate(
+-        req(source_relation_policy=VERSION, repair_policy=REPAIR)
++        request_fixture(source_relation_policy=VERSION, repair_policy=REPAIR)
+     )
+     assert out.succeeded, out.error
+     assert out.budget["consumed_calls"] == 4
+@@ -254,7 +259,7 @@
+ 
+     out = GenerationService(
+         Script([answer(short_answer="Photosynthesis uses light energy. [ev_001]"), rejected])
+-    ).generate(req(source_relation_policy=VERSION), RequestBudget(max_calls=2))
++    ).generate(request_fixture(source_relation_policy=VERSION), RequestBudget(max_calls=2))
+     assert out.response is None and out.error["code"] == "SEMANTIC_CHECK_FAILED"
+ 
+ 
+@@ -269,6 +274,6 @@
+         return value
+ 
+     out = GenerationService(Script([answer(), contradictory])).generate(
+-        req(source_relation_policy=VERSION), RequestBudget(max_calls=2)
++        request_fixture(source_relation_policy=VERSION), RequestBudget(max_calls=2)
+     )
+     assert out.response is None and "INSUFFICIENT_CONTEXT_FULL_COVERAGE" in json.dumps(out.checks)

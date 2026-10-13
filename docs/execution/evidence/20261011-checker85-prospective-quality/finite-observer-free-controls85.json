@@ -1,0 +1,45 @@
+{
+  "schema": "phase85_finite_observer_synthetic_controls_v1",
+  "status": "PASS",
+  "created_UTC": "2026-10-11T18:33:08.868015+00:00",
+  "tests_run": 5,
+  "failures": 0,
+  "errors": 0,
+  "elapsed_seconds": 0.069933,
+  "network_attempts": 0,
+  "source_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-finite-observer-candidate\\outcome_observer82.py",
+      "bytes": 2792,
+      "sha256": "e9a3167934f36ebe054a4cedb3e2674c54118c9d0e896bea8ea468618f3c57d1"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-finite-observer-candidate\\outcome_observer82.py.before85",
+      "bytes": 1916,
+      "sha256": "bc5f8341e98298b064d4c0db93266efda697662429fda050dcec9986ee1c05a2"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-finite-observer-candidate\\test_finite_observer85.py",
+      "bytes": 6970,
+      "sha256": "2d097568ec71b561004e153c930b7bba5e0f45acc9dbe52542a5f2638162f491"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-finite-observer-candidate\\independent-review85.json",
+      "bytes": 2671,
+      "sha256": "ead0313cd4bbff43cd7dda2107d58ff181b8bf48f3c087bd8bc9183de5c379c8"
+    }
+  ],
+  "output": "test_all_legacy_fields_are_identical_and_original_exceptions_still_propagate (finite_observer85_controls.FiniteObserverControls.test_all_legacy_fields_are_identical_and_original_exceptions_still_propagate) ... ok\ntest_category_is_scoped_to_known_checker_error_and_numeric_fields_stay_finite (finite_observer85_controls.FiniteObserverControls.test_category_is_scoped_to_known_checker_error_and_numeric_fields_stay_finite) ... ok\ntest_known_code_and_fixed_category_are_retained (finite_observer85_controls.FiniteObserverControls.test_known_code_and_fixed_category_are_retained) ... ok\ntest_unknown_codes_categories_and_shapes_are_not_exported (finite_observer85_controls.FiniteObserverControls.test_unknown_codes_categories_and_shapes_are_not_exported) ... ok\ntest_wrapper_keeps_outcome_identity_and_write_failure_callback (finite_observer85_controls.FiniteObserverControls.test_wrapper_keeps_outcome_identity_and_write_failure_callback) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.000s\n\nOK\n",
+  "limitations": [
+    "Pure observer synthetic tests only; no normal pipeline, provider wire, semantic quality, or timing claim.",
+    "Original-call exceptions still bypass observation; no case03 cause established."
+  ],
+  "performed": {
+    "actual_provider_calls": 0,
+    "Main_imports": 0,
+    "Main_writes": 0,
+    "frozen_runtime_writes": 0,
+    "actual_ledger_reads_or_writes": 0,
+    "auth_DB_access": 0
+  }
+}

@@ -611,3 +611,11 @@ The dated 858-source checkpoint passed 2,929 Python cases plus two subtests and 
 ## Real practice assessment observation — 3 October 2026
 
 Sixteen real DeepSeek calls and six deterministic controls completed against the fixed official-source development population. Model outcomes were six correct, two incorrect, two partial and six pending reviews caused by invalid evidence coordinates. All eight contradictory responses avoided a correct grade. This direct preparation/validation trial used unpersisted learning objects; real API progression, independent human ratings and source-disjoint quality evaluation remain pending. [Actual results and usage](docs/execution/week09-real-practice-assessment-results-20261003.md).
+
+
+## Week10 implementation specification addendum - 9 October 2026
+
+Apply the [Week10 plan](docs/execution/20261009-week10-implementation-plan.md) through isolated, versioned and reversible changes around the existing modular application, jobs and atomic checked publication. The server determines conditional Q&A/practice scope; only confirmed non-attempt Q&A may normalize a missing attempt result to explicit not_applicable. Actual attempts, ambiguous/conflicting contexts and explicit negative assessments retain strict validation. Other semantic, citation and source checks are unchanged.
+
+Keep E5-small-v2 384-D, BM25, RRF and MiniLM as controlled baselines. Contextual text, parent-child maps and candidate vector indexes need separate identities and rollback pointers; query/document encoders must share the same embedding space. Preserve finite call/time/token limits, unknown costs, user/course-scoped cache keys and real source anchors. Instrument full publication and failure clocks separately. The [actual-status companion](docs/execution/20261009-week10-implementation-status.md) carries current results and gaps; this addendum does not promote a model, rebuild embeddings, alter Week09 evidence or renumber the original contracts.
+

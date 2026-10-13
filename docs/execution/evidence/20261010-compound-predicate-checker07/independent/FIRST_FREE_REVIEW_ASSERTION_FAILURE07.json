@@ -1,0 +1,20 @@
+{
+  "status": "ACTUAL_FREE_REVIEW_ASSERTION_FAILURE_PRESERVED",
+  "scope": "Independent read-only audit script, not provider generation or the application pipeline",
+  "script_before_correction": "review_actual05A_support07.before-raw-applicability-correction.py",
+  "executed_script": "review_actual05A_support07.py",
+  "tool_exit_code": 1,
+  "failure_line": 65,
+  "failure_type": "KeyError",
+  "failure_field": "attempt_evaluation_ok",
+  "exact_error": "KeyError: 'attempt_evaluation_ok'",
+  "overstrong_assertion": "parsed[\"attempt_evaluation_ok\"] == typed[\"attempt_evaluation_ok\"] == \"not_applicable\"",
+  "cause": "The actual retained provider raw JSON omits the required field. The typed output contains not_applicable after guarded ordinary-question normalization. The review must distinguish the raw contract omission from normalized conditional schema success.",
+  "correction_scope": "Audit assertions and wording only: verify the actual server-bound ordinary-question predicate, null attempt evaluation, no pending question, and the sole added typed field. Preserve the raw response and all actual scientific claims/verdicts unchanged.",
+  "outputs_created_before_failure": false,
+  "application_or_model_result_changed": false,
+  "reviewer_API_POSTs": 0,
+  "reviewer_database_reads_or_writes": 0,
+  "reviewer_Main_writes": 0,
+  "old_artifacts_or_frozen06_changed": false
+}

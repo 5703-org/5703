@@ -1,0 +1,95 @@
+{
+  "schema": "5703_source_relation_unit_id_fix_final_frozen_v1",
+  "status": "FINAL_FROZEN_READY_FOR_ROOT_ADOPTION_AND_FREE_REGRESSION",
+  "files": {
+    "generation/checked.py.before": {
+      "bytes": 159286,
+      "sha256": "8e3042a00e23a72e7ac06cebded3c12550db916d89c4cea24dd744a19c6217eb"
+    },
+    "generation/checked.py": {
+      "bytes": 159567,
+      "sha256": "567c6809fa4edd1afb5faf1584f86965291d825499985db4ed9d8de21c0c1b5b"
+    },
+    "tests/unit/test_source_relation_units_v2.py.before": {
+      "bytes": 11228,
+      "sha256": "a7f9209ff295c868dadfd5716dafd5fd9397e305f28ec342e4a2ab299891d642"
+    },
+    "tests/unit/test_source_relation_units_v2.py": {
+      "bytes": 16356,
+      "sha256": "9060f29d82dfb3e391b684072669a57f8a61621a43ba843daacf9fa05c247a73"
+    },
+    "SOURCE_RELATION_UNIT_ID_FIX.diff": {
+      "bytes": 8896,
+      "sha256": "6d3cd9894fa23189bc052b64aa7b862c31640af930a42067be2afd7863c2f242"
+    },
+    "SOURCE_RELATION_UNIT_ID_FIX_PREPARED_REVIEW01.json": {
+      "bytes": 2690,
+      "sha256": "764114711c08b61835f75e9df19bc6422a89cbcc3aa8e60a0ba843bf69ac3a2f"
+    }
+  },
+  "implementation_scope": {
+    "Main_target": "generation/checked.py",
+    "five_added_lines_only": true,
+    "V2_only": true,
+    "stable_machine_readable_unit_fragment_IDs": "Map through the exact existing per-check alias bank at the already cloned assessment boundary. Unknown aliases retain the existing compact-path sentinel; they gain no source validity.",
+    "raw_alias_copy_preserved": true,
+    "reason_text_preserved": true,
+    "unit_status_relations_conditions_defects_preserved": true,
+    "source_quote_selection_unchanged": true,
+    "no_extra_schema_prompt_metadata_defaults_or_budget_changes": true,
+    "removed_delta_reconstructs_exact_Main_predecessor": true
+  },
+  "production_consumers": {
+    "PrivateAnswerDraft": "backend/app/modules/learning_state/sources.py:260-269 persists full result.checks payload",
+    "repair_feedback": "checked.py:3060 reuses canonical source_relation_assessment",
+    "source_text_transport": "repair_context.compact_source_text deep-copies full feedback and references only candidate text",
+    "claim_feedback_transport": "encode/decode preserve corrected unit IDs as literal JSON and reference only selected exact source quote text"
+  },
+  "provenance_reuse": {
+    "machine_unit_ids_join_source_quotes": true,
+    "immutable_fragment_IDs_resolve_existing_attribution_fragments": true,
+    "existing_source_locations": "document_version_id/processing_id/chunk_id/source_unit_id/start/end/text_hash/offset_basis already come from validated source_spans mapper",
+    "claim_unit_offsets": "claim_start/end remain relative to exact full_claim; parent claim carries answer_field/start/end",
+    "entailment_or_atomicity_certificate": false
+  },
+  "prepared_test_scope": {
+    "existing_file": "tests/unit/test_source_relation_units_v2.py",
+    "old_assert_ASTs_preserved": 26,
+    "candidate_assert_ASTs": 50,
+    "additional_parameterized_cases_expected_not_observed": 5,
+    "invariants": [
+      "Canonical stored unit IDs equal own source quote IDs and resolve actual source-unit Unicode slices/hash/offset_basis.",
+      "Raw alias selections and raw reason/status/condition fields are preserved.",
+      "Reworded compound/body/short-answer cases use the production GenerationService with an explicitly authored Script checker.",
+      "Conditional failure, partial support and unsupported empty selections remain rejected under max2 calls; no selection is filled.",
+      "Existing max4 repair retains exact protected text and the fresh complete final checker; repair callback asserts canonical source IDs."
+    ],
+    "scripts_are_authored_software_not_semantic_quality_evidence": true,
+    "tests_not_executed": true,
+    "Ruff_not_executed": true,
+    "codec_encoded_branch_not_independently_executed": true
+  },
+  "independent_readonly_review": {
+    "agent": "/root/strict_schema41_feasibility/answering_mapping_readonly",
+    "status": "PASS_STATIC_ONLY",
+    "pins_and_AST_checked": true,
+    "negative_pipeline_existing_fragment_availability_confirmed": true,
+    "no_gate_weakening_found": true,
+    "qualification": "The existing repair callback uses the pre-existing full-feedback shape assumption; Root free verification must exercise the actual FULL/encoded behavior. No arbitrary wrapper or codec rewrite was added."
+  },
+  "negative_conclusion": [
+    "No pre-generation per-atomic-assertion entailment map was found to recover. Syntactic partitions and lexical context occurrences are candidate/provenance structures.",
+    "This fix repairs persisted and repair-input identifier consistency; no evidence establishes that it fixes the supported-but-incomplete selections in paid43/46-50.",
+    "Auto-adding missing FIDs or rewriting claims from shared lexical hints would make an unsupported semantic decision and is not justified."
+  ],
+  "Root_next_action": "Verify exact Main predecessor pins, promote only these two files if still matched, run the appropriate free real-Main regressions, preserve outcomes and update current documentation from actual results.",
+  "actions": {
+    "W_create_only": true,
+    "Main_writes": 0,
+    "API_model_calls": 0,
+    "DB_authentication": 0,
+    "services": 0,
+    "tests_Ruff_or_production_module_execution": 0,
+    "stdlib_hash_AST_readonly_review": true
+  }
+}

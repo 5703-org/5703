@@ -1,0 +1,57 @@
+{
+  "schema": "read_only_case06_v2_first_failure87_v1",
+  "recorded_at": "2026-10-11T20:49:27.333791+00:00",
+  "case": "actual87/case06",
+  "strict_json": "PASS",
+  "recorded_and_reprepared_context_sha256": "e3adf1dcfc2a298978ebef1d1345f71183f681f978be08b169222ae0e2447473",
+  "context_digest_match": true,
+  "transport_raw_unchanged_equal_raw_text": true,
+  "raw_sha256": "085768c680d2456c230785b443a9200bbfc2cd11918906784d9ad8d1a3fff1cf",
+  "first_failure": {
+    "stage": "decode metadata fence before claim/unit/canonical semantic gates",
+    "exception_type": "ValueError",
+    "trusted_static_message": "Missing, unknown or stale single-selection metadata",
+    "core_file": "single_selection_findings_v2.py",
+    "function": "_decode",
+    "line": 122,
+    "exact_missing_root_field": "context_sha256",
+    "version_literal": "single_selection_findings_v2"
+  },
+  "bounded_raw_shape_inspection": {
+    "missing_required_root_fields": [
+      "context_sha256"
+    ],
+    "extra_root_fields": [],
+    "claim_records": 8,
+    "every_parent_status_explicit": true,
+    "observed_citation_and_requirement_evidence_field_sets_match_v2": true,
+    "downstream_validation_established": false,
+    "source_entailment_established": false
+  },
+  "provider_observation": {
+    "http_status": 200,
+    "finish_reason": "stop",
+    "output_tokens": 2114,
+    "reasoning_tokens": 396,
+    "known_cost_usd": 0.0132932
+  },
+  "actions": {
+    "main_write": false,
+    "runtime_pin_write": false,
+    "raw_normalization": false,
+    "metadata_fill": false,
+    "new_provider_request": false,
+    "auth_read": false,
+    "database_connection": false
+  },
+  "diagnostic_only_proposal": {
+    "file": "generation/providers.py",
+    "function": "_checker_decode_failure",
+    "predicate": "type(exc) is ValueError and exc.args == (\"Missing, unknown or stale single-selection metadata\",)",
+    "return": {
+      "category": "CONTRACT_INVALID",
+      "code": "SINGLE_SELECTION_METADATA_INVALID"
+    },
+    "constraints": "Exact trusted literal classification only; preserve all other/v1 classifications, original CHECKER_TRANSPORT_INVALID refusal, raw, flags and decoder; no missing/stale distinction inferred by this classifier. No Main patch applied."
+  }
+}

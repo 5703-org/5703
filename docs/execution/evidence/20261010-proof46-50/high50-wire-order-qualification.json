@@ -1,0 +1,69 @@
+{
+  "status": "READ_ONLY_SERIALIZATION_QUALIFICATION_NO_FROZEN_REWRITE",
+  "reason": "The frozen offline control used the canonical sorted-key schema snapshot. Its whole-wire serializer did not sort keys; nested schema insertion order differs from the original49 fixture. This fully accounts for the hash difference.",
+  "input_pins": {
+    "prior49_wire": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-unit-proof-plan49-replay-candidate\\UNIT_PROOF_PLAN49_EXACT_WIRE.json",
+      "bytes": 87981,
+      "sha256": "bbca2830159c4fd824218a09f22032754168f8563b936b79836d58fd1cf76729"
+    },
+    "canonical_schema_snapshot": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-gemini-high-profile-candidate\\SCOPED3031_SCHEMA.json",
+      "bytes": 3031,
+      "sha256": "da548389e9bace0395f7c60b457d4e787b2fdb415ca9efaa4b10eebe601d4871"
+    },
+    "frozen_high_review": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-gemini-high-profile-candidate\\HIGH_PROFILE_FINAL_FROZEN_REVIEW01.json",
+      "bytes": 11940,
+      "sha256": "c25de6d0ad751c7838354105f8f8dc0c515a5efe42646c19bcdaef3679cb4019"
+    },
+    "frozen_high_controls": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-gemini-high-profile-candidate\\HIGH_PROFILE_REAL_OFFLINE_CONTROLS01.json",
+      "bytes": 4345,
+      "sha256": "98dfed8bb71f305063fcf45b06877a00947bdcfa484127fba0a899af6116d4b7"
+    },
+    "frozen_control_source": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-gemini-high-profile-candidate\\check_high_route_controls.py",
+      "bytes": 8251,
+      "sha256": "7d8dec1a8e9fdec7455550aeb95a136bfa4fc4cdf0682117c2448c3ae633319d"
+    }
+  },
+  "exact_encoding": "json.dumps(body,ensure_ascii=False,separators=(comma,colon),allow_nan=False).encode(UTF-8); sort_keys defaults False.",
+  "proof": {
+    "complete_JSON_objects_equal": true,
+    "only_value_change_from49": "reasoning.effort medium to high",
+    "prior49_schema_root_key_order": [
+      "type",
+      "properties",
+      "required",
+      "additionalProperties"
+    ],
+    "offline_canonical_schema_root_key_order": [
+      "additionalProperties",
+      "properties",
+      "required",
+      "type"
+    ],
+    "preserved_original49_schema_order_expected_wire": {
+      "bytes": 87979,
+      "sha256": "12814f5a901648b8d05def4739bfdce19ecf55c562b673d0606fe0c4fd366115"
+    },
+    "sorted_schema_snapshot_offline_control_wire": {
+      "bytes": 87979,
+      "sha256": "4b161afd80f10c425ed517456c446d22b2ae0f5d7731974bc373a6ae10614c9c"
+    },
+    "schema_identity_fields_constraints_messages_DATA8192_route_prices_all_same": true
+  },
+  "qualification": "4b161a... remains the actual offline-control encoding hash and is not the expected original-fixture production wire hash. Root must prepare the unchanged49 fixture with the genuine high row and bind the resulting complete wire; expected compact wire12814f... is a pure JSON prediction, not an observed network request. The frozen high review is preserved and this additive note narrows its exact-byte interpretation.",
+  "unchanged_frozen_inputs": true,
+  "no_semantic_schema_lowering_or_value_repair": true,
+  "boundaries": {
+    "runner_imports": 0,
+    "old_profile_controls_rerun": 0,
+    "API_requests": 0,
+    "DB_accesses": 0,
+    "authentication_target_reads": 0,
+    "Main_writes": 0,
+    "frozen_high_file_writes": 0
+  }
+}

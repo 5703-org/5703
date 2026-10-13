@@ -1,0 +1,89 @@
+{
+  "contract": {
+    "STOP_slots_reused": false,
+    "accounting_basis": "UTF8_wire_bytes_plus_fixed_overhead_not_provider_count",
+    "actual_stage_output_caps": {
+      "generation": 2048,
+      "joint_check": 4096,
+      "joint_recheck": 4096,
+      "semantic_repair": 4096
+    },
+    "additional_budget_requested": false,
+    "additional_money_requested": false,
+    "automatic_retry_allowed": false,
+    "candidate_wire_bounds": {
+      "configured_input_tier": 99487,
+      "configured_window": 126464,
+      "cost": 113688,
+      "reviewed_whole_wire_cap": 98304
+    },
+    "configured_input_tier_exclusive": 100000,
+    "configured_window_tokens": 131072,
+    "cumulative_maximum_physical_POSTs": 12,
+    "cumulative_worst_case_USD": "0.22985240",
+    "fixed_input_overhead": 512,
+    "input_token_upper_at_max_wire": 98816,
+    "input_tokens_bound_at_max_wire": 98816,
+    "manual_new_allocation_USD": "0.18000000",
+    "manual_new_allocation_physical_POSTs": 4,
+    "manual_new_call_allocation_explicit": true,
+    "manual_per_POST_hold_USD": "0.04500000",
+    "maximum_batch_reserve_USD": "0.18000000",
+    "maximum_new_physical_POSTs": 4,
+    "maximum_wire_bytes": 98304,
+    "new_scope_reserve_USD": "0.18000000",
+    "old_scope_closed": true,
+    "original_eight_POST_cap_unchanged": true,
+    "original_maximum_physical_POSTs": 8,
+    "original_total_budget_USD": "0.24000000",
+    "output_reserved_tokens": 4096,
+    "per_POST_reserve_USD": "0.04500000",
+    "previous_physical_POSTs_used": 8,
+    "previous_spent_USD": "0.04985240",
+    "provider_native_input_tokens_claimed": false,
+    "remaining_original_budget_USD": "0.19014760",
+    "remaining_original_physical_POSTs": 0,
+    "reserve_margin_USD": "0.00050000",
+    "retained_provider_price_cap_USD_per_million": {
+      "completion": "2.5",
+      "prompt": "0.3"
+    },
+    "strict_upper_USD_at_max_wire": "0.03988480",
+    "strict_upper_bound_basis": "uniform_4096_output_UTF8_byte_input_accounting_at_enforced_price_caps",
+    "strict_upper_per_physical_POST_USD": "0.03988480",
+    "unallocated_reserve_USD_at_max_wire": "0.00511520",
+    "uniform_bound_output_tokens": 4096
+  },
+  "math_boundary_checks": 14,
+  "passed_checks": [
+    "same_reviewed_whole_wire_cap",
+    "utf8_boundary",
+    "fixed_overhead_and_input_bound",
+    "strict_input_tier",
+    "configured_window",
+    "uniform_and_actual_output_caps",
+    "fixed_rates_and_margin",
+    "per_post_cost_and_hold",
+    "new_manual_allocation",
+    "closed_old_eight_post_cap_immutable",
+    "explicit_manual_cumulative_calls",
+    "strict_cumulative_cash_cap",
+    "no_slot_reuse_auto_retry_or_extra_money",
+    "not_provider_tokenizer_certification"
+  ],
+  "provider_tokenizer_certification": false,
+  "qualification_asserted": false,
+  "source_pins": [
+    {
+      "bytes": 6320,
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-wire-budget36-candidate\\wire_budget_contract36_CANDIDATE.py",
+      "sha256": "eafb18d2421583a37a5372a899b38e97347dcb007f1432bb2d9b0a91337aa055"
+    },
+    {
+      "bytes": 5951,
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-wire-budget31-candidate\\wire_budget_contract31_CANDIDATE.py",
+      "sha256": "880383246779bd724628f16532ea3cb66050f3f20dd2c6eaed9d414bb111917c"
+    }
+  ],
+  "status": "PASS"
+}

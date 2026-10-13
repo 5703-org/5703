@@ -1,0 +1,40 @@
+--- real_browser_week10_scientific_native_closure_PREPARED01.cjs
++++ real_browser_POST_LIVENESS_CANDIDATE10B.cjs
+@@ -573,20 +573,25 @@
+ 
+ 
+ 
+-  async function observeLiveWorker(sinceEpoch) {
++  async function observeLiveWorker(sinceEpoch, { requireAdmissionReady = true } = {}) {
+     let observed;
+     await expect.poll(() => {
+       try {
+         const input = readJSON(fixture.readiness_public_path, 256000), r = input.data;
+         identityMatch(r, sourceSHA);
+-        const valid = r.ready === true && r.worker_alive === true && Number.isSafeInteger(r.worker_pid) && r.worker_pid > 0
++        // Post-answer liveness is separate from admission for a new paid request.
++        const readiness = requireAdmissionReady ? r.ready === true
++          : (r.ready === true && r.status === 'READY_FOR_LEARNER_QA')
++            || (r.ready === false && r.status === 'PENDING_MODEL_CALL');
++        const valid = readiness && r.worker_alive === true && Number.isSafeInteger(r.worker_pid) && r.worker_pid > 0
+           && Number.isSafeInteger(r.engine_object_identity) && r.engine_object_identity > 0
+           && Number.isFinite(r.worker_liveness_observed_epoch_ms) && r.worker_liveness_observed_epoch_ms >= sinceEpoch
+           && Number.isFinite(r.worker_liveness_perf_counter_ms);
+         if (!valid) return false;
+         observed = { public_readiness_pin: input.pin, worker_pid: r.worker_pid, engine_object_identity: r.engine_object_identity,
+           worker_alive: r.worker_alive, worker_liveness_observed_epoch_ms: r.worker_liveness_observed_epoch_ms,
+-          worker_liveness_perf_counter_ms: r.worker_liveness_perf_counter_ms };
++          worker_liveness_perf_counter_ms: r.worker_liveness_perf_counter_ms,
++          admission_ready: r.ready, requires_admission_ready: requireAdmissionReady };
+         return true;
+       } catch { return false; }
+     }, { timeout: 15000 }).toBe(true);
+@@ -719,7 +724,7 @@
+     const first = await question('Q2', expectedQuestions[0].question, freeQ2.session_id, freeQ2);
+     const latest = gate(cli['--budget-status'], sourceSHA, qualified.provider_route, true);
+     requireTrue(latest.provider_post_count >= MIN_PROVIDER_SLOTS && latest.provider_post_count <= MAX_PROVIDER_POSTS && latest.remaining_provider_slots === MAX_PROVIDER_POSTS - latest.provider_post_count, 'BOUNDED_TWO_TO_FOUR_POST_SINGLE_REGRESSION_SETTLEMENT_REQUIRED');
+-    const afterFirstLive = await observeLiveWorker(first.reload_started_epoch_ms);
++    const afterFirstLive = await observeLiveWorker(first.reload_started_epoch_ms, { requireAdmissionReady: false });
+     sameLiveWorker({ worker_pid: freeQ2.observed_worker_pid, engine_object_identity: freeQ2.observed_engine_identity, worker_alive: true }, afterFirstLive);
+     record.after_regression_live_worker = afterFirstLive;
+     record.regression_question.status = 'PASS';

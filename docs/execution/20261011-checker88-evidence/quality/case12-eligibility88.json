@@ -1,0 +1,264 @@
+{
+  "schema": "phase88_case12_independent_answer_eligibility_v1",
+  "created_utc": "2026-10-11T22:55:49.060333+00:00",
+  "status": "PASS",
+  "case_id": "case12",
+  "question_id": "fresh_lipid_structure88_03",
+  "question_sha256": "17eb147480f7a85cbeec585328a7bbefe6ce70a755c23cfa839bea2eabde49af",
+  "independent_answer_QA": "PASS",
+  "quality_basis": "Independent exposed AI source/rubric assessment of actual published answer and actual own selected proof, not API/checker flags alone",
+  "all_four_required_facets_complete": true,
+  "all_four_claims_and_twelve_units_supported": true,
+  "no_uncited_scientific_claim": true,
+  "no_scientific_critical_error_observed": true,
+  "unit_proof": [
+    {
+      "claim_id": "claim_97c7a421435dc2c3a020df8e_1",
+      "unit_ids": [
+        "U01",
+        "U02",
+        "U03"
+      ],
+      "selected_support": [
+        [
+          "F062"
+        ],
+        [
+          "F062"
+        ],
+        [
+          "F063"
+        ]
+      ],
+      "own_evidence": [
+        "ev_008",
+        "ev_001"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "claim_id": "claim_6f06443a239b1fa02a6da4e0_1",
+      "unit_ids": [
+        "U01",
+        "U02",
+        "U03"
+      ],
+      "selected_support": [
+        [
+          "F008"
+        ],
+        [
+          "F008"
+        ],
+        [
+          "F008"
+        ]
+      ],
+      "own_evidence": [
+        "ev_002",
+        "ev_009"
+      ],
+      "bounded_step": "two satisfies one-or-more; hydrocarbon-chain context retained",
+      "verdict": "PASS"
+    },
+    {
+      "claim_id": "claim_68e510ce8edc754d9575a214_1",
+      "unit_ids": [
+        "U01",
+        "U02",
+        "U03",
+        "U04"
+      ],
+      "selected_support": [
+        [
+          "F008"
+        ],
+        [
+          "F008"
+        ],
+        [
+          "F008"
+        ],
+        [
+          "F066"
+        ]
+      ],
+      "own_evidence": [
+        "ev_002",
+        "ev_008"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "claim_id": "claim_c5d4674c22bb7f28f9e68463_1",
+      "unit_ids": [
+        "U01",
+        "U02"
+      ],
+      "selected_support": [
+        [
+          "F004"
+        ],
+        [
+          "F011"
+        ]
+      ],
+      "own_evidence": [
+        "ev_002",
+        "ev_003"
+      ],
+      "verdict": "PASS"
+    }
+  ],
+  "checker_provenance": {
+    "transport_version": "lossless_unit_findings_v1",
+    "canonical_schema_sha256": "864212a5e636d2cadbc34328f431712a954c30130848a31e64e66e4bdedbc926",
+    "context_sha256": "224902b6c74226b55422698b6350e29390bbd7356742cc74a7864e82392d3494",
+    "hydrated_full_v2_sha256": "ca24ddbb2aed0b08629fe9a74fa963e7b60c6313f62e3ba1d0b3453fd2e1594b",
+    "raw_compact_sha256": "13e72184c26bcad0a530b09610d7d753f7734d86212ac074ce50ba279867813f",
+    "codec_structural_projection_only": true,
+    "codec_itself_certifies_entailment": false,
+    "original_validator_operation_evidence": "Completed hydrated output plus original application persisted factual DTO",
+    "reported_original_gate_flags": {
+      "body_ok": true,
+      "complete_answer": true,
+      "scope_ok": true,
+      "specific_help": true,
+      "evidence_display_ok": true,
+      "tutor_question_ok": true,
+      "attempt_evaluation_ok": true,
+      "suggestions_ok": true,
+      "cumulative_ok": true
+    },
+    "independent_quality_does_not_infer_from_flags": true,
+    "requirement_record_limitation": "R004 requirement-row quote lists F004 only; it does not independently exhibit the membrane F011. Actual C004 two units own F004/F011 are separately verified; no silent repair of saved judgement."
+  },
+  "exact_answer": {
+    "answer_id": "44272449-8942-4695-a3e9-20b2ddd2fc43",
+    "job_id": "432d5c89-9eb6-4584-b6c8-b85a5648a8f2",
+    "teacher_published_shared_fields_equal": true,
+    "answer_text_sha256_UTF8": "70a507ed944b399a81b758724e426d228ac55829659159da7b8ec5aa67d0a693",
+    "public_DTO_sha256_sorted_compact_UTF8": "bfe48caf86d233c980face0f0d3bc8ebd10d9486c03b3fedd7eebe1d5a8003e9",
+    "public_DTO_canonical_bytes": 945
+  },
+  "source_bindings": {
+    "release_id": "4f11bd70-a486-4d16-b216-78cfe499530a",
+    "source_version_sha256_from_descriptor": "f7f03e32b3bab3f539002e53798cc5abdfc0f7816d37d78d85401eff8e1ce5d2",
+    "current_evidence_count": 10,
+    "source_proof_count": 10,
+    "source_fragment_count": 73,
+    "source_proof_canonical_sha256": "c335f0a3e4d1934257e74520800e370cf0df9a14448ec3245400236ce44aa171",
+    "all_saved_span_verified_flags": true,
+    "scope_sha256_from_actual_journey": "fb6f058c10d5e187124ff0d23fc959077c66a4f7c9a5fdbe8c7dac9c4c9590fc",
+    "fresh_validation_descriptor_sha256": "ab2cfc4589bb5aa85d178bb96ee4ecbc09d73669bc143a8ab87e5c4eca65ede2",
+    "current_Main_runtime_source_guard_provenance": "Root frozen descriptor/readback; this independent source-quality review did not rehash Main again"
+  },
+  "config_bindings": {
+    "checker_high8192_manifest_sha256": "c06089c8b60d673561657e61ce94254b4e1d261bc36a6ed5414936e3667449da",
+    "checker_config_canonical_sha256": "03689510a0090504979274424c800a4f20eb6b159236dabdb00ad9a0eac0f09c",
+    "effective_checker_wire_config_canonical_sha256": "8fb339841af57b7a6b53187578927fce5862feb552c7b9f2ee980423679a523f",
+    "config_hash_domain": "UTF8 JSON sorted keys and compact separators; wire config excludes messages",
+    "model": "google/gemini-3.5-flash-lite",
+    "effective_max_tokens": 8192,
+    "effective_reasoning_effort": "high",
+    "route_profile": "gemini35_google_vertex_high_research_v1",
+    "stored_reasoning_effort": null,
+    "policy": "lossless_unit_findings_v1"
+  },
+  "rubric_bindings": {
+    "sealed_record_sha256": "afe43ad8774a42666d276b19667790d39ab352a8141f5595225ed1ba51c1a8ee",
+    "prospective_rubric_sha256": "3575161da04f615287269ce356196aa49e4483358506328e143e46c17b5af94e",
+    "public_question_record_sha256": "32f536b6451ceb96b2ca3c75ebc38e06aed5a54178e7ea09a23f5dfc012a5c90",
+    "revealed_only_after_actual_case12_closed": true,
+    "case11_rubric_remains_unopened": true
+  },
+  "finance": {
+    "actual_posts": 2,
+    "known_cost_USD": "0.0211086",
+    "UNKNOWN_full_hold_USD": "0",
+    "closure": "CLOSED_NUMERIC_NO_UNKNOWN",
+    "shared_posts": 18,
+    "shared_known_cost_USD": "0.1954720",
+    "shared_UNKNOWN_full_hold_USD": "0"
+  },
+  "timing_scope": {
+    "API_send_to_complete_response_ms": 19194.283899996663,
+    "worker_before_commit_ms": 18807.469,
+    "browser_used": false,
+    "DOM_sample_n": 0,
+    "send_to_complete_DOM_ms": null,
+    "stable_p95_established": false
+  },
+  "future_page_eligibility": {
+    "question_and_pipeline_candidate_preparation_eligible": true,
+    "exact_saved_answer_QA_only": true,
+    "actual_page_response_requires_independent_review_again": true,
+    "different_question_source_config_or_DTO_not_prequalified": true,
+    "no_permission_or_budget_granted_by_this_memo": true,
+    "actual_page_latency_sample_qualified": false
+  },
+  "limits": [
+    "Exposed prospective development item, n=1; not heldout or HumanGold",
+    "No course/project completion or default-enable claim",
+    "No QA claim from software test counts"
+  ],
+  "inputs": [
+    {
+      "path": "5703-checker88-runtime/case12/journey-receipt88.json",
+      "bytes": 3599,
+      "sha256": "567531c229b4d810612a8ae5b487375057e9f0b143130437374038e62d081bd2"
+    },
+    {
+      "path": "5703-checker88-runtime/case12/api-closure77.json",
+      "bytes": 1226,
+      "sha256": "41de320b1ad5e2f7fe576c1f0335252af3935e06930c638852cbe8fb287dadeb"
+    },
+    {
+      "path": "5703-checker88-runtime/case12/native-provider70/slot-01-normal-outcome.json",
+      "bytes": 2129,
+      "sha256": "c1cacad6ca2d94ba71c2a8b3168031a196c336db03ccbee2d35df11938f74a7c"
+    },
+    {
+      "path": "5703-checker88-runtime/case12/native-provider70/slot-02-public-inputs.json",
+      "bytes": 165098,
+      "sha256": "b31913e91f4181752ee18d870c8936207b6586035cf077dd6a0344310e88c134"
+    },
+    {
+      "path": "5703-checker88-runtime/case12/native-provider70/slot-02-normal-outcome.json",
+      "bytes": 13274,
+      "sha256": "08840e4ddb9684620ee80e9ca9b213a85a0227a83f844ffe79796c17a3eab5c7"
+    },
+    {
+      "path": "5703-checker88-runtime/case12/native-provider70/final-receipt.json",
+      "bytes": 1529,
+      "sha256": "de1dbd2a818ccf83b0fd489cf4f3ed05cd3f4663fa4bdaae5d74fea6f676069b"
+    },
+    {
+      "path": "5703-checker88-runtime/checker-high8192-88.json",
+      "bytes": 1973,
+      "sha256": "c06089c8b60d673561657e61ce94254b4e1d261bc36a6ed5414936e3667449da"
+    },
+    {
+      "path": "5703-checker88-runtime/fresh-validation88-case12.json",
+      "bytes": 1190,
+      "sha256": "ab2cfc4589bb5aa85d178bb96ee4ecbc09d73669bc143a8ab87e5c4eca65ede2"
+    },
+    {
+      "path": "5703-checker88-quality/fresh12-rubric88-sealed.json",
+      "bytes": 7480,
+      "sha256": "afe43ad8774a42666d276b19667790d39ab352a8141f5595225ed1ba51c1a8ee"
+    },
+    {
+      "path": "5703-checker88-quality/fresh12-question88-public.json",
+      "bytes": 8493,
+      "sha256": "32f536b6451ceb96b2ca3c75ebc38e06aed5a54178e7ea09a23f5dfc012a5c90"
+    }
+  ],
+  "review_execution": {
+    "Main_writes": 0,
+    "runtime_writes": 0,
+    "DB_auth_network_model_calls": 0,
+    "new_test_runs": 0,
+    "public_metadata_only_no_full_text_copy": true
+  }
+}

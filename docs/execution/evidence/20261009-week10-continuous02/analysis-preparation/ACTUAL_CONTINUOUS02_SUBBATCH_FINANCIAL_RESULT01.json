@@ -1,0 +1,242 @@
+{
+  "schema": "5703_week10_continuous_subbatch_financial_result_v1",
+  "status": "ACTUAL_CONTINUOUS02_Q1_PASS_Q2_NOT_EXECUTED_NEW_COSTS_SETTLED_STOP_PRESERVED",
+  "recorded_utc": "2026-10-09T05:33:30.4855784Z",
+  "scope": "Only new claims-continuous02 and exact public continuous02 receipts; parent known totals reused from actual budget. No old raw ledger/account/API/DB query.",
+  "parent_batch_id": "cs30-week10-native-pair-20261009-01",
+  "subbatch_id": "cs30-week10-continuous-scopes-20261009-01",
+  "source_version": "42359d2d2cd2f8d28007173a20d20e994d5d767372acd597d5e3d495f552885f",
+  "controller_status": "ACTUAL_CONTROLLER_BLOCKED_OR_FAILED_NO_RETRY",
+  "controller_error_class": "ValueError",
+  "claims_root": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous02",
+  "new_started_claim_count": 2,
+  "new_finished_claim_count": 2,
+  "new_actual_submitted_POST_count": 2,
+  "new_known_API_cost_subtotal_USD": "0.00870200",
+  "new_UNKNOWN_count": 0,
+  "new_open_claims": 0,
+  "new_UNKNOWN_or_open_full_holds_USD": "0.00000000",
+  "fully_settled": true,
+  "budget_status": "STOPPED",
+  "current_STOP_preserved": true,
+  "STOP_status": "STOP_NO_NEXT_SUBMISSION",
+  "STOP_reason": "ROOT_NATIVE_PAIR_CONTROLLER_FAILED",
+  "parent_observed_physical_POSTs": 4,
+  "parent_known_API_cost_USD": "0.01936904",
+  "aggregate_observed_physical_POSTs": 6,
+  "aggregate_known_API_cost_USD": "0.02807104",
+  "maximum_new_subbatch_POSTs": 4,
+  "maximum_total_authorized_POSTs": 8,
+  "subbatch_full_protection_USD": "0.12000000",
+  "maximum_total_authorized_cost_USD": "0.24000000",
+  "within_authorized_aggregate_POST_and_cost_limits": true,
+  "remaining_unstarted_subbatch_slots": 2,
+  "remaining_slots_automatically_reused": false,
+  "UNKNOWN_replay_authorized": false,
+  "old_UNKNOWN_count_unchanged_policy": 14,
+  "old_UNKNOWN_holds_retained_in_full_STOP_metadata": true,
+  "old_raw_ledger_reads": 0,
+  "old_ledger_writes": 0,
+  "additional_money_USD": "0.00000000",
+  "historical_files_written_by_STOP": 0,
+  "calls": [
+    {
+      "slot": 1,
+      "question_id": "Q1",
+      "role": "teacher",
+      "purpose": "interactive_chat",
+      "started_status": "CONSUMED_NEVER_RETRY",
+      "finished_status": "KNOWN_COST_RECORDED",
+      "known_API_cost_USD": "0.00443330",
+      "UNKNOWN_full_hold_USD": "0.00000000",
+      "errorcode": null,
+      "wire_sha256": "445f82c4b6a737c3e062b7f1aa80cfe0e2ce4160db1816c507ae58f42a1902b9",
+      "started_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous02\\slot-01-started01.json",
+        "bytes": 1249,
+        "sha256": "6e7347731822f042d46ca400984394f56c274b9073f693165a0532e999d4d081"
+      },
+      "finished_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous02\\slot-01-finished01.json",
+        "bytes": 697,
+        "sha256": "f0869450d1f69e75d31e9f198d35c8c2e40ae5a2b03ac1e513e4b9f98e0daec9"
+      },
+      "request_submitted_confirmed": true,
+      "adapter_latency_ms": 3279
+    },
+    {
+      "slot": 2,
+      "question_id": "Q1",
+      "role": "checker",
+      "purpose": "interactive_chat",
+      "started_status": "CONSUMED_NEVER_RETRY",
+      "finished_status": "KNOWN_COST_RECORDED",
+      "known_API_cost_USD": "0.00426870",
+      "UNKNOWN_full_hold_USD": "0.00000000",
+      "errorcode": null,
+      "wire_sha256": "206f0f26ab565daf2b2826135a5f23c6de5ef0b822b4f548bdf5effe791ab706",
+      "started_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous02\\slot-02-started01.json",
+        "bytes": 1249,
+        "sha256": "4d5bc74c22203eb0f0b298c76cc8ae31f6dc12ba75a4fcc3e03ef82cb3b3075f"
+      },
+      "finished_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous02\\slot-02-finished01.json",
+        "bytes": 694,
+        "sha256": "d48c5c19e31d5a6cdc154761a52aed869178fb8444b671c8de48745958a74e2b"
+      },
+      "request_submitted_confirmed": true,
+      "adapter_latency_ms": 3105
+    }
+  ],
+  "Q1_observation": {
+    "status": "PASS",
+    "terminal_state": "succeeded",
+    "answer_completeness_status": "complete_at_requested_help",
+    "completed_cited_answer": true,
+    "citation_checked": true,
+    "refresh_persisted": true,
+    "actual_provider_POSTs": 2,
+    "known_API_cost_USD": "0.00870200"
+  },
+  "Q2_observation": {
+    "status": "NOT_EXECUTED_PRE_SEND_FAILURE",
+    "actual_provider_POSTs": 0,
+    "known_API_cost_USD": "0.00000000",
+    "first_failure_code": "SINGLE_NORMAL_CHAPTER_CONTROL_REQUIRED",
+    "failure_exception_class": "Boundary",
+    "failure_local_source_line": 33,
+    "second_question_not_executed": true
+  },
+  "browser_observation": {
+    "status": "ACTUAL_LIVE_UI_JOURNEY_FAILED_OR_BLOCKED",
+    "new_question_submissions": 1,
+    "browser_closed": true,
+    "context_closed": true
+  },
+  "native_runtime_closure": {
+    "status": "CLEANUP_FAILED_OR_LEG_FAILED",
+    "browser_leg_passed": false,
+    "native_checked_completed": false,
+    "native_completed_question_ids": [
+      "Q1"
+    ],
+    "native_executed_question_ids": [
+      "Q1"
+    ],
+    "all_submitted_native_jobs_checked": true,
+    "owned_threads_closed": true,
+    "owned_database_resources_closed": true,
+    "cleanup_error_classes": [],
+    "leg_closed_after_advisory_unlock_connection_close_and_engine_dispose": false,
+    "normal_native_CLOSED_observed": false
+  },
+  "owned_processes": [
+    {
+      "pid": 66652,
+      "exit_code": 1,
+      "owned_job_closed": true,
+      "streams": [
+        {
+          "name": "stderr",
+          "bytes": 4207,
+          "sha256": "6245954c9421f2f90e18e4dd89583d16b81d22902e8515e1d8c1470555f328db",
+          "collector_complete": true
+        },
+        {
+          "name": "stdout",
+          "bytes": 16403,
+          "sha256": "526a06cf2e86c007a893c9b5209a2c8481475ef99f2de4da01d2e20324c94277",
+          "collector_complete": true
+        }
+      ]
+    },
+    {
+      "pid": 4636,
+      "exit_code": 1,
+      "owned_job_closed": true,
+      "streams": [
+        {
+          "name": "stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "collector_complete": true
+        },
+        {
+          "name": "stdout",
+          "bytes": 136,
+          "sha256": "4c9e80c32027c900c510c0f747154483cbfe8d0b9e4c1600f377650909e18af9",
+          "collector_complete": true
+        }
+      ]
+    }
+  ],
+  "source_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\continuous-preparation\\ROOT_CONTINUOUS_CONTROLLER_ACTUAL02.json",
+      "bytes": 4005,
+      "sha256": "7465089ed77a8e2947cebd8fbe1214be5e639412a39ee02b44711b65d9a85381"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous02\\budget-status-public01.json",
+      "bytes": 1301,
+      "sha256": "5467f781b38ab2aedd4700d63e5b8272033890d1dd4b4685588756c030d9b367"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous02\\runtime-closed-public01.json",
+      "bytes": 1497,
+      "sha256": "623e740592f90ab7f71f1ef1ddc869743efff579b64e6514c0ff45377997d70f"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\browser-continuous02\\real-browser-live-qa-receipt01.json",
+      "bytes": 27440,
+      "sha256": "325ed5ab421788b88a42a7504168a7d7e0ce9a9d1097311456d82a277ddef463"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous02\\STOP-before-any-next-submission01.json",
+      "bytes": 556,
+      "sha256": "332a8711715de29a5fc7278b6efd6451680ae590841bbb00c64d4cd30473883d"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous02\\slot-01-started01.json",
+      "bytes": 1249,
+      "sha256": "6e7347731822f042d46ca400984394f56c274b9073f693165a0532e999d4d081"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous02\\slot-01-finished01.json",
+      "bytes": 697,
+      "sha256": "f0869450d1f69e75d31e9f198d35c8c2e40ae5a2b03ac1e513e4b9f98e0daec9"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous02\\slot-02-started01.json",
+      "bytes": 1249,
+      "sha256": "4d5bc74c22203eb0f0b298c76cc8ae31f6dc12ba75a4fcc3e03ef82cb3b3075f"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous02\\slot-02-finished01.json",
+      "bytes": 694,
+      "sha256": "d48c5c19e31d5a6cdc154761a52aed869178fb8444b671c8de48745958a74e2b"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous02\\adapter-public01.jsonl",
+      "bytes": 832,
+      "sha256": "a259837bd7cfcf8fdbd950966f4e8e2022110e0b02c0d7e753878cce1bdb931f"
+    }
+  ],
+  "limits": [
+    "Q1 passed native answer/citation/refresh acceptance; Q2 was not submitted, so two continuous questions were not demonstrated.",
+    "The overall controller/runtime state is failed despite the accepted Q1; owned process/thread/resource closure is not normal native CLOSED.",
+    "This stopped approved continuation is not automatically replayed; two unused slots are preserved.",
+    "Aggregate six POSTs/USD0.02807104 include the prior settled four POSTs/USD0.01936904; continuation01 added zero POSTs/USD0.",
+    "The USD figures are settled provider-reported costs, not account or invoice balances.",
+    "Old fourteen UNKNOWN and protections remain under the existing policy; no old raw ledger was reread.",
+    "No p95, SLA, model-superiority or continuous-two-question speedup claim."
+  ],
+  "actions": {
+    "API_DB_or_credentials_access": 0,
+    "tests_or_guards_executed": 0,
+    "service_operations": 0,
+    "old_files_written": 0,
+    "create_only_result_files": 1
+  }
+}

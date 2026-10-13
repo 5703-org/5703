@@ -1,0 +1,63 @@
+{
+  "schema": "phase85_finite_observer_independent_static_review_v1",
+  "status": "STATIC_REVIEW_COMPLETE_TESTS_UNEXECUTED",
+  "reviewer": "/root/checker82_startup_prewarm/prewarm_safety_review",
+  "candidate": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-finite-observer-candidate\\outcome_observer82.py",
+    "bytes": 2792,
+    "sha256": "e9a3167934f36ebe054a4cedb3e2674c54118c9d0e896bea8ea468618f3c57d1"
+  },
+  "before": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-finite-observer-candidate\\outcome_observer82.py.before85",
+    "bytes": 1916,
+    "sha256": "bc5f8341e98298b064d4c0db93266efda697662429fda050dcec9986ee1c05a2"
+  },
+  "reviewed_change": {
+    "added_error_code": "CHECKER_TRANSPORT_INVALID",
+    "only_recognized_nested_category": "LOSSLESS_OUTPUT_INVALID",
+    "added_output_field": "checker_decode_failure",
+    "category_states": [
+      "NOT_APPLICABLE",
+      "NONE",
+      "RECOGNIZED",
+      "UNRECOGNIZED"
+    ],
+    "unknown_error_or_category_export": null,
+    "nested_reads_only": [
+      "diagnostic.checker_transport.decode_failure.category"
+    ]
+  },
+  "preservation": {
+    "make_observed_call_text_unchanged": true,
+    "numeric_text_unchanged": true,
+    "original_outcome_passthrough_unchanged": true,
+    "observation_write_failure_behavior_unchanged": true,
+    "financial_settlement_authority": false,
+    "existing_usage_and_finish_allowlists_unchanged": true,
+    "messages_details_raw_text_or_auth_reads_added": false,
+    "raw_text_or_auth_exported": false,
+    "current_frozen_runtime_modified_by_reviewer": false
+  },
+  "limits": [
+    "Only returned normal adapter outcomes are observed. Original-call exceptions still bypass the observer; this candidate changes no transport timing or exception boundary.",
+    "Nested diagnostic values are reduced to fixed finite state/category fields; arbitrary messages, details, raw text and credentials are not read or exported.",
+    "No actual case03 code was reconstructed, inferred or asserted from this candidate.",
+    "Parent owns synthetic unit-control execution; the reviewer executed no code, imports or tests."
+  ],
+  "reviewer_actions": {
+    "public_W_candidate_and_before_reads": true,
+    "this_JSON_write_only": true,
+    "candidate_or_test_writes": 0,
+    "Main_reads": 0,
+    "Main_writes": 0,
+    "Main_imports": 0,
+    "tests_run": 0,
+    "DB_actions": 0,
+    "auth_actions": 0,
+    "network_actions": 0,
+    "model_loads": 0,
+    "real_ledger_reads": 0
+  },
+  "blockers": [],
+  "qualification": "Static source comparison only; no test result or live-runtime qualification is claimed."
+}

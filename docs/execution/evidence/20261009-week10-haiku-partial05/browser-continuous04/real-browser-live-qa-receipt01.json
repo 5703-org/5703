@@ -1,0 +1,501 @@
+{
+  "schema": "5703_week10_native_continuous_ui_receipt_v1",
+  "status": "ACTUAL_LIVE_UI_JOURNEY_FAILED_OR_BLOCKED",
+  "started_utc": "2026-10-09T06:49:23.435Z",
+  "batch_id": "cs30-week10-haiku-persistent-general-20261009-01",
+  "paired_leg_id": "B_startup_prewarm",
+  "worker_prewarm_retrieval_cache": true,
+  "source_index_sha256": "8c6a6933f7af2ba4876913f752b16f0d661da2eaec8e9cf5dc302461f158d4b1",
+  "source_label": "WEEK10_HAIKU_PERSISTENT_GENERAL",
+  "model_mode": "live",
+  "exact_model_binding_basis": "Root released isolated Haiku experiment with fresh pending QA descriptors; Q3 normal teacher/fullchecker publication establishes observed QA compatibility. Production activation qualification remains false.",
+  "provider": "openai_compatible",
+  "model": "anthropic/claude-haiku-5.5",
+  "openrouter_route_profile": "haiku55_google_vertex_low_v1",
+  "provider_route": "google-vertex/global",
+  "configuration_id": "74c8201e-aca0-400d-bcc5-5785e24c1c11",
+  "config_revision": 1,
+  "config_hash": "703c94a357ddd4b826d8b5fe25d503198d3d56e1e9130f6a37ed9e9c3396aa4a",
+  "qualification": {
+    "ready_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous04\\readiness-public01.json",
+      "bytes": 3219,
+      "sha256": "76d8ed4bb874c734f47c098a1014c0d3bcf548be00999f18b1118ca2a8d67b60"
+    },
+    "role_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous04\\role-qualification-public01.json",
+      "bytes": 3638,
+      "sha256": "e02c313599055fce5d834bd783fa11c22d415d8dcd502f50886fc8136fd557a0"
+    },
+    "worker_startup_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous04\\worker-startup-preparation-public01.json",
+      "bytes": 1636,
+      "sha256": "4ce7f9c79da436b6e16cc010e4923c2d1e02f5364057766f08cd53258eba622e"
+    },
+    "worker_startup": {
+      "schema": "5703_week10_worker_startup_preparation_v1",
+      "status": "PASS",
+      "batch_id": "cs30-week10-haiku-persistent-general-20261009-01",
+      "paired_leg_id": "B_startup_prewarm",
+      "source_version": "8c6a6933f7af2ba4876913f752b16f0d661da2eaec8e9cf5dc302461f158d4b1",
+      "worker_prewarm_retrieval_cache": true,
+      "same_Engine_as_native_run_once": true,
+      "queue": "interactive",
+      "main_entry_epoch_ms": 1791528548281.7214,
+      "native_model_warmup_ms": 5653.039299999364,
+      "release_cache_prepare_wall_ms": 6479.18959999879,
+      "native_cache_prepare_report": {
+        "status": "ready",
+        "cache_version": "validated_release_cache_v1",
+        "cache_hit": false,
+        "validation_ms": 6374.471500002983,
+        "visible_chunk_count": 10594,
+        "release_id_sha256": "541d9515e720f2b25011ecea178a58a1cbb7cdd6ec0acf78825b772edf986ace",
+        "epoch_sha256": "dbc6b4f6b51c64394b6ffcf4f1a7e05373e340655bf068d1b58cf20fb40ed5b6",
+        "startup_prepare_ms": 6479.168,
+        "queue": "interactive",
+        "version": "worker_active_release_prewarm_v1",
+        "timing_scope": "worker_startup_before_job_claim_v1"
+      },
+      "runner_main_entry_to_worker_ready_ms": 14295.46389999814,
+      "startup_timing_scope": "runner_main_entry_to_worker_preparation_completed_v1",
+      "process_launch_to_ready_ms": null,
+      "browser_Send_to_full_answer_ms": null,
+      "provider_POSTs_for_this_preparation": 0,
+      "full_startup_cost_and_early_Send_wait_must_remain_in_total_user_journey": true,
+      "process_imports_and_external_launch_overhead_require_separate_driver_clock": true,
+      "raw_error_messages_DSN_keys_history_or_source_text_exported": false
+    },
+    "default_retrieval_profile_pin": {
+      "path": "E:\\5703\\learning-assistant\\configs\\retrieval\\chat_hybrid_minilm.json",
+      "bytes": 294,
+      "sha256": "23ca72ddb737045259a04cbfc81c71969440f11cc2fa1a77bc7f8e7fc4364e17",
+      "scope": "Configuration binding only; native execution proof is separate"
+    },
+    "native_current_default_bound": true,
+    "executor_override": false,
+    "provider_route": "google-vertex/global",
+    "qualification_status": "PENDING_NOT_EXECUTED",
+    "qualification_basis": "EXPERIMENTAL_Q3_NATIVE_TEACHER_FULL_CHECKER_PUBLICATION",
+    "normal_project_activation_qualified": false,
+    "reused_existing": false,
+    "newly_submitted_provider_posts": 0,
+    "actual_q3_job_id": null,
+    "actual_q3_request_id": null,
+    "actual_q3_answer_id": null,
+    "actual_q3_full_checker_publication_passed": false,
+    "observed_Q3_provider_posts": 0,
+    "role_run_ids": [
+      {
+        "role": "answer",
+        "run_id": null,
+        "status": "PENDING_NOT_EXECUTED"
+      },
+      {
+        "role": "checker",
+        "run_id": null,
+        "status": "PENDING_NOT_EXECUTED"
+      }
+    ],
+    "fresh_QA_role_descriptors": [
+      {
+        "role": "answer",
+        "current_fingerprints": {
+          "schema_hash": "149a9433de28318e6c1d1174c06937762e7db073977ab125d48ae80232f4ae2b",
+          "prompt_hash": "f85fc94c2afd66c03c9ec9d66323da729b604c37642777a5f408125c7c1b257a",
+          "configuration_hash": "631bc9b1e07347b75292654ee64f038b0e0cbbbb17df0966e8b25b3b13c1b4ac",
+          "capability_hash": "e6648a497ab770f07c85308a947728d380795522e59ca79a5b9b31074a607fac",
+          "reserved_output_tokens": 2048,
+          "effective_parameters": {
+            "model": "anthropic/claude-haiku-5.5",
+            "max_tokens": 2048,
+            "provider": {
+              "order": [
+                "google-vertex/global"
+              ],
+              "only": [
+                "google-vertex/global"
+              ],
+              "allow_fallbacks": false,
+              "require_parameters": true,
+              "max_price": {
+                "prompt": 0.3,
+                "completion": 2.5
+              }
+            },
+            "reasoning": {
+              "effort": "low"
+            }
+          }
+        }
+      },
+      {
+        "role": "checker",
+        "current_fingerprints": {
+          "schema_hash": "7988037e08d52662a1b232f049776a42b6d10ad5d896f1a26c8c912b3efd79d4",
+          "prompt_hash": "3a9c4ef6feac70fbdc8cdd8c6d9521815d69d4639351f5be60c417d48a31e923",
+          "configuration_hash": "631bc9b1e07347b75292654ee64f038b0e0cbbbb17df0966e8b25b3b13c1b4ac",
+          "capability_hash": "e6648a497ab770f07c85308a947728d380795522e59ca79a5b9b31074a607fac",
+          "reserved_output_tokens": 4096,
+          "effective_parameters": {
+            "model": "anthropic/claude-haiku-5.5",
+            "max_tokens": 4096,
+            "provider": {
+              "order": [
+                "google-vertex/global"
+              ],
+              "only": [
+                "google-vertex/global"
+              ],
+              "allow_fallbacks": false,
+              "require_parameters": true,
+              "max_price": {
+                "prompt": 0.3,
+                "completion": 2.5
+              }
+            },
+            "reasoning": {
+              "effort": "low"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "normal_project_activation_qualified": false,
+  "experimental_Q3_compatibility_probe": true,
+  "budget_initial": {
+    "pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous04\\budget-status-public01.json",
+      "bytes": 1304,
+      "sha256": "4ac64d00b58386c647dc971c65e234f79f738a3db2cd953cb8dda38e50db7a24"
+    },
+    "status": "READY",
+    "per_leg_provider_post_count": {
+      "B_startup_prewarm": 0
+    },
+    "per_leg_remaining_provider_slots": {
+      "B_startup_prewarm": 4
+    },
+    "leg_completed": [],
+    "leg_runtime_closed": [],
+    "integrity_errors": 0,
+    "cleanup_pending": 0,
+    "provider_post_count": 0,
+    "remaining_provider_slots": 4,
+    "fully_settled": true,
+    "open_claims": 0,
+    "unknown_cost_count": 0,
+    "stop_exists": false,
+    "known_API_cost_USD": "0",
+    "full_unknown_hold_USD": "0"
+  },
+  "retrieval_variant": "R2",
+  "retrieval_binding": "current_public_default_hybrid_minilm_v1",
+  "executor_override": false,
+  "native_retrieval_execution_proof": null,
+  "default_retrieval_acceptance": "PENDING_ROOT_NATIVE_TRACE_AND_QUALITY_REVIEW",
+  "synthetic_learner_and_questions": true,
+  "existing_public_owned_book": {
+    "id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+    "title": "Biology 2e",
+    "release_id": "4f11bd70-a486-4d16-b216-78cfe499530a"
+  },
+  "actual_headless_browser": true,
+  "browser_count": 1,
+  "page_count": 1,
+  "worker_count": 1,
+  "browser_gpu_disabled": true,
+  "chromium_sandbox": true,
+  "ignore_https_errors": false,
+  "process_priority": "Normal; applied by this Node runner",
+  "cpu_affinity": "Controlled by Root launcher; not asserted here",
+  "direct_http_acceptance_calls": 0,
+  "direct_database_accesses": 0,
+  "manual_provider_calls": 0,
+  "automatic_question_retries": 0,
+  "provider_physical_post_limit": 4,
+  "native_per_question_post_bound": 4,
+  "new_batch_reserve_USD": "0.12000000",
+  "maximum_authorized_new_batch_cost_USD": "0.12000000",
+  "timeTTFT_ms": null,
+  "TTFT_boundary": "Current UI is not token-streaming; first painted prose is not provider TTFT",
+  "normal_reader_scopes": false,
+  "two_normal_chat_pages_before_paid": true,
+  "intended_retrieval_scope": "all_active_corpus",
+  "chapter_filter_applied": false,
+  "new_question_submissions": 0,
+  "actual_seed_receipt_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\ACTUAL_PAIRED_SYNTHETIC_SEED_RECEIPT03.json",
+    "bytes": 19716,
+    "sha256": "2f1d82623fa1aff132c2d9304648026a97b14622c55b1b842470e5bd3c80a78c"
+  },
+  "seeded_first_provider_POSTs": 0,
+  "warm_execution_basis": "Native offline model-instance prewarm used a distinct authored query; no measured question-result cache was populated",
+  "prewarm_public_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous04\\native-prewarm-public01.json",
+  "continuation_mode": "TWO_NEW_GENERAL_QUESTIONS_SAME_WORKER",
+  "continuing_worker_basis": "One live worker and Engine remain alive across the two free ordinary-chat readiness checks and both new questions; runtime traces separately establish identity and cache use.",
+  "startup_driver_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\continuous-preparation\\ROOT_CONTINUOUS_STARTUP_DRIVER_ACTUAL04.json",
+    "bytes": 466,
+    "sha256": "7aae6d57c3795e5d30cac2c79c47528e6d55668909a726c1a6a04b6b02f53c34"
+  },
+  "startup_driver": {
+    "batch_id": "cs30-week10-haiku-persistent-general-20261009-01",
+    "launch_to_ready_includes_imports_artifact_pins_models_and_native_startup": true,
+    "owned_runtime_pid": 74016,
+    "paired_leg_id": "B_startup_prewarm",
+    "process_launch_epoch_ms": 1791528548184.7905,
+    "schema": "5703_week10_root_startup_driver_v1",
+    "source_version": "8c6a6933f7af2ba4876913f752b16f0d661da2eaec8e9cf5dc302461f158d4b1",
+    "worker_ready_observed_epoch_ms": 1791528563181.1736
+  },
+  "process_launch_to_worker_ready_ms": 14996.383056640625,
+  "worker_startup_report": {
+    "schema": "5703_week10_worker_startup_preparation_v1",
+    "status": "PASS",
+    "batch_id": "cs30-week10-haiku-persistent-general-20261009-01",
+    "paired_leg_id": "B_startup_prewarm",
+    "source_version": "8c6a6933f7af2ba4876913f752b16f0d661da2eaec8e9cf5dc302461f158d4b1",
+    "worker_prewarm_retrieval_cache": true,
+    "same_Engine_as_native_run_once": true,
+    "queue": "interactive",
+    "main_entry_epoch_ms": 1791528548281.7214,
+    "native_model_warmup_ms": 5653.039299999364,
+    "release_cache_prepare_wall_ms": 6479.18959999879,
+    "native_cache_prepare_report": {
+      "status": "ready",
+      "cache_version": "validated_release_cache_v1",
+      "cache_hit": false,
+      "validation_ms": 6374.471500002983,
+      "visible_chunk_count": 10594,
+      "release_id_sha256": "541d9515e720f2b25011ecea178a58a1cbb7cdd6ec0acf78825b772edf986ace",
+      "epoch_sha256": "dbc6b4f6b51c64394b6ffcf4f1a7e05373e340655bf068d1b58cf20fb40ed5b6",
+      "startup_prepare_ms": 6479.168,
+      "queue": "interactive",
+      "version": "worker_active_release_prewarm_v1",
+      "timing_scope": "worker_startup_before_job_claim_v1"
+    },
+    "runner_main_entry_to_worker_ready_ms": 14295.46389999814,
+    "startup_timing_scope": "runner_main_entry_to_worker_preparation_completed_v1",
+    "process_launch_to_ready_ms": null,
+    "browser_Send_to_full_answer_ms": null,
+    "provider_POSTs_for_this_preparation": 0,
+    "full_startup_cost_and_early_Send_wait_must_remain_in_total_user_journey": true,
+    "process_imports_and_external_launch_overhead_require_separate_driver_clock": true,
+    "raw_error_messages_DSN_keys_history_or_source_text_exported": false
+  },
+  "questions": [],
+  "normal_chat_preflight": null,
+  "second_question": {
+    "status": "NOT_EXECUTED_PRIOR_FAILURE",
+    "reason": "BROWSER_OR_IO_FAILURE"
+  },
+  "page_errors": [],
+  "denied_external_requests": [],
+  "console_type_counts": {},
+  "browser_closed": true,
+  "context_closed": true,
+  "project_complete": false,
+  "limits": [
+    "Two new ordinary chat sessions on one worker; full active-corpus RAG with no reader context; small functionality/cache observations, no p95, invalidation experiment or causal comparison",
+    "Public default profile binding does not itself prove native R2/reranker execution or retrieval quality",
+    "Complete DOM is not simultaneous visibility of every character or user reading",
+    "Paint clocks are double-RAF samples; full time also includes DTO observation and the 200 ms control-loop sampling delay",
+    "Normalized Markdown-to-DOM text comparison is approximate and may conservatively reject a valid formatted answer",
+    "Viewport intersection includes ancestor clipping but does not prove unobscured individual text glyphs",
+    "Published refusal or partial-reply rendering can have measured clocks while cited-answer quality remains FAIL",
+    "No guarantee of zero operating-system contention"
+  ],
+  "actual_browser_version": "154.0.4258.62",
+  "login_response_status": 200,
+  "failure_code": "BROWSER_OR_IO_FAILURE",
+  "failure_exception_class": "PlaywrightError",
+  "failure_local_source_line": 606,
+  "raw_exception_text_exported": false,
+  "normal_worker_observations": [
+    {
+      "public_readiness_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous04\\readiness-public01.json",
+        "bytes": 3219,
+        "sha256": "5436900a04bfc7b5a7b9094728359c28fde26cb96b7a6f18fc57e3ecba6a2751"
+      },
+      "worker_pid": 74016,
+      "engine_object_identity": 1641872006448,
+      "worker_alive": true,
+      "worker_liveness_observed_epoch_ms": 1791528565641.9294,
+      "worker_liveness_perf_counter_ms": 23241346.5681
+    }
+  ],
+  "final_experimental_QA_observation": {
+    "ready_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous04\\readiness-public01.json",
+      "bytes": 3224,
+      "sha256": "ccb2097e07337725784ba22136c9f1725ed1bfc834f96d7cf5eced55b2b0be5b"
+    },
+    "role_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous04\\role-qualification-public01.json",
+      "bytes": 3638,
+      "sha256": "e02c313599055fce5d834bd783fa11c22d415d8dcd502f50886fc8136fd557a0"
+    },
+    "worker_startup_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous04\\worker-startup-preparation-public01.json",
+      "bytes": 1636,
+      "sha256": "4ce7f9c79da436b6e16cc010e4923c2d1e02f5364057766f08cd53258eba622e"
+    },
+    "worker_startup": {
+      "schema": "5703_week10_worker_startup_preparation_v1",
+      "status": "PASS",
+      "batch_id": "cs30-week10-haiku-persistent-general-20261009-01",
+      "paired_leg_id": "B_startup_prewarm",
+      "source_version": "8c6a6933f7af2ba4876913f752b16f0d661da2eaec8e9cf5dc302461f158d4b1",
+      "worker_prewarm_retrieval_cache": true,
+      "same_Engine_as_native_run_once": true,
+      "queue": "interactive",
+      "main_entry_epoch_ms": 1791528548281.7214,
+      "native_model_warmup_ms": 5653.039299999364,
+      "release_cache_prepare_wall_ms": 6479.18959999879,
+      "native_cache_prepare_report": {
+        "status": "ready",
+        "cache_version": "validated_release_cache_v1",
+        "cache_hit": false,
+        "validation_ms": 6374.471500002983,
+        "visible_chunk_count": 10594,
+        "release_id_sha256": "541d9515e720f2b25011ecea178a58a1cbb7cdd6ec0acf78825b772edf986ace",
+        "epoch_sha256": "dbc6b4f6b51c64394b6ffcf4f1a7e05373e340655bf068d1b58cf20fb40ed5b6",
+        "startup_prepare_ms": 6479.168,
+        "queue": "interactive",
+        "version": "worker_active_release_prewarm_v1",
+        "timing_scope": "worker_startup_before_job_claim_v1"
+      },
+      "runner_main_entry_to_worker_ready_ms": 14295.46389999814,
+      "startup_timing_scope": "runner_main_entry_to_worker_preparation_completed_v1",
+      "process_launch_to_ready_ms": null,
+      "browser_Send_to_full_answer_ms": null,
+      "provider_POSTs_for_this_preparation": 0,
+      "full_startup_cost_and_early_Send_wait_must_remain_in_total_user_journey": true,
+      "process_imports_and_external_launch_overhead_require_separate_driver_clock": true,
+      "raw_error_messages_DSN_keys_history_or_source_text_exported": false
+    },
+    "default_retrieval_profile_pin": {
+      "path": "E:\\5703\\learning-assistant\\configs\\retrieval\\chat_hybrid_minilm.json",
+      "bytes": 294,
+      "sha256": "23ca72ddb737045259a04cbfc81c71969440f11cc2fa1a77bc7f8e7fc4364e17",
+      "scope": "Configuration binding only; native execution proof is separate"
+    },
+    "native_current_default_bound": true,
+    "executor_override": false,
+    "provider_route": "google-vertex/global",
+    "qualification_status": "PENDING_NOT_EXECUTED",
+    "qualification_basis": "EXPERIMENTAL_Q3_NATIVE_TEACHER_FULL_CHECKER_PUBLICATION",
+    "normal_project_activation_qualified": false,
+    "reused_existing": false,
+    "newly_submitted_provider_posts": 0,
+    "actual_q3_job_id": null,
+    "actual_q3_request_id": null,
+    "actual_q3_answer_id": null,
+    "actual_q3_full_checker_publication_passed": false,
+    "observed_Q3_provider_posts": 0,
+    "role_run_ids": [
+      {
+        "role": "answer",
+        "run_id": null,
+        "status": "PENDING_NOT_EXECUTED"
+      },
+      {
+        "role": "checker",
+        "run_id": null,
+        "status": "PENDING_NOT_EXECUTED"
+      }
+    ],
+    "fresh_QA_role_descriptors": [
+      {
+        "role": "answer",
+        "current_fingerprints": {
+          "schema_hash": "149a9433de28318e6c1d1174c06937762e7db073977ab125d48ae80232f4ae2b",
+          "prompt_hash": "f85fc94c2afd66c03c9ec9d66323da729b604c37642777a5f408125c7c1b257a",
+          "configuration_hash": "631bc9b1e07347b75292654ee64f038b0e0cbbbb17df0966e8b25b3b13c1b4ac",
+          "capability_hash": "e6648a497ab770f07c85308a947728d380795522e59ca79a5b9b31074a607fac",
+          "reserved_output_tokens": 2048,
+          "effective_parameters": {
+            "model": "anthropic/claude-haiku-5.5",
+            "max_tokens": 2048,
+            "provider": {
+              "order": [
+                "google-vertex/global"
+              ],
+              "only": [
+                "google-vertex/global"
+              ],
+              "allow_fallbacks": false,
+              "require_parameters": true,
+              "max_price": {
+                "prompt": 0.3,
+                "completion": 2.5
+              }
+            },
+            "reasoning": {
+              "effort": "low"
+            }
+          }
+        }
+      },
+      {
+        "role": "checker",
+        "current_fingerprints": {
+          "schema_hash": "7988037e08d52662a1b232f049776a42b6d10ad5d896f1a26c8c912b3efd79d4",
+          "prompt_hash": "3a9c4ef6feac70fbdc8cdd8c6d9521815d69d4639351f5be60c417d48a31e923",
+          "configuration_hash": "631bc9b1e07347b75292654ee64f038b0e0cbbbb17df0966e8b25b3b13c1b4ac",
+          "capability_hash": "e6648a497ab770f07c85308a947728d380795522e59ca79a5b9b31074a607fac",
+          "reserved_output_tokens": 4096,
+          "effective_parameters": {
+            "model": "anthropic/claude-haiku-5.5",
+            "max_tokens": 4096,
+            "provider": {
+              "order": [
+                "google-vertex/global"
+              ],
+              "only": [
+                "google-vertex/global"
+              ],
+              "allow_fallbacks": false,
+              "require_parameters": true,
+              "max_price": {
+                "prompt": 0.3,
+                "completion": 2.5
+              }
+            },
+            "reasoning": {
+              "effort": "low"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "final_budget_observation": {
+    "pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous04\\budget-status-public01.json",
+      "bytes": 1304,
+      "sha256": "4ac64d00b58386c647dc971c65e234f79f738a3db2cd953cb8dda38e50db7a24"
+    },
+    "observed_epoch_ms": 1791528566096,
+    "scope": "Read-only observed status; this snapshot does not authorize a submission",
+    "status": "READY",
+    "provider_post_count": 0,
+    "maximum_provider_post_count": 4,
+    "remaining_provider_slots": 4,
+    "open_claims": 0,
+    "unknown_cost_count": 0,
+    "integrity_errors": 0,
+    "cleanup_pending": 0,
+    "fully_settled": true,
+    "stop_exists": false,
+    "known_API_cost_USD": "0",
+    "full_unknown_hold_USD": "0",
+    "max_possible_new_batch_reserve_USD": "0.12000000"
+  },
+  "completed_utc": "2026-10-09T06:49:26.096Z",
+  "elapsed_ms": 2661,
+  "script_sha256": "9ebcd044d50a8067ba6265a93a40d181aa7a45a0dee2443e9faceca171144ddf"
+}

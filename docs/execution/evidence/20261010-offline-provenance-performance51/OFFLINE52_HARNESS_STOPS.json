@@ -1,0 +1,22 @@
+{
+  "status": "EARLY_OFFLINE_HARNESS_ERRORS_RETAINED_FINAL_REPLAY_PASSED",
+  "attempts": [
+    {
+      "stopped_before_persistence": true,
+      "attempt": 1,
+      "error": "FeedbackEncodingError:INVALID_ENCODING_WRAPPER",
+      "cause": "Diagnostic compared encoding to guessed full sentinel;corrected to production FULL/VERSION constants"
+    },
+    {
+      "stopped_before_persistence": true,
+      "attempt": 2,
+      "error": "KeyError:provider_result",
+      "cause": "Diagnostic encountered immutable component_proof47_02 NOT_RUN_GLOBAL_STOP arm;explicitly skipped and retained null physical_POSTs"
+    }
+  ],
+  "production_source_changed": false,
+  "inputs_changed": false,
+  "models_requested": 0,
+  "native_or_external_DB_access": 0,
+  "final_receipt": "OFFLINE_SAVED_RESPONSE_REPLAY52.json"
+}

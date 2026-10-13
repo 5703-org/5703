@@ -1,0 +1,367 @@
+--- generation/source_relations_v2.py.before
++++ generation/source_relations_v2.py
+@@ -15,7 +15,10 @@
+ from pydantic import Field
+ 
+ from .reliability_v3 import Strict
+-from .reliability_v4 import CalculationClaim, GeneralClaim, GivenClaim, GuidanceClaim, TextbookClaim
++from .reliability_v4 import (
++    CalculationClaim, GeneralClaim, GivenClaim, GuidanceClaim, TextbookClaim, compact_schema,
++)
++from .attempt_evaluation_contract_v1 import ordinary_question_without_attempt
+ from .reliability_v5 import ReliableCheckV5
+ 
+ VERSION = "source_relation_contract_v2"
+@@ -45,6 +48,177 @@
+ 
+ class ReliableUnitCheck(ReliableCheckV5):
+     claims: list[UnitClaimVariant] = Field(max_length=100)  # type: ignore[assignment]
++
++
++CHECKER_SCHEMA_RESEARCH_POLICY = "textbook_checker_schema_research_v1"
++
++
++class CheckerSchemaScopeError(ValueError):
++    """Reject an incompatible explicit research scope without a fallback call."""
++
++
++def checker_schema_submission_fields(policy):
++    """Freeze only an explicit policy; omitted defaults keep old commands intact."""
++    if policy is None:
++        return {}
++    if policy != CHECKER_SCHEMA_RESEARCH_POLICY:
++        raise CheckerSchemaScopeError("Unknown checker schema research policy")
++    return {"checker_schema_policy": policy}
++
++
++def validate_checker_schema_request(request, *, research_unchecked=False):
++    """Admit only the declared ordinary textbook lane before any paid stage."""
++    if getattr(request, "checker_schema_policy", None) is None:
++        return
++    try:
++        _validate_checker_schema_request(request, research_unchecked=research_unchecked)
++    except CheckerSchemaScopeError:
++        raise
++    except (AttributeError, KeyError, TypeError, ValueError) as exc:
++        raise CheckerSchemaScopeError("Invalid explicit research request or checker configuration") from exc
++
++
++def _validate_checker_schema_request(request, *, research_unchecked=False):
++    checker_schema_submission_fields(request.checker_schema_policy)
++    config = request.checker_config or request.config
++    from .providers import checker_transport_enabled
++
++    if (
++        research_unchecked
++        or request.source_relation_policy != VERSION
++        or request.reliability_policy != "evidence_reliability_v5"
++        or request.joint_checker_policy != "typed_joint_v5"
++        or request.mode != "interactive_chat"
++        or request.condition != "E1"
++        or request.answer_mode != "textbook"
++        or not ordinary_question_without_attempt(request.teaching_context)
++        or config.structured_output_mode != "json_schema"
++        or checker_transport_enabled(config)
++    ):
++        raise CheckerSchemaScopeError(
++            "The research schema requires ordinary E1 textbook V2 checks without attempt or compact transport"
++        )
++
++
++def validate_textbook_checker_packet(data):
++    """Check every revision's actual scope and ownership without assigning basis."""
++    try:
++        _validate_textbook_checker_packet(data)
++    except CheckerSchemaScopeError:
++        raise
++    except (AttributeError, KeyError, TypeError, ValueError) as exc:
++        raise CheckerSchemaScopeError("Malformed textbook research checker packet") from exc
++
++
++def _validate_textbook_checker_packet(data):
++    if (
++        data.get("SOURCE_RELATION_POLICY") != VERSION
++        or data.get("answer_mode") != "textbook"
++        or not ordinary_question_without_attempt(
++            data.get("LEARNER_TURN"), data.get("ATTEMPT_EVALUATION")
++        )
++        or data.get("TUTOR_QUESTION") is not None
++    ):
++        raise CheckerSchemaScopeError("This revision is outside ordinary textbook research scope")
++    claims = data.get("CLAIMS", [])
++    bindings = data.get("ACTUAL_CITATION_BINDINGS", [])
++    fragments = data.get("SOURCE_FRAGMENTS", [])
++    ids = [claim["claim_id"] for claim in claims]
++    bound_ids = [row["claim_id"] for row in bindings]
++    fragment_ids = [row["fragment_id"] for row in fragments]
++    if (
++        not claims or len(ids) != len(set(ids))
++        or set(bound_ids) != set(ids) or len(bound_ids) != len(ids)
++        or len(fragment_ids) != len(set(fragment_ids))
++    ):
++        raise CheckerSchemaScopeError("The research packet has inconsistent identity sets")
++    available = {row["fragment_id"]: row for row in fragments}
++    by_claim = {row["claim_id"]: row for row in bindings}
++    for claim in claims:
++        # Original generator claims need not contain a basis field. Do not infer
++        # one from text or citations; enforce the actual returned basis later.
++        if "basis" in claim and claim["basis"] != "textbook":
++            raise CheckerSchemaScopeError("An explicit non-textbook input is outside research scope")
++        citations = by_claim[claim["claim_id"]].get("citations", [])
++        evidence_ids = [item["evidence_id"] for item in citations]
++        if (
++            not citations or len(evidence_ids) != len(set(evidence_ids))
++            or not claim.get("evidence_ids")
++            or set(evidence_ids) != set(claim["evidence_ids"])
++        ):
++            raise CheckerSchemaScopeError("Every research claim needs its own declared source bindings")
++        for citation in citations:
++            allowed = citation.get("allowed_fragment_ids", [])
++            if not allowed or len(allowed) != len(set(allowed)):
++                raise CheckerSchemaScopeError("Every research binding needs a nonempty unique source set")
++            for fid in allowed:
++                source = available.get(fid)
++                if (
++                    source is None or source["evidence_id"] != citation["evidence_id"]
++                    or source.get("complete_block") is not True
++                ):
++                    raise CheckerSchemaScopeError("A research source is missing or owned by another evidence item")
++    original_units = [
++        {key: value for key, value in row.items() if key != "source_context_candidates"}
++        for row in data.get("SOURCE_SYNTACTIC_UNITS", [])
++    ]
++    if original_units != scoped_syntactic_units(claims, bindings):
++        raise CheckerSchemaScopeError("The research unit partition differs from the complete original claims")
++
++
++def validate_textbook_checker_raw(raw):
++    """Require all remote fields in original JSON; do not hydrate model defaults."""
++    if not isinstance(raw, dict) or set(compact_schema(ReliableUnitCheck)["properties"]) - set(raw):
++        raise CheckerSchemaScopeError("The research checker omitted required original JSON fields")
++
++
++def validate_textbook_checker_basis(typed):
++    """Check the actual canonical verdict, never a forced input classification."""
++    if any(claim["basis"] != "textbook" for claim in typed["claims"]):
++        raise CheckerSchemaScopeError("The checker returned a basis outside the explicit textbook research scope")
++
++
++def textbook_checker_wire_schema():
++    """Keep the complete original JSON shape for an explicitly textbook-only probe."""
++    canonical = compact_schema(ReliableUnitCheck)
++    definitions = canonical.get("$defs", {})
++    shape = deepcopy(canonical)
++    variants = shape["properties"]["claims"]["items"]["anyOf"]
++    textbook = [branch for branch in variants
++                if definitions[branch["$ref"].removeprefix("#/$defs/")]
++                ["properties"]["basis"].get("const") == "textbook"]
++    if len(textbook) != 1:
++        raise CheckerSchemaScopeError("The explicit textbook research schema branch is not unique")
++    shape["properties"]["claims"]["items"] = textbook[0]
++
++    def lower(node, stack=()):
++        if "$ref" in node:
++            ref = node["$ref"]
++            if not ref.startswith("#/$defs/") or ref in stack:
++                raise CheckerSchemaScopeError("Only finite local definition references are allowed")
++            name = ref.removeprefix("#/$defs/")
++            if name not in definitions:
++                raise CheckerSchemaScopeError("Unresolved definition reference")
++            return lower(definitions[name], stack + (ref,))
++        if "anyOf" in node or "oneOf" in node:
++            raise CheckerSchemaScopeError("This simple research schema does not lower unions or nullability")
++        kind = node.get("type")
++        if kind == "object":
++            properties = {name: lower(child, stack) for name, child in node["properties"].items()}
++            return {"type": "object", "properties": properties,
++                    "required": list(properties), "additionalProperties": False}
++        if kind == "array":
++            return {"type": "array", "items": lower(node["items"], stack)}
++        if kind not in {"string", "boolean", "integer", "number", "null"}:
++            raise CheckerSchemaScopeError("Unsupported primitive type")
++        result = {"type": kind}
++        if "const" in node:
++            result["enum"] = [node["const"]]
++        elif "enum" in node:
++            result["enum"] = deepcopy(node["enum"])
++        return result
++
++    return lower(shape)
+ 
+ 
+ def syntactic_units(claims):
+--- generation/checked.py.before
++++ generation/checked.py
+@@ -142,6 +142,12 @@
+     assess_source_relations as assess_unit_relations,
+     scoped_syntactic_units,
+     SOURCE_SELECTION_INSTRUCTIONS,
++    CheckerSchemaScopeError,
++    validate_checker_schema_request,
++    validate_textbook_checker_packet,
++    validate_textbook_checker_raw,
++    validate_textbook_checker_basis,
++    textbook_checker_wire_schema,
+ )
+ from .reliability_v6 import (
+     VERSION as COMPACT_JOINT_POLICY,
+@@ -267,6 +273,13 @@
+ 
+ 
+ def generate_checked(service, request, budget=None, on_attempt=None, *, research_unchecked=False):
++    try:
++        validate_checker_schema_request(request, research_unchecked=research_unchecked)
++    except CheckerSchemaScopeError as exc:
++        return GenerationOutcome(
++            error=failure("CHECKER_SCHEMA_SCOPE_INVALID", str(exc)),
++            budget=(budget if budget is not None else RequestBudget()).to_dict(),
++        )
+     try:
+         pending_action_gate = pending_action_v8.validate_pair(
+             request, research_unchecked=research_unchecked
+@@ -1919,6 +1932,25 @@
+                     "current_problem": check_data["current_problem"],
+                     "style_preferences_add_required_facts": False,
+                 }
++            wire_checker_schema = compact_schema(checker_model)
++            if getattr(request, "checker_schema_policy", None) is not None:
++                try:
++                    validate_textbook_checker_packet(original_check_data)
++                    wire_checker_schema = textbook_checker_wire_schema()
++                except CheckerSchemaScopeError as exc:
++                    raise CheckedFailure(failure("CHECKER_SCHEMA_SCOPE_INVALID", str(exc))) from exc
++                report.setdefault("checker_wire_schemas", []).append({
++                    "revision": revision,
++                    "policy": getattr(request, "checker_schema_policy", None),
++                    "wire_schema_hash": _sha(json.dumps(
++                        wire_checker_schema, ensure_ascii=False, sort_keys=True, separators=(",", ":")
++                    )),
++                    "canonical_schema_hash": _sha(json.dumps(
++                        compact_schema(checker_model), ensure_ascii=False,
++                        sort_keys=True, separators=(",", ":")
++                    )),
++                    "canonical_local_contract_preserved": True,
++                })
+             check_messages = [
+                 {"role": "system", "content": check_template},
+                 {"role": "user", "content": _json(check_data)},
+@@ -1936,7 +1968,7 @@
+                 check_messages = [dict(message) for message in check_messages]
+                 check_messages[-1]["content"] = dumps_lossless_checker_input(encoded_check_data)
+                 fixed_input_tokens = TokenCounter(check_cfg).request_input(
+-                    check_messages, compact_schema(checker_model), checker_schema_name
++                    check_messages, wire_checker_schema, checker_schema_name
+                 )
+                 encoding_report = {
+                     "encoding": CHECKER_ENCODING,
+@@ -1953,13 +1985,13 @@
+                     check_data,
+                     check_messages,
+                     TokenCounter(check_cfg),
+-                    compact_schema(checker_model),
++                    wire_checker_schema,
+                     checker_schema_name,
+                 )
+             else:
+                 if (
+                     TokenCounter(check_cfg).request_input(
+-                        check_messages, compact_schema(checker_model), checker_schema_name
++                        check_messages, wire_checker_schema, checker_schema_name
+                     )
+                     + check_cfg.max_tokens
+                     > check_cfg.window_tokens
+@@ -1985,7 +2017,7 @@
+             for check_revision in range(maximum_checks):
+                 checked = invoke(
+                     check_messages,
+-                    compact_schema(checker_model),
++                    wire_checker_schema,
+                     checker_schema_name,
+                     "checker_contract_repair"
+                     if check_revision
+@@ -2023,6 +2055,8 @@
+                 schema_failure_diagnostics = None
+                 try:
+                     raw_judgment = strict_json(checked.raw_text)
++                    if getattr(request, "checker_schema_policy", None) is not None:
++                        validate_textbook_checker_raw(raw_judgment)
+                     if attempt_not_applicable and not ordinary_question_without_attempt(
+                         request.teaching_context, attempt_evaluation
+                     ):
+@@ -2039,6 +2073,8 @@
+                             raw_judgment, not_applicable=attempt_not_applicable
+                         )
+                     ).model_dump()
++                    if getattr(request, "checker_schema_policy", None) is not None:
++                        validate_textbook_checker_basis(typed_judgment)
+                     if attempt_not_applicable:
+                         evaluation_assessment = attempt_assessment(
+                             typed_judgment,
+@@ -2319,6 +2355,9 @@
+                         if negative_routing["route"] == "semantic_repair":
+                             inconsistencies = negative_routing["remaining_inconsistencies"]
+                             routing_issues = negative_routing["semantic_issues"]
++                except CheckerSchemaScopeError as exc:
++                    # Scope violations never authorize a contract correction call.
++                    raise CheckedFailure(failure("CHECKER_SCHEMA_SCOPE_INVALID", str(exc))) from exc
+                 except (ValidationError, ResponseValidationError, ValueError) as exc:
+                     schema_issues = schema_issue(exc)
+                     inconsistencies = compact_contract_issues + schema_issues
+--- generation/types.py.before
++++ generation/types.py
+@@ -211,6 +211,7 @@
+     checker_contract_policy: str = "single_contract_correction_v1"
+     reading_context: dict | None = None
+     source_relation_policy: str | None = None
++    checker_schema_policy: str | None = None
+     joint_checker_policy: str = "typed_joint_v5"
+     coverage_query_policy: dict | None = None
+ 
+--- backend/app/core/config.py.before
++++ backend/app/core/config.py
+@@ -59,6 +59,7 @@
+     chat_source_relation_policy: Literal[
+         "off", "source_relation_contract_v1", "source_relation_contract_v2"
+     ] = "off"
++    chat_checker_schema_policy: Literal["textbook_checker_schema_research_v1"] | None = None
+     chat_coverage_query_policy: Literal["off", "explicit_unit_definition_lookup_v1"] = "off"
+     chat_source_block_policy: Literal[
+         "legacy_source_blocks_v1", "raw_definition_block_partition_v2"
+@@ -103,6 +104,11 @@
+ 
+     @model_validator(mode="after")
+     def validate_environment(self):
++        if self.chat_checker_schema_policy is not None and (
++            self.chat_source_relation_policy != "source_relation_contract_v2"
++            or self.chat_joint_checker_policy != "typed_joint_v5"
++        ):
++            raise ValueError("The textbook research schema requires the typed V2 source contract")
+         if (
+             self.chat_joint_checker_policy
+             in {"scoped_compact_v6", "scoped_compact_v7", "scoped_compact_v8", "scoped_compact_v9"}
+--- backend/app/modules/answering/service.py.before
++++ backend/app/modules/answering/service.py
+@@ -50,6 +50,7 @@
+ from personalisation.compiler import compile_profile
+ from generation.types import GenerationRequest, ModelConfig, RequestBudget
+ from generation.service import GenerationService
++from generation.source_relations_v2 import checker_schema_submission_fields
+ from generation.token_counting import TokenCounter
+ from generation.teaching_plan import freeze_generation_policy, build_teaching_plan
+ from generation.evidence_coverage import assess_evidence_coverage, supplement_once
+@@ -482,6 +483,7 @@
+                 answer_mode=body.answer_mode,
+             ),
+             **({"reading_context": reading_context} if reading_context else {}),
++            **checker_schema_submission_fields(settings.chat_checker_schema_policy),
+             "checker_payload_policy": "lossless_checker_tables_v1",
+             "joint_checker_policy": settings.chat_joint_checker_policy,
+             "provider_output_policy": settings.chat_provider_output_policy,
+@@ -1935,6 +1937,7 @@
+             source_block_policy=req.command.get("source_block_policy", "legacy_source_blocks_v1"),
+             repair_policy=req.command.get("repair_policy"),
+             source_relation_policy=req.command.get("source_relation_policy"),
++            checker_schema_policy=req.command.get("checker_schema_policy"),
+             joint_checker_policy=req.command.get("joint_checker_policy", "typed_joint_v5"),
+             provider_output_policy=req.command.get("provider_output_policy", "strict_v1"),
+             generation_policy=generation_policy,

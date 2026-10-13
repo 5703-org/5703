@@ -1,0 +1,137 @@
+{
+  "status": "FREE_SAVED_OUTPUT_REPLAY_USING_PROMOTED_MAIN_CODE",
+  "time_UTC": "2026-10-11T06:01:15.188971+00:00",
+  "source_pins": {
+    "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic64-completion-candidate\\actual64completion\\result64.json": "74289433e778a839253c9e1ade38e574345ed845be67bf3cae15322225778a5b",
+    "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic64-completion-candidate\\wire64-third8192.json": "dd31e7473003b65f078c25d024a64bf5a992133a4705f201f1f1abbad21501a5",
+    "E:\\5703\\learning-assistant\\generation\\atomic_quote_binding_v1.py": "0bcb4dd156f16a31ac4d5942ec50b5dc16b625aee13c329dc1a402f178bf6dd4",
+    "E:\\5703\\learning-assistant\\tests\\unit\\test_atomic_quote_binding_v1.py": "2d8b092edd23d1db44d042f4a198c3dbabce2df07c97d283b408d3f2521df8a7"
+  },
+  "original_strict_error_before": "JUDGMENT_SLICE_MISMATCH",
+  "original_strict_error_after": "JUDGMENT_SLICE_MISMATCH",
+  "default_execute_retains_original_rejection": true,
+  "local_in_memory_fixture_invocations": 1,
+  "external_provider_requests": 0,
+  "database_operations": 0,
+  "production_writes": 0,
+  "historical_three_case_qualification": "1 accepted, 1 truncated, 1 strict-invalid; unchanged",
+  "semantic_truth_verified": false,
+  "human_rating": null,
+  "local_binding_replay": {
+    "schema_version": "atomic_quote_binding_v1",
+    "status": "LOCAL_PROVENANCE_NORMALIZATION_VALIDATED_ONLY",
+    "normalization_applied": true,
+    "corrected_raw": "{\"additional_gaps\":[],\"atom_id\":\"A1\",\"condition_judgments\":[{\"condition_id\":\"C0\",\"evidence_spans\":[{\"end\":221,\"fragment_id\":\"F2\",\"quote\":\"Its origin and packet identifier were not recorded; other gateways were active in that trial.\",\"start\":128}],\"gap\":{\"detail\":\"Lack of identifiers and presence of other gateways prevent establishing that the packet received by Node N originated at Gateway G.\",\"kind\":\"unresolved_identity\"},\"semantic_reason\":\"Without recorded packet identifiers or origins, and with multiple gateways active, it cannot be proven that the Aster packet received by Node N originated at Gateway G.\",\"verdict\":\"uncertain\"},{\"condition_id\":\"C1\",\"evidence_spans\":[{\"end\":123,\"fragment_id\":\"F1\",\"quote\":\"During Trial T, Gateway G emitted one packet.\",\"start\":78}],\"gap\":null,\"semantic_reason\":\"F1 explicitly confirms that Gateway G emitted one packet during Trial T.\",\"verdict\":\"supported\"},{\"condition_id\":\"C2\",\"evidence_spans\":[{\"end\":127,\"fragment_id\":\"F2\",\"quote\":\"During Trial T, Node N received one Aster packet.\",\"start\":78}],\"gap\":null,\"semantic_reason\":\"F2 explicitly confirms that Node N received one Aster packet during Trial T.\",\"verdict\":\"supported\"},{\"condition_id\":\"C3\",\"evidence_spans\":[{\"end\":221,\"fragment_id\":\"F2\",\"quote\":\"Its origin and packet identifier were not recorded; other gateways were active in that trial.\",\"start\":128}],\"gap\":{\"detail\":\"Unrecorded identifiers and active competing gateways make it impossible to confirm the emitted packet and received packet are the same.\",\"kind\":\"unresolved_identity\"},\"semantic_reason\":\"Packet identifiers were not recorded and other gateways were active, leaving the identity and correspondence of the received packet unverified.\",\"verdict\":\"uncertain\"}],\"schema_version\":\"atomic_support_judgment_v1\",\"verdict\":\"uncertain\"}",
+    "audit": {
+      "original_raw_sha256": "05ef5dbf8d083e1c06ef5c50634f65d9526e259f568f6639ab4b1ddc211e7846",
+      "normalized_raw_sha256": "399e315b8c6f711c376b8856ef332d84d5a1f38f4548b0ea4f64cc7df912253d",
+      "original_strict_validation_error": "JUDGMENT_SLICE_MISMATCH",
+      "changes": [
+        {
+          "condition_id": "C1",
+          "span_index": 0,
+          "fragment_id": "F1",
+          "before": {
+            "start": 78,
+            "end": 125
+          },
+          "after": {
+            "start": 78,
+            "end": 123
+          },
+          "quote_unchanged": true,
+          "match_scope": "the_same_actually_cited_fragment_only"
+        }
+      ],
+      "coordinate_fields_only_changed": true,
+      "quote_text_sources_conditions_verdicts_reasons_and_gaps_unchanged": true,
+      "original_provider_observation_qualification_upgraded": false,
+      "semantic_truth_verified": false,
+      "atomic_decomposition_verified": false,
+      "necessary_conditions_complete_verified": false,
+      "human_rating": null,
+      "production_publication_authorized": false,
+      "default_execution_integrated": false,
+      "provider_requests": 0
+    },
+    "strict_validation_after_normalization": {
+      "status": "STRUCTURALLY_BOUND_REPORTED_JUDGMENT",
+      "judgment": {
+        "schema_version": "atomic_support_judgment_v1",
+        "atom_id": "A1",
+        "verdict": "uncertain",
+        "condition_judgments": [
+          {
+            "condition_id": "C0",
+            "verdict": "uncertain",
+            "evidence_spans": [
+              {
+                "fragment_id": "F2",
+                "start": 128,
+                "end": 221,
+                "quote": "Its origin and packet identifier were not recorded; other gateways were active in that trial."
+              }
+            ],
+            "semantic_reason": "Without recorded packet identifiers or origins, and with multiple gateways active, it cannot be proven that the Aster packet received by Node N originated at Gateway G.",
+            "gap": {
+              "kind": "unresolved_identity",
+              "detail": "Lack of identifiers and presence of other gateways prevent establishing that the packet received by Node N originated at Gateway G."
+            }
+          },
+          {
+            "condition_id": "C1",
+            "verdict": "supported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 78,
+                "end": 123,
+                "quote": "During Trial T, Gateway G emitted one packet."
+              }
+            ],
+            "semantic_reason": "F1 explicitly confirms that Gateway G emitted one packet during Trial T.",
+            "gap": null
+          },
+          {
+            "condition_id": "C2",
+            "verdict": "supported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F2",
+                "start": 78,
+                "end": 127,
+                "quote": "During Trial T, Node N received one Aster packet."
+              }
+            ],
+            "semantic_reason": "F2 explicitly confirms that Node N received one Aster packet during Trial T.",
+            "gap": null
+          },
+          {
+            "condition_id": "C3",
+            "verdict": "uncertain",
+            "evidence_spans": [
+              {
+                "fragment_id": "F2",
+                "start": 128,
+                "end": 221,
+                "quote": "Its origin and packet identifier were not recorded; other gateways were active in that trial."
+              }
+            ],
+            "semantic_reason": "Packet identifiers were not recorded and other gateways were active, leaving the identity and correspondence of the received packet unverified.",
+            "gap": {
+              "kind": "unresolved_identity",
+              "detail": "Unrecorded identifiers and active competing gateways make it impossible to confirm the emitted packet and received packet are the same."
+            }
+          }
+        ],
+        "additional_gaps": []
+      },
+      "local_validation": "structure_identity_and_exact_citation_offsets_only",
+      "semantic_truth_verified": false,
+      "atomic_decomposition_verified": false,
+      "necessary_conditions_complete_verified": false,
+      "human_rating": null,
+      "production_publication_authorized": false
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "Q1_reexecuted": false,
+  "batch_id": "cs30-week10-q2-singleton-20261009-01",
+  "caller_lines": [],
+  "child_output_retained_as_hash_and_bytes_only": true,
+  "completed_at_UTC": "2026-10-09T05:54:11.574752+00:00",
+  "completed_process_receipts": [
+    {
+      "exit_code": 0,
+      "kind": "browser",
+      "owned_job_closed": true,
+      "paired_leg_id": "B_startup_prewarm",
+      "pid": 65888,
+      "streams": {
+        "stderr": {
+          "bytes": 0,
+          "collector_complete": true,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 137,
+          "collector_complete": true,
+          "sha256": "2b60f27d492022933a094f04073b3a00e6c6d3a318cfaa1e1e667f1721e1c07e"
+        }
+      }
+    },
+    {
+      "exit_code": 0,
+      "kind": "runtime",
+      "owned_job_closed": true,
+      "paired_leg_id": "B_startup_prewarm",
+      "pid": 13352,
+      "streams": {
+        "stderr": {
+          "bytes": 523,
+          "collector_complete": true,
+          "sha256": "2a1cf20e91c3f360974aa9b8e07caa3e380d04e06b6cae5828ca2d7a3d8acd1f"
+        },
+        "stdout": {
+          "bytes": 15891,
+          "collector_complete": true,
+          "sha256": "9cdf044c8218be8c99b050f7dc52352134d617d9bbd622a65e9ddd0a972e71b4"
+        }
+      }
+    }
+  ],
+  "continuation_mode": "Q2_FIRST_EXECUTION_NEW_WORKER",
+  "error_class": null,
+  "exception_cleanup": [],
+  "guard_release_pin": {
+    "bytes": 186227,
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\continuous-preparation\\CONTINUOUS_GUARD_RELEASE_ACTUAL03.json",
+    "sha256": "890063c5ae240cff285b5b3d932d605075cdaef138f127a22aa1df23c673388e"
+  },
+  "legs": [
+    {
+      "browser_elapsed_ms": 16439,
+      "browser_process": {
+        "exit_code": 0,
+        "owned_job_closed": true,
+        "pid": 65888,
+        "streams": {
+          "stderr": {
+            "bytes": 0,
+            "collector_complete": true,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "bytes": 137,
+            "collector_complete": true,
+            "sha256": "2b60f27d492022933a094f04073b3a00e6c6d3a318cfaa1e1e667f1721e1c07e"
+          }
+        }
+      },
+      "browser_receipt_pin": {
+        "bytes": 27381,
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\browser-continuous03\\real-browser-live-qa-receipt01.json",
+        "sha256": "36d93ef626982207617932b7ce275ae383e8b5737b3c39cc54b0d48e89bb468f"
+      },
+      "paired_leg_id": "B_startup_prewarm",
+      "process_launch_to_worker_ready_ms": 15027.13671875,
+      "provider_post_count_global_after_leg": 2,
+      "runtime_closed_pin": {
+        "bytes": 1925,
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous03\\runtime-closed-public01.json",
+        "sha256": "ec3d2fbb96025bdf16a8dc67bb5dd3dba2d66b67b6ae01ba3f94bb6e86e5267b"
+      },
+      "runtime_process": {
+        "exit_code": 0,
+        "owned_job_closed": true,
+        "pid": 13352,
+        "streams": {
+          "stderr": {
+            "bytes": 523,
+            "collector_complete": true,
+            "sha256": "2a1cf20e91c3f360974aa9b8e07caa3e380d04e06b6cae5828ca2d7a3d8acd1f"
+          },
+          "stdout": {
+            "bytes": 15891,
+            "collector_complete": true,
+            "sha256": "9cdf044c8218be8c99b050f7dc52352134d617d9bbd622a65e9ddd0a972e71b4"
+          }
+        }
+      }
+    }
+  ],
+  "method_limits": [
+    "Original Q2 first execution with full active-corpus RAG on a new worker/Engine after Q1 worker closure; no same-worker-across-Q1/Q2 or causal comparison",
+    "Root launch-to-ready includes imports and artifact hash checks; native worker models/prewarm are separate measurements",
+    "Full1564 public source files are initially hashed; the same394 production/assets pins are checked at provider boundaries in this singleton",
+    "At most two new model POSTs for sole Q2; no Q1 repeat or automatic replacement; no quality/p95 superiority claim",
+    "First painted prose is not TTFT; no p95 claim"
+  ],
+  "new_money_or_aggregate_POST_cap_added": false,
+  "owned_process_final_state": [
+    {
+      "exit_code": 0,
+      "owned_job_closed": true,
+      "pid": 13352,
+      "streams": {
+        "stderr": {
+          "bytes": 523,
+          "collector_complete": true,
+          "sha256": "2a1cf20e91c3f360974aa9b8e07caa3e380d04e06b6cae5828ca2d7a3d8acd1f"
+        },
+        "stdout": {
+          "bytes": 15891,
+          "collector_complete": true,
+          "sha256": "9cdf044c8218be8c99b050f7dc52352134d617d9bbd622a65e9ddd0a972e71b4"
+        }
+      }
+    },
+    {
+      "exit_code": 0,
+      "owned_job_closed": true,
+      "pid": 65888,
+      "streams": {
+        "stderr": {
+          "bytes": 0,
+          "collector_complete": true,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 137,
+          "collector_complete": true,
+          "sha256": "2b60f27d492022933a094f04073b3a00e6c6d3a318cfaa1e1e667f1721e1c07e"
+        }
+      }
+    }
+  ],
+  "previous_q1_settled_pin": {
+    "bytes": 10672,
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\analysis-preparation\\ACTUAL_CONTINUOUS02_SUBBATCH_FINANCIAL_RESULT01.json",
+    "sha256": "ce8ec8657fe7da3d875d8d4c3506f59112b0b77a34ce3cb08255d973365c8a1d"
+  },
+  "raw_child_logs_exported": false,
+  "same_worker_across_Q1_Q2": false,
+  "schema": "5703_week10_root_continuous_controller_v1",
+  "source_version": "1ada08eec0778fdf84dd1c2cdd2d9e946bafc9cddbef6bbbd85cf66ee04263c1",
+  "status": "ACTUAL_Q2_FIRST_EXECUTION_NEW_WORKER_PASS_BATCH_CLOSED"
+}

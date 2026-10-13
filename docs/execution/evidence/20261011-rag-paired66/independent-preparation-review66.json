@@ -1,0 +1,157 @@
+{
+  "schema_version": "independent_paired66_free_preparation_review_v1",
+  "status": "FREE_PREPARATION_AND_36_FROZEN_PACKETS_PASS_PAID_ADMISSION_NOT_ESTABLISHED",
+  "input_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-rag-paired66-preparation\\prepare_paired66.py",
+      "bytes": 7228,
+      "sha256": "ad81e29a7563d382f74e1c25f1e2ca570337afc1d1d41b1a791f79f57509907e"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-rag-paired66-preparation\\frozen-paired66-inputs.json",
+      "bytes": 243050,
+      "sha256": "c1b4c60cefc9777f75f3d63be37bab22fa280ec2f006c2eaf78823a652bb321c"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-rag-paired66-standards\\preregistered-offline-scoring.json",
+      "bytes": 64051,
+      "sha256": "9c1f506b970a191b7187c3ad6e09f2264191a7607a83c6dfbadf795886f8e201"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-rag-paired66-preparation\\protocol_readonly_review.json",
+      "bytes": 11472,
+      "sha256": "db399e7a9e601ebe2d847f6722ec924074f610afdd4a2955872df798e84cf683"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-rag-readonly-locator\\public-retrieval-inputs66.json",
+      "bytes": 426080,
+      "sha256": "a44fd1a6c897545eadf0920c240d61438ad3ee958ad6c69c7b9a3f0cfa7743bd"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\public12-openqa36-frozen-inputs01.json",
+      "bytes": 249942,
+      "sha256": "17d0135cc0e348e3336c39b878078808ab9dfea0178f29f5a247335830e80e3e"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-rag-unified-budget-audit\\budget-readiness.json",
+      "bytes": 7931,
+      "sha256": "bd75ff58a7a7f92cc0650c31d9006f9334cbc94ba370d9ba804ab0228b5e0a34"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-normal-openrouter-route-static01\\route-readiness01.json",
+      "bytes": 5552,
+      "sha256": "b953e82898a0884aeff87307ac62521b1b1cc4437f9a5a2808eb98d44873aa48"
+    }
+  ],
+  "packet_readback": {
+    "normal_plans": 36,
+    "questions": 12,
+    "actual_wire_bytes_and_sha_matched": 36,
+    "common_body_fields_except_messages_matched": 36,
+    "provider": "openai_compatible",
+    "model": "google/gemini-3.5-flash-lite",
+    "profile": "gemini35_google_vertex_v1",
+    "provider_only": [
+      "google-vertex/global"
+    ],
+    "allow_fallbacks": false,
+    "reasoning_effort": "low",
+    "max_output_tokens": 768,
+    "timeout_seconds": 45,
+    "response_format": "json_object",
+    "price_caps_USD_per_million": {
+      "prompt": "0.3",
+      "completion": "2.5"
+    },
+    "baseline_model_config_and_response_schema_identical": true,
+    "normal_adapter_route_audit_source_pins_matched": 4,
+    "base_system_prompt_sha256": "915efac624303d6bf7261a40fad6f2bf9ac52f9867fd690851732eeda830ecd1",
+    "wire_system": "All36 retain the same base system prefix and the same normal payload output-format/schema suffix. Final wire system is longer than the manifest base.",
+    "user_keys": [
+      "QUESTION",
+      "CURRENT_EVIDENCE"
+    ],
+    "evidence_item_keys": [
+      "chunk_id",
+      "text"
+    ],
+    "empty_E0_packets": 12,
+    "five_full_chunk_retrieval_packets": 24,
+    "exact_public_text_hash_bytes_and_order_slots": 120,
+    "unique_chunk_ids": 84,
+    "references_labels_history_profile_or_learner_fields_in_wire": false,
+    "independent_standard_question_text_and_hash_matches": 12,
+    "matched_corpus_release_id": "4f11bd70-a486-4d16-b216-78cfe499530a",
+    "balanced_arm_positions": {
+      "E0": [
+        4,
+        4,
+        4
+      ],
+      "E1": [
+        4,
+        4,
+        4
+      ],
+      "HYBRID_R2_MINILM": [
+        4,
+        4,
+        4
+      ]
+    }
+  },
+  "preparation_cost_bounds": {
+    "input_token_bound_rule": "UTF8 wire bytes +4096 fixed wrapper allowance; conservative estimate, not measured model tokenization.",
+    "per_packet_formula_verified": 36,
+    "normal36_hold_USD": "0.1837320",
+    "all40_hold_USD": "0.2096568",
+    "largest_normal_wire_bytes": 11108,
+    "largest_normal_hold_USD": "0.0064812",
+    "phase_cap_USD": "1",
+    "exact_arithmetic_verified": true,
+    "unplanned_four": "At most4 additional requests with no larger input wire and no output cap above768; exact new wires must be frozen before use. Larger repairs and external judges are not reserved.",
+    "planned_extra_requests": 0
+  },
+  "admission_and_claims": {
+    "project_budget_admitted": false,
+    "current_project_remaining_USD": null,
+    "current_global_financial_baseline_proven": false,
+    "old_USD10_ceiling_or_9_97001709_protection_used_as_current_balance": false,
+    "this_preparation_allocates_budget": false,
+    "credential_runtime_verified": false,
+    "actual_provider_requests": 0,
+    "native_page_timing": null,
+    "generated_answer_quality": null,
+    "human_gold": null,
+    "held_out": false,
+    "whole_project_completion_claim": null,
+    "historical_rankings_and_public_source_snapshots_only": true
+  },
+  "corrected_preparation_error": {
+    "root_reported_initial_error": "ImportError: prepare_schema_transport; occurred before frozen-wires66 creation.",
+    "final_function": "generation.openrouter_routes.prepare_schema_wire(config, payload(config, messages, schema, matched_openqa_v1), schema)",
+    "root_reported_second_free_prepare_exit": 0,
+    "failed_outputs_overwritten": false,
+    "root_reported_API_auth_DB_operations": 0
+  },
+  "remaining_blockers": [
+    {
+      "target": "Any paid execution of paired66",
+      "reason": "Current project global financial baseline and remaining protected budget are unresolved. The phase USD1 bound is not a project ceiling increase or live admission."
+    }
+  ],
+  "limitations": [
+    "Independent file/packet review only; no controller execution or imports by this reviewer.",
+    "References are local AI development preregistration, not human Gold. No generated-answer, current retrieval, causal RAG, native timing or population p95 result is established.",
+    "Short-answer generation requests contain no citations; future context support and reviewer-selected witness trails must not be represented as model-supplied citations."
+  ],
+  "reviewer_operations": {
+    "W_evidence_files_created": 1,
+    "Main_reads_or_writes": 0,
+    "auth_reads": 0,
+    "DB_operations": 0,
+    "network_or_model_requests": 0,
+    "tests_or_installs": 0
+  },
+  "preparation_mismatches": []
+}

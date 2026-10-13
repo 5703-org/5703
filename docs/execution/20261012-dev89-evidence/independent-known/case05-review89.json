@@ -1,0 +1,261 @@
+{
+  "schema": "dev89_independent_closed_case_review_v1",
+  "case_id": "case05",
+  "status": "FAIL",
+  "independent_answer_QA": "FAIL",
+  "draft_scientific_correctness": "FAIL_CONDITIONS_OMITTED_IN_SOLUTION_ONLY_BOMB_HEAT_BALANCE",
+  "required_coverage": "3_COMPLETE_1_PARTIAL",
+  "own_citation_and_selected_support": "FAIL_OR_UNASSESSABLE_FULL_CHECKER_SELECTION",
+  "publication": "NO_PUBLISHED_ANSWER",
+  "independent_page_eligible": false,
+  "packet_review": {
+    "all_submitted_fragments_reviewed": true,
+    "fragments": 57,
+    "claims": 14,
+    "units": 23,
+    "original_decoded_packet_sha256": "8616f5a9bec92740e420c8d9119d3c84ff2d4730dbec8df7571aeb9461e7cfde",
+    "checker_context_sha256": "843145a834468340774eee9a28d1553433011b7afbc3c7ff77d1a606c498c762",
+    "hydrated_full_v2_sha256": null,
+    "complete_model_authored_checker_selection_available": false
+  },
+  "source_availability": {
+    "overall": "PARTIAL_FOR_EXPLICIT_BOMB_COMPONENTS_OTHER_REQUESTED_RULES_SUFFICIENT",
+    "sign_and_exothermic_rule": [
+      "ev_002/F009-F011",
+      "ev_004/F024-F029"
+    ],
+    "insulation_and_apparatus_surroundings": [
+      "ev_003/F018"
+    ],
+    "capacity_and_calibration": [
+      "ev_001/F001-F005"
+    ],
+    "bomb_water_description": [
+      "ev_001/F006"
+    ],
+    "apparatus_plus_solution_heat_balance": [
+      "ev_007/F050"
+    ],
+    "explicit_bomb_and_water_absorption_sentence_submitted": false,
+    "steel_word_present_in_actual_fragments": false,
+    "RAG_MISS": "The prospective original-PDF steel-bomb-and-surrounding-water absorption paragraph is not in the actual submitted packet; ev001 starts at the subsequent capacity sentence. Do not borrow that original PDF paragraph to grade the actual own citation as passed.",
+    "not_a_global_book_or_rule_absence": true,
+    "general_apparatus_and_solution_components_supported": true
+  },
+  "facet_assessment": [
+    {
+      "facet": "H1",
+      "content": "COMPLETE",
+      "verdict": "CORRECT_NEGATIVE_Q",
+      "detail": "Negative q/exothermic sign is correct for the reacting system and the observed surrounding-water temperature rise."
+    },
+    {
+      "facet": "H2",
+      "content": "COMPLETE",
+      "verdict": "CORRECT_GENUINE_MISSING_EXPERIMENTAL_INPUT_RESERVATION",
+      "detail": "No actual device heat capacity/calibration or water/container capacity data are supplied; 5.0 degC alone does not authorize numerical J. This reservation is not an erroneous refusal.",
+      "own_support_limitation": "C005 is an uncited inference; later C006 capacity citation cannot retrospectively provide its own binding."
+    },
+    {
+      "facet": "H3",
+      "content": "PARTIAL",
+      "verdict": "TOTAL_CAPACITY_SCOPE_NOT_CLEARLY_COMPLETED_AND_BALANCE_CONTRADICTED",
+      "detail": "The answer mentions total q_solution+q_calorimeter and calibrated calorimeter capacity, but never clearly identifies bomb/container and water as the heat-absorbing parts or defines an effective total capacity. It explicitly restricts identification to calorimeter as a whole. The actual packet lacks direct steel-bomb absorption text, while F006/F009-F010/F018/F050 still establish water/apparatus context and total heat accounting. Do not force the missing steel lexical detail; retain the available apparatus/solution relation and source gap separately."
+    },
+    {
+      "facet": "H4",
+      "content": "COMPLETE",
+      "verdict": "CORRECT_KNOWN_Q_TEMPERATURE_CALIBRATION",
+      "support": [
+        "ev_001/F002-F005"
+      ]
+    }
+  ],
+  "claim_unit_audit": [
+    {
+      "claim": "C001",
+      "finding": "Correct negative-q and exothermic direction; a sign conclusion is not invalid merely because actual heat magnitude is unknown."
+    },
+    {
+      "claim": "C002",
+      "finding": "SCIENTIFIC_CONDITION_FAILURE",
+      "own_evidence": "ev_002/F009-F011",
+      "text_excerpt": "heat produced by the reaction equals the heat absorbed by the solution, since q_reaction plus q_solution must add up to zero",
+      "detail": "This unqualified solution-only balance is applied to a bomb-calorimeter question. The same source context permits neglecting apparatus heat only as an approximation, and ev004/F025 explicitly requires no calorimeter heat absorption and no external exchange. Insulation does not establish zero container heat. The draft later includes q_calorimeter, so the unconditional statement is internally inconsistent."
+    },
+    {
+      "claim": "C003",
+      "finding": "Correct negative sign means exothermic, supported by own ev004/F029."
+    },
+    {
+      "claim": "C004",
+      "finding": "Correct qualitative nearly insulated interpretation, supported by own ev003/F018-F019; do not upgrade nearly prevents to exactly zero losses."
+    },
+    {
+      "claim": "C005",
+      "finding": "Correct numerical insufficiency but no own citation binding."
+    },
+    {
+      "claim": "C006",
+      "finding": "Known heat capacity plus temperature rise determines energy; supported by own ev001/F001."
+    },
+    {
+      "claim": "C007",
+      "finding": "The total relation q_reaction=-(q_solution+q_calorimeter) is correct and own ev007/F050 supplies the apparatus term; it contradicts the unqualified earlier C002. Specific heat/mass/temperature dependence is in own ev004/F025."
+    },
+    {
+      "claim": "C008",
+      "finding": "Calorimeter capacity is needed, but the answer does not consistently distinguish apparatus-only capacity from a calibrated effective total including water."
+    },
+    {
+      "claim": "C009",
+      "finding": "Source quotes often-negligible apparatus heat with accuracy caveat, but no source establishes this bomb can safely neglect it. Preserve the conditional scope rather than using this general statement to excuse C002."
+    },
+    {
+      "claim": "C010",
+      "finding": "Gas-tight bomb submerged in water/insulating material is supported by own ev001/F006."
+    },
+    {
+      "claim": "C011",
+      "finding": "Uncited source-limitation meta statement. No exhaustive component list is demanded by the question; partial available water/apparatus information should be distinguished from absent explicit steel-bomb text and missing numerical calibration."
+    },
+    {
+      "claim": "C012",
+      "finding": "Calibration purpose supported by own ev001/F002."
+    },
+    {
+      "claim": "C013",
+      "finding": "Known-q reaction/temperature-change calibration supported by own ev001/F003-F004; no unrelated example numerical capacity is borrowed."
+    },
+    {
+      "claim": "C014",
+      "finding": "Generally calibrating before research use supported by own ev001/F005; not asserted as an absolute universal frequency."
+    }
+  ],
+  "checker_and_failure_stage": {
+    "HTTP_status": 200,
+    "finish_reason": "length",
+    "actual_output_tokens": 8188,
+    "actual_reasoning_tokens": 7783,
+    "configured_HIGH_checker_max_tokens": 8192,
+    "normal_adapter_error": "OUTPUT_TRUNCATED",
+    "truncated_raw_proposed_judgments_authoritative": false,
+    "hydration_complete": false,
+    "accepted_semantic_judgment_available": false,
+    "published_model_scientific_false_positive_observed": false,
+    "exact_missing_or_truncated_schema_fields": "NOT_INFERRED_FROM_TOKEN_COUNT_OR_RAW_PREFIX"
+  },
+  "given_missing_and_false_refusal": {
+    "actual_device_calibrated_capacity_given": false,
+    "actual_water_and_container_capacity_given": false,
+    "numeric_J_reservation_justified": true,
+    "borrowed_other_calorimeter_example_values": false,
+    "teacher_refusal_DTO": false,
+    "teacher_wrong_blanket_withholding": "NOT_ESTABLISHED_AS_ALL_PARTS_REFUSAL",
+    "component_coverage_limit": "Partial conservative source statement; do not treat the genuine missing C as missing sign/calibration rules. The unqualified wrong heat balance is a separate generation fault.",
+    "system_semantic_refusal_observed": false,
+    "API_failure_cause_public_observation": "Checker output truncation, not a validated semantic rejection."
+  },
+  "clock": {
+    "started_utc": "2026-10-12T00:55:29.160946+00:00",
+    "finished_utc": "2026-10-12T00:56:05.282799+00:00",
+    "api_send_to_terminal_ms": 35855.54590000538,
+    "full_answer_API_sample_n": 0,
+    "complete_DOM_sample_n": 0,
+    "TTFT_ms": null,
+    "p95_ms": null
+  },
+  "finance": {
+    "actual_provider_POST": 2,
+    "known_cost_USD": "0.0322206",
+    "UNKNOWN_protection_USD": "0",
+    "numeric_settlements": 2
+  },
+  "closure": {
+    "owned_threads_closed": true,
+    "old_metadata_unchanged": {
+      "sessions": true,
+      "jobs": true,
+      "answer_requests": true,
+      "answers": true,
+      "active_model_configurations": true
+    }
+  },
+  "exact_actual_ids": {
+    "session_id": "71444848-58ac-4b8c-8355-cd9618af793f",
+    "request_id": "2d43d634-5702-480d-b782-ac008bb06993",
+    "job_id": "30dfd07e-d7ac-4540-be83-461497ab8f57",
+    "answer_id": null,
+    "question_sha256": "d4d41f5bc32ce19ed5cd470d57216826b890f0ca126809949a1e6627c38c56ea",
+    "scope_sha256": "aa369b8f450e899309b215aba85c8a3642c71f42197d902870338e3c7efca2b3",
+    "draft_answer_text_sha256_UTF8": "61f331ede65f4382ea5b37fba1f280540c84f98ee178b4eee02a174bac2aa0e2"
+  },
+  "frozen_baseline": {
+    "denominator": 8,
+    "source_version_sha256": "f7f03e32b3bab3f539002e53798cc5abdfc0f7816d37d78d85401eff8e1ce5d2",
+    "protocol_sha256": "704153b20e858e964314cb078c5773352428f26632df8e95cf0424963a25a483",
+    "rubric_sha256": "468ecce8dcd190c567d942c133731b6a52948994520c7e0d1529669a4b4f5c14"
+  },
+  "limits": [
+    "Exposed independent AI source assessment, not HumanGold.",
+    "No full book or other parent evidence used to pass own citation; original-PDF witness used only to identify actual retrieval omission.",
+    "No models/auth/DB/network/Main/runtime writes or tests."
+  ],
+  "input_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case05\\journey-receipt88.json",
+      "bytes": 1699,
+      "sha256": "67b4b4694abc041a8079eda46f837753ccb7109e46cbd2c5d9863d0c4560ce9e"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case05\\api-closure77.json",
+      "bytes": 1187,
+      "sha256": "fc3be4cdfef5f3c76943dceeaf78170694b7f06eb523560dcb1ea6dab9d2a268"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case05\\native-provider70\\final-receipt.json",
+      "bytes": 1413,
+      "sha256": "8e61f1e56e0b5415cac5e41c88a453c046989ecf7ef9df9d09df15dd1647220c"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case05\\native-provider70\\slot-01-normal-outcome.json",
+      "bytes": 3353,
+      "sha256": "4f505f6094c404968d83fb74224f6ce0aab967eefb0b86b6646c85b88e299d43"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case05\\native-provider70\\slot-01-public-inputs.json",
+      "bytes": 93311,
+      "sha256": "12637d6231ddbc0cf760182a704670fc41b8a4c870e6f4ec3fdfdf95696b300c"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case05\\native-provider70\\slot-01-financial.json",
+      "bytes": 325,
+      "sha256": "4ee6f3265d440ee7bf09b2a51f197092bd81239ce14f0ae1c4ccef7ece14141f"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case05\\native-provider70\\slot-01-settlement.json",
+      "bytes": 247,
+      "sha256": "01426e421760916a7acdffd95afa75d2e04b0478723dd1b021b60f015b131a89"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case05\\native-provider70\\slot-02-normal-outcome.json",
+      "bytes": 4332,
+      "sha256": "d4ebc570474b9ef53559c1fa3099e095b4b3f544436a28ab9cb69c344bde3ada"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case05\\native-provider70\\slot-02-public-inputs.json",
+      "bytes": 193066,
+      "sha256": "b3e15449886088398bec042c75c68398c84d04cd94b6542cdc66ab15038cb538"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case05\\native-provider70\\slot-02-financial.json",
+      "bytes": 325,
+      "sha256": "41b853a437842b37a219967b43b092822ad427ed4c7a4935bd0463ffa03bde9f"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case05\\native-provider70\\slot-02-settlement.json",
+      "bytes": 247,
+      "sha256": "0658bb07b2447fedb38546f403eb77ed3a70e5bfb601f24e03a4e7a1ec4a0b5c"
+    }
+  ]
+}

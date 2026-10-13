@@ -1,0 +1,135 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "E:\\5703\\learning-assistant\\frontend\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-native58-candidate\\playwright58.config.cjs"
+    ],
+    "configFile": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-native58-candidate\\playwright58.config.cjs",
+    "rootDir": "C:/Users/PC/Documents/Codex/2026-10-04/task-2/5703-native58-candidate",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/PC/Documents/Codex/2026-10-04/task-2/5703-native58-candidate/run58-01/browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/PC/Documents/Codex/2026-10-04/task-2/5703-native58-candidate",
+        "testIgnore": [],
+        "testMatch": [
+          "native58.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-native58-candidate\\run58-01\\native58-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "native58.spec.ts",
+      "file": "native58.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "current mock API and worker publish a cited answer that survives source opening and reload",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1,
+                  "error": {
+                    "message": "Error: browserType.launch: Chromium distribution 'msedge' is not found at C:\\Users\\PC\\AppData\\Local\\Microsoft\\Edge\\Application\\msedge.exe\nRun \"npx playwright install msedge\"",
+                    "stack": "Error: browserType.launch: Chromium distribution 'msedge' is not found at C:\\Users\\PC\\AppData\\Local\\Microsoft\\Edge\\Application\\msedge.exe\nRun \"npx playwright install msedge\""
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: browserType.launch: Chromium distribution 'msedge' is not found at C:\\Users\\PC\\AppData\\Local\\Microsoft\\Edge\\Application\\msedge.exe\nRun \"npx playwright install msedge\""
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-11T03:37:33.555Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-native58-candidate\\run58-01\\browser-artifacts\\native58-current-mock-API--f524a-s-source-opening-and-reload\\error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "93b4cc4781e109b84e5d-1f071cf194efcc351808",
+          "file": "native58.spec.ts",
+          "line": 7,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-11T03:37:33.183Z",
+    "duration": 430.691,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

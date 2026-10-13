@@ -1,0 +1,56 @@
+{
+  "schema": "phase85_real_entry_fixture_review_v1",
+  "status": "FIXTURE_CORRECTED_TESTS_UNEXECUTED_BY_REVIEWER",
+  "final_test": {
+    "path": "test_generation_programmatic_optins.py",
+    "bytes": 3834,
+    "sha256": "0dbfa7178015db5e072a942eb49b45c017455eae09ba4297e53c8cf65faed3a4"
+  },
+  "preserved_first_test": {
+    "path": "test_generation_programmatic_optins.py.first85",
+    "bytes": 3903,
+    "sha256": "4e2f35ded8f429285264ae6045ee2cb594aee8f729f391c5987aa5a6c4f450fb",
+    "archive_mode": "exclusive_create_exact_original_bytes"
+  },
+  "preserved_parent_run": {
+    "directory": "free-controls/20261011T183439669528Z-dfbf6df5",
+    "receipt_sha256": "5d70527a8adb166a0eac4d37f6cd42bc0e82e15f004fb105c9942d8ce0600240",
+    "junit_sha256": "85dfc311e501801c180f95edb33da1354e50d8507ed55dde6c4ced1187315c01",
+    "tests": 3,
+    "failures": 2,
+    "passes": 1,
+    "observed_failures": "clarification and factual no-evidence returned ENHANCEMENT_VALIDATION_ERROR; XML truncates error details",
+    "evidence_unchanged": true
+  },
+  "source_diagnosis": {
+    "version_definition": "Main generation/joint_policy.py:7 defines VERSION = learning_enhancement_v1",
+    "entry_gate": "Main generation/checked.py:781-782 rejects enhancement_version != VERSION with UNKNOWN_ENHANCEMENT_VERSION before preparation or fallback",
+    "wrapper": "generate_checked converts the validation ValueError into ENHANCEMENT_VALIDATION_ERROR",
+    "invalid_first_fixture": "enhancement_version = checked_attribution_v5",
+    "qualification": "Literal mismatch is proven by public source. UNKNOWN_ENHANCEMENT_VERSION was not exposed by the truncated failure XML."
+  },
+  "minimal_changes": [
+    "Import public generation.joint_policy.VERSION as ENHANCEMENT_VERSION and use it for the synthetic request",
+    "Replace conversational docstring with ordinary regression purpose"
+  ],
+  "static_comparison": "Exact first-to-final text comparison confirms only those edits; LF preserved",
+  "retained_controls": [
+    "Real GenerationService.generate entry: recognized clarification returns programmatic ambiguity origin with zero adapter calls",
+    "Real GenerationService.generate entry: factual no-evidence returns programmatic no-evidence origin with zero adapter calls",
+    "Invalid original checker opt-in remains denied with zero adapter calls"
+  ],
+  "retained_assertions": "Original request unchanged, no generate/count_tokens calls, no attempts or consumed calls",
+  "bypasses": "No AST extraction, alternate pipeline, mocked build_messages, or disabled Main validation gates",
+  "reviewer_activity": {
+    "tests_executed": 0,
+    "main_imports": 0,
+    "main_writes": 0,
+    "frozen_runtime_writes": 0,
+    "candidate_checked_writes": 0,
+    "auth_reads": 0,
+    "database_access": 0,
+    "network_access": 0,
+    "model_loading": 0
+  },
+  "remaining_validation": "Root executes the corrected three controls; this review claims no new test PASS"
+}

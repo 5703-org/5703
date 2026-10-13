@@ -1,0 +1,186 @@
+{
+  "version": "integration_static_review84_final_v2",
+  "status": "PASS",
+  "review_kind": "read_only_static_snapshot",
+  "reviewer": "native76_narrow_review",
+  "scope": {
+    "integration_candidate_root": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker84\\integration-candidate",
+    "codec_candidate_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker84-output-candidate\\generation\\lossless_unit_findings_v1.py",
+    "main_root": "E:\\5703\\learning-assistant",
+    "main_writes": 0,
+    "db_access": 0,
+    "credential_access": 0,
+    "network_requests": 0,
+    "model_requests": 0,
+    "tests_executed": 0,
+    "runtime_started": 0,
+    "nullable_reference_revision": "reviewed exact one-line structural compatibility fix; no other codec bytes changed",
+    "only_written_artifacts": [
+      "5703-checker84/integration-static-review84.json",
+      "5703-checker84/integration-static-review84-final.json"
+    ]
+  },
+  "integration_files": [
+    {
+      "relative_path": "generation/types.py",
+      "candidate_bytes": 10176,
+      "candidate_sha256": "757f907befeaa9300fdeb8ab5c8d03d205c142920cf3c2f5e72ee98988f53068",
+      "main_before_bytes": 10131,
+      "main_before_sha256": "f74ce2c7295b7ee655577bc330791fbdd2c62447b8f7d4414af85b4aba7bcd69"
+    },
+    {
+      "relative_path": "generation/service.py",
+      "candidate_bytes": 29098,
+      "candidate_sha256": "e694ec2f919754480b927ac7c48ee966a0d9db3d875ff70a71ad39ba08211fcb",
+      "main_before_bytes": 28496,
+      "main_before_sha256": "bf099269aac9c84431a368935339749a3d53c643eded251a3793a0b30cf53e43"
+    },
+    {
+      "relative_path": "generation/checked.py",
+      "candidate_bytes": 166258,
+      "candidate_sha256": "fd8f18a8a7dbed449654310fb17086ddb4207069a394ca4ac55cf2db3a6fab8c",
+      "main_before_bytes": 164809,
+      "main_before_sha256": "f3cddafa8a49a6efaca905383abaeaf72690c8ff988f34fea086113feab408f5"
+    },
+    {
+      "relative_path": "generation/providers.py",
+      "candidate_bytes": 28382,
+      "candidate_sha256": "c00004ce5bb14c65d775f16700f10facd182194533462a114d9e086d9ed6fac4",
+      "main_before_bytes": 26220,
+      "main_before_sha256": "bbfb74558e1adf5e4850edad02bb117af221c804aaad6e6f260addfe05fb38f4"
+    },
+    {
+      "relative_path": "backend/app/core/config.py",
+      "candidate_bytes": 7480,
+      "candidate_sha256": "f7d117d22925209e66617baa32aac3c3e41a530d6a20f2a7a10e434928f1155d",
+      "main_before_bytes": 7019,
+      "main_before_sha256": "2822cd3768d821e7a43ab05b846abf33af8a629b22c566a35bdd0a42c5158b9c"
+    },
+    {
+      "relative_path": "backend/app/modules/answering/service.py",
+      "candidate_bytes": 95312,
+      "candidate_sha256": "a8f8e02d156a5d940fa49a16558b26f87f0816b61a2671d9efa0b615d226c1b0",
+      "main_before_bytes": 95064,
+      "main_before_sha256": "7c7be9ee81e5cad2b685855473e6605598f15acdb3f92d7a9917bd5f2be963a5"
+    }
+  ],
+  "codec_reviewed_snapshot": {
+    "bytes": 28255,
+    "sha256": "affbbf2db064323e9139273917f2d47dc36c95d073225f97e888fa0144cc6b7b"
+  },
+  "checks": {
+    "default_none_preserved": true,
+    "unknown_policy_rejected": true,
+    "enhanced_interactive_E1_textbook_only": true,
+    "ordinary_without_attempt_only": true,
+    "source_relation_contract_v2_required": true,
+    "evidence_reliability_v5_required": true,
+    "typed_joint_v5_required": true,
+    "research_unchecked_rejected": true,
+    "experimental_checker_schema_rejected": true,
+    "compact_transport_overlap_rejected": true,
+    "basic_provider_call_rejected": true,
+    "schema_projection_routes_rejected_at_request_and_pure_provider": true,
+    "target_gemini_vertex_json_object_compatible": true,
+    "nonprojecting_json_schema_compatible": true,
+    "direct_teacher_instruction_opt_in_only": true,
+    "complete_answer_text_facts_conditions_quantities_citations_required": true,
+    "teacher_instruction_precedes_message_assembly_and_input_count": true,
+    "shared_checker_compiler_for_payload_and_token_counter": true,
+    "all_model_authored_judgments_retained": true,
+    "strict_complete_schema_fields_and_identity_sets": true,
+    "exact_quote_spans_reconstructed_without_entailment_inference": true,
+    "ordinary_full_typed_source_and_requirement_validators_unchanged": true,
+    "publication_gate_and_request_budget_unchanged": true,
+    "decode_failure_closed_without_fallback": true,
+    "usage_unmodified_by_hydration": true,
+    "canonical_nullable_negative_reference_preserved": true
+  },
+  "notes": [
+    "Haiku projection was the concrete counting exception; both new-policy entrances now reject any resolved route with schema_transport != null in json_schema mode. Existing global route behavior is unchanged.",
+    "Only haiku55_google_vertex_low_v1 currently declares schema_transport; prepare_schema_wire otherwise returns the payload unchanged unless the response format is json_schema.",
+    "Canonical judgment aliases are bijective. Status, basis, unit relation/condition flags, requirement relevance/sufficiency/coverage, boolean gates, and reasons remain model-authored.",
+    "Valid quote offsets establish exact source provenance only. Original assess_unit_relations, assess_requirements, citation/basis and publication checks remain necessary.",
+    "The pre-existing direct mock branch remains explicitly unverified_mock_direct and does not count as real semantic acceptance.",
+    "TokenCounter totals remain local serialized-request estimates with the existing safety framing; they are not actual provider token measurements.",
+    "The initial integration-candidate-pins84.json is stale for checked.py and providers.py. This review binds the six directly measured candidate hashes above.",
+    "The final codec permits canonical null formula/input references through the structural reference-membership check without adding a reference. Original derivation gates still decide validity and reject missing textbook source."
+  ],
+  "blockers": [],
+  "previous_review": {
+    "relative_path": "5703-checker84/integration-static-review84.json",
+    "bytes": 5569,
+    "sha256": "58ab5ce36646fb009fbbee2fada6b648e870f0a78ef0251aee14c271088321d7",
+    "preserved": true,
+    "codec_sha256": "df5ffc9bdfefa269b02b766fd935b301250dd6e4db76eeb5250ffb916cf943d1"
+  },
+  "final_readback_checks": [
+    {
+      "relative_path": "generation/types.py",
+      "candidate_sha256": "757f907befeaa9300fdeb8ab5c8d03d205c142920cf3c2f5e72ee98988f53068",
+      "candidate_bytes": 10176,
+      "candidate_same_as_reviewed": true,
+      "main_before_sha256": "f74ce2c7295b7ee655577bc330791fbdd2c62447b8f7d4414af85b4aba7bcd69",
+      "main_same_as_reviewed_baseline": true
+    },
+    {
+      "relative_path": "generation/service.py",
+      "candidate_sha256": "e694ec2f919754480b927ac7c48ee966a0d9db3d875ff70a71ad39ba08211fcb",
+      "candidate_bytes": 29098,
+      "candidate_same_as_reviewed": true,
+      "main_before_sha256": "bf099269aac9c84431a368935339749a3d53c643eded251a3793a0b30cf53e43",
+      "main_same_as_reviewed_baseline": true
+    },
+    {
+      "relative_path": "generation/checked.py",
+      "candidate_sha256": "fd8f18a8a7dbed449654310fb17086ddb4207069a394ca4ac55cf2db3a6fab8c",
+      "candidate_bytes": 166258,
+      "candidate_same_as_reviewed": true,
+      "main_before_sha256": "f3cddafa8a49a6efaca905383abaeaf72690c8ff988f34fea086113feab408f5",
+      "main_same_as_reviewed_baseline": true
+    },
+    {
+      "relative_path": "generation/providers.py",
+      "candidate_sha256": "c00004ce5bb14c65d775f16700f10facd182194533462a114d9e086d9ed6fac4",
+      "candidate_bytes": 28382,
+      "candidate_same_as_reviewed": true,
+      "main_before_sha256": "bbfb74558e1adf5e4850edad02bb117af221c804aaad6e6f260addfe05fb38f4",
+      "main_same_as_reviewed_baseline": true
+    },
+    {
+      "relative_path": "backend/app/core/config.py",
+      "candidate_sha256": "f7d117d22925209e66617baa32aac3c3e41a530d6a20f2a7a10e434928f1155d",
+      "candidate_bytes": 7480,
+      "candidate_same_as_reviewed": true,
+      "main_before_sha256": "2822cd3768d821e7a43ab05b846abf33af8a629b22c566a35bdd0a42c5158b9c",
+      "main_same_as_reviewed_baseline": true
+    },
+    {
+      "relative_path": "backend/app/modules/answering/service.py",
+      "candidate_sha256": "a8f8e02d156a5d940fa49a16558b26f87f0816b61a2671d9efa0b615d226c1b0",
+      "candidate_bytes": 95312,
+      "candidate_same_as_reviewed": true,
+      "main_before_sha256": "7c7be9ee81e5cad2b685855473e6605598f15acdb3f92d7a9917bd5f2be963a5",
+      "main_same_as_reviewed_baseline": true
+    }
+  ],
+  "nullable_reference_diff": {
+    "previous_sha256": "df5ffc9bdfefa269b02b766fd935b301250dd6e4db76eeb5250ffb916cf943d1",
+    "current_sha256": "affbbf2db064323e9139273917f2d47dc36c95d073225f97e888fa0144cc6b7b",
+    "old_line": "if basis == \"textbook\" and fid not in selected:",
+    "new_line": "if basis == \"textbook\" and fid is not None and fid not in selected:",
+    "added_bytes": 20,
+    "replacements": 1,
+    "in_memory_reverse_patch_matches_exact_previous_codec_sha256": true,
+    "canonical_nullable_fields": [
+      "CalculationInput.fragment_id",
+      "Derivation.formula_fragment_id"
+    ],
+    "canonical_schema_null_preserved": true,
+    "nonnull_foreign_or_unselected_parent_reference_rejected": true,
+    "problem_input_nonnull_reference_rejected": true,
+    "statuses_citations_and_model_boolean_judgments_unchanged": true,
+    "original_validate_derivation_still_rejects_missing_textbook_source": true,
+    "null_is_not_support_or_entailment": true
+  }
+}

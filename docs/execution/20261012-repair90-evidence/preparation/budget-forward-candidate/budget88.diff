@@ -1,0 +1,311 @@
+--- budget88.before.py
++++ budget88.py
+@@ -541,8 +541,222 @@
+     raise BudgetError("OLD_SPECIAL_VALIDATION_FORBIDDEN_IN_REPAIR90")
+ 
+ 
+-def claim_component(*_args, **_kwargs):
+-    raise BudgetError("CHECKER_LOW_COMPONENT_FORBIDDEN_IN_REPAIR90")
++REPAIR90_RUNTIME = Path(r"C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-repair90-runtime")
++QWEN_PUBLIC_SNAPSHOT = Path(r"C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-repair90-preparation\current-public-model-config90.json")
++QWEN_PUBLIC_SNAPSHOT_SHA256 = "a49292bf7857b6d7128740595961543a269372bac898936db0e08314aa16d287"
++QWEN_ID = "d78c2a1a-caac-4024-b5f5-2a652414cb0b"
++QWEN_CONFIG_HASH = "45e52c76a7276b7ee58550669c5a9d58698b42f87532c8501cbe742604d88852"
++_COMPONENT_BASES = {"component01qwen": "case01", "component08qwen": "case08",
++                    "component06qwen": "case06", "component_positiveqwen": None,
++                    "component_negativeqwen": None}
++_COMPONENT_KEYS = {"schema", "authorization", "instance_id", "kind", "base_case_id",
++    "protocol_sha256", "question_sha256", "selected_checker_slot", "actual_input_artifact_pins",
++    "source_pins", "review_binding", "root_selected_authorized", "automatic_retry_or_reclaim",
++    "input_artifact_sha256", "original_wire_sha256", "contrast_wire_sha256", "contrast_wire_bytes",
++    "context_sha256", "model_config", "model_config_sha256", "model_config_delta", "controller_pins"}
++
++
++def _component_records(root, instance_id, descriptor_pin, marker, cases):
++    """Validate prospective public bindings without running a compiler or model."""
++    _require(instance_id in {"component01qwen", "component08qwen"} and root == REPAIR90_RUNTIME / "cohort-ledger",
++             "EXACT_NEW_COMPONENT_LEDGER_REQUIRED")
++    protocol = _protocol_records(root, marker["protocol_sha256"])
++    planned = _planned(protocol, instance_id)
++    _require(_exact(planned, {"instance_id": instance_id, "kind": "diagnostic",
++             "base_case_id": None, "maximum_posts": 1}), "COMPONENT_PLAN_CHANGED")
++    descriptor, _ = _pinned_record(root.parent / f"{instance_id}-descriptor90.json", descriptor_pin)
++    _require(set(descriptor) == _COMPONENT_KEYS
++             and descriptor.get("schema") == "repair90_checker_component_descriptor_v1"
++             and descriptor.get("authorization") == AUTHORIZATION
++             and descriptor.get("instance_id") == instance_id
++             and descriptor.get("kind") == "checker_only_same_input_qwen_contrast"
++             and descriptor.get("protocol_sha256") == marker["protocol_sha256"]
++             and descriptor.get("root_selected_authorized") is True
++             and descriptor.get("automatic_retry_or_reclaim") is False,
++             "EXACT_COMPONENT_DESCRIPTOR_REQUIRED")
++    base, slot = descriptor["base_case_id"], descriptor["selected_checker_slot"]
++    _require(base in BASE_CASES and _COMPONENT_BASES[instance_id] in {None, base}
++             and type(slot) is int and 1 <= slot <= CASE_POST_CAP and base in cases,
++             "COMPONENT_CLOSED_BASE_REQUIRED")
++    question = next(row for row in protocol["cases"] if row["case_id"] == base)
++    _require(descriptor["question_sha256"] == question["question_sha256"]
++             == cases[base]["question_sha256"], "COMPONENT_QUESTION_CHANGED")
++    paths = {"scope": f"scope88-{base}.json",
++             "checker_inputs": f"{base}/native-provider70/slot-{slot:02d}-public-inputs.json",
++             "checker_claim": f"{base}/native-provider70/slot-{slot:02d}-claim.json",
++             "base_final": f"{base}/native-provider70/final-receipt.json",
++             "base_api_closure": f"{base}/api-closure77.json",
++             "base_journey": f"{base}/journey-receipt88.json"}
++    pins = descriptor["actual_input_artifact_pins"]
++    _require(type(pins) is list and len(pins) == 6, "COMPONENT_SIX_ARTIFACTS_REQUIRED")
++    records, hashes = {}, {}
++    for row in pins:
++        _require(type(row) is dict and set(row) == {"role", "relative_path", "bytes", "sha256"}
++                 and row.get("role") in paths and row["role"] not in records
++                 and row.get("relative_path") == paths[row["role"]]
++                 and type(row.get("bytes")) is int and row["bytes"] > 0,
++                 "COMPONENT_EXACT_ARTIFACT_PATH_REQUIRED")
++        path = _public_relative(root.parent, row["relative_path"])
++        records[row["role"]], hashes[row["role"]] = _pinned_record(path, row["sha256"])
++        _require(path.stat().st_size == row["bytes"], "COMPONENT_ARTIFACT_BYTES_CHANGED")
++    scope, inputs, selected, final, closure, journey = (records[name] for name in paths)
++    _require(scope.get("case_id") == base and scope.get("phase88_authorization") == AUTHORIZATION
++             and scope.get("phase88_case_execution_authorized") is True
++             and scope.get("cohort_protocol_sha256") == marker["protocol_sha256"]
++             and scope.get("question_sha256") == descriptor["question_sha256"]
++             and scope.get("question_text") == question["question_text"]
++             and _exact(scope.get("source_pins"), descriptor["source_pins"])
++             and _exact(scope["source_pins"], protocol["source_pins"])
++             and _source_pins(scope["source_pins"]) == FROZEN_BASE_SOURCE_VERSION_SHA256
++             and _exact(scope.get("expected_checker_config"), protocol["expected_checker_config"]),
++             "COMPONENT_FROZEN_SOURCE_OR_SCOPE_CHANGED")
++    for pin in scope["source_pins"]:
++        source = Path(pin["path"])
++        _require(source.is_absolute() and source.resolve(strict=True).is_relative_to(Path(r"E:\5703\learning-assistant").resolve(strict=True))
++                 and source.stat().st_size == pin["bytes"], "COMPONENT_CURRENT_SOURCE_CHANGED")
++        _pinned_record_bytes(source, pin["sha256"])
++    _require(inputs.get("role") == selected.get("role") == "checker"
++             and inputs.get("purpose") == selected.get("purpose")
++             and inputs["purpose"] in {"joint_check", "checker_contract_repair", "joint_recheck"}
++             and inputs.get("question") == question["question_text"]
++             and inputs.get("headers_or_auth_exported") is False
++             and selected.get("normal_transport_used") is True
++             and selected.get("original_auth_exported") is False
++             and type(selected.get("slot")) is int and selected["slot"] == slot
++             and descriptor["input_artifact_sha256"] == hashes["checker_inputs"],
++             "COMPONENT_ORIGINAL_CHECKER_TASK_CHANGED")
++    _require(final.get("schema") == "5703_repair90_case_normal_transport_final_v1"
++             and final.get("authorization") == AUTHORIZATION and final.get("case_id") == base
++             and final.get("cohort_protocol_sha256") == marker["protocol_sha256"]
++             and final.get("question_sha256") == descriptor["question_sha256"]
++             and final.get("closure_status") == "CLOSED_NUMERIC_NO_UNKNOWN"
++             and type(final.get("actual_posts")) is int and 1 <= slot <= final["actual_posts"] <= 4
++             and type(final.get("settled_numeric_cost_observations")) is int
++             and final["settled_numeric_cost_observations"] == final["actual_posts"]
++             and _amount(final.get("native_unresolved_full_protection_USD")) == Decimal(0)
++             and _amount(final.get("native_settled_known_cost_USD")) is not None
++             and final.get("auth_exported") is False and final.get("automatic_retries") == 0,
++             "COMPONENT_BASE_NOT_NUMERIC_CLOSED")
++    metadata = closure.get("old_metadata_unchanged")
++    _require(closure.get("owned_threads_closed") is True and closure.get("auth_exported") is False
++             and type(metadata) is dict and set(metadata) == _OLD_METADATA_KEYS
++             and all(value is True for value in metadata.values())
++             and journey.get("case_id") == base and journey.get("question_sha256") == descriptor["question_sha256"]
++             and journey.get("scope_sha256") == hashes["scope"]
++             and journey.get("status") in {"API_FAILED", "API_COMPLETED"}
++             and journey.get("api_close_status") == 200 and journey.get("auth_exported") is False
++             and _exact(journey.get("accepted"), closure.get("accepted"))
++             and journey.get("session_id") == closure.get("session_id"),
++             "COMPONENT_BASE_THREADS_OR_IDS_NOT_CLOSED")
++    review = descriptor["review_binding"]
++    qwen_binding = {"configuration_id": QWEN_ID, "revision": 1, "config_hash": QWEN_CONFIG_HASH,
++                    "stored_max_tokens": 2048, "stored_structured_output_mode": "json_schema",
++                    "comparison_max_tokens": 8192, "comparison_structured_output_mode": "json_object"}
++    _require(type(review) is dict and review.get("current_public_model_config_sha256") == QWEN_PUBLIC_SNAPSHOT_SHA256
++             and _exact(review.get("current_qwen_configuration"), qwen_binding),
++             "COMPONENT_CURRENT_QWEN_BINDING_REQUIRED")
++    snapshot_record, _ = _pinned_record(QWEN_PUBLIC_SNAPSHOT, QWEN_PUBLIC_SNAPSHOT_SHA256)
++    _require(snapshot_record.get("schema") == "repair90_current_synthetic_public_model_configuration_v1"
++             and snapshot_record.get("transaction_read_only") is True, "COMPONENT_PUBLIC_SNAPSHOT_CHANGED")
++    qwen_rows = [row for row in snapshot_record["model_configurations"] if row.get("configuration_id") == QWEN_ID]
++    _require(len(qwen_rows) == 1 and type(qwen_rows[0].get("revision")) is int
++             and qwen_rows[0]["revision"] == 1 and qwen_rows[0].get("config_hash") == QWEN_CONFIG_HASH
++             and type(qwen_rows[0].get("public_model_metadata")) is list
++             and len(qwen_rows[0]["public_model_metadata"]) == 1, "COMPONENT_CURRENT_QWEN_ROW_CHANGED")
++    metadata = qwen_rows[0]["public_model_metadata"][0]
++    before = scope["expected_checker_config"]
++    changes = {"model": "qwen/qwen3.8-flash", "openrouter_route_profile": "qwen38_alibaba_v2", "configuration_id": QWEN_ID}
++    expected_config = {**before, **changes}
++    _require(_exact(descriptor["model_config"], expected_config)
++             and descriptor["model_config_sha256"] == public_digest(expected_config)
++             and _exact(descriptor["model_config_delta"], {key: {"before": before[key], "after": value} for key, value in changes.items()})
++             and all(_exact(metadata.get(key), expected_config[key]) for key in metadata
++                     if key not in {"object_path", "max_tokens", "structured_output_mode"})
++             and type(metadata.get("max_tokens")) is int and metadata["max_tokens"] == 2048
++             and metadata.get("structured_output_mode") == "json_schema"
++             and expected_config["max_tokens"] == 8192 and expected_config["structured_output_mode"] == "json_object",
++             "COMPONENT_QWEN_CONFIG_DELTA_CHANGED")
++    original = inputs.get("normal_compiled_wire")
++    _require(type(original) is dict, "COMPONENT_ORIGINAL_WIRE_REQUIRED")
++    # Saved public JSON sorts object keys. Reconstruct the frozen native payload
++    # key order while preserving every original message string and value.
++    messages = original.get("messages")
++    _require(type(messages) is list and len(messages) in {2, 3}
++             and [row.get("role") for row in messages] == (["system", "user"] if len(messages) == 2 else ["system", "user", "user"])
++             and all(type(row) is dict and set(row) == {"role", "content"} and type(row["content"]) is str for row in messages),
++             "COMPONENT_FULL_WIRE_MESSAGES_CHANGED")
++    original_ordered = {"model": "google/gemini-3.5-flash-lite",
++                        "messages": [{"role": row["role"], "content": row["content"]} for row in messages],
++                        "max_tokens": 8192, "response_format": {"type": "json_object"},
++                        "provider": {"order": ["google-vertex/global"], "only": ["google-vertex/global"],
++                                     "allow_fallbacks": False, "require_parameters": True,
++                                     "max_price": {"prompt": 0.3, "completion": 2.5}},
++                        "reasoning": {"effort": "high"}}
++    _require(_exact(original, original_ordered), "COMPONENT_ORIGINAL_NATIVE_WIRE_CHANGED")
++    original_bytes = json.dumps(original_ordered, ensure_ascii=False, separators=(",", ":"), allow_nan=False).encode("utf-8")
++    original_sha = hashlib.sha256(original_bytes).hexdigest()
++    expected_wire = {**original_ordered, "model": changes["model"], "reasoning": {"enabled": False},
++                     "provider": {"order": ["alibaba"], "only": ["alibaba"], "allow_fallbacks": False,
++                                  "require_parameters": True, "max_price": {"prompt": 0.15, "completion": 0.47}}}
++    contrast = json.dumps(expected_wire, ensure_ascii=False, separators=(",", ":"), allow_nan=False).encode("utf-8")
++    _require(original_sha == selected.get("wire_sha256") == descriptor["original_wire_sha256"]
++             and type(selected.get("wire_bytes")) is int and len(original_bytes) == selected["wire_bytes"]
++             and original.get("max_tokens") == 8192 and original.get("response_format") == {"type": "json_object"}
++             and descriptor["contrast_wire_sha256"] == hashlib.sha256(contrast).hexdigest()
++             and type(descriptor["contrast_wire_bytes"]) is int and descriptor["contrast_wire_bytes"] == len(contrast)
++             and 0 < len(contrast) <= MAX_WIRE_BYTES, "COMPONENT_EXACT_WIRE_CHANGED")
++    _sha(descriptor["context_sha256"])
++    controller_pins = descriptor["controller_pins"]
++    _require(type(controller_pins) is dict and set(controller_pins) == {"budget88.py", "normal_transport88.py", "checker_component90.py"},
++             "COMPONENT_CONTROLLER_PIN_SET_REQUIRED")
++    for name, pin in controller_pins.items():
++        _pinned_record_bytes(_public_relative(root.parent, name), pin)
++    return descriptor, final, selected
++
++
++def _pinned_record_bytes(path, pin):
++    """Check binary/code evidence without JSON parsing."""
++    path = Path(path).absolute()
++    _require(path.resolve(strict=True) == path and path.is_file() and not path.is_symlink()
++             and not getattr(path, "is_junction", lambda: False)(), "COMPONENT_SOURCE_PATH_CHANGED")
++    _require(hashlib.sha256(path.read_bytes()).hexdigest() == _sha(pin), "COMPONENT_SOURCE_BYTES_CHANGED")
++
++
++def _closed_component_journal(descriptor, final, selected, cases, claims, settlements, exposures):
++    _closed_base_journal(descriptor, final, cases, claims, settlements, exposures)
++    slots = sorted(slot for slot, row in claims.items() if row["case_id"] == descriptor["base_case_id"])
++    chosen = slots[descriptor["selected_checker_slot"] - 1]
++    row = claims[chosen]
++    _require(type(selected.get("cohort_slot")) is int and selected["cohort_slot"] == chosen
++             and row["role"] == "checker" and row["purpose"] == selected["purpose"]
++             and row["wire_sha256"] == selected["wire_sha256"] and row["wire_bytes"] == selected["wire_bytes"],
++             "COMPONENT_SELECTED_POST_LINEAGE_CHANGED")
++
++
++def validate_component(root, instance_id, descriptor_sha256, *, admission=True):
++    """Read-only exact binding; admission is a fresh single-slot budget gate."""
++    _require(type(admission) is bool, "EXPLICIT_ADMISSION_MODE_REQUIRED")
++    root = _root(root)
++    if admission:
++        _require_running(root)
++    marker, cases, claims, settlements, exposures, _, known, unknown = _scan(root)
++    descriptor, final, selected = _component_records(root, instance_id, _sha(descriptor_sha256), marker, cases)
++    _closed_component_journal(descriptor, final, selected, cases, claims, settlements, exposures)
++    if admission:
++        _require(instance_id not in cases, "COMPONENT_REPLAY_FORBIDDEN")
++        _require(unknown == 0, "UNSETTLED_PROTECTION_BLOCKS_POSTS")
++        _require(len(claims) + 1 <= POST_CAP and known + HOLD <= COST_CAP, "BOUND_LOCAL_BUDGET")
++    return descriptor
++
++
++def claim_component(root, instance_id, descriptor_sha256):
++    descriptor = validate_component(root, instance_id, descriptor_sha256, admission=True)
++    record = {"schema": "repair90_checker_component_claim_v1", "authorization": AUTHORIZATION,
++              "protocol_sha256": descriptor["protocol_sha256"], "case_id": instance_id,
++              "question_sha256": descriptor["question_sha256"], "physical_posts_maximum": 1,
++              "component_descriptor_sha256": _sha(descriptor_sha256), "automatic_retry_or_reclaim": False}
++    _create(_root(root) / f"{instance_id}-claim.json", record, "COMPONENT_REPLAY_FORBIDDEN")
++    return snapshot(root)
+ 
+ 
+ def _closed_base_journal(descriptor, final, cases, claims, settlements, exposures):
+@@ -642,7 +856,13 @@
+                         "question_sha256": _sha(record.get("question_sha256")),
+                         "physical_posts_maximum": CASE_POST_CAP, "automatic_retry_or_reclaim": False}
+             planned = _planned(protocol, case_id)
+-            if case_id in _SUPPLEMENTS:
++            if case_id in COMPONENT_CASES:
++                expected["schema"] = "repair90_checker_component_claim_v1"
++                expected["physical_posts_maximum"] = 1
++                expected["component_descriptor_sha256"] = _sha(record.get("component_descriptor_sha256"))
++                _require(planned["kind"] == "diagnostic" and planned["maximum_posts"] == 1,
++                         "COMPONENT_PLAN_CHANGED")
++            elif case_id in _SUPPLEMENTS:
+                 expected["schema"] = "repair90_supplement_case_claim_v1"
+                 expected["supplement_descriptor_sha256"] = _sha(record.get("supplement_descriptor_sha256"))
+             else:
+@@ -662,6 +882,8 @@
+              "DUPLICATE_QUESTION_CLAIM")
+     supplements = [_supplement_records(root, case_id, row["supplement_descriptor_sha256"], marker, cases)
+                    for case_id, row in cases.items() if case_id in _SUPPLEMENTS]
++    components = [_component_records(root, case_id, row["component_descriptor_sha256"], marker, cases)
++                  for case_id, row in cases.items() if case_id in COMPONENT_CASES]
+     _require(sorted(claims) == list(range(1, len(claims) + 1)) and len(claims) <= POST_CAP,
+              "POST_SLOTS_NOT_CONTIGUOUS")
+     _require(set(settlements) <= set(claims) and set(exposures) <= set(claims)
+@@ -674,11 +896,18 @@
+         case_id = _case(claim.get("case_id"))
+         _require(case_id in cases, "CASE_CLAIM_REQUIRED")
+         index = case_posts[case_id]
+-        _require(index < CASE_POST_CAP, "CASE_POST_LIMIT")
++        _require(index < (1 if case_id in COMPONENT_CASES else CASE_POST_CAP), "CASE_POST_LIMIT")
+         wire_bytes = claim.get("wire_bytes")
+         _require(type(wire_bytes) is int and 0 < wire_bytes <= MAX_WIRE_BYTES, "WIRE_BYTES_INVALID")
+         role, purpose = claim.get("role"), claim.get("purpose")
+-        _require(next_step_allowed(case_steps[case_id], role, purpose), "ROLE_PURPOSE_SEQUENCE_INVALID")
++        if case_id in COMPONENT_CASES:
++            _require(index == 0 and role == "checker" and purpose == "diagnostic_check",
++                     "COMPONENT_SINGLE_CHECKER_DIAGNOSTIC_ONLY")
++            descriptor = next(row[0] for row in components if row[0]["instance_id"] == case_id)
++            _require(claim.get("wire_sha256") == descriptor["contrast_wire_sha256"]
++                     and wire_bytes == descriptor["contrast_wire_bytes"], "COMPONENT_RESERVED_WIRE_CHANGED")
++        else:
++            _require(next_step_allowed(case_steps[case_id], role, purpose), "ROLE_PURPOSE_SEQUENCE_INVALID")
+         expected = {"schema": "repair90_post_claim_v1", "authorization": AUTHORIZATION,
+                     "protocol_sha256": marker["protocol_sha256"], "global_slot": slot,
+                     "case_id": case_id, "case_post_index": index + 1,
+@@ -713,6 +942,8 @@
+             unknown += HOLD
+     for descriptor, final in supplements:
+         _closed_base_journal(descriptor, final, cases, claims, settlements, exposures)
++    for descriptor, final, selected in components:
++        _closed_component_journal(descriptor, final, selected, cases, claims, settlements, exposures)
+     _require(sum(row["case_id"] not in PAGE_CASES for row in claims.values()) <= NONPAGE_POST_CAP,
+              "BOUND_LOCAL_BUDGET")
+     return marker, cases, claims, settlements, exposures, case_posts, known, unknown
+@@ -727,7 +958,7 @@
+             "unknown_full_hold_USD": str(unknown), "physical_posts_maximum": POST_CAP,
+             "cost_cap_USD": str(COST_CAP), "reserved_extra_posts_authorized": False,
+             "ordinary_cases_claimed": sum(case_id in BASE_CASES for case_id in cases),
+-            "diagnostic_components_claimed": 0,
++            "diagnostic_components_claimed": sum(case_id in COMPONENT_CASES for case_id in cases),
+             "supplemental_cases_claimed": sum(case_id in _SUPPLEMENTS for case_id in cases),
+             "auxiliary_cases_claimed": sum(case_id in AUX_CASES for case_id in cases),
+              "page_cases_claimed": sum(case_id in PAGE_CASES for case_id in cases),
+@@ -778,10 +1009,18 @@
+     _require(case_id in cases, "CASE_CLAIM_REQUIRED")
+     _require(unknown == 0, "UNSETTLED_PROTECTION_BLOCKS_POSTS")
+     index = case_posts[case_id]
+-    _require(index < CASE_POST_CAP, "CASE_POST_LIMIT")
++    _require(index < (1 if case_id in COMPONENT_CASES else CASE_POST_CAP), "CASE_POST_LIMIT")
+     steps = [{"role": row["role"], "purpose": row["purpose"]}
+              for _, row in sorted(claims.items()) if row["case_id"] == case_id]
+-    _require(next_step_allowed(steps, role, purpose), "ROLE_PURPOSE_SEQUENCE_INVALID")
++    if case_id in COMPONENT_CASES:
++        _require(index == 0 and role == "checker" and purpose == "diagnostic_check",
++                 "COMPONENT_SINGLE_CHECKER_DIAGNOSTIC_ONLY")
++        descriptor, _, _ = _component_records(_root(root), case_id,
++            cases[case_id]["component_descriptor_sha256"], marker, cases)
++        _require(wire_sha256 == descriptor["contrast_wire_sha256"]
++                 and wire_bytes == descriptor["contrast_wire_bytes"], "COMPONENT_RESERVED_WIRE_CHANGED")
++    else:
++        _require(next_step_allowed(steps, role, purpose), "ROLE_PURPOSE_SEQUENCE_INVALID")
+     if case_id not in PAGE_CASES:
+         _require(sum(row["case_id"] not in PAGE_CASES for row in claims.values()) < NONPAGE_POST_CAP,
+                  "BOUND_LOCAL_BUDGET")

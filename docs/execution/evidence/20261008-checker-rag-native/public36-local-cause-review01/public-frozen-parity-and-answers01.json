@@ -1,0 +1,146 @@
+{
+  "status": "ACTUAL_OFFLINE_PUBLIC_FROZEN_PARITY_PASS",
+  "method": "Exact submitted question, selected passage identity, full text, SHA256, title and locator equality; raw JSON output extraction equality. No reference answers read.",
+  "inputs": {
+    "frozen": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\public12-openqa36-frozen-inputs01.json",
+      "bytes": 249942,
+      "sha256": "17d0135cc0e348e3336c39b878078808ab9dfea0178f29f5a247335830e80e3e"
+    },
+    "pool": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-free-retrieval-root-public12-20261008-01\\retrieval-pool01.json",
+      "bytes": 1819356,
+      "sha256": "cc5be32e9641d594e161894471eeffd890f5b35d20cfe93ff92ee19936f21bdd"
+    },
+    "terminal": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\terminal-receipt01.json",
+      "bytes": 43094,
+      "sha256": "f2712ed9ae60914374e4fc67e0ba2ce3931dce9be918dd61d0ccd8989d4db26e"
+    },
+    "diagnostics": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public12-retrieval-quality-diagnostics01.json",
+      "bytes": 681461,
+      "sha256": "e677b45c506e9394e8f50f0e94d6f847d18a9309806c271fd6e3b2b224a605fa"
+    }
+  },
+  "question_count": 12,
+  "answer_count": 36,
+  "selected_RAG_passages_exactly_preserved": 120,
+  "reranker_candidate_inputs_not_truncated": 240,
+  "raw_output_extraction_exactly_preserved": 36,
+  "refusals": 0,
+  "Gold_reads": 0,
+  "provider_calls": 0,
+  "DB_actions": 0,
+  "E_writes": 0,
+  "rows": [
+    {
+      "qid": "sciq:test:000008",
+      "question": "What kind of viscosity is found in long-chain hydrocarbons?",
+      "answers": {
+        "E0_none": "High viscosity",
+        "E1_dense": "high viscosity",
+        "hybrid_plus_rerank": "high viscosity"
+      }
+    },
+    {
+      "qid": "sciq:test:000015",
+      "question": "How does a neon light produce visible light?",
+      "answers": {
+        "E1_dense": "By passing an electrical current through neon gas at a low pressure, which excites the neon atoms and causes them to emit photons of light.",
+        "hybrid_plus_rerank": "An electrical current passes through neon gas at low pressure, exciting the neon atoms and causing them to emit photons as they return to a lower energy state.",
+        "E0_none": "A neon light produces visible light when an electrical current passes through the neon gas inside the tube, causing the atoms to become excited and release photons as they return to a lower energy state."
+      }
+    },
+    {
+      "qid": "sciq:test:000003",
+      "question": "What is the height above or below sea level called?",
+      "answers": {
+        "hybrid_plus_rerank": "elevation",
+        "E0_none": "elevation",
+        "E1_dense": "elevation"
+      }
+    },
+    {
+      "qid": "sciq:validation:000040",
+      "question": "What force makes objects seem lighter in water?",
+      "answers": {
+        "E0_none": "Buoyancy",
+        "E1_dense": "buoyant force",
+        "hybrid_plus_rerank": "buoyant force"
+      }
+    },
+    {
+      "qid": "sciq:validation:000013",
+      "question": "During telophase , the chromosomes begin to uncoil and form what?",
+      "answers": {
+        "E1_dense": "chromatin",
+        "hybrid_plus_rerank": "chromatin",
+        "E0_none": "chromatin"
+      }
+    },
+    {
+      "qid": "sciq:test:000019",
+      "question": "What term means the amount of water vapor in the air?",
+      "answers": {
+        "hybrid_plus_rerank": "Humidity",
+        "E0_none": "Humidity",
+        "E1_dense": "humidity"
+      }
+    },
+    {
+      "qid": "sciq:validation:000002",
+      "question": "A frameshift mutation is a deletion or insertion of one or more of what that changes the reading frame of the base sequence?",
+      "answers": {
+        "E0_none": "nucleotides",
+        "E1_dense": "nucleotides",
+        "hybrid_plus_rerank": "nucleotides"
+      }
+    },
+    {
+      "qid": "sciq:validation:000047",
+      "question": "The air pressure is about 80% that of ________ pressure at sea level.",
+      "answers": {
+        "E1_dense": "normal",
+        "hybrid_plus_rerank": "atmospheric",
+        "E0_none": "atmospheric"
+      }
+    },
+    {
+      "qid": "sciq:test:000014",
+      "question": "Only about one percent of plants have lost what ability, turning them into consumers and even predators, instead of producers?",
+      "answers": {
+        "hybrid_plus_rerank": "photosynthesis",
+        "E0_none": "photosynthesis",
+        "E1_dense": "photosynthesis"
+      }
+    },
+    {
+      "qid": "sciq:validation:000060",
+      "question": "The protein without the prosthetic group is known as the what?",
+      "answers": {
+        "E0_none": "apoprotein",
+        "E1_dense": "aprotein",
+        "hybrid_plus_rerank": "apoprotein"
+      }
+    },
+    {
+      "qid": "sciq:test:000052",
+      "question": "Collateral ganglia controls organs in which cavity in the body?",
+      "answers": {
+        "E1_dense": "abdominal cavity",
+        "hybrid_plus_rerank": "abdominal cavity",
+        "E0_none": "abdominopelvic cavity"
+      }
+    },
+    {
+      "qid": "sciq:validation:000052",
+      "question": "During what part of a person's development are they generally at their physical peak?",
+      "answers": {
+        "hybrid_plus_rerank": "young adulthood",
+        "E0_none": "early adulthood",
+        "E1_dense": "early adulthood"
+      }
+    }
+  ]
+}

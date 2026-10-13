@@ -1,0 +1,225 @@
+{
+  "status": "TECHNICAL_STOP",
+  "scope": "Fixed synthetic answer replay into current normal compiled checker; existing vs opt-in; not native Send-to-DOM or general accuracy",
+  "physical_checker_requests": 3,
+  "known_peak_upper_CNY": "0.153684",
+  "new_UNKNOWN_protection_CNY": "0.000000",
+  "cap_CNY": "1.00",
+  "maximum_requests": 12,
+  "generation_requests": 0,
+  "repair_requests": 0,
+  "retries": 0,
+  "old_UNKNOWN_holds_released": 0,
+  "requested_model": "deepseek-flash",
+  "thinking": false,
+  "temperature": 0,
+  "route": "official DeepSeek",
+  "source_bank_counts": [
+    64,
+    54,
+    50
+  ],
+  "original_source_version_changed": false,
+  "default_policy_changed": false,
+  "metrics": {
+    "A": {
+      "valid": 1,
+      "negative_denominator": 1,
+      "false_accept_count": 0,
+      "false_accept_rate": 0.0,
+      "positive_denominator": 0,
+      "false_reject_count": 0,
+      "false_reject_rate": null,
+      "API_elapsed_ms": [
+        5878.228499997931
+      ]
+    },
+    "B": {
+      "valid": 1,
+      "negative_denominator": 1,
+      "false_accept_count": 0,
+      "false_accept_rate": 0.0,
+      "positive_denominator": 0,
+      "false_reject_count": 0,
+      "false_reject_rate": null,
+      "API_elapsed_ms": [
+        8557.50380000245,
+        11168.481300002895
+      ]
+    }
+  },
+  "rows": [
+    {
+      "id": "S01-negative-A",
+      "status": "VALID_SEMANTIC_RESULT",
+      "semantic_accept": false,
+      "expected_accept": false,
+      "false_accept": false,
+      "false_reject": false,
+      "API_elapsed_ms": 5878.228499997931,
+      "local_validation_ms": 111.78530000324827,
+      "known_upper_CNY": "0.044076",
+      "usage": {
+        "prompt_tokens": 17262,
+        "completion_tokens": 1194,
+        "total_tokens": 18456,
+        "prompt_tokens_details": {
+          "cached_tokens": 3840
+        },
+        "prompt_cache_hit_tokens": 3840,
+        "prompt_cache_miss_tokens": 13422
+      },
+      "case": "S01",
+      "control": "negative",
+      "variant": "A"
+    },
+    {
+      "id": "S01-negative-B",
+      "status": "VALID_SEMANTIC_RESULT",
+      "semantic_accept": false,
+      "expected_accept": false,
+      "false_accept": false,
+      "false_reject": false,
+      "API_elapsed_ms": 8557.50380000245,
+      "local_validation_ms": 32.41780000098515,
+      "known_upper_CNY": "0.051902",
+      "usage": {
+        "prompt_tokens": 18463,
+        "completion_tokens": 1872,
+        "total_tokens": 20335,
+        "prompt_tokens_details": {
+          "cached_tokens": 6400
+        },
+        "prompt_cache_hit_tokens": 6400,
+        "prompt_cache_miss_tokens": 12063
+      },
+      "case": "S01",
+      "control": "negative",
+      "variant": "B"
+    },
+    {
+      "id": "S02-negative-B",
+      "status": "TECHNICAL_STOP",
+      "semantic_accept": null,
+      "expected_accept": false,
+      "false_accept": false,
+      "false_reject": false,
+      "API_elapsed_ms": 11168.481300002895,
+      "local_validation_ms": 34.39200000138953,
+      "known_upper_CNY": "0.057706",
+      "safe_error": "CHECKER_LOCAL_CONTRACT_INVALID",
+      "usage": {
+        "prompt_tokens": 18689,
+        "completion_tokens": 2541,
+        "total_tokens": 21230,
+        "prompt_tokens_details": {
+          "cached_tokens": 9600
+        },
+        "prompt_cache_hit_tokens": 9600,
+        "prompt_cache_miss_tokens": 9089
+      },
+      "case": "S02",
+      "control": "negative",
+      "variant": "B",
+      "specific_failure": {
+        "claim_reason_chars": 1006,
+        "claim_reason_max_chars": 800,
+        "qualification_citation_support_exists": true,
+        "qualification_supporting_quotes_count": 0,
+        "raw_context_status": "conflict",
+        "raw_target_limiter_fragment": "F018",
+        "raw_semantic_hint_not_counted_as_valid": true
+      }
+    },
+    {
+      "id": "S02-negative-A",
+      "status": "NOT_RUN",
+      "reason": "CHECKER_LOCAL_CONTRACT_INVALID",
+      "case": "S02",
+      "control": "negative",
+      "variant": "A"
+    },
+    {
+      "id": "S03-negative-A",
+      "status": "NOT_RUN",
+      "reason": "CHECKER_LOCAL_CONTRACT_INVALID",
+      "case": "S03",
+      "control": "negative",
+      "variant": "A"
+    },
+    {
+      "id": "S03-negative-B",
+      "status": "NOT_RUN",
+      "reason": "CHECKER_LOCAL_CONTRACT_INVALID",
+      "case": "S03",
+      "control": "negative",
+      "variant": "B"
+    },
+    {
+      "id": "S01-positive-B",
+      "status": "NOT_RUN",
+      "reason": "CHECKER_LOCAL_CONTRACT_INVALID",
+      "case": "S01",
+      "control": "positive",
+      "variant": "B"
+    },
+    {
+      "id": "S01-positive-A",
+      "status": "NOT_RUN",
+      "reason": "CHECKER_LOCAL_CONTRACT_INVALID",
+      "case": "S01",
+      "control": "positive",
+      "variant": "A"
+    },
+    {
+      "id": "S02-positive-A",
+      "status": "NOT_RUN",
+      "reason": "CHECKER_LOCAL_CONTRACT_INVALID",
+      "case": "S02",
+      "control": "positive",
+      "variant": "A"
+    },
+    {
+      "id": "S02-positive-B",
+      "status": "NOT_RUN",
+      "reason": "CHECKER_LOCAL_CONTRACT_INVALID",
+      "case": "S02",
+      "control": "positive",
+      "variant": "B"
+    },
+    {
+      "id": "S03-positive-B",
+      "status": "NOT_RUN",
+      "reason": "CHECKER_LOCAL_CONTRACT_INVALID",
+      "case": "S03",
+      "control": "positive",
+      "variant": "B"
+    },
+    {
+      "id": "S03-positive-A",
+      "status": "NOT_RUN",
+      "reason": "CHECKER_LOCAL_CONTRACT_INVALID",
+      "case": "S03",
+      "control": "positive",
+      "variant": "A"
+    }
+  ],
+  "complete_valid_pairs": [
+    "S01-negative"
+  ],
+  "valid_semantic_results": 2,
+  "technical_invalid_results": 1,
+  "not_run": 9,
+  "new_policy_improvement_established": false,
+  "native_complete_answer_DOM_ms": null,
+  "human_rating": null,
+  "limits": "No positive controls or complete S02/S03 pairs were run; cannot estimate false-reject rate or broad scientific efficacy. HTTP checker response latency is not complete-answer browser latency.",
+  "pins_matched_after_run": true,
+  "S01_B_qualification_gate_accepted": true,
+  "S01_B_context_statuses": [
+    "clear",
+    "clear",
+    "clear"
+  ],
+  "S01_B_target_context_miss_preserved": true
+}

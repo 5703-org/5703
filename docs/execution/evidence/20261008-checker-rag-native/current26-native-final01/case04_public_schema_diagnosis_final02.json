@@ -1,0 +1,115 @@
+{
+  "status": "ACTUAL_PUBLIC_FAILURE_VERIFIED_EXACT_SCHEMA_LEAF_UNAVAILABLE_OBSERVER_CANDIDATE_FREE_PASS",
+  "supersedes_prose_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\reuse-native01\\case04-public-schema-source-diagnosis01.json",
+    "bytes": 3370,
+    "sha256": "71a10dfc83e374e814108c683748fb38e3ac504934d641cb604bb5eac74c2ab3"
+  },
+  "case_id": "case04",
+  "job_id": "1c53c91c-d21e-4d98-9a6c-84f92074d2ae",
+  "request_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792",
+  "actual_terminal_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\actual-current-native-worker-root-native-four-20261008-03\\case04-terminal01.json",
+    "bytes": 4274,
+    "sha256": "000e8308391df31deda473e2741020ba9dccf4b93219feea8fb4af823d0d547c"
+  },
+  "actual_readonly_projection_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\case04-public-schema-readonly01.json",
+    "bytes": 7829,
+    "sha256": "2ea1bd4d6b9fad31997ed53e0c80e4998d250c6d3d1fd96972fe4c487217e80d"
+  },
+  "actual_failure": {
+    "code": "CHECKER_INCONSISTENT",
+    "issue_codes": [
+      "CHECKER_SCHEMA_INVALID"
+    ],
+    "published_answer": false,
+    "physical_calls": 4,
+    "known_cost_USD": 0.0171304
+  },
+  "authorized_public_schema_leaf_available": false,
+  "verified_limits": [
+    "The named authorized public Job.error/Attempt diagnostic paths contain no field_errors or parse_code for this failed job.",
+    "Raw responses and private checker records were not queried.",
+    "Raw-field removal in service.py is conditional on memory_context; complete deletion is not inferred.",
+    "The exact invalid field, actual raw response, citation defect and prompt/model root cause are not established.",
+    "No actual response replay or repaired acceptance is claimed."
+  ],
+  "source_pins": [
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checker_contract.py",
+      "bytes": 2958,
+      "sha256": "7b1c3b69d54586b99e14722c8c375bb1481bc452b64f5b2ec71e11052532537e"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checked.py",
+      "bytes": 142373,
+      "sha256": "fb7c47b04253906aaa6c8753f0f907f9ff468dddd3280b5555048b1151ff3be2"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\answering\\service.py",
+      "bytes": 92797,
+      "sha256": "4ff471baab3eeceef59634407a28b884118eb3d433752defacfd04abd4b462de"
+    }
+  ],
+  "source_flow": [
+    "schema_issue creates bounded safe paths/types or parser code.",
+    "CHECKER_INCONSISTENT exports issue_codes only at checked.py2169.",
+    "Attempt finish precedes checker parsing; provider-stage error_present=false does not certify schema validity."
+  ],
+  "candidate": {
+    "purpose": "Future diagnostic observability only",
+    "default_enabled": false,
+    "project_integrated": false,
+    "observer_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\reuse-native01\\schema-observer-candidate01\\schema_diagnostic_observer.py",
+      "bytes": 6301,
+      "sha256": "18204e0ea7ee2a80f2ef67a54c86b50d34785ddcf0a9031d3ada82efbfcd9ea4"
+    },
+    "tests_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\reuse-native01\\schema-observer-candidate01\\test_schema_diagnostic_observer.py",
+      "bytes": 4711,
+      "sha256": "fc46b16dd3db928df4543bd7c1240c2d4aab4f987fc38b6d98175c1179c7fd94"
+    },
+    "controls_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\reuse-native01\\schema-observer-candidate01\\free-synthetic-controls01.json",
+      "bytes": 1927,
+      "sha256": "4be47471c1eb27093b4f46662c1000efd9edd2191ec83b4f345f2a8bd5cfef60"
+    },
+    "draft_readme_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\reuse-native01\\schema-observer-candidate01\\README.md",
+      "bytes": 1971,
+      "sha256": "81bf6d3ed20e7b23afcf3dd2b3edc7b06949aa191dea5a26263f2f418c430f64"
+    },
+    "synthetic_controls_pass": 20,
+    "privacy": "Static public-field/parser/type allowlists; unknowns are fixed markers/counts; no inputs/context/msg/exceptions/raw responses/prompts/unknown keys",
+    "bounds": {
+      "issue_rows": 16,
+      "field_rows_global": 16,
+      "path_tokens": 8,
+      "index_maximum": 10000,
+      "record_bytes": 16384
+    },
+    "unchanged_gates": [
+      "publication",
+      "schema",
+      "citation",
+      "permissions",
+      "budget",
+      "STOP"
+    ],
+    "actual_case04_replayed": false
+  },
+  "blocked_next_step": "Fresh qualified model acceptance requires resolving the preserved real ledger STOP and obtaining a new concrete authorization; no paid retry is run or proposed as already authorized.",
+  "preserved": [
+    "Actual case04 failure and unpublished answer state",
+    "All old native/runtime/timing/finance evidence",
+    "Frozen guard/budget/source25/source42 and real STOP"
+  ],
+  "agent_scope": {
+    "DB_or_helper_executed": false,
+    "API_calls": 0,
+    "E_writes": 0,
+    "private_records_read": false
+  }
+}

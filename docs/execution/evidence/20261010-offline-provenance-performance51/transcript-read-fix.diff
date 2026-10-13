@@ -1,0 +1,119 @@
+--- E:\5703\learning-assistant\frontend\src\Chat.tsx
++++ C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-chat-transcript-parallel-read-candidate-20261010-01\frontend\src\Chat.tsx
+@@ -95,11 +95,16 @@
+     const requestId = ++transcriptRequest.current;
+     const isCurrent = () => mounted.current && transcriptRequest.current === requestId;
+     try {
+-      const current = await api.session(sessionId);
++      const sessionRequest = api.session(sessionId);
++      // Handle early history rejection while keeping session errors authoritative.
++      const firstPageRequest = api.messages(sessionId, 0).then(page => ({ page }), error => ({ error }));
++      const current = await sessionRequest;
+       if (!isCurrent()) return;
++      const firstPage = await firstPageRequest;
++      if ('error' in firstPage) throw firstPage.error;
+       let after = 0; const items: Message[] = []; let active: string | null = null; let latest: string | null = null;
+       while (true) {
+-        const page = await api.messages(sessionId, after);
++        const page = after === 0 ? firstPage.page : await api.messages(sessionId, after);
+         if (!isCurrent()) return;
+         items.push(...page.items); active = page.active_job_id; latest = page.latest_job_id;
+         if (page.next_after_sequence === null) break;
+--- E:\5703\learning-assistant\frontend\src\ChatTranscriptRace.test.tsx
++++ C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-chat-transcript-parallel-read-candidate-20261010-01\frontend\src\ChatTranscriptRace.test.tsx
+@@ -91,6 +91,50 @@
+ }
+ 
+ describe('same-conversation transcript request races', () => {
++  it('starts both transcript reads before either resolves and ignores stale or unmounted pairs', async () => {
++    const firstSession = deferred<Session>();
++    const firstHistory = deferred<MessagePage>();
++    const secondSession = deferred<Session>();
++    const secondHistory = deferred<MessagePage>();
++    vi.mocked(api.session).mockReturnValueOnce(firstSession.promise).mockReturnValueOnce(secondSession.promise);
++    vi.mocked(api.messages).mockReturnValueOnce(firstHistory.promise).mockReturnValueOnce(secondHistory.promise);
++    const view = render(<Chat {...props} />);
++    await waitFor(() => {
++      expect(api.session).toHaveBeenCalledWith(session.id);
++      expect(api.messages).toHaveBeenCalledWith(session.id, 0);
++    });
++    expect(screen.queryByText('Newly completed response.', { exact: false })).toBeNull();
++
++    view.rerender(<Chat {...props} sessionId="session-two" />);
++    await waitFor(() => {
++      expect(api.session).toHaveBeenCalledWith('session-two');
++      expect(api.messages).toHaveBeenCalledWith('session-two', 0);
++    });
++    await act(async () => {
++      firstHistory.resolve(history(previousAnswer, null, 'obsolete-job'));
++      firstSession.resolve(session);
++    });
++    expect(screen.queryByText('Previously saved response.', { exact: false })).toBeNull();
++    expect(api.job).not.toHaveBeenCalled();
++
++    view.unmount();
++    const nextAnswer = savedAnswer('answer-next-session', 'Next conversation response.');
++    vi.mocked(api.session).mockResolvedValue({ ...session, id: 'session-three', title: 'Next conversation' });
++    vi.mocked(api.messages).mockResolvedValue(history(nextAnswer, null, null, 'session-three'));
++    render(<Chat {...props} sessionId="session-three" />);
++    await screen.findByText('Next conversation response.', { exact: false });
++    await act(async () => {
++      secondHistory.resolve(history(previousAnswer, null, 'obsolete-job', 'session-two'));
++      secondSession.resolve({ ...session, id: 'session-two' });
++    });
++    expect(screen.getByText('Next conversation response.', { exact: false })).toBeTruthy();
++    expect(screen.queryByText('Previously saved response.', { exact: false })).toBeNull();
++    expect(api.job).not.toHaveBeenCalled();
++    expect(api.send).not.toHaveBeenCalled();
++    expect(post).not.toHaveBeenCalled();
++    expect(props.refreshSessions).not.toHaveBeenCalled();
++  });
++
+   it('keeps the completed answer and does not revive an old job when an earlier Stop snapshot arrives last', async () => {
+     const { oldHistory, pendingPoll } = await startOverlappingHistoryLoads();
+     await completeNewerHistory(pendingPoll);
+--- E:\5703\learning-assistant\frontend\src\ChatTranscriptRecovery.test.tsx
++++ C:\Users\PC\Documents\Codex\2026-10-04\task-2\5703-chat-transcript-parallel-read-candidate-20261010-01\frontend\src\ChatTranscriptRecovery.test.tsx
+@@ -79,19 +79,37 @@
+ afterEach(cleanup);
+ 
+ describe('conversation transcript recovery', () => {
+-  it('retries an initial session lookup failure for the same conversation without submitting work', async () => {
+-    vi.mocked(api.session).mockRejectedValueOnce(new ApiError('CONNECTION_ERROR', 'Saved conversation lookup interrupted.'));
+-    render(<Chat {...props} />);
++  it('retains session error priority after an early history rejection and recovers without submitting work', async () => {
++    const lookup = deferred<Session>();
++    const firstHistory = deferred<MessagePage>();
++    vi.mocked(api.session).mockReturnValueOnce(lookup.promise);
++    vi.mocked(api.messages).mockReturnValueOnce(firstHistory.promise);
++    render(<Chat {...props} />);
++    await waitFor(() => {
++      expect(api.session).toHaveBeenCalledWith(session.id);
++      expect(api.messages).toHaveBeenCalledWith(session.id, 0);
++    });
++    // Do not catch this in the test: production must handle the early rejection.
++    await act(async () => {
++      firstHistory.reject(new ApiError('CONNECTION_ERROR', 'Early history lookup interrupted.'));
++    });
++    expect(screen.queryByText('Early history lookup interrupted.')).toBeNull();
++    expect(screen.queryByText('Previously saved response.', { exact: false })).toBeNull();
++    await act(async () => {
++      lookup.reject(new ApiError('CONNECTION_ERROR', 'Saved conversation lookup interrupted.'));
++    });
+ 
+     await screen.findByText('Saved conversation lookup interrupted.');
+     const reload = await screen.findByRole('button', { name: 'Reload conversation' });
+-    expect(api.messages).not.toHaveBeenCalled();
++    expect(vi.mocked(api.messages).mock.calls).toEqual([[session.id, 0]]);
++    expect(screen.queryByText('Early history lookup interrupted.')).toBeNull();
++    expect(screen.queryByText('Previously saved response.', { exact: false })).toBeNull();
+     expectNoSubmission();
+ 
+     fireEvent.click(reload);
+     await screen.findByText('Previously saved response.', { exact: false });
+     expect(vi.mocked(api.session).mock.calls).toEqual([[session.id], [session.id]]);
+-    expect(vi.mocked(api.messages).mock.calls).toEqual([[session.id, 0]]);
++    expect(vi.mocked(api.messages).mock.calls).toEqual([[session.id, 0], [session.id, 0]]);
+     expect(screen.queryByText('Saved conversation lookup interrupted.')).toBeNull();
+     expect(screen.queryByRole('button', { name: 'Reload conversation' })).toBeNull();
+     expectNoSubmission();

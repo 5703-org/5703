@@ -1,0 +1,35 @@
+{
+  "started_at": "2026-10-11T04:22:52.645240+00:00",
+  "finished_at": "2026-10-11T04:22:52.763981+00:00",
+  "command": [
+    "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "ruff",
+    "check",
+    "generation/checked.py",
+    "generation/source_evidence_combinations_v1.py",
+    "tests/unit/test_source_evidence_combinations_v1.py",
+    "tests/integration/test_source_evidence_combinations_runtime.py",
+    "--no-cache",
+    "--config",
+    "E:\\5703\\learning-assistant\\pyproject.toml"
+  ],
+  "exit_code": 0,
+  "source_pins": {
+    "generation/checked.py": "88509d22466095e5761bd247269a4dd03432fcb4dd2511ed02739e29da2e5d30",
+    "generation/source_evidence_combinations_v1.py": "ab69de76304a08370acd9483866fbc84ea364e77caab36c723796f1e40bc4f8a",
+    "generation/prompts/source_relation_repair_v2.txt": "03c8fa82094f1d2c9e4e7fee95bfd6ec2f555cef72220bdf761a13679779b92c",
+    "tests/unit/test_source_evidence_combinations_v1.py": "1d9bb48e8d3257e65dadd9546f7a7877b4dc28ea1045617dabe8652827762b0e",
+    "tests/integration/test_source_evidence_combinations_runtime.py": "f81a6d8169e8ede946a83acb23c7291276ec071c0b3b7d82ab516983eed60e48"
+  },
+  "unchanged_pins": {
+    "generation/source_relations_v2.py": "ab22171c03566ed1f8b97e67bb1d0d5f4b276e0ab0bcc40be487f3b296ceeb11",
+    "frontend/src/Chat.tsx": "e15a0b56d7ee9d20c8312c05b7e86f60360c3127d930ce50f348c56b0c0a3ad7",
+    "docs/execution/tasks.json": "c56119170b9fca1e7eadb1f91db0268c3f57ff25f332e068dfb8679b24aface7",
+    "docs/execution/acceptance.json": "b36020cd2acd576fa071ce85c6007d116c7c0b73c8859875f047c44f59c80c73"
+  },
+  "new_primary_unit_cases": 39,
+  "new_case_failures": 0,
+  "external_model_calls": 0
+}

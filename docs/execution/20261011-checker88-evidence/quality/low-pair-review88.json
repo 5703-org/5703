@@ -1,0 +1,293 @@
+{
+  "schema": "phase88_independent_low_high_checker_diagnostic_pair_v1",
+  "created_utc": "2026-10-11T23:14:22.906690+00:00",
+  "status": "NORMAL_TRANSPORT_REJECTED_AND_RAW_SEMANTIC_NEGATIVE_MISSED",
+  "comparison_scope": "One saved HIGH checker versus one new LOW checker of the identical saved case07 input; component diagnostic only",
+  "same_input": {
+    "original_messages_equal": true,
+    "actual_compiled_wire_messages_equal": true,
+    "all_non_reasoning_wire_fields_structurally_equal": true,
+    "only_actual_wire_delta": {
+      "HIGH": {
+        "effort": "high"
+      },
+      "LOW": {
+        "effort": "low"
+      }
+    },
+    "context_sha256": "2233e55c4e2a589c4cc3187e9e0b114a854de4a0341ab233d0884d2d763bdfe8",
+    "component_descriptor_sha256": "f515517904e88b4137541e4330baca25e1556e635dd4fab97e3759e00e78effc",
+    "actual_network_serialized_byte_identity_except_effort_independently_reconstructed": false
+  },
+  "actual_baselines": {
+    "HIGH": {
+      "input_tokens": 24892,
+      "output_tokens": 8188,
+      "reasoning_tokens": 6647,
+      "cache_hit_input_tokens": 0,
+      "provider_latency_ms": 16452,
+      "known_cost_USD": "0.0279376",
+      "finish_reason": "length",
+      "adapter_error": "OUTPUT_TRUNCATED",
+      "hydrated_full_v2_sha256": null,
+      "full_native_API_failure_ms": 28624.17540000024
+    },
+    "LOW": {
+      "input_tokens": 24892,
+      "output_tokens": 1733,
+      "reasoning_tokens": 0,
+      "cache_hit_input_tokens": 0,
+      "provider_latency_ms": 5151,
+      "normal_adapter_complete_ms": 5154,
+      "known_cost_USD": "0.0118001",
+      "finish_reason": "stop",
+      "adapter_error": "CHECKER_TRANSPORT_INVALID",
+      "hydrated_full_v2_sha256": null,
+      "raw_JSON_complete": true,
+      "raw_claims": 10,
+      "raw_units": 24,
+      "raw_requirements": 2
+    }
+  },
+  "comparison_interpretation": {
+    "observed_provider_only_latency_difference_ms": 11301,
+    "no_stable_speedup_or_full_answer_latency_claim": true,
+    "n_per_mode": 1,
+    "order": "Saved HIGH then LOW",
+    "seed_and_order_effects_controlled": false,
+    "provider_reported_cache_hits": {
+      "HIGH": 0,
+      "LOW": 0
+    },
+    "zero_reported_cache_hit_does_not_eliminate_other_cache_order_variation": true,
+    "different_outputs_and_both_failed_normal_adapter_preclude_equal_success_quality_comparison": true
+  },
+  "transport_failure": {
+    "pure_diagnostic_reproduction_only": true,
+    "functions": "build_context + hydrate_findings on retained public packet/raw; failure caught, no accepted output returned",
+    "exception_class": "ValueError",
+    "exception_message": "Unit evidence was not selected by its own parent",
+    "first_located_claim": "C004",
+    "first_located_unit": "U04",
+    "parent_selected_fragment_ids": [
+      "F012",
+      "F063"
+    ],
+    "unit_fragment_ids": [
+      "F063",
+      "F013"
+    ],
+    "invalid_extra_fragment": "F013",
+    "whole_own_allowed_source_contains_extra": true,
+    "canonical_original_codec_file": "generation/lossless_unit_findings_v1.py",
+    "codec_bytes": 33944,
+    "codec_sha256": "81045fec9ddc851eda6f445bdd99b20c056de07c36a8acb7264fdbc5c2f5d459",
+    "actual_normal_adapter_failure_was_preserved": true,
+    "no_drop_normalize_hydrate_or_retry_to_pass": true
+  },
+  "negative_controls": [
+    {
+      "compact_claim": "C001",
+      "claim_id": "claim_2a4962a6bec83c607bf81bf3_1",
+      "negative_kind": "uncited factual summary",
+      "raw_parent_status": "unsupported",
+      "raw_units": 3,
+      "raw_all_units_unsupported": true,
+      "diagnostic_result": "DETECTED",
+      "actual_semantic_gate_verdict": "NOT_EXECUTED"
+    },
+    {
+      "compact_claim": "C006",
+      "claim_id": "claim_956d6897f3cb0c0b0ee62b3b_1",
+      "negative_kind": "recognizer/recognized subject-object reversal",
+      "wrong_unit": "U01",
+      "own_source": "ev_001/F001",
+      "source_correct_relation": {
+        "recognizer": "protein release factor",
+        "recognized": "stop/nonsense codon"
+      },
+      "raw_wrong_unit_status": "supported",
+      "raw_wrong_unit_relation_preserved": true,
+      "diagnostic_result": "MISSED_RAW_PROPOSED_JUDGEMENT",
+      "raw_U02_tRNA_resemblance_is_scientifically_supported": true,
+      "actual_semantic_gate_verdict": "NOT_EXECUTED"
+    }
+  ],
+  "positive_controls": [
+    {
+      "compact_claim": "C002",
+      "claim_id": "claim_bede3caa251fbe99e6b0aba7_1",
+      "scientific_truth": "CORRECT",
+      "raw_label": "supported",
+      "actual_selected": [
+        "F066"
+      ],
+      "proof_verdict": "PARTIAL_SUBJECT_ANTECEDENT",
+      "missing_selected_context": "F065 identifies AUG; F066 uses it"
+    },
+    {
+      "compact_claim": "C003",
+      "claim_id": "claim_888a12af2b589260e200ac94_1",
+      "scientific_truth": "CORRECT",
+      "raw_label": "supported",
+      "actual_selected": [
+        "F030"
+      ],
+      "proof_verdict": "SUFFICIENT",
+      "conditions": "in-frame AUG during elongation; non-formylated Met"
+    },
+    {
+      "compact_claim": "C004",
+      "claim_id": "claim_768bd0507b54c65207030bc9_1",
+      "scientific_truth": "CORRECT",
+      "raw_label": "supported",
+      "actual_selected_parent": [
+        "F012",
+        "F063"
+      ],
+      "proof_verdict": "PROTOCOL_INVALID_UNIT_SELECTION",
+      "unit": "U04",
+      "unit_fs": [
+        "F063",
+        "F013"
+      ],
+      "foreign_to_selected_parent": [
+        "F013"
+      ],
+      "F013_still_in_allowed_own_source": true,
+      "semantic_note": "F063 itself supports release; extra reference is invalid transport, not a scientific error in the draft"
+    },
+    {
+      "compact_claim": "C005",
+      "claim_id": "claim_56dcb297028bbed0911ba71f_1",
+      "scientific_truth": "CORRECT",
+      "raw_label": "supported",
+      "actual_selected": [
+        "F038"
+      ],
+      "proof_verdict": "PARTIAL_TRIGGER_CONDITION",
+      "missing_selected_context": "F042/F043 identify stop/nonsense codon aligning at the A site; F038 only states release-factor entry"
+    },
+    {
+      "compact_claim": "C007",
+      "claim_id": "claim_bf183cc67fe064a470f63fa6_1",
+      "scientific_truth": "CORRECT",
+      "raw_label": "supported",
+      "actual_selected": [
+        "F002"
+      ],
+      "proof_verdict": "SUFFICIENT"
+    },
+    {
+      "compact_claim": "C008",
+      "claim_id": "claim_bc6a2313863d1540da17adeb_1",
+      "scientific_truth": "CORRECT",
+      "raw_label": "supported",
+      "actual_selected": [
+        "F003"
+      ],
+      "proof_verdict": "SUFFICIENT"
+    },
+    {
+      "compact_claim": "C009",
+      "claim_id": "claim_33a06a4f24dbb7f904a8a65a_1",
+      "scientific_truth": "CORRECT",
+      "raw_label": "supported",
+      "actual_selected": [
+        "F004",
+        "F048"
+      ],
+      "proof_verdict": "SUFFICIENT"
+    },
+    {
+      "compact_claim": "C010",
+      "claim_id": "claim_2e4334534317a6277b37adee_1",
+      "scientific_truth": "CORRECT",
+      "raw_label": "supported",
+      "actual_selected": [
+        "F005"
+      ],
+      "proof_verdict": "SUFFICIENT",
+      "conditions": "after many ribosomes complete translation; nucleotide reuse"
+    }
+  ],
+  "raw_labels_summary": {
+    "science_correct_positive_claims": 8,
+    "positive_raw_supported_claims": 8,
+    "positive_raw_units": 19,
+    "two_negative_controls_detected": 1,
+    "raw_values_do_not_establish_accepted_gate_accuracy": true,
+    "raw_body_ok": false,
+    "raw_complete_answer": true,
+    "raw_contradictory_or_partial_labels_not_silently_repaired": true
+  },
+  "full_application_boundaries": {
+    "semantic_assessors_exercised": false,
+    "full_publication_gates_exercised": false,
+    "answer_published": false,
+    "page_exercised": false,
+    "DOM_sample_n": 0,
+    "LOW_pipeline_or_page_qualified": false,
+    "no_automatic_default_enable": true
+  },
+  "financial_closure": {
+    "component_posts": 1,
+    "component_known_cost_USD": "0.0118001",
+    "component_UNKNOWN_full_hold_USD": "0",
+    "shared_posts_at_closure": 19,
+    "shared_known_cost_USD": "0.2072721",
+    "shared_UNKNOWN_full_hold_USD": "0",
+    "no_retry_or_reclaim": true
+  },
+  "inputs": [
+    {
+      "path": "5703-checker88-runtime/component07low/public-inputs.json",
+      "bytes": 176827,
+      "sha256": "c64bc1beb717b2ca08f79f36bae2aad2a6ebd63ee6f0951b72add9d4f6fddf41"
+    },
+    {
+      "path": "5703-checker88-runtime/component07low/normal-outcome.json",
+      "bytes": 12687,
+      "sha256": "9712cfa04182843fdf3fe63c5f144dff28a0922987042b9aba7867697f926288"
+    },
+    {
+      "path": "5703-checker88-runtime/component07low/diagnostic-result.json",
+      "bytes": 811,
+      "sha256": "6c6d7e3da771d16fcce4dcf777777a6dd46e9afb3a3c6e8aab10db1633217685"
+    },
+    {
+      "path": "5703-checker88-runtime/component07low/final-receipt.json",
+      "bytes": 963,
+      "sha256": "f0a988d7cf6e87a2befc9cd81e4720f5d413aefa1816468c3c4ee20dbed88932"
+    },
+    {
+      "path": "5703-checker88-runtime/component07low/financial.json",
+      "bytes": 161,
+      "sha256": "e02e3eb482b4c499ea358c8ea7e4c1004eaf7ea2b966482c20bf8e26c9b8d75f"
+    },
+    {
+      "path": "5703-checker88-runtime/component07low/physical-claim.json",
+      "bytes": 252,
+      "sha256": "b9cc6f49915cfe163299c5b722402a74f78c5d276da0d138f0ced2d4d86be74a"
+    },
+    {
+      "path": "5703-checker88-runtime/case07/native-provider70/slot-02-public-inputs.json",
+      "bytes": 176654,
+      "sha256": "4183b9a353d3b107f86256e014177c35fc5cc85cb8e651dd24d4ce2a39b29d79"
+    },
+    {
+      "path": "5703-checker88-runtime/case07/native-provider70/slot-02-normal-outcome.json",
+      "bytes": 10648,
+      "sha256": "7fc73f616b5cf3be35d4f457aaae88c6601a811dd762647074ee7d0d4fd8900e"
+    }
+  ],
+  "review_execution": {
+    "Main_writes": 0,
+    "runtime_writes": 0,
+    "DB_auth_network_model_calls": 0,
+    "heavy_or_full_tests": 0,
+    "one_free_pure_failure_diagnostic": true,
+    "output_metadata_only_no_full_source_auth_or_provider_user_id": true,
+    "case11_rubric_still_unopened": true
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "schema": "phase89_case10b_latency_and_checker_inventory_preparation_v1",
+  "created_UTC": "2026-10-12 00:10:55 UTC",
+  "assessment": "Ready within reviewed scope; one historical sample, no new execution.",
+  "scope": {
+    "historical_case": "case10b",
+    "runtime_root": "C:/Users/PC/Documents/Codex/2026-10-04/task-2/5703-checker88-runtime",
+    "main_root": "E:/5703/learning-assistant",
+    "next_stage_parent_limits": {
+      "physical_POSTs": 32,
+      "USD": "2.00",
+      "ledger_changed": false
+    },
+    "writes": {
+      "Main": 0,
+      "runtime88": 0
+    },
+    "new_auth_DB_model_service_or_project_test_actions": 0
+  },
+  "sample": {
+    "send_to_complete_DOM_ms": 20437.10000000149,
+    "send_to_first_prose_ms": 20437.10000000149,
+    "technical_DOM_observation_n": 1,
+    "original_journey_quality_status": "PENDING",
+    "original_qualified_n": 0,
+    "scientific_QA_performed_by_this_review": false,
+    "external_independent_QA_not_reassessed_here": true,
+    "TTFT_ms": null,
+    "p95_ms": null
+  },
+  "exclusive_partition_ms": {
+    "preparation_excluding_retrieval": 46.479,
+    "retrieval": 1605.834,
+    "teacher_adapter": 3618,
+    "checker_adapter": 13194,
+    "generation_pipeline_outside_adapters": 441.975,
+    "other_backend_before_commit": 454.777,
+    "outside_worker_before_commit": 1076.035,
+    "sum_rounded": 20437.1
+  },
+  "nested_spans_ms": {
+    "worker_before_commit": 19361.065,
+    "worker_before_answer_insert": 19169.819,
+    "generation_wall": 17253.975,
+    "model_total": 16812,
+    "token_count": 0,
+    "query_preparation": 4.143,
+    "teaching_plan": 0.343,
+    "publication_before_commit": 203.536,
+    "job_created_to_worker_trace_marker": 186.698,
+    "after_answer_timing_until_before_commit": 191.246,
+    "publication_overlap_before_answer_timing": 12.29
+  },
+  "arithmetic": [
+    "16812 = 3618 + 13194; generation_wall17253.975 - model_total16812 = 441.975.",
+    "worker19361.065 - preparation46.479 - retrieval1605.834 - generation_wall17253.975 = other_backend454.777.",
+    "DOM20437.100 - worker19361.065 = outer_residual1076.035.",
+    "worker19361.065 - before_insert19169.819 = 191.246; publication203.536 overlaps before_insert by approximately12.290.",
+    "Exclusive partition sums to20437.100ms. Adapter timings floor to integer milliseconds; residuals inherit rounding and instrumentation."
+  ],
+  "clock_relationships": [
+    "DOM is browser performance.now: capture-phase Send click to MutationObserver seeing nonempty answer prose and no Stop/status control. This includes request handling, worker, commit, job polling and render; it excludes login, fresh-session setup, startup/prewarm and later refresh/cleanup.",
+    "Backend perf_counter starts execute_answer before initial DB reads; total_ms is overwritten at answer construction before db.add/flush. worker_before_commit_ms samples the same start immediately before final commit; commit duration is not included.",
+    "preparation_ms subtracts retrieval from worker input preparation. query_preparation is contained in preparation; teaching_plan is contained in query_preparation. Do not add those subspans again.",
+    "generation_wall encloses the generation service and both serial adapters plus local setup/validation/audit work. Adapter monotonic timers include compilation, transport, local financial capture, parsing and checker hydration; they are not pure upstream inference time.",
+    "publication_before_commit starts before answer construction, so it overlaps total_ms and is contained in other_backend; total_ms + publication double-counts about12.290ms.",
+    "submission_to_worker_start is UTC job.created_at to a trace marker set after execute_answer has already begun. It partly overlaps the worker timer. Do not add186.698 as an exact disjoint queue term; exact overlap was not retained.",
+    "Outer_residual1076.035 combines pre-worker request/queue and post-worker commit/poll/render; those parts cannot be separated from saved clocks.",
+    "Node UTC accepted/complete events are diagnostic logging points, not browser click/completion endpoints. API closure finished_utc includes shutdown; root outer wall includes startup and cleanup. None should replace the DOM duration.",
+    "First prose equals full prose for this completed-job page; this is not measured token TTFT. No cross-process absolute monotonic timestamps are subtracted."
+  ],
+  "diagnostic_UTC_events": {
+    "accepted_event": "2026-10-11T23:47:51.715Z",
+    "complete_observed_event": "2026-10-11T23:48:12.143Z",
+    "event_delta_ms": 20428,
+    "API_closure_finished": "2026-10-11T23:48:13.042211+00:00",
+    "root_outer_wall_seconds": 37.888229799995315
+  },
+  "actual_provider_usage": {
+    "teacher": {
+      "model": "anthropic/claude-haiku-5.5",
+      "route": "haiku55_google_vertex_low_v1",
+      "max_tokens": 4096,
+      "input": 17589,
+      "completion": 449,
+      "reasoning": 0,
+      "cached_input": 0,
+      "USD": "0.0019834",
+      "HTTP": 200,
+      "finish_reason": "stop"
+    },
+    "checker": {
+      "model": "google/gemini-3.5-flash-lite",
+      "route": "gemini35_google_vertex_high_research_v1",
+      "max_tokens": 8192,
+      "input": 22687,
+      "completion": 5892,
+      "reasoning": 4709,
+      "nonreasoning_completion_by_difference": 1183,
+      "cached_input": 0,
+      "USD": "0.0215361",
+      "HTTP": 200,
+      "finish_reason": "stop"
+    }
+  },
+  "optimization": {
+    "largest_measured_component": "checker adapter13194ms (64.559% of DOM); teacher17.703%, retrieval7.857%.",
+    "reasoning": "Reported4709 reasoning tokens are79.922% of5892 completion tokens. Completion already includes reasoning; do not add them. Token proportions do not establish a reasoning-time split or guaranteed savings.",
+    "practical_target": "Reduce avoidable protocol reproduction/selection bookkeeping using existing deterministic inventory helpers; measure new complete answers under identical full input/source/config and independent quality review.",
+    "constraints": "Keep every necessary source, claim, unit, requirement, own-source binding and original semantic/publication gate. Existing failed LOW diagnostic is not eligible for activation. No optimization implemented or model invoked here."
+  },
+  "existing_inventory": {
+    "reuse": "lossless_unit_findings_v1.build_context/_tables/OutputContext.descriptor and source_relations_v2.scoped_syntactic_units; v2 already delegates these. Use a thin wrapper if a public inventory API is needed, not a second ID generator.",
+    "canonical_claim": "joint_policy.response_claims:58 + reliability_v5.response_claims:40: SHA256(answer_field + NUL + text with ev markers removed) first24 hex plus occurrence; retain actual text/offsets/citations.",
+    "C": "lossless_unit_findings_v1._tables:297/318: Cnnn aliases frozen CLAIMS order.",
+    "U": "source_relations_v2.syntactic_units:224: Unn restarts per parent claim; exact Unicode partitions reconstruct the full claim. Identity is(claim_id,unit_id).",
+    "canonical_fragment": "retrieval/source_spans.map_fragments:119/179: span_ + first32 SHA256 hex of mapping-version/provenance/span/exact-text-hash tuple.",
+    "F": "checked.generate_checked:1953/1962/1995: Fnnn aliases current fragment order; original identities restored for validation/persistence.",
+    "canonical_requirement": "coverage_v2.requirements:17 consumes upstream IDs; requirements_v5.describe_requirements:101/146 assigns requirement_nn in question-clause order.",
+    "R": "lossless_unit_findings_v1._tables:319 aliases frozen requirements order.",
+    "stability": "C/F/R are deterministic within the same frozen packet, not globally stable under reordering. Cross-request provenance needs canonical IDs plus context digest.",
+    "coverage": "build_context:209/288 freezes full packet/schema/fingerprint, verifies exact IDs/text/offset/hash and recomputed full unit catalogue. descriptor:192 exposes counts; it is structural inventory, not semantic PASS."
+  },
+  "output_protocol_comparison": {
+    "v1": "All canonical fields are abbreviated, with C/R aliases and exact quote IDs. _quote_catalogue:123 builds maximal consecutive full-sentence quotes <=1200 characters from each sentence start for long fragments; original sources remain intact, no partial-quote fallback.",
+    "v2": "Reuses v1 context and keeps readable field names. _unit_pool:65/_decode:112 selects unit fragments once, adds explicit parent extras and requires a full exact parent fragment_order permutation; no sibling/foreign/duplicate/omitted selection.",
+    "status_reason": "Short reasons are possible, but both codecs still require explicit complete claim/requirement/textbook-unit judgments, basis/relations/conditions/evidence selection and root gates. No status/reason-only automatic PASS, omitted judgments or default nonfactual conversion.",
+    "limits_chars": {
+      "unit_reason": 200,
+      "claim_reason": 800,
+      "requirement_reason": 1200,
+      "root_reason": 1600
+    },
+    "safeguards": "_validate_original_fields:460 rejects missing/extra fields before strict ReliableUnitCheck validation. Textbook parents need all exact units and actual own-source provenance; hydration failure is CHECKER_TRANSPORT_INVALID. Original source/requirement/binding/derivation/publication gates follow."
+  },
+  "source_sha256": {
+    "R/case10b/journey-receipt88.json": "2f71390dd72f1c8f945e082cfae20617bafbfa98ceb0976c9aa0a8546ae4182e",
+    "R/case10b/native-provider70/slot-01-normal-outcome.json": "70495267d831b6a70ca62887b0f043e46add34b6ae146bb119b487b3ee7857f3",
+    "R/case10b/native-provider70/slot-02-normal-outcome.json": "4a3970d60c263be03a916730e78321272c778de85bde7ae21b907d1d4f68e8fc",
+    "R/case10b/native-provider70/slot-01-raw-response.json": "777dc6a263705466ff5d062f770ac4b6fcce19cfdc4a5e0a896168f766ce03eb",
+    "R/case10b/native-provider70/slot-02-raw-response.json": "f771140e2c44d7b4f568450c5f76000df5645e8cab56658c9e9da02b31667766",
+    "R/journey88.cjs": "95c7dc4d5fe9cf8bb3f23abeae52de047cbcd2d97c6adfd2640e03421f4ad33d",
+    "R/completion-observer88.cjs": "15598675a59337ed2e02dba99d99b512a1456ee38e4c0326e7d0497c4ca9eb42",
+    "Main/backend/app/modules/answering/service.py": "f302de879a270a5879adbc9374331c86d7b014dadca79c0a40a804647ceafeb0",
+    "Main/generation/adapters.py": "99075cb07f4faf861119c5fa5113da6951408c02323c14452d090661fd0c3ddb",
+    "Main/generation/checked.py": "2b675807b299c2d802eda90ef6dfd10beaeac9a7737ec2dfe40279f66862515b",
+    "Main/generation/lossless_unit_findings_v1.py": "81045fec9ddc851eda6f445bdd99b20c056de07c36a8acb7264fdbc5c2f5d459",
+    "Main/generation/single_selection_findings_v2.py": "91ebe1c011c5d82ccc722c33ab34cf11efb65a17ad3637e4a6bb4052508cd53a",
+    "Main/generation/source_relations_v2.py": "ab22171c03566ed1f8b97e67bb1d0d5f4b276e0ab0bcc40be487f3b296ceeb11",
+    "Main/generation/reliability_v5.py": "f1cf5db78bb8f07996e8f56f48db8542a82591e92b90d233d0a58dd1a73f169d",
+    "Main/generation/joint_policy.py": "115a217dd9cd49dcf4e42221a1cdedcd8e7c21c72bb3d413a89a50bd1a9b818b",
+    "Main/generation/providers.py": "8411a08b94c57feac7d6ca068c6feae9193201c109f28d9b64d014d3199cd4ee",
+    "Main/retrieval/source_spans.py": "8289958b634853a3dab4c6880340c8ee0505c49e9df2d869d18fa8925750ff29",
+    "Main/conversation/requirements_v5.py": "5e36d944c6ce91fd9cfe32e2ba5fcaf4e0e5b59f2dd7a4ab45fedf437f6eb3fe"
+  }
+}

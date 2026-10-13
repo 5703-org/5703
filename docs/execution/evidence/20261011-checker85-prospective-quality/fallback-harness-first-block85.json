@@ -1,0 +1,13 @@
+{
+  "schema": "phase85_posttrial_synthetic_harness_failure_v1",
+  "status": "HARNESS_FAILED_BEFORE_COLLECTION",
+  "error": "SYNTHETIC_OUTSIDE_WRITE_FORBIDDEN",
+  "cause": "pytest FD capture requested a default temporary-file write outside the run directory; audit blocked it",
+  "junit_counts": null,
+  "provider_posts": 0,
+  "DB_actions": 0,
+  "auth_actions": 0,
+  "Main_writes": 0,
+  "correction": "Use sys capture and a run-local temporary directory; retain the same write guard",
+  "recorded_after_failure_from_root_tool_result": true
+}

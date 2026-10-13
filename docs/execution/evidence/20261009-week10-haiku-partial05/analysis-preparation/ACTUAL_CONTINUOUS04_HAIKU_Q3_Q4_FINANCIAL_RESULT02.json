@@ -1,0 +1,288 @@
+{
+  "schema": "5703_week10_continuous_subbatch_financial_result_v1",
+  "status": "ACTUAL_CONTINUOUS04_HAIKU_PRE_SEND_FAILED_ZERO_NEW_POSTS_STOP_PRESERVED",
+  "observed_at_UTC": "2026-10-09T06:59:23Z",
+  "parent_batch_id": "cs30-week10-native-pair-20261009-01",
+  "batch_id": "cs30-week10-haiku-persistent-general-20261009-01",
+  "source_version": "8c6a6933f7af2ba4876913f752b16f0d661da2eaec8e9cf5dc302461f158d4b1",
+  "continuation_mode": "TWO_NEW_GENERAL_QUESTIONS_SAME_WORKER",
+  "model": "anthropic/claude-haiku-5.5",
+  "provider_route": "google-vertex/global",
+  "new_started_claim_count": 0,
+  "new_finished_claim_count": 0,
+  "new_provider_post_count": 0,
+  "new_known_API_cost_USD": "0.00000000",
+  "new_UNKNOWN_count": 0,
+  "new_open_claim_count": 0,
+  "new_full_unknown_hold_USD": "0.00000000",
+  "new_fully_settled": true,
+  "provider_cost_role_breakdown": [],
+  "prior_provider_post_count": 8,
+  "prior_known_API_cost_USD": "0.03987014",
+  "aggregate_provider_post_count": 8,
+  "aggregate_known_API_cost_USD": "0.03987014",
+  "limits": {
+    "new_allocation_maximum_POSTs": 4,
+    "new_allocation_full_hold_USD": "0.12000000",
+    "aggregate_maximum_authorized_POSTs": 12,
+    "aggregate_maximum_full_protection_USD": "0.36000000",
+    "per_POST_full_hold_USD": "0.03000000",
+    "remaining_unconsumed_new_slots": 4,
+    "unused_original_Haiku_allocation_USD": "0.12000000",
+    "new_additional_allocation_for_any_successor_USD": "0.00000000",
+    "next_submission_requires_fresh_explicit_guard_scope": true,
+    "STOP_not_removed": true,
+    "UNKNOWN_replay_forbidden": true
+  },
+  "failure": {
+    "controller_status": "ACTUAL_CONTROLLER_BLOCKED_OR_FAILED_NO_RETRY",
+    "controller_error_class": "ValueError",
+    "completed_legs_count": 0,
+    "browser_status": "ACTUAL_LIVE_UI_JOURNEY_FAILED_OR_BLOCKED",
+    "browser_failure_code": "BROWSER_OR_IO_FAILURE",
+    "browser_exception_class": "PlaywrightError",
+    "browser_local_source_line": 606,
+    "login_response_status": 200,
+    "actual_question_count": 0,
+    "actual_new_question_submissions": 0,
+    "normal_chat_preflight": null,
+    "actual_free_two_chat_pages_proof_observed": false,
+    "two_normal_chat_pages_before_paid_configuration_flag": true,
+    "Q3_status": "NOT_EXECUTED_PRE_SEND_FAILURE",
+    "Q3_compatibility_probe_pass": false,
+    "Q4_status": "NOT_EXECUTED_PRIOR_FAILURE",
+    "model_failure_established": false,
+    "provider_balance_block_established": false,
+    "formal_permission_denial_observed": false
+  },
+  "closure": {
+    "runtime_status": "CLEANUP_FAILED_OR_LEG_FAILED",
+    "native_normal_CLOSED_observed": false,
+    "native_checked_completed": false,
+    "browser_leg_passed": false,
+    "native_executed_question_ids": [],
+    "native_completed_question_ids": [],
+    "owned_threads_closed": true,
+    "owned_database_resources_closed": true,
+    "cleanup_error_classes": [],
+    "leg_closed_after_advisory_unlock_connection_close_and_engine_dispose": false,
+    "browser_closed": true,
+    "browser_context_closed": true,
+    "owned_processes": [
+      {
+        "pid": 74016,
+        "exit_code": 1,
+        "owned_job_closed": true,
+        "stdout_collector_complete": true,
+        "stderr_collector_complete": true
+      },
+      {
+        "pid": 80376,
+        "exit_code": 1,
+        "owned_job_closed": true,
+        "stdout_collector_complete": true,
+        "stderr_collector_complete": true
+      }
+    ],
+    "cleanup_started_count": 3,
+    "cleanup_finished_count": 3,
+    "cleanup_all_handles_closed": true,
+    "cleanup_pending": 0,
+    "cleanup_records": [
+      {
+        "started_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous04\\cleanup-87e83039-b0b3-422a-b8d9-a8b82476461c-started01.json",
+          "bytes": 458,
+          "sha256": "01deec338a3544a962214d034e45ceabe5845015d2a42f8ae4cd420c853211a5"
+        },
+        "finished_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous04\\cleanup-87e83039-b0b3-422a-b8d9-a8b82476461c-finished01.json",
+          "bytes": 401,
+          "sha256": "6474429465931822f07cb717b90f12d768da17c7b057a5b1af1ad3c4e6455d8b"
+        },
+        "all_handles_closed": true
+      },
+      {
+        "started_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous04\\cleanup-8d07d22d-b84c-4919-9021-c0bda642f6b2-started01.json",
+          "bytes": 458,
+          "sha256": "9b9cb40394b30decf258a29744d01b5d66c69d2cbb6b1ae32b1f841d5b87d83a"
+        },
+        "finished_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous04\\cleanup-8d07d22d-b84c-4919-9021-c0bda642f6b2-finished01.json",
+          "bytes": 401,
+          "sha256": "70aca99cc8f1504b75fba8ed1286710d757fa1f6909021ae07fac9d8adb9bcf0"
+        },
+        "all_handles_closed": true
+      },
+      {
+        "started_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous04\\cleanup-e7d7b335-4d9d-4623-8fe5-563771785070-started01.json",
+          "bytes": 458,
+          "sha256": "03fa9780ae4eba4e7057ba13a3896d369a611d1ab5bd9f4af94f0ecca3cf076e"
+        },
+        "finished_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous04\\cleanup-e7d7b335-4d9d-4623-8fe5-563771785070-finished01.json",
+          "bytes": 401,
+          "sha256": "aed1a4074c7d3f817112d205d7c088f4335ecb3e5a2a9a970d737fc3604ad6c9"
+        },
+        "all_handles_closed": true
+      }
+    ]
+  },
+  "stop": {
+    "exists": true,
+    "status": "STOP_NO_NEXT_SUBMISSION",
+    "reason": "ROOT_NATIVE_PAIR_CONTROLLER_FAILED",
+    "historical_files_written": 0,
+    "unknown_holds_retained_in_full": true,
+    "pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous04\\STOP-before-any-next-submission01.json",
+      "bytes": 556,
+      "sha256": "9a23914c9a4df50395eb719aba842dbbf29932d030b334ce4562edcde8ad98e7"
+    }
+  },
+  "public_receipt_pins": {
+    "controller": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\continuous-preparation\\ROOT_CONTINUOUS_CONTROLLER_ACTUAL04.json",
+      "bytes": 4394,
+      "sha256": "0fa301a274a3ff831c25cb7ed94d9af0dca0f68e18c3c673a79871486752aaf3"
+    },
+    "budget": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous04\\budget-status-public01.json",
+      "bytes": 1305,
+      "sha256": "639f24d0970b61bac671d4434afba3ec6a4562eed2720efb5d1323a86ad1220a"
+    },
+    "runtime_closed": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous04\\runtime-closed-public01.json",
+      "bytes": 1634,
+      "sha256": "3a67b9a78e8c458d92b991ce58e8e98d03ecfcbf15d3e16095e68aab73f2477a"
+    },
+    "browser": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\browser-continuous04\\real-browser-live-qa-receipt01.json",
+      "bytes": 22102,
+      "sha256": "c0cfc2588ac8bd30aab30ccff0cdff14c306a453b96fa3c606dbbf5e833144e2"
+    },
+    "stop": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous04\\STOP-before-any-next-submission01.json",
+      "bytes": 556,
+      "sha256": "9a23914c9a4df50395eb719aba842dbbf29932d030b334ce4562edcde8ad98e7"
+    },
+    "current_guard_release": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\continuous-preparation\\CONTINUOUS_GUARD_RELEASE_ACTUAL04.json",
+      "bytes": 186911,
+      "sha256": "94484a45739225bfbf00e82eda3a047c4370cb42e869568cee2f3483d5318ec3"
+    }
+  },
+  "predecessor_finance_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\analysis-preparation\\ACTUAL_CONTINUOUS03_Q2_ONLY_FINANCIAL_RESULT01.json",
+    "bytes": 10926,
+    "sha256": "8d04ee732f7377e3211ad0086879fe4535589a393388c88719c33aafe1c66116"
+  },
+  "authority_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\continuous-preparation\\CONTINUATION_AUTHORIZATION_SCOPE04.json",
+    "bytes": 5533,
+    "sha256": "5120797cdb2e4fda5179c8155d50876032c776a1d0cc4a0b7c206958f389a9ee"
+  },
+  "lock_metadata": {
+    "basis": "Current public release declarations only; no prior lock or ledger body was read.",
+    "current_claim_lock_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous04\\global-pair-budget.lock",
+      "bytes": 1,
+      "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    "declared_historical_lock_pin_count": 11,
+    "declared_historical_lock_pins": [
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-compact-repair-20261008-01\\new-batch42-claims\\global42-budget.lock",
+        "bytes": 1,
+        "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-batch38-claims\\global38-budget.lock",
+        "bytes": 1,
+        "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\global37-budget.lock",
+        "bytes": 1,
+        "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-current-native-checker26-20261008-01\\new-batch26-claims\\global26-budget.lock",
+        "bytes": 1,
+        "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-real-browser-live6-20261008-01\\claims-live6\\global6-budget.lock",
+        "bytes": 1,
+        "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-real-browser-default10-20261008-01\\claims-live10\\global10-budget.lock",
+        "bytes": 1,
+        "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-real-browser-warm4-20261008-01\\claims-warm4-bootstrap04\\global-warm4-budget.lock",
+        "bytes": 1,
+        "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-base5-matched-e0-20261008-01\\claims-base5\\global-base5-budget.lock",
+        "bytes": 1,
+        "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-base1-response-diagnostic-20261008-01\\claims-one\\global-one-budget.lock",
+        "bytes": 1,
+        "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-v32-reasoning-disabled-check-20261008-01\\claims-one\\global-one-budget.lock",
+        "bytes": 1,
+        "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-v32-disabled-matched4-20261008-01\\claims-four\\global-four-budget.lock",
+        "bytes": 1,
+        "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+      }
+    ],
+    "full_runtime_lock_list_not_inferred": true
+  },
+  "historical_protection": {
+    "old_UNKNOWN_count": 14,
+    "all_old_full_holds_unchanged": true,
+    "historical_submitted_known_costs_and_STOPs_unchanged": true,
+    "old_actual_unknown_total_cost_USD": null,
+    "provider_account_balance_USD": null,
+    "invoice_balance_USD": null,
+    "old_financial_reconstruction_performed": false
+  },
+  "observer_actions": {
+    "model_calls": 0,
+    "API_calls": 0,
+    "database_operations": 0,
+    "main_project_writes": 0,
+    "old_raw_ledger_reads": 0,
+    "old_ledger_writes": 0,
+    "automatic_retries": 0,
+    "raw_log_reads": 0
+  },
+  "output_generation_correction": {
+    "invalid_preserved_artifact_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\analysis-preparation\\ACTUAL_CONTINUOUS04_HAIKU_Q3_Q4_FINANCIAL_RESULT01.json",
+      "bytes": 6,
+      "sha256": "abdfbffecbe18ed94df9829819e596ee285b52a94aa108514452a9121721c789"
+    },
+    "invalid_reason": "PowerShell bare boolean caused result construction failure; previous artifact contains JSON null and must not be bound.",
+    "this_file_is_valid_create_only_successor": true
+  },
+  "limitations": [
+    "The actual failure occurred before Send. Zero POSTs do not establish Haiku compatibility, quality, latency or Q3/Q4 same-worker success.",
+    "Owned resource cleanup is observed; native leg remains failed, with normal CLOSED not observed.",
+    "Original unused four-POST/USD0.12 protection is retained. This receipt launches nothing and adds no budget.",
+    "No provider balance or actual historical UNKNOWN total was queried or inferred."
+  ]
+}

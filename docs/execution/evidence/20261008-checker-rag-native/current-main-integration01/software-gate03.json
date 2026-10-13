@@ -1,0 +1,105 @@
+{
+  "mode": "mock",
+  "started_at": "2026-10-08T09:39:32.172224+00:00",
+  "executed_at": "2026-10-08T09:58:43.727893+00:00",
+  "status": "passed",
+  "source_files_unchanged": true,
+  "changed_during_run": [],
+  "source_snapshot": "evidence/current-main-mock03/source_snapshot.json",
+  "checks": [
+    {
+      "name": "python_quality",
+      "command": [
+        "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+        "-m",
+        "scripts.verify.python_quality",
+        "--output",
+        "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-main-default-off-diagnostic-integration-20261008-01\\free-gate01\\project\\evidence\\current-main-mock03\\python-quality"
+      ],
+      "exit_code": 0,
+      "log": "evidence\\current-main-mock03\\python_quality.log"
+    },
+    {
+      "name": "foundation",
+      "command": [
+        "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+        "-m",
+        "scripts.verify.foundation"
+      ],
+      "exit_code": 0,
+      "log": "evidence\\current-main-mock03\\foundation.log"
+    },
+    {
+      "name": "contracts",
+      "command": [
+        "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+        "-m",
+        "scripts.verify.contracts"
+      ],
+      "exit_code": 0,
+      "log": "evidence\\current-main-mock03\\contracts.log"
+    },
+    {
+      "name": "chat_scope",
+      "command": [
+        "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+        "-m",
+        "scripts.verify.chat_scope"
+      ],
+      "exit_code": 0,
+      "log": "evidence\\current-main-mock03\\chat_scope.log"
+    },
+    {
+      "name": "python_tests",
+      "command": [
+        "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "tests",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp=C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-main-default-off-diagnostic-integration-20261008-01\\free-gate01\\project\\evidence\\current-main-mock03\\pytest-temp",
+        "--junitxml=C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-main-default-off-diagnostic-integration-20261008-01\\free-gate01\\project\\evidence\\current-main-mock03\\pytest.xml"
+      ],
+      "exit_code": 0,
+      "log": "evidence\\current-main-mock03\\python_tests.log"
+    },
+    {
+      "name": "frontend_types",
+      "command": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "run",
+        "types:check"
+      ],
+      "exit_code": 0,
+      "log": "evidence\\current-main-mock03\\frontend_types.log"
+    },
+    {
+      "name": "frontend_tests",
+      "command": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "test"
+      ],
+      "exit_code": 0,
+      "log": "evidence\\current-main-mock03\\frontend_tests.log"
+    },
+    {
+      "name": "frontend_build",
+      "command": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "run",
+        "build"
+      ],
+      "exit_code": 0,
+      "log": "evidence\\current-main-mock03\\frontend_build.log"
+    }
+  ],
+  "separate_evidence_required": [
+    "real browser responsive and lifecycle journeys",
+    "clean Compose install",
+    "backup restore",
+    "live scientific evaluation",
+    "human ratings and physical mobile keyboard"
+  ]
+}

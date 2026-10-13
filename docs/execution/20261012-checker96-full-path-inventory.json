@@ -1,0 +1,100 @@
+{
+  "schema": "phase96_gated_same_case_full_path_inventory_v1",
+  "status": "PLANNED_NOT_RUN_NO_RESERVATION",
+  "current_admission": "BLOCKED_FIRST_TWO_STRUCTURAL_AND_SEMANTIC_GATE_FAILED",
+  "cases": [
+    {
+      "case_id": "S01",
+      "question_id": "S01.Q",
+      "original_question": "What is an enzyme, and what does a catalyst change about a chemical reaction?",
+      "source_scope": "Original public four-book corpus; freeze actual retrieved/selected fragments before sends",
+      "learner_data": "New isolated synthetic session with no real learner history"
+    },
+    {
+      "case_id": "S02",
+      "question_id": "S02.Q",
+      "original_question": "In bacterial DNA replication, explain why leading-strand synthesis is continuous while lagging-strand synthesis produces Okazaki fragments, including the direction in which new DNA is synthesized. How are RNA primers replaced and the remaining nicks between DNA fragments sealed?",
+      "source_scope": "Original public four-book corpus; freeze actual retrieved/selected fragments before sends",
+      "learner_data": "New isolated synthetic session with no real learner history"
+    }
+  ],
+  "legs": [
+    {
+      "leg_id": "S01.baseline",
+      "case_id": "S01",
+      "native_teacher_POSTs_max": 1,
+      "normal_checker_POSTs_max": 1,
+      "span_extraction_POSTs_max": 0,
+      "protective_CNY_envelope": "0.40"
+    },
+    {
+      "leg_id": "S01.candidate",
+      "case_id": "S01",
+      "native_teacher_POSTs_max": 1,
+      "normal_checker_POSTs_max": 1,
+      "span_extraction_POSTs_max": 1,
+      "protective_CNY_envelope": "0.45"
+    },
+    {
+      "leg_id": "S02.baseline",
+      "case_id": "S02",
+      "native_teacher_POSTs_max": 1,
+      "normal_checker_POSTs_max": 1,
+      "span_extraction_POSTs_max": 0,
+      "protective_CNY_envelope": "0.40"
+    },
+    {
+      "leg_id": "S02.candidate",
+      "case_id": "S02",
+      "native_teacher_POSTs_max": 1,
+      "normal_checker_POSTs_max": 1,
+      "span_extraction_POSTs_max": 1,
+      "protective_CNY_envelope": "0.45"
+    }
+  ],
+  "maximum_physical_POSTs": 10,
+  "maximum_teacher_POSTs": 4,
+  "maximum_normal_checker_POSTs": 4,
+  "maximum_span_POSTs": 2,
+  "proposed_saved_rate_protective_CNY_envelope": "1.70",
+  "envelope_is_committed_or_spent": false,
+  "old_holds_reallocated_or_released": false,
+  "configuration": {
+    "teacher_and_normal_checker": "Resolve existing authorized official DeepSeek profile ID before execution; do not change defaults",
+    "retrieval": "E1 basic dense RAG, same visibility/source version/query settings across each paired case",
+    "session_context": "Fresh isolated synthetic sessions with identical empty history/context; server chooses context",
+    "native_worker": "Same owned worker/Engine for paired legs; finite cleanup and existing isolation guards",
+    "database": "Existing authorized isolated fixture at 127.0.0.1:15433 only after harmless health and fixture binding checks",
+    "runtime_profile_id": null,
+    "candidate_producer_consumer_adapter": null,
+    "page_timeout_seconds_max": 300,
+    "maximum_concurrency": 1,
+    "retries_or_provider_fallback": false
+  },
+  "prerequisites_before_any_paid_leg": [
+    "Both same-case extraction outputs independently pass structure and descriptive semantics under a new frozen finite plan",
+    "Separately close the previously authorized remaining-six gate with current reviewed results; no unused old run is resumed",
+    "Implement and test a test-only producer/consumer/failure path; span inspection containers cannot directly certify support",
+    "Preserve actual selected proof and all scientific scope/role/unit/condition requirements; checksum or lexical coverage cannot substitute for semantic review",
+    "Resolve exact isolated controller/profile/page route IDs and freeze only affected source/configuration plus sent data manifest",
+    "Harmless isolated service/binder read succeeds; use only already authorized fixture credentials in memory",
+    "Finalize per-leg token/wire/output protective admission from actual messages; abort rather than discard context to fit budget"
+  ],
+  "measurements": [
+    "Native Send event to complete final answer DOM with citations and metadata; timeout is right-censored with complete-answer time null",
+    "Full teacher/checker/span POST clocks separately; preserve model, token usage, exact sources and failed responses",
+    "Independent full-answer scientific/citation/selected-proof and learning-response QA for every actually delivered answer",
+    "Report per-case absolute added/removed latency and quality-qualified completion; four small legs cannot establish p95 or held-out quality"
+  ],
+  "stop_rules": [
+    "Failed extraction gate stops later six and native comparison",
+    "Unknown spend, unsafe credential echo, failed isolation, HTTP/contract failure or source mismatch stops remaining legs without blind retry",
+    "Platform rejection stops its exact action without alternate route"
+  ],
+  "candidate_shadow_is_actual_delivery_improvement": false,
+  "defaults_enabled": false,
+  "physical_POSTs": 0,
+  "database_or_browser_execution": 0,
+  "native_qualified_latency": null,
+  "project_complete": false
+}

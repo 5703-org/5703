@@ -1,0 +1,60 @@
+{
+  "schema": "unchanged_case07_v2_and_instruction_audit87_v1",
+  "recorded_at": "2026-10-11T20:52:15.713475+00:00",
+  "case": "actual87/case07",
+  "strict_json": "PASS",
+  "prepared_recorded_and_returned_context_sha256": "8e299b523fbe3840c42bd5e7b659047c34a10131a72bc3dd1b32a34b50a1afa7",
+  "context_digests_match": true,
+  "raw_text_equals_unchanged_transport_raw": true,
+  "raw_sha256": "59645f2f5c6e24353ee16e4e4d267cf4a1d4ca87fe66e80c12235319269536e3",
+  "first_failure": {
+    "exception": "ValueError",
+    "trusted_static_message": "Unknown claim reference",
+    "core_file": "single_selection_findings_v2.py",
+    "function": "_decode",
+    "line": 125,
+    "returned_first_claim_id": "claim_d28561456bb9e91dc1d1e907_1",
+    "required_first_alias": "C001"
+  },
+  "unmodified_shape_inspection": {
+    "returned_claim_records": 1,
+    "actual_input_claim_records": 10,
+    "first_textbook_claim_missing_field": [
+      "citations"
+    ],
+    "root_missing_required_fields": [],
+    "downstream_validation_established": false
+  },
+  "compiled_wire_audit": {
+    "format": "json_object",
+    "schema_equals_prepared_schema": true,
+    "original_user_packet_unchanged": true,
+    "context_sha256_const_explicit_and_required": true,
+    "version_const_explicit_and_required": true,
+    "claim_id_enum_explicit": [
+      "C001",
+      "C002",
+      "C003",
+      "C004",
+      "C005",
+      "C006",
+      "C007",
+      "C008",
+      "C009",
+      "C010"
+    ],
+    "codebook_contains_current_metadata_and_alias_tables": true,
+    "original_prose_explicitly_requires_output_metadata_literals_and_alias_keys": false,
+    "causal_instruction_omission_established": false,
+    "interpretation": "No metadata/schema requirement was omitted by compiler; generic prose lacked explicit root-literal/alias-key/full-set instructions. The narrow candidate clarifies that contract; no model-compliance improvement is established."
+  },
+  "provider": {
+    "http_status": 200,
+    "finish_reason": "stop",
+    "output_tokens": 706,
+    "reasoning_tokens": 0,
+    "known_cost_usd": 0.0095017
+  },
+  "main_or_runtime_or_raw_mutation": false,
+  "network_or_model_or_auth_or_database_actions": false
+}

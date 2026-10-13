@@ -1,0 +1,99 @@
+{
+  "schema": "phase88_current_software_verification_v1",
+  "production_and_test_source_pins": {
+    "generation/checked.py": "2b675807b299c2d802eda90ef6dfd10beaeac9a7737ec2dfe40279f66862515b",
+    "tests/unit/test_single_selection_teacher_contract.py": "910f812fd96bc729e64ec6eb37696848a743bf8b12d909c65c07f0c08a275efa",
+    "tests/unit/test_single_selection_wire_contract.py": "7d06eb097df4612f258e34efbbfbd2c2b754ab973b0c8255d15e101995e1ddae",
+    "tests/unit/test_v22_integration.py": "b0ff8b09890860de6b76b5cc0c842d054772b2b1ca7941a4d13a46d7008aae7e",
+    "tests/unit/test_lossless_output_integration84.py": "aa07bcf78ba4208cca6016a6960510bac31bae5115588d31b186116e0125aea2"
+  },
+  "full_unit": {
+    "status": "PASS",
+    "passed": 4532,
+    "skipped": 21,
+    "warnings": 40,
+    "additional_subtests_passed": 215,
+    "pytest_seconds": 117.37,
+    "parent_seconds": 119.8878199000028,
+    "test_files": 234,
+    "timeout": false,
+    "source_version_unchanged": true
+  },
+  "affected": {
+    "passed": 139,
+    "previous_failed_or_error_node_ids_rechecked_passed": 46,
+    "distinct_counts_not_added_to_full_suite": true
+  },
+  "authored_teacher_and_wire_contract": {
+    "distinct_passed": 45,
+    "ruff": "PASS"
+  },
+  "isolation_guard_controls": {
+    "passed": 27,
+    "failed": 0
+  },
+  "frontend_recorded_checks": {
+    "typescript": {
+      "status": "PASS",
+      "command": "tsc --noEmit --incremental false"
+    },
+    "generated_OpenAPI_client": {
+      "status": "PASS",
+      "existing_Redocly_warnings": 12
+    },
+    "note": "Earlier read-only tool checks in this task; no frontend changes or repeated run."
+  },
+  "isolation": {
+    "SQLite_memory_or_owned_temporary_data": true,
+    "external_models_blocked": true,
+    "real_PostgreSQL_blocked": true,
+    "Main_writes_blocked": true,
+    "dotenv_disabled_in_child": true,
+    "owned_parent_deadline_seconds": 240
+  },
+  "full_original_eight_stage_workflow_executed": false,
+  "clean_install_executed": false,
+  "scientific_or_course_acceptance_inferred_from_unit_PASS": false,
+  "evidence": [
+    {
+      "workspace_relative_path": "5703-unit88-free-r4/receipt.json",
+      "bytes": 2303,
+      "sha256": "732b346edc4173b78c902a258e8520997c94ba78a60b8d4eb3240383f152dbff"
+    },
+    {
+      "workspace_relative_path": "5703-unit88-free-r4/pytest.log",
+      "bytes": 663745,
+      "sha256": "9a42d77281167f8c998e5617f63e99a189a199fbe27787b60515f07888c7eb97"
+    },
+    {
+      "workspace_relative_path": "5703-unit88-free-r4/pytest.xml",
+      "bytes": 1254755,
+      "sha256": "2699b4ae35a7e020d181557e0a885676e655b51103fad3f6fe7c747f5e561696"
+    },
+    {
+      "workspace_relative_path": "5703-unit88-free-r4/tripwire.json",
+      "bytes": 7051,
+      "sha256": "588256a4031de405a2b4a8cf1b3b0a614dc02044f0a52b9bdae0a926c9ea00d9"
+    },
+    {
+      "workspace_relative_path": "5703-unit88-affected02/receipt.json",
+      "bytes": 2023,
+      "sha256": "dbe6583733a2813e8104beca72d8b37528977d9aecb5c37ee9e75c51f8aa21e3"
+    },
+    {
+      "workspace_relative_path": "5703-unit88-harness-release.json",
+      "bytes": 11016,
+      "sha256": "d388c5aa1b94dc1e2d34317f2bd2bd0fc1011dfe25a923ae8210d68551844ae1"
+    },
+    {
+      "workspace_relative_path": "5703-unit88-contract-test-fixes/root-adoption.json",
+      "bytes": 829,
+      "sha256": "320a432d1f2635b3223617984c20907a790e800ec51c39b55ed50d08d6f52ae9"
+    },
+    {
+      "workspace_relative_path": "5703-unit88-cwd-nul-controls05/controls.json",
+      "bytes": 30563,
+      "sha256": "43188b55c722656a9fb1e9b6b6b38106a5efab0d0f3d3e1748a068ec45fc909d"
+    }
+  ]
+}

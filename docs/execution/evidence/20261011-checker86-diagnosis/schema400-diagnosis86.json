@@ -1,0 +1,251 @@
+{
+  "status": "FREE_SCHEMA_DIAGNOSIS_NO_RETRY",
+  "observed": {
+    "http_status": 400,
+    "finite_provider_status": "INVALID_ARGUMENT",
+    "numeric_cost_USD": null,
+    "retained_unknown_full_hold_USD": "0.0714688",
+    "second_component_executed": false,
+    "native_baseline_reserved_posts": 7,
+    "combined_reserved_posts": 8,
+    "combined_known_cost_USD": "0.0465392",
+    "account_fields_exported": false,
+    "original_raw_exported": false,
+    "teacher_or_textbook_content_exported": false
+  },
+  "reconstruction": {
+    "recorded_wire_bytes": 90663,
+    "recorded_wire_sha256": "96169d560dd1eaabad8ad71982184ed2ef09834a243e45da7b2fe8b9ac6a98bd",
+    "reconstructed_wire_bytes": 90663,
+    "reconstructed_wire_sha256": "96169d560dd1eaabad8ad71982184ed2ef09834a243e45da7b2fe8b9ac6a98bd",
+    "exact_compiler_wire_equality": true,
+    "response_format": "json_schema",
+    "strict": true,
+    "require_parameters": true,
+    "route_schema_projection": {},
+    "schema_bytes_compact_utf8": 6724,
+    "schema_sha256_sorted": "9f91e0fa2982facd9910eeb2c8966880681900f5f6724def8884475a90afc078"
+  },
+  "schema_statistics": {
+    "schema_node_count": 111,
+    "keyword_occurrences": {
+      "$defs": 1,
+      "$ref": 12,
+      "additionalProperties": 12,
+      "anyOf": 3,
+      "const": 6,
+      "description": 4,
+      "enum": 20,
+      "items": 11,
+      "maxItems": 11,
+      "maxLength": 18,
+      "minItems": 2,
+      "minLength": 15,
+      "pattern": 1,
+      "properties": 12,
+      "required": 12,
+      "type": 96
+    },
+    "definitions": 11,
+    "root_properties": 19,
+    "object_properties_total": 79,
+    "optional_properties_total": 0,
+    "enum_occurrences": 20,
+    "enum_values_total": 144,
+    "maximum_enum_cardinality": {
+      "path": "$.$defs.RequirementEvidence.properties.p",
+      "values": 67,
+      "max_string_characters": 7,
+      "total_string_characters": 286
+    },
+    "maximum_enum_value_characters": 19,
+    "anyOf_occurrences": 3,
+    "anyOf_branch_counts": [
+      {
+        "path": "$.properties.cs.items",
+        "branches": 5
+      },
+      {
+        "path": "$.$defs.CalculationInputV4.properties.f",
+        "branches": 2
+      },
+      {
+        "path": "$.$defs.DerivationV4.properties.ff",
+        "branches": 2
+      }
+    ],
+    "ref_occurrences": 12,
+    "distinct_ref_targets": 11,
+    "json_container_maximum_depth": 7,
+    "reference_expanded_schema_edge_depth": 12,
+    "recursive_reference_cycles": [],
+    "unresolved_refs": []
+  },
+  "official_sources": [
+    {
+      "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/capabilities/control-generated-output",
+      "claim": "The official Vertex successor guide identifies complex schemas as a possible source of InvalidArgument 400, including large enums, nested arrays and constrained properties. Its responseSchema subset ignores unsupported fields; this is not proof of the OpenRouter responseJsonSchema translation used here."
+    },
+    {
+      "url": "https://ai.google.dev/gemini-api/docs/structured-output",
+      "claim": "Gemini supports a JSON Schema subset and may reject very large or deeply nested schemas. Current official examples also use anyOf and recursive $ref, so their presence alone does not establish an unsupported feature."
+    },
+    {
+      "url": "https://openrouter.ai/docs/guides/features/structured-outputs",
+      "claim": "Support is endpoint-specific. Provider translation and strict enforcement vary; require_parameters=true and strict=true do not prove every supplied schema is accepted."
+    }
+  ],
+  "interpretation": {
+    "cause_confirmed": false,
+    "inference": "Schema complexity or provider/gateway schema translation is plausible given the strict-only config change and documented 400 behavior; the finite error supplies no offending field. Neither schema byte size, enum count nor anyOf/$ref alone identifies the cause.",
+    "unsupported_field_caution": "Production const/minLength/maxLength/$defs/$ref/additionalProperties require comparison with the exact gateway-selected responseJsonSchema dialect. The older responseSchema subset must not be treated as the exact transport contract.",
+    "semantic_obligations_unchanged": "Do not remove unknown output fields, fill judgments, auto-select parent citations, or weaken original validators to recover this failure."
+  },
+  "content_free_synthetic_structure": {
+    "purpose": "Small illustrative shape preserving nested arrays, anyOf, refs, const and string bounds; NOT a proven minimal 400 reproducer and NOT sent to any provider.",
+    "request": {
+      "model": "google/gemini-3.5-flash-lite",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Return one complete synthetic structural record."
+        }
+      ],
+      "max_tokens": 4096,
+      "response_format": {
+        "type": "json_schema",
+        "json_schema": {
+          "name": "synthetic_codec_subset_diagnostic",
+          "strict": true,
+          "schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "cs": {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/T"
+                    },
+                    {
+                      "$ref": "#/$defs/G"
+                    }
+                  ]
+                }
+              },
+              "h": {
+                "type": "string",
+                "const": "0000000000000000000000000000000000000000000000000000000000000000"
+              }
+            },
+            "required": [
+              "cs",
+              "h"
+            ],
+            "$defs": {
+              "T": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "c": {
+                    "type": "string",
+                    "enum": [
+                      "C001",
+                      "C002"
+                    ]
+                  },
+                  "b": {
+                    "type": "string",
+                    "const": "textbook"
+                  },
+                  "us": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/U"
+                    }
+                  }
+                },
+                "required": [
+                  "c",
+                  "b",
+                  "us"
+                ]
+              },
+              "G": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "c": {
+                    "type": "string",
+                    "enum": [
+                      "C001",
+                      "C002"
+                    ]
+                  },
+                  "b": {
+                    "type": "string",
+                    "const": "given"
+                  },
+                  "r": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 4000
+                  }
+                },
+                "required": [
+                  "c",
+                  "b",
+                  "r"
+                ]
+              },
+              "U": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "u": {
+                    "type": "string"
+                  },
+                  "s": {
+                    "type": "string",
+                    "enum": [
+                      "supported",
+                      "partial",
+                      "unsupported"
+                    ]
+                  },
+                  "fs": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "r": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 4000
+                  }
+                },
+                "required": [
+                  "u",
+                  "s",
+                  "fs",
+                  "r"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "actions": {
+    "model_calls": 0,
+    "database_calls": 0,
+    "auth_reads": 0,
+    "Main_writes": 0,
+    "old_ledger_writes": 0,
+    "paid_retries": 0,
+    "public_document_reads_only": true
+  }
+}

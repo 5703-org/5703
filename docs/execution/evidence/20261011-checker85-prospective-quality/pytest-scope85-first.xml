@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="12" time="2.471" timestamp="2026-10-12T04:27:30.276818+11:00" hostname="SK-20250314EJIZ"><testcase classname="" name="test_candidate_reaches_actual_teacher_checker_wire_without_changing_full_gates[json_schema]" time="0.318"><failure message="AssertionError: assert {'version': '....}, ...], ...} == {'version': '....}, ...], ...}&#10;  &#10;  Omitting 7 identical items, use -vv to show&#10;  Differing items:&#10;  {'claims': [{'claim_id': 'claim_84e4f786051c17a7b927816d_1', 'answer_field': 'answer_text', 'start': 0, 'end': 42, ......, {'claim_id': 'claim_84e4f786051c17a7b927816d_6', 'answer_field': 'answer_text', 'start': 215, 'end': 257, ...}, ...]} != {'claims': [{'claim_id': 'claim_84e4f786051c17a7b927816d_1', 'answer_field': 'answer_text', 'start': 0, 'end': 42, ......, {'claim_id': 'claim_84e4f786051c17a7b927816d_6', 'answer_field': 'answer_text', 'start': 215, 'end': 257, ...}, ...]}&#10;  Use -v to get more diff">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001C5A3F590F0&gt;
+mode = 'json_schema'
+
+    @pytest.mark.parametrize("mode", ["json_schema", "json_object"])
+    def test_candidate_reaches_actual_teacher_checker_wire_without_changing_full_gates(
+        monkeypatch, mode
+    ):
+        config = (
+            vertex_config()
+            if mode == "json_object"
+            else ModelConfig(window_tokens=65536, tokenizer_provider="estimate")
+        )
+        before, before_adapter = run(checker_config=config)
+        monkeypatch.setattr(checked, "PROMPTS", CandidatePrompts())
+        after, after_adapter = run(checker_config=config)
+&gt;       assert_original_gates_equal(before, after)
+
+5703-checker85-candidate\tests\unit\test_source_scope_prompt85.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+old = GenerationOutcome(response={'schema_version': 'chat_response_v1', 'response_type': 'answer', 'answer_text': 'Photosynt...ut_tokens': None, 'cost': None}, 'usage_scope': 'provider_generation', 'counted_input_tokens': None, 'latency_ms': 0}])
+new = GenerationOutcome(response={'schema_version': 'chat_response_v1', 'response_type': 'answer', 'answer_text': 'Photosynt...ut_tokens': None, 'cost': None}, 'usage_scope': 'provider_generation', 'counted_input_tokens': None, 'latency_ms': 0}])
+
+    def assert_original_gates_equal(old, new):
+        assert old.succeeded and new.succeeded, (old.error, new.error)
+        assert old.response == new.response
+        assert old.delivered_projection == new.delivered_projection
+&gt;       assert old.attribution == new.attribution
+E       AssertionError: assert {'version': '....}, ...], ...} == {'version': '....}, ...], ...}
+E         
+E         Omitting 7 identical items, use -vv to show
+E         Differing items:
+E         {'claims': [{'claim_id': 'claim_84e4f786051c17a7b927816d_1', 'answer_field': 'answer_text', 'start': 0, 'end': 42, ......, {'claim_id': 'claim_84e4f786051c17a7b927816d_6', 'answer_field': 'answer_text', 'start': 215, 'end': 257, ...}, ...]} != {'claims': [{'claim_id': 'claim_84e4f786051c17a7b927816d_1', 'answer_field': 'answer_text', 'start': 0, 'end': 42, ......, {'claim_id': 'claim_84e4f786051c17a7b927816d_6', 'answer_field': 'answer_text', 'start': 215, 'end': 257, ...}, ...]}
+E         Use -v to get more diff
+
+E:\5703\learning-assistant\tests\unit\test_lossless_output_integration84.py:174: AssertionError</failure></testcase><testcase classname="" name="test_candidate_reaches_actual_teacher_checker_wire_without_changing_full_gates[json_object]" time="0.301"><failure message="AssertionError: assert {'version': '....}, ...], ...} == {'version': '....}, ...], ...}&#10;  &#10;  Omitting 7 identical items, use -vv to show&#10;  Differing items:&#10;  {'claims': [{'claim_id': 'claim_84e4f786051c17a7b927816d_1', 'answer_field': 'answer_text', 'start': 0, 'end': 42, ......, {'claim_id': 'claim_84e4f786051c17a7b927816d_6', 'answer_field': 'answer_text', 'start': 215, 'end': 257, ...}, ...]} != {'claims': [{'claim_id': 'claim_84e4f786051c17a7b927816d_1', 'answer_field': 'answer_text', 'start': 0, 'end': 42, ......, {'claim_id': 'claim_84e4f786051c17a7b927816d_6', 'answer_field': 'answer_text', 'start': 215, 'end': 257, ...}, ...]}&#10;  Use -v to get more diff">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001C5A3F58FC0&gt;
+mode = 'json_object'
+
+    @pytest.mark.parametrize("mode", ["json_schema", "json_object"])
+    def test_candidate_reaches_actual_teacher_checker_wire_without_changing_full_gates(
+        monkeypatch, mode
+    ):
+        config = (
+            vertex_config()
+            if mode == "json_object"
+            else ModelConfig(window_tokens=65536, tokenizer_provider="estimate")
+        )
+        before, before_adapter = run(checker_config=config)
+        monkeypatch.setattr(checked, "PROMPTS", CandidatePrompts())
+        after, after_adapter = run(checker_config=config)
+&gt;       assert_original_gates_equal(before, after)
+
+5703-checker85-candidate\tests\unit\test_source_scope_prompt85.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+old = GenerationOutcome(response={'schema_version': 'chat_response_v1', 'response_type': 'answer', 'answer_text': 'Photosynt...ut_tokens': None, 'cost': None}, 'usage_scope': 'provider_generation', 'counted_input_tokens': None, 'latency_ms': 0}])
+new = GenerationOutcome(response={'schema_version': 'chat_response_v1', 'response_type': 'answer', 'answer_text': 'Photosynt...ut_tokens': None, 'cost': None}, 'usage_scope': 'provider_generation', 'counted_input_tokens': None, 'latency_ms': 0}])
+
+    def assert_original_gates_equal(old, new):
+        assert old.succeeded and new.succeeded, (old.error, new.error)
+        assert old.response == new.response
+        assert old.delivered_projection == new.delivered_projection
+&gt;       assert old.attribution == new.attribution
+E       AssertionError: assert {'version': '....}, ...], ...} == {'version': '....}, ...], ...}
+E         
+E         Omitting 7 identical items, use -vv to show
+E         Differing items:
+E         {'claims': [{'claim_id': 'claim_84e4f786051c17a7b927816d_1', 'answer_field': 'answer_text', 'start': 0, 'end': 42, ......, {'claim_id': 'claim_84e4f786051c17a7b927816d_6', 'answer_field': 'answer_text', 'start': 215, 'end': 257, ...}, ...]} != {'claims': [{'claim_id': 'claim_84e4f786051c17a7b927816d_1', 'answer_field': 'answer_text', 'start': 0, 'end': 42, ......, {'claim_id': 'claim_84e4f786051c17a7b927816d_6', 'answer_field': 'answer_text', 'start': 215, 'end': 257, ...}, ...]}
+E         Use -v to get more diff
+
+E:\5703\learning-assistant\tests\unit\test_lossless_output_integration84.py:174: AssertionError</failure></testcase><testcase classname="" name="test_faithful_direct_and_explicit_complementary_selections_remain_valid[direct_qualified_object]" time="0.001" /><testcase classname="" name="test_faithful_direct_and_explicit_complementary_selections_remain_valid[explicit_complementary_counting_bases]" time="0.001" /><testcase classname="" name="test_honest_scope_and_relation_negatives_defeat_optimistic_parent_without_local_repair[referent_class_broadening]" time="0.001" /><testcase classname="" name="test_honest_scope_and_relation_negatives_defeat_optimistic_parent_without_local_repair[stage_transfer]" time="0.001" /><testcase classname="" name="test_honest_scope_and_relation_negatives_defeat_optimistic_parent_without_local_repair[net_gross_transfer]" time="0.001" /><testcase classname="" name="test_honest_scope_and_relation_negatives_defeat_optimistic_parent_without_local_repair[invented_bridge]" time="0.001" /><testcase classname="tests.unit.test_source_relation_contract" name="test_legacy_schema_and_prompt_do_not_change_when_marker_is_absent" time="0.106" /><testcase classname="tests.unit.test_source_relation_units_v2" name="test_negative_unit_source_trace_never_fills_empty_selection_or_rewrites_reason[partial]" time="0.011" /><testcase classname="tests.unit.test_source_relation_units_v2" name="test_negative_unit_source_trace_never_fills_empty_selection_or_rewrites_reason[unsupported]" time="0.011" /><testcase classname="tests.unit.test_source_relation_units_v2" name="test_invalid_unit_or_actual_assessed_fragment_never_establishes_support[unassessed_fragment]" time="0.000" /></testsuite></testsuites>

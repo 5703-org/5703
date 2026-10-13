@@ -1,0 +1,107 @@
+{
+  "status": "PASS_FREE_STATIC_AND_PURE_OFFLINE_REVIEW_ROOT_RELEASE_AND_FORMAL_TOOL_APPROVAL_REQUIRED",
+  "runner_sha256": "29df6f6ce3977499998a937131e3b64b798a6319be6115106069e3754237a2b0",
+  "pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\run_ROOT_fixed_checker_pair_PREPARED02.py",
+      "bytes": 37215,
+      "sha256": "29df6f6ce3977499998a937131e3b64b798a6319be6115106069e3754237a2b0"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\shared_residual37_claim_guard_PREPARED01.py",
+      "bytes": 28178,
+      "sha256": "bc63d57d84f56e1a44a8b454de6e65321196d77da5191bf5341dfafe4cbe28ec"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\ROOT-residual37-budget01.json",
+      "bytes": 37520,
+      "sha256": "a14c5a9c37429bb6597365cfa79d84d92b899f699bb00f5b8447ff3077a1b8e8"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\ROOT-prior38-unstarted37-transfer01.json",
+      "bytes": 5140,
+      "sha256": "328aef96e1c80dac73945f132d6ae612e17590f688b815649cfa3db1d56c03ce"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\checker-runner02-pure-numeric-guard-replay01.json",
+      "bytes": 10331,
+      "sha256": "d0c260572e71b1cfd117e57aca962e1dab60d02160ea70e14837680c70504a08"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\checker-runner02-pure-pinned-callchain01.json",
+      "bytes": 2971,
+      "sha256": "ebcb92685652e15a7c35954a2fcc7c39cecadf6788525111dbfd18775c31f05d"
+    }
+  ],
+  "interface": {
+    "Guard_public_positional_signatures": {
+      "__init__": [
+        "self",
+        "budget_path",
+        "expected_budget_sha256",
+        "release_path",
+        "expected_release_sha256"
+      ],
+      "stop": [
+        "self",
+        "reason"
+      ],
+      "claim": [
+        "self",
+        "group",
+        "slot",
+        "nonce"
+      ],
+      "finish": [
+        "self",
+        "start"
+      ]
+    },
+    "release_schema": "5703_successor38_group_release_v1",
+    "release_status": "ROOT_FROZEN_SUCCESSOR38_RELEASE",
+    "required_provenance": "ONLY_ORIGINAL38_UNSTARTED37_NO_BASELINE_RETRY",
+    "runner_remaining_original_cell": "checker_pair:02 only",
+    "allowed_cell_fields": [
+      "group",
+      "slot",
+      "wire_sha256",
+      "wire_bytes",
+      "output_cap",
+      "input_tokens_bound"
+    ],
+    "required_release_history_pins": [
+      "residual37_transfer_pin",
+      "prior_journal20_pin",
+      "prior_finance20_pin",
+      "old38_budget_pin",
+      "predecessor_failed_baseline_receipt_pin"
+    ]
+  },
+  "numeric_bug": "Old pair callback certainly rejects product pinned numeric getaddrinfo after Request audit. Actual previous failure is consistent, but no prior denied-event stack witness proves sole cause.",
+  "controls": {
+    "direct_synthetic_audit_cases_passed": 48,
+    "compiled_mock_callchain_real_frame_cases_passed": 6,
+    "independent_source_stack_review": "bootstrap_asset_readonly confirms frame2 handling and slot2 filter; static only"
+  },
+  "invariants": [
+    "No baseline retry: predecessor failure must bind before key access; only original unstarted concise slot2 is claimable.",
+    "Frozen prompt/schema/config/wire/model/Vertex-only route/pricecaps/output4096/input131072/timeout45/scientific validators untouched.",
+    "One provider POST and one same-product-pinned numeric global nonmapped IP443 connection permitted; IP, socket and code origin must match.",
+    "Original subprocess/privatecredentialfile/Ewrite/readonlyDB guards retained.",
+    "Missing or malformed release/helper/history blocks execution before key/provider access.",
+    "Historical UNKNOWN/STOP/budgets/journal/claims remain immutable; residual37 transfers unstarted capacity rather than resetting entitlement.",
+    "48 and6 proofs contain only synthetic or mock I/O decisions, not provider receipts or science/model PASS.",
+    "No valid pair latency comparison is possible from the previous failed baseline."
+  ],
+  "reviewer_actions": {
+    "runner_main_or_provider_executed": false,
+    "global_hook_installed": false,
+    "real_socket_DNS_TCP_HTTP_urllib_DB_key_model_Gold_claim_or_E_actions": 0,
+    "read_only_public_prepared_files_and_CreateNew_review_only": true
+  },
+  "limits": [
+    "ROOT must independently review financial guard/budget/transfer and exact release03, active fixture roles and all prior receipt pins before any execution. This review hashes their prepared bytes and checks the interface/schema; it does not import/execute the financial guard or independently observe actual paid receipts.",
+    "Any formal execution refusal requires STOP without alternate entry; authorization does not add monetary capacity.",
+    "Current previous UNKNOWN cost is not reclassified as free or known."
+  ]
+}

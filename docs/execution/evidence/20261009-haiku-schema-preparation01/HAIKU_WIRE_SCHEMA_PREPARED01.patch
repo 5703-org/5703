@@ -1,0 +1,179 @@
+--- a/generation/adapters.py
++++ b/generation/adapters.py
+@@ -203,6 +203,7 @@
+         started = time.monotonic()
+         observed_http_status = None
+         transport = None
++        schema_transport_metadata = {}
+         result = ProviderResult(provider=cfg.provider, model=cfg.model, request_submitted=False)
+         try:
+             cfg.validate()
+@@ -215,10 +216,14 @@
+                 and not key
+             ):
+                 raise ValueError("Configured credential environment variable is unavailable")
++            from .openrouter_routes import prepare_schema_wire
++
++            request_body = payload(cfg, messages, schema, schema_name, count=count, basic=basic)
++            request_body, schema_transport_metadata = prepare_schema_wire(cfg, request_body, schema)
+             envelope = http.Request(
+                 endpoint(cfg, count=count),
+                 data=json.dumps(
+-                    payload(cfg, messages, schema, schema_name, count=count, basic=basic),
++                    request_body,
+                     ensure_ascii=False,
+                     separators=(",", ":"),
+                 ).encode(),
+@@ -403,6 +408,8 @@
+             hydrate_checker_transport(result, transport)
+         result.latency_ms = int((time.monotonic() - started) * 1000)
+         result.diagnostic["latency_ms"] = result.latency_ms
++        if schema_transport_metadata:
++            result.diagnostic["schema_transport"] = schema_transport_metadata
+         return result
+ 
+ 
+--- a/generation/openrouter_routes.py
++++ b/generation/openrouter_routes.py
+@@ -2,6 +2,9 @@
+ 
+ from __future__ import annotations
+ 
++import copy
++import hashlib
++import json
+ from dataclasses import dataclass
+ from types import MappingProxyType
+ from urllib.parse import urlsplit
+@@ -32,6 +35,7 @@
+     reasoning_enabled: bool | None = None
+     reasoning_effort: str | None = None
+     checker_transport: str | None = None
++    schema_transport: str | None = None
+ 
+ 
+ # Historical requested bindings are retained without selecting a default.
+@@ -49,6 +53,7 @@
+                 completion_price_cap=2.5,
+                 documented_model_ids=("anthropic/claude-haiku-5.5-20261007",),
+                 reasoning_effort="low",
++                schema_transport="anthropic_structured_bounds_v1",
+             ),
+             RouteProfile(
+                 "openai_luna_v2",
+@@ -199,3 +204,95 @@
+             "completion": route.completion_price_cap,
+         }
+     return value
++
++
++SCHEMA_TRANSPORT_ANTHROPIC_BOUNDS_V1 = "anthropic_structured_bounds_v1"
++
++
++def _schema_digest(schema):
++    return hashlib.sha256(
++        json.dumps(schema, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
++    ).hexdigest()
++
++
++def _anthropic_schema_projection(schema):
++    """Copy schema nodes only; local validators keep every original constraint."""
++    removed_count = 0
++    unsupported = {
++        "minimum", "maximum", "exclusiveMinimum", "exclusiveMaximum", "multipleOf",
++        "minLength", "maxLength", "maxItems",
++    }
++    mappings = {"properties", "$defs", "definitions", "patternProperties", "dependentSchemas"}
++    sequences = {"allOf", "anyOf", "oneOf", "prefixItems"}
++    singles = {
++        "items", "contains", "not", "if", "then", "else", "propertyNames",
++        "additionalProperties", "unevaluatedProperties", "unevaluatedItems", "contentSchema",
++    }
++
++    def visit(node):
++        nonlocal removed_count
++        if not isinstance(node, dict):
++            return copy.deepcopy(node)
++        projected = copy.deepcopy(node)
++        removed = {}
++        for keyword in unsupported | {"minItems"}:
++            if keyword not in node:
++                continue
++            if keyword == "minItems" and type(node[keyword]) is int and node[keyword] in (0, 1):
++                continue
++            removed[keyword] = projected.pop(keyword)
++            removed_count += 1
++        if removed:
++            annotation = "Local validation constraints: " + "; ".join(
++                f"{keyword}={json.dumps(value, ensure_ascii=False, separators=(',', ':'))}"
++                for keyword, value in sorted(removed.items())
++            ) + "."
++            prior = projected.get("description", "")
++            projected["description"] = (prior + "\n" if prior else "") + annotation
++        for keyword in mappings:
++            children = node.get(keyword)
++            if isinstance(children, dict):
++                projected[keyword] = {name: visit(child) for name, child in children.items()}
++        for keyword in sequences:
++            children = node.get(keyword)
++            if isinstance(children, list):
++                projected[keyword] = [visit(child) for child in children]
++        for keyword in singles:
++            child = node.get(keyword)
++            if isinstance(child, dict):
++                projected[keyword] = visit(child)
++            elif keyword == "items" and isinstance(child, list):
++                projected[keyword] = [visit(item) for item in child]
++        return projected
++
++    return visit(schema), removed_count
++
++
++def prepare_schema_wire(config, request_body, original_schema):
++    """Apply the explicit Haiku wire policy without mutating its local contract.
++
++    Only JSON Schema bounds documented as unsupported by Anthropic are projected.
++    This compatibility policy does not establish the cause of any HTTP failure.
++    """
++    route = resolve(config)
++    if route is None or route.schema_transport is None:
++        return request_body, {}
++    if route.schema_transport != SCHEMA_TRANSPORT_ANTHROPIC_BOUNDS_V1:
++        raise ValueError("Unsupported route schema transport policy")
++    response_format = request_body.get("response_format")
++    if not isinstance(response_format, dict) or response_format.get("type") != "json_schema":
++        return request_body, {}
++    contract = response_format.get("json_schema")
++    provider_schema = contract.get("schema") if isinstance(contract, dict) else None
++    if not isinstance(provider_schema, dict) or not isinstance(original_schema, dict):
++        raise ValueError("Structured response schema must be an object")
++    projected, removed_count = _anthropic_schema_projection(provider_schema)
++    wire = copy.deepcopy(request_body)
++    wire["response_format"]["json_schema"]["schema"] = projected
++    return wire, {
++        "policy_id": route.schema_transport,
++        "original_response_schema_sha256": _schema_digest(original_schema),
++        "provider_schema_before_projection_sha256": _schema_digest(provider_schema),
++        "wire_schema_sha256": _schema_digest(projected),
++        "removed_bound_count": removed_count,
++    }
+--- a/generation/probes.py
++++ b/generation/probes.py
+@@ -283,6 +283,9 @@
+         ]
+     transport = prepare_checker_transport(effective, messages, schema, name, basic=tier == "basic")
+     wire = payload(effective, messages, schema, name, basic=tier == "basic")
++    from generation.openrouter_routes import prepare_schema_wire
++
++    wire, schema_transport_metadata = prepare_schema_wire(effective, wire, schema)
+     counter = TokenCounter(effective)
+     input_tokens = counter.count(json.dumps(wire, ensure_ascii=False)) + 128
+     if input_tokens + output > effective.window_tokens:
+@@ -318,6 +321,7 @@
+                     }
+                 },
+                 **({"checker_transport": transport["diagnostic"]} if transport is not None else {}),
++                **({"schema_transport": schema_transport_metadata} if schema_transport_metadata else {}),
+             },
+             "input_tokens": input_tokens,
+             "reserved_output_tokens": output,

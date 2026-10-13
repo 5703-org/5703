@@ -1,0 +1,393 @@
+{
+  "schema": "5703_week10_continuous_subbatch_financial_result_v1",
+  "status": "ACTUAL_CONTINUOUS05_HAIKU_Q3_CHECKER_HTTP400_UNKNOWN_COST_STOP_Q4_NOT_EXECUTED",
+  "observed_at_UTC": "2026-10-09T07:22:44Z",
+  "parent_batch_id": "cs30-week10-native-pair-20261009-01",
+  "batch_id": "cs30-week10-haiku-persistent-general-20261009-02",
+  "source_version": "8c6a6933f7af2ba4876913f752b16f0d661da2eaec8e9cf5dc302461f158d4b1",
+  "continuation_mode": "TWO_NEW_GENERAL_QUESTIONS_SAME_WORKER",
+  "model": "anthropic/claude-haiku-5.5",
+  "provider_route": "google-vertex/global",
+  "new_started_claim_count": 2,
+  "new_finished_claim_count": 2,
+  "new_provider_post_count": 2,
+  "new_physically_submitted_POST_count": 2,
+  "new_known_cost_claim_count": 1,
+  "new_known_API_cost_USD": "0.00163590",
+  "new_actual_total_API_cost_USD": null,
+  "new_UNKNOWN_count": 1,
+  "new_open_claim_count": 0,
+  "new_full_unknown_hold_USD": "0.03000000",
+  "new_fully_settled": false,
+  "provider_cost_role_breakdown": [
+    {
+      "slot": 1,
+      "question_id": "Q3",
+      "role": "teacher",
+      "status": "KNOWN_COST_RECORDED",
+      "known_API_cost_USD": "0.00163590",
+      "UNKNOWN_full_hold_USD": "0.00000000",
+      "request_submitted": true,
+      "http_status": 200,
+      "known_cost_observed": true,
+      "native_local_error_code": null,
+      "diagnostic_stage": "completed",
+      "latency_ms": 5909,
+      "finished_errorcode": null,
+      "usage_safe_numeric_fields": {
+        "prompt_tokens": 13474,
+        "completion_tokens": 577,
+        "reasoning_tokens": 0,
+        "total_tokens": 14051
+      },
+      "usage_safe_is_empty": false,
+      "generation_id_persisted": false,
+      "provider_request_id_persisted": false,
+      "started_at_with_original_offset": "2026-10-09T07:10:28.744366+00:00",
+      "started_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\slot-01-started01.json",
+        "bytes": 1255,
+        "sha256": "ffffabad3b787addc7f6617d6985ba123e61d80c67cdb8797f2e342c7fc11bd8"
+      },
+      "finished_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\slot-01-finished01.json",
+        "bytes": 696,
+        "sha256": "23e8364d86bed0444a8a39fd6caa6ebd1c0a58b5a38e69dd13c7216d53255ed0"
+      }
+    },
+    {
+      "slot": 2,
+      "question_id": "Q3",
+      "role": "checker",
+      "status": "UNKNOWN_FULL_HOLD_STOP",
+      "known_API_cost_USD": null,
+      "UNKNOWN_full_hold_USD": "0.03000000",
+      "request_submitted": true,
+      "http_status": 400,
+      "known_cost_observed": false,
+      "native_local_error_code": "PROVIDER_HTTP_ERROR",
+      "diagnostic_stage": "http",
+      "latency_ms": 1104,
+      "finished_errorcode": "PROVIDER_HTTP_ERROR",
+      "usage_safe_numeric_fields": null,
+      "usage_safe_is_empty": true,
+      "generation_id_persisted": false,
+      "provider_request_id_persisted": false,
+      "started_at_with_original_offset": "2026-10-09T07:10:35.308588+00:00",
+      "started_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\slot-02-started01.json",
+        "bytes": 1255,
+        "sha256": "dc0a697cd960091eb0e9d161cb6482704753e953b1af2a11704c6abb5242621a"
+      },
+      "finished_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\slot-02-finished01.json",
+        "bytes": 595,
+        "sha256": "3eed26a59ec22ccf0139b5afd03c873a62f2f56ed203620080d1dd99859f1f85"
+      }
+    }
+  ],
+  "prior_provider_post_count": 8,
+  "prior_known_API_cost_USD": "0.03987014",
+  "prior_new_UNKNOWN_count": 0,
+  "aggregate_provider_post_count": 10,
+  "aggregate_known_API_cost_USD": "0.04150604",
+  "aggregate_new_UNKNOWN_count": 1,
+  "aggregate_open_claim_count": 0,
+  "aggregate_actual_total_API_cost_USD": null,
+  "aggregate_fully_settled": false,
+  "limits": {
+    "original_Haiku_allocation_maximum_POSTs": 4,
+    "original_Haiku_allocation_full_protection_USD": "0.12000000",
+    "new_funding_for_phase05_USD": "0.00000000",
+    "aggregate_maximum_authorized_POSTs": 12,
+    "aggregate_maximum_full_protection_USD": "0.36000000",
+    "per_POST_full_hold_USD": "0.03000000",
+    "consumed_Haiku_POSTs": 2,
+    "remaining_unconsumed_Haiku_slots": 2,
+    "remaining_slots_automatically_reusable": false,
+    "maximum_new_allocation_reserve_retained_USD": "0.12000000",
+    "all_original_protections_retained": true,
+    "UNKNOWN_replay_forbidden": true
+  },
+  "failure": {
+    "controller_status": "ACTUAL_CONTROLLER_BLOCKED_OR_FAILED_NO_RETRY",
+    "controller_error_class": "ValueError",
+    "completed_legs_count": 0,
+    "browser_status": "ACTUAL_LIVE_UI_JOURNEY_FAILED_OR_BLOCKED",
+    "browser_failure_code": "ANSWER_RENDER_TIMEOUT_RIGHT_CENSORED",
+    "browser_exception_class": "Boundary",
+    "browser_local_source_line": 33,
+    "Q3_status": "FAIL",
+    "Q3_compatibility_probe_pass": false,
+    "Q3_full_answer_time_ms": null,
+    "Q3_TTFT_ms": null,
+    "Q3_timing_censored": true,
+    "Q3_completed_cited_answer": false,
+    "Q3_citation_checked": false,
+    "Q3_refresh_persisted": false,
+    "Q4_status": "NOT_EXECUTED_PRIOR_FAILURE",
+    "actual_new_question_submissions": 1,
+    "checker_public_errorcode": "PROVIDER_HTTP_ERROR",
+    "checker_http_status": 400,
+    "checker_provider_cost_observed": false,
+    "checker_actual_fee_USD": null,
+    "checker_usage_safe_shape": "EMPTY_OBJECT",
+    "provider_generation_ID_persisted_in_finished_claim_or_adapter": false,
+    "provider_request_ID_persisted_in_finished_claim_or_adapter": false,
+    "billing_reconciliation_possible_from_retained_public_provider_IDs": false,
+    "raw_provider_cause_observed": false,
+    "schema_failure_established": false,
+    "provider_balance_block_established": false,
+    "formal_permission_denial_observed": false
+  },
+  "actual_free_preflight": {
+    "status": "TWO_NORMAL_CHAT_PAGES_READY_SAME_WORKER",
+    "prepaid_provider_posts": 0,
+    "worker_pid": 75500,
+    "engine_object_identity": 1919648521520,
+    "worker_alive": true,
+    "browser_count": 1,
+    "page_count": 1,
+    "observed_UTC": "2026-10-09T07:10:25.353Z",
+    "first_POST_started_original_offset": "2026-10-09T07:10:28.744366+00:00",
+    "first_POST_started_UTC": "2026-10-09T07:10:28.744366Z",
+    "milliseconds_before_first_POST": 3391.366,
+    "public_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\browser-continuous05\\normal-two-chat-prepaid-readiness-public01.json",
+      "bytes": 2829,
+      "sha256": "0289af8bca1aacbc18ff646a73ce2cb4f23fe309567b51f3bb8a724a2146922c"
+    }
+  },
+  "closure": {
+    "runtime_status": "CLEANUP_FAILED_OR_LEG_FAILED",
+    "native_normal_CLOSED_observed": false,
+    "native_checked_completed": false,
+    "browser_leg_passed": false,
+    "native_executed_question_ids": [
+      "Q3"
+    ],
+    "native_completed_question_ids": [],
+    "all_submitted_native_jobs_checked": false,
+    "both_new_questions_completed_same_worker": false,
+    "second_question_not_executed": true,
+    "owned_threads_closed": true,
+    "owned_database_resources_closed": true,
+    "cleanup_error_classes": [],
+    "leg_closed_after_advisory_unlock_connection_close_and_engine_dispose": false,
+    "browser_closed": true,
+    "browser_context_closed": true,
+    "owned_processes": [
+      {
+        "pid": 75500,
+        "exit_code": 1,
+        "owned_job_closed": true,
+        "stdout_collector_complete": true,
+        "stderr_collector_complete": true
+      },
+      {
+        "pid": 79216,
+        "exit_code": 1,
+        "owned_job_closed": true,
+        "stdout_collector_complete": true,
+        "stderr_collector_complete": true
+      }
+    ],
+    "cleanup_started_count": 8,
+    "cleanup_finished_count": 8,
+    "cleanup_all_handles_closed": true,
+    "cleanup_pending": 0,
+    "cleanup_records": [
+      {
+        "started_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\cleanup-0162de85-0648-4492-9d60-349f4f7792ce-started01.json",
+          "bytes": 458,
+          "sha256": "2552621fd69bfeb86862d51990d59cac0ebe03f2b87c1e0a6f30fc21cd4e875f"
+        },
+        "finished_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\cleanup-0162de85-0648-4492-9d60-349f4f7792ce-finished01.json",
+          "bytes": 401,
+          "sha256": "19e7a617d36190fd72364d414ef4a3c2698a13927ddd956057a7ab95815a98bd"
+        },
+        "all_handles_closed": true
+      },
+      {
+        "started_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\cleanup-34499816-36ad-486c-88d1-a814ef4905b1-started01.json",
+          "bytes": 458,
+          "sha256": "322a64cc6292e0b17889d22398cac02700c8f4def3038f73dba32cfe6998cf3d"
+        },
+        "finished_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\cleanup-34499816-36ad-486c-88d1-a814ef4905b1-finished01.json",
+          "bytes": 401,
+          "sha256": "7351dded7a5b0f4c3a36c88aec242be847e51e5a6f734f6c3301e6bdad57a3ae"
+        },
+        "all_handles_closed": true
+      },
+      {
+        "started_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\cleanup-876c0acb-e9b5-4197-89be-c183bd9aab5b-started01.json",
+          "bytes": 458,
+          "sha256": "390c38dfaa419efa7cfeb50556fd7455f48bf0065bf2b6d4b6421f1e14aee4ce"
+        },
+        "finished_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\cleanup-876c0acb-e9b5-4197-89be-c183bd9aab5b-finished01.json",
+          "bytes": 401,
+          "sha256": "ee6d7876e4c7b8ad244e6bf3556fb4c279aa8143abb8b00bb3f712e81da2dafd"
+        },
+        "all_handles_closed": true
+      },
+      {
+        "started_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\cleanup-a31bb10d-2df0-49e8-909f-4980b9060fe0-started01.json",
+          "bytes": 458,
+          "sha256": "8cbd7dbf28a27ace36afb463a296732467f502e019ee7a885fdd528aefa1d371"
+        },
+        "finished_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\cleanup-a31bb10d-2df0-49e8-909f-4980b9060fe0-finished01.json",
+          "bytes": 401,
+          "sha256": "8ab312378bfa1fc276a505f493d6ef7b2dea76cbad8f10da40f8218c3c20c360"
+        },
+        "all_handles_closed": true
+      },
+      {
+        "started_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\cleanup-b9818d37-b57e-4058-9736-4259e92f0903-started01.json",
+          "bytes": 458,
+          "sha256": "525bf7177be513f908354dfb6b2fd474fbd4668f59f548f61e71de21d6a6edfd"
+        },
+        "finished_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\cleanup-b9818d37-b57e-4058-9736-4259e92f0903-finished01.json",
+          "bytes": 401,
+          "sha256": "120e38d519dab7184379121667ff2547cc64be3d3a1fd66dbf31d72069af8d03"
+        },
+        "all_handles_closed": true
+      },
+      {
+        "started_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\cleanup-d1692a5e-f48e-48a2-be38-62e34c2fdaf2-started01.json",
+          "bytes": 458,
+          "sha256": "93c8e74285ebb764e03d57eff6dccac85ae0356c8895d52cccbdf1b5a68f5747"
+        },
+        "finished_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\cleanup-d1692a5e-f48e-48a2-be38-62e34c2fdaf2-finished01.json",
+          "bytes": 401,
+          "sha256": "14daf24084e2cf8a256ec6adada89e145c3ea4f23c448c1626f65645ff0b0330"
+        },
+        "all_handles_closed": true
+      },
+      {
+        "started_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\cleanup-d2f8eb44-cd43-4ded-8b62-8caba888ea76-started01.json",
+          "bytes": 458,
+          "sha256": "2788ddf16ef06ee361824896967ad8716afe6ea1112263edd02a1d1f32f0a8d5"
+        },
+        "finished_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\cleanup-d2f8eb44-cd43-4ded-8b62-8caba888ea76-finished01.json",
+          "bytes": 401,
+          "sha256": "2db97e03090b07d5281c6b9b2aa5f97505eb2358e240f62864591b6f09401596"
+        },
+        "all_handles_closed": true
+      },
+      {
+        "started_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\cleanup-e82597a2-5a8d-4006-a730-bfb1790e349a-started01.json",
+          "bytes": 458,
+          "sha256": "d4af108b91d6940fe27fd56adb1da0541ca531e1cda8692a0d837951600c119e"
+        },
+        "finished_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\cleanup-e82597a2-5a8d-4006-a730-bfb1790e349a-finished01.json",
+          "bytes": 401,
+          "sha256": "b27368f672a123abc941c0c1767b87675713b15675656a2a423cc1d810618674"
+        },
+        "all_handles_closed": true
+      }
+    ]
+  },
+  "stop": {
+    "exists": true,
+    "status": "STOP_NO_NEXT_SUBMISSION",
+    "reason": "UNKNOWN_COST",
+    "historical_files_written": 0,
+    "unknown_holds_retained_in_full": true,
+    "pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\STOP-before-any-next-submission01.json",
+      "bytes": 534,
+      "sha256": "8a6e1592d803764293148367cb06fb2061c17c2846e6ae0c62dfccc9328d194a"
+    }
+  },
+  "public_receipt_pins": {
+    "controller": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\continuous-preparation\\ROOT_CONTINUOUS_CONTROLLER_ACTUAL05.json",
+      "bytes": 4821,
+      "sha256": "2c810adae2370b443e56fdc8e635919e87a0b80acf20f2ad26552756e6bf6f43"
+    },
+    "budget": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous05\\budget-status-public01.json",
+      "bytes": 1324,
+      "sha256": "cf91ffd95a5dd43dfaaaa873fbcf36bddb9fa94a393a7de51e8ed11b0b3dcb6f"
+    },
+    "runtime_closed": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous05\\runtime-closed-public01.json",
+      "bytes": 1649,
+      "sha256": "6e10f5334e8a52a81251212f04e54f76b1722f4d86efb85b017e105bde8e0349"
+    },
+    "browser": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\browser-continuous05\\real-browser-live-qa-receipt01.json",
+      "bytes": 25917,
+      "sha256": "cb5e31af6694148143698f4ed436a31db0c3fd7a14556d502c003a6f643fc905"
+    },
+    "stop": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\STOP-before-any-next-submission01.json",
+      "bytes": 534,
+      "sha256": "8a6e1592d803764293148367cb06fb2061c17c2846e6ae0c62dfccc9328d194a"
+    },
+    "adapter": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous05\\adapter-public01.jsonl",
+      "bytes": 855,
+      "sha256": "9984dbbddfca129939e47fc2bcd59b27749592545dd8b5f43df630c0230160b9"
+    },
+    "current_guard_release": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\continuous-preparation\\CONTINUOUS_GUARD_RELEASE_ACTUAL05.json",
+      "bytes": 186912,
+      "sha256": "b6dedb0ef4f0c89d54c1f0da00d57aca5345fd4ba73bd9ebbacfdf48a60b9efb"
+    }
+  },
+  "zero_POST_predecessor_finance_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\analysis-preparation\\ACTUAL_CONTINUOUS04_HAIKU_Q3_Q4_FINANCIAL_RESULT02.json",
+    "bytes": 14212,
+    "sha256": "e129653f86699cf16f34619411e7880019319699549dab08f3638703accd71b1"
+  },
+  "authority_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\continuous-preparation\\CONTINUATION_AUTHORIZATION_SCOPE05.json",
+    "bytes": 7498,
+    "sha256": "a010edc9e89efa74476977f56f013df3be50c160139589afe7989e1c8dba6cc0"
+  },
+  "historical_protection": {
+    "old_UNKNOWN_count": 14,
+    "all_old_full_holds_unchanged": true,
+    "historical_submitted_known_costs_and_STOPs_unchanged": true,
+    "historical_Q1_Q2_replayed": false,
+    "old_actual_unknown_total_cost_USD": null,
+    "provider_account_balance_USD": null,
+    "invoice_balance_USD": null,
+    "old_financial_reconstruction_performed": false
+  },
+  "observer_actions": {
+    "model_calls": 0,
+    "API_calls": 0,
+    "database_operations": 0,
+    "main_project_writes": 0,
+    "old_raw_ledger_reads": 0,
+    "old_ledger_writes": 0,
+    "automatic_retries": 0,
+    "raw_log_reads": 0
+  },
+  "limitations": [
+    "Known USD0.00163590 is only the teacher fee subtotal. Checker cost is UNKNOWN; full USD0.03 protection remains held.",
+    "The checker failed with HTTP400/PROVIDER_HTTP_ERROR. No valid full checked answer or exact provider cause is observed. This is not a successful result with only missing billing.",
+    "Finished claims and public adapter retain no provider generation/request IDs; checker safe usage is empty. Existing public IDs cannot support provider billing reconciliation. No supplier query or retransmission was performed.",
+    "Complete DOM and TTFT times are unobserved. Browser timeout is right-censored; Q4 was not executed. No two-question same-worker PASS is established.",
+    "Owned resource cleanup is distinct from failed native leg and unsettled provider cost. Normal CLOSED and fully settled are not claimed.",
+    "Original four-POST/USD0.12 allocation and old protection remain intact. Two unused slots are stopped, with no automatic replay or reallocation."
+  ]
+}

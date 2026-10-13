@@ -1,0 +1,77 @@
+{
+  "at_UTC": "2026-10-08T06:56:29.484437+00:00",
+  "case_id": "case03",
+  "job_id": "2e44c203-cccd-4c9a-8915-f3429f8aad99",
+  "request_id": "35ce7708-c022-49f8-9aa3-2e5c22128b99",
+  "state": "succeeded",
+  "answer_id": "c43a8153-6494-4c51-8cde-260fc7ffe518",
+  "normal_checked_answer_published": true,
+  "actual_physical_POSTs": 2,
+  "actual_persisted_safe_usage_events": [
+    {
+      "sequence": 1,
+      "phase": "start",
+      "attempt_id": "35ce7708-c022-49f8-9aa3-2e5c22128b99:attempt:1",
+      "stage": "generation",
+      "latency_ms": null,
+      "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+      "usage": {},
+      "request_submitted": null,
+      "error_present": false
+    },
+    {
+      "sequence": 2,
+      "phase": "finish",
+      "attempt_id": "35ce7708-c022-49f8-9aa3-2e5c22128b99:attempt:1",
+      "stage": "generation",
+      "latency_ms": 3618,
+      "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+      "usage": {
+        "input_tokens": 9769,
+        "output_tokens": 806,
+        "total_tokens": 10575,
+        "reasoning_tokens": 554,
+        "cache_hit_input_tokens": 0,
+        "cache_miss_input_tokens": 9769,
+        "cost": 0.0049457
+      },
+      "request_submitted": true,
+      "error_present": false
+    },
+    {
+      "sequence": 3,
+      "phase": "start",
+      "attempt_id": "35ce7708-c022-49f8-9aa3-2e5c22128b99:attempt:2",
+      "stage": "joint_check",
+      "latency_ms": null,
+      "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+      "usage": {},
+      "request_submitted": null,
+      "error_present": false
+    },
+    {
+      "sequence": 4,
+      "phase": "finish",
+      "attempt_id": "35ce7708-c022-49f8-9aa3-2e5c22128b99:attempt:2",
+      "stage": "joint_check",
+      "latency_ms": 4092,
+      "configuration_id": "model-settings:74c8201e-aca0-400d-bcc5-5785e24c1c11",
+      "usage": {
+        "input_tokens": 9053,
+        "output_tokens": 1099,
+        "total_tokens": 10152,
+        "reasoning_tokens": 0,
+        "cache_hit_input_tokens": 0,
+        "cache_miss_input_tokens": 9053,
+        "cost": 0.0054634
+      },
+      "request_submitted": true,
+      "error_present": false
+    }
+  ],
+  "known_cost_USD": "0.0104091",
+  "unknown_holds_USD": "0",
+  "unknown_costs_keep_full_call_set_hold": false,
+  "known_cost_within_unresolved_holds_not_added_twice": true,
+  "invoice_or_billing_settlement": null
+}

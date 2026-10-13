@@ -1,0 +1,43 @@
+{
+  "schema": "public_normal_adapter_observation86_v1",
+  "slot": 2,
+  "observation": "RAISED",
+  "exception_type": "ResponseValidationError",
+  "frames": [
+    {
+      "file": "capture_observer86.py",
+      "function": "call",
+      "line": 397
+    },
+    {
+      "file": "parser.py",
+      "function": "strict_json",
+      "line": 51
+    },
+    {
+      "file": "__init__.py",
+      "function": "loads",
+      "line": 359
+    },
+    {
+      "file": "decoder.py",
+      "function": "decode",
+      "line": 345
+    },
+    {
+      "file": "decoder.py",
+      "function": "raw_decode",
+      "line": 361
+    },
+    {
+      "file": "parser.py",
+      "function": "_pairs",
+      "line": 22
+    }
+  ],
+  "exception_message_exported": false,
+  "locals_exported": false,
+  "raw_response_exported": false,
+  "stage": "strict_json",
+  "failure_code": "DUPLICATE_JSON_KEY"
+}

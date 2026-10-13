@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "controls": [
+    {
+      "control": "honest_uncited_negative_bounded_patch_and_complete_recheck",
+      "passed": true,
+      "stages": [
+        "generation",
+        "joint_check",
+        "semantic_repair",
+        "joint_recheck"
+      ],
+      "semantic_defect_codes": [
+        "SOURCE_RELATION_UNSUPPORTED"
+      ],
+      "protected_neighbors": 2,
+      "external_calls": 0
+    },
+    {
+      "control": "negative_final_recheck_never_publishes",
+      "passed": true,
+      "error_code": "SEMANTIC_CHECK_FAILED",
+      "external_calls": 0
+    },
+    {
+      "control": "unknown_unit_hard_rejection",
+      "passed": true,
+      "error_code": "CHECKER_INCONSISTENT",
+      "external_calls": 0
+    },
+    {
+      "control": "unknown_fragment_hard_rejection",
+      "passed": true,
+      "error_code": "CHECKER_INCONSISTENT",
+      "external_calls": 0
+    },
+    {
+      "control": "nonowned_fragment_hard_rejection",
+      "passed": true,
+      "error_code": "CHECKER_INCONSISTENT",
+      "external_calls": 0
+    }
+  ],
+  "authored_scripted_judgments_not_model_quality": true,
+  "schema_or_routing_changes": false,
+  "raw_actual29_modified": false,
+  "main_writes": 0,
+  "network_or_database_calls": 0,
+  "audit_denials": []
+}

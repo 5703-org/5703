@@ -1,0 +1,142 @@
+{
+  "schema": "phase85_case02_independent_public_cause_review_v1",
+  "status": "CAUSE_CONFIRMED_NO_CODE_CHANGE",
+  "created_UTC": "2026-10-11T18:13:53.026923+00:00",
+  "reviewer": "/root/checker82_startup_prewarm",
+  "case_id": "case02",
+  "question_sha256": "0d5d4aa98b479de78b5b3a6264504a12812f9fd6c9ef46f738bce6938608ef4c",
+  "conclusion": "The deterministic clarification fallback strips enhancement_version but retains both checker opt-ins. Recursive GenerationService entry rejects that derived request before any adapter attempt.",
+  "actual_finite_evidence": {
+    "error_code": "CHECKER_OUTPUT_POLICY_INCOMPATIBLE",
+    "all_original_policy_guards_pass": true,
+    "original_ordinary_user_question": true,
+    "needs_clarification": true,
+    "intent": "clarification",
+    "candidate_count": 0,
+    "submitted_count": 0,
+    "provider_posts": 0,
+    "known_cost_USD": "0",
+    "unknown_full_hold_USD": "0",
+    "attempt_starts": 0,
+    "attempt_finishes": 0,
+    "job_state": "failed",
+    "answer_id": null
+  },
+  "source_chain": [
+    {
+      "path": "generation/checked.py",
+      "line": 940,
+      "fact": "legacy_request=replace(request, enhancement_version=None) retains checker_output_policy and checker_payload_policy."
+    },
+    {
+      "path": "generation/checked.py",
+      "line": 995,
+      "fact": "Observed needs_clarification=True selects deterministic fallback; this is the clarification arm, not an independently established factual no-evidence arm."
+    },
+    {
+      "path": "generation/checked.py",
+      "line": 1019,
+      "fact": "Ordinary typed-v5 nonpending fallback recursively calls service.generate with the derived legacy_request."
+    },
+    {
+      "path": "generation/service.py",
+      "line": 47,
+      "fact": "Output-policy validation runs before deterministic programmatic handling."
+    },
+    {
+      "path": "generation/lossless_unit_findings_v1.py",
+      "line": 670,
+      "fact": "Derived enhancement_version=None violates the unchanged opt-in request gate."
+    },
+    {
+      "path": "backend/app/modules/answering/service.py",
+      "line": 2116,
+      "fact": "GenerationOutcome.error is persisted by fail_job and service returns normally, explaining TARGET_EXECUTOR_RETURNED with jobstatefailed."
+    }
+  ],
+  "secondary_guard": {
+    "path": "generation/service.py",
+    "line": 61,
+    "fact": "Clearing only output policy leaves full-input payload opt-in incompatible with enhancement_version=None."
+  },
+  "excluded_interpretations": [
+    "The original request did not fail the ordinary-role or direct-teaching compatibility predicate.",
+    "No teacher or checker was called; this is not a model semantic rejection or quality result.",
+    "No source retrieval success, physical wire proof, or DOM latency success is established."
+  ],
+  "patch_scope_for_later_review": {
+    "derived_fallback_only": {
+      "checker_output_policy": null,
+      "checker_payload_policy": "legacy_fragment_table_v1",
+      "programmatic_only": true
+    },
+    "preserve": [
+      "Original live request and both opt-ins",
+      "All typed V2 request/publication gates",
+      "Existing pending-action reset fields",
+      "Questions, rubric, old receipts, frozen39 source pins and frozen5 controllers"
+    ],
+    "fail_closed": "programmatic_only=True returns PROGRAMMATIC_STATE_INVALID for unexpected state before model transport."
+  },
+  "evidence_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\case02\\recovered85-public.json",
+      "bytes": 3064,
+      "sha256": "3c15bf9d9a486fc6f8de636ba198726d6bb3da9e76661885231d1cf4cf10092f"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\case02\\public-preparation-diagnostic85.json",
+      "bytes": 3453,
+      "sha256": "158f142a30b7f9cec76ae2a3b5c6bb62c84261d1fda5e2a681f652ba4897d37d"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\case02\\public-literal-diagnostic85.json",
+      "bytes": 871,
+      "sha256": "855914fb57a6c019db2c50626b7edfc62f23bd97406cada8647c529b74ebc82e"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\case02\\public-policy-diagnostic85.json",
+      "bytes": 2706,
+      "sha256": "eca14eccbfd5c68cf54d6c39f02d6b86944f76a6e6c86f069012476d0fb16c1a"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\case02\\native-provider70\\final-receipt.json",
+      "bytes": 1019,
+      "sha256": "fa506d6adae71486869c6859585b4bece6bb8c21ac79dfa55bd300dba7f4746f"
+    }
+  ],
+  "public_source_pins": [
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checked.py",
+      "bytes": 166258,
+      "sha256": "fd8f18a8a7dbed449654310fb17086ddb4207069a394ca4ac55cf2db3a6fab8c"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\service.py",
+      "bytes": 29098,
+      "sha256": "e694ec2f919754480b927ac7c48ee966a0d9db3d875ff70a71ad39ba08211fcb"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\lossless_unit_findings_v1.py",
+      "bytes": 32988,
+      "sha256": "0d60cc97701b624e733838ae09abb91e42c4aee6dd63cf2a4c663ae9a8f14ae1"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\answering\\service.py",
+      "bytes": 95312,
+      "sha256": "a8f8e02d156a5d940fa49a16558b26f87f0816b61a2671d9efa0b615d226c1b0"
+    }
+  ],
+  "actions_by_reviewer": {
+    "Main_writes": 0,
+    "runtime_controller_writes": 0,
+    "DB_reads_or_writes": 0,
+    "auth_reads": 0,
+    "network_calls": 0,
+    "tests_executed": 0,
+    "model_loads": 0,
+    "provider_posts": 0
+  },
+  "remaining_question": "The separate reason the conversation preparer requested clarification is not diagnosed by this finite projection.",
+  "case02_retry_authorized_or_performed_by_this_review": false
+}

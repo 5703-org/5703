@@ -1,0 +1,152 @@
+{
+  "schema": "phase85_independent_case_assessment_v1",
+  "created_utc": "2026-10-11T17:56:22.180414+00:00",
+  "status": "UNSUCCESSFUL_DELIVERY_BEFORE_PROVIDER",
+  "case_id": "case01",
+  "question_id": "development85_01",
+  "question_sha256": "9a5b5edb9fc79fc6f9da2ed9f631ba9c574827d1220ada7de82064592d538b08",
+  "review_kind": "Frozen prospective exposed AI source rubric; no Human Gold or independent paid judge",
+  "frozen_rubric_unchanged": true,
+  "input_pins": [
+    {
+      "path": "5703-checker85-quality\\questions85-frozen.json",
+      "bytes": 4261,
+      "sha256": "9d35553d2b973e082152e0d119c1bdbff3102ef55a4936d47fe93d337d6f19da"
+    },
+    {
+      "path": "5703-checker85-quality\\rubric85-frozen.json",
+      "bytes": 44448,
+      "sha256": "7b083b29202be757683944e08ec508844440403dcbccf1c85f44e983f97964d6"
+    },
+    {
+      "path": "5703-checker85-quality\\freeze85-manifest.json",
+      "bytes": 3397,
+      "sha256": "ecbb497f1be19c56a0b9dcb9f27c606097375c34d12c106700ef2d32ef14497e"
+    },
+    {
+      "path": "5703-checker85-runtime\\runtime-freeze85.json",
+      "bytes": 1940,
+      "sha256": "c51774989e767509c253c58f1340084f275c10197797a1eecb793558e1e82588"
+    },
+    {
+      "path": "5703-checker85-runtime\\case01\\journey-receipt85.json",
+      "bytes": 1276,
+      "sha256": "c34f4892a304994122c7cc6e0147eb4a707b802d4570461cecc9d7d4e05ceab9"
+    },
+    {
+      "path": "5703-checker85-runtime\\case01\\api-closure77.json",
+      "bytes": 703,
+      "sha256": "390948f6f97f8fe197279cc9052e81b0cb5bda91efd2784072fec5e3af5c9b18"
+    },
+    {
+      "path": "5703-checker85-runtime\\case01\\startup-prewarm85.json",
+      "bytes": 622,
+      "sha256": "2e7a635c441236f1b3fc610037dd45025b4584531a68706da2636f80c858b2ea"
+    }
+  ],
+  "observed_delivery": {
+    "stage": "SINGLE_SEND",
+    "client_error_code": "LOCAL_API_HTTP_STATUS",
+    "raw_error_not_exported": true,
+    "message_post_attempts": 1,
+    "accepted_request": null,
+    "worker": null,
+    "new_message_submissions": 0,
+    "automatic_retries": 0,
+    "published_answer": false,
+    "model_output_present": false,
+    "recovered_model_pack_present": false,
+    "browser_used": false
+  },
+  "failure_classification": {
+    "class": "CLIENT_API_PROTOCOL_REJECTION_PRE_PROVIDER",
+    "exact_rejection_payload_or_status": "Not exported in supplied public receipts; Root diagnosing exact local protocol",
+    "source_unavailability": false,
+    "source_unavailability_assessed": false,
+    "generation_failure": false,
+    "generation_reached": false,
+    "critical_model_false_positive_observed": false,
+    "critical_model_false_positive_basis": "No model judgment or answer exists, so no model PASS false positive was observable"
+  },
+  "essential_fact_assessments": [
+    {
+      "fact_id": "Q01_F1",
+      "status": "not_evaluable_due_to_failure",
+      "requirement": "The spindle/M checkpoint checks correct attachment of all sister chromatids to spindle microtubules.",
+      "citation_support_status": "not_assessed_no_answer",
+      "scientific_support_result": null
+    },
+    {
+      "fact_id": "Q01_F2",
+      "status": "not_evaluable_due_to_failure",
+      "requirement": "The checkpoint prevents proceeding because sister-chromatid separation in anaphase is irreversible.",
+      "citation_support_status": "not_assessed_no_answer",
+      "scientific_support_result": null
+    },
+    {
+      "fact_id": "Q01_F3",
+      "status": "not_evaluable_due_to_failure",
+      "requirement": "Kinetochores of each sister-chromatid pair must be firmly attached to spindle fibers from opposite cell poles before proceeding; preserve the each/all and opposite-pole conditions.",
+      "citation_support_status": "not_assessed_no_answer",
+      "scientific_support_result": null
+    }
+  ],
+  "source_relation_quantity_negation_units_assessment": "Unassessed: no teacher answer, checker input, actual retrieved evidence or typed judgment for this case",
+  "financial": {
+    "provider_posts": 0,
+    "known_cost_USD": "0",
+    "UNKNOWN_cost_USD": "0",
+    "evidence_basis": "Root actual-runtime attestation of pre-provider rejection; public receipts independently confirm accepted=null/worker=null. No provider financial receipt exists for this rejected submission.",
+    "independent_provider_ledger_verification": false,
+    "cohort_case_claim_consumed": true,
+    "case_claim_consumption_basis": "Root runtime attestation; case is not retried or replaced"
+  },
+  "timing": {
+    "valid_full_DOM_sample": false,
+    "full_DOM_n": 0,
+    "send_to_first_prose_ms": null,
+    "send_to_complete_dom_ms": null,
+    "TTFT_ms": null,
+    "stable_p95_ms": null,
+    "startup_prepare_ms": 10111.841,
+    "startup_boundary": "before normal API listener and Send",
+    "startup_is_not_answer_latency": true
+  },
+  "closure": {
+    "owned_threads_closed": true,
+    "five_old_metadata_groups_unchanged": {
+      "sessions": true,
+      "jobs": true,
+      "answer_requests": true,
+      "answers": true,
+      "active_model_configurations": true
+    },
+    "api_close_status": 200
+  },
+  "cohort_accounting": {
+    "planned_frozen_questions": 8,
+    "attempted_questions": 1,
+    "unsuccessful_questions": 1,
+    "successful_delivery_questions": 0,
+    "unrun_questions": 7,
+    "failed_case_remains_in_denominator": true,
+    "question_replacement": false,
+    "case01_retry_authorized_by_review": false
+  },
+  "science_pass": false,
+  "online_model_gate_pass": null,
+  "overall_case_pass": false,
+  "next_decision": "GO_TO_NEXT_FROZEN_ITEM_AFTER_CLIENT_PROTOCOL_FIX",
+  "next_decision_conditions": [
+    "Root completes local client protocol fix without changing frozen question content or source rubric",
+    "No retry or replacement of case01; next item is frozen development85_02",
+    "Default feature enablement remains off; existing gates and budget remain unchanged",
+    "Any later modelPASS with critical unsupported fact/quantity/negation/unit error requires STOP before additional questions"
+  ],
+  "reviewer_activity": {
+    "Main_writes": 0,
+    "DB_auth_network_model_calls": 0,
+    "tests": 0,
+    "private_scopes_or_credentials_read": false
+  }
+}

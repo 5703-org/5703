@@ -1,0 +1,235 @@
+{
+  "status": "ACTUAL_FREE_CONTRACT_NORMALIZATION_PRESERVATION_PASS",
+  "root_cause": "Review02 extracted claims from raw local patch, bypassing existing Text.strip_whitespace contract applied before production claim extraction",
+  "source_lines": [
+    {
+      "file": "contracts/models.py",
+      "line": 15,
+      "meaning": "Text has StringConstraints(strip_whitespace=True)"
+    },
+    {
+      "file": "contracts/models.py",
+      "line": 95,
+      "meaning": "ChatResponseV1.answer_text uses Text"
+    },
+    {
+      "file": "generation/checked.py",
+      "line": 1185,
+      "meaning": "TeachingDraftV5 alias validates the raw draft before extracting claims"
+    },
+    {
+      "file": "generation/parser.py",
+      "line": 105,
+      "meaning": "Public response validates under the same Text contract"
+    }
+  ],
+  "input_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\attempt-evaluation-conditional-preparation01\\retained-checker-diagnostic-preparation01\\fresh-targeted-patch-recheck-preparation01\\actual-free-current-render03\\ACTUAL_GENERATED_CHECKER_INPUT03.json",
+      "bytes": 85218,
+      "sha256": "d19a095f9c899e3347aa41a1323c23f9509bcaea8d499e8f4861441252967fe6"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\attempt-evaluation-conditional-preparation01\\retained-checker-diagnostic-preparation01\\fresh-targeted-patch-recheck-preparation01\\actual-free-current-render03\\ACTUAL_FREE_RENDER_DIFFERENCE03.json",
+      "bytes": 5719,
+      "sha256": "71be2fad7aa3a106167eff7bc31fb6bf5cad52c20e191510172167ddcd712ea4"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\attempt-evaluation-conditional-preparation01\\retained-checker-diagnostic-preparation01\\fresh-targeted-patch-recheck-preparation01\\RECHECK_INPUT_REVIEW02.json",
+      "bytes": 85768,
+      "sha256": "81b5318794dfd7c010d7aa17741a8ce5760b62dcf6e7e0c7be3e0ea0144a9a7a"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\attempt-evaluation-conditional-preparation01\\retained-checker-diagnostic-preparation01\\fresh-targeted-patch-recheck-preparation01\\checker_recheck_targeted03.py",
+      "bytes": 22095,
+      "sha256": "421684b6c207359580c9222835897b0803b6e46b09d568d1a06e4421b27f6f10"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\attempt-evaluation-conditional-preparation01\\retained-checker-diagnostic-preparation01\\fresh-targeted-patch-recheck-preparation01\\REPAIRED_TEACHER_RAW01.txt",
+      "bytes": 1734,
+      "sha256": "b0218b9309645617bf5fb213eecf238aa570983c44602ed3e86a9f2a8145042f"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\attempt-evaluation-conditional-preparation01\\retained-checker-diagnostic-preparation01\\fresh-targeted-patch-recheck-preparation01\\FRESH_APPROVED_FIVE_SPANS01.json",
+      "bytes": 2000,
+      "sha256": "4fe1f4e143521a873dce2ae0a7877259f0a73adb63dfcb0583728895386324cd"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\attempt-evaluation-conditional-preparation01\\actual-checker-repaired03\\result-public01.json",
+      "bytes": 3006,
+      "sha256": "e6868d39b0a95ad7dd8193196e7aa4c2c5684b767b843466aad0ef8d0e77cadc"
+    }
+  ],
+  "exact_decoded_differences": [
+    {
+      "path": [
+        "CLAIMS",
+        0,
+        "end"
+      ],
+      "reason": "value",
+      "expected": 205,
+      "actual": 204
+    },
+    {
+      "path": [
+        "CLAIMS",
+        0,
+        "start"
+      ],
+      "reason": "value",
+      "expected": 1,
+      "actual": 0
+    },
+    {
+      "path": [
+        "CLAIMS",
+        1,
+        "end"
+      ],
+      "reason": "value",
+      "expected": 314,
+      "actual": 313
+    },
+    {
+      "path": [
+        "CLAIMS",
+        1,
+        "start"
+      ],
+      "reason": "value",
+      "expected": 206,
+      "actual": 205
+    },
+    {
+      "path": [
+        "CLAIMS",
+        2,
+        "end"
+      ],
+      "reason": "value",
+      "expected": 449,
+      "actual": 448
+    },
+    {
+      "path": [
+        "CLAIMS",
+        2,
+        "start"
+      ],
+      "reason": "value",
+      "expected": 315,
+      "actual": 314
+    },
+    {
+      "path": [
+        "CLAIMS",
+        3,
+        "end"
+      ],
+      "reason": "value",
+      "expected": 660,
+      "actual": 659
+    },
+    {
+      "path": [
+        "CLAIMS",
+        3,
+        "start"
+      ],
+      "reason": "value",
+      "expected": 450,
+      "actual": 449
+    },
+    {
+      "path": [
+        "CLAIMS",
+        4,
+        "end"
+      ],
+      "reason": "value",
+      "expected": 867,
+      "actual": 866
+    },
+    {
+      "path": [
+        "CLAIMS",
+        4,
+        "start"
+      ],
+      "reason": "value",
+      "expected": 661,
+      "actual": 660
+    },
+    {
+      "path": [
+        "CLAIMS",
+        5,
+        "end"
+      ],
+      "reason": "value",
+      "expected": 1134,
+      "actual": 1133
+    },
+    {
+      "path": [
+        "CLAIMS",
+        5,
+        "start"
+      ],
+      "reason": "value",
+      "expected": 868,
+      "actual": 867
+    },
+    {
+      "path": [
+        "CLAIMS",
+        6,
+        "end"
+      ],
+      "reason": "value",
+      "expected": 1298,
+      "actual": 1297
+    },
+    {
+      "path": [
+        "CLAIMS",
+        6,
+        "start"
+      ],
+      "reason": "value",
+      "expected": 1135,
+      "actual": 1134
+    },
+    {
+      "path": [
+        "PROPOSED_DELIVERY",
+        "response",
+        "answer_text"
+      ],
+      "reason": "value",
+      "expected": " The overall purpose of the light-dependent reactions is to convert light energy into chemical energy, and this chemical energy is used by the Calvin cycle to fuel the assembly of sugar molecules [ev_008]. Photosystems absorb light and use electron transport chains to convert energy into chemical energy [ev_002]. Photosystem I absorbs a second photon, resulting in the formation of NADPH, an energy carrier for the Calvin cycle reactions [ev_010]. After energy from the sun is converted into chemical energy and temporarily stored in ATP and NADPH molecules, the cell has the fuel needed to build carbohydrate molecules for long-term energy storage [ev_003]. Specifically, light-dependent reactions harness energy from the sun to produce ATP and NADPH, and these energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place [ev_007]. The carriers that move energy from the light-dependent reactions to the Calvin cycle are described as \"full\" because they bring energy; after the energy is released, the \"empty\" carriers return to the light-dependent reactions to obtain more energy [ev_001][ev_005]. Once in the stroma, the Calvin cycle uses the energy in ATP and NADPH to convert the three-carbon molecules into G3P, which builds carbohydrate molecules [ev_010].",
+      "actual": "The overall purpose of the light-dependent reactions is to convert light energy into chemical energy, and this chemical energy is used by the Calvin cycle to fuel the assembly of sugar molecules [ev_008]. Photosystems absorb light and use electron transport chains to convert energy into chemical energy [ev_002]. Photosystem I absorbs a second photon, resulting in the formation of NADPH, an energy carrier for the Calvin cycle reactions [ev_010]. After energy from the sun is converted into chemical energy and temporarily stored in ATP and NADPH molecules, the cell has the fuel needed to build carbohydrate molecules for long-term energy storage [ev_003]. Specifically, light-dependent reactions harness energy from the sun to produce ATP and NADPH, and these energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place [ev_007]. The carriers that move energy from the light-dependent reactions to the Calvin cycle are described as \"full\" because they bring energy; after the energy is released, the \"empty\" carriers return to the light-dependent reactions to obtain more energy [ev_001][ev_005]. Once in the stroma, the Calvin cycle uses the energy in ATP and NADPH to convert the three-carbon molecules into G3P, which builds carbohydrate molecules [ev_010]."
+    }
+  ],
+  "differences_count": 15,
+  "single_leading_space_removed_by_contract": true,
+  "seven_body_claim_offset_pairs_shifted_by_one": true,
+  "claim_text_IDs_citations_sources_and_all_other_fields_exact": true,
+  "five_protected_claims_exact_after_normalization": true,
+  "raw_candidate_unchanged": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\attempt-evaluation-conditional-preparation01\\retained-checker-diagnostic-preparation01\\fresh-targeted-patch-recheck-preparation01\\REPAIRED_TEACHER_RAW01.txt",
+    "bytes": 1734,
+    "sha256": "b0218b9309645617bf5fb213eecf238aa570983c44602ed3e86a9f2a8145042f"
+  },
+  "sources_fragments_exact_count": 67,
+  "sources_evidence_ID_count": 13,
+  "extra_personal_history_profile_memory_or_user_data_added": false,
+  "actual_current_messages_sha256": "941081731df1114896429a1fa30707fc778a10f7703cb13e1bd7e037dbbd2045",
+  "actual_render_provenance": "Root's zero-POST current GenerationService capture; this proof then validates it locally through the exact same TeachingDraftV5 contract and repository lossless inverse",
+  "source_schema_scientific_gates_relaxed": false,
+  "old03_was_prePOST_block_not_paid_model_retry": true,
+  "physical_POSTs": 0,
+  "database_reads_or_writes": 0,
+  "main_repository_writes": 0
+}

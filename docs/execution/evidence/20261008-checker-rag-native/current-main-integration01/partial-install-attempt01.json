@@ -1,0 +1,14 @@
+{
+  "status": "PARTIAL_INSTALL_SELF_HELD_WINDOWS_READBACK_LOCK_CONFLICT",
+  "detected_at_UTC": "2026-10-08T08:36:21.960180+00:00",
+  "after_state_files": 9,
+  "before_state_files": [
+    "generation/checked.py"
+  ],
+  "original_backups_preserved": true,
+  "approval_review_rejected": false,
+  "tool_command_chunk": "473a62",
+  "provider_calls": 0,
+  "DB_operations": 0,
+  "cause": "An independent Path.read_bytes handle was opened while this process held a Windows byte lock. Readback is corrected to use the same locked handle."
+}

@@ -1,0 +1,3560 @@
+{
+  "schema_version": "atomic_support_development_batch65_v1",
+  "status": "CLOSED_EIGHT_CASE_DEVELOPMENT_BATCH_WITH_RETAINED_SEMANTIC_AND_WITNESS_FAILURES",
+  "started_UTC": "2026-10-11T06:26:29.246769+00:00",
+  "closed_UTC": "2026-10-11T06:27:24.375603+00:00",
+  "protocol": {
+    "recipient": "https://openrouter.ai/api/v1/chat/completions",
+    "model": "google/gemini-3.5-flash-lite",
+    "route_profile": "gemini35_google_vertex_high_research_v1",
+    "provider": {
+      "order": [
+        "google-vertex/global"
+      ],
+      "only": [
+        "google-vertex/global"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 0.3,
+        "completion": 2.5
+      }
+    },
+    "reasoning": {
+      "effort": "high"
+    },
+    "timeout_seconds": 60,
+    "max_POSTs": 12,
+    "base_POSTs": 8,
+    "max_repair_POSTs": 4,
+    "max_POSTs_per_case": 2,
+    "base_output_ceiling": 4096,
+    "repair_output_ceiling": 8192,
+    "request_order": "all eight base cases first; then first up to four settled truncated bases in original case order",
+    "repair_trigger": "only OUTPUT_TRUNCATED or finish_reason=length; never semantic labels/schema/binding outcomes",
+    "transport_or_auth_retries": 0,
+    "batch_cap_USD": "0.50",
+    "conservative_combined_cap_USD": "0.50",
+    "hold_rule": "whole UTF8 request bytes +4096 as input tokens at 0.3/M; total output incl reasoning at 2.5/M",
+    "planned_worst_reserve_USD": "0.1970998"
+  },
+  "fixture_bundle": {
+    "schema_version": "atomic65_fixture_bundle_v1",
+    "purpose": "Eight small synthetic development inputs. No learner, personal, authentication or external-source data.",
+    "coordinate_system": "Unicode codepoint offsets; start inclusive, end exclusive.",
+    "wire_input_policy": "Only a case's atomic_input is model input. source_snapshots stay local for exact quote/offset validation. No expectations file, pair/category labels or reviewer judgments enter wire.",
+    "cases": [
+      {
+        "case_id": "case_01",
+        "atomic_input": {
+          "schema_version": "atomic_support_input_v1",
+          "atom_id": "A01",
+          "proposition": "Cart K's average velocity in trial T was 2 m/s east.",
+          "required_conditions": [
+            {
+              "condition_id": "C0",
+              "kind": "proposition",
+              "description": "Cart K's average velocity in trial T was 2 m/s east."
+            },
+            {
+              "condition_id": "C1",
+              "kind": "qualifier",
+              "description": "Cart K's displacement in trial T was 4 m east."
+            },
+            {
+              "condition_id": "C2",
+              "kind": "qualifier",
+              "description": "Cart K's elapsed time in trial T was 2 s."
+            },
+            {
+              "condition_id": "C3",
+              "kind": "identity",
+              "description": "The displacement and elapsed-time entries identify the same cart K and trial T."
+            }
+          ],
+          "actual_citations": [
+            {
+              "fragment_id": "F01",
+              "evidence_id": "E01",
+              "source_id": "S01",
+              "start": 15,
+              "end": 130,
+              "exact_text": "Cart K, trial T: displacement 4 m east; average velocity = displacement / elapsed time for the same cart and trial."
+            },
+            {
+              "fragment_id": "F02",
+              "evidence_id": "E02",
+              "source_id": "S02",
+              "start": 15,
+              "end": 79,
+              "exact_text": "Cart K, trial T: elapsed time 2 s. Average velocity: 2 m/s east."
+            }
+          ]
+        },
+        "source_snapshots": {
+          "S01": {
+            "evidence_id": "E01",
+            "exact_text": "Source S01 · 🟦\nCart K, trial T: displacement 4 m east; average velocity = displacement / elapsed time for the same cart and trial.\nEnd S01."
+          },
+          "S02": {
+            "evidence_id": "E02",
+            "exact_text": "Source S02 · 🟦\nCart K, trial T: elapsed time 2 s. Average velocity: 2 m/s east.\nEnd S02."
+          }
+        }
+      },
+      {
+        "case_id": "case_02",
+        "atomic_input": {
+          "schema_version": "atomic_support_input_v1",
+          "atom_id": "A02",
+          "proposition": "Cart K's average velocity in trial T was 2 m/s east.",
+          "required_conditions": [
+            {
+              "condition_id": "C0",
+              "kind": "proposition",
+              "description": "Cart K's average velocity in trial T was 2 m/s east."
+            },
+            {
+              "condition_id": "C1",
+              "kind": "qualifier",
+              "description": "Cart K's displacement in trial T was 4 m east."
+            },
+            {
+              "condition_id": "C2",
+              "kind": "qualifier",
+              "description": "Cart K's elapsed time in trial T was 2 s."
+            },
+            {
+              "condition_id": "C3",
+              "kind": "identity",
+              "description": "The displacement and elapsed-time entries identify the same cart K and trial T."
+            }
+          ],
+          "actual_citations": [
+            {
+              "fragment_id": "F01",
+              "evidence_id": "E01",
+              "source_id": "S01",
+              "start": 15,
+              "end": 130,
+              "exact_text": "Cart K, trial T: displacement 4 m east; average velocity = displacement / elapsed time for the same cart and trial."
+            },
+            {
+              "fragment_id": "F02",
+              "evidence_id": "E02",
+              "source_id": "S02",
+              "start": 15,
+              "end": 79,
+              "exact_text": "Cart K, trial T: elapsed time 4 s. Average velocity: 1 m/s east."
+            }
+          ]
+        },
+        "source_snapshots": {
+          "S01": {
+            "evidence_id": "E01",
+            "exact_text": "Source S01 · 🟦\nCart K, trial T: displacement 4 m east; average velocity = displacement / elapsed time for the same cart and trial.\nEnd S01."
+          },
+          "S02": {
+            "evidence_id": "E02",
+            "exact_text": "Source S02 · 🟦\nCart K, trial T: elapsed time 4 s. Average velocity: 1 m/s east.\nEnd S02."
+          }
+        }
+      },
+      {
+        "case_id": "case_03",
+        "atomic_input": {
+          "schema_version": "atomic_support_input_v1",
+          "atom_id": "A03",
+          "proposition": "Cart K's average velocity in trial T was 2 m/s east.",
+          "required_conditions": [
+            {
+              "condition_id": "C0",
+              "kind": "proposition",
+              "description": "Cart K's average velocity in trial T was 2 m/s east."
+            },
+            {
+              "condition_id": "C1",
+              "kind": "qualifier",
+              "description": "Cart K's displacement in trial T was 4 m east."
+            },
+            {
+              "condition_id": "C2",
+              "kind": "qualifier",
+              "description": "Cart K's elapsed time in trial T was 2 s."
+            },
+            {
+              "condition_id": "C3",
+              "kind": "identity",
+              "description": "The displacement and elapsed-time entries identify the same cart K and trial T."
+            }
+          ],
+          "actual_citations": [
+            {
+              "fragment_id": "F01",
+              "evidence_id": "E01",
+              "source_id": "S01",
+              "start": 15,
+              "end": 130,
+              "exact_text": "Cart K, trial T: displacement 4 m east; average velocity = displacement / elapsed time for the same cart and trial."
+            },
+            {
+              "fragment_id": "F02",
+              "evidence_id": "E02",
+              "source_id": "S02",
+              "start": 15,
+              "end": 64,
+              "exact_text": "Cart K, trial T: elapsed-time value not recorded."
+            }
+          ]
+        },
+        "source_snapshots": {
+          "S01": {
+            "evidence_id": "E01",
+            "exact_text": "Source S01 · 🟦\nCart K, trial T: displacement 4 m east; average velocity = displacement / elapsed time for the same cart and trial.\nEnd S01."
+          },
+          "S02": {
+            "evidence_id": "E02",
+            "exact_text": "Source S02 · 🟦\nCart K, trial T: elapsed-time value not recorded.\nEnd S02."
+          }
+        }
+      },
+      {
+        "case_id": "case_04",
+        "atomic_input": {
+          "schema_version": "atomic_support_input_v1",
+          "atom_id": "A04",
+          "proposition": "Cart K's average velocity in trial T was 2 m/s east.",
+          "required_conditions": [
+            {
+              "condition_id": "C0",
+              "kind": "proposition",
+              "description": "Cart K's average velocity in trial T was 2 m/s east."
+            },
+            {
+              "condition_id": "C1",
+              "kind": "qualifier",
+              "description": "Cart K's displacement in trial T was 4 m east."
+            },
+            {
+              "condition_id": "C2",
+              "kind": "qualifier",
+              "description": "Cart K's elapsed time in trial T was 2 s."
+            },
+            {
+              "condition_id": "C3",
+              "kind": "identity",
+              "description": "The displacement and elapsed-time entries identify the same cart K and trial T."
+            }
+          ],
+          "actual_citations": [
+            {
+              "fragment_id": "F01",
+              "evidence_id": "E01",
+              "source_id": "S01",
+              "start": 15,
+              "end": 130,
+              "exact_text": "Cart K, trial T: displacement 4 m east; average velocity = displacement / elapsed time for the same cart and trial."
+            },
+            {
+              "fragment_id": "F02",
+              "evidence_id": "E02",
+              "source_id": "S02",
+              "start": 15,
+              "end": 99,
+              "exact_text": "Elapsed time: 2 s. Cart and trial identifiers for this time entry were not recorded."
+            }
+          ]
+        },
+        "source_snapshots": {
+          "S01": {
+            "evidence_id": "E01",
+            "exact_text": "Source S01 · 🟦\nCart K, trial T: displacement 4 m east; average velocity = displacement / elapsed time for the same cart and trial.\nEnd S01."
+          },
+          "S02": {
+            "evidence_id": "E02",
+            "exact_text": "Source S02 · 🟦\nElapsed time: 2 s. Cart and trial identifiers for this time entry were not recorded.\nEnd S02."
+          }
+        }
+      },
+      {
+        "case_id": "case_05",
+        "atomic_input": {
+          "schema_version": "atomic_support_input_v1",
+          "atom_id": "A05",
+          "proposition": "Record R7 satisfies the completion rule in snapshot V.",
+          "required_conditions": [
+            {
+              "condition_id": "C0",
+              "kind": "proposition",
+              "description": "Record R7 satisfies the completion rule in snapshot V."
+            },
+            {
+              "condition_id": "C1",
+              "kind": "qualifier",
+              "description": "Record R7 has status done in snapshot V."
+            },
+            {
+              "condition_id": "C2",
+              "kind": "qualifier",
+              "description": "Record R7 has validation pass in snapshot V."
+            },
+            {
+              "condition_id": "C3",
+              "kind": "identity",
+              "description": "The status and validation entries identify the same record R7 and snapshot V."
+            }
+          ],
+          "actual_citations": [
+            {
+              "fragment_id": "F01",
+              "evidence_id": "E01",
+              "source_id": "S01",
+              "start": 15,
+              "end": 127,
+              "exact_text": "Snapshot V, record R7: status done. Rule: complete iff done AND validation pass on the same record and snapshot."
+            },
+            {
+              "fragment_id": "F02",
+              "evidence_id": "E02",
+              "source_id": "S02",
+              "start": 15,
+              "end": 89,
+              "exact_text": "Snapshot V, record R7: validation pass. Completion rule outcome: complete."
+            }
+          ]
+        },
+        "source_snapshots": {
+          "S01": {
+            "evidence_id": "E01",
+            "exact_text": "Source S01 · 🟦\nSnapshot V, record R7: status done. Rule: complete iff done AND validation pass on the same record and snapshot.\nEnd S01."
+          },
+          "S02": {
+            "evidence_id": "E02",
+            "exact_text": "Source S02 · 🟦\nSnapshot V, record R7: validation pass. Completion rule outcome: complete.\nEnd S02."
+          }
+        }
+      },
+      {
+        "case_id": "case_06",
+        "atomic_input": {
+          "schema_version": "atomic_support_input_v1",
+          "atom_id": "A06",
+          "proposition": "Record R7 satisfies the completion rule in snapshot V.",
+          "required_conditions": [
+            {
+              "condition_id": "C0",
+              "kind": "proposition",
+              "description": "Record R7 satisfies the completion rule in snapshot V."
+            },
+            {
+              "condition_id": "C1",
+              "kind": "qualifier",
+              "description": "Record R7 has status done in snapshot V."
+            },
+            {
+              "condition_id": "C2",
+              "kind": "qualifier",
+              "description": "Record R7 has validation pass in snapshot V."
+            },
+            {
+              "condition_id": "C3",
+              "kind": "identity",
+              "description": "The status and validation entries identify the same record R7 and snapshot V."
+            }
+          ],
+          "actual_citations": [
+            {
+              "fragment_id": "F01",
+              "evidence_id": "E01",
+              "source_id": "S01",
+              "start": 15,
+              "end": 127,
+              "exact_text": "Snapshot V, record R7: status done. Rule: complete iff done AND validation pass on the same record and snapshot."
+            },
+            {
+              "fragment_id": "F02",
+              "evidence_id": "E02",
+              "source_id": "S02",
+              "start": 15,
+              "end": 93,
+              "exact_text": "Snapshot V, record R7: validation fail. Completion rule outcome: not complete."
+            }
+          ]
+        },
+        "source_snapshots": {
+          "S01": {
+            "evidence_id": "E01",
+            "exact_text": "Source S01 · 🟦\nSnapshot V, record R7: status done. Rule: complete iff done AND validation pass on the same record and snapshot.\nEnd S01."
+          },
+          "S02": {
+            "evidence_id": "E02",
+            "exact_text": "Source S02 · 🟦\nSnapshot V, record R7: validation fail. Completion rule outcome: not complete.\nEnd S02."
+          }
+        }
+      },
+      {
+        "case_id": "case_07",
+        "atomic_input": {
+          "schema_version": "atomic_support_input_v1",
+          "atom_id": "A07",
+          "proposition": "Record R7 satisfies the completion rule in snapshot V.",
+          "required_conditions": [
+            {
+              "condition_id": "C0",
+              "kind": "proposition",
+              "description": "Record R7 satisfies the completion rule in snapshot V."
+            },
+            {
+              "condition_id": "C1",
+              "kind": "qualifier",
+              "description": "Record R7 has status done in snapshot V."
+            },
+            {
+              "condition_id": "C2",
+              "kind": "qualifier",
+              "description": "Record R7 has validation pass in snapshot V."
+            },
+            {
+              "condition_id": "C3",
+              "kind": "identity",
+              "description": "The status and validation entries identify the same record R7 and snapshot V."
+            }
+          ],
+          "actual_citations": [
+            {
+              "fragment_id": "F01",
+              "evidence_id": "E01",
+              "source_id": "S01",
+              "start": 15,
+              "end": 127,
+              "exact_text": "Snapshot V, record R7: status done. Rule: complete iff done AND validation pass on the same record and snapshot."
+            },
+            {
+              "fragment_id": "F02",
+              "evidence_id": "E02",
+              "source_id": "S02",
+              "start": 15,
+              "end": 68,
+              "exact_text": "Snapshot V, record R7: validation value not recorded."
+            }
+          ]
+        },
+        "source_snapshots": {
+          "S01": {
+            "evidence_id": "E01",
+            "exact_text": "Source S01 · 🟦\nSnapshot V, record R7: status done. Rule: complete iff done AND validation pass on the same record and snapshot.\nEnd S01."
+          },
+          "S02": {
+            "evidence_id": "E02",
+            "exact_text": "Source S02 · 🟦\nSnapshot V, record R7: validation value not recorded.\nEnd S02."
+          }
+        }
+      },
+      {
+        "case_id": "case_08",
+        "atomic_input": {
+          "schema_version": "atomic_support_input_v1",
+          "atom_id": "A08",
+          "proposition": "Record R7 satisfies the completion rule in snapshot V.",
+          "required_conditions": [
+            {
+              "condition_id": "C0",
+              "kind": "proposition",
+              "description": "Record R7 satisfies the completion rule in snapshot V."
+            },
+            {
+              "condition_id": "C1",
+              "kind": "qualifier",
+              "description": "Record R7 has status done in snapshot V."
+            },
+            {
+              "condition_id": "C2",
+              "kind": "qualifier",
+              "description": "Record R7 has validation pass in snapshot V."
+            },
+            {
+              "condition_id": "C3",
+              "kind": "identity",
+              "description": "The status and validation entries identify the same record R7 and snapshot V."
+            }
+          ],
+          "actual_citations": [
+            {
+              "fragment_id": "F01",
+              "evidence_id": "E01",
+              "source_id": "S01",
+              "start": 15,
+              "end": 127,
+              "exact_text": "Snapshot V, record R7: status done. Rule: complete iff done AND validation pass on the same record and snapshot."
+            },
+            {
+              "fragment_id": "F02",
+              "evidence_id": "E02",
+              "source_id": "S02",
+              "start": 15,
+              "end": 109,
+              "exact_text": "Validation: pass. Record and snapshot identifiers for this validation entry were not recorded."
+            }
+          ]
+        },
+        "source_snapshots": {
+          "S01": {
+            "evidence_id": "E01",
+            "exact_text": "Source S01 · 🟦\nSnapshot V, record R7: status done. Rule: complete iff done AND validation pass on the same record and snapshot.\nEnd S01."
+          },
+          "S02": {
+            "evidence_id": "E02",
+            "exact_text": "Source S02 · 🟦\nValidation: pass. Record and snapshot identifiers for this validation entry were not recorded.\nEnd S02."
+          }
+        }
+      }
+    ]
+  },
+  "independently_preregistered_AI_standard": {
+    "schema_version": "independent_atomic65_preregistered_standards_v1",
+    "frozen_at_utc": "2026-10-11T06:15:12.498538+00:00",
+    "reviewer": "independent AI reviewer",
+    "label_provenance": "AI-authored development expectations derived independently from the frozen invented inputs",
+    "human_rating": null,
+    "Gold_or_heldout": false,
+    "model_results_read_before_freeze": false,
+    "other_reviewer_expectations_read_before_freeze": false,
+    "fixture_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic65-fixtures\\cases65.json",
+    "fixture_sha256": "11bd991f6bbc38af885cc8348552f5c73aa324370953184305e61f3a50960143",
+    "input_source_ownership_and_Unicode_offsets_checked": true,
+    "provider_requests": 0,
+    "credential_reads": 0,
+    "database_calls": 0,
+    "Main_writes": 0,
+    "expected_overall_counts": {
+      "supported": 2,
+      "unsupported": 2,
+      "uncertain": 4
+    },
+    "cases": [
+      {
+        "case_id": "case_01",
+        "atom_id": "A01",
+        "expected_overall_verdict": "supported",
+        "conditions": {
+          "C0": {
+            "verdict": "supported",
+            "semantic_requirement": "F02 explicitly records the claimed outcome; F01 supplies the applicable formula/rule and F02 the bound second condition.",
+            "relevant_actual_fragment_ids": [
+              "F02",
+              "F01"
+            ],
+            "allowed_gap_kinds": [],
+            "gap_required": false
+          },
+          "C1": {
+            "verdict": "supported",
+            "semantic_requirement": "F01 explicitly establishes 4 m east displacement for Cart K in trial T.",
+            "relevant_actual_fragment_ids": [
+              "F01"
+            ],
+            "allowed_gap_kinds": [],
+            "gap_required": false
+          },
+          "C2": {
+            "verdict": "supported",
+            "semantic_requirement": "F02 explicitly establishes 2 s elapsed time for Cart K in trial T.",
+            "relevant_actual_fragment_ids": [
+              "F02"
+            ],
+            "allowed_gap_kinds": [],
+            "gap_required": false
+          },
+          "C3": {
+            "verdict": "supported",
+            "semantic_requirement": "Both concrete displacement and elapsed-time entries name Cart K and trial T. A generic same-owner rule alone is insufficient; the concrete entry labels supply the bridge.",
+            "relevant_actual_fragment_ids": [
+              "F01",
+              "F02"
+            ],
+            "allowed_gap_kinds": [],
+            "gap_required": false
+          }
+        },
+        "rationale": "The paired positive supplies both required values/statuses and concrete matching identifiers.",
+        "paired_positive_control": "case_01",
+        "evidence_scoring_rule": "Quotes must be literal, unique in their own fragment, and address the condition. All named relevant fragments are candidate evidence, not mandatory exact quote strings. Identity support requires both concrete entries to be accounted for by evidence and reasoning; an isolated generic rule does not certify identity.",
+        "additional_gap_policy": "No unmentioned contradiction/conflict is present. Redundant relevant missing/identity gaps are acceptable for uncertain cases if consistent; no additional gap for a supported overall judgment."
+      },
+      {
+        "case_id": "case_02",
+        "atom_id": "A02",
+        "expected_overall_verdict": "unsupported",
+        "conditions": {
+          "C0": {
+            "verdict": "unsupported",
+            "semantic_requirement": "F02 explicitly gives the contrary outcome: 4 s elapsed time and 1 m/s east average velocity. This is counterevidence, not absence of evidence.",
+            "relevant_actual_fragment_ids": [
+              "F02"
+            ],
+            "allowed_gap_kinds": [
+              "contradiction"
+            ],
+            "gap_required": true
+          },
+          "C1": {
+            "verdict": "supported",
+            "semantic_requirement": "F01 explicitly establishes 4 m east displacement for Cart K in trial T.",
+            "relevant_actual_fragment_ids": [
+              "F01"
+            ],
+            "allowed_gap_kinds": [],
+            "gap_required": false
+          },
+          "C2": {
+            "verdict": "unsupported",
+            "semantic_requirement": "F02 explicitly contradicts 2 s elapsed time for Cart K in trial T: 4 s elapsed time and 1 m/s east average velocity.",
+            "relevant_actual_fragment_ids": [
+              "F02"
+            ],
+            "allowed_gap_kinds": [
+              "contradiction"
+            ],
+            "gap_required": true
+          },
+          "C3": {
+            "verdict": "supported",
+            "semantic_requirement": "Both concrete displacement and elapsed-time entries name Cart K and trial T. A generic same-owner rule alone is insufficient; the concrete entry labels supply the bridge.",
+            "relevant_actual_fragment_ids": [
+              "F01",
+              "F02"
+            ],
+            "allowed_gap_kinds": [],
+            "gap_required": false
+          }
+        },
+        "rationale": "Concrete same-owner counterevidence contradicts the outcome and second required condition; first condition and identity remain supported.",
+        "paired_positive_control": "case_01",
+        "evidence_scoring_rule": "Quotes must be literal, unique in their own fragment, and address the condition. All named relevant fragments are candidate evidence, not mandatory exact quote strings. Identity support requires both concrete entries to be accounted for by evidence and reasoning; an isolated generic rule does not certify identity.",
+        "additional_gap_policy": "No unmentioned contradiction/conflict is present. Redundant relevant missing/identity gaps are acceptable for uncertain cases if consistent; no additional gap for a supported overall judgment."
+      },
+      {
+        "case_id": "case_03",
+        "atom_id": "A03",
+        "expected_overall_verdict": "uncertain",
+        "conditions": {
+          "C0": {
+            "verdict": "uncertain",
+            "semantic_requirement": "F01's formula/rule cannot establish the outcome because F02 expressly says the second required value was not recorded. Unknown is not false.",
+            "relevant_actual_fragment_ids": [
+              "F01",
+              "F02"
+            ],
+            "allowed_gap_kinds": [
+              "missing_evidence",
+              "missing_condition",
+              "qualification_gap"
+            ],
+            "gap_required": true
+          },
+          "C1": {
+            "verdict": "supported",
+            "semantic_requirement": "F01 explicitly establishes 4 m east displacement for Cart K in trial T.",
+            "relevant_actual_fragment_ids": [
+              "F01"
+            ],
+            "allowed_gap_kinds": [],
+            "gap_required": false
+          },
+          "C2": {
+            "verdict": "uncertain",
+            "semantic_requirement": "F02 expressly marks the necessary elapsed-time/validation value unrecorded; it does not provide its contrary value.",
+            "relevant_actual_fragment_ids": [
+              "F02"
+            ],
+            "allowed_gap_kinds": [
+              "missing_evidence",
+              "missing_condition",
+              "qualification_gap"
+            ],
+            "gap_required": true
+          },
+          "C3": {
+            "verdict": "supported",
+            "semantic_requirement": "Both concrete displacement and elapsed-time entries name Cart K and trial T. A generic same-owner rule alone is insufficient; the concrete entry labels supply the bridge.",
+            "relevant_actual_fragment_ids": [
+              "F01",
+              "F02"
+            ],
+            "allowed_gap_kinds": [],
+            "gap_required": false
+          }
+        },
+        "rationale": "The second guard/value is missing, while both concrete entries still identify the same subject and trial/snapshot.",
+        "paired_positive_control": "case_01",
+        "evidence_scoring_rule": "Quotes must be literal, unique in their own fragment, and address the condition. All named relevant fragments are candidate evidence, not mandatory exact quote strings. Identity support requires both concrete entries to be accounted for by evidence and reasoning; an isolated generic rule does not certify identity.",
+        "additional_gap_policy": "No unmentioned contradiction/conflict is present. Redundant relevant missing/identity gaps are acceptable for uncertain cases if consistent; no additional gap for a supported overall judgment."
+      },
+      {
+        "case_id": "case_04",
+        "atom_id": "A04",
+        "expected_overall_verdict": "uncertain",
+        "conditions": {
+          "C0": {
+            "verdict": "uncertain",
+            "semantic_requirement": "The second entry has the target raw value but no recorded owner/context identifiers; combining it with F01 invents an identity bridge.",
+            "relevant_actual_fragment_ids": [
+              "F01",
+              "F02"
+            ],
+            "allowed_gap_kinds": [
+              "unresolved_identity",
+              "missing_condition",
+              "qualification_gap"
+            ],
+            "gap_required": true
+          },
+          "C1": {
+            "verdict": "supported",
+            "semantic_requirement": "F01 explicitly establishes 4 m east displacement for Cart K in trial T.",
+            "relevant_actual_fragment_ids": [
+              "F01"
+            ],
+            "allowed_gap_kinds": [],
+            "gap_required": false
+          },
+          "C2": {
+            "verdict": "uncertain",
+            "semantic_requirement": "The raw 2 s/pass value is explicit but its attribution to Cart K/trial T or R7/snapshot V is not established. Do not mark the full owner-qualified condition supported.",
+            "relevant_actual_fragment_ids": [
+              "F02"
+            ],
+            "allowed_gap_kinds": [
+              "unresolved_identity"
+            ],
+            "gap_required": true
+          },
+          "C3": {
+            "verdict": "uncertain",
+            "semantic_requirement": "F02 explicitly says the owner/context identifiers were not recorded. Shared placement, same category and a generic same-owner rule cannot supply the bridge.",
+            "relevant_actual_fragment_ids": [
+              "F02"
+            ],
+            "allowed_gap_kinds": [
+              "unresolved_identity"
+            ],
+            "gap_required": true
+          }
+        },
+        "rationale": "The second entry's value is known but its identity is unresolved; no explicit contrary outcome exists.",
+        "paired_positive_control": "case_01",
+        "evidence_scoring_rule": "Quotes must be literal, unique in their own fragment, and address the condition. All named relevant fragments are candidate evidence, not mandatory exact quote strings. Identity support requires both concrete entries to be accounted for by evidence and reasoning; an isolated generic rule does not certify identity.",
+        "additional_gap_policy": "No unmentioned contradiction/conflict is present. Redundant relevant missing/identity gaps are acceptable for uncertain cases if consistent; no additional gap for a supported overall judgment."
+      },
+      {
+        "case_id": "case_05",
+        "atom_id": "A05",
+        "expected_overall_verdict": "supported",
+        "conditions": {
+          "C0": {
+            "verdict": "supported",
+            "semantic_requirement": "F02 explicitly records the claimed outcome; F01 supplies the applicable formula/rule and F02 the bound second condition.",
+            "relevant_actual_fragment_ids": [
+              "F02",
+              "F01"
+            ],
+            "allowed_gap_kinds": [],
+            "gap_required": false
+          },
+          "C1": {
+            "verdict": "supported",
+            "semantic_requirement": "F01 explicitly establishes status done for record R7 in snapshot V.",
+            "relevant_actual_fragment_ids": [
+              "F01"
+            ],
+            "allowed_gap_kinds": [],
+            "gap_required": false
+          },
+          "C2": {
+            "verdict": "supported",
+            "semantic_requirement": "F02 explicitly establishes validation pass for record R7 in snapshot V.",
+            "relevant_actual_fragment_ids": [
+              "F02"
+            ],
+            "allowed_gap_kinds": [],
+            "gap_required": false
+          },
+          "C3": {
+            "verdict": "supported",
+            "semantic_requirement": "Both concrete status and validation entries name record R7 and snapshot V. A generic same-owner rule alone is insufficient; the concrete entry labels supply the bridge.",
+            "relevant_actual_fragment_ids": [
+              "F01",
+              "F02"
+            ],
+            "allowed_gap_kinds": [],
+            "gap_required": false
+          }
+        },
+        "rationale": "The paired positive supplies both required values/statuses and concrete matching identifiers.",
+        "paired_positive_control": "case_05",
+        "evidence_scoring_rule": "Quotes must be literal, unique in their own fragment, and address the condition. All named relevant fragments are candidate evidence, not mandatory exact quote strings. Identity support requires both concrete entries to be accounted for by evidence and reasoning; an isolated generic rule does not certify identity.",
+        "additional_gap_policy": "No unmentioned contradiction/conflict is present. Redundant relevant missing/identity gaps are acceptable for uncertain cases if consistent; no additional gap for a supported overall judgment."
+      },
+      {
+        "case_id": "case_06",
+        "atom_id": "A06",
+        "expected_overall_verdict": "unsupported",
+        "conditions": {
+          "C0": {
+            "verdict": "unsupported",
+            "semantic_requirement": "F02 explicitly gives the contrary outcome: validation fail and not complete. This is counterevidence, not absence of evidence.",
+            "relevant_actual_fragment_ids": [
+              "F02"
+            ],
+            "allowed_gap_kinds": [
+              "contradiction"
+            ],
+            "gap_required": true
+          },
+          "C1": {
+            "verdict": "supported",
+            "semantic_requirement": "F01 explicitly establishes status done for record R7 in snapshot V.",
+            "relevant_actual_fragment_ids": [
+              "F01"
+            ],
+            "allowed_gap_kinds": [],
+            "gap_required": false
+          },
+          "C2": {
+            "verdict": "unsupported",
+            "semantic_requirement": "F02 explicitly contradicts validation pass for record R7 in snapshot V: validation fail and not complete.",
+            "relevant_actual_fragment_ids": [
+              "F02"
+            ],
+            "allowed_gap_kinds": [
+              "contradiction"
+            ],
+            "gap_required": true
+          },
+          "C3": {
+            "verdict": "supported",
+            "semantic_requirement": "Both concrete status and validation entries name record R7 and snapshot V. A generic same-owner rule alone is insufficient; the concrete entry labels supply the bridge.",
+            "relevant_actual_fragment_ids": [
+              "F01",
+              "F02"
+            ],
+            "allowed_gap_kinds": [],
+            "gap_required": false
+          }
+        },
+        "rationale": "Concrete same-owner counterevidence contradicts the outcome and second required condition; first condition and identity remain supported.",
+        "paired_positive_control": "case_05",
+        "evidence_scoring_rule": "Quotes must be literal, unique in their own fragment, and address the condition. All named relevant fragments are candidate evidence, not mandatory exact quote strings. Identity support requires both concrete entries to be accounted for by evidence and reasoning; an isolated generic rule does not certify identity.",
+        "additional_gap_policy": "No unmentioned contradiction/conflict is present. Redundant relevant missing/identity gaps are acceptable for uncertain cases if consistent; no additional gap for a supported overall judgment."
+      },
+      {
+        "case_id": "case_07",
+        "atom_id": "A07",
+        "expected_overall_verdict": "uncertain",
+        "conditions": {
+          "C0": {
+            "verdict": "uncertain",
+            "semantic_requirement": "F01's formula/rule cannot establish the outcome because F02 expressly says the second required value was not recorded. Unknown is not false.",
+            "relevant_actual_fragment_ids": [
+              "F01",
+              "F02"
+            ],
+            "allowed_gap_kinds": [
+              "missing_evidence",
+              "missing_condition",
+              "qualification_gap"
+            ],
+            "gap_required": true
+          },
+          "C1": {
+            "verdict": "supported",
+            "semantic_requirement": "F01 explicitly establishes status done for record R7 in snapshot V.",
+            "relevant_actual_fragment_ids": [
+              "F01"
+            ],
+            "allowed_gap_kinds": [],
+            "gap_required": false
+          },
+          "C2": {
+            "verdict": "uncertain",
+            "semantic_requirement": "F02 expressly marks the necessary elapsed-time/validation value unrecorded; it does not provide its contrary value.",
+            "relevant_actual_fragment_ids": [
+              "F02"
+            ],
+            "allowed_gap_kinds": [
+              "missing_evidence",
+              "missing_condition",
+              "qualification_gap"
+            ],
+            "gap_required": true
+          },
+          "C3": {
+            "verdict": "supported",
+            "semantic_requirement": "Both concrete status and validation entries name record R7 and snapshot V. A generic same-owner rule alone is insufficient; the concrete entry labels supply the bridge.",
+            "relevant_actual_fragment_ids": [
+              "F01",
+              "F02"
+            ],
+            "allowed_gap_kinds": [],
+            "gap_required": false
+          }
+        },
+        "rationale": "The second guard/value is missing, while both concrete entries still identify the same subject and trial/snapshot.",
+        "paired_positive_control": "case_05",
+        "evidence_scoring_rule": "Quotes must be literal, unique in their own fragment, and address the condition. All named relevant fragments are candidate evidence, not mandatory exact quote strings. Identity support requires both concrete entries to be accounted for by evidence and reasoning; an isolated generic rule does not certify identity.",
+        "additional_gap_policy": "No unmentioned contradiction/conflict is present. Redundant relevant missing/identity gaps are acceptable for uncertain cases if consistent; no additional gap for a supported overall judgment."
+      },
+      {
+        "case_id": "case_08",
+        "atom_id": "A08",
+        "expected_overall_verdict": "uncertain",
+        "conditions": {
+          "C0": {
+            "verdict": "uncertain",
+            "semantic_requirement": "The second entry has the target raw value but no recorded owner/context identifiers; combining it with F01 invents an identity bridge.",
+            "relevant_actual_fragment_ids": [
+              "F01",
+              "F02"
+            ],
+            "allowed_gap_kinds": [
+              "unresolved_identity",
+              "missing_condition",
+              "qualification_gap"
+            ],
+            "gap_required": true
+          },
+          "C1": {
+            "verdict": "supported",
+            "semantic_requirement": "F01 explicitly establishes status done for record R7 in snapshot V.",
+            "relevant_actual_fragment_ids": [
+              "F01"
+            ],
+            "allowed_gap_kinds": [],
+            "gap_required": false
+          },
+          "C2": {
+            "verdict": "uncertain",
+            "semantic_requirement": "The raw 2 s/pass value is explicit but its attribution to Cart K/trial T or R7/snapshot V is not established. Do not mark the full owner-qualified condition supported.",
+            "relevant_actual_fragment_ids": [
+              "F02"
+            ],
+            "allowed_gap_kinds": [
+              "unresolved_identity"
+            ],
+            "gap_required": true
+          },
+          "C3": {
+            "verdict": "uncertain",
+            "semantic_requirement": "F02 explicitly says the owner/context identifiers were not recorded. Shared placement, same category and a generic same-owner rule cannot supply the bridge.",
+            "relevant_actual_fragment_ids": [
+              "F02"
+            ],
+            "allowed_gap_kinds": [
+              "unresolved_identity"
+            ],
+            "gap_required": true
+          }
+        },
+        "rationale": "The second entry's value is known but its identity is unresolved; no explicit contrary outcome exists.",
+        "paired_positive_control": "case_05",
+        "evidence_scoring_rule": "Quotes must be literal, unique in their own fragment, and address the condition. All named relevant fragments are candidate evidence, not mandatory exact quote strings. Identity support requires both concrete entries to be accounted for by evidence and reasoning; an isolated generic rule does not certify identity.",
+        "additional_gap_policy": "No unmentioned contradiction/conflict is present. Redundant relevant missing/identity gaps are acceptable for uncertain cases if consistent; no additional gap for a supported overall judgment."
+      }
+    ]
+  },
+  "observations": [
+    {
+      "case_id": "case_01",
+      "phase": "base",
+      "raw_compact_judgment": "{\"additional_gaps\":[],\"atom_id\":\"A01\",\"conditions\":[{\"condition_id\":\"C0\",\"gap\":null,\"reason\":\"Average velocity is stated as 2 m/s east.\",\"verdict\":\"supported\",\"witnesses\":[{\"fragment_id\":\"F02\",\"quote\":\"Average velocity: 2 m/s east.\"}]},{\"condition_id\":\"C1\",\"gap\":null,\"reason\":\"Displacement is given as 4 m east.\",\"verdict\":\"supported\",\"witnesses\":[{\"fragment_id\":\"F01\",\"quote\":\"displacement 4 m east\"}]},{\"condition_id\":\"C2\",\"gap\":null,\"reason\":\"Elapsed time is given as 2 s.\",\"verdict\":\"supported\",\"witnesses\":[{\"fragment_id\":\"F02\",\"quote\":\"elapsed time 2 s.\"}]},{\"condition_id\":\"C3\",\"gap\":null,\"reason\":\"Both entries explicitly refer to Cart K and trial T.\",\"verdict\":\"supported\",\"witnesses\":[{\"fragment_id\":\"F01\",\"quote\":\"Cart K, trial T:\"}]}],\"schema_version\":\"atomic_support_compact_v1\",\"verdict\":\"supported\"}",
+      "raw_compact_sha256": "00fe06102ace78832a5dbc4bc8d15ee4ccb56f8da863216bbbc1d5f96ac35e45",
+      "wire_sha256": "9d751a12d633c75bd00f13299686c311a34ab92b4eecb64d68bb3c318e3238a0",
+      "finish_reason": "stop",
+      "adapter_error": null,
+      "output_ceiling": 4096,
+      "strict_binding_status": "STRICT_BINDING_VALID_MODEL_OPINION_ONLY",
+      "saved_binding_sha256": "a3211ddd02ef2786955386bdfadaa92722346f1d7c384a7650f134d7a84580be",
+      "canonical_raw_sha256": "1a9225407bd567aa92800ce5f6483b77520000e41606e0f85269988b83ba9435",
+      "literal_witness_count": 4,
+      "cost_USD": "0.0056579",
+      "UNKNOWN_USD": "0",
+      "adapter_complete_return_ms": 5689.0364,
+      "physical_POSTs": 1,
+      "original_redacted_wire_receipt_pins": [
+        {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic65-controller\\actual65\\case_01-base\\raw-provider-read01.json",
+          "bytes": 18022,
+          "sha256": "5136c71685c2986256067b1f778ef3720ed6b7fc1d663995cc57ec0d2c039020"
+        }
+      ]
+    },
+    {
+      "case_id": "case_02",
+      "phase": "base",
+      "raw_compact_judgment": "{\n  \"additional_gaps\": [],\n  \"atom_id\": \"A02\",\n  \"conditions\": [\n    {\n      \"condition_id\": \"C0\",\n      \"gap\": {\n        \"detail\": \"F02 states average velocity is 1 m/s east.\",\n        \"kind\": \"contradiction\"\n      },\n      \"reason\": \"Average velocity is stated as 1 m/s east, not 2 m/s east.\",\n      \"verdict\": \"unsupported\",\n      \"witnesses\": [\n        {\n          \"fragment_id\": \"F02\",\n          \"quote\": \"Average velocity: 1 m/s east.\"\n        }\n      ]\n    },\n    {\n      \"condition_id\": \"C1\",\n      \"gap\": null,\n      \"reason\": \"Displacement is 4 m east for cart K, trial T.\",\n      \"verdict\": \"supported\",\n      \"witnesses\": [\n        {\n          \"fragment_id\": \"F01\",\n          \"quote\": \"displacement 4 m east\"\n        }\n      ]\n    },\n    {\n      \"condition_id\": \"C2\",\n      \"gap\": {\n        \"detail\": \"F02 states elapsed time is 4 s.\",\n        \"kind\": \"contradiction\"\n      },\n      \"reason\": \"Elapsed time is stated as 4 s, not 2 s.\",\n      \"verdict\": \"unsupported\",\n      \"witnesses\": [\n        {\n          \"fragment_id\": \"F02\",\n          \"quote\": \"elapsed time 4 s\"\n        }\n      ]\n    },\n    {\n      \"condition_id\": \"C3\",\n      \"gap\": null,\n      \"reason\": \"Both entries explicitly refer to Cart K, trial T.\",\n      \"verdict\": \"supported\",\n      \"witnesses\": [\n        {\n          \"fragment_id\": \"F01\",\n          \"quote\": \"Cart K, trial T\"\n        },\n        {\n          \"fragment_id\": \"F02\",\n          \"quote\": \"Cart K, trial T\"\n        }\n      ]\n    }\n  ],\n  \"schema_version\": \"atomic_support_compact_v1\",\n  \"verdict\": \"unsupported\"\n}",
+      "raw_compact_sha256": "f637aaa55d684535c5b7fd372923cac0aab491d81df60c775b26fd6da76b64e2",
+      "wire_sha256": "8e53b60a9342028a2aa8680f112746334d7795db51d56aa3e97f203ebdb110c7",
+      "finish_reason": "stop",
+      "adapter_error": null,
+      "output_ceiling": 4096,
+      "strict_binding_status": "STRICT_BINDING_VALID_MODEL_OPINION_ONLY",
+      "saved_binding_sha256": "a5327c061d584cf5fd8b000a21c06176413a02e5bc0f06f6da8f35fd4d6d1531",
+      "canonical_raw_sha256": "9185c5b368b0f9754db188930fe821d311d7722ce77fa80b9d46892b2217d3fb",
+      "literal_witness_count": 5,
+      "cost_USD": "0.0077104",
+      "UNKNOWN_USD": "0",
+      "adapter_complete_return_ms": 7849.4861,
+      "physical_POSTs": 1,
+      "original_redacted_wire_receipt_pins": [
+        {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic65-controller\\actual65\\case_02-base\\raw-provider-read01.json",
+          "bytes": 24624,
+          "sha256": "2bb69b50e4bd683c7db3f04065ababe56d23b112f8db2468bcf4937099605035"
+        }
+      ]
+    },
+    {
+      "case_id": "case_03",
+      "phase": "base",
+      "raw_compact_judgment": "{\n  \"additional_gaps\": [],\n  \"atom_id\": \"A03\",\n  \"conditions\": [\n    {\n      \"condition_id\": \"C0\",\n      \"gap\": {\n        \"detail\": \"Elapsed time is unrecorded.\",\n        \"kind\": \"missing_evidence\"\n      },\n      \"reason\": \"Elapsed time is not recorded, so average velocity value is unknown.\",\n      \"verdict\": \"uncertain\",\n      \"witnesses\": []\n    },\n    {\n      \"condition_id\": \"C1\",\n      \"gap\": null,\n      \"reason\": \"Displacement is explicitly given as 4 m east.\",\n      \"verdict\": \"supported\",\n      \"witnesses\": [\n        {\n          \"fragment_id\": \"F01\",\n          \"quote\": \"displacement 4 m east\"\n        }\n      ]\n    },\n    {\n      \"condition_id\": \"C2\",\n      \"gap\": {\n        \"detail\": \"Elapsed-time value not recorded.\",\n        \"kind\": \"missing_evidence\"\n      },\n      \"reason\": \"Elapsed time was not recorded.\",\n      \"verdict\": \"uncertain\",\n      \"witnesses\": [\n        {\n          \"fragment_id\": \"F02\",\n          \"quote\": \"elapsed-time value not recorded.\"\n        }\n      ]\n    },\n    {\n      \"condition_id\": \"C3\",\n      \"gap\": null,\n      \"reason\": \"Both entries reference Cart K, trial T.\",\n      \"verdict\": \"supported\",\n      \"witnesses\": [\n        {\n          \"fragment_id\": \"F01\",\n          \"quote\": \"Cart K, trial T:\"\n        },\n        {\n          \"fragment_id\": \"F02\",\n          \"quote\": \"Cart K, trial T:\"\n        }\n      ]\n    }\n  ],\n  \"schema_version\": \"atomic_support_compact_v1\",\n  \"verdict\": \"uncertain\"\n}",
+      "raw_compact_sha256": "d45e5ad43627fb242e957d4b35bef406ad37c3233db5841ec25713ddcee2e3c9",
+      "wire_sha256": "227213cd1b0599b84456eaa375fdcd390300f06edb633bb0fd0b72b02d337a5d",
+      "finish_reason": "stop",
+      "adapter_error": null,
+      "output_ceiling": 4096,
+      "strict_binding_status": "STRICT_BINDING_VALID_MODEL_OPINION_ONLY",
+      "saved_binding_sha256": "0b8c86a7e2a26ab42a6148f1554dadc4ee09d89365b8bd04afa10e8f24d22721",
+      "canonical_raw_sha256": "64421b8cf80fdb027fcd9d19382b77fa4cbd64ca45be4d20436493a4aa0734a3",
+      "literal_witness_count": 4,
+      "cost_USD": "0.0074002",
+      "UNKNOWN_USD": "0",
+      "adapter_complete_return_ms": 7088.1416,
+      "physical_POSTs": 1,
+      "original_redacted_wire_receipt_pins": [
+        {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic65-controller\\actual65\\case_03-base\\raw-provider-read01.json",
+          "bytes": 24575,
+          "sha256": "bae1c76cb420555078a4670e6569f03210e57c8fde22b5820681bbefc234f82b"
+        }
+      ]
+    },
+    {
+      "case_id": "case_04",
+      "phase": "base",
+      "raw_compact_judgment": "{\n  \"additional_gaps\": [],\n  \"atom_id\": \"A04\",\n  \"conditions\": [\n    {\n      \"condition_id\": \"C0\",\n      \"gap\": {\n        \"detail\": \"Time entry lacks cart and trial identifiers.\",\n        \"kind\": \"unresolved_identity\"\n      },\n      \"reason\": \"Cannot confirm average velocity without matching identifiers.\",\n      \"verdict\": \"uncertain\",\n      \"witnesses\": []\n    },\n    {\n      \"condition_id\": \"C1\",\n      \"gap\": null,\n      \"reason\": \"Displacement is 4 m east for cart K and trial T.\",\n      \"verdict\": \"supported\",\n      \"witnesses\": [\n        {\n          \"fragment_id\": \"F01\",\n          \"quote\": \"Cart K, trial T: displacement 4 m east\"\n        }\n      ]\n    },\n    {\n      \"condition_id\": \"C2\",\n      \"gap\": {\n        \"detail\": \"Cart and trial identifiers for this time entry were not recorded.\",\n        \"kind\": \"unresolved_identity\"\n      },\n      \"reason\": \"Elapsed time is 2 s, but identifiers are missing.\",\n      \"verdict\": \"uncertain\",\n      \"witnesses\": [\n        {\n          \"fragment_id\": \"F02\",\n          \"quote\": \"Elapsed time: 2 s.\"\n        }\n      ]\n    },\n    {\n      \"condition_id\": \"C3\",\n      \"gap\": {\n        \"detail\": \"Cart and trial identifiers for this time entry were not recorded.\",\n        \"kind\": \"unresolved_identity\"\n      },\n      \"reason\": \"Identifiers for the time entry were not recorded.\",\n      \"verdict\": \"uncertain\",\n      \"witnesses\": [\n        {\n          \"fragment_id\": \"F02\",\n          \"quote\": \"Cart and trial identifiers for this time entry were not recorded.\"\n        }\n      ]\n    }\n  ],\n  \"schema_version\": \"atomic_support_compact_v1\",\n  \"verdict\": \"uncertain\"\n}",
+      "raw_compact_sha256": "805f8f399f881c28d118e072bc242ca6130e4a2be7dfa952d8894d7c67f04874",
+      "wire_sha256": "85b2cc1dfcdd02d3364a6ae4e963963ae91934ed6af96984f767b7014d976b18",
+      "finish_reason": "stop",
+      "adapter_error": null,
+      "output_ceiling": 4096,
+      "strict_binding_status": "STRICT_BINDING_VALID_MODEL_OPINION_ONLY",
+      "saved_binding_sha256": "09c1eec5e6512e31b5a83bad5d2718ead9b1f1f37da0aede3e72b1ae42e7497e",
+      "canonical_raw_sha256": "4a84e5934aba602c672c811a3090d6f4dec109b06d479d1c08aa528841a8bed2",
+      "literal_witness_count": 3,
+      "cost_USD": "0.0060445",
+      "UNKNOWN_USD": "0",
+      "adapter_complete_return_ms": 5889.6719,
+      "physical_POSTs": 1,
+      "original_redacted_wire_receipt_pins": [
+        {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic65-controller\\actual65\\case_04-base\\raw-provider-read01.json",
+          "bytes": 21179,
+          "sha256": "dda1802faa76b22acfaa636445d2f72c8ffd73336fe3df1e3184b8439ca33a8e"
+        }
+      ]
+    },
+    {
+      "case_id": "case_05",
+      "phase": "base",
+      "raw_compact_judgment": "{\"additional_gaps\":[],\"atom_id\":\"A05\",\"conditions\":[{\"condition_id\":\"C0\",\"gap\":null,\"reason\":\"F02 confirms completion rule outcome is complete.\",\"verdict\":\"supported\",\"witnesses\":[{\"fragment_id\":\"F02\",\"quote\":\"Completion rule outcome: complete.\"}]},{\"condition_id\":\"C1\",\"gap\":null,\"reason\":\"F01 states record R7 has status done in snapshot V.\",\"verdict\":\"supported\",\"witnesses\":[{\"fragment_id\":\"F01\",\"quote\":\"Snapshot V, record R7: status done.\"}]},{\"condition_id\":\"C2\",\"gap\":null,\"reason\":\"F02 states record R7 has validation pass in snapshot V.\",\"verdict\":\"supported\",\"witnesses\":[{\"fragment_id\":\"F02\",\"quote\":\"Snapshot V, record R7: validation pass.\"}]},{\"condition_id\":\"C3\",\"gap\":null,\"reason\":\"Both entries explicitly refer to snapshot V and record R7.\",\"verdict\":\"supported\",\"witnesses\":[{\"fragment_id\":\"F01\",\"quote\":\"Snapshot V, record R7\"},{\"fragment_id\":\"F02\",\"quote\":\"Snapshot V, record R7\"}]}],\"schema_version\":\"atomic_support_compact_v1\",\"verdict\":\"supported\"}",
+      "raw_compact_sha256": "42e2e541118335f45186dad1bfd3c733507799cae041680c2444fd4f434754e7",
+      "wire_sha256": "170041a8373e0071177ee7011deead8b2ae83c0cfba57bf938cfcd1b1377120c",
+      "finish_reason": "stop",
+      "adapter_error": null,
+      "output_ceiling": 4096,
+      "strict_binding_status": "STRICT_BINDING_VALID_MODEL_OPINION_ONLY",
+      "saved_binding_sha256": "1390a0585af786c108268f0201e6c12937db6a5f69fc9f3c91db4f39b7baa8b7",
+      "canonical_raw_sha256": "ab374495ab4d9a541c59b8f4a3b8eba86ffbda2e99ecb127876e43c5fbaec673",
+      "literal_witness_count": 5,
+      "cost_USD": "0.005342",
+      "UNKNOWN_USD": "0",
+      "adapter_complete_return_ms": 5380.128,
+      "physical_POSTs": 1,
+      "original_redacted_wire_receipt_pins": [
+        {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic65-controller\\actual65\\case_05-base\\raw-provider-read01.json",
+          "bytes": 17626,
+          "sha256": "876fa81746288415fd6cddacb036c5988cad77c1e250725adc0fb7ac851972fa"
+        }
+      ]
+    },
+    {
+      "case_id": "case_06",
+      "phase": "base",
+      "raw_compact_judgment": "{\"additional_gaps\":[],\"atom_id\":\"A06\",\"conditions\":[{\"condition_id\":\"C0\",\"gap\":{\"detail\":\"Explicitly stated as not complete.\",\"kind\":\"contradiction\"},\"reason\":\"Completion rule outcome is explicitly stated as not complete.\",\"verdict\":\"unsupported\",\"witnesses\":[{\"fragment_id\":\"F02\",\"quote\":\"Completion rule outcome: not complete.\"}]},{\"condition_id\":\"C1\",\"gap\":null,\"reason\":\"Record R7 has status done in snapshot V.\",\"verdict\":\"supported\",\"witnesses\":[{\"fragment_id\":\"F01\",\"quote\":\"Snapshot V, record R7: status done.\"}]},{\"condition_id\":\"C2\",\"gap\":{\"detail\":\"Validation is fail instead of pass.\",\"kind\":\"contradiction\"},\"reason\":\"Record R7 has validation fail instead of pass.\",\"verdict\":\"unsupported\",\"witnesses\":[{\"fragment_id\":\"F02\",\"quote\":\"Snapshot V, record R7: validation fail.\"}]},{\"condition_id\":\"C3\",\"gap\":null,\"reason\":\"Both entries reference snapshot V and record R7.\",\"verdict\":\"supported\",\"witnesses\":[{\"fragment_id\":\"F01\",\"quote\":\"Snapshot V, record R7\"},{\"fragment_id\":\"F02\",\"quote\":\"Snapshot V, record R7\"}]}],\"schema_version\":\"atomic_support_compact_v1\",\"verdict\":\"unsupported\"}",
+      "raw_compact_sha256": "6d71697f3695c4d927b4245c018f86d2b882323fd815dcbf374a178e275e4674",
+      "wire_sha256": "4f27f8baaa9b6609e799b348bf7df3bb9f79de2db7d1185c85b98f2f1db4b742",
+      "finish_reason": "stop",
+      "adapter_error": null,
+      "output_ceiling": 4096,
+      "strict_binding_status": "STRICT_BINDING_VALID_MODEL_OPINION_ONLY",
+      "saved_binding_sha256": "fd6af2eb77a6f8eb4a16f1702ac27e8182a7919404eafea5e55a25b2cbbcb85b",
+      "canonical_raw_sha256": "5608abc2dc1a0fb0871e66df51f7e3bab32a003ddfb63d5fc7d63d4e732c66db",
+      "literal_witness_count": 5,
+      "cost_USD": "0.0067673",
+      "UNKNOWN_USD": "0",
+      "adapter_complete_return_ms": 7662.463,
+      "physical_POSTs": 1,
+      "original_redacted_wire_receipt_pins": [
+        {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic65-controller\\actual65\\case_06-base\\raw-provider-read01.json",
+          "bytes": 24041,
+          "sha256": "7466f1b9713844c1c3325b2d20e51e89839778e38bfee98f67202821029297be"
+        }
+      ]
+    },
+    {
+      "case_id": "case_07",
+      "phase": "base",
+      "raw_compact_judgment": "{\"additional_gaps\":[],\"atom_id\":\"A07\",\"conditions\":[{\"condition_id\":\"C0\",\"gap\":{\"detail\":\"Validation pass status is missing.\",\"kind\":\"missing_evidence\"},\"reason\":\"Completion requires validation pass, but it is not recorded.\",\"verdict\":\"uncertain\",\"witnesses\":[{\"fragment_id\":\"F01\",\"quote\":\"Rule: complete iff done AND validation pass\"}]},{\"condition_id\":\"C1\",\"gap\":null,\"reason\":\"Status done is explicitly recorded for record R7.\",\"verdict\":\"supported\",\"witnesses\":[{\"fragment_id\":\"F01\",\"quote\":\"Snapshot V, record R7: status done.\"}]},{\"condition_id\":\"C2\",\"gap\":{\"detail\":\"Validation value is not recorded.\",\"kind\":\"missing_evidence\"},\"reason\":\"Validation value is not recorded.\",\"verdict\":\"uncertain\",\"witnesses\":[{\"fragment_id\":\"F02\",\"quote\":\"validation value not recorded.\"}]},{\"condition_id\":\"C3\",\"gap\":null,\"reason\":\"Both entries reference the same record R7 and snapshot V.\",\"verdict\":\"supported\",\"witnesses\":[{\"fragment_id\":\"F01\",\"quote\":\"Snapshot V, record R7\"}]}],\"schema_version\":\"atomic_support_compact_v1\",\"verdict\":\"uncertain\"}",
+      "raw_compact_sha256": "3a1bc9389bfd0f039865ef745b48ad0be1183f19df356567c1942a4c7b56e665",
+      "wire_sha256": "1e75498dd660921a90588e6f3758394bd34d2b7e9096862b6d1f034c750ad64b",
+      "finish_reason": "stop",
+      "adapter_error": null,
+      "output_ceiling": 4096,
+      "strict_binding_status": "STRICT_BINDING_VALID_MODEL_OPINION_ONLY",
+      "saved_binding_sha256": "d7bd8ad67bbed38bd02d0156355c624cea53d1071303afc1df24e7ff900d5e76",
+      "canonical_raw_sha256": "f71902631fcafa5f77f9ef3aeb03377b824d857034d8b4e2334f9268600412ad",
+      "literal_witness_count": 4,
+      "cost_USD": "0.0061683",
+      "UNKNOWN_USD": "0",
+      "adapter_complete_return_ms": 6145.2278,
+      "physical_POSTs": 1,
+      "original_redacted_wire_receipt_pins": [
+        {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic65-controller\\actual65\\case_07-base\\raw-provider-read01.json",
+          "bytes": 20546,
+          "sha256": "efa970bad8753bb408cd37e0beb532c075a20c7c599cb31d159c61dd086367ec"
+        }
+      ]
+    },
+    {
+      "case_id": "case_08",
+      "phase": "base",
+      "raw_compact_judgment": "{\n  \"additional_gaps\": [],\n  \"atom_id\": \"A08\",\n  \"conditions\": [\n    {\n      \"condition_id\": \"C0\",\n      \"gap\": {\n        \"detail\": \"Depends on unverified identity condition C3.\",\n        \"kind\": \"missing_condition\"\n      },\n      \"reason\": \"Completion rule requires validation pass on the same record and snapshot, but identity is missing.\",\n      \"verdict\": \"uncertain\",\n      \"witnesses\": []\n    },\n    {\n      \"condition_id\": \"C1\",\n      \"gap\": null,\n      \"reason\": \"Snapshot V and record R7 status is explicitly stated as done.\",\n      \"verdict\": \"supported\",\n      \"witnesses\": [\n        {\n          \"fragment_id\": \"F01\",\n          \"quote\": \"Snapshot V, record R7: status done.\"\n        }\n      ]\n    },\n    {\n      \"condition_id\": \"C2\",\n      \"gap\": null,\n      \"reason\": \"Validation entry shows pass status.\",\n      \"verdict\": \"supported\",\n      \"witnesses\": [\n        {\n          \"fragment_id\": \"F02\",\n          \"quote\": \"Validation: pass.\"\n        }\n      ]\n    },\n    {\n      \"condition_id\": \"C3\",\n      \"gap\": {\n        \"detail\": \"Validation entry lacks record and snapshot identifiers.\",\n        \"kind\": \"unresolved_identity\"\n      },\n      \"reason\": \"Validation entry identifiers were not recorded, so identity cannot be linked.\",\n      \"verdict\": \"uncertain\",\n      \"witnesses\": [\n        {\n          \"fragment_id\": \"F02\",\n          \"quote\": \"Record and snapshot identifiers for this validation entry were not recorded.\"\n        }\n      ]\n    }\n  ],\n  \"schema_version\": \"atomic_support_compact_v1\",\n  \"verdict\": \"uncertain\"\n}",
+      "raw_compact_sha256": "510147cf5cc95e9646886b7e10fb74d2478e5271f7753c79920d95d05d6dc2bf",
+      "wire_sha256": "23fb2a8caa39b7f953f976b69a86a1be8c0cbd4128b8d0fb888284563a6ee618",
+      "finish_reason": "stop",
+      "adapter_error": null,
+      "output_ceiling": 4096,
+      "strict_binding_status": "STRICT_BINDING_VALID_MODEL_OPINION_ONLY",
+      "saved_binding_sha256": "9841ab33b081ae76f26ea237e5824d652f105927ba42eddcf456b0cf60b9e078",
+      "canonical_raw_sha256": "2b42abf370331c47f88f71be68df5b4882d97e75aeeecd359a06c1a13d76754a",
+      "literal_witness_count": 3,
+      "cost_USD": "0.007612",
+      "UNKNOWN_USD": "0",
+      "adapter_complete_return_ms": 8686.4077,
+      "physical_POSTs": 1,
+      "original_redacted_wire_receipt_pins": [
+        {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic65-controller\\actual65\\case_08-base\\raw-provider-read01.json",
+          "bytes": 24825,
+          "sha256": "34427182ed4dfe77f390d05ebab788acca56a7a216241d9a6b5e6185f31998ab"
+        }
+      ]
+    }
+  ],
+  "independent_AI_semantic_and_witness_review": {
+    "schema_version": "independent_atomic65_semantic_review_v1",
+    "reviewer": "Independent AI reviewer; AI-authored development standards, no human rating or Gold labels",
+    "reviewed_UTC": "2026-10-11T06:31:30.162775+00:00",
+    "sources": {
+      "fixture_sha256": "11bd991f6bbc38af885cc8348552f5c73aa324370953184305e61f3a50960143",
+      "unchanged_preregistered_standards_sha256": "abdf0342dc6c6133e16af26c9da2863443ac4b189678bf5f0e3549309795dc7e",
+      "batch_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic65-controller\\actual65\\batch65.json",
+      "batch_sha256": "332394c79386e290dca3365eac5604215de64463396a222b628e1828c45762f5",
+      "batch_closed_UTC": "2026-10-11T06:27:24.375603+00:00",
+      "result_path_rule": "batch parent / {case_id}-base / result65.json and offline-validation.json"
+    },
+    "initial_format": {
+      "base_cases": 8,
+      "confirmed_complete": 8,
+      "JSON_valid": 8,
+      "compact_and_original_strict_valid": 8,
+      "denominator": 8
+    },
+    "final_format": {
+      "cases": 8,
+      "strict_valid": 8,
+      "denominator": 8,
+      "repair_POSTs": 0,
+      "changed_output_caps": false,
+      "all_output_caps": 4096
+    },
+    "semantic_labels": {
+      "eligible_cases": 8,
+      "overall_correct": 8,
+      "condition_correct": 31,
+      "condition_denominator": 32,
+      "fully_label_correct_cases": 7,
+      "fully_label_correct_case_denominator": 8,
+      "model_overall_counts": {
+        "supported": 2,
+        "unsupported": 2,
+        "uncertain": 4
+      },
+      "positive_controls_label_correct": 2,
+      "positive_control_denominator": 2
+    },
+    "selected_witness_review": {
+      "provenance_unique_literal_correct": 33,
+      "provenance_quote_denominator": 33,
+      "mandatory_witness_conditions": 23,
+      "complete_required_evidence": 20,
+      "thin_identity_quote_trails": 2,
+      "false_owner_attribution_condition": 1,
+      "uncertain_conditions_with_optional_witnesses": 9,
+      "cases_complete_for_mandatory_selected_witness_trail": 5,
+      "case_denominator": 8,
+      "positive_controls_complete_selected_witness_trails": 1,
+      "positive_control_denominator": 2,
+      "thin_trails": [
+        "case_01:C3",
+        "case_07:C3"
+      ],
+      "semantic_failure": "case_08:C2"
+    },
+    "gap_taxonomy": {
+      "present_allowed_gaps": 13,
+      "present_gap_denominator": 13,
+      "isolated_taxonomy_failures": 0,
+      "case_08_C0": "missing_condition is allowed; coarse dependency gap, unresolved_identity remains explicit in C3",
+      "case_08_C2": "missing identity gap accompanies the false-supported semantic condition; not double-counted as a separate taxonomy error"
+    },
+    "execution": {
+      "root_actual_physical_POSTs": 8,
+      "root_actual_known_cost_USD": "0.0527026",
+      "root_actual_UNKNOWN_hold_USD": "0",
+      "root_adapter_return_ms_min": 5380.128,
+      "root_adapter_return_ms_max": 8686.4077,
+      "reviewer_provider_requests": 0,
+      "reviewer_auth_reads": 0,
+      "reviewer_database_calls": 0,
+      "reviewer_Main_writes": 0,
+      "hidden_reasoning_body_read_or_copied": false,
+      "raw_provider_read_files_opened": false
+    },
+    "qualification": {
+      "human_rating": null,
+      "Gold_or_heldout": false,
+      "semantic_truth_certified": false,
+      "production_or_RAG_acceptance": false,
+      "native_UI_full_answer_latency_measurement": false,
+      "default_semantic_acceptance_blocked": true,
+      "limited_controlled_offline_contract_use_supported": true,
+      "all_supported_failure_pattern_in_this_batch": false,
+      "historical_biology_results_qualified_or_replaced": false
+    },
+    "AI_issue_assessments": [
+      {
+        "case_condition": "case_08:C2",
+        "kind": "false_supported_condition",
+        "expected_full_condition": "Record R7 has validation pass in snapshot V.",
+        "reported_reason": "Validation entry shows pass status.",
+        "reported_quote": "Validation: pass.",
+        "actual_missing_link": "Record and snapshot identifiers for this validation entry were not recorded.",
+        "assessment": "An unowned pass value does not establish pass for R7 in V. Overall/C3 uncertainty does not correct the false-supported C2."
+      },
+      {
+        "case_conditions": [
+          "case_01:C3",
+          "case_07:C3"
+        ],
+        "kind": "thin_selected_identity_witness_trail",
+        "assessment": "Both actual fragments name the same owner/context, so labels and both-entries reasons are correct. Each selected witness trail quotes only F01's owner label and omits F02's concrete label. Kept separate from semantic false attribution."
+      },
+      {
+        "case_condition": "case_08:C0",
+        "kind": "permitted_coarse_gap",
+        "assessment": "missing_condition is allowed by the frozen standard. C3 separately preserves unresolved_identity. No isolated taxonomy failure."
+      }
+    ],
+    "scoring_definitions": {
+      "label_correct": "Comparison with unchanged preregistered expected overall and full owner-qualified condition labels.",
+      "mandatory_witness_denominator": "Every reported supported or unsupported condition requires evidence: 19 supported + 4 unsupported = 23. Nine uncertain conditions allow empty witnesses.",
+      "full_witness_case_denominator": "All eight strictly eligible cases; a case is complete only if all its mandatory evidence trails are complete. Cases01/07 thin and08 false attribution leave5/8.",
+      "source_context": "A short value/outcome quote can inherit its owner/context from the same actual fragment. A cross-entry identity trail must show both concrete entries; a correct reason alone is not a complete selected witness trail.",
+      "not_semantic_certification": "Unique substring matching certifies provenance only. Semantic assessments are independent AI review opinions, not machine-certified truth."
+    },
+    "cases": [
+      {
+        "case_id": "case_01",
+        "expected_overall": "supported",
+        "reported_overall": "supported",
+        "fully_label_correct": true,
+        "mandatory_witness_trail_complete": false,
+        "result_sha256": "04aa758edee85cb47cbff42e713523bdfeb5528442f29fe0251d0580881a6394",
+        "offline_validation_sha256": "a3211ddd02ef2786955386bdfadaa92722346f1d7c384a7650f134d7a84580be",
+        "conditions": [
+          {
+            "id": "C0",
+            "expected": "supported",
+            "reported": "supported",
+            "model_reason": "Average velocity is stated as 2 m/s east.",
+            "model_gap": null,
+            "quotes": [
+              {
+                "fragment_id": "F02",
+                "quote": "Average velocity: 2 m/s east."
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "complete_for_required_evidence"
+          },
+          {
+            "id": "C1",
+            "expected": "supported",
+            "reported": "supported",
+            "model_reason": "Displacement is given as 4 m east.",
+            "model_gap": null,
+            "quotes": [
+              {
+                "fragment_id": "F01",
+                "quote": "displacement 4 m east"
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "complete_for_required_evidence"
+          },
+          {
+            "id": "C2",
+            "expected": "supported",
+            "reported": "supported",
+            "model_reason": "Elapsed time is given as 2 s.",
+            "model_gap": null,
+            "quotes": [
+              {
+                "fragment_id": "F02",
+                "quote": "elapsed time 2 s."
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "complete_for_required_evidence"
+          },
+          {
+            "id": "C3",
+            "expected": "supported",
+            "reported": "supported",
+            "model_reason": "Both entries explicitly refer to Cart K and trial T.",
+            "model_gap": null,
+            "quotes": [
+              {
+                "fragment_id": "F01",
+                "quote": "Cart K, trial T:"
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "thin_one_sided_identity_witness"
+          }
+        ]
+      },
+      {
+        "case_id": "case_02",
+        "expected_overall": "unsupported",
+        "reported_overall": "unsupported",
+        "fully_label_correct": true,
+        "mandatory_witness_trail_complete": true,
+        "result_sha256": "bda32731536535c4ea312b61718f01de8763af52603a1b047f7ac2913937b79f",
+        "offline_validation_sha256": "a5327c061d584cf5fd8b000a21c06176413a02e5bc0f06f6da8f35fd4d6d1531",
+        "conditions": [
+          {
+            "id": "C0",
+            "expected": "unsupported",
+            "reported": "unsupported",
+            "model_reason": "Average velocity is stated as 1 m/s east, not 2 m/s east.",
+            "model_gap": {
+              "detail": "F02 states average velocity is 1 m/s east.",
+              "kind": "contradiction"
+            },
+            "quotes": [
+              {
+                "fragment_id": "F02",
+                "quote": "Average velocity: 1 m/s east."
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "complete_for_required_evidence"
+          },
+          {
+            "id": "C1",
+            "expected": "supported",
+            "reported": "supported",
+            "model_reason": "Displacement is 4 m east for cart K, trial T.",
+            "model_gap": null,
+            "quotes": [
+              {
+                "fragment_id": "F01",
+                "quote": "displacement 4 m east"
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "complete_for_required_evidence"
+          },
+          {
+            "id": "C2",
+            "expected": "unsupported",
+            "reported": "unsupported",
+            "model_reason": "Elapsed time is stated as 4 s, not 2 s.",
+            "model_gap": {
+              "detail": "F02 states elapsed time is 4 s.",
+              "kind": "contradiction"
+            },
+            "quotes": [
+              {
+                "fragment_id": "F02",
+                "quote": "elapsed time 4 s"
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "complete_for_required_evidence"
+          },
+          {
+            "id": "C3",
+            "expected": "supported",
+            "reported": "supported",
+            "model_reason": "Both entries explicitly refer to Cart K, trial T.",
+            "model_gap": null,
+            "quotes": [
+              {
+                "fragment_id": "F01",
+                "quote": "Cart K, trial T"
+              },
+              {
+                "fragment_id": "F02",
+                "quote": "Cart K, trial T"
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "complete_for_required_evidence"
+          }
+        ]
+      },
+      {
+        "case_id": "case_03",
+        "expected_overall": "uncertain",
+        "reported_overall": "uncertain",
+        "fully_label_correct": true,
+        "mandatory_witness_trail_complete": true,
+        "result_sha256": "353622396b0bd0de95f11a75ab3a03043efb28e41afff3420ed8ea14a56378d8",
+        "offline_validation_sha256": "0b8c86a7e2a26ab42a6148f1554dadc4ee09d89365b8bd04afa10e8f24d22721",
+        "conditions": [
+          {
+            "id": "C0",
+            "expected": "uncertain",
+            "reported": "uncertain",
+            "model_reason": "Elapsed time is not recorded, so average velocity value is unknown.",
+            "model_gap": {
+              "detail": "Elapsed time is unrecorded.",
+              "kind": "missing_evidence"
+            },
+            "quotes": [],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "context_reason_gap_sufficient_witness_optional"
+          },
+          {
+            "id": "C1",
+            "expected": "supported",
+            "reported": "supported",
+            "model_reason": "Displacement is explicitly given as 4 m east.",
+            "model_gap": null,
+            "quotes": [
+              {
+                "fragment_id": "F01",
+                "quote": "displacement 4 m east"
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "complete_for_required_evidence"
+          },
+          {
+            "id": "C2",
+            "expected": "uncertain",
+            "reported": "uncertain",
+            "model_reason": "Elapsed time was not recorded.",
+            "model_gap": {
+              "detail": "Elapsed-time value not recorded.",
+              "kind": "missing_evidence"
+            },
+            "quotes": [
+              {
+                "fragment_id": "F02",
+                "quote": "elapsed-time value not recorded."
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "context_reason_gap_sufficient_witness_optional"
+          },
+          {
+            "id": "C3",
+            "expected": "supported",
+            "reported": "supported",
+            "model_reason": "Both entries reference Cart K, trial T.",
+            "model_gap": null,
+            "quotes": [
+              {
+                "fragment_id": "F01",
+                "quote": "Cart K, trial T:"
+              },
+              {
+                "fragment_id": "F02",
+                "quote": "Cart K, trial T:"
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "complete_for_required_evidence"
+          }
+        ]
+      },
+      {
+        "case_id": "case_04",
+        "expected_overall": "uncertain",
+        "reported_overall": "uncertain",
+        "fully_label_correct": true,
+        "mandatory_witness_trail_complete": true,
+        "result_sha256": "372d196c04baebc678acb3ded4d40c3cdb617607ce35411bceabb2a750ef8e2b",
+        "offline_validation_sha256": "09c1eec5e6512e31b5a83bad5d2718ead9b1f1f37da0aede3e72b1ae42e7497e",
+        "conditions": [
+          {
+            "id": "C0",
+            "expected": "uncertain",
+            "reported": "uncertain",
+            "model_reason": "Cannot confirm average velocity without matching identifiers.",
+            "model_gap": {
+              "detail": "Time entry lacks cart and trial identifiers.",
+              "kind": "unresolved_identity"
+            },
+            "quotes": [],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "context_reason_gap_sufficient_witness_optional"
+          },
+          {
+            "id": "C1",
+            "expected": "supported",
+            "reported": "supported",
+            "model_reason": "Displacement is 4 m east for cart K and trial T.",
+            "model_gap": null,
+            "quotes": [
+              {
+                "fragment_id": "F01",
+                "quote": "Cart K, trial T: displacement 4 m east"
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "complete_for_required_evidence"
+          },
+          {
+            "id": "C2",
+            "expected": "uncertain",
+            "reported": "uncertain",
+            "model_reason": "Elapsed time is 2 s, but identifiers are missing.",
+            "model_gap": {
+              "detail": "Cart and trial identifiers for this time entry were not recorded.",
+              "kind": "unresolved_identity"
+            },
+            "quotes": [
+              {
+                "fragment_id": "F02",
+                "quote": "Elapsed time: 2 s."
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "context_reason_gap_sufficient_witness_optional"
+          },
+          {
+            "id": "C3",
+            "expected": "uncertain",
+            "reported": "uncertain",
+            "model_reason": "Identifiers for the time entry were not recorded.",
+            "model_gap": {
+              "detail": "Cart and trial identifiers for this time entry were not recorded.",
+              "kind": "unresolved_identity"
+            },
+            "quotes": [
+              {
+                "fragment_id": "F02",
+                "quote": "Cart and trial identifiers for this time entry were not recorded."
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "context_reason_gap_sufficient_witness_optional"
+          }
+        ]
+      },
+      {
+        "case_id": "case_05",
+        "expected_overall": "supported",
+        "reported_overall": "supported",
+        "fully_label_correct": true,
+        "mandatory_witness_trail_complete": true,
+        "result_sha256": "4d9c12fef3293aa0f5394986fe75cdebc3028515d266dba1727de61e8687a29e",
+        "offline_validation_sha256": "1390a0585af786c108268f0201e6c12937db6a5f69fc9f3c91db4f39b7baa8b7",
+        "conditions": [
+          {
+            "id": "C0",
+            "expected": "supported",
+            "reported": "supported",
+            "model_reason": "F02 confirms completion rule outcome is complete.",
+            "model_gap": null,
+            "quotes": [
+              {
+                "fragment_id": "F02",
+                "quote": "Completion rule outcome: complete."
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "complete_for_required_evidence"
+          },
+          {
+            "id": "C1",
+            "expected": "supported",
+            "reported": "supported",
+            "model_reason": "F01 states record R7 has status done in snapshot V.",
+            "model_gap": null,
+            "quotes": [
+              {
+                "fragment_id": "F01",
+                "quote": "Snapshot V, record R7: status done."
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "complete_for_required_evidence"
+          },
+          {
+            "id": "C2",
+            "expected": "supported",
+            "reported": "supported",
+            "model_reason": "F02 states record R7 has validation pass in snapshot V.",
+            "model_gap": null,
+            "quotes": [
+              {
+                "fragment_id": "F02",
+                "quote": "Snapshot V, record R7: validation pass."
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "complete_for_required_evidence"
+          },
+          {
+            "id": "C3",
+            "expected": "supported",
+            "reported": "supported",
+            "model_reason": "Both entries explicitly refer to snapshot V and record R7.",
+            "model_gap": null,
+            "quotes": [
+              {
+                "fragment_id": "F01",
+                "quote": "Snapshot V, record R7"
+              },
+              {
+                "fragment_id": "F02",
+                "quote": "Snapshot V, record R7"
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "complete_for_required_evidence"
+          }
+        ]
+      },
+      {
+        "case_id": "case_06",
+        "expected_overall": "unsupported",
+        "reported_overall": "unsupported",
+        "fully_label_correct": true,
+        "mandatory_witness_trail_complete": true,
+        "result_sha256": "8a52da061377415da72864488c16b30b8e839c253344ed1c0446a7260b52fb28",
+        "offline_validation_sha256": "fd6af2eb77a6f8eb4a16f1702ac27e8182a7919404eafea5e55a25b2cbbcb85b",
+        "conditions": [
+          {
+            "id": "C0",
+            "expected": "unsupported",
+            "reported": "unsupported",
+            "model_reason": "Completion rule outcome is explicitly stated as not complete.",
+            "model_gap": {
+              "detail": "Explicitly stated as not complete.",
+              "kind": "contradiction"
+            },
+            "quotes": [
+              {
+                "fragment_id": "F02",
+                "quote": "Completion rule outcome: not complete."
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "complete_for_required_evidence"
+          },
+          {
+            "id": "C1",
+            "expected": "supported",
+            "reported": "supported",
+            "model_reason": "Record R7 has status done in snapshot V.",
+            "model_gap": null,
+            "quotes": [
+              {
+                "fragment_id": "F01",
+                "quote": "Snapshot V, record R7: status done."
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "complete_for_required_evidence"
+          },
+          {
+            "id": "C2",
+            "expected": "unsupported",
+            "reported": "unsupported",
+            "model_reason": "Record R7 has validation fail instead of pass.",
+            "model_gap": {
+              "detail": "Validation is fail instead of pass.",
+              "kind": "contradiction"
+            },
+            "quotes": [
+              {
+                "fragment_id": "F02",
+                "quote": "Snapshot V, record R7: validation fail."
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "complete_for_required_evidence"
+          },
+          {
+            "id": "C3",
+            "expected": "supported",
+            "reported": "supported",
+            "model_reason": "Both entries reference snapshot V and record R7.",
+            "model_gap": null,
+            "quotes": [
+              {
+                "fragment_id": "F01",
+                "quote": "Snapshot V, record R7"
+              },
+              {
+                "fragment_id": "F02",
+                "quote": "Snapshot V, record R7"
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "complete_for_required_evidence"
+          }
+        ]
+      },
+      {
+        "case_id": "case_07",
+        "expected_overall": "uncertain",
+        "reported_overall": "uncertain",
+        "fully_label_correct": true,
+        "mandatory_witness_trail_complete": false,
+        "result_sha256": "edf0188c64fc2e74958396252fbded9a1e305f46f965785cbe4fdf501605b4fa",
+        "offline_validation_sha256": "d7bd8ad67bbed38bd02d0156355c624cea53d1071303afc1df24e7ff900d5e76",
+        "conditions": [
+          {
+            "id": "C0",
+            "expected": "uncertain",
+            "reported": "uncertain",
+            "model_reason": "Completion requires validation pass, but it is not recorded.",
+            "model_gap": {
+              "detail": "Validation pass status is missing.",
+              "kind": "missing_evidence"
+            },
+            "quotes": [
+              {
+                "fragment_id": "F01",
+                "quote": "Rule: complete iff done AND validation pass"
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "context_reason_gap_sufficient_witness_optional"
+          },
+          {
+            "id": "C1",
+            "expected": "supported",
+            "reported": "supported",
+            "model_reason": "Status done is explicitly recorded for record R7.",
+            "model_gap": null,
+            "quotes": [
+              {
+                "fragment_id": "F01",
+                "quote": "Snapshot V, record R7: status done."
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "complete_for_required_evidence"
+          },
+          {
+            "id": "C2",
+            "expected": "uncertain",
+            "reported": "uncertain",
+            "model_reason": "Validation value is not recorded.",
+            "model_gap": {
+              "detail": "Validation value is not recorded.",
+              "kind": "missing_evidence"
+            },
+            "quotes": [
+              {
+                "fragment_id": "F02",
+                "quote": "validation value not recorded."
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "context_reason_gap_sufficient_witness_optional"
+          },
+          {
+            "id": "C3",
+            "expected": "supported",
+            "reported": "supported",
+            "model_reason": "Both entries reference the same record R7 and snapshot V.",
+            "model_gap": null,
+            "quotes": [
+              {
+                "fragment_id": "F01",
+                "quote": "Snapshot V, record R7"
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "thin_one_sided_identity_witness"
+          }
+        ]
+      },
+      {
+        "case_id": "case_08",
+        "expected_overall": "uncertain",
+        "reported_overall": "uncertain",
+        "fully_label_correct": false,
+        "mandatory_witness_trail_complete": false,
+        "result_sha256": "0956d5b57a9eea63a8f766b48b83708bbe071ae16981df7218ec922700f9ded9",
+        "offline_validation_sha256": "9841ab33b081ae76f26ea237e5824d652f105927ba42eddcf456b0cf60b9e078",
+        "conditions": [
+          {
+            "id": "C0",
+            "expected": "uncertain",
+            "reported": "uncertain",
+            "model_reason": "Completion rule requires validation pass on the same record and snapshot, but identity is missing.",
+            "model_gap": {
+              "detail": "Depends on unverified identity condition C3.",
+              "kind": "missing_condition"
+            },
+            "quotes": [],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "context_reason_gap_sufficient_witness_optional"
+          },
+          {
+            "id": "C1",
+            "expected": "supported",
+            "reported": "supported",
+            "model_reason": "Snapshot V and record R7 status is explicitly stated as done.",
+            "model_gap": null,
+            "quotes": [
+              {
+                "fragment_id": "F01",
+                "quote": "Snapshot V, record R7: status done."
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "complete_for_required_evidence"
+          },
+          {
+            "id": "C2",
+            "expected": "uncertain",
+            "reported": "supported",
+            "model_reason": "Validation entry shows pass status.",
+            "model_gap": null,
+            "quotes": [
+              {
+                "fragment_id": "F02",
+                "quote": "Validation: pass."
+              }
+            ],
+            "semantic_review": "incorrect_owner_attribution",
+            "witness_trail": "insufficient_for_full_condition"
+          },
+          {
+            "id": "C3",
+            "expected": "uncertain",
+            "reported": "uncertain",
+            "model_reason": "Validation entry identifiers were not recorded, so identity cannot be linked.",
+            "model_gap": {
+              "detail": "Validation entry lacks record and snapshot identifiers.",
+              "kind": "unresolved_identity"
+            },
+            "quotes": [
+              {
+                "fragment_id": "F02",
+                "quote": "Record and snapshot identifiers for this validation entry were not recorded."
+              }
+            ],
+            "semantic_review": "correct_in_actual_excerpt_context",
+            "witness_trail": "context_reason_gap_sufficient_witness_optional"
+          }
+        ]
+      }
+    ]
+  },
+  "statistics": {
+    "status": "CLOSED_BATCH_OFFLINE_STATS_VERIFIED",
+    "batch_sha256": "332394c79386e290dca3365eac5604215de64463396a222b628e1828c45762f5",
+    "controller_sha256": "c835806793e1ccea9bdc158ea628486c81ef920b967c5408358d29c87213b74b",
+    "review_sha256": "85d8583921f4bf481f7864a007606530492532ca15db8db965cf27c00957494a",
+    "batch_status": "ALL_BASES_AND_ELIGIBLE_REPAIRS_RETAINED_PENDING_INDEPENDENT_REVIEW",
+    "closed_UTC_as_recorded": "2026-10-11T06:27:24.375603+00:00",
+    "base": {
+      "denominator": 8,
+      "attempted_observations": 8,
+      "confirmed_full_returns": 8,
+      "complete_JSON_objects": 8,
+      "complete_format": 8,
+      "strict_binding_qualified": 8
+    },
+    "all_attempts": {
+      "denominator": 8,
+      "attempted_observations": 8,
+      "confirmed_full_returns": 8,
+      "complete_JSON_objects": 8,
+      "complete_format": 8,
+      "strict_binding_qualified": 8
+    },
+    "final_per_case": {
+      "denominator": 8,
+      "attempted_observations": 8,
+      "confirmed_full_returns": 8,
+      "complete_JSON_objects": 8,
+      "complete_format": 8,
+      "strict_binding_qualified": 8
+    },
+    "latency_base": {
+      "n": 8,
+      "p50_median_ms": 6616.6847,
+      "p95_nearest_rank_ms": 8686.4077,
+      "minimum_ms": 5380.128,
+      "maximum_ms": 8686.4077
+    },
+    "latency_repair": {
+      "n": 0,
+      "p50_median_ms": null,
+      "p95_nearest_rank_ms": null,
+      "minimum_ms": null,
+      "maximum_ms": null
+    },
+    "financial": {
+      "cost_USD": "0.0527026",
+      "UNKNOWN_USD": "0",
+      "transport_attempts": 8,
+      "physical_POSTs": 8,
+      "max_slots": 12,
+      "remaining_slots": 4,
+      "prior_immutable_cost_USD": "0.22909566",
+      "combined_cost_USD": "0.28179826",
+      "conservative_combined_cap_USD": "0.50",
+      "all_five_old_pins_unchanged_now": true
+    },
+    "observations": [
+      {
+        "case": "case_01",
+        "phase": "base",
+        "POSTs": 1,
+        "physical_POSTs": 1,
+        "full_return": true,
+        "JSON_object": true,
+        "format_complete": true,
+        "strict_binding": true,
+        "adapter_full_return_ms": 5689.0364,
+        "cost_USD": "0.0056579",
+        "UNKNOWN_USD": "0",
+        "output_cap": 4096
+      },
+      {
+        "case": "case_02",
+        "phase": "base",
+        "POSTs": 1,
+        "physical_POSTs": 1,
+        "full_return": true,
+        "JSON_object": true,
+        "format_complete": true,
+        "strict_binding": true,
+        "adapter_full_return_ms": 7849.4861,
+        "cost_USD": "0.0077104",
+        "UNKNOWN_USD": "0",
+        "output_cap": 4096
+      },
+      {
+        "case": "case_03",
+        "phase": "base",
+        "POSTs": 1,
+        "physical_POSTs": 1,
+        "full_return": true,
+        "JSON_object": true,
+        "format_complete": true,
+        "strict_binding": true,
+        "adapter_full_return_ms": 7088.1416,
+        "cost_USD": "0.0074002",
+        "UNKNOWN_USD": "0",
+        "output_cap": 4096
+      },
+      {
+        "case": "case_04",
+        "phase": "base",
+        "POSTs": 1,
+        "physical_POSTs": 1,
+        "full_return": true,
+        "JSON_object": true,
+        "format_complete": true,
+        "strict_binding": true,
+        "adapter_full_return_ms": 5889.6719,
+        "cost_USD": "0.0060445",
+        "UNKNOWN_USD": "0",
+        "output_cap": 4096
+      },
+      {
+        "case": "case_05",
+        "phase": "base",
+        "POSTs": 1,
+        "physical_POSTs": 1,
+        "full_return": true,
+        "JSON_object": true,
+        "format_complete": true,
+        "strict_binding": true,
+        "adapter_full_return_ms": 5380.128,
+        "cost_USD": "0.005342",
+        "UNKNOWN_USD": "0",
+        "output_cap": 4096
+      },
+      {
+        "case": "case_06",
+        "phase": "base",
+        "POSTs": 1,
+        "physical_POSTs": 1,
+        "full_return": true,
+        "JSON_object": true,
+        "format_complete": true,
+        "strict_binding": true,
+        "adapter_full_return_ms": 7662.463,
+        "cost_USD": "0.0067673",
+        "UNKNOWN_USD": "0",
+        "output_cap": 4096
+      },
+      {
+        "case": "case_07",
+        "phase": "base",
+        "POSTs": 1,
+        "physical_POSTs": 1,
+        "full_return": true,
+        "JSON_object": true,
+        "format_complete": true,
+        "strict_binding": true,
+        "adapter_full_return_ms": 6145.2278,
+        "cost_USD": "0.0061683",
+        "UNKNOWN_USD": "0",
+        "output_cap": 4096
+      },
+      {
+        "case": "case_08",
+        "phase": "base",
+        "POSTs": 1,
+        "physical_POSTs": 1,
+        "full_return": true,
+        "JSON_object": true,
+        "format_complete": true,
+        "strict_binding": true,
+        "adapter_full_return_ms": 8686.4077,
+        "cost_USD": "0.007612",
+        "UNKNOWN_USD": "0",
+        "output_cap": 4096
+      }
+    ],
+    "binding_receipt_count": 8,
+    "binding_receipt_SHA_bundle": "d19f737f67a3f4a562e63ca20beb99d557b27e0d9dfe9490586ed7458d714fcb",
+    "definitions": {
+      "complete_format": "confirmed stop/end_turn/STOP, no adapter error, strict compact schema, matching atom/unique full condition set and 8192-byte ceiling",
+      "strict_binding": "saved pinned offline canonical strict-validation receipt; provenance and contract consistency only",
+      "p50": "ordinary sample median",
+      "p95": "sorted sample[ceil(.95*n)-1]; descriptive, tiny sample, often sample maximum",
+      "latency": "send via adapter to complete adapter return, including truncated/error returns with measured times; excludes optional validation; not native UI end-to-end"
+    },
+    "limits": "Synthetic development fixtures; base/conditional repair populations separate. No causal comparison, robust population p95, human semantic gold, native RAG qualification or default production readiness.",
+    "auth_DB_network_operations": 0,
+    "new_provider_requests": 0,
+    "semantic_truth_verified": false
+  },
+  "Main_free_verification": {
+    "status": "MAIN_TARGETED_FREE_VERIFICATION_PASS",
+    "working_directory": "E:\\5703\\learning-assistant",
+    "commands": [
+      {
+        "command": ".venv\\Scripts\\python.exe -B -m unittest tests.unit.test_atomic_support_compact_v1 tests.unit.test_atomic_support_v1 tests.unit.test_atomic_quote_binding_v1 -v",
+        "environment": {
+          "PYTHONDONTWRITEBYTECODE": "1"
+        },
+        "exit_code": 0,
+        "tests": 37,
+        "breakdown": {
+          "compact": 9,
+          "strict_atomic": 19,
+          "quote_binding": 9
+        },
+        "reported_test_duration_seconds": 0.077,
+        "result": "OK"
+      },
+      {
+        "command": ".venv\\Scripts\\python.exe -B -m ruff check --no-cache generation\\atomic_support_compact_v1.py tests\\unit\\test_atomic_support_compact_v1.py",
+        "exit_code": 0,
+        "result": "All checks passed!"
+      }
+    ],
+    "provider_requests": 0,
+    "database_operations": 0,
+    "fixtures": "Authored isolated in-memory fixtures and manual fake replies only",
+    "global_current_acceptance_verified": false,
+    "semantic_truth_verified": false,
+    "human_rating": null,
+    "default_execution_integrated": false
+  },
+  "Main_free_actual_replay": {
+    "status": "EIGHT_MAIN_OFFLINE_REPLAYS_EXACTLY_MATCH",
+    "count": 8,
+    "cases": [
+      {
+        "case_id": "case_01",
+        "exact_binding_receipt_match": true,
+        "compact_raw_sha256": "00fe06102ace78832a5dbc4bc8d15ee4ccb56f8da863216bbbc1d5f96ac35e45",
+        "verdict_retained": "supported"
+      },
+      {
+        "case_id": "case_02",
+        "exact_binding_receipt_match": true,
+        "compact_raw_sha256": "f637aaa55d684535c5b7fd372923cac0aab491d81df60c775b26fd6da76b64e2",
+        "verdict_retained": "unsupported"
+      },
+      {
+        "case_id": "case_03",
+        "exact_binding_receipt_match": true,
+        "compact_raw_sha256": "d45e5ad43627fb242e957d4b35bef406ad37c3233db5841ec25713ddcee2e3c9",
+        "verdict_retained": "uncertain"
+      },
+      {
+        "case_id": "case_04",
+        "exact_binding_receipt_match": true,
+        "compact_raw_sha256": "805f8f399f881c28d118e072bc242ca6130e4a2be7dfa952d8894d7c67f04874",
+        "verdict_retained": "uncertain"
+      },
+      {
+        "case_id": "case_05",
+        "exact_binding_receipt_match": true,
+        "compact_raw_sha256": "42e2e541118335f45186dad1bfd3c733507799cae041680c2444fd4f434754e7",
+        "verdict_retained": "supported"
+      },
+      {
+        "case_id": "case_06",
+        "exact_binding_receipt_match": true,
+        "compact_raw_sha256": "6d71697f3695c4d927b4245c018f86d2b882323fd815dcbf374a178e275e4674",
+        "verdict_retained": "unsupported"
+      },
+      {
+        "case_id": "case_07",
+        "exact_binding_receipt_match": true,
+        "compact_raw_sha256": "3a1bc9389bfd0f039865ef745b48ad0be1183f19df356567c1942a4c7b56e665",
+        "verdict_retained": "uncertain"
+      },
+      {
+        "case_id": "case_08",
+        "exact_binding_receipt_match": true,
+        "compact_raw_sha256": "510147cf5cc95e9646886b7e10fb74d2478e5271f7753c79920d95d05d6dc2bf",
+        "verdict_retained": "uncertain"
+      }
+    ],
+    "new_provider_requests": 0,
+    "auth_or_database_operations": 0,
+    "semantic_truth_verified": false,
+    "default_execution_integrated": false,
+    "human_rating": null
+  },
+  "source_pins": {
+    "controller_sha256": "c835806793e1ccea9bdc158ea628486c81ef920b967c5408358d29c87213b74b",
+    "frozen_review_sha256": "85d8583921f4bf481f7864a007606530492532ca15db8db965cf27c00957494a",
+    "fixtures_sha256": "11bd991f6bbc38af885cc8348552f5c73aa324370953184305e61f3a50960143",
+    "standard_sha256": "abdf0342dc6c6133e16af26c9da2863443ac4b189678bf5f0e3549309795dc7e",
+    "semantic_review_sha256": "90e30648b868880ed5c943362710ff2ae4f7d5d33c5468c55ad4ec4cdcc850aa",
+    "original_closed_batch_sha256": "332394c79386e290dca3365eac5604215de64463396a222b628e1828c45762f5",
+    "promoted_code": {
+      "generation\\atomic_support_compact_v1.py": "eaad247be4adfe0106690ab451d927b2f1aa2d0c5629360b8226eb8a163d1bb9",
+      "generation\\prompts\\atomic_support_compact_v1.txt": "505b2916f8f1b328a8acbc60847108139e1bb5cb7c6eebeffd787ebbacef2f6d",
+      "tests\\unit\\test_atomic_support_compact_v1.py": "8375ed2510005b5dd1ebc12f47d842a95c3008fd125bf23cbb1b3824b0d549ea"
+    }
+  },
+  "batch_closed_unused_conditional_slots": 4,
+  "unused_slots_authorize_semantic_or_other_retries": false,
+  "outbound_real_private_learner_data": false,
+  "authentication_or_hidden_reasoning_in_this_deliverable": false,
+  "old_records_and_canonical_acceptance_modified": false,
+  "default_execution_integrated": false,
+  "semantic_truth_certified": false,
+  "human_Gold": false,
+  "held_out": false,
+  "human_rating": null,
+  "native_page_latency_accepted": false,
+  "unified_RAG_quality_accepted": false,
+  "project_complete": false,
+  "authorized_continuation": {
+    "authorization": "Latest explicit instruction reopened four unused slots inside the same original 12-request/USD0.50 grant; no new budget",
+    "supersedes_historical_unused_slots_expired_statement": true,
+    "original_eight_observations_and_all_original_fields_preserved": true,
+    "started_UTC": "2026-10-11T06:49:03.684939+00:00",
+    "closed_UTC": "2026-10-11T06:49:31.086074+00:00",
+    "one_prompt_revision_sha256": "5343cb0007ebd6f9dbb317ec77c94e2c2c1c9f9ef28405cbe335e13db4a1ef6c",
+    "output_cap": 4096,
+    "route_and_provider": {
+      "recipient": "https://openrouter.ai/api/v1/chat/completions",
+      "model": "google/gemini-3.5-flash-lite",
+      "provider": {
+        "order": [
+          "google-vertex/global"
+        ],
+        "only": [
+          "google-vertex/global"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 0.3,
+          "completion": 2.5
+        }
+      },
+      "route_profile": "gemini35_google_vertex_high_research_v1",
+      "reasoning": {
+        "effort": "high"
+      }
+    },
+    "classification": {
+      "seen_regressions": [
+        "reg_owner",
+        "reg_bridge"
+      ],
+      "new_synthetic_controls": [
+        "new_owner",
+        "new_bridge"
+      ]
+    },
+    "fixtures": {
+      "schema_version": "atomic65_followup_fixture_bundle_v1",
+      "purpose": "Four fixed synthetic development inputs. Contains no expectations or personal data.",
+      "coordinate_system": "Unicode codepoint offsets; start inclusive, end exclusive.",
+      "wire_input_policy": "Only each case's atomic_input enters model input after the same coordinate-free compact projection. source_snapshots and outer case identifiers remain local. No author expectations are supplied.",
+      "cases": [
+        {
+          "case_id": "reg_owner",
+          "atomic_input": {
+            "schema_version": "atomic_support_input_v1",
+            "atom_id": "A08",
+            "proposition": "Record R7 satisfies the completion rule in snapshot V.",
+            "required_conditions": [
+              {
+                "condition_id": "C0",
+                "kind": "proposition",
+                "description": "Record R7 satisfies the completion rule in snapshot V."
+              },
+              {
+                "condition_id": "C1",
+                "kind": "qualifier",
+                "description": "Record R7 has status done in snapshot V."
+              },
+              {
+                "condition_id": "C2",
+                "kind": "qualifier",
+                "description": "Record R7 has validation pass in snapshot V."
+              },
+              {
+                "condition_id": "C3",
+                "kind": "identity",
+                "description": "The status and validation entries identify the same record R7 and snapshot V."
+              }
+            ],
+            "actual_citations": [
+              {
+                "fragment_id": "F01",
+                "evidence_id": "E01",
+                "source_id": "S01",
+                "start": 15,
+                "end": 127,
+                "exact_text": "Snapshot V, record R7: status done. Rule: complete iff done AND validation pass on the same record and snapshot."
+              },
+              {
+                "fragment_id": "F02",
+                "evidence_id": "E02",
+                "source_id": "S02",
+                "start": 15,
+                "end": 109,
+                "exact_text": "Validation: pass. Record and snapshot identifiers for this validation entry were not recorded."
+              }
+            ]
+          },
+          "source_snapshots": {
+            "S01": {
+              "evidence_id": "E01",
+              "exact_text": "Source S01 · 🟦\nSnapshot V, record R7: status done. Rule: complete iff done AND validation pass on the same record and snapshot.\nEnd S01."
+            },
+            "S02": {
+              "evidence_id": "E02",
+              "exact_text": "Source S02 · 🟦\nValidation: pass. Record and snapshot identifiers for this validation entry were not recorded.\nEnd S02."
+            }
+          }
+        },
+        {
+          "case_id": "reg_bridge",
+          "atomic_input": {
+            "schema_version": "atomic_support_input_v1",
+            "atom_id": "A01",
+            "proposition": "Cart K's average velocity in trial T was 2 m/s east.",
+            "required_conditions": [
+              {
+                "condition_id": "C0",
+                "kind": "proposition",
+                "description": "Cart K's average velocity in trial T was 2 m/s east."
+              },
+              {
+                "condition_id": "C1",
+                "kind": "qualifier",
+                "description": "Cart K's displacement in trial T was 4 m east."
+              },
+              {
+                "condition_id": "C2",
+                "kind": "qualifier",
+                "description": "Cart K's elapsed time in trial T was 2 s."
+              },
+              {
+                "condition_id": "C3",
+                "kind": "identity",
+                "description": "The displacement and elapsed-time entries identify the same cart K and trial T."
+              }
+            ],
+            "actual_citations": [
+              {
+                "fragment_id": "F01",
+                "evidence_id": "E01",
+                "source_id": "S01",
+                "start": 15,
+                "end": 130,
+                "exact_text": "Cart K, trial T: displacement 4 m east; average velocity = displacement / elapsed time for the same cart and trial."
+              },
+              {
+                "fragment_id": "F02",
+                "evidence_id": "E02",
+                "source_id": "S02",
+                "start": 15,
+                "end": 79,
+                "exact_text": "Cart K, trial T: elapsed time 2 s. Average velocity: 2 m/s east."
+              }
+            ]
+          },
+          "source_snapshots": {
+            "S01": {
+              "evidence_id": "E01",
+              "exact_text": "Source S01 · 🟦\nCart K, trial T: displacement 4 m east; average velocity = displacement / elapsed time for the same cart and trial.\nEnd S01."
+            },
+            "S02": {
+              "evidence_id": "E02",
+              "exact_text": "Source S02 · 🟦\nCart K, trial T: elapsed time 2 s. Average velocity: 2 m/s east.\nEnd S02."
+            }
+          }
+        },
+        {
+          "case_id": "new_owner",
+          "atomic_input": {
+            "schema_version": "atomic_support_input_v1",
+            "atom_id": "A09",
+            "proposition": "Record M3 satisfies the completion rule in snapshot N.",
+            "required_conditions": [
+              {
+                "condition_id": "C0",
+                "kind": "proposition",
+                "description": "Record M3 satisfies the completion rule in snapshot N."
+              },
+              {
+                "condition_id": "C1",
+                "kind": "qualifier",
+                "description": "Record M3 has status done in snapshot N."
+              },
+              {
+                "condition_id": "C2",
+                "kind": "qualifier",
+                "description": "Record M3 has validation pass in snapshot N."
+              },
+              {
+                "condition_id": "C3",
+                "kind": "identity",
+                "description": "The status and validation entries identify the same record M3 and snapshot N."
+              }
+            ],
+            "actual_citations": [
+              {
+                "fragment_id": "F01",
+                "evidence_id": "E01",
+                "source_id": "S01",
+                "start": 15,
+                "end": 110,
+                "exact_text": "Validation value: pass. No record identifier or snapshot identifier is recorded for this entry."
+              },
+              {
+                "fragment_id": "F02",
+                "evidence_id": "E02",
+                "source_id": "S02",
+                "start": 15,
+                "end": 125,
+                "exact_text": "Record M3 in snapshot N: status done. Rule: complete iff done AND validation pass on this record and snapshot."
+              }
+            ]
+          },
+          "source_snapshots": {
+            "S01": {
+              "evidence_id": "E01",
+              "exact_text": "Source S01 · 🟦\nValidation value: pass. No record identifier or snapshot identifier is recorded for this entry.\nEnd S01."
+            },
+            "S02": {
+              "evidence_id": "E02",
+              "exact_text": "Source S02 · 🟦\nRecord M3 in snapshot N: status done. Rule: complete iff done AND validation pass on this record and snapshot.\nEnd S02."
+            }
+          }
+        },
+        {
+          "case_id": "new_bridge",
+          "atomic_input": {
+            "schema_version": "atomic_support_input_v1",
+            "atom_id": "A10",
+            "proposition": "Record B6 satisfies the completion rule in snapshot P.",
+            "required_conditions": [
+              {
+                "condition_id": "C0",
+                "kind": "proposition",
+                "description": "Record B6 satisfies the completion rule in snapshot P."
+              },
+              {
+                "condition_id": "C1",
+                "kind": "qualifier",
+                "description": "Record B6 has status done in snapshot P."
+              },
+              {
+                "condition_id": "C2",
+                "kind": "qualifier",
+                "description": "Record B6 has validation pass in snapshot P."
+              },
+              {
+                "condition_id": "C3",
+                "kind": "identity",
+                "description": "The status and validation entries identify the same record B6 and snapshot P."
+              }
+            ],
+            "actual_citations": [
+              {
+                "fragment_id": "F01",
+                "evidence_id": "E01",
+                "source_id": "S01",
+                "start": 15,
+                "end": 79,
+                "exact_text": "For snapshot P and record B6, the validation entry records pass."
+              },
+              {
+                "fragment_id": "F02",
+                "evidence_id": "E02",
+                "source_id": "S02",
+                "start": 15,
+                "end": 125,
+                "exact_text": "Record B6 in snapshot P: status done. Rule: complete iff done AND validation pass on this record and snapshot."
+              }
+            ]
+          },
+          "source_snapshots": {
+            "S01": {
+              "evidence_id": "E01",
+              "exact_text": "Source S01 · 🟦\nFor snapshot P and record B6, the validation entry records pass.\nEnd S01."
+            },
+            "S02": {
+              "evidence_id": "E02",
+              "exact_text": "Source S02 · 🟦\nRecord B6 in snapshot P: status done. Rule: complete iff done AND validation pass on this record and snapshot.\nEnd S02."
+            }
+          }
+        }
+      ]
+    },
+    "preregistered_AI_standard": {
+      "schema_version": "independent_atomic65_followup_standards_v1",
+      "frozen_UTC": "2026-10-11T06:44:05.431593+00:00",
+      "reviewer": "Independent AI reviewer; AI-authored development expectations",
+      "fixture_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic65-followup-fixtures\\cases65-followup.json",
+      "fixture_sha256": "19feb849004201d5deadcf0d293bd5f39822252c8cf20771cf3f997f369c6667",
+      "original_regression_inputs_exactly_preserved": true,
+      "source_ownership_and_Unicode_slices_checked": true,
+      "classification_counts": {
+        "seen_regression": 2,
+        "new_synthetic_analogue": 2
+      },
+      "expected_overall_counts": {
+        "supported": 2,
+        "uncertain": 2,
+        "unsupported": 0
+      },
+      "prior_atomic65_responses_known": true,
+      "followup_actual_responses_read": false,
+      "writer_expectations_or_followup_prompt_read": false,
+      "human_rating": null,
+      "Gold_or_heldout": false,
+      "case07_free_replay_separate_from_provider_case_denominator": true,
+      "original_standards_and_reviews_modified": false,
+      "reviewer_provider_requests": 0,
+      "reviewer_auth_reads": 0,
+      "reviewer_database_calls": 0,
+      "reviewer_Main_writes": 0,
+      "cases": [
+        {
+          "case_id": "reg_owner",
+          "atom_id": "A08",
+          "classification": "seen_regression",
+          "expected_overall_verdict": "uncertain",
+          "conditions": {
+            "C0": {
+              "expected_verdict": "uncertain",
+              "reason": "The completion rule requires validation pass for this record/snapshot. Its pass entry lacks identifiers, so the rule outcome cannot be established.",
+              "complete_witness_fragment_options": [],
+              "gap_required": true,
+              "allowed_gap_kinds": [
+                "unresolved_identity",
+                "missing_condition",
+                "qualification_gap"
+              ],
+              "both_concrete_identity_labels_required_in_witness_trail": false
+            },
+            "C1": {
+              "expected_verdict": "supported",
+              "reason": "The status entry explicitly names the target record/snapshot and says status done.",
+              "complete_witness_fragment_options": [
+                [
+                  "F01"
+                ]
+              ],
+              "gap_required": false,
+              "allowed_gap_kinds": [],
+              "both_concrete_identity_labels_required_in_witness_trail": false
+            },
+            "C2": {
+              "expected_verdict": "uncertain",
+              "reason": "Pass is recorded, but its entry explicitly lacks record and snapshot identifiers. A raw pass value cannot establish the full owner-qualified condition.",
+              "complete_witness_fragment_options": [],
+              "gap_required": true,
+              "allowed_gap_kinds": [
+                "unresolved_identity"
+              ],
+              "both_concrete_identity_labels_required_in_witness_trail": false
+            },
+            "C3": {
+              "expected_verdict": "uncertain",
+              "reason": "One concrete entry lacks owner/context identifiers. Shared category, ordering or the generic same-owner rule cannot supply the bridge.",
+              "complete_witness_fragment_options": [],
+              "gap_required": true,
+              "allowed_gap_kinds": [
+                "unresolved_identity"
+              ],
+              "both_concrete_identity_labels_required_in_witness_trail": false
+            }
+          },
+          "quote_review_policy": "Literal uniqueness in the named actually cited fragment is provenance only. Fragment options are complete evidence sets, not automatic semantic certification; inspect quote meaning and its actual-fragment context. Owner/context may qualify a value within one actual fragment. Cross-entry identity witnesses must show each concrete entry's owner and context.",
+          "missing_owner_value_is_known": true,
+          "uncertain_witnesses_optional": true,
+          "additional_gap_policy": "Relevant coarse missing-link gaps may accompany uncertainty. No actual conflict or contrary value exists in these four cases; supported overall needs no additional gaps."
+        },
+        {
+          "case_id": "reg_bridge",
+          "atom_id": "A01",
+          "classification": "seen_regression",
+          "expected_overall_verdict": "supported",
+          "conditions": {
+            "C0": {
+              "expected_verdict": "supported",
+              "reason": "F02 directly records the target average velocity in the Cart K/trial T entry. The formula plus both recorded values also supports the result.",
+              "complete_witness_fragment_options": [
+                [
+                  "F02"
+                ],
+                [
+                  "F01",
+                  "F02"
+                ]
+              ],
+              "gap_required": false,
+              "allowed_gap_kinds": [],
+              "both_concrete_identity_labels_required_in_witness_trail": false
+            },
+            "C1": {
+              "expected_verdict": "supported",
+              "reason": "F01 gives Cart K/trial T displacement 4 m east.",
+              "complete_witness_fragment_options": [
+                [
+                  "F01"
+                ]
+              ],
+              "gap_required": false,
+              "allowed_gap_kinds": [],
+              "both_concrete_identity_labels_required_in_witness_trail": false
+            },
+            "C2": {
+              "expected_verdict": "supported",
+              "reason": "F02 gives Cart K/trial T elapsed time 2 s.",
+              "complete_witness_fragment_options": [
+                [
+                  "F02"
+                ]
+              ],
+              "gap_required": false,
+              "allowed_gap_kinds": [],
+              "both_concrete_identity_labels_required_in_witness_trail": false
+            },
+            "C3": {
+              "expected_verdict": "supported",
+              "reason": "Both concrete entries explicitly name Cart K and trial T. Require an identity-bearing literal witness from each fragment, not only one label or a generic rule.",
+              "complete_witness_fragment_options": [
+                [
+                  "F01",
+                  "F02"
+                ]
+              ],
+              "gap_required": false,
+              "allowed_gap_kinds": [],
+              "both_concrete_identity_labels_required_in_witness_trail": true
+            }
+          },
+          "quote_review_policy": "Literal uniqueness in the named actually cited fragment is provenance only. Fragment options are complete evidence sets, not automatic semantic certification; inspect quote meaning and its actual-fragment context. Owner/context may qualify a value within one actual fragment. Cross-entry identity witnesses must show each concrete entry's owner and context.",
+          "missing_owner_value_is_known": false,
+          "uncertain_witnesses_optional": true,
+          "additional_gap_policy": "Relevant coarse missing-link gaps may accompany uncertainty. No actual conflict or contrary value exists in these four cases; supported overall needs no additional gaps."
+        },
+        {
+          "case_id": "new_owner",
+          "atom_id": "A09",
+          "classification": "new_synthetic_analogue",
+          "expected_overall_verdict": "uncertain",
+          "conditions": {
+            "C0": {
+              "expected_verdict": "uncertain",
+              "reason": "The completion rule requires validation pass for this record/snapshot. Its pass entry lacks identifiers, so the rule outcome cannot be established.",
+              "complete_witness_fragment_options": [],
+              "gap_required": true,
+              "allowed_gap_kinds": [
+                "unresolved_identity",
+                "missing_condition",
+                "qualification_gap"
+              ],
+              "both_concrete_identity_labels_required_in_witness_trail": false
+            },
+            "C1": {
+              "expected_verdict": "supported",
+              "reason": "The status entry explicitly names the target record/snapshot and says status done.",
+              "complete_witness_fragment_options": [
+                [
+                  "F02"
+                ]
+              ],
+              "gap_required": false,
+              "allowed_gap_kinds": [],
+              "both_concrete_identity_labels_required_in_witness_trail": false
+            },
+            "C2": {
+              "expected_verdict": "uncertain",
+              "reason": "Pass is recorded, but its entry explicitly lacks record and snapshot identifiers. A raw pass value cannot establish the full owner-qualified condition.",
+              "complete_witness_fragment_options": [],
+              "gap_required": true,
+              "allowed_gap_kinds": [
+                "unresolved_identity"
+              ],
+              "both_concrete_identity_labels_required_in_witness_trail": false
+            },
+            "C3": {
+              "expected_verdict": "uncertain",
+              "reason": "One concrete entry lacks owner/context identifiers. Shared category, ordering or the generic same-owner rule cannot supply the bridge.",
+              "complete_witness_fragment_options": [],
+              "gap_required": true,
+              "allowed_gap_kinds": [
+                "unresolved_identity"
+              ],
+              "both_concrete_identity_labels_required_in_witness_trail": false
+            }
+          },
+          "quote_review_policy": "Literal uniqueness in the named actually cited fragment is provenance only. Fragment options are complete evidence sets, not automatic semantic certification; inspect quote meaning and its actual-fragment context. Owner/context may qualify a value within one actual fragment. Cross-entry identity witnesses must show each concrete entry's owner and context.",
+          "missing_owner_value_is_known": true,
+          "uncertain_witnesses_optional": true,
+          "additional_gap_policy": "Relevant coarse missing-link gaps may accompany uncertainty. No actual conflict or contrary value exists in these four cases; supported overall needs no additional gaps."
+        },
+        {
+          "case_id": "new_bridge",
+          "atom_id": "A10",
+          "classification": "new_synthetic_analogue",
+          "expected_overall_verdict": "supported",
+          "conditions": {
+            "C0": {
+              "expected_verdict": "supported",
+              "reason": "F02 supplies status done and the iff completion rule; F01 supplies validation pass for the same B6/P. There is no direct complete-outcome sentence: the quoted proof must account for both actual fragments.",
+              "complete_witness_fragment_options": [
+                [
+                  "F01",
+                  "F02"
+                ]
+              ],
+              "gap_required": false,
+              "allowed_gap_kinds": [],
+              "both_concrete_identity_labels_required_in_witness_trail": false
+            },
+            "C1": {
+              "expected_verdict": "supported",
+              "reason": "F02 explicitly names record B6 in snapshot P with status done.",
+              "complete_witness_fragment_options": [
+                [
+                  "F02"
+                ]
+              ],
+              "gap_required": false,
+              "allowed_gap_kinds": [],
+              "both_concrete_identity_labels_required_in_witness_trail": false
+            },
+            "C2": {
+              "expected_verdict": "supported",
+              "reason": "F01 explicitly names snapshot P and record B6 and records validation pass.",
+              "complete_witness_fragment_options": [
+                [
+                  "F01"
+                ]
+              ],
+              "gap_required": false,
+              "allowed_gap_kinds": [],
+              "both_concrete_identity_labels_required_in_witness_trail": false
+            },
+            "C3": {
+              "expected_verdict": "supported",
+              "reason": "The two concrete entries explicitly name B6/P, despite reversed phrase and fragment order. Require identity-bearing literal witnesses from both fragments.",
+              "complete_witness_fragment_options": [
+                [
+                  "F01",
+                  "F02"
+                ]
+              ],
+              "gap_required": false,
+              "allowed_gap_kinds": [],
+              "both_concrete_identity_labels_required_in_witness_trail": true
+            }
+          },
+          "quote_review_policy": "Literal uniqueness in the named actually cited fragment is provenance only. Fragment options are complete evidence sets, not automatic semantic certification; inspect quote meaning and its actual-fragment context. Owner/context may qualify a value within one actual fragment. Cross-entry identity witnesses must show each concrete entry's owner and context.",
+          "missing_owner_value_is_known": false,
+          "uncertain_witnesses_optional": true,
+          "additional_gap_policy": "Relevant coarse missing-link gaps may accompany uncertainty. No actual conflict or contrary value exists in these four cases; supported overall needs no additional gaps."
+        }
+      ]
+    },
+    "observations": [
+      {
+        "case_id": "reg_owner",
+        "raw_compact_judgment": "{\"additional_gaps\":[],\"atom_id\":\"A08\",\"conditions\":[{\"condition_id\":\"C0\",\"gap\":{\"detail\":\"Validation entry lacks record and snapshot identifiers.\",\"kind\":\"unresolved_identity\"},\"reason\":\"Missing identity link for validation entry prevents rule evaluation.\",\"verdict\":\"uncertain\",\"witnesses\":[]},{\"condition_id\":\"C1\",\"gap\":null,\"reason\":\"Status done is explicitly stated for record R7 in snapshot V.\",\"verdict\":\"supported\",\"witnesses\":[{\"fragment_id\":\"F01\",\"quote\":\"Snapshot V, record R7: status done.\"}]},{\"condition_id\":\"C2\",\"gap\":{\"detail\":\"Record and snapshot identifiers were not recorded.\",\"kind\":\"unresolved_identity\"},\"reason\":\"Validation pass is recorded, but without record or snapshot identifiers.\",\"verdict\":\"uncertain\",\"witnesses\":[{\"fragment_id\":\"F02\",\"quote\":\"Validation: pass.\"}]},{\"condition_id\":\"C3\",\"gap\":{\"detail\":\"Validation entry identifiers were not recorded.\",\"kind\":\"unresolved_identity\"},\"reason\":\"Validation entry explicitly lacks record and snapshot identifiers.\",\"verdict\":\"uncertain\",\"witnesses\":[{\"fragment_id\":\"F02\",\"quote\":\"Record and snapshot identifiers for this validation entry were not recorded.\"}]}],\"schema_version\":\"atomic_support_compact_v1\",\"verdict\":\"uncertain\"}",
+        "raw_compact_sha256": "d51daf1788c696739e17351e73048b27ad26215c5b01f2c79af9222c6723a33f",
+        "wire_sha256": "bbd2605e8b4998ac4093b62051fe8f900ea1584407605941bfceda3ab2616179",
+        "finish_reason": "stop",
+        "adapter_error": null,
+        "strict_binding_status": "STRICT_BINDING_VALID_MODEL_OPINION_ONLY",
+        "saved_binding_sha256": "10d52b7ac45bd8ff53d6ec806c0ee12a1e34a62f2e587a6aa3874d594acace7a",
+        "cost_USD": "0.0061773",
+        "UNKNOWN_USD": "0",
+        "adapter_complete_return_ms": 6599.4534,
+        "physical_POSTs": 1
+      },
+      {
+        "case_id": "reg_bridge",
+        "raw_compact_judgment": "{\"additional_gaps\":[],\"atom_id\":\"A01\",\"conditions\":[{\"condition_id\":\"C0\",\"gap\":null,\"reason\":\"F02 explicitly states the average velocity was 2 m/s east for Cart K in trial T.\",\"verdict\":\"supported\",\"witnesses\":[{\"fragment_id\":\"F02\",\"quote\":\"Cart K, trial T: elapsed time 2 s. Average velocity: 2 m/s east.\"}]},{\"condition_id\":\"C1\",\"gap\":null,\"reason\":\"F01 states displacement was 4 m east for Cart K in trial T.\",\"verdict\":\"supported\",\"witnesses\":[{\"fragment_id\":\"F01\",\"quote\":\"Cart K, trial T: displacement 4 m east\"}]},{\"condition_id\":\"C2\",\"gap\":null,\"reason\":\"F02 states elapsed time was 2 s for Cart K in trial T.\",\"verdict\":\"supported\",\"witnesses\":[{\"fragment_id\":\"F02\",\"quote\":\"Cart K, trial T: elapsed time 2 s.\"}]},{\"condition_id\":\"C3\",\"gap\":null,\"reason\":\"Both fragments explicitly identify Cart K and trial T.\",\"verdict\":\"supported\",\"witnesses\":[{\"fragment_id\":\"F01\",\"quote\":\"Cart K, trial T\"},{\"fragment_id\":\"F02\",\"quote\":\"Cart K, trial T\"}]}],\"schema_version\":\"atomic_support_compact_v1\",\"verdict\":\"supported\"}",
+        "raw_compact_sha256": "444455fd31f83bf891394028af643504b1703f275522c9854df600e3eb2eac51",
+        "wire_sha256": "ee5c78f2606ecfd7a51d64d70ab348f05cbf9a0deacb7dba04d549a8d1f0aa21",
+        "finish_reason": "stop",
+        "adapter_error": null,
+        "strict_binding_status": "STRICT_BINDING_VALID_MODEL_OPINION_ONLY",
+        "saved_binding_sha256": "64463520413168d27ee0cb7d79bd90ae1353226856e47047d56aa73ff7a8432a",
+        "cost_USD": "0.0067957",
+        "UNKNOWN_USD": "0",
+        "adapter_complete_return_ms": 6573.9234,
+        "physical_POSTs": 1
+      },
+      {
+        "case_id": "new_owner",
+        "raw_compact_judgment": "{\"additional_gaps\":[],\"atom_id\":\"A09\",\"conditions\":[{\"condition_id\":\"C0\",\"gap\":{\"detail\":\"Identity and validation link to Record M3 and snapshot N are missing.\",\"kind\":\"missing_condition\"},\"reason\":\"Completion rule requires linking validation pass to Record M3 and snapshot N.\",\"verdict\":\"uncertain\",\"witnesses\":[]},{\"condition_id\":\"C1\",\"gap\":null,\"reason\":\"Record M3 status done in snapshot N is explicitly stated.\",\"verdict\":\"supported\",\"witnesses\":[{\"fragment_id\":\"F02\",\"quote\":\"Record M3 in snapshot N: status done.\"}]},{\"condition_id\":\"C2\",\"gap\":{\"detail\":\"Validation value is unlinked to record M3 and snapshot N.\",\"kind\":\"missing_evidence\"},\"reason\":\"Validation value is pass, but not linked to record M3 or snapshot N.\",\"verdict\":\"uncertain\",\"witnesses\":[{\"fragment_id\":\"F01\",\"quote\":\"Validation value: pass.\"}]},{\"condition_id\":\"C3\",\"gap\":{\"detail\":\"Validation entry lacks record and snapshot identifiers.\",\"kind\":\"unresolved_identity\"},\"reason\":\"F01 states no record or snapshot identifier is recorded.\",\"verdict\":\"uncertain\",\"witnesses\":[{\"fragment_id\":\"F01\",\"quote\":\"No record identifier or snapshot identifier is recorded for this entry.\"}]}],\"schema_version\":\"atomic_support_compact_v1\",\"verdict\":\"uncertain\"}",
+        "raw_compact_sha256": "193c481866141f1c5a6f28762f1f3838dfc16620c81af47fc6593632749f5a26",
+        "wire_sha256": "79c2bb9df4347be64fe8d8a427c52397b62193c793401a465b54033c1a9481d6",
+        "finish_reason": "stop",
+        "adapter_error": null,
+        "strict_binding_status": "STRICT_BINDING_VALID_MODEL_OPINION_ONLY",
+        "saved_binding_sha256": "8e91b828246b2c0c92b8a280e4e979728df5a39c9aa06690bff9cad46a03fc4d",
+        "cost_USD": "0.0073273",
+        "UNKNOWN_USD": "0",
+        "adapter_complete_return_ms": 7127.0487,
+        "physical_POSTs": 1
+      },
+      {
+        "case_id": "new_bridge",
+        "raw_compact_judgment": "{\n  \"additional_gaps\": [],\n  \"atom_id\": \"A10\",\n  \"conditions\": [\n    {\n      \"condition_id\": \"C0\",\n      \"gap\": null,\n      \"reason\": \"Snapshot P, record B6 meets done status and validation pass requirements.\",\n      \"verdict\": \"supported\",\n      \"witnesses\": [\n        {\n          \"fragment_id\": \"F02\",\n          \"quote\": \"Rule: complete iff done AND validation pass on this record and snapshot.\"\n        }\n      ]\n    },\n    {\n      \"condition_id\": \"C1\",\n      \"gap\": null,\n      \"reason\": \"Record B6 has status done in snapshot P.\",\n      \"verdict\": \"supported\",\n      \"witnesses\": [\n        {\n          \"fragment_id\": \"F02\",\n          \"quote\": \"Record B6 in snapshot P: status done.\"\n        }\n      ]\n    },\n    {\n      \"condition_id\": \"C2\",\n      \"gap\": null,\n      \"reason\": \"Validation entry records pass for record B6 and snapshot P.\",\n      \"verdict\": \"supported\",\n      \"witnesses\": [\n        {\n          \"fragment_id\": \"F01\",\n          \"quote\": \"For snapshot P and record B6, the validation entry records pass.\"\n        }\n      ]\n    },\n    {\n      \"condition_id\": \"C3\",\n      \"gap\": null,\n      \"reason\": \"Both entries explicitly refer to record B6 and snapshot P.\",\n      \"verdict\": \"supported\",\n      \"witnesses\": [\n        {\n          \"fragment_id\": \"F01\",\n          \"quote\": \"For snapshot P and record B6\"\n        },\n        {\n          \"fragment_id\": \"F02\",\n          \"quote\": \"Record B6 in snapshot P\"\n        }\n      ]\n    }\n  ],\n  \"schema_version\": \"atomic_support_compact_v1\",\n  \"verdict\": \"supported\"\n}",
+        "raw_compact_sha256": "295a219bd41ba9746d248add9424f85156c5801c2854682950fe729c9353a5e9",
+        "wire_sha256": "5cffc9e73ce6606e8fc7ef160389735a115e8f2d80c2d6bfdad95e0acfc036cd",
+        "finish_reason": "stop",
+        "adapter_error": null,
+        "strict_binding_status": "STRICT_BINDING_VALID_MODEL_OPINION_ONLY",
+        "saved_binding_sha256": "787956687494c1f2f462d39392fb18d029994dc52b5d7120a21a5873e8a30c5e",
+        "cost_USD": "0.0067264",
+        "UNKNOWN_USD": "0",
+        "adapter_complete_return_ms": 6465.4195,
+        "physical_POSTs": 1
+      }
+    ],
+    "independent_AI_review": {
+      "schema_version": "independent_atomic65_followup_actual_review_v1",
+      "reviewer": "Independent AI reviewer; frozen AI-authored development expectations, no human rating or Gold/heldout",
+      "reviewed_UTC": "2026-10-11T06:52:43.213448+00:00",
+      "sources": {
+        "input_sha256": "19feb849004201d5deadcf0d293bd5f39822252c8cf20771cf3f997f369c6667",
+        "unchanged_standard_sha256": "ec81216c3f7cbf49d66d7fddd60cf8cfb4858a92af2f932a88bdef9bdcca405a",
+        "batch_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic65-followup-controller\\actual-followup65\\batch-followup65.json",
+        "batch_sha256": "292932fb65d5f99036f27399f0a3cc9ce56a5672ad558785bcc5136993928be4",
+        "closed_UTC": "2026-10-11T06:49:31.086074+00:00",
+        "result_path_rule": "batch parent / case_id / result-followup65.json and offline-validation.json"
+      },
+      "first_and_final_strict_valid": {
+        "correct": 4,
+        "denominator": 4,
+        "automatic_retries": 0,
+        "truncation_repairs": 0,
+        "output_caps": [
+          4096
+        ]
+      },
+      "cohorts": {
+        "seen_regression": {
+          "cases": 2,
+          "strict_valid": 2,
+          "overall_labels_correct": 2,
+          "condition_labels_correct": 8,
+          "condition_denominator": 8,
+          "present_gaps": 3,
+          "allowed_gaps": 3,
+          "uncertain_witness_optional_conditions": 3,
+          "literal_unique_quotes_correct": 8,
+          "mandatory_witness_conditions": 5,
+          "complete_mandatory_witness_conditions": 5,
+          "fully_label_correct_cases": 2,
+          "full_mandatory_witness_cases": 2,
+          "all_present_gap_kinds_allowed_cases": 2,
+          "full_labels_evidence_taxonomy_cases": 2
+        },
+        "new_synthetic_analogue": {
+          "cases": 2,
+          "strict_valid": 2,
+          "overall_labels_correct": 2,
+          "condition_labels_correct": 8,
+          "condition_denominator": 8,
+          "present_gaps": 3,
+          "allowed_gaps": 2,
+          "uncertain_witness_optional_conditions": 3,
+          "literal_unique_quotes_correct": 8,
+          "mandatory_witness_conditions": 5,
+          "complete_mandatory_witness_conditions": 4,
+          "fully_label_correct_cases": 2,
+          "full_mandatory_witness_cases": 1,
+          "all_present_gap_kinds_allowed_cases": 1,
+          "full_labels_evidence_taxonomy_cases": 0
+        }
+      },
+      "totals": {
+        "cases": 4,
+        "strict_valid": 4,
+        "overall_labels_correct": 4,
+        "condition_labels_correct": 16,
+        "condition_denominator": 16,
+        "present_gaps": 6,
+        "allowed_gaps": 5,
+        "uncertain_witness_optional_conditions": 6,
+        "literal_unique_quotes_correct": 16,
+        "mandatory_witness_conditions": 10,
+        "complete_mandatory_witness_conditions": 9,
+        "fully_label_correct_cases": 4,
+        "full_mandatory_witness_cases": 3,
+        "all_present_gap_kinds_allowed_cases": 3,
+        "full_labels_evidence_taxonomy_cases": 2
+      },
+      "issues": [
+        {
+          "case_condition": "new_bridge:C0",
+          "kind": "incomplete_selected_proof",
+          "quote": "Rule: complete iff done AND validation pass on this record and snapshot.",
+          "missing_actual_witness": "F01: For snapshot P and record B6, the validation entry records pass.",
+          "assessment": "Overall/C0 labels and full-input reason are correct, but the selected proof fails the pre-registered F01+F02 evidence requirement."
+        },
+        {
+          "case_condition": "new_owner:C2",
+          "kind": "gap_taxonomy_mismatch",
+          "reported": "missing_evidence",
+          "frozen_allowed": [
+            "unresolved_identity"
+          ],
+          "assessment": "Unknown-owner label and reason are correct. Preserve this separate taxonomy mismatch without changing standards."
+        }
+      ],
+      "qualification": {
+        "seen_regressions_pass_labels_and_evidence": true,
+        "new_cohort_full_evidence_pass": false,
+        "all_four_full_audits_pass": false,
+        "default_automatic_semantic_acceptance_blocked": true,
+        "semantic_truth_certified": false,
+        "historical_case07_thin_trace_qualified_or_replaced": false,
+        "case07_free_replay_counted_as_new_provider_observation": false,
+        "old_results_or_standards_changed": false,
+        "prompt_effect_or_generalization_proven": false,
+        "production_RAG_or_native_UI_acceptance": false
+      },
+      "execution": {
+        "root_followup_POSTs": 4,
+        "root_followup_known_USD": "0.0270267",
+        "root_followup_UNKNOWN_hold_USD": "0",
+        "original_grant_total_attempts": 12,
+        "original_grant_total_known_USD": "0.0797293",
+        "original_grant_slots_remaining": 0,
+        "reviewer_provider_requests": 0,
+        "reviewer_auth_reads": 0,
+        "reviewer_database_calls": 0,
+        "reviewer_Main_writes": 0,
+        "raw_provider_read_files_or_hidden_reasoning_opened": false
+      },
+      "cases": [
+        {
+          "case_id": "reg_owner",
+          "classification": "seen_regression",
+          "expected_overall": "uncertain",
+          "reported_overall": "uncertain",
+          "full_mandatory_witness_trail": true,
+          "all_gap_kinds_allowed": true,
+          "result_sha256": "8f1373abe61e98b707002c733421ce005a4a6046569eb2d0914ad1d248df77c1",
+          "offline_validation_sha256": "10d52b7ac45bd8ff53d6ec806c0ee12a1e34a62f2e587a6aa3874d594acace7a",
+          "known_cost_USD": "0.0061773",
+          "complete_adapter_return_ms": 6599.4534,
+          "conditions": [
+            {
+              "id": "C0",
+              "expected": "uncertain",
+              "reported": "uncertain",
+              "model_reason": "Missing identity link for validation entry prevents rule evaluation.",
+              "model_gap": {
+                "detail": "Validation entry lacks record and snapshot identifiers.",
+                "kind": "unresolved_identity"
+              },
+              "quotes": [],
+              "AI_label_and_reason_review": "correct_in_full_actual_input",
+              "selected_evidence_complete": true,
+              "evidence_review": "Correctly preserves missing attribution; the known pass value is not treated as a full owner-qualified fact. Witnesses are optional.",
+              "taxonomy_matches_frozen_allowed_kinds": true,
+              "taxonomy_review": "Allowed frozen gap kind."
+            },
+            {
+              "id": "C1",
+              "expected": "supported",
+              "reported": "supported",
+              "model_reason": "Status done is explicitly stated for record R7 in snapshot V.",
+              "model_gap": null,
+              "quotes": [
+                {
+                  "fragment_id": "F01",
+                  "quote": "Snapshot V, record R7: status done."
+                }
+              ],
+              "AI_label_and_reason_review": "correct_in_full_actual_input",
+              "selected_evidence_complete": true,
+              "evidence_review": "Complete required witness trail; quotes and actual-fragment context support the full owner-qualified condition.",
+              "taxonomy_matches_frozen_allowed_kinds": true,
+              "taxonomy_review": "Allowed frozen gap kind."
+            },
+            {
+              "id": "C2",
+              "expected": "uncertain",
+              "reported": "uncertain",
+              "model_reason": "Validation pass is recorded, but without record or snapshot identifiers.",
+              "model_gap": {
+                "detail": "Record and snapshot identifiers were not recorded.",
+                "kind": "unresolved_identity"
+              },
+              "quotes": [
+                {
+                  "fragment_id": "F02",
+                  "quote": "Validation: pass."
+                }
+              ],
+              "AI_label_and_reason_review": "correct_in_full_actual_input",
+              "selected_evidence_complete": true,
+              "evidence_review": "Correctly preserves missing attribution; the known pass value is not treated as a full owner-qualified fact. Witnesses are optional.",
+              "taxonomy_matches_frozen_allowed_kinds": true,
+              "taxonomy_review": "Allowed frozen gap kind."
+            },
+            {
+              "id": "C3",
+              "expected": "uncertain",
+              "reported": "uncertain",
+              "model_reason": "Validation entry explicitly lacks record and snapshot identifiers.",
+              "model_gap": {
+                "detail": "Validation entry identifiers were not recorded.",
+                "kind": "unresolved_identity"
+              },
+              "quotes": [
+                {
+                  "fragment_id": "F02",
+                  "quote": "Record and snapshot identifiers for this validation entry were not recorded."
+                }
+              ],
+              "AI_label_and_reason_review": "correct_in_full_actual_input",
+              "selected_evidence_complete": true,
+              "evidence_review": "Correctly preserves missing attribution; the known pass value is not treated as a full owner-qualified fact. Witnesses are optional.",
+              "taxonomy_matches_frozen_allowed_kinds": true,
+              "taxonomy_review": "Allowed frozen gap kind."
+            }
+          ]
+        },
+        {
+          "case_id": "reg_bridge",
+          "classification": "seen_regression",
+          "expected_overall": "supported",
+          "reported_overall": "supported",
+          "full_mandatory_witness_trail": true,
+          "all_gap_kinds_allowed": true,
+          "result_sha256": "de3e7b4c1ec25e38618654c666d2f2dcdc558e78aff5bf8103693cec60d8e575",
+          "offline_validation_sha256": "64463520413168d27ee0cb7d79bd90ae1353226856e47047d56aa73ff7a8432a",
+          "known_cost_USD": "0.0067957",
+          "complete_adapter_return_ms": 6573.9234,
+          "conditions": [
+            {
+              "id": "C0",
+              "expected": "supported",
+              "reported": "supported",
+              "model_reason": "F02 explicitly states the average velocity was 2 m/s east for Cart K in trial T.",
+              "model_gap": null,
+              "quotes": [
+                {
+                  "fragment_id": "F02",
+                  "quote": "Cart K, trial T: elapsed time 2 s. Average velocity: 2 m/s east."
+                }
+              ],
+              "AI_label_and_reason_review": "correct_in_full_actual_input",
+              "selected_evidence_complete": true,
+              "evidence_review": "Complete required witness trail; quotes and actual-fragment context support the full owner-qualified condition.",
+              "taxonomy_matches_frozen_allowed_kinds": true,
+              "taxonomy_review": "Allowed frozen gap kind."
+            },
+            {
+              "id": "C1",
+              "expected": "supported",
+              "reported": "supported",
+              "model_reason": "F01 states displacement was 4 m east for Cart K in trial T.",
+              "model_gap": null,
+              "quotes": [
+                {
+                  "fragment_id": "F01",
+                  "quote": "Cart K, trial T: displacement 4 m east"
+                }
+              ],
+              "AI_label_and_reason_review": "correct_in_full_actual_input",
+              "selected_evidence_complete": true,
+              "evidence_review": "Complete required witness trail; quotes and actual-fragment context support the full owner-qualified condition.",
+              "taxonomy_matches_frozen_allowed_kinds": true,
+              "taxonomy_review": "Allowed frozen gap kind."
+            },
+            {
+              "id": "C2",
+              "expected": "supported",
+              "reported": "supported",
+              "model_reason": "F02 states elapsed time was 2 s for Cart K in trial T.",
+              "model_gap": null,
+              "quotes": [
+                {
+                  "fragment_id": "F02",
+                  "quote": "Cart K, trial T: elapsed time 2 s."
+                }
+              ],
+              "AI_label_and_reason_review": "correct_in_full_actual_input",
+              "selected_evidence_complete": true,
+              "evidence_review": "Complete required witness trail; quotes and actual-fragment context support the full owner-qualified condition.",
+              "taxonomy_matches_frozen_allowed_kinds": true,
+              "taxonomy_review": "Allowed frozen gap kind."
+            },
+            {
+              "id": "C3",
+              "expected": "supported",
+              "reported": "supported",
+              "model_reason": "Both fragments explicitly identify Cart K and trial T.",
+              "model_gap": null,
+              "quotes": [
+                {
+                  "fragment_id": "F01",
+                  "quote": "Cart K, trial T"
+                },
+                {
+                  "fragment_id": "F02",
+                  "quote": "Cart K, trial T"
+                }
+              ],
+              "AI_label_and_reason_review": "correct_in_full_actual_input",
+              "selected_evidence_complete": true,
+              "evidence_review": "Complete required witness trail; quotes and actual-fragment context support the full owner-qualified condition.",
+              "taxonomy_matches_frozen_allowed_kinds": true,
+              "taxonomy_review": "Allowed frozen gap kind."
+            }
+          ]
+        },
+        {
+          "case_id": "new_owner",
+          "classification": "new_synthetic_analogue",
+          "expected_overall": "uncertain",
+          "reported_overall": "uncertain",
+          "full_mandatory_witness_trail": true,
+          "all_gap_kinds_allowed": false,
+          "result_sha256": "3b535c00a577b225e459f0ffc06cc96e2786184fb2bc8a4e908fc123c25c398d",
+          "offline_validation_sha256": "8e91b828246b2c0c92b8a280e4e979728df5a39c9aa06690bff9cad46a03fc4d",
+          "known_cost_USD": "0.0073273",
+          "complete_adapter_return_ms": 7127.0487,
+          "conditions": [
+            {
+              "id": "C0",
+              "expected": "uncertain",
+              "reported": "uncertain",
+              "model_reason": "Completion rule requires linking validation pass to Record M3 and snapshot N.",
+              "model_gap": {
+                "detail": "Identity and validation link to Record M3 and snapshot N are missing.",
+                "kind": "missing_condition"
+              },
+              "quotes": [],
+              "AI_label_and_reason_review": "correct_in_full_actual_input",
+              "selected_evidence_complete": true,
+              "evidence_review": "Correctly preserves missing attribution; the known pass value is not treated as a full owner-qualified fact. Witnesses are optional.",
+              "taxonomy_matches_frozen_allowed_kinds": true,
+              "taxonomy_review": "Permitted coarse dependency gap; identity uncertainty remains explicit in C3."
+            },
+            {
+              "id": "C1",
+              "expected": "supported",
+              "reported": "supported",
+              "model_reason": "Record M3 status done in snapshot N is explicitly stated.",
+              "model_gap": null,
+              "quotes": [
+                {
+                  "fragment_id": "F02",
+                  "quote": "Record M3 in snapshot N: status done."
+                }
+              ],
+              "AI_label_and_reason_review": "correct_in_full_actual_input",
+              "selected_evidence_complete": true,
+              "evidence_review": "Complete required witness trail; quotes and actual-fragment context support the full owner-qualified condition.",
+              "taxonomy_matches_frozen_allowed_kinds": true,
+              "taxonomy_review": "Allowed frozen gap kind."
+            },
+            {
+              "id": "C2",
+              "expected": "uncertain",
+              "reported": "uncertain",
+              "model_reason": "Validation value is pass, but not linked to record M3 or snapshot N.",
+              "model_gap": {
+                "detail": "Validation value is unlinked to record M3 and snapshot N.",
+                "kind": "missing_evidence"
+              },
+              "quotes": [
+                {
+                  "fragment_id": "F01",
+                  "quote": "Validation value: pass."
+                }
+              ],
+              "AI_label_and_reason_review": "correct_in_full_actual_input",
+              "selected_evidence_complete": true,
+              "evidence_review": "Correctly preserves missing attribution; the known pass value is not treated as a full owner-qualified fact. Witnesses are optional.",
+              "taxonomy_matches_frozen_allowed_kinds": false,
+              "taxonomy_review": "Taxonomy mismatch: missing_evidence instead of frozen allowed unresolved_identity. Detail/reason accurately describe missing attribution, so this is not a semantic label/reason failure."
+            },
+            {
+              "id": "C3",
+              "expected": "uncertain",
+              "reported": "uncertain",
+              "model_reason": "F01 states no record or snapshot identifier is recorded.",
+              "model_gap": {
+                "detail": "Validation entry lacks record and snapshot identifiers.",
+                "kind": "unresolved_identity"
+              },
+              "quotes": [
+                {
+                  "fragment_id": "F01",
+                  "quote": "No record identifier or snapshot identifier is recorded for this entry."
+                }
+              ],
+              "AI_label_and_reason_review": "correct_in_full_actual_input",
+              "selected_evidence_complete": true,
+              "evidence_review": "Correctly preserves missing attribution; the known pass value is not treated as a full owner-qualified fact. Witnesses are optional.",
+              "taxonomy_matches_frozen_allowed_kinds": true,
+              "taxonomy_review": "Allowed frozen gap kind."
+            }
+          ]
+        },
+        {
+          "case_id": "new_bridge",
+          "classification": "new_synthetic_analogue",
+          "expected_overall": "supported",
+          "reported_overall": "supported",
+          "full_mandatory_witness_trail": false,
+          "all_gap_kinds_allowed": true,
+          "result_sha256": "a28f4a80e1daef9acaeca602af8b3687767d5be3ceac5ad02577caf259e96187",
+          "offline_validation_sha256": "787956687494c1f2f462d39392fb18d029994dc52b5d7120a21a5873e8a30c5e",
+          "known_cost_USD": "0.0067264",
+          "complete_adapter_return_ms": 6465.4195,
+          "conditions": [
+            {
+              "id": "C0",
+              "expected": "supported",
+              "reported": "supported",
+              "model_reason": "Snapshot P, record B6 meets done status and validation pass requirements.",
+              "model_gap": null,
+              "quotes": [
+                {
+                  "fragment_id": "F02",
+                  "quote": "Rule: complete iff done AND validation pass on this record and snapshot."
+                }
+              ],
+              "AI_label_and_reason_review": "correct_in_full_actual_input",
+              "selected_evidence_complete": false,
+              "evidence_review": "FAIL: rule quote alone omits F01 bound validation-pass premise; cannot borrow another condition's quote. Label and reason remain correct in full input.",
+              "taxonomy_matches_frozen_allowed_kinds": true,
+              "taxonomy_review": "Allowed frozen gap kind."
+            },
+            {
+              "id": "C1",
+              "expected": "supported",
+              "reported": "supported",
+              "model_reason": "Record B6 has status done in snapshot P.",
+              "model_gap": null,
+              "quotes": [
+                {
+                  "fragment_id": "F02",
+                  "quote": "Record B6 in snapshot P: status done."
+                }
+              ],
+              "AI_label_and_reason_review": "correct_in_full_actual_input",
+              "selected_evidence_complete": true,
+              "evidence_review": "Complete required witness trail; quotes and actual-fragment context support the full owner-qualified condition.",
+              "taxonomy_matches_frozen_allowed_kinds": true,
+              "taxonomy_review": "Allowed frozen gap kind."
+            },
+            {
+              "id": "C2",
+              "expected": "supported",
+              "reported": "supported",
+              "model_reason": "Validation entry records pass for record B6 and snapshot P.",
+              "model_gap": null,
+              "quotes": [
+                {
+                  "fragment_id": "F01",
+                  "quote": "For snapshot P and record B6, the validation entry records pass."
+                }
+              ],
+              "AI_label_and_reason_review": "correct_in_full_actual_input",
+              "selected_evidence_complete": true,
+              "evidence_review": "Complete required witness trail; quotes and actual-fragment context support the full owner-qualified condition.",
+              "taxonomy_matches_frozen_allowed_kinds": true,
+              "taxonomy_review": "Allowed frozen gap kind."
+            },
+            {
+              "id": "C3",
+              "expected": "supported",
+              "reported": "supported",
+              "model_reason": "Both entries explicitly refer to record B6 and snapshot P.",
+              "model_gap": null,
+              "quotes": [
+                {
+                  "fragment_id": "F01",
+                  "quote": "For snapshot P and record B6"
+                },
+                {
+                  "fragment_id": "F02",
+                  "quote": "Record B6 in snapshot P"
+                }
+              ],
+              "AI_label_and_reason_review": "correct_in_full_actual_input",
+              "selected_evidence_complete": true,
+              "evidence_review": "Complete required witness trail; quotes and actual-fragment context support the full owner-qualified condition.",
+              "taxonomy_matches_frozen_allowed_kinds": true,
+              "taxonomy_review": "Allowed frozen gap kind."
+            }
+          ]
+        }
+      ]
+    },
+    "statistics": {
+      "status": "CLOSED_FOLLOWUP_FINANCE_LATENCY_READBACK_PASS",
+      "batch_sha256": "292932fb65d5f99036f27399f0a3cc9ce56a5672ad558785bcc5136993928be4",
+      "closed_UTC_as_recorded": "2026-10-11T06:49:31.086074+00:00",
+      "batch_status": "FOUR_FOLLOWUP_OBSERVATIONS_RETAINED_PENDING_INDEPENDENT_REVIEW",
+      "new_four": {
+        "attempts": 4,
+        "physical_POSTs": 4,
+        "known_cost_USD": "0.0270267",
+        "UNKNOWN_USD": "0"
+      },
+      "same_grant": {
+        "original_attempts": 8,
+        "original_known_USD": "0.0527026",
+        "total_attempts": 12,
+        "max_attempts": 12,
+        "total_known_USD": "0.0797293",
+        "UNKNOWN_USD": "0",
+        "cap_USD": "0.50"
+      },
+      "conservative_combined": {
+        "older_known_USD": "0.22909566",
+        "known_USD": "0.30882496",
+        "UNKNOWN_USD": "0",
+        "cap_USD": "0.50",
+        "within_cap": true
+      },
+      "latency_seen_two": {
+        "n": 2,
+        "median_ms": 6586.6884,
+        "minimum_ms": 6573.9234,
+        "maximum_ms": 6599.4534
+      },
+      "latency_new_two": {
+        "n": 2,
+        "median_ms": 6796.2341,
+        "minimum_ms": 6465.4195,
+        "maximum_ms": 7127.0487
+      },
+      "latency_all_four": {
+        "n": 4,
+        "median_ms": 6586.6884,
+        "minimum_ms": 6465.4195,
+        "maximum_ms": 7127.0487
+      },
+      "observations": [
+        {
+          "case_id": "reg_owner",
+          "cost_USD": "0.0061773",
+          "UNKNOWN_USD": "0",
+          "attempts": 1,
+          "physical_POSTs": 1,
+          "adapter_full_return_ms": 6599.4534,
+          "confirmed_complete_return": true,
+          "saved_strict_binding_status": "STRICT_BINDING_VALID_MODEL_OPINION_ONLY"
+        },
+        {
+          "case_id": "reg_bridge",
+          "cost_USD": "0.0067957",
+          "UNKNOWN_USD": "0",
+          "attempts": 1,
+          "physical_POSTs": 1,
+          "adapter_full_return_ms": 6573.9234,
+          "confirmed_complete_return": true,
+          "saved_strict_binding_status": "STRICT_BINDING_VALID_MODEL_OPINION_ONLY"
+        },
+        {
+          "case_id": "new_owner",
+          "cost_USD": "0.0073273",
+          "UNKNOWN_USD": "0",
+          "attempts": 1,
+          "physical_POSTs": 1,
+          "adapter_full_return_ms": 7127.0487,
+          "confirmed_complete_return": true,
+          "saved_strict_binding_status": "STRICT_BINDING_VALID_MODEL_OPINION_ONLY"
+        },
+        {
+          "case_id": "new_bridge",
+          "cost_USD": "0.0067264",
+          "UNKNOWN_USD": "0",
+          "attempts": 1,
+          "physical_POSTs": 1,
+          "adapter_full_return_ms": 6465.4195,
+          "confirmed_complete_return": true,
+          "saved_strict_binding_status": "STRICT_BINDING_VALID_MODEL_OPINION_ONLY"
+        }
+      ],
+      "original_ledger_sha256": "332394c79386e290dca3365eac5604215de64463396a222b628e1828c45762f5",
+      "original_and_older_pins_unchanged": true,
+      "limits": "Two seen regression cases and two new development cases are separate. Descriptive adapter full-return medians/ranges only; no stable p95, native UI timing, causal improvement or semantic truth claim.",
+      "new_auth_DB_network_or_provider_operations": 0
+    },
+    "final_Main_free_tests": {
+      "status": "FINAL_MAIN_NORMAL_IMPORT_FREE_VERIFICATION_PASS",
+      "commands": [
+        {
+          "command": ".venv\\Scripts\\python.exe -B -m unittest tests.unit.test_atomic_support_compact_v1 tests.unit.test_atomic_support_v1 tests.unit.test_atomic_quote_binding_v1 tests.unit.test_atomic_quote_binding_integration_v1 -v",
+          "working_directory": "E:\\5703\\learning-assistant",
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "exit_code": 0,
+          "tests": 46,
+          "breakdown": {
+            "compact": 9,
+            "strict_atomic": 19,
+            "quote_binding": 9,
+            "workflow_integration": 9
+          },
+          "test_duration_seconds": 0.087,
+          "result": "OK"
+        },
+        {
+          "command": ".venv\\Scripts\\python.exe -B -m ruff check --no-cache generation\\atomic_support_v1.py scripts\\verify\\atomic_support.py tests\\unit\\test_atomic_quote_binding_integration_v1.py",
+          "exit_code": 0,
+          "result": "All checks passed!"
+        }
+      ],
+      "new_provider_requests": 0,
+      "auth_DB_operations": 0,
+      "CLI_test_input": "Pure in-memory Path.read_text mock; no filesystem fixture writes",
+      "earlier_W_test_temp_denial": "Python PermissionError, not auto-review rejection; exact denied path preserved in work log, no retry or further access",
+      "semantic_truth_certified": false,
+      "project_complete": false
+    },
+    "final_Main_twelve_free_replays": {
+      "status": "FINAL_MAIN_TWELVE_OFFLINE_REPLAYS_MATCH",
+      "cases": [
+        {
+          "group": "original_eight",
+          "case_id": "case_01",
+          "exact_saved_receipt_match": true,
+          "model_semantic_fields_unchanged": true
+        },
+        {
+          "group": "original_eight",
+          "case_id": "case_02",
+          "exact_saved_receipt_match": true,
+          "model_semantic_fields_unchanged": true
+        },
+        {
+          "group": "original_eight",
+          "case_id": "case_03",
+          "exact_saved_receipt_match": true,
+          "model_semantic_fields_unchanged": true
+        },
+        {
+          "group": "original_eight",
+          "case_id": "case_04",
+          "exact_saved_receipt_match": true,
+          "model_semantic_fields_unchanged": true
+        },
+        {
+          "group": "original_eight",
+          "case_id": "case_05",
+          "exact_saved_receipt_match": true,
+          "model_semantic_fields_unchanged": true
+        },
+        {
+          "group": "original_eight",
+          "case_id": "case_06",
+          "exact_saved_receipt_match": true,
+          "model_semantic_fields_unchanged": true
+        },
+        {
+          "group": "original_eight",
+          "case_id": "case_07",
+          "exact_saved_receipt_match": true,
+          "model_semantic_fields_unchanged": true
+        },
+        {
+          "group": "original_eight",
+          "case_id": "case_08",
+          "exact_saved_receipt_match": true,
+          "model_semantic_fields_unchanged": true
+        },
+        {
+          "group": "followup_four",
+          "case_id": "reg_owner",
+          "exact_saved_receipt_match": true,
+          "model_semantic_fields_unchanged": true
+        },
+        {
+          "group": "followup_four",
+          "case_id": "reg_bridge",
+          "exact_saved_receipt_match": true,
+          "model_semantic_fields_unchanged": true
+        },
+        {
+          "group": "followup_four",
+          "case_id": "new_owner",
+          "exact_saved_receipt_match": true,
+          "model_semantic_fields_unchanged": true
+        },
+        {
+          "group": "followup_four",
+          "case_id": "new_bridge",
+          "exact_saved_receipt_match": true,
+          "model_semantic_fields_unchanged": true
+        }
+      ],
+      "count": 12,
+      "provider_requests": 0,
+      "auth_DB_operations": 0,
+      "semantic_truth_certified": false,
+      "default_semantic_candidate_enabled": false,
+      "default_quote_binding_enabled": false
+    },
+    "existing_workflow_integration": {
+      "status": "GUARDED_EXPLICIT_PROVENANCE_WORKFLOW_INTEGRATION_VERIFIED",
+      "files": [
+        {
+          "target": "generation/atomic_support_v1.py",
+          "before_sha256": "9964f60756cfa462a48fa80366a30d43617406d3423f1248e287852201306e87",
+          "after_sha256": "2816aaabd0b56021d1e3291a5d8f474c911dc6f787f72a84f532b41fd9e59105",
+          "bytes": 18799,
+          "old_bytes_preserved_in_W": true
+        },
+        {
+          "target": "scripts/verify/atomic_support.py",
+          "before_sha256": "f23c54b88714ff1fcb52d089f9ee37a5cfb7d4aeef9720c63f0f1da553f4405b",
+          "after_sha256": "3eb932e961c984d2809d0407962dd1a5ca923fd646c1bab46981d2b9b5ff8c17",
+          "bytes": 3209,
+          "old_bytes_preserved_in_W": true
+        },
+        {
+          "target": "tests/unit/test_atomic_quote_binding_integration_v1.py",
+          "before_sha256": null,
+          "after_sha256": "e0e0b9ab2d583a12d4cf427e876c7cf9a4db9251cb538c8e56e9375d3be6573e",
+          "bytes": 15272,
+          "old_bytes_preserved_in_W": false
+        },
+        {
+          "target": "generation/prompts/atomic_support_compact_v1.txt",
+          "before_sha256": "505b2916f8f1b328a8acbc60847108139e1bb5cb7c6eebeffd787ebbacef2f6d",
+          "after_sha256": "5343cb0007ebd6f9dbb317ec77c94e2c2c1c9f9ef28405cbe335e13db4a1ef6c",
+          "bytes": 3208,
+          "old_bytes_preserved_in_W": true
+        }
+      ],
+      "provider_requests": 0,
+      "database_operations": 0,
+      "default_semantic_candidate_enabled": false,
+      "default_quote_binding_enabled": false,
+      "protected_pins": {
+        "generation/checked.py": "88509d22466095e5761bd247269a4dd03432fcb4dd2511ed02739e29da2e5d30",
+        "generation/openrouter_routes.py": "c82e86990476c0f95da650b38ef444e62c1dba6ae29f407a44c4af444ad2348e",
+        "generation/atomic_quote_binding_v1.py": "0bcb4dd156f16a31ac4d5942ec50b5dc16b625aee13c329dc1a402f178bf6dd4",
+        "generation/atomic_support_compact_v1.py": "eaad247be4adfe0106690ab451d927b2f1aa2d0c5629360b8226eb8a163d1bb9",
+        "generation/source_relations_v2.py": "ab22171c03566ed1f8b97e67bb1d0d5f4b276e0ab0bcc40be487f3b296ceeb11",
+        "docs/execution/tasks.json": "c56119170b9fca1e7eadb1f91db0268c3f57ff25f332e068dfb8679b24aface7",
+        "docs/execution/acceptance.json": "b36020cd2acd576fa071ce85c6007d116c7c0b73c8859875f047c44f59c80c73"
+      }
+    },
+    "remaining_grant_slots": 0,
+    "automatic_retries": 0,
+    "truncation_repairs": 0,
+    "default_semantic_candidate_enabled": false,
+    "default_quote_binding_enabled": false,
+    "default_product_checked_path_changed": false,
+    "human_rating": null,
+    "human_Gold": false,
+    "held_out": false,
+    "project_complete": false,
+    "remaining_failures": [
+      "new_bridge:C0 omits actual F01 pass premise from its selected proof",
+      "new_owner:C2 uses missing_evidence instead of preregistered unresolved_identity"
+    ],
+    "case07_historical_thin_witness_trail_qualification_upgraded": false
+  }
+}

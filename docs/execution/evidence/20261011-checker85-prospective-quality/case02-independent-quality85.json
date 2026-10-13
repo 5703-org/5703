@@ -1,0 +1,202 @@
+{
+  "schema": "phase85_independent_case_assessment_v1",
+  "created_utc": "2026-10-11T18:14:30.436216+00:00",
+  "status": "UNSUCCESSFUL_PREPARATION_POLICY_FAILURE_BEFORE_PROVIDER",
+  "case_id": "case02",
+  "question_id": "development85_02",
+  "question_sha256": "0d5d4aa98b479de78b5b3a6264504a12812f9fd6c9ef46f738bce6938608ef4c",
+  "review_kind": "Frozen prospective exposed AI source rubric; not Human Gold; no additional model judge",
+  "frozen_question_rubric_and_runtime_unchanged": true,
+  "input_pins": [
+    {
+      "path": "5703-checker85-quality\\questions85-frozen.json",
+      "bytes": 4261,
+      "sha256": "9d35553d2b973e082152e0d119c1bdbff3102ef55a4936d47fe93d337d6f19da"
+    },
+    {
+      "path": "5703-checker85-quality\\rubric85-frozen.json",
+      "bytes": 44448,
+      "sha256": "7b083b29202be757683944e08ec508844440403dcbccf1c85f44e983f97964d6"
+    },
+    {
+      "path": "5703-checker85-quality\\freeze85-manifest.json",
+      "bytes": 3397,
+      "sha256": "ecbb497f1be19c56a0b9dcb9f27c606097375c34d12c106700ef2d32ef14497e"
+    },
+    {
+      "path": "5703-checker85-runtime\\runtime-freeze85.json",
+      "bytes": 1940,
+      "sha256": "c51774989e767509c253c58f1340084f275c10197797a1eecb793558e1e82588"
+    },
+    {
+      "path": "5703-checker85-runtime\\case02\\recovered85-public.json",
+      "bytes": 3064,
+      "sha256": "3c15bf9d9a486fc6f8de636ba198726d6bb3da9e76661885231d1cf4cf10092f"
+    },
+    {
+      "path": "5703-checker85-runtime\\case02\\journey-receipt85.json",
+      "bytes": 1694,
+      "sha256": "4e55bfb822010fb292b40b81f8975d7d98cd81a5ae9e17c2d0b7e31a45e9d64f"
+    },
+    {
+      "path": "5703-checker85-runtime\\case02\\api-closure77.json",
+      "bytes": 1207,
+      "sha256": "ef412d263a9889ea76b014db54755e2ed7d4cd036e0b9a3118b27d627c342dac"
+    },
+    {
+      "path": "5703-checker85-runtime\\case02\\native-provider70\\final-receipt.json",
+      "bytes": 1019,
+      "sha256": "fa506d6adae71486869c6859585b4bece6bb8c21ac79dfa55bd300dba7f4746f"
+    },
+    {
+      "path": "5703-checker85-runtime\\case02\\public-literal-diagnostic85.json",
+      "bytes": 871,
+      "sha256": "855914fb57a6c019db2c50626b7edfc62f23bd97406cada8647c529b74ebc82e"
+    },
+    {
+      "path": "5703-checker85-runtime\\case02\\public-policy-diagnostic85.json",
+      "bytes": 2706,
+      "sha256": "eca14eccbfd5c68cf54d6c39f02d6b86944f76a6e6c86f069012476d0fb16c1a"
+    },
+    {
+      "path": "5703-checker85-runtime\\case02\\public-preparation-diagnostic85.json",
+      "bytes": 3453,
+      "sha256": "158f142a30b7f9cec76ae2a3b5c6bb62c84261d1fda5e2a681f652ba4897d37d"
+    }
+  ],
+  "exact_request_identity_verified": true,
+  "observed_delivery": {
+    "message_post_attempts": 1,
+    "new_message_submissions": 1,
+    "accepted": true,
+    "job_state": "failed",
+    "answer_id": null,
+    "teacher_output": null,
+    "checker_judgment": null,
+    "provider_posts": 0,
+    "automatic_retries": 0,
+    "browser_used": false
+  },
+  "independent_question_clarity": {
+    "clarification_justified_by_frozen_wording": false,
+    "same_turn_antecedent": "The first sentence states glucose entry through facilitated transport; the next sentence uses this for that same stated process. The subsequent clauses explicitly name glucose, its concentration gradient and the membrane transport protein.",
+    "required_external_conversation_context": false,
+    "why_not_missing_scientific_information": "The question asks a textbook process explanation, not a patient/cell-specific transport measurement. Frozen direct support for glucose transporter/down-gradient/no-energy behavior is already recorded in S004-S006. This checks prior grounding, not actual runtime retrieval.",
+    "question_or_rubric_rewrite_performed": false
+  },
+  "failure_classification": {
+    "exact_error_code": "CHECKER_OUTPUT_POLICY_INCOMPATIBLE",
+    "literal_error_source": "generation/checked.py (public literal diagnostic; no Main read performed)",
+    "prepared_needs_clarification": true,
+    "prepared_intent": "clarification",
+    "original_request_policy_checks_all_true": true,
+    "attempt_context_fields_all_None": true,
+    "candidate_evidence_count": 0,
+    "submitted_evidence_count": 0,
+    "retrieval_ms": 0.0,
+    "source_unavailability": "NOT_ESTABLISHED_RETRIEVAL_NOT_RUN",
+    "generation_failure": "NOT_GENERATED_PRE_PROVIDER_POLICY_REJECTION",
+    "root_source_diagnosis": "Derived no-source/clarification fallback clears enhancement while retaining checker input/output opt-in policy, then ordinary-typed-V2 compatibility guard rejects.",
+    "mechanism_provenance": "Exact literal error + original-policy/derived-preparation states are independently read from public diagnostics. Internal normalized generation options were not exported; the final clear-enhancement path attribution is Root source inspection, not a model-output inference.",
+    "ordinary_gate_not_relaxed": true,
+    "critical_model_false_positive_observed": false,
+    "critical_model_false_positive_basis": "No teacher/checker model calls and no model PASS or published answer exist."
+  },
+  "essential_fact_assessments": [
+    {
+      "fact_id": "Q02_F1",
+      "requirement": "Facilitated glucose transport uses a membrane transporter/carrier protein.",
+      "status": "not_evaluable_due_to_failure",
+      "citation_support_status": "not_assessed_no_answer",
+      "frozen_support_ids": [
+        "S005",
+        "S006"
+      ]
+    },
+    {
+      "fact_id": "Q02_F2",
+      "requirement": "Glucose moves down its concentration gradient; do not substitute movement against the gradient.",
+      "status": "not_evaluable_due_to_failure",
+      "citation_support_status": "not_assessed_no_answer",
+      "frozen_support_ids": [
+        "S004",
+        "S006"
+      ]
+    },
+    {
+      "fact_id": "Q02_F3",
+      "requirement": "This facilitated transport is passive and requires no cellular energy expenditure.",
+      "status": "not_evaluable_due_to_failure",
+      "citation_support_status": "not_assessed_no_answer",
+      "frozen_support_ids": [
+        "S004"
+      ]
+    }
+  ],
+  "relation_negation_units_and_citation_union_assessment": "Not evaluable for model behavior: no answer, actual retained source packet or typed judgment. Do not classify the corpus as unable to support the frozen question from zero unattempted retrieval.",
+  "financial": {
+    "independent_numeric_receipt_verified": true,
+    "provider_posts": 0,
+    "native_known_cost_USD": "0",
+    "native_UNKNOWN_cost_USD": "0",
+    "cohort_posts": 0,
+    "cohort_known_cost_USD": "0",
+    "cohort_UNKNOWN_cost_USD": "0",
+    "closure_status": "CLOSED_NUMERIC_NO_UNKNOWN",
+    "old_closed12_new_budget_occupancy": 0
+  },
+  "timing": {
+    "completed_answer_n": 0,
+    "valid_full_DOM_sample": false,
+    "send_to_first_prose_ms": null,
+    "send_to_complete_dom_ms": null,
+    "TTFT_ms": null,
+    "stable_p95_ms": null,
+    "API_send_to_failed_terminal_ms": 400.69040000162204,
+    "worker_to_failure_ms": 52.169,
+    "failure_timers_are_not_complete_answer_samples": true
+  },
+  "closure": {
+    "owned_threads_closed": true,
+    "five_protected_metadata_groups_unchanged": {
+      "sessions": true,
+      "jobs": true,
+      "answer_requests": true,
+      "answers": true,
+      "active_model_configurations": true
+    },
+    "old_jobs_selected": 0,
+    "api_close_status": 200
+  },
+  "cohort_accounting": {
+    "frozen_denominator": 8,
+    "attempted_questions": 2,
+    "unsuccessful_questions": 2,
+    "successful_delivery_questions": 0,
+    "unrun_questions": 6,
+    "case01_preserved": {
+      "path": "5703-checker85-quality\\quality-case01.json",
+      "bytes": 6142,
+      "sha256": "8b0f2536117e4e32c8c95ce67f4379133d4d24ea8d536e72ebd1e5ed4957ce92"
+    },
+    "case02_failure_retained": true,
+    "case02_retry_or_replacement": false
+  },
+  "online_model_gate_pass": null,
+  "science_pass": false,
+  "overall_case_pass": false,
+  "next_decision": "GO_TO_NEXT_FROZEN_ITEM_WITH_UNCHANGED_SOURCE",
+  "next_decision_conditions": [
+    "Next item is development85_03; never retry or replace case02 in this frozen cohort",
+    "Keep frozen questions/rubric/prompt/source/gates unchanged for remaining cohort; general deterministic free fix is separate after cohort",
+    "Default enhancement remains off; no additional paid judge call or repair request",
+    "Stop new questions if a later model PASS has a critical unsupported fact or quantity/negation/unit/citation scope error"
+  ],
+  "reviewer_activity": {
+    "Main_writes": 0,
+    "DB_auth_network_model_calls": 0,
+    "tests": 0,
+    "private_auth_binder_scope_access": false,
+    "observations_shared_with_code_fix_agent": false
+  }
+}

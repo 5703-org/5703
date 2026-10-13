@@ -1,0 +1,279 @@
+{
+  "schema": "dev89_independent_closed_case_review_v1",
+  "case_id": "case04",
+  "status": "FAIL",
+  "independent_answer_QA": "FAIL",
+  "scientific_correctness": "PASS",
+  "required_coverage": "COMPLETE_4_OF_4",
+  "own_citation_and_selected_support": "FAIL",
+  "source_availability": "FULL_ACTUAL_PACKET",
+  "source_RAG_MISS": false,
+  "publication": "NO_PUBLISHED_ANSWER",
+  "independent_page_eligible": false,
+  "packet_review": {
+    "all_submitted_fragments_reviewed": true,
+    "fragments": 64,
+    "claims": 8,
+    "units": 20,
+    "original_decoded_packet_sha256": "921ff7d4e19152ac3813d5a2f76b8a2db012ebe376d5115ae66e68a890557e9e",
+    "checker_context_sha256": "f15f63479d85728038e15a000bf279b01f83d7e4f41f6d13a4750b816b17db63",
+    "hydrated_full_v2_sha256": "c7c9631dd4de4e9f3baa9b8c662414c1fabac03b5830fec8cbb0a0eeb78817d0"
+  },
+  "facet_assessment": [
+    {
+      "facet": "G1",
+      "content": "COMPLETE",
+      "support": [
+        "ev_006/F047",
+        "ev_002/F010"
+      ],
+      "detail": "Charles law and fixed amount/constant pressure/ideal model conditions correctly stated."
+    },
+    {
+      "facet": "G2",
+      "content": "COMPLETE",
+      "support": [
+        "ev_006/F047"
+      ],
+      "given_inputs": [
+        "500 mL",
+        "250 K",
+        "300 K",
+        "fixed amount",
+        "constant pressure"
+      ],
+      "independent_calculation": "500*(300/250)=600 mL; kelvin cancels, mL retained."
+    },
+    {
+      "facet": "G3",
+      "content": "COMPLETE",
+      "support": [
+        "ev_006/F047",
+        "ev_002/F017"
+      ],
+      "detail": "Absolute kelvin temperature and the quoted R units are correct; R numeric value and dimensions match own F017."
+    },
+    {
+      "facet": "G4",
+      "content": "COMPLETE",
+      "own_support": "FAIL_UNCITED_C006_AND_UNDERSELECTED_C008",
+      "detail": "Unknown changed final pressure prevents unique volume; actual full own ev002 contains PV=nRT/F017, but the correct implication sentence C006 has no citation and C008 parent only selects F013."
+    }
+  ],
+  "claim_unit_audit": [
+    {
+      "claim": "C001",
+      "verdict": "SUPPORTED",
+      "own_sources": [
+        "ev_006/F047"
+      ]
+    },
+    {
+      "claim": "C002",
+      "verdict": "SUPPORTED_MEANING_PRESERVING_DERIVATION",
+      "own_sources": [
+        "ev_001/F005",
+        "ev_006/F047"
+      ],
+      "detail": "A proportionality at fixed amount/pressure supports V/T ratio and its transparent rearrangement; an identical printed equation is not required."
+    },
+    {
+      "claim": "C003",
+      "verdict": "SCIENTIFIC_AND_CALCULATION_SUPPORTED_BUT_CHECKER_FALSE_NEGATIVE",
+      "own_sources": [
+        "ev_006/F047"
+      ],
+      "detail": "Exact given quantities plus actual cited rule legitimately establish 600 mL and unit cancellation; textbook need not contain these particular problem numbers."
+    },
+    {
+      "claim": "C004",
+      "verdict": "SUPPORTED",
+      "own_sources": [
+        "ev_006/F047",
+        "ev_002/F017"
+      ],
+      "detail": "Absolute temperature and R units supported; Amontons F046 is not a replacement for Charles F047."
+    },
+    {
+      "claim": "C005",
+      "verdict": "CORRECT_STATED_CONDITIONS",
+      "own_sources": [
+        "ev_001/F001",
+        "ev_002/F010"
+      ],
+      "detail": "Fixed amount and pressure given in question; ideal low-pressure/high-temperature approximation accurately matches source."
+    },
+    {
+      "claim": "C006",
+      "verdict": "FAIL_UNCITED_CORRECT_SCIENTIFIC_CONCLUSION",
+      "claim_id": "claim_b39e2bdda8be3776e3996328_1",
+      "actual_citation_bindings": []
+    },
+    {
+      "claim": "C007",
+      "verdict": "SUPPORTED",
+      "own_sources": [
+        "ev_002/F012",
+        "ev_002/F013"
+      ]
+    },
+    {
+      "claim": "C008",
+      "verdict": "CORRECT_FORMULA_BUT_FAIL_OWN_SELECTED_PROOF",
+      "claim_id": "claim_269bc6c57a61c2cc92f4aef0_1",
+      "actual_parent_selected": [
+        "ev_002/F013"
+      ],
+      "available_in_same_own_source_but_not_selected": [
+        "ev_002/F012",
+        "ev_002/F017"
+      ],
+      "detail": "F013 refers to these terms and four-to-find-fifth, but alone has neither the PV=nRT relation nor its variable antecedents. C007 selection cannot silently repair C008."
+    }
+  ],
+  "checker_assessment": {
+    "slot02": "HTTP200/stop but compact decoder failed; no accepted semantic authority.",
+    "slot03": "HTTP200/stop, canonical hydrate succeeded, body_ok=false; actual API failed and no answer published.",
+    "slot03_correct_local_refusal": [
+      "C006 uncited scientific inference"
+    ],
+    "slot03_incorrect_local_refusal": [
+      "C003 numeric values/calculation/unit cancellation marked unsupported because they are not in the textbook, despite rule+given inputs+transparent derivation."
+    ],
+    "slot03_proposed_support_error": [
+      "C008 formula marked supported by F013 alone, missing relation and antecedents."
+    ],
+    "published_scientific_false_positive_observed": false,
+    "persisted_final_publication_failure_code_recovered": false
+  },
+  "given_and_false_refusal": {
+    "main_numerical_branch_given_missing": false,
+    "unknown_pressure_contrast_given_missing": "Intentionally absent final pressure constraint; the answer correctly reserves a unique volume in this branch.",
+    "teacher_wrong_withholding": false,
+    "checker_wrong_rejection_of_answerable_calculation": true,
+    "overall_delivery_false_refusal": "NOT_CLEANLY_ESTABLISHED",
+    "detail": "A correct calculated branch was locally wrongly rejected, but the whole actual draft also has independent uncited/underselected proof defects. Do not claim the entire failed publication is an unjustified scientific refusal."
+  },
+  "clock": {
+    "api_send_to_terminal_ms": 47843.52399999625,
+    "started_utc": "2026-10-12T00:54:11.502390+00:00",
+    "finished_utc": "2026-10-12T00:54:59.615615+00:00",
+    "full_answer_API_sample_n": 0,
+    "complete_DOM_sample_n": 0,
+    "TTFT_ms": null,
+    "p95_ms": null
+  },
+  "finance": {
+    "actual_provider_POST": 3,
+    "known_cost_USD": "0.0508096",
+    "UNKNOWN_protection_USD": "0",
+    "numeric_settlements": 3
+  },
+  "closure": {
+    "owned_threads_closed": true,
+    "old_metadata_unchanged": {
+      "sessions": true,
+      "jobs": true,
+      "answer_requests": true,
+      "answers": true,
+      "active_model_configurations": true
+    }
+  },
+  "exact_actual_ids": {
+    "session_id": "45a3b223-0977-4a12-8caf-45f4b5444cfd",
+    "request_id": "6a4ed72e-c8c3-4f93-bad8-4a56543eae33",
+    "job_id": "a4f7ff0a-f4c1-4576-8491-77ec4e4501db",
+    "answer_id": null,
+    "question_sha256": "2353434ab5fa32d66ca9870950b3dc0fc507a09818d87fa8b83b7314fc44edc0",
+    "scope_sha256": "7d8c2410a37147fef53b0bbc1bd6b31565f8ee6cedfc631630f44de6ac8ed87d",
+    "draft_answer_text_sha256_UTF8": "afc56588d5c5acc8bbed4cd55996991422be56cf89b2f88c0e946a635038c93c"
+  },
+  "frozen_baseline": {
+    "denominator": 8,
+    "source_version_sha256": "f7f03e32b3bab3f539002e53798cc5abdfc0f7816d37d78d85401eff8e1ce5d2",
+    "protocol_sha256": "704153b20e858e964314cb078c5773352428f26632df8e95cf0424963a25a483",
+    "rubric_sha256": "468ecce8dcd190c567d942c133731b6a52948994520c7e0d1529669a4b4f5c14"
+  },
+  "limits": [
+    "Independent exposed AI review, not HumanGold.",
+    "No borrowing another parent/source or normalizing source quotes to make evidence pass.",
+    "No new model/auth/DB/network calls, Main/runtime writes or tests."
+  ],
+  "input_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case04\\journey-receipt88.json",
+      "bytes": 1699,
+      "sha256": "5208532fbe50ce7f350430568b334c35c7dd43e1cbaee05a96f3c1ac2fd3b079"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case04\\api-closure77.json",
+      "bytes": 1187,
+      "sha256": "0df145d076962048949538c1d21ed4e4cbd7159fbc63ba70be59bb14a9a284a6"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case04\\native-provider70\\final-receipt.json",
+      "bytes": 1412,
+      "sha256": "260eadb00f858ffb563c9712b1025ad75ed6f7fc32e0c75ad2cda3a0b529d221"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case04\\native-provider70\\slot-01-normal-outcome.json",
+      "bytes": 2519,
+      "sha256": "0d8363702bc6bfe2fded97ea98c69fd5dd4a70d0670660716ee7201484900498"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case04\\native-provider70\\slot-01-public-inputs.json",
+      "bytes": 98232,
+      "sha256": "a7765e0e3af47b23e95e6aaec78428f5c793abab50b3c3b64efea4058dacc5dc"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case04\\native-provider70\\slot-01-financial.json",
+      "bytes": 325,
+      "sha256": "0f95a810be548b8167eb856d7ada8778a2707d9c9277c6c3410d5990b73759ef"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case04\\native-provider70\\slot-01-settlement.json",
+      "bytes": 247,
+      "sha256": "ba7144f5d33f522c3450e5bb72dd6750533c0d8df25155ce984f70cf08e9a2db"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case04\\native-provider70\\slot-02-normal-outcome.json",
+      "bytes": 12964,
+      "sha256": "689c15d88ac4f68df7e177546bdab90392f6d182f2d8dd774e8e7e3a122e7b63"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case04\\native-provider70\\slot-02-public-inputs.json",
+      "bytes": 170431,
+      "sha256": "1ede0dc0ca94df146b1fe26d1dd04584892b9dca6f5a8a03a0efda08282997a6"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case04\\native-provider70\\slot-02-financial.json",
+      "bytes": 325,
+      "sha256": "64bedaec725a9589a215fb2d2eb3da7042c22a40c8f643eee65dc718faab9d32"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case04\\native-provider70\\slot-02-settlement.json",
+      "bytes": 247,
+      "sha256": "c349cbb05dddac0d215d65a94e7f24291984f4487bb21107ee18d92c7f2032ff"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case04\\native-provider70\\slot-03-normal-outcome.json",
+      "bytes": 14419,
+      "sha256": "7706cf817a1f5659fcdcec6c6012c7e26461af90fa0c92ff2ae667d19240b348"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case04\\native-provider70\\slot-03-public-inputs.json",
+      "bytes": 172027,
+      "sha256": "a1e25c202b878ed783dee6111e4a07ec1b84e461b417154ea3ca310cc9c768c9"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case04\\native-provider70\\slot-03-financial.json",
+      "bytes": 325,
+      "sha256": "357afa1ac4e9f2466aed2bce37411ccb8420595abaa4d69131d438affe86f1d7"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case04\\native-provider70\\slot-03-settlement.json",
+      "bytes": 247,
+      "sha256": "6eb21c9edb9a3c92c7d96a2cd6c21044c577f0ed7263592ace319ab1a30e8674"
+    }
+  ]
+}

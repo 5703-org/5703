@@ -1,0 +1,19 @@
+--- runner-used01.py
++++ replay_saved_teacher_checker01.py
+@@ -220,11 +220,15 @@
+                 ReliableCheckV5.model_validate(parsed)
+                 schema_pass = True
+             except Exception as exc:
+-                issues = [{'type': type(exc).__name__}]
++                issues = [{'type': type(exc).__name__, 'parse_code': getattr(exc, 'code', None)}]
+                 if hasattr(exc, 'errors'):
+                     issues = [{'loc': list(e['loc']), 'type': e['type']} for e in exc.errors()]
+                 parsed = None
+             trial = {'slot': current.get('slot'), 'output_cap': cap, 'http_status': current.get('http_status'), 'finish_reason': result.finish_reason, 'usage': result.usage, 'known_cost_USD': str(cost) if cost is not None else None, 'adapter_latency_ms': result.latency_ms, 'local_generation_elapsed_ms': round((time.monotonic() - started) * 1000, 3), 'raw_chars': len(raw), 'raw_bytes': len(raw.encode()), 'raw_sha256': hashlib.sha256(raw.encode()).hexdigest(), 'complete_full_Pydantic_PASS': schema_pass, 'schema_issues': issues, 'business_gate_error_code': (outcome.error or {}).get('code'), 'business_gate_PASS': outcome.response is not None and outcome.error is None, 'outcome_diagnostic_keys': sorted(outcome.diagnostic) if hasattr(outcome, 'diagnostic') else [], 'field_bytes': {k: len(json.dumps(v, ensure_ascii=False).encode()) for k, v in parsed.items()} if isinstance(parsed, dict) else None, 'new_teacher_POSTs': 0, 'DB_writes': 0, 'native_publication_verified': False}
++            details = (outcome.error or {}).get('details', {})
++            diagnostics = details.get('schema_diagnostics') or {}
++            trial['business_issue_codes'] = [c for c in details.get('issue_codes', []) if isinstance(c, str) and c.isascii() and all(ch.isupper() or ch.isdigit() or ch == '_' for ch in c)]
++            trial['business_schema_parse_codes'] = [i.get('parse_code') for i in diagnostics.get('issues', []) if isinstance(i, dict) and i.get('parse_code') in {'INVALID_JSON', 'DUPLICATE_JSON_KEY'}]
+             trials.append(trial)
+             trial['service_exception_type'] = service_exception
+             save(OUT / f'checker-{current.get("slot", 0):02d}-finished01.json', trial)

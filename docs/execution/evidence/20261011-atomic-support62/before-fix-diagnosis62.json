@@ -1,0 +1,44 @@
+{
+  "status": "MISSING_CURRENT_RESEARCH_PROFILE_REPRODUCED_OFFLINE",
+  "current_failure": {
+    "profile": "gemini35_google_vertex_high_research_v1",
+    "first_adapter_entry": "generation/adapters.py:209 -> ModelConfig.validate",
+    "first_model_config_entry": "generation/types.py:119-121 -> resolve_route(self)",
+    "guard": "generation/openrouter_routes.py:165-166: chosen not in PROFILES",
+    "observed_exception": "ValueError: Unsupported fixed OpenRouter route profile",
+    "adapter_conversion": "generation/adapters.py:233-242 -> CONFIGURATION_ERROR with request_submitted=False",
+    "credential_resolution_is_later": "generation/adapters.py:211",
+    "formal_approval_rejection": false
+  },
+  "historical_actual_observations": {
+    "phase58": "HTTP 200; OUTPUT_TRUNCATED; finish_reason=length; one settled POST",
+    "phase59": "HTTP 200; error=null; finish_reason=stop; one settled POST",
+    "approval_receipt": "docs/execution/evidence/20261011-checker-recovery58-59/software/authorization58-59.json: SPECIFIC_CURRENT_ACTIONS_ACCEPTED_AND_EXECUTED"
+  },
+  "historical_controller_constraints": {
+    "namespace_installation": "selection58.py:65-75 executes legacy.install_public_implementation before cfg.validate; capacity59.py:64-66 inherits this prepare chain",
+    "stale_checked_pin": "selection58.py:35 expects checked.py b4e0cfdd...; current checked.py differs; prepare:105-106/read:54 rejects PIN_CHANGED:checked",
+    "exclusive_outputs": "selection58.py:178 and capacity59.py:123 use out.mkdir(), intentionally disallowing repeated execution",
+    "stale_aggregate": "capacity59.py:69-74 requires the pre-phase59 aggregate of 6 calls, whereas retained actual aggregate is 7",
+    "execution_flags_are_not_permission": "selection58.py:172 and capacity59.py:117 explicitly require root approval of each precise action"
+  },
+  "minimal_same_route_repair_candidate": {
+    "change": "Register the missing high research profile in the current public registry and test payload equivalence locally; never reinterpret low/minimal profiles as high",
+    "recipient": "https://openrouter.ai/api/v1/chat/completions",
+    "model": "google/gemini-3.5-flash-lite",
+    "provider_only": ["google-vertex/global"],
+    "allow_fallbacks": false,
+    "reasoning_effort": "high",
+    "prompt_price_cap": 0.3,
+    "completion_price_cap": 2.5,
+    "actual_execution_readiness": "Not established: requires a current reviewed sender, current settled aggregate and the same approved credential consumer; this diagnosis did not access or execute that consumer"
+  },
+  "performed": {
+    "current_public_registry_probe": true,
+    "old_loader_or_controller_executed": false,
+    "credential_reads": 0,
+    "network_attempts": 0,
+    "database_operations": 0,
+    "main_writes": 0
+  }
+}

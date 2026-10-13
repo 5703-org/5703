@@ -1,0 +1,48 @@
+{
+  "status": "READONLY_ACTUAL36_CLOCK_BOUNDARIES_VERIFIED",
+  "source_pins": [
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\answering\\service.py",
+      "bytes": 94819,
+      "sha256": "0085621f56bea5971c5a6b4da47ad2441c33cc4ae66ae80e1ccd3f732a7c6499"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\browser\\real-browser-live-qa-receipt01.json",
+      "bytes": 95638,
+      "sha256": "0fc5fa5834743114048b19e2d7d74fbd89f01857d120c709b63ed7baa5071722"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\runtime\\native-retrieval-609300fd-9ff7-4004-adc0-4584c3784df1-public01.json",
+      "bytes": 9874,
+      "sha256": "7665ec82cbb91ee95a734b4266e97c9754ce9c4a1ca6364069d0d58b7fc2eaf8"
+    }
+  ],
+  "job_created_to_worker_started_ms": 714.798,
+  "job_clock_definition": "service.py:101-106 and1092-1096: utcnow at worker preparing entry minus Job.created_at. Includes job scheduling/admission completion/commit/pickup; excludes time before Job.created_at. It is not a UI-Send-to-worker clock or an isolated scheduler-only clock.",
+  "Send_to_HTTP202_ms": 404.300048828125,
+  "Send_to_terminal_observation_ms": 39842.300048828125,
+  "Send_to_first_painted_prose_ms": 41011.80000001192,
+  "Send_to_full_painted_answer_ms": 41144.90000000596,
+  "terminal_observation_to_first_prose_ms": 1169.499951183796,
+  "terminal_observation_to_full_answer_ms": 1302.5999511778355,
+  "retrieval_stages_ms": {
+    "query_embedding_ms": 15.099099997314624,
+    "query_vector_cache_hit": false,
+    "dense_ms": 50.965699992957525,
+    "lexical_ms": 9.242799991625361,
+    "retrieval_total_ms": 101.05679999105632,
+    "release_cache": {
+      "version": "validated_release_cache_v1",
+      "hit": true,
+      "validation_ms": 4.0502000047126785
+    }
+  },
+  "rerank_ms": 213.48120000038762,
+  "worker_retrieval_wrapper_ms": 463.534,
+  "nested_clocks_must_not_be_added": true,
+  "server_elapsed_and_browser_markers_have_distinct_boundaries": true,
+  "UI_marker_difference_includes_polling_fetch_render_paint_not_isolated_render_cost": true,
+  "new_provider_calls": 0,
+  "database_accesses": 0,
+  "Main_or_B_writes": 0
+}

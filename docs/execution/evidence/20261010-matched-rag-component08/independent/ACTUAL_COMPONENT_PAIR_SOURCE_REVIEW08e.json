@@ -1,0 +1,177 @@
+{
+  "review_id": "independent_actual_component_pair_source_review08e",
+  "assessment_route": "semantic review of exact source and claim excerpts supplied by Root in messages; reviewer file reads did not start",
+  "status": "COMPLETED_PROVIDED_EXCERPT_REVIEW_WITH_ONE_PARTIAL_SUPPORT_CLAIM",
+  "input_provenance": {
+    "root_owned_source_pack": "direct-user-continuation07/ROOT_SELECTED_SOURCE_PACK08e.json",
+    "root_reported_bytes": 18986,
+    "root_reported_sha256": "2ee4dc9be3e763f1e23dee06ab20a02817f57b9652bdf10dad2af2ce3da9fe1e",
+    "actual_result": "component-rag-quality08/actual08e/RESULT08.json",
+    "root_reported_actual_result_bytes": 305861,
+    "root_reported_actual_result_sha256": "e5a82ffa7056af68eb16c1de0b05877e2dc42ab01df7f72ad5c6fee22aeaa1a5",
+    "independent_file_read": false,
+    "independent_hash_verification": false,
+    "exact_claim_and_source_texts_provided_by": "/root",
+    "actual_claim_ids_not_provided": true,
+    "review_labels_are_not_actual_claim_ids": true,
+    "source_identity_and_geometry_not_independently_verified": true,
+    "root_reported_fragments": "prose; complete_block=true"
+  },
+  "access_limit": {
+    "target": "component-rag-quality08/actual08e/RESULT08.json",
+    "initial_read": "automatic permission approval review timed out before CreateProcess",
+    "single_permitted_retry": "automatic permission approval review timed out before CreateProcess",
+    "action_after_retry": "stopped further tool reads as instructed by Root",
+    "unsafe_action_judgment": false,
+    "target_code_executed": false,
+    "alternative_private_or_native_access": false
+  },
+  "method": {
+    "rubric": "Root predeclared COMPONENT_QUALITY_REVIEW_CRITERIA08.md; required simple definition of homeostasis as relative internal stability, plus support for optional asserted extensions",
+    "unit": "each actual answer_text or short_answer claim, using only that claim's actual selected-fragment union",
+    "no_cross_claim_support_borrowing": true,
+    "no_posthoc_selection_enlargement": true,
+    "no_model_pass_to_scientific_pass_inference": true,
+    "human_gold": null,
+    "new_web_evidence": false,
+    "reviewer_api_calls": 0,
+    "reviewer_db_calls": 0,
+    "reviewer_model_calls": 0,
+    "reviewer_credential_reads": 0,
+    "reviewer_native_reads": 0,
+    "main_writes": 0
+  },
+  "claims": [
+    {
+      "review_label": "D1", "arm": "Dense5", "field": "answer_text",
+      "actual_text": "Homeostasis refers to the relatively stable state inside the body of an animal [ev_005].",
+      "selected_fragments": [{"evidence_id": "ev_005", "alias": "F018", "exact_text": "16.1 Homeostasis and Osmoregulation LEARNING OBJECTIVES By the end of this section, you will be able to: • Explain the concept of homeostasis • Describe thermoregulation of endothermic and ectothermic animals • Explain how the kidneys serve as the main osmoregulatory organs in the human body Homeostasis refers to the relatively stable state inside the body of an animal."}],
+      "predicate_review": [{"predicate": "relative internal stability in an animal", "status": "PASS", "support": ["ev_005/F018"]}],
+      "selected_source_status": "PASS",
+      "reason": "The definition is directly stated by the selected fragment."
+    },
+    {
+      "review_label": "D2", "arm": "Dense5", "field": "answer_text",
+      "actual_text": "Animal organs and organ systems constantly adjust to internal and external changes through this process to maintain a dynamic equilibrium [ev_004].",
+      "selected_fragments": [{"evidence_id": "ev_004", "alias": "F014", "exact_text": "33.3 Homeostasis LEARNING OBJECTIVES By the end of this section, you will be able to do the following: • Define homeostasis • Describe the factors affecting homeostasis • Discuss positive and negative feedback mechanisms used in homeostasis • Describe thermoregulation of endothermic and ectothermic animals Animal organs and organ systems constantly adjust to internal and external changes through a process called homeostasis (“steady state”)."}],
+      "predicate_review": [
+        {"predicate": "animal organs and organ systems constantly adjust to internal and external changes", "status": "PASS", "support": ["ev_004/F014"]},
+        {"predicate": "the adjustment process is homeostasis", "status": "PASS", "support": ["ev_004/F014"]},
+        {"predicate": "the explicit goal is maintaining a dynamic equilibrium", "status": "PARTIAL", "support": ["ev_004/F014"], "reason": "F014 names homeostasis as steady state and describes continual adjustment, but does not itself state this added explicit goal in terms of dynamic equilibrium. This is a plausible biological paraphrase, not an established complete selected-fragment support judgment under the conservative per-predicate rubric."}
+      ],
+      "selected_source_status": "PARTIAL",
+      "scientifically_false": false,
+      "reason": "Core adjustment facts are supported. The added explicit goal is not directly established by the only selected fragment. F016 is selected for D4, not D2; it is not borrowed or added here.",
+      "model_original_status_unchanged": "supported / accepted=true, as reported by Root"
+    },
+    {
+      "review_label": "D3", "arm": "Dense5", "field": "answer_text",
+      "actual_text": "Maintaining homeostasis requires that the body continuously monitor its internal conditions around a particular set point [ev_003].",
+      "selected_fragments": [
+        {"evidence_id": "ev_003", "alias": "F010", "exact_text": "1.5 Homeostasis LEARNING OBJECTIVES By the end of this section, you will be able to: • Discuss the role of homeostasis in healthy functioning • Contrast negative and positive feedback, giving one physiologic example of each mechanism Maintaining homeostasis requires that the body continuously monitor its internal conditions."},
+        {"evidence_id": "ev_003", "alias": "F011", "exact_text": "From body temperature to blood pressure to levels of certain nutrients, each physiological condition has a particular set point."}
+      ],
+      "predicate_review": [
+        {"predicate": "homeostasis requires continuous monitoring of internal conditions", "status": "PASS", "support": ["ev_003/F010"]},
+        {"predicate": "these physiological conditions have particular set points", "status": "PASS", "support": ["ev_003/F011"]}
+      ],
+      "selected_source_status": "PASS",
+      "reason": "The complementary selected passages jointly cover this bounded monitoring-and-set-point summary. It does not assert a new molecular mechanism."
+    },
+    {
+      "review_label": "D4", "arm": "Dense5", "field": "short_answer",
+      "actual_text": "Homeostasis is the maintenance of a stable internal steady state or dynamic equilibrium in the body [ev_004] [ev_005].",
+      "selected_fragments": [
+        {"evidence_id": "ev_004", "alias": "F016", "exact_text": "Homeostasis means to maintain dynamic equilibrium in the body."},
+        {"evidence_id": "ev_005", "alias": "F018", "exact_text_ref": "D1/ev_005/F018"}
+      ],
+      "predicate_review": [
+        {"predicate": "maintenance of dynamic equilibrium in the body", "status": "PASS", "support": ["ev_004/F016"]},
+        {"predicate": "stable internal state", "status": "PASS", "support": ["ev_005/F018"]}
+      ],
+      "selected_source_status": "PASS",
+      "reason": "Both definitions and both bound evidence contributions are covered by this claim's actual selected union. Stable is understood as relative physiological stability, not absence of change."
+    },
+    {
+      "review_label": "H1", "arm": "Hybrid5", "field": "answer_text",
+      "actual_text": "Homeostasis, literally meaning \"steady state,\" refers to the relatively stable internal environment required to maintain life [ev_002].",
+      "selected_fragments": [{"evidence_id": "ev_002", "alias": "F007", "exact_text": "Homeostasis (literally, “steady state”) refers to the relatively stable internal environment required to maintain life."}],
+      "predicate_review": [{"predicate": "literal steady-state meaning, relative stable internal environment, life requirement", "status": "PASS", "support": ["ev_002/F007"]}],
+      "selected_source_status": "PASS",
+      "reason": "The selected fragment directly states all definition predicates."
+    },
+    {
+      "review_label": "H2", "arm": "Hybrid5", "field": "answer_text",
+      "actual_text": "It is a dynamic state of balance where biological systems constantly adjust to internal and external changes within parameters compatible with life [ev_004] [ev_005].",
+      "selected_fragments": [
+        {"evidence_id": "ev_004", "alias": "F017", "exact_text": "Homeostasis is a term used in biology that refers to a dynamic state of balance within parameters that are compatible with life."},
+        {"evidence_id": "ev_005", "alias": "F020", "exact_text": "33.3 Homeostasis LEARNING OBJECTIVES By the end of this section, you will be able to do the following: • Define homeostasis • Describe the factors affecting homeostasis • Discuss positive and negative feedback mechanisms used in homeostasis • Describe thermoregulation of endothermic and ectothermic animals Animal organs and organ systems constantly adjust to internal and external changes through a process called homeostasis (“steady state”)."},
+        {"evidence_id": "ev_005", "alias": "F022", "exact_text": "Homeostasis means to maintain dynamic equilibrium in the body."},
+        {"evidence_id": "ev_005", "alias": "F023", "exact_text": "It is dynamic because it is constantly adjusting to the changes that the body’s systems encounter."}
+      ],
+      "predicate_review": [
+        {"predicate": "dynamic balance within life-compatible parameters", "status": "PASS", "support": ["ev_004/F017"]},
+        {"predicate": "constant adjustment to internal and external changes", "status": "PASS", "support": ["ev_005/F020", "ev_005/F023"]},
+        {"predicate": "homeostatic dynamic equilibrium", "status": "PASS", "support": ["ev_005/F022"]}
+      ],
+      "selected_source_status": "PASS",
+      "reason": "The four actually selected fragments jointly establish the compound statement and each bound citation's contribution. Biological systems is a broad description here, not a separately asserted mechanism for every organism."
+    },
+    {
+      "review_label": "H3", "arm": "Hybrid5", "field": "answer_text",
+      "actual_text": "The goal of this process is the maintenance of equilibrium around a specific value or set point [ev_003].",
+      "selected_fragments": [{"evidence_id": "ev_003", "alias": "F011", "exact_text": "Homeostatic Process The goal of homeostasis is the maintenance of equilibrium around a point or value called a set point."}],
+      "predicate_review": [{"predicate": "goal of maintaining equilibrium around a set point", "status": "PASS", "support": ["ev_003/F011"]}],
+      "selected_source_status": "PASS",
+      "reason": "The selected fragment directly states the goal and set-point relation."
+    },
+    {
+      "review_label": "H4", "arm": "Hybrid5", "field": "short_answer",
+      "actual_text": "Homeostasis is the maintenance of a dynamic equilibrium and stable internal environment required to sustain life [ev_002] [ev_005].",
+      "selected_fragments": [
+        {"evidence_id": "ev_002", "alias": "F007", "exact_text_ref": "H1/ev_002/F007"},
+        {"evidence_id": "ev_005", "alias": "F022", "exact_text_ref": "H2/ev_005/F022"}
+      ],
+      "predicate_review": [
+        {"predicate": "dynamic equilibrium", "status": "PASS", "support": ["ev_005/F022"]},
+        {"predicate": "relatively stable internal environment required for life", "status": "PASS", "support": ["ev_002/F007"]}
+      ],
+      "selected_source_status": "PASS",
+      "reason": "The complementary actual selected union covers both definition contributions. Stable does not mean a completely fixed internal environment."
+    }
+  ],
+  "aggregate": {
+    "Dense5": {"reviewed_claims": 4, "selected_source_PASS": 3, "selected_source_PARTIAL": 1, "required_simple_definition": "PASS"},
+    "Hybrid5": {"reviewed_claims": 4, "selected_source_PASS": 4, "selected_source_PARTIAL": 0, "required_simple_definition": "PASS"},
+    "overall_selected_source_PASS": 7,
+    "overall_selected_source_PARTIAL": 1,
+    "original_model_labels_changed": false,
+    "root_reported_original_model_supported_accepted": "4 of 4 for each arm",
+    "question_requirement_added_posthoc": false,
+    "quality_winner": null,
+    "human_accuracy_or_general_RAG_score": null
+  },
+  "conditional_and_component_observations": {
+    "route": "Root reports from actual raw and normalized results; reviewer did not independently read these objects",
+    "raw_attempt_evaluation_ok": "not_applicable for both arms, explicitly provider supplied",
+    "normalization_changed_attempt_evaluation_ok": false,
+    "learner_evaluation_passed": null,
+    "Root_reported_completed_arms": 2,
+    "Root_reported_successor_POSTs": 4,
+    "Root_reported_successor_known_cost_usd": "0.0152063",
+    "Root_reported_successor_UNKNOWN": 0,
+    "Root_reported_Dense_component_GenerationService_ms": 6437.308,
+    "Root_reported_Hybrid_component_GenerationService_ms": 7719.444,
+    "timing_scope": "single actual full GenerationService component interval per arm, not native Send-to-DOM, percentile, or controlled general latency comparison",
+    "old08d_UNKNOWN_preserved": 1,
+    "old08d_reserved_unknown_hold_usd": "0.03",
+    "old08d_known_zero_does_not_prove_zero_billing": true
+  },
+  "limitations": [
+    "Exact provided excerpts were reviewed independently for meaning; source-pack/result hashes, claim IDs, offsets, full source maps and raw object equality were not independently verified because both permitted read attempts timed out before process start.",
+    "D2 has a conservative selected-fragment support limitation. It is not a demonstrated factual error and does not negate the correctly supported basic definition or short answer.",
+    "The case is one exposed development question with two component arms; there are no human gold ratings, broad scientific benchmark, EM/F1, teaching-effectiveness ratings, or RAG promotion decision.",
+    "Selected source support does not establish bibliographic edition, frozen-corpus license provenance, complete textbook accuracy, or native/personalized workflow completion.",
+    "Prepared top-five inputs are not identical to all full source text reaching the provider: Root reports complementary packed ranges; this review assesses only the actual selected excerpts supplied here."
+  ]
+}

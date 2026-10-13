@@ -1,0 +1,625 @@
+{
+  "schema": "5703_week10_native_continuous_ui_receipt_v1",
+  "status": "ACTUAL_LIVE_UI_JOURNEY_FAILED_OR_BLOCKED",
+  "started_utc": "2026-10-09T21:35:42.319Z",
+  "batch_id": "d84387e5-2966-4aee-8a4c-c3675b272cc8",
+  "paired_leg_id": "B_startup_prewarm",
+  "worker_prewarm_retrieval_cache": true,
+  "source_index_sha256": "cf8115dd14d775e2e27f8f914d182167c0d403d75e2616a1defb8cfeb7c92092",
+  "source_label": "5703-scientific-native-closure-20261010-02",
+  "model_mode": "live",
+  "exact_model_binding_basis": "Root released one isolated Q2 development regression with checker json_object and fresh pending QA descriptors; normal teacher/fullchecker publication is experimental compatibility only. Production activation qualification remains false.",
+  "provider": "openai_compatible",
+  "model": "anthropic/claude-haiku-5.5",
+  "openrouter_route_profile": "haiku55_google_vertex_low_v1",
+  "provider_route": "google-vertex/global",
+  "configuration_id": "74c8201e-aca0-400d-bcc5-5785e24c1c11",
+  "config_revision": 1,
+  "config_hash": "703c94a357ddd4b826d8b5fe25d503198d3d56e1e9130f6a37ed9e9c3396aa4a",
+  "qualification": {
+    "ready_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure10\\runtime\\readiness-public01.json",
+      "bytes": 3976,
+      "sha256": "a9599497fd63bad9631fb9a6cb65b8208f0d9bd676dbab4a917b35a842f32bc4"
+    },
+    "role_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure10\\runtime\\role-qualification-public01.json",
+      "bytes": 4516,
+      "sha256": "82255886d9b03123a2b2dc6e2a70a2ae82ba796b713422981d77e6bab5ea69a4"
+    },
+    "worker_startup_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure10\\runtime\\worker-startup-preparation-public01.json",
+      "bytes": 1626,
+      "sha256": "045bee827036155ea886faaffb4e436c87d7d18b424cd2510cefc1b82f1a5b31"
+    },
+    "worker_startup": {
+      "schema": "5703_week10_worker_startup_preparation_v1",
+      "status": "PASS",
+      "batch_id": "d84387e5-2966-4aee-8a4c-c3675b272cc8",
+      "paired_leg_id": "B_startup_prewarm",
+      "source_version": "cf8115dd14d775e2e27f8f914d182167c0d403d75e2616a1defb8cfeb7c92092",
+      "worker_prewarm_retrieval_cache": true,
+      "same_Engine_as_native_run_once": true,
+      "queue": "interactive",
+      "main_entry_epoch_ms": 1791581729434.8152,
+      "native_model_warmup_ms": 4951.935899996897,
+      "release_cache_prepare_wall_ms": 5541.394899999432,
+      "native_cache_prepare_report": {
+        "status": "ready",
+        "cache_version": "validated_release_cache_v1",
+        "cache_hit": false,
+        "validation_ms": 5482.398100000864,
+        "visible_chunk_count": 10594,
+        "release_id_sha256": "541d9515e720f2b25011ecea178a58a1cbb7cdd6ec0acf78825b772edf986ace",
+        "epoch_sha256": "dbc6b4f6b51c64394b6ffcf4f1a7e05373e340655bf068d1b58cf20fb40ed5b6",
+        "startup_prepare_ms": 5541.374,
+        "queue": "interactive",
+        "version": "worker_active_release_prewarm_v1",
+        "timing_scope": "worker_startup_before_job_claim_v1"
+      },
+      "runner_main_entry_to_worker_ready_ms": 12287.683700000343,
+      "startup_timing_scope": "runner_main_entry_to_worker_preparation_completed_v1",
+      "process_launch_to_ready_ms": null,
+      "browser_Send_to_full_answer_ms": null,
+      "provider_POSTs_for_this_preparation": 0,
+      "full_startup_cost_and_early_Send_wait_must_remain_in_total_user_journey": true,
+      "process_imports_and_external_launch_overhead_require_separate_driver_clock": true,
+      "raw_error_messages_DSN_keys_history_or_source_text_exported": false
+    },
+    "default_retrieval_profile_pin": {
+      "path": "E:\\5703\\learning-assistant\\configs\\retrieval\\chat_hybrid_minilm.json",
+      "bytes": 294,
+      "sha256": "23ca72ddb737045259a04cbfc81c71969440f11cc2fa1a77bc7f8e7fc4364e17",
+      "scope": "Configuration binding only; native execution proof is separate"
+    },
+    "native_current_default_bound": true,
+    "executor_override": false,
+    "provider_route": "google-vertex/global",
+    "qualification_status": "PENDING_NOT_EXECUTED",
+    "qualification_basis": "EXPERIMENTAL_Q2_NATIVE_TEACHER_FULL_CHECKER_PUBLICATION",
+    "teacher_model": "anthropic/claude-haiku-5.5",
+    "checker_model": "google/gemini-3.5-flash-lite",
+    "mixed_route": true,
+    "Haiku_checker_qualification_claimed": false,
+    "normal_project_activation_qualified": false,
+    "reused_existing": false,
+    "newly_submitted_provider_posts": 0,
+    "actual_q2_job_id": null,
+    "actual_q2_request_id": null,
+    "actual_q2_answer_id": null,
+    "actual_q2_full_checker_publication_passed": false,
+    "observed_Q2_provider_posts": 0,
+    "role_run_ids": [
+      {
+        "role": "answer",
+        "run_id": null,
+        "status": "PENDING_NOT_EXECUTED"
+      },
+      {
+        "role": "checker",
+        "run_id": null,
+        "status": "PENDING_NOT_EXECUTED"
+      }
+    ],
+    "fresh_QA_role_descriptors": [
+      {
+        "role": "answer",
+        "current_fingerprints": {
+          "schema_hash": "149a9433de28318e6c1d1174c06937762e7db073977ab125d48ae80232f4ae2b",
+          "prompt_hash": "f85fc94c2afd66c03c9ec9d66323da729b604c37642777a5f408125c7c1b257a",
+          "configuration_hash": "631bc9b1e07347b75292654ee64f038b0e0cbbbb17df0966e8b25b3b13c1b4ac",
+          "capability_hash": "e6648a497ab770f07c85308a947728d380795522e59ca79a5b9b31074a607fac",
+          "reserved_output_tokens": 2048,
+          "effective_parameters": {
+            "model": "anthropic/claude-haiku-5.5",
+            "max_tokens": 2048,
+            "provider": {
+              "order": [
+                "google-vertex/global"
+              ],
+              "only": [
+                "google-vertex/global"
+              ],
+              "allow_fallbacks": false,
+              "require_parameters": true,
+              "max_price": {
+                "prompt": 0.3,
+                "completion": 2.5
+              }
+            },
+            "reasoning": {
+              "effort": "low"
+            },
+            "schema_transport": {
+              "policy_id": "anthropic_structured_bounds_v1",
+              "original_response_schema_sha256": "149a9433de28318e6c1d1174c06937762e7db073977ab125d48ae80232f4ae2b",
+              "provider_schema_before_projection_sha256": "149a9433de28318e6c1d1174c06937762e7db073977ab125d48ae80232f4ae2b",
+              "wire_schema_sha256": "178366c17b7ff57c9fcd0f68f14fe7752871eacd398b5c245046deada688b187",
+              "removed_bound_count": 11
+            }
+          }
+        }
+      },
+      {
+        "role": "checker",
+        "current_fingerprints": {
+          "schema_hash": "7988037e08d52662a1b232f049776a42b6d10ad5d896f1a26c8c912b3efd79d4",
+          "prompt_hash": "3a9c4ef6feac70fbdc8cdd8c6d9521815d69d4639351f5be60c417d48a31e923",
+          "configuration_hash": "bcf21bb9d8b643a11368faa05634cedc7131b1a8302bf9a8201fbcc9f6cc4fae",
+          "capability_hash": "e6648a497ab770f07c85308a947728d380795522e59ca79a5b9b31074a607fac",
+          "reserved_output_tokens": 4096,
+          "effective_parameters": {
+            "model": "google/gemini-3.5-flash-lite",
+            "max_tokens": 4096,
+            "provider": {
+              "order": [
+                "google-vertex/global"
+              ],
+              "only": [
+                "google-vertex/global"
+              ],
+              "allow_fallbacks": false,
+              "require_parameters": true,
+              "max_price": {
+                "prompt": 0.3,
+                "completion": 2.5
+              }
+            },
+            "reasoning": {
+              "effort": "low"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "normal_project_activation_qualified": false,
+  "experimental_Q2_compatibility_probe": true,
+  "development_regression_only": true,
+  "independent_quality_sample": false,
+  "teacher_structured_output_mode": "json_schema",
+  "checker_structured_output_mode": "json_object",
+  "provider_strict_checker_grammar_passed": false,
+  "historical_failed_Q3_Q4_replayed": false,
+  "budget_initial": {
+    "pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure10\\runtime\\budget-status-public01.json",
+      "bytes": 1296,
+      "sha256": "1d575dfaea91df6fbb62fe872177c46a4eebf7c7616b3a3fcfce41c67423548f"
+    },
+    "status": "READY",
+    "per_leg_provider_post_count": {
+      "B_startup_prewarm": 0
+    },
+    "per_leg_remaining_provider_slots": {
+      "B_startup_prewarm": 4
+    },
+    "leg_completed": [],
+    "leg_runtime_closed": [],
+    "integrity_errors": 0,
+    "cleanup_pending": 0,
+    "provider_post_count": 0,
+    "remaining_provider_slots": 4,
+    "fully_settled": true,
+    "open_claims": 0,
+    "unknown_cost_count": 0,
+    "stop_exists": false,
+    "known_API_cost_USD": "0",
+    "full_unknown_hold_USD": "0"
+  },
+  "retrieval_variant": "R2",
+  "retrieval_binding": "current_public_default_hybrid_minilm_v1",
+  "executor_override": false,
+  "native_retrieval_execution_proof": null,
+  "default_retrieval_acceptance": "PENDING_ROOT_NATIVE_TRACE_AND_QUALITY_REVIEW",
+  "synthetic_learner_and_questions": true,
+  "existing_public_owned_book": {
+    "id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+    "title": "Biology 2e",
+    "release_id": "4f11bd70-a486-4d16-b216-78cfe499530a"
+  },
+  "actual_headless_browser": true,
+  "browser_count": 1,
+  "page_count": 1,
+  "worker_count": 1,
+  "browser_gpu_disabled": true,
+  "chromium_sandbox": true,
+  "ignore_https_errors": false,
+  "process_priority": "Normal; applied by this Node runner",
+  "cpu_affinity": "Controlled by Root launcher; not asserted here",
+  "direct_http_acceptance_calls": 0,
+  "direct_database_accesses": 0,
+  "manual_provider_calls": 0,
+  "automatic_question_retries": 0,
+  "provider_physical_post_limit": 4,
+  "native_per_question_post_bound": 4,
+  "new_batch_reserve_USD": "0.12000000",
+  "maximum_authorized_new_batch_cost_USD": "0.12000000",
+  "older_UNKNOWN_holds_USD": "0.09000000",
+  "timeTTFT_ms": null,
+  "TTFT_boundary": "Current UI is not token-streaming; first painted prose is not provider TTFT",
+  "normal_reader_scopes": false,
+  "one_normal_chat_page_before_paid": true,
+  "intended_retrieval_scope": "all_active_corpus",
+  "chapter_filter_applied": false,
+  "new_question_submissions": 1,
+  "actual_seed_receipt_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\ACTUAL_PAIRED_SYNTHETIC_SEED_RECEIPT03.json",
+    "bytes": 19716,
+    "sha256": "2f1d82623fa1aff132c2d9304648026a97b14622c55b1b842470e5bd3c80a78c"
+  },
+  "seeded_first_provider_POSTs": 0,
+  "warm_execution_basis": "Native offline model-instance prewarm used a distinct authored query; no measured question-result cache was populated",
+  "prewarm_public_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure10\\runtime\\native-prewarm-public01.json",
+  "continuation_mode": "SUCCESSFUL_Q2_DEVELOPMENT_REGRESSION_NEW_WORKER",
+  "continuing_worker_basis": "One new live worker and Engine execute a single Q2 development regression after a fresh ordinary-chat readiness check; no Q1/Q2 same-worker or independent-quality claim.",
+  "startup_driver_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation10\\ROOT_SCIENTIFIC_NATIVE_CLOSURE_STARTUP_DRIVER_ACTUAL09.json",
+    "bytes": 455,
+    "sha256": "ec5351c4379dc39d05db3bb1854cd4d7457d691129bbb1d4c95e65a309a0e761"
+  },
+  "startup_driver": {
+    "batch_id": "d84387e5-2966-4aee-8a4c-c3675b272cc8",
+    "launch_to_ready_includes_imports_artifact_pins_models_and_native_startup": true,
+    "owned_runtime_pid": 116708,
+    "paired_leg_id": "B_startup_prewarm",
+    "process_launch_epoch_ms": 1791581729334.2566,
+    "schema": "5703_week10_root_startup_driver_v1",
+    "source_version": "cf8115dd14d775e2e27f8f914d182167c0d403d75e2616a1defb8cfeb7c92092",
+    "worker_ready_observed_epoch_ms": 1791581742016.7363
+  },
+  "process_launch_to_worker_ready_ms": 12682.479736328125,
+  "worker_startup_report": {
+    "schema": "5703_week10_worker_startup_preparation_v1",
+    "status": "PASS",
+    "batch_id": "d84387e5-2966-4aee-8a4c-c3675b272cc8",
+    "paired_leg_id": "B_startup_prewarm",
+    "source_version": "cf8115dd14d775e2e27f8f914d182167c0d403d75e2616a1defb8cfeb7c92092",
+    "worker_prewarm_retrieval_cache": true,
+    "same_Engine_as_native_run_once": true,
+    "queue": "interactive",
+    "main_entry_epoch_ms": 1791581729434.8152,
+    "native_model_warmup_ms": 4951.935899996897,
+    "release_cache_prepare_wall_ms": 5541.394899999432,
+    "native_cache_prepare_report": {
+      "status": "ready",
+      "cache_version": "validated_release_cache_v1",
+      "cache_hit": false,
+      "validation_ms": 5482.398100000864,
+      "visible_chunk_count": 10594,
+      "release_id_sha256": "541d9515e720f2b25011ecea178a58a1cbb7cdd6ec0acf78825b772edf986ace",
+      "epoch_sha256": "dbc6b4f6b51c64394b6ffcf4f1a7e05373e340655bf068d1b58cf20fb40ed5b6",
+      "startup_prepare_ms": 5541.374,
+      "queue": "interactive",
+      "version": "worker_active_release_prewarm_v1",
+      "timing_scope": "worker_startup_before_job_claim_v1"
+    },
+    "runner_main_entry_to_worker_ready_ms": 12287.683700000343,
+    "startup_timing_scope": "runner_main_entry_to_worker_preparation_completed_v1",
+    "process_launch_to_ready_ms": null,
+    "browser_Send_to_full_answer_ms": null,
+    "provider_POSTs_for_this_preparation": 0,
+    "full_startup_cost_and_early_Send_wait_must_remain_in_total_user_journey": true,
+    "process_imports_and_external_launch_overhead_require_separate_driver_clock": true,
+    "raw_error_messages_DSN_keys_history_or_source_text_exported": false
+  },
+  "questions": [
+    {
+      "label": "Q2",
+      "question_id": "Q2",
+      "selected_scope": {
+        "question_id": "Q2",
+        "session_id": "393a728b-6d98-4b19-a6d5-8c54b1cb3bef",
+        "question_sha256": "212c31fae733b4a005bdb56790438f1ecdce2e389dc1c5263493f6c2149e6fa3",
+        "chat_url": "http://127.0.0.1:15197/chat/393a728b-6d98-4b19-a6d5-8c54b1cb3bef",
+        "normal_new_chat": true,
+        "DOMchatready": true,
+        "live_model_badge": true,
+        "reading_context_present": false,
+        "retrieval_scope": "all_active_corpus",
+        "chapter_filter_applied": false,
+        "normal_UI_reading_context_removed": false,
+        "observed_worker_pid": 116708,
+        "observed_engine_identity": 1921014572640,
+        "worker_alive": true,
+        "worker_liveness_observed_epoch_ms": 1791581744677.0122,
+        "worker_liveness_perf_counter_ms": 33233609.071500003,
+        "public_readiness_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure10\\runtime\\readiness-public01.json",
+          "bytes": 3976,
+          "sha256": "ab36435f52ec94d4fdd2c53e85f7d8fe271fc4c0cc7bad41d30fd45b0b154821"
+        }
+      },
+      "retrieval_scope": "all_active_corpus",
+      "chapter_filter_applied": false,
+      "normal_UI_reading_context_removed": false,
+      "status": "PASS",
+      "question": "How do light-dependent reactions provide the energy carriers used by the Calvin cycle?",
+      "question_sha256": "212c31fae733b4a005bdb56790438f1ecdce2e389dc1c5263493f6c2149e6fa3",
+      "session_id": "393a728b-6d98-4b19-a6d5-8c54b1cb3bef",
+      "request_id": "53f4ca4f-a3d8-494a-a63f-549844dddbe9",
+      "job_id": "9be7a7f9-e719-400f-a0ec-19e1441b3dce",
+      "answer_id": "815e95c5-140d-479e-8f01-46225e71501a",
+      "terminal_state": "succeeded",
+      "terminal_error_code": null,
+      "t0_performance_ms": 1118.5999999977648,
+      "page_time_origin_ms": 1791581744775.6,
+      "t202_ms": 194.7998046875,
+      "tterminal_ms": 21288.7998046875,
+      "tfirst_ms": 21844.5,
+      "tfull_ms": 21844.900000002235,
+      "tfailure_ms": null,
+      "timeTTFT_ms": null,
+      "server_worker_timing": {
+        "timing_scope": "worker_execution_before_answer_insert_v1",
+        "units": "milliseconds",
+        "excludes": "HTTP admission, queue wait, answer insertion/commit, browser loading/paint",
+        "total_ms": 20379.657,
+        "generation_ms": 7476,
+        "checking_ms": 11057,
+        "token_count_ms": 0,
+        "model_total_ms": 18533,
+        "preparation_ms": 34.47,
+        "query_preparation_ms": 1.893,
+        "retrieval_ms": 178.244,
+        "teaching_plan_ms": 0.289,
+        "submission_to_worker_start_ms": 373.31199999999995,
+        "generation_wall_ms": 19975.869,
+        "publication_before_commit_ms": 215.932,
+        "worker_before_commit_ms": 20590.792
+      },
+      "budget_before": {
+        "pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure10\\runtime\\budget-status-public01.json",
+          "bytes": 1296,
+          "sha256": "1d575dfaea91df6fbb62fe872177c46a4eebf7c7616b3a3fcfce41c67423548f"
+        },
+        "status": "READY",
+        "per_leg_provider_post_count": {
+          "B_startup_prewarm": 0
+        },
+        "per_leg_remaining_provider_slots": {
+          "B_startup_prewarm": 4
+        },
+        "leg_completed": [],
+        "leg_runtime_closed": [],
+        "integrity_errors": 0,
+        "cleanup_pending": 0,
+        "provider_post_count": 0,
+        "remaining_provider_slots": 4,
+        "fully_settled": true,
+        "open_claims": 0,
+        "unknown_cost_count": 0,
+        "stop_exists": false,
+        "known_API_cost_USD": "0",
+        "full_unknown_hold_USD": "0"
+      },
+      "budget_after": {
+        "pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure10\\runtime\\budget-status-public01.json",
+          "bytes": 1304,
+          "sha256": "facdef2566479f96d1447570f62706eb6cd2a4ba690898fc6028c770e2ffc7b7"
+        },
+        "status": "READY",
+        "per_leg_provider_post_count": {
+          "B_startup_prewarm": 4
+        },
+        "per_leg_remaining_provider_slots": {
+          "B_startup_prewarm": 0
+        },
+        "leg_completed": [],
+        "leg_runtime_closed": [],
+        "integrity_errors": 0,
+        "cleanup_pending": 0,
+        "provider_post_count": 4,
+        "remaining_provider_slots": 0,
+        "fully_settled": true,
+        "open_claims": 0,
+        "unknown_cost_count": 0,
+        "stop_exists": false,
+        "known_API_cost_USD": "0.0186608",
+        "full_unknown_hold_USD": "0"
+      },
+      "physical_provider_posts": 4,
+      "citation_checked": true,
+      "refresh_persisted": true,
+      "routed_message_posts": 1,
+      "observer_error_code": null,
+      "submitted_message_body": {
+        "method": "POST",
+        "route": "/api/v1/sessions/393a728b-6d98-4b19-a6d5-8c54b1cb3bef/messages",
+        "bytes": 144,
+        "sha256": "18faf71e9e3413513ab063299fc9cced7f60db68f7138768c83f853cca34c071",
+        "content_sha256": "212c31fae733b4a005bdb56790438f1ecdce2e389dc1c5263493f6c2149e6fa3",
+        "reading_scope": null,
+        "document_id": null,
+        "source_unit_id": null,
+        "section_id": null,
+        "selection_sha256": null,
+        "retrieval_scope": "all_active_corpus",
+        "chapter_filter_applied": false,
+        "normal_UI_reading_context_removed": false,
+        "normal_new_chat": true,
+        "scope": "Digest of observed message body; raw body, headers and credentials are not saved"
+      },
+      "published_reply_rendered": true,
+      "completed_cited_answer": true,
+      "quality_failure_code": null,
+      "fresh_reload_response": {
+        "method": "GET",
+        "route": "/api/v1/sessions/393a728b-6d98-4b19-a6d5-8c54b1cb3bef/messages",
+        "http_status": 200,
+        "request_started_epoch_ms": 1791581768845.381,
+        "response_observed_epoch_ms": 1791581768995,
+        "answer_id": "815e95c5-140d-479e-8f01-46225e71501a",
+        "request_id": "53f4ca4f-a3d8-494a-a63f-549844dddbe9",
+        "job_id": "9be7a7f9-e719-400f-a0ec-19e1441b3dce",
+        "published_response_sha256": "a02d30dfd3a65b63cbf74cb876fd2d565410e1647d43849bdf82a9fbab53bd5f",
+        "answer_text_sha256": "b494417bb27ca6717105a79480a8f7d6f65491d250d78d3c16a0c6b246b24ae7"
+      },
+      "accepted_202_observed_epoch_ms": 1791581746089,
+      "response_type": "answer",
+      "refusal_reason": null,
+      "answer_completeness_status": "complete_at_requested_help",
+      "published_response_sha256": "a02d30dfd3a65b63cbf74cb876fd2d565410e1647d43849bdf82a9fbab53bd5f",
+      "answer_text_sha256": "b494417bb27ca6717105a79480a8f7d6f65491d250d78d3c16a0c6b246b24ae7",
+      "answer_text": "The light-dependent reactions capture light energy in energy carriers that then move to the Calvin cycle [ev_008] [ev_001]. The overall purpose of the light-dependent reactions is to convert light energy into chemical energy, and this chemical energy will be used by the Calvin cycle to fuel the assembly of sugar molecules [ev_008]. Photosystems absorb light and use electron transport chains to convert energy into the chemical energy of ATP and NADPH [ev_002]. The energy carriers that move energy from the light-dependent reactions to the Calvin cycle reactions are thought of as full because they bring energy [ev_001]. These ATP and NADPH molecules travel into the stroma, where the Calvin cycle reactions take place [ev_007]. The Calvin cycle then uses the energy in ATP and NADPH to convert molecules into G3P, and the energy-carrying molecules are used in the fixation and reduction stages that build carbohydrates [ev_010]. After the energy is released, the empty energy carriers return to the light-dependent reactions to obtain more energy [ev_001]. The products ATP and NADPH have very short lifespans, in the range of millionths of seconds, which is why the cell stores their energy in carbohydrates for longer-term use [ev_003].",
+      "citation_ids": [
+        "ev_008",
+        "ev_001",
+        "ev_002",
+        "ev_007",
+        "ev_010",
+        "ev_003"
+      ],
+      "follow_up_questions": [],
+      "native_retrieval_public_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure10\\runtime\\native-retrieval-53f4ca4f-a3d8-494a-a63f-549844dddbe9-public01.json",
+      "paint_observation": {
+        "first_ms": 21844.5,
+        "full_ms": 21844.900000002235,
+        "visible": true,
+        "prose_length": 1198,
+        "visibility_basis": "IntersectionObserver >=0.01 including ancestor clipping; document visible; own style and viewport rectangle; sampled after prior paint",
+        "complete_body": true,
+        "citation_controls": 9,
+        "followup_controls": 0
+      },
+      "pre_refresh_prose_sha256": "ac77973a5ed31f5e8225a0eea0a3585649e7c75253aff4df337dca21849987d8",
+      "source_excerpt_sha256": "349b5737133023780b2d58cededfdb6efd9eff0c07147039acd642c86bb407dd",
+      "source_excerpt_character_count": 396,
+      "source_excerpt": "Each pigment can absorb different wavelengths of light, which allows the plant to absorb any light that passes through the taller trees. (credit: Jason Hollinger) How Light-Dependent Reactions Work The overall purpose of the light-dependent reactions is to convert light energy into chemical energy.\n…\nThis chemical energy will be used by the Calvin cycle to fuel the assembly of sugar molecules.",
+      "source_dialog_text": "Sources\n\nSource passages linked to this claim.\n\nSource 1\nSource 2\nSOURCE PASSAGE\nConcepts of Biology\n\nChapter 5 Photosynthesis / 5.2 The Light-Dependent Reactions of Photosynthesis · PDF physical pages 138\n\nHighlighted text is linked to the selected claim.\n\nEach pigment can absorb different wavelengths of light, which allows the plant to absorb any light that passes through the taller trees. (credit: Jason Hollinger) How Light-Dependent Reactions Work The overall purpose of the light-dependent reactions is to convert light energy into chemical energy.\n…\nThis chemical energy will be used by the Calvin cycle to fuel the assembly of sugar molecules.\n\nThe complete source may reveal the answer to this problem.\n\nShow complete source\n\nOpenStax / Rice University · Access for free at openstax.org\n\nView original source\nSource record\nExact source positions\n\nSupport assessment: model check. Independent review is separate.\n\nModel support check",
+      "reload_started_epoch_ms": 1791581768211,
+      "refreshed_prose_sha256": "ac77973a5ed31f5e8225a0eea0a3585649e7c75253aff4df337dca21849987d8",
+      "worker_ready_to_Send_ms": 3877.4638671875,
+      "process_launch_to_complete_answer_ms": 38404.84360351786
+    }
+  ],
+  "normal_chat_preflight": {
+    "schema": "5703_week10_normal_single_chat_readiness_v1",
+    "status": "ONE_NORMAL_CHAT_PAGE_READY_SAME_WORKER",
+    "batch_id": "d84387e5-2966-4aee-8a4c-c3675b272cc8",
+    "source_version": "cf8115dd14d775e2e27f8f914d182167c0d403d75e2616a1defb8cfeb7c92092",
+    "paired_leg_id": "B_startup_prewarm",
+    "continuation_mode": "SUCCESSFUL_Q2_DEVELOPMENT_REGRESSION_NEW_WORKER",
+    "prepaid_provider_posts": 0,
+    "worker_pid": 116708,
+    "engine_object_identity": 1921014572640,
+    "worker_alive": true,
+    "chat_sessions": [
+      {
+        "question_id": "Q2",
+        "session_id": "393a728b-6d98-4b19-a6d5-8c54b1cb3bef",
+        "question_sha256": "212c31fae733b4a005bdb56790438f1ecdce2e389dc1c5263493f6c2149e6fa3",
+        "chat_url": "http://127.0.0.1:15197/chat/393a728b-6d98-4b19-a6d5-8c54b1cb3bef",
+        "normal_new_chat": true,
+        "DOMchatready": true,
+        "live_model_badge": true,
+        "reading_context_present": false,
+        "retrieval_scope": "all_active_corpus",
+        "chapter_filter_applied": false,
+        "normal_UI_reading_context_removed": false,
+        "observed_worker_pid": 116708,
+        "observed_engine_identity": 1921014572640,
+        "worker_alive": true,
+        "worker_liveness_observed_epoch_ms": 1791581744677.0122,
+        "worker_liveness_perf_counter_ms": 33233609.071500003,
+        "public_readiness_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure10\\runtime\\readiness-public01.json",
+          "bytes": 3976,
+          "sha256": "ab36435f52ec94d4fdd2c53e85f7d8fe271fc4c0cc7bad41d30fd45b0b154821"
+        }
+      }
+    ],
+    "browser_count": 1,
+    "page_count": 1,
+    "direct_http_calls": 0,
+    "direct_database_accesses": 0,
+    "observed_utc": "2026-10-09T21:35:44.769Z",
+    "public_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure10\\browser\\normal-single-chat-prepaid-readiness-public01.json",
+      "bytes": 1767,
+      "sha256": "f83002136b4e7a9501e4faef950dd82a4ed125d3e6a9fd91ba7cbd1b46450803"
+    }
+  },
+  "regression_question": {
+    "status": "FAIL"
+  },
+  "page_errors": [],
+  "denied_external_requests": [],
+  "console_type_counts": {},
+  "browser_closed": true,
+  "context_closed": true,
+  "project_complete": false,
+  "limits": [
+    "One repeated previously successful Q2 input in a fresh ordinary session; full active-corpus RAG with no reader context; development regression only, no independent quality, strict grammar, two-question worker reuse, p95 or causal comparison",
+    "Public default profile binding does not itself prove native R2/reranker execution or retrieval quality",
+    "Complete DOM is not simultaneous visibility of every character or user reading",
+    "Paint clocks are double-RAF samples; full time also includes DTO observation and the 200 ms control-loop sampling delay",
+    "Normalized Markdown-to-DOM text comparison is approximate and may conservatively reject a valid formatted answer",
+    "Viewport intersection includes ancestor clipping but does not prove unobscured individual text glyphs",
+    "Published refusal or partial-reply rendering can have measured clocks while cited-answer quality remains FAIL",
+    "No guarantee of zero operating-system contention"
+  ],
+  "actual_browser_version": "154.0.4258.62",
+  "login_response_status": 200,
+  "failure_code": "BROWSER_OR_IO_FAILURE",
+  "failure_exception_class": "ExpectError",
+  "failure_local_source_line": 592,
+  "raw_exception_text_exported": false,
+  "normal_worker_observations": [
+    {
+      "public_readiness_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure10\\runtime\\readiness-public01.json",
+        "bytes": 3976,
+        "sha256": "ab36435f52ec94d4fdd2c53e85f7d8fe271fc4c0cc7bad41d30fd45b0b154821"
+      },
+      "worker_pid": 116708,
+      "engine_object_identity": 1921014572640,
+      "worker_alive": true,
+      "worker_liveness_observed_epoch_ms": 1791581744677.0122,
+      "worker_liveness_perf_counter_ms": 33233609.071500003
+    },
+    {
+      "public_readiness_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure10\\runtime\\readiness-public01.json",
+        "bytes": 3970,
+        "sha256": "1575307f2fb48a3b0af7ba9cc465808c2dbd01a2183f175cb5873fcda89f7228"
+      },
+      "worker_pid": 116708,
+      "engine_object_identity": 1921014572640,
+      "worker_alive": true,
+      "worker_liveness_observed_epoch_ms": 1791581745550.5996,
+      "worker_liveness_perf_counter_ms": 33234482.659
+    }
+  ],
+  "final_experimental_QA_observation": {
+    "unavailable": true,
+    "code": "PUBLIC_LEARNER_READINESS_REQUIRED"
+  },
+  "final_budget_observation": {
+    "pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure10\\runtime\\budget-status-public01.json",
+      "bytes": 1304,
+      "sha256": "facdef2566479f96d1447570f62706eb6cd2a4ba690898fc6028c770e2ffc7b7"
+    },
+    "observed_epoch_ms": 1791581784859,
+    "scope": "Read-only observed status; this snapshot does not authorize a submission",
+    "status": "READY",
+    "provider_post_count": 4,
+    "maximum_provider_post_count": 4,
+    "remaining_provider_slots": 0,
+    "open_claims": 0,
+    "unknown_cost_count": 0,
+    "integrity_errors": 0,
+    "cleanup_pending": 0,
+    "fully_settled": true,
+    "stop_exists": false,
+    "known_API_cost_USD": "0.0186608",
+    "full_unknown_hold_USD": "0",
+    "max_possible_new_batch_reserve_USD": "0.12000000"
+  },
+  "completed_utc": "2026-10-09T21:36:24.859Z",
+  "elapsed_ms": 42540,
+  "script_sha256": "a04ae8fd13cd94a9f256ea4bf434577eba112b5d40c852d97a70d8f908509c9c"
+}

@@ -1,0 +1,145 @@
+{
+  "status": "PUBLIC_PRIMARY_REVIEW_NO_MODEL_RETRY",
+  "reviewed_at_UTC": "2026-10-11T20:10:38.650453+00:00",
+  "actual_error": {
+    "HTTP_status": 400,
+    "outer_code": 400,
+    "provider_name": "Google",
+    "provider_error_code": 400,
+    "provider_status": "INVALID_ARGUMENT",
+    "provider_message": "Request contains an invalid argument.",
+    "offending_field": null,
+    "usage_or_numeric_cost": null,
+    "account_fields_exported": false
+  },
+  "retained_unknown_full_hold_USD": "0.0714688",
+  "endpoint_catalog": {
+    "url": "https://openrouter.ai/api/v1/models/google/gemini-3.5-flash-lite/endpoints",
+    "access": "UNAUTHENTICATED_PUBLIC_GET",
+    "HTTP_status": 200,
+    "model": "google/gemini-3.5-flash-lite",
+    "exact_tag": "google-vertex/global",
+    "provider_name": "Google",
+    "status": 0,
+    "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "seed",
+      "response_format",
+      "stop",
+      "structured_outputs",
+      "tools",
+      "tool_choice",
+      "reasoning_effort"
+    ],
+    "max_completion_tokens": 65536
+  },
+  "static_request_review": {
+    "compiler_success": true,
+    "request_top_level_fields": [
+      "max_tokens",
+      "messages",
+      "model",
+      "provider",
+      "reasoning",
+      "response_format"
+    ],
+    "max_tokens": 4096,
+    "reasoning": {
+      "effort": "low"
+    },
+    "response_format_type": "json_schema",
+    "strict": true,
+    "schema_name": "lossless_unit_findings_v1",
+    "provider_only": [
+      "google-vertex/global"
+    ],
+    "allow_fallbacks": false,
+    "require_parameters": true,
+    "route_schema_transport": null,
+    "route_schema_projection": {},
+    "JSON_Schema_Draft202012_check_schema": "PASS",
+    "schema_compact_bytes": 6724,
+    "schema_sha256_sorted": "9f91e0fa2982facd9910eeb2c8966880681900f5f6724def8884475a90afc078",
+    "reference_cycles": [],
+    "unresolved_refs": []
+  },
+  "schema_subset_comparison": {
+    "Vertex_responseSchema_subset_is_not_exact_OpenRouter_gateway_contract": true,
+    "Google_direct_responseJsonSchema_documented_supported_keywords_present": [
+      "$defs",
+      "$ref",
+      "additionalProperties",
+      "anyOf",
+      "description",
+      "enum",
+      "items",
+      "maxItems",
+      "minItems",
+      "properties",
+      "required",
+      "type"
+    ],
+    "actual_keywords_outside_documented_direct_Google_list": {
+      "const": 6,
+      "minLength": 15,
+      "maxLength": 18,
+      "pattern": 1
+    },
+    "unsupported_keywords_are_not_confirmed_400_cause": true,
+    "largest_enum_cardinality": 67,
+    "expanded_schema_edge_depth": 12,
+    "large_or_deep_schema_can_raise_400_per_official_Google_docs": true,
+    "no_documented_threshold_establishes_this_schema_too_large": true
+  },
+  "findings": {
+    "entire_model_schema_unsupported": "NOT_SUPPORTED_BY_EVIDENCE; exact endpoint advertises structured_outputs and response_format; Vertex model page lists structured output supported.",
+    "request_envelope_field_error": "NOT_ESTABLISHED; compiler shape matches OpenRouter documented envelope, known posted parameters advertised, schema passes standard static validation.",
+    "exact_400_cause": "UNDETERMINED; provider raw lacks a field path or constraint detail. Provider schema subset/complexity/gateway translation remain hypotheses, not confirmed diagnoses.",
+    "strict_guarantee": "Endpoint supported_parameters does not prove arbitrary schema acceptance, exact gateway dialect, or uniform native strict enforcement."
+  },
+  "safe_next_step": "Preserve old HTTP400 UNKNOWN hold and failed request without retry; run separately authorized independent units on the previously successful google-vertex/global json_object mode with unchanged complete JSON parsing, evidence ownership/entailment and citation validators. This service INVALID_ARGUMENT is not an authorization/tool refusal and does not justify changing endpoints to evade one.",
+  "primary_sources": [
+    {
+      "url": "https://openrouter.ai/api/v1/models/google/gemini-3.5-flash-lite/endpoints",
+      "supports": "Actual exact endpoint advertised capabilities retrieved via public GET200."
+    },
+    {
+      "url": "https://openrouter.ai/google/gemini-3.5-flash-lite",
+      "supports": "Model page states JSON-schema response_format support and Google Vertex provider availability."
+    },
+    {
+      "url": "https://openrouter.ai/docs/guides/features/structured-outputs",
+      "supports": "JSON schema envelope, endpoint-specific support, require_parameters, provider-dependent strict enforcement."
+    },
+    {
+      "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash-lite",
+      "supports": "Structured output supported; global region supported; custom frequency/presence penalties and final model turn can error. Neither unsupported field appears in reviewed request."
+    },
+    {
+      "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/capabilities/control-generated-output",
+      "supports": "Model support, responseSchema subset, complexity may cause INVALID_ARGUMENT400."
+    },
+    {
+      "url": "https://ai.google.dev/api/generate-content#v1beta.GenerationConfig",
+      "supports": "Direct Google responseJsonSchema documented keyword subset includes $defs/$ref/anyOf/additionalProperties; const/string length/pattern absent; gateway translation unobserved."
+    },
+    {
+      "url": "https://ai.google.dev/gemini-api/docs/structured-output",
+      "supports": "Structured output uses a schema subset and very large/deep schemas may be rejected; semantic values still need application validation."
+    }
+  ],
+  "actions": {
+    "model_calls": 0,
+    "paid_requests": 0,
+    "database_calls": 0,
+    "auth_reads": 0,
+    "Main_writes": 0,
+    "old_ledger_writes": 0,
+    "sanitized_raw_error_inspected": true,
+    "account_id_exported": false,
+    "full_request_or_teacher_or_textbook_exported": false,
+    "single_W_deliverable": true
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "status": "PUBLIC_CAP_PREFLIGHT_PASS_NATIVE_START_BLOCKED_BY_ACTUAL39_SCHEMA_AND_SCIENCE",
+  "scope": "W-only reviewable producer draft; no runtime, binder or financial slot created",
+  "budget_math": {
+    "POST_cap": 2,
+    "per_POST_hold_USD": "0.04100000",
+    "batch_reserve_USD": "0.08200000",
+    "strict_POST_upper_USD": "0.03988480",
+    "safety_margin_USD": "0.00050000",
+    "strict_upper_plus_margin_USD": "0.04038480",
+    "maximum_wire_UTF8_bytes": 98304,
+    "input_token_upper": 98816,
+    "uniform_bound_output_tokens": 4096,
+    "teacher_output_cap": 2048,
+    "checker_output_cap": 4096,
+    "prior_actual_group_POSTs": 18,
+    "prior_actual_group_known_USD": "0.14928810",
+    "conditional_cumulative_maximum_POSTs": 20,
+    "conditional_cumulative_maximum_USD": "0.23128810",
+    "provider_slot_or_financial_allocation_created": false
+  },
+  "derived_public_sources": [
+    {
+      "role": "guard",
+      "source_name": "scientific_native_closure_guard_PREPARED09.py",
+      "base_bytes": 338976,
+      "base_SHA256": "2194360c40cdb3431d23c53bfd22ddbab30edbba8dbeeac2a4e062af96e6969f",
+      "draft_bytes": 338978,
+      "draft_SHA256": "ac1dd6701099db7d864901e954e4dbd6e6a0ccd698a6d932c0561f0b2478a4d2",
+      "exact_public_delta": [
+        {
+          "before": "MAX_POSTS = 4",
+          "after": "MAX_POSTS = 2",
+          "occurrences": 1
+        },
+        {
+          "before": "MAX_POSTS_PER_LEG = 4",
+          "after": "MAX_POSTS_PER_LEG = 2",
+          "occurrences": 1
+        },
+        {
+          "before": "UPPER = Decimal('0.04500000')",
+          "after": "UPPER = Decimal('0.04100000')",
+          "occurrences": 1
+        },
+        {
+          "before": "RESERVE = Decimal('0.18000000')",
+          "after": "RESERVE = Decimal('0.08200000')",
+          "occurrences": 1
+        },
+        {
+          "before": "a[\"maximum_physical_POSTs\"] == MAX_POSTS == 4",
+          "after": "a[\"maximum_physical_POSTs\"] == MAX_POSTS == 2",
+          "occurrences": 1
+        },
+        {
+          "before": "RESERVE == Decimal('0.18')",
+          "after": "RESERVE == Decimal('0.082')",
+          "occurrences": 1
+        },
+        {
+          "before": "\"max_possible_new_batch_reserve_USD\": '0.18000000'",
+          "after": "\"max_possible_new_batch_reserve_USD\": '0.08200000'",
+          "occurrences": 1
+        },
+        {
+          "structured_MONEY_changes": {
+            "new_separate_authorized_scope_USD": "0.08200000",
+            "maximum_batch_reserve_USD": "0.08200000",
+            "upper_per_physical_POST_USD": "0.04100000",
+            "each_leg_full_bound_USD": "0.08200000",
+            "previous_physical_POSTs_used": 18,
+            "previous_spent_USD": "0.14928810",
+            "cumulative_maximum_physical_POSTs": 20,
+            "cumulative_worst_case_USD": "0.23128810"
+          }
+        }
+      ],
+      "Python_compile_PASS": true,
+      "source_or_template_released": false
+    },
+    {
+      "role": "runtime",
+      "source_name": "launch_week10_scientific_native_closure_PREPARED09.py",
+      "base_bytes": 113785,
+      "base_SHA256": "77d2a5f990bd6e0434471f1bf191f5ab77ea055a31448723d843bf967a8d086f",
+      "draft_bytes": 113932,
+      "draft_SHA256": "f9c26c21f9a975234c216646d447cd6ae51490094d62e3a3ef6e900fe0b114d6",
+      "exact_public_delta": [
+        {
+          "before": "release.get(\"max_provider_posts\") != 4",
+          "after": "release.get(\"max_provider_posts\") != 2",
+          "occurrences": 1
+        },
+        {
+          "before": "release.get(\"new_batch_reserve_USD\") != \"0.18000000\"",
+          "after": "release.get(\"new_batch_reserve_USD\") != \"0.08200000\"",
+          "occurrences": 1
+        },
+        {
+          "before": "max_provider_calls=4, provider_timeout_seconds=60",
+          "after": "max_provider_calls=2, provider_timeout_seconds=60",
+          "occurrences": 1
+        },
+        {
+          "before": "PREPARATION / \"native_checker_json_object_override_PREPARED01.py\"",
+          "after": "Path('C:\\\\Users\\\\PC\\\\Documents\\\\Codex\\\\2026-10-04\\\\task-2\\\\5703-week10-native-pair-20261009-01\\\\diagnostic-preparation\\\\scientific-native-closure-preparation36\\\\native_checker_json_object_override_PREPARED01.py')",
+          "occurrences": 1
+        }
+      ],
+      "Python_compile_PASS": true,
+      "source_or_template_released": false
+    },
+    {
+      "role": "controller",
+      "source_name": "execute_week10_scientific_native_closure_ROOT_PREPARED09.py",
+      "base_bytes": 70242,
+      "base_SHA256": "ce8408afb77e666e3a8c0837c960c99f9eb52e8ca68579e9d365b314bf94ed5c",
+      "draft_bytes": 70237,
+      "draft_SHA256": "ddd21bb3e2641781c24a32bf2dd519fc9a4b459799d3244b889ddfedd368633d",
+      "exact_public_delta": [
+        {
+          "before": "2 <= budget[\"provider_post_count\"] <= 4",
+          "after": "budget[\"provider_post_count\"] == 2",
+          "occurrences": 1
+        }
+      ],
+      "Python_compile_PASS": true,
+      "source_or_template_released": false
+    },
+    {
+      "role": "browser",
+      "source_name": "real_browser_week10_scientific_native_closure_PREPARED01.cjs",
+      "base_bytes": 82844,
+      "base_SHA256": "2c1a948acdddc7914d87d7cac0de268a553a025ca85a2ab0df613b0bcbd72c1b",
+      "draft_bytes": 82850,
+      "draft_SHA256": "ec25616baf47c8bbb13ed34b6895ba0bcba0fe1122c53fd005e4a6e7b46145d5",
+      "exact_public_delta": [
+        {
+          "before": "const MAX_PROVIDER_POSTS = 4, MIN_PROVIDER_SLOTS = 2, MAX_REQUEST_POSTS = 4;",
+          "after": "const MAX_PROVIDER_POSTS = 2, MIN_PROVIDER_SLOTS = 2, MAX_REQUEST_POSTS = 2;",
+          "occurrences": 1
+        },
+        {
+          "before": "const BATCH_RESERVE_SCALED = 18000000n;",
+          "after": "const BATCH_RESERVE_SCALED = 8200000n;",
+          "occurrences": 1
+        },
+        {
+          "before": "new_batch_reserve_USD: '0.18000000', maximum_authorized_new_batch_cost_USD: '0.18000000'",
+          "after": "new_batch_reserve_USD: '0.08200000', maximum_authorized_new_batch_cost_USD: '0.08200000'",
+          "occurrences": 1
+        }
+      ],
+      "Python_compile_PASS": false,
+      "source_or_template_released": false
+    }
+  ],
+  "current39_business_pin_observation": [
+    {
+      "relative_path": "generation/checked.py",
+      "frozen39_bytes": 155543,
+      "frozen39_SHA256": "5b62005af2263600d6c9485aedf73613acd825bade85f41fc33ba88b0b39994c",
+      "observed_bytes": 155543,
+      "observed_SHA256": "5b62005af2263600d6c9485aedf73613acd825bade85f41fc33ba88b0b39994c",
+      "matches_frozen39": true
+    },
+    {
+      "relative_path": "generation/source_relations_v2.py",
+      "frozen39_bytes": 17079,
+      "frozen39_SHA256": "4e3ef844eff23b77d83e850c32fdfa47c9504b7cec9a8edd7db3328851ba5a55",
+      "observed_bytes": 17079,
+      "observed_SHA256": "4e3ef844eff23b77d83e850c32fdfa47c9504b7cec9a8edd7db3328851ba5a55",
+      "matches_frozen39": true
+    }
+  ],
+  "current_small_free_proof_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\ACTUAL_SOURCE_ANCHOR39_CURRENT_FREE_VERIFICATION.json",
+    "bytes": 1613,
+    "sha256": "b57e80d1cc89375597af7db55fd3998fb103242db4ebeff691b532d09086117e"
+  },
+  "software_repair_policy": {
+    "max_provider_calls": 2,
+    "Main_branch_line": 2898,
+    "required_remaining_calls_for_repair_and_recheck": 2,
+    "stop_reason": "insufficient_calls_for_repair_and_recheck",
+    "repair_or_complete_quality_gates_disabled": false,
+    "successful_TFull_claimed": false
+  },
+  "override": {
+    "existing_pinned_module_reused": true,
+    "contents_read": false,
+    "existing_SHA256_documented": "c2e7287830825e95fdddc7a6656eae5af71ea864c10a3abbb853aa74b66e9d7d"
+  },
+  "pending_before_executable_source_sealing": [
+    "Latest actual checker output must pass strict current schema and independent full-source assessment with 10 complete claims and 19 complete units; actual39 fails.",
+    "Refresh final Main pins and latest small affected-code receipt after any subsequent generic prompt repair.",
+    "After intervening component calls, recompute actual group cost plus 0.082 <= 0.24; do not reuse this predecessor subtotal.",
+    "Root must refresh source-index/curated-manifest two executable delta rows and current helper hashes, nonce, authority, release-template, binder delta, configuration and exact controller PINS.",
+    "Root alone uses the already-authorized ordinary fixture consumer and existing native36 preflight. No new provider qualification or full245 suite is required.",
+    "Use a unique future native scope if component40 takes the next identifier. Do not alter native36 sources, STOPs, captures, data or the true/protected databases."
+  ],
+  "future_scope_and_funds": {
+    "this_native40_draft_only": true,
+    "actual_future_native_ID_minimum": 41,
+    "component40_must_close_first": true,
+    "funds_after_component40_unverified_here": true,
+    "future_known_group_cost_plus_0_082_must_not_exceed_0_24": true,
+    "no_native_provider_slots_allocated_or_reserved": true
+  },
+  "free_next_serial_cost_plan": {
+    "baseline36_ms": {
+      "generation": 5626,
+      "joint_check": 10755,
+      "semantic_repair": 9071,
+      "joint_recheck": 7740,
+      "TFull": 41144.90000000596
+    },
+    "baseline36_initial_checker_output": {
+      "output_tokens": 3776,
+      "JSON_UTF8_bytes": 11770
+    },
+    "first_dependency": "Fix strict output-schema compliance and full source selection before relying on repair avoidance.",
+    "next_measured_target_if_no_repair_still_above_20_seconds": "Mandatory initial checker interval and output serialization; its baseline36 10.755s exceeds teacher 5.626s.",
+    "offline_work": [
+      "Measure retained exact checker input/context-candidate tables, schema hints and response bytes without further model calls.",
+      "Identify repeated identifiers or duplicated guidance for a generic lossless representation; prove canonical decoded payload equality and all condition/negation/no-evidence controls before adopting any compression.",
+      "Retain complete original sources, strict schema, citations, all full predicates and final publication gates. No source truncation, skipped checker or unsupported quality claim.",
+      "Do not prioritize the baseline36 retrieval CUDA rerank 213ms while the measured required checker stage is over 10 seconds."
+    ],
+    "limits": "No paid test or new latency result in this task; token counts do not alone establish causal latency or p95."
+  },
+  "limitations": [
+    "This is a public producer draft, not a released runnable native scope.",
+    "Python compile and numeric cap checks do not establish browser execution, model quality or TFull."
+  ],
+  "actions": {
+    "API_POSTs": 0,
+    "database_calls": 0,
+    "credential_or_private_binder_reads": 0,
+    "override_content_reads": 0,
+    "Main_or_B_writes": 0,
+    "W_only_metadata_or_optional_public_preview": true
+  }
+}

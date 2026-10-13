@@ -1,0 +1,140 @@
+{
+  "schema": "evidence41_public_metadata_inventory_v1",
+  "status": "PREPARED_NOT_ACTUAL_RELEASE41",
+  "workspace_root": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2",
+  "inventory_scope": "First-level public *.json only in 5703-fixed-checker-native-schema41-candidate/actual-native-schema41",
+  "publication_performed": false,
+  "first_level_only": true,
+  "directory_availability": "EXACT_SCHEMA41_DIRECTORY_AVAILABLE",
+  "json_file_count": 7,
+  "total_bytes": 273168,
+  "classifications": {
+    "actual_native_schema_result": 1,
+    "public_scope_intent": 1,
+    "actual_planned_wire": 1,
+    "transport_post_finished_receipt_no_settlement_inference": 1,
+    "transport_start_marker_no_current_cost_inference": 1,
+    "public_provider_response_read_no_model_success_inference": 1,
+    "submission_stop_marker_no_quality_inference": 1
+  },
+  "files": [
+    {
+      "relative_path": "5703-fixed-checker-native-schema41-candidate/actual-native-schema41/actual-checker-native-schema41-result01.json",
+      "bytes": 3616,
+      "sha256": "615934b671341b9f968b9b4cc4aeeeceb21e04602b7c13c0e9155bc1142c6dd6",
+      "classification": "actual_native_schema_result",
+      "literal_credential_shape_detected": false,
+      "body_printed": false
+    },
+    {
+      "relative_path": "5703-fixed-checker-native-schema41-candidate/actual-native-schema41/intent01.json",
+      "bytes": 900,
+      "sha256": "62d57bcb32b8901bf7ee2ca85a539b9197feff502b0fa52d8aa1bf90a6a88ff2",
+      "classification": "public_scope_intent",
+      "literal_credential_shape_detected": false,
+      "body_printed": false
+    },
+    {
+      "relative_path": "5703-fixed-checker-native-schema41-candidate/actual-native-schema41/native_schema41-actual-planned-wire01.json",
+      "bytes": 264462,
+      "sha256": "795a378064e8f84d7ad396b50d54caeb4eaa12a7caa5f6b887fee6e9a1a3b658",
+      "classification": "actual_planned_wire",
+      "literal_credential_shape_detected": false,
+      "body_printed": false
+    },
+    {
+      "relative_path": "5703-fixed-checker-native-schema41-candidate/actual-native-schema41/native_schema41-POST_FINISHED01.json",
+      "bytes": 2020,
+      "sha256": "500392e17ba33530e84c135d4e9af90eeb821c2ef9c1b50240e2855a8103ba9b",
+      "classification": "transport_post_finished_receipt_no_settlement_inference",
+      "literal_credential_shape_detected": false,
+      "body_printed": false
+    },
+    {
+      "relative_path": "5703-fixed-checker-native-schema41-candidate/actual-native-schema41/native_schema41-POST_STARTED_UNKNOWN01.json",
+      "bytes": 255,
+      "sha256": "d02052e2206dee0eb1621a134e9c07a93c4d49b8e7eae130412c1cfaca837682",
+      "classification": "transport_start_marker_no_current_cost_inference",
+      "literal_credential_shape_detected": false,
+      "body_printed": false
+    },
+    {
+      "relative_path": "5703-fixed-checker-native-schema41-candidate/actual-native-schema41/native_schema41-raw-provider-read01.json",
+      "bytes": 1778,
+      "sha256": "f51efd5ceae9b6ae94814405a798919382e19f37c02d0adfc59c3d0bba56114d",
+      "classification": "public_provider_response_read_no_model_success_inference",
+      "literal_credential_shape_detected": false,
+      "body_printed": false
+    },
+    {
+      "relative_path": "5703-fixed-checker-native-schema41-candidate/actual-native-schema41/STOP-before-any-next-submission01.json",
+      "bytes": 137,
+      "sha256": "b200c2a18a7ad0bcc787a84ac263170f178cf5bebc81ef66b5e6d158db4348d0",
+      "classification": "submission_stop_marker_no_quality_inference",
+      "literal_credential_shape_detected": false,
+      "body_printed": false
+    }
+  ],
+  "excluded_selected_json": [],
+  "forbidden_filename_shape_matches_in_enumerated_json": 0,
+  "literal_credential_shape_screen": {
+    "matched_file_count": 0,
+    "scope": "Common literal API-key, private-key, bearer-token and credential-bearing database-URL patterns; metadata references and hashes are not credential values",
+    "comprehensive_secret_audit": false
+  },
+  "marker_semantics": "POST_FINISHED and POST_STARTED_UNKNOWN are transport receipts. File presence and names establish neither a model completion, a successful comparison arm, fee settlement, nor the current UNKNOWN hold.",
+  "Root_reported_transport_context_not_semantically_rechecked": {
+    "provider_POSTs": 1,
+    "HTTP_status": 400,
+    "model_completion": false,
+    "arm_fee_USD": null,
+    "new_UNKNOWN_hold_USD": "0.045",
+    "fully_settled": false
+  },
+  "root_expected_result_pin_verified": {
+    "relative_path": "5703-fixed-checker-native-schema41-candidate/actual-native-schema41/actual-checker-native-schema41-result01.json",
+    "bytes": 3616,
+    "sha256": "615934b671341b9f968b9b4cc4aeeeceb21e04602b7c13c0e9155bc1142c6dd6",
+    "matched": true
+  },
+  "root_first_level_filename_metadata_only": [
+    {
+      "relative_path": "5703-fixed-checker-native-schema41-candidate/clone_checker_native_schema41.py",
+      "bytes": 1818,
+      "classification": "clone_helper_metadata_only_body_excluded",
+      "body_read": false,
+      "sha256": null
+    },
+    {
+      "relative_path": "5703-fixed-checker-native-schema41-candidate/NATIVE_SCHEMA41_FROM_CLOSED40_PUBLIC.diff",
+      "bytes": 15442,
+      "classification": "public_diff_metadata_only",
+      "body_read": false,
+      "sha256": null
+    },
+    {
+      "relative_path": "5703-fixed-checker-native-schema41-candidate/OFFLINE_CHECKER_NATIVE_SCHEMA41_PREPARATION01.json",
+      "bytes": 27693,
+      "classification": "public_preparation_metadata_only",
+      "body_read": false,
+      "sha256": null
+    },
+    {
+      "relative_path": "5703-fixed-checker-native-schema41-candidate/run_checker_native_schema41_CANDIDATE.py",
+      "bytes": 43449,
+      "classification": "runner_metadata_only",
+      "body_read": false,
+      "sha256": null
+    }
+  ],
+  "root_file_bodies_read": false,
+  "helper_runner_or_config_bodies_read": false,
+  "JSON_semantic_or_quality_review_performed": false,
+  "json_or_model_string_bodies_printed": false,
+  "API_calls": 0,
+  "DB_accesses": 0,
+  "Main_writes": 0,
+  "source_file_writes": 0,
+  "inventory_output_create_only": true,
+  "previous_inventories_modified": false
+}

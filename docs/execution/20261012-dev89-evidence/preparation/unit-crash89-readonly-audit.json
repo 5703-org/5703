@@ -1,0 +1,183 @@
+{
+  "schema": "dev89_readonly_native_unit_crash_audit_v1",
+  "created_utc": "2026-10-12T01:32:23.187501+00:00",
+  "status": "NATIVE_CRASH_CONFIRMED_CAUSE_UNCONFIRMED_NO_TEST_RUN_BY_REVIEWER",
+  "crash": {
+    "exit_code_decimal": 3221225477,
+    "exit_code_hex": "0xC0000005",
+    "seconds": 40.60976140000275,
+    "parent_timeout_seconds": 240,
+    "timed_out": false,
+    "last_test_log": "tests/unit/test_hint_task_alignment_v10.py::test_h1_task_references_the_owned_operation_and_conditions_without_solving[D-physics_fixed_variable_fit]",
+    "observed_stack": [
+      {
+        "path": "D:/Python/Lib/tempfile.py",
+        "line": 499,
+        "function": "func_wrapper"
+      },
+      {
+        "path": ".venv/Lib/site-packages/_pytest/capture.py",
+        "line": 594,
+        "function": "FDCapture.snap: tmpfile.truncate"
+      },
+      {
+        "path": ".venv/Lib/site-packages/_pytest/capture.py",
+        "line": 707,
+        "function": "MultiCapture.readouterr"
+      }
+    ],
+    "faulthandler_20_second_Timeout_lines_are_periodic_stack_dump": true,
+    "pytest_xml_exists": false,
+    "tripwire_final_exists": false,
+    "no_failure_entries_observed_before_native_crash": true,
+    "complete_suite_PASS_established": false,
+    "capture_root_cause_confirmed": false,
+    "production_B_code_root_cause_confirmed": false,
+    "absence_of_tripwire_file_proves_zero_blocked_events": false,
+    "first_receipt_tracks_five_stable_files_but_omits_changed_codec_pin": true
+  },
+  "isolation_source_reuse": {
+    "guard_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\run-unit88-cwd-nul-candidate.py",
+    "guard_sha256": "2ca132717a54ae107f820f2ee16a95647f2b1199eca8347e9580dc9dcdafa1b8",
+    "old_thin_probe_sha256": "e7cead37963774e7faacb560f4fd5674d8f672a9ec826103c4918d3b84046d9b",
+    "guard_core_AST_equal_to_original_full_runner": {
+      "UnitIsolationGuard": true,
+      "environment": true,
+      "output_path": true,
+      "hashes": true,
+      "child": true
+    },
+    "same_mock_SQLite_memory_and_new_W_outputs": true,
+    "dotenv_disabled_only_in_child": true,
+    "PostgreSQL_blocked_even_native_psycopg": true,
+    "external_network_blocked_except_exact_reviewed_owned_fixture_local_HTTP": true,
+    "no_original_runner_or_test_edits_required": true,
+    "known_api_model_DB_credential_environment_variables_removed": true
+  },
+  "capture_mode": {
+    "installed_source": "E:\\5703\\learning-assistant\\.venv\\Lib\\site-packages\\_pytest\\capture.py",
+    "installed_source_sha256": "12004dbff0ab7b34141ff53e33e616db2e857c695f64e640631f5abe30619145",
+    "default": "fd",
+    "proposed_exact_arg": "--capture=sys",
+    "allowed_choices_source_line": 56,
+    "global_sys_capture_mapping_source_lines": [
+      715,
+      716
+    ],
+    "explicit_capfd_remains_FDCapture_source_line": 1117,
+    "changes_only_pytest_log_observation_mechanism": true,
+    "changes_production_model_env_or_schema_semantics": false,
+    "eliminates_every_FD_fixture_or_guarantees_no_native_crash": false
+  },
+  "reviewed_B_pin": {
+    "target": "E:\\5703\\learning-assistant\\generation\\lossless_unit_findings_v1.py",
+    "after_sha256": "8c830694093b41e9f6250939de2cf9f72b24726bddbc1cba0141a6b8cb9efa56",
+    "source_version_after_sha256": "369bba3c1ba0e0007b346142988ccc3a242e13505e22513a1a13166a2fe4b2fc",
+    "current_target_matches_adopted_B": true,
+    "next_attempt_should_include_B_parent_child_and_after_pin": true
+  },
+  "recommended_one_bounded_attempt": {
+    "preferred": "One same-234-file full suite through a new W-only thin selector and original frozen isolation guard, with --capture=sys and B pin; preserve first crash artifacts.",
+    "maximum_parent_seconds": 180,
+    "automatic_repeated_suite_or_replay": false,
+    "unit_file_count": 234,
+    "no_test_omission_xfail_warning_filter_or_ASSERT_changes": true,
+    "required_receipt_claims": [
+      "exact capture mode",
+      "full/selected target set",
+      "B and old five source pins before/after",
+      "actual exit/timeout",
+      "pytest XML if normally finalized",
+      "actual tripwire summary if normally finalized"
+    ],
+    "if_bounded_retry_crashes_again": "Preserve native crash and mark full B verification blocked; do not infer PASS from partial log or old Phase88 4532."
+  },
+  "alternative_direct_ten_file_selector": {
+    "source_pins": [
+      {
+        "path": "tests\\unit\\test_checker_output_fixed_ids_v4.py",
+        "sha256": "f71776523ac3d7ad5ca967ab1f6e2e38cf324fc2e063972770330afbb65bb072",
+        "defined_test_functions": 14
+      },
+      {
+        "path": "tests\\unit\\test_checker_output_projection_v1.py",
+        "sha256": "2bfa8498aac811efe55de7f25868f80505c3a1937b7ee2725a6bd9847553ed65",
+        "defined_test_functions": 19
+      },
+      {
+        "path": "tests\\unit\\test_lossless_output_integration84.py",
+        "sha256": "aa07bcf78ba4208cca6016a6960510bac31bae5115588d31b186116e0125aea2",
+        "defined_test_functions": 8
+      },
+      {
+        "path": "tests\\unit\\test_single_selection_findings_v2.py",
+        "sha256": "00f16f0f7c460ba467a5d6e1c334e5070b13aaec1d9967c2409c0c8b250e6112",
+        "defined_test_functions": 7
+      },
+      {
+        "path": "tests\\unit\\test_single_selection_output_integration.py",
+        "sha256": "75358d22edbd185f34b80afad4ad0009d5d91078f33d83503efd2924221e2b59",
+        "defined_test_functions": 5
+      },
+      {
+        "path": "tests\\unit\\test_single_selection_teacher_contract.py",
+        "sha256": "910f812fd96bc729e64ec6eb37696848a743bf8b12d909c65c07f0c08a275efa",
+        "defined_test_functions": 6
+      },
+      {
+        "path": "tests\\unit\\test_single_selection_wire_contract.py",
+        "sha256": "7d06eb097df4612f258e34efbbfbd2c2b754ab973b0c8255d15e101995e1ddae",
+        "defined_test_functions": 8
+      },
+      {
+        "path": "tests\\unit\\test_checker_encoding_v2.py",
+        "sha256": "f0ed3379a35e5342d2d1537bd190a0f803e5a6fc014b2ab96af7a30684436d22",
+        "defined_test_functions": 9
+      },
+      {
+        "path": "tests\\unit\\test_haiku_wire_schema.py",
+        "sha256": "a1eda4065d1eaddb44891f4d69c9dd1d831b40e3bbcc83ff31c57435ce8164d2",
+        "defined_test_functions": 9
+      },
+      {
+        "path": "tests\\unit\\test_generation_programmatic_optins.py",
+        "sha256": "0dbfa7178015db5e072a942eb49b45c017455eae09ba4297e53c8cf65faed3a4",
+        "defined_test_functions": 3
+      }
+    ],
+    "coverage": [
+      "strict v1 full schema/mandatory keys and C/U/F/R/Q references",
+      "own-parent selections and negative evidence gates",
+      "v2 reuse and default-off policy boundaries",
+      "actual provider wire/schema original limits",
+      "programmatic optins"
+    ],
+    "successful_run_can_certify_only_selected_regression_scope": true,
+    "replaces_full_B_suite_or_live_quality_tests": false
+  },
+  "supporting_evidence_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-unit89-free-v1\\receipt.json",
+      "sha256": "5447efd994f5f43b491de0bad66e7be676c6d346598aa1869b963bd86a8769f8",
+      "bytes": 2312
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-unit89-free-v1\\pytest.log",
+      "sha256": "823c9ecb02b61aef4cc9b99c928192da69071cf4930c6d7450344e976520df8e",
+      "bytes": 214376
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-unit89-free-v1\\faulthandler.log",
+      "sha256": "f26f6ec781c99a5b9c461ffc26b7da138cf1210e2a19b6805430afee6c2be0ae",
+      "bytes": 4288
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-preparation\\common-repair-adoption89-root.json",
+      "sha256": "44658c25d1e561b0f578ea8d7d29ef4d6cb926c606b09713ca2f069df757d19b",
+      "bytes": 12512
+    }
+  ],
+  "reviewer_auth_DB_models_network_services_Main_R_runner_or_test_writes": false,
+  "tests_executed_by_reviewer": 0,
+  "old_Phase88_4532_pass_reused_as_B": false
+}

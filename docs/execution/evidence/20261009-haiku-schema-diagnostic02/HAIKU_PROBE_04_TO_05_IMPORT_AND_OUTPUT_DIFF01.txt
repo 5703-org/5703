@@ -1,0 +1,29 @@
+--- haiku_two_schema_probe_PREPARED04.py
++++ haiku_two_schema_probe_PREPARED05.py
+@@ -212,7 +212,7 @@
+     from sqlalchemy.pool import NullPool
+     from app.modules.model_settings.models import ModelConfiguration, ModelCredential
+     from app.modules.model_settings.secrets import decrypt
+-    from app.core.errors import AppError
++    from app.core.exceptions import AppError
+     # Load only the exact approved public credential consumer; avoid service's unrelated providers import.
+     consumer_bytes = Path(CREDENTIAL_CONSUMER_PUBLIC_PIN['path']).read_bytes()
+     if len(consumer_bytes) != CREDENTIAL_CONSUMER_PUBLIC_PIN['bytes'] or hashlib.sha256(consumer_bytes).hexdigest() != CREDENTIAL_CONSUMER_PUBLIC_PIN['sha256']:
+@@ -266,7 +266,7 @@
+             or [m.get('role') for m in messages] != ['system', 'user']):
+         raise ValueError('TINY_PUBLIC_SYNTHETIC_INPUT_REQUIRED')
+     work = Path(args.output).absolute()
+-    if work != ROOT / 'diagnostic-preparation/haiku-schema-diagnostic01':
++    if work != ROOT / 'diagnostic-preparation/haiku-schema-diagnostic02':
+         raise ValueError('EXACT_FRESH_DIAGNOSTIC_OUTPUT_REQUIRED')
+     work.mkdir(exist_ok=False)
+     create(work / 'authorization-scope-public01.json', {'status': 'ROOT_EXECUTING_EXPLICIT_TWO_SYNTHETIC_DIAGNOSTICS',
+@@ -412,7 +412,7 @@
+     parser = argparse.ArgumentParser(description=__doc__)
+     parser.add_argument('--execute-authorized-two-probes', action='store_true')
+     parser.add_argument('--workspace-id', required=True)
+-    parser.add_argument('--output', default=str(ROOT / 'diagnostic-preparation/haiku-schema-diagnostic01'))
++    parser.add_argument('--output', default=str(ROOT / 'diagnostic-preparation/haiku-schema-diagnostic02'))
+     args = parser.parse_args()
+     if not args.execute_authorized_two_probes:
+         parser.error('Root explicit execution flag required; preparation never submits a request')

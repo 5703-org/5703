@@ -1,0 +1,84 @@
+{
+  "request_id": "86ccea30-76ee-47b5-bbad-d8b431728fb5",
+  "old_failed_job_id": "42dab830-cd5b-4702-87b3-8b8e256f0102",
+  "teacher_sha256": "f843ea4e3ef7aea098eb327c85fe9da81d64f2fe2519c81b342375d00967a0ae",
+  "teacher_bytes": 1625,
+  "retrieval_sha256": "6cff5bf1e64faf66373cbf042b2d0b22249ed069d2d417ae484b3591c7771762",
+  "source_map_sha256": "23c89cad4805e5d55e3ed1cb3101896a4971acb01ef6e257a6b8c579dd50156d",
+  "selected_evidence_count": 20,
+  "teacher_network_POSTs": 0,
+  "database_writes": 0,
+  "native_publication_verified": false,
+  "project_complete": false,
+  "old_UNKNOWN_hold_USD_unchanged": "0.09000000",
+  "schema_sha256": "f259fd47e0156f8d526996b7ce1fddb71d246bec8cb6d79f789dfa898d6bc0e0",
+  "messages_sha256": "12084645457e975e49474f05f3a21a463ae0b0cb4649110fd305acfbe21368b6",
+  "schema_name": "joint_check_v5_ordinary_question_v1",
+  "http_status": 200,
+  "finish_reason": "stop",
+  "adapter_latency_ms": 4736,
+  "usage": {
+    "input_tokens": 10606,
+    "output_tokens": 1123,
+    "total_tokens": 11729,
+    "cost": 0.0059893
+  },
+  "strict_json_PASS": true,
+  "conditional_full_Pydantic_PASS": true,
+  "schema_issues": [],
+  "raw_bytes": 3806,
+  "raw_sha256": "b6365862aed25ef2df1f7ccb0c0f24a74cf24cc73c1e3f4d643c7187ecd9b537",
+  "business_gate_PASS": false,
+  "business_gate_error_code": "SEMANTIC_CHECK_FAILED",
+  "issue_codes": [
+    "CHECK_PROBLEM_QUOTE_MISMATCH",
+    "SEMANTIC_CHECK_FAILED",
+    "UNEXPECTED_CITATION_FOR_BASIS"
+  ],
+  "checks": [
+    {
+      "validation_state": "validated",
+      "effective_body_ok": false,
+      "attempt_evaluation_assessment": {
+        "version": "conditional_attempt_evaluation_v1",
+        "applicability": "not_applicable",
+        "verdict": "not_applicable",
+        "normalization": "unchanged",
+        "learner_evaluation_passed": null,
+        "gate_satisfied": true
+      },
+      "gates": {
+        "body_ok": false,
+        "specific_help": true,
+        "scope_ok": true,
+        "suggestions_ok": true,
+        "evidence_display_ok": true,
+        "cumulative_ok": true,
+        "complete_answer": true,
+        "attempt_evaluation_ok": "not_applicable",
+        "tutor_question_ok": true,
+        "non_repetitive_next_action": true,
+        "coverage": "full"
+      }
+    }
+  ],
+  "logical_budget": {
+    "consumed_calls": 2,
+    "active_seconds": 4.786009299999932,
+    "format_repairs": 0,
+    "transient_retries": 0,
+    "max_calls": 2,
+    "max_active_seconds": 180.0
+  },
+  "status": "ACTUAL_SINGLE_CHECKER_COMPLETE",
+  "physical_POSTs": 1,
+  "known_cost_USD": "0.0059893",
+  "UNKNOWN_hold_USD": "0",
+  "remaining_scope_USD": "0.0240107",
+  "local_generation_elapsed_ms": 5146.255,
+  "service_exception_type": null,
+  "fresh_checker_verified": true,
+  "raw_text_exported": false,
+  "credential_or_DSN_exported": false,
+  "at_UTC": "2026-10-09T16:37:00.993173+00:00"
+}

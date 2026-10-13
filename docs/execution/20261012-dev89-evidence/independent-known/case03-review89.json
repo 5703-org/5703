@@ -1,0 +1,391 @@
+{
+  "schema": "dev89_independent_closed_case_review_v1",
+  "case_id": "case03",
+  "status": "FAIL",
+  "independent_answer_QA": "FAIL",
+  "scientific_correctness": "PASS",
+  "required_coverage": "COMPLETE_5_OF_5",
+  "own_citation_and_selected_support": "FAIL",
+  "citation_marker_identifiers": "VALID",
+  "uncited_scientific_claim_observed": false,
+  "no_scientific_critical_error_observed": true,
+  "source_availability": "FULL_ACTUAL_PACKET",
+  "source_RAG_MISS": false,
+  "missing_experimental_inputs": false,
+  "publication": "REAL_PUBLISHED_API_ANSWER",
+  "independent_page_eligible": false,
+  "packet_review": {
+    "all_submitted_source_fragments_reviewed": true,
+    "fragments": 76,
+    "claims": 9,
+    "units": 24,
+    "original_decoded_packet_sha256": "639707d7a67b30269298afb587d7438451bd02807c49c91d21e1bc884b3222f4",
+    "checker_context_sha256": "7d2842d06173f559f370bce2d5e657e9cf3218880c5afa218a90edd8a2e5e844",
+    "hydrated_full_v2_sha256": "17925ba90f01147363a44ed2be4218875f6fbf270ae3f7593028e89f16dcc0b9",
+    "typed_checker_body_ok": true,
+    "typed_checker_has_full_coverage": null,
+    "teacher_public_response_fields_equal": true
+  },
+  "facet_assessment": [
+    {
+      "facet": "T1",
+      "verdict": "COMPLETE",
+      "support": [
+        "ev_004/F031-F032",
+        "ev_006/F046-F047"
+      ],
+      "detail": "AUG start role and methionine supplied; no universal claim every AUG restarts or all initiator Met is formylated."
+    },
+    {
+      "facet": "T2",
+      "verdict": "COMPLETE",
+      "support": [
+        "ev_004/F029-F030",
+        "ev_002/F016-F017",
+        "ev_007/F064-F065"
+      ],
+      "detail": "Named stop identities and no-addition/termination are present in whole actual packet and answer; own-selection deficit in opener retained below."
+    },
+    {
+      "facet": "T3",
+      "verdict": "COMPLETE_OWN_SUPPORTED",
+      "support": [
+        "ev_007/F064-F065",
+        "ev_001/F001"
+      ],
+      "detail": "Release factors recognize codons, not the reverse; resemblance does not become an unsupported causal explanation."
+    },
+    {
+      "facet": "T4",
+      "verdict": "COMPLETE_OWN_SUPPORTED",
+      "support": [
+        "ev_002/F017",
+        "ev_001/F002-F003"
+      ]
+    },
+    {
+      "facet": "T5",
+      "verdict": "COMPLETE_OWN_SUPPORTED",
+      "support": [
+        "ev_002/F017",
+        "ev_007/F060",
+        "ev_001/F004"
+      ]
+    }
+  ],
+  "published_counterexample": {
+    "claim_alias": "C001",
+    "claim_id": "claim_1b76a189643bc5b55ae26e2a_1",
+    "unit_aliases": [
+      "U01",
+      "U02"
+    ],
+    "text_excerpt": "AUG differs from the stop codons UAA, UAG and UGA ...",
+    "actual_own_evidence_ids": [
+      "ev_004",
+      "ev_006"
+    ],
+    "all_allowed_own_fragment_ids": [
+      "F029",
+      "F030",
+      "F031",
+      "F032",
+      "F033",
+      "F034",
+      "F035",
+      "F036",
+      "F044",
+      "F045",
+      "F046",
+      "F047",
+      "F048",
+      "F049",
+      "F050",
+      "F051",
+      "F052",
+      "F053",
+      "F054",
+      "F055"
+    ],
+    "actual_parent_selected_fragments": [
+      {
+        "evidence_id": "ev_004",
+        "fragment_ids": [
+          "F029",
+          "F030",
+          "F031",
+          "F032"
+        ]
+      },
+      {
+        "evidence_id": "ev_006",
+        "fragment_ids": [
+          "F044",
+          "F045",
+          "F046",
+          "F047"
+        ]
+      }
+    ],
+    "named_stop_hits_in_all_own_allowed_text": [],
+    "checker_unit_selected_fragments": [
+      {
+        "unit_id": "U01",
+        "fragment_ids": [
+          "F031",
+          "F046"
+        ]
+      },
+      {
+        "unit_id": "U02",
+        "fragment_ids": [
+          "F032",
+          "F047"
+        ]
+      },
+      {
+        "unit_id": "U03",
+        "fragment_ids": [
+          "F032",
+          "F047"
+        ]
+      }
+    ],
+    "explicit_identity_source_elsewhere": [
+      "ev_002/F016",
+      "ev_007/F064"
+    ],
+    "verdict": "OWN_TEXTBOOK_PROOF_INCOMPLETE_WITH_PROBLEM_INPUT_ALTERNATIVE_NOT_ACTUALLY_USED",
+    "explanation": "A source saying three unspecified codons terminate does not identify UAA/UAG/UGA. C001 selected fragments establish AUG special function/start/Met and generic stops, not these named-triplet identities. The question itself supplies those names and could legitimately support a faithful problem_input quotation, but the actual model chose textbook basis without that quote variant. Neither another parent C006 nor a post hoc basis conversion is used to pass this actual output. This is provenance/own-selected support failure, not a claim that the stop identities are scientifically false."
+  },
+  "other_claim_unit_audit": [
+    {
+      "claim": "C002",
+      "units": [
+        "U01",
+        "U02"
+      ],
+      "verdict": "SUPPORTED",
+      "own_fragments": [
+        "F033",
+        "F034",
+        "F048"
+      ],
+      "detail": "Reading-frame setup and reading in triples match own source."
+    },
+    {
+      "claim": "C003",
+      "units": [
+        "U01",
+        "U02",
+        "U03"
+      ],
+      "verdict": "SUPPORTED",
+      "own_fragments": [
+        "F029",
+        "F044"
+      ],
+      "detail": "Generic three stop/termination/release, without new unsupported named identities."
+    },
+    {
+      "claim": "C004",
+      "units": [
+        "U01",
+        "U02"
+      ],
+      "verdict": "SUPPORTED",
+      "own_fragments": [
+        "F029",
+        "F030",
+        "F065"
+      ],
+      "detail": "Nonsense/no-addition contrast is coherent with its own termination/release-factor sources."
+    },
+    {
+      "claim": "C005",
+      "units": [
+        "U01",
+        "U02",
+        "U03"
+      ],
+      "verdict": "SUPPORTED",
+      "own_fragments": [
+        "F017"
+      ]
+    },
+    {
+      "claim": "C006",
+      "units": [
+        "U01",
+        "U02",
+        "U03"
+      ],
+      "verdict": "SUPPORTED",
+      "own_fragments": [
+        "F064",
+        "F065",
+        "F001"
+      ],
+      "detail": "Named identities retained in this own parent, plus proper recognizer direction; no borrowing them for C001."
+    },
+    {
+      "claim": "C007",
+      "units": [
+        "U01",
+        "U02",
+        "U03"
+      ],
+      "verdict": "SUPPORTED",
+      "own_fragments": [
+        "F002",
+        "F003"
+      ]
+    },
+    {
+      "claim": "C008",
+      "units": [
+        "U01",
+        "U02"
+      ],
+      "verdict": "SUPPORTED",
+      "own_fragments": [
+        "F060"
+      ],
+      "detail": "RF entry terminates translation and components subsequently dissociate; no assertion RF alone directly disassembles."
+    },
+    {
+      "claim": "C009",
+      "units": [
+        "U01",
+        "U02",
+        "U03"
+      ],
+      "verdict": "SUPPORTED",
+      "own_fragments": [
+        "F004"
+      ]
+    }
+  ],
+  "checker_and_publication": {
+    "normal_adapter_stage": "completed",
+    "finish_reason": "stop",
+    "error": null,
+    "canonical_model_PASS": true,
+    "actual_API_status": "API_COMPLETED",
+    "actual_job_state": "succeeded",
+    "published_own_source_support_false_pass": true,
+    "scientifically_false_fact_observed": false,
+    "false_refusal": "NO_REFUSAL_PUBLISHED_COMPLETE_RESPONSE"
+  },
+  "actual_answer": {
+    "session_id": "d8122ea5-b6e9-4191-b294-35442bcab50d",
+    "request_id": "806553e5-771e-4331-a728-a7f6cb06cf52",
+    "job_id": "952f7317-8b58-4b88-87c6-a8688b847931",
+    "user_message_id": "5934c65c-7a04-4568-b2c2-60dbc9b57053",
+    "answer_id": "070b1e19-ce39-481e-800e-632bee092a48",
+    "question_sha256": "71c613679d6b6799d285ed57c7102c229b3fc8c72ccc678cd7aab21a10cf087b",
+    "scope_sha256": "ad9a7b5334562c93e70140fd13a102763d949fa92a8c0f4c852121095d20ab5d",
+    "response_DTO_sha256_python_canonical": "b5ee8334ea8dd52495e23d750cdc38a15e2a73e46a97c5a17db509f04288000c",
+    "answer_text_sha256_UTF8": "4aea2324847bb6b90dd39bc1d95d70e0cf387880ff8594edb1c53da1b63e981f",
+    "actual_journey_sha256": "b204ce057e346c674b111ad6e8a2fcbda6183af6c07dd85dd8acdf0a9cc5a7eb"
+  },
+  "clock": {
+    "started_utc": "2026-10-12T00:52:53.582426+00:00",
+    "finished_utc": "2026-10-12T00:53:18.261732+00:00",
+    "api_send_to_complete_response_ms": 24440.6009000013,
+    "backend_worker_before_answer_insert_ms": 23427.539,
+    "backend_worker_before_commit_ms": 23892.787,
+    "provider_generation_ms": 3623,
+    "provider_checker_ms": 16301,
+    "browser_used": false,
+    "qualified_complete_DOM_samples": 0,
+    "actual_page_latency_sample_qualified": false,
+    "QA_qualified_API_answer_samples": 0,
+    "qualification_note": "Recorded API completion duration exists, but source-support QA failed; no independent page eligibility receipt is emitted."
+  },
+  "finance": {
+    "actual_provider_POST": 2,
+    "known_cost_USD": "0.0297455",
+    "UNKNOWN_protection_USD": "0",
+    "numeric_settlements": 2
+  },
+  "closure": {
+    "owned_threads_closed": true,
+    "old_metadata_unchanged": {
+      "sessions": true,
+      "jobs": true,
+      "answer_requests": true,
+      "answers": true,
+      "active_model_configurations": true
+    }
+  },
+  "frozen_baseline": {
+    "denominator": 8,
+    "source_version_sha256": "f7f03e32b3bab3f539002e53798cc5abdfc0f7816d37d78d85401eff8e1ce5d2",
+    "protocol_sha256": "704153b20e858e964314cb078c5773352428f26632df8e95cf0424963a25a483",
+    "rubric_sha256": "468ecce8dcd190c567d942c133731b6a52948994520c7e0d1529669a4b4f5c14"
+  },
+  "limits": [
+    "Exposed independent AI review, not HumanGold.",
+    "No old textbook/fullbook or another parent proof used to pass actual citations.",
+    "No new models/auth/DB/network/Main/runtime writes or tests.",
+    "All eight denominator retained; other closed cases and unrun cases are separate."
+  ],
+  "input_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case03\\journey-receipt88.json",
+      "bytes": 4256,
+      "sha256": "b204ce057e346c674b111ad6e8a2fcbda6183af6c07dd85dd8acdf0a9cc5a7eb"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case03\\api-closure77.json",
+      "bytes": 1224,
+      "sha256": "0465073db2407b714d952080ced3bdaebe7e4578296c19fec6ca204a45b573bf"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case03\\native-provider70\\final-receipt.json",
+      "bytes": 1413,
+      "sha256": "682fa01d288de653b9ef17b53adf306b21623929312e80c70e230dcdc755e889"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case03\\native-provider70\\slot-01-normal-outcome.json",
+      "bytes": 2792,
+      "sha256": "34c4c57cbe4aba11bc5d827f70f0e73be17343bd22c9dd9bac6f93f1ffd76f38"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case03\\native-provider70\\slot-01-public-inputs.json",
+      "bytes": 97530,
+      "sha256": "8d8f03f68a2437e67637f031c6d5e4c59a89ea65d21f570fbbe86c2d3b6d2405"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case03\\native-provider70\\slot-01-financial.json",
+      "bytes": 325,
+      "sha256": "a87961a0005a7b7b9b6358e4344bfaed8bc13a2e76c8339cb1773ef160a0796c"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case03\\native-provider70\\slot-01-settlement.json",
+      "bytes": 247,
+      "sha256": "cb8307bc8553c18539cad8149edc39ad5eda5060328434ace63d6ba66493c7a0"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case03\\native-provider70\\slot-02-normal-outcome.json",
+      "bytes": 23249,
+      "sha256": "e19ca658ef38c61622758d8cf0d5ce28a4266ce013c3541affb8b22111b803e5"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case03\\native-provider70\\slot-02-public-inputs.json",
+      "bytes": 192922,
+      "sha256": "88256952d26c47583d837b808416cc4605221b574f887848d8759a3bf37ef64e"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case03\\native-provider70\\slot-02-financial.json",
+      "bytes": 325,
+      "sha256": "c0d87f9b88da5c0ab131ad81a5c812c6a7b4f259fc92731eb332ffce57eae407"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-dev89-runtime\\case03\\native-provider70\\slot-02-settlement.json",
+      "bytes": 247,
+      "sha256": "df527f3db7f89e624189e339858f7abf43039da856799c2f545056c32629eac7"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "5703_compatible43_pre_execution_approval_stops_v1",
+  "recorded_at_UTC": "2026-10-10T11:37:04+00:00",
+  "source": "Root-observed automatic approval tool responses; reason summaries, not provider responses",
+  "status": "BLOCKED_BEFORE_PROCESS_CREATION_PENDING_EXACT_71_CONTENT_APPROVAL",
+  "target": "OpenRouter /api/v1/chat/completions, Gemini checker routed to requested google-vertex/global",
+  "attempted_runner": "run_checker_compatible43_CANDIDATE.py",
+  "attempted_review": "OFFLINE_COMPATIBLE43_PREPARATION01.json",
+  "attempted_review_sha256": "27ef2468086781fa5dc9eb0e530266b28b49307dd92b17ec25bc0d6e2b60dd53",
+  "exact_proposed_disclosure": {
+    "question": "Original saved Calvin-cycle synthetic test question",
+    "saved_model_answer": "10 original claims and 19 original units",
+    "retrieved_fragments": 71,
+    "trusted_checker_instructions": true,
+    "learner_identity_or_history_observed": false,
+    "authentication": "Memory-only normal credential consumer; excluded from model prompt, reports and evidence"
+  },
+  "reviews": [
+    {
+      "sequence": 1,
+      "result": "REJECTED_BEFORE_PROCESS_CREATION",
+      "reason_summary": "Existing exact-content user approval covered 67 fragments; the proposed 71-fragment disclosure was not explicitly covered."
+    },
+    {
+      "sequence": 2,
+      "result": "REJECTED_BEFORE_PROCESS_CREATION",
+      "risk_check_before_retry": "Read-only public-content audit established public provenance, checked four extra fragments, and observed no learner identifiers or credential patterns. The same exact proposed command was reviewed again once.",
+      "reason_summary": "Public provenance did not make the private derived answer and exact 71-fragment payload explicitly user-authorized; a user-authored reply covering that exact disclosure was still required."
+    }
+  ],
+  "processes_started_by_rejected_commands": 0,
+  "provider_requests": 0,
+  "database_or_authentication_accesses": 0,
+  "actual43_fees": "USD0.00000000",
+  "actual43_unknown_holds": "USD0.00000000",
+  "unused_new_independent_batch": {
+    "maximum_requests": 2,
+    "per_request_hold_USD": "0.04500000",
+    "total_cap_USD": "0.09000000",
+    "standing_fee_authorization_preserved": true,
+    "old_stopped_scopes_or_unknown_holds_reopened": false
+  },
+  "current_Main_offline_refresh": {
+    "review": "OFFLINE_COMPATIBLE43_PREPARATION02.json",
+    "bytes": 34160,
+    "sha256": "f98f2729e8ab47e63c01f666b9a6fee37d67a6d5b4c03f30d9c7b264e221e90c",
+    "only_changed_field": "main_source_and_prompt_pins",
+    "request_wire_bytes": 86938,
+    "request_wire_sha256": "3ad513c0aef095fe34b2dbf737bdb48d922caa25277d20168c257c38ec5aca89",
+    "original_messages_claims_units_and_all_71_fragments_unchanged": true,
+    "paid_execution_performed": false
+  },
+  "next_action": "Wait for the pending exact-71-content user reply. Root rechecks current Main and frozen preparation pins, then submits only the bounded reviewed execution for ordinary automatic approval. Do not retry, alter content to bypass review, switch credential routes, or ask for fee permission again.",
+  "quality_or_native_full_answer_latency_proven": false,
+  "project_complete": false
+}

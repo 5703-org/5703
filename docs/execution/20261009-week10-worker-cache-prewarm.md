@@ -1,0 +1,42 @@
+# Week10 worker retrieval-cache startup preparation - 2026-10-09
+
+The reviewed three-file opt-in prewarm is adopted in Main and passed the affected free controls: **48 tests passed in 1.44 seconds**, with zero failures, errors or skips. Ruff correctness and formatting checks passed for all four changed Python files. This is a Week10 change; the delivered Week09 Source04 archives and original reports remain immutable. No new provider request, real database connection, dependency installation, deployment or course submission occurred.
+
+## Change and retained behavior
+
+`backend/app/core/config.py` adds `worker_prewarm_retrieval_cache`, default **false**, configurable through `WORKER_PREWARM_RETRIEVAL_CACHE=true`. `backend/app/worker.py` prepares the existing active release after the normal PostgreSQL project/queue locks and optional stale-job recovery, before the first job claim. It uses the same Engine as the worker loop, a separate read-only Session, and the existing retrieval-cache loader. The Session is rolled back and closed on success and failure. Only the interactive PostgreSQL lane with chat retrieval caching enabled is eligible. Background, all-queue and SQLite lanes skip it.
+
+`backend/app/modules/knowledge/service.py` requires a clean Session and an active release, retains the native full validation, and rechecks the active pointer and invalidation epoch after loading. No cache key/capacity, evidence, model role, prompt, token limit, checker, retrieval ranker, source-visibility validation or publication fence changed. Failure reports contain an exception class rather than message text. Optional prewarm failure leaves ordinary job retrieval responsible for its existing validation. All three original files have separate byte-preserving backups; adoption required exact baseline hashes before replacement.
+
+Startup preparation is logged separately under `worker_active_release_prewarm_v1` and `worker_startup_before_job_claim_v1`. API readiness is not proof that an interactive worker has completed prewarm. Waiting after an early Send remains part of full-answer latency. The flag stays disabled unless explicitly configured for the controlled execution.
+
+## Actual free verification
+
+The new `tests/unit/test_worker_retrieval_prewarm.py` and the existing `test_retrieval_cache.py` and `test_worker_queues.py` passed in one selected run. The pre-import launcher denied network, DNS, UDP, dotenv paths and non-synthetic database transports. It allowed only memory SQLite and a new owned pytest directory. Native cache.load, epoch checks, immutable projection, vector hashing, lexical ranking and current-hit source checks were exercised with synthetic database transport; the existing queue regression used a newly created synthetic SQLite file.
+
+The controls cover first business retrieval reusing the warmed snapshot with one full validation, cache identity changes requiring validation, changed/revoked source rejection, invalid trigger/replica/epoch rejection, active-release and clean-Session guards, lock/recovery/prewarm/claim order, and rollback/close/error privacy. An initial formatting check failed only for the new test file; its original candidate is preserved, AST equality was checked during formatting, and final formatting passed. No full suite or PostgreSQL integration rerun is claimed.
+
+Actual result and exact source hashes: [validation receipt](evidence/20261009-week10-worker-cache-prewarm01/ACTUAL_WEEK10_TARGETED_FREE_VALIDATION01.json), [JUnit](evidence/20261009-week10-worker-cache-prewarm01/worker-prewarm-junit01.xml), [run log](evidence/20261009-week10-worker-cache-prewarm01/ACTUAL_UNIT_GATE01.log). The validation receipt is 3982 bytes, SHA256 `4490d71823c99978132e5516f4009bfa0c359cf50ba02cd2cca0c7ea105e97f3`.
+
+## Controlled native-browser pair: prepared, not executed
+
+The historical full UI followup was 22713.1 ms and its cold-cache validation was 6081.2484 ms. These are motivation, not a measured improvement or either new execution leg. Startup prewarm moves work before a question; its startup and total-journey costs must remain visible. No new full-answer latency, provider TTFT, p95, RAG quality improvement or scientific acceptance is asserted.
+
+The [prepared paired plan](evidence/20261009-week10-worker-cache-prewarm01/WEEK10_MATCHED_BROWSER_PAIR_PREPARED01.md) fixes the original followup, frozen history, corpus/epoch, R2 profile, local models, provider route, role limits and checker. Both fresh workers warm local models identically; measured query-vector cache conditions match. The only treatment difference is the release-cache prewarm flag. Candidate/ranked/evidence hashes must match; startup, first visible answer and Send-to-complete-answer DOM timings are separate. One pair is a diagnostic observation and cannot support p95 or model superiority.
+
+Execution remains **NOT_EXECUTED_BUDGET_PROTECTION_INSUFFICIENT**. The finite maximum is eight physical POSTs with a strict upper bound USD 0.22714880 and rounded full protection USD 0.24. Existing API-use authorization does not increase the requested original USD 10 budget. A new independent USD 0.24 allocation is required; the old 14 UNKNOWN records, 13 unstarted slots, full allocations, STOPs and unused scopes remain untouched. The existing protected followup remainder USD 0.00127260 and separate unallocated USD 0.02871031 are not transferred or recycled. Account/invoice totals including UNKNOWN remain null. This is a budget constraint, not an automatic tool-approval rejection.
+
+## Week09 delivery and scope
+
+The actual final directory is `5703-week09-deadline-release-20261008-01/final_source04_with_reports_matched5_and_token_cache_20261009_01` in the shared workspace. Its nine archives passed preserved-prefix/source metadata, added-member hashes/CRC, ownership and report binding. Complete has all nine original English DOCX, each owner has its corresponding original DOCX, and the complete contains 87 public resource files including the two original tiktoken cache files. The final nine-archive receipt is 22403 bytes, SHA256 `fa131e9a5ccc71fe34e4897c3bcc2d741f433faa71b22bae8f975c668678f715`. Earlier archive directories and failed Base5 evidence remain preserved. The eight owner archives are cumulative modules of one application and depend on complete-project resources.
+
+Week09 source identity remains `CS30-1_Main_20261008_b94f69f894ce` with source-index SHA256 `88451d11075975db45e2102ffadf5e26f2190d4d03060ca6c3721993448ab890`. Main now has the separate Week10 delta; the old source03 runtime and full Mock gate are historical evidence, not fresh verification of this delta. Current53 whole-row counts remain 5 implemented_verified, 38 implemented_pending_verification, 8 incomplete and 2 external_condition. Formal scientific studies, human/device conditions and extracted final-package installation acceptance remain open. `project_complete=false`.
+
+
+## Actual Week10 paired native-browser result - 2026-10-09
+
+The previously prepared pair has now executed with the separately approved max8POST/USD0.24 allocation. Both normal native R2/full-checker/browser legs passed and closed. Same question, frozen synthetic history/profile/memory, complete initial teacher wire and ordered candidates/evidence matched. Send-to-complete cited-answer DOM: A18.7143s, B12.1465s; process launch-to-completion: A30.2040s, B29.4479s. The observed Send difference is35.10%, but startup rose8.4283s to14.0966s; net launch-to-completion difference is only2.50%. n=1/AthenB is diagnostic, not p95, independent scientific quality or causal cache acceptance.
+
+Four actual known-cost POSTs cost USD0.01936904, newUNKNOWN0/open0; both owned runtimes/browser Jobs and database resources closed. Success STOP closes this batch; no unused slot is automatically reused. All old UNKNOWN/STOP/full protections and Week09 deliveries remain preserved. The default startup flag remains false. Normal login was repaired only in the already-owned synthetic fixture email; a cross-representation response-hash prerequisite was removed only from the browser harness. Existing48 affected free tests/Ruff checks are reused rather than rerun unchanged. Earlier prepared-only or access/budget pauses are dated historical checkpoints, superseded for this completed execution. Current53 remains5/38/8/2; project_complete=false.
+
+[Actual result and limits](20261009-week10-native-pair-result.md).

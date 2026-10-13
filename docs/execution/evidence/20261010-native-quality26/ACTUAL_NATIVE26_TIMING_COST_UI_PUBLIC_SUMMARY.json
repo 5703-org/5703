@@ -1,0 +1,623 @@
+{
+  "schema": "5703_actual_native26_public_summary_v1",
+  "status": "NATIVE_UI_PASS_INDEPENDENT_QUALITY_PENDING",
+  "actual_succeeded": true,
+  "actual_error": null,
+  "provider_post_count": 4,
+  "known_cost_USD": "0.0174422",
+  "UNKNOWN": 0,
+  "all_settled": true,
+  "stop_exists": false,
+  "open_claims": 0,
+  "integrity_errors": 0,
+  "cleanup_pending": 0,
+  "prior_UNKNOWN_hold_USD": "0.09000000",
+  "native_stages": [
+    "generation",
+    "joint_check",
+    "semantic_repair",
+    "joint_recheck"
+  ],
+  "slots": [
+    {
+      "slot": 1,
+      "stage": "generation",
+      "latency_ms": 4075,
+      "http_status": 200,
+      "finish_reason": "stop",
+      "pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure26\\runtime\\retained-provider-diagnostics\\slot-01-model-output01.json",
+        "bytes": 2712,
+        "sha256": "556c02a0c46e6797e73ef92eb10fbd6c41181eeb963ba998c2b859f3dd9d90be"
+      }
+    },
+    {
+      "slot": 2,
+      "stage": "joint_check",
+      "latency_ms": 5548,
+      "http_status": 200,
+      "finish_reason": "stop",
+      "pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure26\\runtime\\retained-provider-diagnostics\\slot-02-model-output01.json",
+        "bytes": 31471,
+        "sha256": "e54dde02d7e810b285c13a205309618c08889b88f871a01d0e0b4cd35893f39d"
+      }
+    },
+    {
+      "slot": 3,
+      "stage": "semantic_repair",
+      "latency_ms": 8570,
+      "http_status": 200,
+      "finish_reason": "stop",
+      "pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure26\\runtime\\retained-provider-diagnostics\\slot-03-model-output01.json",
+        "bytes": 1748,
+        "sha256": "820bf58b1b3cbaf3dd7cd24a4b6e3d1c0c8f98a1477330a512778ca8bdeaa1eb"
+      }
+    },
+    {
+      "slot": 4,
+      "stage": "joint_recheck",
+      "latency_ms": 5531,
+      "http_status": 200,
+      "finish_reason": "stop",
+      "pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure26\\runtime\\retained-provider-diagnostics\\slot-04-model-output01.json",
+        "bytes": 31821,
+        "sha256": "bdda6a81be4476c439da11d4a66b7994be3af10ce32f8a72af3f6cdf300f1304"
+      }
+    }
+  ],
+  "check_summaries": [
+    {
+      "revision": 0,
+      "accepted": false,
+      "validation_state": "validated",
+      "structural_issue_codes": [
+        "UNRESOLVED_TECHNICAL_ENTITY_COLLISION",
+        "CHECK_SUPPORT_WITHOUT_SOURCE"
+      ],
+      "entity_issues": [
+        {
+          "code": "UNRESOLVED_TECHNICAL_ENTITY_COLLISION",
+          "claim_id": "claim_37eb9395c8cbcb5721d36f6e_1",
+          "claimed_identifier": "NADPH",
+          "source_identifiers": [
+            "NADH"
+          ],
+          "reason_source_identifiers": [
+            "NADH"
+          ],
+          "selected_fragment_ids": [
+            "F007"
+          ],
+          "reason": "The claimed identifier is absent from its selected supporting union; a model reason cannot establish a source alias. A selected source supplies the same proposition with a one-edit different identifier in that slot. The model reason cannot exempt this source-binding conflict. Resolve this binding before publication; this is not a scientific falsehood verdict or an entailment certificate.",
+          "source_entailment_certified": false,
+          "publication_override": false
+        }
+      ]
+    },
+    {
+      "revision": 1,
+      "accepted": true,
+      "validation_state": "validated",
+      "structural_issue_codes": [],
+      "entity_issues": []
+    }
+  ],
+  "actual_wire_sizes_bytes": [
+    44968,
+    51351,
+    59710,
+    51376
+  ],
+  "wire_limit_bytes": 60000,
+  "wire_limit_raised": false,
+  "final_generation_revision": 1,
+  "generation_snapshot_native_publication_claimed": false,
+  "browser": {
+    "status": "PASS",
+    "answer_id": "ef293209-67ce-4165-b664-0a074c1f5cc8",
+    "tfull_ms": 31096.79999999702,
+    "tfailure_ms": null,
+    "citation_checked": true,
+    "citation_controls_checked": 10,
+    "citation_checks": [
+      {
+        "occurrence": 1,
+        "evidence_id": "ev_008",
+        "claim_id": "claim_13aa30069496b0f2d13d01e7_1",
+        "status": "PASS",
+        "exposure_id": "41d38880-dcdd-4eca-abf4-78ffab086c64",
+        "source_dto_sha256": "6a09c4f2380a20d77f552335e23a6df64d4892efa418e8c92f456d8247d0b82e",
+        "http_status": 200,
+        "route": "/api/v1/answers/ef293209-67ce-4165-b664-0a074c1f5cc8/exposures",
+        "title": "Concepts of Biology",
+        "source_title": "Concepts of Biology",
+        "section": "Chapter 5 Photosynthesis / 5.2 The Light-Dependent Reactions of Photosynthesis",
+        "pages": [
+          138
+        ],
+        "fragment_ids": [
+          "span_aef88da7210ccdb7eaec2d299b5e7c3f"
+        ],
+        "source_excerpt_sha256": "1290ddf491f21c69a15bc1f56b212dda4efea694324ca84433ff091a0552019e",
+        "source_excerpt_character_count": 299,
+        "source_excerpt": "Each pigment can absorb different wavelengths of light, which allows the plant to absorb any light that passes through the taller trees. (credit: Jason Hollinger) How Light-Dependent Reactions Work The overall purpose of the light-dependent reactions is to convert light energy into chemical energy.",
+        "source_segments": [
+          {
+            "text": "Each pigment can absorb different wavelengths of light, which allows the plant to absorb any light that passes through the taller trees. (credit: Jason Hollinger) How Light-Dependent Reactions Work The overall purpose of the light-dependent reactions is to convert light energy into chemical energy.",
+            "text_sha256": "1290ddf491f21c69a15bc1f56b212dda4efea694324ca84433ff091a0552019e",
+            "highlight": true,
+            "fragment_ids": [
+              "span_aef88da7210ccdb7eaec2d299b5e7c3f"
+            ]
+          }
+        ],
+        "source_dialog_text": "Sources\n\nSource passages linked to this claim.\n\nSource 1\nSource 2\nSource 3\nSOURCE PASSAGE\nConcepts of Biology\n\nChapter 5 Photosynthesis / 5.2 The Light-Dependent Reactions of Photosynthesis · PDF physical pages 138\n\nHighlighted text is linked to the selected claim.\n\nEach pigment can absorb different wavelengths of light, which allows the plant to absorb any light that passes through the taller trees. (credit: Jason Hollinger) How Light-Dependent Reactions Work The overall purpose of the light-dependent reactions is to convert light energy into chemical energy.\n\nThe complete source may reveal the answer to this problem.\n\nShow complete source\n\nOpenStax / Rice University · Access for free at openstax.org\n\nView original source\nSource record\n{\n  \"presentation_id\": \"07729d18-f2d8-4850-bc01-08e724d82c20\",\n  \"policy_version\": \"learning_enhancement_v1\",\n  \"evidence_id\": \"ev_008\",\n  \"claim_id\": \"claim_13aa30069496b0f2d13d01e7_1\",\n  \"fragment_ids\": [\n    \"span_aef88da7210ccdb7eaec2d299b5e7c3f\"\n  ],\n  \"license\": \"Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.\"\n}\nExact source positions\n[\n  {\n    \"fragment_id\": \"span_aef88da7210ccdb7eaec2d299b5e7c3f\",\n    \"source_unit_id\": \"d4f2c268aabe6d35a8e1bb794f91abbc2ee7\",\n    \"processing_id\": \"82fb328d-a383-43c2-a6eb-b91b61d05069\",\n    \"document_version_id\": \"35d45deb-de7f-4194-9ce2-1861ae84434d\",\n    \"start\": 1267,\n    \"end\": 1566,\n    \"text_hash\": \"1290ddf491f21c69a15bc1f56b212dda4efea694324ca84433ff091a0552019e\",\n    \"block_kind\": \"prose\",\n    \"mapping_quality\": \"sentence\"\n  }\n]\n\nSupport assessment: model check. Independent review is separate.\n\nModel support check"
+      },
+      {
+        "occurrence": 2,
+        "evidence_id": "ev_005",
+        "claim_id": "claim_13aa30069496b0f2d13d01e7_1",
+        "status": "PASS",
+        "exposure_id": "da8f583e-2c1e-456a-b31a-0180b088842c",
+        "source_dto_sha256": "0a14437719dc7693785be5d4366046791ffca345b88c6b74cb45d84ed8819daf",
+        "http_status": 200,
+        "route": "/api/v1/answers/ef293209-67ce-4165-b664-0a074c1f5cc8/exposures",
+        "title": "Biology 2e",
+        "source_title": "Biology 2e",
+        "section": "Chapter 8 Photosynthesis / 8.1 Overview of Photosynthesis",
+        "pages": [
+          238
+        ],
+        "fragment_ids": [
+          "span_da05e15e378bb8d7ff72296587cd5412"
+        ],
+        "source_excerpt_sha256": "aed87a03a12217ca921a100aed423b96cc268b216f80d009bf393bf43a3076aa",
+        "source_excerpt_character_count": 130,
+        "source_excerpt": "The light-dependent reactions utilize certain molecules to temporarily store the energy: These are referred to as energy carriers.",
+        "source_segments": [
+          {
+            "text": "The light-dependent reactions utilize certain molecules to temporarily store the energy: These are referred to as energy carriers.",
+            "text_sha256": "aed87a03a12217ca921a100aed423b96cc268b216f80d009bf393bf43a3076aa",
+            "highlight": true,
+            "fragment_ids": [
+              "span_da05e15e378bb8d7ff72296587cd5412"
+            ]
+          }
+        ],
+        "source_dialog_text": "Sources\n\nSource passages linked to this claim.\n\nSource 1\nSource 2\nSource 3\nSOURCE PASSAGE\nBiology 2e\n\nChapter 8 Photosynthesis / 8.1 Overview of Photosynthesis · PDF physical pages 238\n\nHighlighted text is linked to the selected claim.\n\nThe light-dependent reactions utilize certain molecules to temporarily store the energy: These are referred to as energy carriers.\n\nThe complete source may reveal the answer to this problem.\n\nShow complete source\n\nOpenStax / Rice University · Access for free at openstax.org\n\nView original source\nSource record\n{\n  \"presentation_id\": \"07729d18-f2d8-4850-bc01-08e724d82c20\",\n  \"policy_version\": \"learning_enhancement_v1\",\n  \"evidence_id\": \"ev_005\",\n  \"claim_id\": \"claim_13aa30069496b0f2d13d01e7_1\",\n  \"fragment_ids\": [\n    \"span_da05e15e378bb8d7ff72296587cd5412\"\n  ],\n  \"license\": \"Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.\"\n}\nExact source positions\n[\n  {\n    \"fragment_id\": \"span_da05e15e378bb8d7ff72296587cd5412\",\n    \"source_unit_id\": \"072fb74e256184e4e568fa976f69bdc6d2c5\",\n    \"processing_id\": \"242be583-8e03-448f-8009-9db23179fdb9\",\n    \"document_version_id\": \"bb336e9b-ef43-466f-9e65-ca6d1d196c4b\",\n    \"start\": 1863,\n    \"end\": 1993,\n    \"text_hash\": \"aed87a03a12217ca921a100aed423b96cc268b216f80d009bf393bf43a3076aa\",\n    \"block_kind\": \"prose\",\n    \"mapping_quality\": \"sentence\"\n  }\n]\n\nSupport assessment: model check. Independent review is separate.\n\nModel support check"
+      },
+      {
+        "occurrence": 3,
+        "evidence_id": "ev_007",
+        "claim_id": "claim_13aa30069496b0f2d13d01e7_1",
+        "status": "PASS",
+        "exposure_id": "56dbbcbf-c0cd-49ec-822f-3bf77c5115bc",
+        "source_dto_sha256": "b4769c1ac0abd1afdf2207af19a797201c7710f81b1d2b099901a9b1caa588b4",
+        "http_status": 200,
+        "route": "/api/v1/answers/ef293209-67ce-4165-b664-0a074c1f5cc8/exposures",
+        "title": "Concepts of Biology",
+        "source_title": "Concepts of Biology",
+        "section": "Chapter 5 Photosynthesis / 5.3 The Calvin Cycle",
+        "pages": [
+          141
+        ],
+        "fragment_ids": [
+          "span_8f1a62f750cb3a80f992bbac985e92d6"
+        ],
+        "source_excerpt_sha256": "f62728ea51eae95a56e23cd7ca4c5658ffd39ccdac40b01bcaabf92ef840a70d",
+        "source_excerpt_character_count": 193,
+        "source_excerpt": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.\n…\nFIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.",
+        "source_segments": [
+          {
+            "text": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+            "text_sha256": "606fdcf5a3064a4d77ffbad85c4b56f0002123b63ac5b5df981b58ec2dee1933",
+            "highlight": true,
+            "fragment_ids": [
+              "span_8f1a62f750cb3a80f992bbac985e92d6"
+            ]
+          },
+          {
+            "text": "\n…\n",
+            "text_sha256": "a95283d596e4c1cd8dc608acf74dca55f5d576e7551db83d914ac9f2524216e9",
+            "highlight": false,
+            "fragment_ids": []
+          },
+          {
+            "text": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.",
+            "text_sha256": "4165a545e507a6b32094143b577105ff897e3eddc5b2c9b13e41d41c16eec272",
+            "highlight": false,
+            "fragment_ids": []
+          }
+        ],
+        "source_dialog_text": "Sources\n\nSource passages linked to this claim.\n\nSource 1\nSource 2\nSource 3\nSOURCE PASSAGE\nConcepts of Biology\n\nChapter 5 Photosynthesis / 5.3 The Calvin Cycle · PDF physical pages 141\n\nHighlighted text is linked to the selected claim.\n\nThese energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.\n…\nFIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.\n\nThe complete source may reveal the answer to this problem.\n\nShow complete source\n\nOpenStax / Rice University · Access for free at openstax.org\n\nView original source\nSource record\n{\n  \"presentation_id\": \"07729d18-f2d8-4850-bc01-08e724d82c20\",\n  \"policy_version\": \"learning_enhancement_v1\",\n  \"evidence_id\": \"ev_007\",\n  \"claim_id\": \"claim_13aa30069496b0f2d13d01e7_1\",\n  \"fragment_ids\": [\n    \"span_8f1a62f750cb3a80f992bbac985e92d6\"\n  ],\n  \"license\": \"Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.\"\n}\nExact source positions\n[\n  {\n    \"fragment_id\": \"span_8f1a62f750cb3a80f992bbac985e92d6\",\n    \"source_unit_id\": \"8bd9edcf0207e2fb714c2840ecc6398bfbff\",\n    \"processing_id\": \"82fb328d-a383-43c2-a6eb-b91b61d05069\",\n    \"document_version_id\": \"35d45deb-de7f-4194-9ce2-1861ae84434d\",\n    \"start\": 863,\n    \"end\": 962,\n    \"text_hash\": \"606fdcf5a3064a4d77ffbad85c4b56f0002123b63ac5b5df981b58ec2dee1933\",\n    \"block_kind\": \"prose\",\n    \"mapping_quality\": \"sentence\"\n  }\n]\n\nSupport assessment: model check. Independent review is separate.\n\nModel support check"
+      },
+      {
+        "occurrence": 4,
+        "evidence_id": "ev_007",
+        "claim_id": "claim_78b5f4cd410afad4e8aae852_1",
+        "status": "PASS",
+        "exposure_id": "955fbb25-c1e9-4eae-83ad-9fb134e8df57",
+        "source_dto_sha256": "6a83dcef99e04b0ce528cefcebff2cead68a4937ec83a5ea2ffc5cfe6b7ac303",
+        "http_status": 200,
+        "route": "/api/v1/answers/ef293209-67ce-4165-b664-0a074c1f5cc8/exposures",
+        "title": "Concepts of Biology",
+        "source_title": "Concepts of Biology",
+        "section": "Chapter 5 Photosynthesis / 5.3 The Calvin Cycle",
+        "pages": [
+          141
+        ],
+        "fragment_ids": [
+          "span_1d77ba72ab25e9f04b8f13fc0e2bb0c2"
+        ],
+        "source_excerpt_sha256": "f62728ea51eae95a56e23cd7ca4c5658ffd39ccdac40b01bcaabf92ef840a70d",
+        "source_excerpt_character_count": 193,
+        "source_excerpt": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.\n…\nFIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.",
+        "source_segments": [
+          {
+            "text": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+            "text_sha256": "606fdcf5a3064a4d77ffbad85c4b56f0002123b63ac5b5df981b58ec2dee1933",
+            "highlight": false,
+            "fragment_ids": []
+          },
+          {
+            "text": "\n…\n",
+            "text_sha256": "a95283d596e4c1cd8dc608acf74dca55f5d576e7551db83d914ac9f2524216e9",
+            "highlight": false,
+            "fragment_ids": []
+          },
+          {
+            "text": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.",
+            "text_sha256": "4165a545e507a6b32094143b577105ff897e3eddc5b2c9b13e41d41c16eec272",
+            "highlight": true,
+            "fragment_ids": [
+              "span_1d77ba72ab25e9f04b8f13fc0e2bb0c2"
+            ]
+          }
+        ],
+        "source_dialog_text": "Sources\n\nSource passages linked to this claim.\n\nSOURCE PASSAGE\nConcepts of Biology\n\nChapter 5 Photosynthesis / 5.3 The Calvin Cycle · PDF physical pages 141\n\nHighlighted text is linked to the selected claim.\n\nThese energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.\n…\nFIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.\n\nThe complete source may reveal the answer to this problem.\n\nShow complete source\n\nOpenStax / Rice University · Access for free at openstax.org\n\nView original source\nSource record\n{\n  \"presentation_id\": \"07729d18-f2d8-4850-bc01-08e724d82c20\",\n  \"policy_version\": \"learning_enhancement_v1\",\n  \"evidence_id\": \"ev_007\",\n  \"claim_id\": \"claim_78b5f4cd410afad4e8aae852_1\",\n  \"fragment_ids\": [\n    \"span_1d77ba72ab25e9f04b8f13fc0e2bb0c2\"\n  ],\n  \"license\": \"Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.\"\n}\nExact source positions\n[\n  {\n    \"fragment_id\": \"span_1d77ba72ab25e9f04b8f13fc0e2bb0c2\",\n    \"source_unit_id\": \"8bd9edcf0207e2fb714c2840ecc6398bfbff\",\n    \"processing_id\": \"82fb328d-a383-43c2-a6eb-b91b61d05069\",\n    \"document_version_id\": \"35d45deb-de7f-4194-9ce2-1861ae84434d\",\n    \"start\": 771,\n    \"end\": 862,\n    \"text_hash\": \"4165a545e507a6b32094143b577105ff897e3eddc5b2c9b13e41d41c16eec272\",\n    \"block_kind\": \"prose\",\n    \"mapping_quality\": \"sentence\"\n  }\n]\n\nSupport assessment: model check. Independent review is separate.\n\nModel support check"
+      },
+      {
+        "occurrence": 5,
+        "evidence_id": "ev_005",
+        "claim_id": "claim_7b64455512b43eaa7d77cc06_1",
+        "status": "PASS",
+        "exposure_id": "8c99cf15-62c4-4f44-96c1-1cd05bab9260",
+        "source_dto_sha256": "2c66266e06351671a1600b7c57a7e3a4d970ddd4d804f6ef975510f9c20e3679",
+        "http_status": 200,
+        "route": "/api/v1/answers/ef293209-67ce-4165-b664-0a074c1f5cc8/exposures",
+        "title": "Biology 2e",
+        "source_title": "Biology 2e",
+        "section": "Chapter 8 Photosynthesis / 8.1 Overview of Photosynthesis",
+        "pages": [
+          238
+        ],
+        "fragment_ids": [
+          "span_da05e15e378bb8d7ff72296587cd5412"
+        ],
+        "source_excerpt_sha256": "aed87a03a12217ca921a100aed423b96cc268b216f80d009bf393bf43a3076aa",
+        "source_excerpt_character_count": 130,
+        "source_excerpt": "The light-dependent reactions utilize certain molecules to temporarily store the energy: These are referred to as energy carriers.",
+        "source_segments": [
+          {
+            "text": "The light-dependent reactions utilize certain molecules to temporarily store the energy: These are referred to as energy carriers.",
+            "text_sha256": "aed87a03a12217ca921a100aed423b96cc268b216f80d009bf393bf43a3076aa",
+            "highlight": true,
+            "fragment_ids": [
+              "span_da05e15e378bb8d7ff72296587cd5412"
+            ]
+          }
+        ],
+        "source_dialog_text": "Sources\n\nSource passages linked to this claim.\n\nSOURCE PASSAGE\nBiology 2e\n\nChapter 8 Photosynthesis / 8.1 Overview of Photosynthesis · PDF physical pages 238\n\nHighlighted text is linked to the selected claim.\n\nThe light-dependent reactions utilize certain molecules to temporarily store the energy: These are referred to as energy carriers.\n\nThe complete source may reveal the answer to this problem.\n\nShow complete source\n\nOpenStax / Rice University · Access for free at openstax.org\n\nView original source\nSource record\n{\n  \"presentation_id\": \"07729d18-f2d8-4850-bc01-08e724d82c20\",\n  \"policy_version\": \"learning_enhancement_v1\",\n  \"evidence_id\": \"ev_005\",\n  \"claim_id\": \"claim_7b64455512b43eaa7d77cc06_1\",\n  \"fragment_ids\": [\n    \"span_da05e15e378bb8d7ff72296587cd5412\"\n  ],\n  \"license\": \"Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.\"\n}\nExact source positions\n[\n  {\n    \"fragment_id\": \"span_da05e15e378bb8d7ff72296587cd5412\",\n    \"source_unit_id\": \"072fb74e256184e4e568fa976f69bdc6d2c5\",\n    \"processing_id\": \"242be583-8e03-448f-8009-9db23179fdb9\",\n    \"document_version_id\": \"bb336e9b-ef43-466f-9e65-ca6d1d196c4b\",\n    \"start\": 1863,\n    \"end\": 1993,\n    \"text_hash\": \"aed87a03a12217ca921a100aed423b96cc268b216f80d009bf393bf43a3076aa\",\n    \"block_kind\": \"prose\",\n    \"mapping_quality\": \"sentence\"\n  }\n]\n\nSupport assessment: model check. Independent review is separate.\n\nModel support check"
+      },
+      {
+        "occurrence": 6,
+        "evidence_id": "ev_001",
+        "claim_id": "claim_b7f9e15645de941723449704_1",
+        "status": "PASS",
+        "exposure_id": "9ce20da7-4739-4286-8278-c231e3d43c32",
+        "source_dto_sha256": "01cda524515a269170589e256dc8f8923fecfd4ca8f8ee4df92948636592c64a",
+        "http_status": 200,
+        "route": "/api/v1/answers/ef293209-67ce-4165-b664-0a074c1f5cc8/exposures",
+        "title": "Concepts of Biology",
+        "source_title": "Concepts of Biology",
+        "section": "Chapter 5 Photosynthesis / 5.1 Overview of Photosynthesis",
+        "pages": [
+          135
+        ],
+        "fragment_ids": [
+          "span_13d8f9a35661f0fb624af18c220292d6"
+        ],
+        "source_excerpt_sha256": "6554a66be82f650b8ae9d9009f3930036523f34e7cea4e1796d781add8cbe884",
+        "source_excerpt_character_count": 272,
+        "source_excerpt": "The carriers that move energy from the light-dependent reactions to the Calvin cycle reactions can be thought of as “full” because they bring energy.\n…\nAfter the energy is released, the “empty” energy carriers return to the light-dependent reactions to obtain more energy.",
+        "source_segments": [
+          {
+            "text": "The carriers that move energy from the light-dependent reactions to the Calvin cycle reactions can be thought of as “full” because they bring energy.",
+            "text_sha256": "6ea81195b4c83fd36a8abea39e89795c4930011cecf5715a4d1b0f10cd8c182b",
+            "highlight": true,
+            "fragment_ids": [
+              "span_13d8f9a35661f0fb624af18c220292d6"
+            ]
+          },
+          {
+            "text": "\n…\n",
+            "text_sha256": "a95283d596e4c1cd8dc608acf74dca55f5d576e7551db83d914ac9f2524216e9",
+            "highlight": false,
+            "fragment_ids": []
+          },
+          {
+            "text": "After the energy is released, the “empty” energy carriers return to the light-dependent reactions to obtain more energy.",
+            "text_sha256": "42f47d41240c5b2ef75be23fcbb6d8b71ecb76cac7a90fe9d0330c6a0a049cb2",
+            "highlight": false,
+            "fragment_ids": []
+          }
+        ],
+        "source_dialog_text": "Sources\n\nSource passages linked to this claim.\n\nSOURCE PASSAGE\nConcepts of Biology\n\nChapter 5 Photosynthesis / 5.1 Overview of Photosynthesis · PDF physical pages 135\n\nHighlighted text is linked to the selected claim.\n\nThe carriers that move energy from the light-dependent reactions to the Calvin cycle reactions can be thought of as “full” because they bring energy.\n…\nAfter the energy is released, the “empty” energy carriers return to the light-dependent reactions to obtain more energy.\n\nThe complete source may reveal the answer to this problem.\n\nShow complete source\n\nOpenStax / Rice University · Access for free at openstax.org\n\nView original source\nSource record\n{\n  \"presentation_id\": \"07729d18-f2d8-4850-bc01-08e724d82c20\",\n  \"policy_version\": \"learning_enhancement_v1\",\n  \"evidence_id\": \"ev_001\",\n  \"claim_id\": \"claim_b7f9e15645de941723449704_1\",\n  \"fragment_ids\": [\n    \"span_13d8f9a35661f0fb624af18c220292d6\"\n  ],\n  \"license\": \"Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.\"\n}\nExact source positions\n[\n  {\n    \"fragment_id\": \"span_13d8f9a35661f0fb624af18c220292d6\",\n    \"source_unit_id\": \"70a0305c9d11b854d54c558bd1ab3cb153b1\",\n    \"processing_id\": \"82fb328d-a383-43c2-a6eb-b91b61d05069\",\n    \"document_version_id\": \"35d45deb-de7f-4194-9ce2-1861ae84434d\",\n    \"start\": 1416,\n    \"end\": 1565,\n    \"text_hash\": \"6ea81195b4c83fd36a8abea39e89795c4930011cecf5715a4d1b0f10cd8c182b\",\n    \"block_kind\": \"prose\",\n    \"mapping_quality\": \"sentence\"\n  }\n]\n\nSupport assessment: model check. Independent review is separate.\n\nModel support check"
+      },
+      {
+        "occurrence": 7,
+        "evidence_id": "ev_010",
+        "claim_id": "claim_df265f14f5567f97bcef7b81_1",
+        "status": "PASS",
+        "exposure_id": "38199cba-ec21-472a-a256-a7cd11b7c0f4",
+        "source_dto_sha256": "cca9e8ee2384b69a601134aa7814aac55349bd9797372f29c97d01239734c32e",
+        "http_status": 200,
+        "route": "/api/v1/answers/ef293209-67ce-4165-b664-0a074c1f5cc8/exposures",
+        "title": "Concepts of Biology",
+        "source_title": "Concepts of Biology",
+        "section": "Chapter 5 Photosynthesis / Chapter Summary",
+        "pages": [
+          145,
+          146
+        ],
+        "fragment_ids": [
+          "span_0daa77759f0a36e4197e28c3a7df8a5e"
+        ],
+        "source_excerpt_sha256": "8f2ee0ffdf8145c06f89c4db9b4d5df0defc3c916d8fa99c5c9ade22fbea2e22",
+        "source_excerpt_character_count": 158,
+        "source_excerpt": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+        "source_segments": [
+          {
+            "text": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+            "text_sha256": "8f2ee0ffdf8145c06f89c4db9b4d5df0defc3c916d8fa99c5c9ade22fbea2e22",
+            "highlight": true,
+            "fragment_ids": [
+              "span_0daa77759f0a36e4197e28c3a7df8a5e"
+            ]
+          }
+        ],
+        "source_dialog_text": "Sources\n\nSource passages linked to this claim.\n\nSOURCE PASSAGE\nConcepts of Biology\n\nChapter 5 Photosynthesis / Chapter Summary · PDF physical pages 145, 146\n\nHighlighted text is linked to the selected claim.\n\nThe resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.\n\nThe complete source may reveal the answer to this problem.\n\nShow complete source\n\nOpenStax / Rice University · Access for free at openstax.org\n\nView original source\nSource record\n{\n  \"presentation_id\": \"07729d18-f2d8-4850-bc01-08e724d82c20\",\n  \"policy_version\": \"learning_enhancement_v1\",\n  \"evidence_id\": \"ev_010\",\n  \"claim_id\": \"claim_df265f14f5567f97bcef7b81_1\",\n  \"fragment_ids\": [\n    \"span_0daa77759f0a36e4197e28c3a7df8a5e\"\n  ],\n  \"license\": \"Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.\"\n}\nExact source positions\n[\n  {\n    \"fragment_id\": \"span_0daa77759f0a36e4197e28c3a7df8a5e\",\n    \"source_unit_id\": \"9384d80eee75aac546751fdd4d6708b70e6c\",\n    \"processing_id\": \"82fb328d-a383-43c2-a6eb-b91b61d05069\",\n    \"document_version_id\": \"35d45deb-de7f-4194-9ce2-1861ae84434d\",\n    \"start\": 1901,\n    \"end\": 2059,\n    \"text_hash\": \"8f2ee0ffdf8145c06f89c4db9b4d5df0defc3c916d8fa99c5c9ade22fbea2e22\",\n    \"block_kind\": \"prose\",\n    \"mapping_quality\": \"sentence\"\n  }\n]\n\nSupport assessment: model check. Independent review is separate.\n\nModel support check"
+      },
+      {
+        "occurrence": 8,
+        "evidence_id": "ev_008",
+        "claim_id": "claim_e45389bfcf498be266c5354e_1",
+        "status": "PASS",
+        "exposure_id": "83884140-8599-44a9-b594-4c6d769bcee3",
+        "source_dto_sha256": "b9c29c990edef32e46449954643ff815fabf72d15778afa9a6c204700350c206",
+        "http_status": 200,
+        "route": "/api/v1/answers/ef293209-67ce-4165-b664-0a074c1f5cc8/exposures",
+        "title": "Concepts of Biology",
+        "source_title": "Concepts of Biology",
+        "section": "Chapter 5 Photosynthesis / 5.2 The Light-Dependent Reactions of Photosynthesis",
+        "pages": [
+          138
+        ],
+        "fragment_ids": [
+          "span_aef88da7210ccdb7eaec2d299b5e7c3f"
+        ],
+        "source_excerpt_sha256": "1290ddf491f21c69a15bc1f56b212dda4efea694324ca84433ff091a0552019e",
+        "source_excerpt_character_count": 299,
+        "source_excerpt": "Each pigment can absorb different wavelengths of light, which allows the plant to absorb any light that passes through the taller trees. (credit: Jason Hollinger) How Light-Dependent Reactions Work The overall purpose of the light-dependent reactions is to convert light energy into chemical energy.",
+        "source_segments": [
+          {
+            "text": "Each pigment can absorb different wavelengths of light, which allows the plant to absorb any light that passes through the taller trees. (credit: Jason Hollinger) How Light-Dependent Reactions Work The overall purpose of the light-dependent reactions is to convert light energy into chemical energy.",
+            "text_sha256": "1290ddf491f21c69a15bc1f56b212dda4efea694324ca84433ff091a0552019e",
+            "highlight": true,
+            "fragment_ids": [
+              "span_aef88da7210ccdb7eaec2d299b5e7c3f"
+            ]
+          }
+        ],
+        "source_dialog_text": "Sources\n\nSource passages linked to this claim.\n\nSource 1\nSource 2\nSOURCE PASSAGE\nConcepts of Biology\n\nChapter 5 Photosynthesis / 5.2 The Light-Dependent Reactions of Photosynthesis · PDF physical pages 138\n\nHighlighted text is linked to the selected claim.\n\nEach pigment can absorb different wavelengths of light, which allows the plant to absorb any light that passes through the taller trees. (credit: Jason Hollinger) How Light-Dependent Reactions Work The overall purpose of the light-dependent reactions is to convert light energy into chemical energy.\n\nThe complete source may reveal the answer to this problem.\n\nShow complete source\n\nOpenStax / Rice University · Access for free at openstax.org\n\nView original source\nSource record\n{\n  \"presentation_id\": \"07729d18-f2d8-4850-bc01-08e724d82c20\",\n  \"policy_version\": \"learning_enhancement_v1\",\n  \"evidence_id\": \"ev_008\",\n  \"claim_id\": \"claim_e45389bfcf498be266c5354e_1\",\n  \"fragment_ids\": [\n    \"span_aef88da7210ccdb7eaec2d299b5e7c3f\"\n  ],\n  \"license\": \"Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.\"\n}\nExact source positions\n[\n  {\n    \"fragment_id\": \"span_aef88da7210ccdb7eaec2d299b5e7c3f\",\n    \"source_unit_id\": \"d4f2c268aabe6d35a8e1bb794f91abbc2ee7\",\n    \"processing_id\": \"82fb328d-a383-43c2-a6eb-b91b61d05069\",\n    \"document_version_id\": \"35d45deb-de7f-4194-9ce2-1861ae84434d\",\n    \"start\": 1267,\n    \"end\": 1566,\n    \"text_hash\": \"1290ddf491f21c69a15bc1f56b212dda4efea694324ca84433ff091a0552019e\",\n    \"block_kind\": \"prose\",\n    \"mapping_quality\": \"sentence\"\n  }\n]\n\nSupport assessment: model check. Independent review is separate.\n\nModel support check"
+      },
+      {
+        "occurrence": 9,
+        "evidence_id": "ev_007",
+        "claim_id": "claim_e45389bfcf498be266c5354e_1",
+        "status": "PASS",
+        "exposure_id": "21de5c51-f43a-492a-969b-48660f0df827",
+        "source_dto_sha256": "a61e96841f9fa28e562ba0fcafc869a4ed21e82fe936fe0405cef16af73caced",
+        "http_status": 200,
+        "route": "/api/v1/answers/ef293209-67ce-4165-b664-0a074c1f5cc8/exposures",
+        "title": "Concepts of Biology",
+        "source_title": "Concepts of Biology",
+        "section": "Chapter 5 Photosynthesis / 5.3 The Calvin Cycle",
+        "pages": [
+          141
+        ],
+        "fragment_ids": [
+          "span_8f1a62f750cb3a80f992bbac985e92d6",
+          "span_1d77ba72ab25e9f04b8f13fc0e2bb0c2"
+        ],
+        "source_excerpt_sha256": "f62728ea51eae95a56e23cd7ca4c5658ffd39ccdac40b01bcaabf92ef840a70d",
+        "source_excerpt_character_count": 193,
+        "source_excerpt": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.\n…\nFIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.",
+        "source_segments": [
+          {
+            "text": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+            "text_sha256": "606fdcf5a3064a4d77ffbad85c4b56f0002123b63ac5b5df981b58ec2dee1933",
+            "highlight": true,
+            "fragment_ids": [
+              "span_8f1a62f750cb3a80f992bbac985e92d6"
+            ]
+          },
+          {
+            "text": "\n…\n",
+            "text_sha256": "a95283d596e4c1cd8dc608acf74dca55f5d576e7551db83d914ac9f2524216e9",
+            "highlight": false,
+            "fragment_ids": []
+          },
+          {
+            "text": "FIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.",
+            "text_sha256": "4165a545e507a6b32094143b577105ff897e3eddc5b2c9b13e41d41c16eec272",
+            "highlight": true,
+            "fragment_ids": [
+              "span_1d77ba72ab25e9f04b8f13fc0e2bb0c2"
+            ]
+          }
+        ],
+        "source_dialog_text": "Sources\n\nSource passages linked to this claim.\n\nSource 1\nSource 2\nSOURCE PASSAGE\nConcepts of Biology\n\nChapter 5 Photosynthesis / 5.3 The Calvin Cycle · PDF physical pages 141\n\nHighlighted text is linked to the selected claim.\n\nThese energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.\n…\nFIGURE 5.14 Light-dependent reactions harness energy from the sun to produce ATP and NADPH.\n\nThe complete source may reveal the answer to this problem.\n\nShow complete source\n\nOpenStax / Rice University · Access for free at openstax.org\n\nView original source\nSource record\n{\n  \"presentation_id\": \"07729d18-f2d8-4850-bc01-08e724d82c20\",\n  \"policy_version\": \"learning_enhancement_v1\",\n  \"evidence_id\": \"ev_007\",\n  \"claim_id\": \"claim_e45389bfcf498be266c5354e_1\",\n  \"fragment_ids\": [\n    \"span_8f1a62f750cb3a80f992bbac985e92d6\",\n    \"span_1d77ba72ab25e9f04b8f13fc0e2bb0c2\"\n  ],\n  \"license\": \"Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.\"\n}\nExact source positions\n[\n  {\n    \"fragment_id\": \"span_1d77ba72ab25e9f04b8f13fc0e2bb0c2\",\n    \"source_unit_id\": \"8bd9edcf0207e2fb714c2840ecc6398bfbff\",\n    \"processing_id\": \"82fb328d-a383-43c2-a6eb-b91b61d05069\",\n    \"document_version_id\": \"35d45deb-de7f-4194-9ce2-1861ae84434d\",\n    \"start\": 771,\n    \"end\": 862,\n    \"text_hash\": \"4165a545e507a6b32094143b577105ff897e3eddc5b2c9b13e41d41c16eec272\",\n    \"block_kind\": \"prose\",\n    \"mapping_quality\": \"sentence\"\n  },\n  {\n    \"fragment_id\": \"span_8f1a62f750cb3a80f992bbac985e92d6\",\n    \"source_unit_id\": \"8bd9edcf0207e2fb714c2840ecc6398bfbff\",\n    \"processing_id\": \"82fb328d-a383-43c2-a6eb-b91b61d05069\",\n    \"document_version_id\": \"35d45deb-de7f-4194-9ce2-1861ae84434d\",\n    \"start\": 863,\n    \"end\": 962,\n    \"text_hash\": \"606fdcf5a3064a4d77ffbad85c4b56f0002123b63ac5b5df981b58ec2dee1933\",\n    \"block_kind\": \"prose\",\n    \"mapping_quality\": \"sentence\"\n  }\n]\n\nSupport assessment: model check. Independent review is separate.\n\nModel support check"
+      },
+      {
+        "occurrence": 10,
+        "evidence_id": "ev_001",
+        "claim_id": "claim_1d43516889b5d53f4e881ef9_1",
+        "status": "PASS",
+        "exposure_id": "395b0a70-28c2-4ddf-9a4d-64cca4aa69ee",
+        "source_dto_sha256": "c82e9178cb8b9d2a84dd151feb003d3ccc9c0522cb7268db123ee3501ee8532d",
+        "http_status": 200,
+        "route": "/api/v1/answers/ef293209-67ce-4165-b664-0a074c1f5cc8/exposures",
+        "title": "Concepts of Biology",
+        "source_title": "Concepts of Biology",
+        "section": "Chapter 5 Photosynthesis / 5.1 Overview of Photosynthesis",
+        "pages": [
+          135
+        ],
+        "fragment_ids": [
+          "span_d79a5dd8adc00070817b948e6abf25b3"
+        ],
+        "source_excerpt_sha256": "6554a66be82f650b8ae9d9009f3930036523f34e7cea4e1796d781add8cbe884",
+        "source_excerpt_character_count": 272,
+        "source_excerpt": "The carriers that move energy from the light-dependent reactions to the Calvin cycle reactions can be thought of as “full” because they bring energy.\n…\nAfter the energy is released, the “empty” energy carriers return to the light-dependent reactions to obtain more energy.",
+        "source_segments": [
+          {
+            "text": "The carriers that move energy from the light-dependent reactions to the Calvin cycle reactions can be thought of as “full” because they bring energy.",
+            "text_sha256": "6ea81195b4c83fd36a8abea39e89795c4930011cecf5715a4d1b0f10cd8c182b",
+            "highlight": false,
+            "fragment_ids": []
+          },
+          {
+            "text": "\n…\n",
+            "text_sha256": "a95283d596e4c1cd8dc608acf74dca55f5d576e7551db83d914ac9f2524216e9",
+            "highlight": false,
+            "fragment_ids": []
+          },
+          {
+            "text": "After the energy is released, the “empty” energy carriers return to the light-dependent reactions to obtain more energy.",
+            "text_sha256": "42f47d41240c5b2ef75be23fcbb6d8b71ecb76cac7a90fe9d0330c6a0a049cb2",
+            "highlight": true,
+            "fragment_ids": [
+              "span_d79a5dd8adc00070817b948e6abf25b3"
+            ]
+          }
+        ],
+        "source_dialog_text": "Sources\n\nSource passages linked to this claim.\n\nSOURCE PASSAGE\nConcepts of Biology\n\nChapter 5 Photosynthesis / 5.1 Overview of Photosynthesis · PDF physical pages 135\n\nHighlighted text is linked to the selected claim.\n\nThe carriers that move energy from the light-dependent reactions to the Calvin cycle reactions can be thought of as “full” because they bring energy.\n…\nAfter the energy is released, the “empty” energy carriers return to the light-dependent reactions to obtain more energy.\n\nThe complete source may reveal the answer to this problem.\n\nShow complete source\n\nOpenStax / Rice University · Access for free at openstax.org\n\nView original source\nSource record\n{\n  \"presentation_id\": \"07729d18-f2d8-4850-bc01-08e724d82c20\",\n  \"policy_version\": \"learning_enhancement_v1\",\n  \"evidence_id\": \"ev_001\",\n  \"claim_id\": \"claim_1d43516889b5d53f4e881ef9_1\",\n  \"fragment_ids\": [\n    \"span_d79a5dd8adc00070817b948e6abf25b3\"\n  ],\n  \"license\": \"Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.\"\n}\nExact source positions\n[\n  {\n    \"fragment_id\": \"span_d79a5dd8adc00070817b948e6abf25b3\",\n    \"source_unit_id\": \"70a0305c9d11b854d54c558bd1ab3cb153b1\",\n    \"processing_id\": \"82fb328d-a383-43c2-a6eb-b91b61d05069\",\n    \"document_version_id\": \"35d45deb-de7f-4194-9ce2-1861ae84434d\",\n    \"start\": 1566,\n    \"end\": 1686,\n    \"text_hash\": \"42f47d41240c5b2ef75be23fcbb6d8b71ecb76cac7a90fe9d0330c6a0a049cb2\",\n    \"block_kind\": \"prose\",\n    \"mapping_quality\": \"sentence\"\n  }\n]\n\nSupport assessment: model check. Independent review is separate.\n\nModel support check"
+      }
+    ],
+    "refresh_persisted": true,
+    "server_worker_timing": {
+      "timing_scope": "worker_execution_before_answer_insert_v1",
+      "units": "milliseconds",
+      "excludes": "HTTP admission, queue wait, answer insertion/commit, browser loading/paint",
+      "total_ms": 28036.654,
+      "generation_ms": 12645,
+      "checking_ms": 11079,
+      "token_count_ms": 0,
+      "model_total_ms": 23724,
+      "preparation_ms": 43.228,
+      "query_preparation_ms": 2.674,
+      "retrieval_ms": 229.195,
+      "teaching_plan_ms": 0.355,
+      "submission_to_worker_start_ms": 574.112,
+      "generation_wall_ms": 27537.485,
+      "publication_before_commit_ms": 254.204,
+      "worker_before_commit_ms": 28287.084
+    }
+  },
+  "resources": {
+    "status": "CLOSED",
+    "batch_id": "a8bfaee5-0c15-47e2-a110-3e1bfd288e08",
+    "paired_leg_id": "B_startup_prewarm",
+    "browser_leg_passed": true,
+    "native_checked_completed": true,
+    "native_completed_question_ids": [
+      "Q2"
+    ],
+    "native_executed_question_ids": [
+      "Q2"
+    ],
+    "all_submitted_native_jobs_checked": true,
+    "continuation_mode": "SUCCESSFUL_Q2_DEVELOPMENT_REGRESSION_NEW_WORKER",
+    "single_Q2_development_regression_completed": true,
+    "old_Q2_request_job_or_answer_replayed": false,
+    "historical_failed_Q3_Q4_replayed": false,
+    "same_worker_across_Q1_Q2_demonstrated": false,
+    "independent_quality_acceptance": false,
+    "worker_pid": 139380,
+    "engine_object_identity": 2148250461792,
+    "database_target_public": {
+      "database_name": "cs30_week10_pair_b_20261009_01",
+      "host": "127.0.0.1",
+      "port": 15433
+    },
+    "active_pointers_unchanged": true,
+    "owned_threads_closed": true,
+    "owned_database_resources_closed": true,
+    "cleanup_error_classes": [],
+    "cleanup_guard_faults": [],
+    "raw_cleanup_errors_exported": false,
+    "leg_closed_after_advisory_unlock_connection_close_and_engine_dispose": true,
+    "local_models_loaded": true,
+    "provider_calls_are_guarded": true,
+    "no_old_job_recovery": true,
+    "retrieval_variant": "R2",
+    "embedding_provider": "native_e5",
+    "default_profile_pin": {
+      "bytes": 294,
+      "path": "E:\\5703\\learning-assistant\\configs\\retrieval\\chat_hybrid_minilm.json",
+      "sha256": "23ca72ddb737045259a04cbfc81c71969440f11cc2fa1a77bc7f8e7fc4364e17"
+    },
+    "model_cache_readonly": true,
+    "python_write_denials": [],
+    "historical_lock_handles_read_byte_only": true,
+    "cpu_threads": 4,
+    "native_cuda_allowed": true,
+    "no_runtime_retrieval_override": true
+  },
+  "evidence_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure26\\runtime\\retained-provider-diagnostics\\native-generation-outcome01.json",
+      "bytes": 538066,
+      "sha256": "4afa6ef2a056e6324f8b643a7cba38f7bdefd8e7cc3261bbab51e5cc5d236d3b"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure26\\browser\\real-browser-live-qa-receipt01.json",
+      "bytes": 71108,
+      "sha256": "f0c3867aa96c32c0010c88f39c76c5e73b7dab8d37af202791f8465769141b23"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure26\\runtime\\budget-status-public01.json",
+      "bytes": 1362,
+      "sha256": "8757030b04b84b36500d7e61e11c6238cb73533ed209491b338342f351575aa0"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure26\\runtime\\runtime-closed-public01.json",
+      "bytes": 1780,
+      "sha256": "84d9444c1c74907c47b53e1f08559d7af27087bb11ab50af298e7da373d7c9d3"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure26\\runtime\\actual-model-inputs-public01.jsonl",
+      "bytes": 9754,
+      "sha256": "73c6db5eea3e48e9da374321d7e3a76058f5187ff43a784beda2412521639a50"
+    }
+  ],
+  "limits": [
+    "Generation snapshots precede publication; actual answer persistence/display evidence is the separate browser receipt.",
+    "UI/citation-source equality does not certify complete predicate support or scientific correctness.",
+    "A single Send-to-full observation is not a warm p95 or a same-worker multi-module benchmark."
+  ]
+}

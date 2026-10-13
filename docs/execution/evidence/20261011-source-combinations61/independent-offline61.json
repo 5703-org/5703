@@ -1,0 +1,821 @@
+{
+  "status": "COMPLETE_EXPOSED_OFFLINE61_SEMANTIC_REVIEW",
+  "scope": "Independent semantic inspection of the actual Root offline plan_source_combinations replay for the five exposed saved59 diagnostic gaps. This is not a new checker/API observation.",
+  "human_gold": false,
+  "held_out": false,
+  "new_model_requests": 0,
+  "last_authorized_slot_consumed": false,
+  "current_actual_quality_established": false,
+  "five_gap_semantic_completion_demonstrated": false,
+  "actual59_false_positive_recovery_demonstrated": false,
+  "semantic_support_certified": false,
+  "publication_override": false,
+  "input_pins": [
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\20261011-checker-recovery58-59\\capacity59\\wire59-PREPARED-UNVERIFIED.json",
+      "bytes": 88704,
+      "sha256": "c14a0748a60e981f03d5f2d5731ba87048909514ac45d4e3d28828e656913b40"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\20261011-checker-recovery58-59\\capacity59\\actual59\\result59.json",
+      "bytes": 63952,
+      "sha256": "230de5d6ff787f79cddd7161ebbcddbdc40c173af442de1e3081b3bf558e082b"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\20261011-checker-recovery58-59\\capacity59\\independent59-review.json",
+      "bytes": 44235,
+      "sha256": "e70843d0bc08b5a8e50d6e25061391ad560b27fe81a4639592384eec7ffc80b9"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\20261011-checker-recovery58-59\\capacity59\\independent59-review.md",
+      "bytes": 9607,
+      "sha256": "1b569d0a83d51904ca1847f12b75643df2d46d71badae67819055e844fee9f9c"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-proof60-diagnosis\\saved59-gap-taxonomy.json",
+      "bytes": 36110,
+      "sha256": "57e26c4b924846d078d827eb20bff12ac926d3c3c1e963ea3522c29ef4702dd0"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-proof60-diagnosis\\saved59-gap-taxonomy.md",
+      "bytes": 9572,
+      "sha256": "8ba2ba8307e17c98cd1fe2bf592dbe03b2f300892e0ad6c75c06695ee539c0fa"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-proof61-quality\\offline-replay61.json",
+      "bytes": 37647,
+      "sha256": "c04017d02b9bb626a8903428267c45aaa87e233de3485f45c1aa0e7f9a62e8ba"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-proof61-quality\\imported-negative-assessment61.json",
+      "bytes": 19303,
+      "sha256": "b79ca9e917ccbc10ce3aaf90878a18380efbadb051685c2f413cf2f34b1238a7"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\source_evidence_combinations_v1.py",
+      "bytes": 17130,
+      "sha256": "ab69de76304a08370acd9483866fbc84ea364e77caab36c723796f1e40bc4f8a"
+    }
+  ],
+  "input_interface": {
+    "wire_data_path": "JSON.parse(wire.messages[1].content)",
+    "compact_tables": [
+      "CLAIMS",
+      "SOURCE_FRAGMENTS",
+      "BINDING_BANK",
+      "ACTUAL_CITATION_BINDINGS"
+    ],
+    "table_decode": "Reconstruct each row by its columns; do not treat the tables as lists of claim or fragment records.",
+    "bindings_reconstruction": "Join ACTUAL_CITATION_BINDINGS.binding_ids to BINDING_BANK; yield [{claim_id,citations:[{evidence_id,allowed_fragment_ids}]}]. Preserve each claim's evidence_ids.",
+    "assessment_path": "result59.validation.original_full_local_checker_result.assessment",
+    "assessment_units_field": "claims[].obligations, not raw provider claims[].units",
+    "exact_unit_partition_preserved": true,
+    "fragment_identity_namespace": "Original saved wire F001-F071 aliases; no invented canonical DB identity/parent span or mapping metadata",
+    "source_parent_metadata_available": false
+  },
+  "observation_origin": {
+    "actual59": {
+      "raw_claims_supported": 10,
+      "raw_units_supported": 19,
+      "source_entailment_certified": false,
+      "current_helper_proposals": 0,
+      "current_helper_candidate_ids": [],
+      "production_trigger": false,
+      "provider_result_rewritten": false
+    },
+    "offline_import": {
+      "source": "Five partial labels imported from exposed independent59 diagnosis; not a new model observation",
+      "exposed_development": true,
+      "model_emitted_negative": false,
+      "assessment_accepted": false,
+      "contract_issues": [],
+      "changed_units": [
+        {
+          "claim_id": "claim_9dd7ed3c15bfc4ae4368ad47_1",
+          "unit_id": "U01",
+          "actual_status": "supported",
+          "imported_status": "partial",
+          "selected_fragment_ids_unchanged": true,
+          "actual_relation_preserved": true,
+          "imported_relation_preserved": true,
+          "actual_conditions_preserved": true,
+          "imported_conditions_preserved": true,
+          "changed_keys": [
+            "status",
+            "reason",
+            "defect_codes"
+          ]
+        },
+        {
+          "claim_id": "claim_9e6350bf8c8ac897dd6ce681_1",
+          "unit_id": "U01",
+          "actual_status": "supported",
+          "imported_status": "partial",
+          "selected_fragment_ids_unchanged": true,
+          "actual_relation_preserved": true,
+          "imported_relation_preserved": true,
+          "actual_conditions_preserved": true,
+          "imported_conditions_preserved": true,
+          "changed_keys": [
+            "status",
+            "reason",
+            "defect_codes"
+          ]
+        },
+        {
+          "claim_id": "claim_b85b9fa953bffc184b48ae2d_1",
+          "unit_id": "U02",
+          "actual_status": "supported",
+          "imported_status": "partial",
+          "selected_fragment_ids_unchanged": true,
+          "actual_relation_preserved": true,
+          "imported_relation_preserved": true,
+          "actual_conditions_preserved": true,
+          "imported_conditions_preserved": true,
+          "changed_keys": [
+            "status",
+            "reason",
+            "defect_codes"
+          ]
+        },
+        {
+          "claim_id": "claim_b85b9fa953bffc184b48ae2d_1",
+          "unit_id": "U04",
+          "actual_status": "supported",
+          "imported_status": "partial",
+          "selected_fragment_ids_unchanged": true,
+          "actual_relation_preserved": true,
+          "imported_relation_preserved": true,
+          "actual_conditions_preserved": true,
+          "imported_conditions_preserved": true,
+          "changed_keys": [
+            "status",
+            "reason",
+            "defect_codes"
+          ]
+        },
+        {
+          "claim_id": "claim_4bbb28fe7a90b6a3f87b6b75_1",
+          "unit_id": "U02",
+          "actual_status": "supported",
+          "imported_status": "partial",
+          "selected_fragment_ids_unchanged": true,
+          "actual_relation_preserved": true,
+          "imported_relation_preserved": true,
+          "actual_conditions_preserved": true,
+          "imported_conditions_preserved": true,
+          "changed_keys": [
+            "status",
+            "reason",
+            "defect_codes"
+          ]
+        }
+      ],
+      "normal_obligation_records_identical": 14,
+      "original_fragment_selections_preserved": true,
+      "original_relation_condition_flags_preserved": true,
+      "flags_are_inherited_not_new_certification": true,
+      "retained_method_string": "online_checker_lossless_syntactic_units_and_exact_binding_validation",
+      "method_string_warning": "The imported file retains the source contract's original method label. The replay wrapper and this review establish synthetic/offline origin; the label must not be read as a new online-checker assessment."
+    }
+  },
+  "current_proposal_diagnostics": {
+    "proposal_count": 5,
+    "candidate_inventory_coverage": 3,
+    "candidate_inventory_denominator": 5,
+    "candidate_inventory_is_semantic_repair_count": false,
+    "semantic_classification_counts": {
+      "complete": 1,
+      "partial": 2,
+      "bridge_unknown": 2,
+      "total": 5
+    },
+    "unique_supplements": [
+      "F053",
+      "F055",
+      "F058",
+      "F061",
+      "F054",
+      "F016",
+      "F013"
+    ],
+    "limits": {
+      "max_new_per_unit": 4,
+      "max_new_fragments": 12,
+      "max_new_source_chars": 6000,
+      "max_proposals": 12,
+      "max_hint_rows_per_proposal": 64,
+      "max_output_utf8_bytes": 18432,
+      "new_fragment_count": 7,
+      "new_source_chars": 1114,
+      "omitted_proposal_count": 0,
+      "metadata_capacity_blocked": false
+    },
+    "all_proposal_limit_reasons_empty": true,
+    "interpretation": "The two definitely incomplete returned combinations are ranking/relationship failures, not observed budget or output truncation. Three previously listed witness groups appearing in the inventory is not three completed semantic repairs."
+  },
+  "normal_controls": {
+    "compatible_energy_role_controls": 14,
+    "strict_unambiguous_controls": 13,
+    "ATP_ownership_sensitive_controls": 1,
+    "records_unchanged": 14,
+    "receive_proposals": 0,
+    "unit_ids": [
+      {
+        "claim_id": "claim_f9fe075af789df975cbeaea7_1",
+        "unit_id": "U01"
+      },
+      {
+        "claim_id": "claim_f9fe075af789df975cbeaea7_1",
+        "unit_id": "U02"
+      },
+      {
+        "claim_id": "claim_364664c975bdc00d74ab2a22_1",
+        "unit_id": "U01"
+      },
+      {
+        "claim_id": "claim_8b458d38f4d30c5060c0957c_1",
+        "unit_id": "U01"
+      },
+      {
+        "claim_id": "claim_8b458d38f4d30c5060c0957c_1",
+        "unit_id": "U02"
+      },
+      {
+        "claim_id": "claim_8b458d38f4d30c5060c0957c_1",
+        "unit_id": "U03"
+      },
+      {
+        "claim_id": "claim_9eace1a26f8e9d6071f0acb8_1",
+        "unit_id": "U01"
+      },
+      {
+        "claim_id": "claim_9eace1a26f8e9d6071f0acb8_1",
+        "unit_id": "U02"
+      },
+      {
+        "claim_id": "claim_e042c515f904bec48279173e_1",
+        "unit_id": "U01"
+      },
+      {
+        "claim_id": "claim_e042c515f904bec48279173e_1",
+        "unit_id": "U02"
+      },
+      {
+        "claim_id": "claim_4e19e4a486fe9dc923da7169_1",
+        "unit_id": "U01"
+      },
+      {
+        "claim_id": "claim_b85b9fa953bffc184b48ae2d_1",
+        "unit_id": "U01"
+      },
+      {
+        "claim_id": "claim_b85b9fa953bffc184b48ae2d_1",
+        "unit_id": "U03"
+      },
+      {
+        "claim_id": "claim_4bbb28fe7a90b6a3f87b6b75_1",
+        "unit_id": "U01"
+      }
+    ],
+    "new_semantic_labels_assigned": false,
+    "normal_semantic_noninferiority_measured": false,
+    "interpretation": "Fourteen normal records, including compatible C9 U03, are unchanged and receive no proposal. Strict shared reduction-predicate ownership leaves C9 U03 conditional; it cannot be converted to an unconditional fourteenth scientific support result."
+  },
+  "helper_code_review": {
+    "path": "E:\\5703\\learning-assistant\\generation\\source_evidence_combinations_v1.py",
+    "sha256": "ab69de76304a08370acd9483866fbc84ea364e77caab36c723796f1e40bc4f8a",
+    "entry": "plan_source_combinations(claims, bindings, fragments, assessment)",
+    "negative_only": true,
+    "contract_issue_gate": "assessment.contract_issue_codes must equal []",
+    "all_returned_unit_sets_must_equal_original_partition": true,
+    "candidate_only": true,
+    "source_entailment_certified": false,
+    "publication_override": false,
+    "ranking_limit": "Greedy anchor coverage treats a matched lexical predicate as covered and can skip a different source that supplies the missing concrete relation.",
+    "actual_example_reduction": "C9 U04 picks F053 for the reduce word-family hit; once that anchor is covered, F059 has no new lexical hit and is skipped even though F059 supplies the concrete classification.",
+    "actual_example_export": "F016 covers carbohydrate and formation words, including formation of NADPH; its lexical gain wins over F020's carbohydrate object although its propositions do not establish the exported G3P's purpose.",
+    "runtime_implication": "A negative-only candidate helper cannot detect or repair the existing all-supported false-positive observation without an independent negative trigger. The actual59 plan has zero proposals."
+  },
+  "review_rules": [
+    "Judge the concrete original source propositions and their subject/predicate/object references, not IDs, source row order, exact token hits or quote positions.",
+    "Credit only the returned combined_ids for each current proposal. Unselected needed witnesses are listed separately and not credited.",
+    "Treat the named-product identity as bridge_unknown when it requires an unverified cross-fragment co-reference; do not force an invented Gold or a PASS.",
+    "Preserve original59 labels and source records; imported partial statuses exist only in this exposed offline fixture.",
+    "Keep parent provenance unknown and retain OCR/header contamination. No joined source quotation is created."
+  ],
+  "cases": [
+    {
+      "case_id": "C1-U01",
+      "claim_id": "claim_9dd7ed3c15bfc4ae4368ad47_1",
+      "unit_id": "U01",
+      "original_selected": [
+        "F056",
+        "F064"
+      ],
+      "supplement_ids": [
+        "F053",
+        "F055"
+      ],
+      "combined_ids": [
+        "F056",
+        "F064",
+        "F053",
+        "F055"
+      ],
+      "needed_candidate_groups": [
+        [
+          "F056",
+          "F064",
+          "F055"
+        ],
+        [
+          "F056",
+          "F064",
+          "F065"
+        ]
+      ],
+      "complete_previously_identified_candidate_group_present": true,
+      "covered_candidate_groups": [
+        [
+          "F056",
+          "F064",
+          "F055"
+        ]
+      ],
+      "proposal_present": true,
+      "lexical_inventory_only": true,
+      "semantic_support_certified": false,
+      "original_unit_literal": "In the Calvin cycle, RuBisCO catalyzes the fixation reaction by combining CO2 with RuBP, a five-carbon molecule with a phosphate group on each end [ev_007] [ev_008].",
+      "raw_actual59_status": "supported",
+      "offline_imported_status": "partial",
+      "current_semantic_status": "complete",
+      "current_semantic_support_complete": true,
+      "supported_components": [
+        "F053 names the Calvin-cycle stages and supplies Calvin scope.",
+        "F064's Fixation heading and named reactants supply stage context; F056 explicitly supplies the RuBisCO CO2/RuBP reaction.",
+        "F055 explicitly states five carbon atoms and a phosphate group on each end."
+      ],
+      "semantic_limit": "The full original unit's omitted scope/attributes have a direct source-combination witness.",
+      "needed_original_candidate_ids_or_alternatives": [
+        [
+          "F055"
+        ],
+        [
+          "F065"
+        ]
+      ],
+      "predicate_or_identity_bridge": "Fixation-stage context is read with the named reaction; molecular attributes are not inferred from the chemical name.",
+      "unresolved_conditions": [],
+      "nonrepairing_supplement_reasons": [],
+      "identity_or_word_matching_alone_used_as_support": false,
+      "Gold_label": false,
+      "new_model_observation": false
+    },
+    {
+      "case_id": "C2-U01",
+      "claim_id": "claim_9e6350bf8c8ac897dd6ce681_1",
+      "unit_id": "U01",
+      "original_selected": [
+        "F056"
+      ],
+      "supplement_ids": [
+        "F058",
+        "F061"
+      ],
+      "combined_ids": [
+        "F056",
+        "F058",
+        "F061"
+      ],
+      "needed_candidate_groups": [
+        [
+          "F056",
+          "F058"
+        ]
+      ],
+      "complete_previously_identified_candidate_group_present": true,
+      "covered_candidate_groups": [
+        [
+          "F056",
+          "F058"
+        ]
+      ],
+      "proposal_present": true,
+      "lexical_inventory_only": true,
+      "semantic_support_certified": false,
+      "original_unit_literal": "The resulting six-carbon compound is immediately broken down into two three-carbon compounds, 3-PGA [ev_007].",
+      "raw_actual59_status": "supported",
+      "offline_imported_status": "partial",
+      "current_semantic_status": "bridge_unknown",
+      "current_semantic_support_complete": false,
+      "supported_components": [
+        "F056 directly supports the immediate six-carbon to two-three-carbon conversion.",
+        "F058 directly names 3-PGA as the three-carbon compound used in the subsequent G3P conversion."
+      ],
+      "semantic_limit": "The missing step is identifying F058's named substrate as the same two products of F056. Same evidence identity, row order or the repeated three-carbon phrase alone does not certify that identity.",
+      "needed_original_candidate_ids_or_alternatives": [
+        [
+          "F056",
+          "F058"
+        ]
+      ],
+      "predicate_or_identity_bridge": "Same-product/precursor co-reference between the unnamed products and the named 3-PGA substrate.",
+      "unresolved_conditions": [
+        "The source excerpts are compatible with that bridge, but this replay has no explicit product-identity assertion or recovered full-parent passage proving it.",
+        "A semantic checker or source-context judgment must accept the bridge before assigning complete support."
+      ],
+      "nonrepairing_supplement_reasons": [
+        {
+          "fragment_id": "F061",
+          "reason": "Its 'resulting' refers to ADP/NADP+ from the reduction reaction, not the six-carbon compound or its two products. It does not repair the named-product identity."
+        }
+      ],
+      "identity_or_word_matching_alone_used_as_support": false,
+      "Gold_label": false,
+      "new_model_observation": false
+    },
+    {
+      "case_id": "C9-U02",
+      "claim_id": "claim_b85b9fa953bffc184b48ae2d_1",
+      "unit_id": "U02",
+      "original_selected": [
+        "F056"
+      ],
+      "supplement_ids": [
+        "F058",
+        "F053"
+      ],
+      "combined_ids": [
+        "F056",
+        "F058",
+        "F053"
+      ],
+      "needed_candidate_groups": [
+        [
+          "F056",
+          "F058"
+        ]
+      ],
+      "complete_previously_identified_candidate_group_present": true,
+      "covered_candidate_groups": [
+        [
+          "F056",
+          "F058"
+        ]
+      ],
+      "proposal_present": true,
+      "lexical_inventory_only": true,
+      "semantic_support_certified": false,
+      "original_unit_literal": "; the six-carbon product splits into two 3-PGA,",
+      "raw_actual59_status": "supported",
+      "offline_imported_status": "partial",
+      "current_semantic_status": "bridge_unknown",
+      "current_semantic_support_complete": false,
+      "supported_components": [
+        "F056 directly supports the six-carbon product splitting into two three-carbon compounds.",
+        "F058 supplies the 3-PGA name in the later conversion description."
+      ],
+      "semantic_limit": "The same unnamed-product to named-substrate identity bridge remains unresolved. Being selected elsewhere in C9 is not unit proof.",
+      "needed_original_candidate_ids_or_alternatives": [
+        [
+          "F056",
+          "F058"
+        ]
+      ],
+      "predicate_or_identity_bridge": "Same-product/precursor co-reference; the specific two products must be identified as 3-PGA.",
+      "unresolved_conditions": [
+        "F053 only lists the three Calvin-cycle stages; it does not equate F056's products with the named substrate.",
+        "Adding a stage label does not establish the product-name relation."
+      ],
+      "nonrepairing_supplement_reasons": [
+        {
+          "fragment_id": "F053",
+          "reason": "A general fixation/reduction/regeneration inventory does not establish the named product identity."
+        }
+      ],
+      "identity_or_word_matching_alone_used_as_support": false,
+      "Gold_label": false,
+      "new_model_observation": false
+    },
+    {
+      "case_id": "C9-U04",
+      "claim_id": "claim_b85b9fa953bffc184b48ae2d_1",
+      "unit_id": "U04",
+      "original_selected": [
+        "F058"
+      ],
+      "supplement_ids": [
+        "F053",
+        "F054"
+      ],
+      "combined_ids": [
+        "F058",
+        "F053",
+        "F054"
+      ],
+      "needed_candidate_groups": [
+        [
+          "F058",
+          "F059"
+        ]
+      ],
+      "complete_previously_identified_candidate_group_present": false,
+      "covered_candidate_groups": [],
+      "proposal_present": true,
+      "lexical_inventory_only": true,
+      "semantic_support_certified": false,
+      "original_unit_literal": " and NADPH reduce to G3P [ev_007].",
+      "raw_actual59_status": "supported",
+      "offline_imported_status": "partial",
+      "current_semantic_status": "partial",
+      "current_semantic_support_complete": false,
+      "supported_components": [
+        "F058 supports joint ATP/NADPH stored-energy conversion from 3-PGA into G3P."
+      ],
+      "semantic_limit": "The actual supplemented set still does not classify this particular conversion as reduction.",
+      "needed_original_candidate_ids_or_alternatives": [
+        [
+          "F058",
+          "F059"
+        ]
+      ],
+      "predicate_or_identity_bridge": "F059's 'This type of reaction' must refer to the F058 conversion; this concrete predicate bridge is absent from the actual proposal.",
+      "unresolved_conditions": [
+        "F059 is in the allowed original binding but not returned in the proposal."
+      ],
+      "nonrepairing_supplement_reasons": [
+        {
+          "fragment_id": "F053",
+          "reason": "Naming reduction as one of three stages does not classify this concrete chemical conversion."
+        },
+        {
+          "fragment_id": "F054",
+          "reason": "Listing CO2, RuBisCO and RuBP as Calvin-cycle initiation components does not assert a reduction relation for 3-PGA-to-G3P."
+        }
+      ],
+      "identity_or_word_matching_alone_used_as_support": false,
+      "Gold_label": false,
+      "new_model_observation": false
+    },
+    {
+      "case_id": "C10-U02",
+      "claim_id": "claim_4bbb28fe7a90b6a3f87b6b75_1",
+      "unit_id": "U02",
+      "original_selected": [
+        "F011",
+        "F019"
+      ],
+      "supplement_ids": [
+        "F016",
+        "F013"
+      ],
+      "combined_ids": [
+        "F011",
+        "F019",
+        "F016",
+        "F013"
+      ],
+      "needed_candidate_groups": [
+        [
+          "F011",
+          "F019",
+          "F020"
+        ]
+      ],
+      "complete_previously_identified_candidate_group_present": false,
+      "covered_candidate_groups": [],
+      "proposal_present": true,
+      "lexical_inventory_only": true,
+      "semantic_support_certified": false,
+      "original_unit_literal": " while one G3P per three turns is exported for carbohydrate formation [ev_002] [ev_003].",
+      "raw_actual59_status": "supported",
+      "offline_imported_status": "partial",
+      "current_semantic_status": "partial",
+      "current_semantic_support_complete": false,
+      "supported_components": [
+        "F011 directly supports three Calvin-cycle turns to export one G3P.",
+        "F019 supports a G3P subject leaving the cycle and an unfinished 'to become a' predicate.",
+        "F013 supports one exported versus five retained G3Ps and RuBP regeneration."
+      ],
+      "semantic_limit": "The actual set still omits the carbohydrate object tying this particular exported G3P to carbohydrate formation.",
+      "needed_original_candidate_ids_or_alternatives": [
+        [
+          "F011",
+          "F019",
+          "F020"
+        ]
+      ],
+      "predicate_or_identity_bridge": "The F019 subject/predicate and F020 carbohydrate object are separate original records; a semantic layout/continuation judgment is required, without inventing a joined quotation.",
+      "unresolved_conditions": [
+        "F020 is allowed but absent from the proposal.",
+        "F019's page/header contamination is retained and its intended object is missing."
+      ],
+      "nonrepairing_supplement_reasons": [
+        {
+          "fragment_id": "F016",
+          "reason": "It says Calvin-cycle reactions build carbohydrate molecules, but does not identify the particular exported G3P as that formation route. Its 'formation' occurrence concerns NADPH production, a different subject/relation."
+        },
+        {
+          "fragment_id": "F013",
+          "reason": "It identifies export and regeneration counts, not the exported molecule's carbohydrate destination."
+        }
+      ],
+      "identity_or_word_matching_alone_used_as_support": false,
+      "Gold_label": false,
+      "new_model_observation": false
+    }
+  ],
+  "sources": [
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_002",
+      "exact_text": "chloroplast has three carbon atoms, it takes three “turns” of the Calvin cycle to fix enough net carbon to export one G3P.",
+      "fragment_id": "F011",
+      "text_hash": "1fbe6dd179067254251d2be7ec2a14d5f7d6b64ee88453a66241981a323fb32a",
+      "current_proposal_uses": [
+        "C10-U02"
+      ],
+      "unselected_witness_reference_only": false
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_002",
+      "exact_text": "One is exported while the remaining five G3P molecules remain in the cycle and are used to regenerate RuBP, which enables the system to prepare for more CO2 to be fixed.",
+      "fragment_id": "F013",
+      "text_hash": "f2952210ae8c17c3f33b4e7998d1b360961720f31d0e11b638b31ea80db82182",
+      "current_proposal_uses": [
+        "C10-U02"
+      ],
+      "unselected_witness_reference_only": false
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_003",
+      "exact_text": "Photosystem I absorbs a second photon, which results in the formation of an NADPH molecule, another energy carrier for the Calvin cycle reactions. 5.3 The Calvin Cycle Using the energy carriers formed in the first stage of photosynthesis, the Calvin cycle reactions fix CO2 from the environment to build carbohydrate molecules.",
+      "fragment_id": "F016",
+      "text_hash": "d02758677c15d5ed19271c33b904d826f7342b8078cd98de8a9bd93b484b190c",
+      "current_proposal_uses": [
+        "C10-U02"
+      ],
+      "unselected_witness_reference_only": false
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_003",
+      "exact_text": "One of the three-carbon molecules of G3P leaves the cycle to become a 5 • Key Terms 131",
+      "fragment_id": "F019",
+      "text_hash": "89f58060b3f0936bc12d967bc682b0e35cb99ccfd34a3b40657e132ef914524b",
+      "current_proposal_uses": [
+        "C10-U02"
+      ],
+      "unselected_witness_reference_only": false
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_003",
+      "exact_text": "part of a carbohydrate molecule.",
+      "fragment_id": "F020",
+      "text_hash": "c1a3b48806142a30bd23bc23fb441bd6a5b341e414f4665f186a9b86b60a22bb",
+      "current_proposal_uses": [],
+      "unselected_witness_reference_only": true
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_007",
+      "exact_text": "The Calvin cycle reactions (Figure 5.15) can be organized into three basic stages: fixation, reduction, and regeneration.",
+      "fragment_id": "F053",
+      "text_hash": "131657babb5d741d97ef473af651c20d0529f5ba47a478f87163d0bb58d043fb",
+      "current_proposal_uses": [
+        "C1-U01",
+        "C9-U02",
+        "C9-U04"
+      ],
+      "unselected_witness_reference_only": false
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_007",
+      "exact_text": "In the stroma, in addition to CO2, two other chemicals are present to initiate the Calvin cycle: an enzyme abbreviated RuBisCO, and the molecule ribulose bisphosphate (RuBP).",
+      "fragment_id": "F054",
+      "text_hash": "af19406f076500565714ec2cf3d674f5b02a09923410c41869f237efeabd9122",
+      "current_proposal_uses": [
+        "C9-U04"
+      ],
+      "unselected_witness_reference_only": false
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_007",
+      "exact_text": "RuBP has five atoms of carbon and a phosphate group on each end.",
+      "fragment_id": "F055",
+      "text_hash": "5a1e9c22c8d2ae068bf5129527f9eec4c851884e635074794f8ae9b087cdb448",
+      "current_proposal_uses": [
+        "C1-U01"
+      ],
+      "unselected_witness_reference_only": false
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_007",
+      "exact_text": "RuBisCO catalyzes a reaction between CO2 and RuBP, which forms a six-carbon compound that is immediately converted into two three-carbon compounds.",
+      "fragment_id": "F056",
+      "text_hash": "f8ee38f00b9f739a3cc529f7a9b912e61bbe42a3f033cd597fd3af7c323158bf",
+      "current_proposal_uses": [
+        "C1-U01",
+        "C2-U01",
+        "C9-U02"
+      ],
+      "unselected_witness_reference_only": false
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_007",
+      "exact_text": "ATP and NADPH use their stored energy to convert the three-carbon compound, 3-PGA, into another three-carbon compound called G3P.",
+      "fragment_id": "F058",
+      "text_hash": "a42ee2eaa63a6814202ef6aab939fd18d2aac95422b54e6cf416dbab74d9e12c",
+      "current_proposal_uses": [
+        "C2-U01",
+        "C9-U02",
+        "C9-U04"
+      ],
+      "unselected_witness_reference_only": false
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_007",
+      "exact_text": "This type of reaction is called a reduction reaction, because it involves the gain of electrons.",
+      "fragment_id": "F059",
+      "text_hash": "544b9dbfc6b0c39832d9238c607decd0cc3f7a994edb609f73d8b06875852822",
+      "current_proposal_uses": [],
+      "unselected_witness_reference_only": true
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_007",
+      "exact_text": "The molecules of ADP and NADP+, resulting from the reduction reaction, return to the light-dependent reactions to be re-energized.",
+      "fragment_id": "F061",
+      "text_hash": "28f4efbd35d04a0d17011d7a3ed1c08dd410a6d7ce1471d7807c3d8bbf6da726",
+      "current_proposal_uses": [
+        "C2-U01"
+      ],
+      "unselected_witness_reference_only": false
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_008",
+      "exact_text": "Stage 1: Fixation In the stroma, in addition to CO2, two other components are present to initiate the light-independent reactions: an enzyme called ribulose-1,5-bisphosphate carboxylase/oxygenase (RuBisCO), and three molecules of ribulose bisphosphate (RuBP), as shown in Figure 8.19.",
+      "fragment_id": "F064",
+      "text_hash": "5ea99e3d5ea314a164f7717bd11730a2a0d295bfcf21a96d2bdb4283d0f78585",
+      "current_proposal_uses": [
+        "C1-U01"
+      ],
+      "unselected_witness_reference_only": false
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_008",
+      "exact_text": "RuBP has five atoms of carbon, flanked by two phosphates.",
+      "fragment_id": "F065",
+      "text_hash": "e75f21bdfd6d021ea97d384d878627fff2708a80de5d4d23f4ca4f5e3237c432",
+      "current_proposal_uses": [],
+      "unselected_witness_reference_only": true
+    }
+  ],
+  "secondary_readonly_review": {
+    "completed": true,
+    "reviewer_task": "/root/selection58_plan_readonly/candidate58_readonly_review",
+    "actual_replay_read": true,
+    "concurred_statuses": [
+      "complete",
+      "bridge_unknown",
+      "bridge_unknown",
+      "partial",
+      "partial"
+    ],
+    "extra_model_requests": 0,
+    "human_gold": false
+  },
+  "limitations": [
+    "Seen-case agent diagnostics are not held-out, human Gold, a calibrated semantic accuracy result or a before/after causal experiment.",
+    "Same-product and split-object bridging are semantic obligations, not solved by span fidelity or source identity alone.",
+    "The currently returned combinations do not demonstrate complete repair of the five scientific selected-proof gaps.",
+    "Unchanged normal records/proposal counts do not measure downstream generator/checker semantic noninferiority.",
+    "No publication, course acceptance, native-page latency, RAG comparative quality or p95 conclusion follows.",
+    "Only the two new independent-offline61 files are written by this reviewer; no Main/auth/Git/DB/API operation or eighth request is performed."
+  ]
+}

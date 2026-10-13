@@ -1,0 +1,93 @@
+{
+  "schema": "development85_prospective_freeze_manifest_v1",
+  "created_utc": "2026-10-11T17:30:55.603893+00:00",
+  "status": "PROSPECTIVE_8_QUESTIONS_RUBRIC_FROZEN_NO_RESULTS",
+  "question_count": 8,
+  "essential_fact_count": 25,
+  "exact_support_span_count": 25,
+  "selected_unique_chunk_count": 14,
+  "approved_document_count": 4,
+  "full_grounding_chunk_count_verified": 79,
+  "input_pins": [
+    {
+      "path": "5703-checker85-quality\\public-textbook-grounding85.json",
+      "bytes": 140058,
+      "sha256": "890b858a9f4234fff02d250f8b0d656f3e27365a7dd530fe39934abb5ba5cc90"
+    },
+    {
+      "path": "5703-rag-paired69-semantic-review\\independent-semantic-review69.json",
+      "bytes": 278888,
+      "sha256": "52e4c70fede905159031bfcb4d290374709483469a36ed0c845486873b8cdf36"
+    },
+    {
+      "path": "5703-checker84\\stage02\\recovered84-B-public.json",
+      "bytes": 187449,
+      "sha256": "80c7c7794058cb56bdb90e6afc41c247139da83fa0af558e9ef23d77fc230822"
+    }
+  ],
+  "frozen_output_pins": [
+    {
+      "path": "5703-checker85-quality\\questions85-frozen.json",
+      "bytes": 4261,
+      "sha256": "9d35553d2b973e082152e0d119c1bdbff3102ef55a4936d47fe93d337d6f19da"
+    },
+    {
+      "path": "5703-checker85-quality\\rubric85-frozen.json",
+      "bytes": 44448,
+      "sha256": "7b083b29202be757683944e08ec508844440403dcbccf1c85f44e983f97964d6"
+    },
+    {
+      "path": "5703-checker85-quality\\exposure-audit85.json",
+      "bytes": 7241,
+      "sha256": "1df717d55d83b64944d77b0059a6c95096b442a9e19349628e3232da57e7ab6e"
+    }
+  ],
+  "creator_pin": {
+    "path": "5703-checker85-quality\\freeze_quality85.py",
+    "bytes": 29246,
+    "sha256": "4feb0f87f0032be7e2c1ab3ecec0dda7342bf73c788f67233ecaa557036ee9b4"
+  },
+  "ordered_question_hashes": [
+    {
+      "question_id": "development85_01",
+      "sha256": "9a5b5edb9fc79fc6f9da2ed9f631ba9c574827d1220ada7de82064592d538b08"
+    },
+    {
+      "question_id": "development85_02",
+      "sha256": "0d5d4aa98b479de78b5b3a6264504a12812f9fd6c9ef46f738bce6938608ef4c"
+    },
+    {
+      "question_id": "development85_03",
+      "sha256": "79e10aea43d34d5ec92aaa1d42a4123f94c4991e83cbfa6be3ae55e97891ffe5"
+    },
+    {
+      "question_id": "development85_04",
+      "sha256": "bc771dece3e6c2961dd8ed4aee766ba3b8b3034549ee19977f7b9c68db092bfd"
+    },
+    {
+      "question_id": "development85_05",
+      "sha256": "e159815e7046927e2c08025e57d0281f18aa174fc19c599a3c4f577c2757cc0f"
+    },
+    {
+      "question_id": "development85_06",
+      "sha256": "ea0adda731dcc65c3190efb769fcd3f9ce5af66598fa77e861e9ff797db909c4"
+    },
+    {
+      "question_id": "development85_07",
+      "sha256": "bd615ce859d72da72075a72c25ffad9a476e20e8bd3293850cb705775620fafc"
+    },
+    {
+      "question_id": "development85_08",
+      "sha256": "32cfb6093a0691704c5f389c7baacdcb19d00b3b4c9c99a69c3a124b66b089c1"
+    }
+  ],
+  "model_outputs_seen_for_phase85": 0,
+  "provider_requests_executed": 0,
+  "remaining_runtime_preconditions": [
+    "Root freeze actual production source/runtime/model-route/profile/schema/budget pins before any request",
+    "Root20request/$1 new closed-batch controller guard; preserve old12 ledger",
+    "Retain all8 failures/outcomes and actual submitted evidence per question",
+    "Timing and science results pending; this file is preparation, not acceptance completion"
+  ],
+  "remaining_grounding_blockers": []
+}

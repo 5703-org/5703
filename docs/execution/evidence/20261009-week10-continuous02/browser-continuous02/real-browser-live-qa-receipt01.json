@@ -1,0 +1,552 @@
+{
+  "schema": "5703_week10_native_continuous_ui_receipt_v1",
+  "status": "ACTUAL_LIVE_UI_JOURNEY_FAILED_OR_BLOCKED",
+  "started_utc": "2026-10-09T05:29:08.943Z",
+  "batch_id": "cs30-week10-continuous-scopes-20261009-01",
+  "paired_leg_id": "B_startup_prewarm",
+  "worker_prewarm_retrieval_cache": true,
+  "source_index_sha256": "42359d2d2cd2f8d28007173a20d20e994d5d767372acd597d5e3d495f552885f",
+  "source_label": "WEEK10_CONTINUOUS_SCOPES",
+  "model_mode": "live",
+  "exact_model_binding_basis": "Root pinned current project qualification and guarded batch; AnswerOut itself exposes only model_mode",
+  "provider": "openai_compatible",
+  "model": "google/gemini-3.5-flash-lite",
+  "openrouter_route_profile": "gemini35_google_vertex_v1",
+  "provider_route": "google-vertex/global",
+  "configuration_id": "74c8201e-aca0-400d-bcc5-5785e24c1c11",
+  "config_revision": 1,
+  "config_hash": "703c94a357ddd4b826d8b5fe25d503198d3d56e1e9130f6a37ed9e9c3396aa4a",
+  "qualification": {
+    "ready_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous02\\readiness-public01.json",
+      "bytes": 2715,
+      "sha256": "b08d0ca220b94d5f5068f4e9ec7f9c6254ad1ce31be20d7264fae68df0ebdb02"
+    },
+    "role_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous02\\role-qualification-public01.json",
+      "bytes": 5155,
+      "sha256": "f921ae73444d3970f0a397022b95f9102515402f654aaa36388385e9809c619f"
+    },
+    "worker_startup_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous02\\worker-startup-preparation-public01.json",
+      "bytes": 1630,
+      "sha256": "6c8f865c44d2e02fc61cd9afc4438dcf7bda90934a222713996f7d8380a080a7"
+    },
+    "worker_startup": {
+      "schema": "5703_week10_worker_startup_preparation_v1",
+      "status": "PASS",
+      "batch_id": "cs30-week10-continuous-scopes-20261009-01",
+      "paired_leg_id": "B_startup_prewarm",
+      "source_version": "42359d2d2cd2f8d28007173a20d20e994d5d767372acd597d5e3d495f552885f",
+      "worker_prewarm_retrieval_cache": true,
+      "same_Engine_as_native_run_once": true,
+      "queue": "interactive",
+      "main_entry_epoch_ms": 1791523734330.2937,
+      "native_model_warmup_ms": 5585.050800000317,
+      "release_cache_prepare_wall_ms": 6178.22840000008,
+      "native_cache_prepare_report": {
+        "status": "ready",
+        "cache_version": "validated_release_cache_v1",
+        "cache_hit": false,
+        "validation_ms": 6078.419199999189,
+        "visible_chunk_count": 10594,
+        "release_id_sha256": "541d9515e720f2b25011ecea178a58a1cbb7cdd6ec0acf78825b772edf986ace",
+        "epoch_sha256": "dbc6b4f6b51c64394b6ffcf4f1a7e05373e340655bf068d1b58cf20fb40ed5b6",
+        "startup_prepare_ms": 6178.206,
+        "queue": "interactive",
+        "version": "worker_active_release_prewarm_v1",
+        "timing_scope": "worker_startup_before_job_claim_v1"
+      },
+      "runner_main_entry_to_worker_ready_ms": 13878.967699998611,
+      "startup_timing_scope": "runner_main_entry_to_worker_preparation_completed_v1",
+      "process_launch_to_ready_ms": null,
+      "browser_Send_to_full_answer_ms": null,
+      "provider_POSTs_for_this_preparation": 0,
+      "full_startup_cost_and_early_Send_wait_must_remain_in_total_user_journey": true,
+      "process_imports_and_external_launch_overhead_require_separate_driver_clock": true,
+      "raw_error_messages_DSN_keys_history_or_source_text_exported": false
+    },
+    "default_retrieval_profile_pin": {
+      "path": "E:\\5703\\learning-assistant\\configs\\retrieval\\chat_hybrid_minilm.json",
+      "bytes": 294,
+      "sha256": "23ca72ddb737045259a04cbfc81c71969440f11cc2fa1a77bc7f8e7fc4364e17",
+      "scope": "Configuration binding only; native execution proof is separate"
+    },
+    "native_current_default_bound": true,
+    "executor_override": false,
+    "provider_route": "google-vertex/global",
+    "reused_existing": true,
+    "newly_submitted_provider_posts": 0,
+    "role_run_ids": [
+      {
+        "role": "answer",
+        "run_id": "d0f74a13-1b55-4de1-9fd8-bd94864e3624"
+      },
+      {
+        "role": "checker",
+        "run_id": "a077519f-19c7-47dd-a3b1-068059b2a0ab"
+      }
+    ]
+  },
+  "budget_initial": {
+    "pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous02\\budget-status-public01.json",
+      "bytes": 1292,
+      "sha256": "edc17eef146ddaf41c2fd5ab80273df932ba607776854e334352e38f16f49bef"
+    },
+    "status": "READY",
+    "per_leg_provider_post_count": {
+      "B_startup_prewarm": 0
+    },
+    "per_leg_remaining_provider_slots": {
+      "B_startup_prewarm": 4
+    },
+    "leg_completed": [],
+    "leg_runtime_closed": [],
+    "integrity_errors": 0,
+    "cleanup_pending": 0,
+    "provider_post_count": 0,
+    "remaining_provider_slots": 4,
+    "fully_settled": true,
+    "open_claims": 0,
+    "unknown_cost_count": 0,
+    "stop_exists": false,
+    "known_API_cost_USD": "0",
+    "full_unknown_hold_USD": "0"
+  },
+  "retrieval_variant": "R2",
+  "retrieval_binding": "current_public_default_hybrid_minilm_v1",
+  "executor_override": false,
+  "native_retrieval_execution_proof": null,
+  "default_retrieval_acceptance": "PENDING_ROOT_NATIVE_TRACE_AND_QUALITY_REVIEW",
+  "synthetic_learner_and_questions": true,
+  "existing_public_owned_book": {
+    "id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+    "title": "Biology 2e",
+    "release_id": "4f11bd70-a486-4d16-b216-78cfe499530a"
+  },
+  "actual_headless_browser": true,
+  "browser_count": 1,
+  "page_count": 1,
+  "worker_count": 1,
+  "browser_gpu_disabled": true,
+  "chromium_sandbox": true,
+  "ignore_https_errors": false,
+  "process_priority": "Normal; applied by this Node runner",
+  "cpu_affinity": "Controlled by Root launcher; not asserted here",
+  "direct_http_acceptance_calls": 0,
+  "direct_database_accesses": 0,
+  "manual_provider_calls": 0,
+  "automatic_question_retries": 0,
+  "provider_physical_post_limit": 4,
+  "native_per_question_post_bound": 4,
+  "new_batch_reserve_USD": "0.12000000",
+  "approved_cumulative_ceiling_USD": "0.24000000",
+  "timeTTFT_ms": null,
+  "TTFT_boundary": "Current UI is not token-streaming; first painted prose is not provider TTFT",
+  "normal_reader_scopes": true,
+  "intended_retrieval_scope": "all_active_corpus",
+  "chapter_filter_applied": false,
+  "new_question_submissions": 1,
+  "actual_seed_receipt_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\ACTUAL_PAIRED_SYNTHETIC_SEED_RECEIPT03.json",
+    "bytes": 19716,
+    "sha256": "2f1d82623fa1aff132c2d9304648026a97b14622c55b1b842470e5bd3c80a78c"
+  },
+  "seeded_first_provider_POSTs": 0,
+  "warm_execution_basis": "Native offline model-instance prewarm used a distinct authored query; no measured question-result cache was populated",
+  "prewarm_public_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous02\\native-prewarm-public01.json",
+  "continuing_worker_basis": "One native B worker and one Engine remain alive across Q1 and Q2; native traces separately establish identity/cache use",
+  "startup_driver_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\continuous-preparation\\ROOT_CONTINUOUS_STARTUP_DRIVER_ACTUAL02.json",
+    "bytes": 458,
+    "sha256": "00dba36c374d418754cdf825b7dc6ec4dadc58ec0834180b0c191136eea4eebe"
+  },
+  "startup_driver": {
+    "batch_id": "cs30-week10-continuous-scopes-20261009-01",
+    "launch_to_ready_includes_imports_artifact_pins_models_and_native_startup": true,
+    "owned_runtime_pid": 66652,
+    "paired_leg_id": "B_startup_prewarm",
+    "process_launch_epoch_ms": 1791523734240.8916,
+    "schema": "5703_week10_root_startup_driver_v1",
+    "source_version": "42359d2d2cd2f8d28007173a20d20e994d5d767372acd597d5e3d495f552885f",
+    "worker_ready_observed_epoch_ms": 1791523748692.164
+  },
+  "process_launch_to_worker_ready_ms": 14451.2724609375,
+  "worker_startup_report": {
+    "schema": "5703_week10_worker_startup_preparation_v1",
+    "status": "PASS",
+    "batch_id": "cs30-week10-continuous-scopes-20261009-01",
+    "paired_leg_id": "B_startup_prewarm",
+    "source_version": "42359d2d2cd2f8d28007173a20d20e994d5d767372acd597d5e3d495f552885f",
+    "worker_prewarm_retrieval_cache": true,
+    "same_Engine_as_native_run_once": true,
+    "queue": "interactive",
+    "main_entry_epoch_ms": 1791523734330.2937,
+    "native_model_warmup_ms": 5585.050800000317,
+    "release_cache_prepare_wall_ms": 6178.22840000008,
+    "native_cache_prepare_report": {
+      "status": "ready",
+      "cache_version": "validated_release_cache_v1",
+      "cache_hit": false,
+      "validation_ms": 6078.419199999189,
+      "visible_chunk_count": 10594,
+      "release_id_sha256": "541d9515e720f2b25011ecea178a58a1cbb7cdd6ec0acf78825b772edf986ace",
+      "epoch_sha256": "dbc6b4f6b51c64394b6ffcf4f1a7e05373e340655bf068d1b58cf20fb40ed5b6",
+      "startup_prepare_ms": 6178.206,
+      "queue": "interactive",
+      "version": "worker_active_release_prewarm_v1",
+      "timing_scope": "worker_startup_before_job_claim_v1"
+    },
+    "runner_main_entry_to_worker_ready_ms": 13878.967699998611,
+    "startup_timing_scope": "runner_main_entry_to_worker_preparation_completed_v1",
+    "process_launch_to_ready_ms": null,
+    "browser_Send_to_full_answer_ms": null,
+    "provider_POSTs_for_this_preparation": 0,
+    "full_startup_cost_and_early_Send_wait_must_remain_in_total_user_journey": true,
+    "process_imports_and_external_launch_overhead_require_separate_driver_clock": true,
+    "raw_error_messages_DSN_keys_history_or_source_text_exported": false
+  },
+  "questions": [
+    {
+      "label": "Q1",
+      "question_id": "Q1",
+      "selected_scope": {
+        "schema": "5703_week10_continuous_scope_observation_v1",
+        "batch_id": "cs30-week10-continuous-scopes-20261009-01",
+        "source_version": "42359d2d2cd2f8d28007173a20d20e994d5d767372acd597d5e3d495f552885f",
+        "paired_leg_id": "B_startup_prewarm",
+        "question_id": "Q1",
+        "question_sha256": "80e1cb0e4bd867754acc2bded2f750fbda83ce3c47ad52ba65cb2b4ced34158b",
+        "session_id": "6679eafa-5dba-4117-8345-6470d67cc1b2",
+        "document_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+        "document_version_id": "bb336e9b-ef43-466f-9e65-ca6d1d196c4b",
+        "release_id": "4f11bd70-a486-4d16-b216-78cfe499530a",
+        "book_title": "Biology 2e",
+        "section_id": "996bade097e4a4a563c014e9b1a300fd5246ce5505ba4b1e886d53f8dfc02966",
+        "section_title": "Chapter 7 Cellular Respiration / 7.2 Glycolysis",
+        "source_unit_id": "4def6ba7a9f55f82bd6c42012b6ba19967fb",
+        "reading_scope": null,
+        "navigation_reading_scope": "chapter",
+        "retrieval_scope": "all_active_corpus",
+        "chapter_filter_applied": false,
+        "normal_UI_reading_context_removed": true,
+        "source_identity_scope": "Reader origin/navigation only; submitted RAG has no chapter or document filter",
+        "selection_sha256": "f942c5ced725d1aaac7d611ffcea78d7754a0b3a43c7b4d6452e33bbfb169d17",
+        "selection_character_count": 1686,
+        "normal_UI_navigation": true,
+        "direct_http_calls": 0,
+        "direct_database_accesses": 0,
+        "observed_sections_api": {
+          "method": "GET",
+          "route": "/api/v1/learning/library/071d52f9-ad95-4e50-84bd-e43ed136121f/sections",
+          "http_status": 200,
+          "sha256": "20f90dfd23294579c974fda17d9ebb6199e605be1d23dfbddf38b1fa09b0c648"
+        },
+        "observed_units_api": {
+          "method": "GET",
+          "route": "/api/v1/learning/library/071d52f9-ad95-4e50-84bd-e43ed136121f/units?offset=0&limit=20&section_id=996bade097e4a4a563c014e9b1a300fd5246ce5505ba4b1e886d53f8dfc02966",
+          "http_status": 200,
+          "sha256": "96cf68946db6328e7ba5db6677ca2d42c73d8cf8223d797a7a0af9138dbf2636"
+        },
+        "observed_utc": "2026-10-09T05:29:12.867Z",
+        "public_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\browser-continuous02\\scope-Q1-public01.json",
+          "bytes": 1982,
+          "sha256": "2d71b3206e8d04253a1da76fe0d65249b717764e1096c4be894e2291e3b44832"
+        }
+      },
+      "retrieval_scope": "all_active_corpus",
+      "chapter_filter_applied": false,
+      "normal_UI_reading_context_removed": true,
+      "status": "PASS",
+      "question": "What are the net products of glycolysis per glucose molecule?",
+      "question_sha256": "80e1cb0e4bd867754acc2bded2f750fbda83ce3c47ad52ba65cb2b4ced34158b",
+      "session_id": "6679eafa-5dba-4117-8345-6470d67cc1b2",
+      "request_id": "0503d729-ea72-41a0-a2c3-486422cb2ba0",
+      "job_id": "181bb1d6-ff49-40f3-8ff3-e124fc06f2c0",
+      "answer_id": "c6237c84-c890-41bb-b049-0e15ebe2d825",
+      "terminal_state": "succeeded",
+      "terminal_error_code": null,
+      "t0_performance_ms": 3523.5,
+      "page_time_origin_ms": 1791523749404.8,
+      "t202_ms": 276.699951171875,
+      "tterminal_ms": 8885.699951171875,
+      "tfirst_ms": 9013.20000000298,
+      "tfull_ms": 9047.70000000298,
+      "tfailure_ms": null,
+      "timeTTFT_ms": null,
+      "server_worker_timing": {
+        "timing_scope": "worker_execution_before_answer_insert_v1",
+        "units": "milliseconds",
+        "excludes": "HTTP admission, queue wait, answer insertion/commit, browser loading/paint",
+        "total_ms": 7633.954,
+        "generation_ms": 3279,
+        "checking_ms": 3105,
+        "token_count_ms": 0,
+        "model_total_ms": 6384,
+        "preparation_ms": 31.771,
+        "query_preparation_ms": 1.689,
+        "retrieval_ms": 166.264,
+        "teaching_plan_ms": 0.245,
+        "submission_to_worker_start_ms": 484.543,
+        "generation_wall_ms": 7213.506,
+        "publication_before_commit_ms": 276.518,
+        "worker_before_commit_ms": 7908.17
+      },
+      "budget_before": {
+        "pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous02\\budget-status-public01.json",
+          "bytes": 1292,
+          "sha256": "edc17eef146ddaf41c2fd5ab80273df932ba607776854e334352e38f16f49bef"
+        },
+        "status": "READY",
+        "per_leg_provider_post_count": {
+          "B_startup_prewarm": 0
+        },
+        "per_leg_remaining_provider_slots": {
+          "B_startup_prewarm": 4
+        },
+        "leg_completed": [],
+        "leg_runtime_closed": [],
+        "integrity_errors": 0,
+        "cleanup_pending": 0,
+        "provider_post_count": 0,
+        "remaining_provider_slots": 4,
+        "fully_settled": true,
+        "open_claims": 0,
+        "unknown_cost_count": 0,
+        "stop_exists": false,
+        "known_API_cost_USD": "0",
+        "full_unknown_hold_USD": "0"
+      },
+      "budget_after": {
+        "pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous02\\budget-status-public01.json",
+          "bytes": 1300,
+          "sha256": "c119cbabd0885495656df7b8f1f82b18b0d60289db3114024cf91e71c4ad3ae7"
+        },
+        "status": "READY",
+        "per_leg_provider_post_count": {
+          "B_startup_prewarm": 2
+        },
+        "per_leg_remaining_provider_slots": {
+          "B_startup_prewarm": 2
+        },
+        "leg_completed": [],
+        "leg_runtime_closed": [],
+        "integrity_errors": 0,
+        "cleanup_pending": 0,
+        "provider_post_count": 2,
+        "remaining_provider_slots": 2,
+        "fully_settled": true,
+        "open_claims": 0,
+        "unknown_cost_count": 0,
+        "stop_exists": false,
+        "known_API_cost_USD": "0.0087020",
+        "full_unknown_hold_USD": "0"
+      },
+      "physical_provider_posts": 2,
+      "citation_checked": true,
+      "refresh_persisted": true,
+      "routed_message_posts": 1,
+      "observer_error_code": null,
+      "submitted_message_body": {
+        "method": "POST",
+        "route": "/api/v1/sessions/6679eafa-5dba-4117-8345-6470d67cc1b2/messages",
+        "bytes": 164,
+        "sha256": "c84880b2000b6bef6240c28810b03014dead5c36267e5426e660e4e5fb18b767",
+        "content_sha256": "80e1cb0e4bd867754acc2bded2f750fbda83ce3c47ad52ba65cb2b4ced34158b",
+        "reading_scope": null,
+        "document_id": null,
+        "source_unit_id": null,
+        "section_id": null,
+        "selection_sha256": null,
+        "retrieval_scope": "all_active_corpus",
+        "chapter_filter_applied": false,
+        "normal_UI_reading_context_removed": true,
+        "navigation_section_id": "996bade097e4a4a563c014e9b1a300fd5246ce5505ba4b1e886d53f8dfc02966",
+        "scope": "Digest of observed message body; raw body, headers and credentials are not saved"
+      },
+      "published_reply_rendered": true,
+      "completed_cited_answer": true,
+      "quality_failure_code": null,
+      "fresh_reload_response": {
+        "method": "GET",
+        "route": "/api/v1/sessions/6679eafa-5dba-4117-8345-6470d67cc1b2/messages",
+        "http_status": 200,
+        "request_started_epoch_ms": 1791523762490.402,
+        "response_observed_epoch_ms": 1791523762547,
+        "answer_id": "c6237c84-c890-41bb-b049-0e15ebe2d825",
+        "request_id": "0503d729-ea72-41a0-a2c3-486422cb2ba0",
+        "job_id": "181bb1d6-ff49-40f3-8ff3-e124fc06f2c0",
+        "published_response_sha256": "8a28ea36534644964344ea3dfae2c436ff0f0faa044b9e426b58996df52a72dc",
+        "answer_text_sha256": "1282d6b017ffc8dbbb165647a1ea0987156cd431e6f67247960a07cba62b002d"
+      },
+      "accepted_202_observed_epoch_ms": 1791523753205,
+      "response_type": "answer",
+      "refusal_reason": null,
+      "answer_completeness_status": "complete_at_requested_help",
+      "published_response_sha256": "8a28ea36534644964344ea3dfae2c436ff0f0faa044b9e426b58996df52a72dc",
+      "answer_text_sha256": "1282d6b017ffc8dbbb165647a1ea0987156cd431e6f67247960a07cba62b002d",
+      "answer_text": "Per molecule of glucose, glycolysis yields a net product of two pyruvate molecules, two ATP molecules, and two NADH molecules [ev_004] [ev_008].",
+      "citation_ids": [
+        "ev_004",
+        "ev_008"
+      ],
+      "follow_up_questions": [],
+      "native_retrieval_public_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous02\\native-retrieval-0503d729-ea72-41a0-a2c3-486422cb2ba0-public01.json",
+      "paint_observation": {
+        "first_ms": 9013.20000000298,
+        "full_ms": 9047.70000000298,
+        "visible": true,
+        "prose_length": 134,
+        "visibility_basis": "IntersectionObserver >=0.01 including ancestor clipping; document visible; own style and viewport rectangle; sampled after prior paint",
+        "complete_body": true,
+        "citation_controls": 2,
+        "followup_controls": 0
+      },
+      "pre_refresh_prose_sha256": "6caa31a75300c13472686256eedd4ca628623fd12c06ec33117570c513df4c08",
+      "source_excerpt_sha256": "deef6c45fc71b005cd4f4b4f4da38ddafe2828159632f4abad1538142f6027b4",
+      "source_excerpt_character_count": 338,
+      "source_excerpt": "Outcomes of Glycolysis Glycolysis begins with glucose and produces two pyruvate molecules, four new ATP molecules, and two molecules of NADH. (Note: two ATP molecules are used in the first half of the pathway to prepare the six-carbon ring for cleavage, so the cell has a net gain of two ATP molecules and two NADH molecules for its use).",
+      "source_dialog_text": "Sources\n\nSource passages linked to this claim.\n\nSource 1\nSource 2\nSOURCE PASSAGE\nBiology 2e\n\nChapter 7 Cellular Respiration / 7.2 Glycolysis · PDF physical pages 215\n\nHighlighted text is linked to the selected claim.\n\nOutcomes of Glycolysis Glycolysis begins with glucose and produces two pyruvate molecules, four new ATP molecules, and two molecules of NADH. (Note: two ATP molecules are used in the first half of the pathway to prepare the six-carbon ring for cleavage, so the cell has a net gain of two ATP molecules and two NADH molecules for its use).\n\nThe complete source may reveal the answer to this problem.\n\nShow complete source\n\nOpenStax / Rice University · Access for free at openstax.org\n\nView original source\nSource record\nExact source positions\n\nSupport assessment: model check. Independent review is separate.\n\nModel support check",
+      "reload_started_epoch_ms": 1791523762358,
+      "refreshed_prose_sha256": "6caa31a75300c13472686256eedd4ca628623fd12c06ec33117570c513df4c08",
+      "worker_ready_to_Send_ms": 4236.135986328125,
+      "process_launch_to_complete_answer_ms": 27735.108447268605
+    }
+  ],
+  "selected_scopes": [
+    {
+      "schema": "5703_week10_continuous_scope_observation_v1",
+      "batch_id": "cs30-week10-continuous-scopes-20261009-01",
+      "source_version": "42359d2d2cd2f8d28007173a20d20e994d5d767372acd597d5e3d495f552885f",
+      "paired_leg_id": "B_startup_prewarm",
+      "question_id": "Q1",
+      "question_sha256": "80e1cb0e4bd867754acc2bded2f750fbda83ce3c47ad52ba65cb2b4ced34158b",
+      "session_id": "6679eafa-5dba-4117-8345-6470d67cc1b2",
+      "document_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+      "document_version_id": "bb336e9b-ef43-466f-9e65-ca6d1d196c4b",
+      "release_id": "4f11bd70-a486-4d16-b216-78cfe499530a",
+      "book_title": "Biology 2e",
+      "section_id": "996bade097e4a4a563c014e9b1a300fd5246ce5505ba4b1e886d53f8dfc02966",
+      "section_title": "Chapter 7 Cellular Respiration / 7.2 Glycolysis",
+      "source_unit_id": "4def6ba7a9f55f82bd6c42012b6ba19967fb",
+      "reading_scope": null,
+      "navigation_reading_scope": "chapter",
+      "retrieval_scope": "all_active_corpus",
+      "chapter_filter_applied": false,
+      "normal_UI_reading_context_removed": true,
+      "source_identity_scope": "Reader origin/navigation only; submitted RAG has no chapter or document filter",
+      "selection_sha256": "f942c5ced725d1aaac7d611ffcea78d7754a0b3a43c7b4d6452e33bbfb169d17",
+      "selection_character_count": 1686,
+      "normal_UI_navigation": true,
+      "direct_http_calls": 0,
+      "direct_database_accesses": 0,
+      "observed_sections_api": {
+        "method": "GET",
+        "route": "/api/v1/learning/library/071d52f9-ad95-4e50-84bd-e43ed136121f/sections",
+        "http_status": 200,
+        "sha256": "20f90dfd23294579c974fda17d9ebb6199e605be1d23dfbddf38b1fa09b0c648"
+      },
+      "observed_units_api": {
+        "method": "GET",
+        "route": "/api/v1/learning/library/071d52f9-ad95-4e50-84bd-e43ed136121f/units?offset=0&limit=20&section_id=996bade097e4a4a563c014e9b1a300fd5246ce5505ba4b1e886d53f8dfc02966",
+        "http_status": 200,
+        "sha256": "96cf68946db6328e7ba5db6677ca2d42c73d8cf8223d797a7a0af9138dbf2636"
+      },
+      "observed_utc": "2026-10-09T05:29:12.867Z",
+      "public_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\browser-continuous02\\scope-Q1-public01.json",
+        "bytes": 1982,
+        "sha256": "2d71b3206e8d04253a1da76fe0d65249b717764e1096c4be894e2291e3b44832"
+      }
+    }
+  ],
+  "scope_resolution_attempts": [
+    {
+      "question_id": "Q1",
+      "method": "GET",
+      "route": "/api/v1/learning/library/071d52f9-ad95-4e50-84bd-e43ed136121f/sections",
+      "required_field": "data[].title",
+      "authored_topic": "glycolysis",
+      "normalized_topic": "glycolysis",
+      "response_sha256": "20f90dfd23294579c974fda17d9ebb6199e605be1d23dfbddf38b1fa09b0c648",
+      "observed_section_count": 502,
+      "matched_section_titles": [
+        "Chapter 7 Cellular Respiration / 7.2 Glycolysis"
+      ],
+      "selected_document_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+      "selected_release_id": "4f11bd70-a486-4d16-b216-78cfe499530a",
+      "resolution_scope": "Normal published chapter titles; no whole-book fallback"
+    },
+    {
+      "question_id": "Q2",
+      "method": "GET",
+      "route": "/api/v1/learning/library/071d52f9-ad95-4e50-84bd-e43ed136121f/sections",
+      "required_field": "data[].title",
+      "authored_topic": "light-dependent reactions",
+      "normalized_topic": "light dependent reactions",
+      "response_sha256": "20f90dfd23294579c974fda17d9ebb6199e605be1d23dfbddf38b1fa09b0c648",
+      "observed_section_count": 502,
+      "matched_section_titles": [
+        "Chapter 8 Photosynthesis / 8.2 The Light-Dependent Reactions of Photosynthesis"
+      ],
+      "selected_document_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+      "selected_release_id": "4f11bd70-a486-4d16-b216-78cfe499530a",
+      "resolution_scope": "Normal published chapter titles; no whole-book fallback"
+    }
+  ],
+  "second_question": {
+    "status": "NOT_EXECUTED_PRE_SEND_FAILURE",
+    "reason": "SINGLE_NORMAL_CHAPTER_CONTROL_REQUIRED"
+  },
+  "page_errors": [],
+  "denied_external_requests": [],
+  "console_type_counts": {},
+  "browser_closed": true,
+  "context_closed": true,
+  "project_complete": false,
+  "limits": [
+    "Two different chapter-origin authored questions use normal whole-context removal and full active-corpus RAG; chapter IDs are navigation provenance, not retrieval filters; small functionality observations, no p95 or causal comparison",
+    "Public default profile binding does not itself prove native R2/reranker execution or retrieval quality",
+    "Complete DOM is not simultaneous visibility of every character or user reading",
+    "Paint clocks are double-RAF samples; full time also includes DTO observation and the 200 ms control-loop sampling delay",
+    "Normalized Markdown-to-DOM text comparison is approximate and may conservatively reject a valid formatted answer",
+    "Viewport intersection includes ancestor clipping but does not prove unobscured individual text glyphs",
+    "Published refusal or partial-reply rendering can have measured clocks while cited-answer quality remains FAIL",
+    "No guarantee of zero operating-system contention"
+  ],
+  "actual_browser_version": "154.0.4258.62",
+  "login_response_status": 200,
+  "failure_code": "SINGLE_NORMAL_CHAPTER_CONTROL_REQUIRED",
+  "failure_exception_class": "Boundary",
+  "failure_local_source_line": 33,
+  "raw_exception_text_exported": false,
+  "final_budget_observation": {
+    "pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous02\\budget-status-public01.json",
+      "bytes": 1300,
+      "sha256": "c119cbabd0885495656df7b8f1f82b18b0d60289db3114024cf91e71c4ad3ae7"
+    },
+    "observed_epoch_ms": 1791523763837,
+    "scope": "Read-only observed status; this snapshot does not authorize a submission",
+    "status": "READY",
+    "provider_post_count": 2,
+    "maximum_provider_post_count": 4,
+    "remaining_provider_slots": 2,
+    "open_claims": 0,
+    "unknown_cost_count": 0,
+    "integrity_errors": 0,
+    "cleanup_pending": 0,
+    "fully_settled": true,
+    "stop_exists": false,
+    "known_API_cost_USD": "0.0087020",
+    "full_unknown_hold_USD": "0",
+    "max_possible_new_batch_reserve_USD": "0.12000000"
+  },
+  "completed_utc": "2026-10-09T05:29:23.837Z",
+  "elapsed_ms": 14894,
+  "script_sha256": "e1a85a86cfd177f6e1f727d20c1cc0af19c75020659f80c77c7f43405c28c60f"
+}

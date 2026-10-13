@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="3" time="1.285" timestamp="2026-10-12T05:34:40.186385+11:00" hostname="isolated-synthetic"><testcase classname="" name="test_checked_clarification_with_both_optins_remains_zero_call" time="0.222"><failure message="AssertionError: assert False&#10; +  where False = GenerationOutcome(response=None, error={'code': 'ENHANCEMENT_VALIDATION_ERROR', 'message': 'Enhanced response or sourc...n={}, checks=[], drafts=[], teaching_context={'teaching_mode': 'direct', 'turn_role': 'user_question'}, stage_usage=[]).succeeded">def test_checked_clarification_with_both_optins_remains_zero_call():
+        original = original_request(clarification=True)
+        result = run_without_adapter_calls(original)
+&gt;       assert result.succeeded
+E       AssertionError: assert False
+E        +  where False = GenerationOutcome(response=None, error={'code': 'ENHANCEMENT_VALIDATION_ERROR', 'message': 'Enhanced response or sourc...n={}, checks=[], drafts=[], teaching_context={'teaching_mode': 'direct', 'turn_role': 'user_question'}, stage_usage=[]).succeeded
+
+5703-checker85-fallback-candidate\test_generation_programmatic_optins.py:74: AssertionError</failure></testcase><testcase classname="" name="test_checked_factual_no_evidence_with_both_optins_remains_zero_call" time="0.000"><failure message="AssertionError: assert False&#10; +  where False = GenerationOutcome(response=None, error={'code': 'ENHANCEMENT_VALIDATION_ERROR', 'message': 'Enhanced response or sourc...n={}, checks=[], drafts=[], teaching_context={'teaching_mode': 'direct', 'turn_role': 'user_question'}, stage_usage=[]).succeeded">def test_checked_factual_no_evidence_with_both_optins_remains_zero_call():
+        original = original_request(clarification=False)
+        result = run_without_adapter_calls(original)
+&gt;       assert result.succeeded
+E       AssertionError: assert False
+E        +  where False = GenerationOutcome(response=None, error={'code': 'ENHANCEMENT_VALIDATION_ERROR', 'message': 'Enhanced response or sourc...n={}, checks=[], drafts=[], teaching_context={'teaching_mode': 'direct', 'turn_role': 'user_question'}, stage_usage=[]).succeeded
+
+5703-checker85-fallback-candidate\test_generation_programmatic_optins.py:83: AssertionError</failure></testcase><testcase classname="" name="test_invalid_original_lossless_optin_still_rejects_before_adapter" time="0.000" /></testsuite></testsuites>

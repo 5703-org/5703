@@ -1,0 +1,194 @@
+{
+  "status": "PAIRED_OBSERVATIONS_CLOSED",
+  "physical_POSTs": 2,
+  "known_cost_USD": "0.0244545",
+  "new_UNKNOWN_holds_USD": "0",
+  "open_claims": 0,
+  "cumulative_known_group_cost_USD": "0.14928810",
+  "fully_settled": true,
+  "fresh_lock_released": true,
+  "credential_preparation_read_only_DB_legs": 1,
+  "experiment_DB_accesses": 0,
+  "automatic_retries": 0,
+  "teacher_calls": 0,
+  "JSON_repairs": 0,
+  "old_scope_reuse": false,
+  "credential_values_exported": false,
+  "actual_result_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-fixed-checker-pair39-candidate\\actual-fixed-pair39\\actual-fixed-checker-pair39-result01.json",
+    "bytes": 60931,
+    "sha256": "c925836596a70379a8583f6154066a7a06c1a2e0c0b42386468ad7fd9722e613"
+  },
+  "arms": [
+    {
+      "arm": "baseline39",
+      "status": "OBSERVED",
+      "physical_POSTs": 1,
+      "known_cost_USD": "0.0110106",
+      "latency_ms": 7126.4153,
+      "timing_boundary": "LLMAdapter.generate invocation to complete return",
+      "provider_result": {
+        "provider": "openai_compatible",
+        "model": "google/gemini-3.5-flash-lite",
+        "finish_reason": "stop",
+        "usage": {
+          "input_tokens": 17277,
+          "output_tokens": 2331,
+          "total_tokens": 19608,
+          "reasoning_tokens": 0,
+          "cache_hit_input_tokens": 0,
+          "cache_miss_input_tokens": 17277,
+          "cost": 0.0110106
+        },
+        "latency_ms": 7123,
+        "error": null,
+        "request_submitted": true,
+        "diagnostic": {
+          "stage": "completed",
+          "http_status": 200,
+          "provider_error_type": null,
+          "provider_error_code": null,
+          "provider_error_parameter": null,
+          "message": null,
+          "message_redacted": false,
+          "provider_request_id": "gen-1791623969-lEInyoxq5uNL27mrXgLA",
+          "finish_reason": "stop",
+          "network_error": null,
+          "request_submitted": true,
+          "latency_ms": 7123
+        }
+      },
+      "raw_bytes": 7651,
+      "raw_sha256": "c166e007a8c4efa2f87b9f71254ea635fc1792372c9d95379a689a0e1e9044e2",
+      "validation": {
+        "schema_PASS": true,
+        "local_binding_and_relation_contract_PASS": true,
+        "independent_source_entailment_certified": false,
+        "native_publication": false,
+        "exact_claim_identity_PASS": true,
+        "binding_issues": [],
+        "source_contract_issues": [],
+        "source_semantic_defects": [],
+        "checker_inconsistencies": [],
+        "repairable_verdict_inconsistencies": [],
+        "technical_entity_binding_issues": [
+          {
+            "code": "SOURCE_SCOPE_CONTEXT_NOT_SELECTED",
+            "claim_id": "claim_9dd7ed3c15bfc4ae4368ad47_1",
+            "leading_scope": "Calvin cycle",
+            "scope_start": 7,
+            "scope_end": 19,
+            "selected_fragment_ids": [
+              "F056",
+              "F064"
+            ],
+            "context_candidate_fragments": [
+              {
+                "evidence_id": "ev_007",
+                "fragment_id": "F053",
+                "scope_start": 4,
+                "scope_end": 16
+              },
+              {
+                "evidence_id": "ev_007",
+                "fragment_id": "F054",
+                "scope_start": 83,
+                "scope_end": 95
+              },
+              {
+                "evidence_id": "ev_008",
+                "fragment_id": "F063",
+                "scope_start": 39,
+                "scope_end": 51
+              }
+            ],
+            "binding_recheck_required": true,
+            "claim_relation_assessed": false,
+            "reason": "Leading scope absent from selected support; recheck allowed source context. Occurrence alone is not support.",
+            "source_entailment_certified": false,
+            "publication_override": false
+          }
+        ],
+        "scope_repair_triggered": true,
+        "model_all_units_supported_without_local_contract_errors": true,
+        "all_product_publication_gates_replayed": false
+      },
+      "raw_claim_statuses": [
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported"
+      ],
+      "raw_claim_count": 10,
+      "raw_unit_count": 19
+    },
+    {
+      "arm": "candidate39",
+      "status": "OBSERVED",
+      "physical_POSTs": 1,
+      "known_cost_USD": "0.0134439",
+      "latency_ms": 6611.8447,
+      "timing_boundary": "LLMAdapter.generate invocation to complete return",
+      "provider_result": {
+        "provider": "openai_compatible",
+        "model": "google/gemini-3.5-flash-lite",
+        "finish_reason": "stop",
+        "usage": {
+          "input_tokens": 26938,
+          "output_tokens": 2145,
+          "total_tokens": 29083,
+          "reasoning_tokens": 0,
+          "cache_hit_input_tokens": 0,
+          "cache_miss_input_tokens": 26938,
+          "cost": 0.0134439
+        },
+        "latency_ms": 6611,
+        "error": null,
+        "request_submitted": true,
+        "diagnostic": {
+          "stage": "completed",
+          "http_status": 200,
+          "provider_error_type": null,
+          "provider_error_code": null,
+          "provider_error_parameter": null,
+          "message": null,
+          "message_redacted": false,
+          "provider_request_id": "gen-1791623976-hudbG1ZtWVklDVBupogL",
+          "finish_reason": "stop",
+          "network_error": null,
+          "request_submitted": true,
+          "latency_ms": 6611
+        }
+      },
+      "raw_bytes": 7152,
+      "raw_sha256": "228ea9e95aa3778c34aa1bbeec08d8214458b798222e148713b53545a85f4530",
+      "validation": {
+        "schema_PASS": false,
+        "local_binding_and_relation_contract_PASS": false,
+        "independent_source_entailment_certified": false,
+        "native_publication": false,
+        "schema_error_class": "ValidationError"
+      },
+      "raw_claim_statuses": [
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported"
+      ],
+      "raw_claim_count": 10,
+      "raw_unit_count": 19
+    }
+  ]
+}

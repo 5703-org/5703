@@ -1,0 +1,328 @@
+--- haiku_projected_full_checker_probe_PREPARED06.py
++++ haiku_json_object_full_checker_probe_PREPARED08.py
+@@ -1,4 +1,4 @@
+-"""One projected full-checker diagnostic within new two-POST authority. Root executes only."""
++"""One experimental JSON-object full-checker diagnostic in the remaining existing slot. Root executes only."""
+ from pathlib import Path
+ from decimal import Decimal, InvalidOperation
+ import argparse
+@@ -65,7 +65,29 @@
+     {'path': str(MAIN / 'generation/openrouter_routes.py'), 'bytes': 11703, 'sha256': 'eb2471e712bc92e5c04495b5353017dbcbc7aa8cdec5451b0ead9f05050588ee'},
+     {'path': str(MAIN / 'generation/probes.py'), 'bytes': 25431, 'sha256': 'b9cccc3ae40886da1c327c9721d5d1e1511d200ec72e0e8fbd100c037c12923e'},
+ )
+-PROJECTED_SCHEMA_SHA = '70355e166c78f69ccd65927c425ff3ba93daf18e7e0bd1d9490c7ea6c1746c9b'
++INITIAL_SCOPE_POSTS = 1
++INITIAL_SCOPE_HOLD = Decimal('0.03')
++D = ROOT / 'diagnostic-preparation'
++CAPABILITY_PIN = {'path': str(D / 'ACTUAL_PUBLIC_HAIKU_CAPABILITY_METADATA01.json'), 'bytes': 1758, 'sha256': 'f7509e97026ec6b9f3e0a747ca3f5bd418153c3c59d5cb5d34769e58f4371fe9'}
++PAYLOAD_PIN = {'path': str(D / 'HAIKU_JSON_OBJECT_FULL_CHECKER_OFFLINE_PAYLOAD_PREPARED08.json'), 'bytes': 24971, 'sha256': '23267aeab19d1f3e1ae9c2549b7ce238d3fcc56e7ae28cee5cf2702d9daf53db'}
++OFFLINE_PROOF_PIN = {'path': str(D / 'HAIKU_JSON_OBJECT_FULL_CHECKER_OFFLINE_PROOF_PREPARED08.json'), 'bytes': 2627, 'sha256': '28050f4f0e5ea153c53e2c8a8d1343d2d42d0c322c2e33f3899ffe53e0480c73'}
++PRODUCER_PIN = {'path': str(MAIN / 'generation/providers.py'), 'bytes': 26220, 'sha256': 'bbfb74558e1adf5e4850edad02bb117af221c804aaad6e6f260addfe05fb38f4'}
++BUSINESS_SOURCE_PINS = (
++    PRODUCER_PIN,
++    {'path': str(MAIN / 'generation/types.py'), 'bytes': 10086, 'sha256': 'de000ead20b00c09dcab7e1e7e0bad92685932a67b127731ff8cd8a9d86bd4bb'},
++    {'path': str(MAIN / 'generation/capabilities.py'), 'bytes': 4926, 'sha256': '590dac5cb82bf1494cd0db01af422800ce1dd227bae5e943d608c841401ebff0'},
++    {'path': str(MAIN / 'generation/parser.py'), 'bytes': 7035, 'sha256': '5eb3eabae06b786669a74cb362b2a387db873f0b05d8d461592886e7fe49e749'},
++    {'path': str(MAIN / 'generation/reliability_v5.py'), 'bytes': 8366, 'sha256': '7260e47e6b51e45834f660f5d0fabb3c142b760f40a6c791fff733c08fd1261d'},
++    {'path': str(MAIN / 'generation/reliability_v4.py'), 'bytes': 10203, 'sha256': '0771dd38c821053788608a942033081433ab8ac2ef53afd3d14ed68987b9b56c'},
++    {'path': str(MAIN / 'generation/checked.py'), 'bytes': 144282, 'sha256': '879d66c059e3343d9117d5e3a6357a07dcd13e555ff5bc2091553e4e37dafc22'},
++)
++INHERITED_SCOPE_PINS = (
++    {'path': str(D / 'haiku-schema-diagnostic03/authorization-scope-public01.json'), 'bytes': 3529, 'sha256': 'f96319a20959514cab60574f4787363b84e89253167482796d131fd62f71729b'},
++    {'path': str(D / 'haiku-schema-diagnostic03/probe-01-started01.json'), 'bytes': 1038, 'sha256': '0533a7fda2a2fe40182cdb2fee7d9fbfb242e578f5da12bdfa09330fb42cc0ec'},
++    {'path': str(D / 'haiku-schema-diagnostic03/probe-01-finished01.json'), 'bytes': 1146, 'sha256': 'c64d6d4fcd55c389c0a6c22bdfa7d0c276d7f920a8e3d28118b478dc2a2bd82f'},
++    {'path': str(D / 'haiku-schema-diagnostic03/diagnostic-result-public01.json'), 'bytes': 3082, 'sha256': '67475368fd2f6040f899491d14b843f2bcbc72f28f65715ab6973c1ba8e87b2a'},
++    {'path': str(D / 'haiku-schema-diagnostic03/STOP-no-retry-public01.json'), 'bytes': 220, 'sha256': 'f95764a48cfa814ffaa0889321f6faf3c79c819bf881fb9344ea35ba83549e4c'},
++)
+ 
+ def preserved_inputs():
+     old = fixed(OLD_UNKNOWN_PIN)
+@@ -80,7 +102,23 @@
+             or adoption['status'] != 'ACTUAL_EXACT_SIX_FILE_HAIKU_WIRE_REPAIR_ADOPTED'
+             or len(adoption['committed']) != 6):
+         raise ValueError('PRIOR_HOLDS_OR_ACTUAL_SOURCE_ADOPTION_CHANGED')
+-    for pin in ADOPTED_SOURCE_PINS:
++    authority, started, finished, inherited, stop = [fixed(pin) for pin in INHERITED_SCOPE_PINS]
++    if (authority['maximum_new_POSTs'] != MAX_POSTS
++            or Decimal(authority['new_full_reserve_USD']) != NEW_RESERVE
++            or Decimal(authority['old_UNKNOWN_hold_USD']) != OLD_HOLD
++            or started['slot'] != 1 or finished['slot'] != 1 or finished['http_status'] != 400
++            or finished['reported_cost_USD'] is not None
++            or Decimal(finished['UNKNOWN_full_hold_USD']) != INITIAL_SCOPE_HOLD
++            or inherited['physical_POST_count'] != INITIAL_SCOPE_POSTS
++            or Decimal(inherited['known_reported_cost_USD']) != 0
++            or Decimal(inherited['new_UNKNOWN_full_holds_USD']) != INITIAL_SCOPE_HOLD
++            or Decimal(inherited['old_UNKNOWN_hold_preserved_USD']) != OLD_HOLD
++            or stop['physical_POST_count'] != INITIAL_SCOPE_POSTS):
++        raise ValueError('EXISTING_SINGLE_SCOPE_ACCOUNTING_CHANGED')
++    fixed(CAPABILITY_PIN)
++    fixed(PAYLOAD_PIN)
++    fixed(OFFLINE_PROOF_PIN)
++    for pin in (*ADOPTED_SOURCE_PINS, *BUSINESS_SOURCE_PINS):
+         data = Path(pin['path']).read_bytes()
+         if len(data) != pin['bytes'] or hashlib.sha256(data).hexdigest() != pin['sha256']:
+             raise ValueError('ADOPTED_PUBLIC_SOURCE_CHANGED')
+@@ -183,7 +221,7 @@
+ 
+ class FiniteBudget:
+     def __init__(self):
+-        self.posts, self.known, self.holds = 0, Decimal(0), Decimal(0)
++        self.posts, self.known, self.holds = INITIAL_SCOPE_POSTS, Decimal(0), INITIAL_SCOPE_HOLD
+ 
+     def admit(self):
+         if self.posts >= MAX_POSTS or self.known + self.holds + UPPER > NEW_RESERVE:
+@@ -199,10 +237,52 @@
+         return cost is not None and cost > UPPER
+ 
+ def build_payload(controls, schema, messages):
+-    payload = json.loads(json.dumps(controls))
+-    payload['response_format']['json_schema']['schema'] = schema
+-    payload['messages'] = messages
+-    return payload
++    # Execute only the actual public producer's pure payload functions, without package exports.
++    from generation.types import ModelConfig
++    from generation.capabilities import validate
++    capability = fixed(CAPABILITY_PIN)['baseline_public_config_selected']
++    config = ModelConfig(provider='openai_compatible', model=MODEL,
++        base_url='https://openrouter.ai/api/v1', max_tokens=4096,
++        window_tokens=capability['window_tokens'], temperature=None, seed=None,
++        reasoning_effort=None, thinking_enabled=None,
++        token_limit_parameter=capability['token_limit_parameter'], structured_output_mode='json_object',
++        capability_version=capability['capability_version'], capabilities=capability['capabilities'],
++        configuration_id='model-settings:synthetic-schema-diagnostic-only',
++        openrouter_route_profile='haiku55_google_vertex_low_v1')
++    config.validate()
++    resolved = validate(config)
++    if resolved is None or 'json_object' not in resolved.structured_modes:
++        raise ValueError('EXACT_INHERITED_JSON_OBJECT_CAPABILITY_REQUIRED')
++    source = Path(PRODUCER_PIN['path']).read_bytes()
++    if len(source) != PRODUCER_PIN['bytes'] or hashlib.sha256(source).hexdigest() != PRODUCER_PIN['sha256']:
++        raise ValueError('PUBLIC_PAYLOAD_PRODUCER_CHANGED')
++    names = {'payload', 'provider_schema', 'strict_schema', 'checker_transport_enabled', 'prepare_checker_transport'}
++    nodes = [node for node in ast.parse(source).body if isinstance(node, ast.FunctionDef) and node.name in names]
++    if {node.name for node in nodes} != names:
++        raise ValueError('EXACT_PUBLIC_PAYLOAD_FUNCTIONS_REQUIRED')
++    namespace = {'__name__': 'generation.providers', '__package__': 'generation',
++        'ModelConfig': ModelConfig, 'json': json, 'hashlib': hashlib, 'Path': Path}
++    exec(compile(ast.Module(body=nodes, type_ignores=[]), str(PRODUCER_PIN['path']) + '#public-payload-only', 'exec'), namespace)
++    body = namespace['payload'](config, messages, schema, controls['response_format']['json_schema']['name'])
++    proof, reviewed = fixed(OFFLINE_PROOF_PIN), fixed(PAYLOAD_PIN)
++    wire = json.dumps(body, ensure_ascii=False).encode('utf-8')
++    old_nonprotocol = {key: value for key, value in controls.items() if key != 'response_format'}
++    new_nonprotocol = {key: value for key, value in body.items() if key not in {'messages', 'response_format'}}
++    if (body != reviewed or body.get('response_format') != {'type': 'json_object'}
++            or namespace['provider_schema'](schema, config.provider) != schema
++            or new_nonprotocol != old_nonprotocol or digest(messages) != proof['original_messages_sha256']
++            or digest(body['messages']) != proof['json_object_messages_sha256']
++            or digest({key: value for key, value in body.items() if key != 'messages'}) != proof['actual_nonmessage_controls_sha256']
++            or len(wire) != proof['actual_wire_bytes']
++            or hashlib.sha256(wire).hexdigest() != proof['actual_wire_sha256']
++            or proof['original_schema_sha256'] != digest(schema)
++            or proof['provider_strict_schema_PASS'] is not False):
++        raise ValueError('ROOT_REVIEWED_ACTUAL_JSON_OBJECT_WIRE_REQUIRED')
++    from generation.openrouter_routes import prepare_schema_wire
++    prepared, metadata = prepare_schema_wire(config, body, schema)
++    if prepared != body or metadata != {}:
++        raise ValueError('JSON_OBJECT_MUST_NOT_APPLY_STRICT_SCHEMA_PROJECTION')
++    return body, metadata
+ 
+ def approved_credential(workspace):
+     # The existing approved PG consumer supplies only a URI. No URI or key is logged.
+@@ -285,37 +365,35 @@
+             or [m.get('role') for m in messages] != ['system', 'user']):
+         raise ValueError('EXACT_PUBLIC_SYNTHETIC_CHECKER_INPUT_REQUIRED')
+     work = Path(args.output).absolute()
+-    if work != ROOT / 'diagnostic-preparation/haiku-schema-diagnostic03':
++    if work != ROOT / 'diagnostic-preparation/haiku-schema-diagnostic04':
+         raise ValueError('EXACT_FRESH_DIAGNOSTIC_OUTPUT_REQUIRED')
+     work.mkdir(exist_ok=False)
+-    create(work / 'authorization-scope-public01.json', {'status': 'ROOT_EXECUTING_ONE_PROJECTED_FULL_CHECKER_WITHIN_NEW_TWO_POST_AUTHORITY',
+-        'maximum_new_POSTs': 2, 'execution_attempt_limit': 1, 'new_full_reserve_USD': '0.06000000', 'old_UNKNOWN_hold_USD': '0.06000000',
+-        'combined_old_hold_plus_new_full_reserve_USD': '0.12000000', 'old_UNKNOWN_pin': OLD_UNKNOWN_PIN,
+-        'prior_full_UNKNOWN_pin': PRIOR_FULL_UNKNOWN_PIN, 'prior_result_pin': PRIOR_RESULT_PIN,
+-        'old_STOP_pin': OLD_STOP_PIN, 'schema_pin': SCHEMA_PIN, 'controls_pin': CONTROLS_PIN,
+-        'synthetic_fixture_pin': MESSAGES_PIN, 'adopted_source_pins': ADOPTED_SOURCE_PINS,
+-        'adoption_receipt_pin': ADOPTION_RECEIPT_PIN, 'projected_schema_sha256': PROJECTED_SCHEMA_SHA,
++    create(work / 'authorization-scope-public01.json', {
++        'status': 'ROOT_EXECUTING_CHANGED_JSON_OBJECT_CANDIDATE_IN_EXISTING_SCOPE_SLOT_TWO',
++        'existing_scope_maximum_POSTs': MAX_POSTS, 'existing_scope_full_reserve_USD': '0.06000000',
++        'initial_scope_consumed_POSTs': INITIAL_SCOPE_POSTS, 'initial_scope_known_USD': '0.00000000',
++        'initial_scope_UNKNOWN_hold_USD': '0.03000000', 'remaining_POSTs_for_this_execution': 1,
++        'remaining_full_hold_USD': '0.03000000', 'additional_budget_allocation_USD': '0.00000000',
++        'execution_attempt_limit': 1, 'older_outside_scope_UNKNOWN_hold_USD': '0.06000000',
++        'initial_all_UNKNOWN_holds_USD': '0.09000000', 'inherited_scope_public_pins': INHERITED_SCOPE_PINS,
++        'old_UNKNOWN_pin': OLD_UNKNOWN_PIN, 'prior_full_UNKNOWN_pin': PRIOR_FULL_UNKNOWN_PIN,
++        'prior_result_pin': PRIOR_RESULT_PIN, 'old_STOP_pin': OLD_STOP_PIN,
++        'schema_pin': SCHEMA_PIN, 'controls_pin': CONTROLS_PIN, 'synthetic_fixture_pin': MESSAGES_PIN,
++        'payload_pin': PAYLOAD_PIN, 'offline_proof_pin': OFFLINE_PROOF_PIN, 'capability_pin': CAPABILITY_PIN,
++        'adopted_source_pins': ADOPTED_SOURCE_PINS, 'business_source_pins': BUSINESS_SOURCE_PINS,
++        'adoption_receipt_pin': ADOPTION_RECEIPT_PIN, 'protocol_and_message_change_is_experimental': True,
++        'provider_strict_schema_PASS': False, 'native_qualification_or_publication_PASS': False,
+         'Q3_or_Q4_replayed': False, 'at_UTC': now()})
+     site = MAIN / '.venv/Lib/site-packages'
+     if not site.is_dir():
+         raise ValueError('EXISTING_DEPENDENCIES_REQUIRED_NO_INSTALL')
+     sys.path[:0] = [str(MAIN), str(MAIN / 'backend'), str(site), str(W)]
+-    # Public schema namespace bypasses package convenience exports; it does not load denied providers.
++    # Isolate public schema imports from package convenience exports and credential bootstrap.
+     if 'generation' not in sys.modules:
+         package = types.ModuleType('generation')
+         package.__path__ = [str(MAIN / 'generation')]
+         sys.modules['generation'] = package
+-    from generation.openrouter_routes import prepare_schema_wire, BASE_URL
+-    config = types.SimpleNamespace(openrouter_route_profile='haiku55_google_vertex_low_v1',
+-        provider='openai_compatible', model=MODEL, base_url=BASE_URL, capabilities=None,
+-        auth_header=None, api_version=None, temperature=None, thinking_enabled=None, reasoning_effort=None)
+-    projected_payload, projection_metadata = prepare_schema_wire(config, build_payload(controls, schema, messages), schema)
+-    projected_schema = projected_payload['response_format']['json_schema']['schema']
+-    if (digest(projected_schema) != PROJECTED_SCHEMA_SHA
+-            or projection_metadata['original_response_schema_sha256'] != digest(schema)
+-            or projection_metadata['provider_schema_before_projection_sha256'] != digest(schema)
+-            or projection_metadata['removed_bound_count'] != 42):
+-        raise ValueError('REVIEWED_PROJECTED_FULL_SCHEMA_REQUIRED')
++    reviewed_payload, projection_metadata = build_payload(controls, schema, messages)
+     key = approved_credential(workspace)
+     from generation.parser import strict_json
+     from generation.reliability_v5 import ReliableCheckV5
+@@ -326,25 +404,23 @@
+     budget = FiniteBudget()
+     current = {}
+     def observed_open(shape):
+-        payload, wire_metadata = prepare_schema_wire(config, build_payload(controls, schema, messages), schema)
+-        if payload['response_format']['json_schema']['schema'] != shape or wire_metadata != projection_metadata:
+-            raise ValueError('PROJECTED_SCHEMA_HELPER_RESULT_CHANGED')
++        payload, wire_metadata = build_payload(controls, schema, messages)
++        if payload != reviewed_payload or wire_metadata != projection_metadata or shape != schema:
++            raise ValueError('REVIEWED_JSON_OBJECT_PRODUCER_RESULT_CHANGED')
+         wire = json.dumps(payload, ensure_ascii=False).encode('utf-8')
+         observed_controls = {k: v for k, v in payload.items() if k != 'messages'}
+-        expected = json.loads(json.dumps(controls))
+-        expected['response_format']['json_schema']['schema'] = shape
+-        if (len(wire) > 60000 or len(wire) + 512 >= 100000 or observed_controls != expected
+-                or payload['messages'] != messages or current.get('started')):
+-            raise ValueError('ACTUAL_DIAGNOSTIC_WIRE_CONTROLS_CHANGED')
++        if len(wire) > 60000 or len(wire) + 512 >= 100000 or current.get('started'):
++            raise ValueError('ACTUAL_DIAGNOSTIC_WIRE_BOUND_OR_SINGLE_EXECUTION_CHANGED')
+         preserved_inputs()
+         slot = budget.admit()
+         current.update(started=True, slot=slot, start_UTC=now(), start_monotonic=time.monotonic())
+         create(work / f'probe-{slot:02d}-started01.json', {'slot': slot, 'case': current['case'],
+             'start_UTC': current['start_UTC'], 'wire_sha256': hashlib.sha256(wire).hexdigest(),
+             'wire_bytes': len(wire), 'schema_sha256': digest(shape), 'schema_transport': wire_metadata,
+-            'controls_sha256': digest(observed_controls), 'messages_sha256': digest(messages),
++            'controls_sha256': digest(observed_controls), 'messages_sha256': digest(payload['messages']), 'original_messages_sha256': digest(messages),
+             'output_cap': 4096, 'input_bound': len(wire) + 512, 'reserved_USD': '0.03000000',
+-            'no_raw_payload_or_credentials_exported': True})
++            'provider_strict_schema_PASS': False, 'experimental_protocol': 'json_object',
++            'no_raw_response_or_credentials_exported': True, 'reviewed_synthetic_payload_pin': PAYLOAD_PIN})
+         request = Request(ENDPOINT, data=wire, method='POST', headers={
+             'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json'})
+         try:
+@@ -369,7 +445,7 @@
+         return decoded if isinstance(decoded, dict) else {}
+     outcomes = []
+     try:
+-        for label, shape, validator in [('projected_full_native_checker', projected_schema, ReliableCheckV5)]:
++        for label, shape, validator in [('json_object_full_native_checker', schema, ReliableCheckV5)]:
+             current.clear()
+             current.update(case=label, schema=shape, started=False)
+             decoded = observed_open(shape)
+@@ -404,6 +480,8 @@
+                 'usage': usage, 'reported_cost_USD': None if cost is None else str(cost),
+                 'UNKNOWN_full_hold_USD': '0.03000000' if cost is None else '0.00000000',
+                 'valid_local_schema_result': valid, 'local_validation_error_types': error_types,
++                'provider_strict_schema_PASS': False, 'native_semantic_publication_verified': False,
++                'original_local_validation': 'strict_json -> ReliableCheckV5.model_validate',
+                 'safe_vendor_error': current.get('safe_vendor_error'),
+                 'transport_error_category': error_code,
+                 'raw_body_messages_headers_or_credentials_exported': False}
+@@ -411,23 +489,38 @@
+             outcomes.append(receipt)
+             if exceeded:
+                 raise ValueError('KNOWN_COST_EXCEEDS_RESERVED_BOUND')
+-            # This execution intentionally consumes only its first full-checker attempt.
++            # This changed candidate uses only the remaining second slot of the existing scope.
+             if not valid:
+                 create(work / 'STOP-no-retry-public01.json', {
+-                    'status': 'STOP_FIRST_PROJECTED_FULL_CHECKER_INVALID_OR_NON200',
+-                    'physical_POST_count': budget.posts, 'new_UNKNOWN_full_holds_USD': str(budget.holds),
++                    'status': 'STOP_REMAINING_JSON_OBJECT_FULL_CHECKER_INVALID_OR_NON200',
++                    'physical_POST_count': budget.posts - INITIAL_SCOPE_POSTS, 'scope_consumed_POST_count': budget.posts,
++                    'this_execution_UNKNOWN_hold_USD': str(budget.holds - INITIAL_SCOPE_HOLD),
++                    'scope_total_UNKNOWN_hold_USD': str(budget.holds),
+                     'old_UNKNOWN_hold_preserved_USD': '0.06000000', 'unused_authorized_slots': MAX_POSTS - budget.posts})
+             break
+-        create(work / 'diagnostic-result-public01.json', {'status': 'PROJECTED_FULL_CHECKER_LOCAL_STRICT_VALIDATION_PASS' if outcomes and outcomes[0]['valid_local_schema_result'] else 'PROJECTED_FULL_CHECKER_FAILED_STOP_NO_RETRY',
+-            'physical_POST_count': budget.posts, 'known_reported_cost_USD': str(budget.known),
+-            'new_UNKNOWN_full_holds_USD': str(budget.holds), 'old_UNKNOWN_hold_preserved_USD': '0.06000000',
+-            'maximum_new_reserve_USD': '0.06000000', 'maximum_authorized_new_POSTs': 2, 'execution_attempt_limit': 1,
++        create(work / 'diagnostic-result-public01.json', {
++            'status': 'JSON_OBJECT_FULL_CHECKER_LOCAL_STRICT_VALIDATION_PASS_DIAGNOSTIC_ONLY' if outcomes and outcomes[0]['valid_local_schema_result'] else 'JSON_OBJECT_FULL_CHECKER_FAILED_STOP_NO_RETRY',
++            'physical_POST_count': budget.posts - INITIAL_SCOPE_POSTS,
++            'scope_consumed_POST_count': budget.posts, 'scope_initial_consumed_POST_count': INITIAL_SCOPE_POSTS,
++            'known_reported_cost_USD': str(budget.known),
++            'this_execution_UNKNOWN_hold_USD': str(budget.holds - INITIAL_SCOPE_HOLD),
++            'inherited_scope_UNKNOWN_hold_USD': '0.03000000', 'scope_total_UNKNOWN_hold_USD': str(budget.holds),
++            'older_outside_scope_UNKNOWN_hold_USD': '0.06000000',
++            'all_UNKNOWN_hold_USD': str(OLD_HOLD + budget.holds),
++            'existing_scope_maximum_reserve_USD': '0.06000000', 'existing_scope_maximum_POSTs': MAX_POSTS,
++            'additional_budget_allocation_USD': '0.00000000', 'execution_attempt_limit': 1,
+             'unused_authorized_slots': MAX_POSTS - budget.posts, 'automatic_second_attempt': False,
+-            'remaining_scope_requires_changed_candidate_and_existing_single_scope_accounting': True,
+-            'original_local_validator': 'ReliableCheckV5', 'schema_transport': projection_metadata,
+-            'adopted_source_pins': ADOPTED_SOURCE_PINS, 'native_semantic_publication_verified': False,
+-            'cases': outcomes, 'old_STOP_modified': False, 'Q3_replayed': False, 'Q4_replayed': False,
+-            'DB_rebuilt_or_written': False, 'manual_retry_redirect_or_fallback': False})
++            'original_local_validator': 'strict_json -> ReliableCheckV5.model_validate',
++            'original_full_schema_sha256': digest(schema), 'schema_transport': projection_metadata,
++            'payload_pin': PAYLOAD_PIN, 'offline_proof_pin': OFFLINE_PROOF_PIN, 'capability_pin': CAPABILITY_PIN,
++            'inherited_scope_public_pins': INHERITED_SCOPE_PINS,
++            'adopted_source_pins': ADOPTED_SOURCE_PINS, 'business_source_pins': BUSINESS_SOURCE_PINS,
++            'experimental_protocol_and_messages_changed': True, 'provider_strict_schema_PASS': False,
++            'native_semantic_publication_verified': False, 'product_or_project_qualification_PASS': False,
++            'valid_schema_is_not_a_positive_semantic_judgment': True,
++            'cases': outcomes, 'old_STOP_modified': False, 'inherited_scope_STOP_modified': False,
++            'Q3_replayed': False, 'Q4_replayed': False, 'DB_rebuilt_or_written': False,
++            'manual_retry_redirect_or_fallback': False})
+     except BaseException as error:
+         if current.get('started'):
+             target = work / f"probe-{current['slot']:02d}-finished01.json"
+@@ -436,9 +529,11 @@
+                     'status': 'LOCAL_OR_TRANSPORT_UNCERTAIN_FULL_HOLD', 'http_status': current.get('http_status'),
+                     'error_class': type(error).__name__, 'reported_cost_USD': None, 'UNKNOWN_full_hold_USD': '0.03000000',
+                     'safe_vendor_error': current.get('safe_vendor_error'), 'raw_body_or_credentials_exported': False})
+-        create(work / 'STOP-no-retry-public01.json', {'status': 'STOP_NO_RETRY', 'error_class': type(error).__name__,
+-            'physical_POST_count': budget.posts, 'known_reported_cost_USD': str(budget.known),
+-            'new_full_holds_USD': str(budget.holds), 'old_UNKNOWN_hold_preserved_USD': '0.06000000'})
++        if not (work / 'STOP-no-retry-public01.json').exists():
++            create(work / 'STOP-no-retry-public01.json', {'status': 'STOP_NO_RETRY', 'error_class': type(error).__name__,
++                'physical_POST_count': budget.posts - INITIAL_SCOPE_POSTS, 'scope_consumed_POST_count': budget.posts,
++                'known_reported_cost_USD': str(budget.known), 'scope_total_full_holds_USD': str(budget.holds),
++                'older_outside_scope_UNKNOWN_hold_USD': '0.06000000', 'additional_budget_allocation_USD': '0.00000000'})
+         raise
+     finally:
+         key = None
+@@ -447,11 +542,11 @@
+ 
+ def main():
+     parser = argparse.ArgumentParser(description=__doc__)
+-    parser.add_argument('--execute-authorized-projected-checker', action='store_true')
++    parser.add_argument('--execute-authorized-json-object-checker', action='store_true')
+     parser.add_argument('--workspace-id', required=True)
+-    parser.add_argument('--output', default=str(ROOT / 'diagnostic-preparation/haiku-schema-diagnostic03'))
++    parser.add_argument('--output', default=str(ROOT / 'diagnostic-preparation/haiku-schema-diagnostic04'))
+     args = parser.parse_args()
+-    if not args.execute_authorized_projected_checker:
++    if not args.execute_authorized_json_object_checker:
+         parser.error('Root explicit execution flag required; preparation never submits a request')
+     try:
+         passed = execute(args)
+@@ -459,7 +554,7 @@
+         print(json.dumps({'status': 'BLOCKED_OR_STOPPED', 'error_class': type(error).__name__,
+                           'raw_error_or_credentials_exported': False}))
+         return 1
+-    print(json.dumps({'status': 'PROJECTED_CHECKER_DIAGNOSTIC_FINISHED', 'strict_local_schema_pass': passed, 'public_result': str(Path(args.output) / 'diagnostic-result-public01.json')}))
++    print(json.dumps({'status': 'JSON_OBJECT_CHECKER_DIAGNOSTIC_FINISHED', 'strict_local_schema_pass': passed, 'public_result': str(Path(args.output) / 'diagnostic-result-public01.json')}))
+     return 0 if passed else 1
+ 
+ if __name__ == '__main__':

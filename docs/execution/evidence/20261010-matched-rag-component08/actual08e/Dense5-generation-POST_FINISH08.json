@@ -1,0 +1,61 @@
+{
+  "arm": "Dense5",
+  "role": "generation",
+  "started_at_utc": "2026-10-09T20:21:34.555097+00:00",
+  "cost_status": "KNOWN",
+  "reported_cost_usd": "0.0032918",
+  "complete": true,
+  "wire_proof": {
+    "body_bytes": 27497,
+    "body_sha256": "d8379dd6a584e2c3fb3b882e35b91d4f1edab39971ac0775b311665e387c4e5b",
+    "conservative_cost_upper_usd": "0.0187963",
+    "role": "generation",
+    "max_price": {
+      "prompt": 0.3,
+      "completion": 2.5
+    },
+    "output_limit": 4096,
+    "input_bound": "UTF8 body bytes+1024 protocol allowance; not actual tokens"
+  },
+  "raw_receipts": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\component-rag-quality08\\actual08e\\Dense5-generation-raw-provider-read01.json",
+      "bytes": 8658,
+      "sha256": "8d5b7e7da5a37e0a60ad6dad3fcb83eb9ba4a4dd9b7bf165e01a314a45bbbca1"
+    }
+  ],
+  "network_trace": [
+    {
+      "event": "validated-resolver-host",
+      "host": "openrouter.ai",
+      "port": 443
+    },
+    {
+      "event": "original-Main-validated-IP",
+      "host": "104.18.2.115",
+      "port": 443
+    },
+    {
+      "event": "numeric-pinned-IP-resolution",
+      "host": "104.18.2.115",
+      "port": 443
+    },
+    {
+      "event": "connect-requested",
+      "host": "104.18.2.115",
+      "port": 443
+    }
+  ],
+  "finish_reason": "stop",
+  "error": null,
+  "usage": {
+    "input_tokens": 6131,
+    "output_tokens": 581,
+    "total_tokens": 6712,
+    "reasoning_tokens": 347,
+    "cache_hit_input_tokens": 0,
+    "cache_miss_input_tokens": 6131,
+    "cost": 0.0032918
+  },
+  "latency_ms": 3291
+}

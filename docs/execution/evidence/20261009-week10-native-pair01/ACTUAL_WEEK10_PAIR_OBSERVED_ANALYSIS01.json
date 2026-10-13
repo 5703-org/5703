@@ -1,0 +1,753 @@
+{
+  "schema": "5703_week10_actual_public_pair_observed_analysis_v1",
+  "status": "ACTUAL_OBSERVED_MATCHED_PAIR_DIAGNOSTIC_ONLY",
+  "controller_observed": {
+    "schema": "5703_week10_root_native_pair_controller_v1",
+    "status": "ACTUAL_TWO_NATIVE_BROWSER_LEGS_PASS_BATCH_CLOSED",
+    "batch_id": "cs30-week10-native-pair-20261009-01",
+    "source_version": "26afaa44371533d9a77f0e8aa8a51570c6027011e1d0e9d01c60c3562edd3adb"
+  },
+  "missing_artifacts": [],
+  "findings": [],
+  "legs": {
+    "A_baseline": {
+      "source_version": "26afaa44371533d9a77f0e8aa8a51570c6027011e1d0e9d01c60c3562edd3adb",
+      "question_sha256": "c6437bbeb45b83c75a18d503e28e0b235a600f8f3884e23aba944c6bd6940caf",
+      "runtime_flag": false,
+      "startup_status": "PASS",
+      "same_Engine_as_native_run_once": true,
+      "root_process_launch_epoch_ms": 1791520416087.86,
+      "root_worker_ready_epoch_ms": 1791520424516.181,
+      "root_process_launch_to_worker_ready_ms": 8428.32080078125,
+      "controller_process_launch_to_worker_ready_ms": 8428.32080078125,
+      "runner_main_entry_to_worker_ready_ms": 7291.0179999998945,
+      "local_model_warmup": {
+        "status": "PASS",
+        "query_sha256": "daa04b02895bc8112d80917330531e93d07c9305c42be075ded1f4a63a7da487",
+        "prewarm_total_ms": 5099.644300000364,
+        "embedding_model_load_and_single_encode_ms": 5027.921999999307,
+        "reranker_model_load_and_single_pair_predict_ms": 71.71040000139328,
+        "native_model_instances_warm_after": true,
+        "query_result_cache_populated": false,
+        "query_different_from_measured_questions": true,
+        "provider_posts": 0,
+        "database_retrieval_calls": 0
+      },
+      "native_model_warmup_ms": 5099.632400000701,
+      "release_cache_prepare_wall_ms": 0.003700000888784416,
+      "snapshot_startup_report": {
+        "status": null,
+        "cache_hit": null,
+        "validation_ms": null,
+        "startup_prepare_ms": null,
+        "visible_chunk_count": null,
+        "release_id_sha256": null,
+        "epoch_sha256": null
+      },
+      "runtime_cpu_threads": 4,
+      "native_cuda_allowed": true,
+      "retrieval_recorded_device": "cuda",
+      "retrieval_execution_device": "cuda",
+      "measured_query_vector_cache_hit": false,
+      "measured_release_cache": {
+        "version": "validated_release_cache_v1",
+        "hit": false,
+        "validation_ms": 5899.568599999839
+      },
+      "retrieval_stages": {
+        "query_embedding_ms": 55.04299999847717,
+        "dense_ms": 39.46960000030231,
+        "lexical_ms": 4.868100000749109,
+        "retrieval_total_ms": 6076.599199999691
+      },
+      "rerank_ms": 104.23380000065663,
+      "candidate_orders": {
+        "candidate_ids": {
+          "count": 20,
+          "sha256": "94544eb64d6445fa2111d54cc5a87ee64145f0e4743783d13197794192ee1030"
+        },
+        "submitted_candidate_ids": {
+          "count": 20,
+          "sha256": "94544eb64d6445fa2111d54cc5a87ee64145f0e4743783d13197794192ee1030"
+        },
+        "ranked_ids": {
+          "count": 20,
+          "sha256": "41b188b901064f19022cdea703bbd8ad32b33cc0ccd6a53a623b4732bf5580b4"
+        }
+      },
+      "full_DOM_observed_ms": 18714.299999998882,
+      "accepted_complete_cited_answer_UI_ms": 18714.299999998882,
+      "first_visible_answer_UI_ms": 18647.699999999255,
+      "provider_TTFT_ms": null,
+      "terminal_UI_observation_ms": 18516.400146484375,
+      "worker_ready_to_Send_ms": 3061.4189453125,
+      "process_launch_to_complete_answer_ms": 30204.039746092632,
+      "worker_pipeline_observed_timing": {
+        "total_ms": 16709.472,
+        "generation_ms": 6031,
+        "checking_ms": 3039,
+        "token_count_ms": 0,
+        "model_total_ms": 9070,
+        "preparation_ms": 55.784,
+        "query_preparation_ms": 1.719,
+        "retrieval_ms": 6198.168,
+        "teaching_plan_ms": 0.25,
+        "submission_to_worker_start_ms": 525.837,
+        "generation_wall_ms": 10254.957,
+        "publication_before_commit_ms": 216.036,
+        "worker_before_commit_ms": 16922.173,
+        "timing_scope": "worker_execution_before_answer_insert_v1"
+      },
+      "quality": {
+        "browser_followup_status": "PASS",
+        "terminal_state": "succeeded",
+        "answer_completeness_status": "complete_at_requested_help",
+        "completed_cited_answer": true,
+        "citation_checked": true,
+        "refresh_persisted": true,
+        "browser_leg_passed": true,
+        "native_checked_completed": true,
+        "native_job_state": "succeeded",
+        "scientific_quality_acceptance": "NOT_ASSERTED",
+        "runtime_closed_status": "CLOSED"
+      },
+      "native_role_qualification_status": "PASS",
+      "input_hash_rows": [
+        {
+          "schema": "5703_week10_actual_model_input_hashes_v1",
+          "paired_leg_id": "A_baseline",
+          "source_version": "26afaa44371533d9a77f0e8aa8a51570c6027011e1d0e9d01c60c3562edd3adb",
+          "role": "teacher",
+          "purpose": "interactive_chat",
+          "wire_bytes": 41988,
+          "wire_payload_sha256": "62d38f263f4abc86d6d6f2d10269a76704e2d6d0f8101f4b580e3caec380a563",
+          "canonical_complete_payload_sha256": "04768d494078405abbf5d16f2d9012585cdb4bd2f3c9f509a5942a2fb300af06",
+          "messages_sha256": "c11885c0e744ed9e7223c7590c65c1173664440cfa3f2d45675a8d9feb371034",
+          "wire_controls_sha256": "5b923084ba41999537925b5f5b8c1d13e988106bab8cfd2cf1cb84a7be75b8ad",
+          "schema_sha256": "149a9433de28318e6c1d1174c06937762e7db073977ab125d48ae80232f4ae2b",
+          "actual_complete_payload_equal_to_A": null,
+          "checker_candidate_answer_difference_is_preserved": null,
+          "native_input": {
+            "ordered_evidence_sha256": "093a6ba3df89c00e57618443deac6dfbb295bc381ff65e25d4160fec3a684ed2",
+            "history_sha256": "84a13290505d1171c55a7c7068874094a2ef22a570a7d56e66ceeda84f9c4e3a",
+            "profile_sha256": "aa75d57aaafc67e475857635022d5a240e1a80f9393a2c790544d5d8757f5390",
+            "summary_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "prepared_query_sha256": "815d33774c0ec00edb81847d99ab266a97d2304d50057517d3a60e9b3489892a",
+            "resolved_query_sha256": "cda4359c6214d05e325a371dba86c2e5efc5ccfe7efacd3dde0b797b403f73d4",
+            "question_sha256": "9bb133d7438106b64fcd187e12e2bc803fc86adbe1b64d6ac2fd19f2c6ebd17f"
+          }
+        },
+        {
+          "schema": "5703_week10_actual_model_input_hashes_v1",
+          "paired_leg_id": "A_baseline",
+          "source_version": "26afaa44371533d9a77f0e8aa8a51570c6027011e1d0e9d01c60c3562edd3adb",
+          "role": "checker",
+          "purpose": "interactive_chat",
+          "wire_bytes": 42519,
+          "wire_payload_sha256": "e20e9cc94f68839d5126f9679c75a781149e0a2516e751a04773b3ae9b027810",
+          "canonical_complete_payload_sha256": "94b60fbd6c00a1fe458ece4f11c4648e1eaaf0dc96a35852bbd78cbdc850ba97",
+          "messages_sha256": "6ac3d18ad0da2d3948c2d80b81a51aaf70e42a60d73ae83b8d4b04a398456c79",
+          "wire_controls_sha256": "9106c8c5dfd60ef22fdae09f3bb25db67e4bd6fb6cfbdf7eccea249b89960eff",
+          "schema_sha256": "7988037e08d52662a1b232f049776a42b6d10ad5d896f1a26c8c912b3efd79d4",
+          "actual_complete_payload_equal_to_A": null,
+          "checker_candidate_answer_difference_is_preserved": null,
+          "native_input": {
+            "ordered_evidence_sha256": "093a6ba3df89c00e57618443deac6dfbb295bc381ff65e25d4160fec3a684ed2",
+            "history_sha256": "84a13290505d1171c55a7c7068874094a2ef22a570a7d56e66ceeda84f9c4e3a",
+            "profile_sha256": "aa75d57aaafc67e475857635022d5a240e1a80f9393a2c790544d5d8757f5390",
+            "summary_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "prepared_query_sha256": "815d33774c0ec00edb81847d99ab266a97d2304d50057517d3a60e9b3489892a",
+            "resolved_query_sha256": "cda4359c6214d05e325a371dba86c2e5efc5ccfe7efacd3dde0b797b403f73d4",
+            "question_sha256": "9bb133d7438106b64fcd187e12e2bc803fc86adbe1b64d6ac2fd19f2c6ebd17f"
+          }
+        }
+      ],
+      "adapter_rows": [
+        {
+          "slot": 1,
+          "request_submitted": true,
+          "model": "google/gemini-3.5-flash-lite",
+          "provider": "openai_compatible",
+          "native_local_error_code": null,
+          "latency_ms": 6031,
+          "diagnostic_stage": "completed",
+          "http_status": 200,
+          "known_cost_observed": true
+        },
+        {
+          "slot": 2,
+          "request_submitted": true,
+          "model": "google/gemini-3.5-flash-lite",
+          "provider": "openai_compatible",
+          "native_local_error_code": null,
+          "latency_ms": 3039,
+          "diagnostic_stage": "completed",
+          "http_status": 200,
+          "known_cost_observed": true
+        }
+      ],
+      "final_budget": {
+        "status": "READY",
+        "provider_post_count": 2,
+        "maximum_provider_post_count": 8,
+        "open_claims": 0,
+        "unknown_cost_count": 0,
+        "integrity_errors": 0,
+        "cleanup_pending": 0,
+        "fully_settled": true,
+        "stop_exists": false
+      }
+    },
+    "B_startup_prewarm": {
+      "source_version": "26afaa44371533d9a77f0e8aa8a51570c6027011e1d0e9d01c60c3562edd3adb",
+      "question_sha256": "c6437bbeb45b83c75a18d503e28e0b235a600f8f3884e23aba944c6bd6940caf",
+      "runtime_flag": true,
+      "startup_status": "PASS",
+      "same_Engine_as_native_run_once": true,
+      "root_process_launch_epoch_ms": 1791520448841.844,
+      "root_worker_ready_epoch_ms": 1791520462938.478,
+      "root_process_launch_to_worker_ready_ms": 14096.634033203125,
+      "controller_process_launch_to_worker_ready_ms": 14096.634033203125,
+      "runner_main_entry_to_worker_ready_ms": 13161.972800000513,
+      "local_model_warmup": {
+        "status": "PASS",
+        "query_sha256": "daa04b02895bc8112d80917330531e93d07c9305c42be075ded1f4a63a7da487",
+        "prewarm_total_ms": 4987.6858000006905,
+        "embedding_model_load_and_single_encode_ms": 4916.79110000041,
+        "reranker_model_load_and_single_pair_predict_ms": 70.88309999926423,
+        "native_model_instances_warm_after": true,
+        "query_result_cache_populated": false,
+        "query_different_from_measured_questions": true,
+        "provider_posts": 0,
+        "database_retrieval_calls": 0
+      },
+      "native_model_warmup_ms": 4987.674199999674,
+      "release_cache_prepare_wall_ms": 5760.193500000241,
+      "snapshot_startup_report": {
+        "status": "ready",
+        "cache_hit": false,
+        "validation_ms": 5702.0542999998725,
+        "startup_prepare_ms": 5760.162,
+        "visible_chunk_count": 10594,
+        "release_id_sha256": "541d9515e720f2b25011ecea178a58a1cbb7cdd6ec0acf78825b772edf986ace",
+        "epoch_sha256": "dbc6b4f6b51c64394b6ffcf4f1a7e05373e340655bf068d1b58cf20fb40ed5b6"
+      },
+      "runtime_cpu_threads": 4,
+      "native_cuda_allowed": true,
+      "retrieval_recorded_device": "cuda",
+      "retrieval_execution_device": "cuda",
+      "measured_query_vector_cache_hit": false,
+      "measured_release_cache": {
+        "version": "validated_release_cache_v1",
+        "hit": true,
+        "validation_ms": 3.619200000684941
+      },
+      "retrieval_stages": {
+        "query_embedding_ms": 28.099099999963073,
+        "dense_ms": 50.35429999952612,
+        "lexical_ms": 6.204900000739144,
+        "retrieval_total_ms": 113.99770000025455
+      },
+      "rerank_ms": 96.17230000003474,
+      "candidate_orders": {
+        "candidate_ids": {
+          "count": 20,
+          "sha256": "94544eb64d6445fa2111d54cc5a87ee64145f0e4743783d13197794192ee1030"
+        },
+        "submitted_candidate_ids": {
+          "count": 20,
+          "sha256": "94544eb64d6445fa2111d54cc5a87ee64145f0e4743783d13197794192ee1030"
+        },
+        "ranked_ids": {
+          "count": 20,
+          "sha256": "41b188b901064f19022cdea703bbd8ad32b33cc0ccd6a53a623b4732bf5580b4"
+        }
+      },
+      "full_DOM_observed_ms": 12146.5,
+      "accepted_complete_cited_answer_UI_ms": 12146.5,
+      "first_visible_answer_UI_ms": 12146.5,
+      "provider_TTFT_ms": null,
+      "terminal_UI_observation_ms": 12029.800048828125,
+      "worker_ready_to_Send_ms": 3204.721923828125,
+      "process_launch_to_complete_answer_ms": 29447.85595703125,
+      "worker_pipeline_observed_timing": {
+        "total_ms": 10902.969,
+        "generation_ms": 4932,
+        "checking_ms": 4272,
+        "token_count_ms": 0,
+        "model_total_ms": 9204,
+        "preparation_ms": 45.773,
+        "query_preparation_ms": 1.687,
+        "retrieval_ms": 220.196,
+        "teaching_plan_ms": 0.254,
+        "submission_to_worker_start_ms": 467.53,
+        "generation_wall_ms": 10425.536,
+        "publication_before_commit_ms": 198.83,
+        "worker_before_commit_ms": 11098.557,
+        "timing_scope": "worker_execution_before_answer_insert_v1"
+      },
+      "quality": {
+        "browser_followup_status": "PASS",
+        "terminal_state": "succeeded",
+        "answer_completeness_status": "complete_at_requested_help",
+        "completed_cited_answer": true,
+        "citation_checked": true,
+        "refresh_persisted": true,
+        "browser_leg_passed": true,
+        "native_checked_completed": true,
+        "native_job_state": "succeeded",
+        "scientific_quality_acceptance": "NOT_ASSERTED",
+        "runtime_closed_status": "CLOSED"
+      },
+      "native_role_qualification_status": "PASS",
+      "input_hash_rows": [
+        {
+          "schema": "5703_week10_actual_model_input_hashes_v1",
+          "paired_leg_id": "B_startup_prewarm",
+          "source_version": "26afaa44371533d9a77f0e8aa8a51570c6027011e1d0e9d01c60c3562edd3adb",
+          "role": "teacher",
+          "purpose": "interactive_chat",
+          "wire_bytes": 41988,
+          "wire_payload_sha256": "62d38f263f4abc86d6d6f2d10269a76704e2d6d0f8101f4b580e3caec380a563",
+          "canonical_complete_payload_sha256": "04768d494078405abbf5d16f2d9012585cdb4bd2f3c9f509a5942a2fb300af06",
+          "messages_sha256": "c11885c0e744ed9e7223c7590c65c1173664440cfa3f2d45675a8d9feb371034",
+          "wire_controls_sha256": "5b923084ba41999537925b5f5b8c1d13e988106bab8cfd2cf1cb84a7be75b8ad",
+          "schema_sha256": "149a9433de28318e6c1d1174c06937762e7db073977ab125d48ae80232f4ae2b",
+          "actual_complete_payload_equal_to_A": true,
+          "checker_candidate_answer_difference_is_preserved": false,
+          "native_input": {
+            "ordered_evidence_sha256": "093a6ba3df89c00e57618443deac6dfbb295bc381ff65e25d4160fec3a684ed2",
+            "history_sha256": "84a13290505d1171c55a7c7068874094a2ef22a570a7d56e66ceeda84f9c4e3a",
+            "profile_sha256": "aa75d57aaafc67e475857635022d5a240e1a80f9393a2c790544d5d8757f5390",
+            "summary_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "prepared_query_sha256": "815d33774c0ec00edb81847d99ab266a97d2304d50057517d3a60e9b3489892a",
+            "resolved_query_sha256": "cda4359c6214d05e325a371dba86c2e5efc5ccfe7efacd3dde0b797b403f73d4",
+            "question_sha256": "9bb133d7438106b64fcd187e12e2bc803fc86adbe1b64d6ac2fd19f2c6ebd17f"
+          }
+        },
+        {
+          "schema": "5703_week10_actual_model_input_hashes_v1",
+          "paired_leg_id": "B_startup_prewarm",
+          "source_version": "26afaa44371533d9a77f0e8aa8a51570c6027011e1d0e9d01c60c3562edd3adb",
+          "role": "checker",
+          "purpose": "interactive_chat",
+          "wire_bytes": 43214,
+          "wire_payload_sha256": "8766d39c1dda162f078f9f0b922ac08b5c55d2c4ce8ee4c8d09bd1ac6f14305d",
+          "canonical_complete_payload_sha256": "ba86175dba0ac03a31dbf93c45f19dee773f546706d4b4c8868a37a667d74441",
+          "messages_sha256": "1fc4201a0016626e26e7649a8e8cd67f91eb9b3abccb609a32c598673b4b5209",
+          "wire_controls_sha256": "9106c8c5dfd60ef22fdae09f3bb25db67e4bd6fb6cfbdf7eccea249b89960eff",
+          "schema_sha256": "7988037e08d52662a1b232f049776a42b6d10ad5d896f1a26c8c912b3efd79d4",
+          "actual_complete_payload_equal_to_A": false,
+          "checker_candidate_answer_difference_is_preserved": true,
+          "native_input": {
+            "ordered_evidence_sha256": "093a6ba3df89c00e57618443deac6dfbb295bc381ff65e25d4160fec3a684ed2",
+            "history_sha256": "84a13290505d1171c55a7c7068874094a2ef22a570a7d56e66ceeda84f9c4e3a",
+            "profile_sha256": "aa75d57aaafc67e475857635022d5a240e1a80f9393a2c790544d5d8757f5390",
+            "summary_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "prepared_query_sha256": "815d33774c0ec00edb81847d99ab266a97d2304d50057517d3a60e9b3489892a",
+            "resolved_query_sha256": "cda4359c6214d05e325a371dba86c2e5efc5ccfe7efacd3dde0b797b403f73d4",
+            "question_sha256": "9bb133d7438106b64fcd187e12e2bc803fc86adbe1b64d6ac2fd19f2c6ebd17f"
+          }
+        }
+      ],
+      "adapter_rows": [
+        {
+          "slot": 3,
+          "request_submitted": true,
+          "model": "google/gemini-3.5-flash-lite",
+          "provider": "openai_compatible",
+          "native_local_error_code": null,
+          "latency_ms": 4932,
+          "diagnostic_stage": "completed",
+          "http_status": 200,
+          "known_cost_observed": true
+        },
+        {
+          "slot": 4,
+          "request_submitted": true,
+          "model": "google/gemini-3.5-flash-lite",
+          "provider": "openai_compatible",
+          "native_local_error_code": null,
+          "latency_ms": 4272,
+          "diagnostic_stage": "completed",
+          "http_status": 200,
+          "known_cost_observed": true
+        }
+      ],
+      "final_budget": {
+        "status": "READY",
+        "provider_post_count": 4,
+        "maximum_provider_post_count": 8,
+        "open_claims": 0,
+        "unknown_cost_count": 0,
+        "integrity_errors": 0,
+        "cleanup_pending": 0,
+        "fully_settled": true,
+        "stop_exists": false
+      }
+    }
+  },
+  "paired_input_checks": {
+    "initial_generator_complete_input_equalities": {
+      "wire_payload_sha256": true,
+      "canonical_complete_payload_sha256": true,
+      "messages_sha256": true,
+      "wire_controls_sha256": true,
+      "schema_sha256": true,
+      "ordered_evidence_sha256": true,
+      "history_sha256": true,
+      "profile_sha256": true,
+      "summary_sha256": true,
+      "question_sha256": true,
+      "resolved_query_sha256": true,
+      "prepared_query_sha256_equal_observed_separately": true
+    },
+    "initial_generator_matched": true,
+    "candidate_and_ranking_order_equalities": {
+      "candidate_ids": true,
+      "submitted_candidate_ids": true,
+      "ranked_ids": true
+    },
+    "startup_flag_false_then_true": true,
+    "same_authored_model_warmup_query_sha256": true,
+    "actual_environment_and_cache_conditions": {
+      "same_Engine_for_startup_and_worker_both": true,
+      "measured_query_vector_cache_miss_both": true,
+      "measured_query_result_not_prewarmed_both": true,
+      "local_model_instances_warm_both": true,
+      "startup_and_local_model_warmup_status_both_PASS": true,
+      "CPU_threads_equal": true,
+      "native_CUDA_execution_both": true,
+      "question_sha256_equal": true,
+      "browser_source_version_equal": true
+    },
+    "checker_full_wire_hashes": [
+      {
+        "ordinal": 1,
+        "A_wire_payload_sha256": "e20e9cc94f68839d5126f9679c75a781149e0a2516e751a04773b3ae9b027810",
+        "B_wire_payload_sha256": "8766d39c1dda162f078f9f0b922ac08b5c55d2c4ce8ee4c8d09bd1ac6f14305d",
+        "complete_wire_equal": false,
+        "difference_preserved_not_coerced_to_equal": true
+      }
+    ],
+    "all_checker_and_repair_complete_hash_rows_preserved_per_leg": true
+  },
+  "new_physical_claim_accounting": {
+    "physical_started_claims_observed": 4,
+    "maximum8": 8,
+    "maximum_per_leg4": 4,
+    "known_API_cost_subtotal_USD": "0.01936904",
+    "new_UNKNOWN_count": 0,
+    "new_open_claims": 0,
+    "new_UNKNOWN_or_open_conservative_full_holds_USD": "0",
+    "authorized_and_retained_whole_allocation_USD": "0.24000000",
+    "failure_or_UNKNOWN_not_assumed_zero_cost": true,
+    "calls": [
+      {
+        "slot": 1,
+        "paired_leg_id": "A_baseline",
+        "role": "teacher",
+        "purpose": "interactive_chat",
+        "wire_sha256": "62d38f263f4abc86d6d6f2d10269a76704e2d6d0f8101f4b580e3caec380a563",
+        "wire_bytes": 41988,
+        "output_cap": 2048,
+        "finished_status": "KNOWN_COST_RECORDED",
+        "native_errorcode": null,
+        "known_API_cost_USD": "0.0065769",
+        "conservative_UNKNOWN_or_open_full_hold_USD": "0.00000000",
+        "usage_safe": {
+          "completion_tokens": 1374,
+          "prompt_tokens": 10473,
+          "reasoning_tokens": 1147,
+          "total_tokens": 11847
+        },
+        "input_metadata_hash_matches": 1,
+        "observed_adapter_records": [
+          {
+            "slot": 1,
+            "request_submitted": true,
+            "model": "google/gemini-3.5-flash-lite",
+            "provider": "openai_compatible",
+            "native_local_error_code": null,
+            "latency_ms": 6031,
+            "diagnostic_stage": "completed",
+            "http_status": 200,
+            "known_cost_observed": true
+          }
+        ]
+      },
+      {
+        "slot": 2,
+        "paired_leg_id": "A_baseline",
+        "role": "checker",
+        "purpose": "interactive_chat",
+        "wire_sha256": "e20e9cc94f68839d5126f9679c75a781149e0a2516e751a04773b3ae9b027810",
+        "wire_bytes": 42519,
+        "output_cap": 4096,
+        "finished_status": "KNOWN_COST_RECORDED",
+        "native_errorcode": null,
+        "known_API_cost_USD": "0.004279",
+        "conservative_UNKNOWN_or_open_full_hold_USD": "0.00000000",
+        "usage_safe": {
+          "completion_tokens": 598,
+          "prompt_tokens": 9280,
+          "reasoning_tokens": 0,
+          "total_tokens": 9878
+        },
+        "input_metadata_hash_matches": 1,
+        "observed_adapter_records": [
+          {
+            "slot": 2,
+            "request_submitted": true,
+            "model": "google/gemini-3.5-flash-lite",
+            "provider": "openai_compatible",
+            "native_local_error_code": null,
+            "latency_ms": 3039,
+            "diagnostic_stage": "completed",
+            "http_status": 200,
+            "known_cost_observed": true
+          }
+        ]
+      },
+      {
+        "slot": 3,
+        "paired_leg_id": "B_startup_prewarm",
+        "role": "teacher",
+        "purpose": "interactive_chat",
+        "wire_sha256": "62d38f263f4abc86d6d6f2d10269a76704e2d6d0f8101f4b580e3caec380a563",
+        "wire_bytes": 41988,
+        "output_cap": 2048,
+        "finished_status": "KNOWN_COST_RECORDED",
+        "native_errorcode": null,
+        "known_API_cost_USD": "0.00305234",
+        "conservative_UNKNOWN_or_open_full_hold_USD": "0.00000000",
+        "usage_safe": {
+          "completion_tokens": 1058,
+          "prompt_tokens": 10473,
+          "reasoning_tokens": 830,
+          "total_tokens": 11531
+        },
+        "input_metadata_hash_matches": 1,
+        "observed_adapter_records": [
+          {
+            "slot": 3,
+            "request_submitted": true,
+            "model": "google/gemini-3.5-flash-lite",
+            "provider": "openai_compatible",
+            "native_local_error_code": null,
+            "latency_ms": 4932,
+            "diagnostic_stage": "completed",
+            "http_status": 200,
+            "known_cost_observed": true
+          }
+        ]
+      },
+      {
+        "slot": 4,
+        "paired_leg_id": "B_startup_prewarm",
+        "role": "checker",
+        "purpose": "interactive_chat",
+        "wire_sha256": "8766d39c1dda162f078f9f0b922ac08b5c55d2c4ce8ee4c8d09bd1ac6f14305d",
+        "wire_bytes": 43214,
+        "output_cap": 4096,
+        "finished_status": "KNOWN_COST_RECORDED",
+        "native_errorcode": null,
+        "known_API_cost_USD": "0.0054608",
+        "conservative_UNKNOWN_or_open_full_hold_USD": "0.00000000",
+        "usage_safe": {
+          "completion_tokens": 1049,
+          "prompt_tokens": 9461,
+          "reasoning_tokens": 0,
+          "total_tokens": 10510
+        },
+        "input_metadata_hash_matches": 1,
+        "observed_adapter_records": [
+          {
+            "slot": 4,
+            "request_submitted": true,
+            "model": "google/gemini-3.5-flash-lite",
+            "provider": "openai_compatible",
+            "native_local_error_code": null,
+            "latency_ms": 4272,
+            "diagnostic_stage": "completed",
+            "http_status": 200,
+            "known_cost_observed": true
+          }
+        ]
+      }
+    ]
+  },
+  "historical_constants_unchanged_no_ledger_read_or_write": {
+    "old_project_known_API_cost_USD": "0.58138393",
+    "old_UNKNOWN_count": 14,
+    "all_old_full_holds_preserved": true,
+    "actual_total_including_old_UNKNOWN_USD": null,
+    "account_or_invoice_balance": null
+  },
+  "descriptive_full_UI_delta_if_two_accepted_completions": {
+    "B_minus_A_full_UI_ms": -6567.799999998882,
+    "descriptive_change_fraction": -0.35095087713669626,
+    "causal_cache_attribution": false
+  },
+  "limits": [
+    "n=1; fixed A then B; no p95, SLA, model superiority or held-out quality claim.",
+    "OS pagecache is not reset or randomized; total pipeline difference cannot be attributed purely to cache.",
+    "Full DOM availability includes browser sampling and is not provider TTFT or simultaneous visibility of every glyph.",
+    "Startup, local-model warmup and ready-to-Send time remain separate and part of total user journey.",
+    "Controller outer startup/browser/cleanup deadlines may censor a run before internal browser deadlines; no complete answer time is fabricated.",
+    "Native checked/citation/refresh gates are observed operational status; independent scientific quality remains unasserted.",
+    "Input metadata is recorded before physical claim: unmatched prewire metadata is not invented as a billed POST."
+  ],
+  "source_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\ROOT_NATIVE_PAIR_CONTROLLER_ACTUAL06.json",
+      "bytes": 9640,
+      "sha256": "aeb9a2f50c5865e5a995eecabb6a3dd7e80293f6710908c12b7df7e1de322d62"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\browser-A_baseline-repair06\\real-browser-live-qa-receipt01.json",
+      "bytes": 22088,
+      "sha256": "cc5b9fba363fea9af48815479c599ad73ed5fa437076d8141c7e4ff2b85ca435"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-A_baseline-repair06\\runtime-closed-public01.json",
+      "bytes": 1197,
+      "sha256": "1234c421c9c4d68f12f0938c03cac460f06d5d5dee11202cdaef3022398e6ed9"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-A_baseline-repair06\\worker-startup-preparation-public01.json",
+      "bytes": 1084,
+      "sha256": "06ed9af599fdb80ad0a4290d2df30c80111efdf8df75e4f1c18f3637989a0041"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-A_baseline-repair06\\native-prewarm-public01.json",
+      "bytes": 1148,
+      "sha256": "c07bc3c2387d3251cab7321ab627b2fb4b12fa0c7800c237e1f893653c071ebe"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-A_baseline-repair06\\native-model-inputs-public01.json",
+      "bytes": 1165,
+      "sha256": "7cb6eaa6d5e5346ef105a5c71d1a19529f94815a2cafdbd5ab8702dbae1b92ac"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-A_baseline-repair06\\role-qualification-public01.json",
+      "bytes": 5143,
+      "sha256": "346a909afc205f2111a348b3cc8d54a1fc835581462102bce4a726d3b7f13ceb"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-A_baseline-repair06\\budget-status-public01.json",
+      "bytes": 1152,
+      "sha256": "7caa92578e74386c8f6e2289e3118a545dc6d62a1e3549a8ed8d275a58e7fb19"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-A_baseline-repair06\\actual-model-inputs-public01.jsonl",
+      "bytes": 2926,
+      "sha256": "2808ea004e6c82ad6b6820a8b3daf0d74f9a9b9ecd927e09ea2ebe06d3fa8126"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-A_baseline-repair06\\adapter-public01.jsonl",
+      "bytes": 820,
+      "sha256": "09cc1303b631f2b267bca484e2dd24468143973da3adc87a86f6d0333c419442"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-A_baseline-repair06\\native-retrieval-b21fbd75-af00-49f6-95cd-2ff3b0a8fc2d-public01.json",
+      "bytes": 5258,
+      "sha256": "d31ad45f28565980900449bc931e9fe80330b4e60a213ed8daa8253d1c8913cb"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\browser-B_startup_prewarm-repair06\\real-browser-live-qa-receipt01.json",
+      "bytes": 23510,
+      "sha256": "3c5f4e07e9666af05b11d2cfba47bdf8deb2bdb0f532c673ad2773e375c96e07"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-B_startup_prewarm-repair06\\runtime-closed-public01.json",
+      "bytes": 1204,
+      "sha256": "6231b0a654b81c1639dd903fa685d8fb7feaeb2527d1b80a8fa08b9b7d357e89"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-B_startup_prewarm-repair06\\worker-startup-preparation-public01.json",
+      "bytes": 1625,
+      "sha256": "c18c16aec1c3d71ad4bea503050a588ba02a3ea0edbdbf7024c3a5fe4c6e6498"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-B_startup_prewarm-repair06\\native-prewarm-public01.json",
+      "bytes": 1148,
+      "sha256": "11dfe40a2af1aee3fa153808af09a8e727eab5283201ca6099b2895a51e5a089"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-B_startup_prewarm-repair06\\native-model-inputs-public01.json",
+      "bytes": 1165,
+      "sha256": "7cb6eaa6d5e5346ef105a5c71d1a19529f94815a2cafdbd5ab8702dbae1b92ac"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-B_startup_prewarm-repair06\\role-qualification-public01.json",
+      "bytes": 5143,
+      "sha256": "346a909afc205f2111a348b3cc8d54a1fc835581462102bce4a726d3b7f13ceb"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-B_startup_prewarm-repair06\\budget-status-public01.json",
+      "bytes": 1205,
+      "sha256": "5d25f73c8094331bc67f7991e852e6d70ca772027b211b9fd809e310ff7ed595"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-B_startup_prewarm-repair06\\actual-model-inputs-public01.jsonl",
+      "bytes": 3664,
+      "sha256": "ac7b5485bb60eacdbf93c65f93b59b328670107f45223dd6397d2f47168f67cc"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-B_startup_prewarm-repair06\\adapter-public01.jsonl",
+      "bytes": 820,
+      "sha256": "a22cb91ab7fb28e723cfd79ed93cc8063f4208a119af6b4f4a35ec9c0b63ae7d"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-B_startup_prewarm-repair06\\native-retrieval-306e2c45-d6ae-4e01-aebd-04a86715c9db-public01.json",
+      "bytes": 5258,
+      "sha256": "b600d197f2eda186c266fde387d221a80b7de3d8f65ef85419ceab2d90ada906"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-pair06\\slot-01-started01.json",
+      "bytes": 1193,
+      "sha256": "e325aa493448ac60c55e79e782fa35cafc769a3786a2bd73ce0d9f8f2dd81a41"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-pair06\\slot-01-finished01.json",
+      "bytes": 694,
+      "sha256": "df59f97272d39d23fe0392c15615fabd480e816e58ded33d0e160c8f6a6fbd65"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-pair06\\slot-02-started01.json",
+      "bytes": 1193,
+      "sha256": "0e33ec856517da4827a17f74e815db093693018f4ebb7e0ccd820906340a2986"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-pair06\\slot-02-finished01.json",
+      "bytes": 687,
+      "sha256": "e058791a43854a8c24940d6b9a3e934a87a501fe6518856afcdc70b6174ee9f9"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-pair06\\slot-03-started01.json",
+      "bytes": 1200,
+      "sha256": "ead06635fedef62d8640bace7684d41b61150147b038a8163cd5eaeacca536ab"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-pair06\\slot-03-finished01.json",
+      "bytes": 694,
+      "sha256": "43f5bef8270d7a9c6f2c245a00207684860dd6cfca19416dd8518549e12273ec"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-pair06\\slot-04-started01.json",
+      "bytes": 1200,
+      "sha256": "939eb85b8a9dc5623fef08aa2a251d57d269cc665e72fa6ba562cb29145fec2f"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-pair06\\slot-04-finished01.json",
+      "bytes": 690,
+      "sha256": "f5c62fdde76bcf73e214b53f1110dc8fa5f631281cae0c1d3cda9b6048b86627"
+    }
+  ],
+  "actions": {
+    "provider_API_DB_or_credential_access": 0,
+    "old_file_or_ledger_writes": 0,
+    "create_only_output_files": 2
+  }
+}

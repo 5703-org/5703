@@ -1,0 +1,424 @@
+{
+  "schema": "phase88_independent_selected_case_quality_review_v1",
+  "created_utc": "2026-10-11T22:57:31.123270+00:00",
+  "status": "REVIEW_COMPLETE_WITH_ONE_SAVED_ANSWER_QA_PASS",
+  "scope": "Cases03/07/11/12 only, not a full phase denominator or quality superiority estimate",
+  "case_results": [
+    {
+      "case_id": "case03",
+      "question_id": "development85_03",
+      "question_sha256": "79e10aea43d34d5ec92aaa1d42a4123f94c4991e83cbfa6be3ae55e97891ffe5",
+      "scope_sha256": "7d1a65ae348c671b188900cc5ab985d1a55d2f08d0df3ea202b2fa6cf4aa8c52",
+      "API_status": "API_COMPLETED",
+      "response_type": "answer",
+      "published_factual_answer": true,
+      "own_threads_closed": true,
+      "old_five_metadata_unchanged": true,
+      "finance": {
+        "actual_posts": 2,
+        "known_cost_USD": "0.0299954",
+        "UNKNOWN_full_hold_USD": "0",
+        "closure": "CLOSED_NUMERIC_NO_UNKNOWN"
+      },
+      "latency": {
+        "API_send_to_terminal_ms": 30300.241999997525,
+        "API_send_to_complete_response_ms": 30419.423500003177,
+        "DOM_n": 0,
+        "send_to_complete_DOM_ms": null,
+        "page_sample_qualified": false
+      },
+      "teacher_answer_text_sha256_UTF8": "cc6fb1f3814761c669c0d0fdcab225286fcdb87b0b66f3bd6045d4d375f61a24",
+      "release_id": "4f11bd70-a486-4d16-b216-78cfe499530a",
+      "checker_finish_reason": "stop",
+      "checker_error_code": null,
+      "checker_hydrated_full_sha256": "24528e1d2b6ecfb732cc97dbfebad841bc8f317076137df93279dbf2b6d9bfcb",
+      "checker_context_sha256": "58e60108510e274c188150429a9ea650d48c55065c36613de1fa0672a49ccb0b",
+      "independent_QA": "FAIL",
+      "core_facet_verdicts": {
+        "Q03_F1": "COMPLETE",
+        "Q03_F2": "COMPLETE",
+        "Q03_F3": "PARTIAL_EXPLICIT_ACTIVATOR_ACTIVITY_DIRECTION"
+      },
+      "intrinsic_scientific_direction_error_observed": false,
+      "original_application_published_after_reported_semantic_gate_pass": true,
+      "independent_semantic_counterexamples": [
+        {
+          "type": "OWN_FULL_AND_SELECTED_PROOF_GAP",
+          "claim_id": "claim_c53b1f738cd5fd6627bc916f_1",
+          "clause": "inhibitor binds other than the active site",
+          "own_evidence": "ev_001",
+          "actual_selected_fragment_ids": [
+            "F001",
+            "F004",
+            "F007"
+          ],
+          "own_full_fragment_ids": "F001-F009",
+          "reason": "Selected fragments describe conformational/affinity/activity effects; the full own source states the away-location for activators only, not inhibitors.",
+          "correct_proof_elsewhere_current_packet": "ev_005/F040 exists but is not this claim own binding",
+          "corpus_or_retrieval_unavailability": false
+        },
+        {
+          "type": "REQUIRED_FACET_PARTIAL",
+          "fact_id": "Q03_F3",
+          "reason": "Activators explicitly raise affinity/better fit; no explicit mapping to can enhance enzyme activity. General effectors may increase/decrease is insufficient for the requested contrast."
+        }
+      ],
+      "bare_No_prefix_punished_as_uncited_fact": false,
+      "page_candidate_eligible": false
+    },
+    {
+      "case_id": "case07",
+      "question_id": "development85_07",
+      "question_sha256": "bd615ce859d72da72075a72c25ffad9a476e20e8bd3293850cb705775620fafc",
+      "scope_sha256": "640614dc687f701a3d4c97fadd850f816b69f3697827a3fb510d8e9744844a05",
+      "API_status": "API_FAILED",
+      "response_type": null,
+      "published_factual_answer": false,
+      "own_threads_closed": true,
+      "old_five_metadata_unchanged": true,
+      "finance": {
+        "actual_posts": 2,
+        "known_cost_USD": "0.0307790",
+        "UNKNOWN_full_hold_USD": "0",
+        "closure": "CLOSED_NUMERIC_NO_UNKNOWN"
+      },
+      "latency": {
+        "API_send_to_terminal_ms": 28624.17540000024,
+        "API_send_to_complete_response_ms": null,
+        "DOM_n": 0,
+        "send_to_complete_DOM_ms": null,
+        "page_sample_qualified": false
+      },
+      "teacher_answer_text_sha256_UTF8": "0757ac6891181b8d35b72f8db1c1ee6d4d1b3d4e32d92f768c02571161493a14",
+      "release_id": "4f11bd70-a486-4d16-b216-78cfe499530a",
+      "checker_finish_reason": "length",
+      "checker_error_code": "OUTPUT_TRUNCATED",
+      "checker_hydrated_full_sha256": null,
+      "checker_context_sha256": "2233e55c4e2a589c4cc3187e9e0b114a854de4a0341ab233d0884d2d763bdfe8",
+      "independent_QA": "FAIL",
+      "core_facet_verdicts": {
+        "Q07_F1": "COMPLETE",
+        "Q07_F2": "COMPLETE",
+        "Q07_F3": "COMPLETE"
+      },
+      "teacher_scientific_direction_error_observed": true,
+      "independent_proof_counterexamples": [
+        {
+          "type": "SUBJECT_OBJECT_RELATION_REVERSED",
+          "claim_id": "claim_956d6897f3cb0c0b0ee62b3b_1",
+          "own_evidence": "ev_001",
+          "source_fragment_id": "F001",
+          "teacher_relation": {
+            "recognizer": "stop codon",
+            "recognized": "release factor"
+          },
+          "source_correct_relation": {
+            "recognizer": "protein release factor",
+            "recognized": "nonsense/stop codon"
+          },
+          "tRNA_resemblance_does_not_repair_relation": true
+        },
+        {
+          "type": "UNCITED_SCIENTIFIC_SUMMARY",
+          "claim_id": "claim_2a4962a6bec83c607bf81bf3_1",
+          "actual_own_citations": []
+        }
+      ],
+      "model_semantic_verdict": "UNAVAILABLE_TRUNCATED_BEFORE_HYDRATION",
+      "no_claim_of_checker_acceptance_or_semantic_refusal": true,
+      "common_transport_failure": {
+        "wire_max_tokens": 8192,
+        "wire_reasoning_effort": "high",
+        "output_tokens": 8188,
+        "reasoning_tokens": 6647,
+        "output_minus_reasoning_tokens": 1541,
+        "raw_chars": 3726,
+        "interpretation": "Actual length truncation despite higher cap; raw hints are not a validated judgement and no LOW efficacy is inferred."
+      },
+      "page_candidate_eligible": false
+    },
+    {
+      "case_id": "case11",
+      "question_id": "phase88_crossing_over_translocation_fresh",
+      "question_sha256": "41fb4b0c4eddae80cc6d3a96fef30336925ff2c2604140aaa4fbabbb9aa0a0c2",
+      "scope_sha256": "db668fd499b076df534a6c1929c30a5b88c608131fe20055b3241686b8728138",
+      "API_status": "API_COMPLETED",
+      "response_type": "clarification",
+      "published_factual_answer": false,
+      "own_threads_closed": true,
+      "old_five_metadata_unchanged": true,
+      "finance": {
+        "actual_posts": 0,
+        "known_cost_USD": "0",
+        "UNKNOWN_full_hold_USD": "0",
+        "closure": "CLOSED_NUMERIC_NO_UNKNOWN"
+      },
+      "latency": {
+        "API_send_to_terminal_ms": 423.0002999975113,
+        "API_send_to_complete_response_ms": 527.0448000010219,
+        "DOM_n": 0,
+        "send_to_complete_DOM_ms": null,
+        "page_sample_qualified": false
+      },
+      "independent_QA": "NOT_ASSESSED_NO_MODEL_FACTUAL_ANSWER",
+      "requested_factual_delivery": "FAIL_CLARIFICATION_ONLY",
+      "science_facets": "UNASSESSED",
+      "normal_model_outcomes_present": false,
+      "mock_established": false,
+      "specific_preparation_branch_cause_recovered_in_this_review": false,
+      "sealed_rubric_opened": false,
+      "frozen_gold_remains_permanently_sealed": true,
+      "API_completed_answer_counter_is_not_factual_completion_qualification": true,
+      "page_candidate_eligible": false
+    },
+    {
+      "case_id": "case12",
+      "question_id": "fresh_lipid_structure88_03",
+      "question_sha256": "17eb147480f7a85cbeec585328a7bbefe6ce70a755c23cfa839bea2eabde49af",
+      "scope_sha256": "fb6f058c10d5e187124ff0d23fc959077c66a4f7c9a5fdbe8c7dac9c4c9590fc",
+      "API_status": "API_COMPLETED",
+      "response_type": "answer",
+      "published_factual_answer": true,
+      "own_threads_closed": true,
+      "old_five_metadata_unchanged": true,
+      "finance": {
+        "actual_posts": 2,
+        "known_cost_USD": "0.0211086",
+        "UNKNOWN_full_hold_USD": "0",
+        "closure": "CLOSED_NUMERIC_NO_UNKNOWN"
+      },
+      "latency": {
+        "API_send_to_terminal_ms": 19068.814399994153,
+        "API_send_to_complete_response_ms": 19194.283899996663,
+        "DOM_n": 0,
+        "send_to_complete_DOM_ms": null,
+        "page_sample_qualified": false
+      },
+      "teacher_answer_text_sha256_UTF8": "70a507ed944b399a81b758724e426d228ac55829659159da7b8ec5aa67d0a693",
+      "release_id": "4f11bd70-a486-4d16-b216-78cfe499530a",
+      "checker_finish_reason": "stop",
+      "checker_error_code": null,
+      "checker_hydrated_full_sha256": "ca24ddbb2aed0b08629fe9a74fa963e7b60c6313f62e3ba1d0b3453fd2e1594b",
+      "checker_context_sha256": "224902b6c74226b55422698b6350e29390bbd7356742cc74a7864e82392d3494",
+      "independent_QA": "PASS",
+      "core_facet_verdicts": {
+        "Q12_F1": "COMPLETE",
+        "Q12_F2": "COMPLETE",
+        "Q12_F3": "COMPLETE",
+        "Q12_F4": "COMPLETE"
+      },
+      "actual_claims_supported": 4,
+      "actual_units_supported": 12,
+      "no_uncited_scientific_claim": true,
+      "intrinsic_scientific_critical_error_observed": false,
+      "selected_proof_summary": [
+        {
+          "claim_id": "claim_97c7a421435dc2c3a020df8e_1",
+          "unit_support": [
+            "F062",
+            "F062",
+            "F063"
+          ]
+        },
+        {
+          "claim_id": "claim_6f06443a239b1fa02a6da4e0_1",
+          "unit_support": [
+            "F008",
+            "F008",
+            "F008"
+          ],
+          "bounded_application": "2 satisfies one-or-more, hydrocarbon C-C context retained"
+        },
+        {
+          "claim_id": "claim_68e510ce8edc754d9575a214_1",
+          "unit_support": [
+            "F008",
+            "F008",
+            "F008",
+            "F066"
+          ]
+        },
+        {
+          "claim_id": "claim_c5d4674c22bb7f28f9e68463_1",
+          "unit_support": [
+            "F004",
+            "F011"
+          ]
+        }
+      ],
+      "checker_requirement_record_limitation": "R004 quotes F004 only, not membrane F011. Actual answer own C004 units separately supported by F004/F011; no silent saved-judgement repair.",
+      "public_DTO_canonical_sha256": "bfe48caf86d233c980face0f0d3bc8ebd10d9486c03b3fedd7eebe1d5a8003e9",
+      "exact_saved_answer_only_eligibility_memo": {
+        "path": "5703-checker88-quality/case12-eligibility88.json",
+        "bytes": 9269,
+        "sha256": "4bdcd508e94a5ce99966c2cf4ec15a325b08f3bd71e6f87f889592edda493c7f"
+      },
+      "candidate_preparation_eligible": true,
+      "any_actual_fresh_page_response_requires_new_independent_review": true,
+      "page_latency_already_qualified": false
+    }
+  ],
+  "selected_subset_counts": {
+    "cases": 4,
+    "independent_answer_QA_PASS": 1,
+    "independent_answer_QA_FAIL": 2,
+    "unassessed_science_clarification_only": 1,
+    "actual_model_posts": 6,
+    "known_model_cost_USD": "0.0818830",
+    "UNKNOWN_full_hold_USD": "0",
+    "DOM_sample_n": 0
+  },
+  "period_finance_snapshot_at_case12_final_receipt": {
+    "actual_posts": 18,
+    "known_cost_USD": "0.1954720",
+    "UNKNOWN_full_hold_USD": "0",
+    "source": {
+      "path": "5703-checker88-runtime/case12/native-provider70/final-receipt.json",
+      "bytes": 1529,
+      "sha256": "de1dbd2a818ccf83b0fd489cf4f3ed05cd3f4663fa4bdaae5d74fea6f676069b"
+    }
+  },
+  "review_method": [
+    "Prospective frozen rubrics for actual responses, independent exposed AI source assessment",
+    "Own adjacent citation bindings and actual selected source items, not source ID presence alone",
+    "Source/config/currentness metadata bound through actual public receipts; no additional DB or model calls",
+    "API status, codec hydration, and software test counts are separate from answer quality"
+  ],
+  "boundaries": {
+    "case11_rubric_remains_permanently_unopened": true,
+    "case12_rubric_opened_only_after_actual_closure": true,
+    "no_fresh_page_answer_prequalified": true,
+    "no_heldout_HumanGold_project_course_completion_or_default_enable_claim": true,
+    "no_paid_request_permission_granted": true,
+    "actual_DOM_or_p95_established": false
+  },
+  "inputs": [
+    {
+      "path": "5703-checker88-runtime/case03/journey-receipt88.json",
+      "bytes": 4076,
+      "sha256": "090a741733301f64fc0be7760ffbcf7c66e1104cccaf4419e6cc16ef5b87970d"
+    },
+    {
+      "path": "5703-checker88-runtime/case03/api-closure77.json",
+      "bytes": 1226,
+      "sha256": "a4dde376d4d6df9b119d7a60b7f07bbe8cd0618d9299cc093704cb815c3f35b3"
+    },
+    {
+      "path": "5703-checker88-runtime/case03/native-provider70/final-receipt.json",
+      "bytes": 1423,
+      "sha256": "5f69804fc77a7a14c54ac3f5035ad57cdb7b4f6068f262f5cadc8a56a616eae6"
+    },
+    {
+      "path": "5703-checker88-runtime/case03/native-provider70/slot-01-normal-outcome.json",
+      "bytes": 2614,
+      "sha256": "895aa18681dc937429eeaffa40b9476e3b945ec984f97ac1a692791c79539bc1"
+    },
+    {
+      "path": "5703-checker88-runtime/case03/native-provider70/slot-02-public-inputs.json",
+      "bytes": 178496,
+      "sha256": "397b8cd5a4613180d2e67d3f2812db3859936e9ff93dce410103611462366396"
+    },
+    {
+      "path": "5703-checker88-runtime/case03/native-provider70/slot-02-normal-outcome.json",
+      "bytes": 19111,
+      "sha256": "03c60c587d74679535d7567f2fad788547a7705463be4f153420fc5a143a82ea"
+    },
+    {
+      "path": "5703-checker88-runtime/case07/journey-receipt88.json",
+      "bytes": 1695,
+      "sha256": "21888f39659f6979709cf81637e98038e56d4120d37b8e0833bcacaecc1be932"
+    },
+    {
+      "path": "5703-checker88-runtime/case07/api-closure77.json",
+      "bytes": 1189,
+      "sha256": "becaf6ae15e1dd8cf1bcae2ea4a4d6e03c64dae487171bca8eeb214595fca3ad"
+    },
+    {
+      "path": "5703-checker88-runtime/case07/native-provider70/final-receipt.json",
+      "bytes": 1466,
+      "sha256": "9747475bf70a0b52ae7ac31573ccaf8294b638a875eba1b980229c8cbdb39333"
+    },
+    {
+      "path": "5703-checker88-runtime/case07/native-provider70/slot-01-normal-outcome.json",
+      "bytes": 2731,
+      "sha256": "6e4bc17ff2eb30f8ff166410b9af80db3d509e6006ae921c3efec2d1469f00a0"
+    },
+    {
+      "path": "5703-checker88-runtime/case07/native-provider70/slot-02-public-inputs.json",
+      "bytes": 176654,
+      "sha256": "4183b9a353d3b107f86256e014177c35fc5cc85cb8e651dd24d4ce2a39b29d79"
+    },
+    {
+      "path": "5703-checker88-runtime/case07/native-provider70/slot-02-normal-outcome.json",
+      "bytes": 10648,
+      "sha256": "7fc73f616b5cf3be35d4f457aaae88c6601a811dd762647074ee7d0d4fd8900e"
+    },
+    {
+      "path": "5703-checker88-runtime/case11/journey-receipt88.json",
+      "bytes": 2590,
+      "sha256": "5ba9b7fce6c2fedabd991eb7e879ef4bc3a22e54cbe4f97df252baf27700af38"
+    },
+    {
+      "path": "5703-checker88-runtime/case11/api-closure77.json",
+      "bytes": 1226,
+      "sha256": "9d82d08cad36bc3eb68267596ff49abdda2de6a901ed1b9849d6b5293326f611"
+    },
+    {
+      "path": "5703-checker88-runtime/case11/native-provider70/final-receipt.json",
+      "bytes": 1518,
+      "sha256": "e79d690d7317a8c14baad4967c8de697d43e5ef0e7acbff4b58cb010ca36b67c"
+    },
+    {
+      "path": "5703-checker88-runtime/case12/journey-receipt88.json",
+      "bytes": 3599,
+      "sha256": "567531c229b4d810612a8ae5b487375057e9f0b143130437374038e62d081bd2"
+    },
+    {
+      "path": "5703-checker88-runtime/case12/api-closure77.json",
+      "bytes": 1226,
+      "sha256": "41de320b1ad5e2f7fe576c1f0335252af3935e06930c638852cbe8fb287dadeb"
+    },
+    {
+      "path": "5703-checker88-runtime/case12/native-provider70/final-receipt.json",
+      "bytes": 1529,
+      "sha256": "de1dbd2a818ccf83b0fd489cf4f3ed05cd3f4663fa4bdaae5d74fea6f676069b"
+    },
+    {
+      "path": "5703-checker88-runtime/case12/native-provider70/slot-01-normal-outcome.json",
+      "bytes": 2129,
+      "sha256": "c1cacad6ca2d94ba71c2a8b3168031a196c336db03ccbee2d35df11938f74a7c"
+    },
+    {
+      "path": "5703-checker88-runtime/case12/native-provider70/slot-02-public-inputs.json",
+      "bytes": 165098,
+      "sha256": "b31913e91f4181752ee18d870c8936207b6586035cf077dd6a0344310e88c134"
+    },
+    {
+      "path": "5703-checker88-runtime/case12/native-provider70/slot-02-normal-outcome.json",
+      "bytes": 13274,
+      "sha256": "08840e4ddb9684620ee80e9ca9b213a85a0227a83f844ffe79796c17a3eab5c7"
+    },
+    {
+      "path": "5703-checker88-quality/case12-eligibility88.json",
+      "bytes": 9269,
+      "sha256": "4bdcd508e94a5ce99966c2cf4ec15a325b08f3bd71e6f87f889592edda493c7f"
+    },
+    {
+      "path": "5703-checker88-quality/fresh12-question88-public.json",
+      "bytes": 8493,
+      "sha256": "32f536b6451ceb96b2ca3c75ebc38e06aed5a54178e7ea09a23f5dfc012a5c90"
+    },
+    {
+      "path": "5703-checker88-quality/fresh12-rubric88-sealed.json",
+      "bytes": 7480,
+      "sha256": "afe43ad8774a42666d276b19667790d39ab352a8141f5595225ed1ba51c1a8ee"
+    }
+  ],
+  "review_execution": {
+    "Main_writes": 0,
+    "runtime_writes": 0,
+    "DB_auth_network_model_calls": 0,
+    "new_tests": 0,
+    "output_metadata_only_no_full_source_or_auth_copy": true
+  }
+}

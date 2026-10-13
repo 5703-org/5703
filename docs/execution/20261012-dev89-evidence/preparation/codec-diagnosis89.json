@@ -1,0 +1,963 @@
+{
+  "schema": "dev89_readonly_actual_codec_diagnosis_v1",
+  "created_utc": "2026-10-12T01:01:35.129584+00:00",
+  "status": "EXACT_ORIGINAL_OUTPUT_FAILURES_REPRODUCED",
+  "authorization_scope": "Pure offline actual public packet diagnosis only",
+  "summary": [
+    "case01 slots02/03 fail because C003/U02 selects valid own-allowlist fragments absent from its parent ci.fs; no Q/F alias mismatch observed.",
+    "case04 slot02 omits required parent status s in all eight textbook claims; unit statuses cannot supply this independent model verdict.",
+    "case04 slot03 strictly decodes and matches the original canonical hash, but its original unsupported numeric/uncited claims are retained; structural decoding is not semantic or scientific PASS.",
+    "case01 slot03 reclassifies uncited C001/C002 as supported general_knowledge; this remains a scientific/citation-risk observation, never a locally accepted repair.",
+    "case08 slot02 repeats the same own-parent selection inconsistency: C001/U03 selects F004, absent from parent-selected F002/F013; F004 still belongs to the own actual allowlist.",
+    "case08 slot03 uses the canonical key relation in all nine parent citation objects instead of the required wire key rl; each citation therefore has missing rl/extra relation and strict key decoding rejects it.",
+    "raw_compact_sha256 follows the provider definition: exact original UTF8 transport string. A different canonical JSON projection hash for case08 slot02 is normal formatting, not source mutation."
+  ],
+  "cases": [
+    {
+      "case_id": "case01",
+      "slot": 2,
+      "purpose": "joint_check",
+      "role": "checker",
+      "finish_reason": "stop",
+      "original_normal_error_code": "CHECKER_TRANSPORT_INVALID",
+      "context_descriptor": {
+        "version": "lossless_unit_findings_v1",
+        "context_sha256": "6dad527cce598b91438ae499ab398e55e5a089274cf99a76cb3dbb95873d2745",
+        "canonical_schema_sha256": "864212a5e636d2cadbc34328f431712a954c30130848a31e64e66e4bdedbc926",
+        "wire_codec_fingerprint": "afd794437b84cc1ccce43edb6c105b03e647c41892821cb30aca077ce7f29944",
+        "claim_count": 6,
+        "requirement_count": 2,
+        "fragment_count": 69,
+        "unit_count": 16,
+        "structural_projection_only": true,
+        "source_entailment_certified": false,
+        "original_full_validators_required": true
+      },
+      "reconstructed_context_matches_original": true,
+      "raw_compact_digest_matches_original": true,
+      "local_decode_success": false,
+      "exact_local_decode_exception": {
+        "type": "ValueError",
+        "message": "Unit evidence was not selected by its own parent",
+        "source_trace": [
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 646,
+            "function": "hydrate_findings"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 640,
+            "function": "_hydrate_findings"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 540,
+            "function": "_validate_original_fields"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 99,
+            "function": "_fail"
+          }
+        ]
+      },
+      "canonical_output_sha256": null,
+      "canonical_output_matches_original": null,
+      "required_schema_field_issues": [],
+      "unknown_claim_aliases": [],
+      "unknown_requirement_aliases": [],
+      "unknown_unit_fragment_aliases": [],
+      "quote_fragment_pointer_issues": [],
+      "foreign_actual_parent_selection": [],
+      "missing_or_duplicate_units": [],
+      "unit_parent_selection_mismatches": [
+        {
+          "claim": "C003",
+          "unit": "U02",
+          "unit_selected_fragment_ids": [
+            "F008",
+            "F009",
+            "F014"
+          ],
+          "parent_selected_fragment_ids": [
+            "F005",
+            "F007",
+            "F009",
+            "F011",
+            "F014"
+          ],
+          "unit_fragments_not_selected_by_parent": [
+            "F008"
+          ],
+          "offending_fragments_still_within_own_actual_allowlist": true,
+          "evidence_id_for_offending_fragments": {
+            "F008": "ev_001"
+          }
+        }
+      ],
+      "basis_and_uncited_claim_observations": [
+        {
+          "claim": "C001",
+          "declared_basis": "textbook",
+          "declared_status": "unsupported",
+          "actual_citation_ids": [],
+          "text": "No.",
+          "judgment_locally_reclassified": false
+        },
+        {
+          "claim": "C002",
+          "declared_basis": "textbook",
+          "declared_status": "unsupported",
+          "actual_citation_ids": [],
+          "text": "A molecule binding at an allosteric site does not necessarily inhibit an enzyme, because allosteric molecules can be either inhibitors or activators.",
+          "judgment_locally_reclassified": false
+        }
+      ],
+      "scientific_or_semantic_PASS_certified": false,
+      "full_source_packet_preserved": true,
+      "raw_or_hydrated_fields_edited": false,
+      "raw_compact_UTF8_sha256": "35e3f3019586301e064c353ee914c530837a8cca68c8e3dfb01c00f3b46f8f2c",
+      "JSON_canonical_projection_sha256": "35e3f3019586301e064c353ee914c530837a8cca68c8e3dfb01c00f3b46f8f2c"
+    },
+    {
+      "case_id": "case01",
+      "slot": 3,
+      "purpose": "checker_contract_repair",
+      "role": "checker",
+      "finish_reason": "stop",
+      "original_normal_error_code": "CHECKER_TRANSPORT_INVALID",
+      "context_descriptor": {
+        "version": "lossless_unit_findings_v1",
+        "context_sha256": "6dad527cce598b91438ae499ab398e55e5a089274cf99a76cb3dbb95873d2745",
+        "canonical_schema_sha256": "864212a5e636d2cadbc34328f431712a954c30130848a31e64e66e4bdedbc926",
+        "wire_codec_fingerprint": "afd794437b84cc1ccce43edb6c105b03e647c41892821cb30aca077ce7f29944",
+        "claim_count": 6,
+        "requirement_count": 2,
+        "fragment_count": 69,
+        "unit_count": 16,
+        "structural_projection_only": true,
+        "source_entailment_certified": false,
+        "original_full_validators_required": true
+      },
+      "reconstructed_context_matches_original": true,
+      "raw_compact_digest_matches_original": true,
+      "local_decode_success": false,
+      "exact_local_decode_exception": {
+        "type": "ValueError",
+        "message": "Unit evidence was not selected by its own parent",
+        "source_trace": [
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 646,
+            "function": "hydrate_findings"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 640,
+            "function": "_hydrate_findings"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 540,
+            "function": "_validate_original_fields"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 99,
+            "function": "_fail"
+          }
+        ]
+      },
+      "canonical_output_sha256": null,
+      "canonical_output_matches_original": null,
+      "required_schema_field_issues": [],
+      "unknown_claim_aliases": [],
+      "unknown_requirement_aliases": [],
+      "unknown_unit_fragment_aliases": [],
+      "quote_fragment_pointer_issues": [],
+      "foreign_actual_parent_selection": [],
+      "missing_or_duplicate_units": [],
+      "unit_parent_selection_mismatches": [
+        {
+          "claim": "C003",
+          "unit": "U02",
+          "unit_selected_fragment_ids": [
+            "F001",
+            "F008",
+            "F010",
+            "F014"
+          ],
+          "parent_selected_fragment_ids": [
+            "F009",
+            "F011"
+          ],
+          "unit_fragments_not_selected_by_parent": [
+            "F001",
+            "F008",
+            "F010",
+            "F014"
+          ],
+          "offending_fragments_still_within_own_actual_allowlist": true,
+          "evidence_id_for_offending_fragments": {
+            "F001": "ev_001",
+            "F008": "ev_001",
+            "F010": "ev_002",
+            "F014": "ev_002"
+          }
+        }
+      ],
+      "basis_and_uncited_claim_observations": [
+        {
+          "claim": "C001",
+          "declared_basis": "general_knowledge",
+          "declared_status": "supported",
+          "actual_citation_ids": [],
+          "text": "No.",
+          "judgment_locally_reclassified": false
+        },
+        {
+          "claim": "C002",
+          "declared_basis": "general_knowledge",
+          "declared_status": "supported",
+          "actual_citation_ids": [],
+          "text": "A molecule binding at an allosteric site does not necessarily inhibit an enzyme, because allosteric molecules can be either inhibitors or activators.",
+          "judgment_locally_reclassified": false
+        }
+      ],
+      "scientific_or_semantic_PASS_certified": false,
+      "full_source_packet_preserved": true,
+      "raw_or_hydrated_fields_edited": false,
+      "raw_compact_UTF8_sha256": "b1eaa7235a672d044b80356486ff009b1a74d7c2cf385f4a8fb4e234ae181dda",
+      "JSON_canonical_projection_sha256": "b1eaa7235a672d044b80356486ff009b1a74d7c2cf385f4a8fb4e234ae181dda"
+    },
+    {
+      "case_id": "case04",
+      "slot": 2,
+      "purpose": "joint_check",
+      "role": "checker",
+      "finish_reason": "stop",
+      "original_normal_error_code": "CHECKER_TRANSPORT_INVALID",
+      "context_descriptor": {
+        "version": "lossless_unit_findings_v1",
+        "context_sha256": "f15f63479d85728038e15a000bf279b01f83d7e4f41f6d13a4750b816b17db63",
+        "canonical_schema_sha256": "864212a5e636d2cadbc34328f431712a954c30130848a31e64e66e4bdedbc926",
+        "wire_codec_fingerprint": "01dcdcab275c7606f269e1bc1c97fe0c3e3f01bb22a280265de26ce2050c68d4",
+        "claim_count": 8,
+        "requirement_count": 3,
+        "fragment_count": 64,
+        "unit_count": 20,
+        "structural_projection_only": true,
+        "source_entailment_certified": false,
+        "original_full_validators_required": true
+      },
+      "reconstructed_context_matches_original": true,
+      "raw_compact_digest_matches_original": true,
+      "local_decode_success": false,
+      "exact_local_decode_exception": {
+        "type": "ValueError",
+        "message": "Missing or extra canonical object keys",
+        "source_trace": [
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 646,
+            "function": "hydrate_findings"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 640,
+            "function": "_hydrate_findings"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 496,
+            "function": "_validate_original_fields"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 489,
+            "function": "require_fields"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 494,
+            "function": "require_fields"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 484,
+            "function": "require_fields"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 469,
+            "function": "require_fields"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 487,
+            "function": "require_fields"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 120,
+            "function": "_exact_keys"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 99,
+            "function": "_fail"
+          }
+        ]
+      },
+      "canonical_output_sha256": null,
+      "canonical_output_matches_original": null,
+      "required_schema_field_issues": [
+        {
+          "path": "$.cs[0]",
+          "missing": [
+            "s"
+          ],
+          "extra": []
+        },
+        {
+          "path": "$.cs[1]",
+          "missing": [
+            "s"
+          ],
+          "extra": []
+        },
+        {
+          "path": "$.cs[2]",
+          "missing": [
+            "s"
+          ],
+          "extra": []
+        },
+        {
+          "path": "$.cs[3]",
+          "missing": [
+            "s"
+          ],
+          "extra": []
+        },
+        {
+          "path": "$.cs[4]",
+          "missing": [
+            "s"
+          ],
+          "extra": []
+        },
+        {
+          "path": "$.cs[5]",
+          "missing": [
+            "s"
+          ],
+          "extra": []
+        },
+        {
+          "path": "$.cs[6]",
+          "missing": [
+            "s"
+          ],
+          "extra": []
+        },
+        {
+          "path": "$.cs[7]",
+          "missing": [
+            "s"
+          ],
+          "extra": []
+        }
+      ],
+      "unknown_claim_aliases": [],
+      "unknown_requirement_aliases": [],
+      "unknown_unit_fragment_aliases": [],
+      "quote_fragment_pointer_issues": [],
+      "foreign_actual_parent_selection": [],
+      "missing_or_duplicate_units": [],
+      "unit_parent_selection_mismatches": [],
+      "basis_and_uncited_claim_observations": [
+        {
+          "claim": "C003",
+          "declared_basis": "textbook",
+          "declared_status": null,
+          "actual_citation_ids": [
+            "ev_006"
+          ],
+          "text": "Using your given values, V1 = 500 mL, T1 = 250 K, and T2 = 300 K: V2 = 500 mL × (300 K / 250 K) = 600 mL, where the kelvin units cancel and leave mL [ev_006].",
+          "judgment_locally_reclassified": false
+        },
+        {
+          "claim": "C006",
+          "declared_basis": "textbook",
+          "declared_status": null,
+          "actual_citation_ids": [],
+          "text": "If the final pressure were unknown and allowed to change, the temperatures and initial volume alone would not determine the final volume.",
+          "judgment_locally_reclassified": false
+        }
+      ],
+      "scientific_or_semantic_PASS_certified": false,
+      "full_source_packet_preserved": true,
+      "raw_or_hydrated_fields_edited": false,
+      "raw_compact_UTF8_sha256": "63649c41231dfb257de04a460e8af15b4b8a55dc9710dc936afde682c27237ed",
+      "JSON_canonical_projection_sha256": "63649c41231dfb257de04a460e8af15b4b8a55dc9710dc936afde682c27237ed"
+    },
+    {
+      "case_id": "case04",
+      "slot": 3,
+      "purpose": "checker_contract_repair",
+      "role": "checker",
+      "finish_reason": "stop",
+      "original_normal_error_code": null,
+      "context_descriptor": {
+        "version": "lossless_unit_findings_v1",
+        "context_sha256": "f15f63479d85728038e15a000bf279b01f83d7e4f41f6d13a4750b816b17db63",
+        "canonical_schema_sha256": "864212a5e636d2cadbc34328f431712a954c30130848a31e64e66e4bdedbc926",
+        "wire_codec_fingerprint": "01dcdcab275c7606f269e1bc1c97fe0c3e3f01bb22a280265de26ce2050c68d4",
+        "claim_count": 8,
+        "requirement_count": 3,
+        "fragment_count": 64,
+        "unit_count": 20,
+        "structural_projection_only": true,
+        "source_entailment_certified": false,
+        "original_full_validators_required": true
+      },
+      "reconstructed_context_matches_original": true,
+      "raw_compact_digest_matches_original": true,
+      "local_decode_success": true,
+      "exact_local_decode_exception": null,
+      "canonical_output_sha256": "c7c9631dd4de4e9f3baa9b8c662414c1fabac03b5830fec8cbb0a0eeb78817d0",
+      "canonical_output_matches_original": true,
+      "required_schema_field_issues": [],
+      "unknown_claim_aliases": [],
+      "unknown_requirement_aliases": [],
+      "unknown_unit_fragment_aliases": [],
+      "quote_fragment_pointer_issues": [],
+      "foreign_actual_parent_selection": [],
+      "missing_or_duplicate_units": [],
+      "unit_parent_selection_mismatches": [],
+      "basis_and_uncited_claim_observations": [
+        {
+          "claim": "C003",
+          "declared_basis": "textbook",
+          "declared_status": "unsupported",
+          "actual_citation_ids": [
+            "ev_006"
+          ],
+          "text": "Using your given values, V1 = 500 mL, T1 = 250 K, and T2 = 300 K: V2 = 500 mL × (300 K / 250 K) = 600 mL, where the kelvin units cancel and leave mL [ev_006].",
+          "judgment_locally_reclassified": false
+        },
+        {
+          "claim": "C006",
+          "declared_basis": "textbook",
+          "declared_status": "unsupported",
+          "actual_citation_ids": [],
+          "text": "If the final pressure were unknown and allowed to change, the temperatures and initial volume alone would not determine the final volume.",
+          "judgment_locally_reclassified": false
+        }
+      ],
+      "scientific_or_semantic_PASS_certified": false,
+      "full_source_packet_preserved": true,
+      "raw_or_hydrated_fields_edited": false,
+      "raw_compact_UTF8_sha256": "b1b517e6f97ce92474a374fce807a5cf5ec6647a7ac7d751631dd0b51210d4ce",
+      "JSON_canonical_projection_sha256": "b1b517e6f97ce92474a374fce807a5cf5ec6647a7ac7d751631dd0b51210d4ce"
+    },
+    {
+      "case_id": "case08",
+      "slot": 2,
+      "purpose": "joint_check",
+      "role": "checker",
+      "finish_reason": "stop",
+      "original_normal_error_code": "CHECKER_TRANSPORT_INVALID",
+      "context_descriptor": {
+        "version": "lossless_unit_findings_v1",
+        "context_sha256": "3b53326c54aca6a428474c966998fba424a6581d1d33d76dfe307ca517a53f2b",
+        "canonical_schema_sha256": "864212a5e636d2cadbc34328f431712a954c30130848a31e64e66e4bdedbc926",
+        "wire_codec_fingerprint": "3aabe81c6209f8b150921e66f2d3f68353c7298f41f3ed74294cca00cb31c860",
+        "claim_count": 7,
+        "requirement_count": 3,
+        "fragment_count": 50,
+        "unit_count": 12,
+        "structural_projection_only": true,
+        "source_entailment_certified": false,
+        "original_full_validators_required": true
+      },
+      "reconstructed_context_matches_original": true,
+      "raw_compact_UTF8_sha256": "6c3884a83b01e5a64920bc23cd58bc1790381fd7b9fdd4b4995b7d4e174453f3",
+      "raw_compact_digest_matches_original": true,
+      "JSON_canonical_projection_sha256": "332d59f69353288d33bbbaacee9efef65bbccfe66a8632acc9520c12e474ef92",
+      "raw_compact_exact_HTTP_content_match": true,
+      "local_decode_success": false,
+      "exact_local_decode_exception": {
+        "type": "ValueError",
+        "message": "Unit evidence was not selected by its own parent",
+        "source_trace": [
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 646,
+            "function": "hydrate_findings"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 640,
+            "function": "_hydrate_findings"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 540,
+            "function": "_validate_original_fields"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 99,
+            "function": "_fail"
+          }
+        ]
+      },
+      "canonical_output_sha256": null,
+      "canonical_output_matches_original": null,
+      "required_schema_field_issues": [],
+      "unknown_projected_key_issues": [],
+      "unknown_claim_aliases": [],
+      "unknown_requirement_aliases": [],
+      "unknown_unit_fragment_aliases": [],
+      "quote_fragment_pointer_issues": [],
+      "foreign_actual_parent_selection": [],
+      "missing_or_duplicate_units": [],
+      "unit_parent_selection_mismatches": [
+        {
+          "claim": "C001",
+          "unit": "U03",
+          "unit_selected_fragment_ids": [
+            "F004"
+          ],
+          "parent_selected_fragment_ids": [
+            "F002",
+            "F013"
+          ],
+          "unit_fragments_not_selected_by_parent": [
+            "F004"
+          ],
+          "offending_fragments_still_within_own_actual_allowlist": true,
+          "evidence_id_for_offending_fragments": {
+            "F004": "ev_001"
+          }
+        }
+      ],
+      "basis_and_uncited_claim_observations": [
+        {
+          "claim": "C007",
+          "declared_basis": "evidence_limitation",
+          "declared_status": null,
+          "actual_citation_ids": [],
+          "text": "The source does not give a numerical comparison, so no quantitative ratio is stated.",
+          "judgment_locally_reclassified": false
+        }
+      ],
+      "scientific_or_semantic_PASS_certified": false,
+      "full_source_packet_preserved": true,
+      "raw_or_hydrated_fields_edited": false
+    },
+    {
+      "case_id": "case08",
+      "slot": 3,
+      "purpose": "checker_contract_repair",
+      "role": "checker",
+      "finish_reason": "stop",
+      "original_normal_error_code": "CHECKER_TRANSPORT_INVALID",
+      "context_descriptor": {
+        "version": "lossless_unit_findings_v1",
+        "context_sha256": "3b53326c54aca6a428474c966998fba424a6581d1d33d76dfe307ca517a53f2b",
+        "canonical_schema_sha256": "864212a5e636d2cadbc34328f431712a954c30130848a31e64e66e4bdedbc926",
+        "wire_codec_fingerprint": "3aabe81c6209f8b150921e66f2d3f68353c7298f41f3ed74294cca00cb31c860",
+        "claim_count": 7,
+        "requirement_count": 3,
+        "fragment_count": 50,
+        "unit_count": 12,
+        "structural_projection_only": true,
+        "source_entailment_certified": false,
+        "original_full_validators_required": true
+      },
+      "reconstructed_context_matches_original": true,
+      "raw_compact_UTF8_sha256": "d22cbc5006c6bdad5274999f9918a9cca3b69945708146f31bf8a504aa65ff0c",
+      "raw_compact_digest_matches_original": true,
+      "JSON_canonical_projection_sha256": "d22cbc5006c6bdad5274999f9918a9cca3b69945708146f31bf8a504aa65ff0c",
+      "raw_compact_exact_HTTP_content_match": true,
+      "local_decode_success": false,
+      "exact_local_decode_exception": {
+        "type": "ValueError",
+        "message": "Unknown full or projected field key",
+        "source_trace": [
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 646,
+            "function": "hydrate_findings"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 639,
+            "function": "_hydrate_findings"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 457,
+            "function": "_walk"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 452,
+            "function": "_walk"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 457,
+            "function": "_walk"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 452,
+            "function": "_walk"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 456,
+            "function": "_walk"
+          },
+          {
+            "path": "generation\\lossless_unit_findings_v1.py",
+            "line": 99,
+            "function": "_fail"
+          }
+        ]
+      },
+      "canonical_output_sha256": null,
+      "canonical_output_matches_original": null,
+      "required_schema_field_issues": [
+        {
+          "path": "$.cs[0].ci[0]",
+          "missing": [
+            "rl"
+          ],
+          "extra": [
+            "relation"
+          ]
+        },
+        {
+          "path": "$.cs[0].ci[1]",
+          "missing": [
+            "rl"
+          ],
+          "extra": [
+            "relation"
+          ]
+        },
+        {
+          "path": "$.cs[1].ci[0]",
+          "missing": [
+            "rl"
+          ],
+          "extra": [
+            "relation"
+          ]
+        },
+        {
+          "path": "$.cs[2].ci[0]",
+          "missing": [
+            "rl"
+          ],
+          "extra": [
+            "relation"
+          ]
+        },
+        {
+          "path": "$.cs[2].ci[1]",
+          "missing": [
+            "rl"
+          ],
+          "extra": [
+            "relation"
+          ]
+        },
+        {
+          "path": "$.cs[3].ci[0]",
+          "missing": [
+            "rl"
+          ],
+          "extra": [
+            "relation"
+          ]
+        },
+        {
+          "path": "$.cs[3].ci[1]",
+          "missing": [
+            "rl"
+          ],
+          "extra": [
+            "relation"
+          ]
+        },
+        {
+          "path": "$.cs[4].ci[0]",
+          "missing": [
+            "rl"
+          ],
+          "extra": [
+            "relation"
+          ]
+        },
+        {
+          "path": "$.cs[5].ci[0]",
+          "missing": [
+            "rl"
+          ],
+          "extra": [
+            "relation"
+          ]
+        }
+      ],
+      "unknown_projected_key_issues": [
+        {
+          "path": "$.cs[0].ci[0]",
+          "unknown_projected_field_keys": [
+            "relation"
+          ]
+        },
+        {
+          "path": "$.cs[0].ci[1]",
+          "unknown_projected_field_keys": [
+            "relation"
+          ]
+        },
+        {
+          "path": "$.cs[1].ci[0]",
+          "unknown_projected_field_keys": [
+            "relation"
+          ]
+        },
+        {
+          "path": "$.cs[2].ci[0]",
+          "unknown_projected_field_keys": [
+            "relation"
+          ]
+        },
+        {
+          "path": "$.cs[2].ci[1]",
+          "unknown_projected_field_keys": [
+            "relation"
+          ]
+        },
+        {
+          "path": "$.cs[3].ci[0]",
+          "unknown_projected_field_keys": [
+            "relation"
+          ]
+        },
+        {
+          "path": "$.cs[3].ci[1]",
+          "unknown_projected_field_keys": [
+            "relation"
+          ]
+        },
+        {
+          "path": "$.cs[4].ci[0]",
+          "unknown_projected_field_keys": [
+            "relation"
+          ]
+        },
+        {
+          "path": "$.cs[5].ci[0]",
+          "unknown_projected_field_keys": [
+            "relation"
+          ]
+        }
+      ],
+      "unknown_claim_aliases": [],
+      "unknown_requirement_aliases": [],
+      "unknown_unit_fragment_aliases": [],
+      "quote_fragment_pointer_issues": [],
+      "foreign_actual_parent_selection": [],
+      "missing_or_duplicate_units": [],
+      "unit_parent_selection_mismatches": [],
+      "basis_and_uncited_claim_observations": [
+        {
+          "claim": "C007",
+          "declared_basis": "evidence_limitation",
+          "declared_status": null,
+          "actual_citation_ids": [],
+          "text": "The source does not give a numerical comparison, so no quantitative ratio is stated.",
+          "judgment_locally_reclassified": false
+        }
+      ],
+      "scientific_or_semantic_PASS_certified": false,
+      "full_source_packet_preserved": true,
+      "raw_or_hydrated_fields_edited": false
+    }
+  ],
+  "original_evidence_pins": [
+    {
+      "path": "case01\\native-provider70\\slot-02-public-inputs.json",
+      "bytes": 167946,
+      "sha256": "401d45091a46581a67ef403309d817aa98c6a5c01b390048a521e3af5b3de644"
+    },
+    {
+      "path": "case01\\native-provider70\\slot-02-normal-outcome.json",
+      "bytes": 11126,
+      "sha256": "c724e8a77ecbd3f2f08d65d2688eb4ae7211b821883189bddc8e60f52f40312f"
+    },
+    {
+      "path": "case01\\native-provider70\\slot-02-raw-response.json",
+      "bytes": 17445,
+      "sha256": "4bffdb013f9580917863b38481d0be72485bdae814dd8a0b408a295a0ccdc33c"
+    },
+    {
+      "path": "case01\\native-provider70\\slot-03-public-inputs.json",
+      "bytes": 169542,
+      "sha256": "83f5fb94039802a8fffaab86e838cbd338b6306354a5840a757f6047777ac0ea"
+    },
+    {
+      "path": "case01\\native-provider70\\slot-03-normal-outcome.json",
+      "bytes": 9272,
+      "sha256": "c8a1612e11300a12cc0e86c3c64e69e72f890bf45e6629032a104e9f0ea61011"
+    },
+    {
+      "path": "case01\\native-provider70\\slot-03-raw-response.json",
+      "bytes": 16797,
+      "sha256": "70fb360340e0f089f7bd1e7bb3974a4c90bbc42f81ae5cb0476889b52cc0d61d"
+    },
+    {
+      "path": "case04\\native-provider70\\slot-02-public-inputs.json",
+      "bytes": 170431,
+      "sha256": "1ede0dc0ca94df146b1fe26d1dd04584892b9dca6f5a8a03a0efda08282997a6"
+    },
+    {
+      "path": "case04\\native-provider70\\slot-02-normal-outcome.json",
+      "bytes": 12964,
+      "sha256": "689c15d88ac4f68df7e177546bdab90392f6d182f2d8dd774e8e7e3a122e7b63"
+    },
+    {
+      "path": "case04\\native-provider70\\slot-02-raw-response.json",
+      "bytes": 17857,
+      "sha256": "2221cc6d53c2cfa3640453b4ead096f7cb9cb009945f4239cc12f2305b473be6"
+    },
+    {
+      "path": "case04\\native-provider70\\slot-03-public-inputs.json",
+      "bytes": 172027,
+      "sha256": "a1e25c202b878ed783dee6111e4a07ec1b84e461b417154ea3ca310cc9c768c9"
+    },
+    {
+      "path": "case04\\native-provider70\\slot-03-normal-outcome.json",
+      "bytes": 14419,
+      "sha256": "7706cf817a1f5659fcdcec6c6012c7e26461af90fa0c92ff2ae667d19240b348"
+    },
+    {
+      "path": "case04\\native-provider70\\slot-03-raw-response.json",
+      "bytes": 13246,
+      "sha256": "d20b1ce8547b098a8b5f55efefdf0254aa189201566af3daf606b23c754dee5f"
+    },
+    {
+      "path": "case08\\native-provider70\\slot-02-public-inputs.json",
+      "bytes": 175605,
+      "sha256": "969df72fe63bed92333f3ddd0179db35bdf08073c896abb5f064da8f6fa96a1e"
+    },
+    {
+      "path": "case08\\native-provider70\\slot-02-normal-outcome.json",
+      "bytes": 17190,
+      "sha256": "6f7507ecd275c774b2a05c2d80586b41d7df170739d402fa09cc43899e90316c"
+    },
+    {
+      "path": "case08\\native-provider70\\slot-02-raw-response.json",
+      "bytes": 14937,
+      "sha256": "b2301e3a49a6a65acc35d55e60b0a3d04dc9ed7fee8c990ba4804e7245ecaf7a"
+    },
+    {
+      "path": "case08\\native-provider70\\slot-03-public-inputs.json",
+      "bytes": 177201,
+      "sha256": "b70b430b174edf87f16104654fab4518a1a288d741c10e53f2c39bd7ad1e8987"
+    },
+    {
+      "path": "case08\\native-provider70\\slot-03-normal-outcome.json",
+      "bytes": 11049,
+      "sha256": "5f5836e2725c653b5de4df3f4910a7f6f8a402d60168fa71da74fdd916702f47"
+    },
+    {
+      "path": "case08\\native-provider70\\slot-03-raw-response.json",
+      "bytes": 9210,
+      "sha256": "26c62bc71702cd1056b0788534c96e3786c97c61a1ac88de244ff287e652aa5d"
+    }
+  ],
+  "originals_unchanged_after_diagnosis": true,
+  "pure_loaded_module_pins": [
+    {
+      "module": "contracts.models",
+      "path": "contracts\\models.py",
+      "sha256": "1be28f9411b23074c3195fbbad8109ded6ceb65a28311bc0d64de619d72f795a"
+    },
+    {
+      "module": "generation.attempt_evaluation_contract_v1",
+      "path": "generation\\attempt_evaluation_contract_v1.py",
+      "sha256": "029da3b5c8a352f2dbe16d2ab95b7bda8a907982ac802b87559adb448d67c760"
+    },
+    {
+      "module": "generation.binding_repair",
+      "path": "generation\\binding_repair.py",
+      "sha256": "38ba52eed48bd188698851c8cf9dfbea4d40d087d8bf7be8ce2c70cdff9ac293"
+    },
+    {
+      "module": "generation.checker_encoding",
+      "path": "generation\\checker_encoding.py",
+      "sha256": "57e7fdc229e0732d827af1be3985db8c8ccff91d40e4a6699ad28784ccedf8e2"
+    },
+    {
+      "module": "generation.checker_encoding_v2",
+      "path": "generation\\checker_encoding_v2.py",
+      "sha256": "60eafb9111ac6ec9008b913e296edd771f1cbd99729928dc20aa163e4ab68860"
+    },
+    {
+      "module": "generation.lossless_unit_findings_v1",
+      "path": "generation\\lossless_unit_findings_v1.py",
+      "sha256": "81045fec9ddc851eda6f445bdd99b20c056de07c36a8acb7264fdbc5c2f5d459"
+    },
+    {
+      "module": "generation.reliability_v3",
+      "path": "generation\\reliability_v3.py",
+      "sha256": "33d72113ee45fa489adaaf274dbfa8f1b342d8cd0834cbb8188713f6c3254fa2"
+    },
+    {
+      "module": "generation.reliability_v4",
+      "path": "generation\\reliability_v4.py",
+      "sha256": "0771dd38c821053788608a942033081433ab8ac2ef53afd3d14ed68987b9b56c"
+    },
+    {
+      "module": "generation.reliability_v5",
+      "path": "generation\\reliability_v5.py",
+      "sha256": "f1cf5db78bb8f07996e8f56f48db8542a82591e92b90d233d0a58dd1a73f169d"
+    },
+    {
+      "module": "generation.source_relations_v2",
+      "path": "generation\\source_relations_v2.py",
+      "sha256": "ab22171c03566ed1f8b97e67bb1d0d5f4b276e0ab0bcc40be487f3b296ceeb11"
+    }
+  ],
+  "auth_DB_models_network_services_Main_R_writes": false,
+  "bytecode_cache_written": false,
+  "application_package_initializers_executed": false,
+  "preserve_negative_contracts": [
+    "Missing required fields fail closed; do not fill parent status from unit verdicts.",
+    "Unit evidence remains limited to this exact parent explicit selection; do not union or borrow fragments automatically.",
+    "Unknown/stale C/U/F/R/Q IDs, wrong Q-to-F/evidence, missing unit inventories, incomplete fragments and foreign parent selections remain rejected.",
+    "No local unsupported-to-supported promotion, uncited-to-cited invention, basis reclassification, derivation fabrication or semantic gate bypass.",
+    "Canonical and short wire property names cannot be mixed or silently normalized; nonfactual schema branches may legitimately omit parent status."
+  ],
+  "next_step_for_root": [
+    "A bounded model instruction change may require every textbook parent s and same-parent selection consistency explicitly, without changing decoders.",
+    "A numeric problem statement/calculation requires an appropriate fully populated original proof branch when the model chooses it; never treat absent values in textbook source as permission to fabricate proof.",
+    "Retain all 45 existing meaningful negative guards for any proposed fix; this diagnosis did not rerun or modify them.",
+    "Any affected/control run is a distinct Root-authorized future instance; original baseline inputs/outcomes remain immutable.",
+    "The actual short wire requires parent citation e/fs/rl, not canonical evidence_id/fragment_ids/relation. Audit model instructions for contradictory canonical-key examples; keep strict decoding unchanged."
+  ],
+  "revision_UTC": "2026-10-12T01:05:38.465567+00:00",
+  "previous_summary_sha256": "ca5d2e9682eb6d51f1b669fe954a79a5466452a8e8c862a50f316280284370eb",
+  "raw_digest_definition": "SHA256 of exact saved transport_raw_text UTF8, matching generation/providers.py:341; JSON canonical projection digest is separately labelled.",
+  "all_context_and_raw_pins_match": true
+}

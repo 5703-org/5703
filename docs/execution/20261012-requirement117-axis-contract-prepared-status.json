@@ -1,0 +1,138 @@
+{
+  "status": "PREPARED_OFFLINE_NO_DISPATCH",
+  "dispatch_enabled": false,
+  "maximum_requests": 8,
+  "pairs": [
+    [
+      "S02-negative-B",
+      "S02-negative-A"
+    ],
+    [
+      "S03-negative-A",
+      "S03-negative-B"
+    ],
+    [
+      "S01-positive-B",
+      "S01-positive-A"
+    ],
+    [
+      "S02-positive-A",
+      "S02-positive-B"
+    ]
+  ],
+  "comparison_validity": [
+    {
+      "id": "S02-negative-B",
+      "question_draft_sources_unchanged": true,
+      "label_unchanged": true,
+      "baseline_wire_unchanged": null,
+      "old_wire_current": false,
+      "current_wire_sha256": "47d7b4eda1a5943dc37fc2616c505ac280e995a54328b84ee169789cbeac36cd",
+      "wire_bytes": 89388,
+      "off_peak_hold_CNY": "0.10782"
+    },
+    {
+      "id": "S02-negative-A",
+      "question_draft_sources_unchanged": true,
+      "label_unchanged": true,
+      "baseline_wire_unchanged": true,
+      "old_wire_current": true,
+      "current_wire_sha256": "144a0d8132c7f8f78a4e196d375c00eacdb5a13e4a3483dae4751cb45944a117",
+      "wire_bytes": 76429,
+      "off_peak_hold_CNY": "0.094861"
+    },
+    {
+      "id": "S03-negative-A",
+      "question_draft_sources_unchanged": true,
+      "label_unchanged": true,
+      "baseline_wire_unchanged": true,
+      "old_wire_current": true,
+      "current_wire_sha256": "543cbde6d56f9091d697744acc787dc6ed156264fc7b1665f21cfb5059a84193",
+      "wire_bytes": 77889,
+      "off_peak_hold_CNY": "0.096321"
+    },
+    {
+      "id": "S03-negative-B",
+      "question_draft_sources_unchanged": true,
+      "label_unchanged": true,
+      "baseline_wire_unchanged": null,
+      "old_wire_current": false,
+      "current_wire_sha256": "910ca87e81406e335ab3467a55bbea3ed1462e8139bcb3fe05054b1fec8e9224",
+      "wire_bytes": 90848,
+      "off_peak_hold_CNY": "0.10928"
+    },
+    {
+      "id": "S01-positive-B",
+      "question_draft_sources_unchanged": true,
+      "label_unchanged": true,
+      "baseline_wire_unchanged": null,
+      "old_wire_current": false,
+      "current_wire_sha256": "be36d1dc7d7a50871bf1149f27ce29300d03c48c97823c909934e2e68405ae87",
+      "wire_bytes": 93185,
+      "off_peak_hold_CNY": "0.111617"
+    },
+    {
+      "id": "S01-positive-A",
+      "question_draft_sources_unchanged": true,
+      "label_unchanged": true,
+      "baseline_wire_unchanged": true,
+      "old_wire_current": true,
+      "current_wire_sha256": "afbf33499f007a314fa363271a24915e511a58cba888628c550b954e9785fdd7",
+      "wire_bytes": 80226,
+      "off_peak_hold_CNY": "0.098658"
+    },
+    {
+      "id": "S02-positive-A",
+      "question_draft_sources_unchanged": true,
+      "label_unchanged": true,
+      "baseline_wire_unchanged": true,
+      "old_wire_current": true,
+      "current_wire_sha256": "15f27c5fdea608abc5508d05ad4e9048c56b013994d62e90882d65f65c0e4f6b",
+      "wire_bytes": 77102,
+      "off_peak_hold_CNY": "0.095534"
+    },
+    {
+      "id": "S02-positive-B",
+      "question_draft_sources_unchanged": true,
+      "label_unchanged": true,
+      "baseline_wire_unchanged": null,
+      "old_wire_current": false,
+      "current_wire_sha256": "5e040e969bfde207770ce8a2f25db4fa982df5c7b85189ccb9dd33949178ef27",
+      "wire_bytes": 90061,
+      "off_peak_hold_CNY": "0.108493"
+    }
+  ],
+  "scope_valid_all_eight": true,
+  "old_A_wires_current": 4,
+  "old_B_wires_current": 0,
+  "original_sources_changed": false,
+  "original_answers_changed": false,
+  "full_upfront_off_peak_holds_CNY": "0.822584",
+  "old_proposal_cap_CNY": "0.80",
+  "old_proposal_cap_fits": false,
+  "remaining_original_experiment_capacity_CNY": "0.818598",
+  "original_capacity_fits_all_eight_upfront": false,
+  "estimated_with_saved116_rates_only": true,
+  "current_price_verified": false,
+  "new_lease_created": 0,
+  "new_holds_created": 0,
+  "real_provider_requests": 0,
+  "real_key_reads": 0,
+  "DB_operations": 0,
+  "historical_replay_technical_valid": false,
+  "historical_decisions_unchanged": true,
+  "activation_conditions": [
+    "Current source/control review",
+    "A fresh finite controller admission and real-time pricing verification; old closed controller cannot be reopened",
+    "Budget admission must protect full requested pair; never omit or shrink source text to fit a cap"
+  ],
+  "source_pins": {
+    "generation/checked.py": "731138bd56dc62ed8359b7a818c6ee4512344d130f1be82e51fe0ae35fdd492d",
+    "generation/qualification_v1.py": "f7d43ca3ebb8cf706a1b3654e395766e105414957ed65cffa72e4334dd1174b0",
+    "generation/requirement_axes_v1.py": "9c29ba3ad09e8797dd923884e3a5660c3cca95b8b5ba8ea8dcc6756a27db2b26",
+    "generation/prompts/qualification_check_v1.txt": "c48677ff8eddaf8a84ff7f56dfad76f371f7a2de7ea889195f634d518f435a0f"
+  },
+  "current_packets_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-requirement117-free\\prepared-eight117-final.json",
+  "source_review": "RELEASE",
+  "source_review_receipt": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-requirement117-free\\source-review117.json"
+}

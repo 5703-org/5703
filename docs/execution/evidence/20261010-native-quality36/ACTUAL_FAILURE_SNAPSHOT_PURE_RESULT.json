@@ -1,0 +1,61 @@
+{
+  "actual30_failure_replayed": false,
+  "authentication_files_read": 0,
+  "cases": [
+    {
+      "case": "original_normal",
+      "returned_identity_preserved": true
+    },
+    {
+      "case": "patched_normal",
+      "returned_identity_preserved": true
+    },
+    {
+      "case": "invalid_JSON_failure",
+      "original_exception_preserved": true,
+      "status": "PASS"
+    },
+    {
+      "case": "relation_contract_failure",
+      "original_exception_preserved": true,
+      "status": "PASS"
+    },
+    {
+      "case": "snapshot_write_failure",
+      "original_exception_preserved": true,
+      "status": "PASS"
+    },
+    {
+      "case": "existing_snapshot_not_overwritten",
+      "original_exception_preserved": true,
+      "status": "PASS"
+    }
+  ],
+  "cleanup_AST_sha256": "5829fb20689bb4e53f534831607fed392a202a9d6c80414a94bea71ef75d093f",
+  "controls": 6,
+  "database_accesses": 0,
+  "input_pins": [
+    {
+      "bytes": 109369,
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation30\\launch_week10_scientific_native_closure_PREPARED09.py",
+      "sha256": "be0e5c09c5ea6fa36824db6fe92dfadf81bb6cbf29d701551f4d8521b70bd90f"
+    },
+    {
+      "bytes": 17258,
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation30\\diagnostics01.py",
+      "sha256": "e2f06c40dd0b703fd63bbd3248b436a79864290149ca515a4ac81d2822c3942b"
+    },
+    {
+      "bytes": 5188,
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-native-failure-snapshot-candidate\\runtime_failure_snapshot_CANDIDATE.py",
+      "sha256": "a29ef04ac2769fd35ad57bdc59b56e50ac00dbd189ea97c62c2b3457be13b779"
+    }
+  ],
+  "main_writes": 0,
+  "normal_outcome_exact_equal": true,
+  "old_scope_writes": 0,
+  "provider_requests": 0,
+  "schema": "5703_native_failure_snapshot_pure_v1",
+  "status": "PASS",
+  "synthetic_failure_cases_only": true
+}

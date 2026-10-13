@@ -1,0 +1,57 @@
+{
+  "status": "W_CANDIDATE_FROZEN_10_PASS",
+  "main_relative_path": "conversation/query_v23.py",
+  "main_preimage_sha256": "f325a629f3490b6f0aea0c30b5494fe35788c45d723d4fff1b93d0aec7fdf031",
+  "pins": {
+    "query_v23.before86.py": {
+      "bytes": 5372,
+      "sha256": "f325a629f3490b6f0aea0c30b5494fe35788c45d723d4fff1b93d0aec7fdf031"
+    },
+    "query_v23.py": {
+      "bytes": 7808,
+      "sha256": "ad8ae510ef6e9ee0bc48a0acad7297cec45d8b0e97fb583824ea382be94ee59d"
+    },
+    "test_assignment_reference86.py": {
+      "bytes": 5578,
+      "sha256": "ee3d4503677fd43e4ed042b090e4fb50dbd09674b048e00be81d2fd2029698fd"
+    },
+    "pytest-assignment86.xml": {
+      "bytes": 2945,
+      "sha256": "ef7b40d2f13c7a7fd7d53a3068cbc6871f9e3e8d4ab5b0ce5a0fbadad0b8d274"
+    }
+  },
+  "free_controls": {
+    "passed": 10,
+    "seconds": 0.98,
+    "denied_actions": [],
+    "ruff": "PASS"
+  },
+  "change": "Explicit current assignment-set demonstrative eligibility only; complete original question and original requirements preserved.",
+  "case04": {
+    "before": "clarification/missing_referent",
+    "candidate": "factual/current_explicit_assignment_set_reference_v1"
+  },
+  "case05": {
+    "unchanged": "clarification/missing_referent",
+    "dependent_tokens": [
+      "It",
+      "its",
+      "these"
+    ],
+    "reason": "Multiple referents with distinct bases; outside single current assignment grammar."
+  },
+  "case08": {
+    "unchanged": "clarification/missing_referent",
+    "dependent_tokens": [
+      "its",
+      "its",
+      "this"
+    ],
+    "reason": "Possessive and demonstrative referents with distinct bases; outside single current assignment grammar."
+  },
+  "limits": [
+    "Only explicit opt-in v23 changes; v22 remains default.",
+    "Not a semantic/coreference correctness certificate.",
+    "No API/DB/auth/model/Main writes; no new online acceptance."
+  ]
+}

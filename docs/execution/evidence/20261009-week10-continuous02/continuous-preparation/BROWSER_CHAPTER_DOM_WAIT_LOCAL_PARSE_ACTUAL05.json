@@ -1,0 +1,92 @@
+{
+  "schema": "5703_browser_chapter_dom_wait_local_parse_v1",
+  "status": "PREPARED_BROWSER05_LOCAL_NODE_PARSE_PASS_NOT_LIVE_VALIDATED",
+  "changed_lines": 1,
+  "main_repository_changes": 0,
+  "browser_launches": 0,
+  "API_calls": 0,
+  "provider_POSTs": 0,
+  "pure_parse": {
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "--check",
+      "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\continuous-preparation\\real_browser_week10_continuous_scopes_PREPARED05.cjs"
+    ],
+    "exit_code": 0,
+    "stdout_bytes": 0,
+    "stderr_bytes": 0
+  },
+  "predecessor": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\continuous-preparation\\real_browser_week10_continuous_scopes_PREPARED04.cjs",
+    "bytes": 69451,
+    "sha256": "e1a85a86cfd177f6e1f727d20c1cc0af19c75020659f80c77c7f43405c28c60f"
+  },
+  "candidate": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\continuous-preparation\\real_browser_week10_continuous_scopes_PREPARED05.cjs",
+    "bytes": 69425,
+    "sha256": "b43cfcc84c4e6840afa95ff7cf346d5749c90491e239a0a642d3ef9af426915b"
+  },
+  "diff": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\continuous-preparation\\BROWSER_CHAPTER_DOM_WAIT_PREPARED05.diff",
+    "bytes": 798,
+    "sha256": "a3825e1549aae4208fb9f3ae95d62f6c2ec06b614b751b452222b649cf383795"
+  },
+  "actual_failure_evidence": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\browser-continuous02\\real-browser-live-qa-receipt01.json",
+      "bytes": 27440,
+      "sha256": "325ed5ab421788b88a42a7504168a7d7e0ce9a9d1097311456d82a277ddef463"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\browser-continuous02\\retained-failure.png",
+      "bytes": 79765,
+      "sha256": "60762b5540a5941385dddcc2406f716eb7067350cf7d9720f8cb0ce9862eca32"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\browser-continuous02\\retained-failure.txt",
+      "bytes": 990,
+      "sha256": "d8ed54ea9f4631983359bb3f6feb6eb88d03895bec7be012f9de6a229a53f4e9"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous02\\native-retrieval-0503d729-ea72-41a0-a2c3-486422cb2ba0-public01.json",
+      "bytes": 8807,
+      "sha256": "f1582db1058d7697f1c511c381d735d27cbebfdb692baf100dea781464ae412e"
+    }
+  ],
+  "failure": {
+    "question_id": "Q2",
+    "status": "NOT_EXECUTED_PRE_SEND_FAILURE",
+    "code": "SINGLE_NORMAL_CHAPTER_CONTROL_REQUIRED",
+    "Q2_provider_POSTs": 0,
+    "observed_UI": "Retained screenshot and text show Loading contents and no chapter control while the search field contains the actual matched chapter title.",
+    "source_mechanism": "The sections observer Map retains Q1 data by book ID; has(bookID) succeeds before the reopened Q2 BookReader finishes loading. The old immediate locator.count() does not wait for its current DOM.",
+    "interpretation": "Supported automation loading/wait race; no evidence of two matching chapter controls or a product/API scope failure.",
+    "exact_count_not_retained": true,
+    "minimal_change": "Wait up to the existing 15-second local UI timeout for exactly one real chapter control before the normal click.",
+    "scope": "Prepared local syntax result only. No live Q2 validation or complete two-question/cache-invalidation claim."
+  },
+  "finite_Q1_support_review": {
+    "reviewer_kind": "Assistant source comparison; not a human rating or independent scientific evaluation",
+    "question": "What are the net products of glycolysis per glucose molecule?",
+    "answer_text": "Per molecule of glucose, glycolysis yields a net product of two pyruvate molecules, two ATP molecules, and two NADH molecules [ev_004] [ev_008].",
+    "finding": "The opened Biology 2e 7.2 Glycolysis PDF physical page 215 excerpt directly supports two pyruvate, net two ATP (four produced minus two used) and two NADH per glucose.",
+    "citation_ids": [
+      "ev_004",
+      "ev_008"
+    ],
+    "opened_source_1_supports_core_answer": true,
+    "source_2_body_individually_reviewed": false,
+    "Send_to_full_DOM_ms": 9047.70000000298,
+    "native_checker_complete": true,
+    "citation_open_verified": true,
+    "fresh_reload_same_answer": true,
+    "retrieval_scope": "all_active_corpus",
+    "chapter_filter_applied": false,
+    "normal_UI_reading_context_removed": true,
+    "release_cache_hit": true,
+    "query_vector_cache_hit": false,
+    "scientific_acceptance": "NOT_ASSERTED",
+    "p95": "NOT_MEASURED",
+    "two_question_same_worker_reuse": "NOT_ESTABLISHED_Q2_NOT_SUBMITTED"
+  }
+}

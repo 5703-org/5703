@@ -1,0 +1,41 @@
+--- a/generation/reliability_v5.py
++++ b/generation/reliability_v5.py
+@@ -435,3 +435,3 @@
+                 'binding_recheck_required': True, 'claim_relation_assessed': False,
+-                'reason': 'A literal leading scope is absent from this claim\'s own selected supporting union but occurs in a complete fragment allowed by the same actually supporting citation. Re-evaluate the source context or the stated scope. A candidate occurrence, heading or literal spelling does not certify support; aliases and semantic scope inheritance are not assessed by this diagnostic.',
++                'reason': 'Leading scope absent from selected support; recheck allowed source context. Occurrence alone is not support.',
+                 'source_entailment_certified': False, 'publication_override': False,
+--- a/generation/checked.py
++++ b/generation/checked.py
+@@ -168,2 +168,18 @@
+ 
++def _compact_claim_patch_feedback(feedback):
++    """Shorten only derived binding prose on the repair wire; retain raw checks."""
++    revised = dict(feedback)
++    if "structural_issues" not in feedback:
++        return revised
++    reasons = {
++        "UNRESOLVED_TECHNICAL_ENTITY_COLLISION": "Selected support lacks this identifier; recheck the same-slot source witness. No alias or entailment is certified.",
++    }
++    revised["structural_issues"] = [
++        {**issue, "reason": reasons[issue["code"]]}
++        if isinstance(issue, dict) and issue.get("code") in reasons else issue
++        for issue in feedback["structural_issues"]
++    ]
++    return revised
++
++
+ def _sha(value):
+@@ -1363,3 +1379,6 @@
+                     + "\nREPAIR_DATA_JSON:\n"
+-                    + transport_json(repair_feedback)
++                    + transport_json(
++                        _compact_claim_patch_feedback(repair_feedback)
++                        if repair_policy == CLAIM_PATCH_POLICY else repair_feedback
++                    )
+                 )
+@@ -1376,3 +1395,3 @@
+                     + "\nREPAIR_DATA_JSON:\n"
+-                    + transport_json(repair_feedback)
++                    + transport_json(_compact_claim_patch_feedback(repair_feedback))
+                 )

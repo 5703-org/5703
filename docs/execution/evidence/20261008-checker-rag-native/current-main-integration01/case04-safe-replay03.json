@@ -1,0 +1,80 @@
+{
+  "status": "EXACT_CASE04_RETAINED_STRICT_V5_SAFE_SCHEMA_REPLAY_COMPLETE",
+  "at_UTC": "2026-10-08T08:59:14.236508+00:00",
+  "retained_response_count": 2,
+  "responses": [
+    {
+      "sequence": 4,
+      "stage": "joint_check",
+      "schema_name": "joint_check_v5",
+      "strict_schema_status": "passed",
+      "schema_error_count": 0,
+      "diagnostic": null
+    },
+    {
+      "sequence": 8,
+      "stage": "joint_recheck",
+      "schema_name": "joint_check_v5",
+      "strict_schema_status": "failed",
+      "schema_error_count": 3,
+      "diagnostic": {
+        "schema": "PUBLIC_SCHEMA_DIAGNOSTIC_OBSERVER_MAIN_V1",
+        "issues": [
+          {
+            "code": "CHECKER_SCHEMA_INVALID",
+            "field_errors": [
+              {
+                "path": [
+                  "claims",
+                  0
+                ],
+                "error_type": "union_tag_invalid"
+              },
+              {
+                "path": [
+                  "requirements",
+                  0,
+                  "relevance"
+                ],
+                "error_type": "missing"
+              },
+              {
+                "path": [
+                  "requirements",
+                  0,
+                  "redacted_field"
+                ],
+                "error_type": "extra_forbidden"
+              }
+            ]
+          }
+        ],
+        "redaction_counts": {
+          "issue_rows_omitted": 0,
+          "field_rows_omitted": 0,
+          "path_tokens_omitted": 0,
+          "path_tokens_redacted": 1,
+          "error_types_redacted": 0,
+          "parse_codes_redacted": 0,
+          "invalid_rows": 0
+        }
+      }
+    }
+  ],
+  "raw_text_exported": false,
+  "whole_payloads_read": false,
+  "private_drafts_read": false,
+  "provider_calls": 0,
+  "database_writes": 0,
+  "Gold_reads": 0,
+  "max_checker_scalars": 2,
+  "max_scalar_bytes": 131072,
+  "job_id": "1c53c91c-d21e-4d98-9a6c-84f92074d2ae",
+  "request_id": "527b51f5-23d4-4219-9a5b-211bb0ffe792",
+  "database_identity": {
+    "database_name": "cs30_fixture_20261006_01",
+    "transaction_read_only": "on"
+  },
+  "read_only_selects": 2,
+  "cleanup_errors": []
+}

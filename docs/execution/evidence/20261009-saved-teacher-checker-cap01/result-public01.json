@@ -1,0 +1,51 @@
+{
+  "status": "ACTUAL_CHECKER_CAP_FAILED_OR_BLOCKED",
+  "physical_POSTs": 1,
+  "known_cost_USD": "0.0042585",
+  "UNKNOWN_hold_USD": "0.00",
+  "remaining_scope_USD": "0.0557415",
+  "smallest_tested_passing_cap": null,
+  "trials": [
+    {
+      "slot": 1,
+      "output_cap": 8192,
+      "http_status": 200,
+      "finish_reason": "stop",
+      "usage": {
+        "input_tokens": 15870,
+        "output_tokens": 5343,
+        "total_tokens": 21213,
+        "reasoning_tokens": 3496,
+        "cache_hit_input_tokens": 0,
+        "cache_miss_input_tokens": 15870,
+        "cost": 0.0042585
+      },
+      "known_cost_USD": "0.0042585",
+      "adapter_latency_ms": 22353,
+      "local_generation_elapsed_ms": 22393.072,
+      "raw_chars": 4633,
+      "raw_bytes": 4633,
+      "raw_sha256": "43cddb016929ba2e5faf4d75205a9d3d306b2e92168e74b07726e94d9d054e38",
+      "complete_full_Pydantic_PASS": false,
+      "schema_issues": [
+        {
+          "type": "ResponseValidationError"
+        }
+      ],
+      "business_gate_error_code": "CHECKER_INCONSISTENT",
+      "business_gate_PASS": false,
+      "outcome_diagnostic_keys": [],
+      "field_bytes": null,
+      "new_teacher_POSTs": 0,
+      "DB_writes": 0,
+      "native_publication_verified": false,
+      "service_exception_type": null
+    }
+  ],
+  "teacher_sha256": "f5fc06d9eabb5483997ce3a1bd0a86a413f3a9825598fa4560a7f334d46e655f",
+  "old_UNKNOWN_hold_USD_unchanged": "0.09000000",
+  "new_teacher_POSTs": 0,
+  "DB_writes": 0,
+  "native_publication_verified": false,
+  "project_complete": false
+}

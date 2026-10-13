@@ -1,0 +1,468 @@
+{
+  "status": "ACTUAL_FREE_PRESERVING_COMPOUND_PREDICATE_SOURCE_PLAN05",
+  "input_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\attempt-evaluation-conditional-preparation01\\actual-checker-repaired04\\private-diagnostic\\checker-input-schema01.json",
+      "bytes": 110854,
+      "sha256": "d05829e4dae49947c34d77263c25dec33bf2d0563307bbbbebff21391b8b37ef"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\attempt-evaluation-conditional-preparation01\\actual-checker-repaired04\\private-diagnostic\\checker-full-diagnosis01.json",
+      "bytes": 152842,
+      "sha256": "b398f674597bd26854e934b9758432b4a670f5921f77a0d6b395dcd2bd4046ad"
+    }
+  ],
+  "old04_automatic_PASS_and_independent_limit_remain_immutable": true,
+  "affected_claim_id": "claim_2e2e3ba2b43cbd571afa271b_1",
+  "affected_span": [
+    1134,
+    1297
+  ],
+  "old_complete_claim": "Once in the stroma, the Calvin cycle uses the energy in ATP and NADPH to convert the three-carbon molecules into G3P, which builds carbohydrate molecules [ev_010].",
+  "recommended_replacement": "The energy in ATP and NADPH is used to convert three-carbon compounds into G3P [ev_010]. G3P can leave the cycle and become part of a carbohydrate molecule [ev_010]. The Calvin cycle reactions take place in the stroma [ev_007].",
+  "three_independent_source_scopes": [
+    {
+      "review_scope_id": "ATPNADPH_to_G3P",
+      "text": "The energy in ATP and NADPH is used to convert three-carbon compounds into G3P [ev_010].",
+      "actual_inline_citation": "ev_010",
+      "recommended_fragment_ids": [
+        "F053"
+      ],
+      "actual_sources": [
+        {
+          "fragment_alias": "F053",
+          "evidence_id": "ev_010",
+          "exact_separate_quote": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+          "complete_immutable_fragment_read": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+          "actual_fragment_id": "span_0daa77759f0a36e4197e28c3a7df8a5e",
+          "source_unit_id": "9384d80eee75aac546751fdd4d6708b70e6c",
+          "chunk_id": "d78123b2ffdc57261b6fef649db606d00094",
+          "source_unit_span": [
+            1901,
+            2059
+          ],
+          "chunk_span": [
+            566,
+            724
+          ],
+          "page": 145,
+          "complete_block_flag_not_used_as_entailment_proof": true
+        }
+      ],
+      "predicate_breakdown": [
+        "energy in ATP",
+        "energy in NADPH",
+        "conversion of three-carbon compounds",
+        "G3P product"
+      ],
+      "joint_source_entailment_local_review": true,
+      "reason": "F053 explicitly identifies the two three-carbon compounds and the energy in ATP/NADPH used to convert them into G3P. The scoped sentence does not generalize to all arbitrary three-carbon compounds or add an enzyme mechanism."
+    },
+    {
+      "review_scope_id": "G3P_to_carbohydrate_part",
+      "text": "G3P can leave the cycle and become part of a carbohydrate molecule [ev_010].",
+      "actual_inline_citation": "ev_010",
+      "recommended_fragment_ids": [
+        "F054",
+        "F055"
+      ],
+      "actual_sources": [
+        {
+          "fragment_alias": "F054",
+          "evidence_id": "ev_010",
+          "exact_separate_quote": "One of the three-carbon molecules of G3P leaves the cycle to become a 5 • Key Terms 131",
+          "complete_immutable_fragment_read": "One of the three-carbon molecules of G3P leaves the cycle to become a 5 • Key Terms 131",
+          "actual_fragment_id": "span_db8a12e2096eef418af7799d31eff8b6",
+          "source_unit_id": "9384d80eee75aac546751fdd4d6708b70e6c",
+          "chunk_id": "d78123b2ffdc57261b6fef649db606d00094",
+          "source_unit_span": [
+            2060,
+            2147
+          ],
+          "chunk_span": [
+            725,
+            812
+          ],
+          "page": 145,
+          "complete_block_flag_not_used_as_entailment_proof": true
+        },
+        {
+          "fragment_alias": "F055",
+          "evidence_id": "ev_010",
+          "exact_separate_quote": "part of a carbohydrate molecule.",
+          "complete_immutable_fragment_read": "part of a carbohydrate molecule.",
+          "actual_fragment_id": "span_67e8193225353c7abd5a297af143f4ee",
+          "source_unit_id": "309bd7732f8ae5010d824c241b5d1d9ffb1a",
+          "chunk_id": "d78123b2ffdc57261b6fef649db606d00094",
+          "source_unit_span": [
+            0,
+            32
+          ],
+          "chunk_span": [
+            814,
+            846
+          ],
+          "page": 146,
+          "complete_block_flag_not_used_as_entailment_proof": true
+        }
+      ],
+      "predicate_breakdown": [
+        "G3P can leave the cycle",
+        "that G3P becomes part of a carbohydrate molecule"
+      ],
+      "joint_source_entailment_local_review": true,
+      "reason": "F054 supplies the subject and leaving-the-cycle relation; F055 supplies the continuation 'part of a carbohydrate molecule.' Their retained same-chunk sequence establishes an adjacent cross-source-unit sentence continuation. 'Can' is a conservative existential narrowing of 'One of ... leaves'; it does not assert that every G3P molecule leaves or becomes carbohydrate.",
+      "layout_noise_interpretation": "The intervening '5 ? Key Terms 131' is a page-layout string, not a scientific negation, quantity condition, chemical formula, or contradictory continuation. Interpreting that string as layout noise adds no scientific premise and does not modify either source fragment.",
+      "source_quality_caveat": "F054 is clipped prose with page noise and F055 is a cross-unit continuation. Both complete original fragment strings must remain independently available and assessed; their complete_block flags alone do not prove support.",
+      "single_stitched_exact_quote_created": false,
+      "source_text_or_offsets_changed": false
+    },
+    {
+      "review_scope_id": "Calvin_cycle_stroma_location",
+      "text": "The Calvin cycle reactions take place in the stroma [ev_007].",
+      "actual_inline_citation": "ev_007",
+      "recommended_fragment_ids": [
+        "F037"
+      ],
+      "actual_sources": [
+        {
+          "fragment_alias": "F037",
+          "evidence_id": "ev_007",
+          "exact_separate_quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+          "complete_immutable_fragment_read": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+          "actual_fragment_id": "span_8f1a62f750cb3a80f992bbac985e92d6",
+          "source_unit_id": "8bd9edcf0207e2fb714c2840ecc6398bfbff",
+          "chunk_id": "f5f548e0f0238b9ca641c222302920bd9e6e",
+          "source_unit_span": [
+            863,
+            962
+          ],
+          "chunk_span": [
+            139,
+            238
+          ],
+          "page": 141,
+          "complete_block_flag_not_used_as_entailment_proof": true
+        }
+      ],
+      "predicate_breakdown": [
+        "Calvin cycle reactions occur in the stroma"
+      ],
+      "joint_source_entailment_local_review": true,
+      "reason": "F037 explicitly states the stroma is where Calvin cycle reactions take place. The new sentence cites ev_007 directly; it does not borrow an uncited fragment from another claim."
+    }
+  ],
+  "every_new_predicate_jointly_supported_under_its_own_explicit_actual_citation_local_review": true,
+  "all_original_scientific_contributions_preserved": true,
+  "scope_narrowing": "The broad 'G3P builds carbohydrate molecules' is represented more precisely as G3P can become part of a carbohydrate molecule. No required knowledge is deleted; this retains the explicit original intermediate relationship conservatively.",
+  "protected_other_seven_claims": [
+    {
+      "claim_id": "claim_843e45c501deb6048e9271db_1",
+      "field": "answer_text",
+      "old_span": [
+        0,
+        204
+      ],
+      "new_span": [
+        0,
+        204
+      ],
+      "text_and_inline_citations_exact": true
+    },
+    {
+      "claim_id": "claim_e936854e9ed9712eae356fbd_1",
+      "field": "answer_text",
+      "old_span": [
+        205,
+        313
+      ],
+      "new_span": [
+        205,
+        313
+      ],
+      "text_and_inline_citations_exact": true
+    },
+    {
+      "claim_id": "claim_a5c215523282b064e592fbf4_1",
+      "field": "answer_text",
+      "old_span": [
+        314,
+        448
+      ],
+      "new_span": [
+        314,
+        448
+      ],
+      "text_and_inline_citations_exact": true
+    },
+    {
+      "claim_id": "claim_7e7f585750d1bae78d3803a3_1",
+      "field": "answer_text",
+      "old_span": [
+        449,
+        659
+      ],
+      "new_span": [
+        449,
+        659
+      ],
+      "text_and_inline_citations_exact": true
+    },
+    {
+      "claim_id": "claim_1c71ec2df3c08732f8f68cd7_1",
+      "field": "answer_text",
+      "old_span": [
+        660,
+        866
+      ],
+      "new_span": [
+        660,
+        866
+      ],
+      "text_and_inline_citations_exact": true
+    },
+    {
+      "claim_id": "claim_8cd7b13097db1301a18c28c6_1",
+      "field": "answer_text",
+      "old_span": [
+        867,
+        1133
+      ],
+      "new_span": [
+        867,
+        1133
+      ],
+      "text_and_inline_citations_exact": true
+    },
+    {
+      "claim_id": "claim_a6a2652d20ee17bbe5f3e20d_1",
+      "field": "short_answer",
+      "old_span": [
+        0,
+        138
+      ],
+      "new_span": [
+        0,
+        138
+      ],
+      "text_and_inline_citations_exact": true
+    }
+  ],
+  "preservation_bounds": {
+    "only_affected_claim_span_replaced": true,
+    "other_answer_characters_exact": true,
+    "short_answer_and_all_other_response_fields_exact": true,
+    "citation_metadata_order_exact": true,
+    "seven_other_claim_texts_and_inline_citations_exact": true,
+    "no_source_fragment_source_map_or_actual_log_mutations": true,
+    "no_cross_claim_uncited_borrowing": true
+  },
+  "answer_coverage": {
+    "question": "How do light-dependent reactions provide the energy carriers used by the Calvin cycle?",
+    "photosystem_absorption_and_electron_transport_retained": true,
+    "PSI_second_photon_NADPH_mechanism_retained": true,
+    "ATP_NADPH_storage_and_transport_retained": true,
+    "G3P_conversion_retained": true,
+    "explicit_G3P_carbohydrate_part_relation_retained": true,
+    "stroma_location_retained_and_explicitly_cited": true,
+    "necessary_broad_question_knowledge_lost": false,
+    "new_unrequested_requirements_invented": false
+  },
+  "negative_positive_control_plan": {
+    "negative": {
+      "text": "Once in the stroma, the Calvin cycle uses the energy in ATP and NADPH to convert the three-carbon molecules into G3P, which builds carbohydrate molecules [ev_010].",
+      "selected_sources": [
+        {
+          "fragment_alias": "F053",
+          "evidence_id": "ev_010",
+          "exact_separate_quote": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+          "complete_immutable_fragment_read": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+          "actual_fragment_id": "span_0daa77759f0a36e4197e28c3a7df8a5e",
+          "source_unit_id": "9384d80eee75aac546751fdd4d6708b70e6c",
+          "chunk_id": "d78123b2ffdc57261b6fef649db606d00094",
+          "source_unit_span": [
+            1901,
+            2059
+          ],
+          "chunk_span": [
+            566,
+            724
+          ],
+          "page": 145,
+          "complete_block_flag_not_used_as_entailment_proof": true
+        }
+      ],
+      "expected_independent_judgment": "F053 establishes only ATP/NADPH-driven conversion into G3P, not the carbohydrate continuation or stroma qualifier. Whole-claim supported is unjustified under that selected union."
+    },
+    "positive": [
+      {
+        "review_scope_id": "ATPNADPH_to_G3P",
+        "text": "The energy in ATP and NADPH is used to convert three-carbon compounds into G3P [ev_010].",
+        "actual_inline_citation": "ev_010",
+        "recommended_fragment_ids": [
+          "F053"
+        ],
+        "actual_sources": [
+          {
+            "fragment_alias": "F053",
+            "evidence_id": "ev_010",
+            "exact_separate_quote": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+            "complete_immutable_fragment_read": "The resulting six-carbon compound is broken down into two three-carbon compounds, and the energy in ATP and NADPH is used to convert these molecules into G3P.",
+            "actual_fragment_id": "span_0daa77759f0a36e4197e28c3a7df8a5e",
+            "source_unit_id": "9384d80eee75aac546751fdd4d6708b70e6c",
+            "chunk_id": "d78123b2ffdc57261b6fef649db606d00094",
+            "source_unit_span": [
+              1901,
+              2059
+            ],
+            "chunk_span": [
+              566,
+              724
+            ],
+            "page": 145,
+            "complete_block_flag_not_used_as_entailment_proof": true
+          }
+        ],
+        "predicate_breakdown": [
+          "energy in ATP",
+          "energy in NADPH",
+          "conversion of three-carbon compounds",
+          "G3P product"
+        ],
+        "joint_source_entailment_local_review": true,
+        "reason": "F053 explicitly identifies the two three-carbon compounds and the energy in ATP/NADPH used to convert them into G3P. The scoped sentence does not generalize to all arbitrary three-carbon compounds or add an enzyme mechanism."
+      },
+      {
+        "review_scope_id": "G3P_to_carbohydrate_part",
+        "text": "G3P can leave the cycle and become part of a carbohydrate molecule [ev_010].",
+        "actual_inline_citation": "ev_010",
+        "recommended_fragment_ids": [
+          "F054",
+          "F055"
+        ],
+        "actual_sources": [
+          {
+            "fragment_alias": "F054",
+            "evidence_id": "ev_010",
+            "exact_separate_quote": "One of the three-carbon molecules of G3P leaves the cycle to become a 5 • Key Terms 131",
+            "complete_immutable_fragment_read": "One of the three-carbon molecules of G3P leaves the cycle to become a 5 • Key Terms 131",
+            "actual_fragment_id": "span_db8a12e2096eef418af7799d31eff8b6",
+            "source_unit_id": "9384d80eee75aac546751fdd4d6708b70e6c",
+            "chunk_id": "d78123b2ffdc57261b6fef649db606d00094",
+            "source_unit_span": [
+              2060,
+              2147
+            ],
+            "chunk_span": [
+              725,
+              812
+            ],
+            "page": 145,
+            "complete_block_flag_not_used_as_entailment_proof": true
+          },
+          {
+            "fragment_alias": "F055",
+            "evidence_id": "ev_010",
+            "exact_separate_quote": "part of a carbohydrate molecule.",
+            "complete_immutable_fragment_read": "part of a carbohydrate molecule.",
+            "actual_fragment_id": "span_67e8193225353c7abd5a297af143f4ee",
+            "source_unit_id": "309bd7732f8ae5010d824c241b5d1d9ffb1a",
+            "chunk_id": "d78123b2ffdc57261b6fef649db606d00094",
+            "source_unit_span": [
+              0,
+              32
+            ],
+            "chunk_span": [
+              814,
+              846
+            ],
+            "page": 146,
+            "complete_block_flag_not_used_as_entailment_proof": true
+          }
+        ],
+        "predicate_breakdown": [
+          "G3P can leave the cycle",
+          "that G3P becomes part of a carbohydrate molecule"
+        ],
+        "joint_source_entailment_local_review": true,
+        "reason": "F054 supplies the subject and leaving-the-cycle relation; F055 supplies the continuation 'part of a carbohydrate molecule.' Their retained same-chunk sequence establishes an adjacent cross-source-unit sentence continuation. 'Can' is a conservative existential narrowing of 'One of ... leaves'; it does not assert that every G3P molecule leaves or becomes carbohydrate.",
+        "layout_noise_interpretation": "The intervening '5 ? Key Terms 131' is a page-layout string, not a scientific negation, quantity condition, chemical formula, or contradictory continuation. Interpreting that string as layout noise adds no scientific premise and does not modify either source fragment.",
+        "source_quality_caveat": "F054 is clipped prose with page noise and F055 is a cross-unit continuation. Both complete original fragment strings must remain independently available and assessed; their complete_block flags alone do not prove support.",
+        "single_stitched_exact_quote_created": false,
+        "source_text_or_offsets_changed": false
+      },
+      {
+        "review_scope_id": "Calvin_cycle_stroma_location",
+        "text": "The Calvin cycle reactions take place in the stroma [ev_007].",
+        "actual_inline_citation": "ev_007",
+        "recommended_fragment_ids": [
+          "F037"
+        ],
+        "actual_sources": [
+          {
+            "fragment_alias": "F037",
+            "evidence_id": "ev_007",
+            "exact_separate_quote": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+            "complete_immutable_fragment_read": "These energy-carrying molecules travel into the stroma where the Calvin cycle reactions take place.",
+            "actual_fragment_id": "span_8f1a62f750cb3a80f992bbac985e92d6",
+            "source_unit_id": "8bd9edcf0207e2fb714c2840ecc6398bfbff",
+            "chunk_id": "f5f548e0f0238b9ca641c222302920bd9e6e",
+            "source_unit_span": [
+              863,
+              962
+            ],
+            "chunk_span": [
+              139,
+              238
+            ],
+            "page": 141,
+            "complete_block_flag_not_used_as_entailment_proof": true
+          }
+        ],
+        "predicate_breakdown": [
+          "Calvin cycle reactions occur in the stroma"
+        ],
+        "joint_source_entailment_local_review": true,
+        "reason": "F037 explicitly states the stroma is where Calvin cycle reactions take place. The new sentence cites ev_007 directly; it does not borrow an uncited fragment from another claim."
+      }
+    ],
+    "controls_are_free_analyst_source_scope_checks_not_model_measurements": true
+  },
+  "bounded_clean_source_backup_if_continuation_not_accepted": {
+    "replacement": "The energy in ATP and NADPH is used to convert three-carbon compounds into G3P [ev_010]. Using the energy carriers formed in the first stage of photosynthesis, the Calvin cycle reactions fix CO2 from the environment to build carbohydrate molecules [ev_010].",
+    "bindings": [
+      {
+        "evidence_id": "ev_010",
+        "fragment_ids": [
+          "F053"
+        ]
+      },
+      {
+        "evidence_id": "ev_010",
+        "fragment_ids": [
+          "F051"
+        ]
+      }
+    ],
+    "tradeoff": "Maintains broad requested coverage but omits the direct optional G3P-to-carbohydrate link and repeated location. Prefer the preserving three-scope version now that source sequence is established."
+  },
+  "science_and_execution_boundaries": {
+    "paired_prose_joint_entailment_local_review": true,
+    "universal_source_quality_or_edition_license_certification": false,
+    "fresh_real_model_recheck_performed_by_reviewer": false,
+    "human_gold_evaluation": false,
+    "native_publication_or_full_UI_timing": false
+  },
+  "operations": {
+    "API_POSTs": 0,
+    "database_reads_or_writes": 0,
+    "Main_writes": 0,
+    "actual_log_source_gate_or_label_changes": 0,
+    "credential_seed_binder_access": false
+  },
+  "candidate_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\attempt-evaluation-conditional-preparation01\\retained-checker-diagnostic-preparation01\\compound-predicate-review05\\PRESERVING_THREE_SCOPE_CANDIDATE05.json",
+    "bytes": 1831,
+    "sha256": "ae9a64ac144d1258f58fd271d27cb1236414b95533b67ef759af614ed179cab9"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schema": "5703_checker85_client_fix1_freeze_v1",
+  "status": "PREPARED_TARGETED_PROTOCOL_CONTROLS_PASS",
+  "prepared_utc": "2026-10-11T17:59:16.0255984Z",
+  "candidate_module": "api_client85_fix1",
+  "origin": "http://127.0.0.1:18029",
+  "files": [
+    {
+      "name": "api_client85_fix1.py",
+      "bytes": 20051,
+      "sha256": "57f097950960fcfa942d630ea56b5f8125788a9c66f95accc984e13da802020d"
+    },
+    {
+      "name": "test_client85_fix1.py",
+      "bytes": 9019,
+      "sha256": "11713b5b3b5bb0fe47838bc90d997fd103a4c741001d197058a958c21af18368"
+    },
+    {
+      "name": "fix1-controls\\20261011T175756Z-ea5e1ad4\\receipt.json",
+      "bytes": 433,
+      "sha256": "3fe7942683f2749d9232fd3bc1603f141434eaaec911da05c2684f7db22f4be3"
+    },
+    {
+      "name": "fix1-controls\\20261011T175756Z-ea5e1ad4\\test-output.txt",
+      "bytes": 1743,
+      "sha256": "02df3e3dbb982e30dda6a274ddd618b0736594bcc53792e3ff509c46d59a4145"
+    },
+    {
+      "name": "fix1-controls\\20261011T175828Z-4704b15f\\receipt.json",
+      "bytes": 433,
+      "sha256": "3c1e529184d651dbf90abc224336b9469bc7b7e746500b7bef15b624e6e79460"
+    },
+    {
+      "name": "fix1-controls\\20261011T175828Z-4704b15f\\test-output.txt",
+      "bytes": 951,
+      "sha256": "98d17debcaf777d04514eb4d4844caea06b95b3e3e84fa2fe2e071ae4da2e33f"
+    }
+  ],
+  "original_client_sha256": "3cda9c216426c48b4081e487cef653be6f649d5e8401ffefb824d703795a7875",
+  "original_client_freeze_sha256": "1d49674467e9646784acb7cab62acc605c40445894554f5439e23c69d812290c",
+  "originals_unchanged": true,
+  "Main_source_evidence": [
+    {
+      "name": "contracts\\models.py",
+      "bytes": 12532,
+      "sha256": "1be28f9411b23074c3195fbbad8109ded6ceb65a28311bc0d64de619d72f795a",
+      "action": "READ_ONLY_SOURCE_EVIDENCE"
+    },
+    {
+      "name": "backend\\app\\modules\\answering\\router.py",
+      "bytes": 10601,
+      "sha256": "37f390b4026ae323fc156488e6e5ecbd17aa60fea75def15f6da4d429916fd62",
+      "action": "READ_ONLY_SOURCE_EVIDENCE"
+    },
+    {
+      "name": "backend\\app\\modules\\answering\\service.py",
+      "bytes": 95312,
+      "sha256": "a8f8e02d156a5d940fa49a16558b26f87f0816b61a2671d9efa0b615d226c1b0",
+      "action": "READ_ONLY_SOURCE_EVIDENCE"
+    }
+  ],
+  "preserved_case01": {
+    "name": "5703-checker85-runtime/case01/journey-receipt85.json",
+    "bytes": 1276,
+    "sha256": "c34f4892a304994122c7cc6e0147eb4a707b802d4570461cecc9d7d4e05ceab9",
+    "stage": "SINGLE_SEND",
+    "message_post_attempts": 1,
+    "accepted_messages": 0,
+    "exact_observed_HTTP_status": "NOT_ESTABLISHED_ORIGINAL_CLIENT_DISCARDED_STATUS",
+    "expected_missing_header_status": 422,
+    "no_reopen_or_retry": true,
+    "cohort_denominator_retained": true
+  },
+  "concrete_cause": "Main send_message requires idempotency_key: str = Header(...), but original LocalTransport supplied no Idempotency-Key. Four JSON body fields match ChatMessageCreate.",
+  "changes": [
+    "Add Idempotency-Key only to the single message POST; deterministic 74-character key binds case ID + frozen scope SHA + fresh session UUID.",
+    "Record numeric unexpected HTTP status/method/path without exporting body or raw exception.",
+    "No change to question/body/model/checker/source scope/financial cap/poll deadline/idle settlement/retries or quality semantics."
+  ],
+  "verification": {
+    "focused_controls": 6,
+    "failures": 0,
+    "errors": 0,
+    "ruff_check": "PASS",
+    "network_calls": 0,
+    "auth_reads": 0,
+    "database_reads": 0,
+    "database_writes": 0,
+    "Main_runtime_imports": 0,
+    "Main_source_read_only": true,
+    "provider_posts": 0,
+    "original20_suite_repeated": false,
+    "first_fix1_test_failure_preserved": true,
+    "first_fix1_failure_cause": "Reused fake transport raised original module ClientStop class; fixture now maps that class to candidate ClientStop without changing tested production behavior."
+  },
+  "Root_next_action": "Use api_client85_fix1.run_case only for case02 onward after verifying this manifest. Do not retry case01. Existing recovery85_public target and pure case checker remain compatible."
+}

@@ -1,0 +1,375 @@
+{
+  "status": "ACTUAL_FREE_FRESH_TWO_DEFECT_INDEPENDENT_COVERAGE_REVIEW",
+  "question": "How do light-dependent reactions provide the energy carriers used by the Calvin cycle?",
+  "position_units": "Python Unicode codepoint half-open [start,end)",
+  "input_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\attempt-evaluation-conditional-preparation01\\actual-checker-retained02\\private-diagnostic\\checker-input-schema01.json",
+      "bytes": 108699,
+      "sha256": "ae8b7cc7b80e0d35a9ec4a3b5c505e42529f368f0350389282fbe42bc6c6a387"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\attempt-evaluation-conditional-preparation01\\actual-checker-retained02\\private-diagnostic\\checker-full-diagnosis01.json",
+      "bytes": 146966,
+      "sha256": "155f39b0d99928ec0ec7e21c6ac0e661ba0f4deb28a2fc9ab1f5e9c2583dfdd9"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\attempt-evaluation-conditional-preparation01\\retained-checker-diagnostic-preparation01\\fresh-targeted-patch-recheck-preparation01\\REPAIRED_TEACHER_CANDIDATE01.json",
+      "bytes": 1834,
+      "sha256": "76d51c5c2f94c8fb6623ae147e2dba13ba722c686e04d8aee53ad90880057c71"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\attempt-evaluation-conditional-preparation01\\retained-checker-diagnostic-preparation01\\fresh-targeted-patch-recheck-preparation01\\FRESH_TARGETED_PATCH_FREE_PROOF01.json",
+      "bytes": 13052,
+      "sha256": "2db42295449634bbb1f6c8fc48d351e310647b2db5ab8d404fa20a09484186a2"
+    }
+  ],
+  "fresh_unchanged_draft_actual_checker_result": {
+    "body_ok": false,
+    "complete_answer": true,
+    "coverage": "full",
+    "missing_facets": [],
+    "final_business_PASS": false,
+    "unapproved_claims": [
+      {
+        "claim_id": "claim_1ad094406c5a0d4221904d72_1",
+        "basis": "textbook",
+        "status": "unsupported"
+      },
+      {
+        "claim_id": "claim_8c3369c13449744ca7b21a20_1",
+        "basis": "textbook",
+        "status": "partial",
+        "citation_defect": "ACTUAL_CITATION_CONTRADICTORY"
+      }
+    ],
+    "protected_claims": 5
+  },
+  "local_edit_geometry": {
+    "exact_two_target_replacement_verified": true,
+    "intro_removed_span": [
+      0,
+      144
+    ],
+    "conflict_replaced_span": [
+      350,
+      551
+    ],
+    "replacement": "Photosystems absorb light and use electron transport chains to convert energy into chemical energy [ev_002]. Photosystem I absorbs a second photon, resulting in the formation of NADPH, an energy carrier for the Calvin cycle reactions [ev_010]. After energy from the sun is converted into chemical energy and temporarily stored in ATP and NADPH molecules, the cell has the fuel needed to build carbohydrate molecules for long-term energy storage [ev_003].",
+    "other_shared_teacher_fields_unchanged": true,
+    "citation_metadata_set_unchanged": true,
+    "five_protected_texts_and_inline_bindings_exact": true,
+    "protected_span_edits": 0
+  },
+  "new_assertion_reviews": [
+    {
+      "new_complete_sentence": "Photosystems absorb light and use electron transport chains to convert energy into chemical energy [ev_002].",
+      "candidate_span": [
+        206,
+        314
+      ],
+      "actual_evidence_id": "ev_002",
+      "submitted_fragment_alias": "F007",
+      "exact_contiguous_supporting_quote": "Photosystems absorb light and use electron transport chains to convert energy into the chemical energy",
+      "complete_immutable_fragment_read": "Photosystems absorb light and use electron transport chains to convert energy into the chemical energy of ATP and NADH.",
+      "scope_explanation": "The new assertion ends at chemical energy. It does not assert the source's ATP/NADH product qualifier or substitute NADPH into that source.",
+      "independent_local_semantic_scope_review": "SUPPORTED_FOR_THIS_LIMITED_ASSERTION",
+      "fresh_candidate_checker_judgment": "NOT_RUN_BY_THIS_REVIEWER"
+    },
+    {
+      "new_complete_sentence": "Photosystem I absorbs a second photon, resulting in the formation of NADPH, an energy carrier for the Calvin cycle reactions [ev_010].",
+      "candidate_span": [
+        315,
+        449
+      ],
+      "actual_evidence_id": "ev_010",
+      "submitted_fragment_alias": "F051",
+      "exact_contiguous_supporting_quote": "Photosystem I absorbs a second photon, which results in the formation of an NADPH molecule, another energy carrier for the Calvin cycle reactions.",
+      "complete_immutable_fragment_read": "Photosystem I absorbs a second photon, which results in the formation of an NADPH molecule, another energy carrier for the Calvin cycle reactions. 5.3 The Calvin Cycle Using the energy carriers formed in the first stage of photosynthesis, the Calvin cycle reactions fix CO2 from the environment to build carbohydrate molecules.",
+      "scope_explanation": "Photosystem I, second photon, resulting NADPH formation, and carrier use in Calvin reactions are preserved. No NADP+ reduction mechanism is added.",
+      "independent_local_semantic_scope_review": "SUPPORTED_FOR_THIS_LIMITED_ASSERTION",
+      "fresh_candidate_checker_judgment": "NOT_RUN_BY_THIS_REVIEWER"
+    },
+    {
+      "new_complete_sentence": "After energy from the sun is converted into chemical energy and temporarily stored in ATP and NADPH molecules, the cell has the fuel needed to build carbohydrate molecules for long-term energy storage [ev_003].",
+      "candidate_span": [
+        450,
+        660
+      ],
+      "actual_evidence_id": "ev_003",
+      "submitted_fragment_alias": "F012",
+      "exact_contiguous_supporting_quote": "After the energy from the sun is converted into chemical energy and temporarily stored in ATP and NADPH molecules, the cell has the fuel needed to build carbohydrate molecules for long-term energy storage.",
+      "complete_immutable_fragment_read": "8.3 Using Light Energy to Make Organic Molecules LEARNING OBJECTIVES By the end of this section, you will be able to do the following: • Describe the Calvin cycle • Define carbon fixation • Explain how photosynthesis works in the energy cycle of all living organisms After the energy from the sun is converted into chemical energy and temporarily stored in ATP and NADPH molecules, the cell has the fuel needed to build carbohydrate molecules for long-term energy storage.",
+      "scope_explanation": "Sun-derived chemical energy, temporary ATP/NADPH storage, carbohydrate formation, and long-term storage are retained without adding ATP synthase or proton-gradient claims.",
+      "independent_local_semantic_scope_review": "SUPPORTED_FOR_THIS_LIMITED_ASSERTION",
+      "fresh_candidate_checker_judgment": "NOT_RUN_BY_THIS_REVIEWER"
+    }
+  ],
+  "exact_protected_claims": [
+    {
+      "claim_id": "claim_843e45c501deb6048e9271db_1",
+      "answer_field": "answer_text",
+      "original_span": [
+        145,
+        349
+      ],
+      "candidate_span": [
+        1,
+        205
+      ],
+      "text_and_inline_citations_exact": true,
+      "fresh_actual_citation_binding": {
+        "claim_id": "claim_843e45c501deb6048e9271db_1",
+        "citations": [
+          {
+            "evidence_id": "ev_008",
+            "allowed_fragment_ids": [
+              "F041",
+              "F042",
+              "F043",
+              "F044",
+              "F045",
+              "F046"
+            ]
+          }
+        ]
+      },
+      "fresh_checker_citation_assessments": [
+        {
+          "evidence_id": "ev_008",
+          "fragment_ids": [
+            "F042",
+            "F043"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "fresh_support_label_not_recertified_by_preservation_check": true
+    },
+    {
+      "claim_id": "claim_1c71ec2df3c08732f8f68cd7_1",
+      "answer_field": "answer_text",
+      "original_span": [
+        552,
+        758
+      ],
+      "candidate_span": [
+        661,
+        867
+      ],
+      "text_and_inline_citations_exact": true,
+      "fresh_actual_citation_binding": {
+        "claim_id": "claim_1c71ec2df3c08732f8f68cd7_1",
+        "citations": [
+          {
+            "evidence_id": "ev_007",
+            "allowed_fragment_ids": [
+              "F036",
+              "F037",
+              "F038",
+              "F039",
+              "F040"
+            ]
+          }
+        ]
+      },
+      "fresh_checker_citation_assessments": [
+        {
+          "evidence_id": "ev_007",
+          "fragment_ids": [
+            "F036",
+            "F037"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "fresh_support_label_not_recertified_by_preservation_check": true
+    },
+    {
+      "claim_id": "claim_8cd7b13097db1301a18c28c6_1",
+      "answer_field": "answer_text",
+      "original_span": [
+        759,
+        1025
+      ],
+      "candidate_span": [
+        868,
+        1134
+      ],
+      "text_and_inline_citations_exact": true,
+      "fresh_actual_citation_binding": {
+        "claim_id": "claim_8cd7b13097db1301a18c28c6_1",
+        "citations": [
+          {
+            "evidence_id": "ev_001",
+            "allowed_fragment_ids": [
+              "F001",
+              "F002",
+              "F003",
+              "F004"
+            ]
+          },
+          {
+            "evidence_id": "ev_005",
+            "allowed_fragment_ids": [
+              "F028",
+              "F029",
+              "F030",
+              "F031",
+              "F032"
+            ]
+          }
+        ]
+      },
+      "fresh_checker_citation_assessments": [
+        {
+          "evidence_id": "ev_001",
+          "fragment_ids": [
+            "F002",
+            "F003"
+          ],
+          "relation": "supporting"
+        },
+        {
+          "evidence_id": "ev_005",
+          "fragment_ids": [
+            "F030",
+            "F031"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "fresh_support_label_not_recertified_by_preservation_check": true
+    },
+    {
+      "claim_id": "claim_2e2e3ba2b43cbd571afa271b_1",
+      "answer_field": "answer_text",
+      "original_span": [
+        1026,
+        1189
+      ],
+      "candidate_span": [
+        1135,
+        1298
+      ],
+      "text_and_inline_citations_exact": true,
+      "fresh_actual_citation_binding": {
+        "claim_id": "claim_2e2e3ba2b43cbd571afa271b_1",
+        "citations": [
+          {
+            "evidence_id": "ev_010",
+            "allowed_fragment_ids": [
+              "F051",
+              "F052",
+              "F053",
+              "F054",
+              "F055",
+              "F056"
+            ]
+          }
+        ]
+      },
+      "fresh_checker_citation_assessments": [
+        {
+          "evidence_id": "ev_010",
+          "fragment_ids": [
+            "F053"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "fresh_support_label_not_recertified_by_preservation_check": true
+    },
+    {
+      "claim_id": "claim_a6a2652d20ee17bbe5f3e20d_1",
+      "answer_field": "short_answer",
+      "original_span": [
+        0,
+        138
+      ],
+      "candidate_span": [
+        0,
+        138
+      ],
+      "text_and_inline_citations_exact": true,
+      "fresh_actual_citation_binding": {
+        "claim_id": "claim_a6a2652d20ee17bbe5f3e20d_1",
+        "citations": [
+          {
+            "evidence_id": "ev_007",
+            "allowed_fragment_ids": [
+              "F036",
+              "F037",
+              "F038",
+              "F039",
+              "F040"
+            ]
+          }
+        ]
+      },
+      "fresh_checker_citation_assessments": [
+        {
+          "evidence_id": "ev_007",
+          "fragment_ids": [
+            "F036",
+            "F037"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "fresh_support_label_not_recertified_by_preservation_check": true
+    }
+  ],
+  "knowledge_preservation": {
+    "uncited_intro_unique_fact_lost": false,
+    "intro_conversion_storage_transport_retained_by": [
+      "claim_843e45c501deb6048e9271db_1",
+      "claim_1c71ec2df3c08732f8f68cd7_1",
+      "claim_a6a2652d20ee17bbe5f3e20d_1"
+    ],
+    "photosystem_absorption_mechanism_retained": true,
+    "electron_transport_mechanism_retained": true,
+    "carrier_identities_ATP_NADPH_retained": true,
+    "PSI_second_photon_to_NADPH_mechanism_added_from_frozen_F051": true,
+    "stroma_delivery_and_Calvin_energy_use_retained": true,
+    "removed_product_assertion": "ATP/NADH as the photosystem/electron-chain products; the conflicting source qualifier is not necessary correct knowledge for answering the question.",
+    "new_unrequested_requirements_invented": false,
+    "deletion_or_rewrite_loses_necessary_broad_requested_facet": false,
+    "high_level_question_coverage_local_review": "CONDITIONALLY_SUPPORTED",
+    "mechanistic_depth_limit": [
+      "proton gradient",
+      "ATP synthase",
+      "NADP+ reduction"
+    ],
+    "depth_limit_explanation": "The frozen sources and original answer did not establish these detailed mechanisms. This bounded revision retains useful existing mechanism and adds the frozen PSI/NADPH step. It does not claim exhaustive biochemical detail or convert an optional deeper mechanism into a new question requirement."
+  },
+  "source_quality_and_assessment_limits": [
+    {
+      "id": "F007_SOURCE_PRODUCT_INCONSISTENCY_PRESERVED",
+      "finding": "F007 itself still says ATP/NADH. Its immutable wording is not repaired or treated as an accurate product statement. The new answer uses only its shared generic mechanism; source display and provenance remain subject to final checks."
+    },
+    {
+      "id": "FRESH_G3P_SELECTED_SUPPORT_SCOPE",
+      "claim_id": "claim_2e2e3ba2b43cbd571afa271b_1",
+      "fresh_selected_fragment_ids": [
+        "F053"
+      ],
+      "finding": "Fresh checker labels this protected claim supported, but F053 alone states ATP/NADPH to G3P without the carbohydrate clause. Available same-citation F051 and F054-F055 supply carbohydrate context; F054 is clipped and F055 completes it. Final full checking should assess the entire preserved claim against actual available complete passages. This review neither alters the protected span nor silently repairs the saved assessment."
+    },
+    {
+      "id": "BIBLIOGRAPHIC_AND_EDITION_PROVENANCE_NOT_ESTABLISHED",
+      "finding": "No new web text is inserted into the frozen input. This local review does not establish title/license/frozen edition or universally certify source scientific correctness."
+    }
+  ],
+  "submitted_fragment_count": 67,
+  "submitted_evidence_id_count": 13,
+  "physical_POSTs_by_this_review": 0,
+  "database_reads_or_writes": 0,
+  "main_repository_writes": 0,
+  "seed_binder_credential_access": false,
+  "checker_positive_gate_changes": 0,
+  "candidate_full_scientific_acceptance": "PENDING_INDEPENDENT_COMPLETE_RECHECK",
+  "native_publication_verified": false,
+  "UI_full_answer_verified": false,
+  "final_judgment": "The exact two-target candidate is a legitimate bounded repair: it removes a redundant uncited introduction, preserves the useful absorption/electron-transport mechanism, and replaces the conflicting product assertion with separately grounded frozen-source mechanisms. The required broad explanation remains covered without importing unsupported detail. This is a local coverage and assertion-scope review, not a fresh candidate scientific checker pass or publication approval."
+}

@@ -1,0 +1,351 @@
+{
+  "schema": "5703_actual_native_relation_public_summary_v1",
+  "native_number": 35,
+  "actual_succeeded": false,
+  "actual_error": {
+    "code": "CHECKER_INCONSISTENT",
+    "message": "The checker returned inconsistent support metadata; no answer was published",
+    "retryable": false,
+    "details": {
+      "issue_codes": [
+        "RELATION_ASSESSED_FRAGMENT_MISMATCH"
+      ]
+    }
+  },
+  "outcome_available": true,
+  "browser_available": true,
+  "failure_snapshot_available": false,
+  "failure_snapshot_error_class": null,
+  "same_actual30_question_regression_not_new_heldout_question": true,
+  "browser_status": "ACTUAL_LIVE_UI_JOURNEY_FAILED_OR_BLOCKED",
+  "provider_post_count": 4,
+  "known_cost_USD": "0.0264511",
+  "new_UNKNOWN": 0,
+  "fully_settled": true,
+  "open_claims": 0,
+  "stop_exists": true,
+  "stage_clocks": {
+    "generation": {
+      "status": "OBSERVED",
+      "physical_POSTs": 1,
+      "latency_ms": 6839
+    },
+    "joint_check": {
+      "status": "OBSERVED",
+      "physical_POSTs": 1,
+      "latency_ms": 7294
+    },
+    "semantic_repair": {
+      "status": "OBSERVED",
+      "physical_POSTs": 1,
+      "latency_ms": 9976
+    },
+    "joint_recheck": {
+      "status": "OBSERVED",
+      "physical_POSTs": 1,
+      "latency_ms": 7016
+    }
+  },
+  "slots": [
+    {
+      "slot": 1,
+      "stage": "generation",
+      "latency_ms": 6839,
+      "http_status": 200,
+      "finish_reason": "stop",
+      "evidence_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure35\\runtime\\retained-provider-diagnostics\\slot-01-model-output01.json",
+        "bytes": 2729,
+        "sha256": "8eb9190fc5411112780fa35fa5f486d33a9e107fd0e6490cf0de7cbc37a106d8"
+      }
+    },
+    {
+      "slot": 2,
+      "stage": "joint_check",
+      "latency_ms": 7294,
+      "http_status": 200,
+      "finish_reason": "stop",
+      "evidence_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure35\\runtime\\retained-provider-diagnostics\\slot-02-model-output01.json",
+        "bytes": 44788,
+        "sha256": "03ddebd693f36727910b489af000d6efe215ec706f4556e621821d6587648af9"
+      }
+    },
+    {
+      "slot": 3,
+      "stage": "semantic_repair",
+      "latency_ms": 9976,
+      "http_status": 200,
+      "finish_reason": "stop",
+      "evidence_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure35\\runtime\\retained-provider-diagnostics\\slot-03-model-output01.json",
+        "bytes": 1626,
+        "sha256": "ee05c5008494f14e329098a457cf2c542b2aa3b0e676f95810fe57c996b756b1"
+      }
+    },
+    {
+      "slot": 4,
+      "stage": "joint_recheck",
+      "latency_ms": 7016,
+      "http_status": 200,
+      "finish_reason": "stop",
+      "evidence_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure35\\runtime\\retained-provider-diagnostics\\slot-04-model-output01.json",
+        "bytes": 45408,
+        "sha256": "3fd252f1e5b219cf8b7db75af9c1e63ade7fc3fbaa6b30c06146541eef50b188"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "Q_NEW35",
+      "status": "FAIL",
+      "answer_id": null,
+      "tfull_ms": null,
+      "tfailure_ms": 37533.60009765625,
+      "citation_checked": false,
+      "citation_controls_checked": null,
+      "refresh_persisted": false,
+      "server_worker_timing": null
+    }
+  ],
+  "recorded_wire_sizes_bytes": [
+    44477,
+    64119,
+    73264,
+    64633
+  ],
+  "wire_limit_bytes": 98304,
+  "wire_limit_basis": "fee-derived local guard, not provider byte cap",
+  "resources": {
+    "status": "CLEANUP_FAILED_OR_LEG_FAILED",
+    "batch_id": "cbb247f1-65a2-4a8a-a8c9-e76c40ed15cf",
+    "paired_leg_id": "B_startup_prewarm",
+    "browser_leg_passed": false,
+    "native_checked_completed": false,
+    "native_completed_question_ids": [],
+    "native_executed_question_ids": [
+      "Q_NEW35"
+    ],
+    "all_submitted_native_jobs_checked": false,
+    "continuation_mode": "SAME_QUESTION_FIX_REGRESSION_NEW_SCOPE_NEW_WORKER",
+    "single_Q2_development_regression_completed": false,
+    "old_Q2_request_job_or_answer_replayed": false,
+    "historical_failed_Q3_Q4_replayed": false,
+    "same_worker_across_Q1_Q2_demonstrated": false,
+    "independent_quality_acceptance": false,
+    "worker_pid": 162916,
+    "engine_object_identity": 2193695156480,
+    "database_target_public": {
+      "database_name": "cs30_week10_pair_b_20261009_01",
+      "host": "127.0.0.1",
+      "port": 15433
+    },
+    "active_pointers_unchanged": true,
+    "owned_threads_closed": true,
+    "owned_database_resources_closed": true,
+    "cleanup_error_classes": [],
+    "cleanup_guard_faults": [],
+    "raw_cleanup_errors_exported": false,
+    "leg_closed_after_advisory_unlock_connection_close_and_engine_dispose": false,
+    "local_models_loaded": true,
+    "provider_calls_are_guarded": true,
+    "no_old_job_recovery": true,
+    "retrieval_variant": "R2",
+    "embedding_provider": "native_e5",
+    "default_profile_pin": {
+      "bytes": 294,
+      "path": "E:\\5703\\learning-assistant\\configs\\retrieval\\chat_hybrid_minilm.json",
+      "sha256": "23ca72ddb737045259a04cbfc81c71969440f11cc2fa1a77bc7f8e7fc4364e17"
+    },
+    "model_cache_readonly": true,
+    "python_write_denials": [],
+    "historical_lock_handles_read_byte_only": true,
+    "cpu_threads": 4,
+    "native_cuda_allowed": true,
+    "no_runtime_retrieval_override": true
+  },
+  "check_summaries": [
+    {
+      "revision": 0,
+      "accepted": false,
+      "validation_state": "validated",
+      "source_relation_protection_invalidation": {
+        "version": "source_relation_protection_invalidation_v1",
+        "stage": "before_teaching_repair_boundary",
+        "method": "same_selector_same_global_gates_without_validated_negative_unit_issues",
+        "protected_without_negative_unit_ids": [
+          "claim_0879c90304abb5855877d42d_1",
+          "claim_0a18750f0cd5b22dbb4ab2db_1",
+          "claim_39a0465a54fded6142924006_1",
+          "claim_4637491dd26986b1477e71cb_1",
+          "claim_898acd96ea3339e192f1f334_1",
+          "claim_9e6350bf8c8ac897dd6ce681_1",
+          "claim_d34d87c1337ba4e04d5fe6b6_1",
+          "claim_dd648b419f14dc504dbd7284_1"
+        ],
+        "protected_with_all_diagnostic_ids": [
+          "claim_0879c90304abb5855877d42d_1",
+          "claim_0a18750f0cd5b22dbb4ab2db_1",
+          "claim_39a0465a54fded6142924006_1",
+          "claim_4637491dd26986b1477e71cb_1",
+          "claim_898acd96ea3339e192f1f334_1",
+          "claim_9e6350bf8c8ac897dd6ce681_1",
+          "claim_d34d87c1337ba4e04d5fe6b6_1",
+          "claim_dd648b419f14dc504dbd7284_1"
+        ],
+        "protection_removed_claim_ids": [],
+        "unattributed_protection_losses": [],
+        "negative_unit_reasons": [
+          {
+            "claim_id": "claim_69f66b082fcd8262639553e6_1",
+            "unit_id": "U01",
+            "issue_codes": [
+              "SOURCE_RELATION_UNSUPPORTED"
+            ],
+            "checker_claim_status": "supported",
+            "current_judgment_claim_status": "supported",
+            "checker_unit_status": "unsupported",
+            "reason": "Uncited summary statement.",
+            "actual_assessed_source_refs": [],
+            "protected_without_negative_units": false,
+            "protected_with_all_diagnostics": false,
+            "source_entailment_certified": false,
+            "publication_override": false
+          },
+          {
+            "claim_id": "claim_69f66b082fcd8262639553e6_1",
+            "unit_id": "U02",
+            "issue_codes": [
+              "SOURCE_RELATION_UNSUPPORTED"
+            ],
+            "checker_claim_status": "supported",
+            "current_judgment_claim_status": "supported",
+            "checker_unit_status": "unsupported",
+            "reason": "Uncited summary statement.",
+            "actual_assessed_source_refs": [],
+            "protected_without_negative_units": false,
+            "protected_with_all_diagnostics": false,
+            "source_entailment_certified": false,
+            "publication_override": false
+          },
+          {
+            "claim_id": "claim_69f66b082fcd8262639553e6_1",
+            "unit_id": "U03",
+            "issue_codes": [
+              "SOURCE_RELATION_UNSUPPORTED"
+            ],
+            "checker_claim_status": "supported",
+            "current_judgment_claim_status": "supported",
+            "checker_unit_status": "unsupported",
+            "reason": "Uncited summary statement.",
+            "actual_assessed_source_refs": [],
+            "protected_without_negative_units": false,
+            "protected_with_all_diagnostics": false,
+            "source_entailment_certified": false,
+            "publication_override": false
+          },
+          {
+            "claim_id": "claim_69f66b082fcd8262639553e6_1",
+            "unit_id": "U04",
+            "issue_codes": [
+              "SOURCE_RELATION_UNSUPPORTED"
+            ],
+            "checker_claim_status": "supported",
+            "current_judgment_claim_status": "supported",
+            "checker_unit_status": "unsupported",
+            "reason": "Uncited summary statement.",
+            "actual_assessed_source_refs": [],
+            "protected_without_negative_units": false,
+            "protected_with_all_diagnostics": false,
+            "source_entailment_certified": false,
+            "publication_override": false
+          }
+        ],
+        "source_binding_contract_valid": true,
+        "independent_semantic_evaluation": false,
+        "publication_override": false
+      },
+      "claim_feedback_transport": {
+        "codec_proof": {
+          "version": "lossless_claim_feedback27_v1",
+          "encoding": "lossless_claim_feedback27_v1",
+          "original_utf8_bytes": 26664,
+          "transmitted_utf8_bytes": 23008,
+          "saved_utf8_bytes": 3656,
+          "original_sha256": "9132e59c825071948a56ba1dc4bdfba0f8c9d5eab1f883e36ef306909041c399",
+          "restored_sha256": "9132e59c825071948a56ba1dc4bdfba0f8c9d5eab1f883e36ef306909041c399",
+          "exact_round_trip_verified": true,
+          "canonical_json_and_types_verified": true,
+          "claim_span_count": 9,
+          "protected_claim_ref_count": 8,
+          "source_quote_ref_count": 23,
+          "source_quote_verified_fragment_count": 23,
+          "source_quote_context_only_count": 0,
+          "source_quote_refs_are_ownership_certificates": false,
+          "original_draft_sha256": "0f86a883ffde73d9dbcf3371e8705502ff83c28fbd201efd73f895e9199bc8af",
+          "original_claims_sha256": "68c8e9cdfc3750dd46eadcb77973251790c2cd4316b3f18eca53d65a309184b2",
+          "original_source_quotes_sha256": "1666c9445ab9a2267dbd714d7f1edde8b5653aa0a6498a7a3b2fca3513e0ab5f",
+          "source_repair_candidates_sha256": "5507d39fd7afed9f02204fc161be8eb58d91ae5ee4d33f30496a8a053e63840d"
+        },
+        "selected_wire_encoding": "lossless_claim_feedback27_v1",
+        "raw_server_feedback_sha256": "9132e59c825071948a56ba1dc4bdfba0f8c9d5eab1f883e36ef306909041c399",
+        "projected_feedback_sha256": "9132e59c825071948a56ba1dc4bdfba0f8c9d5eab1f883e36ef306909041c399",
+        "full_content_utf8_bytes": 26664,
+        "selected_content_utf8_bytes": 23907,
+        "full_serialized_content_utf8_bytes": 28788,
+        "selected_serialized_content_utf8_bytes": 25987,
+        "saved_provider_wire_utf8_bytes": 2801,
+        "wire_delta_basis": "same_remaining_body_and_outer_JSON_string_serializer",
+        "trusted_instruction_included_in_wire_measurement": true,
+        "authoritative_server_feedback_changed": false
+      }
+    },
+    {
+      "revision": 1,
+      "accepted": false,
+      "validation_state": "checker_inconsistent",
+      "source_relation_protection_invalidation": null,
+      "claim_feedback_transport": null
+    }
+  ],
+  "evidence_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure35\\runtime\\budget-status-public01.json",
+      "bytes": 1305,
+      "sha256": "d4e7a2ee6bf5a79e74ea8bc4697cc7947f1fb31f1bda5ba27e0380013ba67b94"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure35\\runtime\\runtime-closed-public01.json",
+      "bytes": 1800,
+      "sha256": "69b5ab8f9fc66d165def17bcb2d8fa5be69b69a9fd7561874621d3103c3186fd"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure35\\runtime\\retained-provider-diagnostics\\native-generation-outcome01.json",
+      "bytes": 749160,
+      "sha256": "54bebfc048a7cc968fe2f53c822d04a87174c55ab6375eba44aea62431694239"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure35\\browser\\real-browser-live-qa-receipt01.json",
+      "bytes": 26873,
+      "sha256": "af39aee5e1e21e386cbc9e43a5ba1a83fb7511ccf7044b449d51b1752d92d413"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure35\\runtime\\actual-model-inputs-public01.jsonl",
+      "bytes": 9690,
+      "sha256": "241e2b0743826e4086d8e6fde7ed90495be4774d2934a86d27298dd4004e06d7"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation35\\SCIENTIFIC_NATIVE_CLOSURE_GUARD_RELEASE_ACTUAL09.json",
+      "bytes": 187841,
+      "sha256": "65b209350c00578ee97b321707159e2a421520ce080f81fa08522547b7994c3e"
+    }
+  ],
+  "limitations": [
+    "Independent source quality requires a separate full-predicate review.",
+    "A repeated old question is development regression, not a formal quality test.",
+    "One new question is functional confirmation, not a held-out benchmark.",
+    "Nested worker and provider clocks must not be added together.",
+    "Missing outcome, browser receipt or stage clock remains missing."
+  ]
+}

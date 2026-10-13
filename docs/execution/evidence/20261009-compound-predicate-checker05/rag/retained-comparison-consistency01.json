@@ -1,0 +1,303 @@
+{
+  "status": "ACTUAL_FREE_RETAINED_PUBLIC_COMPARISON_CONSISTENCY_PASS",
+  "checked_at_UTC": "2026-10-09T17:33:40.948912+00:00",
+  "source_scope": "Dated 20261008 evidence; new consistency verification only.",
+  "input_pins": [
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\20261008-checker-rag-native\\matched-DEV-scores.json",
+      "bytes": 20342,
+      "sha256": "a2c63a9a8663059b267b2d0f21c8d06fb51a81dc921a3b58796cc8a6d83ae265"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\20261008-checker-rag-native\\native-four-HTTP.json",
+      "bytes": 209715,
+      "sha256": "d89383350d866ca4269a3ac1345de323b60422d43a495d383a73ace443002799"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\20261008-checker-rag-native\\free-ablation-terminal.json",
+      "bytes": 1644,
+      "sha256": "7fe7da157b9b21ee6b42ae78670fd8ff02ef841c1c9170d795435cba11b4d62a"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-rag-ablation-public-20261008-01\\attempt03\\fixed-pool-four-arm-results01.json",
+      "bytes": 210685,
+      "sha256": "f386a2d161795d28d3a697efe174021809a08c3a43412a99bd89866791d15d5d"
+    }
+  ],
+  "quality": {
+    "matched_cells": 18,
+    "questions": 3,
+    "tasks": 2,
+    "arms": 3,
+    "cube_complete_no_duplicates": true,
+    "original_numeric_scores_reaggregated_without_reading_Gold": true,
+    "original_scores_independently_recomputed_against_references": false,
+    "slot19_excluded_from_matched_denominators": true,
+    "summaries": [
+      {
+        "protocol": "mcq",
+        "arm": "E0_none",
+        "scheduled_count": 3,
+        "metrics": {
+          "accuracy": 1.0
+        },
+        "historical_adapter_generation_median_ms": 1093.4345000005123
+      },
+      {
+        "protocol": "mcq",
+        "arm": "E1_dense",
+        "scheduled_count": 3,
+        "metrics": {
+          "accuracy": 1.0
+        },
+        "historical_adapter_generation_median_ms": 1005.5668000004516
+      },
+      {
+        "protocol": "mcq",
+        "arm": "hybrid_plus_rerank",
+        "scheduled_count": 3,
+        "metrics": {
+          "accuracy": 1.0
+        },
+        "historical_adapter_generation_median_ms": 1176.8047000005026
+      },
+      {
+        "protocol": "openqa",
+        "arm": "E0_none",
+        "scheduled_count": 3,
+        "metrics": {
+          "em": 0.6666666666666666,
+          "token_f1": 0.6666666666666666
+        },
+        "historical_adapter_generation_median_ms": 1043.1626999998116
+      },
+      {
+        "protocol": "openqa",
+        "arm": "E1_dense",
+        "scheduled_count": 3,
+        "metrics": {
+          "em": 0.6666666666666666,
+          "token_f1": 0.6666666666666666
+        },
+        "historical_adapter_generation_median_ms": 1153.3602999998038
+      },
+      {
+        "protocol": "openqa",
+        "arm": "hybrid_plus_rerank",
+        "scheduled_count": 3,
+        "metrics": {
+          "em": 0.6666666666666666,
+          "token_f1": 0.6666666666666666
+        },
+        "historical_adapter_generation_median_ms": 1117.8594999992129
+      }
+    ],
+    "new_quality_measurement": false,
+    "heldout_evaluation": false,
+    "human_semantic_correctness": null,
+    "demonstrated_RAG_accuracy_gain": false
+  },
+  "ranking": {
+    "cells_verified": 12,
+    "question_specific_candidate_memberships": 84,
+    "fixed_pool_membership_text_hash_and_AI_label_equal_across_all_four_arms": true,
+    "top5_and_aggregate_recount_PASS": true,
+    "per_cell": [
+      {
+        "question_id": "sciq:test:000000",
+        "arm": "dense_E5_fixed_union",
+        "candidate_count": 31,
+        "positive_top5_count": 0,
+        "unknown_top5_count": 0,
+        "exploratory_precision_at_5": 0.0
+      },
+      {
+        "question_id": "sciq:test:000000",
+        "arm": "BM25_candidate_local",
+        "candidate_count": 31,
+        "positive_top5_count": 0,
+        "unknown_top5_count": 0,
+        "exploratory_precision_at_5": 0.0
+      },
+      {
+        "question_id": "sciq:test:000000",
+        "arm": "RRF_candidate_local_consensus",
+        "candidate_count": 31,
+        "positive_top5_count": 0,
+        "unknown_top5_count": 0,
+        "exploratory_precision_at_5": 0.0
+      },
+      {
+        "question_id": "sciq:test:000000",
+        "arm": "MiniLM_same_union",
+        "candidate_count": 31,
+        "positive_top5_count": 0,
+        "unknown_top5_count": 0,
+        "exploratory_precision_at_5": 0.0
+      },
+      {
+        "question_id": "sciq:test:000013",
+        "arm": "dense_E5_fixed_union",
+        "candidate_count": 25,
+        "positive_top5_count": 1,
+        "unknown_top5_count": 0,
+        "exploratory_precision_at_5": 0.2
+      },
+      {
+        "question_id": "sciq:test:000013",
+        "arm": "BM25_candidate_local",
+        "candidate_count": 25,
+        "positive_top5_count": 4,
+        "unknown_top5_count": 0,
+        "exploratory_precision_at_5": 0.8
+      },
+      {
+        "question_id": "sciq:test:000013",
+        "arm": "RRF_candidate_local_consensus",
+        "candidate_count": 25,
+        "positive_top5_count": 2,
+        "unknown_top5_count": 0,
+        "exploratory_precision_at_5": 0.4
+      },
+      {
+        "question_id": "sciq:test:000013",
+        "arm": "MiniLM_same_union",
+        "candidate_count": 25,
+        "positive_top5_count": 3,
+        "unknown_top5_count": 0,
+        "exploratory_precision_at_5": 0.6
+      },
+      {
+        "question_id": "sciq:test:000030",
+        "arm": "dense_E5_fixed_union",
+        "candidate_count": 28,
+        "positive_top5_count": 0,
+        "unknown_top5_count": 0,
+        "exploratory_precision_at_5": 0.0
+      },
+      {
+        "question_id": "sciq:test:000030",
+        "arm": "BM25_candidate_local",
+        "candidate_count": 28,
+        "positive_top5_count": 0,
+        "unknown_top5_count": 0,
+        "exploratory_precision_at_5": 0.0
+      },
+      {
+        "question_id": "sciq:test:000030",
+        "arm": "RRF_candidate_local_consensus",
+        "candidate_count": 28,
+        "positive_top5_count": 0,
+        "unknown_top5_count": 0,
+        "exploratory_precision_at_5": 0.0
+      },
+      {
+        "question_id": "sciq:test:000030",
+        "arm": "MiniLM_same_union",
+        "candidate_count": 28,
+        "positive_top5_count": 0,
+        "unknown_top5_count": 0,
+        "exploratory_precision_at_5": 0.0
+      }
+    ],
+    "aggregates": {
+      "dense_E5_fixed_union": {
+        "positive_top5_count": 1,
+        "denominator": 15,
+        "unknown_at_5": 0,
+        "exploratory_precision_at_5": 0.06666666666666667
+      },
+      "BM25_candidate_local": {
+        "positive_top5_count": 4,
+        "denominator": 15,
+        "unknown_at_5": 0,
+        "exploratory_precision_at_5": 0.26666666666666666
+      },
+      "RRF_candidate_local_consensus": {
+        "positive_top5_count": 2,
+        "denominator": 15,
+        "unknown_at_5": 0,
+        "exploratory_precision_at_5": 0.13333333333333333
+      },
+      "MiniLM_same_union": {
+        "positive_top5_count": 3,
+        "denominator": 15,
+        "unknown_at_5": 0,
+        "exploratory_precision_at_5": 0.2
+      }
+    },
+    "pair_tokens_min": 107,
+    "pair_tokens_max": 341,
+    "new_ranker_inference": false,
+    "new_gold_relevance_judgment": false,
+    "human_gold_precision_at_5": null,
+    "full_corpus_recall_at_5": null,
+    "answer_sufficiency_or_answer_accuracy_inferred_from_relevance": false
+  },
+  "complete_answer_timing": {
+    "historical_completed_answers": 4,
+    "matched_questions": 2,
+    "arms": [
+      "dense",
+      "hybrid_rerank"
+    ],
+    "dated_rows": [
+      {
+        "case_id": "case01",
+        "question": "What is homeostasis?",
+        "arm": "dense",
+        "message_POST_through_answer_GET_ms": 14117.831,
+        "observed_total_duration_ms": 14117.838,
+        "actual_observation_minus_answer_GET_ms": 0.007,
+        "historical_model_attempts": 2
+      },
+      {
+        "case_id": "case02",
+        "question": "How do simple diffusion and facilitated diffusion differ?",
+        "arm": "hybrid_rerank",
+        "message_POST_through_answer_GET_ms": 13073.519,
+        "observed_total_duration_ms": 13073.526,
+        "actual_observation_minus_answer_GET_ms": 0.007,
+        "historical_model_attempts": 2
+      },
+      {
+        "case_id": "case03",
+        "question": "What is homeostasis?",
+        "arm": "hybrid_rerank",
+        "message_POST_through_answer_GET_ms": 7572.64,
+        "observed_total_duration_ms": 7572.645,
+        "actual_observation_minus_answer_GET_ms": 0.005,
+        "historical_model_attempts": 2
+      },
+      {
+        "case_id": "case04",
+        "question": "How do simple diffusion and facilitated diffusion differ?",
+        "arm": "dense",
+        "message_POST_through_answer_GET_ms": 32933.151,
+        "observed_total_duration_ms": 32933.164,
+        "actual_observation_minus_answer_GET_ms": 0.013,
+        "historical_model_attempts": 3
+      }
+    ],
+    "new_complete_answer_measurement": false,
+    "browser_visible_full_answer_ms": null,
+    "p95_ms": null,
+    "TTFT_ms": null,
+    "controlled_causal_speedup": null,
+    "current_source_native_verification": false,
+    "no_RAG_interactive_arm": "UNSUPPORTED_NOT_MEASURED"
+  },
+  "operations": {
+    "model_POSTs": 0,
+    "network_calls": 0,
+    "database_reads": 0,
+    "database_writes": 0,
+    "credential_or_seed_reads": 0,
+    "Gold_reads": 0,
+    "Main_writes": 0,
+    "dependency_installs": 0,
+    "model_loads": 0
+  },
+  "old_failures_UNKNOWNs_STOPs_and_receipts_modified": false,
+  "project_complete": false
+}

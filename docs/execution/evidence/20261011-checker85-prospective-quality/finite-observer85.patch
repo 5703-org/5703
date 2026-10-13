@@ -1,0 +1,38 @@
+--- a/outcome_observer82.py
++++ b/outcome_observer82.py
+@@ -1,13 +1,25 @@
+ """Content-free observation of the unchanged normal adapter result."""
+ import math
+ 
+-ERROR_CODES = frozenset({"CONFIGURATION_ERROR", "PROVIDER_REFUSAL", "OUTPUT_TRUNCATED", "PROVIDER_RESPONSE_ERROR", "EMPTY_RESPONSE", "PROVIDER_ROUTE_MODEL_MISMATCH", "PROVIDER_GATEWAY_ERROR", "PROVIDER_HTTP_ERROR", "PROVIDER_TIMEOUT", "PROVIDER_NETWORK_ERROR"})
++ERROR_CODES = frozenset({"CONFIGURATION_ERROR", "PROVIDER_REFUSAL", "OUTPUT_TRUNCATED", "PROVIDER_RESPONSE_ERROR", "EMPTY_RESPONSE", "PROVIDER_ROUTE_MODEL_MISMATCH", "PROVIDER_GATEWAY_ERROR", "PROVIDER_HTTP_ERROR", "PROVIDER_TIMEOUT", "PROVIDER_NETWORK_ERROR", "CHECKER_TRANSPORT_INVALID"})
+ FINISH_REASONS = frozenset({"stop", "length", "content_filter", "tool_calls", "function_call", "token_count"})
+ USAGE_FIELDS = ("input_tokens", "output_tokens", "total_tokens", "reasoning_tokens", "cache_hit_input_tokens", "cache_miss_input_tokens", "cost")
++CHECKER_DECODE_CATEGORIES = frozenset({"LOSSLESS_OUTPUT_INVALID"})
+ 
+ 
+ def numeric(value):
+     return value if type(value) in (int, float) and math.isfinite(value) and value >= 0 else None
++
++
++def checker_decode_failure(outcome, code):
++    if code != "CHECKER_TRANSPORT_INVALID":
++        return {"state": "NOT_APPLICABLE", "category": None}
++    diagnostic = getattr(outcome, "diagnostic", None)
++    transport = diagnostic.get("checker_transport") if isinstance(diagnostic, dict) else None
++    failure = transport.get("decode_failure") if isinstance(transport, dict) else None
++    category = failure.get("category") if isinstance(failure, dict) else None
++    recognized = type(category) is str and category in CHECKER_DECODE_CATEGORIES
++    return {"state": "NONE" if category is None else "RECOGNIZED" if recognized else "UNRECOGNIZED", "category": category if recognized else None}
+ 
+ 
+ def observe(outcome, slot):
+@@ -18,7 +30,7 @@
+     recognized = isinstance(code, str) and code in ERROR_CODES
+     usage = outcome.usage if isinstance(outcome.usage, dict) else {}
+     finish = outcome.finish_reason
+-    return {"schema": "cs30_content_free_adapter_outcome82_v1", "slot": slot, "error_code_state": "NONE" if error is None else "RECOGNIZED" if recognized else "UNRECOGNIZED", "error_code": code if recognized else None, "finish_reason": finish if isinstance(finish, str) and finish in FINISH_REASONS else None, "usage": {name: numeric(usage.get(name)) for name in USAGE_FIELDS}, "raw_text_or_auth_exported": False, "financial_settlement_authority": False}
++    return {"schema": "cs30_content_free_adapter_outcome82_v1", "slot": slot, "error_code_state": "NONE" if error is None else "RECOGNIZED" if recognized else "UNRECOGNIZED", "error_code": code if recognized else None, "finish_reason": finish if isinstance(finish, str) and finish in FINISH_REASONS else None, "usage": {name: numeric(usage.get(name)) for name in USAGE_FIELDS}, "checker_decode_failure": checker_decode_failure(outcome, code if recognized else None), "raw_text_or_auth_exported": False, "financial_settlement_authority": False}
+ 
+ 
+ def make_observed_call(original, slot_supplier, write, write_failed):

@@ -1,0 +1,1358 @@
+{
+  "status": "BACKEND_PERSISTED_ANSWER_AND_FREE_UI_READBACK_PASS_SCIENCE_NO_GO_ORIGINAL_DOM_TIME_INVALID",
+  "scope_sha256": "8f95552421a1f2efcc716f072af19a54d10691cd58db5e3a7ff165bb523ceacc",
+  "wire_proofs": [
+    {
+      "slot": 1,
+      "wire_sha256": "5ec777311f244f2118e88328484f13873b11d7fac7cb546dfc6a2b41fc300322",
+      "wire_bytes": 44464,
+      "matches_actual_dispatch_claim": true,
+      "raw_response_commit_valid": true,
+      "http_status": 200,
+      "returned_model": "deepseek-flash",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 9258,
+        "completion_tokens": 329,
+        "total_tokens": 9587,
+        "prompt_tokens_details": {
+          "cached_tokens": 9088
+        },
+        "prompt_cache_hit_tokens": 9088,
+        "prompt_cache_miss_tokens": 170
+      }
+    },
+    {
+      "slot": 2,
+      "wire_sha256": "2a7b31929e881726d47c023c207d24f916fd5d88157495bd7d98700dd168b337",
+      "wire_bytes": 90229,
+      "matches_actual_dispatch_claim": true,
+      "raw_response_commit_valid": true,
+      "http_status": 200,
+      "returned_model": "deepseek-flash",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 21516,
+        "completion_tokens": 2121,
+        "total_tokens": 23637,
+        "prompt_tokens_details": {
+          "cached_tokens": 5888
+        },
+        "prompt_cache_hit_tokens": 5888,
+        "prompt_cache_miss_tokens": 15628
+      }
+    }
+  ],
+  "checker110_complete_prompt_present_once": true,
+  "context_coverage": [
+    {
+      "evidence_id": "ev_001",
+      "text_sha256": "10feda0b6442423e3081f8a3f480c119211aaf3810e36e5ebad0f449ab68342d",
+      "all_nonwhitespace_present_in_checker": true
+    },
+    {
+      "evidence_id": "ev_002",
+      "text_sha256": "a7be0a387cedb6d568205d58c5ab2b8955fb857ad2cf98650d3cf6db1a00d5cf",
+      "all_nonwhitespace_present_in_checker": true
+    },
+    {
+      "evidence_id": "ev_003",
+      "text_sha256": "4dfd5145de1d03f4f82ef24b4f1afaded6c8f796081dcd4fabfe3e21458d9b8b",
+      "all_nonwhitespace_present_in_checker": true
+    },
+    {
+      "evidence_id": "ev_004",
+      "text_sha256": "896404eb3e913a7d9574aa2cb9f44784e3e54d3b5a62694335c96c6a7d993ac4",
+      "all_nonwhitespace_present_in_checker": true
+    },
+    {
+      "evidence_id": "ev_005",
+      "text_sha256": "d73c47a3ff25b1da0e63efc2d7b1bfdac1c093076b64d0b7d3e0b0746147d10b",
+      "all_nonwhitespace_present_in_checker": true
+    },
+    {
+      "evidence_id": "ev_006",
+      "text_sha256": "1ece10b1dc13b5ccec589971d65580a3f1c229721250741c633d10f97d9ba598",
+      "all_nonwhitespace_present_in_checker": true
+    },
+    {
+      "evidence_id": "ev_007",
+      "text_sha256": "30ff494455d3872ed634c78b9e1741cb0606541b19df11c7fcf3c47e826f5c97",
+      "all_nonwhitespace_present_in_checker": true
+    },
+    {
+      "evidence_id": "ev_008",
+      "text_sha256": "089faa2a9a9004f8837560f4f8062586157c7d5eea5cba346e78f7bec1c06ba0",
+      "all_nonwhitespace_present_in_checker": true
+    }
+  ],
+  "checker_fragments": 64,
+  "teacher_response": {
+    "schema_version": "chat_response_v1",
+    "response_type": "answer",
+    "answer_text": "An enzyme is a catalyst composed of protein or ribonucleic acid (RNA) [ev_001]. Most enzymes are proteins and perform the critical task of lowering the activation energies of chemical reactions inside the cell [ev_003]. A catalyst is a substance that increases the rate of a chemical reaction without itself undergoing any change [ev_001]. Catalysts work by lowering the level of energy that needs to be invested in a chemical reaction, that is, the activation energy, which is the threshold level of energy needed to break the bonds in the reactants [ev_001]. Enzymes do this by binding to the reactant molecules and holding them in such a way as to make the chemical bond-breaking and bond-forming processes take place more easily [ev_003]. Importantly, enzymes do not change whether a reaction is exergonic (spontaneous) or endergonic, because they do not change the free energy of the reactants or products; they only reduce the activation energy required for the reaction to go forward [ev_003].",
+    "short_answer": "An enzyme is a catalyst composed of protein or RNA [ev_001]. A catalyst increases the rate of a chemical reaction without itself undergoing any change [ev_001], by lowering the activation energy needed to break the bonds in the reactants [ev_001].",
+    "citations": [
+      "ev_001",
+      "ev_003"
+    ],
+    "refusal_reason": null,
+    "follow_up_questions": [],
+    "confidence": 0.95,
+    "tutor_question": null,
+    "learner_attempt_evaluation": null
+  },
+  "checker_response": {
+    "claims": [
+      {
+        "claim_id": "claim_ca1fdc49c4f519df5a8e8f73_1",
+        "basis": "textbook",
+        "status": "supported",
+        "citations": [
+          {
+            "evidence_id": "ev_001",
+            "fragment_ids": [
+              "F006"
+            ],
+            "relation": "supporting"
+          }
+        ],
+        "reason": "F006 states 'An enzyme is a catalyst composed of protein or ribonucleic acid (RNA)', establishing the definition and both composition alternatives.",
+        "units": [
+          {
+            "unit_id": "U01",
+            "status": "supported",
+            "fragment_ids": [
+              "F006"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "F006 states an enzyme is a catalyst composed of protein."
+          },
+          {
+            "unit_id": "U02",
+            "status": "supported",
+            "fragment_ids": [
+              "F006"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "F006 adds 'or ribonucleic acid (RNA)', matching the RNA alternative."
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_a9157b9b589134e7760a9e3e_1",
+        "basis": "textbook",
+        "status": "supported",
+        "citations": [
+          {
+            "evidence_id": "ev_003",
+            "fragment_ids": [
+              "F022"
+            ],
+            "relation": "supporting"
+          }
+        ],
+        "reason": "F022 states 'Most enzymes are proteins and perform the critical task of lowering the activation energies of chemical reactions inside the cell', covering the quantifier, composition and task.",
+        "units": [
+          {
+            "unit_id": "U01",
+            "status": "supported",
+            "fragment_ids": [
+              "F022"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "F022 states 'Most enzymes are proteins'."
+          },
+          {
+            "unit_id": "U02",
+            "status": "supported",
+            "fragment_ids": [
+              "F022"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "F022 states they lower activation energies of chemical reactions inside the cell."
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_19124ab8a83e155311dda72d_1",
+        "basis": "textbook",
+        "status": "supported",
+        "citations": [
+          {
+            "evidence_id": "ev_001",
+            "fragment_ids": [
+              "F002"
+            ],
+            "relation": "supporting"
+          }
+        ],
+        "reason": "F002 states 'a catalyst is a substance that increases the rate of a chemical reaction without itself undergoing any change', matching the claim exactly.",
+        "units": [
+          {
+            "unit_id": "U01",
+            "status": "supported",
+            "fragment_ids": [
+              "F002"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "F002 fully states the catalyst definition including the unchanged condition."
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_3808e8e23c6f3f9623809c5d_1",
+        "basis": "textbook",
+        "status": "supported",
+        "citations": [
+          {
+            "evidence_id": "ev_001",
+            "fragment_ids": [
+              "F007",
+              "F008"
+            ],
+            "relation": "supporting"
+          }
+        ],
+        "reason": "F007 states catalysts work by lowering the energy invested in a reaction; F008 defines activation energy as the threshold energy needed to break bonds in reactants.",
+        "units": [
+          {
+            "unit_id": "U01",
+            "status": "supported",
+            "fragment_ids": [
+              "F007"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "F007 states catalysts work by lowering the energy invested in a chemical reaction."
+          },
+          {
+            "unit_id": "U02",
+            "status": "supported",
+            "fragment_ids": [
+              "F008"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "F008 defines activation energy as the threshold energy needed to break bonds in reactants."
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_6cbdb0e24f7854bfa9d5019c_1",
+        "basis": "textbook",
+        "status": "supported",
+        "citations": [
+          {
+            "evidence_id": "ev_003",
+            "fragment_ids": [
+              "F026"
+            ],
+            "relation": "supporting"
+          }
+        ],
+        "reason": "F026 states enzymes bind reactant molecules and hold them so bond-breaking and bond-forming processes take place more easily.",
+        "units": [
+          {
+            "unit_id": "U01",
+            "status": "supported",
+            "fragment_ids": [
+              "F026"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "F026 states enzymes bind to reactant molecules."
+          },
+          {
+            "unit_id": "U02",
+            "status": "supported",
+            "fragment_ids": [
+              "F026"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "F026 states holding them so chemical bond-breaking takes place more easily."
+          },
+          {
+            "unit_id": "U03",
+            "status": "supported",
+            "fragment_ids": [
+              "F026"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "F026 includes bond-forming processes taking place more easily."
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_15c958d17cab8487e6887512_1",
+        "basis": "textbook",
+        "status": "supported",
+        "citations": [
+          {
+            "evidence_id": "ev_003",
+            "fragment_ids": [
+              "F027",
+              "F028",
+              "F029"
+            ],
+            "relation": "supporting"
+          }
+        ],
+        "reason": "F027 states enzymes do not change whether a reaction is exergonic or endergonic; F028 gives the reason (no change in free energy of reactants or products); F029 states they only reduce activation energy required to go forward.",
+        "units": [
+          {
+            "unit_id": "U01",
+            "status": "supported",
+            "fragment_ids": [
+              "F027"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "F027 states enzymes do not change whether a reaction is exergonic (spontaneous)."
+          },
+          {
+            "unit_id": "U02",
+            "status": "supported",
+            "fragment_ids": [
+              "F027"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "F027 includes 'or endergonic'."
+          },
+          {
+            "unit_id": "U03",
+            "status": "supported",
+            "fragment_ids": [
+              "F028"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "F028 states they do not change the free energy of the reactants."
+          },
+          {
+            "unit_id": "U04",
+            "status": "supported",
+            "fragment_ids": [
+              "F028"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "F028 includes 'or products'."
+          },
+          {
+            "unit_id": "U05",
+            "status": "supported",
+            "fragment_ids": [
+              "F029"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "F029 states they only reduce the activation energy required for the reaction to go forward."
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_3919da0902bbc781ba4e279a_1",
+        "basis": "textbook",
+        "status": "supported",
+        "citations": [
+          {
+            "evidence_id": "ev_001",
+            "fragment_ids": [
+              "F006"
+            ],
+            "relation": "supporting"
+          }
+        ],
+        "reason": "F006 states an enzyme is a catalyst composed of protein or ribonucleic acid (RNA); RNA is the abbreviation given in the source.",
+        "units": [
+          {
+            "unit_id": "U01",
+            "status": "supported",
+            "fragment_ids": [
+              "F006"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "F006 states an enzyme is a catalyst composed of protein."
+          },
+          {
+            "unit_id": "U02",
+            "status": "supported",
+            "fragment_ids": [
+              "F006"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "F006 gives RNA as the abbreviation for ribonucleic acid."
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_9838eb72391c371b0759edd7_1",
+        "basis": "textbook",
+        "status": "supported",
+        "citations": [
+          {
+            "evidence_id": "ev_001",
+            "fragment_ids": [
+              "F002",
+              "F007",
+              "F008"
+            ],
+            "relation": "supporting"
+          }
+        ],
+        "reason": "F002 states a catalyst increases reaction rate without itself changing; F007 states catalysts lower the energy invested; F008 defines activation energy as threshold energy to break bonds in reactants.",
+        "units": [
+          {
+            "unit_id": "U01",
+            "status": "supported",
+            "fragment_ids": [
+              "F002",
+              "F007",
+              "F008"
+            ],
+            "relation_preserved": true,
+            "conditions_preserved": true,
+            "reason": "F002 gives rate increase and unchanged catalyst; F007 and F008 give lowering activation energy to break reactant bonds."
+          }
+        ]
+      }
+    ],
+    "body_ok": true,
+    "specific_help": true,
+    "scope_ok": true,
+    "suggestions_ok": true,
+    "evidence_display_ok": true,
+    "cumulative_ok": true,
+    "complete_answer": true,
+    "coverage": "full",
+    "missing_facets": [],
+    "limitations_explicit": true,
+    "reason": "All eight claims are supported by the cited fragments. The answer defines an enzyme and explains what a catalyst changes (rate, activation energy) with relevant conditions. Direct mode permits the complete explanation.",
+    "repair_fragment_ids": [],
+    "attempt_evaluation_ok": true,
+    "tutor_question_ok": true,
+    "requirements": [
+      {
+        "requirement_id": "requirement_01",
+        "relevance": "related",
+        "sufficiency": "sufficient",
+        "evidence": [
+          {
+            "evidence_id": "ev_001",
+            "fragment_id": "F006",
+            "quote": "An enzyme is a catalyst composed of protein or ribonucleic acid (RNA), both of which will be discussed later in this chapter."
+          }
+        ],
+        "conditions_preserved": true,
+        "response_coverage": "covered",
+        "missing_information": "",
+        "reason": "F006 directly defines an enzyme as a catalyst composed of protein or RNA."
+      },
+      {
+        "requirement_id": "requirement_02",
+        "relevance": "related",
+        "sufficiency": "sufficient",
+        "evidence": [
+          {
+            "evidence_id": "ev_001",
+            "fragment_id": "F002",
+            "quote": "In chemistry, a catalyst is a substance that increases the rate of a chemical reaction without itself undergoing any change."
+          },
+          {
+            "evidence_id": "ev_001",
+            "fragment_id": "F007",
+            "quote": "Like all catalysts, enzymes work by lowering the level of energy that needs to be invested in a chemical reaction."
+          },
+          {
+            "evidence_id": "ev_001",
+            "fragment_id": "F008",
+            "quote": "A chemical reaction’s activation energy is the “threshold” level of energy needed to break the bonds in the reactants."
+          }
+        ],
+        "conditions_preserved": true,
+        "response_coverage": "covered",
+        "missing_information": "",
+        "reason": "F002 gives the rate increase and unchanged catalyst; F007 and F008 give the activation-energy lowering mechanism."
+      }
+    ],
+    "non_repetitive_next_action": true
+  },
+  "science_review": {
+    "status": "LIMITED_INDEPENDENT_AI_CONTEXTUAL_SCIENCE_NO_GO",
+    "reviewer": "checker87_terminal_review",
+    "human_rating": null,
+    "exposed_cases": 1,
+    "temporary_vs_net_change": "NOT_QUALIFIED: absolute no-change formulation remains in body and short answer; supplied F018/F048/F049 specify temporary changes",
+    "activation_energy_definition": "NOT_QUALIFIED: general definition remains reactant bond-breaking threshold; it does not literally say only, but F033/F044 supply transition-state scope",
+    "force_assertion": "NOT_PRESENT_IN_THIS_ANSWER; no causal attribution to Checker110 because teacher preceded checker and no repair ran",
+    "core_content": "Protein/RNA definition, most proteins, reaction-rate increase, lower activation energy, binding/bond-breaking/bond-forming and free-energy distinction retained; partially useful",
+    "checker_result": "8 claims/18 units all supported with true flags; own-citation bindings valid, complete contextual restrictions not applied",
+    "affected_scope": "Body claims3/4 and short compound claim8; not a formal 2-of-8 scientific failure rate",
+    "repair_and_recheck": "NOT_TRIGGERED, not live validated; no protected-span preservation claim under a nonexistent patch"
+  },
+  "finance": {
+    "actual_posts": 2,
+    "known_upper_CNY": "0.081148",
+    "UNKNOWN_protection_CNY": "0.000000",
+    "stop_code": null,
+    "settled": 2,
+    "cap_CNY": "0.40",
+    "max_POSTs": 4,
+    "independent_batch_id": "5703-native111",
+    "historical_batch_closed": true,
+    "old_UNKNOWN_CNY_retained": "0.10",
+    "is_invoice": false,
+    "retries": 0,
+    "auth_exported": false
+  },
+  "actual_stage_names": [
+    "generation",
+    "joint_check"
+  ],
+  "full_browser_send_to_answer_ms": null,
+  "full_browser_refusal_ms": null,
+  "invalid_raw_observer_values_preserved": {
+    "first_prose_ms": -991.5,
+    "complete_dom_ms": -991.5
+  },
+  "original_browser_journey_pass": false,
+  "continuous_send_to_dom_recovered": false,
+  "original_observer_failure": "Async waitForFunction predicate returns a truthy Promise before the condition; null completion timestamps were subtracted from Send. PERSISTED_JOIN then failed; no published DOM had been observed",
+  "free_browser_readback": {
+    "status": "EXISTING_ANSWER_FREE_BROWSER_READBACK_PASS_NOT_SEND_LATENCY",
+    "new_message_submissions": 0,
+    "provider_calls": 0,
+    "send_to_complete_dom_ms": null,
+    "is_recovered_send_measurement": false,
+    "auth_exported": false,
+    "rendered_prose": "An enzyme is a catalyst composed of protein or ribonucleic acid (RNA) [1]. Most enzymes are proteins and perform the critical task of lowering the activation energies of chemical reactions inside the cell [2]. A catalyst is a substance that increases the rate of a chemical reaction without itself undergoing any change [1]. Catalysts work by lowering the level of energy that needs to be invested in a chemical reaction, that is, the activation energy, which is the threshold level of energy needed to break the bonds in the reactants [1]. Enzymes do this by binding to the reactant molecules and holding them in such a way as to make the chemical bond-breaking and bond-forming processes take place more easily [2]. Importantly, enzymes do not change whether a reaction is exergonic (spontaneous) or endergonic, because they do not change the free energy of the reactants or products; they only reduce the activation energy required for the reaction to go forward [2].",
+    "citations_before_refresh": [
+      "Open source 1",
+      "Open source 2",
+      "Open source 1",
+      "Open source 1",
+      "Open source 2",
+      "Open source 2"
+    ],
+    "answer_id": "7e7e2493-42e3-4115-b94d-4cc19946473a",
+    "session_id": "63dee3b2-59c3-4702-8b60-950f4ad5f956",
+    "response": {
+      "schema_version": "chat_response_v1",
+      "response_type": "answer",
+      "answer_text": "An enzyme is a catalyst composed of protein or ribonucleic acid (RNA) [ev_001]. Most enzymes are proteins and perform the critical task of lowering the activation energies of chemical reactions inside the cell [ev_003]. A catalyst is a substance that increases the rate of a chemical reaction without itself undergoing any change [ev_001]. Catalysts work by lowering the level of energy that needs to be invested in a chemical reaction, that is, the activation energy, which is the threshold level of energy needed to break the bonds in the reactants [ev_001]. Enzymes do this by binding to the reactant molecules and holding them in such a way as to make the chemical bond-breaking and bond-forming processes take place more easily [ev_003]. Importantly, enzymes do not change whether a reaction is exergonic (spontaneous) or endergonic, because they do not change the free energy of the reactants or products; they only reduce the activation energy required for the reaction to go forward [ev_003].",
+      "short_answer": "An enzyme is a catalyst composed of protein or RNA [ev_001]. A catalyst increases the rate of a chemical reaction without itself undergoing any change [ev_001], by lowering the activation energy needed to break the bonds in the reactants [ev_001].",
+      "citations": [
+        "ev_001",
+        "ev_003"
+      ],
+      "refusal_reason": null,
+      "follow_up_questions": [],
+      "confidence": 0.95
+    },
+    "answer_timing": {
+      "total_ms": 12055.614,
+      "generation_ms": 2123,
+      "checking_ms": 8134,
+      "token_count_ms": 0,
+      "model_total_ms": 10257,
+      "attempts": 2,
+      "preparation_ms": 117.053,
+      "query_preparation_ms": 1.692,
+      "retrieval_ms": 970.302,
+      "teaching_plan_ms": 0.235,
+      "submission_to_worker_start_ms": 129.237,
+      "generation_wall_ms": 10518.627,
+      "timing_scope": "worker_execution_before_answer_insert_v1",
+      "publication_before_commit_ms": 195.032,
+      "worker_before_commit_ms": 12247.912
+    },
+    "citations_after_refresh": [
+      "Open source 1",
+      "Open source 2",
+      "Open source 1",
+      "Open source 1",
+      "Open source 2",
+      "Open source 2"
+    ],
+    "source_title": "Anatomy and Physiology 2e",
+    "refresh_persisted_answer": true,
+    "sources_reopened": true,
+    "api_close_status": 200,
+    "browser_closed": true
+  },
+  "free_observer_regression": {
+    "status": "FREE_OBSERVER_REGRESSION_CONTROLS_PASS",
+    "controls": 3,
+    "async_false_predicate_reproduced_premature_resolution": true,
+    "synchronous_wait_preserves_positive_complete_time": true,
+    "failure_separate_from_answer": true,
+    "fake_job_GETs": 1,
+    "real_HTTP": 0,
+    "provider_calls": 0,
+    "database_calls": 0,
+    "actual_native111_latency_recovered": false
+  },
+  "backend_timing": {
+    "total_ms": 12055.614,
+    "generation_ms": 2123,
+    "checking_ms": 8134,
+    "token_count_ms": 0,
+    "model_total_ms": 10257,
+    "attempts": 2,
+    "preparation_ms": 117.053,
+    "query_preparation_ms": 1.692,
+    "retrieval_ms": 970.302,
+    "teaching_plan_ms": 0.235,
+    "submission_to_worker_start_ms": 129.237,
+    "generation_wall_ms": 10518.627,
+    "timing_scope": "worker_execution_before_answer_insert_v1",
+    "publication_before_commit_ms": 195.032,
+    "worker_before_commit_ms": 12247.912
+  },
+  "observed_adapter_stages": [
+    {
+      "role": "teacher",
+      "purpose": "generation",
+      "started_UTC": "2026-10-12T18:10:38.888340+00:00",
+      "finished_UTC": "2026-10-12T18:10:41.011994+00:00",
+      "adapter_elapsed_seconds": 2.1236549999994168,
+      "normal_adapter_returned": true,
+      "includes_response_capture_and_accounting": true,
+      "excludes_preceding_public_source_boundary_validation": true
+    },
+    {
+      "role": "checker",
+      "purpose": "joint_check",
+      "started_UTC": "2026-10-12T18:10:41.127268+00:00",
+      "finished_UTC": "2026-10-12T18:10:49.262035+00:00",
+      "adapter_elapsed_seconds": 8.134769600001164,
+      "normal_adapter_returned": true,
+      "includes_response_capture_and_accounting": true,
+      "excludes_preceding_public_source_boundary_validation": true
+    }
+  ],
+  "startup_warmup_ms": 10172.279999998864,
+  "startup_before_send": true,
+  "read_only_exact_trace": {
+    "frame": "111",
+    "job_state": "succeeded",
+    "answer_id": "7e7e2493-42e3-4115-b94d-4cc19946473a",
+    "session_id": "63dee3b2-59c3-4702-8b60-950f4ad5f956",
+    "job_id": "4299e5c2-f90d-4a28-9473-eca4fa5b0c74",
+    "request_id": "7232f6bc-89bd-42b0-8c0a-7454dcf24890",
+    "arm": "R2",
+    "budget": {
+      "consumed_calls": 2,
+      "active_seconds": 11.553313100001105,
+      "format_repairs": 0,
+      "transient_retries": 0,
+      "max_calls": 4,
+      "max_active_seconds": 180
+    },
+    "actual_prepared_query": "What is an enzyme, and what does a catalyst change about a chemical reaction?",
+    "expected_warm_query": "What is an enzyme, and what does a catalyst change about a chemical reaction?",
+    "warm_query_matches": true,
+    "frozen_retrieval_policy": {
+      "version": "chat_hybrid_rerank_v1",
+      "retriever": "R2",
+      "candidate_count": 20,
+      "reranker_model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+      "reranker_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+      "reranker_device": "cpu",
+      "reranker_cache_folder": "E:\\5703\\learning-assistant\\artifacts\\huggingface"
+    },
+    "retrieval_execution": {
+      "policy": {
+        "version": "chat_hybrid_rerank_v1",
+        "retriever": "R2",
+        "candidate_count": 20,
+        "reranker_model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+        "reranker_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+        "reranker_device": "cpu",
+        "reranker_cache_folder": "E:\\5703\\learning-assistant\\artifacts\\huggingface"
+      },
+      "policy_hash": "6434c526a47434eee4248adee762ad69195d669b50c183b678c8653ec981f9a3",
+      "candidate_ids": [
+        "7f30b053c0211d3eb49fbf79ad5cc45e478a",
+        "e36f86d683c68557f68152a3d1990f940325",
+        "705764d732f2eb1220870cb76c94335f663e",
+        "f4737b5547118e56c6dd60ff7d4c325b4fc1",
+        "70bc777fdfb9ed03ecacee63d766afbd896f",
+        "d8aa85cd5eb6ddb4f80b8ad42f43eec14d8f",
+        "4c100f7a97613aee04462d61cd783247a244",
+        "e5349b88348274d4f0526b662b02b5b2e122",
+        "c10264c7082cb24713315afff6cb85f9e567",
+        "a912c4644c18d84b1a7873ef49843d067275",
+        "58b28858eb0986ba47fb30e9e0e08801a9b8",
+        "e9ef0bae7f1e139fbe05a13b582ba61468a3",
+        "75769cedda34445476451d4194c54a2194a2",
+        "63560962b02453557cbf6fa9286a251e6d22",
+        "1c8cdf694ba37274144dd745531ba0c9fc82",
+        "f71a9ee3bf656595bba6fae4d291d1393cfa",
+        "0eadf39213ee21fc9210621fe619515bd208",
+        "1606262d67b7ea74de2e6e85e8adf26ab766",
+        "30712b5b5fdf4f8699bca1dcc9e1a738041b",
+        "6ccc2b57fb1171662f2af315e53a375f8d45"
+      ],
+      "submitted_candidate_ids": [
+        "7f30b053c0211d3eb49fbf79ad5cc45e478a",
+        "e36f86d683c68557f68152a3d1990f940325",
+        "705764d732f2eb1220870cb76c94335f663e",
+        "f4737b5547118e56c6dd60ff7d4c325b4fc1",
+        "70bc777fdfb9ed03ecacee63d766afbd896f",
+        "d8aa85cd5eb6ddb4f80b8ad42f43eec14d8f",
+        "4c100f7a97613aee04462d61cd783247a244",
+        "e5349b88348274d4f0526b662b02b5b2e122",
+        "c10264c7082cb24713315afff6cb85f9e567",
+        "a912c4644c18d84b1a7873ef49843d067275",
+        "58b28858eb0986ba47fb30e9e0e08801a9b8",
+        "e9ef0bae7f1e139fbe05a13b582ba61468a3",
+        "75769cedda34445476451d4194c54a2194a2",
+        "63560962b02453557cbf6fa9286a251e6d22",
+        "1c8cdf694ba37274144dd745531ba0c9fc82",
+        "f71a9ee3bf656595bba6fae4d291d1393cfa",
+        "0eadf39213ee21fc9210621fe619515bd208",
+        "1606262d67b7ea74de2e6e85e8adf26ab766",
+        "30712b5b5fdf4f8699bca1dcc9e1a738041b",
+        "6ccc2b57fb1171662f2af315e53a375f8d45"
+      ],
+      "ranked_ids": [
+        "7f30b053c0211d3eb49fbf79ad5cc45e478a",
+        "705764d732f2eb1220870cb76c94335f663e",
+        "e36f86d683c68557f68152a3d1990f940325",
+        "6ccc2b57fb1171662f2af315e53a375f8d45",
+        "f71a9ee3bf656595bba6fae4d291d1393cfa",
+        "d8aa85cd5eb6ddb4f80b8ad42f43eec14d8f",
+        "f4737b5547118e56c6dd60ff7d4c325b4fc1",
+        "e5349b88348274d4f0526b662b02b5b2e122",
+        "75769cedda34445476451d4194c54a2194a2",
+        "1c8cdf694ba37274144dd745531ba0c9fc82",
+        "58b28858eb0986ba47fb30e9e0e08801a9b8",
+        "4c100f7a97613aee04462d61cd783247a244",
+        "a912c4644c18d84b1a7873ef49843d067275",
+        "70bc777fdfb9ed03ecacee63d766afbd896f",
+        "e9ef0bae7f1e139fbe05a13b582ba61468a3",
+        "63560962b02453557cbf6fa9286a251e6d22",
+        "1606262d67b7ea74de2e6e85e8adf26ab766",
+        "c10264c7082cb24713315afff6cb85f9e567",
+        "0eadf39213ee21fc9210621fe619515bd208",
+        "30712b5b5fdf4f8699bca1dcc9e1a738041b"
+      ],
+      "recorded_device": "cpu",
+      "execution_device": "cpu",
+      "rerank_ms": 830.6558000003861,
+      "runtime": null,
+      "adaptive": null,
+      "scope": "local learned ordering only; scores are not evidence support labels",
+      "candidate_merge": {
+        "policy": {
+          "version": "interactive_evidence_union_v1",
+          "candidate_limit": 20,
+          "inherited_limit": 5,
+          "membership": "frozen_release_current_visibility_exact_text",
+          "ordering": "fresh_and_inherited_interleaved_then_current_query_rerank",
+          "scoring": "cross_encoder"
+        },
+        "fresh_count": 20,
+        "eligible_inherited_count": 0,
+        "merged_chunk_ids": [
+          "7f30b053c0211d3eb49fbf79ad5cc45e478a",
+          "e36f86d683c68557f68152a3d1990f940325",
+          "705764d732f2eb1220870cb76c94335f663e",
+          "f4737b5547118e56c6dd60ff7d4c325b4fc1",
+          "70bc777fdfb9ed03ecacee63d766afbd896f",
+          "d8aa85cd5eb6ddb4f80b8ad42f43eec14d8f",
+          "4c100f7a97613aee04462d61cd783247a244",
+          "e5349b88348274d4f0526b662b02b5b2e122",
+          "c10264c7082cb24713315afff6cb85f9e567",
+          "a912c4644c18d84b1a7873ef49843d067275",
+          "58b28858eb0986ba47fb30e9e0e08801a9b8",
+          "e9ef0bae7f1e139fbe05a13b582ba61468a3",
+          "75769cedda34445476451d4194c54a2194a2",
+          "63560962b02453557cbf6fa9286a251e6d22",
+          "1c8cdf694ba37274144dd745531ba0c9fc82",
+          "f71a9ee3bf656595bba6fae4d291d1393cfa",
+          "0eadf39213ee21fc9210621fe619515bd208",
+          "1606262d67b7ea74de2e6e85e8adf26ab766",
+          "30712b5b5fdf4f8699bca1dcc9e1a738041b",
+          "6ccc2b57fb1171662f2af315e53a375f8d45"
+        ],
+        "inherited_chunk_ids": [],
+        "excluded": [],
+        "scope": "bounded candidate admission; all admitted rows need current-question scoring"
+      },
+      "retrieval_stages": {
+        "release_cache": {
+          "version": "validated_release_cache_v1",
+          "hit": true,
+          "epoch": "153d326a-2d6e-4025-81e0-b331854659a4",
+          "validation_ms": 4.67939999725786
+        },
+        "query_embedding_ms": 0.02130000211764127,
+        "query_vector_cache_hit": true,
+        "dense_ms": 99.78390000105719,
+        "lexical_ms": 5.640399998810608,
+        "retrieval_total_ms": 128.4975000016857
+      },
+      "relevance_gate": {
+        "policy": {
+          "version": "interactive_relevance_v1",
+          "exact_expanded_terms": true,
+          "minimum_logit": -4.0,
+          "reranker_model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+          "reranker_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+          "calibration": "20260916-openstax-development-provisional",
+          "fallback": "strict_grounded"
+        },
+        "candidate_count": 20,
+        "accepted_count": 17,
+        "accepted_chunk_ids": [
+          "7f30b053c0211d3eb49fbf79ad5cc45e478a",
+          "705764d732f2eb1220870cb76c94335f663e",
+          "e36f86d683c68557f68152a3d1990f940325",
+          "6ccc2b57fb1171662f2af315e53a375f8d45",
+          "f71a9ee3bf656595bba6fae4d291d1393cfa",
+          "d8aa85cd5eb6ddb4f80b8ad42f43eec14d8f",
+          "f4737b5547118e56c6dd60ff7d4c325b4fc1",
+          "e5349b88348274d4f0526b662b02b5b2e122",
+          "75769cedda34445476451d4194c54a2194a2",
+          "1c8cdf694ba37274144dd745531ba0c9fc82",
+          "58b28858eb0986ba47fb30e9e0e08801a9b8",
+          "4c100f7a97613aee04462d61cd783247a244",
+          "a912c4644c18d84b1a7873ef49843d067275",
+          "70bc777fdfb9ed03ecacee63d766afbd896f",
+          "e9ef0bae7f1e139fbe05a13b582ba61468a3",
+          "63560962b02453557cbf6fa9286a251e6d22",
+          "1606262d67b7ea74de2e6e85e8adf26ab766"
+        ],
+        "excluded": [
+          {
+            "chunk_id": "c10264c7082cb24713315afff6cb85f9e567",
+            "reason": "below_relevance_threshold",
+            "missing_terms": [],
+            "score": -4.327394008636475
+          },
+          {
+            "chunk_id": "0eadf39213ee21fc9210621fe619515bd208",
+            "reason": "below_relevance_threshold",
+            "missing_terms": [],
+            "score": -4.95380163192749
+          },
+          {
+            "chunk_id": "30712b5b5fdf4f8699bca1dcc9e1a738041b",
+            "reason": "below_relevance_threshold",
+            "missing_terms": [],
+            "score": -7.355812072753906
+          }
+        ],
+        "scope": "topic relevance screening; raw logits are not probabilities or claim entailment",
+        "unconfirmed_inherited_chunk_ids": []
+      },
+      "coverage_supplement": {
+        "version": "coverage_supplement_v4",
+        "triggered": false,
+        "retrieval_passes": 0,
+        "candidate_limit": 10,
+        "reason": "no_locatable_requirement",
+        "before": {
+          "version": "context_coverage_v4",
+          "estimate_method": "distributed_relational_lexical_requirement_candidates_v4",
+          "context_sufficiency_estimate": "lexically_complete",
+          "candidate_coverage": {
+            "status": "lexically_complete",
+            "requirements": [
+              {
+                "id": "requirement_01",
+                "request": "What is an enzyme,",
+                "verbatim_request": "What is an enzyme,",
+                "terms": [
+                  "enzyme"
+                ],
+                "intent": "definition",
+                "objects": [],
+                "relation": "definition",
+                "conditions": [],
+                "origin": "verbatim_question_structure_v5",
+                "request_span": {
+                  "coordinate_space": "requirement_source_text",
+                  "start": 0,
+                  "end": 18
+                },
+                "presentation_request_ids": [],
+                "lexical_request": "What is an enzyme,",
+                "term_groups": [
+                  [
+                    "enzyme"
+                  ]
+                ],
+                "lexical_projection": {
+                  "version": "relational_request_projection_v1",
+                  "relation_cues": [],
+                  "semantic_request_preserved": true,
+                  "semantic_relation_verified": null
+                },
+                "lexically_covered": true,
+                "single_passage_covered": true,
+                "distributed_across_passages": false,
+                "matched_evidence": [
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "7f30b053c0211d3eb49fbf79ad5cc45e478a",
+                    "matched_terms": [
+                      "enzyme"
+                    ],
+                    "all_term_groups_present": true
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "705764d732f2eb1220870cb76c94335f663e",
+                    "matched_terms": [
+                      "enzyme"
+                    ],
+                    "all_term_groups_present": true
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "e36f86d683c68557f68152a3d1990f940325",
+                    "matched_terms": [
+                      "enzyme"
+                    ],
+                    "all_term_groups_present": true
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "6ccc2b57fb1171662f2af315e53a375f8d45",
+                    "matched_terms": [
+                      "enzyme"
+                    ],
+                    "all_term_groups_present": true
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "f71a9ee3bf656595bba6fae4d291d1393cfa",
+                    "matched_terms": [
+                      "enzyme"
+                    ],
+                    "all_term_groups_present": true
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "d8aa85cd5eb6ddb4f80b8ad42f43eec14d8f",
+                    "matched_terms": [
+                      "enzyme"
+                    ],
+                    "all_term_groups_present": true
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "f4737b5547118e56c6dd60ff7d4c325b4fc1",
+                    "matched_terms": [
+                      "enzyme"
+                    ],
+                    "all_term_groups_present": true
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "75769cedda34445476451d4194c54a2194a2",
+                    "matched_terms": [
+                      "enzyme"
+                    ],
+                    "all_term_groups_present": true
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "58b28858eb0986ba47fb30e9e0e08801a9b8",
+                    "matched_terms": [
+                      "enzyme"
+                    ],
+                    "all_term_groups_present": true
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "4c100f7a97613aee04462d61cd783247a244",
+                    "matched_terms": [
+                      "enzyme"
+                    ],
+                    "all_term_groups_present": true
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "a912c4644c18d84b1a7873ef49843d067275",
+                    "matched_terms": [
+                      "enzyme"
+                    ],
+                    "all_term_groups_present": true
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "70bc777fdfb9ed03ecacee63d766afbd896f",
+                    "matched_terms": [
+                      "enzyme"
+                    ],
+                    "all_term_groups_present": true
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "e9ef0bae7f1e139fbe05a13b582ba61468a3",
+                    "matched_terms": [
+                      "enzyme"
+                    ],
+                    "all_term_groups_present": true
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "63560962b02453557cbf6fa9286a251e6d22",
+                    "matched_terms": [
+                      "enzyme"
+                    ],
+                    "all_term_groups_present": true
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "1606262d67b7ea74de2e6e85e8adf26ab766",
+                    "matched_terms": [
+                      "enzyme"
+                    ],
+                    "all_term_groups_present": true
+                  }
+                ],
+                "missing_term_groups": [],
+                "semantic_sufficiency": null
+              },
+              {
+                "id": "requirement_02",
+                "request": "what does a catalyst change about a chemical reaction",
+                "verbatim_request": "what does a catalyst change about a chemical reaction",
+                "terms": [
+                  "catalyst",
+                  "change",
+                  "chemical",
+                  "reaction"
+                ],
+                "intent": "explanation",
+                "objects": [],
+                "relation": "explanation",
+                "conditions": [],
+                "origin": "verbatim_question_structure_v5",
+                "request_span": {
+                  "coordinate_space": "requirement_source_text",
+                  "start": 23,
+                  "end": 76
+                },
+                "presentation_request_ids": [],
+                "lexical_request": "what does a catalyst change about a chemical reaction",
+                "term_groups": [
+                  [
+                    "catalyst"
+                  ],
+                  [
+                    "change"
+                  ],
+                  [
+                    "chemical"
+                  ],
+                  [
+                    "reaction"
+                  ]
+                ],
+                "lexical_projection": {
+                  "version": "relational_request_projection_v1",
+                  "relation_cues": [],
+                  "semantic_request_preserved": true,
+                  "semantic_relation_verified": null
+                },
+                "lexically_covered": true,
+                "single_passage_covered": true,
+                "distributed_across_passages": false,
+                "matched_evidence": [
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "7f30b053c0211d3eb49fbf79ad5cc45e478a",
+                    "matched_terms": [
+                      "catalyst",
+                      "change",
+                      "chemical",
+                      "reaction"
+                    ],
+                    "all_term_groups_present": true
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "705764d732f2eb1220870cb76c94335f663e",
+                    "matched_terms": [
+                      "catalyst",
+                      "change",
+                      "chemical",
+                      "reaction"
+                    ],
+                    "all_term_groups_present": true
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "e36f86d683c68557f68152a3d1990f940325",
+                    "matched_terms": [
+                      "catalyst",
+                      "change",
+                      "chemical",
+                      "reaction"
+                    ],
+                    "all_term_groups_present": true
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "6ccc2b57fb1171662f2af315e53a375f8d45",
+                    "matched_terms": [
+                      "catalyst",
+                      "chemical",
+                      "reaction"
+                    ],
+                    "all_term_groups_present": false
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "f71a9ee3bf656595bba6fae4d291d1393cfa",
+                    "matched_terms": [
+                      "catalyst",
+                      "change",
+                      "chemical",
+                      "reaction"
+                    ],
+                    "all_term_groups_present": true
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "d8aa85cd5eb6ddb4f80b8ad42f43eec14d8f",
+                    "matched_terms": [
+                      "catalyst",
+                      "chemical",
+                      "reaction"
+                    ],
+                    "all_term_groups_present": false
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "f4737b5547118e56c6dd60ff7d4c325b4fc1",
+                    "matched_terms": [
+                      "change",
+                      "chemical",
+                      "reaction"
+                    ],
+                    "all_term_groups_present": false
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "e5349b88348274d4f0526b662b02b5b2e122",
+                    "matched_terms": [
+                      "catalyst",
+                      "chemical",
+                      "reaction"
+                    ],
+                    "all_term_groups_present": false
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "75769cedda34445476451d4194c54a2194a2",
+                    "matched_terms": [
+                      "chemical",
+                      "reaction"
+                    ],
+                    "all_term_groups_present": false
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "1c8cdf694ba37274144dd745531ba0c9fc82",
+                    "matched_terms": [
+                      "catalyst",
+                      "change",
+                      "reaction"
+                    ],
+                    "all_term_groups_present": false
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "58b28858eb0986ba47fb30e9e0e08801a9b8",
+                    "matched_terms": [
+                      "change",
+                      "chemical",
+                      "reaction"
+                    ],
+                    "all_term_groups_present": false
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "4c100f7a97613aee04462d61cd783247a244",
+                    "matched_terms": [
+                      "change",
+                      "chemical",
+                      "reaction"
+                    ],
+                    "all_term_groups_present": false
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "a912c4644c18d84b1a7873ef49843d067275",
+                    "matched_terms": [
+                      "change",
+                      "chemical",
+                      "reaction"
+                    ],
+                    "all_term_groups_present": false
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "70bc777fdfb9ed03ecacee63d766afbd896f",
+                    "matched_terms": [
+                      "catalyst",
+                      "change",
+                      "reaction"
+                    ],
+                    "all_term_groups_present": false
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "e9ef0bae7f1e139fbe05a13b582ba61468a3",
+                    "matched_terms": [
+                      "chemical",
+                      "reaction"
+                    ],
+                    "all_term_groups_present": false
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "63560962b02453557cbf6fa9286a251e6d22",
+                    "matched_terms": [
+                      "change",
+                      "chemical",
+                      "reaction"
+                    ],
+                    "all_term_groups_present": false
+                  },
+                  {
+                    "evidence_id": null,
+                    "chunk_id": "1606262d67b7ea74de2e6e85e8adf26ab766",
+                    "matched_terms": [
+                      "chemical",
+                      "reaction"
+                    ],
+                    "all_term_groups_present": false
+                  }
+                ],
+                "missing_term_groups": [],
+                "semantic_sufficiency": null
+              }
+            ],
+            "missing_requirement_ids": [],
+            "distributed_requirement_ids": []
+          },
+          "packed_coverage": null,
+          "locatable_missing": [],
+          "targeted_query": null,
+          "budget_lost_requirement_ids": [],
+          "budget_exclusions": [],
+          "distributed_requirement_ids": [],
+          "draft_support": null,
+          "semantic_sufficiency": null,
+          "human_rating": null,
+          "source_bound_requirement_ids": [],
+          "response_guidance": "Evaluate the verbatim requirement and its requested relation, objects and conditions. Generic relation cues are auxiliary lexical planning signals, not additional required source words. Lexical completeness does not establish the requested causal link, comparison, contribution or sufficient context. Answer supported parts and name actual gaps."
+        },
+        "added_chunk_ids": [],
+        "semantic_sufficiency": null,
+        "elapsed_ms": 2.515
+      },
+      "inherited_evidence": {
+        "release_id": "4f11bd70-a486-4d16-b216-78cfe499530a",
+        "available_count": 0,
+        "eligible_count": 0,
+        "eligible_chunk_ids": [],
+        "excluded": [],
+        "rescored_chunk_ids": []
+      }
+    },
+    "retrieval_optimization": "validated_release_cache_v1",
+    "error_code": null,
+    "DB_writes": 0,
+    "provider_calls_by_inspector": 0
+  },
+  "original_api_closed": {
+    "session_id": "63dee3b2-59c3-4702-8b60-950f4ad5f956",
+    "accepted": {
+      "request_id": "7232f6bc-89bd-42b0-8c0a-7454dcf24890",
+      "job_id": "4299e5c2-f90d-4a28-9473-eca4fa5b0c74",
+      "user_message_id": "f4f77731-aa6a-4ed6-ad6c-86acc39545ab",
+      "poll_url": "/api/v1/jobs/4299e5c2-f90d-4a28-9473-eca4fa5b0c74"
+    },
+    "worker": {
+      "status": "TARGET_EXECUTOR_RETURNED",
+      "job_id": "4299e5c2-f90d-4a28-9473-eca4fa5b0c74",
+      "request_id": "7232f6bc-89bd-42b0-8c0a-7454dcf24890",
+      "job_state": "succeeded",
+      "answer_id": "7e7e2493-42e3-4115-b94d-4cc19946473a",
+      "old_jobs_selected": 0,
+      "automatic_retries": 0
+    },
+    "route_stops": [],
+    "model_calls_limit": 4,
+    "external_scope_requests_max": 4,
+    "cost_cap_CNY": "0.40",
+    "old_queue_consumed": false,
+    "auth_exported": false,
+    "source_scope": "New S01 official DeepSeek public-corpus envelope",
+    "owned_threads_closed": true,
+    "old_metadata_unchanged": {
+      "sessions": true,
+      "jobs": true,
+      "answer_requests": true,
+      "answers": true,
+      "active_model_configurations": true
+    },
+    "finished_utc": "2026-10-12T18:11:53.522539+00:00"
+  },
+  "readback_api_closed": {
+    "answer_id": "7e7e2493-42e3-4115-b94d-4cc19946473a",
+    "request_id": "7232f6bc-89bd-42b0-8c0a-7454dcf24890",
+    "session_id": "63dee3b2-59c3-4702-8b60-950f4ad5f956",
+    "login_posts": 1,
+    "new_question_posts": 0,
+    "provider_calls": 0,
+    "stops": [],
+    "old_metadata_unchanged": {
+      "sessions": true,
+      "jobs": true,
+      "answer_requests": true,
+      "answers": true,
+      "active_model_configurations": true
+    }
+  },
+  "owned_frontend_closed": {
+    "status": "OWNED_NATIVE111_FRONTEND_CLOSED",
+    "pid": 93716,
+    "closed_utc": "2026-10-12T18:20:50.8915954Z",
+    "exact_exe_config_verified": true
+  },
+  "new_model_retries": 0,
+  "fifth_request": false,
+  "new_questions": 1,
+  "remaining_slots_reused": false,
+  "batch_closed": true,
+  "no_actual_permission_denial_observed": true,
+  "old_UNKNOWN_CNY_retained": "0.10",
+  "old_batches_reopened": false,
+  "main_production_changes_during_experiment": 0,
+  "source_pins_afterward_match": 38,
+  "stable_p95_ms": null,
+  "quality_accuracy_estimate": null,
+  "scientific_prompt_causal_effect_established": false,
+  "project_complete": false
+}

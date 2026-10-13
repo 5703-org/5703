@@ -1571,3 +1571,11 @@ completed. The remaining connected controls are unexecuted. See
 [the actual terminal record](evidence/week09-continuation/20261003/current883-owned-module-controls-failure-01.json).
 The current883 CPU installation/start remains separately verified; model
 quality, connected learner acceptance and scientific studies remain active.
+
+
+## Week10 implementation addendum - 9 October 2026
+
+The [Week10 implementation plan](docs/execution/20261009-week10-implementation-plan.md) adds W10-01 through W10-10 as planning labels; the [actual-status companion](docs/execution/20261009-week10-implementation-status.md) records measured progress and current blockers. Core order is baseline/protocol and evaluation pool, conditional checker contracts, contextual/parent-child retrieval with latency and routing work, then integrated evidence. Bounded model comparisons are conditional; BKT, multimodal and GEPA/DSPy are stretch work.
+
+Preserve Week09 deliverables, the original 108 task and 60 acceptance IDs, eight owner domains, seven formal study families and tutoring A/B/C/D definitions. Planned owner assignments do not assert completed contributions. The current conditional checker repair passes structural validation but the fresh saved-teacher checker still fails scientific/body validation, so native publishing and whole-project completion remain open. Follow the companion rather than historical dated headings for this additional Week10 work.
+

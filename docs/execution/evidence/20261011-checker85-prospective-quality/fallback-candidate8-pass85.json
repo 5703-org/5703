@@ -1,0 +1,60 @@
+{
+  "schema": "phase85_posttrial_fallback_synthetic_controls_v1",
+  "status": "PASS",
+  "exit_code": 0,
+  "elapsed_seconds": 0.9147773000004236,
+  "junit_counts": {
+    "tests": 8,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "guards": {
+    "network": 0,
+    "outside_run_write": 0,
+    "private_input": 0,
+    "subprocess": 0
+  },
+  "provider_posts": 0,
+  "auth_actions": 0,
+  "DB_actions": 0,
+  "Main_writes": 0,
+  "complete_pipeline_or_quality_validation": false,
+  "normal_live_proof": "unchanged AST outside fallback; no actual model",
+  "pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-fallback-candidate\\checked.py",
+      "bytes": 166521,
+      "sha256": "35338a904cec0297ece096f94b83d986c7e7014216b246c09725febeeba8246c"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-fallback-candidate\\checked.py.before85",
+      "bytes": 166258,
+      "sha256": "fd8f18a8a7dbed449654310fb17086ddb4207069a394ca4ac55cf2db3a6fab8c"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-fallback-candidate\\test_programmatic_fallback85.py",
+      "bytes": 9000,
+      "sha256": "fcecaa0e1863f53024c21dd5f4a36acfc2554aa6f126ac63fecc58a18b3f76cc"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\service.py",
+      "bytes": 29098,
+      "sha256": "e694ec2f919754480b927ac7c48ee966a0d9db3d875ff70a71ad39ba08211fcb"
+    }
+  ],
+  "pytest_args": [
+    "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-fallback-candidate\\test_programmatic_fallback85.py",
+    "-q",
+    "--capture=sys",
+    "--noconftest",
+    "-c",
+    "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-fallback-candidate\\free-controls\\20261011T183029500630Z-da7c1c61\\pytest.ini",
+    "-p",
+    "no:cacheprovider",
+    "-p",
+    "no:logging",
+    "--basetemp=C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-fallback-candidate\\free-controls\\20261011T183029500630Z-da7c1c61\\fixtures",
+    "--junitxml=C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-fallback-candidate\\free-controls\\20261011T183029500630Z-da7c1c61\\junit.xml"
+  ]
+}

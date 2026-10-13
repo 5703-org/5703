@@ -1,0 +1,395 @@
+{
+  "status": "PASS_PURE_SYNTHETIC_GUARD_AND_SLOT_SELECTION_ONLY",
+  "runner_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\run_ROOT_fixed_checker_pair_PREPARED02.py",
+    "bytes": 37215,
+    "sha256": "29df6f6ce3977499998a937131e3b64b798a6319be6115106069e3754237a2b0"
+  },
+  "case_count": 48,
+  "cases": [
+    {
+      "case": "exact_concise_POST_allowed",
+      "expected_allow": true,
+      "result": {
+        "allowed": true
+      }
+    },
+    {
+      "case": "global_numeric_allowed_1.1.1.1",
+      "expected_allow": true,
+      "result": {
+        "allowed": true
+      }
+    },
+    {
+      "case": "same_pinned_socket_connect_allowed_1.1.1.1",
+      "expected_allow": true,
+      "result": {
+        "allowed": true
+      }
+    },
+    {
+      "case": "second_connect_rejected_1.1.1.1",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Only one connection to the just-approved pinned IP443 allowed"
+      }
+    },
+    {
+      "case": "second_POST_rejected_1.1.1.1",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Only the single original concise slot2 request allowed"
+      }
+    },
+    {
+      "case": "exact_concise_POST_allowed",
+      "expected_allow": true,
+      "result": {
+        "allowed": true
+      }
+    },
+    {
+      "case": "global_numeric_allowed_2606:4700:4700::1111",
+      "expected_allow": true,
+      "result": {
+        "allowed": true
+      }
+    },
+    {
+      "case": "same_pinned_socket_connect_allowed_2606:4700:4700::1111",
+      "expected_allow": true,
+      "result": {
+        "allowed": true
+      }
+    },
+    {
+      "case": "second_connect_rejected_2606:4700:4700::1111",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Only one connection to the just-approved pinned IP443 allowed"
+      }
+    },
+    {
+      "case": "second_POST_rejected_2606:4700:4700::1111",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Only the single original concise slot2 request allowed"
+      }
+    },
+    {
+      "case": "exact_concise_POST_allowed",
+      "expected_allow": true,
+      "result": {
+        "allowed": true
+      }
+    },
+    {
+      "case": "nonpublic_mapped_scoped_or_hostname_rejected_10.0.0.1",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Only canonical global nonmapped pinned IP allowed"
+      }
+    },
+    {
+      "case": "exact_concise_POST_allowed",
+      "expected_allow": true,
+      "result": {
+        "allowed": true
+      }
+    },
+    {
+      "case": "nonpublic_mapped_scoped_or_hostname_rejected_169.254.1.1",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Only canonical global nonmapped pinned IP allowed"
+      }
+    },
+    {
+      "case": "exact_concise_POST_allowed",
+      "expected_allow": true,
+      "result": {
+        "allowed": true
+      }
+    },
+    {
+      "case": "nonpublic_mapped_scoped_or_hostname_rejected_::1",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Only canonical global nonmapped pinned IP allowed"
+      }
+    },
+    {
+      "case": "exact_concise_POST_allowed",
+      "expected_allow": true,
+      "result": {
+        "allowed": true
+      }
+    },
+    {
+      "case": "nonpublic_mapped_scoped_or_hostname_rejected_::ffff:1.1.1.1",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Only canonical global nonmapped pinned IP allowed"
+      }
+    },
+    {
+      "case": "exact_concise_POST_allowed",
+      "expected_allow": true,
+      "result": {
+        "allowed": true
+      }
+    },
+    {
+      "case": "nonpublic_mapped_scoped_or_hostname_rejected_0.0.0.0",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Only canonical global nonmapped pinned IP allowed"
+      }
+    },
+    {
+      "case": "exact_concise_POST_allowed",
+      "expected_allow": true,
+      "result": {
+        "allowed": true
+      }
+    },
+    {
+      "case": "nonpublic_mapped_scoped_or_hostname_rejected_2606:4700:4700::1111%1",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Only canonical global nonmapped pinned IP allowed"
+      }
+    },
+    {
+      "case": "exact_concise_POST_allowed",
+      "expected_allow": true,
+      "result": {
+        "allowed": true
+      }
+    },
+    {
+      "case": "nonpublic_mapped_scoped_or_hostname_rejected_unselected.example.com",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Numeric pinned address required"
+      }
+    },
+    {
+      "case": "numeric_before_POST_rejected",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Only one post-audited pinned numeric resolution allowed"
+      }
+    },
+    {
+      "case": "exact_concise_POST_allowed",
+      "expected_allow": true,
+      "result": {
+        "allowed": true
+      }
+    },
+    {
+      "case": "wrong_product_caller_rejected",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Only product pinned stdlib connection origin allowed"
+      }
+    },
+    {
+      "case": "exact_concise_POST_allowed",
+      "expected_allow": true,
+      "result": {
+        "allowed": true
+      }
+    },
+    {
+      "case": "selected_IP_mismatch_rejected",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Numeric resolution does not match product selected IP"
+      }
+    },
+    {
+      "case": "exact_concise_POST_allowed",
+      "expected_allow": true,
+      "result": {
+        "allowed": true
+      }
+    },
+    {
+      "case": "wrong_numeric_port_rejected",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Only one post-audited pinned numeric resolution allowed"
+      }
+    },
+    {
+      "case": "exact_concise_POST_allowed",
+      "expected_allow": true,
+      "result": {
+        "allowed": true
+      }
+    },
+    {
+      "case": "numeric_selected_for_connect_negatives",
+      "expected_allow": true,
+      "result": {
+        "allowed": true
+      }
+    },
+    {
+      "case": "wrong_connect_destination_8.8.8.8_443",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Only one connection to the just-approved pinned IP443 allowed"
+      }
+    },
+    {
+      "case": "wrong_connect_destination_1.1.1.1_80",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Only one connection to the just-approved pinned IP443 allowed"
+      }
+    },
+    {
+      "case": "wrong_connect_destination_10.0.0.1_443",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Only one connection to the just-approved pinned IP443 allowed"
+      }
+    },
+    {
+      "case": "different_socket_rejected",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Pinned connection socket/origin changed"
+      }
+    },
+    {
+      "case": "wrong_connect_caller_rejected",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Only product pinned stdlib connection origin allowed"
+      }
+    },
+    {
+      "case": "second_numeric_resolution_rejected",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Only one post-audited pinned numeric resolution allowed"
+      }
+    },
+    {
+      "case": "fixture_DB_connect_preserved",
+      "expected_allow": true,
+      "result": {
+        "allowed": true
+      }
+    },
+    {
+      "case": "other_localport_connect_rejected",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Only one connection to the just-approved pinned IP443 allowed"
+      }
+    },
+    {
+      "case": "subprocess_rejected",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Pair runner cannot launch external processes"
+      }
+    },
+    {
+      "case": "E_write_rejected",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "E writes are not admitted"
+      }
+    },
+    {
+      "case": "secret_file_rejected",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Credential files are not admitted"
+      }
+    },
+    {
+      "case": "wrong_URL_rejected",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Only the single original concise slot2 request allowed"
+      }
+    },
+    {
+      "case": "changed_wire_rejected",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Exact fixed public wire/route changed"
+      }
+    },
+    {
+      "case": "provider_DNS_armed_beforePOST",
+      "expected_allow": true,
+      "result": {
+        "allowed": true
+      }
+    },
+    {
+      "case": "provider_DNS_unarmed_rejected",
+      "expected_allow": false,
+      "result": {
+        "allowed": false,
+        "error": "Only the armed exact provider DNS query allowed"
+      }
+    }
+  ],
+  "actual_product_nested_code_used_only_as_identity_from_definition": true,
+  "actual_stdlib_function_code_used_only_as_identity_no_function_invocation": true,
+  "fake_frames_socket_metadata_only_no_socket_instantiated": true,
+  "audit_constructor_and_global_hook_not_executed": true,
+  "synthetic_callback_only_no_provider_receipt_written": true,
+  "save_new_stubbed_in_memory": true,
+  "concise_slot2_selection_expected": [
+    {
+      "arm": "concise",
+      "slot": 2
+    }
+  ],
+  "baseline_slot1_not_selected": true,
+  "real_DNS_TCP_HTTP_urllib_DB_key_model_Gold_E_operations": 0,
+  "limitations": [
+    "No actual provider/request/transport result or cost claim.",
+    "Guard caller frames are synthetic controlled metadata for direct audit replay, not a production socket test.",
+    "Residual helper/budget/ROOT release03 and actual prior receipt bindings remain ROOT execution prerequisites.",
+    "Old UNKNOWN, STOP and budgets not modified."
+  ]
+}

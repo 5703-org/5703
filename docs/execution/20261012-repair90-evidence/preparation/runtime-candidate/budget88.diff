@@ -1,0 +1,323 @@
+--- R89/budget88.py
++++ candidate/budget88.py
+@@ -1,4 +1,4 @@
+-"""Independent Phase89 32-POST/$2 ledger; historical instance admissions are forbidden."""
++"""Independent Repair90 24-POST/$1 ledger; historical instance admissions are forbidden."""
+ from __future__ import annotations
+ import hashlib
+ import json
+@@ -7,22 +7,23 @@
+ from decimal import Decimal, InvalidOperation
+ from pathlib import Path
+ from datetime import datetime
+-AUTHORIZATION = 'parent_dev89_independent32posts_2USD_quality_pages_20261012'
+-POST_CAP = 32
+-CASE_CAP = 8
++AUTHORIZATION = 'parent_repair90_independent24posts_1USD_same_input_validation_20261012'
++POST_CAP = 24
++CASE_CAP = 3
+ CASE_POST_CAP = 4
+-NONPAGE_POST_CAP = 24
++NONPAGE_POST_CAP = POST_CAP
+ MAX_WIRE_BYTES = 200000
+ MARKER = 'cohort-claim.json'
+ STOP_MARKER = 'cohort-stop.json'
+-BASE_CASES = {'case07', 'case03', 'case08', 'case05', 'case09', 'case01', 'case06', 'case04'}
+-AUX_CASES = {'case05r', 'case04r', 'case01r', 'case03r'}
+-PAGE_CASES = {'case10', 'case10b', 'case10c'}
+-ALL_CASES = {'case10c', 'case07', 'case03r', 'case03', 'case08', 'case05', 'case09', 'case01', 'case06', 'case04r', 'case10b', 'case05r', 'case04', 'case01r', 'case10'}
+-_SUPPLEMENTS = {'case05r', 'case10c', 'case10b', 'case01r', 'case03r', 'case10', 'case04r'}
++BASE_CASES = {'case01', 'case08', 'case06'}
++AUX_CASES = {'case01r', 'case08r', 'case06r'}
++PAGE_CASES = set()
++COMPONENT_CASES = {'component01qwen', 'component08qwen', 'component06qwen', 'component_positiveqwen', 'component_negativeqwen'}
++ALL_CASES = BASE_CASES | AUX_CASES | COMPONENT_CASES
++_SUPPLEMENTS = AUX_CASES
+ FRESH_CASES = set()
+ FRESH_PUBLIC_PINS = {}
+-FROZEN_BASE_SOURCE_VERSION_SHA256 = 'f7f03e32b3bab3f539002e53798cc5abdfc0f7816d37d78d85401eff8e1ce5d2'
++FROZEN_BASE_SOURCE_VERSION_SHA256 = '369bba3c1ba0e0007b346142988ccc3a242e13505e22513a1a13166a2fe4b2fc'
+ FROZEN_TEACHER_CONFIG_SHA256 = '65a9f21eee75556b2dc8f34ba7cb90c7caf2f1946e6f5cc3afd7b30d7cdff013'
+ FROZEN_CHECKER_CONFIG_SHA256 = '03689510a0090504979274424c800a4f20eb6b159236dabdb00ad9a0eac0f09c'
+ FROZEN_SETTINGS_SHA256 = '2253514d03713fdadf3637fb5ba5058b9848af6af21531de7e77dd7c84d968de'
+@@ -30,9 +31,9 @@
+ STOP_CODES = {'UNSAFE_LOCAL_CONTROLLER', 'ROOT_QA_COHORT_STOP', 'UNSAFE_NORMAL_TRANSPORT', 'ROOT_QA_CRITICAL_UNSUPPORTED_FACT', 'UNSAFE_NORMAL_TARGET'}
+ _QUALITY_STOP_CODES = {'ROOT_QA_COHORT_STOP', 'ROOT_QA_CRITICAL_UNSUPPORTED_FACT'}
+ HOLD = Decimal("0.0714688")
+-COST_CAP = Decimal("2.00")
++COST_CAP = Decimal("1.00")
+ _SHA = re.compile(r"[0-9a-f]{64}\Z")
+-_POST_FILE = re.compile(r"post-(0[1-9]|[12][0-9]|3[0-2])-(claim|settlement|exposure)\.json\Z")
++_POST_FILE = re.compile(r"post-(0[1-9]|1[0-9]|2[0-4])-(claim|settlement|exposure)\.json\Z")
+ 
+ _NEXT_STEPS = {
+     None: frozenset({("teacher", "generation")}),
+@@ -95,7 +96,7 @@
+ 
+ 
+ def _case(value):
+-    _require(type(value) is str and value in ALL_CASES, "FIXED_DEV89_INSTANCE_REQUIRED")
++    _require(type(value) is str and value in ALL_CASES, "FIXED_REPAIR90_INSTANCE_REQUIRED")
+     return value
+ 
+ def public_digest(value):
+@@ -216,7 +217,7 @@
+ def validate_protocol(protocol):
+     """Validate the new frozen public manifest, without accepting old cohort metadata."""
+     _require(type(protocol) is dict
+-             and protocol.get("schema") == "dev89_bound_development_validation_v1"
++             and protocol.get("schema") == "repair90_bound_development_validation_v1"
+              and protocol.get("status") == "READY_FROZEN_PUBLIC_CASES"
+              and protocol.get("authorization") == AUTHORIZATION
+              and protocol.get("maximum_physical_posts") == POST_CAP
+@@ -225,31 +226,32 @@
+              and protocol.get("whole_case_seconds_cap") == 180
+              and protocol.get("http_automatic_retries") is False
+              and protocol.get("automatic_case_replay_or_reclaim") is False,
+-             "EXACT_FROZEN_DEV89_PROTOCOL_REQUIRED")
++             "EXACT_FROZEN_REPAIR90_PROTOCOL_REQUIRED")
+     cases = protocol.get("cases")
+     case_keys = {"case_id", "question_id", "question_text", "question_sha256", "purpose", "classification"}
+-    _require(type(cases) is list and len(cases) == 8
++    _require(type(cases) is list and len(cases) == 3
+              and all(type(row) is dict and set(row) == case_keys
+                      and row.get("case_id") in BASE_CASES
+                      and type(row.get("question_id")) is str and bool(row["question_id"].strip())
+                      and type(row.get("question_text")) is str and bool(row["question_text"].strip())
+                      and hashlib.sha256(row["question_text"].encode()).hexdigest() == row.get("question_sha256")
+-                     and row.get("purpose") == "baseline_dev"
+-                     and row.get("classification") in {"recurrent_error", "new_topic"} for row in cases)
++                     and row.get("purpose") == "baseline_repair"
++                     and row.get("classification") == {"case01": "affected", "case08": "affected", "case06": "positive_control"}[row["case_id"]] for row in cases)
+              and {row["case_id"] for row in cases} == BASE_CASES
+-             and len({row["question_id"] for row in cases}) == 8
+-             and len({row["question_sha256"] for row in cases}) == 8,
+-             "EXACT_EIGHT_PUBLIC_DEVELOPMENT_CASES_REQUIRED")
++             and len({row["question_id"] for row in cases}) == 3
++             and len({row["question_sha256"] for row in cases}) == 3,
++             "EXACT_THREE_PUBLIC_REPAIR_CASES_REQUIRED")
+     planned = protocol.get("planned_instances")
+-    _require(type(planned) is list and 10 <= len(planned) <= 15
++    _require(type(planned) is list and len(planned) == len(ALL_CASES)
+              and all(type(row) is dict and set(row) == {"instance_id", "kind", "base_case_id", "maximum_posts"}
+                      and row.get("instance_id") in ALL_CASES
+-                     and row.get("maximum_posts") == CASE_POST_CAP
++                     and row.get("maximum_posts") == (1 if row["instance_id"] in COMPONENT_CASES else CASE_POST_CAP)
++                     and type(row.get("maximum_posts")) is int
+                      and row.get("base_case_id") is None
+                      and row.get("kind") == ("base" if row["instance_id"] in BASE_CASES
+-                         else "affected_or_control" if row["instance_id"] in AUX_CASES else "page") for row in planned)
+-             and len({row["instance_id"] for row in planned}) == len(planned)
+-             and BASE_CASES | {"case10", "case10b"} <= {row["instance_id"] for row in planned},
++                         else "affected_or_control" if row["instance_id"] in AUX_CASES else "diagnostic") for row in planned)
++             and {row["instance_id"] for row in planned} == ALL_CASES
++             and len({row["instance_id"] for row in planned}) == len(planned),
+              "EXACT_FINITE_PLANNED_INSTANCES_REQUIRED")
+     _require(_source_pins(protocol.get("source_pins")) == protocol.get("source_version_sha256")
+              == FROZEN_BASE_SOURCE_VERSION_SHA256, "BASELINE_MAIN_SOURCE_VERSION_CHANGED")
+@@ -300,12 +302,12 @@
+ 
+ def _fix_plan(root, protocol, protocol_pin):
+     """One immutable, Root-selected common fix; original baseline source never changes."""
+-    plan, pin = _pinned_record(Path(root).parent / "common-fix-plan89.json")
++    plan, pin = _pinned_record(Path(root).parent / "common-fix-plan90.json")
+     keys = {"schema", "authorization", "protocol_sha256", "root_selected_authorized",
+             "single_common_fix", "full_batch_replay_authorized", "source_pins_before", "source_pins_after",
+             "source_version_before_sha256", "source_version_after_sha256", "selected_source_paths",
+             "cause_review_sha256", "instances"}
+-    _require(set(plan) == keys and plan.get("schema") == "dev89_single_common_fix_plan_v1"
++    _require(set(plan) == keys and plan.get("schema") == "repair90_single_common_fix_plan_v1"
+              and plan.get("authorization") == AUTHORIZATION
+              and plan.get("protocol_sha256") == protocol_pin
+              and plan.get("root_selected_authorized") is True and plan.get("single_common_fix") is True
+@@ -326,10 +328,10 @@
+              and len(selected) == len(set(selected)) and set(selected) == changed,
+              "COMMON_FIX_CHANGED_PRODUCTION_PATHS_REQUIRED")
+     rows = plan.get("instances")
+-    _require(type(rows) is list and 2 <= len(rows) <= 4
++    _require(type(rows) is list and 2 <= len(rows) <= 3
+              and all(type(row) is dict and set(row) == {"instance_id", "kind", "base_case_id", "question_sha256"}
+                      and row.get("instance_id") in AUX_CASES and row.get("kind") in {"affected", "control"}
+-                     and row.get("base_case_id") in BASE_CASES for row in rows)
++                     and row.get("base_case_id") == {"case01r": "case01", "case08r": "case08", "case06r": "case06"}[row["instance_id"]] for row in rows)
+              and len({row["instance_id"] for row in rows}) == len(rows)
+              and len({row["base_case_id"] for row in rows}) == len(rows)
+              and any(row["kind"] == "affected" for row in rows)
+@@ -363,7 +365,7 @@
+         started = datetime.fromisoformat(clock["started_utc"].replace("Z", "+00:00"))
+         finished = datetime.fromisoformat(clock["finished_utc"].replace("Z", "+00:00"))
+         return (set(qa) == expected_keys
+-            and qa.get("schema") == "dev89_independent_actual_answer_eligibility_v1"
++            and qa.get("schema") == "repair90_independent_actual_answer_eligibility_v1"
+             and qa.get("status") == qa.get("independent_answer_QA") == "PASS"
+             and qa.get("case_id") == base_scope.get("case_id") == journey.get("case_id")
+             and qa.get("question_sha256") == base_scope.get("question_sha256") == journey.get("question_sha256")
+@@ -402,7 +404,7 @@
+         "qa_receipt_path", "qa_receipt_sha256", "actual_answer_sha256", "root_selected_authorized",
+         "automatic_replay_or_reclaim", "repair_review_path", "repair_review_sha256", "base_journey_receipt_sha256"}
+     _require(set(descriptor) == expected_keys
+-             and descriptor.get("schema") == "dev89_planned_instance_descriptor_v1"
++             and descriptor.get("schema") == "repair90_planned_instance_descriptor_v1"
+              and descriptor.get("authorization") == AUTHORIZATION
+              and descriptor.get("instance_id") == instance_id
+              and descriptor.get("root_selected_authorized") is True
+@@ -428,7 +430,7 @@
+     for scope, ident in ((base_scope, base_id), (instance_scope, instance_id)):
+         _require(_exact(scope.get("expected_model_config"), protocol["expected_model_config"])
+                  and _exact(scope.get("expected_checker_config"), protocol["expected_checker_config"])
+-                 and scope.get("phase89_frozen_profile_sha256") == protocol["base_config_sha256"],
++                 and scope.get("phase90_frozen_profile_sha256") == protocol["base_config_sha256"],
+                  "QUALITY_PAGE_MODEL_OR_POLICY_CHANGED")
+         _settings_match(scope, protocol, runtime, ident)
+     journey, journey_pin = _pinned_record(runtime / base_id / "journey-receipt88.json",
+@@ -439,7 +441,7 @@
+         _require(planned["kind"] == "affected_or_control" and descriptor["kind"] in {"affected", "control"}
+                  and base_id in BASE_CASES
+                  and all(descriptor[field] is None for field in ("qa_receipt_path", "qa_receipt_sha256", "actual_answer_sha256"))
+-                 and descriptor["repair_review_path"] == "common-fix-plan89.json", "AFFECTED_CONTROL_DESCRIPTOR_REQUIRED")
++                 and descriptor["repair_review_path"] == "common-fix-plan90.json", "AFFECTED_CONTROL_DESCRIPTOR_REQUIRED")
+         plan, plan_pin = _fix_plan(root, protocol, marker["protocol_sha256"])
+         _require(plan_pin == descriptor["repair_review_sha256"]
+                  and base_version == plan["source_version_before_sha256"]
+@@ -456,7 +458,7 @@
+                  and instance_scope.get("page_base_checker_config_sha256") == public_digest(base_scope["expected_checker_config"]),
+                  "QUALITY_PAGE_DESCRIPTOR_REQUIRED")
+         version = protocol["source_version_sha256"]
+-        if (runtime / "common-fix-plan89.json").exists():
++        if (runtime / "common-fix-plan90.json").exists():
+             plan, _ = _fix_plan(root, protocol, marker["protocol_sha256"])
+             version = plan["source_version_after_sha256"]
+         _require(instance_version == version, "QUALITY_PAGE_CURRENT_SOURCE_VERSION_REQUIRED")
+@@ -536,11 +538,11 @@
+ 
+ 
+ def validate_fresh_validation(*_args, **_kwargs):
+-    raise BudgetError("OLD_SPECIAL_VALIDATION_FORBIDDEN_IN_DEV89")
++    raise BudgetError("OLD_SPECIAL_VALIDATION_FORBIDDEN_IN_REPAIR90")
+ 
+ 
+ def claim_component(*_args, **_kwargs):
+-    raise BudgetError("CHECKER_LOW_COMPONENT_FORBIDDEN_IN_DEV89")
++    raise BudgetError("CHECKER_LOW_COMPONENT_FORBIDDEN_IN_REPAIR90")
+ 
+ 
+ def _closed_base_journal(descriptor, final, cases, claims, settlements, exposures):
+@@ -567,7 +569,7 @@
+         raise BudgetError("JOURNAL_WRITE_FAILED") from None
+ 
+ def _marker(protocol_pin):
+-    return {"schema": "dev89_cohort_claim_v1", "authorization": AUTHORIZATION,
++    return {"schema": "repair90_cohort_claim_v1", "authorization": AUTHORIZATION,
+             "protocol_sha256": _sha(protocol_pin), "physical_posts_maximum": POST_CAP,
+             "cost_cap_USD": str(COST_CAP), "per_post_full_hold_USD": str(HOLD),
+             "cases_maximum": CASE_CAP, "per_case_posts_maximum": CASE_POST_CAP,
+@@ -595,7 +597,7 @@
+              "QUALITY_REVIEW_SHA256_REQUIRED")
+     if review_sha256 is not None:
+         review_sha256 = _sha(review_sha256)
+-    return {"schema": "dev89_permanent_cohort_stop_v1", "protocol_sha256": _sha(protocol_pin),
++    return {"schema": "repair90_permanent_cohort_stop_v1", "protocol_sha256": _sha(protocol_pin),
+             "finite_code": finite_code, "review_sha256": review_sha256}
+ 
+ def stop_cohort(root, finite_code, review_sha256=None):
+@@ -635,13 +637,13 @@
+         if name.endswith("-claim.json") and name.removesuffix("-claim.json") in ALL_CASES:
+             case_id = name.removesuffix("-claim.json")
+             record = _read(path)
+-            expected = {"schema": "dev89_case_claim_v1", "authorization": AUTHORIZATION,
++            expected = {"schema": "repair90_case_claim_v1", "authorization": AUTHORIZATION,
+                         "protocol_sha256": marker["protocol_sha256"], "case_id": case_id,
+                         "question_sha256": _sha(record.get("question_sha256")),
+                         "physical_posts_maximum": CASE_POST_CAP, "automatic_retry_or_reclaim": False}
+             planned = _planned(protocol, case_id)
+             if case_id in _SUPPLEMENTS:
+-                expected["schema"] = "dev89_supplement_case_claim_v1"
++                expected["schema"] = "repair90_supplement_case_claim_v1"
+                 expected["supplement_descriptor_sha256"] = _sha(record.get("supplement_descriptor_sha256"))
+             else:
+                 _require(planned["kind"] == "base", "ORDINARY_INSTANCE_PLAN_CHANGED")
+@@ -677,7 +679,7 @@
+         _require(type(wire_bytes) is int and 0 < wire_bytes <= MAX_WIRE_BYTES, "WIRE_BYTES_INVALID")
+         role, purpose = claim.get("role"), claim.get("purpose")
+         _require(next_step_allowed(case_steps[case_id], role, purpose), "ROLE_PURPOSE_SEQUENCE_INVALID")
+-        expected = {"schema": "dev89_post_claim_v1", "authorization": AUTHORIZATION,
++        expected = {"schema": "repair90_post_claim_v1", "authorization": AUTHORIZATION,
+                     "protocol_sha256": marker["protocol_sha256"], "global_slot": slot,
+                     "case_id": case_id, "case_post_index": index + 1,
+                     "role": role, "purpose": purpose,
+@@ -692,7 +694,7 @@
+             record = settlements[slot]
+             cost = _amount(record.get("known_cost_USD"))
+             _require(cost is not None and cost <= HOLD, "SETTLEMENT_COST_INVALID")
+-            expected = {"schema": "dev89_post_settlement_v1", **binding,
++            expected = {"schema": "repair90_post_settlement_v1", **binding,
+                         "known_cost_USD": str(cost), "released_own_protection_USD": str(HOLD)}
+             _require(_exact(record, expected), "SETTLEMENT_BINDING_CHANGED")
+             known += cost
+@@ -702,7 +704,7 @@
+             cost = _amount(raw_cost)
+             _require(raw_cost is None or cost is not None, "EXPOSURE_COST_INVALID")
+             protection = max(HOLD, cost) if cost is not None else HOLD
+-            expected = {"schema": "dev89_terminal_exposure_v1", **binding,
++            expected = {"schema": "repair90_terminal_exposure_v1", **binding,
+                         "observed_cost_USD": str(cost) if cost is not None else None,
+                         "unknown_protection_USD": str(protection), "terminal": True}
+             _require(_exact(record, expected), "EXPOSURE_BINDING_CHANGED")
+@@ -729,7 +731,7 @@
+             "supplemental_cases_claimed": sum(case_id in _SUPPLEMENTS for case_id in cases),
+             "auxiliary_cases_claimed": sum(case_id in AUX_CASES for case_id in cases),
+              "page_cases_claimed": sum(case_id in PAGE_CASES for case_id in cases),
+-             "nonpage_posts_cap": NONPAGE_POST_CAP, "page_posts_reserved_from_nonpage": 8,
++             "nonpage_posts_cap": NONPAGE_POST_CAP, "page_posts_reserved_from_nonpage": 0,
+              "cohort_stopped": _stopped(root)}
+ 
+ def claim_case(root, case_id, question_sha256, protocol_pin, *, remaining_case_execution_authorized=False,
+@@ -737,7 +739,8 @@
+     """One-shot finite instance claim; local budget deferral does not change the planned denominator."""
+     _require_running(root)
+     case_id, question_sha256 = _case(case_id), _sha(question_sha256)
+-    _require(fresh_validation_descriptor_sha256 is None, "OLD_SPECIAL_VALIDATION_FORBIDDEN_IN_DEV89")
++    _require(case_id not in COMPONENT_CASES, "FUTURE_COMPONENT_REQUIRES_SEPARATE_FROZEN_CONTROLLER")
++    _require(fresh_validation_descriptor_sha256 is None, "OLD_SPECIAL_VALIDATION_FORBIDDEN_IN_REPAIR90")
+     initialize_cohort(root, protocol_pin)
+     marker, cases, claims, _, _, _, known, unknown = _scan(root)
+     _require(case_id not in cases, "CASE_REPLAY_FORBIDDEN")
+@@ -757,11 +760,11 @@
+         nonpage = sum(row["case_id"] not in PAGE_CASES for row in claims.values())
+         _require(nonpage + 2 <= NONPAGE_POST_CAP and known + HOLD * 2 <= COST_CAP, "BOUND_LOCAL_BUDGET")
+     _require(unknown == 0, "UNSETTLED_PROTECTION_BLOCKS_POSTS")
+-    record = {"schema": "dev89_case_claim_v1", "authorization": AUTHORIZATION,
++    record = {"schema": "repair90_case_claim_v1", "authorization": AUTHORIZATION,
+         "protocol_sha256": marker["protocol_sha256"], "case_id": case_id, "question_sha256": question_sha256,
+         "physical_posts_maximum": CASE_POST_CAP, "automatic_retry_or_reclaim": False}
+     if case_id in _SUPPLEMENTS:
+-        record["schema"] = "dev89_supplement_case_claim_v1"
++        record["schema"] = "repair90_supplement_case_claim_v1"
+         record["supplement_descriptor_sha256"] = _sha(supplement_descriptor_sha256)
+     _create(_root(root) / f"{case_id}-claim.json", record, "CASE_REPLAY_FORBIDDEN")
+     return snapshot(root)
+@@ -788,7 +791,7 @@
+              "COHORT_BUDGET_EXHAUSTED")
+     slot = len(claims) + 1
+     _create(_root(root) / f"post-{slot:02d}-claim.json", {
+-        "schema": "dev89_post_claim_v1", "authorization": AUTHORIZATION,
++        "schema": "repair90_post_claim_v1", "authorization": AUTHORIZATION,
+         "protocol_sha256": marker["protocol_sha256"], "global_slot": slot,
+         "case_id": case_id, "case_post_index": index + 1, "role": role, "purpose": purpose,
+         "wire_sha256": wire_sha256, "wire_bytes": wire_bytes, "full_hold_USD": str(HOLD),
+@@ -810,13 +813,13 @@
+     safe = status_safe and amount is not None and amount <= HOLD
+     if safe:
+         _create(_root(root) / f"post-{global_slot:02d}-settlement.json", {
+-            "schema": "dev89_post_settlement_v1", **binding,
++            "schema": "repair90_post_settlement_v1", **binding,
+             "known_cost_USD": str(amount), "released_own_protection_USD": str(HOLD),
+         }, "SETTLEMENT_REPLAY_FORBIDDEN")
+     else:
+         protection = max(HOLD, amount) if amount is not None else HOLD
+         _create(_root(root) / f"post-{global_slot:02d}-exposure.json", {
+-            "schema": "dev89_terminal_exposure_v1", **binding,
++            "schema": "repair90_terminal_exposure_v1", **binding,
+             "observed_cost_USD": str(amount) if amount is not None else None,
+             "unknown_protection_USD": str(protection), "terminal": True,
+         }, "TERMINAL_EXPOSURE_CANNOT_SETTLE")

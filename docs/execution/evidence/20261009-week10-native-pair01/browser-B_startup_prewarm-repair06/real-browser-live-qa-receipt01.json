@@ -1,0 +1,518 @@
+{
+  "schema": "5703_week10_native_pair_resume_ui_receipt_v1",
+  "status": "ACTUAL_SEEDED_FIRST_READ_ONLY_VERIFIED_AND_FOLLOWUP_PASS",
+  "started_utc": "2026-10-09T04:34:23.178Z",
+  "batch_id": "cs30-week10-native-pair-20261009-01",
+  "paired_leg_id": "B_startup_prewarm",
+  "worker_prewarm_retrieval_cache": true,
+  "source_index_sha256": "26afaa44371533d9a77f0e8aa8a51570c6027011e1d0e9d01c60c3562edd3adb",
+  "source_label": "WEEK10_NATIVE_PAIR",
+  "model_mode": "live",
+  "exact_model_binding_basis": "Root pinned current project qualification and guarded batch; AnswerOut itself exposes only model_mode",
+  "provider": "openai_compatible",
+  "model": "google/gemini-3.5-flash-lite",
+  "openrouter_route_profile": "gemini35_google_vertex_v1",
+  "provider_route": "google-vertex/global",
+  "configuration_id": "74c8201e-aca0-400d-bcc5-5785e24c1c11",
+  "config_revision": 1,
+  "config_hash": "703c94a357ddd4b826d8b5fe25d503198d3d56e1e9130f6a37ed9e9c3396aa4a",
+  "qualification": {
+    "ready_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-B_startup_prewarm-repair06\\readiness-public01.json",
+      "bytes": 2588,
+      "sha256": "cc898ca4b7efc0cc25ed5b102b0828ccc1a60bd44595db3f80c85b02a6792afb"
+    },
+    "role_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-B_startup_prewarm-repair06\\role-qualification-public01.json",
+      "bytes": 5143,
+      "sha256": "346a909afc205f2111a348b3cc8d54a1fc835581462102bce4a726d3b7f13ceb"
+    },
+    "worker_startup_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-B_startup_prewarm-repair06\\worker-startup-preparation-public01.json",
+      "bytes": 1625,
+      "sha256": "c18c16aec1c3d71ad4bea503050a588ba02a3ea0edbdbf7024c3a5fe4c6e6498"
+    },
+    "worker_startup": {
+      "schema": "5703_week10_worker_startup_preparation_v1",
+      "status": "PASS",
+      "batch_id": "cs30-week10-native-pair-20261009-01",
+      "paired_leg_id": "B_startup_prewarm",
+      "source_version": "26afaa44371533d9a77f0e8aa8a51570c6027011e1d0e9d01c60c3562edd3adb",
+      "worker_prewarm_retrieval_cache": true,
+      "same_Engine_as_native_run_once": true,
+      "queue": "interactive",
+      "main_entry_epoch_ms": 1791520448940.825,
+      "native_model_warmup_ms": 4987.674199999674,
+      "release_cache_prepare_wall_ms": 5760.193500000241,
+      "native_cache_prepare_report": {
+        "status": "ready",
+        "cache_version": "validated_release_cache_v1",
+        "cache_hit": false,
+        "validation_ms": 5702.0542999998725,
+        "visible_chunk_count": 10594,
+        "release_id_sha256": "541d9515e720f2b25011ecea178a58a1cbb7cdd6ec0acf78825b772edf986ace",
+        "epoch_sha256": "dbc6b4f6b51c64394b6ffcf4f1a7e05373e340655bf068d1b58cf20fb40ed5b6",
+        "startup_prepare_ms": 5760.162,
+        "queue": "interactive",
+        "version": "worker_active_release_prewarm_v1",
+        "timing_scope": "worker_startup_before_job_claim_v1"
+      },
+      "runner_main_entry_to_worker_ready_ms": 13161.972800000513,
+      "startup_timing_scope": "runner_main_entry_to_worker_preparation_completed_v1",
+      "process_launch_to_ready_ms": null,
+      "browser_Send_to_full_answer_ms": null,
+      "provider_POSTs_for_this_preparation": 0,
+      "full_startup_cost_and_early_Send_wait_must_remain_in_total_user_journey": true,
+      "process_imports_and_external_launch_overhead_require_separate_driver_clock": true,
+      "raw_error_messages_DSN_keys_history_or_source_text_exported": false
+    },
+    "default_retrieval_profile_pin": {
+      "path": "E:\\5703\\learning-assistant\\configs\\retrieval\\chat_hybrid_minilm.json",
+      "bytes": 294,
+      "sha256": "23ca72ddb737045259a04cbfc81c71969440f11cc2fa1a77bc7f8e7fc4364e17",
+      "scope": "Configuration binding only; native execution proof is separate"
+    },
+    "native_current_default_bound": true,
+    "executor_override": false,
+    "provider_route": "google-vertex/global",
+    "reused_existing": true,
+    "newly_submitted_provider_posts": 0,
+    "role_run_ids": [
+      {
+        "role": "answer",
+        "run_id": "d0f74a13-1b55-4de1-9fd8-bd94864e3624"
+      },
+      {
+        "role": "checker",
+        "run_id": "a077519f-19c7-47dd-a3b1-068059b2a0ab"
+      }
+    ]
+  },
+  "budget_initial": {
+    "pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-B_startup_prewarm-repair06\\budget-status-public01.json",
+      "bytes": 1152,
+      "sha256": "7caa92578e74386c8f6e2289e3118a545dc6d62a1e3549a8ed8d275a58e7fb19"
+    },
+    "status": "READY",
+    "per_leg_provider_post_count": {
+      "A_baseline": 2,
+      "B_startup_prewarm": 0
+    },
+    "per_leg_remaining_provider_slots": {
+      "A_baseline": 2,
+      "B_startup_prewarm": 4
+    },
+    "leg_completed": [
+      "A_baseline"
+    ],
+    "leg_runtime_closed": [
+      "A_baseline"
+    ],
+    "integrity_errors": 0,
+    "cleanup_pending": 0,
+    "provider_post_count": 2,
+    "remaining_provider_slots": 6,
+    "fully_settled": true,
+    "open_claims": 0,
+    "unknown_cost_count": 0,
+    "stop_exists": false,
+    "known_API_cost_USD": "0.0108559",
+    "full_unknown_hold_USD": "0"
+  },
+  "retrieval_variant": "R2",
+  "retrieval_binding": "current_public_default_hybrid_minilm_v1",
+  "executor_override": false,
+  "native_retrieval_execution_proof": null,
+  "default_retrieval_acceptance": "PENDING_ROOT_NATIVE_TRACE_AND_QUALITY_REVIEW",
+  "synthetic_learner_and_questions": true,
+  "existing_public_owned_book": {
+    "id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+    "title": "Biology 2e",
+    "release_id": "4f11bd70-a486-4d16-b216-78cfe499530a"
+  },
+  "actual_headless_browser": true,
+  "browser_count": 1,
+  "page_count": 1,
+  "worker_count": 1,
+  "browser_gpu_disabled": true,
+  "chromium_sandbox": true,
+  "ignore_https_errors": false,
+  "process_priority": "Normal; applied by this Node runner",
+  "cpu_affinity": "Controlled by Root launcher; not asserted here",
+  "direct_http_acceptance_calls": 0,
+  "direct_database_accesses": 0,
+  "manual_provider_calls": 0,
+  "automatic_question_retries": 0,
+  "provider_physical_post_limit": 8,
+  "native_per_question_post_bound": 4,
+  "new_batch_reserve_USD": "0.24000000",
+  "timeTTFT_ms": null,
+  "TTFT_boundary": "Current UI is not token-streaming; first painted prose is not provider TTFT",
+  "resume_seeded_first_only": true,
+  "new_first_submissions": 0,
+  "actual_seed_receipt_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\ACTUAL_PAIRED_SYNTHETIC_SEED_RECEIPT03.json",
+    "bytes": 19716,
+    "sha256": "2f1d82623fa1aff132c2d9304648026a97b14622c55b1b842470e5bd3c80a78c"
+  },
+  "seeded_first_provider_POSTs": 0,
+  "historical_source_first_receipt_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-real-browser-warm4-20261008-01\\browser-warm05\\real-browser-live-qa-receipt01.json",
+    "bytes": 16626,
+    "sha256": "3b9c045f4106408671f04b02a4eac5a272b723e48808f81f1a9d376e87a8d127"
+  },
+  "warm_execution_basis": "Native offline model-instance prewarm used a distinct authored query; no measured question-result cache was populated",
+  "prewarm_public_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-B_startup_prewarm-repair06\\native-prewarm-public01.json",
+  "original_first_timings": {
+    "tfirst_ms": null,
+    "tfull_ms": null,
+    "immutable_scope": "Seeded accepted first exchange; no fresh Send, native generation or latency is fabricated"
+  },
+  "startup_driver_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\ROOT_STARTUP_DRIVER_B_startup_prewarm_ACTUAL06.json",
+    "bytes": 451,
+    "sha256": "1406d9140d4c079084228904ec616f3d070bc3872efb051555950ddfa9b3cdb0"
+  },
+  "startup_driver": {
+    "batch_id": "cs30-week10-native-pair-20261009-01",
+    "launch_to_ready_includes_imports_artifact_pins_models_and_native_startup": true,
+    "owned_runtime_pid": 22392,
+    "paired_leg_id": "B_startup_prewarm",
+    "process_launch_epoch_ms": 1791520448841.844,
+    "schema": "5703_week10_root_startup_driver_v1",
+    "source_version": "26afaa44371533d9a77f0e8aa8a51570c6027011e1d0e9d01c60c3562edd3adb",
+    "worker_ready_observed_epoch_ms": 1791520462938.478
+  },
+  "process_launch_to_worker_ready_ms": 14096.634033203125,
+  "worker_startup_report": {
+    "schema": "5703_week10_worker_startup_preparation_v1",
+    "status": "PASS",
+    "batch_id": "cs30-week10-native-pair-20261009-01",
+    "paired_leg_id": "B_startup_prewarm",
+    "source_version": "26afaa44371533d9a77f0e8aa8a51570c6027011e1d0e9d01c60c3562edd3adb",
+    "worker_prewarm_retrieval_cache": true,
+    "same_Engine_as_native_run_once": true,
+    "queue": "interactive",
+    "main_entry_epoch_ms": 1791520448940.825,
+    "native_model_warmup_ms": 4987.674199999674,
+    "release_cache_prepare_wall_ms": 5760.193500000241,
+    "native_cache_prepare_report": {
+      "status": "ready",
+      "cache_version": "validated_release_cache_v1",
+      "cache_hit": false,
+      "validation_ms": 5702.0542999998725,
+      "visible_chunk_count": 10594,
+      "release_id_sha256": "541d9515e720f2b25011ecea178a58a1cbb7cdd6ec0acf78825b772edf986ace",
+      "epoch_sha256": "dbc6b4f6b51c64394b6ffcf4f1a7e05373e340655bf068d1b58cf20fb40ed5b6",
+      "startup_prepare_ms": 5760.162,
+      "queue": "interactive",
+      "version": "worker_active_release_prewarm_v1",
+      "timing_scope": "worker_startup_before_job_claim_v1"
+    },
+    "runner_main_entry_to_worker_ready_ms": 13161.972800000513,
+    "startup_timing_scope": "runner_main_entry_to_worker_preparation_completed_v1",
+    "process_launch_to_ready_ms": null,
+    "browser_Send_to_full_answer_ms": null,
+    "provider_POSTs_for_this_preparation": 0,
+    "full_startup_cost_and_early_Send_wait_must_remain_in_total_user_journey": true,
+    "process_imports_and_external_launch_overhead_require_separate_driver_clock": true,
+    "raw_error_messages_DSN_keys_history_or_source_text_exported": false
+  },
+  "questions": [
+    {
+      "label": "resume_existing_first",
+      "status": "PASS",
+      "question": "What does photosynthesis require, and what does it produce?",
+      "question_sha256": "c594ef5428369e19735e8935a039b8fc5517cba504a855ce901a4b26da7d1fac",
+      "session_id": "0edbe19c-3a1a-436e-ad4d-8f44b2133656",
+      "request_id": "470ac917-66df-4b22-912b-9a8f1fd67d02",
+      "job_id": "ac9b4704-e6d2-4a79-892c-7a4093e29999",
+      "answer_id": "e53c9a76-e19b-4626-a214-664c2f45f21f",
+      "terminal_state": "succeeded",
+      "terminal_state_basis": "Copied accepted first exchange in newly owned fixture; current GET AnswerOut identity and original answer text revalidated; stored raw response and history independently verified by native runtime; no new model call",
+      "tfirst_ms": null,
+      "tfull_ms": null,
+      "original_first_full_render_ms": null,
+      "timeTTFT_ms": null,
+      "physical_provider_posts": 0,
+      "newly_submitted_message_posts": 0,
+      "citation_checked": true,
+      "refresh_persisted": true,
+      "completed_cited_answer": true,
+      "published_reply_rendered": true,
+      "observer_error_code": null,
+      "resume_navigation_started_epoch_ms": 1791520464066,
+      "response_digest_basis": "Current HTTP DTO canonical SHA is recorded; native runtime already verifies stored raw response and history SHA. DTO normalization is a separate representation.",
+      "published_response_sha256": "2e58f4f8d6587b7daddbec7a3108ebea1f961f91ba5bcc8e6408c33575162b4e",
+      "answer_text_sha256": "c0573fa4bd6c8a8877c75fe70404ee7d07a51c19f8f2fa99e31b45dc205b36df",
+      "answer_completeness_status": "complete_at_requested_help",
+      "resume_verification_first_paint_ms": 444.2999999988824,
+      "resume_verification_full_paint_ms": 444.59999999962747,
+      "resume_paint_scope": "New read-only resumed-page verification after current GET; not original Send latency and never fills historical tfull",
+      "paint_observation": {
+        "first_ms": 444.2999999988824,
+        "full_ms": 444.59999999962747,
+        "visible": true,
+        "prose_length": 344,
+        "visibility_basis": "IntersectionObserver >=0.01 including ancestor clipping; document visible; own style and viewport rectangle; sampled after prior paint",
+        "complete_body": true,
+        "citation_controls": 3,
+        "followup_controls": 0
+      },
+      "pre_refresh_prose_sha256": "875a0957d3fb3b21d1bf0d3a1d3aa36bb9a1874ea0aa2f9167c56a9e43db3419",
+      "source_excerpt_sha256": "cf4de324a1ad1d638757c65965d51d889331297e993554f62aa4dbcdfcadbd3d",
+      "source_excerpt_character_count": 469,
+      "reload_started_epoch_ms": 1791520465207,
+      "fresh_reload_response": {
+        "method": "GET",
+        "route": "/api/v1/sessions/0edbe19c-3a1a-436e-ad4d-8f44b2133656/messages",
+        "http_status": 200,
+        "request_started_epoch_ms": 1791520465303.6392,
+        "response_observed_epoch_ms": 1791520465342,
+        "answer_id": "e53c9a76-e19b-4626-a214-664c2f45f21f",
+        "request_id": "470ac917-66df-4b22-912b-9a8f1fd67d02",
+        "job_id": "ac9b4704-e6d2-4a79-892c-7a4093e29999",
+        "published_response_sha256": "2e58f4f8d6587b7daddbec7a3108ebea1f961f91ba5bcc8e6408c33575162b4e",
+        "answer_text_sha256": "c0573fa4bd6c8a8877c75fe70404ee7d07a51c19f8f2fa99e31b45dc205b36df"
+      },
+      "refreshed_prose_sha256": "875a0957d3fb3b21d1bf0d3a1d3aa36bb9a1874ea0aa2f9167c56a9e43db3419",
+      "budget_after": {
+        "pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-B_startup_prewarm-repair06\\budget-status-public01.json",
+          "bytes": 1152,
+          "sha256": "7caa92578e74386c8f6e2289e3118a545dc6d62a1e3549a8ed8d275a58e7fb19"
+        },
+        "status": "READY",
+        "per_leg_provider_post_count": {
+          "A_baseline": 2,
+          "B_startup_prewarm": 0
+        },
+        "per_leg_remaining_provider_slots": {
+          "A_baseline": 2,
+          "B_startup_prewarm": 4
+        },
+        "leg_completed": [
+          "A_baseline"
+        ],
+        "leg_runtime_closed": [
+          "A_baseline"
+        ],
+        "integrity_errors": 0,
+        "cleanup_pending": 0,
+        "provider_post_count": 2,
+        "remaining_provider_slots": 6,
+        "fully_settled": true,
+        "open_claims": 0,
+        "unknown_cost_count": 0,
+        "stop_exists": false,
+        "known_API_cost_USD": "0.0108559",
+        "full_unknown_hold_USD": "0"
+      }
+    },
+    {
+      "label": "followup",
+      "status": "PASS",
+      "question": "Why is light necessary for this process?",
+      "question_sha256": "c6437bbeb45b83c75a18d503e28e0b235a600f8f3884e23aba944c6bd6940caf",
+      "session_id": "0edbe19c-3a1a-436e-ad4d-8f44b2133656",
+      "request_id": "306e2c45-d6ae-4e01-aebd-04a86715c9db",
+      "job_id": "1474fbdc-7674-48e1-8c34-a7789f897e50",
+      "answer_id": "6419fecb-950e-4736-9f5d-a31fcdd34bfc",
+      "terminal_state": "succeeded",
+      "terminal_error_code": null,
+      "t0_performance_ms": 930.5,
+      "page_time_origin_ms": 1791520465212.7,
+      "t202_ms": 325.800048828125,
+      "tterminal_ms": 12029.800048828125,
+      "tfirst_ms": 12146.5,
+      "tfull_ms": 12146.5,
+      "tfailure_ms": null,
+      "timeTTFT_ms": null,
+      "server_worker_timing": {
+        "timing_scope": "worker_execution_before_answer_insert_v1",
+        "units": "milliseconds",
+        "excludes": "HTTP admission, queue wait, answer insertion/commit, browser loading/paint",
+        "total_ms": 10902.969,
+        "generation_ms": 4932,
+        "checking_ms": 4272,
+        "token_count_ms": 0,
+        "model_total_ms": 9204,
+        "preparation_ms": 45.773,
+        "query_preparation_ms": 1.687,
+        "retrieval_ms": 220.196,
+        "teaching_plan_ms": 0.254,
+        "submission_to_worker_start_ms": 467.53,
+        "generation_wall_ms": 10425.536,
+        "publication_before_commit_ms": 198.83,
+        "worker_before_commit_ms": 11098.557
+      },
+      "budget_before": {
+        "pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-B_startup_prewarm-repair06\\budget-status-public01.json",
+          "bytes": 1152,
+          "sha256": "7caa92578e74386c8f6e2289e3118a545dc6d62a1e3549a8ed8d275a58e7fb19"
+        },
+        "status": "READY",
+        "per_leg_provider_post_count": {
+          "A_baseline": 2,
+          "B_startup_prewarm": 0
+        },
+        "per_leg_remaining_provider_slots": {
+          "A_baseline": 2,
+          "B_startup_prewarm": 4
+        },
+        "leg_completed": [
+          "A_baseline"
+        ],
+        "leg_runtime_closed": [
+          "A_baseline"
+        ],
+        "integrity_errors": 0,
+        "cleanup_pending": 0,
+        "provider_post_count": 2,
+        "remaining_provider_slots": 6,
+        "fully_settled": true,
+        "open_claims": 0,
+        "unknown_cost_count": 0,
+        "stop_exists": false,
+        "known_API_cost_USD": "0.0108559",
+        "full_unknown_hold_USD": "0"
+      },
+      "budget_after": {
+        "pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-B_startup_prewarm-repair06\\budget-status-public01.json",
+          "bytes": 1179,
+          "sha256": "8fce7548972b89b7652a3e754a9557f5dfd965035153c535108a6bdc048e122b"
+        },
+        "status": "READY",
+        "per_leg_provider_post_count": {
+          "A_baseline": 2,
+          "B_startup_prewarm": 2
+        },
+        "per_leg_remaining_provider_slots": {
+          "A_baseline": 2,
+          "B_startup_prewarm": 2
+        },
+        "leg_completed": [
+          "A_baseline",
+          "B_startup_prewarm"
+        ],
+        "leg_runtime_closed": [
+          "A_baseline"
+        ],
+        "integrity_errors": 0,
+        "cleanup_pending": 0,
+        "provider_post_count": 4,
+        "remaining_provider_slots": 4,
+        "fully_settled": true,
+        "open_claims": 0,
+        "unknown_cost_count": 0,
+        "stop_exists": false,
+        "known_API_cost_USD": "0.01936904",
+        "full_unknown_hold_USD": "0"
+      },
+      "physical_provider_posts": 2,
+      "citation_checked": true,
+      "refresh_persisted": true,
+      "routed_message_posts": 1,
+      "observer_error_code": null,
+      "submitted_message_body": {
+        "method": "POST",
+        "route": "/api/v1/sessions/0edbe19c-3a1a-436e-ad4d-8f44b2133656/messages",
+        "bytes": 98,
+        "sha256": "8088841c34359129fce9f52a86899faad780469e34a9c588f028784bd8ab55b7",
+        "content_sha256": "c6437bbeb45b83c75a18d503e28e0b235a600f8f3884e23aba944c6bd6940caf",
+        "reading_scope": null,
+        "document_id": null,
+        "scope": "Digest of observed message body; raw body, headers and credentials are not saved"
+      },
+      "published_reply_rendered": true,
+      "completed_cited_answer": true,
+      "quality_failure_code": null,
+      "fresh_reload_response": {
+        "method": "GET",
+        "route": "/api/v1/sessions/0edbe19c-3a1a-436e-ad4d-8f44b2133656/messages",
+        "http_status": 200,
+        "request_started_epoch_ms": 1791520478788.926,
+        "response_observed_epoch_ms": 1791520478855,
+        "answer_id": "6419fecb-950e-4736-9f5d-a31fcdd34bfc",
+        "request_id": "306e2c45-d6ae-4e01-aebd-04a86715c9db",
+        "job_id": "1474fbdc-7674-48e1-8c34-a7789f897e50",
+        "published_response_sha256": "9f6c654c5d494a6bbf906f641221999ad3bd2d516f610fb12d7e1630125fb17b",
+        "answer_text_sha256": "1bb2ff4940a8037b52b96bd33789a3cd1db5c293f3cdd6c6b1014e3075516317"
+      },
+      "accepted_202_observed_epoch_ms": 1791520466469,
+      "response_type": "answer",
+      "refusal_reason": null,
+      "answer_completeness_status": "complete_at_requested_help",
+      "published_response_sha256": "9f6c654c5d494a6bbf906f641221999ad3bd2d516f610fb12d7e1630125fb17b",
+      "answer_text_sha256": "1bb2ff4940a8037b52b96bd33789a3cd1db5c293f3cdd6c6b1014e3075516317",
+      "paint_observation": {
+        "first_ms": 12146.5,
+        "full_ms": 12146.5,
+        "visible": true,
+        "prose_length": 501,
+        "visibility_basis": "IntersectionObserver >=0.01 including ancestor clipping; document visible; own style and viewport rectangle; sampled after prior paint",
+        "complete_body": true,
+        "citation_controls": 4,
+        "followup_controls": 0
+      },
+      "pre_refresh_prose_sha256": "7f18f3f8537bc9b0c01d9238da82d5b5442d76ad44e9cae5272d227cc9abe9bb",
+      "source_excerpt_sha256": "4036c8481b88def18e4715054fe15c815415efb483cb4cd7746873cea38487dc",
+      "source_excerpt_character_count": 462,
+      "reload_started_epoch_ms": 1791520478675,
+      "refreshed_prose_sha256": "7f18f3f8537bc9b0c01d9238da82d5b5442d76ad44e9cae5272d227cc9abe9bb",
+      "worker_ready_to_Send_ms": 3204.721923828125,
+      "process_launch_to_complete_answer_ms": 29447.85595703125
+    }
+  ],
+  "followup": {
+    "status": "PASS",
+    "same_session_id": "0edbe19c-3a1a-436e-ad4d-8f44b2133656"
+  },
+  "page_errors": [],
+  "denied_external_requests": [],
+  "console_type_counts": {},
+  "browser_closed": true,
+  "context_closed": true,
+  "project_complete": false,
+  "limits": [
+    "Read-only retained first verification plus at most one newly submitted followup; no scientific or human study qualification",
+    "Public default profile binding does not itself prove native R2/reranker execution or retrieval quality",
+    "Complete DOM is not simultaneous visibility of every character or user reading",
+    "Paint clocks are double-RAF samples; full time also includes DTO observation and the 200 ms control-loop sampling delay",
+    "Normalized Markdown-to-DOM text comparison is approximate and may conservatively reject a valid formatted answer",
+    "Viewport intersection includes ancestor clipping but does not prove unobscured individual text glyphs",
+    "Published refusal or partial-reply rendering can have measured clocks while cited-answer quality remains FAIL",
+    "No guarantee of zero operating-system contention"
+  ],
+  "actual_browser_version": "154.0.4258.62",
+  "login_response_status": 200,
+  "submitted_session_id": "0edbe19c-3a1a-436e-ad4d-8f44b2133656",
+  "final_budget_observation": {
+    "pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-B_startup_prewarm-repair06\\budget-status-public01.json",
+      "bytes": 1179,
+      "sha256": "8fce7548972b89b7652a3e754a9557f5dfd965035153c535108a6bdc048e122b"
+    },
+    "observed_epoch_ms": 1791520479221,
+    "scope": "Read-only observed status; this snapshot does not authorize a submission",
+    "status": "READY",
+    "provider_post_count": 4,
+    "maximum_provider_post_count": 8,
+    "remaining_provider_slots": 4,
+    "open_claims": 0,
+    "unknown_cost_count": 0,
+    "integrity_errors": 0,
+    "cleanup_pending": 0,
+    "fully_settled": true,
+    "stop_exists": false,
+    "known_API_cost_USD": "0.01936904",
+    "full_unknown_hold_USD": "0",
+    "max_possible_new_batch_reserve_USD": "0.24000000"
+  },
+  "completed_utc": "2026-10-09T04:34:39.221Z",
+  "elapsed_ms": 16043,
+  "script_sha256": "719952cbb8190f5cb678415fb5878240d99a0dbe1a5ba8996dc4967adf5a9e81"
+}

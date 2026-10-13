@@ -1,0 +1,9 @@
+# Actual producer three-scope candidate review
+
+The actual TeachingDraftV5/apply-claim-patch candidate matches the independently prepared preserving plan. Its raw JSON and structured object are equal. The only additional default fields relative to the public response are null `tutor_question` and null `learner_attempt_evaluation`; they add no assertion or learner judgment.
+
+The actual decoded input contains 10 unique claims: the seven other final-04 claims retain exact text and inline source identities, and the affected compound statement becomes three independent scopes. Their actual source markers and allowed fragment sets contain the recommended unions: ATP/NADPH-to-G3P / ev_010 F053; G3P leaving the cycle and becoming a carbohydrate component / ev_010 F054+F055; Calvin-cycle stroma location / ev_007 F037. All decoded claim spans reproduce exact candidate Unicode text. All 67 original frozen source fragments and the original question remain unchanged.
+
+The narrow G3P relation is established by the preserved neighboring cross-unit prose continuation. F054 and F055 are read separately and collectively; their page-layout noise stays visible, and no synthetic source quote or offset is created. Every predicate in the three new scopes has independent local semantic support under its own explicit citation. This does not universally certify source quality or convert the free review into an actual fresh model result.
+
+The original automatic PASS and independent full-compound support limitation remain immutable. The producer proof records zero API calls and no positive gate written. This reviewer also made zero API/database operations or main-repository writes, and changed no actual source, log, label, or gate. Fresh real regression, human gold evaluation, native publication, and full UI answer timing remain unverified by this review.

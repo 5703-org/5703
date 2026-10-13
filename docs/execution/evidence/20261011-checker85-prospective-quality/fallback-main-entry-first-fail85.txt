@@ -1,0 +1,26 @@
+FF.                                                                      [100%]
+================================== FAILURES ===================================
+________ test_checked_clarification_with_both_optins_remains_zero_call ________
+
+    def test_checked_clarification_with_both_optins_remains_zero_call():
+        original = original_request(clarification=True)
+        result = run_without_adapter_calls(original)
+>       assert result.succeeded
+E       AssertionError: assert False
+E        +  where False = GenerationOutcome(response=None, error={'code': 'ENHANCEMENT_VALIDATION_ERROR', 'message': 'Enhanced response or sourc...n={}, checks=[], drafts=[], teaching_context={'teaching_mode': 'direct', 'turn_role': 'user_question'}, stage_usage=[]).succeeded
+
+5703-checker85-fallback-candidate\test_generation_programmatic_optins.py:74: AssertionError
+_____ test_checked_factual_no_evidence_with_both_optins_remains_zero_call _____
+
+    def test_checked_factual_no_evidence_with_both_optins_remains_zero_call():
+        original = original_request(clarification=False)
+        result = run_without_adapter_calls(original)
+>       assert result.succeeded
+E       AssertionError: assert False
+E        +  where False = GenerationOutcome(response=None, error={'code': 'ENHANCEMENT_VALIDATION_ERROR', 'message': 'Enhanced response or sourc...n={}, checks=[], drafts=[], teaching_context={'teaching_mode': 'direct', 'turn_role': 'user_question'}, stage_usage=[]).succeeded
+
+5703-checker85-fallback-candidate\test_generation_programmatic_optins.py:83: AssertionError
+=========================== short test summary info ===========================
+FAILED 5703-checker85-fallback-candidate\free-controls\20261011T183439669528Z-dfbf6df5::test_checked_clarification_with_both_optins_remains_zero_call
+FAILED 5703-checker85-fallback-candidate\free-controls\20261011T183439669528Z-dfbf6df5::test_checked_factual_no_evidence_with_both_optins_remains_zero_call
+2 failed, 1 passed in 1.28s

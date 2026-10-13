@@ -1,0 +1,429 @@
+{
+  "schema": "phase85_independent_posttrial_readback_v1",
+  "status": "PASS",
+  "created_utc": "2026-10-11T18:50:47.336034+00:00",
+  "reviewer": "/root/native76_narrow_review",
+  "remaining_blockers": [],
+  "scope": {
+    "Main_reads": "Only 43 public paths declared by source-pins85-posttrial.json; four bounded source diffs and targeted guard/default source reads",
+    "Main_writes": 0,
+    "DB_actions": 0,
+    "auth_reads": 0,
+    "network_actions": 0,
+    "provider_posts": 0,
+    "test_reruns": 0,
+    "runtime_runs": 0,
+    "unrun_case_contents_read": 0,
+    "ledger_mutations": 0,
+    "W_writes": "This new review only"
+  },
+  "inputs": [
+    {
+      "path": "5703-checker85-posttrial-fixes\\source-pins85-posttrial.json",
+      "bytes": 10434,
+      "sha256": "f6b629c71a49430df0211700210eec39e701fa81700feaab8b549193aabda54a"
+    },
+    {
+      "path": "5703-checker85-runtime\\source-pins85.json",
+      "bytes": 6708,
+      "sha256": "54a9b260ec51339151c905c297b427a7b7a11682074f7da820a893b216717b51"
+    },
+    {
+      "path": "5703-checker85-posttrial-fixes\\fallback-adoption85.json",
+      "bytes": 677,
+      "sha256": "4eb314a1d6dfeaef32cdfe4bf8f31e33a1d182cd9c25a3f740451383adf942e4"
+    },
+    {
+      "path": "5703-checker85-posttrial-fixes\\query-v23-adoption85.json",
+      "bytes": 3699,
+      "sha256": "ae3531df82ea4bf6c5085ad279badbb72561d6993f65e13f4b7de7020be0652b"
+    },
+    {
+      "path": "5703-checker85-posttrial-fixes\\entry-test-adoption85.json",
+      "bytes": 632,
+      "sha256": "cb97e055c674f6dba18c0490a3bba1d4a74486e7b79a8e39d3feee2353d0de03"
+    },
+    {
+      "path": "5703-checker85-posttrial-fixes\\ruff-main85.json",
+      "bytes": 650,
+      "sha256": "d76da648072453a0363c2f72cce851ee8c9472abc426672a9842ffddbd7e4194"
+    },
+    {
+      "path": "5703-checker85-posttrial-fixes\\free-controls\\20261011T184319277191Z-4b9aa0d4\\receipt.json",
+      "bytes": 1849,
+      "sha256": "402284518e5a2f2fe1c400425ce977520f56b7bb3933708fdcede71db6d7f790"
+    },
+    {
+      "path": "5703-checker85-fallback-candidate\\free-controls\\20261011T183911498176Z-563feda2\\receipt.json",
+      "bytes": 2525,
+      "sha256": "b4f7dfbde23dade2cefd4a87a1c854d04f0fa46aaa3f7a847aa0571e3bce78af"
+    },
+    {
+      "path": "5703-checker85-local-reference-fix\\review-receipt85.json",
+      "bytes": 8558,
+      "sha256": "af43bcc19f13c3c9a3fc15a7c83e22bf90d4f2203e8bf15dc6ec8bd4fd6cf6f1"
+    },
+    {
+      "path": "5703-checker85-runtime\\financial-closure-audit85-final.json",
+      "bytes": 28881,
+      "sha256": "80978da0c87787290ee2c0f50c5ad3c8191d1ce0b4a272d9cfbe207dd6d48f91"
+    },
+    {
+      "path": "5703-checker85-runtime\\cohort-ledger\\cohort-stop.json",
+      "bytes": 199,
+      "sha256": "791db2f293b85cf19a73e02e622aa08518fdcfd1de783235cabfe3d35c3b30eb"
+    },
+    {
+      "path": "5703-checker85-quality\\quality-cohort85-summary.json",
+      "bytes": 8387,
+      "sha256": "3e56f5f4c3fb0821abc134b80c2bf0508017e665be7e7c0982a917dc31e81d79"
+    }
+  ],
+  "Main_readback": {
+    "matched_files": 43,
+    "mismatches": 0,
+    "exact_public_source_pins": [
+      {
+        "path": "backend/app/core/config.py",
+        "bytes": 7515,
+        "sha256": "e740c78c99e54a014e5905d45e0d4757d3beb3c384c5d563fed83a8847667849"
+      },
+      {
+        "path": "backend/app/db/base.py",
+        "bytes": 1052,
+        "sha256": "45b925d6ecbb31a10e68f415a93a271fded22e7a5a910be71ae8d0e74157920b"
+      },
+      {
+        "path": "backend/app/db/session.py",
+        "bytes": 1647,
+        "sha256": "c49d02fba805016dc940acd4e281f0717d9d88ff0ffc0687f4bbc5d7d5b0eeeb"
+      },
+      {
+        "path": "backend/app/main.py",
+        "bytes": 3780,
+        "sha256": "ef671429abefbad54925e87613f4686877068de5137396b86d011fb519de473a"
+      },
+      {
+        "path": "backend/app/modules/answering/models.py",
+        "bytes": 6923,
+        "sha256": "179e0a78c38a4c0224ad0b5846ca6d7731e97bef7cab6c0fb8bc21cbeaf9ef29"
+      },
+      {
+        "path": "backend/app/modules/answering/service.py",
+        "bytes": 95993,
+        "sha256": "f302de879a270a5879adbc9374331c86d7b014dadca79c0a40a804647ceafeb0"
+      },
+      {
+        "path": "backend/app/modules/identity/models.py",
+        "bytes": 2932,
+        "sha256": "c11094b2642b9a13bab870ba6154aa302280836c8838a42f2566547ac01af80d"
+      },
+      {
+        "path": "backend/app/modules/knowledge/service.py",
+        "bytes": 62130,
+        "sha256": "26b6e89f55902bfba8ca8302ab69ae54a65160193994ea204272964ae968c8e1"
+      },
+      {
+        "path": "backend/app/modules/learning/models.py",
+        "bytes": 1060,
+        "sha256": "b98af9973cf65593d30fb20bda08ccbbb0a8dc304aa9223f6f71aa49b85f80ac"
+      },
+      {
+        "path": "backend/app/modules/learning_state/models.py",
+        "bytes": 8894,
+        "sha256": "170ac23cfe6c4686ea6be837fa9db04007878fc8682e5a032d2f325bed0f26ec"
+      },
+      {
+        "path": "backend/app/modules/model_settings/models.py",
+        "bytes": 7198,
+        "sha256": "dd4aadd9910b1935149174d5d355a3ebc82c1aa0ce1e9ae030ab95e06dac24e4"
+      },
+      {
+        "path": "backend/app/modules/model_settings/service.py",
+        "bytes": 19093,
+        "sha256": "e6e0a9d41846ff36a37bc1eef72892f9ddbc3f2c4648f36f2e9a714f07d5e39d"
+      },
+      {
+        "path": "backend/app/platform_core/worker_locks.py",
+        "bytes": 3015,
+        "sha256": "b2d5c5284c3440e16dee05d2e41677a4a94390436aacab8e97e9508d3c38a4fb"
+      },
+      {
+        "path": "backend/app/worker.py",
+        "bytes": 12018,
+        "sha256": "bda7c7ec99de6f30eb6e7d124d6dc8318752f4680a6d0c84106f65f013553df4"
+      },
+      {
+        "path": "conversation/practice_context.py",
+        "bytes": 6440,
+        "sha256": "5145e2dd4563098320ae74d3757612c00700495daed9b9fece2f6044541382b4"
+      },
+      {
+        "path": "conversation/query_v23.py",
+        "bytes": 5372,
+        "sha256": "f325a629f3490b6f0aea0c30b5494fe35788c45d723d4fff1b93d0aec7fdf031"
+      },
+      {
+        "path": "frontend/package.json",
+        "bytes": 1134,
+        "sha256": "ae34299e3aae1b093395469121722889d73d475ab83d1bd75e6df4d23dd42baf"
+      },
+      {
+        "path": "frontend/src/App.tsx",
+        "bytes": 15036,
+        "sha256": "0fa3fa6a7afeb674c65f58be33d83d161ef54a7e543543bc698bf5a1975046bd"
+      },
+      {
+        "path": "frontend/src/Chat.tsx",
+        "bytes": 43076,
+        "sha256": "e15a0b56d7ee9d20c8312c05b7e86f60360c3127d930ce50f348c56b0c0a3ad7"
+      },
+      {
+        "path": "frontend/src/Markdown.tsx",
+        "bytes": 4549,
+        "sha256": "3edc21990e972fae30acc2b22fea1ddee014e8cc7e11b93c67dfa8d6081966d4"
+      },
+      {
+        "path": "frontend/src/api.ts",
+        "bytes": 4059,
+        "sha256": "5492a02e628bdd7b189329e0d6e97026857ef1e8d6ed4fc32a983f4ed24e1f88"
+      },
+      {
+        "path": "generation/adapters.py",
+        "bytes": 29552,
+        "sha256": "99075cb07f4faf861119c5fa5113da6951408c02323c14452d090661fd0c3ddb"
+      },
+      {
+        "path": "generation/binding_repair.py",
+        "bytes": 3071,
+        "sha256": "38ba52eed48bd188698851c8cf9dfbea4d40d087d8bf7be8ce2c70cdff9ac293"
+      },
+      {
+        "path": "generation/checked.py",
+        "bytes": 166521,
+        "sha256": "35338a904cec0297ece096f94b83d986c7e7014216b246c09725febeeba8246c"
+      },
+      {
+        "path": "generation/checker_encoding.py",
+        "bytes": 4294,
+        "sha256": "57e7fdc229e0732d827af1be3985db8c8ccff91d40e4a6699ad28784ccedf8e2"
+      },
+      {
+        "path": "generation/checker_encoding_v2.py",
+        "bytes": 8946,
+        "sha256": "60eafb9111ac6ec9008b913e296edd771f1cbd99729928dc20aa163e4ab68860"
+      },
+      {
+        "path": "generation/lossless_unit_findings_v1.py",
+        "bytes": 32988,
+        "sha256": "0d60cc97701b624e733838ae09abb91e42c4aee6dd63cf2a4c663ae9a8f14ae1"
+      },
+      {
+        "path": "generation/network_policy.py",
+        "bytes": 3407,
+        "sha256": "31ee11495949894073b292cd39b5d186f0ea21f5fd3f598b243e9f37b467bf02"
+      },
+      {
+        "path": "generation/openrouter_routes.py",
+        "bytes": 12356,
+        "sha256": "c82e86990476c0f95da650b38ef444e62c1dba6ae29f407a44c4af444ad2348e"
+      },
+      {
+        "path": "generation/prompt_builder.py",
+        "bytes": 10256,
+        "sha256": "d6cb2fefc3a98549b4193111cff5e1132e663d02198af1b8a9b3aee98325a606"
+      },
+      {
+        "path": "generation/prompts/checked_generation_v5.txt",
+        "bytes": 14862,
+        "sha256": "341c2e2d154993fb8cae909299824a236f8c886c26d3d69c8e8dade41de127fb"
+      },
+      {
+        "path": "generation/prompts/joint_check_v5.txt",
+        "bytes": 21673,
+        "sha256": "06763c8ce8ac3395f93b26fcf66131bb9fdad8370284e9ceb233a5b48afcf27e"
+      },
+      {
+        "path": "generation/prompts/source_relation_check_v2.txt",
+        "bytes": 5884,
+        "sha256": "7a4a2bb4ccb036121985bb2c041976a7bb2342690e46c8e7d2ecfb61219232e7"
+      },
+      {
+        "path": "generation/prompts/source_relation_generation_v2.txt",
+        "bytes": 2475,
+        "sha256": "79f9933cc4a74cedab05dee07fef53c619f52657bef66c730374167c25a28597"
+      },
+      {
+        "path": "generation/providers.py",
+        "bytes": 28382,
+        "sha256": "c00004ce5bb14c65d775f16700f10facd182194533462a114d9e086d9ed6fac4"
+      },
+      {
+        "path": "generation/reliability_v5.py",
+        "bytes": 26253,
+        "sha256": "f1cf5db78bb8f07996e8f56f48db8542a82591e92b90d233d0a58dd1a73f169d"
+      },
+      {
+        "path": "generation/service.py",
+        "bytes": 29098,
+        "sha256": "e694ec2f919754480b927ac7c48ee966a0d9db3d875ff70a71ad39ba08211fcb"
+      },
+      {
+        "path": "generation/source_relations.py",
+        "bytes": 7679,
+        "sha256": "3a934201cb5fab583e2f6186322b2b7f208070d6863ce864258900c1b4f636ed"
+      },
+      {
+        "path": "generation/source_relations_v2.py",
+        "bytes": 25459,
+        "sha256": "ab22171c03566ed1f8b97e67bb1d0d5f4b276e0ab0bcc40be487f3b296ceeb11"
+      },
+      {
+        "path": "generation/types.py",
+        "bytes": 10176,
+        "sha256": "757f907befeaa9300fdeb8ab5c8d03d205c142920cf3c2f5e72ee98988f53068"
+      },
+      {
+        "path": "personalisation/compiler.py",
+        "bytes": 3519,
+        "sha256": "f61c6af6fcd2ffc030dc5a91292bbf8927d61d6768c29dc240c1ba08640a55bd"
+      },
+      {
+        "path": "tests/unit/test_generation_programmatic_optins.py",
+        "bytes": 3834,
+        "sha256": "0dbfa7178015db5e072a942eb49b45c017455eae09ba4297e53c8cf65faed3a4"
+      },
+      {
+        "path": "tests/unit/test_query_v23.py",
+        "bytes": 3155,
+        "sha256": "bf4a084da30cb4064d64edf4991554f188b77428a41f68f634c8700e15f5e0d9"
+      }
+    ],
+    "frozen_descriptor_unchanged": true,
+    "frozen_descriptors": 39,
+    "old_descriptor_files_unchanged": 36,
+    "expected_old_descriptor_differences": [
+      {
+        "path": "backend/app/core/config.py",
+        "before": {
+          "path": "backend/app/core/config.py",
+          "bytes": 7480,
+          "sha256": "f7d117d22925209e66617baa32aac3c3e41a530d6a20f2a7a10e434928f1155d"
+        },
+        "after": {
+          "path": "backend/app/core/config.py",
+          "bytes": 7515,
+          "sha256": "e740c78c99e54a014e5905d45e0d4757d3beb3c384c5d563fed83a8847667849"
+        }
+      },
+      {
+        "path": "backend/app/modules/answering/service.py",
+        "before": {
+          "path": "backend/app/modules/answering/service.py",
+          "bytes": 95312,
+          "sha256": "a8f8e02d156a5d940fa49a16558b26f87f0816b61a2671d9efa0b615d226c1b0"
+        },
+        "after": {
+          "path": "backend/app/modules/answering/service.py",
+          "bytes": 95993,
+          "sha256": "f302de879a270a5879adbc9374331c86d7b014dadca79c0a40a804647ceafeb0"
+        }
+      },
+      {
+        "path": "generation/checked.py",
+        "before": {
+          "path": "generation/checked.py",
+          "bytes": 166258,
+          "sha256": "fd8f18a8a7dbed449654310fb17086ddb4207069a394ca4ac55cf2db3a6fab8c"
+        },
+        "after": {
+          "path": "generation/checked.py",
+          "bytes": 166521,
+          "sha256": "35338a904cec0297ece096f94b83d986c7e7014216b246c09725febeeba8246c"
+        }
+      }
+    ],
+    "outside_old_descriptor_consumer": {
+      "path": "conversation/practice_context.py",
+      "before": {
+        "bytes": 6239,
+        "sha256": "643d2b3a2ef4610900eb97854fcda63dabaaacda28910eb60c8332b6cc78ce17"
+      },
+      "after": {
+        "path": "conversation/practice_context.py",
+        "bytes": 6440,
+        "sha256": "5145e2dd4563098320ae74d3757612c00700495daed9b9fece2f6044541382b4"
+      },
+      "qualification": "Preexisting consumer was outside the frozen trial 39 descriptors; independently CAS adopted after closure"
+    },
+    "new_sources_and_tests": [
+      "conversation/query_v23.py",
+      "tests/unit/test_generation_programmatic_optins.py",
+      "tests/unit/test_query_v23.py"
+    ]
+  },
+  "static_review": {
+    "ordinary_query_default": "anchored_reference_v22",
+    "query_v23": "Selectable opt-in only; dispatch follows frozen preparation_version; no migration of old commands",
+    "checker_output_default": null,
+    "fallback": "Existing clarification/zero-selected-textbook branch derives a separate request, clears checker_output_policy and resets checker_payload_policy to legacy_fragment_table_v1, then unconditionally calls programmatic_only=True. It changes no original model request or ordinary publication gate.",
+    "zero_model_boundary": "Unchanged service rejects enhanced programmatic-only state; clarification/no-evidence return deterministic responses; every remaining programmatic-only state returns PROGRAMMATIC_STATE_INVALID before provider counting/generation.",
+    "unchanged_gate_pins": [
+      "generation/service.py",
+      "generation/lossless_unit_findings_v1.py",
+      "generation/reliability_v5.py",
+      "generation/source_relations_v2.py",
+      "generation/types.py"
+    ],
+    "query_v23_bounds": "One bounded current-turn modal antecedent with exactly one dependent this; keeps the full original query and source span/hash; rejects competing/external/generic anchors; preserves independent semantic clarification. Original gates still decide evidence entailment.",
+    "query_v23_limit": "Finite syntactic ownership resolution, not general coreference or semantic sufficiency proof."
+  },
+  "saved_actual_Main_controls": {
+    "real_entry": {
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_seconds": 0.8861388000004808,
+      "provenance": "W durable fixture exercising actual Main service/checked fallback entry; adopted test file byte-identical. No provider called."
+    },
+    "query_v23": {
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_seconds": 0.7425003999996989,
+      "Main_import_path_verified": true,
+      "candidate_portable_tests_excluded": true
+    },
+    "ruff": {
+      "status": "PASS",
+      "files": 7,
+      "Main_configuration": true
+    },
+    "interpretation": "3+6 focused unit controls are nine unit passes, not eight-question qualification or end-to-end model/scientific acceptance. Counts come from saved receipts; no tests rerun by this reviewer."
+  },
+  "trial_preserved": {
+    "permanently_stopped": true,
+    "stop_code": "UNSAFE_NORMAL_TRANSPORT",
+    "frozen_denominator": 8,
+    "failed": 3,
+    "unrun": 5,
+    "published_answers": 0,
+    "complete_DOM_samples": 0,
+    "actual_provider_POSTs": 2,
+    "known_cost_USD": "0.0135132",
+    "UNKNOWN_USD": "0",
+    "old_trial_frozen_descriptor_unchanged": true,
+    "posttrial_sources_not_used_for_paid_trial": true,
+    "actual_unsorted_wire_equality": "NOT_ESTABLISHED",
+    "recovery_provider_posts_0": "Zero additional recovery POSTs, not the actual case03 POST count"
+  },
+  "limitations": [
+    "No SQL, API, browser, provider, or scientific/model-quality validation of posttrial changes.",
+    "No rerun or replacement of the three failed frozen items or five unrun items.",
+    "Defaults remain v22 and output policy None; source-level controls do not establish deployment configuration.",
+    "Canonical registry hashes are provenance metadata from the source manifest; this finite review did not reread Main registries.",
+    "Raw JUnit contents and credential/auth artifacts were not exported or read for this review."
+  ]
+}

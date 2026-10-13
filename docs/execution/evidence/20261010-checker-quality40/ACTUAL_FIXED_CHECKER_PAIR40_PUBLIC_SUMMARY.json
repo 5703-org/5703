@@ -1,0 +1,148 @@
+{
+  "status": "PAIRED_OBSERVATIONS_CLOSED",
+  "physical_POSTs": 2,
+  "known_cost_USD": "0.0225398",
+  "new_UNKNOWN_holds_USD": "0",
+  "open_claims": 0,
+  "cumulative_known_group_cost_USD": "0.17182790",
+  "fully_settled": true,
+  "fresh_lock_released": true,
+  "credential_preparation_read_only_DB_legs": 1,
+  "experiment_DB_accesses": 0,
+  "automatic_retries": 0,
+  "teacher_calls": 0,
+  "JSON_repairs": 0,
+  "old_scope_reuse": false,
+  "credential_values_exported": false,
+  "actual_result_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-fixed-checker-pair40-candidate\\actual-fixed-pair40\\actual-fixed-checker-pair40-result01.json",
+    "bytes": 19001,
+    "sha256": "d9eb38a10f2e544603e2f80ae324ea2458b9463f3d9786ef973b3cd756e895d0"
+  },
+  "arms": [
+    {
+      "arm": "baseline40",
+      "status": "OBSERVED",
+      "physical_POSTs": 1,
+      "known_cost_USD": "0.0097681",
+      "latency_ms": 6065.7401,
+      "timing_boundary": "LLMAdapter.generate invocation to complete return",
+      "provider_result": {
+        "provider": "openai_compatible",
+        "model": "google/gemini-3.5-flash-lite",
+        "finish_reason": "stop",
+        "usage": {
+          "input_tokens": 17277,
+          "output_tokens": 1834,
+          "total_tokens": 19111,
+          "reasoning_tokens": 0,
+          "cache_hit_input_tokens": 0,
+          "cache_miss_input_tokens": 17277,
+          "cost": 0.0097681
+        },
+        "latency_ms": 6063,
+        "error": null,
+        "request_submitted": true,
+        "diagnostic": {
+          "stage": "completed",
+          "http_status": 200,
+          "provider_error_type": null,
+          "provider_error_code": null,
+          "provider_error_parameter": null,
+          "message": null,
+          "message_redacted": false,
+          "provider_request_id": "gen-1791625286-cLuCSjum6OgyEqN6mfTG",
+          "finish_reason": "stop",
+          "network_error": null,
+          "request_submitted": true,
+          "latency_ms": 6063
+        }
+      },
+      "raw_bytes": 6257,
+      "raw_sha256": "8b00dfa4a4fa24823687ceffbd026438db813f48079b9a0a7a5483251272329b",
+      "validation": {
+        "schema_PASS": false,
+        "local_binding_and_relation_contract_PASS": false,
+        "independent_source_entailment_certified": false,
+        "native_publication": false,
+        "schema_error_class": "ValidationError"
+      },
+      "raw_claim_statuses": [
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported"
+      ],
+      "raw_claim_count": 10,
+      "raw_unit_count": 19
+    },
+    {
+      "arm": "candidate40",
+      "status": "OBSERVED",
+      "physical_POSTs": 1,
+      "known_cost_USD": "0.0127717",
+      "latency_ms": 6009.3818,
+      "timing_boundary": "LLMAdapter.generate invocation to complete return",
+      "provider_result": {
+        "provider": "openai_compatible",
+        "model": "google/gemini-3.5-flash-lite",
+        "finish_reason": "stop",
+        "usage": {
+          "input_tokens": 26964,
+          "output_tokens": 1873,
+          "total_tokens": 28837,
+          "reasoning_tokens": 0,
+          "cache_hit_input_tokens": 0,
+          "cache_miss_input_tokens": 26964,
+          "cost": 0.0127717
+        },
+        "latency_ms": 6009,
+        "error": null,
+        "request_submitted": true,
+        "diagnostic": {
+          "stage": "completed",
+          "http_status": 200,
+          "provider_error_type": null,
+          "provider_error_code": null,
+          "provider_error_parameter": null,
+          "message": null,
+          "message_redacted": false,
+          "provider_request_id": "gen-1791625292-uBRxYxPP0uecbLZU1ECH",
+          "finish_reason": "stop",
+          "network_error": null,
+          "request_submitted": true,
+          "latency_ms": 6009
+        }
+      },
+      "raw_bytes": 6008,
+      "raw_sha256": "9ee6f0d9f6c1be7c6ce8c765aa364fa081179582bb841a8e69aa64f05832edb8",
+      "validation": {
+        "schema_PASS": false,
+        "local_binding_and_relation_contract_PASS": false,
+        "independent_source_entailment_certified": false,
+        "native_publication": false,
+        "schema_error_class": "ValidationError"
+      },
+      "raw_claim_statuses": [
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported",
+        "supported"
+      ],
+      "raw_claim_count": 10,
+      "raw_unit_count": 19
+    }
+  ]
+}

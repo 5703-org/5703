@@ -1,0 +1,75 @@
+{
+  "schema": "phase85_independent_static_review_v1",
+  "status": "STATIC_REVIEW_PASS",
+  "reviewer": "/root/checker82_startup_prewarm/prewarm_safety_review",
+  "authorization": "parent_phase85_unseen8_public_textbooks_20posts_1USD_20261011",
+  "scope": "Prepared public W85 source only; no runtime freeze or execution.",
+  "source_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\budget85.py",
+      "bytes": 13750,
+      "sha256": "3439316c3368774e932ca52cab34ca2841e38e4fb8002ab3deef19472d0327e7"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\normal_transport85.py",
+      "bytes": 28227,
+      "sha256": "fc907e0f80d513a5580fc29f61e6d9e1e99c1c18e4a008d3d633f21dacb7ffce"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\server85.py",
+      "bytes": 17381,
+      "sha256": "ecf9f8c7508b1db018416e3bdef80423c74b0773a2f0b3070e2d286da6673c7f"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\prepare_runtime85.py",
+      "bytes": 22595,
+      "sha256": "e01541dc3dc2d6b810529799deacd81ca569dd1a997c515d50337129c6059e7b"
+    }
+  ],
+  "reviewed_invariants": [
+    "Fresh independent flat cohort journal; historical closed calls do not occupy phase85 budget.",
+    "Exactly case01 through case08; unique case/question claims; teacher then checker only; no third post, automatic retry or failure replay; extra four ceiling slots remain unauthorized.",
+    "Global maximum 20 physical claims and USD 1; Decimal HOLD 0.0714688; serial admission and settlement; teacher checks two-post headroom without booking a second hold.",
+    "Exclusive immutable claims and settlements; slot collision fails closed; unsafe or unknown exposure retains at least full hold and permanently blocks later safe release.",
+    "Permanent cohort-stop existence blocks new case/post claims; existing exposure and settlement accounting remain preserved.",
+    "Transport reserves the shared global slot before physical open, settles only a validated safe own-slot numeric envelope, and requires settled=true.",
+    "One declared 180-second case deadline spans teacher and checker without reset and is checked before dispatch and after outcome.",
+    "Server validates runtime/scope/public-boundary pins before auth access; preparer projects only question fields, uses separate fresh freeze outputs and creates no live claims."
+  ],
+  "parent_test_execution": {
+    "receipt_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\free-controls\\run-20261011T173722026816Z-e2afaf\\receipt.json",
+    "receipt_bytes": 2246,
+    "receipt_sha256": "62b271553d8304ff88c7b61ce00f4e42a016463974f807b14ac1714f43902457",
+    "receipt_status": "PASS",
+    "tests": 14,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 30.2162281000019,
+    "suite": "12 budget controls plus 2 protocol controls",
+    "reviewer_executed": false,
+    "actual_receipt_read_and_hash_checked_by_reviewer": true,
+    "four_reviewed_source_pins_match_receipt": true,
+    "whole_suite_run": false,
+    "live_transport_context_entered": false,
+    "real_cohort_or_case_claims": 0,
+    "provider_posts": 0
+  },
+  "reviewer_actions_this_review": {
+    "public_W_source_and_receipt_reads": true,
+    "output_JSON_write": true,
+    "tests_run": 0,
+    "auth_reads_or_actions": 0,
+    "DB_actions": 0,
+    "network_actions": 0,
+    "model_loads": 0,
+    "Main_reads": 0,
+    "Main_writes": 0,
+    "real_ledger_reads": 0,
+    "rubric_reads": 0,
+    "runtime_freezes": 0,
+    "live_contexts_started": 0
+  },
+  "blockers": [],
+  "qualification": "Static preparation review only. Parent synthetic execution is separately evidenced above; this review does not qualify a frozen or live runtime."
+}

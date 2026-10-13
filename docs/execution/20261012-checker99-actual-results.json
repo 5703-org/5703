@@ -1,0 +1,295 @@
+{
+  "schema": "phase99_actual_read_only_observation_v1",
+  "recorded_UTC": "2026-10-12T13:18:06.430407+00:00",
+  "status": "TWO_COMPLETE_RESPONSES_STRICT_QUOTE_GRAPH_FAILED_NO_GO",
+  "actual_new_invocations": 2,
+  "actual_complete_HTTP_responses": 2,
+  "structurally_bound_outputs": 0,
+  "independent_semantic_support_passes": null,
+  "rows": [
+    {
+      "operational_request_id": "99_S01",
+      "scientific_case_id": "S01",
+      "HTTP_status": 200,
+      "HTTP_response_complete": true,
+      "finish_reason": "stop",
+      "returned_model": "deepseek-flash",
+      "stage_order": [
+        "RESERVATION_DURABLE",
+        "SEND_INTENT_DURABLE",
+        "BODY_WIRE_COMPLETED_LOCAL",
+        "RESPONSE_DURABLE",
+        "METERING_FINAL"
+      ],
+      "response_durable_before_meter": true,
+      "local_WIRE_is_provider_ACK": false,
+      "saved_response_bytes": 6618,
+      "saved_response_sha256": "ecc8d62bcfd2d7448100dc74d24720bc51bae9da3cfc20f260dbc4eb61205b09",
+      "original_wire_bytes": 6277,
+      "original_wire_sha256": "978f331d15a4e0a6a02809f4bfa59ce2b8fc111597f4cb5da72508f2846546f1",
+      "usage": {
+        "prompt_tokens": 1331,
+        "completion_tokens": 1542,
+        "total_tokens": 2873,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 179
+      },
+      "protective_saved_tariff_upper_CNY": "0.014998",
+      "invoice_cost_known": false,
+      "new_UNKNOWN_CNY": "0",
+      "strict_decode_status": "QUOTE_SPAN_INTERFACE_FAILED",
+      "first_failure_code": "QUOTE_SPAN_SCHEMA",
+      "first_failure_explanation": "subject/object contain {span:[text_index,quote]} objects; declared role entries must be bare [text_index,quote] pairs",
+      "invalid_role_wrapper_count": 32,
+      "invalid_role_wrapper_paths": [
+        "actions[0].subject[0]",
+        "actions[0].object[0]",
+        "actions[1].subject[0]",
+        "actions[1].object[0]",
+        "actions[3].subject[0]",
+        "actions[3].object[0]",
+        "actions[4].subject[0]",
+        "actions[4].object[0]",
+        "actions[5].subject[0]",
+        "actions[5].object[0]",
+        "actions[6].subject[0]",
+        "actions[6].object[0]",
+        "actions[7].subject[0]",
+        "actions[7].object[0]",
+        "actions[8].subject[0]",
+        "actions[8].object[0]",
+        "actions[9].subject[0]",
+        "actions[9].object[0]",
+        "actions[10].subject[0]",
+        "actions[10].object[0]",
+        "actions[11].subject[0]",
+        "actions[11].object[0]",
+        "actions[12].subject[0]",
+        "actions[12].object[0]",
+        "actions[13].subject[0]",
+        "actions[13].object[0]",
+        "actions[14].subject[0]",
+        "actions[14].object[0]",
+        "actions[15].subject[0]",
+        "actions[15].object[0]",
+        "actions[16].subject[0]",
+        "actions[16].object[0]"
+      ],
+      "raw_action_count": 17,
+      "raw_TARGET_action_count": 2,
+      "raw_link_count": 17,
+      "raw_unresolved_count": 0,
+      "read_only_quote_diagnostics": {
+        "purpose": "Independent observation of original nested literals, not canonicalization, repair, decoder admission or scientific support",
+        "counts": {
+          "EXACT_UNIQUE": 76,
+          "AMBIGUOUS_LITERAL": 2,
+          "NOT_LITERAL": 0,
+          "INVALID_PAIR_OR_INDEX": 0
+        },
+        "non_unique_or_nonliteral_paths": [
+          {
+            "path": "links[1].span",
+            "status": "AMBIGUOUS_LITERAL"
+          },
+          {
+            "path": "links[2].span",
+            "status": "AMBIGUOUS_LITERAL"
+          }
+        ]
+      },
+      "raw_fields_or_output_repaired": false,
+      "scientific_support_status": "UNMEASURED_UNCERTIFIED",
+      "full_original_question_QA": "NOT_RUN",
+      "complete_exchange_including_journal_ms": 6036.8702,
+      "early_failed_decode_ms": 0.4144,
+      "native_complete_DOM_ms": null,
+      "TTFT_ms": null,
+      "p95_ms": null
+    },
+    {
+      "operational_request_id": "99_S02",
+      "scientific_case_id": "S02",
+      "HTTP_status": 200,
+      "HTTP_response_complete": true,
+      "finish_reason": "stop",
+      "returned_model": "deepseek-flash",
+      "stage_order": [
+        "RESERVATION_DURABLE",
+        "SEND_INTENT_DURABLE",
+        "BODY_WIRE_COMPLETED_LOCAL",
+        "RESPONSE_DURABLE",
+        "METERING_FINAL"
+      ],
+      "response_durable_before_meter": true,
+      "local_WIRE_is_provider_ACK": false,
+      "saved_response_bytes": 5685,
+      "saved_response_sha256": "2c94dc909ce679140d1b3e84ecd34c756880be2ea905d209f4db7de8fc93a342",
+      "original_wire_bytes": 6186,
+      "original_wire_sha256": "1ad4b89d147776fc2e6e09afd25336b661a6b8634efa4398738ff7f87cc544a1",
+      "usage": {
+        "prompt_tokens": 1303,
+        "completion_tokens": 1326,
+        "total_tokens": 2629,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 919
+      },
+      "protective_saved_tariff_upper_CNY": "0.013214",
+      "invoice_cost_known": false,
+      "new_UNKNOWN_CNY": "0",
+      "strict_decode_status": "QUOTE_SPAN_INTERFACE_FAILED",
+      "first_failure_code": "QUOTE_SPAN_SCHEMA",
+      "first_failure_explanation": "subject/object contain {span:[text_index,quote]} objects; declared role entries must be bare [text_index,quote] pairs",
+      "invalid_role_wrapper_count": 30,
+      "invalid_role_wrapper_paths": [
+        "actions[0].subject[0]",
+        "actions[0].object[0]",
+        "actions[1].subject[0]",
+        "actions[1].object[0]",
+        "actions[2].subject[0]",
+        "actions[2].object[0]",
+        "actions[3].subject[0]",
+        "actions[3].object[0]",
+        "actions[4].subject[0]",
+        "actions[5].object[0]",
+        "actions[6].subject[0]",
+        "actions[6].object[0]",
+        "actions[7].subject[0]",
+        "actions[7].object[0]",
+        "actions[8].subject[0]",
+        "actions[8].object[0]",
+        "actions[9].subject[0]",
+        "actions[10].subject[0]",
+        "actions[10].object[0]",
+        "actions[11].subject[0]",
+        "actions[11].object[0]",
+        "actions[12].subject[0]",
+        "actions[13].subject[0]",
+        "actions[13].object[0]",
+        "actions[14].subject[0]",
+        "actions[14].object[0]",
+        "actions[15].subject[0]",
+        "actions[16].subject[0]",
+        "actions[16].object[0]",
+        "actions[17].subject[0]"
+      ],
+      "raw_action_count": 18,
+      "raw_TARGET_action_count": 3,
+      "raw_link_count": 12,
+      "raw_unresolved_count": 5,
+      "read_only_quote_diagnostics": {
+        "purpose": "Independent observation of original nested literals, not canonicalization, repair, decoder admission or scientific support",
+        "counts": {
+          "EXACT_UNIQUE": 64,
+          "AMBIGUOUS_LITERAL": 1,
+          "NOT_LITERAL": 0,
+          "INVALID_PAIR_OR_INDEX": 0
+        },
+        "non_unique_or_nonliteral_paths": [
+          {
+            "path": "actions[0].object[0].span_inside_invalid_wrapper",
+            "status": "AMBIGUOUS_LITERAL"
+          }
+        ]
+      },
+      "raw_fields_or_output_repaired": false,
+      "scientific_support_status": "UNMEASURED_UNCERTIFIED",
+      "full_original_question_QA": "NOT_RUN",
+      "complete_exchange_including_journal_ms": 5174.4139,
+      "early_failed_decode_ms": 0.3422,
+      "native_complete_DOM_ms": null,
+      "TTFT_ms": null,
+      "p95_ms": null
+    }
+  ],
+  "new_saved_tariff_upper_CNY": "0.028212",
+  "new_UNKNOWN_full_protection_CNY": "0",
+  "old_Phase97_protection_retained_CNY": "0.10",
+  "old_logs_reclassified_or_merged": false,
+  "cost_is_invoice_or_global_account_balance": false,
+  "current_frozen_public_source_pins": {
+    "5703-checker99/actual_root99.py": {
+      "sha256": "369e206491fc89c7480d40fdf7577aacae238a4090e42de6a0064552c2e30c85",
+      "matches": true
+    },
+    "5703-checker98/observed_transport98.py": {
+      "sha256": "13910ad82a84a70071a940789c9538b668d4d6cb078969f1808646c672d585af",
+      "matches": true
+    },
+    "5703-checker98/future_checklist98.py": {
+      "sha256": "00656c46933249c925a700fca24f32ac3dd1379d4a3d2ff5d3ff7b5f6882fe76",
+      "matches": true
+    },
+    "5703-checker98/future-checklist98-v2.json": {
+      "sha256": "da933266dfe7ce00d4a9f21b1d3392716a878e77cb59f952edec757052920a66",
+      "matches": true
+    },
+    "5703-checker97/bundle97.json": {
+      "sha256": "f8d183d8b3c18622475f859c777ffd41082f3775feea6a5d297a456a044f5202",
+      "matches": true
+    },
+    "5703-checker94/config-inventory94.json": {
+      "sha256": "6fd792dd364a0318e9f7aebd69a7ca85b7349342ba2a8a8d9288ea6088497381",
+      "matches": true
+    }
+  },
+  "new_seal_PID_recorded": true,
+  "process_closed_evidence": "Root tool completion exit0/session95551; no new PID/process query by this audit",
+  "original_evidence_pins": {
+    "actual99-independent-two\\summary.json": {
+      "bytes": 1403,
+      "sha256": "eb8ba561b472ac23167d3617700e7a1ffeef29132070cb28d6f54e77d21fea45"
+    },
+    "execution-claim99-independent-two.json": {
+      "bytes": 207,
+      "sha256": "7979f40c16ec87ecb1d81879fa4c332090f8c081af0195178c45ea64d8cc804a"
+    },
+    "actual99-independent-two\\99_S01\\events.jsonl": {
+      "bytes": 532,
+      "sha256": "dbf0957ee3763f10710ae76946e470d8a09d440f11d085c933d60c66aeb80986"
+    },
+    "actual99-independent-two\\99_S01\\response.bin": {
+      "bytes": 6618,
+      "sha256": "ecc8d62bcfd2d7448100dc74d24720bc51bae9da3cfc20f260dbc4eb61205b09"
+    },
+    "actual99-independent-two\\99_S01\\response-receipt.json": {
+      "bytes": 268,
+      "sha256": "db241ab8538fb25e596e239721a08322471d8650b4e2796bd3aaf0887832bd70"
+    },
+    "actual99-independent-two\\99_S01\\meter.json": {
+      "bytes": 437,
+      "sha256": "d617de400d8becec1055442cdce98169efd6b21fdfb0a92abb02d7b8ca8274f0"
+    },
+    "actual99-independent-two\\99_S02\\events.jsonl": {
+      "bytes": 532,
+      "sha256": "ab8cf53620ef448016d2779781f40b82cc11e700167a9641bd60755405463ecf"
+    },
+    "actual99-independent-two\\99_S02\\response.bin": {
+      "bytes": 5685,
+      "sha256": "2c94dc909ce679140d1b3e84ecd34c756880be2ea905d209f4db7de8fc93a342"
+    },
+    "actual99-independent-two\\99_S02\\response-receipt.json": {
+      "bytes": 268,
+      "sha256": "7719ee2f7ada444a7ceea40a2fe500ffd7ed517a33d81c09130e253d93251cf5"
+    },
+    "actual99-independent-two\\99_S02\\meter.json": {
+      "bytes": 437,
+      "sha256": "612cad86f9684a14fd76e31a3d299d0aa6f5c53f21d619de3a5b751388ec1c8f"
+    }
+  },
+  "original_request_model_payloads_modified": false,
+  "raw_or_graph_normalization_applied": false,
+  "format_and_literal_localization_are_semantic_support": false,
+  "remaining_six_gate": "CLOSED",
+  "defaults_enabled": false,
+  "native_full_answer_QA_or_DOM_latency_measured": false,
+  "paid_retries_or_further_API_calls_by_audit": 0,
+  "private_key_profile_DB_Main_access_by_audit": 0,
+  "next_scope": "Use existing normal/light checker and explicitly labelled bounded claim-patch fixtures; no additional quote extraction/schema layer and no original-case quality pass inferred."
+}

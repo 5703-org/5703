@@ -1,0 +1,15 @@
+# Independent review of optional atomic quote binding
+
+No concrete defect or remaining blocker was found in the frozen module and nine portable tests. The candidate suite passed 9/9; three independent local boundary probes passed. This is an AI-authored code and contract review, not a human rating, Gold evaluation, model quality measurement, native UI test or RAG comparison.
+
+Reviewed pins: candidate module `0bcb4dd156f16a31ac4d5942ec50b5dc16b625aee13c329dc1a402f178bf6dd4`; portable tests `2d8b092edd23d1db44d042f4a198c3dbabce2df07c97d283b408d3f2521df8a7`. The existing strict module still matches `9964f60756cfa462a48fa80366a30d43617406d3423f1248e287852201306e87`.
+
+The helper requires an explicit call with a current prepared input. It has no default execution hook and does not change the original strict validator. A wrong-offset quote can be corrected only when its unchanged literal text occurs exactly once in that same actually cited fragment. Overlapping matches count as multiple matches; a full source or sibling fragment cannot supply a replacement. An already exact span retains its original coordinates even if its quote appears elsewhere in the fragment. Offsets are Python Unicode code-point positions; the helper does not normalize Unicode or rewrite quote text.
+
+Every payload field except `start` and `end` is compared before and after. The original strict validator runs again on a changed result. Invalid schema/UTF-8, foreign fragment IDs, missing or ambiguous text, verdict/gap violations and duplicate witnesses remain failures. The extra probes confirmed that composed/decomposed Unicode text does not match, coordinate repair cannot hide duplicate witnesses, and an exact quote about Valve P does not certify a reported claim about Valve Q. That deliberately false semantic opinion remains unchanged with `semantic_truth_verified=false`, no human rating and no publication authorization.
+
+The audit distinguishes a separate local normalized result from the original provider observation: original/normalized raw hashes, changed coordinates, original strict error and qualification flags are retained. This review did not reread or execute the actual third-result consumer. Its original `JUDGMENT_SLICE_MISMATCH` observation remains a binding failure; any saved normalized replay is a separate local provenance artifact.
+
+Execution used a pure module loader and the Main virtual environment with `-B`; no application package initialization, provider request, credential read, database call or Main write occurred. The interpreter emitted its existing `D:\Python\python.exe` location warning but exited successfully. An initial independent probe used an incorrect expected error label; the strict validator correctly rejected it with `DUPLICATE_JUDGMENT_SPAN`. Only that harness label was corrected, and the final run passed.
+
+`independent-review64.json` records exact pins and outcomes. `review_binding64.py` reproduces the three independent probes using fictional, hand-written development fixtures.

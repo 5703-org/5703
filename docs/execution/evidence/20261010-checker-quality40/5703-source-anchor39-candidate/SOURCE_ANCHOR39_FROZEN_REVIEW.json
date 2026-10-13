@@ -1,0 +1,146 @@
+{
+  "status": "W_ONLY_ANCHOR39_FROZEN_READY_FOR_ROOT_REVIEW_NOT_ADOPTED",
+  "before": [
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\source_relations_v2.py",
+      "bytes": 16317,
+      "sha256": "cc89ad7c7d91ee04c660a8b0eab5dfc714ac037a9b99f102b83f53519b48edbe"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checked.py",
+      "bytes": 155543,
+      "sha256": "5b62005af2263600d6c9485aedf73613acd825bade85f41fc33ba88b0b39994c"
+    }
+  ],
+  "before_backup_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-anchor39-candidate\\source_relations_v2.py.before",
+    "bytes": 16317,
+    "sha256": "cc89ad7c7d91ee04c660a8b0eab5dfc714ac037a9b99f102b83f53519b48edbe"
+  },
+  "candidate_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-anchor39-candidate\\source_relations_v2.py",
+    "bytes": 17079,
+    "sha256": "4e3ef844eff23b77d83e850c32fdfa47c9504b7cec9a8edd7db3328851ba5a55"
+  },
+  "diff_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-anchor39-candidate\\SOURCE_ANCHOR39.diff",
+    "bytes": 4828,
+    "sha256": "510f99bc13540a3260a077f75c5af0d3ad915b260d7411bd30c7182cbae961d3"
+  },
+  "small_controls_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-anchor39-candidate\\SOURCE_ANCHOR39_SMALL_FREE_CONTROLS.json",
+    "bytes": 8314,
+    "sha256": "76a4902ecb136f5580c3b126c3a5cacee125eadb28dc7f75a21439b3fb265a04"
+  },
+  "small_controls_passed": 22,
+  "original16_controls_adapted_plus6_offset_grouping_schema_controls": true,
+  "metadata_key": "source_context_candidates",
+  "columns": [
+    "kind",
+    "anchor_text",
+    "claim_occurrences",
+    "source_hits"
+  ],
+  "claim_occurrence_shape": [
+    "unit_id",
+    "full_claim_start",
+    "full_claim_end"
+  ],
+  "source_hit_shape": [
+    "evidence_id",
+    "fragment_id",
+    [
+      [
+        "source_start",
+        "source_end",
+        "literal|word_family_candidate"
+      ]
+    ]
+  ],
+  "matching_rules": {
+    "group_key": "(kind, exact original anchor_text), never casefold or word-family stem",
+    "claim_offset": "unit.start + anchor unit-local offset; Unicode code points relative to full_claim",
+    "source_offset": "original exact_text block-local Unicode code points",
+    "literal": "unchanged re.I case-insensitive whole-token/phrase regex with (?<!\\w)/(?!\\w) boundaries; positions from original unnormalized source",
+    "word_family_candidate": "predicate_term only; original whole source token differs by casefold from anchor and the unchanged _context_word_family values match; neither an alias nor support",
+    "source_scope": "same claim's actual cited evidence_id and allowed_fragment_ids; existing complete_block only",
+    "empty_source_hits": "no indexed occurrence, not semantic absence",
+    "duplicate_queries": "merge repeated exact anchors and their occurrences without a cross-unit semantic bridge"
+  },
+  "payload_measurement": {
+    "original_core_packet_UTF8_bytes": 28294,
+    "old_aggregated38_packet_UTF8_bytes": 40686,
+    "new_anchor39_packet_UTF8_bytes": 49386,
+    "packet_delta_from_aggregated38_UTF8_bytes": 8700,
+    "old_aggregated_FID_rows": 89,
+    "anchor_group_rows": 111,
+    "claim_occurrences": 117,
+    "source_hits": 262,
+    "source_spans": 314,
+    "empty_lookup_groups": 9,
+    "initial_source_texts_retained": 71,
+    "initial_claims_retained": 10,
+    "original_initial_unit_count": 19,
+    "whole_wire_not_measured_here": true
+  },
+  "specific_group_alignment_proof": {
+    "product_identity_3_PGA": [
+      "F058"
+    ],
+    "short_product_identity_3_PGA": [
+      "F058"
+    ],
+    "short_operation_reduce_lookup": [
+      "F053",
+      "F059",
+      "F060",
+      "F061"
+    ],
+    "short_purpose_carbohydrate": [
+      "F016",
+      "F020"
+    ]
+  },
+  "every_anchor_claim_and_source_offset_owned_and_exact": true,
+  "duplicate_anchor_across_units_grouped": true,
+  "zero_lookup_is_not_semantic_absence": true,
+  "strip_entire_metadata_key_restores_original_units_and_bindings": true,
+  "fixed_original_decoded_packet_sha256": "a092637caa65f208c833a341b9367c173a5a7fd36414bc35950c2a56ee242926",
+  "fixed_original_initial_evidence_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure36\\runtime\\retained-provider-diagnostics\\slot-02-model-output01.json",
+    "bytes": 56525,
+    "sha256": "f3ed73ca40b0258998ef25d9d4d1fa74ace5e060cd1140b0ccca07bf831e1e67"
+  },
+  "schema_compact_sha256": "864212a5e636d2cadbc34328f431712a954c30130848a31e64e66e4bdedbc926",
+  "original_discovery_rules_all_other_AST_nodes_unchanged": true,
+  "output_schema_parser_assessor_gates_default_policy_changed": false,
+  "old_aggregated89_FID_table_replaced_not_duplicated": true,
+  "Ruff": {
+    "command": "ruff check --no-cache --config E:/5703/learning-assistant/pyproject.toml <W source_relations_v2.py>",
+    "exit_code": 0,
+    "stdout": "All checks passed!",
+    "config_pin": {
+      "path": "E:\\5703\\learning-assistant\\pyproject.toml",
+      "bytes": 1131,
+      "sha256": "67e34ffd3a2de13ea00ca10928817429dfeb8ee0862c551f3ed3be403a180e62"
+    }
+  },
+  "first_small_control_attempt": {
+    "error": "NameError: re not defined in the newly added control code",
+    "firstfailed_runner_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-anchor39-candidate\\run_small_controls39-firstfailed.py",
+      "bytes": 17530,
+      "sha256": "90b7dda85ba5058b380ddf5b7fcb604c699e08f6d3f3c9982f68195318b6f02f"
+    },
+    "correction": "Added the missing runner import and corrected an unexecuted handwritten Unicode expected span from 24:28 to 25:29. The business candidate did not change."
+  },
+  "limitations": [
+    "Original initial 10 claims / 19 units / 71 complete source blocks are preserved. The accepted rewritten 10/21 packet is not another experiment arm.",
+    "3-PGA, operation/reduction word-family and carbohydrate target mappings are discovery-index checks over retained input, not scientific-support or model-quality results.",
+    "No automatic citations, source selection, text joining, source label changes, alias certification or publication override is introduced.",
+    "The component packet grew 8,700 UTF-8 bytes; actual whole provider wire/token costs must pass the launcher's unchanged 98,304-byte cap. No original source was removed or shortened.",
+    "No model paired response, native full-answer time, p95 improvement or completed-source-quality result exists for this candidate."
+  ],
+  "Main_B_API_DB_auth_calls_or_writes": 0,
+  "audit_denials": []
+}

@@ -1,0 +1,708 @@
+{
+  "schema": "phase86_independent_frozen_rubric_quality_v1",
+  "updated_utc": "2026-10-11T19:47:16.940882+00:00",
+  "reviewer": "/root/native76_narrow_review",
+  "assessment_kind": "EXPOSED_AI_SOURCE_RUBRIC_NOT_HUMAN_GOLD",
+  "rubric": "5703-checker85-quality/rubric85-frozen.json",
+  "rubric_sha256": "7b083b29202be757683944e08ec508844440403dcbccf1c85f44e983f97964d6",
+  "frozen_question_file_sha256": "9d35553d2b973e082152e0d119c1bdbff3102ef55a4936d47fe93d337d6f19da",
+  "plan": {
+    "rows": 7,
+    "unique_questions": 6,
+    "ordered_rows": [
+      "diag03",
+      "reg03r",
+      "case04",
+      "case05",
+      "case06",
+      "case07",
+      "case08"
+    ],
+    "qualification": "Diagnostic and regression repeat original Q03; not seven independent held-out questions. Phase85 remains closed and its three failures/five unrun are not replaced."
+  },
+  "rules": "Frozen essential facts and quantities/negation/conditions/units unchanged; each actual cited unit must support its own clause; legitimate bounded fragment unions allowed; quote IDs do not establish entailment; raw invalid checker labels are not validated judgments. Count every planned execution outcome; only actual complete DOM is a page sample.",
+  "progress": {
+    "completed_rows": 7,
+    "pending_rows": 0,
+    "failed_rows": 7,
+    "failed_rows_definition": "Unsuccessful frozen-rubric factual delivery, including three persisted generic clarifications",
+    "API_failed_jobs": 4,
+    "API_succeeded_clarification_jobs": 3,
+    "persisted_API_responses": 3,
+    "published_answers": 0,
+    "published_answers_definition": "Qualifying factual answer responses; excludes generic clarification",
+    "published_clarifications": 3,
+    "valid_complete_DOM_n": 0,
+    "reviewed_provider_posts": 7,
+    "reviewed_known_cost_USD": "0.0465392",
+    "reviewed_UNKNOWN_USD": "0",
+    "validated_model_gate_PASS_n": 0,
+    "validated_model_semantic_refusal_n": 0,
+    "model_critical_false_positive_observed": false
+  },
+  "rows": [
+    {
+      "plan_row": "diag03",
+      "runtime_case_id": "case03",
+      "question_id": "development85_03",
+      "question_sha256": "79e10aea43d34d5ec92aaa1d42a4123f94c4991e83cbfa6be3ae55e97891ffe5",
+      "status": "FAILED_SETTLED",
+      "delivery": "NO_PUBLIC_ANSWER",
+      "job_id": "066327b1-7bb9-4757-8016-19fffe9646f5",
+      "provider_posts": 2,
+      "known_cost_USD": "0.0153969",
+      "UNKNOWN_USD": "0",
+      "valid_complete_DOM_n": 0,
+      "complete_DOM_ms": null,
+      "API_failure_terminal_ms": 12085.838899998635,
+      "model_gate_result": "NOT_ESTABLISHED",
+      "checker_semantic_refusal": "NOT_ESTABLISHED",
+      "checker_failure": {
+        "code": "INVALID_JSON",
+        "stage": "strict_json_before_core_decode_or_semantic_gate",
+        "JSON_error_position": 3387,
+        "literal_ellipsis_starts_at": 3386,
+        "selected_evidence_ids_validated": false,
+        "raw_proposed_judgments": "Unvalidated model text only; no proposed label is promoted to gate PASS or semantic refusal"
+      },
+      "teacher_draft": {
+        "published": false,
+        "essential_facts_present": 3,
+        "essential_facts_total": 3,
+        "source_evidence_count": 8,
+        "source_fragments": 69,
+        "source_text_hashes_verified": 8,
+        "raw_text_sha256": "8663ef3ee8ae88198af993555f04744710768ca1226dac1fa3e981ed203c2287",
+        "facts": [
+          {
+            "fact_id": "Q03_F1",
+            "content": "Supported: binding is not necessarily inhibitory; both inhibitors and activators exist",
+            "actual_support": [
+              "ev_001:F008",
+              "ev_002:F010",
+              "ev_006:F045,F047,F049"
+            ],
+            "own_citation_qualification": "Cited short-answer unit has support; two duplicated answer_text factual clauses are uncited"
+          },
+          {
+            "fact_id": "Q03_F2",
+            "content": "Supported: inhibitor conformational change lowers substrate affinity/efficiency and activity",
+            "actual_support": [
+              "ev_001:F004,F005,F007",
+              "ev_002:F013",
+              "ev_005:F041,F042"
+            ],
+            "own_citation_support": "The cited inhibitor units retain their own corresponding evidence bindings"
+          },
+          {
+            "fact_id": "Q03_F3",
+            "content": "Supported bounded join: away-from-active-site binding, shape/affinity improvement and possible activity increase",
+            "actual_support": [
+              "ev_001:F009",
+              "ev_002:F011+F012,F014",
+              "ev_006:F045,F047,F049"
+            ],
+            "own_citation_support": "Long-answer claim binds ev_001/ev_002 for site/affinity and ev_002/ev_006 for better fit plus possible activity increase; no sibling evidence is borrowed"
+          }
+        ],
+        "citation_gaps": [
+          {
+            "claim_id": "claim_9ecf1a230d50892ff168689d_1",
+            "clause": "The sources describe allosteric sites as locations away from the active site, and they describe both allosteric inhibitors and allosteric activators.",
+            "own_evidence_ids": []
+          },
+          {
+            "claim_id": "claim_3e63a24d0680f78a095ec484_1",
+            "clause": "Therefore, binding at an allosteric site does not necessarily inhibit an enzyme; the effect depends on whether the bound molecule is an inhibitor or an activator.",
+            "own_evidence_ids": []
+          }
+        ],
+        "scope_warning": "short_answer states activators increase activity without the long-answer can; cited ev_006 retains may/can and prevailing-conditions language. This is a conditional-scope caution, not an established numerical or reversed-mechanism contradiction.",
+        "legitimate_fragment_join": "ev_002 F011+F012 is one split source sentence and jointly supports affinity; it is not rejected for requiring two fragments.",
+        "critical_contradiction_observed": false,
+        "draft_citation_rubric_pass": false,
+        "scientific_acceptance": false
+      },
+      "decision": "KEEP_FAILED_ROW; KNOWN_SETTLED_FAILURE_MAY_CONTINUE_UNDER_ROOT_PROTOCOL; NO_SEMANTIC_GATE_INFERENCE",
+      "public_inputs": [
+        {
+          "path": "5703-checker86-runtime\\case03\\native-provider70\\slot-01-normal-outcome.json",
+          "bytes": 2924,
+          "sha256": "8a27640e05633706eb2453adc7d5cdfea1c5ef24c1787f092614cfd6d6010185"
+        },
+        {
+          "path": "5703-checker86-runtime\\case03\\native-provider70\\slot-02-normal-outcome.json",
+          "bytes": 15260,
+          "sha256": "d739683d4a01eceaac731655926b6d4e41cf18a8bb351fb8b0399a6540b2f81f"
+        },
+        {
+          "path": "5703-checker86-runtime\\case03\\native-provider70\\slot-01-public-inputs.json",
+          "bytes": 91726,
+          "sha256": "c9820ec1b6835955f19fdf7eb419495c3ea4472866f879fe0a74a90a439b3826"
+        },
+        {
+          "path": "5703-checker86-runtime\\case03\\native-provider70\\slot-02-public-inputs.json",
+          "bytes": 189916,
+          "sha256": "bfb58fbdc9a4598bf14a03ef43632d944342fdce3c2e51db5f68f113fccca6e3"
+        },
+        {
+          "path": "5703-checker86-runtime\\case03\\native-provider70\\final-receipt.json",
+          "bytes": 1086,
+          "sha256": "3a7d30ccaaf83fe85c4517f0803e60df7fa22429dfc2bb2cb59d073f7bea8a99"
+        },
+        {
+          "path": "5703-checker86-runtime\\case03\\strict-json-error86.json",
+          "bytes": 532,
+          "sha256": "2ce8040f20c7d1076bd751cbfa094eb31e04cbf227c60c0bd693010ca6327ff7"
+        },
+        {
+          "path": "5703-checker86-runtime\\case03\\journey-receipt86.json",
+          "bytes": 1695,
+          "sha256": "c5f0b549d156749f20beaebdade21d9efdbbf2024abedaba7eabe3e208d79027"
+        },
+        {
+          "path": "5703-checker86-runtime\\case03\\api-closure77.json",
+          "bytes": 1195,
+          "sha256": "ee26fde82040832d6b1eef7a3f57f5cf33c6f24990332baef41e662ac11dbfa3"
+        }
+      ]
+    },
+    {
+      "plan_row": "reg03r",
+      "runtime_case_id": "case03r",
+      "question_id": "development85_03",
+      "question_sha256": "79e10aea43d34d5ec92aaa1d42a4123f94c4991e83cbfa6be3ae55e97891ffe5",
+      "status": "FAILED_SETTLED",
+      "essential_facts_assessed": 0,
+      "model_gate_result": "NOT_ESTABLISHED",
+      "published_answer_assessed": false,
+      "delivery": "NO_PUBLIC_ANSWER",
+      "job_id": "9a1eaebf-4b5d-4326-90c9-6968a8a3b6d3",
+      "provider_posts": 1,
+      "known_cost_USD": "0.0026221",
+      "UNKNOWN_USD": "0",
+      "valid_complete_DOM_n": 0,
+      "complete_DOM_ms": null,
+      "API_failure_terminal_ms": 11346.217700000125,
+      "teacher_result": {
+        "error": "OUTPUT_TRUNCATED",
+        "http_status": 200,
+        "finish_reason": "length",
+        "output_tokens": 2048,
+        "reasoning_tokens": 1517,
+        "complete_validated_teacher_draft": false,
+        "essential_facts_assessed": 0,
+        "citation_quality_assessed": false
+      },
+      "checker_ran": false,
+      "checker_prompt_fix_validated": false,
+      "checker_semantic_refusal": "NOT_ESTABLISHED",
+      "scientific_acceptance": false,
+      "decision": "KEEP_FAILED_ROW; KNOWN_SETTLED_TEACHER_TRUNCATION; NO_CHECKER_OR_COMPLETE_ANSWER_INFERENCE",
+      "public_inputs": [
+        {
+          "path": "5703-checker86-runtime\\case03r\\native-provider70\\slot-01-normal-outcome.json",
+          "bytes": 2906,
+          "sha256": "00149a87ef104b52c395142d118ca2b32027f64d5d3eb9bba9d0ab95a77a8f11"
+        },
+        {
+          "path": "5703-checker86-runtime\\case03r\\native-provider70\\slot-01-raw-response.json",
+          "bytes": 12053,
+          "sha256": "c6f5f74b30545a6dc090e72a0881a6034223abb417660d174673ce4511dad9f7"
+        },
+        {
+          "path": "5703-checker86-runtime\\case03r\\native-provider70\\final-receipt.json",
+          "bytes": 1087,
+          "sha256": "51537fbb46d633ec42f7557833be401d6e71f7a7ba44437703012fa7d71bfb4d"
+        },
+        {
+          "path": "5703-checker86-runtime\\case03r\\journey-receipt86.json",
+          "bytes": 1696,
+          "sha256": "ba84ba4f9cb4b671c355c987a7a3d326eca9b32334e88edf5a3729e6cefde537"
+        },
+        {
+          "path": "5703-checker86-runtime\\case03r\\api-closure77.json",
+          "bytes": 1195,
+          "sha256": "d64ebdef5ebde1646d78312d6f752f2ad415934def51e0e1fd4014a245f98ec9"
+        }
+      ]
+    },
+    {
+      "plan_row": "case04",
+      "runtime_case_id": "case04",
+      "question_id": "development85_04",
+      "question_sha256": "bc771dece3e6c2961dd8ed4aee766ba3b8b3034549ee19977f7b9c68db092bfd",
+      "status": "QUALITY_FAILURE_PROGRAMMATIC_CLARIFICATION",
+      "essential_facts_assessed": 3,
+      "model_gate_result": "NOT_ESTABLISHED",
+      "published_answer_assessed": true,
+      "job_id": "e83d0463-1126-4de7-80ee-976d7d9237cf",
+      "API_job_state": "succeeded",
+      "provider_posts": 0,
+      "known_cost_USD": "0",
+      "UNKNOWN_USD": "0",
+      "valid_complete_DOM_n": 0,
+      "complete_DOM_ms": null,
+      "checker_semantic_refusal": "NOT_ESTABLISHED",
+      "scientific_acceptance": false,
+      "owned_API_threads_closed": true,
+      "old_metadata_unchanged": true,
+      "public_inputs": [
+        {
+          "path": "5703-checker86-runtime\\case04\\journey-receipt86.json",
+          "bytes": 2565,
+          "sha256": "cecdafc0de1783a7b5a593d293a3807bece723c464850c4682ce71e1cb08f531"
+        },
+        {
+          "path": "5703-checker86-runtime\\case04\\native-provider70\\final-receipt.json",
+          "bytes": 1076,
+          "sha256": "efdf6f2b8aa7a09f8e483f506661413416596d9dec2d6d9ef1fef4c5e9a0bab0"
+        },
+        {
+          "path": "5703-checker86-runtime\\case04\\api-closure77.json",
+          "bytes": 1232,
+          "sha256": "869a8d25bafdb6f2efebf51fadfc81ce4ec0ebc1d071656df2482831f8d38e5a"
+        }
+      ],
+      "delivery": "PERSISTED_CLARIFICATION_ONLY",
+      "API_response_ms": 468.3004999969853,
+      "published_factual_answer": false,
+      "response_text": "Please clarify the subject and the relationship or action you want explained.",
+      "core_fact_pass": false,
+      "citation_pass": false,
+      "essential_fact_coverage": [
+        {
+          "fact_id": "Q04_F1",
+          "status": "missing"
+        },
+        {
+          "fact_id": "Q04_F2",
+          "status": "missing"
+        },
+        {
+          "fact_id": "Q04_F3",
+          "status": "missing"
+        }
+      ],
+      "clarification_assessment": "Generic clarification does not answer the self-contained frozen question. Its explicitly missing input branch is an answerable insufficiency request, where applicable, rather than grounds for withholding all supported parts.",
+      "retrieval_ms": 0,
+      "source_unavailability": "NOT_ESTABLISHED; retrieval skipped, no actual teacher source packet exists",
+      "preparation_reason": "NOT_EXPORTED in reviewed public response; no precise query-rule cause inferred",
+      "checker_ran": false,
+      "decision": "COUNT_QUALITY_FAILURE; API succeeded only for clarification, not factual response or quality PASS"
+    },
+    {
+      "plan_row": "case05",
+      "runtime_case_id": "case05",
+      "question_id": "development85_05",
+      "question_sha256": "e159815e7046927e2c08025e57d0281f18aa174fc19c599a3c4f577c2757cc0f",
+      "status": "QUALITY_FAILURE_PROGRAMMATIC_CLARIFICATION",
+      "essential_facts_assessed": 3,
+      "model_gate_result": "NOT_ESTABLISHED",
+      "published_answer_assessed": true,
+      "job_id": "bb10c008-81e7-44cf-b193-c0d407ce8d8d",
+      "API_job_state": "succeeded",
+      "provider_posts": 0,
+      "known_cost_USD": "0",
+      "UNKNOWN_USD": "0",
+      "valid_complete_DOM_n": 0,
+      "complete_DOM_ms": null,
+      "checker_semantic_refusal": "NOT_ESTABLISHED",
+      "scientific_acceptance": false,
+      "owned_API_threads_closed": true,
+      "old_metadata_unchanged": true,
+      "public_inputs": [
+        {
+          "path": "5703-checker86-runtime\\case05\\journey-receipt86.json",
+          "bytes": 2579,
+          "sha256": "5dae9c48e8af3237051fd68e0c37c3a6023d24446fabb98c749c964cdf758772"
+        },
+        {
+          "path": "5703-checker86-runtime\\case05\\native-provider70\\final-receipt.json",
+          "bytes": 1076,
+          "sha256": "fcf72a9490df91b87ebdccdf51cd5323847acb43ec1db0c5fff28cdaa8d4d1d7"
+        },
+        {
+          "path": "5703-checker86-runtime\\case05\\api-closure77.json",
+          "bytes": 1232,
+          "sha256": "5203216ff19e795a48cb064b4c0fe076a8758de2bdda88fdb0f2a5f641c2758a"
+        }
+      ],
+      "delivery": "PERSISTED_CLARIFICATION_ONLY",
+      "API_response_ms": 450.4328000002715,
+      "published_factual_answer": false,
+      "response_text": "Please clarify the subject and the relationship or action you want explained.",
+      "core_fact_pass": false,
+      "citation_pass": false,
+      "essential_fact_coverage": [
+        {
+          "fact_id": "Q05_F1",
+          "status": "missing"
+        },
+        {
+          "fact_id": "Q05_F2",
+          "status": "missing"
+        },
+        {
+          "fact_id": "Q05_F3",
+          "status": "missing"
+        }
+      ],
+      "clarification_assessment": "Generic clarification does not answer the self-contained frozen question. Its explicitly missing input branch is an answerable insufficiency request, where applicable, rather than grounds for withholding all supported parts.",
+      "retrieval_ms": 0,
+      "source_unavailability": "NOT_ESTABLISHED; retrieval skipped, no actual teacher source packet exists",
+      "preparation_reason": "NOT_EXPORTED in reviewed public response; no precise query-rule cause inferred",
+      "checker_ran": false,
+      "decision": "COUNT_QUALITY_FAILURE; API succeeded only for clarification, not factual response or quality PASS"
+    },
+    {
+      "plan_row": "case06",
+      "runtime_case_id": "case06",
+      "question_id": "development85_06",
+      "question_sha256": "ea0adda731dcc65c3190efb769fcd3f9ce5af66598fa77e861e9ff797db909c4",
+      "status": "FAILED_SETTLED_CHECKER_DECODE",
+      "essential_facts_assessed": 0,
+      "model_gate_result": "NOT_ESTABLISHED",
+      "published_answer_assessed": false,
+      "job_id": "2d4d202f-0cd2-4112-bc1e-607f77a978cf",
+      "API_job_state": "failed",
+      "provider_posts": 2,
+      "known_cost_USD": "0.0136806",
+      "UNKNOWN_USD": "0",
+      "valid_complete_DOM_n": 0,
+      "complete_DOM_ms": null,
+      "checker_semantic_refusal": "NOT_ESTABLISHED",
+      "scientific_acceptance": false,
+      "owned_API_threads_closed": true,
+      "old_metadata_unchanged": true,
+      "public_inputs": [
+        {
+          "path": "5703-checker86-runtime\\case06\\journey-receipt86.json",
+          "bytes": 1695,
+          "sha256": "e01667b43cdf83bef6653649f5e72047078dde10229b1a5e6511eb98d35c899d"
+        },
+        {
+          "path": "5703-checker86-runtime\\case06\\native-provider70\\final-receipt.json",
+          "bytes": 1086,
+          "sha256": "e384cb427e6a489de300ce1c89861dbc5a74841e49dc1343673e9b1e5c5978fa"
+        },
+        {
+          "path": "5703-checker86-runtime\\case06\\api-closure77.json",
+          "bytes": 1195,
+          "sha256": "f9c18e086d5f0430bd17a4b2f94aba3cc4d284a69a8ee5072227e1fc73afb800"
+        },
+        {
+          "path": "5703-checker86-runtime\\case06\\native-provider70\\slot-01-normal-outcome.json",
+          "bytes": 2530,
+          "sha256": "a22bc88c4be47a8034f1a883f2e1c440ea39f0df179c29b3e233a3301b22e778"
+        },
+        {
+          "path": "5703-checker86-runtime\\case06\\native-provider70\\slot-02-normal-outcome.json",
+          "bytes": 13392,
+          "sha256": "c06fc9ec06a11a4a9e88944721b7b962cda89b794962de3bf48540717f77d01e"
+        },
+        {
+          "path": "5703-checker86-runtime\\case06\\native-provider70\\slot-01-public-inputs.json",
+          "bytes": 90782,
+          "sha256": "8954a0682700a756b8d128bf63237605cc4dd011130dd6e1c8c8676a58fa2a74"
+        },
+        {
+          "path": "5703-checker86-runtime\\case06\\native-provider70\\slot-02-public-inputs.json",
+          "bytes": 175170,
+          "sha256": "d858ef4a9e26f774f85e65d424f6cd709cdc22391d47e3bad1dceb1a44c1fde6"
+        },
+        {
+          "path": "5703-checker86-runtime\\case06\\checker-decode-error86.json",
+          "bytes": 996,
+          "sha256": "5a32287aa86a3fd9ee9499578bf85f8b22fd7fc6f4bf495212c95003042abdfd"
+        }
+      ],
+      "delivery": "NO_PUBLIC_ANSWER",
+      "API_failure_terminal_ms": 11033.738900001481,
+      "checker_failure": {
+        "code": "CODEC_CONTRACT_INVALID",
+        "stage": "lossless_decode_before_full_V2_publication_gate",
+        "trusted_reason": "Unit evidence was not selected by its own parent",
+        "hydrated_full_V2": false,
+        "validated_model_selected_ids": false,
+        "proposed_judgments": "Raw compact model proposals only; not validated gate outcomes"
+      },
+      "teacher_draft": {
+        "published": false,
+        "raw_text_sha256": "61bf9eb086ee6258365d40dcc63b097b2074233719fd9f3325c05177ec4f4e0e",
+        "actual_source_count": 7,
+        "source_hashes_verified": 7,
+        "fragment_count": 62,
+        "claim_count": 7,
+        "unit_count": 17,
+        "critical_contradiction_observed": false,
+        "scientific_acceptance": false,
+        "essential_facts_total": 4,
+        "essential_facts_fully_present": 3,
+        "essential_fact_coverage": [
+          {
+            "fact_id": "Q06_F1",
+            "status": "explicitly_supported",
+            "own_support": [
+              "ev_002:F008,F009,F010",
+              "ev_001:F002"
+            ]
+          },
+          {
+            "fact_id": "Q06_F2",
+            "status": "partial_missing_alveolar_interface",
+            "present": "Pulmonary capillaries/lungs and O2-in/CO2-out are correct",
+            "missing": "Frozen rubric requires pulmonary capillaries around alveoli; alveoli are never named in the draft",
+            "available_source": [
+              "ev_001:F002"
+            ]
+          },
+          {
+            "fact_id": "Q06_F3",
+            "status": "explicitly_supported_in_long_answer_but_short_answer_citation_gap",
+            "own_long_support": [
+              "ev_002:F011",
+              "ev_001:F002"
+            ]
+          },
+          {
+            "fact_id": "Q06_F4",
+            "status": "explicitly_supported",
+            "own_support": [
+              "ev_002:F010,F011",
+              "ev_007:F052,F053"
+            ]
+          }
+        ],
+        "core_fact_pass": false,
+        "citation_pass": false,
+        "citation_gaps": [
+          {
+            "claim_id": "claim_d4a7c15dd2b4624a1f740024_1",
+            "clause": "pulmonary veins return oxygenated blood to the left atrium",
+            "own_evidence_ids": [
+              "ev_002"
+            ],
+            "problem": "The complete cited ev_002 lacks left atrium; ev_001/F002 supports it only in a different long-answer parent claim. No sibling binding may be borrowed."
+          }
+        ],
+        "legitimate_join": "Long-answer pulmonary-return claim binds both ev_002/F011 (oxygenation/veins) and ev_001/F002 (left atrium); union is allowed."
+      },
+      "decision": "COUNT_FAILED_EXECUTION; KEEP_DRAFT_SUPPORT_REVIEW_SEPARATE_FROM_INVALID_CHECKER_GATE"
+    },
+    {
+      "plan_row": "case07",
+      "runtime_case_id": "case07",
+      "question_id": "development85_07",
+      "question_sha256": "bd615ce859d72da72075a72c25ffad9a476e20e8bd3293850cb705775620fafc",
+      "status": "FAILED_SETTLED_CHECKER_DECODE",
+      "essential_facts_assessed": 0,
+      "model_gate_result": "NOT_ESTABLISHED",
+      "published_answer_assessed": false,
+      "job_id": "6bb366ec-2e3c-4977-abaf-ff19d1397d64",
+      "API_job_state": "failed",
+      "provider_posts": 2,
+      "known_cost_USD": "0.0148396",
+      "UNKNOWN_USD": "0",
+      "valid_complete_DOM_n": 0,
+      "complete_DOM_ms": null,
+      "checker_semantic_refusal": "NOT_ESTABLISHED",
+      "scientific_acceptance": false,
+      "owned_API_threads_closed": true,
+      "old_metadata_unchanged": true,
+      "public_inputs": [
+        {
+          "path": "5703-checker86-runtime\\case07\\journey-receipt86.json",
+          "bytes": 1694,
+          "sha256": "c183be6b39f66d33813381d72320ec2005a20b0851dc1de10d821250773c1b5b"
+        },
+        {
+          "path": "5703-checker86-runtime\\case07\\native-provider70\\final-receipt.json",
+          "bytes": 1086,
+          "sha256": "6be902a67a52eecccf8d76ff4b091a5776ddb0e832a05796edd4d82e75122f7c"
+        },
+        {
+          "path": "5703-checker86-runtime\\case07\\api-closure77.json",
+          "bytes": 1195,
+          "sha256": "8df94c2907ed6b33f4284e991816b4d6c657ee4e9486aaeebcf2f042ef64df40"
+        },
+        {
+          "path": "5703-checker86-runtime\\case07\\native-provider70\\slot-01-normal-outcome.json",
+          "bytes": 3012,
+          "sha256": "aa31d4daaf88687feb5769c4d31273ea7f503348c81999b33ff10fd740bc69f2"
+        },
+        {
+          "path": "5703-checker86-runtime\\case07\\native-provider70\\slot-02-normal-outcome.json",
+          "bytes": 15143,
+          "sha256": "d4f88df0f93fd87d5255b5b70106b1632196530f565fe9d553af8bff09ac9270"
+        },
+        {
+          "path": "5703-checker86-runtime\\case07\\native-provider70\\slot-01-public-inputs.json",
+          "bytes": 99910,
+          "sha256": "61f46c7afa58b2df122f8893cec9dbb7e893873fb0f2716f3a37f9f236712109"
+        },
+        {
+          "path": "5703-checker86-runtime\\case07\\native-provider70\\slot-02-public-inputs.json",
+          "bytes": 182867,
+          "sha256": "730024a4c629ff199396c05d8799838048ac011c092c8a25bad46ea24c90a328"
+        },
+        {
+          "path": "5703-checker86-runtime\\case07\\checker-decode-error86.json",
+          "bytes": 1291,
+          "sha256": "3511a40fd0fd7ccdce4b1ac586955972ae7b9c7149885110398127bbc7ca1ba4"
+        }
+      ],
+      "delivery": "NO_PUBLIC_ANSWER",
+      "API_failure_terminal_ms": 13346.98379999827,
+      "checker_failure": {
+        "code": "CODEC_CONTRACT_INVALID",
+        "stage": "lossless_decode_before_full_V2_publication_gate",
+        "trusted_reason": "Unknown full or projected field key",
+        "hydrated_full_V2": false,
+        "validated_model_selected_ids": false,
+        "proposed_judgments": "Raw compact model proposals only; not validated gate outcomes"
+      },
+      "teacher_draft": {
+        "published": false,
+        "raw_text_sha256": "46e83b335653fff1859835c2bb1ff0306685df0e395a69e7baa7e821082150b2",
+        "actual_source_count": 10,
+        "source_hashes_verified": 10,
+        "fragment_count": 76,
+        "claim_count": 10,
+        "unit_count": 28,
+        "critical_contradiction_observed": false,
+        "scientific_acceptance": false,
+        "independent_support_reviewer": "/root/native76_narrow_review/quote_controls80",
+        "essential_facts_total": 3,
+        "essential_facts_present": 3,
+        "essential_fact_coverage": [
+          {
+            "fact_id": "Q07_F1",
+            "status": "explicitly_supported",
+            "own_support": [
+              "ev_009:F065+F066"
+            ],
+            "scope": "Draft does not claim that every AUG restarts translation; elongation-AUG nuance is not explained and its available ev_003/F014 and ev_004/F030 are not cited."
+          },
+          {
+            "fact_id": "Q07_F2",
+            "status": "supported_by_bounded_join",
+            "own_support": [
+              "ev_002:F012+F013"
+            ],
+            "derivation": "Termination/release rather than addition of another amino acid is a bounded inference, not a literal source quote."
+          },
+          {
+            "fact_id": "Q07_F3",
+            "status": "explicitly_supported",
+            "own_support": [
+              "ev_002:F012+F013"
+            ]
+          }
+        ],
+        "core_fact_pass": true,
+        "citation_pass": false,
+        "citation_gaps": [
+          {
+            "claim_id": "claim_ef04e0ce4f71ff74911a3314_1",
+            "clause": "AUG differs from the stop codons because AUG is a start codon and also specifies methionine, while UAA, UAG and UGA are stop codons that do not add an amino acid.",
+            "own_evidence_ids": [],
+            "units": [
+              "U01",
+              "U02",
+              "U03",
+              "U04",
+              "U05"
+            ],
+            "problem": "Uncited opening AUG/stop/no-extra-amino-acid facts cannot borrow citations from later claims."
+          }
+        ],
+        "legitimate_join": "Cited short answer owns ev_009+ev_002, allowing AUG F065/F066 plus termination F011–F013 without borrowing sibling claims.",
+        "other_cited_support": "64/3 codon counts F063/F064; nonsense triplets F042; release factors F001/F043; hydrolysis F002/F003; dissociation and later mRNA degradation F004/F005. No added-amino-acid, immediate degradation, or transcription/translation confusion observed."
+      },
+      "decision": "COUNT_FAILED_EXECUTION; KEEP_DRAFT_SUPPORT_REVIEW_SEPARATE_FROM_INVALID_CHECKER_GATE"
+    },
+    {
+      "plan_row": "case08",
+      "runtime_case_id": "case08",
+      "question_id": "development85_08",
+      "question_sha256": "32cfb6093a0691704c5f389c7baacdcb19d00b3b4c9c99a69c3a124b66b089c1",
+      "status": "QUALITY_FAILURE_PROGRAMMATIC_CLARIFICATION",
+      "essential_facts_assessed": 3,
+      "model_gate_result": "NOT_ESTABLISHED",
+      "published_answer_assessed": true,
+      "job_id": "7ca0c690-d47a-4b29-8341-7a2f6ee9b8e3",
+      "API_job_state": "succeeded",
+      "provider_posts": 0,
+      "known_cost_USD": "0",
+      "UNKNOWN_USD": "0",
+      "valid_complete_DOM_n": 0,
+      "complete_DOM_ms": null,
+      "checker_semantic_refusal": "NOT_ESTABLISHED",
+      "scientific_acceptance": false,
+      "owned_API_threads_closed": true,
+      "old_metadata_unchanged": true,
+      "public_inputs": [
+        {
+          "path": "5703-checker86-runtime\\case08\\journey-receipt86.json",
+          "bytes": 2578,
+          "sha256": "0af2675e8c9df822c226f156066236f1f05a7d5c78a62948f027e9c68b97f072"
+        },
+        {
+          "path": "5703-checker86-runtime\\case08\\native-provider70\\final-receipt.json",
+          "bytes": 1076,
+          "sha256": "d5c25cc91aeadd757212d00b2f462fde44d07f55b0dd31a10d884bad934bd8bf"
+        },
+        {
+          "path": "5703-checker86-runtime\\case08\\api-closure77.json",
+          "bytes": 1232,
+          "sha256": "2a9b93d2e347fc984bf7d97512f0648cf06a10588fc258ac2ca7edc494e85360"
+        }
+      ],
+      "delivery": "PERSISTED_CLARIFICATION_ONLY",
+      "API_response_ms": 453.4974999987753,
+      "published_factual_answer": false,
+      "response_text": "Please clarify the subject and the relationship or action you want explained.",
+      "core_fact_pass": false,
+      "citation_pass": false,
+      "essential_fact_coverage": [
+        {
+          "fact_id": "Q08_F1",
+          "status": "missing"
+        },
+        {
+          "fact_id": "Q08_F2",
+          "status": "missing"
+        },
+        {
+          "fact_id": "Q08_F3",
+          "status": "missing"
+        }
+      ],
+      "clarification_assessment": "Generic clarification does not answer the self-contained frozen question. Its explicitly missing input branch is an answerable insufficiency request, where applicable, rather than grounds for withholding all supported parts.",
+      "retrieval_ms": 0,
+      "source_unavailability": "NOT_ESTABLISHED; retrieval skipped, no actual teacher source packet exists",
+      "preparation_reason": "NOT_EXPORTED in reviewed public response; no precise query-rule cause inferred",
+      "checker_ran": false,
+      "decision": "COUNT_QUALITY_FAILURE; API succeeded only for clarification, not factual response or quality PASS"
+    }
+  ],
+  "review_scope": {
+    "Main_writes": 0,
+    "DB_actions": 0,
+    "auth_reads": 0,
+    "API_calls": 0,
+    "provider_posts": 0,
+    "tests_run": 0,
+    "W_output": "Only this mutable phase86 quality.json"
+  },
+  "limitations": [
+    "Zero qualifying factual answers across seven planned executions; three API-success responses are generic clarifications, four jobs failed.",
+    "All four failed executions lack valid final publication-gate judgments: one checker syntax failure, one teacher truncation before checker, two lossless decode contract failures.",
+    "Unpublished teacher support observations are exposed AI assessments, not Human Gold, scientific acceptance or model gate outcomes.",
+    "No browser was used; API failure-terminal and clarification timers are not Send-to-complete-DOM samples, stable p95 or speedup evidence.",
+    "No source-unavailability claim follows from the three clarification paths with skipped retrieval.",
+    "Old phase85 permanent STOP and original failed/unrun results remain unchanged; no historical item is retroactively passed."
+  ],
+  "status": "ALL_7_PLANNED_ROWS_ASSESSED_NO_QUALIFYING_FACTUAL_ANSWERS"
+}

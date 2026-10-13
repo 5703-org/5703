@@ -1,0 +1,59 @@
+{
+  "status": "PREPARED_NOT_EXECUTED",
+  "controller_sha256": "6e4ccd07d50e5920a68e940450c179b4d374113898ec2d8e0a5537b58f5a27bc",
+  "wire_sha256": "c14a0748a60e981f03d5f2d5731ba87048909514ac45d4e3d28828e656913b40",
+  "wire_bytes": 88704,
+  "exact_saved59_bytes": true,
+  "same_existing_grant": true,
+  "prior_slots": 7,
+  "prior_known_USD": "0.16526676",
+  "prior_new_UNKNOWN_USD": "0",
+  "max_new_POSTs": 1,
+  "hold_USD": "0.0688",
+  "grant_cap_USD": "0.36",
+  "maximum_aggregate_reserved_USD": "0.23406676",
+  "recipient": "https://openrouter.ai/api/v1/chat/completions",
+  "model": "google/gemini-3.5-flash-lite",
+  "provider": {
+    "order": [
+      "google-vertex/global"
+    ],
+    "only": [
+      "google-vertex/global"
+    ],
+    "allow_fallbacks": false,
+    "require_parameters": true,
+    "max_price": {
+      "prompt": 0.3,
+      "completion": 2.5
+    }
+  },
+  "reasoning": {
+    "effort": "high"
+  },
+  "source_fragments": 71,
+  "claims": 10,
+  "syntactic_units": 19,
+  "automatic_retries": 0,
+  "free_prepare_credential_DB_network_operations": 0,
+  "credential_consumer": "unchanged original approved_credential in pinned helper",
+  "credential_DB": "cs30_week10_pair_b_20261009_01",
+  "new_or_modified_credentials": false,
+  "credentials_in_reports_or_model_requests": false,
+  "main_pins": {
+    "generation/openrouter_routes.py": "c82e86990476c0f95da650b38ef444e62c1dba6ae29f407a44c4af444ad2348e",
+    "generation/adapters.py": "99075cb07f4faf861119c5fa5113da6951408c02323c14452d090661fd0c3ddb",
+    "generation/providers.py": "bbfb74558e1adf5e4850edad02bb117af221c804aaad6e6f260addfe05fb38f4",
+    "generation/types.py": "f74ce2c7295b7ee655577bc330791fbdd2c62447b8f7d4414af85b4aba7bcd69",
+    "generation/provider_diagnostics.py": "109f75fd2858c35530c93e3c4a663629bc143344e190bab42eec5458ff39c6b5",
+    "backend/app/modules/model_settings/service.py": "e6e0a9d41846ff36a37bc1eef72892f9ddbc3f2c4648f36f2e9a714f07d5e39d"
+  },
+  "helper_sha256": "b19fdfd53bfccb64e617a8203ed7947bc73ae2c2897a22908de7380dd5e29b6c",
+  "diagnostics_sha256": "e2f06c40dd0b703fd63bbd3248b436a79864290149ca515a4ac81d2822c3942b",
+  "prior_result_sha256": "230de5d6ff787f79cddd7161ebbcddbdc40c173af442de1e3081b3bf558e082b",
+  "authorization_receipt_sha256": "80d81adaec66875e042dc64961f88443e743d850736e61fca510fb06142d0006",
+  "old_ledgers_written": false,
+  "native_publication": false,
+  "quality_acceptance": "PENDING_INDEPENDENT_SEMANTIC_REVIEW",
+  "scope": "One same-input confirmation; no Gold, p95, native or RAG comparison claim"
+}

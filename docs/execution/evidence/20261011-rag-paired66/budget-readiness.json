@@ -1,0 +1,153 @@
+{
+  "schema": "5703_unified_rag_budget_readiness_readonly_v1",
+  "status": "PAID_BATCH_BLOCKED_CURRENT_PROJECT_FINANCIAL_BASELINE_NOT_PROVEN",
+  "scope": {
+    "new_questions": 12,
+    "arms": 3,
+    "normal_POSTs": 36,
+    "max_POSTs": 40,
+    "new_batch_cap_USD": "1.00",
+    "new_batch_cap_is_not_project_ceiling_increase": true,
+    "writes": "This W JSON only",
+    "auth_DB_env_network_API_tests_install_Main_writes": 0
+  },
+  "current_project": {
+    "numeric_total_ceiling_USD": null,
+    "remaining_protected_budget_USD": null,
+    "known_API_cost_total_USD": null,
+    "actual_cost_including_UNKNOWN_USD": null,
+    "current_UNKNOWN_count": null,
+    "current_global_protection_USD": null,
+    "invoice_or_provider_balance_USD": null,
+    "explicit_global_ceiling_increase_evidence_found": false,
+    "approval_rejection_in_this_review": false,
+    "blocker": "Public finite records do not reconcile all post-20261009 scopes into a current global budget; preserved UNKNOWN and unused allocations cannot be released or ignored."
+  },
+  "historical_cutoff_20261009": {
+    "original_documented_project_USD": "10.00000000",
+    "API_reported_known_USD": "0.58138393",
+    "preserved_protection_USD": "9.97001709",
+    "cutoff_unallocated_USD": "0.02998291",
+    "UNKNOWN_count": 14,
+    "all_UNKNOWN_standalone_bound_USD": null,
+    "protection_is_not_actual_spend": true,
+    "cutoff_values_are_not_current_balance": true
+  },
+  "later_authorization_evidence": {
+    "separate_8_POST_USD": "0.24000000",
+    "new_numeric_global_ceiling_USD": null,
+    "record_explicitly_does_not_claim_unlimited_total": true,
+    "preserved_old_protection_plus_this_scope_USD": "10.21001709",
+    "actual_pair_POSTs": 4,
+    "actual_pair_known_USD": "0.01936904",
+    "pair_whole_allocation_retained_USD": "0.24000000",
+    "latest_generic_continue_without_repeat_fee_asks": "Main implementation-status.md:78 records continued authorized OpenRouter development. It supplies no new numeric project total."
+  },
+  "recent_63_65_only": {
+    "renewed_same71_final63_USD": "0.19758306",
+    "atomic64_USD": "0.0315126",
+    "atomic65_initial8_USD": "0.0527026",
+    "atomic65_followup4_USD": "0.0270267",
+    "atomic65_grant12_total_USD": "0.0797293",
+    "series_total_USD": "0.30882496",
+    "series_UNKNOWN_USD": "0",
+    "series_conservative_cap_USD": "0.50",
+    "cap_scope": "Recent series only, not whole project",
+    "two_temporally_disjoint_known_subtotals_lower_bound_USD": "0.89020889",
+    "lower_bound_is_not_all_project_spend": true
+  },
+  "later_preserved_uncertainty": {
+    "native_campaign_UNKNOWN_hold_USD": "0.09000000",
+    "separate_component08d_UNKNOWN_hold_USD": "0.03000000",
+    "native10_plus11_known_USD": "0.0360216",
+    "native11_snapshot_globalbaseline_freshly_validated": false,
+    "current_project_UNKNOWN_cannot_be_inferred_from_old14_or_recent0": true
+  },
+  "deduplication_rules": [
+    "Oct8 journal21 known .489777050 is a predecessor included by Oct9 .58138393; do not add both.",
+    "Reported known expenses inside parent protections are not additional protections.",
+    "Cumulative A/B runtime budget snapshots must not be added as independent expenses.",
+    "Native10+11 .0360216 already contains native11 .0173608.",
+    "Renewed final63 .19758306 already contains intermediate54-59 settlements; the original same71 eight-request .13136218 grant is a separate older scope.",
+    "Atomic65 final .0797293 contains initial8 .0527026 and followup4 .0270267; recent .30882496 already contains63+64+65.",
+    "Zero-POST stopped preparation has zero actual API expense; allocated caps remain separate preserved protections.",
+    "DeepSeek CNY allocations and estimated tariffs cannot be added to API-reported OpenRouter USD without provider/currency reconciliation."
+  ],
+  "ordinary_route_static": {
+    "file": "generation/openrouter_routes.py",
+    "profile": "gemini35_google_vertex_v1",
+    "model": "google/gemini-3.5-flash-lite",
+    "provider_only": "google-vertex/global",
+    "reasoning": "low",
+    "input_price_cap_USD_per_million": "0.3",
+    "output_price_cap_USD_per_million": "2.5",
+    "allow_fallbacks": false,
+    "explicit_profile_required": true,
+    "runtime_selected_profile_credential_and_readiness_verified": false,
+    "historical_native11_teacher_model": "anthropic/claude-haiku-5.5",
+    "historical_native11_checker_model": "google/gemini-3.5-flash-lite",
+    "historical_role_receipt_is_not_current_config": true,
+    "route_static_evidence": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-normal-openrouter-route-static01\\route-readiness01.json",
+      "sha256": "b953e82898a0884aeff87307ac62521b1b1cc4437f9a5a2808eb98d44873aa48",
+      "haiku_profile": "haiku55_google_vertex_low_v1",
+      "haiku_line": 47,
+      "haiku_reasoning": "low",
+      "haiku_registered_but_not_CURRENT_PROFILE_IDS": true,
+      "gemini_profile_line": 86,
+      "default_ModelConfig_provider": "mock"
+    }
+  },
+  "free_preparation_allowed": [
+    "Freeze12 questions and36 identical-condition prompt packets locally; add at most4 explicitly bounded repair slots.",
+    "Compute byte-conservative input and output price-cap holds for every frozen packet; preserve all old allocations.",
+    "Prepare a reviewed financial gate that refuses paid execution until a pinned current global reconciliation or a precise parent-provided global ceiling resolves the missing evidence."
+  ],
+  "source_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-budget-reconciliation-20261009-01\\WEEK10_TOTAL_AUTHORIZATION_RECONCILIATION_ACTUAL01.json",
+      "bytes": 19076,
+      "sha256": "4cfa864f0a0de25a8757372064d8d09d56510fb7eb9b0e668c504afb3c0cce9a"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-budget-reconciliation-20261009-01\\NEW_LIMITED_BATCH_AUTHORIZATION_FINANCIAL01.json",
+      "bytes": 6968,
+      "sha256": "5afa39cbd555ecf3d66c2c207c75990e2c93830ff1379e847138b3a4b7215b2f"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-overall-answer-latency-pilot-20261006-01\\cross-provider-checker-adaptation04\\actual-spend-journal21.json",
+      "bytes": 134196,
+      "sha256": "28759a47a109713b7e729455a6c257535d63e3af584e2bff8027edb24db14943"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic65-followup-stats\\stats-followup65.json",
+      "bytes": 2323,
+      "sha256": "f7413f5c214d0fc5a3fa2bbc4224b88285743239c29fa4900d8dc7466ec24c37"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\20261009-week10-native-pair01\\ACTUAL_SIXTH_NEW_CLAIM_FINANCIAL_RESULT01.json",
+      "bytes": 17035,
+      "sha256": "70658533fcb409e7f7aaa03154e395b081b86677ba8efae36022151226d414cd"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\20261010-native-complete-answer11\\native11\\runtime\\budget-status-public01.json",
+      "bytes": 1362,
+      "sha256": "95b299172614be50878d796d0c8e32dabcb14ea256eb479c9481db1f6e45f4ff"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\20261010-native-complete-answer-acceptance.md",
+      "bytes": 9629,
+      "sha256": "fe84f93ccdebf2804237aab1ffb34794a104c43adc56f96455272999bdafb34e"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\20261009-week10-implementation-status.md",
+      "bytes": 47047,
+      "sha256": "e1e8ae32d43e9f57e7b3c2dd64ce2a985cbc17aec0a3bb3fcc1fdbbf05a9d8aa"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\openrouter_routes.py",
+      "bytes": 12356,
+      "sha256": "c82e86990476c0f95da650b38ef444e62c1dba6ae29f407a44c4af444ad2348e"
+    }
+  ]
+}

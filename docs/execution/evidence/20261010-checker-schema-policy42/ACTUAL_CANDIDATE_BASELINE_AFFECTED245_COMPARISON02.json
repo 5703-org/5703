@@ -1,0 +1,165 @@
+{
+  "status": "CONTROLLED_CURRENT_MAIN_BASELINE_REPRODUCES_EIGHT_CALL_FAILURES",
+  "candidate_actual_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-policy-affected245-20261010-01\\ACTUAL_CHECKER_SCHEMA_POLICY_AFFECTED245_01_RESULT.json",
+    "bytes": 83750,
+    "sha256": "a641834b640d1610e184c2bf85e261969ed517589313910ed8d3dc7b9890bbd8"
+  },
+  "baseline_actual_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-policy-baseline245-20261010-02\\ACTUAL_MAIN_BASELINE_AFFECTED245_02_RESULT.json",
+    "bytes": 65932,
+    "sha256": "44f99d81b6f0ecd3fc356232405688a333549a70667f67bc159b0dc4d1fcd5d5"
+  },
+  "candidate_command": [
+    "D:\\Python\\python.exe",
+    "-I",
+    "-B",
+    "-S",
+    "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-policy-affected245-20261010-01\\run_candidate_affected245_01.py"
+  ],
+  "baseline_command": [
+    "D:\\Python\\python.exe",
+    "-I",
+    "-B",
+    "-S",
+    "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-policy-baseline245-20261010-02\\run_main_baseline_affected245_02.py"
+  ],
+  "candidate_counts": {
+    "passed": 227,
+    "failed": 8,
+    "setup_errors": 10,
+    "passed_subtests": 96
+  },
+  "baseline_counts": {
+    "passed": 237,
+    "failed": 8,
+    "setup_errors": 0,
+    "passed_subtests": 115
+  },
+  "same_call_failure_set": true,
+  "same_visible_call_failure_details": true,
+  "candidate_module_files": {
+    "generation.source_relations_v2": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-policy-candidate\\generation\\source_relations_v2.py",
+    "generation.checked": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-policy-candidate\\generation\\checked.py",
+    "generation.types": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-policy-candidate\\generation\\types.py"
+  },
+  "baseline_module_files": {
+    "generation.checked": "E:\\5703\\learning-assistant\\generation\\checked.py",
+    "generation.types": "E:\\5703\\learning-assistant\\generation\\types.py",
+    "generation.source_relations_v2": "E:\\5703\\learning-assistant\\generation\\source_relations_v2.py"
+  },
+  "candidate_five_pins_unchanged": true,
+  "Main_pins_unchanged_both_runs": true,
+  "failed_tests_and_purposes": {
+    "::test_negative_units_repair_only_defective_claims_and_receive_complete_final_check": "Reject an unsupported unit, protect other original claims, patch the defective claim and perform the complete final relation check.",
+    "::test_valid_supported_relation_units_keep_the_two_call_path": "Valid support uses exactly teacher and checker calls and preserves original body/summary.",
+    "::test_valid_adverse_unit_unlocks_only_original_target_at_third_repair_wire": "A valid adverse unit permits only its original target at repair wire, with protected neighbors and evidence unchanged.",
+    "::test_completed_patch_preserves_neighboring_ids_text_and_summary_through_full_check": "Completed repair preserves neighbors and summary, performs full final source-relation check and consumes exactly four scripted calls.",
+    "::test_invalid_relation_units_contract_fail_before_any_semantic_unlock[missing_unit]": "Reject malformed unit/source binding with CHECKER_INCONSISTENT before any semantic repair call.",
+    "::test_invalid_relation_units_contract_fail_before_any_semantic_unlock[foreign_unit]": "Reject malformed unit/source binding with CHECKER_INCONSISTENT before any semantic repair call.",
+    "::test_invalid_relation_units_contract_fail_before_any_semantic_unlock[foreign_fragment]": "Reject malformed unit/source binding with CHECKER_INCONSISTENT before any semantic repair call.",
+    "::test_invalid_relation_units_contract_fail_before_any_semantic_unlock[unselected_fragment]": "Reject malformed unit/source binding with CHECKER_INCONSISTENT before any semantic repair call."
+  },
+  "observed_context_errors": [
+    {
+      "nodeid": "::test_negative_units_repair_only_defective_claims_and_receive_complete_final_check",
+      "error": "{'code': 'CONTEXT_LIMIT', 'message': 'The complete stage input and output reservation exceed its model window', 'retryable': False, 'details': {'stage': 'joint_check', 'input_reserved_tokens': 15924, 'output_reserved_tokens': 1024, 'window_tokens': 16384}}"
+    },
+    {
+      "nodeid": "::test_valid_supported_relation_units_keep_the_two_call_path",
+      "error": "{'code': 'CONTEXT_LIMIT', 'message': 'The complete stage input and output reservation exceed its model window', 'retryable': False, 'details': {'stage': 'joint_check', 'input_reserved_tokens': 16568, 'output_reserved_tokens': 1024, 'window_tokens': 16384}}"
+    },
+    {
+      "nodeid": "::test_completed_patch_preserves_neighboring_ids_text_and_summary_through_full_check",
+      "error": "{'code': 'CONTEXT_LIMIT', 'message': 'The complete stage input and output reservation exceed its model window', 'retryable': False, 'details': {'stage': 'joint_check', 'input_reserved_tokens': 16568, 'output_reserved_tokens': 1024, 'window_tokens': 16384}}"
+    }
+  ],
+  "request_defaults": {
+    "model": "authored-extractive-v1",
+    "provider": "mock",
+    "window_tokens": 16384,
+    "max_tokens": 1024,
+    "protection_fixture_tokenizer_provider": "estimate",
+    "source_policy": "source_relation_contract_v2",
+    "checker_policy": "typed_joint_v5"
+  },
+  "diagnosis_limits": [
+    "All eight call failures occur in the unchanged Main baseline and the staged candidate. They are not new exclusively candidate failures.",
+    "Three failures explicitly print the same current joint-check CONTEXT_LIMIT reservation. The other five returned errors were not instrumented; keep their immediate causes open.",
+    "Ten staged setup errors are exact candidate types module identity mismatch against a Main-only fixture. The unchanged Main baseline passes these ten cases and all 115 subtests.",
+    "The W/source denial is observed during pytest failure traceback formatting, not from the application: ast.parse -> getstatementrange_ast -> pytest source formatting. No denied target was read or admitted.",
+    "No context gate, module identity, assertions, or audit fences were disabled. Neither run is a PASS or complete software qualification."
+  ],
+  "audit_denials_candidate": [
+    {
+      "event": "open",
+      "target": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\source",
+      "writing": false
+    }
+  ],
+  "audit_denials_baseline": [
+    {
+      "event": "open",
+      "target": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\source",
+      "writing": false,
+      "stack_symbols": [
+        {
+          "file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker-schema-policy-baseline245-20261010-02\\run_main_baseline_affected245_02.py",
+          "function": "audit",
+          "line": 77
+        },
+        {
+          "file": "D:\\Python\\Lib\\ast.py",
+          "function": "parse",
+          "line": 54
+        },
+        {
+          "file": "E:\\5703\\learning-assistant\\.venv\\Lib\\site-packages\\_pytest\\_code\\source.py",
+          "function": "getstatementrange_ast",
+          "line": 193
+        },
+        {
+          "file": "E:\\5703\\learning-assistant\\.venv\\Lib\\site-packages\\_pytest\\_code\\source.py",
+          "function": "getstatementrange",
+          "line": 106
+        },
+        {
+          "file": "E:\\5703\\learning-assistant\\.venv\\Lib\\site-packages\\_pytest\\_code\\source.py",
+          "function": "getstatement",
+          "line": 98
+        },
+        {
+          "file": "E:\\5703\\learning-assistant\\.venv\\Lib\\site-packages\\_pytest\\_code\\code.py",
+          "function": "_getindent",
+          "line": 903
+        },
+        {
+          "file": "E:\\5703\\learning-assistant\\.venv\\Lib\\site-packages\\_pytest\\_code\\code.py",
+          "function": "get_source",
+          "line": 982
+        },
+        {
+          "file": "E:\\5703\\learning-assistant\\.venv\\Lib\\site-packages\\_pytest\\_code\\code.py",
+          "function": "repr_traceback_entry",
+          "line": 1092
+        },
+        {
+          "file": "E:\\5703\\learning-assistant\\.venv\\Lib\\site-packages\\_pytest\\_code\\code.py",
+          "function": "repr_traceback",
+          "line": 1150
+        },
+        {
+          "file": "E:\\5703\\learning-assistant\\.venv\\Lib\\site-packages\\_pytest\\_code\\code.py",
+          "function": "repr_excinfo",
+          "line": 1224
+        }
+      ]
+    }
+  ],
+  "provider_requests": 0,
+  "database_access": 0,
+  "authentication_access": 0,
+  "Main_writes": 0,
+  "full_mock_gate_repeated": false,
+  "suggested_repair_scope_for_Root": "Keep actual 16K CONTEXT_LIMIT protection. Separately make relation/protection semantic fixtures declare sufficient authored mock model window for the intended checker/repair path, and add a retained small-window fail-before-checker control. Candidate staging identity can be resolved only by exact approved module pins or by testing actual Main after adoption, never by spoofing module.__file__."
+}

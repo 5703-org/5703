@@ -1,0 +1,58 @@
+{
+  "schema_version": "independent_binding_review64_v1",
+  "reviewer": "independent AI reviewer; no human rating or Gold labels",
+  "created_at_utc": "2026-10-11T06:00:28.460126+00:00",
+  "pins": {
+    "candidate_module": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic64-binding-candidate\\generation\\atomic_quote_binding_v1.py",
+      "sha256": "0bcb4dd156f16a31ac4d5942ec50b5dc16b625aee13c329dc1a402f178bf6dd4"
+    },
+    "candidate_tests": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-atomic64-binding-candidate\\tests\\test_atomic_quote_binding_v1.py",
+      "sha256": "2d8b092edd23d1db44d042f4a198c3dbabce2df07c97d283b408d3f2521df8a7"
+    },
+    "original_strict_module": {
+      "path": "E:\\5703\\learning-assistant\\generation\\atomic_support_v1.py",
+      "sha256": "9964f60756cfa462a48fa80366a30d43617406d3423f1248e287852201306e87"
+    }
+  },
+  "candidate_portable_suite": {
+    "tests": 9,
+    "passed": 9,
+    "exit_code": 0,
+    "execution": "run_free64.py; Main venv -B; captured tool stdout",
+    "is_model_measurement": false
+  },
+  "review_probe_harness_correction": "Initial probe expected the wrong error label DUPLICATE_EVIDENCE_SPAN; strict code correctly raised DUPLICATE_JUDGMENT_SPAN. Only the independent harness expectation was corrected before final run.",
+  "independent_local_boundary_probes": [
+    {
+      "probe": "composed_quote_does_not_match_decomposed_excerpt",
+      "pass": true,
+      "error": "QUOTE_NOT_IN_ACTUAL_CITATION",
+      "returned_judgment": false
+    },
+    {
+      "probe": "repair_cannot_collapse_duplicate_witnesses_into_accepted_result",
+      "pass": true,
+      "error": "DUPLICATE_JUDGMENT_SPAN",
+      "returned_judgment": false
+    },
+    {
+      "probe": "wrong_subject_exact_quote_is_only_a_reported_opinion",
+      "pass": true,
+      "AI_authored_semantic_expectation": "uncertain; cited P supplies no evidence about Q",
+      "reported_provider_or_fixture_verdict": "supported",
+      "semantic_payload_unchanged": true,
+      "semantic_truth_verified": false,
+      "is_model_measurement": false
+    }
+  ],
+  "provider_requests": 0,
+  "auth_reads": 0,
+  "database_calls": 0,
+  "Main_writes": 0,
+  "actual_original_third_result_reread": false,
+  "original_actual_third_qualification": "binding failure remains unchanged; optional normalized replay is a separate local artifact",
+  "concrete_bugs_found": [],
+  "remaining_blockers_in_reviewed_scope": []
+}

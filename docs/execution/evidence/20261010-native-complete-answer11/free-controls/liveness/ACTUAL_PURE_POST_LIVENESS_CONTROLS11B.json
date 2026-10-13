@@ -1,0 +1,350 @@
+{
+  "status": "PURE_POST_LIVENESS_CONTROL11B_PASS",
+  "failed": 0,
+  "case_count": 29,
+  "original_CODE_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation10\\real_browser_week10_scientific_native_closure_PREPARED01.cjs",
+    "bytes": 72469,
+    "sha256": "a04ae8fd13cd94a9f256ea4bf434577eba112b5d40c852d97a70d8f908509c9c"
+  },
+  "candidate_CODE_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\scientific-native-closure-preparation11\\real_browser_week10_scientific_native_closure_PREPARED01.cjs",
+    "bytes": 72913,
+    "sha256": "bf37f44e9fc36c888539221d6b84f880aa12f5bb6e4c78f180699db979dff189"
+  },
+  "control_CODE_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\direct-user-continuation07\\native-worker-liveness11\\verify_exact_S11_post_liveness_controls11B.cjs",
+    "bytes": 13410,
+    "sha256": "e6165f6855879d1ecdb1661ca2b042f1ac7bdbfd6fd27192ffe8910eed9ea7ea"
+  },
+  "cases": [
+    {
+      "name": "original_post_liveness_rejects_live_exhausted_worker",
+      "accepted": false,
+      "code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "expected_accepted": false,
+      "expected_code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "synthetic_read_count": 2,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "fixed_post_liveness_accepts_same_live_worker_settled_four_calls_zero_slots",
+      "accepted": true,
+      "code": null,
+      "expected_accepted": true,
+      "expected_code": null,
+      "synthetic_read_count": 2,
+      "observation": {
+        "worker_alive": true,
+        "admission_ready": false,
+        "requires_admission_ready": false
+      },
+      "pass": true
+    },
+    {
+      "name": "fixed_post_liveness_accepts_ready_live_worker_with_spare_slots",
+      "accepted": true,
+      "code": null,
+      "expected_accepted": true,
+      "expected_code": null,
+      "synthetic_read_count": 2,
+      "observation": {
+        "worker_alive": true,
+        "admission_ready": true,
+        "requires_admission_ready": false
+      },
+      "pass": true
+    },
+    {
+      "name": "pre_Send_default_still_requires_admission_ready",
+      "accepted": false,
+      "code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "expected_accepted": false,
+      "expected_code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "synthetic_read_count": 2,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "pre_Send_budget_still_requires_pair_slots_even_if_ready_flag_true",
+      "accepted": false,
+      "code": "INSUFFICIENT_PROVIDER_SLOTS_NO_NEXT_SUBMISSION",
+      "expected_accepted": false,
+      "expected_code": "INSUFFICIENT_PROVIDER_SLOTS_NO_NEXT_SUBMISSION",
+      "synthetic_read_count": 1,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "pre_Send_ready_with_two_slots_accepted",
+      "accepted": true,
+      "code": null,
+      "expected_accepted": true,
+      "expected_code": null,
+      "synthetic_read_count": 2,
+      "observation": {
+        "worker_alive": true,
+        "admission_ready": true,
+        "requires_admission_ready": true
+      },
+      "pass": true
+    },
+    {
+      "name": "STOPPED_readiness_rejected",
+      "accepted": false,
+      "code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "expected_accepted": false,
+      "expected_code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "synthetic_read_count": 2,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "inconsistent_false_READY_readiness_rejected",
+      "accepted": false,
+      "code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "expected_accepted": false,
+      "expected_code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "synthetic_read_count": 2,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "inconsistent_true_PENDING_readiness_rejected",
+      "accepted": false,
+      "code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "expected_accepted": false,
+      "expected_code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "synthetic_read_count": 2,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "non_boolean_admission_flag_rejected",
+      "accepted": false,
+      "code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "expected_accepted": false,
+      "expected_code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "synthetic_read_count": 2,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "dead_worker_rejected",
+      "accepted": false,
+      "code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "expected_accepted": false,
+      "expected_code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "synthetic_read_count": 2,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "invalid_worker_PID_rejected",
+      "accepted": false,
+      "code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "expected_accepted": false,
+      "expected_code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "synthetic_read_count": 2,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "invalid_engine_identity_rejected",
+      "accepted": false,
+      "code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "expected_accepted": false,
+      "expected_code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "synthetic_read_count": 2,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "stale_liveness_clock_rejected",
+      "accepted": false,
+      "code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "expected_accepted": false,
+      "expected_code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "synthetic_read_count": 2,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "missing_liveness_clock_rejected",
+      "accepted": false,
+      "code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "expected_accepted": false,
+      "expected_code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "synthetic_read_count": 2,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "invalid_perf_clock_rejected",
+      "accepted": false,
+      "code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "expected_accepted": false,
+      "expected_code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "synthetic_read_count": 2,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "different_batch_rejected",
+      "accepted": false,
+      "code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "expected_accepted": false,
+      "expected_code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "synthetic_read_count": 2,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "different_source_rejected",
+      "accepted": false,
+      "code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "expected_accepted": false,
+      "expected_code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "synthetic_read_count": 2,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "different_config_hash_rejected",
+      "accepted": false,
+      "code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "expected_accepted": false,
+      "expected_code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "synthetic_read_count": 2,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "different_model_rejected",
+      "accepted": false,
+      "code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "expected_accepted": false,
+      "expected_code": "SYNTHETIC_EXPECT_POLL_FAILED",
+      "synthetic_read_count": 2,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "different_live_worker_PID_rejected",
+      "accepted": false,
+      "code": "SAME_ACTUALLY_LIVE_WORKER_AND_ENGINE_REQUIRED",
+      "expected_accepted": false,
+      "expected_code": "SAME_ACTUALLY_LIVE_WORKER_AND_ENGINE_REQUIRED",
+      "synthetic_read_count": 2,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "different_live_engine_rejected",
+      "accepted": false,
+      "code": "SAME_ACTUALLY_LIVE_WORKER_AND_ENGINE_REQUIRED",
+      "expected_accepted": false,
+      "expected_code": "SAME_ACTUALLY_LIVE_WORKER_AND_ENGINE_REQUIRED",
+      "synthetic_read_count": 2,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "retained_budget_STOP_rejected",
+      "accepted": false,
+      "code": "BUDGET_STOP_OR_UNKNOWN_NO_NEXT_SUBMISSION",
+      "expected_accepted": false,
+      "expected_code": "BUDGET_STOP_OR_UNKNOWN_NO_NEXT_SUBMISSION",
+      "synthetic_read_count": 1,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "UNKNOWN_budget_rejected",
+      "accepted": false,
+      "code": "BUDGET_STOP_OR_UNKNOWN_NO_NEXT_SUBMISSION",
+      "expected_accepted": false,
+      "expected_code": "BUDGET_STOP_OR_UNKNOWN_NO_NEXT_SUBMISSION",
+      "synthetic_read_count": 1,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "unsettled_budget_rejected",
+      "accepted": false,
+      "code": "BUDGET_NOT_FULLY_SETTLED_NO_NEXT_SUBMISSION",
+      "expected_accepted": false,
+      "expected_code": "BUDGET_NOT_FULLY_SETTLED_NO_NEXT_SUBMISSION",
+      "synthetic_read_count": 1,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "open_claim_budget_rejected",
+      "accepted": false,
+      "code": "BUDGET_NOT_FULLY_SETTLED_NO_NEXT_SUBMISSION",
+      "expected_accepted": false,
+      "expected_code": "BUDGET_NOT_FULLY_SETTLED_NO_NEXT_SUBMISSION",
+      "synthetic_read_count": 1,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "cleanup_pending_budget_rejected",
+      "accepted": false,
+      "code": "BUDGET_NOT_FULLY_SETTLED_NO_NEXT_SUBMISSION",
+      "expected_accepted": false,
+      "expected_code": "BUDGET_NOT_FULLY_SETTLED_NO_NEXT_SUBMISSION",
+      "synthetic_read_count": 1,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "integrity_failure_budget_rejected",
+      "accepted": false,
+      "code": "PUBLIC_BUDGET_INTEGRITY_AND_CLEANUP_REQUIRED",
+      "expected_accepted": false,
+      "expected_code": "PUBLIC_BUDGET_INTEGRITY_AND_CLEANUP_REQUIRED",
+      "synthetic_read_count": 1,
+      "observation": null,
+      "pass": true
+    },
+    {
+      "name": "excess_cost_budget_rejected",
+      "accepted": false,
+      "code": "TWELVE_CENT_FINITE_SCOPE_PROTECTION",
+      "expected_accepted": false,
+      "expected_code": "TWELVE_CENT_FINITE_SCOPE_PROTECTION",
+      "synthetic_read_count": 1,
+      "observation": null,
+      "pass": true
+    }
+  ],
+  "synthetic_control_only": true,
+  "pre_Send_admission_and_budget_functions_unchanged_except_declared_fresh_scope": true,
+  "complete_browser_equals_frozen_10B_candidate_with_only_declared_fresh_nonce_and_scope": true,
+  "gate_scope_normalization_only": {
+    "from": "5703-scientific-native-closure-20261010-02",
+    "to": "5703-scientific-native-closure-20261010-03"
+  },
+  "frozen_candidate_CODE_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\diagnostic-preparation\\direct-user-continuation07\\native-worker-liveness10B\\real_browser_POST_LIVENESS_CANDIDATE10B.cjs",
+    "bytes": 72913,
+    "sha256": "e233410dbfdf1d37e4fb6a76c4e9c06f102f16e27e2746db38cb800067303f35"
+  },
+  "same_worker_identity_function_byte_identical": true,
+  "real_auth_fixture_seed_ledger_reads": 0,
+  "application_or_full_browser_code_executed": false,
+  "database_actions": 0,
+  "provider_POSTs": 0,
+  "browser_or_native_service_starts": 0,
+  "Main_writes": 0,
+  "old_scopes09_10_reopened_or_modified": false,
+  "actual_native_scope11_executed": false,
+  "native_or_scientific_acceptance_claimed": false,
+  "limits": [
+    "Exact extracted functions run in a VM against synthetic memory inputs; expect.poll is a single-evaluation control, not a live polling/timing test.",
+    "This proves liveness/admission separation and retained identity/clock/budget protections; it does not pass the new native scope or rerun scope10."
+  ]
+}

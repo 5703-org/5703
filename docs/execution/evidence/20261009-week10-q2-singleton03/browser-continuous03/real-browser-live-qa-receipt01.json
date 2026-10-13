@@ -1,0 +1,542 @@
+{
+  "schema": "5703_week10_native_continuous_ui_receipt_v1",
+  "status": "ACTUAL_CONTINUOUS_Q2_FIRST_EXECUTION_PASS",
+  "started_utc": "2026-10-09T05:53:53.239Z",
+  "batch_id": "cs30-week10-q2-singleton-20261009-01",
+  "paired_leg_id": "B_startup_prewarm",
+  "worker_prewarm_retrieval_cache": true,
+  "source_index_sha256": "1ada08eec0778fdf84dd1c2cdd2d9e946bafc9cddbef6bbbd85cf66ee04263c1",
+  "source_label": "WEEK10_Q2_SINGLETON",
+  "model_mode": "live",
+  "exact_model_binding_basis": "Root pinned current project qualification and guarded batch; AnswerOut itself exposes only model_mode",
+  "provider": "openai_compatible",
+  "model": "google/gemini-3.5-flash-lite",
+  "openrouter_route_profile": "gemini35_google_vertex_v1",
+  "provider_route": "google-vertex/global",
+  "configuration_id": "74c8201e-aca0-400d-bcc5-5785e24c1c11",
+  "config_revision": 1,
+  "config_hash": "703c94a357ddd4b826d8b5fe25d503198d3d56e1e9130f6a37ed9e9c3396aa4a",
+  "qualification": {
+    "ready_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous03\\readiness-public01.json",
+      "bytes": 2800,
+      "sha256": "6f42a0742ec095f52fb5e672aed75e14c4b3f6ed8195c0c3b59e6a6c54ef4d00"
+    },
+    "role_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous03\\role-qualification-public01.json",
+      "bytes": 5145,
+      "sha256": "f590a4ae885be5fed702f895f034e1c9158f4f4908afcd9db34dc53bdc45e404"
+    },
+    "worker_startup_pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous03\\worker-startup-preparation-public01.json",
+      "bytes": 1626,
+      "sha256": "8a6d5b848c469239c1c0eac18a4c60c30576ee7358d62c66d4fde798b6050b74"
+    },
+    "worker_startup": {
+      "schema": "5703_week10_worker_startup_preparation_v1",
+      "status": "PASS",
+      "batch_id": "cs30-week10-q2-singleton-20261009-01",
+      "paired_leg_id": "B_startup_prewarm",
+      "source_version": "1ada08eec0778fdf84dd1c2cdd2d9e946bafc9cddbef6bbbd85cf66ee04263c1",
+      "worker_prewarm_retrieval_cache": true,
+      "same_Engine_as_native_run_once": true,
+      "queue": "interactive",
+      "main_entry_epoch_ms": 1791525218052.3936,
+      "native_model_warmup_ms": 5591.777900001034,
+      "release_cache_prepare_wall_ms": 6232.558099996822,
+      "native_cache_prepare_report": {
+        "status": "ready",
+        "cache_version": "validated_release_cache_v1",
+        "cache_hit": false,
+        "validation_ms": 6147.898300001543,
+        "visible_chunk_count": 10594,
+        "release_id_sha256": "541d9515e720f2b25011ecea178a58a1cbb7cdd6ec0acf78825b772edf986ace",
+        "epoch_sha256": "dbc6b4f6b51c64394b6ffcf4f1a7e05373e340655bf068d1b58cf20fb40ed5b6",
+        "startup_prepare_ms": 6232.533,
+        "queue": "interactive",
+        "version": "worker_active_release_prewarm_v1",
+        "timing_scope": "worker_startup_before_job_claim_v1"
+      },
+      "runner_main_entry_to_worker_ready_ms": 14003.232099999877,
+      "startup_timing_scope": "runner_main_entry_to_worker_preparation_completed_v1",
+      "process_launch_to_ready_ms": null,
+      "browser_Send_to_full_answer_ms": null,
+      "provider_POSTs_for_this_preparation": 0,
+      "full_startup_cost_and_early_Send_wait_must_remain_in_total_user_journey": true,
+      "process_imports_and_external_launch_overhead_require_separate_driver_clock": true,
+      "raw_error_messages_DSN_keys_history_or_source_text_exported": false
+    },
+    "default_retrieval_profile_pin": {
+      "path": "E:\\5703\\learning-assistant\\configs\\retrieval\\chat_hybrid_minilm.json",
+      "bytes": 294,
+      "sha256": "23ca72ddb737045259a04cbfc81c71969440f11cc2fa1a77bc7f8e7fc4364e17",
+      "scope": "Configuration binding only; native execution proof is separate"
+    },
+    "native_current_default_bound": true,
+    "executor_override": false,
+    "provider_route": "google-vertex/global",
+    "reused_existing": true,
+    "newly_submitted_provider_posts": 0,
+    "role_run_ids": [
+      {
+        "role": "answer",
+        "run_id": "d0f74a13-1b55-4de1-9fd8-bd94864e3624"
+      },
+      {
+        "role": "checker",
+        "run_id": "a077519f-19c7-47dd-a3b1-068059b2a0ab"
+      }
+    ]
+  },
+  "budget_initial": {
+    "pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous03\\budget-status-public01.json",
+      "bytes": 1282,
+      "sha256": "62c6aa2d077b4b09ecd1cf5a97b4fd36dbb704bd0f46c03f98ff5f3910c411ee"
+    },
+    "status": "READY",
+    "per_leg_provider_post_count": {
+      "B_startup_prewarm": 0
+    },
+    "per_leg_remaining_provider_slots": {
+      "B_startup_prewarm": 2
+    },
+    "leg_completed": [],
+    "leg_runtime_closed": [],
+    "integrity_errors": 0,
+    "cleanup_pending": 0,
+    "provider_post_count": 0,
+    "remaining_provider_slots": 2,
+    "fully_settled": true,
+    "open_claims": 0,
+    "unknown_cost_count": 0,
+    "stop_exists": false,
+    "known_API_cost_USD": "0",
+    "full_unknown_hold_USD": "0"
+  },
+  "retrieval_variant": "R2",
+  "retrieval_binding": "current_public_default_hybrid_minilm_v1",
+  "executor_override": false,
+  "native_retrieval_execution_proof": null,
+  "default_retrieval_acceptance": "PENDING_ROOT_NATIVE_TRACE_AND_QUALITY_REVIEW",
+  "synthetic_learner_and_questions": true,
+  "existing_public_owned_book": {
+    "id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+    "title": "Biology 2e",
+    "release_id": "4f11bd70-a486-4d16-b216-78cfe499530a"
+  },
+  "actual_headless_browser": true,
+  "browser_count": 1,
+  "page_count": 1,
+  "worker_count": 1,
+  "browser_gpu_disabled": true,
+  "chromium_sandbox": true,
+  "ignore_https_errors": false,
+  "process_priority": "Normal; applied by this Node runner",
+  "cpu_affinity": "Controlled by Root launcher; not asserted here",
+  "direct_http_acceptance_calls": 0,
+  "direct_database_accesses": 0,
+  "manual_provider_calls": 0,
+  "automatic_question_retries": 0,
+  "provider_physical_post_limit": 2,
+  "native_per_question_post_bound": 2,
+  "new_batch_reserve_USD": "0.06000000",
+  "approved_cumulative_ceiling_USD": "0.24000000",
+  "timeTTFT_ms": null,
+  "TTFT_boundary": "Current UI is not token-streaming; first painted prose is not provider TTFT",
+  "normal_reader_scopes": true,
+  "intended_retrieval_scope": "all_active_corpus",
+  "chapter_filter_applied": false,
+  "new_question_submissions": 1,
+  "actual_seed_receipt_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\ACTUAL_PAIRED_SYNTHETIC_SEED_RECEIPT03.json",
+    "bytes": 19716,
+    "sha256": "2f1d82623fa1aff132c2d9304648026a97b14622c55b1b842470e5bd3c80a78c"
+  },
+  "seeded_first_provider_POSTs": 0,
+  "warm_execution_basis": "Native offline model-instance prewarm used a distinct authored query; no measured question-result cache was populated",
+  "prewarm_public_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous03\\native-prewarm-public01.json",
+  "continuation_mode": "Q2_FIRST_EXECUTION_NEW_WORKER",
+  "previous_q1_settled_pin": {
+    "bytes": 10672,
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\analysis-preparation\\ACTUAL_CONTINUOUS02_SUBBATCH_FINANCIAL_RESULT01.json",
+    "sha256": "ce8ec8657fe7da3d875d8d4c3506f59112b0b77a34ce3cb08255d973365c8a1d"
+  },
+  "continuing_worker_basis": "New single Q2 worker; the earlier Q1 worker was closed. This does not establish two-question same-worker reuse.",
+  "startup_driver_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\continuous-preparation\\ROOT_CONTINUOUS_STARTUP_DRIVER_ACTUAL03.json",
+    "bytes": 454,
+    "sha256": "265b619e9a7aad70a248940b788bd54b78dd556b48bbe59164640d6c45fbc452"
+  },
+  "startup_driver": {
+    "batch_id": "cs30-week10-q2-singleton-20261009-01",
+    "launch_to_ready_includes_imports_artifact_pins_models_and_native_startup": true,
+    "owned_runtime_pid": 13352,
+    "paired_leg_id": "B_startup_prewarm",
+    "process_launch_epoch_ms": 1791525217961.1611,
+    "schema": "5703_week10_root_startup_driver_v1",
+    "source_version": "1ada08eec0778fdf84dd1c2cdd2d9e946bafc9cddbef6bbbd85cf66ee04263c1",
+    "worker_ready_observed_epoch_ms": 1791525232988.2979
+  },
+  "process_launch_to_worker_ready_ms": 15027.13671875,
+  "worker_startup_report": {
+    "schema": "5703_week10_worker_startup_preparation_v1",
+    "status": "PASS",
+    "batch_id": "cs30-week10-q2-singleton-20261009-01",
+    "paired_leg_id": "B_startup_prewarm",
+    "source_version": "1ada08eec0778fdf84dd1c2cdd2d9e946bafc9cddbef6bbbd85cf66ee04263c1",
+    "worker_prewarm_retrieval_cache": true,
+    "same_Engine_as_native_run_once": true,
+    "queue": "interactive",
+    "main_entry_epoch_ms": 1791525218052.3936,
+    "native_model_warmup_ms": 5591.777900001034,
+    "release_cache_prepare_wall_ms": 6232.558099996822,
+    "native_cache_prepare_report": {
+      "status": "ready",
+      "cache_version": "validated_release_cache_v1",
+      "cache_hit": false,
+      "validation_ms": 6147.898300001543,
+      "visible_chunk_count": 10594,
+      "release_id_sha256": "541d9515e720f2b25011ecea178a58a1cbb7cdd6ec0acf78825b772edf986ace",
+      "epoch_sha256": "dbc6b4f6b51c64394b6ffcf4f1a7e05373e340655bf068d1b58cf20fb40ed5b6",
+      "startup_prepare_ms": 6232.533,
+      "queue": "interactive",
+      "version": "worker_active_release_prewarm_v1",
+      "timing_scope": "worker_startup_before_job_claim_v1"
+    },
+    "runner_main_entry_to_worker_ready_ms": 14003.232099999877,
+    "startup_timing_scope": "runner_main_entry_to_worker_preparation_completed_v1",
+    "process_launch_to_ready_ms": null,
+    "browser_Send_to_full_answer_ms": null,
+    "provider_POSTs_for_this_preparation": 0,
+    "full_startup_cost_and_early_Send_wait_must_remain_in_total_user_journey": true,
+    "process_imports_and_external_launch_overhead_require_separate_driver_clock": true,
+    "raw_error_messages_DSN_keys_history_or_source_text_exported": false
+  },
+  "questions": [
+    {
+      "label": "Q2",
+      "question_id": "Q2",
+      "selected_scope": {
+        "schema": "5703_week10_continuous_scope_observation_v1",
+        "batch_id": "cs30-week10-q2-singleton-20261009-01",
+        "source_version": "1ada08eec0778fdf84dd1c2cdd2d9e946bafc9cddbef6bbbd85cf66ee04263c1",
+        "paired_leg_id": "B_startup_prewarm",
+        "question_id": "Q2",
+        "question_sha256": "212c31fae733b4a005bdb56790438f1ecdce2e389dc1c5263493f6c2149e6fa3",
+        "session_id": "539e07c8-5cfd-438a-848b-3fa87fc70802",
+        "document_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+        "document_version_id": "bb336e9b-ef43-466f-9e65-ca6d1d196c4b",
+        "release_id": "4f11bd70-a486-4d16-b216-78cfe499530a",
+        "book_title": "Biology 2e",
+        "section_id": "a885930aa92fe4dd744ddad8076dc9ffb04a157615f96c056992acec0677a85e",
+        "section_title": "Chapter 8 Photosynthesis / 8.2 The Light-Dependent Reactions of Photosynthesis",
+        "source_unit_id": "0d801f7888820249f8bc52bbc5ce766be7ae",
+        "reading_scope": null,
+        "navigation_reading_scope": "chapter",
+        "retrieval_scope": "all_active_corpus",
+        "chapter_filter_applied": false,
+        "normal_UI_reading_context_removed": true,
+        "source_identity_scope": "Reader origin/navigation only; submitted RAG has no chapter or document filter",
+        "selection_sha256": "b735a29acb2357b2c3ef8820c2f50142e203b75e05023f995c22908005f7e7af",
+        "selection_character_count": 2081,
+        "normal_UI_navigation": true,
+        "direct_http_calls": 0,
+        "direct_database_accesses": 0,
+        "observed_sections_api": {
+          "method": "GET",
+          "route": "/api/v1/learning/library/071d52f9-ad95-4e50-84bd-e43ed136121f/sections",
+          "http_status": 200,
+          "sha256": "20f90dfd23294579c974fda17d9ebb6199e605be1d23dfbddf38b1fa09b0c648"
+        },
+        "observed_units_api": {
+          "method": "GET",
+          "route": "/api/v1/learning/library/071d52f9-ad95-4e50-84bd-e43ed136121f/units?offset=0&limit=20&section_id=a885930aa92fe4dd744ddad8076dc9ffb04a157615f96c056992acec0677a85e",
+          "http_status": 200,
+          "sha256": "ff5b7aa863410eb33f4d5b485d66825e8399068f4d327dec27a4b91ca9bc7206"
+        },
+        "observed_utc": "2026-10-09T05:53:56.556Z",
+        "public_pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\browser-continuous03\\scope-Q2-public01.json",
+          "bytes": 2008,
+          "sha256": "897657f4b3bfecac68eddd2b02aac36aa8ae32df2525473e9e4ebf3938c4e887"
+        }
+      },
+      "retrieval_scope": "all_active_corpus",
+      "chapter_filter_applied": false,
+      "normal_UI_reading_context_removed": true,
+      "status": "PASS",
+      "question": "How do light-dependent reactions provide the energy carriers used by the Calvin cycle?",
+      "question_sha256": "212c31fae733b4a005bdb56790438f1ecdce2e389dc1c5263493f6c2149e6fa3",
+      "session_id": "539e07c8-5cfd-438a-848b-3fa87fc70802",
+      "request_id": "a896c33a-5bb9-4529-a309-6c7ed7b5402b",
+      "job_id": "f23df719-50be-4af6-8fff-eb2889d9d4a8",
+      "answer_id": "196a8409-ccc4-42aa-9380-a32ae3769819",
+      "terminal_state": "succeeded",
+      "terminal_error_code": null,
+      "t0_performance_ms": 2980.099999997765,
+      "page_time_origin_ms": 1791525233622.4,
+      "t202_ms": 241.5,
+      "tterminal_ms": 12026.5,
+      "tfirst_ms": 12146.300000000745,
+      "tfull_ms": 12146.800000000745,
+      "tfailure_ms": null,
+      "timeTTFT_ms": null,
+      "server_worker_timing": {
+        "timing_scope": "worker_execution_before_answer_insert_v1",
+        "units": "milliseconds",
+        "excludes": "HTTP admission, queue wait, answer insertion/commit, browser loading/paint",
+        "total_ms": 11006.37,
+        "generation_ms": 5472,
+        "checking_ms": 4186,
+        "token_count_ms": 0,
+        "model_total_ms": 9658,
+        "preparation_ms": 51.956,
+        "query_preparation_ms": 1.711,
+        "retrieval_ms": 142.356,
+        "teaching_plan_ms": 0.237,
+        "submission_to_worker_start_ms": 210.269,
+        "generation_wall_ms": 10600.68,
+        "publication_before_commit_ms": 256.216,
+        "worker_before_commit_ms": 11259.984
+      },
+      "budget_before": {
+        "pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous03\\budget-status-public01.json",
+          "bytes": 1282,
+          "sha256": "62c6aa2d077b4b09ecd1cf5a97b4fd36dbb704bd0f46c03f98ff5f3910c411ee"
+        },
+        "status": "READY",
+        "per_leg_provider_post_count": {
+          "B_startup_prewarm": 0
+        },
+        "per_leg_remaining_provider_slots": {
+          "B_startup_prewarm": 2
+        },
+        "leg_completed": [],
+        "leg_runtime_closed": [],
+        "integrity_errors": 0,
+        "cleanup_pending": 0,
+        "provider_post_count": 0,
+        "remaining_provider_slots": 2,
+        "fully_settled": true,
+        "open_claims": 0,
+        "unknown_cost_count": 0,
+        "stop_exists": false,
+        "known_API_cost_USD": "0",
+        "full_unknown_hold_USD": "0"
+      },
+      "budget_after": {
+        "pin": {
+          "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous03\\budget-status-public01.json",
+          "bytes": 1290,
+          "sha256": "5f6a3988a4bd985359498415f138e080d2bc8433673c5ab4c4a7729d19f0cb96"
+        },
+        "status": "READY",
+        "per_leg_provider_post_count": {
+          "B_startup_prewarm": 2
+        },
+        "per_leg_remaining_provider_slots": {
+          "B_startup_prewarm": 0
+        },
+        "leg_completed": [],
+        "leg_runtime_closed": [],
+        "integrity_errors": 0,
+        "cleanup_pending": 0,
+        "provider_post_count": 2,
+        "remaining_provider_slots": 0,
+        "fully_settled": true,
+        "open_claims": 0,
+        "unknown_cost_count": 0,
+        "stop_exists": false,
+        "known_API_cost_USD": "0.0117991",
+        "full_unknown_hold_USD": "0"
+      },
+      "physical_provider_posts": 2,
+      "citation_checked": true,
+      "refresh_persisted": true,
+      "routed_message_posts": 1,
+      "observer_error_code": null,
+      "submitted_message_body": {
+        "method": "POST",
+        "route": "/api/v1/sessions/539e07c8-5cfd-438a-848b-3fa87fc70802/messages",
+        "bytes": 189,
+        "sha256": "c6e32d83a53b3179a0b20e2f34ba4717de8a761aade2448bd2dbf379f65c1c91",
+        "content_sha256": "212c31fae733b4a005bdb56790438f1ecdce2e389dc1c5263493f6c2149e6fa3",
+        "reading_scope": null,
+        "document_id": null,
+        "source_unit_id": null,
+        "section_id": null,
+        "selection_sha256": null,
+        "retrieval_scope": "all_active_corpus",
+        "chapter_filter_applied": false,
+        "normal_UI_reading_context_removed": true,
+        "navigation_section_id": "a885930aa92fe4dd744ddad8076dc9ffb04a157615f96c056992acec0677a85e",
+        "scope": "Digest of observed message body; raw body, headers and credentials are not saved"
+      },
+      "published_reply_rendered": true,
+      "completed_cited_answer": true,
+      "quality_failure_code": null,
+      "fresh_reload_response": {
+        "method": "GET",
+        "route": "/api/v1/sessions/539e07c8-5cfd-438a-848b-3fa87fc70802/messages",
+        "http_status": 200,
+        "request_started_epoch_ms": 1791525249237.283,
+        "response_observed_epoch_ms": 1791525249296,
+        "answer_id": "196a8409-ccc4-42aa-9380-a32ae3769819",
+        "request_id": "a896c33a-5bb9-4529-a309-6c7ed7b5402b",
+        "job_id": "f23df719-50be-4af6-8fff-eb2889d9d4a8",
+        "published_response_sha256": "e286bfce3db588d564f5733782539ad2e7b3febfe56d30391269dc2ad18f0324",
+        "answer_text_sha256": "68839961f8a016c0788f9cff4ec2dc20af1b7fa4741d25972a6b6b6d68dee5e1"
+      },
+      "accepted_202_observed_epoch_ms": 1791525236844,
+      "response_type": "answer",
+      "refusal_reason": null,
+      "answer_completeness_status": "complete_at_requested_help",
+      "published_response_sha256": "e286bfce3db588d564f5733782539ad2e7b3febfe56d30391269dc2ad18f0324",
+      "answer_text_sha256": "68839961f8a016c0788f9cff4ec2dc20af1b7fa4741d25972a6b6b6d68dee5e1",
+      "answer_text": "The light-dependent reactions convert light energy into chemical energy [ev_008] by using photosystems and electron transport chains to produce the energy carriers ATP and NADPH [ev_002] [ev_010]. These energy carriers are considered \"full\" because they transport this stored energy from the light-dependent reactions into the stroma where the Calvin cycle reactions take place [ev_001] [ev_005] [ev_007]. Once the energy is released for the Calvin cycle, the \"empty\" energy carriers return to the light-dependent reactions to obtain more energy [ev_001] [ev_005].",
+      "citation_ids": [
+        "ev_001",
+        "ev_002",
+        "ev_005",
+        "ev_007",
+        "ev_008",
+        "ev_010"
+      ],
+      "follow_up_questions": [],
+      "native_retrieval_public_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous03\\native-retrieval-a896c33a-5bb9-4529-a309-6c7ed7b5402b-public01.json",
+      "paint_observation": {
+        "first_ms": 12146.300000000745,
+        "full_ms": 12146.800000000745,
+        "visible": true,
+        "prose_length": 524,
+        "visibility_basis": "IntersectionObserver >=0.01 including ancestor clipping; document visible; own style and viewport rectangle; sampled after prior paint",
+        "complete_body": true,
+        "citation_controls": 8,
+        "followup_controls": 0
+      },
+      "pre_refresh_prose_sha256": "fcb1b1c18e516c4fecf45c405c85094cbec7a8e67f16996c23e2c0f317eaf8a9",
+      "source_excerpt_sha256": "1290ddf491f21c69a15bc1f56b212dda4efea694324ca84433ff091a0552019e",
+      "source_excerpt_character_count": 299,
+      "source_excerpt": "Each pigment can absorb different wavelengths of light, which allows the plant to absorb any light that passes through the taller trees. (credit: Jason Hollinger) How Light-Dependent Reactions Work The overall purpose of the light-dependent reactions is to convert light energy into chemical energy.",
+      "source_dialog_text": "Sources\n\nSource passages linked to this claim.\n\nSource 1\nSource 2\nSource 3\nSOURCE PASSAGE\nConcepts of Biology\n\nChapter 5 Photosynthesis / 5.2 The Light-Dependent Reactions of Photosynthesis · PDF physical pages 138\n\nHighlighted text is linked to the selected claim.\n\nEach pigment can absorb different wavelengths of light, which allows the plant to absorb any light that passes through the taller trees. (credit: Jason Hollinger) How Light-Dependent Reactions Work The overall purpose of the light-dependent reactions is to convert light energy into chemical energy.\n\nThe complete source may reveal the answer to this problem.\n\nShow complete source\n\nOpenStax / Rice University · Access for free at openstax.org\n\nView original source\nSource record\nExact source positions\n\nSupport assessment: model check. Independent review is separate.\n\nModel support check",
+      "reload_started_epoch_ms": 1791525249135,
+      "refreshed_prose_sha256": "fcb1b1c18e516c4fecf45c405c85094cbec7a8e67f16996c23e2c0f317eaf8a9",
+      "worker_ready_to_Send_ms": 3614.2021484375,
+      "process_launch_to_complete_answer_ms": 30788.138867188245
+    }
+  ],
+  "selected_scopes": [
+    {
+      "schema": "5703_week10_continuous_scope_observation_v1",
+      "batch_id": "cs30-week10-q2-singleton-20261009-01",
+      "source_version": "1ada08eec0778fdf84dd1c2cdd2d9e946bafc9cddbef6bbbd85cf66ee04263c1",
+      "paired_leg_id": "B_startup_prewarm",
+      "question_id": "Q2",
+      "question_sha256": "212c31fae733b4a005bdb56790438f1ecdce2e389dc1c5263493f6c2149e6fa3",
+      "session_id": "539e07c8-5cfd-438a-848b-3fa87fc70802",
+      "document_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+      "document_version_id": "bb336e9b-ef43-466f-9e65-ca6d1d196c4b",
+      "release_id": "4f11bd70-a486-4d16-b216-78cfe499530a",
+      "book_title": "Biology 2e",
+      "section_id": "a885930aa92fe4dd744ddad8076dc9ffb04a157615f96c056992acec0677a85e",
+      "section_title": "Chapter 8 Photosynthesis / 8.2 The Light-Dependent Reactions of Photosynthesis",
+      "source_unit_id": "0d801f7888820249f8bc52bbc5ce766be7ae",
+      "reading_scope": null,
+      "navigation_reading_scope": "chapter",
+      "retrieval_scope": "all_active_corpus",
+      "chapter_filter_applied": false,
+      "normal_UI_reading_context_removed": true,
+      "source_identity_scope": "Reader origin/navigation only; submitted RAG has no chapter or document filter",
+      "selection_sha256": "b735a29acb2357b2c3ef8820c2f50142e203b75e05023f995c22908005f7e7af",
+      "selection_character_count": 2081,
+      "normal_UI_navigation": true,
+      "direct_http_calls": 0,
+      "direct_database_accesses": 0,
+      "observed_sections_api": {
+        "method": "GET",
+        "route": "/api/v1/learning/library/071d52f9-ad95-4e50-84bd-e43ed136121f/sections",
+        "http_status": 200,
+        "sha256": "20f90dfd23294579c974fda17d9ebb6199e605be1d23dfbddf38b1fa09b0c648"
+      },
+      "observed_units_api": {
+        "method": "GET",
+        "route": "/api/v1/learning/library/071d52f9-ad95-4e50-84bd-e43ed136121f/units?offset=0&limit=20&section_id=a885930aa92fe4dd744ddad8076dc9ffb04a157615f96c056992acec0677a85e",
+        "http_status": 200,
+        "sha256": "ff5b7aa863410eb33f4d5b485d66825e8399068f4d327dec27a4b91ca9bc7206"
+      },
+      "observed_utc": "2026-10-09T05:53:56.556Z",
+      "public_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\browser-continuous03\\scope-Q2-public01.json",
+        "bytes": 2008,
+        "sha256": "897657f4b3bfecac68eddd2b02aac36aa8ae32df2525473e9e4ebf3938c4e887"
+      }
+    }
+  ],
+  "scope_resolution_attempts": [
+    {
+      "question_id": "Q2",
+      "method": "GET",
+      "route": "/api/v1/learning/library/071d52f9-ad95-4e50-84bd-e43ed136121f/sections",
+      "required_field": "data[].title",
+      "authored_topic": "light-dependent reactions",
+      "normalized_topic": "light dependent reactions",
+      "response_sha256": "20f90dfd23294579c974fda17d9ebb6199e605be1d23dfbddf38b1fa09b0c648",
+      "observed_section_count": 502,
+      "matched_section_titles": [
+        "Chapter 8 Photosynthesis / 8.2 The Light-Dependent Reactions of Photosynthesis"
+      ],
+      "selected_document_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+      "selected_release_id": "4f11bd70-a486-4d16-b216-78cfe499530a",
+      "resolution_scope": "Normal published chapter titles; no whole-book fallback"
+    }
+  ],
+  "second_question": {
+    "status": "PASS",
+    "execution_mode": "Q2_FIRST_EXECUTION_NEW_WORKER"
+  },
+  "page_errors": [],
+  "denied_external_requests": [],
+  "console_type_counts": {},
+  "browser_closed": true,
+  "context_closed": true,
+  "project_complete": false,
+  "limits": [
+    "Single first Q2 execution after the Q1 worker closed; normal whole-context removal and full active-corpus RAG; chapter IDs are navigation provenance only; no two-question same-worker reuse, p95 or causal comparison",
+    "Public default profile binding does not itself prove native R2/reranker execution or retrieval quality",
+    "Complete DOM is not simultaneous visibility of every character or user reading",
+    "Paint clocks are double-RAF samples; full time also includes DTO observation and the 200 ms control-loop sampling delay",
+    "Normalized Markdown-to-DOM text comparison is approximate and may conservatively reject a valid formatted answer",
+    "Viewport intersection includes ancestor clipping but does not prove unobscured individual text glyphs",
+    "Published refusal or partial-reply rendering can have measured clocks while cited-answer quality remains FAIL",
+    "No guarantee of zero operating-system contention"
+  ],
+  "actual_browser_version": "154.0.4258.62",
+  "login_response_status": 200,
+  "final_budget_observation": {
+    "pin": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous03\\budget-status-public01.json",
+      "bytes": 1290,
+      "sha256": "5f6a3988a4bd985359498415f138e080d2bc8433673c5ab4c4a7729d19f0cb96"
+    },
+    "observed_epoch_ms": 1791525249678,
+    "scope": "Read-only observed status; this snapshot does not authorize a submission",
+    "status": "READY",
+    "provider_post_count": 2,
+    "maximum_provider_post_count": 2,
+    "remaining_provider_slots": 0,
+    "open_claims": 0,
+    "unknown_cost_count": 0,
+    "integrity_errors": 0,
+    "cleanup_pending": 0,
+    "fully_settled": true,
+    "stop_exists": false,
+    "known_API_cost_USD": "0.0117991",
+    "full_unknown_hold_USD": "0",
+    "max_possible_new_batch_reserve_USD": "0.06000000"
+  },
+  "completed_utc": "2026-10-09T05:54:09.678Z",
+  "elapsed_ms": 16439,
+  "script_sha256": "cf20201352ea82e8859f1347094d99c2287f0fdf891b343d3def6380c40e71f7"
+}

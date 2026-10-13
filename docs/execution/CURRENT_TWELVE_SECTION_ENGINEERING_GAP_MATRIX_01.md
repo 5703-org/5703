@@ -1,3 +1,23 @@
+## Current Week10 Haiku evidence overlay - 9 October 2026
+
+The reviewed opt-in OpenRouter profile 'haiku55_google_vertex_low_v1' selects 'anthropic/claude-haiku-5.5' on 'google-vertex/global'; existing production default profiles and activation eligibility are unchanged. Saved isolated verification passed 101 cases with 20 skipped cases and Ruff, with zero provider requests or real-database connections. These targeted software checks do not establish live-model qualification.
+
+Actual04 stopped before any model POST because an unscoped New chat locator also matched the newly created history item; its failed receipt and STOP remain preserved. Browser11 scopes normal creation to the desktop creation button and waits for conversation loading. Actual05 then passed the free preflight for two distinct ordinary chat sessions on the same live worker/Engine before the first paid POST. Both prepared pages had no reading context; Q3's actual normal submission used all active-corpus RAG without a chapter filter.
+
+Q3 received teacher HTTP 200, followed by checker HTTP 400. Complete checker parsing, publication, cited-answer rendering and refresh acceptance did not pass. Q4's original conditional authorization remains recorded; the unmet Q3 publication gate prevented its submission. The public receipts do not establish the remote HTTP 400 cause. No Haiku compatibility PASS, six-role qualification, complete-answer latency, TTFT or p95 measurement is added. The 300,022.2001 ms browser wait is right-censored, with complete-answer time and answer ID null. The isolated experiment's normal_project_activation_qualified flag remains false.
+
+The new batch made two physical POSTs: known teacher cost USD0.00163590 and one UNKNOWN checker cost retaining the full USD0.03 hold. Budget status is STOPPED, open claims are zero and fully_settled is false; two unused slots do not authorize automatic retry or replacement. Both owned processes and stream collectors, browser/context, worker threads and database resources closed; active pointers are unchanged. This is failed-leg resource closure, not successful native acceptance. Old STOPs, UNKNOWN protections, databases, experiments and deliveries remain preserved.
+
+Evidence added: opt-in route adoption and targeted free checks; two ordinary sessions ready on one worker before paid execution; failure-path closure. Acceptance still open: normal Haiku teacher/full-checker publication, two complete answers on the continuing worker, answer/source/refresh quality, cache performance causality and formal warm-p95. Free session readiness and teacher HTTP 200 do not satisfy these acceptance items.
+
+Earlier Q1/Q2 results remain two independently successful cited-answer journeys on different workers, not a completed two-question same-worker test. The 53-row matrix stays 5 verified / 38 pending / 8 incomplete / 2 external; original canonical task/check statuses are unchanged and project_complete=false. Human ratings, independent source/semantic quality, formal warm-p95 and remaining course acceptance stay open.
+
+[Actual Haiku result and limits](20261009-week10-haiku-Q3-Q4-partial-results.md); [public evidence index](evidence/20261009-week10-haiku-partial05/index.json).
+
+---
+
+Earlier document bytes follow unchanged as historical evidence.
+
 # Current twelve-section engineering gap matrix — 6 October 2026
 
 The current c9 local package and software checkpoint are delivered. This is a read-only acceptance audit, not a new implementation or a claim of whole-course completion. All eight learning modules exist. Their current Mock regression coverage, bounded installed-browser checks and scientific learning acceptance are different evidence tiers.
@@ -416,3 +436,26 @@ There are 37 partially linked rows, 16 explicitly unmapped expanded rows, 92 tas
 Actual retained case04 safe strict-V5 replay: sequence4 joint_check PASS; sequence8 joint_recheck has exactly three schema errors: claims[0] union_tag_invalid, requirements[0].relevance missing, and requirements[0].redacted_field extra_forbidden. The unknown field name remains redacted. No array-too_long error is present. The schema leaf is now located; the output is unrepaired and an implementation defect is unproven. Replay added zero provider calls, database writes or Gold reads and exported no raw text. Its exact 2160-byte receipt SHA-256 is c2a23425c2e40af91e4019d28546802634ba5745201a15145502bd59c420643c.
 
 Preserve prior CHECKER_SCHEMA_INVALID failure, the original right-censored timeout, old STOP/UNKNOWN records and all protected bounds. Safe diagnostic integration and replay do not establish repaired case04 quality. Human ratings/learning effects, another host/Mac/physical input, independent semantic/source review and formal warm-p95/quality-noninferiority remain separate. The full detailed scopes and exact receipt/source pins are in the additive current_acceptance_overlay_20261008_Main01 object of the adjacent matrix JSON.
+
+
+## Source-bound Week10 diagnostic checkpoint - 2026-10-09
+
+The [actual native RAG/full-answer pair](20261009-week10-native-pair-result.md) passed both normal full-checker publication and real-browser citation/refresh journeys; both native runtimes closed. Complete initial teacher input, history/profile/memory, evidence and candidate/reranked order matched. Send-to-complete DOM was18.7143s/12.1465s; startup-to-completion was30.2040s/29.4479s. Four actual POSTs costUSD0.01936904, newUNKNOWN0/open0, with success batch closure. Earlier prepared-only budget status is superseded for this completed finite pair.
+
+This is n=1, fixed A then B, with uncontrolled OS/model variability. It does not close whole-row scientific acceptance, formal warm-p95, independent semantic-quality, multi-module or human/device conditions. Existing row assessments and counts remain5 verified/38 pending/8 incomplete/2 external; project_complete=false. Retain historical rows, failures, UNKNOWN protections and frozen Week09 deliveries. Tested source index:26afaa44371533d9a77f0e8aa8a51570c6027011e1d0e9d01c60c3562edd3adb; these document additions postdate that execution snapshot.
+
+
+## Actual Week10 continuous-worker partial result - 2026-10-09
+
+2026-10-09 evidence overlay: Q1-only normal-UI acceptance, native R2/CUDA reranking, cached release validation and refresh persistence are demonstrated for one synthetic question. Do not mark the continuous two-question same-worker/Engine goal, cross-scope RAG quality, p95/SLA, independent scientific evaluation or project completion as verified. Q2 was not submitted; its Loading contents failure supports a harness wait race. A one-line awaited DOM-count candidate is locally syntax-checked but not live validated. Overall leg remains failed and STOP preserved; all new costs are settled, with zero new UNKNOWN/open claims. This overlay adds evidence and open limitations without altering existing matrix counts or replacing prior acceptance results.
+
+[Actual partial result and evidence](20261009-week10-continuous-worker-partial-result.md). [Closed paired-run Library archive](https://chatgpt.com/api/library/files/libfile_3f052252ff808191abf55ac4b3efd56b/download); Library ID `libfile_3f052252ff808191abf55ac4b3efd56b`, version0, 34 public evidence files, ZIP154748B/SHA256 `ff2bb66e8fee9341a580ba3d461723ffd79a33d5f669dbcd495aaad25fe27f15`. Current matrix remains5 verified/38 pending/8 incomplete/2 external; project_complete=false.
+
+
+## Actual Week10 Q1/Q2 independent results - 2026-10-09
+
+2026-10-09 independent Q1/Q2 result: both original requests have complete cited answers, source dialogs and refresh persistence. Q1 passed inside the earlier overall failed continuous02 leg; that report, failure evidence and STOP remain unchanged. Q2's authorized first execution passed on a new worker and reached normal native CLOSED. Worker PIDs were 66652 and 13352, so the original two-question same-worker/Engine objective remains unverified. Send-to-complete DOM was 9047.7 ms / 12146.8 ms; each worker independently observed a business release-cache hit after its startup preparation. Both normal UI requests removed reading context and used all active-corpus RAG, without chapter filters. Q2's awaited chapter-control path passed; production code was unchanged. Source-body review remains finite/partial, especially Q2's unopened supporting bodies; no human rating, scientific acceptance, cross-scope quality, causal speedup or p95 claim is added. Campaign totals are 8 settled POSTs/$0.03987014, zero new UNKNOWN/open claims, all authorized slots consumed and STOPs preserved. See `20261009-week10-Q1-Q2-independent-results.md` and the new Q2 public evidence index. Project/course completion remains false; do not alter prior matrix counts solely from these observations.
+
+[Actual results and public evidence](20261009-week10-Q1-Q2-independent-results.md). Current matrix remains5 verified/38 pending/8 incomplete/2 external; project_complete=false.
+
+[Q1/Q2 sanitized original evidence archive](https://chatgpt.com/api/library/files/libfile_8402191335588191be4702caab60e52f/download): Library ID `libfile_8402191335588191be4702caab60e52f`, version0, ZIP520174B/SHA256 `5379c7cc4c47ec0d81b1b3d3e5e2f569db0ce6e802526bc37cd7a0afa4c68c96`. The archive records two independent worker observations and preserves the earlier failed leg; it does not establish same-worker reuse or independent scientific acceptance.

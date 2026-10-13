@@ -1,0 +1,372 @@
+{
+  "status": "STOPPED_AFTER_ONE_REAL_REQUEST",
+  "original_execution_final": {
+    "status": "STOPPED_NO_RETRY",
+    "results": [
+      {
+        "id": "S02-negative-B",
+        "operational_id": "118-S02-negative-B",
+        "wire_sha256": "47d7b4eda1a5943dc37fc2616c505ac280e995a54328b84ee169789cbeac36cd",
+        "status": "TECHNICAL_STOP",
+        "expected_accept": false,
+        "API_elapsed_ms": 8495.862199997646,
+        "HTTP_status": 200,
+        "usage": {
+          "prompt_tokens": 20026,
+          "completion_tokens": 2106,
+          "total_tokens": 22132,
+          "prompt_tokens_details": {
+            "cached_tokens": 7296
+          },
+          "prompt_cache_hit_tokens": 7296,
+          "prompt_cache_miss_tokens": 12730
+        },
+        "known_upper_CNY": "0.02845",
+        "safe_error": "KeyError"
+      },
+      {
+        "id": "S02-negative-A",
+        "operational_id": "118-S02-negative-A",
+        "status": "NOT_RUN",
+        "reason": "KeyError"
+      },
+      {
+        "id": "S03-negative-A",
+        "operational_id": "118-S03-negative-A",
+        "status": "NOT_RUN",
+        "reason": "KeyError"
+      },
+      {
+        "id": "S03-negative-B",
+        "operational_id": "118-S03-negative-B",
+        "status": "NOT_RUN",
+        "reason": "KeyError"
+      },
+      {
+        "id": "S01-positive-B",
+        "operational_id": "118-S01-positive-B",
+        "status": "NOT_RUN",
+        "reason": "KeyError"
+      },
+      {
+        "id": "S01-positive-A",
+        "operational_id": "118-S01-positive-A",
+        "status": "NOT_RUN",
+        "reason": "KeyError"
+      },
+      {
+        "id": "S02-positive-A",
+        "operational_id": "118-S02-positive-A",
+        "status": "NOT_RUN",
+        "reason": "KeyError"
+      },
+      {
+        "id": "S02-positive-B",
+        "operational_id": "118-S02-positive-B",
+        "status": "NOT_RUN",
+        "reason": "KeyError"
+      }
+    ],
+    "known_upper_CNY": "0.02845",
+    "UNKNOWN_protection_CNY": "0.00000",
+    "unused_new_reservation_CNY": "0.714764",
+    "dispatch_intents": 1,
+    "physical_POST_attempts": 1,
+    "simulated_POST_attempts": 0,
+    "cap_CNY": "1.00",
+    "maximum_requests": 8,
+    "generation_requests": 0,
+    "repair_requests": 0,
+    "retries": 0,
+    "old_UNKNOWN_holds_released": 0,
+    "provider_account_limits_changed": false,
+    "fake": false,
+    "technical_stop": "KeyError",
+    "native_DOM_latency_ms": null
+  },
+  "original_execution_cause": "KeyError: prepared118 lacked frozen public config expected by evaluate114",
+  "recovered_local_checker": {
+    "technical_valid": false,
+    "semantic_accept": null,
+    "issue_codes": [
+      "MISSING_FACETS_WITH_NO_REQUIREMENT_GAP"
+    ],
+    "qualification_technical_valid": true,
+    "qualification_context_accepted": false,
+    "qualification_statuses": [
+      "clear",
+      "clear",
+      "clear",
+      "conflict"
+    ],
+    "source_statuses": [
+      "supported",
+      "partial",
+      "partial",
+      "unsupported"
+    ],
+    "source_accepted": false,
+    "requirements": [
+      {
+        "requirement_id": "requirement_01",
+        "relevance": "related",
+        "sufficiency": "sufficient",
+        "evidence": [
+          {
+            "evidence_id": "ev_004",
+            "fragment_id": "F018",
+            "quote": "If the cell's osmolarity matches that of the extracellular fluid, there will be no net movement of water into or out of the cell, although water will still move in and out."
+          },
+          {
+            "evidence_id": "ev_004",
+            "fragment_id": "F021",
+            "quote": "Left: A RBC placed in a hypotonic solution, where the concentration of solutes in the surrounding fluid is lower than those in the cell, will cause water to rush into the RBC and lead to lysis of the cell."
+          },
+          {
+            "evidence_id": "ev_004",
+            "fragment_id": "F023",
+            "quote": "Right: a RBC placed in a hypertonic solution, where the concentration of solutes in the surrounding fluid is greater than that in the cell will cause water to rush out of the cell and into the surrounding fluid."
+          }
+        ],
+        "conditions_preserved": true,
+        "response_coverage": "covered",
+        "missing_information": "",
+        "reason": "The source fragments provide sufficient information to compare isotonic, hypertonic, and hypotonic solutions for a red blood cell, including net water movement and cell-volume changes."
+      },
+      {
+        "requirement_id": "requirement_02",
+        "relevance": "related",
+        "sufficiency": "sufficient",
+        "evidence": [
+          {
+            "evidence_id": "ev_004",
+            "fragment_id": "F018",
+            "quote": "If the cell's osmolarity matches that of the extracellular fluid, there will be no net movement of water into or out of the cell, although water will still move in and out."
+          }
+        ],
+        "conditions_preserved": true,
+        "response_coverage": "covered",
+        "missing_information": "",
+        "reason": "F018 directly answers that no net water movement does not mean individual water molecules stop crossing the membrane; water will still move in and out."
+      }
+    ],
+    "aggregate_coverage": "supported_partial",
+    "missing_facets": [
+      "Direction of net water movement in hypertonic and hypotonic solutions is not established by the cited fragments",
+      "The claim that the red blood cell retains its normal volume in isotonic solution is not supported by the cited fragments"
+    ],
+    "complete_answer": false,
+    "original_raw_and_decisions_preserved": true,
+    "recovery_real_provider_requests": 0
+  },
+  "per_pair": [
+    {
+      "ids": [
+        "S02-negative-B",
+        "S02-negative-A"
+      ],
+      "attempted_units": 1,
+      "complete_dispatched_pair": false,
+      "valid_complete_pair": false,
+      "paired_correctness": null,
+      "units": [
+        {
+          "id": "S02-negative-B",
+          "attempted": true,
+          "original_execution_status": "TECHNICAL_STOP",
+          "original_safe_error": "KeyError",
+          "technical_valid": false,
+          "semantic_accept": null,
+          "correctness": null,
+          "false_accept": null,
+          "false_reject": null,
+          "known_upper_CNY": "0.02845",
+          "API_elapsed_ms": 8495.862199997646,
+          "recovered_metadata_error": "MISSING_FACETS_WITH_NO_REQUIREMENT_GAP",
+          "unrun_reason": null
+        },
+        {
+          "id": "S02-negative-A",
+          "attempted": false,
+          "original_execution_status": "NOT_RUN",
+          "original_safe_error": null,
+          "technical_valid": null,
+          "semantic_accept": null,
+          "correctness": null,
+          "false_accept": null,
+          "false_reject": null,
+          "known_upper_CNY": null,
+          "API_elapsed_ms": null,
+          "recovered_metadata_error": null,
+          "unrun_reason": "KeyError"
+        }
+      ]
+    },
+    {
+      "ids": [
+        "S03-negative-A",
+        "S03-negative-B"
+      ],
+      "attempted_units": 0,
+      "complete_dispatched_pair": false,
+      "valid_complete_pair": null,
+      "paired_correctness": null,
+      "units": [
+        {
+          "id": "S03-negative-A",
+          "attempted": false,
+          "original_execution_status": "NOT_RUN",
+          "original_safe_error": null,
+          "technical_valid": null,
+          "semantic_accept": null,
+          "correctness": null,
+          "false_accept": null,
+          "false_reject": null,
+          "known_upper_CNY": null,
+          "API_elapsed_ms": null,
+          "recovered_metadata_error": null,
+          "unrun_reason": "KeyError"
+        },
+        {
+          "id": "S03-negative-B",
+          "attempted": false,
+          "original_execution_status": "NOT_RUN",
+          "original_safe_error": null,
+          "technical_valid": null,
+          "semantic_accept": null,
+          "correctness": null,
+          "false_accept": null,
+          "false_reject": null,
+          "known_upper_CNY": null,
+          "API_elapsed_ms": null,
+          "recovered_metadata_error": null,
+          "unrun_reason": "KeyError"
+        }
+      ]
+    },
+    {
+      "ids": [
+        "S01-positive-B",
+        "S01-positive-A"
+      ],
+      "attempted_units": 0,
+      "complete_dispatched_pair": false,
+      "valid_complete_pair": null,
+      "paired_correctness": null,
+      "units": [
+        {
+          "id": "S01-positive-B",
+          "attempted": false,
+          "original_execution_status": "NOT_RUN",
+          "original_safe_error": null,
+          "technical_valid": null,
+          "semantic_accept": null,
+          "correctness": null,
+          "false_accept": null,
+          "false_reject": null,
+          "known_upper_CNY": null,
+          "API_elapsed_ms": null,
+          "recovered_metadata_error": null,
+          "unrun_reason": "KeyError"
+        },
+        {
+          "id": "S01-positive-A",
+          "attempted": false,
+          "original_execution_status": "NOT_RUN",
+          "original_safe_error": null,
+          "technical_valid": null,
+          "semantic_accept": null,
+          "correctness": null,
+          "false_accept": null,
+          "false_reject": null,
+          "known_upper_CNY": null,
+          "API_elapsed_ms": null,
+          "recovered_metadata_error": null,
+          "unrun_reason": "KeyError"
+        }
+      ]
+    },
+    {
+      "ids": [
+        "S02-positive-A",
+        "S02-positive-B"
+      ],
+      "attempted_units": 0,
+      "complete_dispatched_pair": false,
+      "valid_complete_pair": null,
+      "paired_correctness": null,
+      "units": [
+        {
+          "id": "S02-positive-A",
+          "attempted": false,
+          "original_execution_status": "NOT_RUN",
+          "original_safe_error": null,
+          "technical_valid": null,
+          "semantic_accept": null,
+          "correctness": null,
+          "false_accept": null,
+          "false_reject": null,
+          "known_upper_CNY": null,
+          "API_elapsed_ms": null,
+          "recovered_metadata_error": null,
+          "unrun_reason": "KeyError"
+        },
+        {
+          "id": "S02-positive-B",
+          "attempted": false,
+          "original_execution_status": "NOT_RUN",
+          "original_safe_error": null,
+          "technical_valid": null,
+          "semantic_accept": null,
+          "correctness": null,
+          "false_accept": null,
+          "false_reject": null,
+          "known_upper_CNY": null,
+          "API_elapsed_ms": null,
+          "recovered_metadata_error": null,
+          "unrun_reason": "KeyError"
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "valid_complete_pairs": 0,
+    "valid_full_checker_samples": 0,
+    "invalid_attempted_full_checker_samples": 1,
+    "variants": {
+      "A": {
+        "actual_requests": 0,
+        "valid_full_checker_samples": 0,
+        "NOT_RUN": 4,
+        "false_accept": null,
+        "false_accept_denominator": 0,
+        "false_reject": null,
+        "false_reject_denominator": 0
+      },
+      "B": {
+        "actual_requests": 1,
+        "valid_full_checker_samples": 0,
+        "NOT_RUN": 3,
+        "false_accept": null,
+        "false_accept_denominator": 0,
+        "false_reject": null,
+        "false_reject_denominator": 0
+      }
+    },
+    "global_project_metric": false,
+    "human_rating": null,
+    "paired_latency_comparison": null,
+    "native_DOM_latency_ms": null,
+    "p95_latency_ms": null
+  },
+  "known_upper_CNY": "0.02845",
+  "new_UNKNOWN_CNY": "0",
+  "unused_new_reservation_CNY": "0.714764",
+  "new_independent_cap_CNY": "1.00",
+  "old_CNY080_draft_superseded_for_new_batch_only": true,
+  "old_holds_released": 0,
+  "paid_retry_or_automatic_continuation": false,
+  "terminal_review": "RELEASE",
+  "local_config_fix_path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-paired118-real\\controller-config-preflight118.patch",
+  "local_config_controls": "PASS"
+}

@@ -1,0 +1,140 @@
+{
+  "schema": "5703_week10_native_pair_role_qualification_v1",
+  "status": "PASS",
+  "batch_id": "cs30-week10-q2-singleton-20261009-01",
+  "source_version": "1ada08eec0778fdf84dd1c2cdd2d9e946bafc9cddbef6bbbd85cf66ee04263c1",
+  "source_label": "WEEK10_Q2_SINGLETON",
+  "configuration_id": "74c8201e-aca0-400d-bcc5-5785e24c1c11",
+  "config_revision": 1,
+  "config_hash": "703c94a357ddd4b826d8b5fe25d503198d3d56e1e9130f6a37ed9e9c3396aa4a",
+  "provider": "openai_compatible",
+  "model": "google/gemini-3.5-flash-lite",
+  "openrouter_route_profile": "gemini35_google_vertex_v1",
+  "provider_route": "google-vertex/global",
+  "reused_existing": true,
+  "newly_submitted_provider_posts": 0,
+  "roles": [
+    {
+      "role": "answer",
+      "run_id": "d0f74a13-1b55-4de1-9fd8-bd94864e3624",
+      "require_project_pass": true,
+      "current_fingerprints": {
+        "schema_hash": "149a9433de28318e6c1d1174c06937762e7db073977ab125d48ae80232f4ae2b",
+        "prompt_hash": "f85fc94c2afd66c03c9ec9d66323da729b604c37642777a5f408125c7c1b257a",
+        "configuration_hash": "495888ada11aef318deea1dc4f7841b0284255cf131893a482248ae05a778c61",
+        "capability_hash": "e6648a497ab770f07c85308a947728d380795522e59ca79a5b9b31074a607fac",
+        "reserved_output_tokens": 2048,
+        "effective_parameters": {
+          "model": "google/gemini-3.5-flash-lite",
+          "max_tokens": 2048,
+          "provider": {
+            "order": [
+              "google-vertex/global"
+            ],
+            "only": [
+              "google-vertex/global"
+            ],
+            "allow_fallbacks": false,
+            "require_parameters": true,
+            "max_price": {
+              "prompt": 0.3,
+              "completion": 2.5
+            }
+          },
+          "reasoning": {
+            "effort": "low"
+          }
+        }
+      },
+      "stored_fingerprints": {
+        "schema_hash": "149a9433de28318e6c1d1174c06937762e7db073977ab125d48ae80232f4ae2b",
+        "prompt_hash": "f85fc94c2afd66c03c9ec9d66323da729b604c37642777a5f408125c7c1b257a",
+        "configuration_hash": "495888ada11aef318deea1dc4f7841b0284255cf131893a482248ae05a778c61",
+        "capability_hash": "e6648a497ab770f07c85308a947728d380795522e59ca79a5b9b31074a607fac",
+        "reserved_output_tokens": 2048,
+        "effective_parameters": {
+          "model": "google/gemini-3.5-flash-lite",
+          "max_tokens": 2048,
+          "provider": {
+            "order": [
+              "google-vertex/global"
+            ],
+            "only": [
+              "google-vertex/global"
+            ],
+            "allow_fallbacks": false,
+            "require_parameters": true,
+            "max_price": {
+              "prompt": 0.3,
+              "completion": 2.5
+            }
+          },
+          "reasoning": {
+            "effort": "low"
+          }
+        }
+      }
+    },
+    {
+      "role": "checker",
+      "run_id": "a077519f-19c7-47dd-a3b1-068059b2a0ab",
+      "require_project_pass": true,
+      "current_fingerprints": {
+        "schema_hash": "7988037e08d52662a1b232f049776a42b6d10ad5d896f1a26c8c912b3efd79d4",
+        "prompt_hash": "3a9c4ef6feac70fbdc8cdd8c6d9521815d69d4639351f5be60c417d48a31e923",
+        "configuration_hash": "495888ada11aef318deea1dc4f7841b0284255cf131893a482248ae05a778c61",
+        "capability_hash": "e6648a497ab770f07c85308a947728d380795522e59ca79a5b9b31074a607fac",
+        "reserved_output_tokens": 4096,
+        "effective_parameters": {
+          "model": "google/gemini-3.5-flash-lite",
+          "max_tokens": 4096,
+          "provider": {
+            "order": [
+              "google-vertex/global"
+            ],
+            "only": [
+              "google-vertex/global"
+            ],
+            "allow_fallbacks": false,
+            "require_parameters": true,
+            "max_price": {
+              "prompt": 0.3,
+              "completion": 2.5
+            }
+          },
+          "reasoning": {
+            "effort": "low"
+          }
+        }
+      },
+      "stored_fingerprints": {
+        "schema_hash": "7988037e08d52662a1b232f049776a42b6d10ad5d896f1a26c8c912b3efd79d4",
+        "prompt_hash": "3a9c4ef6feac70fbdc8cdd8c6d9521815d69d4639351f5be60c417d48a31e923",
+        "configuration_hash": "495888ada11aef318deea1dc4f7841b0284255cf131893a482248ae05a778c61",
+        "capability_hash": "e6648a497ab770f07c85308a947728d380795522e59ca79a5b9b31074a607fac",
+        "reserved_output_tokens": 4096,
+        "effective_parameters": {
+          "model": "google/gemini-3.5-flash-lite",
+          "max_tokens": 4096,
+          "provider": {
+            "order": [
+              "google-vertex/global"
+            ],
+            "only": [
+              "google-vertex/global"
+            ],
+            "allow_fallbacks": false,
+            "require_parameters": true,
+            "max_price": {
+              "prompt": 0.3,
+              "completion": 2.5
+            }
+          },
+          "reasoning": {
+            "effort": "low"
+          }
+        }
+      }
+    }
+  ]
+}

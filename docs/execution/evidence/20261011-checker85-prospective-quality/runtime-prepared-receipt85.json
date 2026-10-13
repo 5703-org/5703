@@ -1,0 +1,170 @@
+{
+  "schema": "phase85_prepared_runtime_release_receipt_v1",
+  "status": "READY_FROZEN_FOR_ROOT_RUNTIME",
+  "created_UTC": "2026-10-11T17:55:25.365023+00:00",
+  "authorization": "parent_phase85_unseen8_public_textbooks_20posts_1USD_20261011",
+  "budget": {
+    "independent_of_old_closed12": true,
+    "maximum_physical_posts": 20,
+    "cost_cap_USD": "1.00",
+    "initial_cases": 8,
+    "nominal_initial_posts": 16,
+    "extra_four_posts_enabled": false,
+    "per_case_posts_maximum": 2,
+    "roles": [
+      "teacher/generation",
+      "checker/joint_check"
+    ],
+    "automatic_retries": 0,
+    "whole_case_active_deadline_seconds": 180,
+    "unknown_full_hold_is_terminal": true,
+    "physical_reservation_before_provider_open": true
+  },
+  "permanent_stop": {
+    "API": "budget85.stop_cohort(root, finite_code, review_sha256=None)",
+    "journal": "cohort-ledger/cohort-stop.json",
+    "immutable_xb_fsync": true,
+    "no_overwrite_reopen": true,
+    "unsafe_failures": [
+      "UNSAFE_NORMAL_TRANSPORT",
+      "UNSAFE_NORMAL_TARGET",
+      "UNSAFE_LOCAL_CONTROLLER"
+    ],
+    "review_bound_quality_codes": [
+      "ROOT_QA_CRITICAL_UNSUPPORTED_FACT",
+      "ROOT_QA_COHORT_STOP"
+    ],
+    "valid_typed_checker_negative": "Counted terminal result; Root independent review GO/STOP before next case. No automatic retry.",
+    "critical_false_positive": "Root writes stop with immutable review SHA before any next case."
+  },
+  "verification": {
+    "prior_14_controls": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\free-controls\\run-20261011T173722026816Z-e2afaf\\receipt.json",
+      "bytes": 2246,
+      "sha256": "62b271553d8304ff88c7b61ce00f4e42a016463974f807b14ac1714f43902457",
+      "qualification": "14/14 PASS before stop API; not rerun."
+    },
+    "targeted_2_stop_controls": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\free-controls\\stop-20261011T175007864977Z-ac42d8\\receipt.json",
+      "bytes": 2100,
+      "sha256": "9e6b34758b2fe2006133c52f43f88d6fd3958858d5e155296e71e79ac1ddcfed",
+      "result": "2/2 PASS",
+      "guards": {
+        "DB": 0,
+        "network": 0,
+        "auth": 0,
+        "outside_run_write": 0,
+        "real_ledger_read": 0
+      },
+      "Main_project_imports": []
+    },
+    "original_cli_or_whole_suite_run": false,
+    "AST_compile_files": 5,
+    "legacy_transport_helpers_AST_equal": 7,
+    "freeze_function_AST_unchanged": true,
+    "stale_generator_archived_freeze_only_entrypoint": true,
+    "Main_public_pins_verified": 39,
+    "frozen_runtime_files_verified": 5,
+    "frozen_scope_bindings_verified": 8,
+    "freeze_changes": "Only TRANSPORT_PINS/SOURCE_PINS assignments change; remaining AST equals exact before-freeze files."
+  },
+  "pre_freeze_controller_pins_at_stop_controls": {
+    "budget85.py": {
+      "bytes": 15754,
+      "sha256": "44d2c0373c40bfcbf395571108cf6bf8eddf0a911bc8579df2234426c1e8f525"
+    },
+    "normal_transport85.py": {
+      "bytes": 28904,
+      "sha256": "48b272a9282470e453245a75ba6f0a7e2642a3eeb58e0503ccb78d92364091a0"
+    },
+    "server85.py": {
+      "bytes": 17905,
+      "sha256": "8db33cbd90922febd6c08f885bfce367d4b3fafdecfe516cf001a2104ca56851"
+    },
+    "prepare_runtime85.py": {
+      "bytes": 7778,
+      "sha256": "be433cc0ea34cb9243a895e461d87037e64380be52c86e2511f820fb480db99c"
+    },
+    "test_stop85.py": {
+      "bytes": 3374,
+      "sha256": "fca85353724428110af2ea0b2fd6c9345a64a399a0c5107ba44de9e55b5db3bc"
+    }
+  },
+  "frozen_runtime_controller_pins": {
+    "normal_transport85.py": {
+      "bytes": 29163,
+      "sha256": "e642397dd59da8a3e62eb65a1e56800166de5607b708ca6fd38d91fa1abdfb1d"
+    },
+    "targeted_answer85.py": {
+      "bytes": 26871,
+      "sha256": "6abde033b0ec8da3f3567388df6c213fc5d8efacdadb61e7a334e0d83611f91f"
+    },
+    "server85.py": {
+      "bytes": 17905,
+      "sha256": "8db33cbd90922febd6c08f885bfce367d4b3fafdecfe516cf001a2104ca56851"
+    },
+    "budget85.py": {
+      "bytes": 15754,
+      "sha256": "44d2c0373c40bfcbf395571108cf6bf8eddf0a911bc8579df2234426c1e8f525"
+    },
+    "outcome_observer82.py": {
+      "bytes": 1916,
+      "sha256": "bc5f8341e98298b064d4c0db93266efda697662429fda050dcec9986ee1c05a2"
+    }
+  },
+  "runtime_freeze": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\runtime-freeze85.json",
+    "bytes": 1940,
+    "sha256": "c51774989e767509c253c58f1340084f275c10197797a1eecb793558e1e82588"
+  },
+  "frozen_protocol": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\protocol85-frozen.json",
+    "bytes": 14446,
+    "sha256": "98bb01db0bd3eaa651707de7c18d7dffe58603b180d4621744c2f9d103899273"
+  },
+  "freeze_preparer": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\prepare_runtime85.py",
+    "bytes": 7778,
+    "sha256": "be433cc0ea34cb9243a895e461d87037e64380be52c86e2511f820fb480db99c"
+  },
+  "source_pin_file": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\source-pins85.json",
+    "bytes": 6708,
+    "sha256": "54a9b260ec51339151c905c297b427a7b7a11682074f7da820a893b216717b51"
+  },
+  "question_only_file": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-quality\\questions85-frozen.json",
+    "bytes": 4261,
+    "sha256": "9d35553d2b973e082152e0d119c1bdbff3102ef55a4936d47fe93d337d6f19da"
+  },
+  "independent_review": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\independent-review85.json",
+    "bytes": 8903,
+    "sha256": "f1a1ebd130b1a448c594de267205c8f739748f0fccbd17d903675396f5f4af2e"
+  },
+  "historical_review_preserved": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker85-runtime\\independent-review85.json.before-stop85",
+    "bytes": 3909,
+    "sha256": "010c7eee32f9a9c56907eb99977a5649e8755be31027ad457b2e7db0ad0bb423"
+  },
+  "observed_actual_claim_marker_present": true,
+  "actions_by_this_agent": {
+    "Main_writes": 0,
+    "credentials_reads": 0,
+    "DB_calls": 0,
+    "network_requests": 0,
+    "model_loads": 0,
+    "provider_posts": 0,
+    "actual_claims": 0,
+    "runtime_launches": 0,
+    "runtime_freezes": 0
+  },
+  "limitations": [
+    "Preparation evidence does not establish actual cohort quality or latency.",
+    "API-only initial client has no DOM observations; startup prewarm and active case timings must be separate.",
+    "All eight questions remain in development acceptance denominator; rubric never sent to models.",
+    "Reserved extra four posts are unclaimable until an explicitly reviewed later scope.",
+    "Actual phase85 wire evidence requires its own verification; phase84 byte-equality limitation remains historical."
+  ],
+  "blockers": []
+}

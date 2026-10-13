@@ -1,0 +1,26 @@
+{
+  "state": "failed",
+  "stage": "failed",
+  "error": {
+    "code": "SEMANTIC_CHECK_FAILED",
+    "message": "The proposed answer did not pass its required support or teaching checks",
+    "details": {
+      "revision": 0,
+      "publication_block": {
+        "version": "semantic_publication_block_v1",
+        "stop_reason": "insufficient_calls_for_repair_and_recheck",
+        "remaining_provider_calls": 0,
+        "required_calls_for_repair_and_recheck": 2,
+        "checker_contract_repair_calls": 0,
+        "checker_reported_body_ok": true,
+        "checker_reported_non_supported_factual_claims": 0,
+        "failed_checker_gate_names": [],
+        "checker_reported_coverage": "full",
+        "requirement_issue_codes": [],
+        "structural_issue_codes": [
+          "CHECK_PROBLEM_QUOTE_MISMATCH"
+        ]
+      }
+    }
+  }
+}

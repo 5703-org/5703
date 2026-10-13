@@ -1,0 +1,179 @@
+{
+  "status": "PREPARED_NOT_DISPATCHED",
+  "dispatch_enabled": false,
+  "scope": "Isolated frozen-draft replay through current generation/check/local-repair/fresh-recheck path; not a normal live-generation latency benchmark",
+  "variants": {
+    "A": {
+      "checker_schema_policy": null
+    },
+    "B": {
+      "checker_schema_policy": "textbook_context_qualification_v1"
+    }
+  },
+  "cases": {
+    "S01": {
+      "path": "S01-common-input.json",
+      "common_input_sha256": "59b31db5608b1af55f8322e6ba6bd4fdf046ee087b7df632e7267bfd334db2ec",
+      "file_sha256": "bead182baac6e9facd100d5c11227fac74f5348a47d4c4e6798c8cb0269f6b27",
+      "source_blocks": 64,
+      "concept": "catalysis scope",
+      "question_sha256": "9196b34afff52d3c6a660e413b3321d7778a5b1823ff102089c2ead993401ea5",
+      "draft_sha256": "9d20560921136745b63f031a23d8bdb50370dc45b292a3509df62298a7791d8d",
+      "source_blocks_sha256": "87384b6833c1d92c87607e2f67ae36d1d58a2dd4a79d5413f8d5d05943862a75"
+    },
+    "S02": {
+      "path": "S02-common-input.json",
+      "common_input_sha256": "95a868d318c56d3b09acfead3ea55e8b4d1370bcd2c65c0d725950d394ca43ac",
+      "file_sha256": "b9f0679d7f35caa68ad28bdd5be8255faf35cf29aff65eb692dcc46d22da7886",
+      "source_blocks": 54,
+      "concept": "osmosis: net movement and cell-volume conditions",
+      "question_sha256": "891bac98f85541efd0e4e421ed5df4255c5c9310a559add805ec3760df273c94",
+      "draft_sha256": "bebe079f66789b90ff74c6915f1e6e58a557ce5e84a13a36a85bf2e5772786e3",
+      "source_blocks_sha256": "76c2785007295aae94f5d90da27446432cbe3a0e4c1ee096393922495d1afa1f"
+    },
+    "S03": {
+      "path": "S03-common-input.json",
+      "common_input_sha256": "d07cfeae0190c8d661cc35b16b82fdd4b7388b8561ea7038147fc9157e7086eb",
+      "file_sha256": "dd231bad1193df9c9751a4e58676e39cf8049791ed2ae5f833db4fcb76aa261f",
+      "source_blocks": 50,
+      "concept": "equilibrium: temporary net reaction vs final concentrations",
+      "question_sha256": "13647efbbe84e35b34cda64c38a6cb8362621af1e5e1a2824be1cef6d583182d",
+      "draft_sha256": "f804ac60bf3ca07f60c5a8cf92951d47ffd732bca044203956d55283a96012bf",
+      "source_blocks_sha256": "c77155a8608146531888240c9cf6319233a808cebb5dffb1dcc72d0843e39c68"
+    }
+  },
+  "sequence": [
+    {
+      "ordinal": 1,
+      "case": "S01",
+      "variant": "A",
+      "common_input_sha256": "59b31db5608b1af55f8322e6ba6bd4fdf046ee087b7df632e7267bfd334db2ec"
+    },
+    {
+      "ordinal": 2,
+      "case": "S01",
+      "variant": "B",
+      "common_input_sha256": "59b31db5608b1af55f8322e6ba6bd4fdf046ee087b7df632e7267bfd334db2ec"
+    },
+    {
+      "ordinal": 3,
+      "case": "S02",
+      "variant": "B",
+      "common_input_sha256": "95a868d318c56d3b09acfead3ea55e8b4d1370bcd2c65c0d725950d394ca43ac"
+    },
+    {
+      "ordinal": 4,
+      "case": "S02",
+      "variant": "A",
+      "common_input_sha256": "95a868d318c56d3b09acfead3ea55e8b4d1370bcd2c65c0d725950d394ca43ac"
+    },
+    {
+      "ordinal": 5,
+      "case": "S03",
+      "variant": "A",
+      "common_input_sha256": "d07cfeae0190c8d661cc35b16b82fdd4b7388b8561ea7038147fc9157e7086eb"
+    },
+    {
+      "ordinal": 6,
+      "case": "S03",
+      "variant": "B",
+      "common_input_sha256": "d07cfeae0190c8d661cc35b16b82fdd4b7388b8561ea7038147fc9157e7086eb"
+    },
+    {
+      "ordinal": 7,
+      "case": "S03",
+      "variant": "B",
+      "common_input_sha256": "d07cfeae0190c8d661cc35b16b82fdd4b7388b8561ea7038147fc9157e7086eb"
+    },
+    {
+      "ordinal": 8,
+      "case": "S03",
+      "variant": "A",
+      "common_input_sha256": "d07cfeae0190c8d661cc35b16b82fdd4b7388b8561ea7038147fc9157e7086eb"
+    },
+    {
+      "ordinal": 9,
+      "case": "S02",
+      "variant": "A",
+      "common_input_sha256": "95a868d318c56d3b09acfead3ea55e8b4d1370bcd2c65c0d725950d394ca43ac"
+    },
+    {
+      "ordinal": 10,
+      "case": "S02",
+      "variant": "B",
+      "common_input_sha256": "95a868d318c56d3b09acfead3ea55e8b4d1370bcd2c65c0d725950d394ca43ac"
+    },
+    {
+      "ordinal": 11,
+      "case": "S01",
+      "variant": "B",
+      "common_input_sha256": "59b31db5608b1af55f8322e6ba6bd4fdf046ee087b7df632e7267bfd334db2ec"
+    },
+    {
+      "ordinal": 12,
+      "case": "S01",
+      "variant": "A",
+      "common_input_sha256": "59b31db5608b1af55f8322e6ba6bd4fdf046ee087b7df632e7267bfd334db2ec"
+    }
+  ],
+  "identical_fields": [
+    "question",
+    "frozen teacher draft",
+    "complete sources and identifiers",
+    "retrieval/context snapshot",
+    "model/route/temperature",
+    "existing source/unit/coverage gates",
+    "repair policy/budget"
+  ],
+  "model": "deepseek-flash",
+  "provider": "official DeepSeek",
+  "temperature": 0,
+  "thinking_enabled": false,
+  "context_window": 65536,
+  "max_input_tokens": 61440,
+  "max_output_tokens": 4096,
+  "timeout_seconds": 60,
+  "frozen_teacher_replay_new_requests": 0,
+  "initial_joint_checks": 12,
+  "conditional_local_repairs_max": 12,
+  "conditional_full_rechecks_max": 12,
+  "maximum_new_physical_requests": 36,
+  "per_run_maximum_new_physical_requests": 3,
+  "checker_contract_correction_requests": 0,
+  "retries": 0,
+  "price_source": "https://api-docs.deepseek.com/quick_start/pricing",
+  "price_snapshot": "official-pricing.html",
+  "price_verification": "Ordinary public HTTP200 on 2026-10-12; web fetch timed out; no model endpoint request",
+  "pricing_currency": "USD",
+  "peak_cache_miss_input_per_million": 0.3,
+  "peak_output_per_million": 1.2,
+  "cache_discount_assumed": false,
+  "initial_checks_maximum_cost_usd": 0.2801664,
+  "all_conditional_stages_maximum_cost_usd": 0.8404992,
+  "proposed_new_budget_usd": 0.9,
+  "existing_closed_batches_or_unknown_holds_reused": false,
+  "pre_dispatch_requirements": [
+    "Freeze current source/model/route/compiled-wire hashes and isolate synthetic fixture binding; do not use real-user DB",
+    "Resolve program-owned source units/coordinates for every archived alias from the frozen original fixture, or fail; do not invent model offsets or relabel snapshot coordinates as original source coordinates",
+    "Compile both variants from identical inputs; compare all question/draft/source bytes and codepoint bindings before any POST",
+    "Reserve each physical request before dispatch; keep UNKNOWN charges held; never retry uncertain submission",
+    "Exact quote/claim coverage validation must fail closed; never convert malformed output into scientific rejection",
+    "Price/token-window recheck and a separate new finite batch binding under standing user authorization; future dispatch is outside this implementation step"
+  ],
+  "metrics": [
+    "original-source support separate from context status",
+    "unqualified false acceptance and qualified false rejection under independently assigned source-fidelity labels",
+    "limiting-context present/absent strata",
+    "quote/schema failures",
+    "correct-content preservation and final full recheck",
+    "individual checker/repair/recheck and replay-completion timings",
+    "physical request usage and billing"
+  ],
+  "limits": [
+    "Twelve runs across three selected cases are a diagnostic pilot, not a quality/p95 estimate",
+    "Replay uses archived teacher drafts, so no Send-to-full-answer, generation-time or TTFT claim",
+    "Independent scientific correctness and human ratings remain separate; no new labels inferred from model familiarity",
+    "The default remains unchanged regardless of a single successful pilot"
+  ],
+  "provider_calls_in_this_step": 0
+}

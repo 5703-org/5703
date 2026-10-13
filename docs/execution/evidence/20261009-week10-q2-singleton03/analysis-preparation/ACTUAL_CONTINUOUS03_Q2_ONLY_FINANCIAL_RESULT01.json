@@ -1,0 +1,241 @@
+{
+  "schema": "5703_week10_continuous_subbatch_financial_result_v1",
+  "status": "ACTUAL_CONTINUOUS03_Q2_FIRST_EXECUTION_NEW_WORKER_PASS_ALL_COSTS_SETTLED",
+  "recorded_utc": "2026-10-09T05:58:20.7449941Z",
+  "scope": "Only new claims-continuous03 and exact public Q2-only attempt03 receipts; prior totals reused from actual public budget. No old raw ledger/account/API/DB query.",
+  "parent_batch_id": "cs30-week10-native-pair-20261009-01",
+  "subbatch_id": "cs30-week10-q2-singleton-20261009-01",
+  "source_version": "1ada08eec0778fdf84dd1c2cdd2d9e946bafc9cddbef6bbbd85cf66ee04263c1",
+  "continuation_mode": "Q2_FIRST_EXECUTION_NEW_WORKER",
+  "controller_status": "ACTUAL_Q2_FIRST_EXECUTION_NEW_WORKER_PASS_BATCH_CLOSED",
+  "claims_root": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous03",
+  "new_started_claim_count": 2,
+  "new_finished_claim_count": 2,
+  "new_actual_submitted_POST_count": 2,
+  "new_known_API_cost_subtotal_USD": "0.01179910",
+  "new_UNKNOWN_count": 0,
+  "new_open_claims": 0,
+  "new_UNKNOWN_or_open_full_holds_USD": "0.00000000",
+  "fully_settled": true,
+  "budget_snapshot_status": "READY",
+  "budget_snapshot_stop_exists": false,
+  "budget_snapshot_scope": "Recorded before controller successful completion STOP; current STOP is preserved below.",
+  "current_STOP_preserved": true,
+  "STOP_status": "STOP_NO_NEXT_SUBMISSION",
+  "STOP_reason": "ROOT_CONTINUOUS_SCOPES_COMPLETED",
+  "prior_aggregate_observed_physical_POSTs": 6,
+  "prior_aggregate_known_API_cost_USD": "0.02807104",
+  "aggregate_observed_physical_POSTs": 8,
+  "aggregate_known_API_cost_USD": "0.03987014",
+  "maximum_new_subbatch_POSTs": 2,
+  "maximum_total_authorized_POSTs": 8,
+  "subbatch_full_protection_USD": "0.06000000",
+  "maximum_total_authorized_cost_USD": "0.24000000",
+  "within_authorized_aggregate_POST_and_cost_limits": true,
+  "remaining_approved_POST_slots": 0,
+  "all_approved_eight_POST_slots_consumed": true,
+  "further_POST_permission_granted_by_this_receipt": false,
+  "old_UNKNOWN_count_unchanged_policy": 14,
+  "old_UNKNOWN_holds_retained_in_full_STOP_metadata": true,
+  "old_raw_ledger_reads": 0,
+  "old_ledger_writes": 0,
+  "additional_money_USD": "0.00000000",
+  "historical_files_written_by_STOP": 0,
+  "prior_Q1_replayed": false,
+  "same_worker_continuous_Q1_Q2_demonstrated": false,
+  "prior_Q1_overall_failed_controller_status_reclassified": false,
+  "calls": [
+    {
+      "slot": 1,
+      "question_id": "Q2",
+      "role": "teacher",
+      "purpose": "interactive_chat",
+      "started_status": "CONSUMED_NEVER_RETRY",
+      "finished_status": "KNOWN_COST_RECORDED",
+      "known_API_cost_USD": "0.00660050",
+      "UNKNOWN_full_hold_USD": "0.00000000",
+      "errorcode": null,
+      "wire_sha256": "5770e88a8526abeac10c866286d7c5d71cef711dd89417570165da3796c52766",
+      "started_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous03\\slot-01-started01.json",
+        "bytes": 1244,
+        "sha256": "afc6765ee25a712b5f46a9705b949b7671a2ea7831c9756369dfc62071904691"
+      },
+      "finished_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous03\\slot-01-finished01.json",
+        "bytes": 700,
+        "sha256": "6b35c953c2eed5c2ddfbdda596b6fa1df03795ea70ced7d0ca3526f5deb2295f"
+      },
+      "request_submitted_confirmed": true,
+      "adapter_latency_ms": 5472
+    },
+    {
+      "slot": 2,
+      "question_id": "Q2",
+      "role": "checker",
+      "purpose": "interactive_chat",
+      "started_status": "CONSUMED_NEVER_RETRY",
+      "finished_status": "KNOWN_COST_RECORDED",
+      "known_API_cost_USD": "0.00519860",
+      "UNKNOWN_full_hold_USD": "0.00000000",
+      "errorcode": null,
+      "wire_sha256": "adab1deb9003f030fa205a1824924efd56660c1a8d901a32993fe785f459a0f0",
+      "started_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous03\\slot-02-started01.json",
+        "bytes": 1244,
+        "sha256": "2ebced09216a4dc1129c82a7c1995be26d43ae2f9804e9ed2a15b48d619ef4ea"
+      },
+      "finished_pin": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous03\\slot-02-finished01.json",
+        "bytes": 695,
+        "sha256": "ddf96141fab2b4b2474af1f216fdff3da404faf3aad33c28c38304e24208a6ff"
+      },
+      "request_submitted_confirmed": true,
+      "adapter_latency_ms": 4186
+    }
+  ],
+  "Q2_observation": {
+    "status": "PASS",
+    "terminal_state": "succeeded",
+    "answer_completeness_status": "complete_at_requested_help",
+    "completed_cited_answer": true,
+    "citation_checked": true,
+    "refresh_persisted": true,
+    "actual_provider_POSTs": 2,
+    "known_API_cost_USD": "0.01179910",
+    "execution_scope": "First Q2 execution in a new owned worker."
+  },
+  "browser_observation": {
+    "status": "ACTUAL_CONTINUOUS_Q2_FIRST_EXECUTION_PASS",
+    "new_question_submissions": 1,
+    "browser_closed": true,
+    "context_closed": true
+  },
+  "native_runtime_closure": {
+    "status": "CLOSED",
+    "continuation_mode": "Q2_FIRST_EXECUTION_NEW_WORKER",
+    "browser_leg_passed": true,
+    "native_checked_completed": true,
+    "native_completed_question_ids": [
+      "Q2"
+    ],
+    "native_executed_question_ids": [
+      "Q2"
+    ],
+    "all_submitted_native_jobs_checked": true,
+    "owned_threads_closed": true,
+    "owned_database_resources_closed": true,
+    "cleanup_error_classes": [],
+    "leg_closed_after_advisory_unlock_connection_close_and_engine_dispose": true,
+    "normal_native_CLOSED_observed": true
+  },
+  "owned_processes": [
+    {
+      "pid": 13352,
+      "exit_code": 0,
+      "owned_job_closed": true,
+      "streams": [
+        {
+          "name": "stderr",
+          "bytes": 523,
+          "sha256": "2a1cf20e91c3f360974aa9b8e07caa3e380d04e06b6cae5828ca2d7a3d8acd1f",
+          "collector_complete": true
+        },
+        {
+          "name": "stdout",
+          "bytes": 15891,
+          "sha256": "9cdf044c8218be8c99b050f7dc52352134d617d9bbd622a65e9ddd0a972e71b4",
+          "collector_complete": true
+        }
+      ]
+    },
+    {
+      "pid": 65888,
+      "exit_code": 0,
+      "owned_job_closed": true,
+      "streams": [
+        {
+          "name": "stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "collector_complete": true
+        },
+        {
+          "name": "stdout",
+          "bytes": 137,
+          "sha256": "2b60f27d492022933a094f04073b3a00e6c6d3a318cfaa1e1e667f1721e1c07e",
+          "collector_complete": true
+        }
+      ]
+    }
+  ],
+  "source_pins": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\continuous-preparation\\ROOT_CONTINUOUS_CONTROLLER_ACTUAL03.json",
+      "bytes": 5905,
+      "sha256": "75798c5c0e97a68948ba8438b1731f90e424b278658a3cdf8782500deb7d67b2"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous03\\budget-status-public01.json",
+      "bytes": 1348,
+      "sha256": "1a8b61d3cdceb7d4d50c20836317243631953c70bc38931f86d393091df70e61"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous03\\runtime-closed-public01.json",
+      "bytes": 1925,
+      "sha256": "ec3d2fbb96025bdf16a8dc67bb5dd3dba2d66b67b6ae01ba3f94bb6e86e5267b"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\browser-continuous03\\real-browser-live-qa-receipt01.json",
+      "bytes": 27381,
+      "sha256": "36d93ef626982207617932b7ce275ae383e8b5737b3c39cc54b0d48e89bb468f"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous03\\STOP-before-any-next-submission01.json",
+      "bytes": 554,
+      "sha256": "806cf88d6feb7523839eca88de8d853171d8c3a278d4634fc30f887f9a42690b"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous03\\slot-01-started01.json",
+      "bytes": 1244,
+      "sha256": "afc6765ee25a712b5f46a9705b949b7671a2ea7831c9756369dfc62071904691"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous03\\slot-01-finished01.json",
+      "bytes": 700,
+      "sha256": "6b35c953c2eed5c2ddfbdda596b6fa1df03795ea70ced7d0ca3526f5deb2295f"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous03\\slot-02-started01.json",
+      "bytes": 1244,
+      "sha256": "2ebced09216a4dc1129c82a7c1995be26d43ae2f9804e9ed2a15b48d619ef4ea"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous03\\slot-02-finished01.json",
+      "bytes": 695,
+      "sha256": "ddf96141fab2b4b2474af1f216fdff3da404faf3aad33c28c38304e24208a6ff"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous03\\adapter-public01.jsonl",
+      "bytes": 822,
+      "sha256": "62257b29a466eb8a0e4d20e79b75dde46dfaff15e70f7a13eb74192a791f5c5f"
+    }
+  ],
+  "limits": [
+    "Q2 passed as its first execution in a new worker; Q1 was not replayed.",
+    "Accepted Q1 and Q2 are independent worker runs. This does not repair or reclassify the previous continuous02 overall failure, or demonstrate two questions in one worker.",
+    "All eight approved POST slots are used; unused monetary protection is not permission for extra POSTs.",
+    "READY budget snapshot precedes successful controller STOP; current STOP is preserved.",
+    "Aggregate eight POSTs/USD0.03987014 include pair06 four/USD0.01936904, continuous02 Q1 two/USD0.00870200 and this Q2 two/USD0.01179910; continuous01 added zero.",
+    "The USD figures are settled provider-reported costs, not account or invoice balances.",
+    "Old fourteen UNKNOWN and protections remain under the existing policy; no old raw ledger was reread.",
+    "No p95, SLA, model-superiority or continuous-two-question speedup claim."
+  ],
+  "observer_actions": {
+    "API_DB_or_credentials_access": 0,
+    "tests_or_guards_executed": 0,
+    "service_operations": 0,
+    "old_files_written": 0,
+    "create_only_result_files": 1
+  }
+}

@@ -1,0 +1,729 @@
+{
+  "status": "ACTUAL_GOLD_FREE_OPENQA36_TIMINGS_COMPLETE_QUALITY_SCORING_BLOCKED",
+  "quality_scoring": "BLOCKED_AUTO_REVIEW_EVALUATOR_PRIVATE_REFERENCE_SOURCE",
+  "no_Gold_or_reference_reads": true,
+  "provider_calls_by_summary": 0,
+  "scheduled_n": 36,
+  "completed_n": 36,
+  "known_API_cost_USD": "0.0172570",
+  "new_UNKNOWN_holds_USD": "0",
+  "arm_statistics": {
+    "E0_none": {
+      "scheduled_n": 12,
+      "completed_n": 12,
+      "median_ms": 1136.1589999978605,
+      "p95_ms": 1533.7412099996068,
+      "min_ms": 934.7493999994185,
+      "max_ms": 1813.017899999977,
+      "scientific_accuracy": null,
+      "exact_match": null,
+      "token_F1": null
+    },
+    "E1_dense": {
+      "scheduled_n": 12,
+      "completed_n": 12,
+      "median_ms": 1189.7338999988278,
+      "p95_ms": 1815.4428300005748,
+      "min_ms": 1000.9200999993482,
+      "max_ms": 1891.832000001159,
+      "scientific_accuracy": null,
+      "exact_match": null,
+      "token_F1": null
+    },
+    "hybrid_plus_rerank": {
+      "scheduled_n": 12,
+      "completed_n": 12,
+      "median_ms": 1077.0388499986439,
+      "p95_ms": 1321.3028250002026,
+      "min_ms": 878.3285999998043,
+      "max_ms": 1334.2721000008169,
+      "scientific_accuracy": null,
+      "exact_match": null,
+      "token_F1": null
+    }
+  },
+  "observations": [
+    {
+      "slot": 1,
+      "arm": "E0_none",
+      "question_id": "sciq:test:000008",
+      "completed": true,
+      "observed_duration_ms": 1305.2420999993046,
+      "API_cost_USD": "0.0001308"
+    },
+    {
+      "slot": 2,
+      "arm": "E1_dense",
+      "question_id": "sciq:test:000008",
+      "completed": true,
+      "observed_duration_ms": 1891.832000001159,
+      "API_cost_USD": "0.0006938"
+    },
+    {
+      "slot": 3,
+      "arm": "hybrid_plus_rerank",
+      "question_id": "sciq:test:000008",
+      "completed": true,
+      "observed_duration_ms": 1334.2721000008169,
+      "API_cost_USD": "0.0006533"
+    },
+    {
+      "slot": 4,
+      "arm": "E1_dense",
+      "question_id": "sciq:test:000015",
+      "completed": true,
+      "observed_duration_ms": 1435.126799999125,
+      "API_cost_USD": "0.0007365"
+    },
+    {
+      "slot": 5,
+      "arm": "hybrid_plus_rerank",
+      "question_id": "sciq:test:000015",
+      "completed": true,
+      "observed_duration_ms": 1310.6915999997,
+      "API_cost_USD": "0.0007206"
+    },
+    {
+      "slot": 6,
+      "arm": "E0_none",
+      "question_id": "sciq:test:000015",
+      "completed": true,
+      "observed_duration_ms": 1813.017899999977,
+      "API_cost_USD": "0.0001999"
+    },
+    {
+      "slot": 7,
+      "arm": "hybrid_plus_rerank",
+      "question_id": "sciq:test:000003",
+      "completed": true,
+      "observed_duration_ms": 1133.1664999997884,
+      "API_cost_USD": "0.000604"
+    },
+    {
+      "slot": 8,
+      "arm": "E0_none",
+      "question_id": "sciq:test:000003",
+      "completed": true,
+      "observed_duration_ms": 1102.328100001614,
+      "API_cost_USD": "0.000103"
+    },
+    {
+      "slot": 9,
+      "arm": "E1_dense",
+      "question_id": "sciq:test:000003",
+      "completed": true,
+      "observed_duration_ms": 1079.5827999972971,
+      "API_cost_USD": "0.0006466"
+    },
+    {
+      "slot": 10,
+      "arm": "E0_none",
+      "question_id": "sciq:validation:000040",
+      "completed": true,
+      "observed_duration_ms": 1173.8318999996409,
+      "API_cost_USD": "0.0001074"
+    },
+    {
+      "slot": 11,
+      "arm": "E1_dense",
+      "question_id": "sciq:validation:000040",
+      "completed": true,
+      "observed_duration_ms": 1000.9200999993482,
+      "API_cost_USD": "0.0006942"
+    },
+    {
+      "slot": 12,
+      "arm": "hybrid_plus_rerank",
+      "question_id": "sciq:validation:000040",
+      "completed": true,
+      "observed_duration_ms": 1070.171699997445,
+      "API_cost_USD": "0.0007168"
+    },
+    {
+      "slot": 13,
+      "arm": "E1_dense",
+      "question_id": "sciq:validation:000013",
+      "completed": true,
+      "observed_duration_ms": 1752.9426000000967,
+      "API_cost_USD": "0.0006773"
+    },
+    {
+      "slot": 14,
+      "arm": "hybrid_plus_rerank",
+      "question_id": "sciq:validation:000013",
+      "completed": true,
+      "observed_duration_ms": 1183.1457000007504,
+      "API_cost_USD": "0.0006236"
+    },
+    {
+      "slot": 15,
+      "arm": "E0_none",
+      "question_id": "sciq:validation:000013",
+      "completed": true,
+      "observed_duration_ms": 1074.318700000731,
+      "API_cost_USD": "0.0001142"
+    },
+    {
+      "slot": 16,
+      "arm": "hybrid_plus_rerank",
+      "question_id": "sciq:test:000019",
+      "completed": true,
+      "observed_duration_ms": 987.5439999996161,
+      "API_cost_USD": "0.0006226"
+    },
+    {
+      "slot": 17,
+      "arm": "E0_none",
+      "question_id": "sciq:test:000019",
+      "completed": true,
+      "observed_duration_ms": 973.8279999983206,
+      "API_cost_USD": "0.0001033"
+    },
+    {
+      "slot": 18,
+      "arm": "E1_dense",
+      "question_id": "sciq:test:000019",
+      "completed": true,
+      "observed_duration_ms": 1189.9464999987686,
+      "API_cost_USD": "0.0006079"
+    },
+    {
+      "slot": 19,
+      "arm": "E0_none",
+      "question_id": "sciq:validation:000002",
+      "completed": true,
+      "observed_duration_ms": 934.7493999994185,
+      "API_cost_USD": "0.00011"
+    },
+    {
+      "slot": 20,
+      "arm": "E1_dense",
+      "question_id": "sciq:validation:000002",
+      "completed": true,
+      "observed_duration_ms": 1107.47690000062,
+      "API_cost_USD": "0.0006665"
+    },
+    {
+      "slot": 21,
+      "arm": "hybrid_plus_rerank",
+      "question_id": "sciq:validation:000002",
+      "completed": true,
+      "observed_duration_ms": 1083.9059999998426,
+      "API_cost_USD": "0.0005819"
+    },
+    {
+      "slot": 22,
+      "arm": "E1_dense",
+      "question_id": "sciq:validation:000047",
+      "completed": true,
+      "observed_duration_ms": 1210.9934000000067,
+      "API_cost_USD": "0.0006358"
+    },
+    {
+      "slot": 23,
+      "arm": "hybrid_plus_rerank",
+      "question_id": "sciq:validation:000047",
+      "completed": true,
+      "observed_duration_ms": 1043.4046000009403,
+      "API_cost_USD": "0.000697"
+    },
+    {
+      "slot": 24,
+      "arm": "E0_none",
+      "question_id": "sciq:validation:000047",
+      "completed": true,
+      "observed_duration_ms": 1025.887599997077,
+      "API_cost_USD": "0.0001298"
+    },
+    {
+      "slot": 25,
+      "arm": "hybrid_plus_rerank",
+      "question_id": "sciq:test:000014",
+      "completed": true,
+      "observed_duration_ms": 1002.4210999981733,
+      "API_cost_USD": "0.0006734"
+    },
+    {
+      "slot": 26,
+      "arm": "E0_none",
+      "question_id": "sciq:test:000014",
+      "completed": true,
+      "observed_duration_ms": 1228.4738999987894,
+      "API_cost_USD": "0.0001341"
+    },
+    {
+      "slot": 27,
+      "arm": "E1_dense",
+      "question_id": "sciq:test:000014",
+      "completed": true,
+      "observed_duration_ms": 1146.7133999976795,
+      "API_cost_USD": "0.0007292"
+    },
+    {
+      "slot": 28,
+      "arm": "E0_none",
+      "question_id": "sciq:validation:000060",
+      "completed": true,
+      "observed_duration_ms": 1133.627199997136,
+      "API_cost_USD": "0.0001058"
+    },
+    {
+      "slot": 29,
+      "arm": "E1_dense",
+      "question_id": "sciq:validation:000060",
+      "completed": true,
+      "observed_duration_ms": 1140.6180999983917,
+      "API_cost_USD": "0.000633"
+    },
+    {
+      "slot": 30,
+      "arm": "hybrid_plus_rerank",
+      "question_id": "sciq:validation:000060",
+      "completed": true,
+      "observed_duration_ms": 878.3285999998043,
+      "API_cost_USD": "0.0006014"
+    },
+    {
+      "slot": 31,
+      "arm": "E1_dense",
+      "question_id": "sciq:test:000052",
+      "completed": true,
+      "observed_duration_ms": 1524.0169000026071,
+      "API_cost_USD": "0.0006317"
+    },
+    {
+      "slot": 32,
+      "arm": "hybrid_plus_rerank",
+      "question_id": "sciq:test:000052",
+      "completed": true,
+      "observed_duration_ms": 959.390699998039,
+      "API_cost_USD": "0.0005792"
+    },
+    {
+      "slot": 33,
+      "arm": "E0_none",
+      "question_id": "sciq:test:000052",
+      "completed": true,
+      "observed_duration_ms": 1234.0292000008048,
+      "API_cost_USD": "0.0001158"
+    },
+    {
+      "slot": 34,
+      "arm": "hybrid_plus_rerank",
+      "question_id": "sciq:validation:000052",
+      "completed": true,
+      "observed_duration_ms": 1225.49699999945,
+      "API_cost_USD": "0.0006935"
+    },
+    {
+      "slot": 35,
+      "arm": "E0_none",
+      "question_id": "sciq:validation:000052",
+      "completed": true,
+      "observed_duration_ms": 1138.6907999985851,
+      "API_cost_USD": "0.0001073"
+    },
+    {
+      "slot": 36,
+      "arm": "E1_dense",
+      "question_id": "sciq:validation:000052",
+      "completed": true,
+      "observed_duration_ms": 1189.5212999988871,
+      "API_cost_USD": "0.0006758"
+    }
+  ],
+  "quantile_method": "linear interpolation at (n-1)*q",
+  "duration_scope": "adapter.generate invocation to complete return, before local response validation",
+  "native_full_answer_HTTP_retrieval_checker_or_UI_duration": null,
+  "valid_paired_checker_latency_comparison": false,
+  "held_out_confirmation": false,
+  "human_scoring": null,
+  "conditions": "same frozen policy, model, schema and 768-token output cap; rotated three-arm order; n=12 seen failure-strata development questions",
+  "source_pins": {
+    "terminal": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\terminal-receipt01.json",
+      "bytes": 43094,
+      "sha256": "f2712ed9ae60914374e4fc67e0ba2ce3931dce9be918dd61d0ccd8989d4db26e"
+    },
+    "frozen_inputs": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\public12-openqa36-frozen-inputs01.json",
+      "bytes": 249942,
+      "sha256": "17d0135cc0e348e3336c39b878078808ab9dfea0178f29f5a247335830e80e3e"
+    },
+    "owned_closures": [
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\ROOT-owned-root-residual-checker-20261008-01\\closure.json",
+        "bytes": 437,
+        "sha256": "aca7015b4ce11fe8e8c037ac395cb17ab09bc8894c624ad3385166fcf4f3df67"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\ROOT-owned-root-residual-quality-20261008-01\\closure.json",
+        "bytes": 437,
+        "sha256": "c359fdd564ad70123cc01e6c6a8be4296286258edd65718fb434033dff180361"
+      }
+    ],
+    "finite_finished_receipts": [
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-01-finished01.json",
+        "bytes": 863,
+        "sha256": "0f3112d1b4cdfc723b372e3dbbaa54b522f3a0e66ec23acde331246fad05d4f7"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-01-finished01.json",
+        "bytes": 645,
+        "sha256": "4a393a1d9cd0ecb69a26353a848520eb70cefd2772fdf0c2e3874d87ce9a0584"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-02-finished01.json",
+        "bytes": 1079,
+        "sha256": "6420ffee084cfe563f5b2ca526acb1332d56210e74bea3720eb39feefb222d59"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-02-finished01.json",
+        "bytes": 647,
+        "sha256": "4c4b598fa7c64c1742394e561f8875f52ab11b6babc28ff80a27a8cf5a7cc976"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-03-finished01.json",
+        "bytes": 1089,
+        "sha256": "1f5085e248932fe4b9b3f254f2a37473013326bc11db954a0b6d164657d32fd7"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-03-finished01.json",
+        "bytes": 647,
+        "sha256": "f540cbf60fe4ce5fdce94a7a1b1b32c5d02d4957ad07ab10bf91a8228b088c3a"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-04-finished01.json",
+        "bytes": 1328,
+        "sha256": "b7c1917f4295eff8e3f595b31c1ad08f05cd40b6857c827949d0d381337bb473"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-04-finished01.json",
+        "bytes": 647,
+        "sha256": "3600699fbbb4dddfa9e3aa0b0e3d17293f2df3c873759c8941ab8f1ef5646ac1"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-05-finished01.json",
+        "bytes": 1376,
+        "sha256": "3248afb23dceb0da96c808c47829a6e8e8f67c48ff88805e542ca592de799141"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-05-finished01.json",
+        "bytes": 647,
+        "sha256": "1d9d746075d6c1894d964822977ee6353ebdb3e73c7aa9d2b9dd785823ccce5d"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-06-finished01.json",
+        "bytes": 1231,
+        "sha256": "6e2c5fe2827c5ae6c62d8fed23162580361a3ac0fb53b4175a425b3dd22a6cf9"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-06-finished01.json",
+        "bytes": 645,
+        "sha256": "dde54bc082c8275f83ede99ec632a65d0121e568c71c44a5b91bf421ac8c7f34"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-07-finished01.json",
+        "bytes": 1075,
+        "sha256": "9cb0ed12b7cfef1c6108d6b4ef387e489ff03969f75aba21dd8a11ebf98d8e03"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-07-finished01.json",
+        "bytes": 645,
+        "sha256": "398a34a8111e05fb06f73e45acf08a2b87970a265378a6676e6b2a70163800c9"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-08-finished01.json",
+        "bytes": 839,
+        "sha256": "7b82e31b3e0061d1ab1cb43d3fec050e7687d913b96d31de46ab1fd96c52c97f"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-08-finished01.json",
+        "bytes": 643,
+        "sha256": "4b5b317297cde490c4e856d12c251a985b5b3aabe3f5411215595bc176591230"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-09-finished01.json",
+        "bytes": 1066,
+        "sha256": "0a61b3c4ee4c3745584f9aa1fb870accccbd1cfde63f75c96e0889a989ebb289"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-09-finished01.json",
+        "bytes": 647,
+        "sha256": "2a5ccc0d5184677c283305ff77bc22d6404d419008e3f51e1c5115abccb3a3b5"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-10-finished01.json",
+        "bytes": 846,
+        "sha256": "76003e97f4d6bc583fde388e14cf8c90ce57dfa974b46e0798ba4b8d2fd1d90c"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-10-finished01.json",
+        "bytes": 645,
+        "sha256": "3f77a32c619ddbc8b6f5a473e9846843479efad560d7f36196fc393d11255f8d"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-11-finished01.json",
+        "bytes": 1085,
+        "sha256": "e24393f159049ce78bcc99d9488aaab2ffcb85e21cdd547f3acdbfa142c2ffca"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-11-finished01.json",
+        "bytes": 647,
+        "sha256": "9b3370c8fdf7dadaed47fe7f473388567bf7952a183cb0d4b5ff434d644c85e5"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-12-finished01.json",
+        "bytes": 1102,
+        "sha256": "173ccd07de5ec7b6bceaee02e58fa9c01a4ae02efefa75bc842f857d5b70ae30"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-12-finished01.json",
+        "bytes": 647,
+        "sha256": "c8d8be9f5dddfb2294ca66125088b38b88261da27127586065a359316fbedad9"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-13-finished01.json",
+        "bytes": 1077,
+        "sha256": "6e3a37a345f09688cefddb8405cb172eaa14720c378c2b33f197c58114fdc4d2"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-13-finished01.json",
+        "bytes": 647,
+        "sha256": "b90e040b4a65e95da37ac74c9dcd1a87a4c89bd48b08d6871651fedcf98bb74f"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-14-finished01.json",
+        "bytes": 1086,
+        "sha256": "3bc6805a92a69be8656c3b2f8ec8fbda459d302bc851a1bbd9e39edab7a21689"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-14-finished01.json",
+        "bytes": 647,
+        "sha256": "de3f2ddabf128008b8dd19e4ab858d1fc2ed837876a1cef63b4c5b6ff2d16e89"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-15-finished01.json",
+        "bytes": 850,
+        "sha256": "f5fc80a54bb03c16c1e6744bdfe05abe85ea19378283810a0b54ea4f981ede2a"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-15-finished01.json",
+        "bytes": 645,
+        "sha256": "1276ad2a4b131d244bb9330b9e3ab86c055f625e4d01cbd39519b1a8190e9b4e"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-16-finished01.json",
+        "bytes": 1074,
+        "sha256": "7ebc80a014956f9f989dcf12d95cc15e642505823d3a7b61023b5a2175af39df"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-16-finished01.json",
+        "bytes": 647,
+        "sha256": "3f5102ff92b6717d70a19bf56b383b72693e696ebce305b098e6a4f676a42e3c"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-17-finished01.json",
+        "bytes": 839,
+        "sha256": "ace0eb4c12cdea144d0d056aeff42193cab11b8178c6d8adcfe103fc644beaf8"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-17-finished01.json",
+        "bytes": 645,
+        "sha256": "c3ff458d0d19affc94b87fcc0066960cb258a70be820bf871c722c44b40eae11"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-18-finished01.json",
+        "bytes": 1068,
+        "sha256": "00318f2d9d9453c3ffc50dcbef29178d9a6014dbf3716286fac1db8a9a416f1b"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-18-finished01.json",
+        "bytes": 647,
+        "sha256": "b807eaa67e71796f40cc5ff41d1dc88f59b4d1efb67d0dde0e3d7798eb701458"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-19-finished01.json",
+        "bytes": 849,
+        "sha256": "8c47aaf64ae3685f13aff54c00e949492fe8261609bc0feb4d8c085e3a32b271"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-19-finished01.json",
+        "bytes": 641,
+        "sha256": "aba81ba8053a6d3ee3193c50b8068b53759cae01dfa91f8adb7ac851a0faec77"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-20-finished01.json",
+        "bytes": 1078,
+        "sha256": "d7fd6a20d43301a59891cb9ebfe6313ca0cf355eebd1e7f7c499f19c892c5125"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-20-finished01.json",
+        "bytes": 647,
+        "sha256": "b94fef41a01d48527f41c43f26a796d7d3b1f423356016a022ec94f40d89b76c"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-21-finished01.json",
+        "bytes": 1090,
+        "sha256": "fdc996123350d3a6209973e3048f61b897a3e1732f7a5a3fba5e6095a29ff775"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-21-finished01.json",
+        "bytes": 647,
+        "sha256": "d47d9d5552f74044731c377f1b27b82122fb0cb62610c00c43354ce3675cd56a"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-22-finished01.json",
+        "bytes": 1070,
+        "sha256": "a8ab6193b5d80b08bfdac1abd5f332693ac8f73fdb151eac82d5086da1b0e13c"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-22-finished01.json",
+        "bytes": 647,
+        "sha256": "dcf4970de4c1817fea4c7b4e2f654e1075e35a2595458e7e1e97e3f1168648bd"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-23-finished01.json",
+        "bytes": 1089,
+        "sha256": "99b831a1536a93a921839cd006908f08712fd0c0b3548fb58ad54883ffbf807b"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-23-finished01.json",
+        "bytes": 645,
+        "sha256": "fb53bcc48e67394b5ab6efb0265023e4e4874ab9e5ecd0af4c532536ed1f8986"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-24-finished01.json",
+        "bytes": 863,
+        "sha256": "8a65f48e28a350b766f67c3475e409f9b90a40864a7be20fca36ae7d1290f002"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-24-finished01.json",
+        "bytes": 645,
+        "sha256": "a0c5f81272e34737c046ae3a9c3da448654aab38d38e82878d49f115805d4269"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-25-finished01.json",
+        "bytes": 1091,
+        "sha256": "4acebe9ee5f3292ce7d693651923c76760bc37e54061eebc99653fadd9284db2"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-25-finished01.json",
+        "bytes": 647,
+        "sha256": "3357688d28ecf5b0e76f1d4015ebf628722e995178eb168afb40a987f04e165d"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-26-finished01.json",
+        "bytes": 864,
+        "sha256": "74ecfb239bb0c5171327f9a2969082061bf8a956b0652ae669d6135cf18e0b68"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-26-finished01.json",
+        "bytes": 645,
+        "sha256": "5c056683bb07eb10f94fc3672f8efd8000f2cb484894e5398827aacd83a7a3a8"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-27-finished01.json",
+        "bytes": 1081,
+        "sha256": "5de5b87dcfe9809f3c6a0852f6c32f0cd59b6d8c45e77f5dcc3140cfb2dffd08"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-27-finished01.json",
+        "bytes": 647,
+        "sha256": "0aa4a910a10f6a633e245352748bdd9236aa09944541140d063ad2ffdd105c1d"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-28-finished01.json",
+        "bytes": 849,
+        "sha256": "60a59a85ade2faefc324f9a436b31529d08d2c9b912af56cd9be49b983043196"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-28-finished01.json",
+        "bytes": 645,
+        "sha256": "f9011cbd109f20cb474e423b9b39ae9235bb51c3f8c9acf0c59a911157df3080"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-29-finished01.json",
+        "bytes": 1073,
+        "sha256": "af3f55308e010ce1f8ce32549b6f661925c86d8212a71c349e94d69089471b8b"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-29-finished01.json",
+        "bytes": 645,
+        "sha256": "6cc3bfca3a3b3bed7b59c7f0ea905b95471fbc603250127a3873dcd54c7f40e1"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-30-finished01.json",
+        "bytes": 1087,
+        "sha256": "1d7288107f172a3e97365986cbd525ecdceb8ca2d52a4b87c009d77c19872c9e"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-30-finished01.json",
+        "bytes": 647,
+        "sha256": "17d272c6ea7e343373e0e82254ec32effd397f8b483a81db808cc6740fff88c9"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-31-finished01.json",
+        "bytes": 1084,
+        "sha256": "b3bdb68c03df6798effd1710b1827d7746025ed9dbb822c20b07ee2fd96b28ea"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-31-finished01.json",
+        "bytes": 647,
+        "sha256": "f0e8bb1bd3380160723cf5ffeafe1c5c94670055fb8686713a21deeee2590d2c"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-32-finished01.json",
+        "bytes": 1089,
+        "sha256": "a90929de1ff3ee50db4b4bd7c2936eb10b590b843634502a1358e6ace457d37c"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-32-finished01.json",
+        "bytes": 647,
+        "sha256": "84039d812765f4bef18fb80164983f2a5ccd2dec6c3b3ae468882101e231f23a"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-33-finished01.json",
+        "bytes": 866,
+        "sha256": "b7dee2d46441a66eed99a64171338293b67d64890c9aca5c58723140716e1431"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-33-finished01.json",
+        "bytes": 645,
+        "sha256": "4372f5a33beba19bb8a935e28cde6ec8fafd6c2478406147113dc5f8ae3e63c5"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-34-finished01.json",
+        "bytes": 1097,
+        "sha256": "57c4f3d88b8fa6a3bb6ed50cd9dc9d12f072b5411cdfb6825721fd9e39704a36"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-34-finished01.json",
+        "bytes": 647,
+        "sha256": "4971645a2879c38168e126a4863262669ab18c10a2db60fff2b23081f76229a4"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-35-finished01.json",
+        "bytes": 860,
+        "sha256": "c3b134b4c9fe5a82a119d3243757c1bc6169d89295d408e12d4060418ffe9ee0"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-35-finished01.json",
+        "bytes": 645,
+        "sha256": "01e5c413a59ab39844111a006df7763f0618b6afc4ac9bb7a7721ac7299fc7f0"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\actual-public-openqa36-root-residual-quality-20261008-01\\slot-36-finished01.json",
+        "bytes": 1089,
+        "sha256": "991fd993347e0a33ac7c5b60d0a10bc33acfe45244333b8605aa5446ee8668a9"
+      },
+      {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-failure-strata-checker-pair-20261008-02\\new-residual37-claims\\quality_openqa\\slot-36-finished01.json",
+        "bytes": 647,
+        "sha256": "76bb3a3de857f82e74f47300ea10da6c30bb826defdc7089e50a124b1d03c457"
+      }
+    ]
+  },
+  "project_complete": false
+}

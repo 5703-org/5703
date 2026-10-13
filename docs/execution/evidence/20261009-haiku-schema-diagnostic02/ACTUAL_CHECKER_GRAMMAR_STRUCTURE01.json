@@ -1,0 +1,1474 @@
+{
+  "schema": "5703_haiku_checker_grammar_structure_quantification_v1",
+  "status": "ACTUAL_OFFLINE_REPRODUCED_STRUCTURE_ONLY",
+  "sources": {
+    "fixture": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-haiku-wire-schema-preparation-20261009-01\\candidate\\tests\\unit\\fixtures\\haiku_actual05_checker_schema.json",
+      "bytes": 6047,
+      "sha256": "08195238e12de5a2e49a575625af7ecd8e4f1bed776ac57853c63a0c7bb80524"
+    },
+    "projection_helper": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-haiku-wire-schema-preparation-20261009-01\\candidate\\generation\\openrouter_routes.py",
+      "bytes": 11703,
+      "sha256": "eb2471e712bc92e5c04495b5353017dbcbc7aa8cdec5451b0ead9f05050588ee"
+    },
+    "existing_comparison": {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-haiku-wire-schema-preparation-20261009-01\\ACTUAL_HAIKU_FULL_SCHEMA_STRUCTURAL_COMPARISON01.json",
+      "bytes": 3713,
+      "sha256": "c15a0256e7c14df6838e8129ed8ce43bff521b30a46ad948ead937555704374c"
+    }
+  },
+  "script": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-haiku-wire-schema-preparation-20261009-01\\haiku-grammar-structure01\\quantify_checker_schema01.py",
+    "bytes": 22135,
+    "sha256": "8d8829a2d296ccd7f3875ef6307b79952134d0b4c4fe2fd1d60ca3b6454327e3"
+  },
+  "definitions": {
+    "optional": "A declared property absent from its containing object's required list; nullable required properties are reported separately.",
+    "physical_schema_edge_depth": "Root schema depth 0; entering a properties/$defs child, a composition branch, or an items schema adds one schema edge; local refs are not expanded.",
+    "serialized_json_container_depth": "Maximum number of dictionary/list containers including root, including schema keyword containers.",
+    "expanded_instance_value_depth": "Root output value depth 0; entering an object property or array item adds one; refs and composition do not add output depth.",
+    "expanded_instance_container_depth": "Maximum object/array containers on one output path including root, with local refs expanded.",
+    "branch_counts": "Sum of explicitly written branches, not provider compiled states or a Cartesian-product estimate."
+  },
+  "original": {
+    "canonical_utf8_bytes": 6046,
+    "canonical_sha256": "7988037e08d52662a1b232f049776a42b6d10ad5d896f1a26c8c912b3efd79d4",
+    "schema_node_count": 99,
+    "max_physical_schema_edge_depth": 3,
+    "max_serialized_json_container_depth": 7,
+    "definitions": [
+      "CalculationClaim",
+      "CalculationInputV4",
+      "CitationAssessment",
+      "DerivationV4",
+      "GeneralClaim",
+      "GivenClaim",
+      "GuidanceClaim",
+      "RequirementCheck",
+      "RequirementEvidence",
+      "TextbookClaim"
+    ],
+    "definitions_count": 10,
+    "local_ref_occurrences": 11,
+    "local_ref_unique_targets": 10,
+    "local_ref_counts": {
+      "#/$defs/CalculationClaim": 1,
+      "#/$defs/CalculationInputV4": 1,
+      "#/$defs/CitationAssessment": 2,
+      "#/$defs/DerivationV4": 1,
+      "#/$defs/GeneralClaim": 1,
+      "#/$defs/GivenClaim": 1,
+      "#/$defs/GuidanceClaim": 1,
+      "#/$defs/RequirementCheck": 1,
+      "#/$defs/RequirementEvidence": 1,
+      "#/$defs/TextbookClaim": 1
+    },
+    "type_node_counts": {
+      "array": 9,
+      "boolean": 14,
+      "null": 2,
+      "object": 11,
+      "string": 49
+    },
+    "object_fields_total": 70,
+    "required_fields_total": 70,
+    "optional_fields_total": 0,
+    "nullable_property_count": 2,
+    "nullable_property_pointers": [
+      "/$defs/CalculationInputV4/properties/fragment_id",
+      "/$defs/DerivationV4/properties/formula_fragment_id"
+    ],
+    "objects": [
+      {
+        "schema_pointer": "/",
+        "properties": 17,
+        "required_properties": 17,
+        "optional_properties": [],
+        "additionalProperties": false
+      },
+      {
+        "schema_pointer": "/$defs/CalculationClaim",
+        "properties": 6,
+        "required_properties": 6,
+        "optional_properties": [],
+        "additionalProperties": false
+      },
+      {
+        "schema_pointer": "/$defs/CalculationInputV4",
+        "properties": 6,
+        "required_properties": 6,
+        "optional_properties": [],
+        "additionalProperties": false
+      },
+      {
+        "schema_pointer": "/$defs/CitationAssessment",
+        "properties": 3,
+        "required_properties": 3,
+        "optional_properties": [],
+        "additionalProperties": false
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4",
+        "properties": 10,
+        "required_properties": 10,
+        "optional_properties": [],
+        "additionalProperties": false
+      },
+      {
+        "schema_pointer": "/$defs/GeneralClaim",
+        "properties": 4,
+        "required_properties": 4,
+        "optional_properties": [],
+        "additionalProperties": false
+      },
+      {
+        "schema_pointer": "/$defs/GivenClaim",
+        "properties": 5,
+        "required_properties": 5,
+        "optional_properties": [],
+        "additionalProperties": false
+      },
+      {
+        "schema_pointer": "/$defs/GuidanceClaim",
+        "properties": 3,
+        "required_properties": 3,
+        "optional_properties": [],
+        "additionalProperties": false
+      },
+      {
+        "schema_pointer": "/$defs/RequirementCheck",
+        "properties": 8,
+        "required_properties": 8,
+        "optional_properties": [],
+        "additionalProperties": false
+      },
+      {
+        "schema_pointer": "/$defs/RequirementEvidence",
+        "properties": 3,
+        "required_properties": 3,
+        "optional_properties": [],
+        "additionalProperties": false
+      },
+      {
+        "schema_pointer": "/$defs/TextbookClaim",
+        "properties": 5,
+        "required_properties": 5,
+        "optional_properties": [],
+        "additionalProperties": false
+      }
+    ],
+    "combinators": [
+      {
+        "schema_pointer": "/$defs/CalculationInputV4/properties/fragment_id/anyOf",
+        "keyword": "anyOf",
+        "branch_count": 2,
+        "branches": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/formula_fragment_id/anyOf",
+        "keyword": "anyOf",
+        "branch_count": 2,
+        "branches": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      {
+        "schema_pointer": "/properties/claims/items/anyOf",
+        "keyword": "anyOf",
+        "branch_count": 5,
+        "branches": [
+          {
+            "$ref": "#/$defs/TextbookClaim"
+          },
+          {
+            "$ref": "#/$defs/GivenClaim"
+          },
+          {
+            "$ref": "#/$defs/CalculationClaim"
+          },
+          {
+            "$ref": "#/$defs/GuidanceClaim"
+          },
+          {
+            "$ref": "#/$defs/GeneralClaim"
+          }
+        ]
+      }
+    ],
+    "combinator_node_counts": {
+      "anyOf": 3,
+      "oneOf": 0,
+      "allOf": 0
+    },
+    "combinator_branch_counts": {
+      "anyOf": 9,
+      "oneOf": 0,
+      "allOf": 0
+    },
+    "bounds_total": 43,
+    "bounds_by_keyword": {
+      "maxItems": 9,
+      "maxLength": 18,
+      "minItems": 1,
+      "minLength": 15
+    },
+    "bounds": [
+      {
+        "schema_pointer": "/$defs/CalculationClaim/properties/citations/maxItems",
+        "keyword": "maxItems",
+        "value": 12
+      },
+      {
+        "schema_pointer": "/$defs/CalculationClaim/properties/reason/maxLength",
+        "keyword": "maxLength",
+        "value": 800
+      },
+      {
+        "schema_pointer": "/$defs/CalculationClaim/properties/reason/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/CalculationInputV4/properties/quote/maxLength",
+        "keyword": "maxLength",
+        "value": 1200
+      },
+      {
+        "schema_pointer": "/$defs/CalculationInputV4/properties/quote/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/CalculationInputV4/properties/unit/maxLength",
+        "keyword": "maxLength",
+        "value": 80
+      },
+      {
+        "schema_pointer": "/$defs/CalculationInputV4/properties/value/maxLength",
+        "keyword": "maxLength",
+        "value": 60
+      },
+      {
+        "schema_pointer": "/$defs/CalculationInputV4/properties/value/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/CitationAssessment/properties/fragment_ids/maxItems",
+        "keyword": "maxItems",
+        "value": 12
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/expression/maxLength",
+        "keyword": "maxLength",
+        "value": 200
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/expression/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/formula_quote/maxLength",
+        "keyword": "maxLength",
+        "value": 1200
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/formula_quote/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/inputs/maxItems",
+        "keyword": "maxItems",
+        "value": 12
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/inputs/minItems",
+        "keyword": "minItems",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/result/maxLength",
+        "keyword": "maxLength",
+        "value": 60
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/result/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/result_quote/maxLength",
+        "keyword": "maxLength",
+        "value": 120
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/result_quote/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/result_unit/maxLength",
+        "keyword": "maxLength",
+        "value": 80
+      },
+      {
+        "schema_pointer": "/$defs/GeneralClaim/properties/reason/maxLength",
+        "keyword": "maxLength",
+        "value": 800
+      },
+      {
+        "schema_pointer": "/$defs/GeneralClaim/properties/reason/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/GivenClaim/properties/problem_quote/maxLength",
+        "keyword": "maxLength",
+        "value": 4000
+      },
+      {
+        "schema_pointer": "/$defs/GivenClaim/properties/problem_quote/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/GivenClaim/properties/reason/maxLength",
+        "keyword": "maxLength",
+        "value": 800
+      },
+      {
+        "schema_pointer": "/$defs/GivenClaim/properties/reason/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/GuidanceClaim/properties/reason/maxLength",
+        "keyword": "maxLength",
+        "value": 800
+      },
+      {
+        "schema_pointer": "/$defs/GuidanceClaim/properties/reason/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/RequirementCheck/properties/evidence/maxItems",
+        "keyword": "maxItems",
+        "value": 8
+      },
+      {
+        "schema_pointer": "/$defs/RequirementCheck/properties/missing_information/maxLength",
+        "keyword": "maxLength",
+        "value": 1000
+      },
+      {
+        "schema_pointer": "/$defs/RequirementCheck/properties/reason/maxLength",
+        "keyword": "maxLength",
+        "value": 1200
+      },
+      {
+        "schema_pointer": "/$defs/RequirementCheck/properties/reason/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/RequirementEvidence/properties/quote/maxLength",
+        "keyword": "maxLength",
+        "value": 1200
+      },
+      {
+        "schema_pointer": "/$defs/RequirementEvidence/properties/quote/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/TextbookClaim/properties/citations/maxItems",
+        "keyword": "maxItems",
+        "value": 12
+      },
+      {
+        "schema_pointer": "/$defs/TextbookClaim/properties/reason/maxLength",
+        "keyword": "maxLength",
+        "value": 800
+      },
+      {
+        "schema_pointer": "/$defs/TextbookClaim/properties/reason/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/properties/claims/maxItems",
+        "keyword": "maxItems",
+        "value": 100
+      },
+      {
+        "schema_pointer": "/properties/missing_facets/maxItems",
+        "keyword": "maxItems",
+        "value": 8
+      },
+      {
+        "schema_pointer": "/properties/reason/maxLength",
+        "keyword": "maxLength",
+        "value": 1600
+      },
+      {
+        "schema_pointer": "/properties/reason/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/properties/repair_fragment_ids/maxItems",
+        "keyword": "maxItems",
+        "value": 24
+      },
+      {
+        "schema_pointer": "/properties/requirements/maxItems",
+        "keyword": "maxItems",
+        "value": 8
+      }
+    ],
+    "enum_nodes": 12,
+    "enum_values_total": 36,
+    "enums": [
+      {
+        "schema_pointer": "/$defs/CalculationClaim/properties/status/enum",
+        "value_count": 3,
+        "values": [
+          "supported",
+          "partial",
+          "unsupported"
+        ]
+      },
+      {
+        "schema_pointer": "/$defs/CalculationInputV4/properties/origin/enum",
+        "value_count": 2,
+        "values": [
+          "problem_input",
+          "textbook"
+        ]
+      },
+      {
+        "schema_pointer": "/$defs/CitationAssessment/properties/relation/enum",
+        "value_count": 3,
+        "values": [
+          "supporting",
+          "irrelevant",
+          "contradictory"
+        ]
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/formula_basis/enum",
+        "value_count": 2,
+        "values": [
+          "textbook",
+          "problem_input"
+        ]
+      },
+      {
+        "schema_pointer": "/$defs/GeneralClaim/properties/status/enum",
+        "value_count": 3,
+        "values": [
+          "supported",
+          "partial",
+          "unsupported"
+        ]
+      },
+      {
+        "schema_pointer": "/$defs/GivenClaim/properties/status/enum",
+        "value_count": 3,
+        "values": [
+          "supported",
+          "partial",
+          "unsupported"
+        ]
+      },
+      {
+        "schema_pointer": "/$defs/GuidanceClaim/properties/basis/enum",
+        "value_count": 2,
+        "values": [
+          "nonfactual",
+          "evidence_limitation"
+        ]
+      },
+      {
+        "schema_pointer": "/$defs/RequirementCheck/properties/relevance/enum",
+        "value_count": 2,
+        "values": [
+          "related",
+          "unrelated"
+        ]
+      },
+      {
+        "schema_pointer": "/$defs/RequirementCheck/properties/response_coverage/enum",
+        "value_count": 5,
+        "values": [
+          "covered",
+          "partial",
+          "not_addressed",
+          "deferred_for_hint",
+          "limitation"
+        ]
+      },
+      {
+        "schema_pointer": "/$defs/RequirementCheck/properties/sufficiency/enum",
+        "value_count": 5,
+        "values": [
+          "sufficient",
+          "partial",
+          "absent",
+          "conflicting",
+          "not_applicable"
+        ]
+      },
+      {
+        "schema_pointer": "/$defs/TextbookClaim/properties/status/enum",
+        "value_count": 3,
+        "values": [
+          "supported",
+          "partial",
+          "unsupported"
+        ]
+      },
+      {
+        "schema_pointer": "/properties/coverage/enum",
+        "value_count": 3,
+        "values": [
+          "full",
+          "supported_partial",
+          "none"
+        ]
+      }
+    ],
+    "const_nodes": 4,
+    "consts": [
+      {
+        "schema_pointer": "/$defs/CalculationClaim/properties/basis/const",
+        "value": "derived_calculation"
+      },
+      {
+        "schema_pointer": "/$defs/GeneralClaim/properties/basis/const",
+        "value": "general_knowledge"
+      },
+      {
+        "schema_pointer": "/$defs/GivenClaim/properties/basis/const",
+        "value": "problem_input"
+      },
+      {
+        "schema_pointer": "/$defs/TextbookClaim/properties/basis/const",
+        "value": "textbook"
+      }
+    ],
+    "pattern_nodes": 1,
+    "keyword_occurrences": {
+      "$defs": 1,
+      "$ref": 11,
+      "additionalProperties": 11,
+      "anyOf": 3,
+      "const": 4,
+      "enum": 12,
+      "items": 9,
+      "maxItems": 9,
+      "maxLength": 18,
+      "minItems": 1,
+      "minLength": 15,
+      "pattern": 1,
+      "properties": 11,
+      "required": 11,
+      "type": 85
+    },
+    "expanded_instance_shape": {
+      "maxima": {
+        "value_depth": 6,
+        "container_depth": 6,
+        "object_depth": 4,
+        "array_depth": 3
+      },
+      "maximum_paths_by_metric": {
+        "value_depth": [
+          "$.claims[]<(anyOf:0)>.citations[].fragment_ids[]",
+          "$.claims[]<(anyOf:2)>.citations[].fragment_ids[]",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id<(anyOf:0)>",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id<(anyOf:1)>",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].name",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].origin",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].quote",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].unit",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].value"
+        ],
+        "container_depth": [
+          "$.claims[]<(anyOf:0)>.citations[].fragment_ids",
+          "$.claims[]<(anyOf:0)>.citations[].fragment_ids[]",
+          "$.claims[]<(anyOf:2)>.citations[].fragment_ids",
+          "$.claims[]<(anyOf:2)>.citations[].fragment_ids[]",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[]",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id<(anyOf:0)>",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id<(anyOf:1)>",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].name",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].origin",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].quote",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].unit",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].value"
+        ],
+        "object_depth": [
+          "$.claims[]<(anyOf:2)>.derivation.inputs[]",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id<(anyOf:0)>",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id<(anyOf:1)>",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].name",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].origin",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].quote",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].unit",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].value"
+        ],
+        "array_depth": [
+          "$.claims[]<(anyOf:0)>.citations[].fragment_ids",
+          "$.claims[]<(anyOf:0)>.citations[].fragment_ids[]",
+          "$.claims[]<(anyOf:2)>.citations[].fragment_ids",
+          "$.claims[]<(anyOf:2)>.citations[].fragment_ids[]"
+        ]
+      },
+      "max_value_depth_paths": [
+        "$.claims[]<(anyOf:0)>.citations[].fragment_ids[]",
+        "$.claims[]<(anyOf:2)>.citations[].fragment_ids[]",
+        "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id",
+        "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id<(anyOf:0)>",
+        "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id<(anyOf:1)>",
+        "$.claims[]<(anyOf:2)>.derivation.inputs[].name",
+        "$.claims[]<(anyOf:2)>.derivation.inputs[].origin",
+        "$.claims[]<(anyOf:2)>.derivation.inputs[].quote",
+        "$.claims[]<(anyOf:2)>.derivation.inputs[].unit",
+        "$.claims[]<(anyOf:2)>.derivation.inputs[].value"
+      ],
+      "local_ref_cycles": [],
+      "expanded_schema_visits": 93
+    }
+  },
+  "projected": {
+    "canonical_utf8_bytes": 7246,
+    "canonical_sha256": "70355e166c78f69ccd65927c425ff3ba93daf18e7e0bd1d9490c7ea6c1746c9b",
+    "schema_node_count": 99,
+    "max_physical_schema_edge_depth": 3,
+    "max_serialized_json_container_depth": 7,
+    "definitions": [
+      "CalculationClaim",
+      "CalculationInputV4",
+      "CitationAssessment",
+      "DerivationV4",
+      "GeneralClaim",
+      "GivenClaim",
+      "GuidanceClaim",
+      "RequirementCheck",
+      "RequirementEvidence",
+      "TextbookClaim"
+    ],
+    "definitions_count": 10,
+    "local_ref_occurrences": 11,
+    "local_ref_unique_targets": 10,
+    "local_ref_counts": {
+      "#/$defs/CalculationClaim": 1,
+      "#/$defs/CalculationInputV4": 1,
+      "#/$defs/CitationAssessment": 2,
+      "#/$defs/DerivationV4": 1,
+      "#/$defs/GeneralClaim": 1,
+      "#/$defs/GivenClaim": 1,
+      "#/$defs/GuidanceClaim": 1,
+      "#/$defs/RequirementCheck": 1,
+      "#/$defs/RequirementEvidence": 1,
+      "#/$defs/TextbookClaim": 1
+    },
+    "type_node_counts": {
+      "array": 9,
+      "boolean": 14,
+      "null": 2,
+      "object": 11,
+      "string": 49
+    },
+    "object_fields_total": 70,
+    "required_fields_total": 70,
+    "optional_fields_total": 0,
+    "nullable_property_count": 2,
+    "nullable_property_pointers": [
+      "/$defs/CalculationInputV4/properties/fragment_id",
+      "/$defs/DerivationV4/properties/formula_fragment_id"
+    ],
+    "objects": [
+      {
+        "schema_pointer": "/",
+        "properties": 17,
+        "required_properties": 17,
+        "optional_properties": [],
+        "additionalProperties": false
+      },
+      {
+        "schema_pointer": "/$defs/CalculationClaim",
+        "properties": 6,
+        "required_properties": 6,
+        "optional_properties": [],
+        "additionalProperties": false
+      },
+      {
+        "schema_pointer": "/$defs/CalculationInputV4",
+        "properties": 6,
+        "required_properties": 6,
+        "optional_properties": [],
+        "additionalProperties": false
+      },
+      {
+        "schema_pointer": "/$defs/CitationAssessment",
+        "properties": 3,
+        "required_properties": 3,
+        "optional_properties": [],
+        "additionalProperties": false
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4",
+        "properties": 10,
+        "required_properties": 10,
+        "optional_properties": [],
+        "additionalProperties": false
+      },
+      {
+        "schema_pointer": "/$defs/GeneralClaim",
+        "properties": 4,
+        "required_properties": 4,
+        "optional_properties": [],
+        "additionalProperties": false
+      },
+      {
+        "schema_pointer": "/$defs/GivenClaim",
+        "properties": 5,
+        "required_properties": 5,
+        "optional_properties": [],
+        "additionalProperties": false
+      },
+      {
+        "schema_pointer": "/$defs/GuidanceClaim",
+        "properties": 3,
+        "required_properties": 3,
+        "optional_properties": [],
+        "additionalProperties": false
+      },
+      {
+        "schema_pointer": "/$defs/RequirementCheck",
+        "properties": 8,
+        "required_properties": 8,
+        "optional_properties": [],
+        "additionalProperties": false
+      },
+      {
+        "schema_pointer": "/$defs/RequirementEvidence",
+        "properties": 3,
+        "required_properties": 3,
+        "optional_properties": [],
+        "additionalProperties": false
+      },
+      {
+        "schema_pointer": "/$defs/TextbookClaim",
+        "properties": 5,
+        "required_properties": 5,
+        "optional_properties": [],
+        "additionalProperties": false
+      }
+    ],
+    "combinators": [
+      {
+        "schema_pointer": "/$defs/CalculationInputV4/properties/fragment_id/anyOf",
+        "keyword": "anyOf",
+        "branch_count": 2,
+        "branches": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/formula_fragment_id/anyOf",
+        "keyword": "anyOf",
+        "branch_count": 2,
+        "branches": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      {
+        "schema_pointer": "/properties/claims/items/anyOf",
+        "keyword": "anyOf",
+        "branch_count": 5,
+        "branches": [
+          {
+            "$ref": "#/$defs/TextbookClaim"
+          },
+          {
+            "$ref": "#/$defs/GivenClaim"
+          },
+          {
+            "$ref": "#/$defs/CalculationClaim"
+          },
+          {
+            "$ref": "#/$defs/GuidanceClaim"
+          },
+          {
+            "$ref": "#/$defs/GeneralClaim"
+          }
+        ]
+      }
+    ],
+    "combinator_node_counts": {
+      "anyOf": 3,
+      "oneOf": 0,
+      "allOf": 0
+    },
+    "combinator_branch_counts": {
+      "anyOf": 9,
+      "oneOf": 0,
+      "allOf": 0
+    },
+    "bounds_total": 1,
+    "bounds_by_keyword": {
+      "minItems": 1
+    },
+    "bounds": [
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/inputs/minItems",
+        "keyword": "minItems",
+        "value": 1
+      }
+    ],
+    "enum_nodes": 12,
+    "enum_values_total": 36,
+    "enums": [
+      {
+        "schema_pointer": "/$defs/CalculationClaim/properties/status/enum",
+        "value_count": 3,
+        "values": [
+          "supported",
+          "partial",
+          "unsupported"
+        ]
+      },
+      {
+        "schema_pointer": "/$defs/CalculationInputV4/properties/origin/enum",
+        "value_count": 2,
+        "values": [
+          "problem_input",
+          "textbook"
+        ]
+      },
+      {
+        "schema_pointer": "/$defs/CitationAssessment/properties/relation/enum",
+        "value_count": 3,
+        "values": [
+          "supporting",
+          "irrelevant",
+          "contradictory"
+        ]
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/formula_basis/enum",
+        "value_count": 2,
+        "values": [
+          "textbook",
+          "problem_input"
+        ]
+      },
+      {
+        "schema_pointer": "/$defs/GeneralClaim/properties/status/enum",
+        "value_count": 3,
+        "values": [
+          "supported",
+          "partial",
+          "unsupported"
+        ]
+      },
+      {
+        "schema_pointer": "/$defs/GivenClaim/properties/status/enum",
+        "value_count": 3,
+        "values": [
+          "supported",
+          "partial",
+          "unsupported"
+        ]
+      },
+      {
+        "schema_pointer": "/$defs/GuidanceClaim/properties/basis/enum",
+        "value_count": 2,
+        "values": [
+          "nonfactual",
+          "evidence_limitation"
+        ]
+      },
+      {
+        "schema_pointer": "/$defs/RequirementCheck/properties/relevance/enum",
+        "value_count": 2,
+        "values": [
+          "related",
+          "unrelated"
+        ]
+      },
+      {
+        "schema_pointer": "/$defs/RequirementCheck/properties/response_coverage/enum",
+        "value_count": 5,
+        "values": [
+          "covered",
+          "partial",
+          "not_addressed",
+          "deferred_for_hint",
+          "limitation"
+        ]
+      },
+      {
+        "schema_pointer": "/$defs/RequirementCheck/properties/sufficiency/enum",
+        "value_count": 5,
+        "values": [
+          "sufficient",
+          "partial",
+          "absent",
+          "conflicting",
+          "not_applicable"
+        ]
+      },
+      {
+        "schema_pointer": "/$defs/TextbookClaim/properties/status/enum",
+        "value_count": 3,
+        "values": [
+          "supported",
+          "partial",
+          "unsupported"
+        ]
+      },
+      {
+        "schema_pointer": "/properties/coverage/enum",
+        "value_count": 3,
+        "values": [
+          "full",
+          "supported_partial",
+          "none"
+        ]
+      }
+    ],
+    "const_nodes": 4,
+    "consts": [
+      {
+        "schema_pointer": "/$defs/CalculationClaim/properties/basis/const",
+        "value": "derived_calculation"
+      },
+      {
+        "schema_pointer": "/$defs/GeneralClaim/properties/basis/const",
+        "value": "general_knowledge"
+      },
+      {
+        "schema_pointer": "/$defs/GivenClaim/properties/basis/const",
+        "value": "problem_input"
+      },
+      {
+        "schema_pointer": "/$defs/TextbookClaim/properties/basis/const",
+        "value": "textbook"
+      }
+    ],
+    "pattern_nodes": 1,
+    "keyword_occurrences": {
+      "$defs": 1,
+      "$ref": 11,
+      "additionalProperties": 11,
+      "anyOf": 3,
+      "const": 4,
+      "description": 27,
+      "enum": 12,
+      "items": 9,
+      "minItems": 1,
+      "pattern": 1,
+      "properties": 11,
+      "required": 11,
+      "type": 85
+    },
+    "expanded_instance_shape": {
+      "maxima": {
+        "value_depth": 6,
+        "container_depth": 6,
+        "object_depth": 4,
+        "array_depth": 3
+      },
+      "maximum_paths_by_metric": {
+        "value_depth": [
+          "$.claims[]<(anyOf:0)>.citations[].fragment_ids[]",
+          "$.claims[]<(anyOf:2)>.citations[].fragment_ids[]",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id<(anyOf:0)>",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id<(anyOf:1)>",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].name",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].origin",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].quote",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].unit",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].value"
+        ],
+        "container_depth": [
+          "$.claims[]<(anyOf:0)>.citations[].fragment_ids",
+          "$.claims[]<(anyOf:0)>.citations[].fragment_ids[]",
+          "$.claims[]<(anyOf:2)>.citations[].fragment_ids",
+          "$.claims[]<(anyOf:2)>.citations[].fragment_ids[]",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[]",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id<(anyOf:0)>",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id<(anyOf:1)>",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].name",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].origin",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].quote",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].unit",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].value"
+        ],
+        "object_depth": [
+          "$.claims[]<(anyOf:2)>.derivation.inputs[]",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id<(anyOf:0)>",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id<(anyOf:1)>",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].name",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].origin",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].quote",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].unit",
+          "$.claims[]<(anyOf:2)>.derivation.inputs[].value"
+        ],
+        "array_depth": [
+          "$.claims[]<(anyOf:0)>.citations[].fragment_ids",
+          "$.claims[]<(anyOf:0)>.citations[].fragment_ids[]",
+          "$.claims[]<(anyOf:2)>.citations[].fragment_ids",
+          "$.claims[]<(anyOf:2)>.citations[].fragment_ids[]"
+        ]
+      },
+      "max_value_depth_paths": [
+        "$.claims[]<(anyOf:0)>.citations[].fragment_ids[]",
+        "$.claims[]<(anyOf:2)>.citations[].fragment_ids[]",
+        "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id",
+        "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id<(anyOf:0)>",
+        "$.claims[]<(anyOf:2)>.derivation.inputs[].fragment_id<(anyOf:1)>",
+        "$.claims[]<(anyOf:2)>.derivation.inputs[].name",
+        "$.claims[]<(anyOf:2)>.derivation.inputs[].origin",
+        "$.claims[]<(anyOf:2)>.derivation.inputs[].quote",
+        "$.claims[]<(anyOf:2)>.derivation.inputs[].unit",
+        "$.claims[]<(anyOf:2)>.derivation.inputs[].value"
+      ],
+      "local_ref_cycles": [],
+      "expanded_schema_visits": 93
+    }
+  },
+  "comparison": {
+    "removed_bound_count": 42,
+    "removed_bounds": [
+      {
+        "schema_pointer": "/$defs/CalculationClaim/properties/citations/maxItems",
+        "keyword": "maxItems",
+        "value": 12
+      },
+      {
+        "schema_pointer": "/$defs/CalculationClaim/properties/reason/maxLength",
+        "keyword": "maxLength",
+        "value": 800
+      },
+      {
+        "schema_pointer": "/$defs/CalculationClaim/properties/reason/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/CalculationInputV4/properties/quote/maxLength",
+        "keyword": "maxLength",
+        "value": 1200
+      },
+      {
+        "schema_pointer": "/$defs/CalculationInputV4/properties/quote/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/CalculationInputV4/properties/unit/maxLength",
+        "keyword": "maxLength",
+        "value": 80
+      },
+      {
+        "schema_pointer": "/$defs/CalculationInputV4/properties/value/maxLength",
+        "keyword": "maxLength",
+        "value": 60
+      },
+      {
+        "schema_pointer": "/$defs/CalculationInputV4/properties/value/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/CitationAssessment/properties/fragment_ids/maxItems",
+        "keyword": "maxItems",
+        "value": 12
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/expression/maxLength",
+        "keyword": "maxLength",
+        "value": 200
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/expression/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/formula_quote/maxLength",
+        "keyword": "maxLength",
+        "value": 1200
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/formula_quote/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/inputs/maxItems",
+        "keyword": "maxItems",
+        "value": 12
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/result/maxLength",
+        "keyword": "maxLength",
+        "value": 60
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/result/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/result_quote/maxLength",
+        "keyword": "maxLength",
+        "value": 120
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/result_quote/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/result_unit/maxLength",
+        "keyword": "maxLength",
+        "value": 80
+      },
+      {
+        "schema_pointer": "/$defs/GeneralClaim/properties/reason/maxLength",
+        "keyword": "maxLength",
+        "value": 800
+      },
+      {
+        "schema_pointer": "/$defs/GeneralClaim/properties/reason/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/GivenClaim/properties/problem_quote/maxLength",
+        "keyword": "maxLength",
+        "value": 4000
+      },
+      {
+        "schema_pointer": "/$defs/GivenClaim/properties/problem_quote/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/GivenClaim/properties/reason/maxLength",
+        "keyword": "maxLength",
+        "value": 800
+      },
+      {
+        "schema_pointer": "/$defs/GivenClaim/properties/reason/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/GuidanceClaim/properties/reason/maxLength",
+        "keyword": "maxLength",
+        "value": 800
+      },
+      {
+        "schema_pointer": "/$defs/GuidanceClaim/properties/reason/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/RequirementCheck/properties/evidence/maxItems",
+        "keyword": "maxItems",
+        "value": 8
+      },
+      {
+        "schema_pointer": "/$defs/RequirementCheck/properties/missing_information/maxLength",
+        "keyword": "maxLength",
+        "value": 1000
+      },
+      {
+        "schema_pointer": "/$defs/RequirementCheck/properties/reason/maxLength",
+        "keyword": "maxLength",
+        "value": 1200
+      },
+      {
+        "schema_pointer": "/$defs/RequirementCheck/properties/reason/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/RequirementEvidence/properties/quote/maxLength",
+        "keyword": "maxLength",
+        "value": 1200
+      },
+      {
+        "schema_pointer": "/$defs/RequirementEvidence/properties/quote/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/$defs/TextbookClaim/properties/citations/maxItems",
+        "keyword": "maxItems",
+        "value": 12
+      },
+      {
+        "schema_pointer": "/$defs/TextbookClaim/properties/reason/maxLength",
+        "keyword": "maxLength",
+        "value": 800
+      },
+      {
+        "schema_pointer": "/$defs/TextbookClaim/properties/reason/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/properties/claims/maxItems",
+        "keyword": "maxItems",
+        "value": 100
+      },
+      {
+        "schema_pointer": "/properties/missing_facets/maxItems",
+        "keyword": "maxItems",
+        "value": 8
+      },
+      {
+        "schema_pointer": "/properties/reason/maxLength",
+        "keyword": "maxLength",
+        "value": 1600
+      },
+      {
+        "schema_pointer": "/properties/reason/minLength",
+        "keyword": "minLength",
+        "value": 1
+      },
+      {
+        "schema_pointer": "/properties/repair_fragment_ids/maxItems",
+        "keyword": "maxItems",
+        "value": 24
+      },
+      {
+        "schema_pointer": "/properties/requirements/maxItems",
+        "keyword": "maxItems",
+        "value": 8
+      }
+    ],
+    "description_annotation_count": 27,
+    "description_annotations": [
+      {
+        "schema_pointer": "/$defs/CalculationClaim/properties/citations/description",
+        "before": null,
+        "after": "Local validation constraints: maxItems=12."
+      },
+      {
+        "schema_pointer": "/$defs/CalculationClaim/properties/reason/description",
+        "before": null,
+        "after": "Local validation constraints: maxLength=800; minLength=1."
+      },
+      {
+        "schema_pointer": "/$defs/CalculationInputV4/properties/quote/description",
+        "before": null,
+        "after": "Local validation constraints: maxLength=1200; minLength=1."
+      },
+      {
+        "schema_pointer": "/$defs/CalculationInputV4/properties/unit/description",
+        "before": null,
+        "after": "Local validation constraints: maxLength=80."
+      },
+      {
+        "schema_pointer": "/$defs/CalculationInputV4/properties/value/description",
+        "before": null,
+        "after": "Local validation constraints: maxLength=60; minLength=1."
+      },
+      {
+        "schema_pointer": "/$defs/CitationAssessment/properties/fragment_ids/description",
+        "before": null,
+        "after": "Local validation constraints: maxItems=12."
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/expression/description",
+        "before": null,
+        "after": "Local validation constraints: maxLength=200; minLength=1."
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/formula_quote/description",
+        "before": null,
+        "after": "Local validation constraints: maxLength=1200; minLength=1."
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/inputs/description",
+        "before": null,
+        "after": "Local validation constraints: maxItems=12."
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/result/description",
+        "before": null,
+        "after": "Local validation constraints: maxLength=60; minLength=1."
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/result_quote/description",
+        "before": null,
+        "after": "Local validation constraints: maxLength=120; minLength=1."
+      },
+      {
+        "schema_pointer": "/$defs/DerivationV4/properties/result_unit/description",
+        "before": null,
+        "after": "Local validation constraints: maxLength=80."
+      },
+      {
+        "schema_pointer": "/$defs/GeneralClaim/properties/reason/description",
+        "before": null,
+        "after": "Local validation constraints: maxLength=800; minLength=1."
+      },
+      {
+        "schema_pointer": "/$defs/GivenClaim/properties/problem_quote/description",
+        "before": null,
+        "after": "Local validation constraints: maxLength=4000; minLength=1."
+      },
+      {
+        "schema_pointer": "/$defs/GivenClaim/properties/reason/description",
+        "before": null,
+        "after": "Local validation constraints: maxLength=800; minLength=1."
+      },
+      {
+        "schema_pointer": "/$defs/GuidanceClaim/properties/reason/description",
+        "before": null,
+        "after": "Local validation constraints: maxLength=800; minLength=1."
+      },
+      {
+        "schema_pointer": "/$defs/RequirementCheck/properties/evidence/description",
+        "before": null,
+        "after": "Local validation constraints: maxItems=8."
+      },
+      {
+        "schema_pointer": "/$defs/RequirementCheck/properties/missing_information/description",
+        "before": null,
+        "after": "Local validation constraints: maxLength=1000."
+      },
+      {
+        "schema_pointer": "/$defs/RequirementCheck/properties/reason/description",
+        "before": null,
+        "after": "Local validation constraints: maxLength=1200; minLength=1."
+      },
+      {
+        "schema_pointer": "/$defs/RequirementEvidence/properties/quote/description",
+        "before": null,
+        "after": "Local validation constraints: maxLength=1200; minLength=1."
+      },
+      {
+        "schema_pointer": "/$defs/TextbookClaim/properties/citations/description",
+        "before": null,
+        "after": "Local validation constraints: maxItems=12."
+      },
+      {
+        "schema_pointer": "/$defs/TextbookClaim/properties/reason/description",
+        "before": null,
+        "after": "Local validation constraints: maxLength=800; minLength=1."
+      },
+      {
+        "schema_pointer": "/properties/claims/description",
+        "before": null,
+        "after": "Local validation constraints: maxItems=100."
+      },
+      {
+        "schema_pointer": "/properties/missing_facets/description",
+        "before": null,
+        "after": "Local validation constraints: maxItems=8."
+      },
+      {
+        "schema_pointer": "/properties/reason/description",
+        "before": null,
+        "after": "Local validation constraints: maxLength=1600; minLength=1."
+      },
+      {
+        "schema_pointer": "/properties/repair_fragment_ids/description",
+        "before": null,
+        "after": "Local validation constraints: maxItems=24."
+      },
+      {
+        "schema_pointer": "/properties/requirements/description",
+        "before": null,
+        "after": "Local validation constraints: maxItems=8."
+      }
+    ],
+    "unexpected_changes": [],
+    "same_schema_node_paths": true
+  },
+  "unchanged_structural_metric_keys": [
+    "schema_node_count",
+    "max_physical_schema_edge_depth",
+    "max_serialized_json_container_depth",
+    "definitions",
+    "definitions_count",
+    "local_ref_occurrences",
+    "local_ref_unique_targets",
+    "local_ref_counts",
+    "type_node_counts",
+    "object_fields_total",
+    "required_fields_total",
+    "optional_fields_total",
+    "nullable_property_count",
+    "nullable_property_pointers",
+    "objects",
+    "combinators",
+    "combinator_node_counts",
+    "combinator_branch_counts",
+    "enum_nodes",
+    "enum_values_total",
+    "enums",
+    "const_nodes",
+    "consts",
+    "pattern_nodes",
+    "expanded_instance_shape"
+  ],
+  "canonical_size_change_bytes": 1200,
+  "original_input_unchanged": true,
+  "interpretation": [
+    "All declared object properties are required. Missing-field optional permutations are not present; the two required nullable properties still have two-branch anyOf schemas.",
+    "The claims array has a five-branch item union, each selecting a claim object. The calculation branch reaches derivation and input objects through local references and a second array level. Citation fragment_ids reach a separate three-array path: claims, citations, fragment_ids.",
+    "Bounds projection removes 42 bounds from 27 schema nodes and adds descriptions, retaining all fields, types, required lists, enums, constants, refs, composition branches and additionalProperties=false.",
+    "Projection increases canonical schema text size. Text byte size is not compiled grammar size: replacing grammar-enforced bounds with non-validating descriptions changes constraint processing, not the output shape.",
+    "The remaining minItems=1 and string pattern are retained. The array/union/nesting structure is not reduced by this candidate.",
+    "No redundant bound is proved removable from the full local validator. Similar reason fields belong to separate variants and may have different limits; flattening the union or merging variants would change the provider output contract.",
+    "No provider compiled grammar size or threshold is exposed. Minimal 200 and full 400 compiled-grammar-too-large diagnostics establish a schema-sensitive failure in those new requests, not which combination is causal or that this projection passes."
+  ],
+  "provider_calls": 0,
+  "DB_accesses": 0,
+  "Main_writes": 0,
+  "paid_validation_status": "NOT_PERFORMED_BY_THIS_ANALYSIS"
+}

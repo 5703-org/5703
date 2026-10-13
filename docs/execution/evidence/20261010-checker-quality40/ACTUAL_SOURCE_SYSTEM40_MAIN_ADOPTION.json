@@ -1,0 +1,51 @@
+{
+  "status": "ACTUAL_GENERIC_SYSTEM_INSTRUCTION40_ADOPTED_READBACK_VERIFIED",
+  "files": [
+    {
+      "path": "E:\\5703\\learning-assistant\\generation\\checked.py",
+      "before": {
+        "path": "E:\\5703\\learning-assistant\\generation\\checked.py",
+        "bytes": 155543,
+        "sha256": "5b62005af2263600d6c9485aedf73613acd825bade85f41fc33ba88b0b39994c"
+      },
+      "after": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-system40-candidate\\checked.py",
+        "bytes": 155924,
+        "sha256": "838b641549631ee365f0f2e9b534c9f08aa0c230dfe59745f5de3ca901145a4c"
+      },
+      "backup": {
+        "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-system40-candidate\\checked.py.before",
+        "bytes": 155543,
+        "sha256": "5b62005af2263600d6c9485aedf73613acd825bade85f41fc33ba88b0b39994c"
+      },
+      "readback_equal": true
+    }
+  ],
+  "review_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-source-system40-candidate\\SOURCE_SYSTEM40_FROZEN_REVIEW.json",
+    "bytes": 5817,
+    "sha256": "216b119c6740169d06963354fbf8f575c30d137225aaab5005134c1c2f549015"
+  },
+  "source_unchanged_pin": {
+    "path": "E:\\5703\\learning-assistant\\generation\\source_relations_v2.py",
+    "bytes": 17079,
+    "sha256": "4e3ef844eff23b77d83e850c32fdfa47c9504b7cec9a8edd7db3328851ba5a55"
+  },
+  "output_schema_parser_assessor_gates_default_policy_changed": false,
+  "whole_other_business_ast_unchanged": true,
+  "production_renderer": {
+    "module": "generation.checked",
+    "helper": "source_relation_checker_system",
+    "argument": "existing check_template string",
+    "system_tail": "original check_template + newline + unchanged SOURCE_SELECTION_INSTRUCTIONS + final_schema_audit",
+    "final_schema_audit": "\nFinal schema audit: copy property names verbatim, including evidence_id, without added whitespace in keys. Keep every required field. Emit complete minified JSON and preserve all string meanings.",
+    "call_site": "relation_contract and relation_v2, before check_messages construction",
+    "user_data_delta": "Do not add SOURCE_RELATION_SELECTION_INSTRUCTIONS; every other original data field is unchanged.",
+    "provider_schema_hint": "The existing providers.payload OUTPUT FORMAT/schema hint follows the helper output. No provider logic is changed.",
+    "rubric_hash": "Both existing _sha(check_template) consumers retain the actual promoted system template hash. They execute after the V2 helper call.",
+    "initial_and_recheck": "Existing per-revision template construction is retained; trusted rules are added once per newly constructed V2 checker request.",
+    "untrusted_source_or_learner_values_promoted": false
+  },
+  "API_DB_calls": 0,
+  "old_actual_results_or_STOP_modified": false
+}

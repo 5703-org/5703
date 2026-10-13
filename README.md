@@ -1,3 +1,21 @@
+# Current Week10 Haiku compatibility checkpoint - 9 October 2026
+
+The reviewed opt-in OpenRouter profile 'haiku55_google_vertex_low_v1' selects 'anthropic/claude-haiku-5.5' on 'google-vertex/global'; existing production default profiles and activation eligibility are unchanged. Saved isolated verification passed 101 cases with 20 skipped cases and Ruff, with zero provider requests or real-database connections. These targeted software checks do not establish live-model qualification.
+
+Actual04 stopped before any model POST because an unscoped New chat locator also matched the newly created history item; its failed receipt and STOP remain preserved. Browser11 scopes normal creation to the desktop creation button and waits for conversation loading. Actual05 then passed the free preflight for two distinct ordinary chat sessions on the same live worker/Engine before the first paid POST. Both prepared pages had no reading context; Q3's actual normal submission used all active-corpus RAG without a chapter filter.
+
+Q3 received teacher HTTP 200, followed by checker HTTP 400. Complete checker parsing, publication, cited-answer rendering and refresh acceptance did not pass. Q4's original conditional authorization remains recorded; the unmet Q3 publication gate prevented its submission. The public receipts do not establish the remote HTTP 400 cause. No Haiku compatibility PASS, six-role qualification, complete-answer latency, TTFT or p95 measurement is added. The 300,022.2001 ms browser wait is right-censored, with complete-answer time and answer ID null. The isolated experiment's normal_project_activation_qualified flag remains false.
+
+The new batch made two physical POSTs: known teacher cost USD0.00163590 and one UNKNOWN checker cost retaining the full USD0.03 hold. Budget status is STOPPED, open claims are zero and fully_settled is false; two unused slots do not authorize automatic retry or replacement. Both owned processes and stream collectors, browser/context, worker threads and database resources closed; active pointers are unchanged. This is failed-leg resource closure, not successful native acceptance. Old STOPs, UNKNOWN protections, databases, experiments and deliveries remain preserved.
+
+Earlier Q1/Q2 results remain two independently successful cited-answer journeys on different workers, not a completed two-question same-worker test. The 53-row matrix stays 5 verified / 38 pending / 8 incomplete / 2 external; original canonical task/check statuses are unchanged and project_complete=false. Human ratings, independent source/semantic quality, formal warm-p95 and remaining course acceptance stay open.
+
+[Actual Haiku result and limits](docs/execution/20261009-week10-haiku-Q3-Q4-partial-results.md); [public evidence index](docs/execution/evidence/20261009-week10-haiku-partial05/index.json).
+
+---
+
+Earlier document bytes follow unchanged as historical evidence.
+
 # Current cumulative Week09 requirements - 6 October 2026
 
 The [current requirements trace](docs/execution/week09-current-requirements-trace-20261006.md) records 53 stable requirements in twelve groups and preserves the eight owner domains. One continuing project uses the main repository and isolated successor candidates. Human ratings remain paused and null; this limits research evidence and does not suspend engineering.
@@ -1000,3 +1018,28 @@ The dated 858-source checkpoint passed 2,929 Python cases plus two subtests and 
 
 [dated measured outcomes](docs/execution/week09-real-memory-v21-20261002.md); [G010 V21 results](docs/execution/week09-current-g010-query21-source-block-development-20261002.md); [native E0/E1 CPU results](docs/execution/week09-current-native-e0-e1-cpu-development-20261002.md); [current software gate](evidence/week09-continuation/20261001/software-gate-memory-v5-20261003-01/software_gate.json). The current V5 installation and four-role startup passed their measured operating checks. The fresh four-case and six-probe memory acceptance is approval-blocked and unexecuted; Models acceptance and remaining seven-family studies retain their acceptance criteria. [Current installed checkpoint](docs/execution/week09-current-memory-v5-installed-acceptance-20261002.md). Human learning, visual content approval and physical-host acceptance retain separate observations. Original numbered scope and accountable owners remain unchanged.
 
+
+
+## Actual Week10 paired native-browser result - 2026-10-09
+
+The previously prepared pair has now executed with the separately approved max8POST/USD0.24 allocation. Both normal native R2/full-checker/browser legs passed and closed. Same question, frozen synthetic history/profile/memory, complete initial teacher wire and ordered candidates/evidence matched. Send-to-complete cited-answer DOM: A18.7143s, B12.1465s; process launch-to-completion: A30.2040s, B29.4479s. The observed Send difference is35.10%, but startup rose8.4283s to14.0966s; net launch-to-completion difference is only2.50%. n=1/AthenB is diagnostic, not p95, independent scientific quality or causal cache acceptance.
+
+Four actual known-cost POSTs cost USD0.01936904, newUNKNOWN0/open0; both owned runtimes/browser Jobs and database resources closed. Success STOP closes this batch; no unused slot is automatically reused. All old UNKNOWN/STOP/full protections and Week09 deliveries remain preserved. The default startup flag remains false. Normal login was repaired only in the already-owned synthetic fixture email; a cross-representation response-hash prerequisite was removed only from the browser harness. Existing48 affected free tests/Ruff checks are reused rather than rerun unchanged. Earlier prepared-only or access/budget pauses are dated historical checkpoints, superseded for this completed execution. Current53 remains5/38/8/2; project_complete=false.
+
+[Actual result and limits](docs/execution/20261009-week10-native-pair-result.md).
+
+
+## Actual Week10 continuous-worker partial result - 2026-10-09
+
+2026-10-09 Week10 continuous02 result is partial: Q1 passed the normal UI, native R2/CUDA retrieval, citation and refresh checks; Send to complete answer DOM was 9047.7 ms and business release-cache validation hit in 8.6338 ms. Q2 stopped before Send during chapter loading and used zero model POSTs. New cost was 2 POSTs/$0.00870200; campaign aggregate is 6 POSTs/$0.02807104. Original STOPs remain closed. Browser05's one-line chapter-DOM wait correction passed local syntax parsing only and has not been live validated. Two-question reuse, cross-scope quality, p95 and scientific/project completion remain open. See the new continuous-worker partial-result report and public evidence index.
+
+[Actual partial result and evidence](docs/execution/20261009-week10-continuous-worker-partial-result.md). [Closed paired-run Library archive](https://chatgpt.com/api/library/files/libfile_3f052252ff808191abf55ac4b3efd56b/download); Library ID `libfile_3f052252ff808191abf55ac4b3efd56b`, version0, 34 public evidence files, ZIP154748B/SHA256 `ff2bb66e8fee9341a580ba3d461723ffd79a33d5f669dbcd495aaad25fe27f15`. Current matrix remains5 verified/38 pending/8 incomplete/2 external; project_complete=false.
+
+
+## Actual Week10 Q1/Q2 independent results - 2026-10-09
+
+2026-10-09 independent Q1/Q2 result: both original requests have complete cited answers, source dialogs and refresh persistence. Q1 passed inside the earlier overall failed continuous02 leg; that report, failure evidence and STOP remain unchanged. Q2's authorized first execution passed on a new worker and reached normal native CLOSED. Worker PIDs were 66652 and 13352, so the original two-question same-worker/Engine objective remains unverified. Send-to-complete DOM was 9047.7 ms / 12146.8 ms; each worker independently observed a business release-cache hit after its startup preparation. Both normal UI requests removed reading context and used all active-corpus RAG, without chapter filters. Q2's awaited chapter-control path passed; production code was unchanged. Source-body review remains finite/partial, especially Q2's unopened supporting bodies; no human rating, scientific acceptance, cross-scope quality, causal speedup or p95 claim is added. Campaign totals are 8 settled POSTs/$0.03987014, zero new UNKNOWN/open claims, all authorized slots consumed and STOPs preserved. See `20261009-week10-Q1-Q2-independent-results.md` and the new Q2 public evidence index. Project/course completion remains false; do not alter prior matrix counts solely from these observations.
+
+[Actual results and public evidence](docs/execution/20261009-week10-Q1-Q2-independent-results.md). Current matrix remains5 verified/38 pending/8 incomplete/2 external; project_complete=false.
+
+[Q1/Q2 sanitized original evidence archive](https://chatgpt.com/api/library/files/libfile_8402191335588191be4702caab60e52f/download): Library ID `libfile_8402191335588191be4702caab60e52f`, version0, ZIP520174B/SHA256 `5379c7cc4c47ec0d81b1b3d3e5e2f569db0ce6e802526bc37cd7a0afa4c68c96`. The archive records two independent worker observations and preserves the earlier failed leg; it does not establish same-worker reuse or independent scientific acceptance.

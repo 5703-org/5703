@@ -1,0 +1,71 @@
+{
+  "status": "ACTUAL_NATIVE14_PROTECTED_EDIT_FAILURE_RETAINED",
+  "at_UTC": "2026-10-10T00:32:16.874659+00:00",
+  "actual_error": {
+    "code": "CLAIM_PATCH_APPROVED_EDIT",
+    "message": "Enhanced response or source mapping failed validation.",
+    "retryable": false,
+    "details": {
+      "error_type": "ResponseValidationError",
+      "validation_code": null
+    }
+  },
+  "actual_native_stages": [
+    "generation",
+    "joint_check",
+    "semantic_repair"
+  ],
+  "original_claim_count": 7,
+  "protected_claim_count": 6,
+  "editable_claim_ids": [
+    "claim_b81f13585a55a56f0b531011_1"
+  ],
+  "actual_patch": {
+    "edits": [
+      {
+        "claim_id": "claim_b81f13585a55a56f0b531011_1",
+        "replacement_text": "The light-dependent reactions capture light energy and store it in energy carriers, ATP and NADPH, which move that energy to the Calvin cycle [ev_002] [ev_007]."
+      },
+      {
+        "claim_id": "claim_561d191cc7aa168722b4c29a_1",
+        "replacement_text": ""
+      }
+    ],
+    "append_answer_text": "The short answer is that the light-dependent reactions capture light energy in ATP and NADPH, which carry that energy into the stroma for the Calvin cycle [ev_007]."
+  },
+  "protected_deletion_attempts": [
+    {
+      "claim_id": "claim_561d191cc7aa168722b4c29a_1",
+      "replacement_text": ""
+    }
+  ],
+  "complete_answer_published": false,
+  "Send_to_observed_STOP_ms": 15533.89990234375,
+  "complete_answer_ms": null,
+  "known_cost_USD": "0.01004490",
+  "physical_POSTs": 3,
+  "new_UNKNOWN": 0,
+  "budget_public_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure14\\runtime\\budget-status-public01.json",
+    "bytes": 1305,
+    "sha256": "28b53d598efc0492ce555b9c69951fbdd85dac428c259861fd7c44723516da93"
+  },
+  "runtime_closure_public_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure14\\runtime\\runtime-closed-public01.json",
+    "bytes": 1762,
+    "sha256": "a395aecdc3ce2e2c270e5ddbfa8172dbbc0e72bc592d900a5fc5b3417039aa43"
+  },
+  "outcome_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure14\\runtime\\retained-provider-diagnostics\\native-generation-outcome01.json",
+    "bytes": 293182,
+    "sha256": "8a3285f64f902a05956e8b6793e3c83b91b9f9edcce1a62adc45fed750604848"
+  },
+  "repair_output_pin": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\scientific-native-closure14\\runtime\\retained-provider-diagnostics\\slot-03-model-output01.json",
+    "bytes": 1786,
+    "sha256": "37919b6ac6ff7e176c5a2925e661ff4416998c4efbf38a0cf89fa5f8d3ce304f"
+  },
+  "old_receipts_modified": false,
+  "generic_message_is_overwritten_before_local_patch_send": true,
+  "diagnosis_limit": "The complete patch attempted a protected short_answer deletion. No generic-message conflict was observed in the actual final local-patch branch. The correction adds explicit server-derived editable IDs to that final branch; it does not weaken validation."
+}

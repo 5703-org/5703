@@ -1,0 +1,270 @@
+{
+  "Q3_browser": {
+    "citation_checked": false,
+    "completed_cited_answer": false,
+    "failure_code": "ANSWER_RENDER_TIMEOUT_RIGHT_CENSORED",
+    "failure_observation_is_not_complete_answer_latency": true,
+    "published_reply_rendered": false,
+    "refresh_persisted": false,
+    "status": "FAIL",
+    "tfailure_ms": 300022.20009765774,
+    "tfull_ms": null,
+    "timeTTFT_ms": null,
+    "worker_ready_to_Send_ms": 6472.933837890625
+  },
+  "Q3_model_calls": {
+    "actual_full_QA_schema_hashes_match_fresh_descriptors": true,
+    "checker_adapter": {
+      "batch_id": "cs30-week10-haiku-persistent-general-20261009-02",
+      "diagnostic_stage": "http",
+      "http_status": 400,
+      "known_cost_observed": false,
+      "latency_ms": 1104,
+      "model": "anthropic/claude-haiku-5.5",
+      "native_local_error_code": "PROVIDER_HTTP_ERROR",
+      "provider": "openai_compatible",
+      "raw_output_messages_headers_or_credentials_exported": false,
+      "request_submitted": true,
+      "schema": "5703_week10_native_pair_adapter_v1",
+      "slot": 2
+    },
+    "checker_exact_remote_error_message_or_cause": "NOT_OBSERVED",
+    "checker_failure_category": "PROVIDER_HTTP_ERROR_HTTP400",
+    "experimental_Q3_full_teacher_checker_publication_passed": false,
+    "normal_project_activation_qualified": false,
+    "pending_descriptor_receipt_not_promoted_after_failure_is_not_zero_request_proof": true,
+    "role_descriptor_receipt_status": "PENDING_NOT_EXECUTED",
+    "teacher_adapter": {
+      "batch_id": "cs30-week10-haiku-persistent-general-20261009-02",
+      "diagnostic_stage": "completed",
+      "http_status": 200,
+      "known_cost_observed": true,
+      "latency_ms": 5909,
+      "model": "anthropic/claude-haiku-5.5",
+      "native_local_error_code": null,
+      "provider": "openai_compatible",
+      "raw_output_messages_headers_or_credentials_exported": false,
+      "request_submitted": true,
+      "schema": "5703_week10_native_pair_adapter_v1",
+      "slot": 1
+    },
+    "teacher_candidate_existence_basis": "Teacher adapter completed HTTP200 without local error, followed by an actual normal full checker dispatch. Raw teacher output was not inspected."
+  },
+  "Q3_native": {
+    "actual_retrieval": {
+      "execution_device": "cuda",
+      "rerank_ms": 146.5213000010408,
+      "retrieval_stages": {
+        "dense_ms": 45.54389999975683,
+        "lexical_ms": 4.9987999991572,
+        "query_embedding_ms": 15.869599999859929,
+        "query_vector_cache_hit": false,
+        "release_cache": {
+          "hit": true,
+          "validation_ms": 3.796200002398109,
+          "version": "validated_release_cache_v1"
+        },
+        "retrieval_total_ms": 91.70860000085668
+      }
+    },
+    "answer_id": null,
+    "candidate_count": 20,
+    "chapter_filter_applied": false,
+    "cpu_threads": 4,
+    "engine_object_identity": 1919648521520,
+    "initial_before_after_epoch_equal": true,
+    "job_id": "bd094002-5cc1-4257-ac82-ed8f7afc5991",
+    "native_job_state": "failed",
+    "native_rerank_trace_present": true,
+    "published_response": null,
+    "reading_context_present": false,
+    "reading_scope": null,
+    "request_id": "1e7fb2de-b48f-4fd9-b70e-8a19bb46fd58",
+    "resource_observation": {
+      "RSS_bytes": null,
+      "cuda_device": "NVIDIA GeForce RTX 5070 Ti",
+      "cuda_max_allocated_bytes": 365905408,
+      "cuda_max_reserved_bytes": 423624704,
+      "peak_counter_reset": false,
+      "scope": "Existing cumulative CUDA peaks at job end; no monitor/model load"
+    },
+    "retrieval_scope": "all_active_corpus",
+    "same_worker_process_and_Engine_as_preflight": true,
+    "worker_alive_at_execution": true,
+    "worker_count": 1,
+    "worker_pid": 75500,
+    "worker_timing": null
+  },
+  "Q4": {
+    "Q3_Q4_same_persistent_worker_execution_proved": false,
+    "full_DOM_answer_ms": null,
+    "provider_POSTs": 0,
+    "status": "NOT_EXECUTED_AFTER_Q3_FAILURE"
+  },
+  "batch_id": "cs30-week10-haiku-persistent-general-20261009-02",
+  "budget_public_observation": {
+    "aggregate_known_API_cost_USD": "0.04150604",
+    "aggregate_provider_post_count": 10,
+    "full_unknown_hold_USD": "0.03000000",
+    "fully_settled": false,
+    "known_API_cost_USD": "0.0016359",
+    "maximum_total_authorized_cost_USD": "0.36000000",
+    "open_claims": 0,
+    "parent_provider_post_count": 8,
+    "provider_post_count": 2,
+    "remaining_provider_slots": 2,
+    "status": "STOPPED",
+    "stop_exists": true,
+    "unknown_cost_count": 1
+  },
+  "closure": {
+    "active_pointers_unchanged": true,
+    "browser_closed": true,
+    "cleanup_error_classes": [],
+    "context_closed": true,
+    "controller_status": "ACTUAL_CONTROLLER_BLOCKED_OR_FAILED_NO_RETRY",
+    "historical_Q1_Q2_replayed": false,
+    "native_completed_question_ids": [],
+    "native_executed_question_ids": [
+      "Q3"
+    ],
+    "owned_abort_used": false,
+    "owned_database_resources_closed": true,
+    "owned_process_final_state": [
+      {
+        "exit_code": 1,
+        "owned_job_closed": true,
+        "pid": 75500
+      },
+      {
+        "exit_code": 1,
+        "owned_job_closed": true,
+        "pid": 79216
+      }
+    ],
+    "owned_threads_closed": true,
+    "previous_actual04_failure_preserved": true,
+    "resources_closed_does_not_imply_acceptance_leg_PASS": true,
+    "status": "CLEANUP_FAILED_OR_LEG_FAILED",
+    "whole_leg_passed": false
+  },
+  "free_preflight": {
+    "both_dynamic_alive_observations_precede_first_POST": true,
+    "chat_sessions": [
+      {
+        "DOMchatready": true,
+        "live_model_badge": true,
+        "normal_new_chat": true,
+        "observed_engine_identity": 1919648521520,
+        "observed_worker_pid": 75500,
+        "question_id": "Q3",
+        "reading_context_present": false,
+        "session_id": "169ee000-cbf9-4eb7-b22c-5d782e7df5f3",
+        "worker_alive": true,
+        "worker_liveness_observed_epoch_ms": 1791529823878.7556,
+        "worker_liveness_perf_counter_ms": 24499583.394500002
+      },
+      {
+        "DOMchatready": true,
+        "live_model_badge": true,
+        "normal_new_chat": true,
+        "observed_engine_identity": 1919648521520,
+        "observed_worker_pid": 75500,
+        "question_id": "Q4",
+        "reading_context_present": false,
+        "session_id": "a0475074-08d0-4f42-88f5-9103a6c425b3",
+        "worker_alive": true,
+        "worker_liveness_observed_epoch_ms": 1791529825011.1777,
+        "worker_liveness_perf_counter_ms": 24500715.8171
+      }
+    ],
+    "engine_object_identity": 1919648521520,
+    "first_POST_public_timestamp_via_financial_agent": {
+      "bytes": 1255,
+      "epoch_ms": 1791529828744.366,
+      "normalized_UTC": "2026-10-09T07:10:28.744366Z",
+      "public_started_file": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\claims-continuous05\\slot-01-started01.json",
+      "raw_at_UTC_has_explicit_plus11_offset": true,
+      "sha256": "ffffabad3b787addc7f6617d6985ba123e61d80c67cdb8797f2e342c7fc11bd8",
+      "wire_not_read": true
+    },
+    "observed_utc": "2026-10-09T07:10:25.353Z",
+    "prepaid_provider_posts": 0,
+    "proof_precedes_first_POST_ms": 3391.365966796875,
+    "status": "TWO_NORMAL_CHAT_PAGES_READY_SAME_WORKER",
+    "worker_alive": true,
+    "worker_pid": 75500
+  },
+  "limits": [
+    "Checker HTTP400 prevented publication; no full answer, citation acceptance, refresh acceptance or independent semantic quality result exists.",
+    "HTTP400 is a provider HTTP rejection, not observed response JSON parsing, timeout or truncation; the remote error body cause remains unobserved.",
+    "Missing reported checker cost remains UNKNOWN with USD0.03 hold; no assumption the call was free, and no retry or Q4 authorization.",
+    "Only Q3 executed. Two-question same-worker cache reuse, p95, quality superiority and whole-journey cache speedup are not established.",
+    "The 300-second browser right-censored failure observation is not a completed-answer latency.",
+    "No raw child logs, provider responses, auth, database, API or tests were accessed or executed in this review."
+  ],
+  "public_receipt_pins": [
+    {
+      "bytes": 4821,
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\continuous-preparation\\ROOT_CONTINUOUS_CONTROLLER_ACTUAL05.json",
+      "sha256": "2c810adae2370b443e56fdc8e635919e87a0b80acf20f2ad26552756e6bf6f43"
+    },
+    {
+      "bytes": 25917,
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\browser-continuous05\\real-browser-live-qa-receipt01.json",
+      "sha256": "cb5e31af6694148143698f4ed436a31db0c3fd7a14556d502c003a6f643fc905"
+    },
+    {
+      "bytes": 1649,
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous05\\runtime-closed-public01.json",
+      "sha256": "6e10f5334e8a52a81251212f04e54f76b1722f4d86efb85b017e105bde8e0349"
+    },
+    {
+      "bytes": 1324,
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous05\\budget-status-public01.json",
+      "sha256": "cf91ffd95a5dd43dfaaaa873fbcf36bddb9fa94a393a7de51e8ed11b0b3dcb6f"
+    },
+    {
+      "bytes": 3638,
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous05\\role-qualification-public01.json",
+      "sha256": "7c6f7680cf0ba35e5bc1af2c9e0c3e3e584698069eeaf1ebadc0202f8a40b43e"
+    },
+    {
+      "bytes": 2829,
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous05\\chat-readiness-public01.json",
+      "sha256": "0289af8bca1aacbc18ff646a73ce2cb4f23fe309567b51f3bb8a724a2146922c"
+    },
+    {
+      "bytes": 1636,
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous05\\worker-startup-preparation-public01.json",
+      "sha256": "f7b75881033bc78188c004588e6183af7ef5657c737339130bdf8bd7750ef3d1"
+    },
+    {
+      "bytes": 855,
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous05\\adapter-public01.jsonl",
+      "sha256": "9984dbbddfca129939e47fc2bcd59b27749592545dd8b5f43df630c0230160b9"
+    },
+    {
+      "bytes": 3402,
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous05\\actual-model-inputs-public01.jsonl",
+      "sha256": "b8ee7aad9330a304f2870bb3efa6a78da3050b8e8e9099880870440dbab7ba14"
+    },
+    {
+      "bytes": 7621,
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-week10-native-pair-20261009-01\\runtime-continuous05\\native-retrieval-1e7fb2de-b48f-4fd9-b70e-8a19bb46fd58-public01.json",
+      "sha256": "f7ccfa8f560c7295c444a65a087c59db91bfa4b64a7bbb2ecfa8d2ff4b142cda"
+    }
+  ],
+  "schema": "5703_week10_haiku_actual05_readonly_review_v1",
+  "source_version": "8c6a6933f7af2ba4876913f752b16f0d661da2eaec8e9cf5dc302461f158d4b1",
+  "startup_time_boundaries": {
+    "browser_elapsed_including_failure_wait_ms": 306485,
+    "complete_answer_total_ms": null,
+    "native_model_warmup_ms": 5672.613100003218,
+    "process_launch_to_worker_ready_ms": 14993.90234375,
+    "provider_POSTs_for_this_preparation": 0,
+    "release_cache_prepare_wall_ms": 6221.413499999471,
+    "runner_main_entry_to_worker_ready_ms": 14070.136999998795
+  },
+  "status": "ACTUAL_Q3_TEACHER_HTTP200_CHECKER_HTTP400_NO_PUBLISHED_ANSWER_RESOURCES_CLOSED"
+}
