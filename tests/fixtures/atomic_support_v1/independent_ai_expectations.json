@@ -1,0 +1,837 @@
+{
+  "reviewer_type": "INDEPENDENT_AI_REVIEWER_NOT_HUMAN",
+  "cases": [
+    {
+      "case_id": "DEV01_guarded_relay_positive",
+      "reviewer_type": "INDEPENDENT_AI_REVIEWER_NOT_HUMAN",
+      "expected_contract_status": "supported",
+      "ai_semantic_rationale": "The single rule explicitly supplies the same sensor, threshold, key condition, and relay consequence.",
+      "absence_policy": "Missing support is uncertain; unsupported requires explicit counterevidence.",
+      "manually_authored_judgment": {
+        "schema_version": "atomic_support_judgment_v1",
+        "atom_id": "A1",
+        "verdict": "supported",
+        "condition_judgments": [
+          {
+            "condition_id": "C0",
+            "verdict": "supported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 67,
+                "end": 160,
+                "quote": "Test rule: when Sensor A reports pressure above 5 kPa while the key is armed, Relay R closes."
+              }
+            ],
+            "semantic_reason": "The single rule explicitly supplies the same sensor, threshold, key condition, and relay consequence.",
+            "gap": null
+          },
+          {
+            "condition_id": "C1",
+            "verdict": "supported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 67,
+                "end": 160,
+                "quote": "Test rule: when Sensor A reports pressure above 5 kPa while the key is armed, Relay R closes."
+              }
+            ],
+            "semantic_reason": "The sensor and strict threshold are explicit.",
+            "gap": null
+          },
+          {
+            "condition_id": "C2",
+            "verdict": "supported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 67,
+                "end": 160,
+                "quote": "Test rule: when Sensor A reports pressure above 5 kPa while the key is armed, Relay R closes."
+              }
+            ],
+            "semantic_reason": "The rule says the key is armed.",
+            "gap": null
+          },
+          {
+            "condition_id": "C3",
+            "verdict": "supported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 67,
+                "end": 160,
+                "quote": "Test rule: when Sensor A reports pressure above 5 kPa while the key is armed, Relay R closes."
+              }
+            ],
+            "semantic_reason": "Relay R closes under the stated conditions.",
+            "gap": null
+          }
+        ],
+        "additional_gaps": []
+      }
+    },
+    {
+      "case_id": "DEV02_bounded_quantifier_positive",
+      "reviewer_type": "INDEPENDENT_AI_REVIEWER_NOT_HUMAN",
+      "expected_contract_status": "supported",
+      "ai_semantic_rationale": "The evidence closes the trial's frame set and applies the timestamp property to every member of that set.",
+      "absence_policy": "Missing support is uncertain; unsupported requires explicit counterevidence.",
+      "manually_authored_judgment": {
+        "schema_version": "atomic_support_judgment_v1",
+        "atom_id": "A1",
+        "verdict": "supported",
+        "condition_judgments": [
+          {
+            "condition_id": "C0",
+            "verdict": "supported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 72,
+                "end": 226,
+                "quote": "Trial 4 recorded exactly 18 frames from Camera C. No other Camera C frames were recorded in that trial. A timestamp is present on each of those 18 frames."
+              }
+            ],
+            "semantic_reason": "The evidence closes the trial's frame set and applies the timestamp property to every member of that set.",
+            "gap": null
+          },
+          {
+            "condition_id": "C1",
+            "verdict": "supported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 72,
+                "end": 226,
+                "quote": "Trial 4 recorded exactly 18 frames from Camera C. No other Camera C frames were recorded in that trial. A timestamp is present on each of those 18 frames."
+              }
+            ],
+            "semantic_reason": "Exactly 18 and no other frames closes the bounded population.",
+            "gap": null
+          },
+          {
+            "condition_id": "C2",
+            "verdict": "supported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 72,
+                "end": 226,
+                "quote": "Trial 4 recorded exactly 18 frames from Camera C. No other Camera C frames were recorded in that trial. A timestamp is present on each of those 18 frames."
+              }
+            ],
+            "semantic_reason": "Each of the 18 has a timestamp.",
+            "gap": null
+          }
+        ],
+        "additional_gaps": []
+      }
+    },
+    {
+      "case_id": "DEV03_dropped_guard_negative",
+      "reviewer_type": "INDEPENDENT_AI_REVIEWER_NOT_HUMAN",
+      "expected_contract_status": "unsupported",
+      "ai_semantic_rationale": "The assertion drops the safety-pin guard. The second sentence provides a direct counterexample to voltage-alone sufficiency.",
+      "absence_policy": "Missing support is uncertain; unsupported requires explicit counterevidence.",
+      "manually_authored_judgment": {
+        "schema_version": "atomic_support_judgment_v1",
+        "atom_id": "A1",
+        "verdict": "unsupported",
+        "condition_judgments": [
+          {
+            "condition_id": "C0",
+            "verdict": "unsupported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 67,
+                "end": 215,
+                "quote": "Gate G opens when the supply voltage exceeds 12 V and the safety pin is inserted. With the pin removed, Gate G remains closed at any supply voltage."
+              }
+            ],
+            "semantic_reason": "The assertion drops the safety-pin guard. The second sentence provides a direct counterexample to voltage-alone sufficiency.",
+            "gap": {
+              "kind": "contradiction",
+              "detail": "The assertion drops the safety-pin guard. The second sentence provides a direct counterexample to voltage-alone sufficiency."
+            }
+          },
+          {
+            "condition_id": "C1",
+            "verdict": "unsupported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 67,
+                "end": 215,
+                "quote": "Gate G opens when the supply voltage exceeds 12 V and the safety pin is inserted. With the pin removed, Gate G remains closed at any supply voltage."
+              }
+            ],
+            "semantic_reason": "Voltage can exceed the threshold while the removed pin keeps the gate closed.",
+            "gap": {
+              "kind": "contradiction",
+              "detail": "Voltage can exceed the threshold while the removed pin keeps the gate closed."
+            }
+          },
+          {
+            "condition_id": "C2",
+            "verdict": "unsupported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 67,
+                "end": 215,
+                "quote": "Gate G opens when the supply voltage exceeds 12 V and the safety pin is inserted. With the pin removed, Gate G remains closed at any supply voltage."
+              }
+            ],
+            "semantic_reason": "The inserted safety pin is required.",
+            "gap": {
+              "kind": "contradiction",
+              "detail": "The inserted safety pin is required."
+            }
+          }
+        ],
+        "additional_gaps": []
+      }
+    },
+    {
+      "case_id": "DEV04_wrong_subject_negative",
+      "reviewer_type": "INDEPENDENT_AI_REVIEWER_NOT_HUMAN",
+      "expected_contract_status": "uncertain",
+      "ai_semantic_rationale": "The temperature rule belongs to Sensor A. A mention of Sensor B elsewhere cannot transfer the predicate to it.",
+      "absence_policy": "Missing support is uncertain; unsupported requires explicit counterevidence.",
+      "manually_authored_judgment": {
+        "schema_version": "atomic_support_judgment_v1",
+        "atom_id": "A1",
+        "verdict": "uncertain",
+        "condition_judgments": [
+          {
+            "condition_id": "C0",
+            "verdict": "uncertain",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 67,
+                "end": 254,
+                "quote": "Sensor A reports a fault when its temperature exceeds 60 degrees Celsius. Sensor B reports a heartbeat once per second; this passage states no temperature-triggered behavior for Sensor B."
+              }
+            ],
+            "semantic_reason": "The temperature rule belongs to Sensor A. A mention of Sensor B elsewhere cannot transfer the predicate to it.",
+            "gap": {
+              "kind": "missing_evidence",
+              "detail": "The temperature rule belongs to Sensor A. A mention of Sensor B elsewhere cannot transfer the predicate to it."
+            }
+          },
+          {
+            "condition_id": "C1",
+            "verdict": "uncertain",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 67,
+                "end": 254,
+                "quote": "Sensor A reports a fault when its temperature exceeds 60 degrees Celsius. Sensor B reports a heartbeat once per second; this passage states no temperature-triggered behavior for Sensor B."
+              }
+            ],
+            "semantic_reason": "The only fault rule names Sensor A.",
+            "gap": {
+              "kind": "missing_evidence",
+              "detail": "The only fault rule names Sensor A."
+            }
+          },
+          {
+            "condition_id": "C2",
+            "verdict": "uncertain",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 67,
+                "end": 254,
+                "quote": "Sensor A reports a fault when its temperature exceeds 60 degrees Celsius. Sensor B reports a heartbeat once per second; this passage states no temperature-triggered behavior for Sensor B."
+              }
+            ],
+            "semantic_reason": "No temperature trigger for Sensor B is supplied.",
+            "gap": {
+              "kind": "missing_evidence",
+              "detail": "No temperature trigger for Sensor B is supplied."
+            }
+          }
+        ],
+        "additional_gaps": []
+      }
+    },
+    {
+      "case_id": "DEV05_wrong_object_negative",
+      "reviewer_type": "INDEPENDENT_AI_REVIEWER_NOT_HUMAN",
+      "expected_contract_status": "unsupported",
+      "ai_semantic_rationale": "The subject and verbs match, but the cited rule assigns port 42 to telemetry and port 17 exclusively to alerts.",
+      "absence_policy": "Missing support is uncertain; unsupported requires explicit counterevidence.",
+      "manually_authored_judgment": {
+        "schema_version": "atomic_support_judgment_v1",
+        "atom_id": "A1",
+        "verdict": "unsupported",
+        "condition_judgments": [
+          {
+            "condition_id": "C0",
+            "verdict": "unsupported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 66,
+                "end": 164,
+                "quote": "Router N forwards telemetry messages to port 42. Router N forwards alert messages only to port 17."
+              }
+            ],
+            "semantic_reason": "The subject and verbs match, but the cited rule assigns port 42 to telemetry and port 17 exclusively to alerts.",
+            "gap": {
+              "kind": "contradiction",
+              "detail": "The subject and verbs match, but the cited rule assigns port 42 to telemetry and port 17 exclusively to alerts."
+            }
+          },
+          {
+            "condition_id": "C1",
+            "verdict": "unsupported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 66,
+                "end": 164,
+                "quote": "Router N forwards telemetry messages to port 42. Router N forwards alert messages only to port 17."
+              }
+            ],
+            "semantic_reason": "Alerts are sent only to port 17, not port 42.",
+            "gap": {
+              "kind": "contradiction",
+              "detail": "Alerts are sent only to port 17, not port 42."
+            }
+          },
+          {
+            "condition_id": "C2",
+            "verdict": "supported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 66,
+                "end": 164,
+                "quote": "Router N forwards telemetry messages to port 42. Router N forwards alert messages only to port 17."
+              }
+            ],
+            "semantic_reason": "Both rules explicitly name Router N.",
+            "gap": null
+          }
+        ],
+        "additional_gaps": []
+      }
+    },
+    {
+      "case_id": "DEV06_unresolved_pronoun_uncertain",
+      "reviewer_type": "INDEPENDENT_AI_REVIEWER_NOT_HUMAN",
+      "expected_contract_status": "uncertain",
+      "ai_semantic_rationale": "The closed-state statement is explicit but its owner is not resolved. Either named device could be the referent; neither ownership should be fabricated.",
+      "absence_policy": "Missing support is uncertain; unsupported requires explicit counterevidence.",
+      "manually_authored_judgment": {
+        "schema_version": "atomic_support_judgment_v1",
+        "atom_id": "A1",
+        "verdict": "uncertain",
+        "condition_judgments": [
+          {
+            "condition_id": "C0",
+            "verdict": "uncertain",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 73,
+                "end": 235,
+                "quote": "Valve V and Latch L were checked together. The technician recorded: 'It stayed closed throughout the joint test.' The note does not identify the referent of 'It'."
+              }
+            ],
+            "semantic_reason": "The closed-state statement is explicit but its owner is not resolved. Either named device could be the referent; neither ownership should be fabricated.",
+            "gap": {
+              "kind": "unresolved_identity",
+              "detail": "The closed-state statement is explicit but its owner is not resolved. Either named device could be the referent; neither ownership should be fabricated."
+            }
+          },
+          {
+            "condition_id": "C1",
+            "verdict": "uncertain",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 73,
+                "end": 235,
+                "quote": "Valve V and Latch L were checked together. The technician recorded: 'It stayed closed throughout the joint test.' The note does not identify the referent of 'It'."
+              }
+            ],
+            "semantic_reason": "The quoted note leaves the pronoun unresolved.",
+            "gap": {
+              "kind": "unresolved_identity",
+              "detail": "The quoted note leaves the pronoun unresolved."
+            }
+          },
+          {
+            "condition_id": "C2",
+            "verdict": "supported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 73,
+                "end": 235,
+                "quote": "Valve V and Latch L were checked together. The technician recorded: 'It stayed closed throughout the joint test.' The note does not identify the referent of 'It'."
+              }
+            ],
+            "semantic_reason": "The note explicitly says throughout the joint test, subject to unresolved ownership.",
+            "gap": null
+          }
+        ],
+        "additional_gaps": []
+      }
+    },
+    {
+      "case_id": "DEV07_overclaimed_count_negative",
+      "reviewer_type": "INDEPENDENT_AI_REVIEWER_NOT_HUMAN",
+      "expected_contract_status": "unsupported",
+      "ai_semantic_rationale": "The cited one-packet failure directly defeats the assertion's universal quantifier.",
+      "absence_policy": "Missing support is uncertain; unsupported requires explicit counterevidence.",
+      "manually_authored_judgment": {
+        "schema_version": "atomic_support_judgment_v1",
+        "atom_id": "A1",
+        "verdict": "unsupported",
+        "condition_judgments": [
+          {
+            "condition_id": "C0",
+            "verdict": "unsupported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 71,
+                "end": 154,
+                "quote": "Batch B contains 20 packets. Nineteen passed checksum validation and one failed it."
+              }
+            ],
+            "semantic_reason": "The cited one-packet failure directly defeats the assertion's universal quantifier.",
+            "gap": {
+              "kind": "contradiction",
+              "detail": "The cited one-packet failure directly defeats the assertion's universal quantifier."
+            }
+          },
+          {
+            "condition_id": "C1",
+            "verdict": "supported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 71,
+                "end": 154,
+                "quote": "Batch B contains 20 packets. Nineteen passed checksum validation and one failed it."
+              }
+            ],
+            "semantic_reason": "The batch size is explicitly 20.",
+            "gap": null
+          },
+          {
+            "condition_id": "C2",
+            "verdict": "unsupported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 71,
+                "end": 154,
+                "quote": "Batch B contains 20 packets. Nineteen passed checksum validation and one failed it."
+              }
+            ],
+            "semantic_reason": "One of the 20 packets failed.",
+            "gap": {
+              "kind": "contradiction",
+              "detail": "One of the 20 packets failed."
+            }
+          }
+        ],
+        "additional_gaps": []
+      }
+    },
+    {
+      "case_id": "DEV08_future_quantifier_negative",
+      "reviewer_type": "INDEPENDENT_AI_REVIEWER_NOT_HUMAN",
+      "expected_contract_status": "uncertain",
+      "ai_semantic_rationale": "A complete finite historical observation set does not establish an unlimited guarantee for future observations. The unsupported label concerns citation support, not a prediction that a future sample must fail.",
+      "absence_policy": "Missing support is uncertain; unsupported requires explicit counterevidence.",
+      "manually_authored_judgment": {
+        "schema_version": "atomic_support_judgment_v1",
+        "atom_id": "A1",
+        "verdict": "uncertain",
+        "condition_judgments": [
+          {
+            "condition_id": "C0",
+            "verdict": "uncertain",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 71,
+                "end": 188,
+                "quote": "All eight voltage samples taken from Battery B on Day 1 exceeded 3 V. This log records only those Day 1 observations."
+              }
+            ],
+            "semantic_reason": "A complete finite historical observation set does not establish an unlimited guarantee for future observations. The unsupported label concerns citation support, not a prediction that a future sample must fail.",
+            "gap": {
+              "kind": "qualification_gap",
+              "detail": "A complete finite historical observation set does not establish an unlimited guarantee for future observations. The unsupported label concerns citation support, not a prediction that a future sample must fail."
+            }
+          },
+          {
+            "condition_id": "C1",
+            "verdict": "uncertain",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 71,
+                "end": 188,
+                "quote": "All eight voltage samples taken from Battery B on Day 1 exceeded 3 V. This log records only those Day 1 observations."
+              }
+            ],
+            "semantic_reason": "The log is restricted to Day 1 samples.",
+            "gap": {
+              "kind": "missing_evidence",
+              "detail": "The log is restricted to Day 1 samples."
+            }
+          },
+          {
+            "condition_id": "C2",
+            "verdict": "uncertain",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 71,
+                "end": 188,
+                "quote": "All eight voltage samples taken from Battery B on Day 1 exceeded 3 V. This log records only those Day 1 observations."
+              }
+            ],
+            "semantic_reason": "No future guarantee is stated.",
+            "gap": {
+              "kind": "missing_evidence",
+              "detail": "No future guarantee is stated."
+            }
+          }
+        ],
+        "additional_gaps": []
+      }
+    },
+    {
+      "case_id": "DEV09_equal_status_conflict_uncertain",
+      "reviewer_type": "INDEPENDENT_AI_REVIEWER_NOT_HUMAN",
+      "expected_contract_status": "uncertain",
+      "ai_semantic_rationale": "One cited account supports second 7, while an equal-status account contradicts it. Picking the supportive fragment and hiding the unresolved conflict would be an invalid supported verdict.",
+      "absence_policy": "Missing support is uncertain; unsupported requires explicit counterevidence.",
+      "manually_authored_judgment": {
+        "schema_version": "atomic_support_judgment_v1",
+        "atom_id": "A1",
+        "verdict": "uncertain",
+        "condition_judgments": [
+          {
+            "condition_id": "C0",
+            "verdict": "uncertain",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 76,
+                "end": 124,
+                "quote": "Recorder A, Trial T: Pump P stopped at second 7."
+              },
+              {
+                "fragment_id": "F2",
+                "start": 76,
+                "end": 234,
+                "quote": "Recorder B, Trial T: Pump P continued operating through second 8 and stopped at second 9. Both recorder reports are unreconciled and have equal review status."
+              }
+            ],
+            "semantic_reason": "One cited account supports second 7, while an equal-status account contradicts it. Picking the supportive fragment and hiding the unresolved conflict would be an invalid supported verdict.",
+            "gap": {
+              "kind": "conflicting_evidence",
+              "detail": "One cited account supports second 7, while an equal-status account contradicts it. Picking the supportive fragment and hiding the unresolved conflict would be an invalid supported verdict."
+            }
+          },
+          {
+            "condition_id": "C1",
+            "verdict": "supported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 76,
+                "end": 124,
+                "quote": "Recorder A, Trial T: Pump P stopped at second 7."
+              },
+              {
+                "fragment_id": "F2",
+                "start": 76,
+                "end": 234,
+                "quote": "Recorder B, Trial T: Pump P continued operating through second 8 and stopped at second 9. Both recorder reports are unreconciled and have equal review status."
+              }
+            ],
+            "semantic_reason": "Both reports name the same pump and trial.",
+            "gap": null
+          },
+          {
+            "condition_id": "C2",
+            "verdict": "uncertain",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 76,
+                "end": 124,
+                "quote": "Recorder A, Trial T: Pump P stopped at second 7."
+              },
+              {
+                "fragment_id": "F2",
+                "start": 76,
+                "end": 234,
+                "quote": "Recorder B, Trial T: Pump P continued operating through second 8 and stopped at second 9. Both recorder reports are unreconciled and have equal review status."
+              }
+            ],
+            "semantic_reason": "The equally reviewed records disagree on stop time without resolution.",
+            "gap": {
+              "kind": "conflicting_evidence",
+              "detail": "The equally reviewed records disagree on stop time without resolution."
+            }
+          }
+        ],
+        "additional_gaps": []
+      }
+    },
+    {
+      "case_id": "DEV10_unrelated_exact_terms_negative",
+      "reviewer_type": "INDEPENDENT_AI_REVIEWER_NOT_HUMAN",
+      "expected_contract_status": "uncertain",
+      "ai_semantic_rationale": "Exact search terms form no factual relation. The observation uses 70 as a time and 52 as temperature, and supplies no threshold or attainment event.",
+      "absence_policy": "Missing support is uncertain; unsupported requires explicit counterevidence.",
+      "manually_authored_judgment": {
+        "schema_version": "atomic_support_judgment_v1",
+        "atom_id": "A1",
+        "verdict": "uncertain",
+        "condition_judgments": [
+          {
+            "condition_id": "C0",
+            "verdict": "uncertain",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 75,
+                "end": 157,
+                "quote": "Search vocabulary for Trial Q: Motor M; shutdown; temperature; 70 degrees Celsius."
+              },
+              {
+                "fragment_id": "F2",
+                "start": 75,
+                "end": 183,
+                "quote": "At second 70 in Trial Q, Motor M's temperature was 52 degrees Celsius. The log states no shutdown threshold."
+              }
+            ],
+            "semantic_reason": "Exact search terms form no factual relation. The observation uses 70 as a time and 52 as temperature, and supplies no threshold or attainment event.",
+            "gap": {
+              "kind": "missing_evidence",
+              "detail": "Exact search terms form no factual relation. The observation uses 70 as a time and 52 as temperature, and supplies no threshold or attainment event."
+            }
+          },
+          {
+            "condition_id": "C1",
+            "verdict": "uncertain",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 75,
+                "end": 157,
+                "quote": "Search vocabulary for Trial Q: Motor M; shutdown; temperature; 70 degrees Celsius."
+              },
+              {
+                "fragment_id": "F2",
+                "start": 75,
+                "end": 183,
+                "quote": "At second 70 in Trial Q, Motor M's temperature was 52 degrees Celsius. The log states no shutdown threshold."
+              }
+            ],
+            "semantic_reason": "A vocabulary list does not assert the shutdown threshold.",
+            "gap": {
+              "kind": "missing_evidence",
+              "detail": "A vocabulary list does not assert the shutdown threshold."
+            }
+          },
+          {
+            "condition_id": "C2",
+            "verdict": "uncertain",
+            "evidence_spans": [
+              {
+                "fragment_id": "F2",
+                "start": 75,
+                "end": 183,
+                "quote": "At second 70 in Trial Q, Motor M's temperature was 52 degrees Celsius. The log states no shutdown threshold."
+              }
+            ],
+            "semantic_reason": "The only observation is 52 degrees Celsius; second 70 is a timestamp.",
+            "gap": {
+              "kind": "missing_evidence",
+              "detail": "The only observation is 52 degrees Celsius; second 70 is a timestamp."
+            }
+          }
+        ],
+        "additional_gaps": []
+      }
+    },
+    {
+      "case_id": "DEV11_missing_identity_bridge_uncertain",
+      "reviewer_type": "INDEPENDENT_AI_REVIEWER_NOT_HUMAN",
+      "expected_contract_status": "uncertain",
+      "ai_semantic_rationale": "Emission and receipt are explicit, but the identity bridge is missing. Shared trial timing does not resolve packet identity or origin when other gateways are active.",
+      "absence_policy": "Missing support is uncertain; unsupported requires explicit counterevidence.",
+      "manually_authored_judgment": {
+        "schema_version": "atomic_support_judgment_v1",
+        "atom_id": "A1",
+        "verdict": "uncertain",
+        "condition_judgments": [
+          {
+            "condition_id": "C0",
+            "verdict": "uncertain",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 78,
+                "end": 174,
+                "quote": "During Trial T, Gateway G emitted one packet. Its packet identifier and class were not recorded."
+              },
+              {
+                "fragment_id": "F2",
+                "start": 78,
+                "end": 221,
+                "quote": "During Trial T, Node N received one Aster packet. Its origin and packet identifier were not recorded; other gateways were active in that trial."
+              }
+            ],
+            "semantic_reason": "Emission and receipt are explicit, but the identity bridge is missing. Shared trial timing does not resolve packet identity or origin when other gateways are active.",
+            "gap": {
+              "kind": "unresolved_identity",
+              "detail": "Emission and receipt are explicit, but the identity bridge is missing. Shared trial timing does not resolve packet identity or origin when other gateways are active."
+            }
+          },
+          {
+            "condition_id": "C1",
+            "verdict": "supported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 78,
+                "end": 174,
+                "quote": "During Trial T, Gateway G emitted one packet. Its packet identifier and class were not recorded."
+              }
+            ],
+            "semantic_reason": "Gateway G's emission is explicit.",
+            "gap": null
+          },
+          {
+            "condition_id": "C2",
+            "verdict": "supported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F2",
+                "start": 78,
+                "end": 221,
+                "quote": "During Trial T, Node N received one Aster packet. Its origin and packet identifier were not recorded; other gateways were active in that trial."
+              }
+            ],
+            "semantic_reason": "Node N's receipt of an Aster packet is explicit.",
+            "gap": null
+          },
+          {
+            "condition_id": "C3",
+            "verdict": "uncertain",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 78,
+                "end": 174,
+                "quote": "During Trial T, Gateway G emitted one packet. Its packet identifier and class were not recorded."
+              },
+              {
+                "fragment_id": "F2",
+                "start": 78,
+                "end": 221,
+                "quote": "During Trial T, Node N received one Aster packet. Its origin and packet identifier were not recorded; other gateways were active in that trial."
+              }
+            ],
+            "semantic_reason": "No packet identifier or origin links the two events.",
+            "gap": {
+              "kind": "unresolved_identity",
+              "detail": "No packet identifier or origin links the two events."
+            }
+          }
+        ],
+        "additional_gaps": []
+      }
+    },
+    {
+      "case_id": "DEV12_explicit_identity_bridge_positive",
+      "reviewer_type": "INDEPENDENT_AI_REVIEWER_NOT_HUMAN",
+      "expected_contract_status": "supported",
+      "ai_semantic_rationale": "The explicit unique serial number bridges the named valve to the full-duration state record. This is semantic evidence joining two records, not mere shared vocabulary.",
+      "absence_policy": "Missing support is uncertain; unsupported requires explicit counterevidence.",
+      "manually_authored_judgment": {
+        "schema_version": "atomic_support_judgment_v1",
+        "atom_id": "A1",
+        "verdict": "supported",
+        "condition_judgments": [
+          {
+            "condition_id": "C0",
+            "verdict": "supported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 78,
+                "end": 167,
+                "quote": "Component registry: Valve V has serial number 9. No other component uses serial number 9."
+              },
+              {
+                "fragment_id": "F2",
+                "start": 78,
+                "end": 203,
+                "quote": "Trial T state log: the component with serial number 9 was closed from the trial's start until its end, with no open interval."
+              }
+            ],
+            "semantic_reason": "The explicit unique serial number bridges the named valve to the full-duration state record. This is semantic evidence joining two records, not mere shared vocabulary.",
+            "gap": null
+          },
+          {
+            "condition_id": "C1",
+            "verdict": "supported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 78,
+                "end": 167,
+                "quote": "Component registry: Valve V has serial number 9. No other component uses serial number 9."
+              }
+            ],
+            "semantic_reason": "The registry supplies a unique identity bridge.",
+            "gap": null
+          },
+          {
+            "condition_id": "C2",
+            "verdict": "supported",
+            "evidence_spans": [
+              {
+                "fragment_id": "F1",
+                "start": 78,
+                "end": 167,
+                "quote": "Component registry: Valve V has serial number 9. No other component uses serial number 9."
+              },
+              {
+                "fragment_id": "F2",
+                "start": 78,
+                "end": 203,
+                "quote": "Trial T state log: the component with serial number 9 was closed from the trial's start until its end, with no open interval."
+              }
+            ],
+            "semantic_reason": "The same serial number remains closed for the entire trial.",
+            "gap": null
+          }
+        ],
+        "additional_gaps": []
+      }
+    }
+  ]
+}
