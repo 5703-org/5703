@@ -1,0 +1,128 @@
+{
+  "origin": "Immutable qualification116 single real response; requirement-gate replay only",
+  "raw_envelope_sha256": "e9ff96a8af4996c0ef659e6bc8c41447956db86c6f26121cd6c0c01630973136",
+  "raw_text_sha256": "6c9bf7378f84547ca2933d4725dff0afdafec56f6876fbfe540359d16eed4e98",
+  "raw_text": "{\"claims\":[{\"claim_id\":\"claim_58eadc0defaa4ca1387a70c2_1\",\"basis\":\"textbook\",\"status\":\"partial\",\"citations\":[{\"evidence_id\":\"ev_004\",\"fragment_ids\":[\"F018\",\"F022\"],\"relation\":\"supporting\"}],\"reason\":\"F018 establishes no net movement of water into or out of the cell when osmolarity matches (isotonic); F022 establishes no net water movement into or out of the cell in the isotonic middle scenario. However, the asserted 'red blood cell retains its normal volume' is not established by any selected ev_004 fragment: F022 concerns net water movement only, and no selected fragment states normal volume retention for the RBC. The volume-retention predicate remains unestablished.\",\"units\":[{\"unit_id\":\"U01\",\"status\":\"supported\",\"fragment_ids\":[\"F018\",\"F022\"],\"relation_preserved\":true,\"conditions_preserved\":true,\"reason\":\"F018 and F022 both state no net water movement into or out of the cell under matching/isotonic osmolarity.\"},{\"unit_id\":\"U02\",\"status\":\"unsupported\",\"fragment_ids\":[],\"relation_preserved\":false,\"conditions_preserved\":false,\"reason\":\"No selected ev_004 fragment states the red blood cell retains its normal volume; F022 covers only net water movement.\"}]},{\"claim_id\":\"claim_0b30dfddb3b04c012ed412b0_1\",\"basis\":\"textbook\",\"status\":\"partial\",\"citations\":[{\"evidence_id\":\"ev_003\",\"fragment_ids\":[\"F015\"],\"relation\":\"supporting\"}],\"reason\":\"F015 states RBCs shrivel and possibly die in a hypertonic solution, supporting the shrink predicate. However, the asserted direction 'net water movement is out of the cell' is not stated in F015; F015 describes shrivel/die but not the direction of water movement. The direction predicate remains unestablished.\",\"units\":[{\"unit_id\":\"U01\",\"status\":\"unsupported\",\"fragment_ids\":[],\"relation_preserved\":false,\"conditions_preserved\":false,\"reason\":\"F015 does not state net water movement out of the cell in hypertonic solution; only shrivel/die is given.\"},{\"unit_id\":\"U02\",\"status\":\"supported\",\"fragment_ids\":[\"F015\"],\"relation_preserved\":true,\"conditions_preserved\":true,\"reason\":\"F015 states RBCs shrivel and possibly die in a hypertonic solution, matching the cell-shrinks predicate.\"}]},{\"claim_id\":\"claim_dfcfbdf826a2053eae3254d2_1\",\"basis\":\"textbook\",\"status\":\"partial\",\"citations\":[{\"evidence_id\":\"ev_003\",\"fragment_ids\":[\"F015\"],\"relation\":\"supporting\"}],\"reason\":\"F015 states RBCs swell and possibly rupture in a hypotonic solution, supporting swell/lysis. However, the asserted direction 'net water movement is into the cell' is not stated in F015; only the swelling outcome is given. The direction predicate remains unestablished.\",\"units\":[{\"unit_id\":\"U01\",\"status\":\"unsupported\",\"fragment_ids\":[],\"relation_preserved\":false,\"conditions_preserved\":false,\"reason\":\"F015 does not state net water movement into the cell in hypotonic solution; only swell/rupture is given.\"},{\"unit_id\":\"U02\",\"status\":\"supported\",\"fragment_ids\":[\"F015\"],\"relation_preserved\":true,\"conditions_preserved\":true,\"reason\":\"F015 states RBCs swell and possibly rupture in a hypotonic solution, matching swell/lysis predicate.\"}]},{\"claim_id\":\"claim_586790123345b6305e02020e_1\",\"basis\":\"textbook\",\"status\":\"unsupported\",\"citations\":[{\"evidence_id\":\"ev_004\",\"fragment_ids\":[\"F018\"],\"relation\":\"contradictory\"}],\"reason\":\"F018 explicitly states that although there is no net movement of water, 'water will still move in and out.' This directly contradicts the claim that individual water molecules stop crossing the membrane in isotonic solution. No selected fragment supports the stop-crossing assertion.\",\"units\":[{\"unit_id\":\"U01\",\"status\":\"unsupported\",\"fragment_ids\":[\"F018\"],\"relation_preserved\":false,\"conditions_preserved\":false,\"reason\":\"F018 states water will still move in and out despite no net movement, contradicting the claim that individual molecules stop crossing.\"}]}],\"body_ok\":false,\"specific_help\":true,\"scope_ok\":true,\"suggestions_ok\":true,\"evidence_display_ok\":true,\"cumulative_ok\":true,\"complete_answer\":false,\"coverage\":\"supported_partial\",\"missing_facets\":[\"Direction of net water movement in hypertonic and hypotonic solutions (out of/into the cell)\",\"Whether the red blood cell retains its normal volume in isotonic solution\"],\"limitations_explicit\":false,\"reason\":\"The draft correctly answers the isotonic no-net-movement question and the hypertonic/hypotonic volume outcomes, but asserts water-movement directions not stated in the cited fragments, asserts normal-volume retention without support, and its final sentence contradicts F018. body_ok=false due to partial/unsupported claims.\",\"repair_fragment_ids\":[\"F016\",\"F021\",\"F023\"],\"attempt_evaluation_ok\":true,\"tutor_question_ok\":true,\"requirements\":[{\"requirement_id\":\"requirement_01\",\"relevance\":\"related\",\"sufficiency\":\"partial\",\"evidence\":[{\"evidence_id\":\"ev_004\",\"fragment_id\":\"F018\",\"quote\":\"If the cell's osmolarity matches that of the extracellular fluid, there will be no net movement of water into or out of the cell, although water will still move in and out.\"},{\"evidence_id\":\"ev_004\",\"fragment_id\":\"F022\",\"quote\":\"Middle: there is no net water movement into or out of the cell as the concentration of the solutes inside the cell equal or is isotonic to that of the surrounding fluid.\"},{\"evidence_id\":\"ev_004\",\"fragment_id\":\"F021\",\"quote\":\"Left: A RBC placed in a hypotonic solution, where the concentration of solutes in the surrounding fluid is lower than those in the cell, will cause water to rush into the RBC and lead to lysis of the cell.\"},{\"evidence_id\":\"ev_004\",\"fragment_id\":\"F023\",\"quote\":\"Right: a RBC placed in a hypertonic solution, where the concentration of solutes in the surrounding fluid is greater than that in the cell will cause water to rush out of the cell and into the surrounding fluid.\"}],\"conditions_preserved\":true,\"response_coverage\":\"covered\",\"missing_information\":\"\",\"reason\":\"ev_004 fragments establish isotonic no-net-movement, hypotonic water rush in with lysis, and hypertonic water rush out with shrivel, covering the comparison of all three solutions.\"},{\"requirement_id\":\"requirement_02\",\"relevance\":\"related\",\"sufficiency\":\"sufficient\",\"evidence\":[{\"evidence_id\":\"ev_004\",\"fragment_id\":\"F018\",\"quote\":\"If the cell's osmolarity matches that of the extracellular fluid, there will be no net movement of water into or out of the cell, although water will still move in and out.\"}],\"conditions_preserved\":true,\"response_coverage\":\"covered\",\"missing_information\":\"\",\"reason\":\"F018 explicitly distinguishes no net movement from individual molecules stopping, directly answering the isotonic question.\"}],\"non_repetitive_next_action\":true,\"qualification_assessments\":[{\"claim_id\":\"claim_58eadc0defaa4ca1387a70c2_1\",\"context_status\":\"clear\",\"supporting_quotes\":[{\"quote\":\"If the cell's osmolarity matches that of the extracellular fluid, there will be no net movement of water into or out of the cell, although water will still move in and out.\"}],\"limiting_quotes\":[],\"qualifiers\":[],\"minimal_revision\":null,\"revision_supporting_quotes\":[],\"revision_entailed\":null,\"revision_context_status\":null,\"reason\":\"No supplied restriction contradicts the isotonic no-net-movement assertion; volume-retention gap is a source-support defect, not a contextual restriction.\"},{\"claim_id\":\"claim_0b30dfddb3b04c012ed412b0_1\",\"context_status\":\"clear\",\"supporting_quotes\":[{\"quote\":\"(c) shrivel and possibly die in a hypertonic solution.\"}],\"limiting_quotes\":[],\"qualifiers\":[],\"minimal_revision\":null,\"revision_supporting_quotes\":[],\"revision_entailed\":null,\"revision_context_status\":null,\"reason\":\"No supplied restriction contradicts the hypertonic shrink assertion; direction gap is a source-support defect.\"},{\"claim_id\":\"claim_dfcfbdf826a2053eae3254d2_1\",\"context_status\":\"clear\",\"supporting_quotes\":[{\"quote\":\"(a) swell and possibly rupture in a hypotonic solution\"}],\"limiting_quotes\":[],\"qualifiers\":[],\"minimal_revision\":null,\"revision_supporting_quotes\":[],\"revision_entailed\":null,\"revision_context_status\":null,\"reason\":\"No supplied restriction contradicts the hypotonic swell/lysis assertion; direction gap is a source-support defect.\"},{\"claim_id\":\"claim_586790123345b6305e02020e_1\",\"context_status\":\"conflict\",\"supporting_quotes\":[],\"limiting_quotes\":[{\"quote\":\"there will be no net movement of water into or out of the cell, although water will still move in and out.\"}],\"qualifiers\":[{\"dimension\":\"relation\",\"restriction\":\"no net movement does not mean individual molecules stop crossing\"}],\"minimal_revision\":\"In an isotonic solution, there is no net water movement, but individual water molecules still cross the membrane in both directions.\",\"revision_supporting_quotes\":[{\"quote\":\"there will be no net movement of water into or out of the cell, although water will still move in and out.\"}],\"revision_entailed\":true,\"revision_context_status\":\"clear\",\"reason\":\"F018 explicitly states water still moves in and out despite no net movement, contradicting the claim that individual molecules stop crossing.\"}]}",
+  "coverage": {
+    "budget_lost_requirement_ids": [],
+    "context_sufficiency_estimate": "partial",
+    "requirements": [
+      {
+        "candidate_lexically_covered": false,
+        "conditions": [
+          "not"
+        ],
+        "id": "requirement_01",
+        "intent": "comparison",
+        "matched_evidence_ids": [
+          "ev_001",
+          "ev_002",
+          "ev_003",
+          "ev_004",
+          "ev_005",
+          "ev_006",
+          "ev_007",
+          "ev_008",
+          "ev_009",
+          "ev_010"
+        ],
+        "missing_term_groups": [
+          [
+            "relevant"
+          ],
+          [
+            "whose"
+          ]
+        ],
+        "objects": [
+          "isotonic, hypertonic",
+          "hypotonic extracellular solutions"
+        ],
+        "origin": "verbatim_question_structure_v3",
+        "packed_lexically_covered": false,
+        "relation": "compare_both_objects_on_requested_axes",
+        "request": "For a red blood cell whose membrane permits water movement but not movement of the relevant solutes, compare isotonic, hypertonic and hypotonic extracellular solutions"
+      },
+      {
+        "candidate_lexically_covered": false,
+        "conditions": [
+          "not"
+        ],
+        "id": "requirement_02",
+        "intent": "explanation",
+        "matched_evidence_ids": [
+          "ev_001",
+          "ev_002",
+          "ev_003",
+          "ev_004",
+          "ev_005",
+          "ev_006",
+          "ev_007",
+          "ev_008",
+          "ev_009",
+          "ev_010"
+        ],
+        "missing_term_groups": [
+          [
+            "individual"
+          ],
+          [
+            "resulting"
+          ],
+          [
+            "stop"
+          ]
+        ],
+        "objects": [],
+        "origin": "verbatim_question_structure_v3",
+        "packed_lexically_covered": false,
+        "relation": "explanation",
+        "request": "Describe net water movement and the resulting cell-volume changes. In an isotonic solution, does \"no net water movement\" mean individual water molecules stop crossing the membrane"
+      }
+    ],
+    "response_guidance": "Assess each complete requirement, relation and condition semantically. Relevant words do not establish sufficient context. Answer supported parts, identify exact missing conditions, and retain qualifications.",
+    "semantic_evaluation_required": true,
+    "semantic_sufficiency": null,
+    "transport_version": "coverage_context_v1",
+    "version": "context_coverage_v2"
+  },
+  "requirement_fragments": [
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_004",
+      "exact_text": "If the cell's osmolarity matches that of the extracellular fluid, there will be no net movement of water into or out of the cell, although water will still move in and out.",
+      "fragment_id": "F018"
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_004",
+      "exact_text": "Left: A RBC placed in a hypotonic solution, where the concentration of solutes in the surrounding fluid is lower than those in the cell, will cause water to rush into the RBC and lead to lysis of the cell.",
+      "fragment_id": "F021"
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_004",
+      "exact_text": "Middle: there is no net water movement into or out of the cell as the concentration of the solutes inside the cell equal or is isotonic to that of the surrounding fluid.",
+      "fragment_id": "F022"
+    },
+    {
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_004",
+      "exact_text": "Right: a RBC placed in a hypertonic solution, where the concentration of solutes in the surrounding fluid is greater than that in the cell will cause water to rush out of the cell and into the surrounding fluid.",
+      "fragment_id": "F023"
+    },
+    {
+      "block_kind": "unresolved_atomic",
+      "complete_block": true,
+      "evidence_id": "ev_003",
+      "exact_text": "FIGURE 11.27 Red blood cell membranes are water permeable and will (a) swell and possibly rupture in a hypotonic solution; (b) maintain normal volume and shape in an isotonic solution; and (c) shrivel and possibly die in a hypertonic solution. (credit a/b/c: modifications of work by “LadyofHats”/Wikimedia commons) Determination of Molar Masses Osmotic pressure and changes in freezing point, boiling point, and vapor pressure are directly proportional to the number of solute species present in a given amount of solution. Consequently, measuring one of these properties for a solution prepared using a known mass of solute permits determination of the solute’s molar mass. EXAMPLE 11.11 Determination of a Molar Mass from a Freezing Point Depression A solution of 4.00 g of a nonelectrolyte dissolved in 55.0 g of benzene is found to freeze at 2.32 °C. Assuming ideal solution behavior, what is the molar mass of this compound? Solution Solve this problem using the following steps. 1. Step 1. Determine the change in freezing point from the observed freezing point and the freezing point of pure benzene (Table 11.2). 2. Step 2.",
+      "fragment_id": "F015"
+    }
+  ],
+  "question": "For a red blood cell whose membrane permits water movement but not movement of the relevant solutes, compare isotonic, hypertonic and hypotonic extracellular solutions. Describe net water movement and the resulting cell-volume changes. In an isotonic solution, does \"no net water movement\" mean individual water molecules stop crossing the membrane?",
+  "answer_text": "In an isotonic solution, there is no net water movement and the red blood cell retains its normal volume. [ev_004]\n\nIn a hypertonic solution, net water movement is out of the cell and the cell shrinks. [ev_003]\n\nIn a hypotonic solution, net water movement is into the cell and the cell swells, potentially lysing. [ev_003]\n\nIn an isotonic solution, individual water molecules stop crossing the membrane. [ev_004]"
+}
