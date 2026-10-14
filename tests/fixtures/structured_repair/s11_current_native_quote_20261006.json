@@ -1,0 +1,54 @@
+{
+  "scope": "Selected public fictional S11 native failure facts; unchanged original verdict",
+  "source_artifacts": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-native-current-joint-20261006-01\\live-02-deepseek-S11-05\\native-outcome-01.json",
+      "sha256": "1026b56445dd1b9ac3b75227ed72181119d7383687918ce0b0dee10311327e86"
+    },
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-native-current-joint-20261006-01\\live-02-deepseek-S11-05\\native-attempt-03.json",
+      "sha256": "3c1150a729535feaee182d5011c323e615f0ad9fd96d07c2deca5ed0f82a6cd2"
+    }
+  ],
+  "claim_text": "For the fit question, first note two already-given conditions as neutral context: the amount of gas is fixed and the temperature remains constant.",
+  "problem_quote": "the amount of gas is fixed and the temperature remains constant",
+  "question": "An ideal gas initially has pressure 100 kPa and volume 2 L. Its volume changes to 4 L at constant temperature and fixed amount of gas.\nCurrent practice step: Choose the supplied pressure-volume relation before substituting values.\nGiven conditions:\nThe amount of gas is fixed.\nThe temperature remains constant.\nThe initial pressure is 100 kPa and the initial volume is 2 L.\nThe final volume is 4 L.\nGive one H1 guiding question for this step, without giving its answer.",
+  "current_problem": "An ideal gas initially has pressure 100 kPa and volume 2 L. Its volume changes to 4 L at constant temperature and fixed amount of gas.",
+  "initial_checker_inconsistencies": [
+    {
+      "code": "COMPLETE_PARTIAL_WITHOUT_LIMITS"
+    }
+  ],
+  "structural_issues": [
+    {
+      "claim_id": "claim_61727b485bcacb108f90ca7b_1",
+      "code": "CHECK_PROBLEM_QUOTE_MISMATCH"
+    }
+  ],
+  "saved_error": {
+    "code": "SEMANTIC_CHECK_FAILED",
+    "message": "The proposed answer did not pass its required support or teaching checks",
+    "retryable": false,
+    "details": {
+      "revision": 0,
+      "publication_block": {
+        "version": "semantic_publication_block_v1",
+        "stop_reason": "insufficient_calls_for_repair_and_recheck",
+        "remaining_provider_calls": 1,
+        "required_calls_for_repair_and_recheck": 2,
+        "checker_contract_repair_calls": 1,
+        "checker_reported_body_ok": true,
+        "checker_reported_non_supported_factual_claims": 0,
+        "failed_checker_gate_names": [],
+        "checker_reported_coverage": "full",
+        "requirement_issue_codes": [],
+        "structural_issue_codes": [
+          "CHECK_PROBLEM_QUOTE_MISMATCH"
+        ]
+      }
+    }
+  },
+  "saved_checker_accepted": false,
+  "saved_native_published": false,
+  "human_rating": null
+}
