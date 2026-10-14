@@ -1,0 +1,273 @@
+{
+  "schema": "repair90_alternate_current_checker_configuration_and_component_readonly_notes_v1",
+  "created_utc": "2026-10-12T02:12:03.944406+00:00",
+  "status": "CURRENT_CONFIGURED_QWEN_LOCAL_COMPILER_COMPATIBLE_LIVE_DIFFERENTIAL_NOT_RUN",
+  "scope": "Root fresh24POST/$1 independent Repair90; no rigid page/nonpage quota; DEV89 and R88 immutable historical evidence",
+  "current_public_configuration_evidence": {
+    "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-repair90-preparation\\current-public-model-config90.json",
+    "sha256": "a49292bf7857b6d7128740595961543a269372bac898936db0e08314aa16d287",
+    "read_utc": "2026-10-12T02:05:02.653556+00:00",
+    "parent_performed_original_fixture_read_only_database_query": true,
+    "reviewer_read_auth_or_database": false,
+    "configuration_id": "d78c2a1a-caac-4024-b5f5-2a652414cb0b",
+    "revision": 1,
+    "config_hash": "45e52c76a7276b7ee58550669c5a9d58698b42f87532c8501cbe742604d88852",
+    "public_model_metadata": {
+      "structured_output_mode": "json_schema",
+      "capabilities": {
+        "profile": "openai_compatible_text_v1",
+        "api_style": "chat_completions",
+        "output_token_parameter": "max_tokens",
+        "temperature": true,
+        "seed": true,
+        "reasoning_effort": false,
+        "thinking_toggle": false,
+        "structured_modes": [
+          "json_schema",
+          "json_object",
+          "prompt"
+        ],
+        "probe_output_tokens": 512,
+        "output_token_ceiling": 32768,
+        "declaration": "runtime_protocol_defaults"
+      },
+      "openrouter_route_profile": "qwen38_alibaba_v2",
+      "thinking_enabled": null,
+      "capability_version": "provider_capabilities_v1",
+      "max_tokens": 2048,
+      "token_limit_parameter": "max_tokens",
+      "window_tokens": 131072,
+      "model": "qwen/qwen3.8-flash",
+      "timeout_seconds": 45.0,
+      "provider": "openai_compatible",
+      "temperature": null,
+      "seed": null,
+      "reasoning_effort": null,
+      "base_url": "https://openrouter.ai/api/v1",
+      "object_path": ""
+    },
+    "currently_stored_and_selectable": true,
+    "active_model_or_global_role_switch_claimed": false,
+    "DeepSeek_current_row_found": false,
+    "configuration_rows": 5
+  },
+  "historical_and_example_evidence_is_not_current_configuration": [
+    {
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\deepseek-connection-metadata-5703-01.json",
+      "sha256": "bcd59cb904a51e355777fb575f09132fb708a86c9a30ecec974f1123ff0a50be",
+      "snapshot_utc": "2026-10-04T15:09:15.468218+00:00",
+      "model": "deepseek-flash",
+      "base_url": "https://api.deepseek.com/v1",
+      "private_file_not_opened_by_reviewer": true,
+      "proves_current_oct12_configuration": false
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\configs\\model-file-input.example.json",
+      "model_example": "deepseek-flash",
+      "consumer_status": "draft_only_no_current_bulk_file_consumer",
+      "proves_current_configuration": false
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\core\\config.py",
+      "source_line": 43,
+      "production_default": "mock",
+      "proves_current_DB_activation": false
+    }
+  ],
+  "current_Qwen_fixed_route": {
+    "source": "generation/openrouter_routes.py:68-76",
+    "profile": "qwen38_alibaba_v2",
+    "model": "qwen/qwen3.8-flash",
+    "provider_slug": "alibaba",
+    "reasoning": {
+      "enabled": false
+    },
+    "max_price_USD_per_million_tokens": {
+      "prompt": 0.15,
+      "completion": 0.47
+    },
+    "allow_fallbacks": false,
+    "require_parameters": true,
+    "schema_projection_policy": null,
+    "locally_frozen_route_metadata_is_not_fresh_official_price_or_endpoint_validation": true
+  },
+  "explicit_prospective_test_overrides_from_current_stored_row": {
+    "max_tokens": {
+      "stored": 2048,
+      "test": 8192
+    },
+    "structured_output_mode": {
+      "stored": "json_schema",
+      "test": "json_object"
+    },
+    "stored_declared_capabilities_allow_json_object": true,
+    "stored_declared_output_ceiling": 32768,
+    "window_tokens_unchanged": 131072,
+    "timeout_seconds_unchanged": 45.0,
+    "temperature_seed_thinking_reasoning_fields_remain_null": true,
+    "database_activation_or_config_rewrite_required": false
+  },
+  "pure_native_compiler_control": {
+    "fixture": "Saved DEV89 case01 slot02 complete public input, compiled only with current Main B; not an actual Repair90/B trial",
+    "messages_equal": true,
+    "full_source_claim_unit_requirement_packet_equal": true,
+    "immutable_context_sha256": "6dad527cce598b91438ae499ab398e55e5a089274cf99a76cb3dbb95873d2745",
+    "canonical_ReliableUnitCheck_schema_equal": true,
+    "short_lossless_V1_wire_schema_equal": true,
+    "schema_projection_metadata_both": {},
+    "shared_max_tokens": 8192,
+    "wire_bytes_Gemini_HIGH_B_compiled": 93201,
+    "wire_bytes_Qwen_B_compiled": 93167,
+    "wire_only_top_level_differences": [
+      "model",
+      "provider",
+      "reasoning"
+    ],
+    "baseline": {
+      "model": "google/gemini-3.5-flash-lite",
+      "provider": {
+        "order": [
+          "google-vertex/global"
+        ],
+        "only": [
+          "google-vertex/global"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 0.3,
+          "completion": 2.5
+        }
+      },
+      "reasoning": {
+        "effort": "high"
+      }
+    },
+    "alternate": {
+      "model": "qwen/qwen3.8-flash",
+      "provider": {
+        "order": [
+          "alibaba"
+        ],
+        "only": [
+          "alibaba"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 0.15,
+          "completion": 0.47
+        }
+      },
+      "reasoning": {
+        "enabled": false
+      }
+    },
+    "model_only_causal_experiment_claimed": false,
+    "endpoint_acceptance_quality_or_latency_certified": false,
+    "actual_adapter_generate_or_key_lookup_called": false
+  },
+  "native_schema_path": [
+    {
+      "source": "generation/providers.py:147-179",
+      "meaning": "prepare_checker_transport keeps full canonical contract and the same lossless_v1 immutable context; no basic/policy overlap fallback."
+    },
+    {
+      "source": "generation/providers.py:159-165",
+      "meaning": "Haiku current json_schema route has schema_transport and is rejected for lossless_v1; do not reuse teacher configuration as checker unchanged."
+    },
+    {
+      "source": "generation/providers.py:388-418",
+      "meaning": "Qwen json_object uses the same exact short schema in the appended OUTPUT FORMAT instruction; no schema fields removed."
+    },
+    {
+      "source": "generation/openrouter_routes.py:302-328",
+      "meaning": "Qwen has no schema_transport projection; both compiled comparisons retain unprojected short and original canonical schemas."
+    },
+    {
+      "source": "generation/adapters.py:169-246",
+      "meaning": "Normal adapter validates profile/capabilities, prepares transport, builds the exact payload and sends once with min(config timeout, supplied timeout)."
+    },
+    {
+      "source": "generation/providers.py:322-361",
+      "meaning": "Original exact UTF8 compact text is retained; strict decoder stays required and malformed output becomes CHECKER_TRANSPORT_INVALID."
+    }
+  ],
+  "stable_component_reuse": {
+    "reference_source": "C:\\Users\\PC\\Documents\\Codex\\2026-10-04\\task-2\\5703-checker88-runtime\\checker_component88.py",
+    "reference_source_sha256": "145d43a73f8d520fe93068b3d0725b0fb2ca8101ab5375ef129f2bdb62ae72f7",
+    "original_component": "component07low",
+    "reference_is_historical_not_executable_for_Repair90": true,
+    "retain": [
+      "Exact full saved checker messages with every source/claim/unit/requirement retained; no teacher regeneration, retrieval rerun or model-selected evidence trimming.",
+      "Compile each model through actual current Main providers and original lossless output contract.",
+      "Exclusive descriptor/claim/output paths and one physical POST, no retry, no stale-claim or old-ledger reuse.",
+      "Parent alone supplies credential in memory; no environment/key/header export.",
+      "Observe HTTP envelope and numerical gateway cost BEFORE model parsing; settle only the same own slot, keep UNKNOWN/full hold on uncertainty.",
+      "Original adapter/parser/strict hydration/semantic assessors; raw invalid/truncated response retained with fees.",
+      "Finite timeout/response size, exact endpoint/wire hash/auth containment checks, final financial closure.",
+      "publication_exercised=false and independent scientific/coverage/own-unit proof review required even when structural decode passes."
+    ],
+    "replace_only_new_cohort_bindings": [
+      "New Repair90 authorization and shared24POST/$1 ledger; no old component claim/descriptors/results or rigid nonpage reservation.",
+      "Fresh literal component ID and closed actual B saved-checker base selected by Root after its three normal B cases.",
+      "Current public Qwen configuration origin/revision/config_hash, explicit 8192/json_object overrides and Qwen fixed-route metadata.",
+      "New current Main B source pins, exact selected input/answer/scope/final/closure/controller pins, immutable context/canonical/short-schema hashes.",
+      "Exact allowed actual wire differences model/provider/reasoning rather than old reasoning-only LOW equality.",
+      "New expected compiled wire bytes and per-post protection, using frozen caps and retained observed numerical costs; byte-price proxy labelled conditional.",
+      "Preserve original baseline teacher answer and source records; descriptor binds the base current B request rather than reconstructing old A as live B."
+    ],
+    "do_not_reuse": {
+      "old_hardwired_case": "case07",
+      "old_component": "component07low",
+      "old_role_purpose_allowlist": "Gemini LOW diagnostic_check only",
+      "old_source_version": "81045fec lossless codec A",
+      "old_protocol_post_cap": 24,
+      "old_global_fixed_fp_or_context": true
+    },
+    "source_anchors": {
+      "compile_task": "checker_component88.py:41-92",
+      "prepare": "checker_component88.py:95-114",
+      "one_POST_and_exact_wire": "checker_component88.py:253-282",
+      "financial_before_parser": "checker_component88.py:195-231",
+      "diagnostic_assessment_not_publication": "checker_component88.py:125-155",
+      "UNKNOWN_finalization": "checker_component88.py:290-304"
+    }
+  },
+  "comparison_reporting_limits": [
+    "Gemini HIGH then Qwen reasoning-disabled with provider changes is a model/profile package comparison, not pure model-only causal evidence.",
+    "A single forward saved-task differential has order/cache/time/provider effects; no stable p95 or learner-effect claim.",
+    "Both structural decode and full independent claim/unit/source/coverage/citation review must be retained separately; correctness cannot be supplied by local hydration.",
+    "Original negative controls for missing keys, unknown/foreign Q/F/C/U/R IDs, own-parent selection, incomplete sources, derivations and uncited facts remain unchanged.",
+    "All differential physical posts and uncertainty share Root Repair90 budget; no global activation, full new unit-suite loop or paid call by this reviewer."
+  ],
+  "current_Main_pure_source_pins": [
+    {
+      "path": "generation/openrouter_routes.py",
+      "sha256": "c82e86990476c0f95da650b38ef444e62c1dba6ae29f407a44c4af444ad2348e"
+    },
+    {
+      "path": "generation/providers.py",
+      "sha256": "8411a08b94c57feac7d6ca068c6feae9193201c109f28d9b64d014d3199cd4ee"
+    },
+    {
+      "path": "generation/adapters.py",
+      "sha256": "99075cb07f4faf861119c5fa5113da6951408c02323c14452d090661fd0c3ddb"
+    },
+    {
+      "path": "generation/capabilities.py",
+      "sha256": "590dac5cb82bf1494cd0db01af422800ce1dd227bae5e943d608c841401ebff0"
+    },
+    {
+      "path": "generation/types.py",
+      "sha256": "757f907befeaa9300fdeb8ab5c8d03d205c142920cf3c2f5e72ee98988f53068"
+    },
+    {
+      "path": "generation/lossless_unit_findings_v1.py",
+      "sha256": "8c830694093b41e9f6250939de2cf9f72b24726bddbc1cba0141a6b8cb9efa56"
+    }
+  ],
+  "reviewer_auth_DB_models_external_network_services_Main_old_runtime_writes": false,
+  "pure_compiler_exercised_no_model_request": true,
+  "next_owner": "Root selects if differential trigger is needed after B normal cases01/08/06 and freezes prospective exact descriptor before any request."
+}
