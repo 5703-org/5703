@@ -1,0 +1,54 @@
+import { test, expect } from '@playwright/test';
+import fs from 'node:fs/promises';
+import { apiCall, login } from './helpers';
+
+test('password change revokes the prior token and account switch clears private drafts', async ({ page }) => {
+  await login(page, 'admin@example.com');
+  const account = { email: `browser-security-${Date.now()}@example.com`, full_name: 'Browser security fixture', password: 'InitialPassw0rd!' };
+  const user = await apiCall(page, '/admin/users', 'POST', account);
+  await page.getByRole('button', { name: 'Sign out' }).click();
+  await page.getByLabel('Email', { exact: true }).fill(account.email);
+  await page.getByLabel('Password', { exact: true }).fill(account.password);
+  await page.getByRole('button', { name: 'Sign in', exact: true }).click();
+  await expect(page.getByRole('textbox', { name: 'Message Learning Assistant' })).toBeVisible();
+  const oldToken = await page.evaluate(() => sessionStorage.getItem('cs30.access-token'));
+  await page.getByRole('textbox', { name: 'Message Learning Assistant' }).fill('Private account draft must be cleared.');
+  await page.goto('/account');
+  await page.getByLabel('Display name').fill('Updated browser account');
+  await page.getByRole('button', { name: 'Save name', exact: true }).click();
+  await expect(page.getByText('Name saved', { exact: true })).toBeVisible();
+  await page.getByLabel('Current password').fill(account.password);
+  await page.getByLabel('New password').fill('ReplacementPassw0rd!');
+  await page.getByRole('button', { name: 'Change password', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Sign in', exact: true })).toBeVisible();
+  const invalidated = await page.request.get('/api/v1/users/me', { headers: { Authorization: `Bearer ${oldToken}` } });
+  expect(invalidated.status()).toBe(401);
+  expect(await page.evaluate(() => Object.keys(sessionStorage).filter(key => key.startsWith('cs30.draft.') || key.startsWith('cs30.pending.')))).toHaveLength(0);
+  await page.getByLabel('Email', { exact: true }).fill(account.email);
+  await page.getByLabel('Password', { exact: true }).fill('ReplacementPassw0rd!');
+  await page.getByRole('button', { name: 'Sign in', exact: true }).click();
+  await expect(page.getByRole('textbox', { name: 'Message Learning Assistant' })).toHaveValue('');
+  const me = await apiCall(page, '/users/me');
+  expect(me.full_name).toBe('Updated browser account');
+  await page.goto('/admin/corpus');
+  await expect(page.getByRole('heading', { name: 'Administrator access required' })).toBeVisible();
+  const forbidden = await page.request.get('/api/v1/documents', { headers: { Authorization: `Bearer ${await page.evaluate(() => sessionStorage.getItem('cs30.access-token'))}` } });
+  expect(forbidden.status()).toBe(403);
+  await fs.writeFile('../artifacts/reports/frontend/account-security.json', JSON.stringify({ user_id: user.id, password_change: true, old_token_status: invalidated.status(), role_route_denied: true, server_role_status: forbidden.status(), private_drafts_cleared: true, re_login_name_saved: me.full_name }, null, 2));
+});
+
+test('profile revision conflict preserves the edit and reloads the saved version', async ({ page }) => {
+  await login(page);
+  await page.goto('/profile');
+  const original = await apiCall(page, '/profiles/me');
+  await page.getByLabel('Advanced', { exact: false }).check();
+  const concurrent = await apiCall(page, '/profiles/me', 'PUT', { ...original, level: 'beginner' });
+  await page.getByRole('button', { name: 'Save preferences', exact: true }).click();
+  await expect(page.getByRole('alert')).toBeVisible();
+  await expect(page.getByLabel('Advanced', { exact: false })).toBeChecked();
+  await page.getByRole('button', { name: 'Reload saved preferences' }).click();
+  await expect(page.getByLabel('Beginner', { exact: false })).toBeChecked();
+  await expect(page.getByText(`Current revision ${concurrent.version}.`, { exact: false })).toBeVisible();
+  await page.getByRole('button', { name: 'Reset to defaults' }).click();
+  await expect(page.getByText('Preferences saved', { exact: true })).toBeVisible();
+});

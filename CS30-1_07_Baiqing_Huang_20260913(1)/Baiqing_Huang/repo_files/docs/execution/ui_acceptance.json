@@ -1,0 +1,1447 @@
+{
+  "kind": "subchecks_of_existing_acceptance",
+  "top_level_task_count_unchanged": 108,
+  "top_level_check_count_unchanged": 60,
+  "checks": [
+    {
+      "check_id": "UI-01",
+      "expected": "No shell overflow, overlapping prose or unreachable controls at the named widths.",
+      "task_ids": [
+        "FE-12",
+        "QA-12"
+      ],
+      "parent_acceptance_ids": [
+        "AC-44"
+      ],
+      "status": "REAL_FLOW_VERIFIED",
+      "actual": "Actual browser geometry and controls passed at the required sampled widths and breakpoint edges. The final official-source journey covers eleven widths; earlier login/stress/admin evidence adds 375, 1280 and 2560. No body/document clipping hides overflow. September13 new Models/Accounts/Diagnostics and source views add actual1440/390 bounds, clicks and individually reviewed screenshots. This is scoped new-page coverage, not a fresh repetition of all named widths. Current upgrade: Actual saved live answer shows 5 candidates/5 submitted/2 cited and Sources 2. Fresh candidate enzyme answer shows 20/11/7 and Sources 7, exact source text/hash/link, reload preservation, eight Tabs contained, Escape close and focus return at 1440/390. Unknown historical counts remain unknown rather than zero. Earlier keyboard failures remain retained.",
+      "actual_commands": [
+        "node scripts/verify-openstax-release.mjs"
+      ],
+      "evidence_paths": [
+        "artifacts/reports/frontend/openstax/2026-09-08T08-27-08-234Z/verification.json",
+        "artifacts/reports/frontend/login-responsive-bounds.json",
+        "artifacts/reports/frontend/chat-responsive-bounds.json",
+        "artifacts/reports/frontend/stress-layout.json",
+        "artifacts/reports/frontend/openstax-rollback-roundtrip/2026-09-08T08-42-25-678Z/verification.json",
+        "artifacts/reports/frontend/history-pagination/2026-09-08T08-55-45-630Z/verification.json",
+        "artifacts/reports/frontend/openstax-v5/2026-09-08T08-54-45-868Z/verification.json",
+        "artifacts/reports/frontend/admin-settings/verification-summary.json",
+        "artifacts/reports/frontend/admin-settings/2026-09-13T03-39-40-209Z/verification.json",
+        "artifacts/reports/frontend/admin-settings/2026-09-13T03-43-09-627Z/verification.json",
+        "artifacts/reports/frontend/admin-settings/2026-09-13T03-49-49-140Z/verification.json",
+        "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        },
+        {
+          "checkpoint": "before_20260913_admin_citation_focus_upgrade",
+          "observation": {
+            "status": "REAL_FLOW_VERIFIED",
+            "actual": "Actual browser geometry and controls passed at the required sampled widths and breakpoint edges. The final official-source journey covers eleven widths; earlier login/stress/admin evidence adds 375, 1280 and 2560. No body/document clipping hides overflow.",
+            "actual_commands": [
+              "node scripts/verify-openstax-release.mjs"
+            ],
+            "evidence_paths": [
+              "artifacts/reports/frontend/openstax/2026-09-08T08-27-08-234Z/verification.json",
+              "artifacts/reports/frontend/login-responsive-bounds.json",
+              "artifacts/reports/frontend/chat-responsive-bounds.json",
+              "artifacts/reports/frontend/stress-layout.json",
+              "artifacts/reports/frontend/openstax-rollback-roundtrip/2026-09-08T08-42-25-678Z/verification.json",
+              "artifacts/reports/frontend/history-pagination/2026-09-08T08-55-45-630Z/verification.json",
+              "artifacts/reports/frontend/openstax-v5/2026-09-08T08-54-45-868Z/verification.json"
+            ],
+            "reconciled_at": "2026-09-08T08:58:34Z"
+          }
+        },
+        {
+          "checkpoint": "answering_upgrade_release_reconciliation_20260913",
+          "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+          "superseded_observation_fields": {
+            "actual": "Actual browser geometry and controls passed at the required sampled widths and breakpoint edges. The final official-source journey covers eleven widths; earlier login/stress/admin evidence adds 375, 1280 and 2560. No body/document clipping hides overflow. September13 new Models/Accounts/Diagnostics and source views add actual1440/390 bounds, clicks and individually reviewed screenshots. This is scoped new-page coverage, not a fresh repetition of all named widths.",
+            "evidence_paths": [
+              "artifacts/reports/frontend/openstax/2026-09-08T08-27-08-234Z/verification.json",
+              "artifacts/reports/frontend/login-responsive-bounds.json",
+              "artifacts/reports/frontend/chat-responsive-bounds.json",
+              "artifacts/reports/frontend/stress-layout.json",
+              "artifacts/reports/frontend/openstax-rollback-roundtrip/2026-09-08T08-42-25-678Z/verification.json",
+              "artifacts/reports/frontend/history-pagination/2026-09-08T08-55-45-630Z/verification.json",
+              "artifacts/reports/frontend/openstax-v5/2026-09-08T08-54-45-868Z/verification.json",
+              "artifacts/reports/frontend/admin-settings/verification-summary.json",
+              "artifacts/reports/frontend/admin-settings/2026-09-13T03-39-40-209Z/verification.json",
+              "artifacts/reports/frontend/admin-settings/2026-09-13T03-43-09-627Z/verification.json",
+              "artifacts/reports/frontend/admin-settings/2026-09-13T03-49-49-140Z/verification.json"
+            ]
+          },
+          "scope": "Old observations retained verbatim; original requirements/reporting fields unchanged"
+        },
+        {
+          "checkpoint": "terminal_studies_post_cache_reconciliation_20260913",
+          "recorded_at": "2026-09-13T05:24:19.545152+00:00",
+          "superseded_observation_fields": {
+            "status": "REAL_FLOW_VERIFIED",
+            "actual": "Actual browser geometry and controls passed at the required sampled widths and breakpoint edges. The final official-source journey covers eleven widths; earlier login/stress/admin evidence adds 375, 1280 and 2560. No body/document clipping hides overflow. September13 new Models/Accounts/Diagnostics and source views add actual1440/390 bounds, clicks and individually reviewed screenshots. This is scoped new-page coverage, not a fresh repetition of all named widths. Current upgrade: Actual saved live answer shows 5 candidates/5 submitted/2 cited and Sources 2. Fresh candidate enzyme answer shows 20/11/7 and Sources 7, exact source text/hash/link, reload preservation, eight Tabs contained, Escape close and focus return at 1440/390. Unknown historical counts remain unknown rather than zero. Earlier keyboard failures remain retained.",
+            "component_statuses": [
+              {
+                "component": "Current cited-source browser and diagnostic layers",
+                "status": "REAL_FLOW_VERIFIED",
+                "detail": "Actual saved live answer shows 5 candidates/5 submitted/2 cited and Sources 2. Fresh candidate enzyme answer shows 20/11/7 and Sources 7, exact source text/hash/link, reload preservation, eight Tabs contained, Escape close and focus return at 1440/390. Unknown historical counts remain unknown rather than zero. Earlier keyboard failures remain retained.",
+                "evidence_paths": [
+                  "artifacts/reports/frontend/admin-settings/verification-summary.json",
+                  "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json"
+                ],
+                "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+                "observation_type": "Reconciliation of cited actual records, not a new execution",
+                "remaining_scope": "Bounded desktop browser/width checks do not replace all earlier journeys, physical touch, native IME or assistive-technology review.",
+                "completion_claim": false
+              }
+            ],
+            "upgrade_current_evidence_paths": [
+              "artifacts/reports/frontend/admin-settings/verification-summary.json",
+              "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json"
+            ],
+            "reconciled_at": "2026-09-13T04:32:45.781638+00:00"
+          },
+          "scope": "Prior observations preserved; original requirements and all existing history/evidence remain unchanged."
+        }
+      ],
+      "reconciled_at": "2026-09-13T05:24:19.545152+00:00",
+      "command_working_directory": "frontend",
+      "component_statuses": [
+        {
+          "component": "Current cited-source browser and diagnostic layers",
+          "status": "REAL_FLOW_VERIFIED",
+          "detail": "Actual saved live answer shows 5 candidates/5 submitted/2 cited and Sources 2. Fresh candidate enzyme answer shows 20/11/7 and Sources 7, exact source text/hash/link, reload preservation, eight Tabs contained, Escape close and focus return at 1440/390. Unknown historical counts remain unknown rather than zero. Earlier keyboard failures remain retained.",
+          "evidence_paths": [
+            "artifacts/reports/frontend/admin-settings/verification-summary.json",
+            "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json"
+          ],
+          "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+          "observation_type": "Reconciliation of cited actual records, not a new execution",
+          "remaining_scope": "Bounded desktop browser/width checks do not replace all earlier journeys, physical touch, native IME or assistive-technology review.",
+          "completion_claim": false
+        }
+      ],
+      "upgrade_current_evidence_paths": [
+        "artifacts/reports/frontend/admin-settings/verification-summary.json",
+        "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json"
+      ]
+    },
+    {
+      "check_id": "UI-02",
+      "expected": "Resize loaded chat across widths and breakpoint edges without reload, lost draft/session/job or duplicate submission.",
+      "task_ids": [
+        "FE-04",
+        "FE-08"
+      ],
+      "parent_acceptance_ids": [
+        "AC-16",
+        "AC-43",
+        "AC-44"
+      ],
+      "status": "REAL_FLOW_VERIFIED",
+      "actual": "Loaded actual chat resized across widths and breakpoint edges without losing draft/session state or causing duplicate submissions. Inflight stop/retry state is recorded separately; answer generation remains mock.",
+      "actual_commands": [
+        "node scripts/verify-openstax-release.mjs"
+      ],
+      "evidence_paths": [
+        "artifacts/reports/frontend/openstax/2026-09-08T08-27-08-234Z/verification.json",
+        "artifacts/reports/frontend/chat-responsive-bounds.json",
+        "artifacts/reports/frontend/stop-retry.json",
+        "artifacts/reports/frontend/history-pagination/2026-09-08T08-55-45-630Z/verification.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        },
+        {
+          "checkpoint": "terminal_studies_post_cache_reconciliation_20260913",
+          "recorded_at": "2026-09-13T05:24:19.545152+00:00",
+          "superseded_observation_fields": {
+            "status": "REAL_FLOW_VERIFIED",
+            "actual": "Loaded actual chat resized across widths and breakpoint edges without losing draft/session state or causing duplicate submissions. Inflight stop/retry state is recorded separately; answer generation remains mock.",
+            "reconciled_at": "2026-09-08T08:58:34Z"
+          },
+          "scope": "Prior observations preserved; original requirements and all existing history/evidence remain unchanged."
+        }
+      ],
+      "reconciled_at": "2026-09-13T05:24:19.545152+00:00",
+      "command_working_directory": "frontend",
+      "component_statuses": []
+    },
+    {
+      "check_id": "UI-03",
+      "expected": "Actual browser/text enlargement and 320 CSS-pixel reflow preserve reading and operations.",
+      "task_ids": [
+        "FE-12"
+      ],
+      "parent_acceptance_ids": [
+        "AC-44"
+      ],
+      "status": "REAL_FLOW_VERIFIED",
+      "actual": "Actual Chromium native Page zoom at 125%, 150%, 200% and 400% measured corresponding DPR and CSS reflow to 314px; source controls and draft/revision remained operable. This historical presentation check is not a new official-source or native-IME test.",
+      "actual_commands": [
+        "node scripts/verify-browser-zoom.mjs"
+      ],
+      "evidence_paths": [
+        "artifacts/reports/frontend/real-browser-zoom.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        },
+        {
+          "checkpoint": "terminal_studies_post_cache_reconciliation_20260913",
+          "recorded_at": "2026-09-13T05:24:19.545152+00:00",
+          "superseded_observation_fields": {
+            "status": "REAL_FLOW_VERIFIED",
+            "actual": "Actual Chromium native Page zoom at 125%, 150%, 200% and 400% measured corresponding DPR and CSS reflow to 314px; source controls and draft/revision remained operable. This historical presentation check is not a new official-source or native-IME test.",
+            "reconciled_at": "2026-09-08T08:58:34Z"
+          },
+          "scope": "Prior observations preserved; original requirements and all existing history/evidence remain unchanged."
+        }
+      ],
+      "reconciled_at": "2026-09-13T05:24:19.545152+00:00",
+      "command_working_directory": "frontend",
+      "component_statuses": []
+    },
+    {
+      "check_id": "UI-04",
+      "expected": "Long text wraps or scrolls locally without clipping or page-width overflow.",
+      "task_ids": [
+        "FE-05",
+        "FE-06",
+        "FE-10",
+        "FE-11"
+      ],
+      "parent_acceptance_ids": [
+        "AC-44"
+      ],
+      "status": "MOCK_TEST_PASSED",
+      "actual": "The authored persisted stress fixture retains 35 paragraphs, an unbroken word, long URL, code, 16-column table, formula and final paragraph; local scroll regions retain content without shell overflow. This establishes rendering only, not scientific or model quality.",
+      "actual_commands": [],
+      "evidence_paths": [
+        "artifacts/reports/frontend/stress-layout.json",
+        "evidence/integration/ui_stress_fixture.json",
+        "evidence/ui/legacy-mcq-final-component-tests.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        },
+        {
+          "checkpoint": "terminal_studies_post_cache_reconciliation_20260913",
+          "recorded_at": "2026-09-13T05:24:19.545152+00:00",
+          "superseded_observation_fields": {
+            "status": "MOCK_TEST_PASSED",
+            "actual": "The authored persisted stress fixture retains 35 paragraphs, an unbroken word, long URL, code, 16-column table, formula and final paragraph; local scroll regions retain content without shell overflow. This establishes rendering only, not scientific or model quality.",
+            "reconciled_at": "2026-09-08T08:58:34Z"
+          },
+          "scope": "Prior observations preserved; original requirements and all existing history/evidence remain unchanged."
+        }
+      ],
+      "reconciled_at": "2026-09-13T05:24:19.545152+00:00",
+      "component_statuses": []
+    },
+    {
+      "check_id": "UI-05",
+      "expected": "Keyboard and low-height/orientation cases preserve composer/transcript/Close; record unavailable physical testing.",
+      "task_ids": [
+        "FE-03",
+        "FE-12"
+      ],
+      "parent_acceptance_ids": [
+        "AC-44"
+      ],
+      "status": "WAITING_EXTERNAL",
+      "actual": "Landscape 844×390 and low-height native zoom keep send/stop and Close reachable. Physical mobile soft-keyboard and actual orientation hardware sessions are unavailable and unverified; desktop emulation does not establish these clauses.",
+      "actual_commands": [],
+      "evidence_paths": [
+        "artifacts/reports/frontend/stress-layout.json",
+        "artifacts/reports/frontend/real-browser-zoom.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        },
+        {
+          "checkpoint": "terminal_studies_post_cache_reconciliation_20260913",
+          "recorded_at": "2026-09-13T05:24:19.545152+00:00",
+          "superseded_observation_fields": {
+            "status": "WAITING_EXTERNAL",
+            "actual": "Landscape 844×390 and low-height native zoom keep send/stop and Close reachable. Physical mobile soft-keyboard and actual orientation hardware sessions are unavailable and unverified; desktop emulation does not establish these clauses.",
+            "reconciled_at": "2026-09-08T08:58:34Z"
+          },
+          "scope": "Prior observations preserved; original requirements and all existing history/evidence remain unchanged."
+        }
+      ],
+      "reconciled_at": "2026-09-13T05:24:19.545152+00:00",
+      "component_statuses": []
+    },
+    {
+      "check_id": "UI-06",
+      "expected": "Drawers open/scroll/close, restore focus and show readable full-screen evidence on narrow screens.",
+      "task_ids": [
+        "FE-06",
+        "FE-08"
+      ],
+      "parent_acceptance_ids": [
+        "AC-16",
+        "AC-44"
+      ],
+      "status": "REAL_FLOW_VERIFIED",
+      "actual": "Actual citation/source drawer interactions preserve full source text, scroll and focus. Final official source title, URL, license, physical-page locator and figure/formula caveat are readable at 1440px and 390px; emulated-touch closure has separate evidence. The focused parser-v5 check additionally verifies current and historical source snapshots, official links and license metadata at 390px/1440px without changing earlier saved history. September13 current source view additionally passes keyboard Enter open, eight Tabs contained, Escape close and trigger-focus return on the exact saved live5/5/2answer. Two earlier failed keyboard attempts remain in the summary; original-PDF caveat and full source stay readable. Current upgrade: Actual saved live answer shows 5 candidates/5 submitted/2 cited and Sources 2. Fresh candidate enzyme answer shows 20/11/7 and Sources 7, exact source text/hash/link, reload preservation, eight Tabs contained, Escape close and focus return at 1440/390. Unknown historical counts remain unknown rather than zero. Earlier keyboard failures remain retained. New isolated managed DeepSeek settings passed saved probe/activation. One real E5/MiniLM/live-model smoke passed with 20 candidates/12 submitted/7 cited; a separate enzyme browser question passed 20/11/7. Portable-installation checks match 80 resources and 205 selected runtime files to the candidate and verify the actual active v5/10,594/384 identity. These limited flows are not another complete 20-question suite.",
+      "actual_commands": [
+        "node scripts/verify-openstax-release.mjs"
+      ],
+      "evidence_paths": [
+        "artifacts/reports/frontend/openstax/2026-09-08T08-27-08-234Z/verification.json",
+        "artifacts/reports/frontend/stress-layout.json",
+        "artifacts/reports/frontend/touch-controls.json",
+        "artifacts/reports/frontend/openstax-v5/2026-09-08T08-54-45-868Z/verification.json",
+        "artifacts/reports/frontend/admin-settings/verification-summary.json",
+        "artifacts/reports/frontend/admin-settings/2026-09-13T03-49-49-140Z/verification.json",
+        "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json",
+        "evidence/answering-upgrade/20260913/clean-model-configuration.json",
+        "evidence/answering-upgrade/20260913/clean-live-smoke.json",
+        "evidence/answering-upgrade/20260913/portable-installation-verification.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        },
+        {
+          "checkpoint": "before_20260913_admin_citation_focus_upgrade",
+          "observation": {
+            "status": "REAL_FLOW_VERIFIED",
+            "actual": "Actual citation/source drawer interactions preserve full source text, scroll and focus. Final official source title, URL, license, physical-page locator and figure/formula caveat are readable at 1440px and 390px; emulated-touch closure has separate evidence. The focused parser-v5 check additionally verifies current and historical source snapshots, official links and license metadata at 390px/1440px without changing earlier saved history.",
+            "actual_commands": [
+              "node scripts/verify-openstax-release.mjs"
+            ],
+            "evidence_paths": [
+              "artifacts/reports/frontend/openstax/2026-09-08T08-27-08-234Z/verification.json",
+              "artifacts/reports/frontend/stress-layout.json",
+              "artifacts/reports/frontend/touch-controls.json",
+              "artifacts/reports/frontend/openstax-v5/2026-09-08T08-54-45-868Z/verification.json"
+            ],
+            "reconciled_at": "2026-09-08T08:58:34Z"
+          }
+        },
+        {
+          "checkpoint": "answering_upgrade_release_reconciliation_20260913",
+          "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+          "superseded_observation_fields": {
+            "actual": "Actual citation/source drawer interactions preserve full source text, scroll and focus. Final official source title, URL, license, physical-page locator and figure/formula caveat are readable at 1440px and 390px; emulated-touch closure has separate evidence. The focused parser-v5 check additionally verifies current and historical source snapshots, official links and license metadata at 390px/1440px without changing earlier saved history. September13 current source view additionally passes keyboard Enter open, eight Tabs contained, Escape close and trigger-focus return on the exact saved live5/5/2answer. Two earlier failed keyboard attempts remain in the summary; original-PDF caveat and full source stay readable.",
+            "evidence_paths": [
+              "artifacts/reports/frontend/openstax/2026-09-08T08-27-08-234Z/verification.json",
+              "artifacts/reports/frontend/stress-layout.json",
+              "artifacts/reports/frontend/touch-controls.json",
+              "artifacts/reports/frontend/openstax-v5/2026-09-08T08-54-45-868Z/verification.json",
+              "artifacts/reports/frontend/admin-settings/verification-summary.json",
+              "artifacts/reports/frontend/admin-settings/2026-09-13T03-49-49-140Z/verification.json"
+            ]
+          },
+          "scope": "Old observations retained verbatim; original requirements/reporting fields unchanged"
+        },
+        {
+          "checkpoint": "terminal_studies_post_cache_reconciliation_20260913",
+          "recorded_at": "2026-09-13T05:24:19.545152+00:00",
+          "superseded_observation_fields": {
+            "status": "REAL_FLOW_VERIFIED",
+            "actual": "Actual citation/source drawer interactions preserve full source text, scroll and focus. Final official source title, URL, license, physical-page locator and figure/formula caveat are readable at 1440px and 390px; emulated-touch closure has separate evidence. The focused parser-v5 check additionally verifies current and historical source snapshots, official links and license metadata at 390px/1440px without changing earlier saved history. September13 current source view additionally passes keyboard Enter open, eight Tabs contained, Escape close and trigger-focus return on the exact saved live5/5/2answer. Two earlier failed keyboard attempts remain in the summary; original-PDF caveat and full source stay readable. Current upgrade: Actual saved live answer shows 5 candidates/5 submitted/2 cited and Sources 2. Fresh candidate enzyme answer shows 20/11/7 and Sources 7, exact source text/hash/link, reload preservation, eight Tabs contained, Escape close and focus return at 1440/390. Unknown historical counts remain unknown rather than zero. Earlier keyboard failures remain retained. New isolated managed DeepSeek settings passed saved probe/activation. One real E5/MiniLM/live-model smoke passed with 20 candidates/12 submitted/7 cited; a separate enzyme browser question passed 20/11/7. Portable-installation checks match 80 resources and 205 selected runtime files to the candidate and verify the actual active v5/10,594/384 identity. These limited flows are not another complete 20-question suite.",
+            "component_statuses": [
+              {
+                "component": "Current cited-source browser and diagnostic layers",
+                "status": "REAL_FLOW_VERIFIED",
+                "detail": "Actual saved live answer shows 5 candidates/5 submitted/2 cited and Sources 2. Fresh candidate enzyme answer shows 20/11/7 and Sources 7, exact source text/hash/link, reload preservation, eight Tabs contained, Escape close and focus return at 1440/390. Unknown historical counts remain unknown rather than zero. Earlier keyboard failures remain retained.",
+                "evidence_paths": [
+                  "artifacts/reports/frontend/admin-settings/verification-summary.json",
+                  "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json"
+                ],
+                "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+                "observation_type": "Reconciliation of cited actual records, not a new execution",
+                "remaining_scope": "Bounded desktop browser/width checks do not replace all earlier journeys, physical touch, native IME or assistive-technology review.",
+                "completion_claim": false
+              },
+              {
+                "component": "Fresh installation live source flow",
+                "status": "REAL_FLOW_VERIFIED",
+                "detail": "New isolated managed DeepSeek settings passed saved probe/activation. One real E5/MiniLM/live-model smoke passed with 20 candidates/12 submitted/7 cited; a separate enzyme browser question passed 20/11/7. Portable-installation checks match 80 resources and 205 selected runtime files to the candidate and verify the actual active v5/10,594/384 identity. These limited flows are not another complete 20-question suite.",
+                "evidence_paths": [
+                  "evidence/answering-upgrade/20260913/clean-model-configuration.json",
+                  "evidence/answering-upgrade/20260913/clean-live-smoke.json",
+                  "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json",
+                  "evidence/answering-upgrade/20260913/portable-installation-verification.json"
+                ],
+                "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+                "observation_type": "Reconciliation of cited actual records, not a new execution",
+                "remaining_scope": "Final current-source archive reconciliation and independent semantic/human acceptance remain separate.",
+                "completion_claim": false
+              }
+            ],
+            "upgrade_current_evidence_paths": [
+              "artifacts/reports/frontend/admin-settings/verification-summary.json",
+              "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json",
+              "evidence/answering-upgrade/20260913/clean-model-configuration.json",
+              "evidence/answering-upgrade/20260913/clean-live-smoke.json",
+              "evidence/answering-upgrade/20260913/portable-installation-verification.json"
+            ],
+            "reconciled_at": "2026-09-13T04:32:45.781638+00:00"
+          },
+          "scope": "Prior observations preserved; original requirements and all existing history/evidence remain unchanged."
+        }
+      ],
+      "reconciled_at": "2026-09-13T05:24:19.545152+00:00",
+      "command_working_directory": "frontend",
+      "component_statuses": [
+        {
+          "component": "Current cited-source browser and diagnostic layers",
+          "status": "REAL_FLOW_VERIFIED",
+          "detail": "Actual saved live answer shows 5 candidates/5 submitted/2 cited and Sources 2. Fresh candidate enzyme answer shows 20/11/7 and Sources 7, exact source text/hash/link, reload preservation, eight Tabs contained, Escape close and focus return at 1440/390. Unknown historical counts remain unknown rather than zero. Earlier keyboard failures remain retained.",
+          "evidence_paths": [
+            "artifacts/reports/frontend/admin-settings/verification-summary.json",
+            "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json"
+          ],
+          "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+          "observation_type": "Reconciliation of cited actual records, not a new execution",
+          "remaining_scope": "Bounded desktop browser/width checks do not replace all earlier journeys, physical touch, native IME or assistive-technology review.",
+          "completion_claim": false
+        },
+        {
+          "component": "Fresh installation live source flow",
+          "status": "REAL_FLOW_VERIFIED",
+          "detail": "New isolated managed DeepSeek settings passed saved probe/activation. One real E5/MiniLM/live-model smoke passed with 20 candidates/12 submitted/7 cited; a separate enzyme browser question passed 20/11/7. Portable-installation checks match 80 resources and 205 selected runtime files to the candidate and verify the actual active v5/10,594/384 identity. These limited flows are not another complete 20-question suite.",
+          "evidence_paths": [
+            "evidence/answering-upgrade/20260913/clean-model-configuration.json",
+            "evidence/answering-upgrade/20260913/clean-live-smoke.json",
+            "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json",
+            "evidence/answering-upgrade/20260913/portable-installation-verification.json"
+          ],
+          "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+          "observation_type": "Reconciliation of cited actual records, not a new execution",
+          "remaining_scope": "Final current-source archive reconciliation and independent semantic/human acceptance remain separate.",
+          "completion_claim": false
+        }
+      ],
+      "upgrade_current_evidence_paths": [
+        "artifacts/reports/frontend/admin-settings/verification-summary.json",
+        "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json",
+        "evidence/answering-upgrade/20260913/clean-model-configuration.json",
+        "evidence/answering-upgrade/20260913/clean-live-smoke.json",
+        "evidence/answering-upgrade/20260913/portable-installation-verification.json"
+      ]
+    },
+    {
+      "check_id": "UI-07",
+      "expected": "Resize during generation/failure/re-login preserves durable state; failed regeneration retains prior revision.",
+      "task_ids": [
+        "FE-04",
+        "FE-08",
+        "CHAT-08"
+      ],
+      "parent_acceptance_ids": [
+        "AC-16",
+        "AC-43",
+        "AC-45"
+      ],
+      "status": "REAL_FLOW_VERIFIED",
+      "actual": "Real job resize/stop/retry and failed replacement retention passed with actual API, worker and PostgreSQL. Current official-source regeneration preserves earlier revision, evidence and feedback; re-login restores ten messages and the active replacement. Answering remains mock.",
+      "actual_commands": [
+        "node scripts/verify-openstax-release.mjs"
+      ],
+      "evidence_paths": [
+        "artifacts/reports/frontend/openstax/2026-09-08T08-27-08-234Z/verification.json",
+        "artifacts/reports/frontend/stop-retry.json",
+        "artifacts/reports/frontend/stress-layout.json",
+        "artifacts/reports/frontend/no-sciq-journey.json",
+        "artifacts/reports/frontend/history-pagination/2026-09-08T08-55-45-630Z/verification.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        },
+        {
+          "checkpoint": "terminal_studies_post_cache_reconciliation_20260913",
+          "recorded_at": "2026-09-13T05:24:19.545152+00:00",
+          "superseded_observation_fields": {
+            "status": "REAL_FLOW_VERIFIED",
+            "actual": "Real job resize/stop/retry and failed replacement retention passed with actual API, worker and PostgreSQL. Current official-source regeneration preserves earlier revision, evidence and feedback; re-login restores ten messages and the active replacement. Answering remains mock.",
+            "reconciled_at": "2026-09-08T08:58:34Z"
+          },
+          "scope": "Prior observations preserved; original requirements and all existing history/evidence remain unchanged."
+        }
+      ],
+      "reconciled_at": "2026-09-13T05:24:19.545152+00:00",
+      "command_working_directory": "frontend",
+      "component_statuses": []
+    },
+    {
+      "check_id": "UI-08",
+      "expected": "Older-message reading is not interrupted; Jump to latest and panel closure preserve position.",
+      "task_ids": [
+        "FE-08"
+      ],
+      "parent_acceptance_ids": [
+        "AC-44"
+      ],
+      "status": "REAL_FLOW_VERIFIED",
+      "actual": "An actual completed sixth response while reading at scrollTop 0 does not jump; Jump to latest returns to bottom and source-panel closure preserves reading position. This actual browser/persistence flow uses the explicitly authored stress fixture and mock answerer.",
+      "actual_commands": [],
+      "evidence_paths": [
+        "artifacts/reports/frontend/stress-layout.json",
+        "artifacts/reports/frontend/history-pagination/2026-09-08T08-55-45-630Z/verification.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        },
+        {
+          "checkpoint": "terminal_studies_post_cache_reconciliation_20260913",
+          "recorded_at": "2026-09-13T05:24:19.545152+00:00",
+          "superseded_observation_fields": {
+            "status": "REAL_FLOW_VERIFIED",
+            "actual": "An actual completed sixth response while reading at scrollTop 0 does not jump; Jump to latest returns to bottom and source-panel closure preserves reading position. This actual browser/persistence flow uses the explicitly authored stress fixture and mock answerer.",
+            "reconciled_at": "2026-09-08T08:58:34Z"
+          },
+          "scope": "Prior observations preserved; original requirements and all existing history/evidence remain unchanged."
+        }
+      ],
+      "reconciled_at": "2026-09-13T05:24:19.545152+00:00",
+      "component_statuses": []
+    },
+    {
+      "check_id": "UI-09",
+      "expected": "Keyboard, IME, touch and visible focus work; essential controls are not hover-only.",
+      "task_ids": [
+        "FE-03",
+        "FE-12"
+      ],
+      "parent_acceptance_ids": [
+        "AC-44"
+      ],
+      "status": "WAITING_EXTERNAL",
+      "actual": "Desktop keyboard/focus, Enter/Shift+Enter, synthetic composition guard and emulated-touch source/feedback controls passed. Physical touch, native OS IME and screen-reader review remain unavailable and unverified; synthetic events do not establish these clauses. September13 actual source-dialog keyboard boundary is repaired and retested; eight Tabs, Escape and trigger restoration pass on a saved live answer. Physical/native/assistive checks remain unverified. Current upgrade: Actual saved live answer shows 5 candidates/5 submitted/2 cited and Sources 2. Fresh candidate enzyme answer shows 20/11/7 and Sources 7, exact source text/hash/link, reload preservation, eight Tabs contained, Escape close and focus return at 1440/390. Unknown historical counts remain unknown rather than zero. Earlier keyboard failures remain retained.",
+      "actual_commands": [],
+      "evidence_paths": [
+        "artifacts/reports/frontend/touch-controls.json",
+        "artifacts/reports/frontend/runs/2026-09-08T07-05-28-822Z/results.json",
+        "evidence/ui/legacy-mcq-final-component-tests.json",
+        "artifacts/reports/frontend/admin-settings/verification-summary.json",
+        "artifacts/reports/frontend/admin-settings/2026-09-13T03-49-49-140Z/verification.json",
+        "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        },
+        {
+          "checkpoint": "before_20260913_admin_citation_focus_upgrade",
+          "observation": {
+            "status": "WAITING_EXTERNAL",
+            "actual": "Desktop keyboard/focus, Enter/Shift+Enter, synthetic composition guard and emulated-touch source/feedback controls passed. Physical touch, native OS IME and screen-reader review remain unavailable and unverified; synthetic events do not establish these clauses.",
+            "actual_commands": [],
+            "evidence_paths": [
+              "artifacts/reports/frontend/touch-controls.json",
+              "artifacts/reports/frontend/runs/2026-09-08T07-05-28-822Z/results.json",
+              "evidence/ui/legacy-mcq-final-component-tests.json"
+            ],
+            "reconciled_at": "2026-09-08T08:58:34Z"
+          }
+        },
+        {
+          "checkpoint": "answering_upgrade_release_reconciliation_20260913",
+          "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+          "superseded_observation_fields": {
+            "actual": "Desktop keyboard/focus, Enter/Shift+Enter, synthetic composition guard and emulated-touch source/feedback controls passed. Physical touch, native OS IME and screen-reader review remain unavailable and unverified; synthetic events do not establish these clauses. September13 actual source-dialog keyboard boundary is repaired and retested; eight Tabs, Escape and trigger restoration pass on a saved live answer. Physical/native/assistive checks remain unverified.",
+            "evidence_paths": [
+              "artifacts/reports/frontend/touch-controls.json",
+              "artifacts/reports/frontend/runs/2026-09-08T07-05-28-822Z/results.json",
+              "evidence/ui/legacy-mcq-final-component-tests.json",
+              "artifacts/reports/frontend/admin-settings/verification-summary.json",
+              "artifacts/reports/frontend/admin-settings/2026-09-13T03-49-49-140Z/verification.json"
+            ]
+          },
+          "scope": "Old observations retained verbatim; original requirements/reporting fields unchanged"
+        },
+        {
+          "checkpoint": "terminal_studies_post_cache_reconciliation_20260913",
+          "recorded_at": "2026-09-13T05:24:19.545152+00:00",
+          "superseded_observation_fields": {
+            "status": "WAITING_EXTERNAL",
+            "actual": "Desktop keyboard/focus, Enter/Shift+Enter, synthetic composition guard and emulated-touch source/feedback controls passed. Physical touch, native OS IME and screen-reader review remain unavailable and unverified; synthetic events do not establish these clauses. September13 actual source-dialog keyboard boundary is repaired and retested; eight Tabs, Escape and trigger restoration pass on a saved live answer. Physical/native/assistive checks remain unverified. Current upgrade: Actual saved live answer shows 5 candidates/5 submitted/2 cited and Sources 2. Fresh candidate enzyme answer shows 20/11/7 and Sources 7, exact source text/hash/link, reload preservation, eight Tabs contained, Escape close and focus return at 1440/390. Unknown historical counts remain unknown rather than zero. Earlier keyboard failures remain retained.",
+            "component_statuses": [
+              {
+                "component": "Current cited-source browser and diagnostic layers",
+                "status": "REAL_FLOW_VERIFIED",
+                "detail": "Actual saved live answer shows 5 candidates/5 submitted/2 cited and Sources 2. Fresh candidate enzyme answer shows 20/11/7 and Sources 7, exact source text/hash/link, reload preservation, eight Tabs contained, Escape close and focus return at 1440/390. Unknown historical counts remain unknown rather than zero. Earlier keyboard failures remain retained.",
+                "evidence_paths": [
+                  "artifacts/reports/frontend/admin-settings/verification-summary.json",
+                  "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json"
+                ],
+                "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+                "observation_type": "Reconciliation of cited actual records, not a new execution",
+                "remaining_scope": "Bounded desktop browser/width checks do not replace all earlier journeys, physical touch, native IME or assistive-technology review.",
+                "completion_claim": false
+              }
+            ],
+            "upgrade_current_evidence_paths": [
+              "artifacts/reports/frontend/admin-settings/verification-summary.json",
+              "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json"
+            ],
+            "reconciled_at": "2026-09-13T04:32:45.781638+00:00"
+          },
+          "scope": "Prior observations preserved; original requirements and all existing history/evidence remain unchanged."
+        }
+      ],
+      "reconciled_at": "2026-09-13T05:24:19.545152+00:00",
+      "component_statuses": [
+        {
+          "component": "Current cited-source browser and diagnostic layers",
+          "status": "REAL_FLOW_VERIFIED",
+          "detail": "Actual saved live answer shows 5 candidates/5 submitted/2 cited and Sources 2. Fresh candidate enzyme answer shows 20/11/7 and Sources 7, exact source text/hash/link, reload preservation, eight Tabs contained, Escape close and focus return at 1440/390. Unknown historical counts remain unknown rather than zero. Earlier keyboard failures remain retained.",
+          "evidence_paths": [
+            "artifacts/reports/frontend/admin-settings/verification-summary.json",
+            "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json"
+          ],
+          "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+          "observation_type": "Reconciliation of cited actual records, not a new execution",
+          "remaining_scope": "Bounded desktop browser/width checks do not replace all earlier journeys, physical touch, native IME or assistive-technology review.",
+          "completion_claim": false
+        }
+      ],
+      "upgrade_current_evidence_paths": [
+        "artifacts/reports/frontend/admin-settings/verification-summary.json",
+        "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json"
+      ]
+    },
+    {
+      "check_id": "UI-10",
+      "expected": "Login/profile/corpus/experiments fit with accessible errors, required fields and pagination.",
+      "task_ids": [
+        "FE-02",
+        "FE-07",
+        "FE-10",
+        "FE-11",
+        "FE-12"
+      ],
+      "parent_acceptance_ids": [],
+      "status": "REAL_FLOW_VERIFIED",
+      "actual": "Named login/profile/corpus/experiment views and errors retain their cited actual responsive browser evidence. The shipped automatic 100-row history pagination is now verified through the real browser/API/worker:51 social turns create 102 rows, requests return 100+2, all IDs/order/full text remain. A further UI turn produces 104 rows while preserving the old reading anchor and unsent draft. This separate UI-only fixture is not corpus input or model-quality evidence; there is no Load older button. September13 adjacent administrator Models/Accounts/Diagnostics pages add real save/test/enable/error/account transitions and responsive1440/390 evidence. Earlier corpus/experiment/pagination observations are preserved, not rerun by this upgrade. Current upgrade: Blank API version is valid for the compatible v1 route and saves null; explicit dated values are preserved. Both configurations saved through actual candidate HTTP201 with active DeepSeek/prior hashes unchanged. Fifty-one frontend tests and matching candidate source bytes passed. Zero Azure provider tests or activations occurred.",
+      "actual_commands": [
+        "node scripts/verify-history-pagination.mjs"
+      ],
+      "evidence_paths": [
+        "artifacts/reports/frontend/login-responsive-bounds.json",
+        "artifacts/reports/frontend/account-security.json",
+        "artifacts/reports/frontend/admin-experiments.json",
+        "artifacts/reports/frontend/runs/2026-09-08T07-02-19-133Z/results.json",
+        "artifacts/reports/frontend/openstax-rollback-roundtrip/2026-09-08T08-42-25-678Z/verification.json",
+        "artifacts/reports/frontend/history-pagination/2026-09-08T08-55-45-630Z/verification.json",
+        "artifacts/reports/frontend/admin-settings/verification-summary.json",
+        "artifacts/reports/frontend/admin-settings/2026-09-13T03-39-40-209Z/verification.json",
+        "artifacts/reports/frontend/admin-settings/2026-09-13T03-43-09-627Z/verification.json",
+        "artifacts/reports/frontend/admin-settings/2026-09-13T03-49-49-140Z/verification.json",
+        "artifacts/reports/frontend/azure-v1/20260913T041856Z/verification-summary.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        },
+        {
+          "checkpoint": "pagination_clause_before_actual_execution",
+          "status": "IMPLEMENTED_UNVERIFIED",
+          "actual": "Actual login/profile/error forms, corpus controls and experiment detail/export/missing-input guidance have bounded responsive browser evidence. Session history pagination is implemented, but complete pagination acceptance for the named pages has no separately recorded browser proof. Preserve that clause as unverified.",
+          "actual_commands": [],
+          "evidence_paths": [
+            "artifacts/reports/frontend/login-responsive-bounds.json",
+            "artifacts/reports/frontend/account-security.json",
+            "artifacts/reports/frontend/admin-experiments.json",
+            "artifacts/reports/frontend/runs/2026-09-08T07-02-19-133Z/results.json",
+            "artifacts/reports/frontend/openstax-rollback-roundtrip/2026-09-08T08-42-25-678Z/verification.json",
+            "artifacts/reports/frontend/history-pagination/2026-09-08T08-55-45-630Z/verification.json"
+          ]
+        },
+        {
+          "checkpoint": "before_20260913_admin_citation_focus_upgrade",
+          "observation": {
+            "status": "REAL_FLOW_VERIFIED",
+            "actual": "Named login/profile/corpus/experiment views and errors retain their cited actual responsive browser evidence. The shipped automatic 100-row history pagination is now verified through the real browser/API/worker:51 social turns create 102 rows, requests return 100+2, all IDs/order/full text remain. A further UI turn produces 104 rows while preserving the old reading anchor and unsent draft. This separate UI-only fixture is not corpus input or model-quality evidence; there is no Load older button.",
+            "actual_commands": [
+              "node scripts/verify-history-pagination.mjs"
+            ],
+            "evidence_paths": [
+              "artifacts/reports/frontend/login-responsive-bounds.json",
+              "artifacts/reports/frontend/account-security.json",
+              "artifacts/reports/frontend/admin-experiments.json",
+              "artifacts/reports/frontend/runs/2026-09-08T07-02-19-133Z/results.json",
+              "artifacts/reports/frontend/openstax-rollback-roundtrip/2026-09-08T08-42-25-678Z/verification.json",
+              "artifacts/reports/frontend/history-pagination/2026-09-08T08-55-45-630Z/verification.json"
+            ],
+            "reconciled_at": "2026-09-08T08:58:34Z"
+          }
+        },
+        {
+          "checkpoint": "answering_upgrade_release_reconciliation_20260913",
+          "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+          "superseded_observation_fields": {
+            "actual": "Named login/profile/corpus/experiment views and errors retain their cited actual responsive browser evidence. The shipped automatic 100-row history pagination is now verified through the real browser/API/worker:51 social turns create 102 rows, requests return 100+2, all IDs/order/full text remain. A further UI turn produces 104 rows while preserving the old reading anchor and unsent draft. This separate UI-only fixture is not corpus input or model-quality evidence; there is no Load older button. September13 adjacent administrator Models/Accounts/Diagnostics pages add real save/test/enable/error/account transitions and responsive1440/390 evidence. Earlier corpus/experiment/pagination observations are preserved, not rerun by this upgrade.",
+            "evidence_paths": [
+              "artifacts/reports/frontend/login-responsive-bounds.json",
+              "artifacts/reports/frontend/account-security.json",
+              "artifacts/reports/frontend/admin-experiments.json",
+              "artifacts/reports/frontend/runs/2026-09-08T07-02-19-133Z/results.json",
+              "artifacts/reports/frontend/openstax-rollback-roundtrip/2026-09-08T08-42-25-678Z/verification.json",
+              "artifacts/reports/frontend/history-pagination/2026-09-08T08-55-45-630Z/verification.json",
+              "artifacts/reports/frontend/admin-settings/verification-summary.json",
+              "artifacts/reports/frontend/admin-settings/2026-09-13T03-39-40-209Z/verification.json",
+              "artifacts/reports/frontend/admin-settings/2026-09-13T03-43-09-627Z/verification.json",
+              "artifacts/reports/frontend/admin-settings/2026-09-13T03-49-49-140Z/verification.json"
+            ]
+          },
+          "scope": "Old observations retained verbatim; original requirements/reporting fields unchanged"
+        },
+        {
+          "checkpoint": "terminal_studies_post_cache_reconciliation_20260913",
+          "recorded_at": "2026-09-13T05:24:19.545152+00:00",
+          "superseded_observation_fields": {
+            "status": "REAL_FLOW_VERIFIED",
+            "actual": "Named login/profile/corpus/experiment views and errors retain their cited actual responsive browser evidence. The shipped automatic 100-row history pagination is now verified through the real browser/API/worker:51 social turns create 102 rows, requests return 100+2, all IDs/order/full text remain. A further UI turn produces 104 rows while preserving the old reading anchor and unsent draft. This separate UI-only fixture is not corpus input or model-quality evidence; there is no Load older button. September13 adjacent administrator Models/Accounts/Diagnostics pages add real save/test/enable/error/account transitions and responsive1440/390 evidence. Earlier corpus/experiment/pagination observations are preserved, not rerun by this upgrade. Current upgrade: Blank API version is valid for the compatible v1 route and saves null; explicit dated values are preserved. Both configurations saved through actual candidate HTTP201 with active DeepSeek/prior hashes unchanged. Fifty-one frontend tests and matching candidate source bytes passed. Zero Azure provider tests or activations occurred.",
+            "component_statuses": [
+              {
+                "component": "Azure optional-version form",
+                "status": "REAL_FLOW_VERIFIED",
+                "detail": "Blank API version is valid for the compatible v1 route and saves null; explicit dated values are preserved. Both configurations saved through actual candidate HTTP201 with active DeepSeek/prior hashes unchanged. Fifty-one frontend tests and matching candidate source bytes passed. Zero Azure provider tests or activations occurred.",
+                "evidence_paths": [
+                  "artifacts/reports/frontend/azure-v1/20260913T041856Z/verification-summary.json"
+                ],
+                "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+                "observation_type": "Reconciliation of cited actual records, not a new execution",
+                "remaining_scope": "Azure connectivity remains unverified; saved configuration is not a live probe.",
+                "completion_claim": false
+              }
+            ],
+            "upgrade_current_evidence_paths": [
+              "artifacts/reports/frontend/azure-v1/20260913T041856Z/verification-summary.json"
+            ],
+            "reconciled_at": "2026-09-13T04:32:45.781638+00:00"
+          },
+          "scope": "Prior observations preserved; original requirements and all existing history/evidence remain unchanged."
+        }
+      ],
+      "reconciled_at": "2026-09-13T05:24:19.545152+00:00",
+      "command_working_directory": "frontend",
+      "component_statuses": [
+        {
+          "component": "Azure optional-version form",
+          "status": "REAL_FLOW_VERIFIED",
+          "detail": "Blank API version is valid for the compatible v1 route and saves null; explicit dated values are preserved. Both configurations saved through actual candidate HTTP201 with active DeepSeek/prior hashes unchanged. Fifty-one frontend tests and matching candidate source bytes passed. Zero Azure provider tests or activations occurred.",
+          "evidence_paths": [
+            "artifacts/reports/frontend/azure-v1/20260913T041856Z/verification-summary.json"
+          ],
+          "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+          "observation_type": "Reconciliation of cited actual records, not a new execution",
+          "remaining_scope": "Azure connectivity remains unverified; saved configuration is not a live probe.",
+          "completion_claim": false
+        }
+      ],
+      "upgrade_current_evidence_paths": [
+        "artifacts/reports/frontend/azure-v1/20260913T041856Z/verification-summary.json"
+      ]
+    },
+    {
+      "check_id": "UI-11",
+      "expected": "Sources, applied profiles, mock/live and error feedback remain correct and discoverable.",
+      "task_ids": [
+        "FE-05",
+        "FE-06",
+        "FE-07"
+      ],
+      "parent_acceptance_ids": [
+        "AC-16",
+        "AC-37",
+        "AC-44"
+      ],
+      "status": "REAL_FLOW_VERIFIED",
+      "actual": "September8 profile/source/error/MCQ/current-versus-historical citation observations retain their dated scopes. September13 actual model test/enable/restore shows the managed Live header correctly; the earlier settings screenshot header defect is retained. The saved live answer shows only its2actual citations from5submitted snapshots, while administrator diagnostics show5candidate/5submitted/2cited. Exact original text/hash/link/license and nonduplicated physical locator/PDF caveat remain readable. Provider timeout is a real failure with Enable disabled, not mock success. Current upgrade: Actual saved live answer shows 5 candidates/5 submitted/2 cited and Sources 2. Fresh candidate enzyme answer shows 20/11/7 and Sources 7, exact source text/hash/link, reload preservation, eight Tabs contained, Escape close and focus return at 1440/390. Unknown historical counts remain unknown rather than zero. Earlier keyboard failures remain retained. Blank API version is valid for the compatible v1 route and saves null; explicit dated values are preserved. Both configurations saved through actual candidate HTTP201 with active DeepSeek/prior hashes unchanged. Fifty-one frontend tests and matching candidate source bytes passed. Zero Azure provider tests or activations occurred. New isolated managed DeepSeek settings passed saved probe/activation. One real E5/MiniLM/live-model smoke passed with 20 candidates/12 submitted/7 cited; a separate enzyme browser question passed 20/11/7. Portable-installation checks match 80 resources and 205 selected runtime files to the candidate and verify the actual active v5/10,594/384 identity. These limited flows are not another complete 20-question suite.",
+      "actual_commands": [
+        "node scripts/verify-openstax-release.mjs"
+      ],
+      "evidence_paths": [
+        "artifacts/reports/frontend/openstax/2026-09-08T08-27-08-234Z/verification.json",
+        "evidence/ui/legacy-mcq-final-component-tests.json",
+        "evidence/ui/openstax-attribution-component-check.json",
+        "artifacts/reports/frontend/openstax-v5/2026-09-08T08-54-45-868Z/verification.json",
+        "artifacts/reports/frontend/keyboard-suggestion/2026-09-08T09-54-55-082Z/verification.json",
+        "docs/execution/keyboard-suggestion-verification.md",
+        "artifacts/reports/frontend/admin-settings/verification-summary.json",
+        "artifacts/reports/frontend/admin-settings/2026-09-13T03-39-40-209Z/verification.json",
+        "artifacts/reports/frontend/admin-settings/2026-09-13T03-43-09-627Z/verification.json",
+        "artifacts/reports/frontend/admin-settings/2026-09-13T03-49-49-140Z/verification.json",
+        "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json",
+        "artifacts/reports/frontend/azure-v1/20260913T041856Z/verification-summary.json",
+        "evidence/answering-upgrade/20260913/clean-model-configuration.json",
+        "evidence/answering-upgrade/20260913/clean-live-smoke.json",
+        "evidence/answering-upgrade/20260913/portable-installation-verification.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        },
+        {
+          "checkpoint": "before_local_error_visibility_fix",
+          "observation": {
+            "check_id": "UI-11",
+            "expected": "Sources, applied profiles, mock/live and error feedback remain correct and discoverable.",
+            "task_ids": [
+              "FE-05",
+              "FE-06",
+              "FE-07"
+            ],
+            "parent_acceptance_ids": [
+              "AC-16",
+              "AC-37",
+              "AC-44"
+            ],
+            "status": "REAL_FLOW_VERIFIED",
+            "actual": "Actual official source snapshots, profile-off/applied snapshot, mock badge, citation hashes, license and explicit refusal/errors remain discoverable. Source-unavailable 410 and historical MCQ rendering additionally have read-only component evidence. No live-provider readiness or answer-quality claim. The focused parser-v5 check additionally verifies current and historical source snapshots, official links and license metadata at 390px/1440px without changing earlier saved history.",
+            "actual_commands": [
+              "node scripts/verify-openstax-release.mjs"
+            ],
+            "evidence_paths": [
+              "artifacts/reports/frontend/openstax/2026-09-08T08-27-08-234Z/verification.json",
+              "evidence/ui/legacy-mcq-final-component-tests.json",
+              "evidence/ui/openstax-attribution-component-check.json",
+              "artifacts/reports/frontend/openstax-v5/2026-09-08T08-54-45-868Z/verification.json"
+            ],
+            "reconciled_at": "2026-09-08T08:58:34Z",
+            "command_working_directory": "frontend"
+          }
+        },
+        {
+          "checkpoint": "before_20260913_admin_citation_focus_upgrade",
+          "observation": {
+            "status": "REAL_FLOW_VERIFIED",
+            "actual": "Actual official source snapshots, profile-off/applied snapshot, mock badge, citation hashes, license and explicit refusal/errors remain discoverable. Source-unavailable 410 and historical MCQ rendering additionally have read-only component evidence. No live-provider readiness or answer-quality claim. The focused parser-v5 check additionally verifies current and historical source snapshots, official links and license metadata at 390px/1440px without changing earlier saved history. New real-browser rejection checks at1440/390 verify the whole alert without manual scrolling; automatic reveal respects intentional older reading. Drafts/history and original failed attempts are preserved.",
+            "actual_commands": [
+              "node scripts/verify-openstax-release.mjs"
+            ],
+            "evidence_paths": [
+              "artifacts/reports/frontend/openstax/2026-09-08T08-27-08-234Z/verification.json",
+              "evidence/ui/legacy-mcq-final-component-tests.json",
+              "evidence/ui/openstax-attribution-component-check.json",
+              "artifacts/reports/frontend/openstax-v5/2026-09-08T08-54-45-868Z/verification.json",
+              "artifacts/reports/frontend/keyboard-suggestion/2026-09-08T09-54-55-082Z/verification.json",
+              "docs/execution/keyboard-suggestion-verification.md"
+            ],
+            "reconciled_at": "2026-09-08T10:00:42.833241+00:00"
+          }
+        },
+        {
+          "checkpoint": "answering_upgrade_release_reconciliation_20260913",
+          "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+          "superseded_observation_fields": {
+            "actual": "September8 profile/source/error/MCQ/current-versus-historical citation observations retain their dated scopes. September13 actual model test/enable/restore shows the managed Live header correctly; the earlier settings screenshot header defect is retained. The saved live answer shows only its2actual citations from5submitted snapshots, while administrator diagnostics show5candidate/5submitted/2cited. Exact original text/hash/link/license and nonduplicated physical locator/PDF caveat remain readable. Provider timeout is a real failure with Enable disabled, not mock success.",
+            "evidence_paths": [
+              "artifacts/reports/frontend/openstax/2026-09-08T08-27-08-234Z/verification.json",
+              "evidence/ui/legacy-mcq-final-component-tests.json",
+              "evidence/ui/openstax-attribution-component-check.json",
+              "artifacts/reports/frontend/openstax-v5/2026-09-08T08-54-45-868Z/verification.json",
+              "artifacts/reports/frontend/keyboard-suggestion/2026-09-08T09-54-55-082Z/verification.json",
+              "docs/execution/keyboard-suggestion-verification.md",
+              "artifacts/reports/frontend/admin-settings/verification-summary.json",
+              "artifacts/reports/frontend/admin-settings/2026-09-13T03-39-40-209Z/verification.json",
+              "artifacts/reports/frontend/admin-settings/2026-09-13T03-43-09-627Z/verification.json",
+              "artifacts/reports/frontend/admin-settings/2026-09-13T03-49-49-140Z/verification.json"
+            ]
+          },
+          "scope": "Old observations retained verbatim; original requirements/reporting fields unchanged"
+        },
+        {
+          "checkpoint": "terminal_studies_post_cache_reconciliation_20260913",
+          "recorded_at": "2026-09-13T05:24:19.545152+00:00",
+          "superseded_observation_fields": {
+            "status": "REAL_FLOW_VERIFIED",
+            "actual": "September8 profile/source/error/MCQ/current-versus-historical citation observations retain their dated scopes. September13 actual model test/enable/restore shows the managed Live header correctly; the earlier settings screenshot header defect is retained. The saved live answer shows only its2actual citations from5submitted snapshots, while administrator diagnostics show5candidate/5submitted/2cited. Exact original text/hash/link/license and nonduplicated physical locator/PDF caveat remain readable. Provider timeout is a real failure with Enable disabled, not mock success. Current upgrade: Actual saved live answer shows 5 candidates/5 submitted/2 cited and Sources 2. Fresh candidate enzyme answer shows 20/11/7 and Sources 7, exact source text/hash/link, reload preservation, eight Tabs contained, Escape close and focus return at 1440/390. Unknown historical counts remain unknown rather than zero. Earlier keyboard failures remain retained. Blank API version is valid for the compatible v1 route and saves null; explicit dated values are preserved. Both configurations saved through actual candidate HTTP201 with active DeepSeek/prior hashes unchanged. Fifty-one frontend tests and matching candidate source bytes passed. Zero Azure provider tests or activations occurred. New isolated managed DeepSeek settings passed saved probe/activation. One real E5/MiniLM/live-model smoke passed with 20 candidates/12 submitted/7 cited; a separate enzyme browser question passed 20/11/7. Portable-installation checks match 80 resources and 205 selected runtime files to the candidate and verify the actual active v5/10,594/384 identity. These limited flows are not another complete 20-question suite.",
+            "component_statuses": [
+              {
+                "component": "Current cited-source browser and diagnostic layers",
+                "status": "REAL_FLOW_VERIFIED",
+                "detail": "Actual saved live answer shows 5 candidates/5 submitted/2 cited and Sources 2. Fresh candidate enzyme answer shows 20/11/7 and Sources 7, exact source text/hash/link, reload preservation, eight Tabs contained, Escape close and focus return at 1440/390. Unknown historical counts remain unknown rather than zero. Earlier keyboard failures remain retained.",
+                "evidence_paths": [
+                  "artifacts/reports/frontend/admin-settings/verification-summary.json",
+                  "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json"
+                ],
+                "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+                "observation_type": "Reconciliation of cited actual records, not a new execution",
+                "remaining_scope": "Bounded desktop browser/width checks do not replace all earlier journeys, physical touch, native IME or assistive-technology review.",
+                "completion_claim": false
+              },
+              {
+                "component": "Azure optional-version form",
+                "status": "REAL_FLOW_VERIFIED",
+                "detail": "Blank API version is valid for the compatible v1 route and saves null; explicit dated values are preserved. Both configurations saved through actual candidate HTTP201 with active DeepSeek/prior hashes unchanged. Fifty-one frontend tests and matching candidate source bytes passed. Zero Azure provider tests or activations occurred.",
+                "evidence_paths": [
+                  "artifacts/reports/frontend/azure-v1/20260913T041856Z/verification-summary.json"
+                ],
+                "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+                "observation_type": "Reconciliation of cited actual records, not a new execution",
+                "remaining_scope": "Azure connectivity remains unverified; saved configuration is not a live probe.",
+                "completion_claim": false
+              },
+              {
+                "component": "Fresh installation live source flow",
+                "status": "REAL_FLOW_VERIFIED",
+                "detail": "New isolated managed DeepSeek settings passed saved probe/activation. One real E5/MiniLM/live-model smoke passed with 20 candidates/12 submitted/7 cited; a separate enzyme browser question passed 20/11/7. Portable-installation checks match 80 resources and 205 selected runtime files to the candidate and verify the actual active v5/10,594/384 identity. These limited flows are not another complete 20-question suite.",
+                "evidence_paths": [
+                  "evidence/answering-upgrade/20260913/clean-model-configuration.json",
+                  "evidence/answering-upgrade/20260913/clean-live-smoke.json",
+                  "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json",
+                  "evidence/answering-upgrade/20260913/portable-installation-verification.json"
+                ],
+                "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+                "observation_type": "Reconciliation of cited actual records, not a new execution",
+                "remaining_scope": "Final current-source archive reconciliation and independent semantic/human acceptance remain separate.",
+                "completion_claim": false
+              }
+            ],
+            "upgrade_current_evidence_paths": [
+              "artifacts/reports/frontend/admin-settings/verification-summary.json",
+              "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json",
+              "artifacts/reports/frontend/azure-v1/20260913T041856Z/verification-summary.json",
+              "evidence/answering-upgrade/20260913/clean-model-configuration.json",
+              "evidence/answering-upgrade/20260913/clean-live-smoke.json",
+              "evidence/answering-upgrade/20260913/portable-installation-verification.json"
+            ],
+            "reconciled_at": "2026-09-13T04:32:45.781638+00:00"
+          },
+          "scope": "Prior observations preserved; original requirements and all existing history/evidence remain unchanged."
+        }
+      ],
+      "reconciled_at": "2026-09-13T05:24:19.545152+00:00",
+      "command_working_directory": "frontend",
+      "component_statuses": [
+        {
+          "component": "Current cited-source browser and diagnostic layers",
+          "status": "REAL_FLOW_VERIFIED",
+          "detail": "Actual saved live answer shows 5 candidates/5 submitted/2 cited and Sources 2. Fresh candidate enzyme answer shows 20/11/7 and Sources 7, exact source text/hash/link, reload preservation, eight Tabs contained, Escape close and focus return at 1440/390. Unknown historical counts remain unknown rather than zero. Earlier keyboard failures remain retained.",
+          "evidence_paths": [
+            "artifacts/reports/frontend/admin-settings/verification-summary.json",
+            "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json"
+          ],
+          "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+          "observation_type": "Reconciliation of cited actual records, not a new execution",
+          "remaining_scope": "Bounded desktop browser/width checks do not replace all earlier journeys, physical touch, native IME or assistive-technology review.",
+          "completion_claim": false
+        },
+        {
+          "component": "Azure optional-version form",
+          "status": "REAL_FLOW_VERIFIED",
+          "detail": "Blank API version is valid for the compatible v1 route and saves null; explicit dated values are preserved. Both configurations saved through actual candidate HTTP201 with active DeepSeek/prior hashes unchanged. Fifty-one frontend tests and matching candidate source bytes passed. Zero Azure provider tests or activations occurred.",
+          "evidence_paths": [
+            "artifacts/reports/frontend/azure-v1/20260913T041856Z/verification-summary.json"
+          ],
+          "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+          "observation_type": "Reconciliation of cited actual records, not a new execution",
+          "remaining_scope": "Azure connectivity remains unverified; saved configuration is not a live probe.",
+          "completion_claim": false
+        },
+        {
+          "component": "Fresh installation live source flow",
+          "status": "REAL_FLOW_VERIFIED",
+          "detail": "New isolated managed DeepSeek settings passed saved probe/activation. One real E5/MiniLM/live-model smoke passed with 20 candidates/12 submitted/7 cited; a separate enzyme browser question passed 20/11/7. Portable-installation checks match 80 resources and 205 selected runtime files to the candidate and verify the actual active v5/10,594/384 identity. These limited flows are not another complete 20-question suite.",
+          "evidence_paths": [
+            "evidence/answering-upgrade/20260913/clean-model-configuration.json",
+            "evidence/answering-upgrade/20260913/clean-live-smoke.json",
+            "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json",
+            "evidence/answering-upgrade/20260913/portable-installation-verification.json"
+          ],
+          "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+          "observation_type": "Reconciliation of cited actual records, not a new execution",
+          "remaining_scope": "Final current-source archive reconciliation and independent semantic/human acceptance remain separate.",
+          "completion_claim": false
+        }
+      ],
+      "upgrade_current_evidence_paths": [
+        "artifacts/reports/frontend/admin-settings/verification-summary.json",
+        "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json",
+        "artifacts/reports/frontend/azure-v1/20260913T041856Z/verification-summary.json",
+        "evidence/answering-upgrade/20260913/clean-model-configuration.json",
+        "evidence/answering-upgrade/20260913/clean-live-smoke.json",
+        "evidence/answering-upgrade/20260913/portable-installation-verification.json"
+      ]
+    },
+    {
+      "check_id": "UI-12",
+      "expected": "Review screenshots with bounds, real clicks and persisted state; rerun the complete no-SciQ journey.",
+      "task_ids": [
+        "CHAT-06",
+        "QA-12"
+      ],
+      "parent_acceptance_ids": [
+        "AC-37",
+        "AC-44"
+      ],
+      "status": "REAL_FLOW_VERIFIED",
+      "actual": "Actual complete no-SciQ learner journeys, immutable history/citations and completed administrator rollback are recorded with IDs, bounds and reviewed screenshots. Independent clean-install browser evidence is separate. Earlier failures remain preserved; physical/native/human acceptance remains outside these software observations. September13 actual new-account/settings and saved-live-source routes include reviewed screenshots, element bounds, clicks, persisted IDs and retained failed attempts. They supplement the earlier complete no-SciQ multi-turn journey; they are not a fresh full-journey or physical-device claim. Current upgrade: Actual saved live answer shows 5 candidates/5 submitted/2 cited and Sources 2. Fresh candidate enzyme answer shows 20/11/7 and Sources 7, exact source text/hash/link, reload preservation, eight Tabs contained, Escape close and focus return at 1440/390. Unknown historical counts remain unknown rather than zero. Earlier keyboard failures remain retained. New isolated managed DeepSeek settings passed saved probe/activation. One real E5/MiniLM/live-model smoke passed with 20 candidates/12 submitted/7 cited; a separate enzyme browser question passed 20/11/7. Portable-installation checks match 80 resources and 205 selected runtime files to the candidate and verify the actual active v5/10,594/384 identity. These limited flows are not another complete 20-question suite.",
+      "actual_commands": [
+        "node scripts/verify-openstax-release.mjs"
+      ],
+      "evidence_paths": [
+        "artifacts/reports/frontend/openstax/2026-09-08T08-27-08-234Z/verification.json",
+        "artifacts/reports/frontend/openstax-rollback-roundtrip/2026-09-08T08-42-25-678Z/verification.json",
+        "artifacts/reports/frontend/no-sciq-journey.json",
+        "artifacts/reports/frontend/clean-install-browser.json",
+        "docs/execution/audit-ui.md",
+        "artifacts/reports/frontend/history-pagination/2026-09-08T08-55-45-630Z/verification.json",
+        "artifacts/reports/frontend/openstax-v5/2026-09-08T08-54-45-868Z/verification.json",
+        "artifacts/reports/frontend/admin-settings/verification-summary.json",
+        "artifacts/reports/frontend/admin-settings/2026-09-13T03-39-40-209Z/verification.json",
+        "artifacts/reports/frontend/admin-settings/2026-09-13T03-43-09-627Z/verification.json",
+        "artifacts/reports/frontend/admin-settings/2026-09-13T03-49-49-140Z/verification.json",
+        "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json",
+        "evidence/answering-upgrade/20260913/clean-model-configuration.json",
+        "evidence/answering-upgrade/20260913/clean-live-smoke.json",
+        "evidence/answering-upgrade/20260913/portable-installation-verification.json"
+      ],
+      "reconciliation_history": [
+        {
+          "checkpoint": "initial_unexecuted_import",
+          "legacy_status": "NOT_RUN",
+          "actual": null,
+          "actual_commands": [],
+          "evidence_paths": []
+        },
+        {
+          "checkpoint": "before_20260913_admin_citation_focus_upgrade",
+          "observation": {
+            "status": "REAL_FLOW_VERIFIED",
+            "actual": "Actual complete no-SciQ learner journeys, immutable history/citations and completed administrator rollback are recorded with IDs, bounds and reviewed screenshots. Independent clean-install browser evidence is separate. Earlier failures remain preserved; physical/native/human acceptance remains outside these software observations.",
+            "actual_commands": [
+              "node scripts/verify-openstax-release.mjs"
+            ],
+            "evidence_paths": [
+              "artifacts/reports/frontend/openstax/2026-09-08T08-27-08-234Z/verification.json",
+              "artifacts/reports/frontend/openstax-rollback-roundtrip/2026-09-08T08-42-25-678Z/verification.json",
+              "artifacts/reports/frontend/no-sciq-journey.json",
+              "artifacts/reports/frontend/clean-install-browser.json",
+              "docs/execution/audit-ui.md",
+              "artifacts/reports/frontend/history-pagination/2026-09-08T08-55-45-630Z/verification.json",
+              "artifacts/reports/frontend/openstax-v5/2026-09-08T08-54-45-868Z/verification.json"
+            ],
+            "reconciled_at": "2026-09-08T08:58:34Z"
+          }
+        },
+        {
+          "checkpoint": "answering_upgrade_release_reconciliation_20260913",
+          "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+          "superseded_observation_fields": {
+            "actual": "Actual complete no-SciQ learner journeys, immutable history/citations and completed administrator rollback are recorded with IDs, bounds and reviewed screenshots. Independent clean-install browser evidence is separate. Earlier failures remain preserved; physical/native/human acceptance remains outside these software observations. September13 actual new-account/settings and saved-live-source routes include reviewed screenshots, element bounds, clicks, persisted IDs and retained failed attempts. They supplement the earlier complete no-SciQ multi-turn journey; they are not a fresh full-journey or physical-device claim.",
+            "evidence_paths": [
+              "artifacts/reports/frontend/openstax/2026-09-08T08-27-08-234Z/verification.json",
+              "artifacts/reports/frontend/openstax-rollback-roundtrip/2026-09-08T08-42-25-678Z/verification.json",
+              "artifacts/reports/frontend/no-sciq-journey.json",
+              "artifacts/reports/frontend/clean-install-browser.json",
+              "docs/execution/audit-ui.md",
+              "artifacts/reports/frontend/history-pagination/2026-09-08T08-55-45-630Z/verification.json",
+              "artifacts/reports/frontend/openstax-v5/2026-09-08T08-54-45-868Z/verification.json",
+              "artifacts/reports/frontend/admin-settings/verification-summary.json",
+              "artifacts/reports/frontend/admin-settings/2026-09-13T03-39-40-209Z/verification.json",
+              "artifacts/reports/frontend/admin-settings/2026-09-13T03-43-09-627Z/verification.json",
+              "artifacts/reports/frontend/admin-settings/2026-09-13T03-49-49-140Z/verification.json"
+            ]
+          },
+          "scope": "Old observations retained verbatim; original requirements/reporting fields unchanged"
+        },
+        {
+          "checkpoint": "terminal_studies_post_cache_reconciliation_20260913",
+          "recorded_at": "2026-09-13T05:24:19.545152+00:00",
+          "superseded_observation_fields": {
+            "status": "REAL_FLOW_VERIFIED",
+            "actual": "Actual complete no-SciQ learner journeys, immutable history/citations and completed administrator rollback are recorded with IDs, bounds and reviewed screenshots. Independent clean-install browser evidence is separate. Earlier failures remain preserved; physical/native/human acceptance remains outside these software observations. September13 actual new-account/settings and saved-live-source routes include reviewed screenshots, element bounds, clicks, persisted IDs and retained failed attempts. They supplement the earlier complete no-SciQ multi-turn journey; they are not a fresh full-journey or physical-device claim. Current upgrade: Actual saved live answer shows 5 candidates/5 submitted/2 cited and Sources 2. Fresh candidate enzyme answer shows 20/11/7 and Sources 7, exact source text/hash/link, reload preservation, eight Tabs contained, Escape close and focus return at 1440/390. Unknown historical counts remain unknown rather than zero. Earlier keyboard failures remain retained. New isolated managed DeepSeek settings passed saved probe/activation. One real E5/MiniLM/live-model smoke passed with 20 candidates/12 submitted/7 cited; a separate enzyme browser question passed 20/11/7. Portable-installation checks match 80 resources and 205 selected runtime files to the candidate and verify the actual active v5/10,594/384 identity. These limited flows are not another complete 20-question suite.",
+            "component_statuses": [
+              {
+                "component": "Current cited-source browser and diagnostic layers",
+                "status": "REAL_FLOW_VERIFIED",
+                "detail": "Actual saved live answer shows 5 candidates/5 submitted/2 cited and Sources 2. Fresh candidate enzyme answer shows 20/11/7 and Sources 7, exact source text/hash/link, reload preservation, eight Tabs contained, Escape close and focus return at 1440/390. Unknown historical counts remain unknown rather than zero. Earlier keyboard failures remain retained.",
+                "evidence_paths": [
+                  "artifacts/reports/frontend/admin-settings/verification-summary.json",
+                  "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json"
+                ],
+                "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+                "observation_type": "Reconciliation of cited actual records, not a new execution",
+                "remaining_scope": "Bounded desktop browser/width checks do not replace all earlier journeys, physical touch, native IME or assistive-technology review.",
+                "completion_claim": false
+              },
+              {
+                "component": "Fresh installation live source flow",
+                "status": "REAL_FLOW_VERIFIED",
+                "detail": "New isolated managed DeepSeek settings passed saved probe/activation. One real E5/MiniLM/live-model smoke passed with 20 candidates/12 submitted/7 cited; a separate enzyme browser question passed 20/11/7. Portable-installation checks match 80 resources and 205 selected runtime files to the candidate and verify the actual active v5/10,594/384 identity. These limited flows are not another complete 20-question suite.",
+                "evidence_paths": [
+                  "evidence/answering-upgrade/20260913/clean-model-configuration.json",
+                  "evidence/answering-upgrade/20260913/clean-live-smoke.json",
+                  "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json",
+                  "evidence/answering-upgrade/20260913/portable-installation-verification.json"
+                ],
+                "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+                "observation_type": "Reconciliation of cited actual records, not a new execution",
+                "remaining_scope": "Final current-source archive reconciliation and independent semantic/human acceptance remain separate.",
+                "completion_claim": false
+              }
+            ],
+            "upgrade_current_evidence_paths": [
+              "artifacts/reports/frontend/admin-settings/verification-summary.json",
+              "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json",
+              "evidence/answering-upgrade/20260913/clean-model-configuration.json",
+              "evidence/answering-upgrade/20260913/clean-live-smoke.json",
+              "evidence/answering-upgrade/20260913/portable-installation-verification.json"
+            ],
+            "reconciled_at": "2026-09-13T04:32:45.781638+00:00"
+          },
+          "scope": "Prior observations preserved; original requirements and all existing history/evidence remain unchanged."
+        }
+      ],
+      "reconciled_at": "2026-09-13T05:24:19.545152+00:00",
+      "command_working_directory": "frontend",
+      "component_statuses": [
+        {
+          "component": "Current cited-source browser and diagnostic layers",
+          "status": "REAL_FLOW_VERIFIED",
+          "detail": "Actual saved live answer shows 5 candidates/5 submitted/2 cited and Sources 2. Fresh candidate enzyme answer shows 20/11/7 and Sources 7, exact source text/hash/link, reload preservation, eight Tabs contained, Escape close and focus return at 1440/390. Unknown historical counts remain unknown rather than zero. Earlier keyboard failures remain retained.",
+          "evidence_paths": [
+            "artifacts/reports/frontend/admin-settings/verification-summary.json",
+            "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json"
+          ],
+          "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+          "observation_type": "Reconciliation of cited actual records, not a new execution",
+          "remaining_scope": "Bounded desktop browser/width checks do not replace all earlier journeys, physical touch, native IME or assistive-technology review.",
+          "completion_claim": false
+        },
+        {
+          "component": "Fresh installation live source flow",
+          "status": "REAL_FLOW_VERIFIED",
+          "detail": "New isolated managed DeepSeek settings passed saved probe/activation. One real E5/MiniLM/live-model smoke passed with 20 candidates/12 submitted/7 cited; a separate enzyme browser question passed 20/11/7. Portable-installation checks match 80 resources and 205 selected runtime files to the candidate and verify the actual active v5/10,594/384 identity. These limited flows are not another complete 20-question suite.",
+          "evidence_paths": [
+            "evidence/answering-upgrade/20260913/clean-model-configuration.json",
+            "evidence/answering-upgrade/20260913/clean-live-smoke.json",
+            "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json",
+            "evidence/answering-upgrade/20260913/portable-installation-verification.json"
+          ],
+          "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+          "observation_type": "Reconciliation of cited actual records, not a new execution",
+          "remaining_scope": "Final current-source archive reconciliation and independent semantic/human acceptance remain separate.",
+          "completion_claim": false
+        }
+      ],
+      "upgrade_current_evidence_paths": [
+        "artifacts/reports/frontend/admin-settings/verification-summary.json",
+        "artifacts/reports/frontend/portable-upgrade/2026-09-13T04-16-59-857Z/verification.json",
+        "evidence/answering-upgrade/20260913/clean-model-configuration.json",
+        "evidence/answering-upgrade/20260913/clean-live-smoke.json",
+        "evidence/answering-upgrade/20260913/portable-installation-verification.json"
+      ]
+    }
+  ],
+  "status_definitions": {
+    "NOT_IMPLEMENTED": "Required implementation or artifact is absent.",
+    "IMPLEMENTED_UNVERIFIED": "Implementation exists, but a material acceptance clause remains unverified.",
+    "MOCK_TEST_PASSED": "The cited software scope passed with simulated or authored inputs; no scientific or live-model claim.",
+    "REAL_FLOW_VERIFIED": "The explicitly stated real component ran with its required dependencies/data; answering may remain mock.",
+    "WAITING_EXTERNAL": "A named unavailable external condition prevents this exact check; independent work continues."
+  },
+  "reconciled_at": "2026-09-13T05:24:19.545152+00:00",
+  "reconciliation_note": "Original twelve UI mappings/statuses and frontend metadata preserved. Current candidate source-keyboard and optional Azure-version proofs cover actual 1440/390 desktop-browser runs; physical/native/assistive/human limits remain unchanged.",
+  "frontend_upgrade_reconciliation": {
+    "checkpoint": "20260913_scoped_frontend_provider",
+    "recorded_at": "2026-09-13T04:00:53.298745+00:00",
+    "executor": "Codex frontend agent",
+    "source_summary": "artifacts/reports/frontend/admin-settings/verification-summary.json",
+    "scope": "Dated actual frontend/provider observations and correction of resolved provider blockers; original requirements, mappings and historical observations preserved.",
+    "frontend_tests": 49,
+    "frontend_test_files": 7,
+    "changed_row_ids": [
+      "UI-01",
+      "UI-06",
+      "UI-09",
+      "UI-10",
+      "UI-11",
+      "UI-12"
+    ],
+    "status_promotions": [],
+    "physical_native_human_limits_unchanged": true
+  },
+  "metadata_reconciliation_history": [
+    {
+      "checkpoint": "answering_upgrade_release_reconciliation_20260913",
+      "previous": {
+        "reconciled_at": "2026-09-13T04:00:53.298745+00:00",
+        "reconciliation_note": "Reconciled from preserved actual records, including default-size pagination and focused parser-v5 source continuity. No runtime UI changes or changes to the 108 tasks/60 top-level checks. Physical/native/human acceptance remains separately unverified."
+      }
+    },
+    {
+      "checkpoint": "terminal_studies_post_cache_reconciliation_20260913",
+      "recorded_at": "2026-09-13T05:24:19.545152+00:00",
+      "previous_upgrade_reconciliation": {
+        "checkpoint": "answering_upgrade_release_reconciliation_20260913",
+        "recorded_at": "2026-09-13T04:32:45.781638+00:00",
+        "executor": "Codex generation audit agent",
+        "gate": "evidence/answering-upgrade/20260913/software-gate-release/software_gate.json",
+        "gate_completed_at": "2026-09-13T04:24:00.365319+00:00",
+        "python_passed": 301,
+        "frontend_passed": 51,
+        "source_files_unchanged": true,
+        "live_attempts": {
+          "scheduled_each": 20,
+          "automated_passes": [
+            17,
+            19,
+            20
+          ],
+          "paths": [
+            "evidence/answering-upgrade/20260913/live-suite-attempt1.json",
+            "evidence/answering-upgrade/20260913/live-suite-attempt2.json",
+            "evidence/answering-upgrade/20260913/live-suite-attempt3.json"
+          ]
+        },
+        "ai_reviews": {
+          "attempt_2": {
+            "responses": 20,
+            "submitted": 90,
+            "citations": 46,
+            "path": "evidence/answering-upgrade/20260913/live-suite-attempt2-ai-review-20260913T035720Z.json"
+          },
+          "attempt_3": {
+            "responses": 20,
+            "submitted": 196,
+            "citations": 81,
+            "path": "evidence/answering-upgrade/20260913/live-suite-attempt3-ai-review-20260913T041313Z.json"
+          },
+          "human_review": false
+        },
+        "profile_study": {
+          "neutral_bases": 3,
+          "outputs": 27,
+          "actual_calls": 30,
+          "independent_ratings": 0,
+          "path": "evidence/personalisation/live-three-question-20260913/artifact-verification.json"
+        },
+        "baselines": {
+          "scheduled_conditions": 512,
+          "state": "running_at_reconciliation",
+          "plans_and_freezes": [
+            "evidence/sciq/live-openqa-first64-20260913/plan.json",
+            "evidence/sciq/live-openqa-first64-20260913/frozen.json",
+            "evidence/sciq/live-mcq-first64-20260913/plan.json",
+            "evidence/sciq/live-mcq-first64-20260913/frozen.json"
+          ],
+          "terminal_metrics_claimed": false
+        },
+        "project_complete": false,
+        "architecture": "Existing Figure 1 / physical page 1 mapping; no new visual inspection",
+        "retained_failures": {
+          "software_gate_attempt1": "evidence/answering-upgrade/20260913/software-gate-attempt1/software_gate.json",
+          "software_gate_attempt2": "evidence/answering-upgrade/20260913/software-gate-attempt2/software_gate.json",
+          "live_attempts": [
+            "evidence/answering-upgrade/20260913/live-suite-attempt1.json",
+            "evidence/answering-upgrade/20260913/live-suite-attempt2.json"
+          ],
+          "first_start": "evidence/answering-upgrade/20260913/clean-start-attempt1.log",
+          "interpretation": "Attempt 1 includes malformed test-server URL setup errors and an obsolete mock-candidate assertion; attempt 2 is a test factory signature mismatch. These are distinct from genuine live output/query/evidence failures. All remain retained."
+        }
+      },
+      "previous_reconciliation_phase": null
+    }
+  ],
+  "upgrade_reconciliation": {
+    "checkpoint": "terminal_studies_post_cache_reconciliation_20260913",
+    "recorded_at": "2026-09-13T05:24:19.545152+00:00",
+    "executor": "Codex generation audit agent",
+    "gate": "evidence/answering-upgrade/20260913/software-gate-final-delivery/software_gate.json",
+    "gate_completed_at": "2026-09-13T05:18:03.150556+00:00",
+    "python_passed": 312,
+    "frontend_passed": 51,
+    "source_files_unchanged": true,
+    "live_attempts": {
+      "scheduled_each": 20,
+      "automated_passes": [
+        17,
+        19,
+        20
+      ],
+      "paths": [
+        "evidence/answering-upgrade/20260913/live-suite-attempt1.json",
+        "evidence/answering-upgrade/20260913/live-suite-attempt2.json",
+        "evidence/answering-upgrade/20260913/live-suite-attempt3.json"
+      ]
+    },
+    "ai_reviews": {
+      "attempt_2": {
+        "responses": 20,
+        "submitted": 90,
+        "citations": 46,
+        "path": "evidence/answering-upgrade/20260913/live-suite-attempt2-ai-review-20260913T035720Z.json"
+      },
+      "attempt_3": {
+        "responses": 20,
+        "submitted": 196,
+        "citations": 81,
+        "path": "evidence/answering-upgrade/20260913/live-suite-attempt3-ai-review-20260913T041313Z.json"
+      },
+      "human_review": false
+    },
+    "profile_study": {
+      "neutral_bases": 3,
+      "outputs": 27,
+      "actual_calls": 30,
+      "independent_ratings": 0,
+      "path": "evidence/personalisation/live-three-question-20260913/artifact-verification.json"
+    },
+    "baselines": {
+      "scheduled_conditions": 512,
+      "unique_run_item_identities": 512,
+      "state": "terminal_reconciled",
+      "terminal_metrics_claimed": "Protocol-specific diagnostics on declared fixed prefixes only",
+      "terminal_verification": "evidence/sciq/live-comparisons-terminal-verification-20260913.json",
+      "protocols": {
+        "openqa": {
+          "results_path": "evidence/sciq/live-openqa-first64-20260913/results.json",
+          "results_sha256": "1cb646bfac905cbeb578a72eb4dd3dc1917e3224179cdc1023dac39d4b83032b",
+          "frozen_sha256": "2a95167c76d58351244c187c8c5d8faeb5095b082b6eef19bbf6af313390c542",
+          "source_snapshot": "642039b815a8df584efb830747bda8471318edf63e2105a9d27fe6baf7135eb0",
+          "scheduled_conditions": 256,
+          "paired_questions": 128,
+          "status_counts": {
+            "completed": 226,
+            "error": 2,
+            "refused": 28
+          },
+          "consumed_call_reservations": 260,
+          "provider_reported_cost": null,
+          "human_review": null,
+          "pooled_metrics": {
+            "E0": {
+              "em": 0.234375,
+              "token_f1": 0.416966301569798
+            },
+            "E1": {
+              "em": 0.140625,
+              "token_f1": 0.30089875030669627
+            }
+          },
+          "independent_ai_consistency_review": "evidence/sciq/live-openqa-first64-20260913/terminal-report-independent-review.json"
+        },
+        "mcq": {
+          "results_path": "evidence/sciq/live-mcq-first64-20260913/results.json",
+          "results_sha256": "300076b88fff984cc65605326db3768bbdd9e49bb4baf298fcdc68ffb4de5657",
+          "frozen_sha256": "129383187f1c28823af0a188798fa4473b98b79c78e727c98e9feea335b7e5c0",
+          "source_snapshot": "642039b815a8df584efb830747bda8471318edf63e2105a9d27fe6baf7135eb0",
+          "scheduled_conditions": 256,
+          "paired_questions": 128,
+          "status_counts": {
+            "completed": 215,
+            "refused": 41
+          },
+          "consumed_call_reservations": 257,
+          "provider_reported_cost": null,
+          "human_review": null,
+          "pooled_metrics": {
+            "E0": {
+              "accuracy": 0.96875
+            },
+            "E1": {
+              "accuracy": 0.671875
+            }
+          },
+          "independent_ai_consistency_review": "evidence/sciq/live-mcq-first64-20260913/terminal-report-independent-review.json"
+        }
+      },
+      "limits": "Only the declared deterministic prefixes ran, not complete splits or representative samples. Lexical OpenQA and MCQ selection metrics are different measures; neither certifies semantic correctness, source entailment or teaching value. The negative dense-E1 result does not measure the separate interactive hybrid/reranked policy. All full-source anomalies, refusals and memory errors remain retained. Independent compatible qrels and scientific/teaching/human ratings remain missing."
+    },
+    "project_complete": false,
+    "architecture": "Existing Figure 1 / physical page 1 mapping; no new visual inspection",
+    "retained_failures": {
+      "software_gate_attempt1": "evidence/answering-upgrade/20260913/software-gate-attempt1/software_gate.json",
+      "software_gate_attempt2": "evidence/answering-upgrade/20260913/software-gate-attempt2/software_gate.json",
+      "live_attempts": [
+        "evidence/answering-upgrade/20260913/live-suite-attempt1.json",
+        "evidence/answering-upgrade/20260913/live-suite-attempt2.json"
+      ],
+      "first_start": "evidence/answering-upgrade/20260913/clean-start-attempt1.log",
+      "interpretation": "Attempt 1 includes malformed test-server URL setup errors and an obsolete mock-candidate assertion; attempt 2 is a test factory signature mismatch. These are distinct from genuine live output/query/evidence failures. All remain retained."
+    },
+    "post_study_cache": {
+      "summary": "evidence/generation/embedding-cache-20260913/summary.json",
+      "status": "passed",
+      "source_revision_separate_from_original_studies": true,
+      "reference_encodes": 8,
+      "cached_encodes": 32,
+      "limits": "The bounded 32-repeat observation is not a long-duration leak proof or established OOM cause/cure. Reference-phase CUDA allocation remained after GC, so totals are not an isolated single-model footprint. Cache limits entries per process, not RAM/VRAM; only loading is serialized. Original 512-condition reports remain tied to the pre-cache source snapshot."
+    },
+    "post_cache_main_smoke": {
+      "path": "evidence/answering-upgrade/20260913/post-cache-main-smoke.json",
+      "automated_passes": 1,
+      "scheduled": 1,
+      "independent_semantic_review": false
+    },
+    "portable_final": {
+      "path": "evidence/answering-upgrade/20260913/portable-installation-final-verification.json",
+      "runtime_files_verified": 205,
+      "resource_files_verified": 80,
+      "restart_source_files_verified": 48,
+      "post_cache_live_smoke_passed": 1,
+      "scope": "Updated existing fresh installation, not a new full dependency install or20-case rerun"
+    },
+    "pending_delivery": "Final archive/source reconciliation remains pending. The optional new full private database/deployment-key backup and restore was rejected by automatic approval review before execution; no new backup/restore is claimed.",
+    "optional_private_recovery": {
+      "path": "evidence/answering-upgrade/20260913/post-upgrade-recovery-blocked.json",
+      "status": "not_executed_approval_review_rejected",
+      "helper_executed": false,
+      "workaround_attempted": false
+    }
+  }
+}
