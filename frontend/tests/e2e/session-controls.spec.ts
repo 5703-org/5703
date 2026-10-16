@@ -1,0 +1,33 @@
+import { test, expect } from '@playwright/test';
+import fs from 'node:fs/promises';
+import { apiCall, login } from './helpers';
+
+test('rename, archive and restore persist while navigation preserves each private draft', async ({ page }) => {
+  await login(page);
+  await page.locator('.new-chat').click();
+  await expect(page).toHaveURL(/\/chat\/[0-9a-f-]+$/);
+  const sessionId = new URL(page.url()).pathname.split('/')[2];
+  const draft = 'A draft belonging to this named conversation.';
+  await page.getByRole('textbox', { name: 'Message Learning Assistant' }).fill(draft);
+  await page.getByRole('button', { name: 'Conversation actions' }).click();
+  await page.getByRole('button', { name: 'Rename', exact: true }).click();
+  const title = `Saved conversation ${Date.now()}`;
+  await page.getByLabel('Conversation title').fill(title);
+  await page.getByRole('button', { name: 'Save title' }).click();
+  await expect(page.getByRole('heading', { name: title })).toBeVisible();
+  expect((await apiCall(page, `/sessions/${sessionId}`)).title).toBe(title);
+  await page.getByRole('button', { name: 'Conversation actions' }).click();
+  await page.getByRole('button', { name: 'Archive conversation', exact: true }).click();
+  await expect(page.getByText('This conversation is archived.', { exact: true })).toBeVisible();
+  expect((await apiCall(page, `/sessions/${sessionId}`)).status).toBe('archived');
+  await page.reload();
+  await page.getByRole('button', { name: 'Restore to continue' }).click();
+  await expect(page.getByRole('textbox', { name: 'Message Learning Assistant' })).toHaveValue(draft);
+  expect((await apiCall(page, `/sessions/${sessionId}`)).status).toBe('active');
+  await page.locator('.new-chat').click();
+  await expect(page).not.toHaveURL(new RegExp(sessionId));
+  await expect(page.getByRole('textbox', { name: 'Message Learning Assistant' })).toHaveValue('');
+  await page.goto(`/chat/${sessionId}`);
+  await expect(page.getByRole('textbox', { name: 'Message Learning Assistant' })).toHaveValue(draft);
+  await fs.writeFile('../artifacts/reports/frontend/session-controls.json', JSON.stringify({ session_id: sessionId, title, renamed_archived_refreshed_restored: true, draft_retained: true, new_session_draft_empty: true }, null, 2));
+});
