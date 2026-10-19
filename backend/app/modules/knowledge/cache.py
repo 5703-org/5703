@@ -55,6 +55,14 @@ def epoch(db):
     return value
 
 
+def schema_identity(db):
+    """A single Engine can execute Sessions in different PostgreSQL schemas."""
+    value = db.scalar(text("SELECT current_schema() || ':' || current_setting('search_path')"))
+    if not isinstance(value, str) or not value:
+        raise ValueError("Retrieval schema identity is unavailable")
+    return value
+
+
 @dataclass(frozen=True)
 class ReleaseIndex:
     token: str
@@ -64,12 +72,16 @@ class ReleaseIndex:
     provenance: dict
 
 
-def load(db, release, project_row, validator, vector_hash, digest):
+def load(db, release, project_row, validator, vector_hash, digest, *, checkpoint=None):
+    if checkpoint:
+        checkpoint()
     started = time.perf_counter()
     current = epoch(db)
     identity = digest({"configuration": release.configuration, "manifest": release.manifest})
-    key = (db.get_bind(), release.id, current, identity)
+    key = (db.get_bind(), schema_identity(db), release.id, current, identity)
     with _LOCK:
+        if checkpoint:
+            checkpoint()
         cached = _CACHE.get(key)
         if cached:
             _CACHE.move_to_end(key)
@@ -84,7 +96,11 @@ def load(db, release, project_row, validator, vector_hash, digest):
         # source before constructing the new validated snapshot.
         db.expire_all()
         provenance = {}
-        raw_rows = validator(db, release, provenance=provenance)
+        raw_rows = validator(
+            db, release, provenance=provenance, **({"checkpoint": checkpoint} if checkpoint else {})
+        )
+        if checkpoint:
+            checkpoint()
         visible = [r for r in raw_rows if r[2].active and not r[2].revoked]
         rows = {r[1].id: project_row(r, provenance) for r in visible}
         result = ReleaseIndex(
@@ -94,6 +110,8 @@ def load(db, release, project_row, validator, vector_hash, digest):
             LexicalIndex(list(rows.values())),
             provenance,
         )
+        if checkpoint:
+            checkpoint()
         if epoch(db) != current:
             raise ValueError("Sources changed during release validation; retry with current data")
         _CACHE[key] = result

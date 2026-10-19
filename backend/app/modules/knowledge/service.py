@@ -1039,7 +1039,9 @@ def _validate_chunk(chunk, units):
         raise ValueError("Chunk includes untraceable trailing text")
 
 
-def _release_rows(db, release, require_active=False, *, provenance=None):
+def _release_rows(db, release, require_active=False, *, provenance=None, checkpoint=None):
+    if checkpoint:
+        checkpoint()
     rows = list(
         db.execute(
             select(ReleaseChunk, Chunk, Document)
@@ -1049,6 +1051,8 @@ def _release_rows(db, release, require_active=False, *, provenance=None):
             .order_by(Chunk.id)
         )
     )
+    if checkpoint:
+        checkpoint()
     manifest = release.manifest
     if any(
         not manifest.get(key)
@@ -1105,6 +1109,8 @@ def _release_rows(db, release, require_active=False, *, provenance=None):
     for unit in units.values():
         units_by_run[unit.processing_id].append(unit)
     for processing_id, processing in runs.items():
+        if checkpoint:
+            checkpoint()
         version = versions.get(processing.document_version_id)
         if not version:
             raise ValueError("A released source asset is unavailable")
@@ -1114,7 +1120,9 @@ def _release_rows(db, release, require_active=False, *, provenance=None):
             )
         except AppError as exc:
             raise ValueError("Released source-unit quality hashes changed") from exc
-    for vector, chunk, document in rows:
+    for index, (vector, chunk, document) in enumerate(rows):
+        if checkpoint and index % 64 == 0:
+            checkpoint()
         processing = runs.get(chunk.processing_id)
         if not processing or processing.state != "ready":
             raise ValueError("A released processing run is unavailable")
@@ -1139,6 +1147,8 @@ def _release_rows(db, release, require_active=False, *, provenance=None):
             for u in units.values()
             if any(issue["code"] == "UNEXTRACTED_VISUAL_CONTENT" for issue in u.issues)
         }
+    if checkpoint:
+        checkpoint()
     return rows
 
 
@@ -1169,10 +1179,18 @@ def activate(db, release_id):
 
 
 def prewarm_active_retrieval_cache(
-    db, *, prepare_embedding_model=False, runtime_device=None, requested_device="recorded"
+    db,
+    *,
+    prepare_embedding_model=False,
+    runtime_device=None,
+    requested_device="recorded",
+    checkpoint=None,
 ):
     """Optionally load the exact local model; never encode or publish a query."""
     from . import cache
+
+    if checkpoint:
+        checkpoint()
 
     if db.new or db.dirty or db.deleted:
         raise ValueError("Retrieval prewarm requires an unmodified session")
@@ -1184,7 +1202,13 @@ def prewarm_active_retrieval_cache(
     if not release or release.state != "active":
         raise AppError("SOURCE_UNAVAILABLE", detail="Active corpus is unavailable for prewarm.")
     index, validation = cache.load(
-        db, release, _retrieval_row, _release_rows, _embedding_hash, digest
+        db,
+        release,
+        _retrieval_row,
+        _release_rows,
+        _embedding_hash,
+        digest,
+        **({"checkpoint": checkpoint} if checkpoint else {}),
     )
     current_pointer = db.get(ActiveCorpus, 1, populate_existing=True)
     if (
@@ -1195,6 +1219,8 @@ def prewarm_active_retrieval_cache(
         raise ValueError("Active corpus changed during retrieval prewarm")
     model_report = {}
     if prepare_embedding_model:
+        if checkpoint:
+            checkpoint()
         model_report = {"embedding_model_prepared": False, "embedding_model_prepare_ms": 0.0}
         if release.configuration.get("embedding_provider") == "e5":
             device_started = time.perf_counter()
@@ -1204,6 +1230,8 @@ def prewarm_active_retrieval_cache(
             model_started = time.perf_counter()
             options = {"runtime_device": runtime_device} if runtime_device is not None else {}
             make_embedding(release.configuration, **options)
+            if checkpoint:
+                checkpoint()
             model_report = {
                 "embedding_model_prepared": True,
                 "embedding_model_prepare_ms": round(
@@ -1219,6 +1247,8 @@ def prewarm_active_retrieval_cache(
                 or cache.epoch(db) != index.token
             ):
                 raise ValueError("Active corpus changed during embedding model prewarm")
+    if checkpoint:
+        checkpoint()
     return {
         "status": "ready",
         "cache_version": validation["version"],
@@ -1395,17 +1425,20 @@ def retrieve(
     runtime_device=None,
     cache_scope=None,
     execution_trace=None,
+    query_vector_cache=True,
     allowed_chunk_ids=None,
 ):
     """New interactive callers explicitly opt into epoch-validated retrieval.
 
     Frozen benchmark and historical requests retain complete per-query validation.
     Cached statistics always belong to the current visible subset of the release.
+    Index-only callers retain fresh query encoding while reusing validated rows.
     """
     from . import cache
     from retrieval.query_cache import encode_query
+    from retrieval.lexical import LexicalIndex
 
-    if cache_scope is None or db.bind.dialect.name != "postgresql" or allowed_chunk_ids is not None:
+    if cache_scope is None or db.bind.dialect.name != "postgresql":
         if execution_trace is not None and allowed_chunk_ids is not None:
             execution_trace["reading_scope"] = {
                 "applied_before_ranking": True,
@@ -1432,17 +1465,33 @@ def retrieve(
     if type(k) is not int or not 1 <= k <= 50 or variant not in ("R0", "R1", "R2", "R3"):
         raise AppError("VALIDATION_FAILED", detail="Invalid retrieval depth or variant.")
     timings = {}
+    allowed = set(allowed_chunk_ids) if allowed_chunk_ids is not None else None
     try:
         index, validation = cache.load(
             db, release, _retrieval_row, _release_rows, _embedding_hash, digest
         )
         timings["release_cache"] = validation
         cfg = release.configuration
+        visible_rows = index.rows
+        lexical_index = index.lexical
+        if allowed is not None:
+            at = time.perf_counter()
+            visible_rows = {key: row for key, row in index.rows.items() if key in allowed}
+            # BM25 statistics must belong to the reading subset, before ranking.
+            lexical_index = LexicalIndex(list(visible_rows.values()))
+            timings["scoped_index_build_ms"] = (time.perf_counter() - at) * 1000
+            timings["reading_scope"] = {
+                "applied_before_ranking": True,
+                "allowed_chunk_count": len(allowed_chunk_ids),
+                "lexical_statistics": "scoped_cached_snapshot_v1",
+                "cache_used": True,
+            }
         dense = []
-        if variant != "R1" and index.rows:
+        if variant != "R1" and visible_rows:
             at = time.perf_counter()
             vector, hit = encode_query(
-                cfg, query, runtime_device=runtime_device, scope=cache_scope, enabled=True
+                cfg, query, runtime_device=runtime_device, scope=cache_scope,
+                enabled=query_vector_cache,
             )
             timings["query_embedding_ms"] = (time.perf_counter() - at) * 1000
             timings["query_vector_cache_hit"] = hit
@@ -1456,6 +1505,7 @@ def retrieve(
                     ReleaseChunk.release_id == release_id,
                     Document.active.is_(True),
                     Document.revoked.is_(False),
+                    *([Chunk.id.in_(allowed)] if allowed is not None else []),
                 )
                 .order_by(distance, Chunk.id)
                 .limit(50)
@@ -1476,7 +1526,7 @@ def retrieve(
             result = dense[:k]
         else:
             at = time.perf_counter()
-            lexical = index.lexical.search(query, k if variant == "R1" else 50)
+            lexical = lexical_index.search(query, k if variant == "R1" else 50)
             timings["lexical_ms"] = (time.perf_counter() - at) * 1000
             # Lexical-only hits also receive current persisted-source validation.
             ids = [r["chunk_id"] for r in lexical]
