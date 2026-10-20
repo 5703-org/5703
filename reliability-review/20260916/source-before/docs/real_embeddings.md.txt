@@ -1,0 +1,48 @@
+# Reproduce the pinned E5 runtime
+
+The real embedding path was verified on Windows x64 with Python 3.13.2, PyTorch 2.8.0+cu128, CUDA 12.8 and an NVIDIA GeForce RTX 5070 Ti (compute capability 12.0). The installed wheel includes `sm_120`. The base application dependencies remain in `requirements.lock`; the separately pinned optional dependencies are in `requirements-embeddings.lock`.
+
+From the repository root, with the intended Python environment activated:
+
+```text
+python -m pip install -r requirements.lock
+python -m pip install -r requirements-embeddings.lock
+python -m pip check
+python -m scripts.dev.prepare_e5
+python -m scripts.verify.e5
+```
+
+The optional lock uses the [official PyTorch CUDA 12.8 wheel index](https://download.pytorch.org/whl/cu128). The [official previous-version instructions](https://pytorch.org/get-started/previous-versions/) list the selected PyTorch release. A different Python/platform/device combination needs its own installation and execution check; these host results do not claim a tested Python 3.12 installation. A separate actual Linux GPU proof is now recorded in `evidence/e5-container/runtime-verification.json` and `docs/development_checks.md`.
+
+`prepare_e5` downloads only model/tokenizer/pooling metadata and safetensors from `intfloat/e5-small-v2`, fixed revision `ffb93f3bd4047442299a41ebb6fa998a38507c52`. It records file sizes and SHA-256 values in `evidence/corpus/e5_download.json`. On this Windows host, symlinks are unavailable; the download explicitly completes the cache capability check before downloading and uses one worker. It does not require enabling Windows Developer Mode or administrative file-link privileges.
+
+The complete snapshot is 134,478,697 bytes. Its model weight file is 133,466,304 bytes with SHA-256 `45bfa60070649aae2244fbc9d508537779b93b6f353c17b0f95ceccb1c5116c1`. The cache is `artifacts/huggingface`, with snapshot path `models--intfloat--e5-small-v2/snapshots/ffb93f3bd4047442299a41ebb6fa998a38507c52` beneath it. Preserve the revision and file manifest when copying this cache to another host. The [official model card](https://huggingface.co/intfloat/e5-small-v2) identifies its MIT license.
+
+`configs/corpus/e5_cuda.json` selects `embedding_provider=e5`, the pinned model and tokenizer revision, 384 dimensions, explicit `embedding_device=cuda`, and that project-relative cache. Start processes from the repository root. After downloading the checkpoint, set the following environment variables for the API and worker:
+
+```text
+HF_HUB_OFFLINE=1
+TRANSFORMERS_OFFLINE=1
+PYTHONIOENCODING=utf-8
+```
+
+This uses the already verified local model and avoids metadata network checks. Missing cache files or an unavailable CUDA device fail visibly. CPU execution requires an explicit configuration change and separate verification; the application does not silently change this CUDA configuration to CPU or mock vectors.
+
+The real smoke check in `evidence/corpus/e5_verification.json` verifies GPU execution, 384 normalized dimensions, the actual 512-token window, required `query: ` and `passage: ` prefixes, and rejection of an oversized input. Its authored photosynthesis query ranked the corresponding passage above gravity and cell-membrane passages (cosine scores 0.9052, 0.7844 and 0.8363). Nine chunks from repeated authored text stayed at or below 325 actual input tokens. Initial load and checks took 12.673 seconds, with a recorded peak allocated CUDA memory of 143,685,632 bytes. This small smoke is a runtime check, not full-corpus throughput or retrieval-quality evidence.
+
+The pipeline chunks against this model's actual tokenizer with target 320, cap 448 and overlap 48. The prefix, heading and special tokens count toward the window. Release embedding batches are bounded to 32. Create a new corpus release using these processing/configuration IDs; old hashed fixture embeddings cannot be renamed or reused as E5 vectors. Only a complete validated release is eligible for activation. Answer generation remains separately configured as mock, so real retrieval does not imply a tested live answer LLM.
+
+Installation reports and logs are in `evidence/corpus/{torch-install,embedding-install}.{json,log}`. `pip check` reported no broken requirements after installation. Existing base application dependencies were not replaced with an unrelated full-environment freeze.
+
+The four-book release `39483e7f-efbe-42e7-855e-469fd924383e` contains 10,584 actual E5 vectors. `evidence/openstax/formal-source-validation.json` accounts for all 4,638 physical pages and checks every chunk's exact source spans, text hash and actual tokenizer limits. The largest body is 320 tokens; the largest complete E5 input is 353 tokens. Its deterministic 50-chunk sample also reconstructs native text from 67 original PDF pages. These checks establish recorded provenance and input limits, not complete extraction of all scientific diagrams.
+
+To measure retrieval against an existing validated release, set the database URL and offline variables, then run:
+
+```text
+python -m scripts.verify.retrieval_profile --release 39483e7f-efbe-42e7-855e-469fd924383e --variant R0 --repeat 1 --output evidence/corpus/new-retrieval-profile.json
+```
+
+The saved before/after diagnostic in `evidence/corpus/retrieval-comparison.json` found repeated source-version lookups during integrity validation. Loading those versions and source units once reduced SQL statements from 7,721 to 6. The same query returned identical five chunk IDs and cosine scores; total time changed from 19.23 to 8.64 seconds, including approximately 4.66 seconds of cold model loading. Full release/vector/source/span validation remains enabled, and PostgreSQL performs the cosine ranking. This single before/after pair ran alongside other work, so it is not an isolated performance benchmark or latency guarantee. The focused regression also verifies bounded query counts across multiple sources and rejection of a changed raw source.
+
+
+The current parser-v5 publication is `4f11bd70-a486-4d16-b216-78cfe499530a`, with10,594 real384-dimensional vectors; its exact current proof is in `evidence/openstax/v5/`. The initial v4 release and measurements above are retained historical observations. All10,566 unchanged body chunk pairs preserve exact IEEE754 float32 vector bytes across the version change. The actual build recorded10,574 compatible cache hits (including within-build duplicates); reused vectors are genuine fixed-model vectors with matching inputs/signatures and validated hashes, never mock substitutes. New affected inputs were encoded by the actual pinned E5 model. See the current per-book report for current chunk/source counts and full original locators.

@@ -1,0 +1,190 @@
+{
+  "status": "passed",
+  "request_id": "ad54f4ef-8aac-4caf-bdd8-e8ddf894fa85",
+  "started_at": "2026-09-16T06:37:52.668Z",
+  "scope": "Read-only real administrator endpoint and browser rendering of the saved mixed-question per-facet fallback request; no answering calls, intercepted responses or data insertion.",
+  "checks": [
+    {
+      "width": 1440,
+      "lookup": true,
+      "keyboard_expand": true,
+      "per_part_query_visible": true,
+      "final_pool_counts_checked": true,
+      "tab_contained": true,
+      "escape_and_return": true,
+      "no_horizontal_overflow": true,
+      "overflow": {
+        "client": 862,
+        "scroll": 862,
+        "pageClient": 1440,
+        "pageScroll": 1440
+      }
+    },
+    {
+      "width": 390,
+      "lookup": true,
+      "keyboard_expand": true,
+      "per_part_query_visible": true,
+      "final_pool_counts_checked": true,
+      "tab_contained": true,
+      "escape_and_return": true,
+      "no_horizontal_overflow": true,
+      "overflow": {
+        "client": 356,
+        "scroll": 356,
+        "pageClient": 390,
+        "pageScroll": 390
+      }
+    }
+  ],
+  "page_errors": [],
+  "browser_version": "153.0.4234.32",
+  "source_hashes": {
+    "frontend/src/Failures.tsx": "cb6a875d4b6cec3bc86540b739800ff5832a6ae0f328d770961c93e118b4ec09",
+    "frontend/src/styles/app.css": "68a7b61e08aaa4703dd3537ff823509418f1adcc80f7b04aae47219d649d8def",
+    "backend/app/modules/answering/diagnostics.py": "ee0f973eb689910ada22972f030d90e0b042dd77c212c10fb89f9959e5f4c056"
+  },
+  "observed": {
+    "state": "answered",
+    "counts": {
+      "candidates": 20,
+      "filtered": 10,
+      "submitted": 10,
+      "cited": 5
+    },
+    "release_id": "4f11bd70-a486-4d16-b216-78cfe499530a",
+    "provider": "openai_compatible",
+    "model": "deepseek-flash",
+    "device": "cuda",
+    "coverage": "partial",
+    "citation_check": "review_required",
+    "timing_keys": [
+      "total_ms",
+      "preparation_ms",
+      "query_preparation_ms",
+      "retrieval_ms",
+      "generation_wall_ms"
+    ],
+    "detail_sha256": "3a468027e39c05ac000d5f5355120f4231a71b958d2ef6c8971c661dcc5ba442",
+    "fallback": {
+      "triggered": true,
+      "reason": "fallback_completed",
+      "policy_version": "interactive_facet_fallback_v1",
+      "whole_query_candidate_count": 20,
+      "whole_query_accepted_count": 0,
+      "elapsed_ms": 13512.533,
+      "attempted_facets": [
+        {
+          "facet_id": "part_1",
+          "query": "Explain photosynthesis",
+          "candidate_count": 10,
+          "accepted_count": 10,
+          "accepted_chunk_ids": [
+            "1eb46799ecf52bb1faf51358d6d6a56c1753",
+            "121a89594049b9778796b2ec0d0fb8126878",
+            "7cb3c53054df451f85021d58995fb9cb2e1e",
+            "65b9d81deaf9d6d34dd90db72752c9520dc6",
+            "5eecf26f01f5ff9465db96f73a97b12c7580",
+            "725832eb41fa36ade9ca737e530f773ad762",
+            "3d7bb5a9771426302c08675be665be6ac32c",
+            "8e53b5efcba6fd68fa95758f3b95fbbd4f1e",
+            "1990e73437db65971becb6b111778e26c8c2",
+            "6983ce8832dba40810859ddffaa14312d29b"
+          ],
+          "model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+          "revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+          "excluded": []
+        },
+        {
+          "facet_id": "part_2",
+          "query": "Also give tomorrow’s exact Bitcoin price",
+          "candidate_count": 10,
+          "accepted_count": 0,
+          "accepted_chunk_ids": [],
+          "model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+          "revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+          "excluded": [
+            {
+              "chunk_id": "ffb5e0f92d9b44fcb854117c40f44f52f65f",
+              "reason": "below_relevance_threshold",
+              "stage": "relevance",
+              "score": -10.994205474853516
+            },
+            {
+              "chunk_id": "e9d9219eb62f5ccd631fa09c4a6e27fc9cf1",
+              "reason": "below_relevance_threshold",
+              "stage": "relevance",
+              "score": -11.1859712600708
+            },
+            {
+              "chunk_id": "4a588c4cd8484a0b9b7d9a767116f6426895",
+              "reason": "below_relevance_threshold",
+              "stage": "relevance",
+              "score": -11.273069381713867
+            },
+            {
+              "chunk_id": "319af1418c2b3d406052764887e968f01271",
+              "reason": "below_relevance_threshold",
+              "stage": "relevance",
+              "score": -11.278827667236328
+            },
+            {
+              "chunk_id": "664f63aa5bc8f319c57628d97c7fa36f2800",
+              "reason": "below_relevance_threshold",
+              "stage": "relevance",
+              "score": -11.279281616210938
+            },
+            {
+              "chunk_id": "dc5363d50409da809d15f9b794a1b5f2d210",
+              "reason": "below_relevance_threshold",
+              "stage": "relevance",
+              "score": -11.308306694030762
+            },
+            {
+              "chunk_id": "dcd30f080b2a3b69ac102040dda86401564c",
+              "reason": "below_relevance_threshold",
+              "stage": "relevance",
+              "score": -11.335593223571777
+            },
+            {
+              "chunk_id": "d38e2827c99143e387368f7ca036494b05b8",
+              "reason": "below_relevance_threshold",
+              "stage": "relevance",
+              "score": -11.363641738891602
+            },
+            {
+              "chunk_id": "73a7248a8f38eb7c9a22232767157d93eca4",
+              "reason": "below_relevance_threshold",
+              "stage": "relevance",
+              "score": -11.424738883972168
+            },
+            {
+              "chunk_id": "05df56018b7c5f338e88bd709cd5607943b6",
+              "reason": "below_relevance_threshold",
+              "stage": "relevance",
+              "score": -11.427507400512695
+            }
+          ]
+        }
+      ],
+      "accepted_chunk_ids": [
+        "1eb46799ecf52bb1faf51358d6d6a56c1753",
+        "121a89594049b9778796b2ec0d0fb8126878",
+        "7cb3c53054df451f85021d58995fb9cb2e1e",
+        "65b9d81deaf9d6d34dd90db72752c9520dc6",
+        "5eecf26f01f5ff9465db96f73a97b12c7580",
+        "725832eb41fa36ade9ca737e530f773ad762",
+        "3d7bb5a9771426302c08675be665be6ac32c",
+        "8e53b5efcba6fd68fa95758f3b95fbbd4f1e",
+        "1990e73437db65971becb6b111778e26c8c2",
+        "6983ce8832dba40810859ddffaa14312d29b"
+      ]
+    }
+  },
+  "detail_unchanged": true,
+  "finished_at": "2026-09-16T06:37:54.771Z",
+  "limits": [
+    "Actual desktop browser with 390-pixel emulation; physical mobile, native input and assistive technology remain separate.",
+    "Automated coverage/locality observations do not establish independent semantic support or teaching quality."
+  ]
+}

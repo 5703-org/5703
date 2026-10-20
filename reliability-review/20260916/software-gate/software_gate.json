@@ -1,0 +1,105 @@
+{
+  "mode": "mock",
+  "started_at": "2026-09-16T04:03:56.286924+00:00",
+  "executed_at": "2026-09-16T04:05:38.242413+00:00",
+  "status": "failed",
+  "source_files_unchanged": true,
+  "changed_during_run": [],
+  "source_snapshot": "evidence/reliability-review/20260916/software-gate/source_snapshot.json",
+  "checks": [
+    {
+      "name": "python_quality",
+      "command": [
+        "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+        "-m",
+        "scripts.verify.python_quality",
+        "--output",
+        "E:\\5703\\learning-assistant\\evidence\\reliability-review\\20260916\\software-gate\\python-quality"
+      ],
+      "exit_code": 0,
+      "log": "evidence\\reliability-review\\20260916\\software-gate\\python_quality.log"
+    },
+    {
+      "name": "foundation",
+      "command": [
+        "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+        "-m",
+        "scripts.verify.foundation"
+      ],
+      "exit_code": 0,
+      "log": "evidence\\reliability-review\\20260916\\software-gate\\foundation.log"
+    },
+    {
+      "name": "contracts",
+      "command": [
+        "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+        "-m",
+        "scripts.verify.contracts"
+      ],
+      "exit_code": 0,
+      "log": "evidence\\reliability-review\\20260916\\software-gate\\contracts.log"
+    },
+    {
+      "name": "chat_scope",
+      "command": [
+        "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+        "-m",
+        "scripts.verify.chat_scope"
+      ],
+      "exit_code": 0,
+      "log": "evidence\\reliability-review\\20260916\\software-gate\\chat_scope.log"
+    },
+    {
+      "name": "python_tests",
+      "command": [
+        "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "tests",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp=E:\\5703\\learning-assistant\\evidence\\reliability-review\\20260916\\software-gate\\pytest-temp",
+        "--junitxml=E:\\5703\\learning-assistant\\evidence\\reliability-review\\20260916\\software-gate\\pytest.xml"
+      ],
+      "exit_code": 1,
+      "log": "evidence\\reliability-review\\20260916\\software-gate\\python_tests.log"
+    },
+    {
+      "name": "frontend_types",
+      "command": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "run",
+        "types:check"
+      ],
+      "exit_code": 0,
+      "log": "evidence\\reliability-review\\20260916\\software-gate\\frontend_types.log"
+    },
+    {
+      "name": "frontend_tests",
+      "command": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "test"
+      ],
+      "exit_code": 0,
+      "log": "evidence\\reliability-review\\20260916\\software-gate\\frontend_tests.log"
+    },
+    {
+      "name": "frontend_build",
+      "command": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "run",
+        "build"
+      ],
+      "exit_code": 0,
+      "log": "evidence\\reliability-review\\20260916\\software-gate\\frontend_build.log"
+    }
+  ],
+  "separate_evidence_required": [
+    "real browser responsive and lifecycle journeys",
+    "clean Compose install",
+    "backup restore",
+    "live scientific evaluation",
+    "human ratings and physical mobile keyboard"
+  ]
+}

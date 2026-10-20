@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    from pathlib import Path; from scripts.verify import contracts; import sys; contracts.ROOT=Path(sys.argv.pop()); contracts.main()
+                                                                                                                     ~~~~~~~~~~~~~~^^
+  File "E:\5703\learning-assistant\scripts\verify\contracts.py", line 37, in main
+    assert path.read_text(encoding="utf-8") == rendered, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Runtime OpenAPI drift: run python -m scripts.verify.contracts --write and regenerate frontend types.

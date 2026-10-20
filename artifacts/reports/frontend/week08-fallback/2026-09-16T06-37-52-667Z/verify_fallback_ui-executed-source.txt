@@ -1,0 +1,100 @@
+import { chromium, expect } from 'file:///E:/5703/learning-assistant/frontend/node_modules/@playwright/test/index.mjs';
+import fs from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+
+const id = process.env.TRACE_REQUEST_ID || 'ad54f4ef-8aac-4caf-bdd8-e8ddf894fa85';
+const output = `E:/5703/learning-assistant/artifacts/reports/frontend/week08-fallback/${new Date().toISOString().replaceAll(':', '-').replaceAll('.', '-')}`;
+await fs.mkdir(output, { recursive: true });
+const record = { status: 'running', request_id: id, started_at: new Date().toISOString(), scope: 'Read-only real administrator endpoint and browser rendering of the saved mixed-question per-facet fallback request; no answering calls, intercepted responses or data insertion.', checks: [], page_errors: [] };
+const digest = bytes => createHash('sha256').update(bytes).digest('hex');
+const browser = await chromium.launch({ channel: 'msedge' });
+const context = await browser.newContext({ baseURL: 'http://127.0.0.1:5173', viewport: { width: 1440, height: 1000 } });
+const page = await context.newPage();
+page.on('pageerror', error => record.page_errors.push(error.name));
+async function api(path) {
+  const token = await page.evaluate(() => sessionStorage.getItem('cs30.access-token'));
+  const result = await page.request.get(`/api/v1${path}`, { headers: { Authorization: `Bearer ${token}` } });
+  if (!result.ok()) throw new Error(`Read-only API status ${result.status()}`);
+  return (await result.json()).data;
+}
+try {
+  record.browser_version = browser.version();
+  record.source_hashes = {};
+  for (const file of ['frontend/src/Failures.tsx', 'frontend/src/styles/app.css', 'backend/app/modules/answering/diagnostics.py']) record.source_hashes[file] = digest(await fs.readFile(`E:/5703/learning-assistant/${file}`));
+  await page.goto('/login');
+  await page.getByLabel('Email', { exact: true }).fill('admin@example.com');
+  await page.getByLabel('Password', { exact: true }).fill('Passw0rd!');
+  await page.getByRole('button', { name: 'Sign in', exact: true }).click();
+  await expect(page.getByRole('textbox', { name: 'Message Learning Assistant' })).toBeVisible();
+  const before = await api(`/admin/failures/${id}`);
+  expect(before.state).toBe('answered');
+  expect(before.processing.understanding.standalone_query).toBeTruthy();
+  expect(before.processing.coverage.version).toBe('lexical_facets_v1');
+  expect(before.processing.packing.version).toBe('complementary_v1');
+  expect(before.processing.citation_audit.version).toBe('citation_locality_v1');
+  record.observed = { state: before.state, counts: before.counts, release_id: before.processing.corpus_release_id, provider: before.model.provider, model: before.model.model, device: before.processing.resolved_device, coverage: before.processing.coverage.status, citation_check: before.processing.citation_audit.status, timing_keys: Object.keys(before.processing.timing_ms), detail_sha256: digest(JSON.stringify(before)) };
+  expect(before.processing.selection_source).toBe('facet_fallback');
+  expect(before.processing.facet_fallback.triggered).toBe(true);
+  expect(before.processing.facet_fallback.whole_query_accepted_count).toBe(0);
+  expect(before.counts.filtered).toBeGreaterThan(0);
+  expect(before.counts.candidates).toBeLessThanOrEqual(20);
+  expect(before.processing.facet_fallback.attempted_facets.length).toBeLessThanOrEqual(2);
+  record.observed.fallback = before.processing.facet_fallback;
+  await page.goto('/admin/failures');
+  await expect(page.getByRole('heading', { name: 'Response diagnostics', exact: true })).toBeVisible();
+  await page.getByRole('combobox', { name: 'Outcome', exact: true }).selectOption('answered');
+  await expect(page.getByRole('combobox', { name: 'Outcome', exact: true })).toHaveValue('answered');
+  for (const width of [1440, 390]) {
+    await page.setViewportSize({ width, height: width === 390 ? 844 : 1000 });
+    await page.getByRole('textbox', { name: 'Request ID', exact: true }).fill(id);
+    const trigger = page.getByRole('button', { name: 'Inspect request', exact: true });
+    await trigger.click();
+    const dialog = page.getByRole('dialog', { name: 'Response diagnostics', exact: true });
+    const summary = dialog.locator('summary').filter({ hasText: /^Processing trace$/ });
+    await expect(summary).toBeVisible();
+    await expect(dialog.getByText('Candidates before relevance', { exact: true })).toBeVisible();
+    const trace = dialog.locator('.processing-trace');
+    await expect(trace).not.toHaveAttribute('open');
+    await summary.focus();
+    await page.keyboard.press('Enter');
+    await expect(trace).toHaveAttribute('open', '');
+    await expect(trace.locator('dl > div').filter({ has: page.locator('dt').filter({ hasText: /^Standalone retrieval question$/ }) }).locator('dd')).toHaveText(before.processing.understanding.standalone_query);
+    await page.screenshot({ path: `${output}/trace-${width}-question.png` });
+    await trace.getByRole('heading', { name: 'Per-part retrieval fallback', exact: true }).scrollIntoViewIfNeeded();
+    const part = trace.locator('summary').filter({ hasText: /^Retrieved part 1/ });
+    await part.focus();
+    await page.keyboard.press('Enter');
+    const partDetails = part.locator('..');
+    await expect(partDetails).toHaveAttribute('open', '');
+    await expect(partDetails.getByText(before.processing.facet_fallback.attempted_facets[0].query, { exact: true })).toBeVisible();
+    await page.screenshot({ path: `${output}/trace-${width}-evidence.png` });
+    const overflow = await dialog.evaluate(element => ({ client: element.clientWidth, scroll: element.scrollWidth, pageClient: document.documentElement.clientWidth, pageScroll: document.documentElement.scrollWidth }));
+    expect(overflow.scroll).toBeLessThanOrEqual(overflow.client + 1);
+    expect(overflow.pageScroll).toBeLessThanOrEqual(overflow.pageClient + 1);
+    await summary.focus();
+    for (let step = 0; step < 8; step++) {
+      await page.keyboard.press('Tab');
+      expect(await dialog.evaluate(element => element.contains(document.activeElement))).toBe(true);
+    }
+    await page.keyboard.press('Escape');
+    await expect(dialog).toHaveCount(0);
+    await expect(trigger).toBeFocused();
+    record.checks.push({ width, lookup: true, keyboard_expand: true, per_part_query_visible: true, final_pool_counts_checked: true, tab_contained: true, escape_and_return: true, no_horizontal_overflow: true, overflow });
+  }
+  const after = await api(`/admin/failures/${id}`);
+  expect(digest(JSON.stringify(after))).toBe(digest(JSON.stringify(before)));
+  record.detail_unchanged = true;
+  expect(record.page_errors).toEqual([]);
+  record.status = 'passed';
+} catch (error) {
+  record.status = 'failed';
+  record.error = { name: error.name, message: String(error.message).replace(/eyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+/g, '[redacted token]').slice(0, 2400) };
+  await page.screenshot({ path: `${output}/failure.png` }).catch(() => {});
+  process.exitCode = 1;
+} finally {
+  record.finished_at = new Date().toISOString();
+  record.limits = ['Actual desktop browser with 390-pixel emulation; physical mobile, native input and assistive technology remain separate.', 'Automated coverage/locality observations do not establish independent semantic support or teaching quality.'];
+  await fs.writeFile(`${output}/verification.json`, JSON.stringify(record, null, 2));
+  await browser.close();
+  console.log(JSON.stringify({ status: record.status, output }));
+}

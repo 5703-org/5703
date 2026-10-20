@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "request_id": "c0117ade-3ac4-46f4-9df6-ebb5f0f3e1bc",
+  "started_at": "2026-09-16T05:43:24.484Z",
+  "scope": "Read-only real administrator endpoint and browser rendering of one saved interactive request; no answering calls, intercepted responses or data insertion.",
+  "checks": [
+    {
+      "width": 1440,
+      "lookup": true,
+      "keyboard_expand": true,
+      "tab_contained": true,
+      "escape_and_return": true,
+      "no_horizontal_overflow": true,
+      "overflow": {
+        "client": 862,
+        "scroll": 862,
+        "pageClient": 1440,
+        "pageScroll": 1440
+      }
+    },
+    {
+      "width": 390,
+      "lookup": true,
+      "keyboard_expand": true,
+      "tab_contained": true,
+      "escape_and_return": true,
+      "no_horizontal_overflow": true,
+      "overflow": {
+        "client": 356,
+        "scroll": 356,
+        "pageClient": 390,
+        "pageScroll": 390
+      }
+    }
+  ],
+  "page_errors": [],
+  "browser_version": "153.0.4234.32",
+  "source_hashes": {
+    "frontend/src/Failures.tsx": "63fa029c74e8d82d2b0957fa1da1251f9cfcd003cfc261c23eadfda73043d1af",
+    "frontend/src/styles/app.css": "56232eb922b3cc9ef89275e97be20a95c580f866b89ee344520d984f25f0b49a",
+    "backend/app/modules/answering/diagnostics.py": "cff225c89e7f759ecb6e6c152d25a0116a6282105251b6f0dedaf7dcff81dff2"
+  },
+  "observed": {
+    "state": "answered",
+    "counts": {
+      "candidates": 20,
+      "filtered": 17,
+      "submitted": 10,
+      "cited": 6
+    },
+    "release_id": "4f11bd70-a486-4d16-b216-78cfe499530a",
+    "provider": "openai_compatible",
+    "model": "deepseek-flash",
+    "device": "cuda",
+    "coverage": "full",
+    "citation_check": "review_required",
+    "timing_keys": [
+      "total_ms",
+      "preparation_ms",
+      "query_preparation_ms",
+      "retrieval_ms",
+      "generation_wall_ms"
+    ],
+    "detail_sha256": "7f8854f555a77fb5a9bac4c522ef1d06259083902ef100428e0f4134300fbc6f"
+  },
+  "detail_unchanged": true,
+  "finished_at": "2026-09-16T05:43:25.835Z",
+  "limits": [
+    "Actual desktop browser with 390-pixel emulation; physical mobile, native input and assistive technology remain separate.",
+    "Automated coverage/locality observations do not establish independent semantic support or teaching quality."
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "executed_at": "2026-09-16T04:04:02.661268+00:00",
+  "status": "passed",
+  "versions": {
+    "ruff": "0.16.6",
+    "mypy": "2.3.1",
+    "pydantic": "2.13.5"
+  },
+  "python": "3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)]",
+  "first_party_roots": [
+    "backend/app",
+    "contracts",
+    "conversation",
+    "evaluation",
+    "generation",
+    "personalisation",
+    "pipelines",
+    "retrieval",
+    "scripts",
+    "tests"
+  ],
+  "type_scope": "Canonical Pydantic payloads/HTTP envelopes, generation dataclasses, evaluator protocol and typed consumers. This is not whole-backend strict typing.",
+  "checks": [
+    {
+      "name": "python_lint",
+      "command": [
+        "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "backend/app",
+        "contracts",
+        "conversation",
+        "evaluation",
+        "generation",
+        "personalisation",
+        "pipelines",
+        "retrieval",
+        "scripts",
+        "tests",
+        "--output-format",
+        "concise"
+      ],
+      "exit_code": 0,
+      "expected_failure": null,
+      "passed": true,
+      "log": "E:\\5703\\learning-assistant\\evidence\\reliability-review\\20260916\\software-gate\\python-quality\\python_lint.log"
+    },
+    {
+      "name": "python_format",
+      "command": [
+        "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "--output-format",
+        "concise",
+        "backend/app",
+        "contracts",
+        "conversation",
+        "evaluation",
+        "generation",
+        "personalisation",
+        "pipelines",
+        "retrieval",
+        "scripts",
+        "tests"
+      ],
+      "exit_code": 0,
+      "expected_failure": null,
+      "passed": true,
+      "log": "E:\\5703\\learning-assistant\\evidence\\reliability-review\\20260916\\software-gate\\python-quality\\python_format.log"
+    },
+    {
+      "name": "python_types",
+      "command": [
+        "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "--config-file",
+        "pyproject.toml"
+      ],
+      "exit_code": 0,
+      "expected_failure": null,
+      "passed": true,
+      "log": "E:\\5703\\learning-assistant\\evidence\\reliability-review\\20260916\\software-gate\\python-quality\\python_types.log"
+    },
+    {
+      "name": "lint_rejects_undefined_name",
+      "command": [
+        "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "C:\\Users\\PC\\AppData\\Local\\Temp\\cs30-gate-probes-dr3ezd_s\\broken.py",
+        "--select",
+        "F821"
+      ],
+      "exit_code": 1,
+      "expected_failure": "F821",
+      "passed": true,
+      "log": "E:\\5703\\learning-assistant\\evidence\\reliability-review\\20260916\\software-gate\\python-quality\\lint_rejects_undefined_name.log"
+    },
+    {
+      "name": "format_rejects_drift",
+      "command": [
+        "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "--output-format",
+        "concise",
+        "C:\\Users\\PC\\AppData\\Local\\Temp\\cs30-gate-probes-dr3ezd_s\\broken.py"
+      ],
+      "exit_code": 1,
+      "expected_failure": "reformatted",
+      "passed": true,
+      "log": "E:\\5703\\learning-assistant\\evidence\\reliability-review\\20260916\\software-gate\\python-quality\\format_rejects_drift.log"
+    },
+    {
+      "name": "types_reject_bad_contract",
+      "command": [
+        "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "--config-file",
+        "E:\\5703\\learning-assistant\\pyproject.toml",
+        "C:\\Users\\PC\\AppData\\Local\\Temp\\cs30-gate-probes-dr3ezd_s\\broken.py"
+      ],
+      "exit_code": 1,
+      "expected_failure": "Argument \"content\" to \"ChatMessageCreate\" has incompatible type",
+      "passed": true,
+      "log": "E:\\5703\\learning-assistant\\evidence\\reliability-review\\20260916\\software-gate\\python-quality\\types_reject_bad_contract.log"
+    },
+    {
+      "name": "types_reject_bad_protocol",
+      "command": [
+        "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+        "-m",
+        "mypy",
+        "--config-file",
+        "E:\\5703\\learning-assistant\\pyproject.toml",
+        "C:\\Users\\PC\\AppData\\Local\\Temp\\cs30-gate-probes-dr3ezd_s\\broken.py"
+      ],
+      "exit_code": 1,
+      "expected_failure": "[return-value]",
+      "passed": true,
+      "log": "E:\\5703\\learning-assistant\\evidence\\reliability-review\\20260916\\software-gate\\python-quality\\types_reject_bad_protocol.log"
+    },
+    {
+      "name": "schema_rejects_broken_contract",
+      "command": [
+        "E:\\5703\\learning-assistant\\.venv\\Scripts\\python.exe",
+        "-c",
+        "from pathlib import Path; from scripts.verify import contracts; import sys; contracts.ROOT=Path(sys.argv.pop()); contracts.main()",
+        "C:\\Users\\PC\\AppData\\Local\\Temp\\cs30-gate-probes-dr3ezd_s"
+      ],
+      "exit_code": 1,
+      "expected_failure": "Runtime OpenAPI drift",
+      "passed": true,
+      "log": "E:\\5703\\learning-assistant\\evidence\\reliability-review\\20260916\\software-gate\\python-quality\\schema_rejects_broken_contract.log"
+    }
+  ],
+  "live_model_calls": 0
+}
