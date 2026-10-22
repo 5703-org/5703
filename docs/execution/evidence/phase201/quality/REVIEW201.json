@@ -1,0 +1,2039 @@
+{
+  "schema": "phase201_independent_fixed_set_answer_review_v1",
+  "status": "COMPLETE_INDEPENDENT_REVIEW_ALL_TEN_CELLS",
+  "utc": "2026-10-15T19:45:46.807708+00:00",
+  "reviewer": "Independent AI/model reviewer using the frozen pre-output rubric; no additional evaluator API or human rating.",
+  "scope": "Only closed/preserved phase201 paid-off01 and paid-on02 records; no active runtime files, private browser profiles or large model assets read.",
+  "rubric_binding": {
+    "path": "docs/execution/evidence/phase200/blind-review/rubric.json",
+    "sha256": "0a0977035746e07c37653de7f4c2e787c539cb391db76254702cb61d9bacf81f"
+  },
+  "question_set_binding": {
+    "path": "docs/execution/evidence/phase200/QSET200.json",
+    "sha256": "d130f6264bf7fa2518b627090e2e4db56f74d005a22d435d4889b9a48ff01643"
+  },
+  "definitions": {
+    "core_correct_complete": "Every essential concept explicitly requested by the frozen question is correctly answered. Extra wording precision is evaluated separately.",
+    "strict_scientifically_clean": "Published, core-correct-and-complete, with no identified inaccurate or overbroad extra factual statement. This strict flag does not imply exhaustive proof of all possible correctness.",
+    "citation_faithfulness": "Claims match actually submitted evidence. Faithfulness does not establish source scientific correctness.",
+    "latency": "Saved real browser submit-to-complete-visible-answer observation, not first token or a new measurement. Failed/unpublished cells have null successful-answer latency and cannot meet the target.",
+    "native_check_passed": "Product metadata only, not independent truth or human approval.",
+    "numeric_quality_scale": null,
+    "severity_scope": "Minor/limited-scope precision findings do not erase correct answers to the requested core concepts."
+  },
+  "cohorts": [
+    {
+      "mode": "OFF",
+      "path": "docs/execution/evidence/phase201/paid-off01",
+      "physical_by_stage": {
+        "GEN": 5,
+        "CHECK": 0
+      },
+      "known_usage_based_conservative_cost_cny": "0.220566",
+      "unknown_protected_holds_cny": "0",
+      "lifecycle_status": "PASS",
+      "source_manifest_sha256": "1f2a8f761565f7373da06bbcd9555fa864adc4edc5e8120b63c9d3629581d2cf",
+      "native_source_revision": "phase201/Candidate201"
+    },
+    {
+      "mode": "ON",
+      "path": "docs/execution/evidence/phase201/paid-on02",
+      "physical_by_stage": {
+        "GEN": 5,
+        "CHECK": 4
+      },
+      "known_usage_based_conservative_cost_cny": "0.382396",
+      "unknown_protected_holds_cny": "0",
+      "lifecycle_status": "PASS",
+      "source_manifest_sha256": "1f2a8f761565f7373da06bbcd9555fa864adc4edc5e8120b63c9d3629581d2cf",
+      "native_source_revision": "phase201/Candidate201"
+    }
+  ],
+  "summary": {
+    "OFF": {
+      "denominator": 5,
+      "published": 4,
+      "failed_unpublished": 1,
+      "core_correct_complete_delivered": 4,
+      "strict_scientifically_clean_delivered": 2,
+      "complete_delivery_under_ten_seconds": 4,
+      "core_correct_complete_under_ten_seconds": 4,
+      "strict_clean_under_ten_seconds": 2
+    },
+    "ON": {
+      "denominator": 5,
+      "published": 2,
+      "failed_unpublished": 3,
+      "core_correct_complete_delivered": 2,
+      "strict_scientifically_clean_delivered": 1,
+      "complete_delivery_under_ten_seconds": 0,
+      "core_correct_complete_under_ten_seconds": 0,
+      "strict_clean_under_ten_seconds": 0
+    },
+    "ALL": {
+      "denominator": 10,
+      "published": 6,
+      "failed_unpublished": 4,
+      "core_correct_complete_delivered": 6,
+      "strict_scientifically_clean_delivered": 3,
+      "complete_delivery_under_ten_seconds": 4,
+      "core_correct_complete_under_ten_seconds": 4,
+      "strict_clean_under_ten_seconds": 2
+    }
+  },
+  "cells": [
+    {
+      "case_id": "N1-OFF",
+      "question_id": "N1",
+      "question": "What are isotopes of an element? Include one example.",
+      "mode": "OFF",
+      "answer_mode": "textbook",
+      "publication_status": "COMPLETE_PUBLISHED_ANSWER_RENDERED",
+      "published": true,
+      "answer_id": "fa3fbbe0-e8cf-4592-8867-7b7b285687f2",
+      "request_id": "1d4174f8-35cb-43fd-bfb4-36a518bcdd58",
+      "job_id": "a95ea158-39b5-4c8c-92ed-83ef1baa1069",
+      "full_published_response": {
+        "schema_version": "chat_response_v1",
+        "response_type": "answer",
+        "answer_text": "Isotopes are atoms of the same element that differ in mass. [ev_002]\n\nThey differ in mass because they have different numbers of neutrons, but they are chemically identical because they have the same number of protons. [ev_002]\n\nAtoms with the same atomic number but different mass numbers are isotopes of the same element. [ev_008]\n\nFor example, magnesium exists as a mixture of three isotopes, each with an atomic number of 12 and with mass numbers of 24, 25, and 26, respectively; these isotopes can be identified as 24Mg, 25Mg, and 26Mg. [ev_001]",
+        "short_answer": "Isotopes are atoms of the same element that differ in mass because they have different numbers of neutrons while having the same number of protons; for example, magnesium exists as 24Mg, 25Mg, and 26Mg, each with atomic number 12 and mass numbers 24, 25, and 26, respectively. [ev_002] [ev_001]",
+        "citations": [
+          "ev_002",
+          "ev_008",
+          "ev_001"
+        ],
+        "refusal_reason": null,
+        "follow_up_questions": [],
+        "confidence": 0.95
+      },
+      "answer_text_sha256": "2595cea7df2aad60e690a532e29eb71ac506e087708166557cada579bb465d83",
+      "short_answer_sha256": "339aa6872b01b40e38cec6fee85d59d9b4f46116e910f5ca3361f9a092c87862",
+      "response_canonical_sha256": "56526e7f05c369044b391069ba92422e84f1a9883cf79b2f18a70e6c1a00f93c",
+      "citations_canonical_sha256": "2ebc0c9fe36793b4e7881be8d603795f4ac76868ffe16fc7b0e6427ebfd75cd7",
+      "actual_submitted_evidence_count": 14,
+      "actual_submitted_evidence_canonical_sha256": "637b600f32095b0d45e28296362ae90ec3e7098ba54ebd49a2e8c1f63a7d6a6f",
+      "cited_source_bindings": [
+        {
+          "evidence_id": "ev_002",
+          "chunk_id": "0e6a7b7f5574ab244b12a243d212bfcb208b",
+          "asset_id": "76de5d4c-a66f-4a77-be54-938fe368b632",
+          "processing_id": "cc12c354-b6a1-4fa9-a259-5e388cfaf342",
+          "source_title": "Chemistry 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/chemistry-2e_-_WEB.pdf",
+          "section": "Chapter 2 Atoms, Molecules, and Ions / 2.2 Evolution of Atomic Theory",
+          "pages": [
+            82
+          ],
+          "locator": "Chapter 2 Atoms, Molecules, and Ions / 2.2 Evolution of Atomic Theory; PDF physical pages 82; Figures or formulas may require viewing the original PDF.",
+          "text_hash": "bc8388ab6c48112a180a15f16adf3b7301db80e226216bdd7e042c52243ba9ad",
+          "chunk_text_hash": "3a60ef777bf9e6dd62332fdff4453f631d1c4469770635b3351ccc4883c6ed57",
+          "chunk_start": 0,
+          "chunk_end": 1113,
+          "exact_submitted_wire_text_matches_saved_evidence": true,
+          "mapped_fragments": [
+            {
+              "fragment_id": "span_11e67d953f2581a859c58d730d6b6735",
+              "document_version_id": "d50e0f43-86dc-4b18-9be5-a6da4407f8d4",
+              "source_unit_id": "9270a1ff805fc14d5e278918a91d1c5207df",
+              "page": 82,
+              "start": 1287,
+              "end": 1375,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 216,
+              "chunk_end": 304,
+              "text_hash": "754b36da85aae58ebb70b88063f22a212bb2faee77c824922c2ca94572995b70"
+            },
+            {
+              "fragment_id": "span_fe25d80b8a8dbc24d34c480a84f61bff",
+              "document_version_id": "d50e0f43-86dc-4b18-9be5-a6da4407f8d4",
+              "source_unit_id": "9270a1ff805fc14d5e278918a91d1c5207df",
+              "page": 82,
+              "start": 1982,
+              "end": 2184,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 911,
+              "chunk_end": 1113,
+              "text_hash": "badd9409f0af1fabc21aa70e01854ea8609d53fdea00ac9aa7cf7cb51a4c9fdd"
+            }
+          ]
+        },
+        {
+          "evidence_id": "ev_008",
+          "chunk_id": "8134af313a610f4f9399531440b96bd97597",
+          "asset_id": "76de5d4c-a66f-4a77-be54-938fe368b632",
+          "processing_id": "cc12c354-b6a1-4fa9-a259-5e388cfaf342",
+          "source_title": "Chemistry 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/chemistry-2e_-_WEB.pdf",
+          "section": "Chapter 21 Nuclear Chemistry / 21.1 Nuclear Structure and Stability",
+          "pages": [
+            1017,
+            1018
+          ],
+          "locator": "Chapter 21 Nuclear Chemistry / 21.1 Nuclear Structure and Stability; PDF physical pages 1017, 1018; Figures or formulas may require viewing the original PDF.",
+          "text_hash": "1082c6ece6193af52b613e0b91fb37915d38d6c60eadb84f8f29f2875e42a55a",
+          "chunk_text_hash": "782dab9089a1faf9b4591cde95f3f1bd6ad3a7ef54910729f541bcf4773c133e",
+          "chunk_start": 210,
+          "chunk_end": 1238,
+          "exact_submitted_wire_text_matches_saved_evidence": true,
+          "mapped_fragments": [
+            {
+              "fragment_id": "span_442f8784f8a78c0d0ec14275d4ae7fbe",
+              "document_version_id": "d50e0f43-86dc-4b18-9be5-a6da4407f8d4",
+              "source_unit_id": "dcd8f735de0d21860e2fea00e42ff7255ab2",
+              "page": 1018,
+              "start": 122,
+              "end": 216,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 332,
+              "chunk_end": 426,
+              "text_hash": "7c9317a14bef2ea0864e02dd8fda2ea7392a7698f59fabd784e0b94be89c65fd"
+            }
+          ]
+        },
+        {
+          "evidence_id": "ev_001",
+          "chunk_id": "4faa67192fcde94a7464d85233bdac8bcc2a",
+          "asset_id": "76de5d4c-a66f-4a77-be54-938fe368b632",
+          "processing_id": "cc12c354-b6a1-4fa9-a259-5e388cfaf342",
+          "source_title": "Chemistry 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/chemistry-2e_-_WEB.pdf",
+          "section": "Chapter 2 Atoms, Molecules, and Ions / 2.3 Atomic Structure and Symbolism",
+          "pages": [
+            87
+          ],
+          "locator": "Chapter 2 Atoms, Molecules, and Ions / 2.3 Atomic Structure and Symbolism; PDF physical pages 87; Figures or formulas may require viewing the original PDF.",
+          "text_hash": "b3e8599944a9fcd2e83a338472fa6b3e069e23286bc15344b8a6b90c15f83e65",
+          "chunk_text_hash": "e6aa165454ce5bae9c702edfdcfd116a320ef7b66e29cb80b8069c527d78b92c",
+          "chunk_start": 104,
+          "chunk_end": 825,
+          "exact_submitted_wire_text_matches_saved_evidence": true,
+          "mapped_fragments": [
+            {
+              "fragment_id": "span_81c7686ca71d8d7c77ab44ced2b91535",
+              "document_version_id": "d50e0f43-86dc-4b18-9be5-a6da4407f8d4",
+              "source_unit_id": "6a4ad98581a85b95ccef37520ce1121d2539",
+              "page": 87,
+              "start": 1513,
+              "end": 1662,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 618,
+              "chunk_end": 767,
+              "text_hash": "cbc6e3c02b12c0d7da49e205decea5714603727ea19ac5fa14a8a6ca8f18ab43"
+            },
+            {
+              "fragment_id": "span_41a03d72e9fda5e06aed3331c9aa061a",
+              "document_version_id": "d50e0f43-86dc-4b18-9be5-a6da4407f8d4",
+              "source_unit_id": "6a4ad98581a85b95ccef37520ce1121d2539",
+              "page": 87,
+              "start": 1663,
+              "end": 1720,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 768,
+              "chunk_end": 825,
+              "text_hash": "74372a4a770af8a0a771f6ea372fbe9fb0dd36616918d6687d39b26ffcc6b35c"
+            }
+          ]
+        }
+      ],
+      "native_check_status": "not_requested",
+      "native_error": null,
+      "observed_stages": [
+        "GEN"
+      ],
+      "human_rating": null,
+      "human_approval": null,
+      "question_relevance": "met",
+      "core_criteria": [
+        {
+          "id": "DEF1",
+          "criterion": "Isotopes belong to the same element and have the same proton number/atomic number.",
+          "status": "met"
+        },
+        {
+          "id": "DEF2",
+          "criterion": "They differ in neutron number, producing different mass numbers/isotopic masses; neutron number is the defining difference, not electron count.",
+          "status": "met"
+        },
+        {
+          "id": "DEF3",
+          "criterion": "Give at least one scientifically valid example, such as a valid named isotope in a clear elemental context or a valid isotope pair. A pair is helpful but not mandatory because the prompt asks for one example.",
+          "status": "met"
+        }
+      ],
+      "core_correct_complete_delivered": true,
+      "core_rationale": "Isotope definition, same proton number/different neutron number, and the Mg-24/25/26 example all meet the requested scope.",
+      "strict_scientifically_clean_delivered": false,
+      "strict_scientific_status": "partly_met_precision_issue",
+      "scientific_issues": [
+        {
+          "id": "ISOTOPE_IDENTICAL_OVERBROAD",
+          "severity": "minor_scientific_precision",
+          "scope": "An unnecessary extra absolute statement; the requested isotope definition and example remain correct and complete.",
+          "answer_field": "answer_text",
+          "actual_span": "chemically identical because they have the same number of protons",
+          "source_evidence_id": "ev_002",
+          "source_faithfulness": "Faithful to the actually submitted Chemistry 2e 2.2 excerpt. The absolute already occurs in that source, not an unsupported addition by the answer.",
+          "scientific_limit": "Similar electronic structure gives very similar ordinary chemistry, but isotope effects prevent a universal identity claim for reaction rates/equilibria.",
+          "reference_ids": [
+            "REF_ISOTOPE",
+            "REF_ISOTOPE_EQUILIBRIUM"
+          ],
+          "short_answer_effect": "The short answer omits the absolute identity claim and is accurate."
+        }
+      ],
+      "short_answer_status": "met",
+      "citation_faithfulness": "met",
+      "citation_rationale": "Published cited claims are supported by the actual submitted excerpts, with the source-science limitations separately flagged.",
+      "successful_complete_latency_ms": 6060.79999999702,
+      "successful_complete_latency_is_saved_browser_observation": true,
+      "meets_ten_seconds_delivery": true,
+      "core_correct_complete_and_under_ten_seconds": true,
+      "strict_clean_and_under_ten_seconds": false,
+      "failure_denominator_retained": false,
+      "failed_raw_draft_read_or_graded": false
+    },
+    {
+      "case_id": "N2-OFF",
+      "question_id": "N2",
+      "question": "Starting with a diploid cell, how do mitosis and meiosis differ in the number of divisions and the chromosome number of their products?",
+      "mode": "OFF",
+      "answer_mode": "textbook",
+      "publication_status": "FAILED_KNOWN_FUNCTIONAL",
+      "published": false,
+      "answer_id": null,
+      "request_id": "3918fe60-2127-4c16-8ba2-1fa762031562",
+      "job_id": "19b2be6c-d957-4228-81dc-6cb91894dcbe",
+      "full_published_response": null,
+      "answer_text_sha256": null,
+      "short_answer_sha256": null,
+      "response_canonical_sha256": null,
+      "citations_canonical_sha256": null,
+      "actual_submitted_evidence_count": 10,
+      "actual_submitted_evidence_canonical_sha256": "c7d5396970d1fdd04a4bc84734eeaa5a45c56dfa37fe4d07ee4ef80dcd40066d",
+      "cited_source_bindings": [],
+      "native_check_status": null,
+      "native_error": {
+        "code": "ENHANCEMENT_VALIDATION_ERROR",
+        "message": "Enhanced response or source mapping failed validation.",
+        "details": {
+          "error_type": "ValueError",
+          "validation_code": "ASSERTION_COMPLETE_CLAIM_REQUIRED"
+        }
+      },
+      "observed_stages": [
+        "GEN"
+      ],
+      "human_rating": null,
+      "human_approval": null,
+      "question_relevance": "not_assessable",
+      "core_criteria": [
+        {
+          "id": "COMP1",
+          "criterion": "A complete mitosis involves one nuclear division, while a complete meiosis involves two successive nuclear divisions, meiosis I and II.",
+          "status": "not_assessable"
+        },
+        {
+          "id": "COMP2",
+          "criterion": "For the stated diploid starting cell, mitotic products retain the chromosome complement/ploidy, 2n.",
+          "status": "not_assessable"
+        },
+        {
+          "id": "COMP3",
+          "criterion": "Meiotic products have half the starting chromosome complement/ploidy, n; do not halve it again in meiosis II.",
+          "status": "not_assessable"
+        }
+      ],
+      "core_correct_complete_delivered": false,
+      "core_rationale": "A generated draft was not published because ASSERTION_COMPLETE_CLAIM_REQUIRED failed. No delivered content or citation quality can be rated.",
+      "strict_scientifically_clean_delivered": false,
+      "strict_scientific_status": "not_assessable",
+      "scientific_issues": [],
+      "short_answer_status": "not_assessable",
+      "citation_faithfulness": "not_assessable_unpublished",
+      "citation_rationale": "No published answer or citations; the failed raw draft is outside the delivered-answer review.",
+      "successful_complete_latency_ms": null,
+      "successful_complete_latency_is_saved_browser_observation": true,
+      "meets_ten_seconds_delivery": false,
+      "core_correct_complete_and_under_ten_seconds": false,
+      "strict_clean_and_under_ten_seconds": false,
+      "failure_denominator_retained": true,
+      "failed_raw_draft_read_or_graded": false
+    },
+    {
+      "case_id": "N3-OFF",
+      "question_id": "N3",
+      "question": "What are the roles of mRNA, tRNA, and rRNA during translation?",
+      "mode": "OFF",
+      "answer_mode": "textbook",
+      "publication_status": "COMPLETE_PUBLISHED_ANSWER_RENDERED",
+      "published": true,
+      "answer_id": "bd0deff9-9f23-4aed-9818-26a77fc5654d",
+      "request_id": "ecee5bf8-c4d2-408d-bfa6-6f5d7f3b2503",
+      "job_id": "f2f367e0-9621-497a-a3d7-f2069b7757a5",
+      "full_published_response": {
+        "schema_version": "chat_response_v1",
+        "response_type": "answer",
+        "answer_text": "During translation, the mRNA template provides tRNA binding specificity, and as the ribosome moves along the mRNA, each mRNA codon comes into register so that specific binding with the corresponding charged tRNA anticodon is ensured. [ev_002]\n\nThe mRNA is read in sets of three bases known as codons, and each codon codes for a single amino acid. [ev_004]\n\nA tRNA molecule recognizes a codon on the mRNA, binds to it by complementary base pairing, and adds the correct amino acid to the growing peptide chain. [ev_004]\n\nThe tRNAs have a critical role in translation; they serve as the “adaptor molecules” between the mRNA template and the growing polypeptide chain. [ev_003]\n\nRibosomal RNA (rRNA) is a major constituent of ribosomes on which the mRNA binds, and the rRNA ensures the proper alignment of the mRNA and the ribosomes. [ev_004]\n\nThe ribosome's rRNA also has an enzymatic activity (peptidyl transferase) and catalyzes peptide bond formation between two aligned amino acids. [ev_005]",
+        "short_answer": "mRNA provides the template that is read in three-base codons, each coding for a single amino acid; tRNA recognizes the mRNA codon by complementary base pairing and delivers the correct amino acid to the growing peptide chain as an adaptor molecule; and rRNA is a major constituent of ribosomes that ensures proper alignment of mRNA and ribosomes and catalyzes peptide bond formation between aligned amino acids. [ev_002] [ev_004] [ev_003] [ev_005]",
+        "citations": [
+          "ev_002",
+          "ev_004",
+          "ev_003",
+          "ev_005"
+        ],
+        "refusal_reason": null,
+        "follow_up_questions": [],
+        "confidence": 0.95
+      },
+      "answer_text_sha256": "ff8511f7aa5c8fcf8a858e8e5b9383b51ebac8ece6098349763032b76a99c66b",
+      "short_answer_sha256": "764fe917996eaa74e845eb6d01342a3953f86a57ec17bd69bfc3c32e25133935",
+      "response_canonical_sha256": "dc2c53fc60c1f71f5b4167f8182e0a3268eaee20001062c0a70c5d731a5ad2a1",
+      "citations_canonical_sha256": "7e6e692b1d26168e03f588c3f364b566f4a3c6a18bf98872098275eefd4aee40",
+      "actual_submitted_evidence_count": 13,
+      "actual_submitted_evidence_canonical_sha256": "2875ce07bc146177c4717ff990ef190f83cc71c944890458de330e484571abbb",
+      "cited_source_bindings": [
+        {
+          "evidence_id": "ev_002",
+          "chunk_id": "0d5cf6b0357ed60209c223da7259309c3c98",
+          "asset_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+          "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+          "source_title": "Biology 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf",
+          "section": "Chapter 15 Genes and Proteins / 15.5 Ribosomes and Protein Synthesis",
+          "pages": [
+            426
+          ],
+          "locator": "Chapter 15 Genes and Proteins / 15.5 Ribosomes and Protein Synthesis; PDF physical pages 426; Figures or formulas may require viewing the original PDF.",
+          "text_hash": "abeb9cd8d67b7b379f64e4ec17ac00bafb5fec1ea1590682f386984ee1221824",
+          "chunk_text_hash": "e59d3ec9f974c821101857b4182a0acdc69345f9949f7fca1776a20a7634c21d",
+          "chunk_start": 164,
+          "chunk_end": 809,
+          "exact_submitted_wire_text_matches_saved_evidence": true,
+          "mapped_fragments": [
+            {
+              "fragment_id": "span_965d270d028cc83a0e0ceda1d2eafeee",
+              "document_version_id": "bb336e9b-ef43-466f-9e65-ca6d1d196c4b",
+              "source_unit_id": "e5817fbffa54e4f1489319b180faa9e0eda7",
+              "page": 426,
+              "start": 2302,
+              "end": 2385,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 316,
+              "chunk_end": 399,
+              "text_hash": "1aa9a3c4d794056fdb975dee01bd8527261eb4cf46d1a5632f219d7eb4ae7905"
+            },
+            {
+              "fragment_id": "span_1e1cf89c5fdc5c1081033b3177b560b6",
+              "document_version_id": "bb336e9b-ef43-466f-9e65-ca6d1d196c4b",
+              "source_unit_id": "e5817fbffa54e4f1489319b180faa9e0eda7",
+              "page": 426,
+              "start": 2386,
+              "end": 2539,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 400,
+              "chunk_end": 553,
+              "text_hash": "964f1a5539acfbc18b3f628d7fca5d1873f694f531f48d5f506ffdd1f5e31ae4"
+            }
+          ]
+        },
+        {
+          "evidence_id": "ev_004",
+          "chunk_id": "0662aedf21690d4f6cba712e86f92bd1af66",
+          "asset_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+          "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+          "source_title": "Biology 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf",
+          "section": "Chapter 3 Biological Macromolecules / 3.5 Nucleic Acids",
+          "pages": [
+            111
+          ],
+          "locator": "Chapter 3 Biological Macromolecules / 3.5 Nucleic Acids; PDF physical pages 111; Figures or formulas may require viewing the original PDF.",
+          "text_hash": "ea7dea7cf012217fe71dff22f16ba80148cbfc12c0b324332963ff62a918eb33",
+          "chunk_text_hash": "a4a047e11c2f792009515f895f5b5b3a680da1605043c3e90c9f074e78fc1242",
+          "chunk_start": 725,
+          "chunk_end": 1233,
+          "exact_submitted_wire_text_matches_saved_evidence": true,
+          "mapped_fragments": [
+            {
+              "fragment_id": "span_79738a13cacdd0b4599e8570f5bdd896",
+              "document_version_id": "bb336e9b-ef43-466f-9e65-ca6d1d196c4b",
+              "source_unit_id": "ad29469bf07952c21c874a54a16aa6c0784b",
+              "page": 111,
+              "start": 1668,
+              "end": 1820,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 768,
+              "chunk_end": 920,
+              "text_hash": "e41e81a43d61565cdc2047725da5905a76424fc9bf677dec8c976d884a7cd6a2"
+            },
+            {
+              "fragment_id": "span_53079b3f2ad07fcc20accba051749963",
+              "document_version_id": "bb336e9b-ef43-466f-9e65-ca6d1d196c4b",
+              "source_unit_id": "ad29469bf07952c21c874a54a16aa6c0784b",
+              "page": 111,
+              "start": 1821,
+              "end": 1877,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 921,
+              "chunk_end": 977,
+              "text_hash": "92710c713f951082fddff19d9be3fe3be382c8e0dc2711fe2272fd1a5ac12cca"
+            },
+            {
+              "fragment_id": "span_93c36f70387fb7e3bf3c09cec37c76f9",
+              "document_version_id": "bb336e9b-ef43-466f-9e65-ca6d1d196c4b",
+              "source_unit_id": "ad29469bf07952c21c874a54a16aa6c0784b",
+              "page": 111,
+              "start": 1878,
+              "end": 1919,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 978,
+              "chunk_end": 1019,
+              "text_hash": "c8b1e211475bca4b60af4550c7921d6e571989062fd9048c7c19dd79c47f6c92"
+            },
+            {
+              "fragment_id": "span_ec0d467698a3220b6000433f4233d4c7",
+              "document_version_id": "bb336e9b-ef43-466f-9e65-ca6d1d196c4b",
+              "source_unit_id": "ad29469bf07952c21c874a54a16aa6c0784b",
+              "page": 111,
+              "start": 1983,
+              "end": 2064,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 1083,
+              "chunk_end": 1164,
+              "text_hash": "69351bc6d2f545dfeba7a07f7853cf7b8f90d064d556bd8186f10dff10a232d4"
+            },
+            {
+              "fragment_id": "span_5c259ab4154fb698d25c5b51d52e5a99",
+              "document_version_id": "bb336e9b-ef43-466f-9e65-ca6d1d196c4b",
+              "source_unit_id": "ad29469bf07952c21c874a54a16aa6c0784b",
+              "page": 111,
+              "start": 2065,
+              "end": 2133,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 1165,
+              "chunk_end": 1233,
+              "text_hash": "3411eac4c536e51b48a4bf5d8bc3cab0f7ed3f2039fcddf3f8d8c580e8d6ffc3"
+            }
+          ]
+        },
+        {
+          "evidence_id": "ev_003",
+          "chunk_id": "376ef55bc3c46473143ac0aad37a1c1e9456",
+          "asset_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+          "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+          "source_title": "Biology 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf",
+          "section": "Chapter 15 Genes and Proteins / 15.3 Eukaryotic Transcription",
+          "pages": [
+            415,
+            416
+          ],
+          "locator": "Chapter 15 Genes and Proteins / 15.3 Eukaryotic Transcription; PDF physical pages 415, 416; Figures or formulas may require viewing the original PDF.",
+          "text_hash": "333907fe50a84e4ea111ad536fce2396193e66fd7d84d660ee39be071ba0ba35",
+          "chunk_text_hash": "d903ba96472df885dafc001683d81d2f16743dfada9c2a2d9a963f3598cf3d3c",
+          "chunk_start": 185,
+          "chunk_end": 1373,
+          "exact_submitted_wire_text_matches_saved_evidence": true,
+          "mapped_fragments": [
+            {
+              "fragment_id": "span_64f5b8b02613691fc2acde90546f8b68",
+              "document_version_id": "bb336e9b-ef43-466f-9e65-ca6d1d196c4b",
+              "source_unit_id": "3f1e7e12912d0d6cc7cd849cea2fc33a7359",
+              "page": 416,
+              "start": 1043,
+              "end": 1188,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 1228,
+              "chunk_end": 1373,
+              "text_hash": "d18e717b7e3283653f5350d18c7d77400c180ad32d7c9bf09935393cd4f4e21a"
+            }
+          ]
+        },
+        {
+          "evidence_id": "ev_005",
+          "chunk_id": "5cfffc7e4668764cb40e4125f0894b896270",
+          "asset_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+          "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+          "source_title": "Biology 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf",
+          "section": "Chapter 3 Biological Macromolecules / 3.5 Nucleic Acids",
+          "pages": [
+            111,
+            112
+          ],
+          "locator": "Chapter 3 Biological Macromolecules / 3.5 Nucleic Acids; PDF physical pages 111, 112; Figures or formulas may require viewing the original PDF.",
+          "text_hash": "ee4c70597f900b608cecc70a9a9bc72d3f183b4f848ec486f983e99613c4afbf",
+          "chunk_text_hash": "41d7b10f5e85109111f336dfedd2fc27ad5ed1ee83c1b43cb4262ca4d162c8b0",
+          "chunk_start": 61,
+          "chunk_end": 1390,
+          "exact_submitted_wire_text_matches_saved_evidence": true,
+          "mapped_fragments": [
+            {
+              "fragment_id": "span_a52e0ea177ea4dd342a00c1efbc4f4f6",
+              "document_version_id": "bb336e9b-ef43-466f-9e65-ca6d1d196c4b",
+              "source_unit_id": "ad29469bf07952c21c874a54a16aa6c0784b",
+              "page": 111,
+              "start": 2134,
+              "end": 2277,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 130,
+              "chunk_end": 273,
+              "text_hash": "2c30daf318873a3c5454c15d077c990d97aceb5adc002e973712c533250d571b"
+            }
+          ]
+        }
+      ],
+      "native_check_status": "not_requested",
+      "native_error": null,
+      "observed_stages": [
+        "GEN"
+      ],
+      "human_rating": null,
+      "human_approval": null,
+      "question_relevance": "met",
+      "core_criteria": [
+        {
+          "id": "RNA1",
+          "criterion": "mRNA provides the coding/codon template that specifies amino-acid order.",
+          "status": "met"
+        },
+        {
+          "id": "RNA2",
+          "criterion": "tRNA brings the appropriate amino acid to the ribosome as an adaptor matching the mRNA code, normally explained through anticodon-codon pairing or an equivalent clear description.",
+          "status": "met"
+        },
+        {
+          "id": "RNA3",
+          "criterion": "rRNA is a functional/structural component of the ribosome that supports polypeptide assembly. An explicit catalytic-core/peptide-bond description is excellent precision but a correct introductory functional-ribosome explanation is sufficient.",
+          "status": "met"
+        }
+      ],
+      "core_correct_complete_delivered": true,
+      "core_rationale": "mRNA coding template, tRNA codon/anticodon adaptor with amino-acid delivery, and rRNA ribosomal structure/catalysis are all explained.",
+      "strict_scientifically_clean_delivered": false,
+      "strict_scientific_status": "partly_met_precision_issue",
+      "scientific_issues": [
+        {
+          "id": "ALL_CODONS_AMINO_ACIDS_OVERBROAD",
+          "severity": "limited_scope_scientific_precision",
+          "scope": "The three requested RNA roles are correct; the volunteered universal statement about codons needs a sense-codon qualification.",
+          "answer_field": "answer_text_and_short_answer",
+          "actual_span": "each codon codes for a single amino acid",
+          "source_evidence_id": "ev_004",
+          "source_faithfulness": "The actual Biology 2e 3.5 excerpt itself says this without a sense-codon qualifier. No selected/submitted passage contains stop-codon discussion. This is not an omitted qualifier from the cited excerpt.",
+          "scientific_limit": "In the standard code, stop codons signal termination rather than specify an amino acid; the complete book explains this in section 15.5.",
+          "reference_ids": [
+            "REF_CODE",
+            "REF_TRANSLATION"
+          ],
+          "short_answer_effect": "The short answer repeats the same overbroad statement."
+        }
+      ],
+      "short_answer_status": "partly_met_precision_issue",
+      "citation_faithfulness": "met",
+      "citation_rationale": "Published cited claims are supported by the actual submitted excerpts, with the source-science limitations separately flagged.",
+      "successful_complete_latency_ms": 4981.10000000149,
+      "successful_complete_latency_is_saved_browser_observation": true,
+      "meets_ten_seconds_delivery": true,
+      "core_correct_complete_and_under_ten_seconds": true,
+      "strict_clean_and_under_ten_seconds": false,
+      "failure_denominator_retained": false,
+      "failed_raw_draft_read_or_graded": false
+    },
+    {
+      "case_id": "N4-OFF",
+      "question_id": "N4",
+      "question": "A solution contains 3.00 g of urea (molar mass 60.06 g/mol) in a final solution volume of 250.0 mL. What is its molarity in mol/L? Show the unit conversions and report three significant figures.",
+      "mode": "OFF",
+      "answer_mode": "textbook",
+      "publication_status": "COMPLETE_PUBLISHED_ANSWER_RENDERED",
+      "published": true,
+      "answer_id": "8587ea22-04c3-4b24-a9d0-d3e37feb59f9",
+      "request_id": "64382cdc-13f1-438a-ac74-c9bf04cf1817",
+      "job_id": "bacb06cf-958c-4732-953b-09bcf1eadfe6",
+      "full_published_response": {
+        "schema_version": "chat_response_v1",
+        "response_type": "answer",
+        "answer_text": "The molar mass of a compound is the mass in grams of 1 mole of that substance, expressed in g/mol [ev_005]. Since the mass of solute is provided instead of its molar amount, use the solute's molar mass to obtain the amount of solute in moles [ev_002]. For this solution, the amount of urea is n = 3.00 g ÷ 60.06 g/mol = 0.04995 mol (retaining a guard digit) [ev_001] [ev_002]. Molarity is defined as the molar amount of solute divided by the volume of solution in liters, so the solution volume must be converted from mL to L [ev_006]: 250.0 mL × (1 L / 1000 mL) = 0.2500 L [ev_006]. Dividing gives M = 0.04995 mol ÷ 0.2500 L = 0.1998 mol/L, which rounds to 0.200 M (three significant figures) [ev_001] [ev_006].",
+        "short_answer": "0.200 M (0.200 mol/L)",
+        "citations": [
+          "ev_001",
+          "ev_002",
+          "ev_005",
+          "ev_006"
+        ],
+        "refusal_reason": null,
+        "follow_up_questions": [],
+        "confidence": 0.95
+      },
+      "answer_text_sha256": "b03063d4aadb1df58c138060bacf3ddd53090f49f00709e51f62c8794ccebf2b",
+      "short_answer_sha256": "60f0ab96d8988e210df2fea020cc328dc815727841dede4d8a4db5206b82e19b",
+      "response_canonical_sha256": "b126f41a223255f683bcbc5c7572983d7e063e502623d2cfbd2a6656e27f6457",
+      "citations_canonical_sha256": "ff0720069344d0dd3118ac91c8672983fa81b18229ab79c13965c4180c209991",
+      "actual_submitted_evidence_count": 13,
+      "actual_submitted_evidence_canonical_sha256": "7f9536190ef81ac41f737ed341f23daff32eb3fd0db3d5c5e97eb49eadae6aa5",
+      "cited_source_bindings": [
+        {
+          "evidence_id": "ev_001",
+          "chunk_id": "c37ea450b9c7fbb76bf43dabefd2afa6fd93",
+          "asset_id": "76de5d4c-a66f-4a77-be54-938fe368b632",
+          "processing_id": "cc12c354-b6a1-4fa9-a259-5e388cfaf342",
+          "source_title": "Chemistry 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/chemistry-2e_-_WEB.pdf",
+          "section": "Chapter 3 Composition of Substances and Solutions / 3.3 Molarity",
+          "pages": [
+            150,
+            151
+          ],
+          "locator": "Chapter 3 Composition of Substances and Solutions / 3.3 Molarity; PDF physical pages 150, 151; Figures or formulas may require viewing the original PDF.",
+          "text_hash": "8fdd0d96f37b5376174da10fe45bd5a065abb552ab2a22258a2575cbee045023",
+          "chunk_text_hash": "b5e6bbb927e46736c879195b04fecca90f41427990123fea2121bee9504b32d7",
+          "chunk_start": 24,
+          "chunk_end": 1227,
+          "exact_submitted_wire_text_matches_saved_evidence": true,
+          "mapped_fragments": [
+            {
+              "fragment_id": "span_13fe2e7409457320b42817197f7e9c43",
+              "document_version_id": "d50e0f43-86dc-4b18-9be5-a6da4407f8d4",
+              "source_unit_id": "81c4edb541a1216d5d62c35909a8a5d4b0fc",
+              "page": 151,
+              "start": 0,
+              "end": 190,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 171,
+              "chunk_end": 361,
+              "text_hash": "623b9ee6102988284c9faee3a468078ca196a5ebb3b46f076c5b2ad51d9443da"
+            },
+            {
+              "fragment_id": "span_a7d9ea91fdc55041b804fa37a6336d12",
+              "document_version_id": "d50e0f43-86dc-4b18-9be5-a6da4407f8d4",
+              "source_unit_id": "81c4edb541a1216d5d62c35909a8a5d4b0fc",
+              "page": 151,
+              "start": 405,
+              "end": 677,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 576,
+              "chunk_end": 848,
+              "text_hash": "1a875fa8d700967017fabb6f4ba389f4490b81bcb302acd01bc5286169d5f408"
+            },
+            {
+              "fragment_id": "span_cbb21c77287fb02608f9acac7f6526a3",
+              "document_version_id": "d50e0f43-86dc-4b18-9be5-a6da4407f8d4",
+              "source_unit_id": "81c4edb541a1216d5d62c35909a8a5d4b0fc",
+              "page": 151,
+              "start": 678,
+              "end": 809,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 849,
+              "chunk_end": 980,
+              "text_hash": "2c59c5373809b1053a4829d02238e09560233fbc65368b42c2275443b2f69e44"
+            }
+          ]
+        },
+        {
+          "evidence_id": "ev_002",
+          "chunk_id": "483bedca3fee927f130704efe18954ba6aa3",
+          "asset_id": "76de5d4c-a66f-4a77-be54-938fe368b632",
+          "processing_id": "cc12c354-b6a1-4fa9-a259-5e388cfaf342",
+          "source_title": "Chemistry 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/chemistry-2e_-_WEB.pdf",
+          "section": "Chapter 3 Composition of Substances and Solutions / 3.3 Molarity",
+          "pages": [
+            149,
+            150
+          ],
+          "locator": "Chapter 3 Composition of Substances and Solutions / 3.3 Molarity; PDF physical pages 149, 150; Figures or formulas may require viewing the original PDF.",
+          "text_hash": "26b13b15f7770f10404ed3ee25e68b75027f60c5a85e9549205e4d36099c3552",
+          "chunk_text_hash": "1fcf8e7bb2369799b298443ebd9a5f70375469d09e47545e6835f23a7b517fc1",
+          "chunk_start": 63,
+          "chunk_end": 979,
+          "exact_submitted_wire_text_matches_saved_evidence": true,
+          "mapped_fragments": [
+            {
+              "fragment_id": "span_bb70615604fbb68887e8fb4e77f48a51",
+              "document_version_id": "d50e0f43-86dc-4b18-9be5-a6da4407f8d4",
+              "source_unit_id": "6323eceb0f5122c95db134869d2d89ad0cf3",
+              "page": 150,
+              "start": 199,
+              "end": 474,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 398,
+              "chunk_end": 673,
+              "text_hash": "f967c7e8bc034f57060f66e74fc12ea3e8f9038a8af3a7749b774768dc84041d"
+            },
+            {
+              "fragment_id": "span_bf25cc9c2d57ace42fc98accd5cd4c2c",
+              "document_version_id": "d50e0f43-86dc-4b18-9be5-a6da4407f8d4",
+              "source_unit_id": "6323eceb0f5122c95db134869d2d89ad0cf3",
+              "page": 150,
+              "start": 475,
+              "end": 634,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 674,
+              "chunk_end": 833,
+              "text_hash": "7d9a7d54b03d6e8a25b51fa45cdd6e3c4361b330f8bcb5c4f6e528c88ace085e"
+            },
+            {
+              "fragment_id": "span_967549be69f21d8f6f03825b478a16e1",
+              "document_version_id": "d50e0f43-86dc-4b18-9be5-a6da4407f8d4",
+              "source_unit_id": "6323eceb0f5122c95db134869d2d89ad0cf3",
+              "page": 150,
+              "start": 635,
+              "end": 780,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 834,
+              "chunk_end": 979,
+              "text_hash": "90109e53980e5e425d6be94fbe9ff6a04e4904b0c661154c86d7b165dd2c3235"
+            }
+          ]
+        },
+        {
+          "evidence_id": "ev_005",
+          "chunk_id": "cc7379c0968b267b04e9fd19ea4dae46dbbc",
+          "asset_id": "76de5d4c-a66f-4a77-be54-938fe368b632",
+          "processing_id": "cc12c354-b6a1-4fa9-a259-5e388cfaf342",
+          "source_title": "Chemistry 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/chemistry-2e_-_WEB.pdf",
+          "section": "Chapter 3 Composition of Substances and Solutions / 3.1 Formula Mass and the Mole Concept",
+          "pages": [
+            132,
+            133
+          ],
+          "locator": "Chapter 3 Composition of Substances and Solutions / 3.1 Formula Mass and the Mole Concept; PDF physical pages 132, 133; Figures or formulas may require viewing the original PDF.",
+          "text_hash": "5a8fe538413a6cbfe4e1668de95ad4acb0b369869a21f70c403fbb144ea1f509",
+          "chunk_text_hash": "62797f3e526fb86cd71f9dcf282a2f2c95f365fc672a34d7eb7baa032290dfe9",
+          "chunk_start": 0,
+          "chunk_end": 166,
+          "exact_submitted_wire_text_matches_saved_evidence": true,
+          "mapped_fragments": [
+            {
+              "fragment_id": "span_a8ad5355fde2830b3859a8c09e91a007",
+              "document_version_id": "d50e0f43-86dc-4b18-9be5-a6da4407f8d4",
+              "source_unit_id": "360f8c2a4374f8647c135efc7f2af5883d6d",
+              "page": 132,
+              "start": 2841,
+              "end": 3007,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 0,
+              "chunk_end": 166,
+              "text_hash": "5a8fe538413a6cbfe4e1668de95ad4acb0b369869a21f70c403fbb144ea1f509"
+            }
+          ]
+        },
+        {
+          "evidence_id": "ev_006",
+          "chunk_id": "dff8089e3e89deaf65d6e34f0583638d565a",
+          "asset_id": "76de5d4c-a66f-4a77-be54-938fe368b632",
+          "processing_id": "cc12c354-b6a1-4fa9-a259-5e388cfaf342",
+          "source_title": "Chemistry 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/chemistry-2e_-_WEB.pdf",
+          "section": "Chapter 3 Composition of Substances and Solutions / 3.3 Molarity",
+          "pages": [
+            148,
+            149
+          ],
+          "locator": "Chapter 3 Composition of Substances and Solutions / 3.3 Molarity; PDF physical pages 148, 149; Figures or formulas may require viewing the original PDF.",
+          "text_hash": "173cf8ed69f298392592fe9b79fe2de4070113422210272298de58a623c710a4",
+          "chunk_text_hash": "c5b2d08a67645889f9acab8f09ae70e6ce845a88eebe3c580a6d0ce20c96f082",
+          "chunk_start": 15,
+          "chunk_end": 1234,
+          "exact_submitted_wire_text_matches_saved_evidence": true,
+          "mapped_fragments": [
+            {
+              "fragment_id": "span_f6f50a9e932fd613fcb803420e97979e",
+              "document_version_id": "d50e0f43-86dc-4b18-9be5-a6da4407f8d4",
+              "source_unit_id": "ab73695ba0aa96e5edbf7928d60cca0b44c0",
+              "page": 148,
+              "start": 2223,
+              "end": 2348,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 75,
+              "chunk_end": 200,
+              "text_hash": "775166216c6b860e3f22d59b1829bbc043ab112d91154b27ba9c928ef72d39de"
+            },
+            {
+              "fragment_id": "span_ad7b6d2e2bf065738824d7ec26edf61e",
+              "document_version_id": "d50e0f43-86dc-4b18-9be5-a6da4407f8d4",
+              "source_unit_id": "6413ecaaab70548bae05fc465af774e9ade6",
+              "page": 149,
+              "start": 24,
+              "end": 175,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 226,
+              "chunk_end": 377,
+              "text_hash": "9b0c859fa0365968c786adc2120526074904b1baeeef10b326cc6a4df04a2d1c"
+            },
+            {
+              "fragment_id": "span_229f25aebc47e7b30cacde72e1ff2766",
+              "document_version_id": "d50e0f43-86dc-4b18-9be5-a6da4407f8d4",
+              "source_unit_id": "6413ecaaab70548bae05fc465af774e9ade6",
+              "page": 149,
+              "start": 291,
+              "end": 467,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 493,
+              "chunk_end": 669,
+              "text_hash": "ca0827994478420e3351bf13faeea5550994fe7bdad01b64e2bc65737ee06008"
+            }
+          ]
+        }
+      ],
+      "native_check_status": "not_requested",
+      "native_error": null,
+      "observed_stages": [
+        "GEN"
+      ],
+      "human_rating": null,
+      "human_approval": null,
+      "question_relevance": "met",
+      "core_criteria": [
+        {
+          "id": "CALC1",
+          "criterion": "Use amount n = mass / molar mass, with g divided by g/mol giving mol.",
+          "status": "met"
+        },
+        {
+          "id": "CALC2",
+          "criterion": "Use final solution volume 250.0 mL = 0.2500 L; do not treat this as volume of added water.",
+          "status": "met"
+        },
+        {
+          "id": "CALC3",
+          "criterion": "Use molarity = amount of solute / final solution volume in liters, with correct arithmetic and dimensional cancellation.",
+          "status": "met"
+        },
+        {
+          "id": "CALC4",
+          "criterion": "Report 0.200 mol/L, or the equivalent 2.00e-1 mol/L or 0.200 M, to three significant figures. A single combined unit-canceling equation satisfies the requested work; separate intermediate lines are not mandatory.",
+          "status": "met"
+        }
+      ],
+      "core_correct_complete_delivered": true,
+      "core_rationale": "Correct dimensional work: 3.00/60.06 mol, 250.0 mL = 0.2500 L, and division gives 0.199800... mol/L, rounded to 0.200 mol/L (three significant figures).",
+      "strict_scientifically_clean_delivered": true,
+      "strict_scientific_status": "met",
+      "scientific_issues": [],
+      "short_answer_status": "met",
+      "citation_faithfulness": "met",
+      "citation_rationale": "Sources support the mole/molarity and unit-conversion rules; given numbers and synthetic arithmetic are a derivation, not a claim that the result appears verbatim in a passage.",
+      "successful_complete_latency_ms": 4962.60000000149,
+      "successful_complete_latency_is_saved_browser_observation": true,
+      "meets_ten_seconds_delivery": true,
+      "core_correct_complete_and_under_ten_seconds": true,
+      "strict_clean_and_under_ten_seconds": true,
+      "failure_denominator_retained": false,
+      "failed_raw_draft_read_or_graded": false
+    },
+    {
+      "case_id": "N5-OFF",
+      "question_id": "N5",
+      "question": "Use general knowledge without retrieving or consulting documents. Why does the Moon appear to change phase during a month, and are ordinary phases caused by Earth's shadow?",
+      "mode": "OFF",
+      "answer_mode": "general_knowledge",
+      "publication_status": "COMPLETE_PUBLISHED_ANSWER_RENDERED",
+      "published": true,
+      "answer_id": "366165b8-1a6e-48eb-b244-8ae0a468468c",
+      "request_id": "072b45ae-3d67-427a-bb61-4f2ea0d004dc",
+      "job_id": "221a8078-2499-4c9e-a345-3c31b22f16a8",
+      "full_published_response": {
+        "schema_version": "chat_response_v1",
+        "response_type": "answer",
+        "answer_text": "This is unverified general knowledge, not a textbook or retrieved source. The Moon does not emit its own visible light; we see it because it reflects sunlight. As the Moon orbits Earth over about a month, the Sun illuminates the half of the Moon facing the Sun, but the fraction of that sunlit half turned toward Earth changes. That changing fraction is what we see as the phases: new moon, waxing crescent, first quarter, waxing gibbous, full moon, waning gibbous, last quarter, waning crescent, and back to new. Ordinary phases are therefore not caused by Earth's shadow. Earth's shadow produces a lunar eclipse, which occurs only near full moon when the Moon passes into Earth's shadow, so eclipses are occasional events rather than the monthly cycle of phases.",
+        "short_answer": "The Moon appears to change phase because, as it orbits Earth over about a month, we see different fractions of its sunlit half; ordinary phases are not caused by Earth's shadow, which instead causes lunar eclipses.",
+        "citations": [],
+        "refusal_reason": null,
+        "follow_up_questions": [],
+        "confidence": 0.9
+      },
+      "answer_text_sha256": "a117992434ea4e9d7fe2c12a17745e8088dd0ea91c605990b3ea4831f3fa4d0d",
+      "short_answer_sha256": "7577b093f70a5a51dcee7cd11bc620979fab29d5f73d7acf0ab08e6e73b30051",
+      "response_canonical_sha256": "b897ae054f97c1dce6ceaeb70146e775f3749e34c373b0979abde7a5c78cd908",
+      "citations_canonical_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "actual_submitted_evidence_count": 0,
+      "actual_submitted_evidence_canonical_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "cited_source_bindings": [],
+      "native_check_status": "not_requested",
+      "native_error": null,
+      "observed_stages": [
+        "GEN"
+      ],
+      "human_rating": null,
+      "human_approval": null,
+      "question_relevance": "met",
+      "core_criteria": [
+        {
+          "id": "MOON1",
+          "criterion": "The Moon is seen by reflected sunlight; during ordinary non-eclipse geometry about half its surface is illuminated by the Sun.",
+          "status": "met"
+        },
+        {
+          "id": "MOON2",
+          "criterion": "As the Moon orbits Earth, the viewing geometry changes and we see different fractions of that sunlit hemisphere, producing phases.",
+          "status": "met"
+        },
+        {
+          "id": "MOON3",
+          "criterion": "Ordinary phases are not caused by Earth's shadow; Earth's shadow on the Moon concerns a lunar eclipse, a different phenomenon.",
+          "status": "met"
+        },
+        {
+          "id": "MOON4",
+          "criterion": "Honor explicit no-retrieval general mode: no textbook retrieval, submitted evidence or fabricated source citations.",
+          "status": "met"
+        }
+      ],
+      "core_correct_complete_delivered": true,
+      "core_rationale": "Reflected sunlight and changing viewing geometry are correctly distinguished from Earth-shadow lunar eclipses; explicit general mode has no retrieved evidence or citations.",
+      "strict_scientifically_clean_delivered": true,
+      "strict_scientific_status": "met",
+      "scientific_issues": [],
+      "short_answer_status": "met",
+      "citation_faithfulness": "not_applicable_explicit_general_knowledge",
+      "citation_rationale": "Zero RAG/evidence/citations is the requested behavior; source provenance remains explicitly unverified general knowledge.",
+      "successful_complete_latency_ms": 3431.199999999255,
+      "successful_complete_latency_is_saved_browser_observation": true,
+      "meets_ten_seconds_delivery": true,
+      "core_correct_complete_and_under_ten_seconds": true,
+      "strict_clean_and_under_ten_seconds": true,
+      "failure_denominator_retained": false,
+      "failed_raw_draft_read_or_graded": false
+    },
+    {
+      "case_id": "N1-ON",
+      "question_id": "N1",
+      "question": "What are isotopes of an element? Include one example.",
+      "mode": "ON",
+      "answer_mode": "textbook",
+      "publication_status": "COMPLETE_PUBLISHED_ANSWER_RENDERED",
+      "published": true,
+      "answer_id": "9f493352-b97f-48a4-9003-c6277bb5314c",
+      "request_id": "d2f08700-dbbc-440b-ac71-66c3596ce20d",
+      "job_id": "0cf08f89-09e3-470c-ae07-a15fdc386458",
+      "full_published_response": {
+        "schema_version": "chat_response_v1",
+        "response_type": "answer",
+        "answer_text": "Isotopes are atoms of the same element that differ in mass. [ev_002]\n\nThey differ in mass because they have different numbers of neutrons, but they are chemically identical because they have the same number of protons. [ev_002]\n\nEquivalently, atoms with the same atomic number but different mass numbers are isotopes of the same element. [ev_008]\n\nFor example, magnesium exists as a mixture of three isotopes, each with an atomic number of 12 and with mass numbers of 24, 25, and 26, respectively; these isotopes can be identified as 24Mg, 25Mg, and 26Mg. [ev_001]",
+        "short_answer": "Isotopes are atoms of the same element that differ in mass because they have different numbers of neutrons while having the same number of protons; for example, magnesium exists as 24Mg, 25Mg, and 26Mg, each with atomic number 12 and mass numbers 24, 25, and 26, respectively. [ev_002] [ev_001]",
+        "citations": [
+          "ev_002",
+          "ev_008",
+          "ev_001"
+        ],
+        "refusal_reason": null,
+        "follow_up_questions": [],
+        "confidence": 0.95
+      },
+      "answer_text_sha256": "5f83c3c856b41664f7cad62b590e6d8ff31eedde267ef1ecfeb4f9506d4d7b0c",
+      "short_answer_sha256": "339aa6872b01b40e38cec6fee85d59d9b4f46116e910f5ca3361f9a092c87862",
+      "response_canonical_sha256": "532219d1187e6c23848d97e1e1ef8cb1eb8f2bf524adb49021f11414f943f778",
+      "citations_canonical_sha256": "2ebc0c9fe36793b4e7881be8d603795f4ac76868ffe16fc7b0e6427ebfd75cd7",
+      "actual_submitted_evidence_count": 14,
+      "actual_submitted_evidence_canonical_sha256": "637b600f32095b0d45e28296362ae90ec3e7098ba54ebd49a2e8c1f63a7d6a6f",
+      "cited_source_bindings": [
+        {
+          "evidence_id": "ev_002",
+          "chunk_id": "0e6a7b7f5574ab244b12a243d212bfcb208b",
+          "asset_id": "76de5d4c-a66f-4a77-be54-938fe368b632",
+          "processing_id": "cc12c354-b6a1-4fa9-a259-5e388cfaf342",
+          "source_title": "Chemistry 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/chemistry-2e_-_WEB.pdf",
+          "section": "Chapter 2 Atoms, Molecules, and Ions / 2.2 Evolution of Atomic Theory",
+          "pages": [
+            82
+          ],
+          "locator": "Chapter 2 Atoms, Molecules, and Ions / 2.2 Evolution of Atomic Theory; PDF physical pages 82; Figures or formulas may require viewing the original PDF.",
+          "text_hash": "bc8388ab6c48112a180a15f16adf3b7301db80e226216bdd7e042c52243ba9ad",
+          "chunk_text_hash": "3a60ef777bf9e6dd62332fdff4453f631d1c4469770635b3351ccc4883c6ed57",
+          "chunk_start": 0,
+          "chunk_end": 1113,
+          "exact_submitted_wire_text_matches_saved_evidence": true,
+          "mapped_fragments": [
+            {
+              "fragment_id": "span_11e67d953f2581a859c58d730d6b6735",
+              "document_version_id": "d50e0f43-86dc-4b18-9be5-a6da4407f8d4",
+              "source_unit_id": "9270a1ff805fc14d5e278918a91d1c5207df",
+              "page": 82,
+              "start": 1287,
+              "end": 1375,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 216,
+              "chunk_end": 304,
+              "text_hash": "754b36da85aae58ebb70b88063f22a212bb2faee77c824922c2ca94572995b70"
+            },
+            {
+              "fragment_id": "span_fe25d80b8a8dbc24d34c480a84f61bff",
+              "document_version_id": "d50e0f43-86dc-4b18-9be5-a6da4407f8d4",
+              "source_unit_id": "9270a1ff805fc14d5e278918a91d1c5207df",
+              "page": 82,
+              "start": 1982,
+              "end": 2184,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 911,
+              "chunk_end": 1113,
+              "text_hash": "badd9409f0af1fabc21aa70e01854ea8609d53fdea00ac9aa7cf7cb51a4c9fdd"
+            }
+          ]
+        },
+        {
+          "evidence_id": "ev_008",
+          "chunk_id": "8134af313a610f4f9399531440b96bd97597",
+          "asset_id": "76de5d4c-a66f-4a77-be54-938fe368b632",
+          "processing_id": "cc12c354-b6a1-4fa9-a259-5e388cfaf342",
+          "source_title": "Chemistry 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/chemistry-2e_-_WEB.pdf",
+          "section": "Chapter 21 Nuclear Chemistry / 21.1 Nuclear Structure and Stability",
+          "pages": [
+            1017,
+            1018
+          ],
+          "locator": "Chapter 21 Nuclear Chemistry / 21.1 Nuclear Structure and Stability; PDF physical pages 1017, 1018; Figures or formulas may require viewing the original PDF.",
+          "text_hash": "1082c6ece6193af52b613e0b91fb37915d38d6c60eadb84f8f29f2875e42a55a",
+          "chunk_text_hash": "782dab9089a1faf9b4591cde95f3f1bd6ad3a7ef54910729f541bcf4773c133e",
+          "chunk_start": 210,
+          "chunk_end": 1238,
+          "exact_submitted_wire_text_matches_saved_evidence": true,
+          "mapped_fragments": [
+            {
+              "fragment_id": "span_442f8784f8a78c0d0ec14275d4ae7fbe",
+              "document_version_id": "d50e0f43-86dc-4b18-9be5-a6da4407f8d4",
+              "source_unit_id": "dcd8f735de0d21860e2fea00e42ff7255ab2",
+              "page": 1018,
+              "start": 122,
+              "end": 216,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 332,
+              "chunk_end": 426,
+              "text_hash": "7c9317a14bef2ea0864e02dd8fda2ea7392a7698f59fabd784e0b94be89c65fd"
+            }
+          ]
+        },
+        {
+          "evidence_id": "ev_001",
+          "chunk_id": "4faa67192fcde94a7464d85233bdac8bcc2a",
+          "asset_id": "76de5d4c-a66f-4a77-be54-938fe368b632",
+          "processing_id": "cc12c354-b6a1-4fa9-a259-5e388cfaf342",
+          "source_title": "Chemistry 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/chemistry-2e_-_WEB.pdf",
+          "section": "Chapter 2 Atoms, Molecules, and Ions / 2.3 Atomic Structure and Symbolism",
+          "pages": [
+            87
+          ],
+          "locator": "Chapter 2 Atoms, Molecules, and Ions / 2.3 Atomic Structure and Symbolism; PDF physical pages 87; Figures or formulas may require viewing the original PDF.",
+          "text_hash": "b3e8599944a9fcd2e83a338472fa6b3e069e23286bc15344b8a6b90c15f83e65",
+          "chunk_text_hash": "e6aa165454ce5bae9c702edfdcfd116a320ef7b66e29cb80b8069c527d78b92c",
+          "chunk_start": 104,
+          "chunk_end": 825,
+          "exact_submitted_wire_text_matches_saved_evidence": true,
+          "mapped_fragments": [
+            {
+              "fragment_id": "span_81c7686ca71d8d7c77ab44ced2b91535",
+              "document_version_id": "d50e0f43-86dc-4b18-9be5-a6da4407f8d4",
+              "source_unit_id": "6a4ad98581a85b95ccef37520ce1121d2539",
+              "page": 87,
+              "start": 1513,
+              "end": 1662,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 618,
+              "chunk_end": 767,
+              "text_hash": "cbc6e3c02b12c0d7da49e205decea5714603727ea19ac5fa14a8a6ca8f18ab43"
+            },
+            {
+              "fragment_id": "span_41a03d72e9fda5e06aed3331c9aa061a",
+              "document_version_id": "d50e0f43-86dc-4b18-9be5-a6da4407f8d4",
+              "source_unit_id": "6a4ad98581a85b95ccef37520ce1121d2539",
+              "page": 87,
+              "start": 1663,
+              "end": 1720,
+              "offset_basis": "cleaned_source_unit_unicode",
+              "chunk_start": 768,
+              "chunk_end": 825,
+              "text_hash": "74372a4a770af8a0a771f6ea372fbe9fb0dd36616918d6687d39b26ffcc6b35c"
+            }
+          ]
+        }
+      ],
+      "native_check_status": "passed",
+      "native_error": null,
+      "observed_stages": [
+        "GEN",
+        "CHECK"
+      ],
+      "human_rating": null,
+      "human_approval": null,
+      "question_relevance": "met",
+      "core_criteria": [
+        {
+          "id": "DEF1",
+          "criterion": "Isotopes belong to the same element and have the same proton number/atomic number.",
+          "status": "met"
+        },
+        {
+          "id": "DEF2",
+          "criterion": "They differ in neutron number, producing different mass numbers/isotopic masses; neutron number is the defining difference, not electron count.",
+          "status": "met"
+        },
+        {
+          "id": "DEF3",
+          "criterion": "Give at least one scientifically valid example, such as a valid named isotope in a clear elemental context or a valid isotope pair. A pair is helpful but not mandatory because the prompt asks for one example.",
+          "status": "met"
+        }
+      ],
+      "core_correct_complete_delivered": true,
+      "core_rationale": "Isotope definition, same proton number/different neutron number, and the Mg-24/25/26 example all meet the requested scope.",
+      "strict_scientifically_clean_delivered": false,
+      "strict_scientific_status": "partly_met_precision_issue",
+      "scientific_issues": [
+        {
+          "id": "ISOTOPE_IDENTICAL_OVERBROAD",
+          "severity": "minor_scientific_precision",
+          "scope": "An unnecessary extra absolute statement; the requested isotope definition and example remain correct and complete.",
+          "answer_field": "answer_text",
+          "actual_span": "chemically identical because they have the same number of protons",
+          "source_evidence_id": "ev_002",
+          "source_faithfulness": "Faithful to the actually submitted Chemistry 2e 2.2 excerpt. The absolute already occurs in that source, not an unsupported addition by the answer.",
+          "scientific_limit": "Similar electronic structure gives very similar ordinary chemistry, but isotope effects prevent a universal identity claim for reaction rates/equilibria.",
+          "reference_ids": [
+            "REF_ISOTOPE",
+            "REF_ISOTOPE_EQUILIBRIUM"
+          ],
+          "short_answer_effect": "The short answer omits the absolute identity claim and is accurate."
+        }
+      ],
+      "short_answer_status": "met",
+      "citation_faithfulness": "met",
+      "citation_rationale": "Published cited claims are supported by the actual submitted excerpts, with the source-science limitations separately flagged.",
+      "successful_complete_latency_ms": 11613.199999999255,
+      "successful_complete_latency_is_saved_browser_observation": true,
+      "meets_ten_seconds_delivery": false,
+      "core_correct_complete_and_under_ten_seconds": false,
+      "strict_clean_and_under_ten_seconds": false,
+      "failure_denominator_retained": false,
+      "failed_raw_draft_read_or_graded": false
+    },
+    {
+      "case_id": "N2-ON",
+      "question_id": "N2",
+      "question": "Starting with a diploid cell, how do mitosis and meiosis differ in the number of divisions and the chromosome number of their products?",
+      "mode": "ON",
+      "answer_mode": "textbook",
+      "publication_status": "FAILED_KNOWN_FUNCTIONAL",
+      "published": false,
+      "answer_id": null,
+      "request_id": "28f75ccb-8cd4-4f96-9702-1b19428a47cd",
+      "job_id": "ebbd0c08-9a98-4a39-81b9-b78e86c8ca84",
+      "full_published_response": null,
+      "answer_text_sha256": null,
+      "short_answer_sha256": null,
+      "response_canonical_sha256": null,
+      "citations_canonical_sha256": null,
+      "actual_submitted_evidence_count": 10,
+      "actual_submitted_evidence_canonical_sha256": "c7d5396970d1fdd04a4bc84734eeaa5a45c56dfa37fe4d07ee4ef80dcd40066d",
+      "cited_source_bindings": [],
+      "native_check_status": null,
+      "native_error": {
+        "code": "ENHANCEMENT_VALIDATION_ERROR",
+        "message": "Enhanced response or source mapping failed validation.",
+        "details": {
+          "error_type": "ValueError",
+          "validation_code": "ASSERTION_COMPLETE_CLAIM_REQUIRED"
+        }
+      },
+      "observed_stages": [
+        "GEN"
+      ],
+      "human_rating": null,
+      "human_approval": null,
+      "question_relevance": "not_assessable",
+      "core_criteria": [
+        {
+          "id": "COMP1",
+          "criterion": "A complete mitosis involves one nuclear division, while a complete meiosis involves two successive nuclear divisions, meiosis I and II.",
+          "status": "not_assessable"
+        },
+        {
+          "id": "COMP2",
+          "criterion": "For the stated diploid starting cell, mitotic products retain the chromosome complement/ploidy, 2n.",
+          "status": "not_assessable"
+        },
+        {
+          "id": "COMP3",
+          "criterion": "Meiotic products have half the starting chromosome complement/ploidy, n; do not halve it again in meiosis II.",
+          "status": "not_assessable"
+        }
+      ],
+      "core_correct_complete_delivered": false,
+      "core_rationale": "A generated draft was not published because ASSERTION_COMPLETE_CLAIM_REQUIRED failed, before CHECK. No delivered content or citation quality can be rated.",
+      "strict_scientifically_clean_delivered": false,
+      "strict_scientific_status": "not_assessable",
+      "scientific_issues": [],
+      "short_answer_status": "not_assessable",
+      "citation_faithfulness": "not_assessable_unpublished",
+      "citation_rationale": "No published answer or citations; the failed raw draft is outside the delivered-answer review.",
+      "successful_complete_latency_ms": null,
+      "successful_complete_latency_is_saved_browser_observation": true,
+      "meets_ten_seconds_delivery": false,
+      "core_correct_complete_and_under_ten_seconds": false,
+      "strict_clean_and_under_ten_seconds": false,
+      "failure_denominator_retained": true,
+      "failed_raw_draft_read_or_graded": false
+    },
+    {
+      "case_id": "N3-ON",
+      "question_id": "N3",
+      "question": "What are the roles of mRNA, tRNA, and rRNA during translation?",
+      "mode": "ON",
+      "answer_mode": "textbook",
+      "publication_status": "FAILED_KNOWN_FUNCTIONAL",
+      "published": false,
+      "answer_id": null,
+      "request_id": "2a697199-0954-48cc-802c-fb63c79962d8",
+      "job_id": "bd913106-6d0e-4a41-97ef-12a82ae341b8",
+      "full_published_response": null,
+      "answer_text_sha256": null,
+      "short_answer_sha256": null,
+      "response_canonical_sha256": null,
+      "citations_canonical_sha256": null,
+      "actual_submitted_evidence_count": 13,
+      "actual_submitted_evidence_canonical_sha256": "2875ce07bc146177c4717ff990ef190f83cc71c944890458de330e484571abbb",
+      "cited_source_bindings": [],
+      "native_check_status": null,
+      "native_error": {
+        "code": "CHECKER_INCONSISTENT",
+        "message": "The checker returned inconsistent support metadata; no answer was published",
+        "details": {
+          "issue_codes": [
+            "CHECKER_SCHEMA_INVALID"
+          ],
+          "schema_diagnostics": {
+            "schema": "PUBLIC_SCHEMA_DIAGNOSTIC_OBSERVER_MAIN_V1",
+            "issues": [
+              {
+                "code": "CHECKER_SCHEMA_INVALID",
+                "field_errors": [
+                  {
+                    "path": [
+                      "evidence"
+                    ],
+                    "error_type": "too_long",
+                    "array_length_validation": "too_long",
+                    "array_length": {
+                      "actual_length": 9,
+                      "max_length": 8
+                    }
+                  }
+                ]
+              }
+            ],
+            "redaction_counts": {
+              "issue_rows_omitted": 0,
+              "field_rows_omitted": 0,
+              "path_tokens_omitted": 0,
+              "path_tokens_redacted": 0,
+              "error_types_redacted": 0,
+              "parse_codes_redacted": 0,
+              "invalid_rows": 0
+            }
+          }
+        }
+      },
+      "observed_stages": [
+        "GEN",
+        "CHECK"
+      ],
+      "human_rating": null,
+      "human_approval": null,
+      "question_relevance": "not_assessable",
+      "core_criteria": [
+        {
+          "id": "RNA1",
+          "criterion": "mRNA provides the coding/codon template that specifies amino-acid order.",
+          "status": "not_assessable"
+        },
+        {
+          "id": "RNA2",
+          "criterion": "tRNA brings the appropriate amino acid to the ribosome as an adaptor matching the mRNA code, normally explained through anticodon-codon pairing or an equivalent clear description.",
+          "status": "not_assessable"
+        },
+        {
+          "id": "RNA3",
+          "criterion": "rRNA is a functional/structural component of the ribosome that supports polypeptide assembly. An explicit catalytic-core/peptide-bond description is excellent precision but a correct introductory functional-ribosome explanation is sufficient.",
+          "status": "not_assessable"
+        }
+      ],
+      "core_correct_complete_delivered": false,
+      "core_rationale": "No answer was published: CHECKER_INCONSISTENT / CHECKER_SCHEMA_INVALID, evidence array length 9 exceeds maximum 8. A checker format failure does not establish that the unpublished draft is scientifically wrong.",
+      "strict_scientifically_clean_delivered": false,
+      "strict_scientific_status": "not_assessable",
+      "scientific_issues": [],
+      "short_answer_status": "not_assessable",
+      "citation_faithfulness": "not_assessable_unpublished",
+      "citation_rationale": "No published answer or citations; the failed raw draft is outside the delivered-answer review.",
+      "successful_complete_latency_ms": null,
+      "successful_complete_latency_is_saved_browser_observation": true,
+      "meets_ten_seconds_delivery": false,
+      "core_correct_complete_and_under_ten_seconds": false,
+      "strict_clean_and_under_ten_seconds": false,
+      "failure_denominator_retained": true,
+      "failed_raw_draft_read_or_graded": false
+    },
+    {
+      "case_id": "N4-ON",
+      "question_id": "N4",
+      "question": "A solution contains 3.00 g of urea (molar mass 60.06 g/mol) in a final solution volume of 250.0 mL. What is its molarity in mol/L? Show the unit conversions and report three significant figures.",
+      "mode": "ON",
+      "answer_mode": "textbook",
+      "publication_status": "FAILED_KNOWN_FUNCTIONAL",
+      "published": false,
+      "answer_id": null,
+      "request_id": "99cf3de1-017b-489f-9640-57ec5c018757",
+      "job_id": "ad9560dd-f8ee-49ab-9e2f-1c519b9c12db",
+      "full_published_response": null,
+      "answer_text_sha256": null,
+      "short_answer_sha256": null,
+      "response_canonical_sha256": null,
+      "citations_canonical_sha256": null,
+      "actual_submitted_evidence_count": 13,
+      "actual_submitted_evidence_canonical_sha256": "7f9536190ef81ac41f737ed341f23daff32eb3fd0db3d5c5e97eb49eadae6aa5",
+      "cited_source_bindings": [],
+      "native_check_status": null,
+      "native_error": {
+        "code": "SEMANTIC_CHECK_FAILED",
+        "message": "The proposed answer did not pass its required support or teaching checks",
+        "details": {
+          "revision": 0,
+          "publication_block": {
+            "version": "semantic_publication_block_v1",
+            "stop_reason": "insufficient_calls_for_repair_and_recheck",
+            "remaining_provider_calls": 0,
+            "required_calls_for_repair_and_recheck": 2,
+            "checker_contract_repair_calls": 0,
+            "checker_reported_body_ok": false,
+            "checker_reported_non_supported_factual_claims": 3,
+            "failed_checker_gate_names": [
+              "body_ok"
+            ],
+            "checker_reported_coverage": "full",
+            "requirement_issue_codes": [],
+            "structural_issue_codes": [
+              "CHECK_DERIVATION_INVALID"
+            ]
+          }
+        }
+      },
+      "observed_stages": [
+        "GEN",
+        "CHECK"
+      ],
+      "human_rating": null,
+      "human_approval": null,
+      "question_relevance": "not_assessable",
+      "core_criteria": [
+        {
+          "id": "CALC1",
+          "criterion": "Use amount n = mass / molar mass, with g divided by g/mol giving mol.",
+          "status": "not_assessable"
+        },
+        {
+          "id": "CALC2",
+          "criterion": "Use final solution volume 250.0 mL = 0.2500 L; do not treat this as volume of added water.",
+          "status": "not_assessable"
+        },
+        {
+          "id": "CALC3",
+          "criterion": "Use molarity = amount of solute / final solution volume in liters, with correct arithmetic and dimensional cancellation.",
+          "status": "not_assessable"
+        },
+        {
+          "id": "CALC4",
+          "criterion": "Report 0.200 mol/L, or the equivalent 2.00e-1 mol/L or 0.200 M, to three significant figures. A single combined unit-canceling equation satisfies the requested work; separate intermediate lines are not mandatory.",
+          "status": "not_assessable"
+        }
+      ],
+      "core_correct_complete_delivered": false,
+      "core_rationale": "No answer was published: SEMANTIC_CHECK_FAILED / CHECK_DERIVATION_INVALID and body_ok=false. This review does not infer mathematical incorrectness from that gate result; the unpublished draft was not treated as a delivered answer.",
+      "strict_scientifically_clean_delivered": false,
+      "strict_scientific_status": "not_assessable",
+      "scientific_issues": [],
+      "short_answer_status": "not_assessable",
+      "citation_faithfulness": "not_assessable_unpublished",
+      "citation_rationale": "No published answer or citations; the failed raw draft is outside the delivered-answer review.",
+      "successful_complete_latency_ms": null,
+      "successful_complete_latency_is_saved_browser_observation": true,
+      "meets_ten_seconds_delivery": false,
+      "core_correct_complete_and_under_ten_seconds": false,
+      "strict_clean_and_under_ten_seconds": false,
+      "failure_denominator_retained": true,
+      "failed_raw_draft_read_or_graded": false
+    },
+    {
+      "case_id": "N5-ON",
+      "question_id": "N5",
+      "question": "Use general knowledge without retrieving or consulting documents. Why does the Moon appear to change phase during a month, and are ordinary phases caused by Earth's shadow?",
+      "mode": "ON",
+      "answer_mode": "general_knowledge",
+      "publication_status": "COMPLETE_PUBLISHED_ANSWER_RENDERED",
+      "published": true,
+      "answer_id": "510d7a4f-89d2-4d4f-b6fb-62e23e946b16",
+      "request_id": "5ec32b9f-716f-469c-a602-eccfb9442f8d",
+      "job_id": "8ba6f64e-4188-4704-8786-d25f89179e96",
+      "full_published_response": {
+        "schema_version": "chat_response_v1",
+        "response_type": "answer",
+        "answer_text": "This is answered from general knowledge, not from any retrieved or consulted document, and it is unverified general knowledge rather than textbook authority.\n\nThe Moon does not emit its own visible light; we see it by reflected sunlight. As the Moon orbits Earth over roughly a month, the Sun illuminates the half of the Moon facing the Sun, while the half facing away is dark. From Earth we see different portions of that sunlit half, and this changing viewing geometry is why the Moon appears to change phase during a month.\n\nAt new moon the Moon lies roughly between Earth and the Sun, so its sunlit side faces away from us and we see little or none of the lit half. At full moon Earth lies roughly between the Sun and the Moon, so the sunlit side faces us and we see essentially the whole lit half. The intermediate phases — crescent, first quarter, gibbous, last quarter — correspond to intermediate viewing angles as the Moon moves along its orbit.\n\nOrdinary lunar phases are not caused by Earth's shadow. They are caused by the changing angle from which we view the Moon's sunlit half. Earth's shadow produces a lunar eclipse, which occurs only near full moon when the Moon passes into Earth's shadow; that is a distinct, occasional event, not the monthly cycle of phases.",
+        "short_answer": "The Moon appears to change phase because we see varying portions of its sunlit half as it orbits Earth over about a month; ordinary phases are not caused by Earth's shadow — that shadow causes a lunar eclipse.",
+        "citations": [],
+        "refusal_reason": null,
+        "follow_up_questions": [],
+        "confidence": 0.9
+      },
+      "answer_text_sha256": "e169f12806207bf4ff5d73fbde776ef849ce3fc49a341a9774c16a956db9e3cc",
+      "short_answer_sha256": "d9b728ef8a47e116d625cac066d8130e9ce86b63f791ededa59a0dbb70975c66",
+      "response_canonical_sha256": "36d936773db6156f79bf644c32be96230298112d0e9a24f820d6c1beb537c6bb",
+      "citations_canonical_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "actual_submitted_evidence_count": 0,
+      "actual_submitted_evidence_canonical_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "cited_source_bindings": [],
+      "native_check_status": "passed",
+      "native_error": null,
+      "observed_stages": [
+        "GEN",
+        "CHECK"
+      ],
+      "human_rating": null,
+      "human_approval": null,
+      "question_relevance": "met",
+      "core_criteria": [
+        {
+          "id": "MOON1",
+          "criterion": "The Moon is seen by reflected sunlight; during ordinary non-eclipse geometry about half its surface is illuminated by the Sun.",
+          "status": "met"
+        },
+        {
+          "id": "MOON2",
+          "criterion": "As the Moon orbits Earth, the viewing geometry changes and we see different fractions of that sunlit hemisphere, producing phases.",
+          "status": "met"
+        },
+        {
+          "id": "MOON3",
+          "criterion": "Ordinary phases are not caused by Earth's shadow; Earth's shadow on the Moon concerns a lunar eclipse, a different phenomenon.",
+          "status": "met"
+        },
+        {
+          "id": "MOON4",
+          "criterion": "Honor explicit no-retrieval general mode: no textbook retrieval, submitted evidence or fabricated source citations.",
+          "status": "met"
+        }
+      ],
+      "core_correct_complete_delivered": true,
+      "core_rationale": "Reflected sunlight and changing viewing geometry are correctly distinguished from Earth-shadow lunar eclipses; explicit general mode has no retrieved evidence or citations.",
+      "strict_scientifically_clean_delivered": true,
+      "strict_scientific_status": "met",
+      "scientific_issues": [],
+      "short_answer_status": "met",
+      "citation_faithfulness": "not_applicable_explicit_general_knowledge",
+      "citation_rationale": "Zero RAG/evidence/citations is the requested behavior; source provenance remains explicitly unverified general knowledge.",
+      "successful_complete_latency_ms": 10362.79999999702,
+      "successful_complete_latency_is_saved_browser_observation": true,
+      "meets_ten_seconds_delivery": false,
+      "core_correct_complete_and_under_ten_seconds": false,
+      "strict_clean_and_under_ten_seconds": false,
+      "failure_denominator_retained": false,
+      "failed_raw_draft_read_or_graded": false
+    }
+  ],
+  "source_quality_flags": [
+    {
+      "id": "ISOTOPE_IDENTICAL_OVERBROAD",
+      "status": "PENDING_SCIENTIFIC_REVIEW",
+      "source_scope": "Chemistry 2e 2.2, physical PDF p82",
+      "published_cells": [
+        "N1-OFF",
+        "N1-ON"
+      ],
+      "target_span": "chemically identical because they have the same number of protons",
+      "source_binding": {
+        "evidence_id": "ev_002",
+        "chunk_id": "0e6a7b7f5574ab244b12a243d212bfcb208b",
+        "asset_id": "76de5d4c-a66f-4a77-be54-938fe368b632",
+        "processing_id": "cc12c354-b6a1-4fa9-a259-5e388cfaf342",
+        "source_title": "Chemistry 2e",
+        "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/chemistry-2e_-_WEB.pdf",
+        "section": "Chapter 2 Atoms, Molecules, and Ions / 2.2 Evolution of Atomic Theory",
+        "pages": [
+          82
+        ],
+        "locator": "Chapter 2 Atoms, Molecules, and Ions / 2.2 Evolution of Atomic Theory; PDF physical pages 82; Figures or formulas may require viewing the original PDF.",
+        "text_hash": "bc8388ab6c48112a180a15f16adf3b7301db80e226216bdd7e042c52243ba9ad",
+        "chunk_text_hash": "3a60ef777bf9e6dd62332fdff4453f631d1c4469770635b3351ccc4883c6ed57",
+        "chunk_start": 0,
+        "chunk_end": 1113,
+        "exact_submitted_wire_text_matches_saved_evidence": true,
+        "mapped_fragments": [
+          {
+            "fragment_id": "span_11e67d953f2581a859c58d730d6b6735",
+            "document_version_id": "d50e0f43-86dc-4b18-9be5-a6da4407f8d4",
+            "source_unit_id": "9270a1ff805fc14d5e278918a91d1c5207df",
+            "page": 82,
+            "start": 1287,
+            "end": 1375,
+            "offset_basis": "cleaned_source_unit_unicode",
+            "chunk_start": 216,
+            "chunk_end": 304,
+            "text_hash": "754b36da85aae58ebb70b88063f22a212bb2faee77c824922c2ca94572995b70"
+          },
+          {
+            "fragment_id": "span_fe25d80b8a8dbc24d34c480a84f61bff",
+            "document_version_id": "d50e0f43-86dc-4b18-9be5-a6da4407f8d4",
+            "source_unit_id": "9270a1ff805fc14d5e278918a91d1c5207df",
+            "page": 82,
+            "start": 1982,
+            "end": 2184,
+            "offset_basis": "cleaned_source_unit_unicode",
+            "chunk_start": 911,
+            "chunk_end": 1113,
+            "text_hash": "badd9409f0af1fabc21aa70e01854ea8609d53fdea00ac9aa7cf7cb51a4c9fdd"
+          }
+        ]
+      },
+      "distinction": "The published answer is faithful to its submitted source. The source wording is scientifically broader than the defensible general statement.",
+      "corpus_or_DB_modified": false,
+      "human_rating": null,
+      "human_approval": null,
+      "target_span_offset_in_submitted_evidence": {
+        "start": 1047,
+        "end": 1112,
+        "coordinate_space": "submitted_evidence_unicode"
+      },
+      "target_span_sha256": "36b9b9a0371ac3c5c47878e29947130273680e6ca50c2189ee1449e561a6aafc",
+      "exact_original_excerpt_retained_in": "docs/execution/evidence/phase201/paid-off01/browser/actual01/N1-OFF-result.json",
+      "reference_ids": [
+        "REF_ISOTOPE",
+        "REF_ISOTOPE_EQUILIBRIUM"
+      ]
+    },
+    {
+      "id": "ALL_CODONS_AMINO_ACIDS_OVERBROAD",
+      "status": "PENDING_SCIENTIFIC_REVIEW",
+      "source_scope": "Biology 2e 3.5, physical PDF p111",
+      "published_cells": [
+        "N3-OFF"
+      ],
+      "target_span": "each codon codes for a single amino acid",
+      "source_binding": {
+        "evidence_id": "ev_004",
+        "chunk_id": "0662aedf21690d4f6cba712e86f92bd1af66",
+        "asset_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+        "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+        "source_title": "Biology 2e",
+        "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf",
+        "section": "Chapter 3 Biological Macromolecules / 3.5 Nucleic Acids",
+        "pages": [
+          111
+        ],
+        "locator": "Chapter 3 Biological Macromolecules / 3.5 Nucleic Acids; PDF physical pages 111; Figures or formulas may require viewing the original PDF.",
+        "text_hash": "ea7dea7cf012217fe71dff22f16ba80148cbfc12c0b324332963ff62a918eb33",
+        "chunk_text_hash": "a4a047e11c2f792009515f895f5b5b3a680da1605043c3e90c9f074e78fc1242",
+        "chunk_start": 725,
+        "chunk_end": 1233,
+        "exact_submitted_wire_text_matches_saved_evidence": true,
+        "mapped_fragments": [
+          {
+            "fragment_id": "span_79738a13cacdd0b4599e8570f5bdd896",
+            "document_version_id": "bb336e9b-ef43-466f-9e65-ca6d1d196c4b",
+            "source_unit_id": "ad29469bf07952c21c874a54a16aa6c0784b",
+            "page": 111,
+            "start": 1668,
+            "end": 1820,
+            "offset_basis": "cleaned_source_unit_unicode",
+            "chunk_start": 768,
+            "chunk_end": 920,
+            "text_hash": "e41e81a43d61565cdc2047725da5905a76424fc9bf677dec8c976d884a7cd6a2"
+          },
+          {
+            "fragment_id": "span_53079b3f2ad07fcc20accba051749963",
+            "document_version_id": "bb336e9b-ef43-466f-9e65-ca6d1d196c4b",
+            "source_unit_id": "ad29469bf07952c21c874a54a16aa6c0784b",
+            "page": 111,
+            "start": 1821,
+            "end": 1877,
+            "offset_basis": "cleaned_source_unit_unicode",
+            "chunk_start": 921,
+            "chunk_end": 977,
+            "text_hash": "92710c713f951082fddff19d9be3fe3be382c8e0dc2711fe2272fd1a5ac12cca"
+          },
+          {
+            "fragment_id": "span_93c36f70387fb7e3bf3c09cec37c76f9",
+            "document_version_id": "bb336e9b-ef43-466f-9e65-ca6d1d196c4b",
+            "source_unit_id": "ad29469bf07952c21c874a54a16aa6c0784b",
+            "page": 111,
+            "start": 1878,
+            "end": 1919,
+            "offset_basis": "cleaned_source_unit_unicode",
+            "chunk_start": 978,
+            "chunk_end": 1019,
+            "text_hash": "c8b1e211475bca4b60af4550c7921d6e571989062fd9048c7c19dd79c47f6c92"
+          },
+          {
+            "fragment_id": "span_ec0d467698a3220b6000433f4233d4c7",
+            "document_version_id": "bb336e9b-ef43-466f-9e65-ca6d1d196c4b",
+            "source_unit_id": "ad29469bf07952c21c874a54a16aa6c0784b",
+            "page": 111,
+            "start": 1983,
+            "end": 2064,
+            "offset_basis": "cleaned_source_unit_unicode",
+            "chunk_start": 1083,
+            "chunk_end": 1164,
+            "text_hash": "69351bc6d2f545dfeba7a07f7853cf7b8f90d064d556bd8186f10dff10a232d4"
+          },
+          {
+            "fragment_id": "span_5c259ab4154fb698d25c5b51d52e5a99",
+            "document_version_id": "bb336e9b-ef43-466f-9e65-ca6d1d196c4b",
+            "source_unit_id": "ad29469bf07952c21c874a54a16aa6c0784b",
+            "page": 111,
+            "start": 2065,
+            "end": 2133,
+            "offset_basis": "cleaned_source_unit_unicode",
+            "chunk_start": 1165,
+            "chunk_end": 1233,
+            "text_hash": "3411eac4c536e51b48a4bf5d8bc3cab0f7ed3f2039fcddf3f8d8c580e8d6ffc3"
+          }
+        ]
+      },
+      "distinction": "The published answer is faithful to its submitted source. The source wording is scientifically broader than the defensible general statement.",
+      "corpus_or_DB_modified": false,
+      "human_rating": null,
+      "human_approval": null,
+      "target_span_offset_in_submitted_evidence": {
+        "start": 253,
+        "end": 293,
+        "coordinate_space": "submitted_evidence_unicode"
+      },
+      "target_span_sha256": "a12c7a09260a67252ee8559b65c98a264dc73b8eca3cb29b8ad1d5f31b82c9ba",
+      "exact_original_excerpt_retained_in": "docs/execution/evidence/phase201/paid-off01/browser/actual01/N3-OFF-result.json",
+      "reference_ids": [
+        "REF_CODE",
+        "REF_TRANSLATION"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "REF_ISOTOPE",
+      "title": "Sharma et al. (2012), Deuterium isotope effects on drug pharmacokinetics. I. System-dependent effects of specific deuteration with aldehyde oxidase cleared drugs",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22190693/",
+      "doi": "10.1124/dmd.111.042770",
+      "type": "Original experimental research, public PubMed abstract",
+      "access_status": "READ_PUBLIC_ABSTRACT",
+      "basis": "Specific deuteration changes metabolic/pharmacokinetic behavior in mechanism- and system-dependent ways. It supplies a concrete counterexample to unqualified chemical identity, not a claim that every isotope substitution has a large effect.",
+      "scope_limit": "This study is about selected deuterated compounds and experimental systems; it is not direct measurement of the listed magnesium isotopes."
+    },
+    {
+      "id": "REF_CODE",
+      "title": "NCBI Genetic Codes, standard code table 1",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi#SG1",
+      "access_status": "READ_PUBLIC_OFFICIAL_PAGE",
+      "basis": "The standard genetic code includes termination entries rather than amino-acid assignments for all 64 codons."
+    },
+    {
+      "id": "REF_TRANSLATION",
+      "title": "OpenStax Biology 2e 15.5, termination section",
+      "url": "https://openstax.org/books/biology-2e/pages/15-5-ribosomes-and-protein-synthesis",
+      "access_status": "READ_PUBLIC_OFFICIAL_PAGE",
+      "basis": "STOP codons recruit termination/release machinery; ordinary tRNA matching does not assign an amino acid to every codon."
+    },
+    {
+      "id": "REF_MOLARITY",
+      "title": "OpenStax Chemistry 2e 3.3 Molarity",
+      "url": "https://openstax.org/books/chemistry-2e/pages/3-3-molarity",
+      "access_status": "READ_PUBLIC_OFFICIAL_PAGE",
+      "basis": "Molarity is amount per liter of final solution; mass is converted to moles using molar mass."
+    },
+    {
+      "id": "REF_MOON",
+      "title": "NASA Moon Phases",
+      "url": "https://science.nasa.gov/moon/moon-phases/",
+      "access_status": "READ_PUBLIC_OFFICIAL_PAGE",
+      "basis": "Changing orbital viewing geometry gives different visible fractions of the Moon’s sunlit half."
+    },
+    {
+      "id": "REF_ISOTOPE_EQUILIBRIUM",
+      "title": "Ceriotti and Markland (2013), Efficient methods and practical guidelines for simulating isotope effects",
+      "url": "https://pubs.aip.org/aip/jcp/article/138/1/014112/191928/Efficient-methods-and-practical-guidelines-for",
+      "doi": "10.1063/1.4772676",
+      "type": "Original computational research, public publisher abstract",
+      "access_status": "READ_PUBLIC_ABSTRACT",
+      "basis": "Isotopic substitutions can shift chemical equilibria; the paper analyzes H/D and oxygen-isotope substitution in water and liquid/vapor fractionation. This does not refute same-element identity or similar ordinary electronic chemistry."
+    },
+    {
+      "id": "REF_ECLIPSE",
+      "title": "NASA Eclipses and the Moon",
+      "url": "https://science.nasa.gov/moon/eclipses/",
+      "access_status": "READ_PUBLIC_OFFICIAL_PAGE",
+      "basis": "A lunar eclipse involves the Moon passing into Earth’s shadow; this differs from ordinary orbital phase geometry."
+    },
+    {
+      "id": "REF_DEFINITION",
+      "title": "OpenStax Chemistry 2e 2.3 Atomic Structure and Symbolism",
+      "url": "https://openstax.org/books/chemistry-2e/pages/2-3-atomic-structure-and-symbolism",
+      "access_status": "READ_PUBLIC_OFFICIAL_PAGE",
+      "basis": "Isotopes share element identity/proton number and differ in neutron number; magnesium-24/25/26 is a valid example."
+    }
+  ],
+  "arithmetic_crosscheck": {
+    "given_mass_g": "3.00",
+    "given_molar_mass_g_per_mol": "60.06",
+    "given_final_volume_mL": "250.0",
+    "moles_unrounded": "0.049950049950049950049950049950049950049950049950050",
+    "molarity_unrounded": "0.1998001998001998001998001998001998001998001998002",
+    "three_significant_figures": "0.200 mol/L",
+    "classification": "Independent decimal arithmetic; no source or model response used as gold.",
+    "final_solution_volume_L": "0.25",
+    "actually_recomputed_locally": true
+  },
+  "paired_published_comparisons": {
+    "N1": "Both published responses have the same three cited sources and core concepts. ON adds only an Equivalently transition to the third paragraph; the same chemical-identity precision problem remains despite native passed.",
+    "N5": "Both correctly explain phases versus eclipses without RAG. ON supplies more phase-geometry detail but does not establish a broader accuracy/speed benefit.",
+    "N2_N3_N4": "No paired comparison of delivered answer quality is possible when one or both modes have no publication."
+  },
+  "preserved_prior_RBC_source_pending": [
+    {
+      "path": "docs/execution/evidence/phase199/quality/SOURCE-REVIEW-PENDING199.json",
+      "sha256": "f833b3383c23f47ec05be412f4305e2008e1ff62ce3b59e159fd1a9f9223d940",
+      "status": "PENDING_SCIENTIFIC_REVIEW",
+      "modified": false
+    },
+    {
+      "path": "docs/execution/evidence/phase199/quality/SOURCE-REVIEW-PENDING199.md",
+      "sha256": "8a43f5881b5d1919e972ad1ceb080aa0f7decad3f170b62913ec5b734fdb6fcb",
+      "status": "PENDING_SCIENTIFIC_REVIEW",
+      "modified": false
+    }
+  ],
+  "input_file_pins": [
+    {
+      "path": "docs/execution/evidence/phase201/paid-off01/runtime/BUDGET-STATE192.json",
+      "bytes": 43817,
+      "sha256": "381973a4ac71972a8e9ee9989ef5d8282ff2b676a2164b87fe17db9c132861e4"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-off01/LIFECYCLE192.json",
+      "bytes": 644,
+      "sha256": "42218b35a195ee7c5bc6d72cec93960cc5a08fcc49f922afdd62f2ee701b6deb"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-off01/SOURCE192.json",
+      "bytes": 190579,
+      "sha256": "706501e73cbd2a28df57d4a1069fbf60752a3609ea8f25d3cef16dd4967d9c5e"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-off01/browser/actual01/N1-OFF-result.json",
+      "bytes": 55057,
+      "sha256": "92606d35bf0716dd8bb25bcc4d474010d313142e016c0973d9c1fa3fabb28591"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-off01/runtime/NATIVE-RESULT-N1-OFF192.json",
+      "bytes": 317834,
+      "sha256": "d81509878a1bd97fe8c681651bad4f5378a176a4fa741b70d91673f5672fafa8"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-off01/runtime/native-wire196/slot-01-request.json",
+      "bytes": 91714,
+      "sha256": "ace4ca63b1a815891e54ed3fa5b40965ba21228ca3fb390d38dbadb66b252ebf"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-off01/browser/actual01/N2-OFF-result.json",
+      "bytes": 5762,
+      "sha256": "c9ca776a537884019c27797ec87b7fc51e78ef4980a5ebe148dbd19d1d9f26a7"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-off01/runtime/NATIVE-RESULT-N2-OFF192.json",
+      "bytes": 330436,
+      "sha256": "9fe0137ac210948223bc6d01584a2dfa67e5e7a99c3ffbe5d7ca3eb72e6e7d5c"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-off01/runtime/native-wire196/slot-02-request.json",
+      "bytes": 90208,
+      "sha256": "e4e5d10e125faf145468aa2239448644a2c7888bed7316a4947850e491496736"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-off01/browser/actual01/N3-OFF-result.json",
+      "bytes": 62993,
+      "sha256": "98e2b6ca1d351810569d3f9ded5e64cfb79887beeb57b7ca13553cabfb8f2410"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-off01/runtime/NATIVE-RESULT-N3-OFF192.json",
+      "bytes": 305394,
+      "sha256": "2ca6e78cfb8acbe5eba836996630c4f148e5f701de033489d24401096886016c"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-off01/runtime/native-wire196/slot-03-request.json",
+      "bytes": 89911,
+      "sha256": "3cc090041ede045f60198bf311e7a6647fdeaccd2556da617256178df31e7320"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-off01/browser/actual01/N4-OFF-result.json",
+      "bytes": 66334,
+      "sha256": "ef336db23ce003a24e44837d04ebaec571c3f39a0a2f08d2e2bde3d74aa0c307"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-off01/runtime/NATIVE-RESULT-N4-OFF192.json",
+      "bytes": 378117,
+      "sha256": "50e0e60e97b25b80e3457e837de3a4cff46e7d0cac8a7f7dbfd0b1f2ecebde74"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-off01/runtime/native-wire196/slot-04-request.json",
+      "bytes": 50918,
+      "sha256": "f5d4c310147a2818bf7a5eef3521e99dd5a249a31b3c4af8534fd4b8e1914438"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-off01/browser/actual01/N5-OFF-result.json",
+      "bytes": 17752,
+      "sha256": "8a3109fba700ca3dd0393537d918fc1d33c6b88b09972316780d59f5fbf0650c"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-off01/runtime/NATIVE-RESULT-N5-OFF192.json",
+      "bytes": 90044,
+      "sha256": "291f2fc57d340b27719468a595ff7c62eea5a9ca8efc20a97421e611115d7b56"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-off01/runtime/native-wire196/slot-05-request.json",
+      "bytes": 25577,
+      "sha256": "f959f1d671980286b7950ba4e6338d5d88066f5c0edf4f55a3ed207968ed55b6"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-on02/runtime/BUDGET-STATE192.json",
+      "bytes": 76189,
+      "sha256": "3c21b8dd8ab895bfa678b74650e7d303796c5d67de7c6227224d0295a5f04c38"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-on02/LIFECYCLE192.json",
+      "bytes": 643,
+      "sha256": "8efec87074d0cb94f09d501938281391685a5a183d2a4c402d4e9aee68703529"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-on02/SOURCE192.json",
+      "bytes": 190661,
+      "sha256": "c23ed2fa8be13fce94784ed1edf0ce666aa2c151a08d5ee9ecca1dab0cc8e946"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-on02/browser/actual01/N1-ON-result.json",
+      "bytes": 57928,
+      "sha256": "c73721458f9f8ff352f4be18ec8b97b8bfc7ddf5dd8fc4db703cf01afd44a50f"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-on02/runtime/NATIVE-RESULT-N1-ON192.json",
+      "bytes": 331660,
+      "sha256": "6282f873e41f249c81c061d8c29153789d32d5e083bd3e7fb7e1ff32883d6b06"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-on02/runtime/native-wire196/slot-01-request.json",
+      "bytes": 91714,
+      "sha256": "ace4ca63b1a815891e54ed3fa5b40965ba21228ca3fb390d38dbadb66b252ebf"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-on02/browser/actual01/N2-ON-result.json",
+      "bytes": 5659,
+      "sha256": "07f4710d41f3841aaf196aed5a77b902c79908565b163635438c4bdf41642f94"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-on02/runtime/NATIVE-RESULT-N2-ON192.json",
+      "bytes": 332021,
+      "sha256": "bfa5cde06876db5e85f2b27a89250e9aded593ad5af97f5eb55e99f99dd48524"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-on02/runtime/native-wire196/slot-03-request.json",
+      "bytes": 90208,
+      "sha256": "e4e5d10e125faf145468aa2239448644a2c7888bed7316a4947850e491496736"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-on02/browser/actual01/N3-ON-result.json",
+      "bytes": 9730,
+      "sha256": "0a029057b5122c747d249928a446db4352ea0535069ebe5695433fbb0272e44a"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-on02/runtime/NATIVE-RESULT-N3-ON192.json",
+      "bytes": 303411,
+      "sha256": "e36ec5ad05399027b5f164a25ef27541402b7b67ae4fc0a6b37ac80fa99f5691"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-on02/runtime/native-wire196/slot-05-request.json",
+      "bytes": 89911,
+      "sha256": "3cc090041ede045f60198bf311e7a6647fdeaccd2556da617256178df31e7320"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-on02/browser/actual01/N4-ON-result.json",
+      "bytes": 8839,
+      "sha256": "0716d44466ce95abf970fb180f094e393b207ec0cb20636e46984775bcfb7b3a"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-on02/runtime/NATIVE-RESULT-N4-ON192.json",
+      "bytes": 380825,
+      "sha256": "62d4526c7feeb1c10a6327f0589d8c54019428a9359c9028031d4792e7b22035"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-on02/runtime/native-wire196/slot-07-request.json",
+      "bytes": 50918,
+      "sha256": "f5d4c310147a2818bf7a5eef3521e99dd5a249a31b3c4af8534fd4b8e1914438"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-on02/browser/actual01/N5-ON-result.json",
+      "bytes": 27315,
+      "sha256": "12b42838402b8af3c6bb455b9b07e40cd85972d51c04e11a9f5ef78e939cff3d"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-on02/runtime/NATIVE-RESULT-N5-ON192.json",
+      "bytes": 100047,
+      "sha256": "02f15c368843e95ec657b9aa1b416ad081b5542cdfac206af44308d494cac078"
+    },
+    {
+      "path": "docs/execution/evidence/phase201/paid-on02/runtime/native-wire196/slot-09-request.json",
+      "bytes": 25577,
+      "sha256": "f959f1d671980286b7950ba4e6338d5d88066f5c0edf4f55a3ed207968ed55b6"
+    }
+  ],
+  "limitations": [
+    "Five fixed development questions with one observation per mode; not a representative benchmark or a causal estimate of checkbox effects.",
+    "No failed raw draft was read or graded as delivered content; failure codes are reported without inferring unpublished scientific quality.",
+    "Citations and submitted-source hashes/locators are checked from saved public artifacts, without reopening documents through product services or querying the corpus.",
+    "Public reference pages were used only by the independent reviewer; no rubric/gold/reference was sent to runtime, GEN or CHECK.",
+    "The earlier phase200 zero-dispatch STOP remains a separate retained historical attempt; it is not overwritten by this current-cohort review."
+  ],
+  "non_actions": {
+    "product_model_or_evaluator_calls": 0,
+    "DB_operations": 0,
+    "runtime_or_source_edits": 0,
+    "services_or_browser_actions": 0,
+    "corpus_changes": 0,
+    "human_ratings_or_approvals": 0
+  },
+  "human_rating": null,
+  "human_approval": null,
+  "paired_published_bindings": {
+    "N1": {
+      "actual_submitted_evidence_identical": true,
+      "citation_ids_identical": true,
+      "short_answer_bytes_identical": true,
+      "primary_answer_only_difference": "The ON response introduces the third paragraph with Equivalently, atoms instead of Atoms.",
+      "independent_semantic_equivalence_certificate": false
+    },
+    "N5": {
+      "both_zero_submitted_evidence": true,
+      "both_empty_citations": true,
+      "exact_answer_text_identical": false,
+      "core_concepts_met_in_both": true,
+      "independent_semantic_equivalence_certificate": false
+    }
+  },
+  "cross_validation": {
+    "all_10_exact_questions_match_frozen_rubric_and_actual_GEN_user_message": true,
+    "all_6_published_native_and_browser_responses_match": true,
+    "all_cited_saved_evidence_texts_match_actual_GEN_wire_CURRENT_EVIDENCE": true,
+    "all_cited_text_hashes_and_mapped_fragment_hashes_verified": true,
+    "all_read_input_pins_rechecked_unchanged": true,
+    "source_manifest_identical_between_cohorts": true,
+    "all_4_failed_cells_have_no_answer_and_null_success_latency": true,
+    "published_general_cells_have_zero_RAG_evidence_and_citations": true,
+    "no_failed_raw_draft_scientific_grade": true
+  }
+}

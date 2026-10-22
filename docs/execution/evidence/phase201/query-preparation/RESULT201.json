@@ -1,0 +1,124 @@
+{
+  "schema": "phase201_native_preflight_repair_result_v1",
+  "status": "PASS_FOCUSED_OFFLINE_READY_FOR_ROOT_CONTROLLED_RETEST",
+  "manifest": {
+    "path": "MANIFEST201.json",
+    "bytes": 2699,
+    "sha256": "304b03b498c4123c593db9d04538b66da4fdd6c5d54c8c599cd0ec5bce306792"
+  },
+  "scope": {
+    "candidate_only": true,
+    "product_paths": [
+      "conversation/query_v22.py",
+      "generation/checked.py"
+    ],
+    "Main_frozen200_Complete200_edited": false,
+    "new_provider_requests": 0,
+    "network_or_database_calls": 0,
+    "services_started": 0,
+    "real_ten_cell_trial_completed": false,
+    "factual_quality_or_latency_measured": false
+  },
+  "native_grammar_repair": {
+    "cause": "Base V13 classifies whole-message example as reexplanation, then rejects the extracted whole current topic because it contains that same trailing example word. V22 inherits missing_referent or incorrectly borrows an older history topic.",
+    "change": "Only V22 recognizes a bounded complete question followed by an include/give/provide/show one/a/an example directive. Existing native prefix preparation and named-primary-content rules must both accept. Preserve the complete original query and every literal requirement; leave bare directives, unknown pronouns and historical ambiguity on their unchanged paths.",
+    "predecessors_v13_to_v21_changed": false,
+    "requirements_or_question_rewritten": false,
+    "native_before": {
+      "path": "BEFORE201.json",
+      "bytes": 37192,
+      "sha256": "46356c47bd3cb5c6c90c4c60223b60858776c5a67ec4580ebfd3a92149a2315f"
+    },
+    "native_after": {
+      "path": "AFTER201.json",
+      "bytes": 36990,
+      "sha256": "6668ec6e02d61c7ac7d9b78f0852e7984a0f85863c0a5ffb9e8b9bcf9213a230"
+    },
+    "full_frozen_question_set_preflight": {
+      "path": "QSET-PREFLIGHT201.json",
+      "bytes": 40668,
+      "sha256": "616647d7ad970c9412d33b544f0e6ccdb6f6b04e5f08b773f4be96fbbc130221",
+      "questions": 5,
+      "all_without_clarification": true,
+      "standalone_original_requirement_source_equal": true,
+      "all_literal_request_spans_exact": true
+    }
+  },
+  "programmatic_fallback_repair": {
+    "cause": "The actual derived zero-call child clears enhanced generation but keeps the source-derived provider-output policy, which the ordinary service correctly rejects as incompatible before producing its deterministic reply.",
+    "change": "Use the existing source-citation submission_policy with empty assertion admission only on the derived programmatic request. New v3 becomes existing json_field_contract_v2; old strict_v1/v2 remain unchanged. Global frozen-v3 admission remains enforced.",
+    "additional_child_replace_field": "provider_output_policy=assertion_citation_derivation_v1.submission_policy(programmatic_request.provider_output_policy, {})",
+    "parent_request_changed": false,
+    "checked4096_output_or_claims_or_source_policies_changed": false,
+    "actual_native_before_failure_reproduced": "PROVIDER_OUTPUT_POLICY_INCOMPATIBLE",
+    "actual_native_after": "Fast and Verified missing-reference/no-evidence parents produce their original deterministic clarification/refusal with zero adapter calls and zero consumed provider budget; user check choice remains reflected truthfully."
+  },
+  "verification": {
+    "initial_new_focused": {
+      "tests": 36,
+      "pass": 36,
+      "seconds": 1.0,
+      "junit": "junit201-01.xml",
+      "chunks": [
+        "493f2b",
+        "2e030c"
+      ]
+    },
+    "initial_combined_preserved": {
+      "tests": 441,
+      "pass": 411,
+      "fail": 30,
+      "seconds": 5.58,
+      "junit": "junit201-combined.xml",
+      "chunks": [
+        "8e825a",
+        "fdce29"
+      ],
+      "cause": "Historical V22 AST-evaluation fixture lacks the current query_v24 namespace; no product assertion failure. One copied-test namespace bound updated, all old cases/assertions retained."
+    },
+    "final_fresh_combined": {
+      "tests": 441,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 4.73,
+      "junit": {
+        "path": "junit201-combined-final.xml",
+        "bytes": 77835,
+        "sha256": "d37ab0085bfacf4ab94fba538b3a091a4d3009ae8f97a9f263b3267295d90a58"
+      },
+      "log": {
+        "path": "pytest201-combined-final.log",
+        "bytes": 588,
+        "sha256": "923b98ff1f22405b48605090681cc8d4b0211810a299a5336a0d035571d837d1"
+      },
+      "chunks": [
+        "7162ab",
+        "3acf3c"
+      ],
+      "composition": {
+        "prior_affected_unit_cases": 257,
+        "new_native_grammar_and_programmatic_cases": 36,
+        "existing_v22_requirement_and_consumer_cases": 148
+      },
+      "single_fresh_run": true
+    },
+    "ruff": {
+      "files": 3,
+      "path": "ruff201-final.log",
+      "bytes": 20,
+      "sha256": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+      "chunk": "0c695e"
+    },
+    "question_preflight_chunks": [
+      "51217b",
+      "950aa2"
+    ],
+    "independent_static_review": "Child reviewer found no blocker in the two-product delta; only subsequent formatting changed query source layout."
+  },
+  "remaining_limits": [
+    "No real-provider, semantic-support quality or latency acceptance is established by these offline results.",
+    "Root owns native observer/guard child-lineage handling, source freeze/promotion and any authorized real fixed-set execution.",
+    "Frozen prior real attempt200 remains setup-stopped with zero provider calls; no completed ten-cell result is inferred."
+  ]
+}

@@ -11,12 +11,17 @@ from pydantic import (
     field_validator,
     model_validator,
 )
+from contracts.text_validation import reject_null_character
 
 Text = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1)]
 ExactText = Annotated[str, StringConstraints(min_length=1, pattern=r"\S")]
 Level = Literal["beginner", "intermediate", "advanced"]
 Mode = Literal["interactive_chat", "benchmark_openqa", "benchmark_mcq"]
 AnswerMode = Literal["textbook", "general_knowledge"]
+VerificationMode = Literal["fast", "verified"]
+VerificationStatus = Literal[
+    "not_requested", "passed", "failed", "not_performed", "not_applicable", "unknown"
+]
 Reason = Literal["NO_EVIDENCE", "INSUFFICIENT_EVIDENCE", "CONFLICTING_EVIDENCE", "OUT_OF_SCOPE"]
 
 
@@ -59,6 +64,8 @@ class ChatMessageCreate(Contract):
     content: Annotated[str, StringConstraints(strip_whitespace=True, min_length=1, max_length=4000)]
     use_profile: bool = True
     answer_mode: AnswerMode = "textbook"
+    # Omitted by older clients: retain their checked execution and idempotency.
+    check_answer: bool | None = None
     teaching_mode: Literal["direct", "hint"] | None = None
     task_id: str | None = None
     task_action: Literal["auto", "new", "continue", "more_hint", "full_explanation"] = "auto"
@@ -67,6 +74,8 @@ class ChatMessageCreate(Contract):
     pending_tutor_question_version: int | None = Field(default=None, ge=1)
     turn_role: Literal["auto", "learner_attempt"] = "auto"
     reading_context: ReadingContext | None = None
+
+    _supported_content = field_validator("content")(reject_null_character)
 
     @model_validator(mode="after")
     def pending_question_identity(self):
@@ -332,6 +341,8 @@ class JobReceipt(Contract):
     job_id: str
     user_message_id: str | None
     poll_url: str
+    verification_mode: VerificationMode | None = None
+    check_requested: bool | None = None
 
 
 class JobOut(Contract):
@@ -344,6 +355,8 @@ class JobOut(Contract):
     can_retry: bool
     created_at: str
     updated_at: str
+    verification_mode: VerificationMode | None = None
+    check_requested: bool | None = None
 
 
 class AnswerOut(Contract):
@@ -356,6 +369,10 @@ class AnswerOut(Contract):
     status: Literal["answered", "clarification", "refused"]
     model_mode: Literal["mock", "live"]
     answer_mode: AnswerMode = "textbook"
+    verification_mode: VerificationMode | None = None
+    check_requested: bool | None = None
+    check_executed: bool | None = None
+    verification_status: VerificationStatus | None = None
     source_provenance: Literal[
         "textbook_evidence", "model_general_knowledge_unverified", "benchmark_protocol"
     ] = "textbook_evidence"

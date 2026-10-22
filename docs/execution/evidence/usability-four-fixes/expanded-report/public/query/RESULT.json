@@ -1,0 +1,221 @@
+{
+  "schema": "expanded_report_query_adjunct_candidate_result_v1",
+  "recorded_utc": "2026-10-19T04:06:31.172188+00:00",
+  "status": "CANDIDATE_PASS_MAIN_NOT_ADOPTED",
+  "source_authority_sha256": "63bca6f3de4d247112e1ae52c098bff7cf284932bf4cf511010f8f0e2e3d1731",
+  "Main_baseline_rows_verified_unchanged": 589,
+  "candidate_baseline_rows_unchanged": 587,
+  "runtime_modified_existing_paths": [
+    "backend/app/core/config.py",
+    "backend/app/modules/answering/service.py"
+  ],
+  "runtime_new_paths": [
+    "conversation/query_v25.py"
+  ],
+  "runtime_files": [
+    {
+      "relative_path": "backend/app/core/config.py",
+      "before_bytes": 9739,
+      "before_sha256": "c77735d0c0aefa21daf486a7717c03605eaa7ec1d05207ed4b7a75b03f4d3599",
+      "after_bytes": 9773,
+      "after_sha256": "224416e25a399083750facbaa719f63c323ff500b88358171385a32cea272ddf"
+    },
+    {
+      "relative_path": "backend/app/modules/answering/service.py",
+      "before_bytes": 142232,
+      "before_sha256": "a0905f2012d5eeb87b5e6ae841a0b0ae2d02530177846aede636daa42d4f89c9",
+      "after_bytes": 142911,
+      "after_sha256": "0b1a5873424b4714152eed6028923ce12711cb545291d40923304c1bdc1f9dd5"
+    },
+    {
+      "relative_path": "conversation/query_v25.py",
+      "before_bytes": null,
+      "before_sha256": null,
+      "after_bytes": 6309,
+      "after_sha256": "9b744437919eb300c01d6f16e2928ae595f175d50a4eafcced7c784f5823f927"
+    }
+  ],
+  "non_runtime_public_supplements": [
+    {
+      "relative_path": ".env.example",
+      "before_bytes": 2303,
+      "before_sha256": "e3db900e1f217230b562c9d98d0289b5dc71feaf40ed714eddacc64d7415a64d",
+      "after_bytes": 2303,
+      "after_sha256": "507d86b04dcc1ed5f5f00a6df234913caec213411a4bcb46785cad759a15627f"
+    }
+  ],
+  "frozen_predecessor_rows_unchanged": [
+    {
+      "path": "conversation/query.py",
+      "bytes": 23646,
+      "sha256": "71f7a08e95657678c53b01d8526f47926ca658b67a04e0ec6803c0b2c50f0e90"
+    },
+    {
+      "path": "conversation/query_v14.py",
+      "bytes": 6020,
+      "sha256": "80da8565ed46834e07aa2649014dab58f7fad90afa4b3659dec50c6630eeefc4"
+    },
+    {
+      "path": "conversation/query_v15.py",
+      "bytes": 5445,
+      "sha256": "dd610e8a3731f8fd5d065bbb2194278340b6b5936300d03e2f3b79389168fff1"
+    },
+    {
+      "path": "conversation/query_v16.py",
+      "bytes": 4389,
+      "sha256": "07b8223a5ed952a3af6dd792ea340555c55473198f3f2896fa1747f549f375cd"
+    },
+    {
+      "path": "conversation/query_v17.py",
+      "bytes": 1494,
+      "sha256": "c2cd01b55ed44e8d9f382ae056b2fc8460b1f273282aabf7bcf20c094180e18b"
+    },
+    {
+      "path": "conversation/query_v18.py",
+      "bytes": 10464,
+      "sha256": "2da612a39db9a3e9b43aa8c58ffdb8f58a2da53a9fdf96b6aa59fad2c36c70ef"
+    },
+    {
+      "path": "conversation/query_v19.py",
+      "bytes": 6913,
+      "sha256": "829273ca0e447e213de7b0599b58d459a85b7a0c1948d1765c8305e9c588facd"
+    },
+    {
+      "path": "conversation/query_v20.py",
+      "bytes": 1420,
+      "sha256": "f5be3682a9c1fc4896649d37f8d77dfdf0b6b14fac255eed52bd9039ea781fa6"
+    },
+    {
+      "path": "conversation/query_v21.py",
+      "bytes": 1443,
+      "sha256": "70672ef50e33b5a6b723cccebbb071d699a4dd46720f2ae8dbc5d144dc679622"
+    },
+    {
+      "path": "conversation/query_v22.py",
+      "bytes": 8042,
+      "sha256": "c4d7d1f87726aaaeec45ff8b855264502d3a01a126174c9cc062b9954b47f51b"
+    },
+    {
+      "path": "conversation/query_v23.py",
+      "bytes": 11008,
+      "sha256": "b8801e073195b51ac4e49d1d06479fb19ac9cc35d260fe7d8bf5a673f2eb8215"
+    },
+    {
+      "path": "conversation/query_v24.py",
+      "bytes": 20097,
+      "sha256": "c0469f793a13fdc51bc4bb8773cfe48932232ce340bd3cfc1c8175d72e6eeaea"
+    }
+  ],
+  "fresh_tests": {
+    "new_controls": 91,
+    "unchanged_neighbor_controls": 13,
+    "passed": 104,
+    "command_exit": 0,
+    "seconds": 1.0,
+    "log": {
+      "path": "E:\\5703\\isolated\\expanded-report-query-20261019\\pytest-v25-04.log",
+      "bytes": 183,
+      "sha256": "f08a01bbd4a1720352f5032eefe4371bde6d655e704b7b879692c1114508b4cb"
+    }
+  },
+  "ruff": {
+    "status": "PASS",
+    "exit": 0,
+    "log": {
+      "path": "E:\\5703\\isolated\\expanded-report-query-20261019\\ruff-v25-final.log",
+      "bytes": 20,
+      "sha256": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0"
+    }
+  },
+  "retained_initial_failures": [
+    {
+      "step": "integration materialization",
+      "exit": 1,
+      "reason": "Public .env.example is outside the 589 runtime rows and initially absent from candidate; candidate-only partial config edit was restored before the corrected public supplement copy and integration."
+    },
+    {
+      "log": {
+        "path": "E:\\5703\\isolated\\expanded-report-query-20261019\\pytest-v25-01.log",
+        "bytes": 4810,
+        "sha256": "cb500e6f7d42b8e61fadb381aac408bead07db25861f47810d4af98b1cec7406"
+      },
+      "passed": 73,
+      "failed": 4,
+      "reason": "New AST test named nonexistent process_answer instead of execute_answer."
+    },
+    {
+      "log": {
+        "path": "E:\\5703\\isolated\\expanded-report-query-20261019\\pytest-v25-02.log",
+        "bytes": 5854,
+        "sha256": "6b59949b59be7e807c72edbfd49d89c0dff6fd82bca8f9709a99ce69c40783eb"
+      },
+      "passed": 81,
+      "failed": 4,
+      "reason": "New AST test used nonexistent requirements assignment instead of understanding."
+    },
+    {
+      "log": {
+        "path": "E:\\5703\\isolated\\expanded-report-query-20261019\\pytest-v25-03.log",
+        "bytes": 5127,
+        "sha256": "91b6c3061e1cb823a21187345c178e314087e8cd73c926ae67bc83929f58425e"
+      },
+      "passed": 100,
+      "failed": 4,
+      "reason": "New AST test assumed wrong conditional AST shape; corrected to select unique actual consumer-call expression."
+    }
+  ],
+  "source_review": {
+    "reviewer": "/root/query_adjunct_fix/review_local_grammar",
+    "status": "NO_REMAINING_BLOCKING_SOURCE_FINDING",
+    "reviewed_v25_bytes": 6309,
+    "reviewed_v25_sha256": "9b744437919eb300c01d6f16e2928ae595f175d50a4eafcced7c784f5823f927",
+    "review_type": "Independent read-only source review; not human acceptance or runtime execution.",
+    "addressed_findings": [
+      "same/selected/ordinal discourse pointers",
+      "personal and possessive references such as yours/our findings"
+    ]
+  },
+  "tests": {
+    "path": "E:\\5703\\isolated\\expanded-report-query-20261019\\candidate\\tests\\unit\\test_query_v25_local_adjunct.py",
+    "bytes": 12719,
+    "sha256": "8fd18281f08c45cf7de82548b9e833599efa669e9129f9662cf974fb05c45c2a"
+  },
+  "unchanged_neighbor_test": {
+    "path": "E:\\5703\\isolated\\expanded-report-query-20261019\\candidate\\tests\\unit\\test_query_v23.py",
+    "bytes": 6356,
+    "sha256": "aa7695a3a4029b42fbe8536d5cbff3fa01060c48cba6ea2fb2410ec50fbdcd02"
+  },
+  "network_database_model_calls": 0,
+  "Main_writes": 0,
+  "provider_cost_added": 0,
+  "not_run": [
+    "Main adoption/restart",
+    "real provider validation",
+    "browser validation",
+    "full backend suite",
+    "all --mode mock",
+    "earlier 92-control suite"
+  ],
+  "artifacts": [
+    {
+      "path": "E:\\5703\\isolated\\expanded-report-query-20261019\\RUNTIME.diff",
+      "bytes": 10519,
+      "sha256": "c8e24722020c261caf652e7c57aed33069ece82b1c1acf771d287574416ccbdd"
+    },
+    {
+      "path": "E:\\5703\\isolated\\expanded-report-query-20261019\\PUBLIC-ENV-EXAMPLE.diff",
+      "bytes": 542,
+      "sha256": "9ab964f1d616187388e69aa910bca617a4371555e52128f5a59835f6f361d1f0"
+    },
+    {
+      "path": "E:\\5703\\isolated\\expanded-report-query-20261019\\TESTS.diff",
+      "bytes": 13307,
+      "sha256": "35880149b9e94dfc074843b0bac78c8d039a367592113babbe37accf926c56cb"
+    },
+    {
+      "path": "E:\\5703\\isolated\\expanded-report-query-20261019\\BEFORE-AFTER.json",
+      "bytes": 14957,
+      "sha256": "d45537f672d74864817aeb09c6dc0c43124502d50e2833a36e45593a3a922154"
+    }
+  ]
+}

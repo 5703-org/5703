@@ -1,0 +1,235 @@
+--- a/backend/app/core/config.py
++++ b/backend/app/core/config.py
+@@ -113,7 +113,8 @@
+         "anchored_reference_v22",
+         "anchored_reference_v23",
+         "anchored_reference_v24",
+-    ] = "anchored_reference_v22"
++        "anchored_reference_v25",
++    ] = "anchored_reference_v25"
+     memory_semantic_policy_file: str | None = None
+     local_model_device: Literal["auto", "cpu", "cuda", "cuda:0", "mps", "recorded"] = "auto"
+     max_upload_bytes: int = Field(default=536_870_912, ge=1, le=536_870_912)
+--- a/backend/app/modules/answering/service.py
++++ b/backend/app/modules/answering/service.py
+@@ -37,6 +37,7 @@
+     query_v22,
+     query_v23,
+     query_v24,
++    query_v25,
+ )
+ from conversation.query import (
+     prepare_query,
+@@ -573,7 +574,7 @@
+             "reliability_policy": "evidence_reliability_v5",
+             "requirements_version": "question_requirements_v8"
+             if settings.chat_query_preparation_policy
+-            in {"anchored_reference_v22", "anchored_reference_v23", "anchored_reference_v24"}
++            in {"anchored_reference_v22", "anchored_reference_v23", "anchored_reference_v24", "anchored_reference_v25"}
+             else "question_requirements_v7"
+             if settings.chat_query_preparation_policy == "anchored_reference_v21"
+             else "question_requirements_v6"
+@@ -664,10 +665,13 @@
+                     "anchored_reference_v22",
+                     "anchored_reference_v23",
+                     "anchored_reference_v24",
++                    "anchored_reference_v25",
+                 }
+                 else {}
+             ),
+-            "preparation_version": query_v24.VERSION
++            "preparation_version": query_v25.VERSION
++            if settings.chat_query_preparation_policy == "anchored_reference_v25"
++            else query_v24.VERSION
+             if settings.chat_query_preparation_policy == "anchored_reference_v24"
+             else query_v23.VERSION
+             if settings.chat_query_preparation_policy == "anchored_reference_v23"
+@@ -1838,7 +1842,9 @@
+         initial_active_seconds = req.budget.get("active_seconds", 0)
+         query_started = time.perf_counter()
+         active_query_preparer = (
+-            query_v24.prepare_query
++            query_v25.prepare_query
++            if req.command.get("preparation_version") == query_v25.VERSION
++            else query_v24.prepare_query
+             if req.command.get("preparation_version") == query_v24.VERSION
+             else query_v23.prepare_query
+             if req.command.get("preparation_version") == query_v23.VERSION
+@@ -1877,6 +1883,7 @@
+                     query_v22.VERSION,
+                     query_v23.VERSION,
+                     query_v24.VERSION,
++                    query_v25.VERSION,
+                 }
+                 else history,
+                 context.get("summary_text"),
+@@ -1952,7 +1959,12 @@
+             practice_query[1]
+             if practice_query
+             else (
+-                query_v24.describe_requirements
++                query_v25.describe_requirements
++                if current_core
++                and req.command.get("requirements_version") == "question_requirements_v8"
++                and prepared
++                and prepared.get("preparation_version") == query_v25.VERSION
++                else query_v24.describe_requirements
+                 if current_core
+                 and req.command.get("requirements_version") == "question_requirements_v8"
+                 and prepared
+@@ -2025,6 +2037,7 @@
+                     query_v22.VERSION,
+                     query_v23.VERSION,
+                     query_v24.VERSION,
++                    query_v25.VERSION,
+                 }
+                 else history,
+             )
+--- /dev/null
++++ b/conversation/query_v25.py
+@@ -0,0 +1,145 @@
++"""Keep a named current request and its bounded local explanation adjunct.
++
++Frozen V22 owns unmatched cases. This rule recognizes syntax only; it does not
++resolve arbitrary coreference, establish evidence support or change retrieval.
++"""
++
++from __future__ import annotations
++
++import hashlib
++import re
++
++from contracts.models import PreparedQuery
++
++from . import query_v22 as previous
++from .query import DEPENDENT
++from .query_v15 import PRIMARY_DISCOURSE_POINTER
++
++VERSION = "conversation_preparer_v25"
++BASE_VERSION = previous.VERSION
++LOCAL_ADJUNCT = "current_named_explanation_adjunct_v25"
++_REQUEST = re.compile(
++    r"^(?:please\s+)?(?:(?:can|could|would|will)\s+you\s+(?:please\s+)?)?"
++    r"(?:define|explain|describe|what\s+(?:is|are))\s+"
++    r"(?P<subject>[a-z][a-z-]*(?:\s+[a-z][a-z-]*){0,5}?)"
++    r"(?P<style>\s+(?:in\s+(?:detail|simple\s+terms|simpler\s+terms|"
++    r"\d+\s+sentences?)|briefly))?"
++    r",\s*including\s+(?P<adjunct>[^;.!?\r\n]+)[.!?]?$",
++    re.I,
++)
++_COMPETING = re.compile(
++    r"\b(?:and|or|compare|comparison|between|versus|vs|near|beside|alongside|"
++    r"behind|against|with|without|of|for|from|to|in|on|at|under|over|whose|"
++    r"who|which|that|other|another|former|latter|both|either|same|first|second|"
++    r"third|last|next|selected|attached|shown|given|displayed|highlighted|"
++    r"what|how|why|when|where|i|me|my|mine|we|us|our|ours|you|your|yours|"
++    r"he|him|his|she|her|hers|their|theirs|them|there|here)\b",
++    re.I,
++)
++_LOCAL_CLAUSE = re.compile(
++    r"(?:what\s+(?:it\s+(?:is|does)|they\s+(?:are|do))|"
++    r"how\s+(?:it\s+(?:works|functions)|they\s+(?:work|function))|"
++    r"why\s+(?:it\s+(?:matters|is\s+important)|they\s+(?:matter|are\s+important)))",
++    re.I,
++)
++_GENERIC = previous._GENERIC_CONTENT_HEADS | {
++    "object", "objects", "thing", "things", "stuff", "something", "anything",
++    "everything", "one", "ones", "property", "properties", "attribute", "attributes",
++}
++
++
++def _local_adjunct(message):
++    """Require one explicit noun phrase and only local wh explanation clauses."""
++    match = _REQUEST.fullmatch(message)
++    if match is None or PRIMARY_DISCOURSE_POINTER.search(message):
++        return None
++    subject = match["subject"]
++    words = re.findall(r"[a-z][a-z-]*", subject.casefold())
++    if (
++        not words or words[-1] in _GENERIC or _COMPETING.search(subject)
++        or DEPENDENT.search(subject)
++        or len(re.findall(r"\b(?:a|an|the)\b", subject, re.I)) > 1
++        or not previous._named_primary_content(subject)
++    ):
++        return None
++    # Run the complete named head through the frozen native ambiguity checks.
++    # Removing the adjunct here is an eligibility check, never the submitted query.
++    head = message[:match.start("adjunct")].rsplit(",", 1)[0]
++    explicit = previous.prepare_query(head)
++    if explicit.needs_clarification or explicit.intent != "factual":
++        return None
++    clauses = re.split(r",\s*(?:and\s+)?|\s+and\s+", match["adjunct"], flags=re.I)
++    if not 1 <= len(clauses) <= 3 or any(
++        _LOCAL_CLAUSE.fullmatch(clause.strip()) is None for clause in clauses
++    ):
++        return None
++    # A mixed singular/plural list is outside this narrow grammar. No agreement
++    # or meaning is inferred from a noun's spelling.
++    refs = list(DEPENDENT.finditer(message))
++    if not refs or len({row.group().casefold() for row in refs}) != 1:
++        return None
++    return {
++        "version": LOCAL_ADJUNCT,
++        "method": "bounded_current_named_explanation_grammar",
++        "source_text": message,
++        "source_sha256": hashlib.sha256(message.encode()).hexdigest(),
++        "coordinate_space": "current_original_message",
++        "subject_span": {"start": match.start("subject"), "end": match.end("subject"),
++                         "text": subject},
++        "adjunct_span": {"start": match.start("adjunct"), "end": match.end("adjunct"),
++                         "text": match["adjunct"]},
++        "dependent_spans": [
++            {"start": row.start(), "end": row.end(), "text": row.group()} for row in refs
++        ],
++        "coreference_resolution": None,
++        "semantic_equivalence": None,
++        "semantic_sufficiency": None,
++        "eligibility_only": True,
++        "human_rating": None,
++    }
++
++
++def prepare_query(message, history=None, summary=None, *, version=VERSION) -> PreparedQuery:
++    if version != VERSION:
++        raise ValueError("Unsupported frozen query preparation version")
++    result = previous.prepare_query(message, history, summary).model_dump()
++    result["preparation_version"] = VERSION
++    historical_reference = (
++        result["needs_clarification"] and result["fallback_reason"] in {
++            "missing_referent", "ambiguous_referent_after_comparison",
++        }
++    ) or (
++        not result["needs_clarification"] and result["intent"] == "follow_up"
++        and result["referenced_message_ids"] and result["fallback_reason"] is None
++    )
++    if historical_reference and _local_adjunct(result["original_message"]) is not None:
++        result.update(
++            standalone_query=result["original_message"], intent="factual",
++            topic_relation="new_topic", referenced_message_ids=[],
++            needs_clarification=False, fallback_reason=LOCAL_ADJUNCT,
++        )
++    return PreparedQuery(**result)
++
++
++def describe_requirements(original, prepared, history=None):
++    if prepared.get("preparation_version") != VERSION:
++        raise ValueError("Unsupported frozen query preparation dependency")
++    adjunct = None
++    if prepared.get("fallback_reason") == LOCAL_ADJUNCT:
++        adjunct = _local_adjunct(original.strip())
++        if adjunct is None or prepared != prepare_query(original, history).model_dump():
++            raise ValueError("The current named explanation adjunct is unavailable")
++    result = previous.describe_requirements(
++        original, {**prepared, "preparation_version": BASE_VERSION}, history
++    )
++    if adjunct is not None:
++        result = {**result, "current_named_explanation_adjunct": adjunct}
++    return {
++        **result,
++        "preparation_dependency": {
++            **result["preparation_dependency"],
++            "version": "query_v25_requirement_dependency_v1",
++            "frozen_preparation_version": VERSION,
++            "current_reference_base_version": BASE_VERSION,
++        },
++    }

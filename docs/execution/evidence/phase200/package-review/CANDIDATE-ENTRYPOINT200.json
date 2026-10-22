@@ -1,0 +1,56 @@
+{
+  "schema": "phase200_offline_candidate_entrypoint_verification_v1",
+  "status": "PASS_VERIFY_ONLY_DECLARED_FILES",
+  "overall_candidate_delivery_status": "HOLD_PENDING_ROOT_REPAIR_AND_LIVE_DECISION",
+  "command": [
+    "powershell.exe",
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "E:\\5703\\isolated\\phase200-complete-candidate-20261015\\start_candidate.ps1",
+    "-VerifyOnly"
+  ],
+  "tool_initial_chunk": "01ca3f",
+  "session_id": 3917,
+  "tool_final_chunk": "2fc435",
+  "exit_code": 0,
+  "manifest_sha256": "3f50aa44faaba726491cf8a83e8d54aa3cdb5735124e24e38e51bb9d3d34e405",
+  "manifest_status": "PREPARED_COMPLETE_PUBLIC_SOURCE_RESOURCES_LIVE_VALIDATION_PENDING",
+  "public_files_verified": 882,
+  "public_bytes_verified": 1867725386,
+  "files": [
+    {
+      "path": "start_candidate.ps1",
+      "bytes": 3455,
+      "sha256": "473d3c264e4b15cdafa8fd75d82705d182ef6541fa9052a80486089b4aa01f69"
+    },
+    {
+      "path": "scripts/release/start_local.ps1",
+      "bytes": 17236,
+      "sha256": "21f0514dec7c306ecf1b476c2675a84cb9909ab90e92f0b6c6769775aa2be0c4"
+    },
+    {
+      "path": "scripts/release/verify_candidate200.py",
+      "bytes": 4370,
+      "sha256": "490ae0682683df387c111c23545c374f68005af4e371eaf336045ebd2378ea4f"
+    },
+    {
+      "path": ".env.example",
+      "bytes": 2371,
+      "sha256": "a65e3ec36b85fcce0ce5e9992881516e25bb031d70f1469a91496ac5c9e4d21a"
+    },
+    {
+      "path": "CANDIDATE200_START_HERE.md",
+      "bytes": 4779,
+      "sha256": "e3f24fa46de851df7cc531c015f5560b002d47a77870183e95aceb9c0d25f8c5"
+    }
+  ],
+  "metadata_closure_receipt_sha256": "f52da1c0fa7f044c238cd68d82814b9d199454734297e7f5b64ca463e5b75dc7",
+  "known_metadata_additions_not_in_provisional_882_manifest": true,
+  "full_install_startup_dependency_or_runtime_cache_acceptance": false,
+  "services_started_installs_database_network_provider_calls": 0,
+  "Root_real_trial200_state": "STOPPED_SETUP;0GEN0CHECK;ON_NOT_RUN; preserveattempt01, no semantic/latency PASS",
+  "Complete_files_changed_by_VerifyOnly": 0,
+  "new_final_archive_created": false
+}

@@ -1,0 +1,42 @@
+{
+  "status": "PASS_SOURCE_APPLY_AND_NEW_PATH_ROLLBACK_WITH_RETAINED_FIXTURE_AUTHOR_ERROR",
+  "baseline_rows": 589,
+  "target_rows": 590,
+  "actual_changed_files": 4,
+  "source_apply_journal": {
+    "path": "E:\\5703\\isolated\\expanded-report-source-fixture-20261019\\backup\\source\\journal.json",
+    "bytes": 2576,
+    "sha256": "1a17131485f1c076b1e1068f62bbd1fd069d07ff9983b70702cc8dcb49b375d2"
+  },
+  "target_projection_before_rollback": {
+    "status": "PASS_FINAL_PUBLIC_SOURCE",
+    "required_rows": 590,
+    "runtime_acceptance": false
+  },
+  "new_path_absent_after_rollback": true,
+  "baseline589_and_release_exactly_restored": true,
+  "rollback": {
+    "status": "ROLLED_BACK_PUBLIC_SOURCE_ONLY",
+    "restored_files": 4,
+    "protected_files_identical": true,
+    "database_actions": 0
+  },
+  "release_restoration": {
+    "status": "RESTORED_PREVIOUS_RUNTIME_RELEASE_MANIFEST",
+    "metadata_mutations": 1,
+    "restored": {
+      "path": "E:\\5703\\isolated\\expanded-report-source-fixture-20261019\\project\\UPGRADE_MANIFEST.json",
+      "bytes": 101804,
+      "sha256": "aa9670d934220000f3f35c53c215e8cd42b538023aa89e88db3572b59a8c3e4a"
+    }
+  },
+  "initial_command_exit": 1,
+  "initial_error": "Fixture author passed backup directory instead of journal.json to helper.rollback; source apply and release install succeeded; Main untouched. Actual unchanged helper rollback then executed once with exact journal path.",
+  "corrected_fixture_source": {
+    "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\usability-four-fixes\\expanded-report\\adoption\\check_new_source_path.py",
+    "bytes": 3579,
+    "sha256": "44b4a0babf6b0f08c6cf980adb1c3482fef1f9ee04f10a76390d377d0c873fd8"
+  },
+  "Main_runtime_writes": 0,
+  "services_database_network_provider_actions": 0
+}

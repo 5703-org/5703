@@ -37,6 +37,7 @@ def main():
         "content",
         "use_profile",
         "answer_mode",
+        "check_answer",
         "teaching_mode",
         "task_id",
         "task_action",
@@ -48,6 +49,7 @@ def main():
     }
     ordinary = ChatMessageCreate(content="A question")
     assert ordinary.answer_mode == "textbook"
+    assert ordinary.check_answer is None
     assert ordinary.teaching_mode is None and ordinary.task_id is None
     assert ordinary.task_action == "auto"
     assert ordinary.reading_context is None

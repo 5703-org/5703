@@ -255,6 +255,87 @@ paths:
                 $ref: '#/components/schemas/ErrorEnvelope'
       security:
       - HTTPBearer: []
+  /api/v1/auth/logout:
+    post:
+      tags:
+      - identity
+      summary: Logout
+      operationId: logout_api_v1_auth_logout_post
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Envelope_dict_str__bool__'
+        '400':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '401':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '403':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '404':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '409':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '410':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '413':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '415':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '422':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '500':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+        '503':
+          description: Structured application error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorEnvelope'
+      security:
+      - HTTPBearer: []
   /api/v1/admin/users:
     get:
       tags:
@@ -10797,6 +10878,14 @@ paths:
           type: boolean
           default: true
           title: Due Only
+      - name: goal_id
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Goal Id
       responses:
         '200':
           description: Successful Response
@@ -12940,6 +13029,19 @@ paths:
           content:
             application/json:
               schema: {}
+  /api/v1/health/retrieval:
+    get:
+      tags:
+      - health
+      summary: Retrieval Readiness
+      description: Observe the request worker without initializing API-side caches.
+      operationId: retrieval_readiness_api_v1_health_retrieval_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
   /health:
     get:
       tags:
@@ -13028,6 +13130,13 @@ components:
           - type: string
           - type: 'null'
           title: Checker Test Id
+        activation_scope:
+          type: string
+          enum:
+          - answer_only
+          - answer_and_checker
+          title: Activation Scope
+          default: answer_and_checker
       additionalProperties: false
       type: object
       required:
@@ -13083,6 +13192,36 @@ components:
           - general_knowledge
           title: Answer Mode
           default: textbook
+        verification_mode:
+          anyOf:
+          - type: string
+            enum:
+            - fast
+            - verified
+          - type: 'null'
+          title: Verification Mode
+        check_requested:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Check Requested
+        check_executed:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Check Executed
+        verification_status:
+          anyOf:
+          - type: string
+            enum:
+            - not_requested
+            - passed
+            - failed
+            - not_performed
+            - not_applicable
+            - unknown
+          - type: 'null'
+          title: Verification Status
         source_provenance:
           type: string
           enum:
@@ -13338,6 +13477,35 @@ components:
         chat_ready:
           type: boolean
           title: Chat Ready
+        hint_ready:
+          type: boolean
+          title: Hint Ready
+          default: false
+        hint_unavailable_reason:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Hint Unavailable Reason
+          default: Hint teaching availability has not been established.
+        checker_enabled:
+          type: boolean
+          title: Checker Enabled
+          default: true
+        checker_unavailable_reason:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Checker Unavailable Reason
+        practice_assessment_ready:
+          type: boolean
+          title: Practice Assessment Ready
+          default: false
+        practice_assessment_unavailable_reason:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Practice Assessment Unavailable Reason
+          default: Practice assessment availability has not been established.
         evaluation_ready:
           type: boolean
           title: Evaluation Ready
@@ -14053,6 +14221,11 @@ components:
           - general_knowledge
           title: Answer Mode
           default: textbook
+        check_answer:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Check Answer
         teaching_mode:
           anyOf:
           - type: string
@@ -15930,6 +16103,64 @@ components:
       - status
       - created_at
       title: FailureAttempt
+    FailureClassification:
+      properties:
+        version:
+          type: string
+          const: safe_failure_classification_v1
+          title: Version
+          default: safe_failure_classification_v1
+        category:
+          type: string
+          enum:
+          - context_budget
+          - output_validation
+          - evidence_check
+          - checker_contract
+          - checker_unavailable
+          - provider_timeout
+          - provider_connection
+          - provider_rejection
+          - configuration
+          - budget_exhausted
+          - unclassified
+          title: Category
+        stage:
+          anyOf:
+          - type: string
+            enum:
+            - preparing
+            - generating
+            - generation
+            - generation_format_repair
+            - semantic_repair
+            - joint_check
+            - joint_recheck
+            - checker_contract_repair
+          - type: 'null'
+          title: Stage
+        error_type:
+          anyOf:
+          - type: string
+            enum:
+            - ValueError
+            - ValidationError
+            - KeyError
+            - TypeError
+          - type: 'null'
+          title: Error Type
+        validation_code:
+          anyOf:
+          - type: string
+            maxLength: 79
+          - type: 'null'
+          title: Validation Code
+      additionalProperties: false
+      type: object
+      required:
+      - category
+      title: FailureClassification
+      description: A selected failure kind, not a retry decision or a semantic verdict.
     FailureCounts:
       properties:
         candidates:
@@ -16044,6 +16275,33 @@ components:
           anyOf:
           - $ref: '#/components/schemas/FailurePublicationBlock'
           - type: 'null'
+        failure_classification:
+          anyOf:
+          - $ref: '#/components/schemas/FailureClassification'
+          - type: 'null'
+        verification_mode:
+          anyOf:
+          - type: string
+            enum:
+            - fast
+            - verified
+          - type: 'null'
+          title: Verification Mode
+        check_requested:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Check Requested
+        check_executed:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Check Executed
+        verification_status:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Verification Status
       additionalProperties: false
       type: object
       required:
@@ -16720,6 +16978,17 @@ components:
           - practised
           - needs_review
           title: Status
+        practice_available:
+          type: boolean
+          title: Practice Available
+          default: false
+        practice_availability_reason:
+          type: string
+          enum:
+          - available
+          - no_published_questions
+          title: Practice Availability Reason
+          default: no_published_questions
         recommended_action:
           type: string
           enum:
@@ -16851,6 +17120,19 @@ components:
         updated_at:
           type: string
           title: Updated At
+        verification_mode:
+          anyOf:
+          - type: string
+            enum:
+            - fast
+            - verified
+          - type: 'null'
+          title: Verification Mode
+        check_requested:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Check Requested
       additionalProperties: false
       type: object
       required:
@@ -16880,6 +17162,19 @@ components:
         poll_url:
           type: string
           title: Poll Url
+        verification_mode:
+          anyOf:
+          - type: string
+            enum:
+            - fast
+            - verified
+          - type: 'null'
+          title: Verification Mode
+        check_requested:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Check Requested
       additionalProperties: false
       type: object
       required:
@@ -17713,6 +18008,13 @@ components:
           - type: string
           - type: 'null'
           title: Active Checker Configuration Id
+        activation_scope:
+          type: string
+          enum:
+          - answer_only
+          - answer_and_checker
+          title: Activation Scope
+          default: answer_and_checker
         source:
           type: string
           enum:
@@ -18113,6 +18415,8 @@ components:
       properties:
         old_password:
           type: string
+          maxLength: 128
+          minLength: 8
           title: Old Password
         new_password:
           type: string

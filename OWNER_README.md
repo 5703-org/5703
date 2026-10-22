@@ -1,9 +1,5 @@
-# Week10 owner source partition — Xianshu Zhang
+# Xianshu Zhang: current assigned source
 
-Owner domain 01; source version CS30-1_Week10_20261013_22ccbfa899ec. These are complete assigned source/support files, not patches. Module responsibility is not an attribution of who executed the changes.
+This package contains 246 complete assigned source files. It depends on `CS30-1_Current_20261019_Complete_Application.zip` and is not a standalone application.
 
-Integrate this partition with CS30-1_Week10_Complete_Project_20261013.zip. The complete package contains the shared current application, public model/corpus/tokenizer resources, installation scripts, dependencies declarations, validation evidence and all reports. This owner ZIP is not a standalone runnable application; do not install it alone. Exact assigned paths/hashes are in RELEASE_MANIFEST.json.
-
-The member DOCX at release/reports/Week10_Xianshu_Zhang_Report.docx exactly matches the standalone final Week10 report. Its PDF was actually rendered; all three pages were visually reviewed.
-
-Real environment files, runtime credentials, live databases and dependency environments are excluded. Global course acceptance remains incomplete. Subsequent development belongs to Week11.
+Domain: Integration, contracts, release and documentation. Domain ownership is responsibility, not attribution of implementation. The actual executor of the recorded changes is Codex. Human contribution and approval remain unrecorded (null). Shared models, textbooks and corpus resources are supplied once in the complete application.

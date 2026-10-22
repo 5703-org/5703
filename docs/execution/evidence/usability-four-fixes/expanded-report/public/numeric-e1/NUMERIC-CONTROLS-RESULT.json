@@ -1,0 +1,76 @@
+{
+  "schema": "expanded_report_numeric_no_database_controls_v1",
+  "status": "PASS",
+  "tests": 5,
+  "failures": 0,
+  "errors": 0,
+  "observations": [
+    {
+      "case": "repeat_validate",
+      "versions": [
+        2,
+        3,
+        4
+      ],
+      "stale_version_conflict_preserves_item": true
+    },
+    {
+      "case": "supported_mol",
+      "validation_version": 2,
+      "publication_version": 3,
+      "status": "passed",
+      "published": true,
+      "authored_correct_response": "correct"
+    },
+    {
+      "case": "unsupported_mmol",
+      "validation_version": 2,
+      "status": "failed",
+      "issues": [
+        "missing_or_unsupported_numeric_key"
+      ],
+      "publish_conflict": true
+    }
+  ],
+  "scope": "Exact production function bodies; authored repository/locking/flush/released-membership seams; no HTTP or database execution",
+  "not_proven": [
+    "PostgreSQL atomicity or concurrency",
+    "the tester's omitted private rubric/answers",
+    "source semantic correctness",
+    "live proposal quality"
+  ],
+  "network_database_provider_native_actions": 0,
+  "Main_writes": 0,
+  "source_pins": [
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\learning_product\\service.py",
+      "bytes": 45683,
+      "sha256": "a7c8e400f57a0cb4f692637d420254112006113c3399e95fc5e9b8db3e46adf0"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\learning_product\\library.py",
+      "bytes": 19095,
+      "sha256": "3d3d5d4eccbad6dcaec2c5b4e8ffaf47dcd1567e27c7b3b3be049da1a791b881"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\learning_product\\grading.py",
+      "bytes": 11417,
+      "sha256": "a1edfb10fed11fbedaa14d02ce8950788278960a0790eda947fffada4eefa910"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\backend\\app\\core\\exceptions.py",
+      "bytes": 3046,
+      "sha256": "a6d10391ddbd467dc5ed5620079b9d9435bd441390ba895289f297935c36b0e7"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\contracts\\study.py",
+      "bytes": 18376,
+      "sha256": "2468af05dc36d504c2519ff33bf614805acfe482b2a647b17986e15802b0274b"
+    }
+  ],
+  "script": {
+    "path": "E:\\5703\\isolated\\expanded-report-numeric-e1-20261019\\verify_numeric_publication.py",
+    "bytes": 12667,
+    "sha256": "8dcbdf003709e0859494e1b1c9993e65c00caa7efdc2842383f3e7b5dd306678"
+  }
+}

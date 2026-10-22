@@ -110,6 +110,10 @@ class GoalUnitOut(Contract):
     pending_attempts: int = 0
     needs_review: bool
     status: Literal["not_started", "read", "practised", "needs_review"]
+    practice_available: bool = False
+    practice_availability_reason: Literal["available", "no_published_questions"] = (
+        "no_published_questions"
+    )
     recommended_action: Literal["read", "practise", "review", "try_related"] = "read"
 
 

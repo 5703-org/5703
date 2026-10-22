@@ -1,5 +1,40 @@
 # API and operator contract
 
+## Four usability repairs: capability, recovery and accounting
+
+The authenticated capabilities response adds `practice_assessment_ready` and `practice_assessment_unavailable_reason`. Readiness uses the same saved real Checker configuration, practice output cap and local prerequisites as a fresh model-assessed practice submission. It is a local capability observation, not a provider probe, content verdict or new permission. Missing/stale capability disables only fresh model-assessed work; deterministic rules, authored help and recovery of accepted idempotent submissions retain their existing contracts.
+
+Administrator response diagnostics adds optional `failure_classification` with version `safe_failure_classification_v1`, an allowlisted category/stage/exception type and a known validation code. Raw exception messages, prompts, Checker output and arbitrary tokens are excluded. Classification does not itself grant Retry. Manual retry requires positive recoverability for the actual frozen command, current ownership/latest-request eligibility and finite remaining budget. Explicit negative or uncertain execution denies retry; unknown historical classification does not imply eligibility. A proven frozen initial overflow offers Edit with a narrower question and preserves a newer draft. Later generated/checker overflow is not relabelled as fixed initial input.
+
+Operations keeps existing bounded known-counter totals and adds `recent_usage.accounting`. Its categories are `confirmed_no_call`, `known_complete`, `partial_or_unknown`, `in_progress` and `unclassified`, with bounded reason counts. Confirmed no-call requires authoritative deterministic or initial pre-dispatch proof, zero reservations and complete absence of attempt history. Saved job/attempt identities and start/finish phases establish complete generation counters; reservations, absent counters, incomplete history, native count-only work and unknown transport do not establish free usage. A history-query limit is disclosed as unclassified rather than inventing a zero. These aggregate projections do not expose question text or raw provider payloads and do not turn token estimates into invoices.
+
+## Usability successor contract, 18 October 2026
+
+Model activation accepts an explicit `activation_scope`: `answer_and_checker`
+(the backward-compatible default) or `answer_only`. Both scopes require the
+existing exact saved-configuration answer project proof. The checked scope also
+requires the existing checker project proof; the answer-only scope rejects a
+checker selection or proof. Activation changes the active pointer and immutable
+activation event atomically. State and capability responses identify whether
+semantic checking is enabled. An explicit answer-only selection rejects checked
+answers, hint teaching and model-assessed practice with
+`SEMANTIC_CHECK_UNAVAILABLE` before enqueueing work. Ordinary explicit Check OFF
+chat remains available. A protocol capability declaration does not substitute
+for a successful role-specific project test.
+
+New ordinary FAST requests using `source_selected_v3` freeze
+`provider_output_policy=json_source_citations_v4`. This revision preserves exact
+assertion text and offsets across bounded `e.g.` and `i.e.` abbreviations. The
+compiler records `claim_boundary_policy=latin_abbreviation_boundaries_v2`, which
+the final claim-binding consumer also uses. Explicit `source_selected_v2` still
+freezes the previous v3 transport; old frozen requests and Check ON retain their
+original segmentation. Source membership, completeness, hashes, coordinates,
+own-source short answers and citation checks continue to apply. No extra model
+stage, checker response field or automatic working-window change is introduced.
+
+These are successor source contracts. Current execution and delivery evidence
+is recorded separately; historical results below are not fresh verification.
+
 ## Active reliability repair — 3 October 2026
 
 The source successor is under development and verification. It adds complete-context practice assessment anchors and an explicit versioned pending-action teaching check, retaining ordinary full-answer behavior and the V6 default. The current880 software, installation and delivery receipts describe the retained baseline. Its nine archives and nine English reports passed independent reconstruction, copy parity and twenty-page visual review. The current883 unified software gate and thirteen-file CPU installation/start passed; the complete installed registry contains 54,776 files. Main retains its loaded current880 runtime. Connected learner, fresh real-model quality and successor delivery checks remain pending. [Repair scope, observed failures and verification](../execution/week09-assessment-and-pending-action-successor-20261003.md).
@@ -473,3 +508,23 @@ The dated 858-source checkpoint passed 2,929 Python cases plus two subtests and 
 ## Current runtime and trial evidence on 3 October 2026
 
 Current source installation and both four-role starts passed. Real grading and initial-turn teaching outcomes retain their distinct quality limits. [Current runtime and preservation](../execution/week09-current880-installed-startup-and-delivery-20261003.md).
+
+
+## Phase189 ordinary-answer checkbox, 15 October 2026
+
+The ordinary composer exposes one English `Check answer` checkbox, unchecked for a new draft. It sends `check_answer` as an explicit boolean. The public chat DTO accepts a nullable optional boolean for compatibility: omitted or null retains the historical checked behavior. Clients cannot supply the internal `verification_mode`. There is no new selector, reminder, badge or post-answer verification action.
+
+The server resolves the effective learning task before freezing the choice. Only eligible ordinary interactive questions may skip the additional semantic checker; hints, pending attempts, practice scoring, goal tutoring and protected experiment contracts keep their mandatory checks. A skipped checker is recorded as `check_requested=false`, `check_executed=false` and `verification_status=not_requested`, never as passed. Receipt/job/answer metadata is nullable for old records. A native mock response requesting checking is `not_performed`, not a semantic pass.
+
+The saved choice belongs to the idempotent request. Legacy omission and explicit true share their prior request identity; false is a distinct identity, so changing the checkbox under the same key conflicts. Retry, regeneration, interruption recovery and history retain the saved command. Current source permission and revocation, evidence binding, citations, output structure and privacy still apply. Zero selected textbook evidence still refuses with zero GEN/CHECK calls; General knowledge remains an explicit source choice.
+
+Source and scoped evidence are indexed in [phase189 usage](../execution/evidence/phase189/USAGE189.md). Source application does not deploy Main. Native mock checks do not measure the requested live submission-to-complete-answer target of 10 seconds.
+
+
+## Current-session logout contract - Phase209, 18 October 2026
+
+The Phase209 candidate supersedes the earlier client-clear-only logout description. `POST /auth/logout` accepts the current bearer token and no body. After a durable commit its success envelope contains `{"logged_out":true,"session_revoked":true}`. The same otherwise valid token can repeat logout idempotently, while protected routes reject its revoked session with 401/TOKEN_INVALID. Missing, expired, malformed and stale-account-version tokens retain authentication errors; deactivated accounts retain 403. A database/schema failure does not produce a logout success.
+
+Every newly issued access token has a random unique signed `jti`; logout revokes only that session and never increments the account-wide token version. Existing signed tokens without jti remain supported and can be revoked by the exact token identity. Identical legacy bearer copies are indistinguishable; fresh logins gain independent jti values. No existing credential/account/history row is rewritten. Authorization already granted before logout commits may finish; subsequent requests are checked against durable revocation.
+
+The browser must await confirmed revocation before reporting server logout. It clears owned private browser/RAM state on success. On a lost response or server failure, revocation is unknown; an explicit local-only signout can clear the browser without claiming server invalidation. Logout neither deletes saved learning data nor silently cancels background jobs. Candidate implementation, frontend integration and isolated PostgreSQL/browser acceptance have separate execution evidence.

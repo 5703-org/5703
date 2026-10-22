@@ -1,0 +1,616 @@
+{
+  "schema": "quality_closure_Q2_independent_public_assessment_v1",
+  "recorded_utc": "2026-10-19T03:57:42.6830323Z",
+  "reviewer": "/root/quality_evidence",
+  "status": "DELIVERED_SUPPORTED_INTRODUCTORY_COMPARISON_WITH_SCOPE_LIMIT_AND_BROWSER_ORACLE_FAILURE",
+  "request_id": "73bd11bf-fbf9-49fc-965a-16e38014a8ba",
+  "answer_id": "2f2be286-56d4-4b3e-b5d5-5a2bf8aa30c2",
+  "exact_question": "Compare diffusion and osmosis in terms of concentration gradients, membrane permeability, and water movement.",
+  "provider_GEN_body_and_saved_body_exact": true,
+  "provider_GEN_short_and_saved_short_exact": true,
+  "actual_published_body": "Diffusion is the movement of substances from an area of higher concentration to an area of lower concentration, and a space with a different concentration of a single substance is said to have a concentration gradient [ev_002]. Osmosis is the movement of free water molecules through a semipermeable membrane according to the water's concentration gradient across the membrane, which is inversely proportional to the solute's concentration [ev_004]. Osmosis is a special case of diffusion [ev_001].\n\nConcentration gradients: each separate substance in a medium has its own concentration gradient, independent of the concentration gradients of other materials, and each substance diffuses according to that gradient [ev_014]. In osmosis, water has a concentration gradient in the system and diffuses down its own concentration gradient, crossing the membrane to the side where water is less concentrated [ev_008].\n\nMembrane permeability: in diffusion across a membrane, only the material capable of getting through the membrane will diffuse through it [ev_008]. Whereas diffusion transports material across membranes and within cells, osmosis transports only water across a membrane, and the membrane limits the diffusion of solutes in the water [ev_001].\n\nWater movement: water moves from an area of high concentration of free water molecules to one of low free water molecule concentration [ev_001]. In osmosis, water always moves from an area of higher water concentration to one of lower water concentration, and this diffusion of water through the membrane continues until the water concentration gradient goes to zero [ev_008].",
+  "actual_published_short_answer": "Diffusion moves substances from higher to lower concentration along a concentration gradient [ev_002], and each substance diffuses according to its own independent gradient [ev_014]. Osmosis is a special case of diffusion in which only water crosses a semipermeable membrane, moving from higher to lower free-water concentration along the water's concentration gradient, which is inversely proportional to solute concentration [ev_001] [ev_004].",
+  "check_requested": true,
+  "check_executed": true,
+  "verification_status": "passed",
+  "raw_first_check_body_ok": true,
+  "raw_first_check_coverage": "full",
+  "raw_missing_facets": [],
+  "raw_claims": 11,
+  "published_body_claims": 9,
+  "published_short_claims": 2,
+  "own_cited_parent_integrity": [
+    {
+      "evidence_id": "ev_001",
+      "wire_membership_unique": true,
+      "saved_membership_unique": true,
+      "exact_GEN_text_matches_saved": true,
+      "text_hash_matches_content": true,
+      "saved_and_GEN_text_hash_equal": true,
+      "exact_saved_API_text_matches_GEN": true,
+      "chunk_asset_processing_equal": true,
+      "source_title": "Concepts of Biology",
+      "section": "Chapter 3 Cell Structure and Function / 3.5 Passive Transport",
+      "pages": [
+        93
+      ]
+    },
+    {
+      "evidence_id": "ev_002",
+      "wire_membership_unique": true,
+      "saved_membership_unique": true,
+      "exact_GEN_text_matches_saved": true,
+      "text_hash_matches_content": true,
+      "saved_and_GEN_text_hash_equal": true,
+      "exact_saved_API_text_matches_GEN": true,
+      "chunk_asset_processing_equal": true,
+      "source_title": "Concepts of Biology",
+      "section": "Chapter 3 Cell Structure and Function / 3.5 Passive Transport",
+      "pages": [
+        92
+      ]
+    },
+    {
+      "evidence_id": "ev_004",
+      "wire_membership_unique": true,
+      "saved_membership_unique": true,
+      "exact_GEN_text_matches_saved": true,
+      "text_hash_matches_content": true,
+      "saved_and_GEN_text_hash_equal": true,
+      "exact_saved_API_text_matches_GEN": true,
+      "chunk_asset_processing_equal": true,
+      "source_title": "Concepts of Biology",
+      "section": "Chapter 3 Cell Structure and Function / 3.5 Passive Transport",
+      "pages": [
+        93
+      ]
+    },
+    {
+      "evidence_id": "ev_008",
+      "wire_membership_unique": true,
+      "saved_membership_unique": true,
+      "exact_GEN_text_matches_saved": true,
+      "text_hash_matches_content": true,
+      "saved_and_GEN_text_hash_equal": true,
+      "exact_saved_API_text_matches_GEN": true,
+      "chunk_asset_processing_equal": true,
+      "source_title": "Concepts of Biology",
+      "section": "Chapter 3 Cell Structure and Function / 3.5 Passive Transport",
+      "pages": [
+        93,
+        94
+      ]
+    },
+    {
+      "evidence_id": "ev_014",
+      "wire_membership_unique": true,
+      "saved_membership_unique": true,
+      "exact_GEN_text_matches_saved": true,
+      "text_hash_matches_content": true,
+      "saved_and_GEN_text_hash_equal": true,
+      "exact_saved_API_text_matches_GEN": true,
+      "chunk_asset_processing_equal": true,
+      "source_title": "Concepts of Biology",
+      "section": "Chapter 3 Cell Structure and Function / 3.5 Passive Transport",
+      "pages": [
+        92,
+        93
+      ]
+    }
+  ],
+  "assertion_review": [
+    {
+      "local_id": "A001",
+      "claim_id": "claim_e273314b219b041994f1c2b9_1",
+      "answer_field": "answer_text",
+      "exact_claim": "Diffusion is the movement of substances from an area of higher concentration to an area of lower concentration, and a space with a different concentration of a single substance is said to have a concentration gradient [ev_002].",
+      "raw_checker_status": "supported",
+      "raw_checker_reason": "F007 establishes diffusion as movement from higher to lower concentration; F008 establishes that a space with a different concentration of a single substance has a concentration gradient. Together they cover the full claim.",
+      "selected_own_fragments": [
+        {
+          "submitted_fragment_id": "F007",
+          "canonical_fragment_id": "span_e24f523305eac7d77825a165dbe03376",
+          "evidence_id": "ev_002",
+          "raw_relation": "supporting",
+          "exact_text": "In passive transport, substances move from an area of higher concentration to an area of lower concentration in a process called diffusion.",
+          "canonical_exact_match_unique": true,
+          "canonical_hash_valid": true,
+          "within_own_inline_citation": true,
+          "exact_selected_text_in_actual_GEN_parent": true
+        },
+        {
+          "submitted_fragment_id": "F008",
+          "canonical_fragment_id": "span_768501b476ba668f3e53935e09b033f9",
+          "evidence_id": "ev_002",
+          "raw_relation": "supporting",
+          "exact_text": "A physical space in which there is a different concentration of a single substance is said to have a concentration gradient.",
+          "canonical_exact_match_unique": true,
+          "canonical_hash_valid": true,
+          "within_own_inline_citation": true,
+          "exact_selected_text_in_actual_GEN_parent": true
+        }
+      ],
+      "manual_science": "CORRECT_IN_STATED_INTRODUCTORY_SCOPE",
+      "manual_own_source_support": "SUPPORTED_BY_ACTUAL_SELECTED_OWN_FRAGMENTS",
+      "manual_finding": "Own F007 and F008 directly establish diffusion direction and the concentration-gradient definition."
+    },
+    {
+      "local_id": "A002",
+      "claim_id": "claim_10593b5331201795f6ae48aa_1",
+      "answer_field": "answer_text",
+      "exact_claim": "Osmosis is the movement of free water molecules through a semipermeable membrane according to the water's concentration gradient across the membrane, which is inversely proportional to the solute's concentration [ev_004].",
+      "raw_checker_status": "supported",
+      "raw_checker_reason": "F040 states osmosis is movement of free water molecules through a semipermeable membrane according to the water's concentration gradient, inversely proportional to solute concentration, matching the claim.",
+      "selected_own_fragments": [
+        {
+          "submitted_fragment_id": "F040",
+          "canonical_fragment_id": "span_fddaa9e358486291d7fd5af7b0f34e98",
+          "evidence_id": "ev_004",
+          "raw_relation": "supporting",
+          "exact_text": "Osmosis Osmosis is the movement of free water molecules through a semipermeable membrane according to the water's concentration gradient across the membrane, which is inversely proportional to the solute's concentration.",
+          "canonical_exact_match_unique": true,
+          "canonical_hash_valid": true,
+          "within_own_inline_citation": true,
+          "exact_selected_text_in_actual_GEN_parent": true
+        }
+      ],
+      "manual_science": "CORRECT_IN_STATED_INTRODUCTORY_SCOPE",
+      "manual_own_source_support": "SUPPORTED_BY_ACTUAL_SELECTED_OWN_FRAGMENTS",
+      "manual_finding": "Own F040 directly supplies the water-gradient/semipermeable-membrane definition; inversely proportional is retained as introductory qualitative source wording, not a validated quantitative law."
+    },
+    {
+      "local_id": "A003",
+      "claim_id": "claim_e681bd73065a7775541681c5_1",
+      "answer_field": "answer_text",
+      "exact_claim": "Osmosis is a special case of diffusion [ev_001].",
+      "raw_checker_status": "supported",
+      "raw_checker_reason": "F002 states exactly that osmosis is a special case of diffusion.",
+      "selected_own_fragments": [
+        {
+          "submitted_fragment_id": "F002",
+          "canonical_fragment_id": "span_d129b0cc7678cd2af41c17ae98b55a7d",
+          "evidence_id": "ev_001",
+          "raw_relation": "supporting",
+          "exact_text": "Osmosis is a special case of diffusion.",
+          "canonical_exact_match_unique": true,
+          "canonical_hash_valid": true,
+          "within_own_inline_citation": true,
+          "exact_selected_text_in_actual_GEN_parent": true
+        }
+      ],
+      "manual_science": "CORRECT_IN_STATED_INTRODUCTORY_SCOPE",
+      "manual_own_source_support": "SUPPORTED_BY_ACTUAL_SELECTED_OWN_FRAGMENTS",
+      "manual_finding": "Own F002 explicitly states the special-case relation; this avoids the frozen Q03 C2 missing-own-relation gap."
+    },
+    {
+      "local_id": "A004",
+      "claim_id": "claim_e438cc93d0fc4a12c6276941_1",
+      "answer_field": "answer_text",
+      "exact_claim": "Concentration gradients: each separate substance in a medium has its own concentration gradient, independent of the concentration gradients of other materials, and each substance diffuses according to that gradient [ev_014].",
+      "raw_checker_status": "supported",
+      "raw_checker_reason": "F096 establishes each separate substance has its own independent concentration gradient; F097 establishes each substance diffuses according to that gradient. Together they cover the claim.",
+      "selected_own_fragments": [
+        {
+          "submitted_fragment_id": "F096",
+          "canonical_fragment_id": "span_a68c938e17b7721b06de41936472fa22",
+          "evidence_id": "ev_014",
+          "raw_relation": "supporting",
+          "exact_text": "Each separate substance in a medium, such as the extracellular fluid, has its own concentration gradient, independent of the concentration gradients of other materials.",
+          "canonical_exact_match_unique": true,
+          "canonical_hash_valid": true,
+          "within_own_inline_citation": true,
+          "exact_selected_text_in_actual_GEN_parent": true
+        },
+        {
+          "submitted_fragment_id": "F097",
+          "canonical_fragment_id": "span_b6189ca6f97d8e082489e3b7c92a4774",
+          "evidence_id": "ev_014",
+          "raw_relation": "supporting",
+          "exact_text": "Additionally, each substance will diffuse according to that gradient.",
+          "canonical_exact_match_unique": true,
+          "canonical_hash_valid": true,
+          "within_own_inline_citation": true,
+          "exact_selected_text_in_actual_GEN_parent": true
+        }
+      ],
+      "manual_science": "CORRECT_IN_STATED_INTRODUCTORY_SCOPE",
+      "manual_own_source_support": "SUPPORTED_BY_ACTUAL_SELECTED_OWN_FRAGMENTS",
+      "manual_finding": "Own F096 and F097 jointly establish each substance own independent gradient and motion down it."
+    },
+    {
+      "local_id": "A005",
+      "claim_id": "claim_5f1ea7923f2ae02644cc2616_1",
+      "answer_field": "answer_text",
+      "exact_claim": "In osmosis, water has a concentration gradient in the system and diffuses down its own concentration gradient, crossing the membrane to the side where water is less concentrated [ev_008].",
+      "raw_checker_status": "supported",
+      "raw_checker_reason": "F063 states water has a concentration gradient in this system and diffuses down its concentration gradient, crossing the membrane to the side where it is less concentrated, matching the claim.",
+      "selected_own_fragments": [
+        {
+          "submitted_fragment_id": "F063",
+          "canonical_fragment_id": "span_bdd10103dbcac7baaadc549f2a6f4be8",
+          "evidence_id": "ev_008",
+          "raw_relation": "supporting",
+          "exact_text": "FIGURE 3.21 In osmosis, water always moves from an area of higher concentration (of water) to one of lower concentration (of water). In this system, the solute cannot pass through the selectively permeable membrane. A principle of diffusion is that the molecules move around and will spread evenly throughout the medium if they can. However, only the material capable of getting through the membrane will diffuse through it. In this example, the solute cannot diffuse through the membrane, but the water can. Water has a concentration gradient in this system. Therefore, water will diffuse down its concentration gradient, crossing the membrane to the side where it is less concentrated. This diffusion of water through the membrane—osmosis—will continue until the concentration gradient of water goes to zero. Osmosis proceeds constantly in living systems. LINK T O LE ARNING Watch this video (https://openstax.org/l/dispersion) that illustrates diffusion in hot versus cold solutions.",
+          "canonical_exact_match_unique": true,
+          "canonical_hash_valid": true,
+          "within_own_inline_citation": true,
+          "exact_selected_text_in_actual_GEN_parent": true
+        }
+      ],
+      "manual_science": "CORRECT_IN_STATED_INTRODUCTORY_SCOPE",
+      "manual_own_source_support": "SUPPORTED_BY_ACTUAL_SELECTED_OWN_FRAGMENTS",
+      "manual_finding": "Own F063 directly gives the water-gradient direction and membrane crossing in its illustrated selective-membrane system."
+    },
+    {
+      "local_id": "A006",
+      "claim_id": "claim_3b059d2b1864fca8386c2549_1",
+      "answer_field": "answer_text",
+      "exact_claim": "Membrane permeability: in diffusion across a membrane, only the material capable of getting through the membrane will diffuse through it [ev_008].",
+      "raw_checker_status": "supported",
+      "raw_checker_reason": "F063 states only the material capable of getting through the membrane will diffuse through it, matching the claim about membrane permeability in diffusion.",
+      "selected_own_fragments": [
+        {
+          "submitted_fragment_id": "F063",
+          "canonical_fragment_id": "span_bdd10103dbcac7baaadc549f2a6f4be8",
+          "evidence_id": "ev_008",
+          "raw_relation": "supporting",
+          "exact_text": "FIGURE 3.21 In osmosis, water always moves from an area of higher concentration (of water) to one of lower concentration (of water). In this system, the solute cannot pass through the selectively permeable membrane. A principle of diffusion is that the molecules move around and will spread evenly throughout the medium if they can. However, only the material capable of getting through the membrane will diffuse through it. In this example, the solute cannot diffuse through the membrane, but the water can. Water has a concentration gradient in this system. Therefore, water will diffuse down its concentration gradient, crossing the membrane to the side where it is less concentrated. This diffusion of water through the membrane—osmosis—will continue until the concentration gradient of water goes to zero. Osmosis proceeds constantly in living systems. LINK T O LE ARNING Watch this video (https://openstax.org/l/dispersion) that illustrates diffusion in hot versus cold solutions.",
+          "canonical_exact_match_unique": true,
+          "canonical_hash_valid": true,
+          "within_own_inline_citation": true,
+          "exact_selected_text_in_actual_GEN_parent": true
+        }
+      ],
+      "manual_science": "CORRECT_IN_STATED_INTRODUCTORY_SCOPE",
+      "manual_own_source_support": "SUPPORTED_BY_ACTUAL_SELECTED_OWN_FRAGMENTS",
+      "manual_finding": "Own F063 states only material able to cross a membrane diffuses through it; this is a conditional across-membrane statement, not a claim that all diffusion requires a membrane."
+    },
+    {
+      "local_id": "A007",
+      "claim_id": "claim_b6d57d4ca0b65460933565d8_1",
+      "answer_field": "answer_text",
+      "exact_claim": "Whereas diffusion transports material across membranes and within cells, osmosis transports only water across a membrane, and the membrane limits the diffusion of solutes in the water [ev_001].",
+      "raw_checker_status": "supported",
+      "raw_checker_reason": "F001 states diffusion transports material across membranes and within cells, osmosis transports only water across a membrane, and the membrane limits diffusion of solutes in the water, matching the claim.",
+      "selected_own_fragments": [
+        {
+          "submitted_fragment_id": "F001",
+          "canonical_fragment_id": "span_9df0727a38d110097152279cfe3a7225",
+          "evidence_id": "ev_001",
+          "raw_relation": "supporting",
+          "exact_text": "Whereas diffusion transports material across membranes and within cells, osmosis transports only water across a membrane and the membrane limits the diffusion of solutes in the water.",
+          "canonical_exact_match_unique": true,
+          "canonical_hash_valid": true,
+          "within_own_inline_citation": true,
+          "exact_selected_text_in_actual_GEN_parent": true
+        }
+      ],
+      "manual_science": "CORRECT_IN_STATED_INTRODUCTORY_SCOPE",
+      "manual_own_source_support": "SUPPORTED_BY_ACTUAL_SELECTED_OWN_FRAGMENTS",
+      "manual_finding": "Own F001 establishes the diffusion-versus-water/membrane/solute distinction."
+    },
+    {
+      "local_id": "A008",
+      "claim_id": "claim_dcb41ca27082ddb9f33a5e63_1",
+      "answer_field": "answer_text",
+      "exact_claim": "Water movement: water moves from an area of high concentration of free water molecules to one of low free water molecule concentration [ev_001].",
+      "raw_checker_status": "supported",
+      "raw_checker_reason": "F003 states water moves from an area of high concentration of free water molecules to one of low free water molecule concentration, matching the claim.",
+      "selected_own_fragments": [
+        {
+          "submitted_fragment_id": "F003",
+          "canonical_fragment_id": "span_419043b5f8f9b4f5945943a74ab50d53",
+          "evidence_id": "ev_001",
+          "raw_relation": "supporting",
+          "exact_text": "Water, like other substances, moves from an area of high concentration of free water molecules to one of low free water molecule concentration.",
+          "canonical_exact_match_unique": true,
+          "canonical_hash_valid": true,
+          "within_own_inline_citation": true,
+          "exact_selected_text_in_actual_GEN_parent": true
+        }
+      ],
+      "manual_science": "CORRECT_IN_STATED_INTRODUCTORY_SCOPE",
+      "manual_own_source_support": "SUPPORTED_BY_ACTUAL_SELECTED_OWN_FRAGMENTS",
+      "manual_finding": "Own F003 directly gives high-to-low free-water concentration."
+    },
+    {
+      "local_id": "A009",
+      "claim_id": "claim_3981b57089e8f0d88bcc77b8_1",
+      "answer_field": "answer_text",
+      "exact_claim": "In osmosis, water always moves from an area of higher water concentration to one of lower water concentration, and this diffusion of water through the membrane continues until the water concentration gradient goes to zero [ev_008].",
+      "raw_checker_status": "supported",
+      "raw_checker_reason": "F063 states water always moves from higher to lower water concentration and this diffusion of water through the membrane continues until the water concentration gradient goes to zero, matching the claim.",
+      "selected_own_fragments": [
+        {
+          "submitted_fragment_id": "F063",
+          "canonical_fragment_id": "span_bdd10103dbcac7baaadc549f2a6f4be8",
+          "evidence_id": "ev_008",
+          "raw_relation": "supporting",
+          "exact_text": "FIGURE 3.21 In osmosis, water always moves from an area of higher concentration (of water) to one of lower concentration (of water). In this system, the solute cannot pass through the selectively permeable membrane. A principle of diffusion is that the molecules move around and will spread evenly throughout the medium if they can. However, only the material capable of getting through the membrane will diffuse through it. In this example, the solute cannot diffuse through the membrane, but the water can. Water has a concentration gradient in this system. Therefore, water will diffuse down its concentration gradient, crossing the membrane to the side where it is less concentrated. This diffusion of water through the membrane—osmosis—will continue until the concentration gradient of water goes to zero. Osmosis proceeds constantly in living systems. LINK T O LE ARNING Watch this video (https://openstax.org/l/dispersion) that illustrates diffusion in hot versus cold solutions.",
+          "canonical_exact_match_unique": true,
+          "canonical_hash_valid": true,
+          "within_own_inline_citation": true,
+          "exact_selected_text_in_actual_GEN_parent": true
+        }
+      ],
+      "manual_science": "INTRODUCTORY_PASSIVE_SYSTEM_SCOPE_LIMIT",
+      "manual_own_source_support": "SUPPORTED_BY_ACTUAL_SELECTED_OWN_FRAGMENTS",
+      "manual_finding": "Own F063 explicitly supports this wording, but its illustrated passive system is generalized in the answer: always and gradient-goes-to-zero require the simple source setting, not arbitrary pressure-constrained biological/osmotic equilibrium."
+    },
+    {
+      "local_id": "S001",
+      "claim_id": "claim_f94a4e4be11587674a3c9b81_1",
+      "answer_field": "short_answer",
+      "exact_claim": "Diffusion moves substances from higher to lower concentration along a concentration gradient [ev_002], and each substance diffuses according to its own independent gradient [ev_014].",
+      "raw_checker_status": "supported",
+      "raw_checker_reason": "F007 establishes diffusion from higher to lower concentration; F096 and F097 establish each substance diffuses according to its own independent gradient. Together they cover the short answer.",
+      "selected_own_fragments": [
+        {
+          "submitted_fragment_id": "F007",
+          "canonical_fragment_id": "span_e24f523305eac7d77825a165dbe03376",
+          "evidence_id": "ev_002",
+          "raw_relation": "supporting",
+          "exact_text": "In passive transport, substances move from an area of higher concentration to an area of lower concentration in a process called diffusion.",
+          "canonical_exact_match_unique": true,
+          "canonical_hash_valid": true,
+          "within_own_inline_citation": true,
+          "exact_selected_text_in_actual_GEN_parent": true
+        },
+        {
+          "submitted_fragment_id": "F096",
+          "canonical_fragment_id": "span_a68c938e17b7721b06de41936472fa22",
+          "evidence_id": "ev_014",
+          "raw_relation": "supporting",
+          "exact_text": "Each separate substance in a medium, such as the extracellular fluid, has its own concentration gradient, independent of the concentration gradients of other materials.",
+          "canonical_exact_match_unique": true,
+          "canonical_hash_valid": true,
+          "within_own_inline_citation": true,
+          "exact_selected_text_in_actual_GEN_parent": true
+        },
+        {
+          "submitted_fragment_id": "F097",
+          "canonical_fragment_id": "span_b6189ca6f97d8e082489e3b7c92a4774",
+          "evidence_id": "ev_014",
+          "raw_relation": "supporting",
+          "exact_text": "Additionally, each substance will diffuse according to that gradient.",
+          "canonical_exact_match_unique": true,
+          "canonical_hash_valid": true,
+          "within_own_inline_citation": true,
+          "exact_selected_text_in_actual_GEN_parent": true
+        }
+      ],
+      "manual_science": "CORRECT_IN_STATED_INTRODUCTORY_SCOPE",
+      "manual_own_source_support": "SUPPORTED_BY_ACTUAL_SELECTED_OWN_FRAGMENTS",
+      "manual_finding": "Own F007 plus F096/F097 support the complete summary diffusion statement."
+    },
+    {
+      "local_id": "S002",
+      "claim_id": "claim_ef43ca340c2a0e6f609476ec_1",
+      "answer_field": "short_answer",
+      "exact_claim": "Osmosis is a special case of diffusion in which only water crosses a semipermeable membrane, moving from higher to lower free-water concentration along the water's concentration gradient, which is inversely proportional to solute concentration [ev_001] [ev_004].",
+      "raw_checker_status": "supported",
+      "raw_checker_reason": "F002 establishes osmosis is a special case of diffusion; F001 establishes osmosis transports only water across a membrane; F040 establishes movement of free water molecules through a semipermeable membrane according to the water's concentration gradient, inversely proportional to solute concentration. Together they cover the short answer.",
+      "selected_own_fragments": [
+        {
+          "submitted_fragment_id": "F002",
+          "canonical_fragment_id": "span_d129b0cc7678cd2af41c17ae98b55a7d",
+          "evidence_id": "ev_001",
+          "raw_relation": "supporting",
+          "exact_text": "Osmosis is a special case of diffusion.",
+          "canonical_exact_match_unique": true,
+          "canonical_hash_valid": true,
+          "within_own_inline_citation": true,
+          "exact_selected_text_in_actual_GEN_parent": true
+        },
+        {
+          "submitted_fragment_id": "F001",
+          "canonical_fragment_id": "span_9df0727a38d110097152279cfe3a7225",
+          "evidence_id": "ev_001",
+          "raw_relation": "supporting",
+          "exact_text": "Whereas diffusion transports material across membranes and within cells, osmosis transports only water across a membrane and the membrane limits the diffusion of solutes in the water.",
+          "canonical_exact_match_unique": true,
+          "canonical_hash_valid": true,
+          "within_own_inline_citation": true,
+          "exact_selected_text_in_actual_GEN_parent": true
+        },
+        {
+          "submitted_fragment_id": "F040",
+          "canonical_fragment_id": "span_fddaa9e358486291d7fd5af7b0f34e98",
+          "evidence_id": "ev_004",
+          "raw_relation": "supporting",
+          "exact_text": "Osmosis Osmosis is the movement of free water molecules through a semipermeable membrane according to the water's concentration gradient across the membrane, which is inversely proportional to the solute's concentration.",
+          "canonical_exact_match_unique": true,
+          "canonical_hash_valid": true,
+          "within_own_inline_citation": true,
+          "exact_selected_text_in_actual_GEN_parent": true
+        }
+      ],
+      "manual_science": "CORRECT_IN_STATED_INTRODUCTORY_SCOPE",
+      "manual_own_source_support": "SUPPORTED_BY_ACTUAL_SELECTED_OWN_FRAGMENTS",
+      "manual_finding": "Own F002/F001/F040 jointly support the summary special-case/water/membrane/gradient statement; no global or other-claim source is borrowed. Direction is a necessary definitional inference in this selected union; the explicit high-to-low F003 sentence is present in its same own ev001 parent but is not part of this summary selection. Do not describe all clauses as independently verbatim."
+    }
+  ],
+  "requested_facets": {
+    "concentration_gradients": "COVERED: own-substance diffusion gradient versus water gradient; solute relationship explicit",
+    "membrane_permeability": "COVERED: across-membrane diffusion requires permeability; osmosis is selective water movement",
+    "water_movement": "COVERED: high-to-low free-water concentration; simple illustrated passive-system scope retained as a limitation"
+  },
+  "scientific_scope_limit": "Unqualified always and water-gradient-goes-to-zero generalize the cited ideal passive selective-membrane illustration. They are not an unrestricted thermodynamic law for systems with opposing pressure or other constraints. Inversely proportional is qualitative textbook wording, not a quantified law established here.",
+  "no_real_own_citation_gap_identified": true,
+  "repair_causal_evidence": {
+    "initial_check_supported_all_claims": true,
+    "semantic_repair_calls": 0,
+    "fresh_recheck_calls": 0,
+    "new_FULL_gap_branch_exercised": false,
+    "historical_Q03_or_temperature_cause_proven": false
+  },
+  "browser": {
+    "whole_command_pass": false,
+    "status": "STOPPED_PRESERVED_NO_REISSUE",
+    "failed_action": "same-answer-refresh",
+    "exact_failed_assertion": "native-quality-browser.mjs:190 assert.equal(record.refresh.checkbox_after_reload, spec.check_answer)",
+    "observed_checkbox_after_reload": false,
+    "expected_by_harness": true,
+    "actual_answer_request_text_and_citations_survive_reload": true,
+    "message_posts_before": 1,
+    "message_posts_after": 1,
+    "citation_and_sources_views_opened": true,
+    "complete_source_clicked": false,
+    "reopened_after_reload_citation": "NOT_REACHED",
+    "denials": [],
+    "no_reissue": true
+  },
+  "latency": {
+    "full_answer_visible_ms": 24046.30000000447,
+    "failure_visible_ms": null,
+    "ten_second_target": "FAIL_THIS_COMPLETE_ANSWER_OBSERVATION",
+    "provider_first_token_ms": null,
+    "timing_scopes_overlap": true
+  },
+  "accounting": {
+    "new_physical_HTTP": 2,
+    "ordinals": [
+      28,
+      29
+    ],
+    "purposes": [
+      "generation",
+      "joint_check"
+    ],
+    "case_estimated_CNY": "0.103728",
+    "cumulative_physical_HTTP": 29,
+    "cumulative_estimated_CNY": "1.848318",
+    "unknown_holds_CNY": "0",
+    "cost_is_invoice": false,
+    "final_settlement": "CLOSED29_COMPLETE_KNOWN_WRITER_CLOSED_NO_NEW_UNKNOWN"
+  },
+  "artifact_pins": [
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\usability-four-fixes\\quality-closure\\live\\runtime\\successor-r2\\browser\\quality_osmosis_on\\NATIVE-BROWSER.json",
+      "bytes": 53294,
+      "sha256": "6e9476855640d165d9fc158c43b21533db943cbe37083c146243e4391660be55"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\usability-four-fixes\\quality-closure\\live\\runtime\\successor-r2\\browser\\quality_osmosis_on\\QUALITY_OSMOSIS_ON-answer.json",
+      "bytes": 72309,
+      "sha256": "35add2f045335fcf6c0a15f1f7e6153023e5741fe7dbfb9da32a469eb5c3b5e5"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\usability-four-fixes\\quality-closure\\live\\runtime\\successor-r2\\browser\\quality_osmosis_on\\QUALITY_OSMOSIS_ON-job.json",
+      "bytes": 414,
+      "sha256": "22e8ef0d480704de4e5147bf08085ff562df6180fd3f9b3e9dd284fea9502bbe"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\usability-four-fixes\\quality-closure\\live\\runtime\\successor-r2\\browser\\quality_osmosis_on\\QUALITY_OSMOSIS_ON-evidence-ev_001.json",
+      "bytes": 1932,
+      "sha256": "e356201dbb6d569d4fedae59a26420d93900b1342e5778480f9093e74c83dc01"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\usability-four-fixes\\quality-closure\\live\\runtime\\successor-r2\\browser\\quality_osmosis_on\\QUALITY_OSMOSIS_ON-evidence-ev_002.json",
+      "bytes": 2603,
+      "sha256": "1a15fdbc3c7f15dc23c68ac349f1386e2610a6bc8de5573ae1bb203bd8ba8cf2"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\usability-four-fixes\\quality-closure\\live\\runtime\\successor-r2\\browser\\quality_osmosis_on\\QUALITY_OSMOSIS_ON-evidence-ev_004.json",
+      "bytes": 2641,
+      "sha256": "bdfa0dd4007f1dfbe5eda0b3e6047711004e3bf7890695f306eb52a3116b59e1"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\usability-four-fixes\\quality-closure\\live\\runtime\\successor-r2\\browser\\quality_osmosis_on\\QUALITY_OSMOSIS_ON-evidence-ev_008.json",
+      "bytes": 2500,
+      "sha256": "fe92e86240d137124d68509af7b5bc8471937fe4730eb460842bc2741679de30"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\usability-four-fixes\\quality-closure\\live\\runtime\\successor-r2\\browser\\quality_osmosis_on\\QUALITY_OSMOSIS_ON-evidence-ev_014.json",
+      "bytes": 2587,
+      "sha256": "b149fab2c110a03d5a5c39a636b3191043afe583063176a0b3c6f3b55cd3f174"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\phase210\\live-main01\\ledger\\http-28-request.json",
+      "bytes": 56824,
+      "sha256": "2a19c828c41b7ebed31a3e3b22351c43ac03661cc630331657d807a7a4bbe28a"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\phase210\\live-main01\\ledger\\http-28-response.body",
+      "bytes": 2871,
+      "sha256": "823356cf8301d1913104fd91b2c2e24d5fe4c8d292bb8a017fa7762aa112183d"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\phase210\\live-main01\\ledger\\http-29-request.json",
+      "bytes": 65139,
+      "sha256": "7a24a536ab16a041c81cdeceefaaf19f315adcf640ce4f261ed5412caece5514"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\phase210\\live-main01\\ledger\\http-29-response.body",
+      "bytes": 7904,
+      "sha256": "58befd7558857b84ffcb4b790dd81ac0ef2a845836e09e431c4bc51a1f79f907"
+    },
+    {
+      "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\usability-four-fixes\\quality-closure\\live\\runtime\\successor-r2\\browser\\native-quality-browser.mjs",
+      "bytes": 42255,
+      "sha256": "3a9341dadb91b21870ffcbe2e7aa08927538465921dbe15d1af9e5251f6ed5f1"
+    }
+  ],
+  "review_actions": {
+    "host_PowerShell_file_reads_only": true,
+    "Python_or_Node_executed": 0,
+    "models": 0,
+    "API_requests": 0,
+    "DB_queries": 0,
+    "process_queries": 0,
+    "service_actions": 0,
+    "product_edits": 0,
+    "new_test_execution": 0,
+    "private_diagnostics_read": 0,
+    "new_session_or_retry": 0
+  },
+  "remaining_inputs": [],
+  "human_rating": null,
+  "final_lifecycle_closeout": {
+    "cohort_status": "CLOSED",
+    "physical_HTTP": 29,
+    "new_physical_HTTP": 2,
+    "new_estimated_CNY": "0.103728",
+    "cumulative_estimated_CNY": "1.848318",
+    "remaining_same_tranche_HTTP": 11,
+    "remaining_same_tranche_CNY": "28.151682",
+    "new_UNKNOWN": 0,
+    "unsettled_requests": 0,
+    "writer_lease_closed": true,
+    "normal_start_status": "PASS_NORMAL_NATIVE_RESUME_SOURCE_QUEUE_AND_READINESS",
+    "source_rows": 589,
+    "source_verification": "PASS",
+    "roles": [
+      "frontend",
+      "api",
+      "interactive",
+      "background"
+    ],
+    "api_ready": "ready",
+    "frontend_http": 200,
+    "pending_jobs": 0,
+    "pending_requests": 0,
+    "schema": "fb2c7e43a910",
+    "full_prior_prefix_preserved": true,
+    "committed_transitions": 9,
+    "ledger_sha256": "b69442661a081335f719de310e0be27fcdfee2df85656916986072dafe672b0c",
+    "receipt_pins": [
+      {
+        "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\usability-four-fixes\\quality-closure\\live\\runtime\\successor-r2\\live-r2\\COHORT-CLOSED.json",
+        "bytes": 4774,
+        "sha256": "5b2a3e6329b62244b19ada8a9f06d55a952b661512075e4c2230ecfadb5cbdd2"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\usability-four-fixes\\quality-closure\\live\\runtime\\successor-r2\\live-r2\\normal-start01\\NORMAL-RESTORED.json",
+        "bytes": 10132,
+        "sha256": "84906ef92c717b017fbac08d9e0c65f4bdd8ae3b6323cdf18d4fdcbe7ee1f807"
+      },
+      {
+        "path": "E:\\5703\\learning-assistant\\docs\\execution\\evidence\\usability-four-fixes\\quality-closure\\live\\runtime\\successor-r2\\live-r2\\normal-start01\\RESULT.json",
+        "bytes": 4449,
+        "sha256": "868d1bdca76cccb7a26c6cfecc23031d73833952c1b6740de1753863aa24d741"
+      }
+    ],
+    "scope": "Dated actual589-source quality-run closure; later batch source and packages require separate acceptance; broader scientific quality remains open"
+  }
+}

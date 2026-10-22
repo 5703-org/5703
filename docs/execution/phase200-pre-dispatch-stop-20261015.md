@@ -1,0 +1,17 @@
+# Phase200: source integration and pre-provider setup stop
+
+Main198 matched all 481 frozen baseline paths. The validated Candidate199 index-reuse and ordinary source-citation changes were integrated into Main source with exact before backups. No Main service was explicitly restarted; its loaded source version remains unconfirmed. Existing configuration, database and keys were not modified.
+
+Frozen isolated Candidate200 passed 257 affected unit tests in 3.31 seconds. The lossless Checker codec also passed the separately recorded native counter and compatibility controls. Six historical full CHECK requests showed local estimated input savings of 652–2005 tokens; this is not a measured provider latency benefit. Required assertions, evidence, schema and the 4096-token CHECK reserve are unchanged.
+
+The planned five-question OFF/ON experiment did **not** complete. The first OFF request entered the native zero-RPC clarification fallback because the complete isotopes question followed by “Include one example” was incorrectly marked `missing_referent`. That fallback recursively calls the same generation service with `programmatic_only=True`. The experiment guard incorrectly treated that internal recursion as concurrent work and stopped before any native logical or physical stage. This defect was outside the single-layer synthetic coverage of the earlier 13 pure guard groups.
+
+The failed job committed. The API then closed on the guard error, the browser observed an owned job-poll HTTP502 followed by a 180-second timeout, and no complete answer was rendered. A separate `FOREIGN_BIND` denial lacks address/stack/time evidence; its origin remains unresolved and no network permission has been broadened. The original STOP is retained, not cleared.
+
+Actual incremental provider calls: **0 GEN / 0 CHECK**. Conservative usage-based cost: **CNY0**. New protected UNKNOWN holds: **CNY0**. The browser context, worker, native engine, owned Windows Job and isolated container closed; the database volume is retained and ports19231–19233 are free. ON was not started. All five cells per mode remain in the planned denominator; unavailable complete-answer latency and scientific assessment are NULL/not assessed. No latency or scientific success is claimed for this setup attempt.
+
+The independently assembled complete candidate directory includes original public corpus/model assets. Its actual `start_candidate.ps1 -VerifyOnly` entry passed read-only validation of the then-declared 882 files (1,867,725,386 bytes). Later-added public metadata has not yet been folded into a sealed final manifest. This check does not establish clean-machine installation or service startup. No final ZIP has been published at this checkpoint.
+
+Repairs continue in an independent phase201 source directory. They must preserve the fixed questions, original failed attempt, Main source/config/database/key boundary, old UNKNOWN charges, stopped 48-unit pilot and Q6 scientific-review flags. The original Q6 source review remains pending and is not an approval.
+
+Evidence: [source integration](evidence/phase200/SOURCE-INTEGRATION200.json), [frozen regression](evidence/phase200/verification/FROZEN-CANDIDATE-RESULT200.json), [setup result](evidence/phase200/PRE-DISPATCH-STOP200.json), [preservation](evidence/phase200/attempt01/PRESERVATION200.json), [candidate entrypoint](evidence/phase200/package-review/CANDIDATE-ENTRYPOINT200.json).

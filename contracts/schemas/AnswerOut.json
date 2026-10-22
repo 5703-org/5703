@@ -588,6 +588,66 @@
       "title": "Answer Mode",
       "type": "string"
     },
+    "verification_mode": {
+      "anyOf": [
+        {
+          "enum": [
+            "fast",
+            "verified"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Verification Mode"
+    },
+    "check_requested": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Check Requested"
+    },
+    "check_executed": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Check Executed"
+    },
+    "verification_status": {
+      "anyOf": [
+        {
+          "enum": [
+            "not_requested",
+            "passed",
+            "failed",
+            "not_performed",
+            "not_applicable",
+            "unknown"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Verification Status"
+    },
     "source_provenance": {
       "default": "textbook_evidence",
       "enum": [

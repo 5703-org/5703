@@ -1,0 +1,142 @@
+{
+  "utc": "2026-10-15T19:43:39.155537+00:00",
+  "status": "MAIN201_SOURCE_ONLY_INTEGRATED_WITH_EXACT_BEFORE_BACKUP",
+  "source_version": "Main201",
+  "based_on": "Integrated Main199 recorded in phase200/SOURCE-INTEGRATION200.json",
+  "candidate_source_manifest_sha256": "1f2a8f761565f7373da06bbcd9555fa864adc4edc5e8120b63c9d3629581d2cf",
+  "changes": [
+    {
+      "path": "backend/app/core/config.py",
+      "kind": "product",
+      "before": {
+        "bytes": 9184,
+        "sha256": "0e7a4e6e405ac583eba85e9f111cf8a70908205ae725abc6c5716621f401efef"
+      },
+      "after": {
+        "bytes": 9232,
+        "sha256": "60101e5bc2d8b3222703acde064109688929638b2cc1f332c7b5638e00b63193"
+      }
+    },
+    {
+      "path": "backend/app/modules/answering/service.py",
+      "kind": "product",
+      "before": {
+        "bytes": 136422,
+        "sha256": "909c9aedc9157d2f5e80ac2dd42b23185d60d3614ea363ab4a5eee63e2296905"
+      },
+      "after": {
+        "bytes": 136691,
+        "sha256": "d9b815eadcf2494cf7faf6078c1978ea48948daf653222299f968d12e8002d98"
+      }
+    },
+    {
+      "path": "conversation/query_v22.py",
+      "kind": "product",
+      "before": {
+        "bytes": 1465,
+        "sha256": "96d385f076ee0457b0a72a85de88bb92d2ab49554e38e3108252db9882e4ef93"
+      },
+      "after": {
+        "bytes": 3251,
+        "sha256": "7317d7ef778fdb289a1a3569a6f8ce081b711b7eac263bcef10a54be4d64e699"
+      }
+    },
+    {
+      "path": "generation/checked.py",
+      "kind": "product",
+      "before": {
+        "bytes": 215040,
+        "sha256": "3255cefaad67eb2866910937939db8c290db6e02c6c790ef5f56eeb4868bc6a6"
+      },
+      "after": {
+        "bytes": 216079,
+        "sha256": "dc466f70839604cb6687ad147c88f51f6a0b5d169c1316ae2fe47e4920191041"
+      }
+    },
+    {
+      "path": "generation/checker_encoding_assertions_v3.py",
+      "kind": "product",
+      "before": null,
+      "after": {
+        "bytes": 12134,
+        "sha256": "ed8f8066387caa15cc8762f0dd6a788f8ddd35e8ba0bc936ec78b9a462a0715e"
+      }
+    },
+    {
+      "path": "generation/service.py",
+      "kind": "product",
+      "before": {
+        "bytes": 32402,
+        "sha256": "b3aa4ab6c964d762deef56f364bb95bf9b4761a2ccec1ffb3fdf9bd3bd0b25a5"
+      },
+      "after": {
+        "bytes": 32884,
+        "sha256": "4cdff4bb5d2807ceac61af1c678780fb635207264052db9a61c80f8980cd6a08"
+      }
+    },
+    {
+      "path": "tests/fixtures/query201/checked.py",
+      "kind": "test_or_fixture",
+      "before": null,
+      "after": {
+        "bytes": 215898,
+        "sha256": "99d5306a6b60fcbaee61b5e19f1346b8ec69c30ce15c2f89c4d1d1cef7ca3e04"
+      }
+    },
+    {
+      "path": "tests/fixtures/query201/query_v22.py",
+      "kind": "test_or_fixture",
+      "before": null,
+      "after": {
+        "bytes": 1465,
+        "sha256": "96d385f076ee0457b0a72a85de88bb92d2ab49554e38e3108252db9882e4ef93"
+      }
+    },
+    {
+      "path": "tests/unit/test_assertion_checker_encoding200.py",
+      "kind": "test_or_fixture",
+      "before": null,
+      "after": {
+        "bytes": 23286,
+        "sha256": "ac163736f0f8bd353547f83dc709ae3a089606a03b0eb3e62232a0d064975abc"
+      }
+    },
+    {
+      "path": "tests/unit/test_query_programmatic201.py",
+      "kind": "test_or_fixture",
+      "before": null,
+      "after": {
+        "bytes": 10932,
+        "sha256": "9c616a9f7f5e8e99e8692e9e235ffe62c1e6983f19a3ebc51c28262df66be4fe"
+      }
+    },
+    {
+      "path": "tests/unit/test_v22_integration.py",
+      "kind": "test_or_fixture",
+      "before": {
+        "bytes": 24687,
+        "sha256": "b0ff8b09890860de6b76b5cc0c842d054772b2b1ca7941a4d13a46d7008aae7e"
+      },
+      "after": {
+        "bytes": 24687,
+        "sha256": "e302103406474a4b96da07f4ac2fe85e80c174e8aca8986c25b7ef8448689e88"
+      }
+    }
+  ],
+  "product_paths": 6,
+  "tests_and_fixtures": 5,
+  "rollback_before_directory": "docs/execution/evidence/phase201/main-before201",
+  "new_paths_for_rollback": [
+    "generation/checker_encoding_assertions_v3.py",
+    "tests/fixtures/query201/checked.py",
+    "tests/fixtures/query201/query_v22.py",
+    "tests/unit/test_assertion_checker_encoding200.py",
+    "tests/unit/test_query_programmatic201.py"
+  ],
+  "Main_env_saved_model_configuration_DB_keys_modified": false,
+  "Main_services_explicitly_restarted_or_deployed": false,
+  "Main_running_loaded_source_version": "UNCONFIRMED: source copy is not proof of a running service update",
+  "candidate_known_limits": "Actual OFF4/5 delivered, ON2/5; scientific precision/source issues and native gate failures remain explicit. No gate relaxed to claim success.",
+  "frozen_actual_trial_source_unchanged": true,
+  "next": "Fresh affected Main regression and final complete candidate/report with honest current limits; no additional model calls."
+}

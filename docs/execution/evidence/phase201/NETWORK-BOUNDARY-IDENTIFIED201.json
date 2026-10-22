@@ -1,0 +1,98 @@
+{
+  "utc": "2026-10-15T19:40:37.657729+00:00",
+  "status": "ACTUAL201_LOCAL_BIND_CALLER_IDENTIFIED_NO_TOOL_REFUSAL",
+  "actual_scope": "Phase201 OFF; the older Phase200 label had no stack, so its exact caller is not retroactively proven",
+  "tool_execution": {
+    "phase200_launch": "613641",
+    "phase201_OFF_launch": "4c4be0",
+    "phase201_ON_launch": "fd4f46",
+    "permission_outcome": "All original exec_command(require_escalated) calls started; no new tool/automatic-approval rejection was returned"
+  },
+  "raw_local_denial": {
+    "code": "FOREIGN_BIND",
+    "ordinal": 1,
+    "role": "server",
+    "perf_counter_ns": 27499590884600,
+    "thread_id": 123556,
+    "pair_active": false,
+    "address_kind": "tuple",
+    "host": "::1",
+    "port": 0,
+    "frames": [
+      {
+        "file": "runtime_fence192.py",
+        "function": "bind",
+        "line": 172
+      },
+      {
+        "file": "connection.py",
+        "function": "_has_ipv6",
+        "line": 127
+      },
+      {
+        "file": "connection.py",
+        "function": "<module>",
+        "line": 137
+      },
+      {
+        "file": "<frozen importlib._bootstrap>",
+        "function": "_call_with_frames_removed",
+        "line": 488
+      },
+      {
+        "file": "<frozen importlib._bootstrap_external>",
+        "function": "exec_module",
+        "line": 1026
+      },
+      {
+        "file": "<frozen importlib._bootstrap>",
+        "function": "_load_unlocked",
+        "line": 935
+      },
+      {
+        "file": "<frozen importlib._bootstrap>",
+        "function": "_find_and_load_unlocked",
+        "line": 1331
+      },
+      {
+        "file": "<frozen importlib._bootstrap>",
+        "function": "_find_and_load",
+        "line": 1360
+      },
+      {
+        "file": "__init__.py",
+        "function": "<module>",
+        "line": 4
+      },
+      {
+        "file": "<frozen importlib._bootstrap>",
+        "function": "_call_with_frames_removed",
+        "line": 488
+      },
+      {
+        "file": "<frozen importlib._bootstrap_external>",
+        "function": "exec_module",
+        "line": 1026
+      },
+      {
+        "file": "<frozen importlib._bootstrap>",
+        "function": "_load_unlocked",
+        "line": 935
+      }
+    ]
+  },
+  "retained_close_receipt_sha256": "1d142fa504676806948a155db3569a20b9773e6efa6ccc4dae3a1ce158f88502",
+  "primary_local_source": {
+    "path": ".venv/Lib/site-packages/urllib3/util/connection.py",
+    "sha256": "2633bbdb69731e5ccb5cf4e4afd65605d86c7979cc5633126f50c92d5ad74a74",
+    "bind_line": 127,
+    "import_call_line": 137,
+    "behavior": "Import-time IPv6 capability check binds loopback ::1 with ephemeral port0; catches Exception and closes the socket. Our local fixed-port wrapper rejects it before the native bind occurs."
+  },
+  "data_transmission": "This capability attempt did not send a model prompt or contact an external address. The separately authorized DeepSeek calls are counted normally.",
+  "rule_changed": false,
+  "Main_production_code_contains_this_experiment_fence": false,
+  "audit_scope": "SERVER-CLOSED retains audit_failure; lifecycle/process/container closure and known billing are separate evidence. Do not call this a clean fence audit.",
+  "old_phase200_exact_callsite": "UNKNOWN_FROM_OLD_RETAINED_LABEL_ONLY",
+  "authorization_status": "Existing and reaffirmed DeepSeek authorization remains applicable; no authorization wait."
+}

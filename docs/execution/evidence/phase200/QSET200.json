@@ -1,0 +1,41 @@
+{
+  "schema": "phase200_fixed_new_question_only_set_v1",
+  "utc": "2026-10-15T18:34:33.436400+00:00",
+  "frozen_before_product_model_calls": true,
+  "question_count": 5,
+  "questions": [
+    {
+      "id": "N1",
+      "category": "definition",
+      "answer_mode": "textbook",
+      "question": "What are isotopes of an element? Include one example."
+    },
+    {
+      "id": "N2",
+      "category": "comparison",
+      "answer_mode": "textbook",
+      "question": "Starting with a diploid cell, how do mitosis and meiosis differ in the number of divisions and the chromosome number of their products?"
+    },
+    {
+      "id": "N3",
+      "category": "multipart",
+      "answer_mode": "textbook",
+      "question": "What are the roles of mRNA, tRNA, and rRNA during translation?"
+    },
+    {
+      "id": "N4",
+      "category": "unit_calculation",
+      "answer_mode": "textbook",
+      "question": "A solution contains 3.00 g of urea (molar mass 60.06 g/mol) in a final solution volume of 250.0 mL. What is its molarity in mol/L? Show the unit conversions and report three significant figures."
+    },
+    {
+      "id": "N5",
+      "category": "explicit_no_retrieval_general_knowledge",
+      "answer_mode": "general_knowledge",
+      "question": "Use general knowledge without retrieving or consulting documents. Why does the Moon appear to change phase during a month, and are ordinary phases caused by Earth's shadow?"
+    }
+  ],
+  "no_gold_answers_or_rubric_in_runtime": true,
+  "order": "OFF cohort N1..N5, then fresh-worker ON cohort N1..N5; descriptive engineering observations, no randomized causal effect claim",
+  "failure_rule": "Keep all five per mode. Continue distinct cells after known functional failure; never retry or repair that cell. Unknown submission or ownership/policy failure stops the scope."
+}

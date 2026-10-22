@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def runtime_openapi():
-    app = create_app(Settings(env="test", database_url="sqlite+pysqlite:///:memory:"))
+    app = create_app(Settings(_env_file=None, env="test", database_url="sqlite+pysqlite:///:memory:"))
     try:
         return app.openapi()
     finally:
@@ -53,6 +53,7 @@ def main():
         "content",
         "use_profile",
         "answer_mode",
+        "check_answer",
         "teaching_mode",
         "task_id",
         "task_action",
@@ -63,6 +64,8 @@ def main():
         "reading_context",
     }
     assert public["ChatMessageCreate"]["properties"]["answer_mode"]["default"] == "textbook"
+    assert public["ChatMessageCreate"]["properties"]["check_answer"].get("default") is None
+    assert "check_answer" not in public["ChatMessageCreate"]["required"]
     assert public["ChatMessageCreate"]["properties"]["answer_mode"]["enum"] == [
         "textbook",
         "general_knowledge",

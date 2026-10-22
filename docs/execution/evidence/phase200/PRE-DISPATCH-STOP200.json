@@ -1,0 +1,108 @@
+{
+  "schema": "phase200_pre_provider_setup_stop_v1",
+  "utc": "2026-10-15T19:11:54.180031+00:00",
+  "status": "STOPPED_SETUP_NOT_A_COMPLETED_SCIENCE_EXPERIMENT",
+  "original_entrypoint_launch_chunk": "613641",
+  "launcher_session": 35344,
+  "completion_chunk": "39f18a",
+  "exit_code": 1,
+  "preservation_chunk": "c10867",
+  "physical_GEN": 0,
+  "physical_CHECK": 0,
+  "logical_stage_attempts": 0,
+  "known_usage_based_conservative_cost_cny": "0",
+  "unknown_protected_holds_cny": "0",
+  "first_stop": "ONLY_ONE_NATIVE_REQUEST_AT_ONCE",
+  "cause": "Native checked.generate_checked invokes service.generate(programmatic_only=True) for a zero-RPC clarification fallback; the experiment guard wrongly treated this same-request internal recursion as concurrent work.",
+  "separate_product_trigger": "The frozen N1 complete question plus Include one example was classified missing_referent by native query V22. It has not been rewritten or removed.",
+  "separate_boundary_denial": {
+    "code": "FOREIGN_BIND",
+    "cause": "UNRESOLVED: no public address/stack/time was retained; do not infer a normal selfpipe cause or widen network permissions."
+  },
+  "browser": {
+    "status": "STOPPED_AT_FIRST_FAILURE",
+    "first_HTTP_error_status": 502,
+    "path": "GET /api/v1/jobs/<owned id>",
+    "native_job_state_observed_in_browser": "queued",
+    "timeout_ms": 180000,
+    "successful_complete_latency_ms": null
+  },
+  "OFF_denominator": 5,
+  "ON_denominator": 5,
+  "cells": [
+    {
+      "case_id": "N1-OFF",
+      "status": "SETUP_FAILED_BEFORE_PROVIDER",
+      "successful_complete_latency_ms": null,
+      "science_assessed": false
+    },
+    {
+      "case_id": "N2-OFF",
+      "status": "NOT_RUN_AFTER_SETUP_STOP",
+      "successful_complete_latency_ms": null,
+      "science_assessed": false
+    },
+    {
+      "case_id": "N3-OFF",
+      "status": "NOT_RUN_AFTER_SETUP_STOP",
+      "successful_complete_latency_ms": null,
+      "science_assessed": false
+    },
+    {
+      "case_id": "N4-OFF",
+      "status": "NOT_RUN_AFTER_SETUP_STOP",
+      "successful_complete_latency_ms": null,
+      "science_assessed": false
+    },
+    {
+      "case_id": "N5-OFF",
+      "status": "NOT_RUN_AFTER_SETUP_STOP",
+      "successful_complete_latency_ms": null,
+      "science_assessed": false
+    },
+    {
+      "case_id": "N1-ON",
+      "status": "NOT_RUN_AFTER_SETUP_STOP",
+      "successful_complete_latency_ms": null,
+      "science_assessed": false
+    },
+    {
+      "case_id": "N2-ON",
+      "status": "NOT_RUN_AFTER_SETUP_STOP",
+      "successful_complete_latency_ms": null,
+      "science_assessed": false
+    },
+    {
+      "case_id": "N3-ON",
+      "status": "NOT_RUN_AFTER_SETUP_STOP",
+      "successful_complete_latency_ms": null,
+      "science_assessed": false
+    },
+    {
+      "case_id": "N4-ON",
+      "status": "NOT_RUN_AFTER_SETUP_STOP",
+      "successful_complete_latency_ms": null,
+      "science_assessed": false
+    },
+    {
+      "case_id": "N5-ON",
+      "status": "NOT_RUN_AFTER_SETUP_STOP",
+      "successful_complete_latency_ms": null,
+      "science_assessed": false
+    }
+  ],
+  "ON_executed": false,
+  "resources": {
+    "owned_windows_job_closed": true,
+    "unknown_processes": [],
+    "container": "STOPPED_RETAINED",
+    "database_volume_retained": "cs30_phase200_3cd8a7e1_off_pgdata",
+    "ports": "FREE",
+    "worker_thread_closed": true,
+    "api_engine_disposed": true
+  },
+  "Main_running_services_explicitly_restarted": false,
+  "Main_loaded_version": "UNCONFIRMED",
+  "old_UNKNOWN_stopped48_and_Q6_pending": "UNCHANGED",
+  "next": "Preserve this STOP permanently. Repair the native query and programmatic derivation plus experiment guard offline in phase201; obtain a new concrete original-entrypoint execution review only after exact zero-dispatch closure and relevant checks. Do not call this a completed blind comparison."
+}

@@ -83,6 +83,34 @@
     "updated_at": {
       "title": "Updated At",
       "type": "string"
+    },
+    "verification_mode": {
+      "anyOf": [
+        {
+          "enum": [
+            "fast",
+            "verified"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Verification Mode"
+    },
+    "check_requested": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Check Requested"
     }
   },
   "required": [

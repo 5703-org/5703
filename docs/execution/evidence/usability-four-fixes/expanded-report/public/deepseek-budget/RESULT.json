@@ -1,0 +1,136 @@
+{
+  "schema": "expanded_report_deepseek_preset_result_v1",
+  "created_utc": "2026-10-19T04:05:56.567404+00:00",
+  "status": "ISOLATED_CANDIDATE_VERIFIED_NOT_ADOPTED",
+  "candidate": "E:\\5703\\isolated\\expanded-report-deepseek-budget-20261019\\candidate",
+  "changes": [
+    {
+      "relative_path": "backend/app/modules/model_settings/service.py",
+      "before": {
+        "path": "E:\\5703\\learning-assistant\\backend\\app\\modules\\model_settings\\service.py",
+        "bytes": 20325,
+        "sha256": "a42ea9eea9f1b3fc3920a7b310cf81598dc6d9328602ed5954ddd05fabdac329"
+      },
+      "after": {
+        "path": "E:\\5703\\isolated\\expanded-report-deepseek-budget-20261019\\candidate\\backend\\app\\modules\\model_settings\\service.py",
+        "bytes": 20737,
+        "sha256": "a6a70ab51c2a69c567459ca69050a00134c791960d42a33405f06ef7b1c697eb"
+      }
+    },
+    {
+      "relative_path": "tests/unit/test_stage_window_budget_v1.py",
+      "before": {
+        "path": "E:\\5703\\isolated\\expanded-report-deepseek-budget-20261019\\additional-test-preimages\\tests\\unit\\test_stage_window_budget_v1.py",
+        "bytes": 20502,
+        "sha256": "e9a1710f59415dadcb5b9b3e32ecfad3408fb478e155896292bea075cf38ea6d"
+      },
+      "after": {
+        "path": "E:\\5703\\isolated\\expanded-report-deepseek-budget-20261019\\candidate\\tests\\unit\\test_stage_window_budget_v1.py",
+        "bytes": 20570,
+        "sha256": "44563f78d9d7982ea3ed1528e5eae94f3192cffaa6d34fda444583a6703b84c4"
+      }
+    },
+    {
+      "relative_path": "tests/unit/test_provider_switching_matrix.py",
+      "before": {
+        "path": "E:\\5703\\isolated\\expanded-report-deepseek-budget-20261019\\additional-test-preimages\\tests\\unit\\test_provider_switching_matrix.py",
+        "bytes": 12435,
+        "sha256": "a96dc58f80ed27dc51eee27f8e8728be03ff2fbaa9014dceb6cbd7fcad7a6576"
+      },
+      "after": {
+        "path": "E:\\5703\\isolated\\expanded-report-deepseek-budget-20261019\\candidate\\tests\\unit\\test_provider_switching_matrix.py",
+        "bytes": 12485,
+        "sha256": "3c55c0e6451ab6dd081d050419414d3a9c134b40efd48cc0c9dc250c3a8f1b6b"
+      }
+    },
+    {
+      "relative_path": "tests/unit/test_deepseek_preset_window.py",
+      "before": null,
+      "after": {
+        "path": "E:\\5703\\isolated\\expanded-report-deepseek-budget-20261019\\candidate\\tests\\unit\\test_deepseek_preset_window.py",
+        "bytes": 3845,
+        "sha256": "9ef88a6b49b445d7da68770146f2a1d5087aa90458260e13d7237ee10adaa51b"
+      }
+    }
+  ],
+  "runtime_product_changes": 1,
+  "existing_test_expectation_updates": 2,
+  "new_focused_test_files": 1,
+  "patch": {
+    "path": "E:\\5703\\isolated\\expanded-report-deepseek-budget-20261019\\DEEPSEEK-PRESET-ACTUAL-DIFF.patch",
+    "bytes": 7378,
+    "sha256": "08d5ab0227d112f2f301c6e1d9b16620f859195c3b07013b1d6bb0ae981cd670"
+  },
+  "baseline": {
+    "path": "E:\\5703\\isolated\\expanded-report-deepseek-budget-20261019\\BASELINE.json",
+    "bytes": 105416,
+    "sha256": "229f845bbd65e541c0786b4200d4792f5d056b6c909d6eac19f892f8091b6bc2"
+  },
+  "verification": {
+    "targeted_pytest": {
+      "result": "26 PASS",
+      "log": {
+        "path": "E:\\5703\\isolated\\expanded-report-deepseek-budget-20261019\\FOCUSED-PYTEST.log",
+        "bytes": 285,
+        "sha256": "daed41367be7f6745e4f4f041937c12bc995550aa78465c4f9e049edd669b51e"
+      }
+    },
+    "ruff": {
+      "result": "PASS",
+      "log": {
+        "path": "E:\\5703\\isolated\\expanded-report-deepseek-budget-20261019\\RUFF.log",
+        "bytes": 20,
+        "sha256": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0"
+      }
+    },
+    "exact_wire_before": {
+      "path": "E:\\5703\\isolated\\expanded-report-deepseek-budget-20261019\\BEFORE-WIRE-BUDGET.json",
+      "bytes": 7912,
+      "sha256": "07c3bc859c416212595e6e67f3ebdda4ef9481e6dfd39f938778201084e1aea8"
+    },
+    "exact_wire_after": {
+      "path": "E:\\5703\\isolated\\expanded-report-deepseek-budget-20261019\\AFTER-WIRE-BUDGET.json",
+      "bytes": 7908,
+      "sha256": "acd6cf6150ca88c44518aab695945216ad83b5fd1ff8e4e7cf20d84154b56c94"
+    },
+    "initial_setup_stop_retained": {
+      "path": "E:\\5703\\isolated\\expanded-report-deepseek-budget-20261019\\BEFORE-WIRE-BUDGET-SETUP-STOP01.log",
+      "bytes": 3778,
+      "sha256": "4d2bc1a12965ea79fa3b733944bf2828fab53ccf56e870934483aa06c10c0130"
+    },
+    "Main_source_rows_reverified_unchanged": 589,
+    "forbidden_network_database_provider_attempts": 0
+  },
+  "budget_observations": {
+    "generation_total_reserved_historical_HF": 14264,
+    "generation_total_reserved_default_labelled_estimate": 20111,
+    "checker_total_reserved_historical_HF": 19661,
+    "checker_total_reserved_default_labelled_estimate": 25952,
+    "genuine_oversized_checker_total_reserved_historical_HF": 67669,
+    "old_preset_window": 16384,
+    "new_known_deepseek_preset_window": 32768,
+    "Luna_preset_window_unchanged": 65536,
+    "generic_unknown_preset_window_unchanged": 16384
+  },
+  "preserved": [
+    "All existing saved/active configurations, explicit windows and credentials",
+    "Provider/model identity, historical local tokenizer, output reservations and transport",
+    "Genuine overflow admission/publication gates",
+    "Main services and source files"
+  ],
+  "limits": [
+    "New preset drafts only; old saved16384 revisions require an explicit operator-created/tested successor if desired.",
+    "32768 is an application working budget, not provider maximum or a guarantee every future legal request fits.",
+    "Configured historical DeepSeek-V4-Flash-0731 tokenizer is not certified identical to current mutable provider alias.",
+    "No new model quality, latency, consumption calibration, real browser or native installation acceptance is claimed.",
+    "The first replay setup stopped on a denied stdlib Windows platform version subprocess before any network/database/provider work; the retained rerun performs that read-only bootstrap before installing the fence."
+  ],
+  "new_provider_calls": 0,
+  "new_cost": 0,
+  "Main_adopted": false,
+  "next_actions": [
+    "Root review/integrate the single preset runtime file and focused test changes into the approved consolidated candidate.",
+    "Use Root's combined source/native verification once; no broad or semantic test rerun is required by this lane.",
+    "Carry the explicit saved-revision and tokenizer limitations into the full runnable package notes."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-15T19:23:00.520097+00:00",
+  "user_authorization_reaffirmed": true,
+  "scope": "Private project prompts/schema plus public textbook and synthetic data to official DeepSeek; no real user data",
+  "tool": "tools.exec_command via functions.exec",
+  "action": "& '.\\.venv\\Scripts\\python.exe' -X utf8 -I -B 'docs\\execution\\evidence\\phase192\\runtime\\launch192.py'",
+  "sandbox_permissions": "require_escalated",
+  "launch_chunk": "613641",
+  "tool_permission_outcome": "Approved and process started; no new auto-review or tool sandbox rejection was returned",
+  "actual_first_stop": {
+    "origin": "Our experiment guard192.py, not the external tool",
+    "code": "ONLY_ONE_NATIVE_REQUEST_AT_ONCE",
+    "reason": "It rejected native same-request programmatic_only recursion as concurrency before any provider stage."
+  },
+  "separate_boundary_record": {
+    "origin": "Our local runtime_fence192.py socket.bind wrapper",
+    "raw_retained_denied_label": [
+      "FOREIGN_BIND"
+    ],
+    "exception_constructed_by_source": "PHASE192_BOUNDARY_FOREIGN_BIND",
+    "exception_string_capture_limit": "This constructed text is read from the helper source; only the denied label and RuntimeError audit stack were preserved, not the original attempted bind address/stack/time.",
+    "exact_attempted_bind": "UNKNOWN_FROM_RETAINED_EVIDENCE",
+    "not_evidence_of": "An OpenAI platform decision, OS network sandbox denial, or denial of the existing DeepSeek payload authorization."
+  },
+  "physical_GEN": 0,
+  "physical_CHECK": 0,
+  "incremental_known_cost_cny": "0",
+  "new_unknown_holds_cny": "0",
+  "resources_closed": true,
+  "normal_work_status": "Authorized repair and finite fixed-set execution continue; missing historical refusal evidence is not an authorization blocker. Any genuinely new tool rejection will be quoted and handled through that same original tool without an alternative route."
+}

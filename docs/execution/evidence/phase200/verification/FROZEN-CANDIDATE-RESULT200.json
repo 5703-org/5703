@@ -1,0 +1,47 @@
+{
+  "utc": "2026-10-15T19:01:07.427601+00:00",
+  "status": "PASS_FROZEN_AFFECTED_UNIT_REGRESSION",
+  "source_manifest": "../SOURCE-COPY200.json",
+  "source_manifest_sha256": "bd9b0380674b72fc324ef82d5de9dfea4e193e07c20f5ea698176a607576eeac",
+  "tests": 257,
+  "failures_and_errors": 0,
+  "seconds_reported_by_pytest": 3.31,
+  "scope": [
+    "tests/unit/test_assertion_checker_encoding200.py",
+    "tests/unit/test_assertion_citation_derivation199.py",
+    "tests/unit/test_index_only_retrieval199.py",
+    "tests/unit/test_assertion_provenance161.py",
+    "tests/unit/test_assertion_source_transport197.py",
+    "tests/unit/test_final_generation_packing198.py",
+    "tests/unit/test_checker_encoding.py"
+  ],
+  "execution_root": "E:/5703/isolated/phase200-fixed-new-set-20261015/source",
+  "resource_binding": "Existing hash-pinned public Complete Candidate200 artifacts/tiktoken; no network installation/download",
+  "junit_sha256": "9f9b42f74d5d488a236c14df1367ac75c27b1c9c092c5c819207aba48ece442b",
+  "log_sha256": "c91ea3e1c14bb1424dfb79d03e793c1947ff8bafa3e11b72db0269de52cdec90",
+  "command_tool_chunks": [
+    "a7cef9",
+    "bf7d6b"
+  ],
+  "preserved_initial_collection_failures": [
+    {
+      "chunks": [
+        "9e113e",
+        "26331a"
+      ],
+      "log": "frozen-candidate200-collection01.log",
+      "cause": "An extra historical integration189 file was outside runtime-copy dependency closure; missing package context"
+    },
+    {
+      "chunks": [
+        "34b57d",
+        "5d6b8d"
+      ],
+      "log": "frozen-candidate200-collection02.log",
+      "cause": "importlib mode exposed bare unit helper imports and missing historical integration learning-state helper; unit regression scope restored without product/source modification"
+    }
+  ],
+  "verification_repairs": "Only test invocation scope/import mode corrected; frozen product files unchanged",
+  "full_backend_suite_run": false,
+  "new_external_calls": 0
+}

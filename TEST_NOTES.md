@@ -1,0 +1,9 @@
+# Main201 release test notes
+
+This document freezes the release's validation scope before the new archive is accepted. Read the accompanying `TEST_NOTES208.md` and final delivery receipt beside the ZIP for actual phase208 results bound to that archive's SHA-256. Those external results do not require rewriting this frozen application/resource bundle.
+
+Historical evidence is not a fresh run: the original context-limit repair reported 16 offline controls for first question/long answer/multi-turn/true overflow; later Main201 source/integration and fixed DEV results are retained in their original records. Earlier complete201 verification covered 943 declared public files, ZIP CRC/member hashes, and a read-only VerifyOnly call. Its clean-PC dependency installation/full fresh launcher was not run. These observations are not relabelled as new phase208 results.
+
+Phase208 uses exactly the 483 frozen canonical Main201 application rows. New release checks cover public resource/source identity, safe ZIP membership, every declared hash, fresh extraction, initialization/startup and a visibly labelled mock UI/retrieval/citation journey when actually completed by the independent validator. Same-host installed dependencies, if reused, must be labelled as a fixture rather than a clean-PC installation. No extra live model calls or new scientific-quality experiment are part of packaging. Mock UI success is not real-provider scientific quality or an answer-latency guarantee.
+
+Preserved application defaults: generic fallback window 16384, maximum output 1024, provider output json_field_contract_v2, checker transport lossless_checker_tables_v1, query preparation anchored_reference_v22. Later experimental phase206/207 strategies are excluded. Source replacement, database initialization, process startup, model activation and scientific answer validation remain separate observations.

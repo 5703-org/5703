@@ -47,6 +47,14 @@ class SummaryOut(Contract):
 class CapabilitiesOut(Contract):
     model_mode: Literal["mock", "live"]
     chat_ready: bool
+    hint_ready: bool = False
+    hint_unavailable_reason: str | None = "Hint teaching availability has not been established."
+    checker_enabled: bool = True
+    checker_unavailable_reason: str | None = None
+    practice_assessment_ready: bool = False
+    practice_assessment_unavailable_reason: str | None = (
+        "Practice assessment availability has not been established."
+    )
     evaluation_ready: bool
     missing_reasons: dict[str, list[str]]
     providers: list[dict]

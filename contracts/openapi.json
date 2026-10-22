@@ -84,6 +84,15 @@
       "ActivationInput": {
         "additionalProperties": false,
         "properties": {
+          "activation_scope": {
+            "default": "answer_and_checker",
+            "enum": [
+              "answer_only",
+              "answer_and_checker"
+            ],
+            "title": "Activation Scope",
+            "type": "string"
+          },
           "checker_configuration_id": {
             "anyOf": [
               {
@@ -162,6 +171,28 @@
           "can_regenerate": {
             "title": "Can Regenerate",
             "type": "boolean"
+          },
+          "check_executed": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Check Executed"
+          },
+          "check_requested": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Check Requested"
           },
           "conversation_snapshot": {
             "anyOf": [
@@ -343,6 +374,40 @@
             "additionalProperties": true,
             "title": "Timing",
             "type": "object"
+          },
+          "verification_mode": {
+            "anyOf": [
+              {
+                "enum": [
+                  "fast",
+                  "verified"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Verification Mode"
+          },
+          "verification_status": {
+            "anyOf": [
+              {
+                "enum": [
+                  "not_requested",
+                  "passed",
+                  "failed",
+                  "not_performed",
+                  "not_applicable",
+                  "unknown"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Verification Status"
           }
         },
         "required": [
@@ -560,6 +625,22 @@
             "title": "Chat Ready",
             "type": "boolean"
           },
+          "checker_enabled": {
+            "default": true,
+            "title": "Checker Enabled",
+            "type": "boolean"
+          },
+          "checker_unavailable_reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Checker Unavailable Reason"
+          },
           "contract_versions": {
             "items": {
               "additionalProperties": {
@@ -581,6 +662,23 @@
             "title": "Feature Flags",
             "type": "object"
           },
+          "hint_ready": {
+            "default": false,
+            "title": "Hint Ready",
+            "type": "boolean"
+          },
+          "hint_unavailable_reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": "Hint teaching availability has not been established.",
+            "title": "Hint Unavailable Reason"
+          },
           "missing_reasons": {
             "additionalProperties": {
               "items": {
@@ -598,6 +696,23 @@
             ],
             "title": "Model Mode",
             "type": "string"
+          },
+          "practice_assessment_ready": {
+            "default": false,
+            "title": "Practice Assessment Ready",
+            "type": "boolean"
+          },
+          "practice_assessment_unavailable_reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": "Practice assessment availability has not been established.",
+            "title": "Practice Assessment Unavailable Reason"
           },
           "providers": {
             "items": {
@@ -1469,6 +1584,17 @@
             ],
             "title": "Answer Mode",
             "type": "string"
+          },
+          "check_answer": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Check Answer"
           },
           "content": {
             "maxLength": 4000,
@@ -4184,6 +4310,90 @@
         "title": "FailureAttempt",
         "type": "object"
       },
+      "FailureClassification": {
+        "additionalProperties": false,
+        "description": "A selected failure kind, not a retry decision or a semantic verdict.",
+        "properties": {
+          "category": {
+            "enum": [
+              "context_budget",
+              "output_validation",
+              "evidence_check",
+              "checker_contract",
+              "checker_unavailable",
+              "provider_timeout",
+              "provider_connection",
+              "provider_rejection",
+              "configuration",
+              "budget_exhausted",
+              "unclassified"
+            ],
+            "title": "Category",
+            "type": "string"
+          },
+          "error_type": {
+            "anyOf": [
+              {
+                "enum": [
+                  "ValueError",
+                  "ValidationError",
+                  "KeyError",
+                  "TypeError"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error Type"
+          },
+          "stage": {
+            "anyOf": [
+              {
+                "enum": [
+                  "preparing",
+                  "generating",
+                  "generation",
+                  "generation_format_repair",
+                  "semantic_repair",
+                  "joint_check",
+                  "joint_recheck",
+                  "checker_contract_repair"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Stage"
+          },
+          "validation_code": {
+            "anyOf": [
+              {
+                "maxLength": 79,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Validation Code"
+          },
+          "version": {
+            "const": "safe_failure_classification_v1",
+            "default": "safe_failure_classification_v1",
+            "title": "Version",
+            "type": "string"
+          }
+        },
+        "required": [
+          "category"
+        ],
+        "title": "FailureClassification",
+        "type": "object"
+      },
       "FailureCounts": {
         "additionalProperties": false,
         "properties": {
@@ -4270,6 +4480,28 @@
             "title": "Budget",
             "type": "object"
           },
+          "check_executed": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Check Executed"
+          },
+          "check_requested": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Check Requested"
+          },
           "counts": {
             "$ref": "#/components/schemas/FailureCounts"
           },
@@ -4302,6 +4534,16 @@
           },
           "evidence": {
             "$ref": "#/components/schemas/FailureEvidence"
+          },
+          "failure_classification": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/FailureClassification"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "http_trace_id": {
             "anyOf": [
@@ -4403,6 +4645,32 @@
           "state": {
             "title": "State",
             "type": "string"
+          },
+          "verification_mode": {
+            "anyOf": [
+              {
+                "enum": [
+                  "fast",
+                  "verified"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Verification Mode"
+          },
+          "verification_status": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Verification Status"
           }
         },
         "required": [
@@ -5403,6 +5671,20 @@
             "title": "Pending Attempts",
             "type": "integer"
           },
+          "practice_availability_reason": {
+            "default": "no_published_questions",
+            "enum": [
+              "available",
+              "no_published_questions"
+            ],
+            "title": "Practice Availability Reason",
+            "type": "string"
+          },
+          "practice_available": {
+            "default": false,
+            "title": "Practice Available",
+            "type": "boolean"
+          },
           "prerequisite_origin": {
             "const": "section_order_suggestion",
             "default": "section_order_suggestion",
@@ -5584,6 +5866,17 @@
             "title": "Can Retry",
             "type": "boolean"
           },
+          "check_requested": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Check Requested"
+          },
           "created_at": {
             "title": "Created At",
             "type": "string"
@@ -5625,6 +5918,21 @@
           "updated_at": {
             "title": "Updated At",
             "type": "string"
+          },
+          "verification_mode": {
+            "anyOf": [
+              {
+                "enum": [
+                  "fast",
+                  "verified"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Verification Mode"
           }
         },
         "required": [
@@ -5644,6 +5952,17 @@
       "JobReceipt": {
         "additionalProperties": false,
         "properties": {
+          "check_requested": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Check Requested"
+          },
           "job_id": {
             "title": "Job Id",
             "type": "string"
@@ -5666,6 +5985,21 @@
               }
             ],
             "title": "User Message Id"
+          },
+          "verification_mode": {
+            "anyOf": [
+              {
+                "enum": [
+                  "fast",
+                  "verified"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Verification Mode"
           }
         },
         "required": [
@@ -6854,6 +7188,15 @@
       "ModelSettingsState": {
         "additionalProperties": false,
         "properties": {
+          "activation_scope": {
+            "default": "answer_and_checker",
+            "enum": [
+              "answer_only",
+              "answer_and_checker"
+            ],
+            "title": "Activation Scope",
+            "type": "string"
+          },
           "active_checker_configuration_id": {
             "anyOf": [
               {
@@ -7505,6 +7848,8 @@
             "type": "string"
           },
           "old_password": {
+            "maxLength": 128,
+            "minLength": 8,
             "title": "Old Password",
             "type": "string"
           }
@@ -18791,6 +19136,142 @@
         ]
       }
     },
+    "/api/v1/auth/logout": {
+      "post": {
+        "operationId": "logout_api_v1_auth_logout_post",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_dict_str__bool__"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "410": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Structured application error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Logout",
+        "tags": [
+          "identity"
+        ]
+      }
+    },
     "/api/v1/capabilities": {
       "get": {
         "operationId": "capabilities_api_v1_capabilities_get",
@@ -22816,6 +23297,26 @@
           }
         },
         "summary": "Ready",
+        "tags": [
+          "health"
+        ]
+      }
+    },
+    "/api/v1/health/retrieval": {
+      "get": {
+        "description": "Observe the request worker without initializing API-side caches.",
+        "operationId": "retrieval_readiness_api_v1_health_retrieval_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Retrieval Readiness",
         "tags": [
           "health"
         ]
@@ -27121,6 +27622,22 @@
               "default": true,
               "title": "Due Only",
               "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "goal_id",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Goal Id"
             }
           }
         ],

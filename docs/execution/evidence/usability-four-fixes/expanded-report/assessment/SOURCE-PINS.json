@@ -1,0 +1,387 @@
+{
+  "schema": "expanded_report_current_source_matrix_pins_v1",
+  "status": "SOURCE_ONLY_PRE_BATCH_REVIEW_NO_FRESH_RUNTIME_ACCEPTANCE",
+  "reviewer": "/root/quality_evidence",
+  "recorded_utc": "2026-10-19T03:35:47.772707+00:00",
+  "original_report": {
+    "path": "docs/execution/evidence/usability-four-fixes/expanded-report/source/5703-LearningAssistant-测试报告(1).md",
+    "bytes": 71492,
+    "sha256": "19dfacec8e1cee0dfe6601c658af6a3105742039920a4ea9af90bfd0a06ad83b"
+  },
+  "original_report_lines": 1309,
+  "matrix": {
+    "path": "docs/execution/evidence/usability-four-fixes/expanded-report/assessment/CURRENT-SOURCE-MATRIX.md",
+    "bytes": 33733,
+    "sha256": "ab077cf9f7298242c5f14ec838623919e5feb4ada51f83b84fbc9fb6caea2f3f"
+  },
+  "inspected_source_and_existing_evidence": [
+    {
+      "path": "backend/app/core/config.py",
+      "bytes": 9739,
+      "sha256": "c77735d0c0aefa21daf486a7717c03605eaa7ec1d05207ed4b7a75b03f4d3599"
+    },
+    {
+      "path": "backend/app/core/middleware.py",
+      "bytes": 1992,
+      "sha256": "0750c94df4472e1897f9845734190aaf2c14ea701a99f812b75ab320a79bbb26"
+    },
+    {
+      "path": "backend/app/core/exceptions.py",
+      "bytes": 3046,
+      "sha256": "a6d10391ddbd467dc5ed5620079b9d9435bd441390ba895289f297935c36b0e7"
+    },
+    {
+      "path": "backend/app/api/v1/deps.py",
+      "bytes": 1831,
+      "sha256": "88fbccead5513e2aa7e924d71d8e567edb3f6af660fb714b154a2c0f34995a5d"
+    },
+    {
+      "path": "backend/app/modules/administration/router.py",
+      "bytes": 7966,
+      "sha256": "1a7312a01477da06021cddae9f5ec7a8a72266e0ccf46700f6f37f6d5393099f"
+    },
+    {
+      "path": "backend/app/modules/answering/service.py",
+      "bytes": 142232,
+      "sha256": "a0905f2012d5eeb87b5e6ae841a0b0ae2d02530177846aede636daa42d4f89c9"
+    },
+    {
+      "path": "backend/app/modules/answering/router.py",
+      "bytes": 10621,
+      "sha256": "720165c1cb650c461a0d844b5f41dd81242d0506d90d64d730913d879d7383ef"
+    },
+    {
+      "path": "backend/app/modules/answering/diagnostics.py",
+      "bytes": 45968,
+      "sha256": "f9be42058c5114dd8cdbb66fbb57a8578eee3f8b0daad9bbc4b7f175760981c1"
+    },
+    {
+      "path": "backend/app/modules/experiment/bridge.py",
+      "bytes": 50844,
+      "sha256": "7720bc96334a3b60f33dea7a04e426332fa5e68d8352bd85f58455d21fe527bd"
+    },
+    {
+      "path": "backend/app/modules/experiment/router.py",
+      "bytes": 20013,
+      "sha256": "67e6cb3a81c081a537013c97c1cc4854b0e8212a8b236a1da0a2f2d47eeb0f44"
+    },
+    {
+      "path": "backend/app/modules/knowledge/service.py",
+      "bytes": 63828,
+      "sha256": "a08d9572c2b75d423372de7350ad916401abe2413fba5d6be10b3ef4f97ad7f9"
+    },
+    {
+      "path": "backend/app/modules/learning_product/library.py",
+      "bytes": 19095,
+      "sha256": "3d3d5d4eccbad6dcaec2c5b4e8ffaf47dcd1567e27c7b3b3be049da1a791b881"
+    },
+    {
+      "path": "backend/app/modules/learning_product/service.py",
+      "bytes": 45683,
+      "sha256": "a7c8e400f57a0cb4f692637d420254112006113c3399e95fc5e9b8db3e46adf0"
+    },
+    {
+      "path": "backend/app/modules/learning_product/grading.py",
+      "bytes": 11417,
+      "sha256": "a1edfb10fed11fbedaa14d02ce8950788278960a0790eda947fffada4eefa910"
+    },
+    {
+      "path": "backend/app/modules/learning_product/proposals.py",
+      "bytes": 11078,
+      "sha256": "ac749873c5461e64953bc6b1eb1f6db1eb585ab8175d5d37ff4de9fd52d47ab4"
+    },
+    {
+      "path": "backend/app/modules/learning_product/practice_assessment.py",
+      "bytes": 28288,
+      "sha256": "228455cab04c1ad986509865874f5514d3203a9f196f816a1f517bde8ec05461"
+    },
+    {
+      "path": "backend/app/modules/learning_product/practice_capability.py",
+      "bytes": 2112,
+      "sha256": "d30df484eb1e9878e65463c17426ba4e0604647481ab0e8e6da9eb7c98ba1e22"
+    },
+    {
+      "path": "backend/app/modules/learning_product/router.py",
+      "bytes": 18738,
+      "sha256": "76e2bcf2880ed79e44d85d13edc9f7bec01775af2ba74b0e1eb4ee9a05f0daa1"
+    },
+    {
+      "path": "backend/app/modules/model_settings/schemas.py",
+      "bytes": 7035,
+      "sha256": "9607661489fb03b03e02640982ab4e7419501523d2f279032449251fef901350"
+    },
+    {
+      "path": "backend/app/modules/model_settings/service.py",
+      "bytes": 20325,
+      "sha256": "a42ea9eea9f1b3fc3920a7b310cf81598dc6d9328602ed5954ddd05fabdac329"
+    },
+    {
+      "path": "backend/app/modules/model_settings/router.py",
+      "bytes": 5924,
+      "sha256": "53bf3bbc55de5b0db684b303a7ccbb5d6eb2ecac4eee4e3772a0d522b8ff16d0"
+    },
+    {
+      "path": "backend/app/platform_core/registry.py",
+      "bytes": 2140,
+      "sha256": "cfe449be8a16ff984c9a7c48d99c3f0de5098c19c8159d58cceb9159f7e69e27"
+    },
+    {
+      "path": "backend/app/worker.py",
+      "bytes": 13583,
+      "sha256": "7391bcb37ac2f546f22305acc2c4110798606d7ac144b8fd023d310c5b8b99bb"
+    },
+    {
+      "path": "contracts/models.py",
+      "bytes": 13329,
+      "sha256": "589fb94e8aafcc8dfcd48393e6a6a5987ed4a799b3261a61e8f22286b672a132"
+    },
+    {
+      "path": "contracts/study.py",
+      "bytes": 18376,
+      "sha256": "2468af05dc36d504c2519ff33bf614805acfe482b2a647b17986e15802b0274b"
+    },
+    {
+      "path": "contracts/text_validation.py",
+      "bytes": 370,
+      "sha256": "2345e2910028ff31474daa9491d557fb0edb3bacc7edd26af1a55174fc1df998"
+    },
+    {
+      "path": "conversation/context.py",
+      "bytes": 5163,
+      "sha256": "6e31a116287e969349eaf2c1983c08b168ca898c94ff5431053a56844f30265b"
+    },
+    {
+      "path": "conversation/summary.py",
+      "bytes": 3105,
+      "sha256": "a942d348dece8a4a4c690f286f2dbf11ddac9e362e49bbee3c38ad5e75781e43"
+    },
+    {
+      "path": "conversation/query.py",
+      "bytes": 23646,
+      "sha256": "71f7a08e95657678c53b01d8526f47926ca658b67a04e0ec6803c0b2c50f0e90"
+    },
+    {
+      "path": "conversation/query_v22.py",
+      "bytes": 8042,
+      "sha256": "c4d7d1f87726aaaeec45ff8b855264502d3a01a126174c9cc062b9954b47f51b"
+    },
+    {
+      "path": "conversation/query_v23.py",
+      "bytes": 11008,
+      "sha256": "b8801e073195b51ac4e49d1d06479fb19ac9cc35d260fe7d8bf5a673f2eb8215"
+    },
+    {
+      "path": "conversation/query_v24.py",
+      "bytes": 20097,
+      "sha256": "c0469f793a13fdc51bc4bb8773cfe48932232ce340bd3cfc1c8175d72e6eeaea"
+    },
+    {
+      "path": "retrieval/chat.py",
+      "bytes": 8257,
+      "sha256": "a297327e6100615691f46b06758c9bfdd92904599e777cbced550168f7a97455"
+    },
+    {
+      "path": "retrieval/embedding.py",
+      "bytes": 5863,
+      "sha256": "4bf84b63bddf93aa6d86f6c0f38726b222029ef5cb5a39a44f9e5e494498cdfa"
+    },
+    {
+      "path": "retrieval/runtime.py",
+      "bytes": 1658,
+      "sha256": "f04c6d79b55d63412dcef499ccafecb4df0212c04060f2f1db0fd58fa79cf1cb"
+    },
+    {
+      "path": "generation/benchmark_query_runtime_v1.py",
+      "bytes": 2587,
+      "sha256": "fa7ef7819ba1919780f4e93ec449ef8ec0ffd282402a3eda28690f30d4337954"
+    },
+    {
+      "path": "generation/checked.py",
+      "bytes": 223084,
+      "sha256": "8a5c105daf7fe144d0ef4abce8918baf236780d5da715fece2435ec8660b5ffe"
+    },
+    {
+      "path": "frontend/src/api.ts",
+      "bytes": 4713,
+      "sha256": "10bab1ab802283088fa59e1c20bae12bcd911050180791b9ad0be09687389291"
+    },
+    {
+      "path": "frontend/src/components.tsx",
+      "bytes": 6900,
+      "sha256": "88b5257096fa59e711a8dc3d51c08c71affa456f47adcac0646cf27cfbb9499d"
+    },
+    {
+      "path": "frontend/src/Chat.tsx",
+      "bytes": 53495,
+      "sha256": "96d184dd80dc87d37e85b8d3a214dd11ba3edeaf9f56c1a0b6b39834f4989422"
+    },
+    {
+      "path": "frontend/src/Failures.tsx",
+      "bytes": 24799,
+      "sha256": "e4ca880e39a948ee6ae1b71b27ca588a481988f5b762536461665b806769a7ee"
+    },
+    {
+      "path": "frontend/src/Operations.tsx",
+      "bytes": 9387,
+      "sha256": "fa425d2f0893234bdcb9f61633bd6f150871dfbbde8b3bed7613a4f00ab72afe"
+    },
+    {
+      "path": "frontend/src/Models.tsx",
+      "bytes": 31629,
+      "sha256": "794de312e65406973ae131ad23244d8809c776fdc440b43e1f75de9f907994c0"
+    },
+    {
+      "path": "frontend/src/StudyPractice.tsx",
+      "bytes": 23474,
+      "sha256": "1af92df8e87f1ec203845bcb9fbcb9d738b861779b9daba3ae8e048afa470c2a"
+    },
+    {
+      "path": "frontend/src/study-types.ts",
+      "bytes": 2083,
+      "sha256": "05d43e0bab7e8affe378fb7f78430e099aa9fc09fcfa55e1d53b76f47bcdad58"
+    },
+    {
+      "path": "frontend/src/Markdown.tsx",
+      "bytes": 5639,
+      "sha256": "5fc0dcce71244540c89802548b0fcddf1c42a5be7655e5bbb33a330b10cb7a20"
+    },
+    {
+      "path": "tests/unit/test_current_named_request.py",
+      "bytes": 13146,
+      "sha256": "d826039a56f9f2be253fb9fe2578989fa9d4c1aa49ed66826a0a573d00993ae7"
+    },
+    {
+      "path": "tests/unit/test_benchmark_query_runtime_v1.py",
+      "bytes": 4215,
+      "sha256": "38c1425bb6637447a8cfc6fbee094be5fe5a5aa9060261cc46bc3091ca4c0228"
+    },
+    {
+      "path": "tests/integration/test_benchmark_query_runtime_v1.py",
+      "bytes": 7436,
+      "sha256": "b6f9db860961a90c9dc3e4511f43759af1c0b4283154b0619cdf7f4f40bac20f"
+    },
+    {
+      "path": "tests/integration/test_api_rules209.py",
+      "bytes": 13154,
+      "sha256": "24f3fc08ed576f84f65c2a7fbb089947f3e815facde227a613ba66ce9894f433"
+    },
+    {
+      "path": "docs/execution/evidence/phase209/api-rules/API-RULES209.md",
+      "bytes": 6254,
+      "sha256": "c31e199d2619ebfe1421cb522a0bdc5c9a8e84b880c94b66b5046602b25b9ec0"
+    },
+    {
+      "path": "docs/execution/evidence/usability-four-fixes/quality-closure/adoption/SOURCE-AUTHORITY.json",
+      "bytes": 417016,
+      "sha256": "63bca6f3de4d247112e1ae52c098bff7cf284932bf4cf511010f8f0e2e3d1731"
+    }
+  ],
+  "coverage": {
+    "section4": [
+      "4.1",
+      "4.2",
+      "4.3",
+      "4.4",
+      "4.5",
+      "4.6",
+      "4.7",
+      "4.8",
+      "4.9",
+      "4.10",
+      "4.11",
+      "4.12",
+      "4.13",
+      "4.14",
+      "4.15",
+      "4.16",
+      "4.17",
+      "4.18",
+      "4.19",
+      "4.20",
+      "4.21",
+      "4.22",
+      "4.2b"
+    ],
+    "section5": [
+      "5.1.1",
+      "5.1.2",
+      "5.1.3",
+      "5.1.4",
+      "5.1.5",
+      "5.1.6",
+      "5.1.7",
+      "5.2.1",
+      "5.2.2",
+      "5.2.3",
+      "5.2.4",
+      "5.2.5",
+      "5.2.6",
+      "5.2.7",
+      "5.2.8",
+      "5.2.9",
+      "5.2.10",
+      "5.2.11",
+      "5.2.12",
+      "5.3.1",
+      "5.3.2",
+      "5.3.3",
+      "5.3.4",
+      "5.3.5",
+      "5.3.6",
+      "5.3.7",
+      "5.3.8"
+    ],
+    "section6": [
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4",
+      "6.5",
+      "6.6",
+      "6.7A",
+      "6.7B",
+      "6.7C",
+      "6.7D",
+      "6.7E",
+      "6.7F",
+      "6.7G",
+      "6.7H",
+      "6.7I"
+    ],
+    "section8": [
+      "practice tutor",
+      "E2/R1/R2/R3",
+      "teaching-study success",
+      "document upload/processing",
+      "source quality review",
+      "visual/table understanding",
+      "R3/MiniLM source reranker"
+    ]
+  },
+  "delegated_readonly_audit": {
+    "executor": "/root/adoption_finish",
+    "scope": "numeric proposal/validation/publication and free-text original-feedback versus nested assessment",
+    "new_tests": 0,
+    "runtime_or_product_edits": 0,
+    "evidence_basis": "Current exact source and existing test source; report lines547–652; no claim of current native data or model results"
+  },
+  "actions_by_this_review": {
+    "product_edits": 0,
+    "tests": 0,
+    "API_requests": 0,
+    "database_queries": 0,
+    "model_calls": 0,
+    "process_queries": 0,
+    "service_actions": 0,
+    "credential_reads": 0,
+    "new_sessions": 0,
+    "new_package": false
+  },
+  "pending": [
+    "Root must durably publish current pure detailed-request reproduction before tested-bug closure.",
+    "Current Q2 pending and source frozen until Root settlement.",
+    "Current actual numeric valid/invalid-unit producer and gate regression not executed by review.",
+    "Old E1 AssertionError exact cause remains unproven.",
+    "Later batch source and verification must receive separate pins; do not relabel this pre-batch review as post-fix acceptance."
+  ]
+}

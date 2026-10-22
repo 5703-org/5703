@@ -1,0 +1,102 @@
+{
+  "utc": "2026-10-15T18:31:14.443376+00:00",
+  "status": "VALIDATED199_SOURCE_DELTA_INTEGRATED_IN_MAIN",
+  "source_version": "Main199-integrated-phase200",
+  "Main198_before_rows_verified": 481,
+  "changes": [
+    {
+      "path": "generation/assertion_citation_derivation_v1.py",
+      "before_sha256": null,
+      "after_sha256": "da5bc7ebb1dfdb5d3019724288786779250ec5c628cbf788380a664b88ba0adf",
+      "kind": "product"
+    },
+    {
+      "path": "generation/checked.py",
+      "before_sha256": "976bf21c0626634b53d4d678fe55995350bc6e678e68e2472d018b425c646a08",
+      "after_sha256": "3255cefaad67eb2866910937939db8c290db6e02c6c790ef5f56eeb4868bc6a6",
+      "kind": "product"
+    },
+    {
+      "path": "generation/service.py",
+      "before_sha256": "0bffad425120828f27087c89591e8193a8f65c9312f53e8f83242ec44fd908ee",
+      "after_sha256": "b3aa4ab6c964d762deef56f364bb95bf9b4761a2ccec1ffb3fdf9bd3bd0b25a5",
+      "kind": "product"
+    },
+    {
+      "path": "generation/response_field_contract_v2.py",
+      "before_sha256": "36acbbdb05b0134fd6f1e86d3d6f2a652cf017fd0a782c1464d6a80dbbb40db5",
+      "after_sha256": "822201f6f21023c4f19112b811813e7115dbcdf0cfe1c41c7696894e27e86817",
+      "kind": "product"
+    },
+    {
+      "path": "backend/app/core/config.py",
+      "before_sha256": "3bfe180bcc4d098b15fedbd1788e8a10460f5e1090c6f7b21734953be08d8ec3",
+      "after_sha256": "0e7a4e6e405ac583eba85e9f111cf8a70908205ae725abc6c5716621f401efef",
+      "kind": "product"
+    },
+    {
+      "path": "backend/app/modules/answering/service.py",
+      "before_sha256": "82d0df16f1a276b02d2861fe834ee2f776c9c681eaff63b9de14197eef5a24ec",
+      "after_sha256": "909c9aedc9157d2f5e80ac2dd42b23185d60d3614ea363ab4a5eee63e2296905",
+      "kind": "product"
+    },
+    {
+      "path": "backend/app/modules/knowledge/service.py",
+      "before_sha256": "85262760939404df6e5ae56e021f6ea6c5ad65f5ac647d7b0710241de0c0dd27",
+      "after_sha256": "a08d9572c2b75d423372de7350ad916401abe2413fba5d6be10b3ef4f97ad7f9",
+      "kind": "product"
+    },
+    {
+      "path": "backend/app/platform_core/retrieval_warmup.py",
+      "before_sha256": "5ec520e179748de2411d3d65c964ca0f414c94c5c0e82bd6a136408d0024f630",
+      "after_sha256": "c1a8d8b2322a057c662739024acedee3f5fe83fff40854c080a6bd3543679994",
+      "kind": "product"
+    },
+    {
+      "path": "backend/app/worker.py",
+      "before_sha256": "e4de1233559369fe0f988da4990ccbdca0cbc87c13fe4b4517f232ffc8951c90",
+      "after_sha256": "7391bcb37ac2f546f22305acc2c4110798606d7ac144b8fd023d310c5b8b99bb",
+      "kind": "product"
+    },
+    {
+      "path": "tests/unit/test_assertion_citation_derivation199.py",
+      "before_sha256": null,
+      "after_sha256": "690431d3844e21a155a4b0f13b1c87e415c4080f95502d09de755cbecfab49bd",
+      "kind": "test"
+    },
+    {
+      "path": "tests/unit/test_index_only_retrieval199.py",
+      "before_sha256": null,
+      "after_sha256": "949cf1a38337031bdec619bdadbec576e24bb2d5dfabcbf721d6149fd7798e37",
+      "kind": "test"
+    },
+    {
+      "path": "tests/fixtures/assertion199/q4-off-citations.json",
+      "before_sha256": null,
+      "after_sha256": "f88d10ce33840a0ea4a3bcb55e518ddff3ee3c3a59c862e1fe9d08ab7efe2fe0",
+      "kind": "fixture"
+    },
+    {
+      "path": "tests/fixtures/assertion199/checked-before199.py",
+      "before_sha256": null,
+      "after_sha256": "976bf21c0626634b53d4d678fe55995350bc6e678e68e2472d018b425c646a08",
+      "kind": "fixture"
+    }
+  ],
+  "rollback_before_directory": "docs/execution/evidence/phase200/source-before",
+  "new_files_for_rollback": [
+    "generation/assertion_citation_derivation_v1.py",
+    "tests/unit/test_assertion_citation_derivation199.py",
+    "tests/unit/test_index_only_retrieval199.py",
+    "tests/fixtures/assertion199/q4-off-citations.json",
+    "tests/fixtures/assertion199/checked-before199.py"
+  ],
+  "patch_reference": "docs/execution/evidence/phase199/deliverable/final/MAIN198-CANDIDATE199.patch",
+  "patch_sha256": "9b4e8737c6ff873ef71369fa031303f86cb58faf3ae2f3b0a70c5f7e83fa6537",
+  "source_only": true,
+  "Main_services_explicitly_restarted_or_deployed": false,
+  "Main_running_service_source_version": "UNCONFIRMED; source integration is not evidence that loaded service imports updated",
+  "Main_database_key_saved_model_config_changes": 0,
+  "model_calls_so_far": 0,
+  "new_changes_need_current_focused_verification": true
+}

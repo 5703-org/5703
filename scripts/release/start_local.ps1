@@ -142,6 +142,8 @@ if ($Install) {
     } finally { Pop-Location }
 }
 if (-not (Test-Path -LiteralPath $python)) { throw 'Run this script with -Install first.' }
+& $python -B (Join-Path $PSScriptRoot 'native_preflight.py')
+if ($LASTEXITCODE -ne 0) { throw 'Native dependency preflight failed before database migration or service startup. Follow the reported module/runtime guidance.' }
 $settingsNames = & $python -c "from app.core.config import Settings; from pydantic import AliasChoices; names=set(Settings.model_fields); [names.update(f.validation_alias.choices if isinstance(f.validation_alias,AliasChoices) else [f.validation_alias]) for f in Settings.model_fields.values() if f.validation_alias]; print('\n'.join(sorted(names)))"
 if ($LASTEXITCODE -ne 0) { throw 'Settings preflight failed.' }
 foreach ($settingName in $settingsNames) { Remove-Item -LiteralPath ('Env:' + $settingName) -ErrorAction SilentlyContinue }
@@ -174,6 +176,9 @@ TIKTOKEN_CACHE_DIR=./artifacts/tiktoken
 }
 & $python -c "from dotenv import dotenv_values; from sqlalchemy.engine import make_url; import sys; e=dotenv_values('.env',encoding='utf-8-sig'); u=make_url(e.get('DATABASE_URL','')); external=sys.argv[2]=='True'; assert u.drivername=='postgresql+psycopg' and u.host=='127.0.0.1' and u.port==int(sys.argv[1]) and bool(u.database) and bool(u.username), 'Portable database must match the selected explicit local port'; assert external or (u.database=='learning' and u.username=='learning' and e.get('POSTGRES_PORT')==sys.argv[1] and u.password==e.get('POSTGRES_PASSWORD') and bool(u.password)), 'Portable database credentials/port disagree with Compose'; assert e.get('STORAGE_ROOT')=='./artifacts/storage', 'Portable source storage must remain inside this installation'" "$DatabasePort" "$UseExistingDatabase"
 if ($LASTEXITCODE -ne 0) { throw 'Portable configuration validation failed before any database change.' }
+$startupTimeoutSeconds = & $python -m scripts.release.startup_policy
+if ($LASTEXITCODE -ne 0) { throw 'Startup readiness policy preflight failed.' }
+$startupTimeoutSeconds = [double]$startupTimeoutSeconds
 if (-not $UseExistingDatabase) {
     $ownedDatabase = docker ps --filter "label=com.docker.compose.project=$composeProject" --filter 'label=com.docker.compose.service=db' --format '{{.ID}}'
     if ((Get-NetTCPConnection -LocalPort $DatabasePort -State Listen -ErrorAction SilentlyContinue) -and -not $ownedDatabase) {
@@ -227,7 +232,7 @@ $node = (Get-Command node).Source
 $frontendRoot = Join-Path $projectRoot 'frontend'
 $webProcess = Start-Process -FilePath $node -ArgumentList 'node_modules/vite/bin/vite.js','--configLoader','runner','--host','127.0.0.1','--port',"$FrontendPort" -WorkingDirectory $frontendRoot -WindowStyle Hidden -RedirectStandardOutput (Join-Path $runtimeDir 'frontend.stdout.log') -RedirectStandardError (Join-Path $runtimeDir 'frontend.stderr.log') -PassThru
 [PSCustomObject]@{ApiPid=$apiProcess.Id;WorkerPid=$workerProcess.Id;BackgroundWorkerPid=$backgroundWorkerProcess.Id;FrontendPid=$webProcess.Id;ApiPort=$ApiPort;FrontendPort=$FrontendPort;DatabasePort=$DatabasePort;ComposeProject=$composeProject;ProjectRoot=$projectRoot} | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $runtimeDir 'processes.json') -Encoding utf8
-$deadline = [DateTime]::UtcNow.AddSeconds(30)
+$deadline = [DateTime]::UtcNow.AddSeconds($startupTimeoutSeconds)
 $ready = $false
 while ([DateTime]::UtcNow -lt $deadline) {
     try {
