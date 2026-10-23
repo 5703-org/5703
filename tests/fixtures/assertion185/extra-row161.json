@@ -1,0 +1,162 @@
+{
+  "schema": "phase185_exact161_checker_rows_v1",
+  "source_path": "docs/execution/evidence/phase161-two-case-reproduction-20261014.json",
+  "source_sha256": "ee66910df2a54db5f9d2a302321010c93bde1102b706c3870d5f8960b6f049f9",
+  "case_id": "D160-Q02",
+  "original_terminal": {
+    "code": "CHECKER_INCONSISTENT",
+    "message": "The checker returned inconsistent support metadata; no answer was published",
+    "details": {
+      "issue_codes": [
+        "CLAIM_IDENTITY_MISMATCH"
+      ]
+    }
+  },
+  "answer_id": null,
+  "provenance": {
+    "version": "assertion_source_v1",
+    "assertions": [
+      {
+        "claim_id": "claim_d3cb9fabdcf59be481bfe3f4_1",
+        "sources": [
+          {
+            "source_id": "F007",
+            "evidence_id": "ev_001"
+          },
+          {
+            "source_id": "F002",
+            "evidence_id": "ev_001"
+          },
+          {
+            "source_id": "F003",
+            "evidence_id": "ev_001"
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_5e4345c7c0a1c48b2299432a_1",
+        "sources": [
+          {
+            "source_id": "F001",
+            "evidence_id": "ev_001"
+          },
+          {
+            "source_id": "F002",
+            "evidence_id": "ev_001"
+          },
+          {
+            "source_id": "F003",
+            "evidence_id": "ev_001"
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_6fc47c36cf34e07317448fbc_1",
+        "sources": [
+          {
+            "source_id": "F019",
+            "evidence_id": "ev_003"
+          },
+          {
+            "source_id": "F020",
+            "evidence_id": "ev_003"
+          },
+          {
+            "source_id": "F021",
+            "evidence_id": "ev_003"
+          }
+        ]
+      }
+    ]
+  },
+  "original_checker_rows": [
+    {
+      "claim_id": "claim_d3cb9fabdcf59be481bfe3f4_1",
+      "reason": "F007 supports primary active transport generating a Na+ gradient, its stored energy moving glucose against its gradient by co-transport/secondary active transport, and identifies that gradient as the energy source. The additional phrase identifying the stored energy specifically as the gradient’s “potential energy” is not established by the selected union.",
+      "basis": "textbook",
+      "status": "partial",
+      "citations": [
+        {
+          "evidence_id": "ev_001",
+          "fragment_ids": [
+            "F007",
+            "F002",
+            "F003"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "proof_audit": {
+        "all_predicates_entailed": false,
+        "actor_identity_preserved": true,
+        "conditions_preserved": true,
+        "causal_bridges_entailed": true,
+        "missing_predicates": [
+          "The energy stored in the sodium gradient is specifically its potential energy."
+        ],
+        "reason": "The selected passages establish the sodium-gradient energy mechanism and glucose as a co-transported substance, but do not identify the gradient’s stored energy as potential energy."
+      }
+    },
+    {
+      "claim_id": "claim_5e4345c7c0a1c48b2299432a_1",
+      "reason": "F001 establishes an open channel protein and sodium moving down its gradient across the membrane. F002 says transported substances must attach to the same transport protein for sodium ions to move across; F003 identifies glucose as entering this way. However, the claim calls the pathway a “sodium channel pathway” and states that sodium movement carries glucose across, neither of which is fully established as phrased: F001 only says channel protein, while F002 specifies attachment in order for sodium ions to move across, not that this movement carries glucose across.",
+      "basis": "textbook",
+      "status": "partial",
+      "citations": [
+        {
+          "evidence_id": "ev_001",
+          "fragment_ids": [
+            "F001",
+            "F002",
+            "F003"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "proof_audit": {
+        "all_predicates_entailed": false,
+        "actor_identity_preserved": true,
+        "conditions_preserved": true,
+        "causal_bridges_entailed": false,
+        "missing_predicates": [
+          "That the open channel protein is specifically a sodium channel pathway.",
+          "That sodium movement carries the attached glucose across the membrane."
+        ],
+        "reason": "The sources establish an open channel protein, sodium moving down its gradient, and attachment of other transported substances to the same transport protein, with glucose entering this way. They do not specifically name a sodium channel pathway or state that sodium movement carries glucose across."
+      }
+    },
+    {
+      "claim_id": "claim_6fc47c36cf34e07317448fbc_1",
+      "reason": "F019 establishes that the two different molecules or ions in a symporter move in the same direction. F020 connects primary active transport to secondary active transport, and F021 says the second method is still active because it depends on energy as primary transport does. The selected passages do not establish that the energy is supplied by primary transport.",
+      "basis": "textbook",
+      "status": "partial",
+      "citations": [
+        {
+          "evidence_id": "ev_003",
+          "fragment_ids": [
+            "F019",
+            "F020",
+            "F021"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "proof_audit": {
+        "all_predicates_entailed": false,
+        "actor_identity_preserved": true,
+        "conditions_preserved": true,
+        "causal_bridges_entailed": false,
+        "missing_predicates": [
+          "The secondary transport depends on energy supplied by primary transport."
+        ],
+        "reason": "The symporter direction and continuing active status are established, but dependence on energy “as does primary transport” does not assert that primary transport supplies the energy."
+      }
+    },
+    {
+      "claim_id": "practice_present",
+      "reason": "The response gives the requested explanation and conditions.",
+      "basis": "nonfactual"
+    }
+  ],
+  "originals_relabelled": false
+}
