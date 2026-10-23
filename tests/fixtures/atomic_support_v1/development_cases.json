@@ -1,0 +1,560 @@
+{
+  "provenance": "AI_AUTHORED_INVENTED_DEVELOPMENT_CASES",
+  "reviewer_type": "INDEPENDENT_AI_REVIEWER_NOT_HUMAN",
+  "not_gold": true,
+  "not_model_observations": true,
+  "external_request_count": 0,
+  "source_snapshots_local_only": true,
+  "cases": [
+    {
+      "case_id": "DEV01_guarded_relay_positive",
+      "packet": {
+        "schema_version": "atomic_support_input_v1",
+        "atom_id": "A1",
+        "proposition": "If Sensor A reports pressure above 5 kPa and the key is armed, Relay R closes.",
+        "required_conditions": [
+          {
+            "condition_id": "C0",
+            "kind": "proposition",
+            "description": "If Sensor A reports pressure above 5 kPa and the key is armed, Relay R closes."
+          },
+          {
+            "condition_id": "C1",
+            "kind": "applicability",
+            "description": "The pressure report is from Sensor A and its threshold is above 5 kPa."
+          },
+          {
+            "condition_id": "C2",
+            "kind": "applicability",
+            "description": "The stated implication includes the armed-key condition."
+          },
+          {
+            "condition_id": "C3",
+            "kind": "applicability",
+            "description": "The consequence is the closing of Relay R."
+          }
+        ],
+        "actual_citations": [
+          {
+            "fragment_id": "F1",
+            "evidence_id": "DEV01_guarded_relay_positive_EVIDENCE_1",
+            "source_id": "DEV01_guarded_relay_positive_SOURCE_1",
+            "start": 67,
+            "end": 160,
+            "exact_text": "Test rule: when Sensor A reports pressure above 5 kPa while the key is armed, Relay R closes."
+          }
+        ]
+      },
+      "source_snapshots": {
+        "DEV01_guarded_relay_positive_SOURCE_1": {
+          "evidence_id": "DEV01_guarded_relay_positive_EVIDENCE_1",
+          "exact_text": "Local invented development record α: DEV01_guarded_relay_positive.\nTest rule: when Sensor A reports pressure above 5 kPa while the key is armed, Relay R closes.\nEnd of invented local record."
+        }
+      }
+    },
+    {
+      "case_id": "DEV02_bounded_quantifier_positive",
+      "packet": {
+        "schema_version": "atomic_support_input_v1",
+        "atom_id": "A1",
+        "proposition": "Every Camera C frame recorded during Trial 4 has a timestamp.",
+        "required_conditions": [
+          {
+            "condition_id": "C0",
+            "kind": "proposition",
+            "description": "Every Camera C frame recorded during Trial 4 has a timestamp."
+          },
+          {
+            "condition_id": "C1",
+            "kind": "applicability",
+            "description": "The evidence identifies the complete Camera C frame set for Trial 4."
+          },
+          {
+            "condition_id": "C2",
+            "kind": "applicability",
+            "description": "Each frame in that bounded set has a timestamp."
+          }
+        ],
+        "actual_citations": [
+          {
+            "fragment_id": "F1",
+            "evidence_id": "DEV02_bounded_quantifier_positive_EVIDENCE_1",
+            "source_id": "DEV02_bounded_quantifier_positive_SOURCE_1",
+            "start": 72,
+            "end": 226,
+            "exact_text": "Trial 4 recorded exactly 18 frames from Camera C. No other Camera C frames were recorded in that trial. A timestamp is present on each of those 18 frames."
+          }
+        ]
+      },
+      "source_snapshots": {
+        "DEV02_bounded_quantifier_positive_SOURCE_1": {
+          "evidence_id": "DEV02_bounded_quantifier_positive_EVIDENCE_1",
+          "exact_text": "Local invented development record α: DEV02_bounded_quantifier_positive.\nTrial 4 recorded exactly 18 frames from Camera C. No other Camera C frames were recorded in that trial. A timestamp is present on each of those 18 frames.\nEnd of invented local record."
+        }
+      }
+    },
+    {
+      "case_id": "DEV03_dropped_guard_negative",
+      "packet": {
+        "schema_version": "atomic_support_input_v1",
+        "atom_id": "A1",
+        "proposition": "Gate G opens whenever the supply voltage exceeds 12 V.",
+        "required_conditions": [
+          {
+            "condition_id": "C0",
+            "kind": "proposition",
+            "description": "Gate G opens whenever the supply voltage exceeds 12 V."
+          },
+          {
+            "condition_id": "C1",
+            "kind": "applicability",
+            "description": "Voltage above 12 V alone is sufficient for Gate G to open."
+          },
+          {
+            "condition_id": "C2",
+            "kind": "applicability",
+            "description": "No additional interlock condition is required by the cited rule."
+          }
+        ],
+        "actual_citations": [
+          {
+            "fragment_id": "F1",
+            "evidence_id": "DEV03_dropped_guard_negative_EVIDENCE_1",
+            "source_id": "DEV03_dropped_guard_negative_SOURCE_1",
+            "start": 67,
+            "end": 215,
+            "exact_text": "Gate G opens when the supply voltage exceeds 12 V and the safety pin is inserted. With the pin removed, Gate G remains closed at any supply voltage."
+          }
+        ]
+      },
+      "source_snapshots": {
+        "DEV03_dropped_guard_negative_SOURCE_1": {
+          "evidence_id": "DEV03_dropped_guard_negative_EVIDENCE_1",
+          "exact_text": "Local invented development record α: DEV03_dropped_guard_negative.\nGate G opens when the supply voltage exceeds 12 V and the safety pin is inserted. With the pin removed, Gate G remains closed at any supply voltage.\nEnd of invented local record."
+        }
+      }
+    },
+    {
+      "case_id": "DEV04_wrong_subject_negative",
+      "packet": {
+        "schema_version": "atomic_support_input_v1",
+        "atom_id": "A1",
+        "proposition": "Sensor B reports a fault when its temperature exceeds 60 degrees Celsius.",
+        "required_conditions": [
+          {
+            "condition_id": "C0",
+            "kind": "proposition",
+            "description": "Sensor B reports a fault when its temperature exceeds 60 degrees Celsius."
+          },
+          {
+            "condition_id": "C1",
+            "kind": "applicability",
+            "description": "The fault-reporting rule applies to Sensor B."
+          },
+          {
+            "condition_id": "C2",
+            "kind": "applicability",
+            "description": "Sensor B's own temperature above 60 degrees Celsius triggers that fault report."
+          }
+        ],
+        "actual_citations": [
+          {
+            "fragment_id": "F1",
+            "evidence_id": "DEV04_wrong_subject_negative_EVIDENCE_1",
+            "source_id": "DEV04_wrong_subject_negative_SOURCE_1",
+            "start": 67,
+            "end": 254,
+            "exact_text": "Sensor A reports a fault when its temperature exceeds 60 degrees Celsius. Sensor B reports a heartbeat once per second; this passage states no temperature-triggered behavior for Sensor B."
+          }
+        ]
+      },
+      "source_snapshots": {
+        "DEV04_wrong_subject_negative_SOURCE_1": {
+          "evidence_id": "DEV04_wrong_subject_negative_EVIDENCE_1",
+          "exact_text": "Local invented development record α: DEV04_wrong_subject_negative.\nSensor A reports a fault when its temperature exceeds 60 degrees Celsius. Sensor B reports a heartbeat once per second; this passage states no temperature-triggered behavior for Sensor B.\nEnd of invented local record."
+        }
+      }
+    },
+    {
+      "case_id": "DEV05_wrong_object_negative",
+      "packet": {
+        "schema_version": "atomic_support_input_v1",
+        "atom_id": "A1",
+        "proposition": "Router N forwards alert messages to port 42.",
+        "required_conditions": [
+          {
+            "condition_id": "C0",
+            "kind": "proposition",
+            "description": "Router N forwards alert messages to port 42."
+          },
+          {
+            "condition_id": "C1",
+            "kind": "applicability",
+            "description": "The messages routed to port 42 are alert messages."
+          },
+          {
+            "condition_id": "C2",
+            "kind": "applicability",
+            "description": "Router N is the router performing that forwarding."
+          }
+        ],
+        "actual_citations": [
+          {
+            "fragment_id": "F1",
+            "evidence_id": "DEV05_wrong_object_negative_EVIDENCE_1",
+            "source_id": "DEV05_wrong_object_negative_SOURCE_1",
+            "start": 66,
+            "end": 164,
+            "exact_text": "Router N forwards telemetry messages to port 42. Router N forwards alert messages only to port 17."
+          }
+        ]
+      },
+      "source_snapshots": {
+        "DEV05_wrong_object_negative_SOURCE_1": {
+          "evidence_id": "DEV05_wrong_object_negative_EVIDENCE_1",
+          "exact_text": "Local invented development record α: DEV05_wrong_object_negative.\nRouter N forwards telemetry messages to port 42. Router N forwards alert messages only to port 17.\nEnd of invented local record."
+        }
+      }
+    },
+    {
+      "case_id": "DEV06_unresolved_pronoun_uncertain",
+      "packet": {
+        "schema_version": "atomic_support_input_v1",
+        "atom_id": "A1",
+        "proposition": "Valve V stayed closed throughout the joint test.",
+        "required_conditions": [
+          {
+            "condition_id": "C0",
+            "kind": "proposition",
+            "description": "Valve V stayed closed throughout the joint test."
+          },
+          {
+            "condition_id": "C1",
+            "kind": "applicability",
+            "description": "The phrase 'It stayed closed' refers to Valve V."
+          },
+          {
+            "condition_id": "C2",
+            "kind": "applicability",
+            "description": "The closed state covers the entire joint test."
+          }
+        ],
+        "actual_citations": [
+          {
+            "fragment_id": "F1",
+            "evidence_id": "DEV06_unresolved_pronoun_uncertain_EVIDENCE_1",
+            "source_id": "DEV06_unresolved_pronoun_uncertain_SOURCE_1",
+            "start": 73,
+            "end": 235,
+            "exact_text": "Valve V and Latch L were checked together. The technician recorded: 'It stayed closed throughout the joint test.' The note does not identify the referent of 'It'."
+          }
+        ]
+      },
+      "source_snapshots": {
+        "DEV06_unresolved_pronoun_uncertain_SOURCE_1": {
+          "evidence_id": "DEV06_unresolved_pronoun_uncertain_EVIDENCE_1",
+          "exact_text": "Local invented development record α: DEV06_unresolved_pronoun_uncertain.\nValve V and Latch L were checked together. The technician recorded: 'It stayed closed throughout the joint test.' The note does not identify the referent of 'It'.\nEnd of invented local record."
+        }
+      }
+    },
+    {
+      "case_id": "DEV07_overclaimed_count_negative",
+      "packet": {
+        "schema_version": "atomic_support_input_v1",
+        "atom_id": "A1",
+        "proposition": "All 20 packets in Batch B passed checksum validation.",
+        "required_conditions": [
+          {
+            "condition_id": "C0",
+            "kind": "proposition",
+            "description": "All 20 packets in Batch B passed checksum validation."
+          },
+          {
+            "condition_id": "C1",
+            "kind": "applicability",
+            "description": "Batch B contains the asserted 20 packets."
+          },
+          {
+            "condition_id": "C2",
+            "kind": "applicability",
+            "description": "Every one of those 20 passed checksum validation."
+          }
+        ],
+        "actual_citations": [
+          {
+            "fragment_id": "F1",
+            "evidence_id": "DEV07_overclaimed_count_negative_EVIDENCE_1",
+            "source_id": "DEV07_overclaimed_count_negative_SOURCE_1",
+            "start": 71,
+            "end": 154,
+            "exact_text": "Batch B contains 20 packets. Nineteen passed checksum validation and one failed it."
+          }
+        ]
+      },
+      "source_snapshots": {
+        "DEV07_overclaimed_count_negative_SOURCE_1": {
+          "evidence_id": "DEV07_overclaimed_count_negative_EVIDENCE_1",
+          "exact_text": "Local invented development record α: DEV07_overclaimed_count_negative.\nBatch B contains 20 packets. Nineteen passed checksum validation and one failed it.\nEnd of invented local record."
+        }
+      }
+    },
+    {
+      "case_id": "DEV08_future_quantifier_negative",
+      "packet": {
+        "schema_version": "atomic_support_input_v1",
+        "atom_id": "A1",
+        "proposition": "Every future voltage sample of Battery B will exceed 3 V.",
+        "required_conditions": [
+          {
+            "condition_id": "C0",
+            "kind": "proposition",
+            "description": "Every future voltage sample of Battery B will exceed 3 V."
+          },
+          {
+            "condition_id": "C1",
+            "kind": "applicability",
+            "description": "The evidence establishes a guarantee covering future samples of Battery B."
+          },
+          {
+            "condition_id": "C2",
+            "kind": "applicability",
+            "description": "That guarantee requires every future sample to exceed 3 V."
+          }
+        ],
+        "actual_citations": [
+          {
+            "fragment_id": "F1",
+            "evidence_id": "DEV08_future_quantifier_negative_EVIDENCE_1",
+            "source_id": "DEV08_future_quantifier_negative_SOURCE_1",
+            "start": 71,
+            "end": 188,
+            "exact_text": "All eight voltage samples taken from Battery B on Day 1 exceeded 3 V. This log records only those Day 1 observations."
+          }
+        ]
+      },
+      "source_snapshots": {
+        "DEV08_future_quantifier_negative_SOURCE_1": {
+          "evidence_id": "DEV08_future_quantifier_negative_EVIDENCE_1",
+          "exact_text": "Local invented development record α: DEV08_future_quantifier_negative.\nAll eight voltage samples taken from Battery B on Day 1 exceeded 3 V. This log records only those Day 1 observations.\nEnd of invented local record."
+        }
+      }
+    },
+    {
+      "case_id": "DEV09_equal_status_conflict_uncertain",
+      "packet": {
+        "schema_version": "atomic_support_input_v1",
+        "atom_id": "A1",
+        "proposition": "Pump P stopped at second 7 in Trial T.",
+        "required_conditions": [
+          {
+            "condition_id": "C0",
+            "kind": "proposition",
+            "description": "Pump P stopped at second 7 in Trial T."
+          },
+          {
+            "condition_id": "C1",
+            "kind": "applicability",
+            "description": "The stop event belongs to Pump P in Trial T."
+          },
+          {
+            "condition_id": "C2",
+            "kind": "applicability",
+            "description": "The stop time is second 7 and the evidence conflict is resolved."
+          }
+        ],
+        "actual_citations": [
+          {
+            "fragment_id": "F1",
+            "evidence_id": "DEV09_equal_status_conflict_uncertain_EVIDENCE_1",
+            "source_id": "DEV09_equal_status_conflict_uncertain_SOURCE_1",
+            "start": 76,
+            "end": 124,
+            "exact_text": "Recorder A, Trial T: Pump P stopped at second 7."
+          },
+          {
+            "fragment_id": "F2",
+            "evidence_id": "DEV09_equal_status_conflict_uncertain_EVIDENCE_2",
+            "source_id": "DEV09_equal_status_conflict_uncertain_SOURCE_2",
+            "start": 76,
+            "end": 234,
+            "exact_text": "Recorder B, Trial T: Pump P continued operating through second 8 and stopped at second 9. Both recorder reports are unreconciled and have equal review status."
+          }
+        ]
+      },
+      "source_snapshots": {
+        "DEV09_equal_status_conflict_uncertain_SOURCE_1": {
+          "evidence_id": "DEV09_equal_status_conflict_uncertain_EVIDENCE_1",
+          "exact_text": "Local invented development record α: DEV09_equal_status_conflict_uncertain.\nRecorder A, Trial T: Pump P stopped at second 7.\nEnd of invented local record."
+        },
+        "DEV09_equal_status_conflict_uncertain_SOURCE_2": {
+          "evidence_id": "DEV09_equal_status_conflict_uncertain_EVIDENCE_2",
+          "exact_text": "Local invented development record α: DEV09_equal_status_conflict_uncertain.\nRecorder B, Trial T: Pump P continued operating through second 8 and stopped at second 9. Both recorder reports are unreconciled and have equal review status.\nEnd of invented local record."
+        }
+      }
+    },
+    {
+      "case_id": "DEV10_unrelated_exact_terms_negative",
+      "packet": {
+        "schema_version": "atomic_support_input_v1",
+        "atom_id": "A1",
+        "proposition": "Motor M reached its shutdown temperature of 70 degrees Celsius during Trial Q.",
+        "required_conditions": [
+          {
+            "condition_id": "C0",
+            "kind": "proposition",
+            "description": "Motor M reached its shutdown temperature of 70 degrees Celsius during Trial Q."
+          },
+          {
+            "condition_id": "C1",
+            "kind": "applicability",
+            "description": "70 degrees Celsius is the shutdown temperature of Motor M."
+          },
+          {
+            "condition_id": "C2",
+            "kind": "applicability",
+            "description": "Motor M actually reached that temperature during Trial Q."
+          }
+        ],
+        "actual_citations": [
+          {
+            "fragment_id": "F1",
+            "evidence_id": "DEV10_unrelated_exact_terms_negative_EVIDENCE_1",
+            "source_id": "DEV10_unrelated_exact_terms_negative_SOURCE_1",
+            "start": 75,
+            "end": 157,
+            "exact_text": "Search vocabulary for Trial Q: Motor M; shutdown; temperature; 70 degrees Celsius."
+          },
+          {
+            "fragment_id": "F2",
+            "evidence_id": "DEV10_unrelated_exact_terms_negative_EVIDENCE_2",
+            "source_id": "DEV10_unrelated_exact_terms_negative_SOURCE_2",
+            "start": 75,
+            "end": 183,
+            "exact_text": "At second 70 in Trial Q, Motor M's temperature was 52 degrees Celsius. The log states no shutdown threshold."
+          }
+        ]
+      },
+      "source_snapshots": {
+        "DEV10_unrelated_exact_terms_negative_SOURCE_1": {
+          "evidence_id": "DEV10_unrelated_exact_terms_negative_EVIDENCE_1",
+          "exact_text": "Local invented development record α: DEV10_unrelated_exact_terms_negative.\nSearch vocabulary for Trial Q: Motor M; shutdown; temperature; 70 degrees Celsius.\nEnd of invented local record."
+        },
+        "DEV10_unrelated_exact_terms_negative_SOURCE_2": {
+          "evidence_id": "DEV10_unrelated_exact_terms_negative_EVIDENCE_2",
+          "exact_text": "Local invented development record α: DEV10_unrelated_exact_terms_negative.\nAt second 70 in Trial Q, Motor M's temperature was 52 degrees Celsius. The log states no shutdown threshold.\nEnd of invented local record."
+        }
+      }
+    },
+    {
+      "case_id": "DEV11_missing_identity_bridge_uncertain",
+      "packet": {
+        "schema_version": "atomic_support_input_v1",
+        "atom_id": "A1",
+        "proposition": "The Aster packet received by Node N originated at Gateway G.",
+        "required_conditions": [
+          {
+            "condition_id": "C0",
+            "kind": "proposition",
+            "description": "The Aster packet received by Node N originated at Gateway G."
+          },
+          {
+            "condition_id": "C1",
+            "kind": "applicability",
+            "description": "Gateway G emitted a packet."
+          },
+          {
+            "condition_id": "C2",
+            "kind": "applicability",
+            "description": "Node N received the Aster packet."
+          },
+          {
+            "condition_id": "C3",
+            "kind": "applicability",
+            "description": "The emitted packet and received Aster packet are the same packet."
+          }
+        ],
+        "actual_citations": [
+          {
+            "fragment_id": "F1",
+            "evidence_id": "DEV11_missing_identity_bridge_uncertain_EVIDENCE_1",
+            "source_id": "DEV11_missing_identity_bridge_uncertain_SOURCE_1",
+            "start": 78,
+            "end": 174,
+            "exact_text": "During Trial T, Gateway G emitted one packet. Its packet identifier and class were not recorded."
+          },
+          {
+            "fragment_id": "F2",
+            "evidence_id": "DEV11_missing_identity_bridge_uncertain_EVIDENCE_2",
+            "source_id": "DEV11_missing_identity_bridge_uncertain_SOURCE_2",
+            "start": 78,
+            "end": 221,
+            "exact_text": "During Trial T, Node N received one Aster packet. Its origin and packet identifier were not recorded; other gateways were active in that trial."
+          }
+        ]
+      },
+      "source_snapshots": {
+        "DEV11_missing_identity_bridge_uncertain_SOURCE_1": {
+          "evidence_id": "DEV11_missing_identity_bridge_uncertain_EVIDENCE_1",
+          "exact_text": "Local invented development record α: DEV11_missing_identity_bridge_uncertain.\nDuring Trial T, Gateway G emitted one packet. Its packet identifier and class were not recorded.\nEnd of invented local record."
+        },
+        "DEV11_missing_identity_bridge_uncertain_SOURCE_2": {
+          "evidence_id": "DEV11_missing_identity_bridge_uncertain_EVIDENCE_2",
+          "exact_text": "Local invented development record α: DEV11_missing_identity_bridge_uncertain.\nDuring Trial T, Node N received one Aster packet. Its origin and packet identifier were not recorded; other gateways were active in that trial.\nEnd of invented local record."
+        }
+      }
+    },
+    {
+      "case_id": "DEV12_explicit_identity_bridge_positive",
+      "packet": {
+        "schema_version": "atomic_support_input_v1",
+        "atom_id": "A1",
+        "proposition": "Valve V stayed closed throughout Trial T.",
+        "required_conditions": [
+          {
+            "condition_id": "C0",
+            "kind": "proposition",
+            "description": "Valve V stayed closed throughout Trial T."
+          },
+          {
+            "condition_id": "C1",
+            "kind": "applicability",
+            "description": "Valve V is the component with serial number 9."
+          },
+          {
+            "condition_id": "C2",
+            "kind": "applicability",
+            "description": "That same component was closed for the full duration of Trial T."
+          }
+        ],
+        "actual_citations": [
+          {
+            "fragment_id": "F1",
+            "evidence_id": "DEV12_explicit_identity_bridge_positive_EVIDENCE_1",
+            "source_id": "DEV12_explicit_identity_bridge_positive_SOURCE_1",
+            "start": 78,
+            "end": 167,
+            "exact_text": "Component registry: Valve V has serial number 9. No other component uses serial number 9."
+          },
+          {
+            "fragment_id": "F2",
+            "evidence_id": "DEV12_explicit_identity_bridge_positive_EVIDENCE_2",
+            "source_id": "DEV12_explicit_identity_bridge_positive_SOURCE_2",
+            "start": 78,
+            "end": 203,
+            "exact_text": "Trial T state log: the component with serial number 9 was closed from the trial's start until its end, with no open interval."
+          }
+        ]
+      },
+      "source_snapshots": {
+        "DEV12_explicit_identity_bridge_positive_SOURCE_1": {
+          "evidence_id": "DEV12_explicit_identity_bridge_positive_EVIDENCE_1",
+          "exact_text": "Local invented development record α: DEV12_explicit_identity_bridge_positive.\nComponent registry: Valve V has serial number 9. No other component uses serial number 9.\nEnd of invented local record."
+        },
+        "DEV12_explicit_identity_bridge_positive_SOURCE_2": {
+          "evidence_id": "DEV12_explicit_identity_bridge_positive_EVIDENCE_2",
+          "exact_text": "Local invented development record α: DEV12_explicit_identity_bridge_positive.\nTrial T state log: the component with serial number 9 was closed from the trial's start until its end, with no open interval.\nEnd of invented local record."
+        }
+      }
+    }
+  ]
+}
