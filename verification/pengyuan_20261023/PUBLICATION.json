@@ -1,0 +1,189 @@
+{
+  "schema": "personalisation_verification_publication_v1",
+  "publication_date": "2026-10-23",
+  "base_commit": "7ffeebc65b854930d4e98fbf568c27aaffd7ca01",
+  "content_type": "verification evidence for existing code; not new product functionality",
+  "originals_unchanged_locally": true,
+  "scripts": [
+    {
+      "path": "scripts/verify_compiler.py",
+      "original_sha256": "b1e03d0690715c228bb5dc74d774122306c63729e0fcef5bc9b66a9b3ee920f6",
+      "changes": [
+        "CLI input/output paths replace workspace-relative paths",
+        "Refuse existing output to protect receipts",
+        "Publication docstring and argparse import; check logic unchanged"
+      ]
+    },
+    {
+      "path": "scripts/verify_handover.py",
+      "original_sha256": "8d98789dd9f19b42bac6ec0167e4a44d24b23ec0b7a596e4141984b5d8b8ea2c",
+      "changes": [
+        "CLI input/output paths replace workspace-relative and absolute paths",
+        "Refuse existing output; create output parent directory",
+        "Publication docstring and argparse import; check logic unchanged"
+      ]
+    }
+  ],
+  "archived_results": [
+    {
+      "path": "evidence/compiler_evidence.json",
+      "original_sha256": "cc05e6df77e196e746ebfb3b0c8e00110f37ccc4f133191170e44cb6f85c13b7",
+      "generated_at_utc": "2026-10-19T05:30:25.341486+00:00",
+      "path_redactions": [
+        {
+          "field": "/command",
+          "replacement": "<ORIGINAL_COMPILER_PROBE_SCRIPT>"
+        },
+        {
+          "field": "/python_executable",
+          "replacement": "<PYTHON_EXECUTABLE>"
+        },
+        {
+          "field": "/provenance/compiler/path",
+          "replacement": "<OWNER_20261019>/personalisation/compiler.py"
+        },
+        {
+          "field": "/provenance/contracts_dependency/path",
+          "replacement": "<COMPLETE_20261019>/contracts/models.py"
+        }
+      ]
+    },
+    {
+      "path": "evidence/handover_validation_receipt.json",
+      "original_sha256": "00f315b8ed8b4c9d700312756677c5b577ff5841a876252d2d58e1dd8601bc7d",
+      "generated_at_utc": "2026-10-23T03:25:25.680972+00:00",
+      "path_redactions": [
+        {
+          "field": "/python_executable",
+          "replacement": "<PYTHON_EXECUTABLE>"
+        },
+        {
+          "field": "/old_archive_test_file_check/archive",
+          "replacement": "<INPUT_ARCHIVES>/CS30-1_Current_20261019_Complete_Application.zip"
+        },
+        {
+          "field": "/imports_with_provenance/0/path",
+          "replacement": "<COMPLETE_20261019>/contracts/__init__.py"
+        },
+        {
+          "field": "/imports_with_provenance/1/path",
+          "replacement": "<COMPLETE_20261019>/contracts/models.py"
+        },
+        {
+          "field": "/imports_with_provenance/2/path",
+          "replacement": "<COMPLETE_20261019>/contracts/text_validation.py"
+        },
+        {
+          "field": "/imports_with_provenance/3/path",
+          "replacement": "<COMPLETE_20261019>/conversation/__init__.py"
+        },
+        {
+          "field": "/imports_with_provenance/4/path",
+          "replacement": "<COMPLETE_20261019>/conversation/context.py"
+        },
+        {
+          "field": "/imports_with_provenance/5/path",
+          "replacement": "<COMPLETE_20261019>/conversation/query.py"
+        },
+        {
+          "field": "/imports_with_provenance/6/path",
+          "replacement": "<COMPLETE_20261019>/conversation/summary.py"
+        },
+        {
+          "field": "/imports_with_provenance/7/path",
+          "replacement": "<COMPLETE_20261019>/conversation/understanding.py"
+        },
+        {
+          "field": "/imports_with_provenance/8/path",
+          "replacement": "<COMPLETE_20261019>/generation/__init__.py"
+        },
+        {
+          "field": "/imports_with_provenance/9/path",
+          "replacement": "<COMPLETE_20261019>/generation/adapters.py"
+        },
+        {
+          "field": "/imports_with_provenance/10/path",
+          "replacement": "<COMPLETE_20261019>/generation/capabilities.py"
+        },
+        {
+          "field": "/imports_with_provenance/11/path",
+          "replacement": "<COMPLETE_20261019>/generation/evidence_budget.py"
+        },
+        {
+          "field": "/imports_with_provenance/12/path",
+          "replacement": "<COMPLETE_20261019>/generation/network_policy.py"
+        },
+        {
+          "field": "/imports_with_provenance/13/path",
+          "replacement": "<COMPLETE_20261019>/generation/openrouter_routes.py"
+        },
+        {
+          "field": "/imports_with_provenance/14/path",
+          "replacement": "<COMPLETE_20261019>/generation/parser.py"
+        },
+        {
+          "field": "/imports_with_provenance/15/path",
+          "replacement": "<COMPLETE_20261019>/generation/prompt_builder.py"
+        },
+        {
+          "field": "/imports_with_provenance/16/path",
+          "replacement": "<COMPLETE_20261019>/generation/provider_transport.py"
+        },
+        {
+          "field": "/imports_with_provenance/17/path",
+          "replacement": "<COMPLETE_20261019>/generation/providers.py"
+        },
+        {
+          "field": "/imports_with_provenance/18/path",
+          "replacement": "<COMPLETE_20261019>/generation/response_field_contract_v2.py"
+        },
+        {
+          "field": "/imports_with_provenance/19/path",
+          "replacement": "<COMPLETE_20261019>/generation/service.py"
+        },
+        {
+          "field": "/imports_with_provenance/20/path",
+          "replacement": "<COMPLETE_20261019>/generation/stage_budget_v1.py"
+        },
+        {
+          "field": "/imports_with_provenance/21/path",
+          "replacement": "<COMPLETE_20261019>/generation/support_audit.py"
+        },
+        {
+          "field": "/imports_with_provenance/22/path",
+          "replacement": "<COMPLETE_20261019>/generation/teaching.py"
+        },
+        {
+          "field": "/imports_with_provenance/23/path",
+          "replacement": "<COMPLETE_20261019>/generation/token_counting.py"
+        },
+        {
+          "field": "/imports_with_provenance/24/path",
+          "replacement": "<COMPLETE_20261019>/generation/types.py"
+        },
+        {
+          "field": "/imports_with_provenance/25/path",
+          "replacement": "<HANDOVER_20261023>/personalisation/__init__.py"
+        },
+        {
+          "field": "/imports_with_provenance/26/path",
+          "replacement": "<HANDOVER_20261023>/personalisation/compiler.py"
+        },
+        {
+          "field": "/imports_with_provenance/27/path",
+          "replacement": "<HANDOVER_20261023>/personalisation/rubric.py"
+        },
+        {
+          "field": "/imports_with_provenance/28/path",
+          "replacement": "<HANDOVER_20261023>/personalisation/study.py"
+        },
+        {
+          "field": "/shared_prompt_dependency/path",
+          "replacement": "<COMPLETE_20261019>/generation/prompts/teaching_v1.txt"
+        }
+      ]
+    }
+  ],
+  "preserved": "All original keys, timestamps, hashes, case inputs/outputs, pass/fail values and limitations are preserved. Only the listed 36 local path strings are redacted. Historical receipts were not regenerated for publication.",
+  "attribution": "Codex-assisted verification and publication preparation. Existing product code/tests are unchanged; this is not a claim of sole authorship or human review."
+}

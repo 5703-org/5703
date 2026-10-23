@@ -1,0 +1,404 @@
+{
+  "schema": "personalisation_presentation_compiler_probe_v1",
+  "generated_at_utc": "2026-10-19T05:30:25.341486+00:00",
+  "command": "<ORIGINAL_COMPILER_PROBE_SCRIPT>",
+  "python_executable": "<PYTHON_EXECUTABLE>",
+  "scope": "Fresh software-only compiler probe with current owner compiler and the matching current complete-package contracts.",
+  "no_llm_calls": true,
+  "no_database_calls": true,
+  "network_connections_blocked": true,
+  "project_sources_modified": false,
+  "provenance": {
+    "compiler": {
+      "path": "<OWNER_20261019>/personalisation/compiler.py",
+      "sha256": "f61c6af6fcd2ffc030dc5a91292bbf8927d61d6768c29dc240c1ba08640a55bd",
+      "owner_manifest_sha256": "f61c6af6fcd2ffc030dc5a91292bbf8927d61d6768c29dc240c1ba08640a55bd",
+      "matches_owner_manifest": true,
+      "matches_current_complete_package_compiler": true
+    },
+    "contracts_dependency": {
+      "path": "<COMPLETE_20261019>/contracts/models.py",
+      "sha256": "589fb94e8aafcc8dfcd48393e6a6a5987ed4a799b3261a61e8f22286b672a132",
+      "current_complete_manifest_sha256": "589fb94e8aafcc8dfcd48393e6a6a5987ed4a799b3261a61e8f22286b672a132",
+      "matches_current_complete_manifest": true,
+      "present_in_owner_package": false,
+      "dependency_boundary": "Taken from the matching CS30-1_Current_20261019 complete package; the owner archive does not contain contracts/models.py. This does not verify full-application deployment."
+    },
+    "current_complete_release_id": "CS30-1_Current_20261019",
+    "owner_to_current_complete_comparison": [
+      {
+        "path": "personalisation/__init__.py",
+        "owner_sha256": "23a75533f30dd50e6399e574b56e3c458469f8a490ff57286dac273b30b3ac5f",
+        "complete_sha256": "23a75533f30dd50e6399e574b56e3c458469f8a490ff57286dac273b30b3ac5f",
+        "matches_owner_manifest": true,
+        "matches_complete_manifest": true,
+        "owner_and_complete_identical": true
+      },
+      {
+        "path": "personalisation/compiler.py",
+        "owner_sha256": "f61c6af6fcd2ffc030dc5a91292bbf8927d61d6768c29dc240c1ba08640a55bd",
+        "complete_sha256": "f61c6af6fcd2ffc030dc5a91292bbf8927d61d6768c29dc240c1ba08640a55bd",
+        "matches_owner_manifest": true,
+        "matches_complete_manifest": true,
+        "owner_and_complete_identical": true
+      },
+      {
+        "path": "personalisation/memory.py",
+        "owner_sha256": "3895ff0ffd52a543408b24183b869d2009130bcf9c9c1074fc031aac6156e322",
+        "complete_sha256": "3895ff0ffd52a543408b24183b869d2009130bcf9c9c1074fc031aac6156e322",
+        "matches_owner_manifest": true,
+        "matches_complete_manifest": true,
+        "owner_and_complete_identical": true
+      },
+      {
+        "path": "personalisation/memory_extraction.py",
+        "owner_sha256": "e9c7e339e11795af8157433a7bc193f24c7b96178fe866de1c7f803611637292",
+        "complete_sha256": "e9c7e339e11795af8157433a7bc193f24c7b96178fe866de1c7f803611637292",
+        "matches_owner_manifest": true,
+        "matches_complete_manifest": true,
+        "owner_and_complete_identical": true
+      },
+      {
+        "path": "personalisation/memory_policy.py",
+        "owner_sha256": "702ed970686c3462b497534389c94c428774276ac38bb82d8fe4c9a4b675351e",
+        "complete_sha256": "702ed970686c3462b497534389c94c428774276ac38bb82d8fe4c9a4b675351e",
+        "matches_owner_manifest": true,
+        "matches_complete_manifest": true,
+        "owner_and_complete_identical": true
+      },
+      {
+        "path": "personalisation/memory_v2.py",
+        "owner_sha256": "9b429a3642749bd37233733925f792e32bda31a0774bfd920df107234528486c",
+        "complete_sha256": "9b429a3642749bd37233733925f792e32bda31a0774bfd920df107234528486c",
+        "matches_owner_manifest": true,
+        "matches_complete_manifest": true,
+        "owner_and_complete_identical": true
+      },
+      {
+        "path": "personalisation/memory_v3.py",
+        "owner_sha256": "290de16f9e17f937219df14fa80b12986e3aa4c5005ea68c239e02ca7e8460aa",
+        "complete_sha256": "290de16f9e17f937219df14fa80b12986e3aa4c5005ea68c239e02ca7e8460aa",
+        "matches_owner_manifest": true,
+        "matches_complete_manifest": true,
+        "owner_and_complete_identical": true
+      },
+      {
+        "path": "personalisation/memory_v4.py",
+        "owner_sha256": "c3ec3829b37e8e76ddcd9bf673b06bfbcc23e15fd79f50fc6004feecb1f22ca5",
+        "complete_sha256": "c3ec3829b37e8e76ddcd9bf673b06bfbcc23e15fd79f50fc6004feecb1f22ca5",
+        "matches_owner_manifest": true,
+        "matches_complete_manifest": true,
+        "owner_and_complete_identical": true
+      },
+      {
+        "path": "personalisation/memory_v5.py",
+        "owner_sha256": "b1813a529aa5a7a59dbb82e44fd1c9d7398a4d62b8e516ecb12513d4069eef78",
+        "complete_sha256": "b1813a529aa5a7a59dbb82e44fd1c9d7398a4d62b8e516ecb12513d4069eef78",
+        "matches_owner_manifest": true,
+        "matches_complete_manifest": true,
+        "owner_and_complete_identical": true
+      },
+      {
+        "path": "personalisation/memory_writer_v4.py",
+        "owner_sha256": "4e265eb5702d2e43477076f0704328844f1bea4eeb34b1174920dc18c69d0ae6",
+        "complete_sha256": "4e265eb5702d2e43477076f0704328844f1bea4eeb34b1174920dc18c69d0ae6",
+        "matches_owner_manifest": true,
+        "matches_complete_manifest": true,
+        "owner_and_complete_identical": true
+      },
+      {
+        "path": "personalisation/memory_writer_v5.py",
+        "owner_sha256": "6982f2d989c7b06e5557a556c17508ac1a426942a148c8a8c23a10762e9815a9",
+        "complete_sha256": "6982f2d989c7b06e5557a556c17508ac1a426942a148c8a8c23a10762e9815a9",
+        "matches_owner_manifest": true,
+        "matches_complete_manifest": true,
+        "owner_and_complete_identical": true
+      },
+      {
+        "path": "personalisation/rubric.py",
+        "owner_sha256": "9cbf44f036f7cf4fc7adcf825306202c3272fb904dba02c3bbc3d69df1dbdb43",
+        "complete_sha256": "9cbf44f036f7cf4fc7adcf825306202c3272fb904dba02c3bbc3d69df1dbdb43",
+        "matches_owner_manifest": true,
+        "matches_complete_manifest": true,
+        "owner_and_complete_identical": true
+      },
+      {
+        "path": "personalisation/study.py",
+        "owner_sha256": "e9644c7563f4a306832ca4c6add4c8fbf49b7fcf2c4114f6e9d2e02cedf0a533",
+        "complete_sha256": "e9644c7563f4a306832ca4c6add4c8fbf49b7fcf2c4114f6e9d2e02cedf0a533",
+        "matches_owner_manifest": true,
+        "matches_complete_manifest": true,
+        "owner_and_complete_identical": true
+      }
+    ]
+  },
+  "positive_controls": [
+    {
+      "case": "beginner/concise",
+      "passed": true,
+      "checks": {
+        "normalizes_profile": true,
+        "includes_level_rule": true,
+        "includes_style_rule": true,
+        "includes_evidence_guardrail": true,
+        "preserves_revision": true,
+        "repeated_output_identical": true,
+        "hash_is_sha256": true
+      },
+      "normalized_profile": {
+        "level": "beginner",
+        "style": "concise",
+        "language": "en",
+        "topics": [
+          "biology"
+        ],
+        "version": 2
+      },
+      "policy_hash": "89f3828d3b0ed4bcf73f1e2c4f0a344a0316c45686ce21e14591d956a79feb26"
+    },
+    {
+      "case": "beginner/detailed",
+      "passed": true,
+      "checks": {
+        "normalizes_profile": true,
+        "includes_level_rule": true,
+        "includes_style_rule": true,
+        "includes_evidence_guardrail": true,
+        "preserves_revision": true,
+        "repeated_output_identical": true,
+        "hash_is_sha256": true
+      },
+      "normalized_profile": {
+        "level": "beginner",
+        "style": "detailed",
+        "language": "en",
+        "topics": [
+          "biology"
+        ],
+        "version": 2
+      },
+      "policy_hash": "3d84fa6946b2267cccc2420a227ec6706f06b44dd9013a1797f6a3cc041499c8"
+    },
+    {
+      "case": "beginner/socratic",
+      "passed": true,
+      "checks": {
+        "normalizes_profile": true,
+        "includes_level_rule": true,
+        "includes_style_rule": true,
+        "includes_evidence_guardrail": true,
+        "preserves_revision": true,
+        "repeated_output_identical": true,
+        "hash_is_sha256": true
+      },
+      "normalized_profile": {
+        "level": "beginner",
+        "style": "socratic",
+        "language": "en",
+        "topics": [
+          "biology"
+        ],
+        "version": 2
+      },
+      "policy_hash": "82e0dea049fa1573abf7665a42ed6f2868f6e9da57fd88accc4229cc433442ad"
+    },
+    {
+      "case": "intermediate/concise",
+      "passed": true,
+      "checks": {
+        "normalizes_profile": true,
+        "includes_level_rule": true,
+        "includes_style_rule": true,
+        "includes_evidence_guardrail": true,
+        "preserves_revision": true,
+        "repeated_output_identical": true,
+        "hash_is_sha256": true
+      },
+      "normalized_profile": {
+        "level": "intermediate",
+        "style": "concise",
+        "language": "en",
+        "topics": [
+          "biology"
+        ],
+        "version": 2
+      },
+      "policy_hash": "f54a72dd63f5e36cf99e1f45f021b676b3c9a65d11be258b04b26e0e8509f328"
+    },
+    {
+      "case": "intermediate/detailed",
+      "passed": true,
+      "checks": {
+        "normalizes_profile": true,
+        "includes_level_rule": true,
+        "includes_style_rule": true,
+        "includes_evidence_guardrail": true,
+        "preserves_revision": true,
+        "repeated_output_identical": true,
+        "hash_is_sha256": true
+      },
+      "normalized_profile": {
+        "level": "intermediate",
+        "style": "detailed",
+        "language": "en",
+        "topics": [
+          "biology"
+        ],
+        "version": 2
+      },
+      "policy_hash": "d8aec840fe1903d46bbe017ef7494fd08ce331df3f1fed6d3becd8ac031ceb68"
+    },
+    {
+      "case": "intermediate/socratic",
+      "passed": true,
+      "checks": {
+        "normalizes_profile": true,
+        "includes_level_rule": true,
+        "includes_style_rule": true,
+        "includes_evidence_guardrail": true,
+        "preserves_revision": true,
+        "repeated_output_identical": true,
+        "hash_is_sha256": true
+      },
+      "normalized_profile": {
+        "level": "intermediate",
+        "style": "socratic",
+        "language": "en",
+        "topics": [
+          "biology"
+        ],
+        "version": 2
+      },
+      "policy_hash": "bad206b5458946ea02b800e52581e79c1efef40c5c26ff9126d5abb0badcfc53"
+    },
+    {
+      "case": "advanced/concise",
+      "passed": true,
+      "checks": {
+        "normalizes_profile": true,
+        "includes_level_rule": true,
+        "includes_style_rule": true,
+        "includes_evidence_guardrail": true,
+        "preserves_revision": true,
+        "repeated_output_identical": true,
+        "hash_is_sha256": true
+      },
+      "normalized_profile": {
+        "level": "advanced",
+        "style": "concise",
+        "language": "en",
+        "topics": [
+          "biology"
+        ],
+        "version": 2
+      },
+      "policy_hash": "df761d7e8ca639403cc084382ac52d1727973acc22f4b1768e6bf70260a1a5d9"
+    },
+    {
+      "case": "advanced/detailed",
+      "passed": true,
+      "checks": {
+        "normalizes_profile": true,
+        "includes_level_rule": true,
+        "includes_style_rule": true,
+        "includes_evidence_guardrail": true,
+        "preserves_revision": true,
+        "repeated_output_identical": true,
+        "hash_is_sha256": true
+      },
+      "normalized_profile": {
+        "level": "advanced",
+        "style": "detailed",
+        "language": "en",
+        "topics": [
+          "biology"
+        ],
+        "version": 2
+      },
+      "policy_hash": "fb2d532786f151401b5eb5a43f247ebd8a93effa92fce1041af15663a6f19763"
+    },
+    {
+      "case": "advanced/socratic",
+      "passed": true,
+      "checks": {
+        "normalizes_profile": true,
+        "includes_level_rule": true,
+        "includes_style_rule": true,
+        "includes_evidence_guardrail": true,
+        "preserves_revision": true,
+        "repeated_output_identical": true,
+        "hash_is_sha256": true
+      },
+      "normalized_profile": {
+        "level": "advanced",
+        "style": "socratic",
+        "language": "en",
+        "topics": [
+          "biology"
+        ],
+        "version": 2
+      },
+      "policy_hash": "76892a9b661f346e0ac905ce041f444de368a779f6baec981f673b19ddd40e03"
+    },
+    {
+      "case": "explicit_current_turn_detail_request",
+      "input": "Please explain this in detail.",
+      "passed": true,
+      "observed_override": {
+        "style": "detailed",
+        "reason": "explicit_detail"
+      }
+    },
+    {
+      "case": "saved_profile_off_without_turn_override",
+      "passed": true,
+      "observed": {
+        "use_profile": false,
+        "profile": null,
+        "policy": "",
+        "turn_override": null
+      }
+    }
+  ],
+  "known_limitations": [
+    {
+      "input": "Do not simplify; keep advanced terminology.",
+      "expected_behaviour": "Do not create a positive override for the explicitly negated request.",
+      "expected_override": null,
+      "observed_override": {
+        "level": "beginner",
+        "style": "concise",
+        "reason": "explicit_simplification"
+      },
+      "mismatch_reproduced": true,
+      "interpretation": "Keyword matching ignores negation in this example; this is a limitation, not a successful adaptation."
+    },
+    {
+      "input": "Please do not give more detail.",
+      "expected_behaviour": "Do not create a positive override for the explicitly negated request.",
+      "expected_override": null,
+      "observed_override": {
+        "style": "detailed",
+        "reason": "explicit_detail"
+      },
+      "mismatch_reproduced": true,
+      "interpretation": "Keyword matching ignores negation in this example; this is a limitation, not a successful adaptation."
+    }
+  ],
+  "summary": {
+    "assigned_source_files_compared_to_current_complete": 13,
+    "assigned_source_files_identical": 13,
+    "profile_combinations_checked": 9,
+    "positive_controls_checked": 11,
+    "positive_controls_passed": 11,
+    "negation_examples_checked_separately": 2,
+    "negation_mismatches_reproduced": 2,
+    "aggregate_pass_percentage": null
+  },
+  "claim_boundary": [
+    "Checks configuration normalization, fixed rule inclusion and output repeatability only.",
+    "Does not test generated answer quality, student understanding or learning gains.",
+    "Does not verify database persistence, end-to-end UI or latest full-application deployment.",
+    "Known negation mismatches are reported separately, not counted as passing behaviour."
+  ]
+}
