@@ -1,0 +1,1088 @@
+{
+  "fixture_version": "offline_claim_entailment152_v1",
+  "purpose": "Reusable selected-evidence audit cases; offline only",
+  "safety_boundary": {
+    "production_input": false,
+    "provider_input": false,
+    "Main_hook": false,
+    "candidate150_default": "OFF",
+    "new_pipeline_or_schema": false,
+    "labels_are_offline_review_annotations": true,
+    "human_ratings": null,
+    "membership_and_exact_quotes_certify_entailment": false
+  },
+  "preserved151": {
+    "strict_whole_answer_quality": "1/2",
+    "raw_outputs_mutated": false
+  },
+  "source_files": [
+    {
+      "file_id": "J01_checker_wire",
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-14\\task\\browser-latency151-runtime03\\02-joint_check-wire151.json",
+      "sha256": "f90188db1eac293d50b400b023e288949cb135442640146aa82e0efa6f95f393",
+      "bytes": 57709,
+      "encoding": "UTF-8-strict",
+      "original_unchanged": true
+    },
+    {
+      "file_id": "J01_checker_raw",
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-14\\task\\browser-latency151-runtime03\\02-joint_check-raw151.json",
+      "sha256": "c2fe7669a310d6a8507515f1de8c574f19bf3c6ab35a7301ece01a93ff9fee78",
+      "bytes": 5265,
+      "encoding": "UTF-8-strict",
+      "original_unchanged": true
+    },
+    {
+      "file_id": "J02_checker_wire",
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-14\\task\\browser-latency151-resume04\\02-joint_check-wire151.json",
+      "sha256": "4a11bc579b2e6dfbd1f221f4749d490a5afdd8daf97bb135e292766922c686e4",
+      "bytes": 51499,
+      "encoding": "UTF-8-strict",
+      "original_unchanged": true
+    },
+    {
+      "file_id": "J02_checker_raw",
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-14\\task\\browser-latency151-resume04\\02-joint_check-raw151.json",
+      "sha256": "409f8a507a202cf054b4bcd22bb173c442f5208370f0d6e249736703a123052c",
+      "bytes": 6573,
+      "encoding": "UTF-8-strict",
+      "original_unchanged": true
+    },
+    {
+      "file_id": "independent151_review",
+      "path": "C:\\Users\\PC\\Documents\\Codex\\2026-10-14\\task\\browser-latency151-resume04\\review\\semantic-source-browser-review151.json",
+      "sha256": "a04d7cfe3ba425f6ec97a97ce7937e0676c7b5dcaf5afb57dcaf25978c7b0ff8",
+      "bytes": 10549,
+      "encoding": "UTF-8-strict",
+      "original_unchanged": true
+    }
+  ],
+  "contexts": {
+    "J01": {
+      "kind": "captured151",
+      "answer_id": "56ff131f-7dd3-4d07-9e56-7be0f4473e15",
+      "answer_surfaces": {
+        "answer_text": "Diffusion is a passive process in which a single substance moves from a high-concentration area to a low-concentration area until concentration is equal across a space [ev_008], and it expends no energy [ev_009]. Osmosis is a special case of diffusion [ev_001]: it is the movement of free water molecules through a semipermeable membrane down the water's concentration gradient, which is inversely proportional to the solutes' concentration [ev_001]. The key difference is scope: diffusion transports material across membranes and within cells, whereas osmosis transports only water across a membrane, and the membrane limits the solutes' diffusion in the water [ev_001].",
+        "short_answer": "Diffusion moves a substance from high to low concentration until equal, expending no energy [ev_008] [ev_009]; osmosis is a special case of diffusion in which only water moves through a semipermeable membrane down its own concentration gradient, which is inversely proportional to solute concentration [ev_001]."
+      },
+      "wire_file_id": "J01_checker_wire",
+      "raw_file_id": "J01_checker_raw",
+      "selected_set_audit_only": true,
+      "all_eligible_fragment_text_included": false
+    },
+    "J02": {
+      "kind": "captured151",
+      "answer_id": "6d9defb1-b063-49d9-a7b4-e71774384b5d",
+      "answer_surfaces": {
+        "answer_text": "No. Osmosis transports only water across a membrane, and the membrane limits the diffusion of solutes in the water [ev_002] [ev_003]. Solutes can move across membranes by other means, such as facilitated diffusion through transport proteins, but that is not osmosis [ev_002]. In the osmosis setup, the solute cannot pass through the selectively permeable membrane, while the water can [ev_004].",
+        "short_answer": "No—osmosis transports only water across a membrane, and the membrane limits the diffusion of solutes in the water [ev_002] [ev_003]."
+      },
+      "wire_file_id": "J02_checker_wire",
+      "raw_file_id": "J02_checker_raw",
+      "selected_set_audit_only": true,
+      "all_eligible_fragment_text_included": false
+    }
+  },
+  "fragments": {
+    "J01:F002": {
+      "context_id": "J01",
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_001",
+      "exact_text": "Osmosis Osmosis is the movement of free water molecules through a semipermeable membrane according to the water's concentration gradient across the membrane, which is inversely proportional to the solutes' concentration.",
+      "fragment_id": "F002",
+      "exact_text_utf8_sha256": "803b0593a83874d167bec090191ff8faf591f10f90049e4b341fc572b32df299",
+      "source_file_id": "J01_checker_wire"
+    },
+    "J01:F003": {
+      "context_id": "J01",
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_001",
+      "exact_text": "While diffusion transports material across membranes and within cells, osmosis transports only water across a membrane and the membrane limits the solutes' diffusion in the water.",
+      "fragment_id": "F003",
+      "exact_text_utf8_sha256": "0c6e0ef933132b168772c90a18140a65f826bdf4003776cbde93a2b30dea5ca7",
+      "source_file_id": "J01_checker_wire"
+    },
+    "J01:F005": {
+      "context_id": "J01",
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_001",
+      "exact_text": "Mechanism Osmosis is a special case of diffusion.",
+      "fragment_id": "F005",
+      "exact_text_utf8_sha256": "2e1ce3a900d52e552a82a27611faa43db4aea99ba65c7886fb82b9c8d9d3d507",
+      "source_file_id": "J01_checker_wire"
+    },
+    "J01:F047": {
+      "context_id": "J01",
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_008",
+      "exact_text": "Diffusion Diffusion is a passive process of transport.",
+      "fragment_id": "F047",
+      "exact_text_utf8_sha256": "7683c72c174ad90bf40157770592a4e0d6633a951ba9aefc1e1046d6a5a7e579",
+      "source_file_id": "J01_checker_wire"
+    },
+    "J01:F048": {
+      "context_id": "J01",
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_008",
+      "exact_text": "A single substance moves from a high concentration to a low concentration area until the concentration is equal across a space.",
+      "fragment_id": "F048",
+      "exact_text_utf8_sha256": "3e5cc3b3b5414d2722fd96427f469364127f80e3eaed289370ad8863d0a35e9b",
+      "source_file_id": "J01_checker_wire"
+    },
+    "J01:F051": {
+      "context_id": "J01",
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_009",
+      "exact_text": "Diffusion expends no energy.",
+      "fragment_id": "F051",
+      "exact_text_utf8_sha256": "18498092bb8bbbeefeb5b748f0e761c5aee01b3d45b1fa82cf20b9760bae9145",
+      "source_file_id": "J01_checker_wire"
+    },
+    "J02:F007": {
+      "context_id": "J02",
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_002",
+      "exact_text": "Facilitated transport In facilitated transport, also called facilitated diffusion, material moves across the plasma membrane with the assistance of transmembrane proteins down a concentration gradient (from high to low concentration) without the expenditure of cellular energy.",
+      "fragment_id": "F007",
+      "exact_text_utf8_sha256": "5c50ac0c7084b306d3c81bfde6a8a600f5151ee0839813caa02d3ddea72a7ef4",
+      "source_file_id": "J02_checker_wire"
+    },
+    "J02:F013": {
+      "context_id": "J02",
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_002",
+      "exact_text": "The integral proteins involved in facilitated transport are collectively referred to as transport proteins, and they function as either channels for the material or carriers.",
+      "fragment_id": "F013",
+      "exact_text_utf8_sha256": "bc564b5c33912a352c01673f5ac1b20db8e7363d574c3923785e70e2835eee4a",
+      "source_file_id": "J02_checker_wire"
+    },
+    "J02:F015": {
+      "context_id": "J02",
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_002",
+      "exact_text": "Whereas diffusion transports material across membranes and within cells, osmosis transports only water across a membrane and the membrane limits the diffusion of solutes in the water.",
+      "fragment_id": "F015",
+      "exact_text_utf8_sha256": "279e81ca8c9ba28bcf8db130b219fc31b4c4fa4a4bbcd3228cf84bf5a4aebd83",
+      "source_file_id": "J02_checker_wire"
+    },
+    "J02:F016": {
+      "context_id": "J02",
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_003",
+      "exact_text": "Whereas diffusion transports material across membranes and within cells, osmosis transports only water across a membrane and the membrane limits the diffusion of solutes in the water.",
+      "fragment_id": "F016",
+      "exact_text_utf8_sha256": "279e81ca8c9ba28bcf8db130b219fc31b4c4fa4a4bbcd3228cf84bf5a4aebd83",
+      "source_file_id": "J02_checker_wire"
+    },
+    "J02:F023": {
+      "context_id": "J02",
+      "block_kind": "unresolved_atomic",
+      "complete_block": true,
+      "evidence_id": "ev_004",
+      "exact_text": "FIGURE 3.21 In osmosis, water always moves from an area of higher concentration (of water) to one of lower concentration (of water). In this system, the solute cannot pass through the selectively permeable membrane. A principle of diffusion is that the molecules move around and will spread evenly throughout the medium if they can. However, only the material capable of getting through the membrane will diffuse through it. In this example, the solute cannot diffuse through the membrane, but the water can. Water has a concentration gradient in this system. Therefore, water will diffuse down its concentration gradient, crossing the membrane to the side where it is less concentrated. This diffusion of water through the membrane—osmosis—will continue until the concentration gradient of water goes to zero. Osmosis proceeds constantly in living systems. LINK T O LE ARNING Watch this video (https://openstax.org/l/dispersion) that illustrates diffusion in hot versus cold solutions.",
+      "fragment_id": "F023",
+      "exact_text_utf8_sha256": "13166a14b5d318dca1d8d338d78ae46c164282f1870e14971e5a7d9e6c62cd03",
+      "source_file_id": "J02_checker_wire"
+    },
+    "J02:F042": {
+      "context_id": "J02",
+      "block_kind": "prose",
+      "complete_block": true,
+      "evidence_id": "ev_007",
+      "exact_text": "Facilitated diffusion utilizes protein channels to move solute molecules from areas of higher to lower concentration while active transport mechanisms are required to move solutes against concentration gradients.",
+      "fragment_id": "F042",
+      "exact_text_utf8_sha256": "9cdb8121fabfe604c70b0114e6b0b3ee060b784b06acfc4153dcde25e1da63e7",
+      "source_file_id": "J02_checker_wire"
+    }
+  },
+  "cases": [
+    {
+      "case_id": "J01:claim_bbfa53ebd9fe388069e1c76b_1",
+      "origin": "captured151",
+      "context_id": "J01",
+      "claim": {
+        "answer_field": "answer_text",
+        "claim_id": "claim_bbfa53ebd9fe388069e1c76b_1",
+        "end": 212,
+        "evidence_ids": [
+          "ev_008",
+          "ev_009"
+        ],
+        "start": 0,
+        "text": "Diffusion is a passive process in which a single substance moves from a high-concentration area to a low-concentration area until concentration is equal across a space [ev_008], and it expends no energy [ev_009]."
+      },
+      "eligible_bindings": [
+        {
+          "evidence_id": "ev_008",
+          "allowed_fragment_ids": [
+            "F047",
+            "F048",
+            "F049",
+            "F050"
+          ]
+        },
+        {
+          "evidence_id": "ev_009",
+          "allowed_fragment_ids": [
+            "F051",
+            "F052"
+          ]
+        }
+      ],
+      "returned_citations": [
+        {
+          "evidence_id": "ev_008",
+          "fragment_ids": [
+            "F047",
+            "F048"
+          ],
+          "relation": "supporting"
+        },
+        {
+          "evidence_id": "ev_009",
+          "fragment_ids": [
+            "F051"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "checker_observation": {
+        "basis": "textbook",
+        "status": "supported",
+        "reason": "F047 establishes diffusion is a passive process of transport; F048 establishes a single substance moves from high to low concentration until equal across a space. F051 establishes diffusion expends no energy. All asserted parts (passive, single substance, high-to-low, equalization, no energy) are covered."
+      },
+      "provenance_diagnostics": {
+        "eligible_unselected_reason_references": [],
+        "foreign_scoped_available_diagnostic_fragments": [],
+        "raw_reason_foreign_references": [],
+        "source_references_are_not_automatic_support": true
+      },
+      "offline_annotation": {
+        "whole_proposition_status": "supported",
+        "review_basis": "independent151_source_review",
+        "rationale": "The recorded independent151 review supports this complete captured proposition from its own selected evidence union.",
+        "supported_parts": [
+          "The complete captured proposition."
+        ],
+        "unestablished_parts": [],
+        "human_rating": null,
+        "machine_entailment_certified": false
+      }
+    },
+    {
+      "case_id": "J01:claim_3b21fe131aa206d96d1bd6eb_1",
+      "origin": "captured151",
+      "context_id": "J01",
+      "claim": {
+        "answer_field": "answer_text",
+        "claim_id": "claim_3b21fe131aa206d96d1bd6eb_1",
+        "end": 450,
+        "evidence_ids": [
+          "ev_001"
+        ],
+        "start": 213,
+        "text": "Osmosis is a special case of diffusion [ev_001]: it is the movement of free water molecules through a semipermeable membrane down the water's concentration gradient, which is inversely proportional to the solutes' concentration [ev_001]."
+      },
+      "eligible_bindings": [
+        {
+          "evidence_id": "ev_001",
+          "allowed_fragment_ids": [
+            "F001",
+            "F002",
+            "F003",
+            "F004",
+            "F005",
+            "F006",
+            "F007",
+            "F008"
+          ]
+        }
+      ],
+      "returned_citations": [
+        {
+          "evidence_id": "ev_001",
+          "fragment_ids": [
+            "F005",
+            "F002"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "checker_observation": {
+        "basis": "textbook",
+        "status": "supported",
+        "reason": "F005 states osmosis is a special case of diffusion. F002 states osmosis is the movement of free water molecules through a semipermeable membrane according to the water's concentration gradient, which is inversely proportional to the solutes' concentration. All asserted parts are established."
+      },
+      "provenance_diagnostics": {
+        "eligible_unselected_reason_references": [],
+        "foreign_scoped_available_diagnostic_fragments": [],
+        "raw_reason_foreign_references": [],
+        "source_references_are_not_automatic_support": true
+      },
+      "offline_annotation": {
+        "whole_proposition_status": "supported",
+        "review_basis": "independent151_source_review",
+        "rationale": "The recorded independent151 review supports this complete captured proposition from its own selected evidence union.",
+        "supported_parts": [
+          "The complete captured proposition."
+        ],
+        "unestablished_parts": [],
+        "human_rating": null,
+        "machine_entailment_certified": false
+      }
+    },
+    {
+      "case_id": "J01:claim_aff3ad87248c174308a99f59_1",
+      "origin": "captured151",
+      "context_id": "J01",
+      "claim": {
+        "answer_field": "answer_text",
+        "claim_id": "claim_aff3ad87248c174308a99f59_1",
+        "end": 671,
+        "evidence_ids": [
+          "ev_001"
+        ],
+        "start": 451,
+        "text": "The key difference is scope: diffusion transports material across membranes and within cells, whereas osmosis transports only water across a membrane, and the membrane limits the solutes' diffusion in the water [ev_001]."
+      },
+      "eligible_bindings": [
+        {
+          "evidence_id": "ev_001",
+          "allowed_fragment_ids": [
+            "F001",
+            "F002",
+            "F003",
+            "F004",
+            "F005",
+            "F006",
+            "F007",
+            "F008"
+          ]
+        }
+      ],
+      "returned_citations": [
+        {
+          "evidence_id": "ev_001",
+          "fragment_ids": [
+            "F003"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "checker_observation": {
+        "basis": "textbook",
+        "status": "supported",
+        "reason": "F003 states that while diffusion transports material across membranes and within cells, osmosis transports only water across a membrane and the membrane limits the solutes' diffusion in the water. This establishes the asserted scope difference and the membrane limiting solutes' diffusion."
+      },
+      "provenance_diagnostics": {
+        "eligible_unselected_reason_references": [],
+        "foreign_scoped_available_diagnostic_fragments": [],
+        "raw_reason_foreign_references": [],
+        "source_references_are_not_automatic_support": true
+      },
+      "offline_annotation": {
+        "whole_proposition_status": "supported",
+        "review_basis": "independent151_source_review",
+        "rationale": "The recorded independent151 review supports this complete captured proposition from its own selected evidence union.",
+        "supported_parts": [
+          "The complete captured proposition."
+        ],
+        "unestablished_parts": [],
+        "human_rating": null,
+        "machine_entailment_certified": false
+      }
+    },
+    {
+      "case_id": "J01:claim_7c2bde94e5a2d39a766ef2b5_1",
+      "origin": "captured151",
+      "context_id": "J01",
+      "claim": {
+        "answer_field": "short_answer",
+        "claim_id": "claim_7c2bde94e5a2d39a766ef2b5_1",
+        "end": 311,
+        "evidence_ids": [
+          "ev_008",
+          "ev_009",
+          "ev_001"
+        ],
+        "start": 0,
+        "text": "Diffusion moves a substance from high to low concentration until equal, expending no energy [ev_008] [ev_009]; osmosis is a special case of diffusion in which only water moves through a semipermeable membrane down its own concentration gradient, which is inversely proportional to solute concentration [ev_001]."
+      },
+      "eligible_bindings": [
+        {
+          "evidence_id": "ev_008",
+          "allowed_fragment_ids": [
+            "F047",
+            "F048",
+            "F049",
+            "F050"
+          ]
+        },
+        {
+          "evidence_id": "ev_009",
+          "allowed_fragment_ids": [
+            "F051",
+            "F052"
+          ]
+        },
+        {
+          "evidence_id": "ev_001",
+          "allowed_fragment_ids": [
+            "F001",
+            "F002",
+            "F003",
+            "F004",
+            "F005",
+            "F006",
+            "F007",
+            "F008"
+          ]
+        }
+      ],
+      "returned_citations": [
+        {
+          "evidence_id": "ev_008",
+          "fragment_ids": [
+            "F047",
+            "F048"
+          ],
+          "relation": "supporting"
+        },
+        {
+          "evidence_id": "ev_009",
+          "fragment_ids": [
+            "F051"
+          ],
+          "relation": "supporting"
+        },
+        {
+          "evidence_id": "ev_001",
+          "fragment_ids": [
+            "F005",
+            "F002"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "checker_observation": {
+        "basis": "textbook",
+        "status": "supported",
+        "reason": "F047/F048 establish diffusion moves a substance from high to low concentration until equal; F051 establishes no energy expended; F005 establishes osmosis is a special case of diffusion; F002 establishes only water moves through a semipermeable membrane down its own concentration gradient inversely proportional to solute concentration. All short-answer assertions are supported."
+      },
+      "provenance_diagnostics": {
+        "eligible_unselected_reason_references": [],
+        "foreign_scoped_available_diagnostic_fragments": [],
+        "raw_reason_foreign_references": [],
+        "source_references_are_not_automatic_support": true
+      },
+      "offline_annotation": {
+        "whole_proposition_status": "supported",
+        "review_basis": "independent151_source_review",
+        "rationale": "The recorded independent151 review supports this complete captured proposition from its own selected evidence union.",
+        "supported_parts": [
+          "The complete captured proposition."
+        ],
+        "unestablished_parts": [],
+        "human_rating": null,
+        "machine_entailment_certified": false
+      }
+    },
+    {
+      "case_id": "J02:claim_8b729ee53752ed1ac2721be2_1",
+      "origin": "captured151",
+      "context_id": "J02",
+      "claim": {
+        "answer_field": "answer_text",
+        "claim_id": "claim_8b729ee53752ed1ac2721be2_1",
+        "end": 133,
+        "evidence_ids": [
+          "ev_002",
+          "ev_003"
+        ],
+        "start": 4,
+        "text": "Osmosis transports only water across a membrane, and the membrane limits the diffusion of solutes in the water [ev_002] [ev_003]."
+      },
+      "eligible_bindings": [
+        {
+          "evidence_id": "ev_002",
+          "allowed_fragment_ids": [
+            "F007",
+            "F008",
+            "F009",
+            "F010",
+            "F011",
+            "F012",
+            "F013",
+            "F014",
+            "F015"
+          ]
+        },
+        {
+          "evidence_id": "ev_003",
+          "allowed_fragment_ids": [
+            "F016",
+            "F017",
+            "F018",
+            "F019",
+            "F020",
+            "F021"
+          ]
+        }
+      ],
+      "returned_citations": [
+        {
+          "evidence_id": "ev_002",
+          "fragment_ids": [
+            "F015"
+          ],
+          "relation": "supporting"
+        },
+        {
+          "evidence_id": "ev_003",
+          "fragment_ids": [
+            "F016"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "checker_observation": {
+        "basis": "textbook",
+        "status": "supported",
+        "reason": "F015 (ev_002) and F016 (ev_003) both state verbatim that osmosis transports only water across a membrane and the membrane limits the diffusion of solutes in the water, establishing both asserted parts of the claim."
+      },
+      "provenance_diagnostics": {
+        "eligible_unselected_reason_references": [],
+        "foreign_scoped_available_diagnostic_fragments": [],
+        "raw_reason_foreign_references": [],
+        "source_references_are_not_automatic_support": true
+      },
+      "offline_annotation": {
+        "whole_proposition_status": "supported",
+        "review_basis": "independent151_source_review",
+        "rationale": "The recorded independent151 review supports this complete captured proposition from its own selected evidence union.",
+        "supported_parts": [
+          "The complete captured proposition."
+        ],
+        "unestablished_parts": [],
+        "human_rating": null,
+        "machine_entailment_certified": false
+      }
+    },
+    {
+      "case_id": "J02:claim_b127bd853dc518bf5b4a4efe_1",
+      "origin": "captured151",
+      "context_id": "J02",
+      "claim": {
+        "answer_field": "answer_text",
+        "claim_id": "claim_b127bd853dc518bf5b4a4efe_1",
+        "end": 275,
+        "evidence_ids": [
+          "ev_002"
+        ],
+        "start": 134,
+        "text": "Solutes can move across membranes by other means, such as facilitated diffusion through transport proteins, but that is not osmosis [ev_002]."
+      },
+      "eligible_bindings": [
+        {
+          "evidence_id": "ev_002",
+          "allowed_fragment_ids": [
+            "F007",
+            "F008",
+            "F009",
+            "F010",
+            "F011",
+            "F012",
+            "F013",
+            "F014",
+            "F015"
+          ]
+        }
+      ],
+      "returned_citations": [
+        {
+          "evidence_id": "ev_002",
+          "fragment_ids": [
+            "F007",
+            "F013"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "checker_observation": {
+        "basis": "textbook",
+        "status": "supported",
+        "reason": "F007 establishes facilitated transport (facilitated diffusion) of material across the plasma membrane with transmembrane proteins; F013 identifies the integral proteins involved as transport proteins. Together they establish that solutes can move across membranes by facilitated diffusion through transport proteins, and the claim's contrast that this is not osmosis is consistent with F015's statement that osmosis transports only water."
+      },
+      "provenance_diagnostics": {
+        "eligible_unselected_reason_references": [
+          "F015"
+        ],
+        "foreign_scoped_available_diagnostic_fragments": [
+          "F042"
+        ],
+        "raw_reason_foreign_references": [],
+        "source_references_are_not_automatic_support": true
+      },
+      "offline_annotation": {
+        "whole_proposition_status": "partial",
+        "review_basis": "independent151_source_review",
+        "rationale": "Scientifically plausible statement, insufficiently established by its actual selected proof; membership and another claim selected F015 do not certify full entailment.",
+        "supported_parts": [
+          "Generic material crosses plasma membranes by facilitated diffusion using transmembrane/transport proteins."
+        ],
+        "unestablished_parts": [
+          "The transported subject is non-water dissolved solute; therefore this specific movement is non-osmotic."
+        ],
+        "human_rating": null,
+        "machine_entailment_certified": false,
+        "acceptable_negative_checker_statuses": [
+          "partial",
+          "unsupported"
+        ]
+      }
+    },
+    {
+      "case_id": "J02:claim_811dd27aaeb8c2ba22cd4c26_1",
+      "origin": "captured151",
+      "context_id": "J02",
+      "claim": {
+        "answer_field": "answer_text",
+        "claim_id": "claim_811dd27aaeb8c2ba22cd4c26_1",
+        "end": 394,
+        "evidence_ids": [
+          "ev_004"
+        ],
+        "start": 276,
+        "text": "In the osmosis setup, the solute cannot pass through the selectively permeable membrane, while the water can [ev_004]."
+      },
+      "eligible_bindings": [
+        {
+          "evidence_id": "ev_004",
+          "allowed_fragment_ids": [
+            "F022",
+            "F023",
+            "F024",
+            "F025"
+          ]
+        }
+      ],
+      "returned_citations": [
+        {
+          "evidence_id": "ev_004",
+          "fragment_ids": [
+            "F023"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "checker_observation": {
+        "basis": "textbook",
+        "status": "supported",
+        "reason": "F023 states that in this system the solute cannot pass through the selectively permeable membrane, and that in this example the solute cannot diffuse through the membrane but the water can, establishing both asserted parts of the claim."
+      },
+      "provenance_diagnostics": {
+        "eligible_unselected_reason_references": [],
+        "foreign_scoped_available_diagnostic_fragments": [],
+        "raw_reason_foreign_references": [],
+        "source_references_are_not_automatic_support": true
+      },
+      "offline_annotation": {
+        "whole_proposition_status": "supported",
+        "review_basis": "independent151_source_review",
+        "rationale": "The recorded independent151 review supports this complete captured proposition from its own selected evidence union.",
+        "supported_parts": [
+          "The complete captured proposition."
+        ],
+        "unestablished_parts": [],
+        "human_rating": null,
+        "machine_entailment_certified": false
+      }
+    },
+    {
+      "case_id": "J02:claim_675d6d0b202fbd9ea82f7f06_1",
+      "origin": "captured151",
+      "context_id": "J02",
+      "claim": {
+        "answer_field": "short_answer",
+        "claim_id": "claim_675d6d0b202fbd9ea82f7f06_1",
+        "end": 132,
+        "evidence_ids": [
+          "ev_002",
+          "ev_003"
+        ],
+        "start": 0,
+        "text": "No—osmosis transports only water across a membrane, and the membrane limits the diffusion of solutes in the water [ev_002] [ev_003]."
+      },
+      "eligible_bindings": [
+        {
+          "evidence_id": "ev_002",
+          "allowed_fragment_ids": [
+            "F007",
+            "F008",
+            "F009",
+            "F010",
+            "F011",
+            "F012",
+            "F013",
+            "F014",
+            "F015"
+          ]
+        },
+        {
+          "evidence_id": "ev_003",
+          "allowed_fragment_ids": [
+            "F016",
+            "F017",
+            "F018",
+            "F019",
+            "F020",
+            "F021"
+          ]
+        }
+      ],
+      "returned_citations": [
+        {
+          "evidence_id": "ev_002",
+          "fragment_ids": [
+            "F015"
+          ],
+          "relation": "supporting"
+        },
+        {
+          "evidence_id": "ev_003",
+          "fragment_ids": [
+            "F016"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "checker_observation": {
+        "basis": "textbook",
+        "status": "supported",
+        "reason": "The short answer's factual content is identical to claim_8b729ee53752ed1ac2721be2_1; F015 and F016 jointly establish that osmosis transports only water across a membrane and that the membrane limits the diffusion of solutes in the water."
+      },
+      "provenance_diagnostics": {
+        "eligible_unselected_reason_references": [],
+        "foreign_scoped_available_diagnostic_fragments": [],
+        "raw_reason_foreign_references": [],
+        "source_references_are_not_automatic_support": true
+      },
+      "offline_annotation": {
+        "whole_proposition_status": "supported",
+        "review_basis": "independent151_source_review",
+        "rationale": "The recorded independent151 review supports this complete captured proposition from its own selected evidence union.",
+        "supported_parts": [
+          "The complete captured proposition."
+        ],
+        "unestablished_parts": [],
+        "human_rating": null,
+        "machine_entailment_certified": false
+      }
+    },
+    {
+      "case_id": "CONTROL_MATERIAL_PARAPHRASE",
+      "origin": "authored_offline_control",
+      "context_id": "J02",
+      "claim": {
+        "claim_id": "CONTROL_MATERIAL_PARAPHRASE",
+        "answer_field": "answer_text",
+        "start": 0,
+        "end": 172,
+        "text": "In facilitated diffusion, material crosses the plasma membrane with the help of transport proteins, moving from greater to lesser concentration without cellular energy use.",
+        "evidence_ids": [
+          "ev_002"
+        ]
+      },
+      "eligible_bindings": [
+        {
+          "evidence_id": "ev_002",
+          "allowed_fragment_ids": [
+            "F007",
+            "F013"
+          ]
+        }
+      ],
+      "returned_citations": [
+        {
+          "evidence_id": "ev_002",
+          "fragment_ids": [
+            "F007",
+            "F013"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "checker_observation": null,
+      "provenance_diagnostics": {
+        "eligible_unselected_reason_references": [],
+        "foreign_scoped_available_diagnostic_fragments": [],
+        "raw_reason_foreign_references": [],
+        "source_references_are_not_automatic_support": true
+      },
+      "offline_annotation": {
+        "whole_proposition_status": "supported",
+        "review_basis": "independent152_offline_semantic_review",
+        "rationale": "F007 supplies generic material, membrane, down-gradient direction and no energy; F013 supplies the transport-protein designation. No solute-specific narrowing is added.",
+        "supported_parts": [
+          "The complete proposition."
+        ],
+        "unestablished_parts": [],
+        "human_rating": null,
+        "machine_entailment_certified": false
+      }
+    },
+    {
+      "case_id": "CONTROL_COMPLEMENTARY_PARAPHRASE",
+      "origin": "authored_offline_control",
+      "context_id": "J01",
+      "claim": {
+        "claim_id": "CONTROL_COMPLEMENTARY_PARAPHRASE",
+        "answer_field": "answer_text",
+        "start": 0,
+        "end": 145,
+        "text": "Diffusion passively moves a substance from greater concentration to lesser concentration until concentrations equalize, without expending energy.",
+        "evidence_ids": [
+          "ev_008",
+          "ev_009"
+        ]
+      },
+      "eligible_bindings": [
+        {
+          "evidence_id": "ev_008",
+          "allowed_fragment_ids": [
+            "F047",
+            "F048"
+          ]
+        },
+        {
+          "evidence_id": "ev_009",
+          "allowed_fragment_ids": [
+            "F051"
+          ]
+        }
+      ],
+      "returned_citations": [
+        {
+          "evidence_id": "ev_008",
+          "fragment_ids": [
+            "F047",
+            "F048"
+          ],
+          "relation": "supporting"
+        },
+        {
+          "evidence_id": "ev_009",
+          "fragment_ids": [
+            "F051"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "checker_observation": null,
+      "provenance_diagnostics": {
+        "eligible_unselected_reason_references": [],
+        "foreign_scoped_available_diagnostic_fragments": [],
+        "raw_reason_foreign_references": [],
+        "source_references_are_not_automatic_support": true
+      },
+      "offline_annotation": {
+        "whole_proposition_status": "supported",
+        "review_basis": "independent152_offline_semantic_review",
+        "rationale": "The three own-selected passages jointly supply passive transport, the moving entity and direction/equalization, and no energy. Meaning-preserving paraphrase and complementary actual citation groups are retained.",
+        "supported_parts": [
+          "The complete proposition."
+        ],
+        "unestablished_parts": [],
+        "human_rating": null,
+        "machine_entailment_certified": false
+      }
+    },
+    {
+      "case_id": "CONTROL_ENTAILED_CONDITIONAL_CAUSAL",
+      "origin": "authored_offline_control",
+      "context_id": "J02",
+      "claim": {
+        "claim_id": "CONTROL_ENTAILED_CONDITIONAL_CAUSAL",
+        "answer_field": "answer_text",
+        "start": 0,
+        "end": 152,
+        "text": "In this example, water has a concentration gradient and can cross the membrane; therefore it diffuses across to the side with lower water concentration.",
+        "evidence_ids": [
+          "ev_004"
+        ]
+      },
+      "eligible_bindings": [
+        {
+          "evidence_id": "ev_004",
+          "allowed_fragment_ids": [
+            "F023"
+          ]
+        }
+      ],
+      "returned_citations": [
+        {
+          "evidence_id": "ev_004",
+          "fragment_ids": [
+            "F023"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "checker_observation": null,
+      "provenance_diagnostics": {
+        "eligible_unselected_reason_references": [],
+        "foreign_scoped_available_diagnostic_fragments": [],
+        "raw_reason_foreign_references": [],
+        "source_references_are_not_automatic_support": true
+      },
+      "offline_annotation": {
+        "whole_proposition_status": "supported",
+        "review_basis": "independent152_offline_semantic_review",
+        "rationale": "The complete example passage explicitly supplies the membrane applicability and water gradient and states the therefore/diffusion-to-lower-water-concentration link. The example condition is preserved.",
+        "supported_parts": [
+          "The complete proposition."
+        ],
+        "unestablished_parts": [],
+        "human_rating": null,
+        "machine_entailment_certified": false
+      }
+    },
+    {
+      "case_id": "CONTROL_UNSUPPORTED_CAUSAL_LINK",
+      "origin": "authored_offline_control",
+      "context_id": "J02",
+      "claim": {
+        "claim_id": "CONTROL_UNSUPPORTED_CAUSAL_LINK",
+        "answer_field": "answer_text",
+        "start": 0,
+        "end": 84,
+        "text": "Facilitated diffusion uses transport proteins because osmosis transports only water.",
+        "evidence_ids": [
+          "ev_002"
+        ]
+      },
+      "eligible_bindings": [
+        {
+          "evidence_id": "ev_002",
+          "allowed_fragment_ids": [
+            "F007",
+            "F013",
+            "F015"
+          ]
+        }
+      ],
+      "returned_citations": [
+        {
+          "evidence_id": "ev_002",
+          "fragment_ids": [
+            "F007",
+            "F013",
+            "F015"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "checker_observation": null,
+      "provenance_diagnostics": {
+        "eligible_unselected_reason_references": [],
+        "foreign_scoped_available_diagnostic_fragments": [],
+        "raw_reason_foreign_references": [],
+        "source_references_are_not_automatic_support": true
+      },
+      "offline_annotation": {
+        "whole_proposition_status": "unsupported",
+        "review_basis": "independent152_offline_semantic_review",
+        "rationale": "The selected passages establish two separate facts but supply no causal explanation linking the protein mechanism to the water-only osmosis classification.",
+        "supported_parts": [
+          "Facilitated diffusion uses transport proteins.",
+          "Osmosis transports only water."
+        ],
+        "unestablished_parts": [
+          "The asserted because relation is not established by the selected union."
+        ],
+        "human_rating": null,
+        "machine_entailment_certified": false,
+        "acceptable_negative_checker_statuses": [
+          "partial",
+          "unsupported"
+        ]
+      }
+    },
+    {
+      "case_id": "CONTROL_CONTRADICTED_WATER_ENTITY",
+      "origin": "authored_offline_control",
+      "context_id": "J02",
+      "claim": {
+        "claim_id": "CONTROL_CONTRADICTED_WATER_ENTITY",
+        "answer_field": "answer_text",
+        "start": 0,
+        "end": 63,
+        "text": "Osmosis transports solutes rather than water across a membrane.",
+        "evidence_ids": [
+          "ev_002"
+        ]
+      },
+      "eligible_bindings": [
+        {
+          "evidence_id": "ev_002",
+          "allowed_fragment_ids": [
+            "F015"
+          ]
+        }
+      ],
+      "returned_citations": [
+        {
+          "evidence_id": "ev_002",
+          "fragment_ids": [
+            "F015"
+          ],
+          "relation": "supporting"
+        }
+      ],
+      "checker_observation": null,
+      "provenance_diagnostics": {
+        "eligible_unselected_reason_references": [],
+        "foreign_scoped_available_diagnostic_fragments": [],
+        "raw_reason_foreign_references": [],
+        "source_references_are_not_automatic_support": true
+      },
+      "offline_annotation": {
+        "whole_proposition_status": "contradicted",
+        "review_basis": "independent152_offline_semantic_review",
+        "rationale": "The selected passage expressly states only water is transported by osmosis and that the membrane limits solute diffusion, contradicting the transported entity.",
+        "supported_parts": [],
+        "unestablished_parts": [
+          "The asserted solute-instead-of-water entity conflicts with the selected passage."
+        ],
+        "human_rating": null,
+        "machine_entailment_certified": false,
+        "native_checker_status_for_annotation": "unsupported"
+      }
+    }
+  ],
+  "independent152_review": {
+    "reviewer": "/root/binding_review150",
+    "utc": "2026-10-14T01:03:33.688289+00:00",
+    "status": "13_WHOLE_PROPOSITIONS_REVIEWED",
+    "human_rating": null,
+    "provider_requests": 0,
+    "Main_changes": 0
+  },
+  "limits": [
+    "Labels are independent or authored offline judgments, not a production entailment algorithm.",
+    "Selected-set review records full server eligibility IDs without copying the complete eligible source bank.",
+    "F015 is locally eligible but unselected for the actual J02 optional claim; F042 is from foreign ev_007.",
+    "A reviewer must examine the entire original proposition and selected union; string overlap and membership are insufficient.",
+    "No actual human rating, general reliability, model-quality improvement or publication qualification is claimed."
+  ]
+}
