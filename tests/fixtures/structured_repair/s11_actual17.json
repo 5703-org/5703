@@ -1,0 +1,326 @@
+{
+  "fixture_version": "saved_bound_repair_contract_replay_v1",
+  "case": "s11_actual17",
+  "scope": "Offline preservation and edit-permission replay only; no new semantic quality result.",
+  "source_artifacts": [
+    {
+      "file": "deepseek-e2e-control-17/deepseek-native-outcome-01.json",
+      "sha256": "f71242b43193872673046dcbd86c6c2ef73f7daec4375dbbc5e2c8aa270a4a17",
+      "bytes": 82408,
+      "json_pointers": [
+        "/drafts/0/response",
+        "/drafts/0/tutor_question",
+        "/drafts/0/learner_attempt_evaluation",
+        "/drafts/0/projection",
+        "/attribution/claims",
+        "/checks/0/judgment",
+        "/checks/0/structural_issues",
+        "/checks/0/repair_plan",
+        "/teaching_context",
+        "/evidence",
+        "/messages"
+      ]
+    },
+    {
+      "file": "deepseek-e2e-control-17/deepseek-request-result-04.json",
+      "sha256": "0e559e251fd08726694b93f3a7e3c47ec6ed9aff03c244ff8fa4c82bdeb88ac0",
+      "bytes": 2411,
+      "json_pointer": "/raw_model_text",
+      "raw_model_text_sha256": "834e55ff4e8bf7cd198484bed2bde78d82d9bbd39256b204db4ad7700baf8a74"
+    }
+  ],
+  "extraction": {
+    "excluded_fields": [
+      "messages with role=system",
+      "claim.support diagnostic metadata"
+    ],
+    "draft": "/drafts/0/response plus recorded teaching metadata",
+    "protected": "Known unique protected claim, reconstructed by the unchanged v4/v5 protection policy in the independent audit; not a new human judgment.",
+    "request_binding": "Only recorded public user messages and teaching_context."
+  },
+  "draft": {
+    "schema_version": "chat_response_v1",
+    "response_type": "answer",
+    "answer_text": "Consider the two conditions already stated for this problem: the amount of gas is fixed, and the temperature remains constant. Would the supplied candidate fit this problem, what in those two conditions supports your judgment, and why should you establish that fit before deciding whether to use it?",
+    "short_answer": null,
+    "citations": [],
+    "refusal_reason": null,
+    "follow_up_questions": [],
+    "confidence": 0.6,
+    "tutor_question": {
+      "question": "Consider the two conditions already stated for this problem: the amount of gas is fixed, and the temperature remains constant. Would the supplied candidate fit this problem, what in those two conditions supports your judgment, and why should you establish that fit before deciding whether to use it?",
+      "expected_response_kind": "explanation"
+    },
+    "learner_attempt_evaluation": null
+  },
+  "claims": [
+    {
+      "claim_id": "claim_fa5278fe54c87f6f68faca7b_1",
+      "answer_field": "answer_text",
+      "start": 0,
+      "end": 126,
+      "text": "Consider the two conditions already stated for this problem: the amount of gas is fixed, and the temperature remains constant.",
+      "evidence_ids": [],
+      "fragment_ids": []
+    },
+    {
+      "claim_id": "claim_fd1186d48e434733dee7b3b3_1",
+      "answer_field": "answer_text",
+      "start": 127,
+      "end": 299,
+      "text": "Would the supplied candidate fit this problem, what in those two conditions supports your judgment, and why should you establish that fit before deciding whether to use it?",
+      "evidence_ids": [],
+      "fragment_ids": []
+    }
+  ],
+  "protected": [
+    {
+      "claim_id": "claim_fd1186d48e434733dee7b3b3_1",
+      "answer_field": "answer_text",
+      "start": 127,
+      "end": 299,
+      "text": "Would the supplied candidate fit this problem, what in those two conditions supports your judgment, and why should you establish that fit before deciding whether to use it?",
+      "evidence_ids": [],
+      "fragment_ids": []
+    }
+  ],
+  "judgment": {
+    "claims": [
+      {
+        "claim_id": "claim_fa5278fe54c87f6f68faca7b_1",
+        "basis": "problem_input",
+        "factual": true,
+        "status": "supported",
+        "fragment_ids": [],
+        "problem_quote": "the amount of gas is fixed, and the temperature remains constant",
+        "derivation": null,
+        "reason": "The two stated conditions are copied from the learner's given conditions in the problem (and current problem/practice context), though the answer paraphrases them. The quoted substring is an exact contiguous learner-provided given phrase."
+      },
+      {
+        "claim_id": "claim_fd1186d48e434733dee7b3b3_1",
+        "basis": "nonfactual",
+        "factual": false,
+        "status": "supported",
+        "fragment_ids": [],
+        "problem_quote": null,
+        "derivation": null,
+        "reason": "This is procedural guidance asking the learner to judge whether the supplied candidate fits and to explain the basis, not a scientific factual assertion."
+      }
+    ],
+    "body_ok": true,
+    "specific_help": true,
+    "scope_ok": true,
+    "suggestions_ok": true,
+    "evidence_display_ok": true,
+    "cumulative_ok": true,
+    "complete_answer": false,
+    "coverage": "full",
+    "missing_facets": [],
+    "limitations_explicit": true,
+    "reason": "The hint names two already-given conditions as neutral context and asks a connected fit question about the supplied candidate ('the supplied candidate') without displaying its expression or asserting applicability. It keeps the H1 selection unanswered. The conditions paraphrased are exact learner givens. Citation lists are empty, appropriately for a purely procedural fit question. The tutor question is present with expected_response_kind explanation and matches the visible question. Coverage of the requested H1 step is full; no missing facets.",
+    "repair_fragment_ids": [
+      "span_0115063b72d19e50f6b9dffb724bc4dd"
+    ],
+    "attempt_evaluation_ok": true,
+    "tutor_question_ok": true,
+    "requirements": [
+      {
+        "requirement_id": "requirement_01",
+        "relevance": "related",
+        "sufficiency": "sufficient",
+        "evidence": [
+          {
+            "evidence_id": "ev_001",
+            "fragment_id": "F001",
+            "quote": "For a fixed amount of ideal gas at constant temperature, P1 * V1 = P2 * V2."
+          }
+        ],
+        "conditions_preserved": true,
+        "response_coverage": "deferred_for_hint",
+        "missing_information": "",
+        "reason": "The source states the pressure-volume relation for a fixed amount of ideal gas at constant temperature, matching the problem conditions (fixed gas amount, constant temperature, initial pressure/volume, final volume). The hint defers the full explanation as permitted at H1, using the source only for context without disclosing the relation."
+      }
+    ],
+    "non_repetitive_next_action": true
+  },
+  "structural_issues": [
+    {
+      "claim_id": "claim_fa5278fe54c87f6f68faca7b_1",
+      "code": "CHECK_PROBLEM_QUOTE_MISMATCH"
+    }
+  ],
+  "repair_plan": {
+    "version": "cause_specific_hint_progression_repair_v10",
+    "actions": [
+      {
+        "origin": "source_coverage",
+        "claim_id": "claim_fa5278fe54c87f6f68faca7b_1",
+        "code": "CHECK_PROBLEM_QUOTE_MISMATCH",
+        "action": "separate_given_formula_and_result"
+      },
+      {
+        "origin": "answer",
+        "code": "INCOMPLETE_REQUEST",
+        "action": "complete_current_permitted_hint_action_without_later_solution",
+        "response_scope": "current_allowed_hint_action"
+      }
+    ],
+    "remaining_repair_pairs": 1
+  },
+  "request_binding": {
+    "user_messages": [
+      {
+        "role": "user",
+        "content": "An ideal gas initially has pressure 100 kPa and volume 2 L. Its volume changes to 4 L at constant temperature and fixed amount of gas.\nCurrent practice step: Choose the supplied pressure-volume relation before substituting values.\nGiven conditions:\nThe amount of gas is fixed.\nThe temperature remains constant.\nThe initial pressure is 100 kPa and the initial volume is 2 L.\nThe final volume is 4 L.\nGive one H1 guiding question for this step, without giving its answer."
+      }
+    ],
+    "teaching_context": {
+      "teaching_mode": "hint",
+      "help_level": 1,
+      "turn_role": "user_question",
+      "current_problem": "An ideal gas initially has pressure 100 kPa and volume 2 L. Its volume changes to 4 L at constant temperature and fixed amount of gas.",
+      "current_step": 1,
+      "delivered_turns": [],
+      "disclosure_events": [],
+      "practice_context": {
+        "version": "practice_tutor_context_v1",
+        "current_step": 1,
+        "current_step_prompt": "Choose the supplied pressure-volume relation before substituting values.",
+        "conditions": [
+          "The amount of gas is fixed.",
+          "The temperature remains constant.",
+          "The initial pressure is 100 kPa and the initial volume is 2 L.",
+          "The final volume is 4 L."
+        ],
+        "selection_candidates": {
+          "version": "selection_candidates_v1",
+          "current_step": 1,
+          "task_ref": {
+            "field": "recorded_step_goal.operation",
+            "start": 0,
+            "end": 72,
+            "exact_quote": "Choose the supplied pressure-volume relation before substituting values."
+          },
+          "candidate_refs": [
+            {
+              "origin": "evidence",
+              "chunk_id": "s11_public_chunk",
+              "text_sha256": "e7ba5c661ca6c5ee4bf2f7b2b78ad39194e149e207d6c4041228f1e86e3ea45b",
+              "start": 57,
+              "end": 74,
+              "exact_quote": "P1 * V1 = P2 * V2"
+            }
+          ]
+        },
+        "selection_task": {
+          "version": "selection_task_v1",
+          "current_step": 1,
+          "task_ref": {
+            "field": "recorded_step_goal.operation",
+            "start": 0,
+            "end": 72,
+            "exact_quote": "Choose the supplied pressure-volume relation before substituting values."
+          },
+          "candidate_presence": "supplied",
+          "candidate_refs": [
+            {
+              "origin": "evidence",
+              "chunk_id": "s11_public_chunk",
+              "text_sha256": "e7ba5c661ca6c5ee4bf2f7b2b78ad39194e149e207d6c4041228f1e86e3ea45b",
+              "start": 57,
+              "end": 74,
+              "exact_quote": "P1 * V1 = P2 * V2"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "selection_contract": {
+    "selection_candidates": {
+      "version": "selection_candidates_v1",
+      "current_step": 1,
+      "task_ref": {
+        "field": "recorded_step_goal.operation",
+        "start": 0,
+        "end": 72,
+        "exact_quote": "Choose the supplied pressure-volume relation before substituting values."
+      },
+      "candidate_refs": [
+        {
+          "origin": "evidence",
+          "chunk_id": "s11_public_chunk",
+          "text_sha256": "e7ba5c661ca6c5ee4bf2f7b2b78ad39194e149e207d6c4041228f1e86e3ea45b",
+          "start": 57,
+          "end": 74,
+          "exact_quote": "P1 * V1 = P2 * V2"
+        }
+      ]
+    },
+    "selection_task": {
+      "version": "selection_task_v1",
+      "current_step": 1,
+      "task_ref": {
+        "field": "recorded_step_goal.operation",
+        "start": 0,
+        "end": 72,
+        "exact_quote": "Choose the supplied pressure-volume relation before substituting values."
+      },
+      "candidate_presence": "supplied",
+      "candidate_refs": [
+        {
+          "origin": "evidence",
+          "chunk_id": "s11_public_chunk",
+          "text_sha256": "e7ba5c661ca6c5ee4bf2f7b2b78ad39194e149e207d6c4041228f1e86e3ea45b",
+          "start": 57,
+          "end": 74,
+          "exact_quote": "P1 * V1 = P2 * V2"
+        }
+      ]
+    }
+  },
+  "projection": {
+    "version": "learning_enhancement_v1",
+    "response": {
+      "schema_version": "chat_response_v1",
+      "response_type": "answer",
+      "answer_text": "Consider the two conditions already stated for this problem: the amount of gas is fixed, and the temperature remains constant. Would the supplied candidate fit this problem, what in those two conditions supports your judgment, and why should you establish that fit before deciding whether to use it?",
+      "short_answer": null,
+      "citations": [],
+      "refusal_reason": null,
+      "follow_up_questions": [],
+      "confidence": 0.6
+    },
+    "citation_views": [],
+    "content_hash": "3571e2c833b96e2c3aeb9aeb39435b6daf081ac5b66b63522fcba95f9ffc4067"
+  },
+  "evidence_ids": [
+    "ev_001"
+  ],
+  "saved_full_repair": {
+    "schema_version": "chat_response_v1",
+    "response_type": "answer",
+    "answer_text": "Consider one condition already given for this problem: the amount of gas is fixed. Would the supplied candidate fit this problem, what in that given condition supports your judgment, and why should you establish that fit before deciding whether to use it?",
+    "short_answer": null,
+    "citations": [],
+    "refusal_reason": null,
+    "follow_up_questions": [],
+    "confidence": 0.6,
+    "tutor_question": {
+      "question": "Would the supplied candidate fit this problem, what in that given condition supports your judgment, and why should you establish that fit before deciding whether to use it?",
+      "expected_response_kind": "explanation"
+    },
+    "learner_attempt_evaluation": null
+  },
+  "saved_error": {
+    "code": "REPAIR_CHANGED_APPROVED_CONTENT",
+    "message": "The targeted repair changed an unaffected approved claim",
+    "retryable": false,
+    "details": {}
+  },
+  "recorded_acceptance_unchanged": {
+    "native_response": null,
+    "native_published": false,
+    "human_rating": null
+  }
+}
