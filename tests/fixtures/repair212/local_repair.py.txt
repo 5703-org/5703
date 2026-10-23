@@ -1,0 +1,160 @@
+"""Versioned edits to defective claim spans with exact approved-text retention."""
+
+from __future__ import annotations
+
+import hashlib
+import re
+
+from pydantic import Field
+
+from .attempt_evaluation_contract_v1 import gate_satisfied
+from .parser import ResponseValidationError
+from .reliability_v3 import Strict
+
+VERSION = "claim_patch_repair_v3"
+PRACTICE_HINT_VERSION = "practice_hint_repair_v4"
+PRACTICE_HINT_NEXT_VERSION = "practice_hint_repair_v5"
+
+
+def practice_teaching_repair_boundary(
+    judgment, teaching, response=None, *, attempt_not_applicable=False
+):
+    """Global teaching approval cannot be inferred from factual support alone."""
+    gates = [
+        "specific_help",
+        "scope_ok",
+        "attempt_evaluation_ok",
+        "tutor_question_ok",
+        "non_repetitive_next_action",
+    ]
+    for enabled, gate in (
+        ("check_suggestions", "suggestions_ok"),
+        ("control_evidence", "evidence_display_ok"),
+        ("check_cumulative", "cumulative_ok"),
+    ):
+        if teaching[enabled]:
+            gates.append(gate)
+    failed = [
+        gate for gate in gates
+        if not gate_satisfied(judgment, gate, attempt_not_applicable=attempt_not_applicable)
+    ]
+    surface_failures = (
+        ["HINT_SHORT_ANSWER_PRESENT"]
+        if response is not None and response.get("short_answer") is not None
+        else []
+    )
+    return {
+        "version": "practice_global_teaching_repair_boundary_v1",
+        "failed_global_gate_names": failed,
+        "failed_surface_gate_names": surface_failures,
+        "per_claim_teaching_safe_binding_available": False,
+        "release_source_supported_claims_for_repair": bool(failed or surface_failures),
+        "reason": (
+            "Source support does not certify these claims as safe for this teaching step; "
+            "an applicable teaching gate failed without individual safe-claim bindings."
+            if failed or surface_failures
+            else "All applicable global teaching gates passed; exact approved spans stay protected."
+        ),
+        "final_full_check_required": True,
+        "publication_override": False,
+    }
+
+
+class ClaimEdit(Strict):
+    claim_id: str = Field(min_length=1, max_length=100)
+    replacement_text: str = Field(max_length=12000)
+
+
+class ClaimPatch(Strict):
+    edits: list[ClaimEdit] = Field(max_length=80)
+    append_answer_text: str = Field(default="", max_length=8000)
+
+
+def apply_claim_patch(draft, claims, protected, proposal, evidence_ids):
+    """Apply bounded edits before the unchanged parser and full final check.
+
+    This validates edit permissions and provenance syntax, not source meaning.
+    New or modified assertions require the same semantic/disclosure check.
+    """
+    patch = ClaimPatch.model_validate(proposal).model_dump()
+    originals = {}
+    spans = {"answer_text": [], "short_answer": []}
+    for claim in claims:
+        field = claim["answer_field"]
+        start, end = claim["start"], claim["end"]
+        original = draft.get(field) or ""
+        if (
+            field not in spans
+            or type(start) is not int
+            or type(end) is not int
+            or not 0 <= start < end <= len(original)
+            or original[start:end] != claim["text"]
+            or claim["claim_id"] in originals
+        ):
+            raise ResponseValidationError("CLAIM_PATCH_ORIGINAL_INVALID", "Invalid original span")
+        originals[claim["claim_id"]] = claim
+        spans[field].append((start, end))
+    for field_spans in spans.values():
+        ordered = sorted(field_spans)
+        if any(left[1] > right[0] for left, right in zip(ordered, ordered[1:])):
+            raise ResponseValidationError("CLAIM_PATCH_SPAN_OVERLAP", "Original spans overlap")
+    approved = {claim["claim_id"] for claim in protected}
+    if not approved <= originals.keys() or any(
+        claim != originals[claim["claim_id"]] for claim in protected
+    ):
+        raise ResponseValidationError("CLAIM_PATCH_PROTECTED_INVALID", "Invalid approved spans")
+    edits = patch["edits"]
+    identities = [edit["claim_id"] for edit in edits]
+    if len(set(identities)) != len(identities):
+        raise ResponseValidationError("CLAIM_PATCH_DUPLICATE", "Repeated claim edit")
+    if any(identity not in originals for identity in identities):
+        raise ResponseValidationError("CLAIM_PATCH_UNKNOWN_CLAIM", "Unknown claim edit")
+    if approved.intersection(identities):
+        raise ResponseValidationError("CLAIM_PATCH_APPROVED_EDIT", "Approved content is immutable")
+    if not edits and not patch["append_answer_text"].strip():
+        raise ResponseValidationError("CLAIM_PATCH_EMPTY", "A repair must address a defect")
+    result = dict(draft)
+    transformations = []
+    for field in spans:
+        relevant = [edit for edit in edits if originals[edit["claim_id"]]["answer_field"] == field]
+        value = draft.get(field) or ""
+        for edit in sorted(
+            relevant, key=lambda row: originals[row["claim_id"]]["start"], reverse=True
+        ):
+            original = originals[edit["claim_id"]]
+            value = value[: original["start"]] + edit["replacement_text"] + value[original["end"] :]
+            transformations.append(
+                {
+                    "claim_id": edit["claim_id"],
+                    "answer_field": field,
+                    "original_start": original["start"],
+                    "original_end": original["end"],
+                    "replacement_sha256": hashlib.sha256(
+                        edit["replacement_text"].encode()
+                    ).hexdigest(),
+                }
+            )
+        if relevant:
+            result[field] = value
+    if patch["append_answer_text"].strip():
+        result["answer_text"] += "\n\n" + patch["append_answer_text"]
+    body_ids = list(dict.fromkeys(re.findall(r"\[(ev_\d{3,})\]", result["answer_text"])))
+    short_ids = set(re.findall(r"\[(ev_\d{3,})\]", result.get("short_answer") or ""))
+    if not set(body_ids) | short_ids <= set(evidence_ids):
+        raise ResponseValidationError("CLAIM_PATCH_SOURCE_UNKNOWN", "Unknown source marker")
+    if not short_ids <= set(body_ids):
+        raise ResponseValidationError(
+            "CLAIM_PATCH_SUMMARY_BINDING", "Summary source is absent from body"
+        )
+    result["citations"] = body_ids
+    return result, {
+        "version": VERSION,
+        "operation": "apply_unapproved_claim_edits_before_full_check",
+        "protected_claim_ids": sorted(approved),
+        "edits": transformations,
+        "append_answer_text_sha256": hashlib.sha256(
+            patch["append_answer_text"].encode()
+        ).hexdigest(),
+        "requires_full_check": True,
+        "source_entailment_certified": False,
+    }
