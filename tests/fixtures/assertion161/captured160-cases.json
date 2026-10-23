@@ -1,0 +1,2595 @@
+{
+  "version": "phase161_exact160_offline_fixture_v1",
+  "cases": [
+    {
+      "case_id": "Q01",
+      "question": "Using the caption of Figure 5.19 and the nearby explanation, explain how the sodium-potassium pump gets energy and moves the two ions against their concentration gradients. State the directions and relative numbers of ions moved, and explain why this is primary active transport.",
+      "original_draft_raw": "{\"schema_version\":\"chat_response_v1\",\"response_type\":\"answer\",\"answer_text\":\"The Figure 5.19 caption states that ATP hydrolysis provides the energy for the sodium-potassium pump to move ions against their concentration gradients: three Na⁺ ions move out of the cell for every two K⁺ ions moved into it. [ev_001] The nearby explanation describes the mechanism: three Na⁺ ions bind to the pump inside the cell; the pump hydrolyzes ATP and a phosphate group attaches, causing the protein to change shape and release the Na⁺ ions outside. Two K⁺ ions then bind; removal of the phosphate group allows the pump to return to its inward-facing configuration and release K⁺ into the cytoplasm. [ev_007] This is primary active transport because the pump uses ATP directly to move ions across the membrane against their gradients. [ev_005]\",\"short_answer\":null,\"citations\":[\"ev_001\",\"ev_007\",\"ev_005\"],\"refusal_reason\":null,\"follow_up_questions\":[],\"confidence\":0.98,\"tutor_question\":null,\"learner_attempt_evaluation\":null}",
+      "original_checker_raw": "{\"claims\":[{\"claim_id\":\"claim_f11aa6d86db36f699895fee1_1\",\"reason\":\"F007 supports ATP hydrolysis as the energy source, movement against concentration gradients, and the three-Na-out/two-K-in ratio. The caption does not state that ATP hydrolysis provides the energy specifically for moving the ions against their gradients; it states these facts separately, so the asserted causal connection is not fully established by the selected fragment.\",\"basis\":\"textbook\",\"status\":\"partial\",\"citations\":[{\"evidence_id\":\"ev_001\",\"fragment_ids\":[\"F007\"],\"relation\":\"supporting\"}]},{\"claim_id\":\"claim_46615cdcaea177a40eaab925_1\",\"reason\":\"This claim has no bound citation. Although the available ev_007 passages could support the binding, ATP hydrolysis, phosphate attachment, shape change, and release of sodium outside, none is selected for this claim; uncited source text cannot support it.\",\"basis\":\"textbook\",\"status\":\"unsupported\",\"citations\":[]},{\"claim_id\":\"claim_a6e46a7974a339db5817f72d_1\",\"reason\":\"F058 supports two potassium ions binding, F059 supports phosphate detachment, and F060 supports return toward the cell interior with phosphate removed and potassium attached. F061 supports release of two potassium ions into the cytoplasm. Together these selected fragments establish the asserted sequence.\",\"basis\":\"textbook\",\"status\":\"supported\",\"citations\":[{\"evidence_id\":\"ev_007\",\"fragment_ids\":[\"F058\",\"F059\",\"F060\",\"F061\"],\"relation\":\"supporting\"}]},{\"claim_id\":\"claim_3c70697401513cd2f94d5b0f_1\",\"reason\":\"F030 establishes that primary active transport moves ions across a membrane and is directly dependent on ATP, but does not establish the specific claim that this pump uses ATP directly to move ions against their gradients. F048 says pumps work against electrochemical gradients, not that this pump's ATP use directly powers that movement; the complete asserted causal relationship is not established.\",\"basis\":\"textbook\",\"status\":\"partial\",\"citations\":[{\"evidence_id\":\"ev_005\",\"fragment_ids\":[\"F030\",\"F048\"],\"relation\":\"supporting\"}]}],\"body_ok\":false,\"specific_help\":true,\"scope_ok\":true,\"suggestions_ok\":true,\"evidence_display_ok\":true,\"cumulative_ok\":true,\"complete_answer\":false,\"coverage\":\"supported_partial\",\"missing_facets\":[\"The selected caption does not expressly establish that ATP hydrolysis provides the energy for the ions' movement against their gradients; the draft's selected sources do not establish the complete direct-ATP causal explanation of primary active transport.\"],\"limitations_explicit\":false,\"reason\":\"The response addresses the requested directions, ratio, ATP source, and pump sequence. However, its first and final causal assertions exceed what their selected citations establish, and the detailed sodium-binding mechanism is uncited. The requested source context does contain the necessary knowledge across passages, but the actual selected bindings do not support all claims in this draft; the stated gaps are therefore citation/support defects rather than a basis for treating unsupported claims as established.\",\"repair_fragment_ids\":[\"F005\",\"F006\",\"F052\",\"F053\",\"F054\",\"F055\",\"F056\",\"F057\",\"F058\",\"F059\",\"F060\",\"F061\"],\"attempt_evaluation_ok\":\"not_applicable\",\"tutor_question_ok\":true,\"requirements\":[{\"requirement_id\":\"requirement_01\",\"relevance\":\"related\",\"sufficiency\":\"sufficient\",\"evidence\":[{\"evidence_id\":\"ev_001\",\"fragment_id\":\"F007\",\"quote\":\"FIGURE 5.19 The sodium-potassium pump is an example of primary active transport that moves ions, sodium and potassium ions in this instance, across a membrane against their concentration gradients. The energy is provided by the hydrolysis of ATP. Three sodium ions are moved out of the cell for every 2 potassium ions that are brought into the cell.\"},{\"evidence_id\":\"ev_007\",\"fragment_id\":\"F052\",\"quote\":\"With the enzyme oriented towards the cell's interior, the carrier has a high affinity for sodium ions.\"},{\"evidence_id\":\"ev_007\",\"fragment_id\":\"F053\",\"quote\":\"Three ions\"},{\"evidence_id\":\"ev_007\",\"fragment_id\":\"F054\",\"quote\":\"bind to the protein. 2.\"},{\"evidence_id\":\"ev_007\",\"fragment_id\":\"F055\",\"quote\":\"The protein carrier hydrolyzes ATP and a low-energy phosphate group attaches to it. 3.\"},{\"evidence_id\":\"ev_007\",\"fragment_id\":\"F056\",\"quote\":\"As a result, the carrier changes shape and reorients itself towards the membrane's exterior.\"},{\"evidence_id\":\"ev_007\",\"fragment_id\":\"F057\",\"quote\":\"The protein’s affinity for sodium decreases and the three sodium ions leave the carrier. 4.\"},{\"evidence_id\":\"ev_007\",\"fragment_id\":\"F058\",\"quote\":\"The shape change increases the carrier’s affinity for potassium ions, and two such ions attach to the protein.\"}],\"conditions_preserved\":true,\"response_coverage\":\"partial\",\"missing_information\":\"\",\"reason\":\"The supplied fragments collectively establish the requested ATP-energy, movement against concentration gradients, directions and relative counts, plus the nearby sequence for sodium and potassium transport. The draft gives that account, but some of its assertions are not fully supported by their selected claim bindings.\"},{\"requirement_id\":\"requirement_02\",\"relevance\":\"related\",\"sufficiency\":\"sufficient\",\"evidence\":[{\"evidence_id\":\"ev_001\",\"fragment_id\":\"F007\",\"quote\":\"Three sodium ions are moved out of the cell for every 2 potassium ions that are brought into the cell.\"},{\"evidence_id\":\"ev_007\",\"fragment_id\":\"F049\",\"quote\":\"The sodium-potassium pump moves K+ into the cell while moving Na+ out at the same time, at a ratio of three Na+ for every two K+ ions moved in.\"}],\"conditions_preserved\":true,\"response_coverage\":\"covered\",\"missing_information\":\"\",\"reason\":\"The sources give the direction and three-sodium-to-two-potassium ratio, and the answer states those directions and numbers.\"},{\"requirement_id\":\"requirement_03\",\"relevance\":\"related\",\"sufficiency\":\"sufficient\",\"evidence\":[{\"evidence_id\":\"ev_001\",\"fragment_id\":\"F007\",\"quote\":\"FIGURE 5.19 The sodium-potassium pump is an example of primary active transport that moves ions, sodium and potassium ions in this instance, across a membrane against their concentration gradients. The energy is provided by the hydrolysis of ATP.\"},{\"evidence_id\":\"ev_005\",\"fragment_id\":\"F030\",\"quote\":\"Primary active transport moves ions across a membrane and creates a difference in charge across that membrane, which is directly dependent on ATP.\"}],\"conditions_preserved\":true,\"response_coverage\":\"partial\",\"missing_information\":\"\",\"reason\":\"The selected source context establishes that primary active transport uses ATP directly and moves ions against concentration gradients, while F007 identifies the sodium-potassium pump as an example and ATP hydrolysis as its energy source. The draft's further wording that the pump uses ATP directly to move ions is not fully established by its selected ev_005 citation, so the answer only partially covers the requested causal explanation as submitted.\"}],\"non_repetitive_next_action\":true}",
+      "checker_packet": {
+        "ACTUAL_CITATION_BINDINGS": [
+          {
+            "claim_id": "claim_f11aa6d86db36f699895fee1_1",
+            "citations": [
+              {
+                "allowed_fragment_ids": [
+                  "F001",
+                  "F002",
+                  "F003",
+                  "F004",
+                  "F005",
+                  "F006",
+                  "F007",
+                  "F008"
+                ],
+                "evidence_id": "ev_001"
+              }
+            ]
+          },
+          {
+            "claim_id": "claim_46615cdcaea177a40eaab925_1",
+            "citations": []
+          },
+          {
+            "claim_id": "claim_a6e46a7974a339db5817f72d_1",
+            "citations": [
+              {
+                "allowed_fragment_ids": [
+                  "F049",
+                  "F050",
+                  "F051",
+                  "F052",
+                  "F053",
+                  "F054",
+                  "F055",
+                  "F056",
+                  "F057",
+                  "F058",
+                  "F059",
+                  "F060",
+                  "F061"
+                ],
+                "evidence_id": "ev_007"
+              }
+            ]
+          },
+          {
+            "claim_id": "claim_3c70697401513cd2f94d5b0f_1",
+            "citations": [
+              {
+                "allowed_fragment_ids": [
+                  "F029",
+                  "F030",
+                  "F031",
+                  "F032",
+                  "F033",
+                  "F034",
+                  "F035",
+                  "F036",
+                  "F037",
+                  "F038",
+                  "F039",
+                  "F040",
+                  "F041"
+                ],
+                "evidence_id": "ev_005"
+              }
+            ]
+          }
+        ],
+        "ATTEMPT_EVALUATION": null,
+        "ATTEMPT_EVALUATION_APPLICABILITY": {
+          "status": "not_applicable",
+          "version": "conditional_attempt_evaluation_v1"
+        },
+        "CHECK_SCOPE": {
+          "body_and_short_answer": true,
+          "current_evidence_display": false,
+          "current_suggestions": false,
+          "prior_actual_exposure": false
+        },
+        "CLAIMS": [
+          {
+            "answer_field": "answer_text",
+            "claim_id": "claim_f11aa6d86db36f699895fee1_1",
+            "end": 234,
+            "evidence_ids": [
+              "ev_001"
+            ],
+            "start": 0,
+            "text": "The Figure 5.19 caption states that ATP hydrolysis provides the energy for the sodium-potassium pump to move ions against their concentration gradients: three Na⁺ ions move out of the cell for every two K⁺ ions moved into it. [ev_001]"
+          },
+          {
+            "answer_field": "answer_text",
+            "claim_id": "claim_46615cdcaea177a40eaab925_1",
+            "end": 457,
+            "evidence_ids": [],
+            "start": 235,
+            "text": "The nearby explanation describes the mechanism: three Na⁺ ions bind to the pump inside the cell; the pump hydrolyzes ATP and a phosphate group attaches, causing the protein to change shape and release the Na⁺ ions outside."
+          },
+          {
+            "answer_field": "answer_text",
+            "claim_id": "claim_a6e46a7974a339db5817f72d_1",
+            "end": 616,
+            "evidence_ids": [
+              "ev_007"
+            ],
+            "start": 458,
+            "text": "Two K⁺ ions then bind; removal of the phosphate group allows the pump to return to its inward-facing configuration and release K⁺ into the cytoplasm. [ev_007]"
+          },
+          {
+            "answer_field": "answer_text",
+            "claim_id": "claim_3c70697401513cd2f94d5b0f_1",
+            "end": 751,
+            "evidence_ids": [
+              "ev_005"
+            ],
+            "start": 617,
+            "text": "This is primary active transport because the pump uses ATP directly to move ions across the membrane against their gradients. [ev_005]"
+          }
+        ],
+        "CONTEXT_COVERAGE": {
+          "budget_lost_requirement_ids": [],
+          "context_sufficiency_estimate": "partial",
+          "requirements": [
+            {
+              "candidate_lexically_covered": false,
+              "conditions": [
+                "5.19 and"
+              ],
+              "id": "requirement_01",
+              "intent": "explanation",
+              "matched_evidence_ids": [
+                "ev_001",
+                "ev_002",
+                "ev_003",
+                "ev_004",
+                "ev_005",
+                "ev_006",
+                "ev_007",
+                "ev_008"
+              ],
+              "missing_term_groups": [
+                [
+                  "caption"
+                ],
+                [
+                  "gets"
+                ],
+                [
+                  "nearby"
+                ]
+              ],
+              "objects": [],
+              "origin": "verbatim_question_structure_v5",
+              "packed_lexically_covered": false,
+              "relation": "explanation",
+              "request": "Using the caption of Figure 5.19 and the nearby explanation, explain how the sodium-potassium pump gets energy and moves the two ions against their concentration gradients"
+            },
+            {
+              "candidate_lexically_covered": false,
+              "conditions": [
+                "5.19 and"
+              ],
+              "id": "requirement_02",
+              "intent": "explanation",
+              "matched_evidence_ids": [
+                "ev_001",
+                "ev_002",
+                "ev_003",
+                "ev_004",
+                "ev_005",
+                "ev_006",
+                "ev_007",
+                "ev_008"
+              ],
+              "missing_term_groups": [
+                [
+                  "state"
+                ]
+              ],
+              "objects": [],
+              "origin": "verbatim_question_structure_v5",
+              "packed_lexically_covered": false,
+              "relation": "explanation",
+              "request": "State the directions and relative numbers of ions moved,"
+            },
+            {
+              "candidate_lexically_covered": true,
+              "conditions": [
+                "5.19 and"
+              ],
+              "id": "requirement_03",
+              "intent": "causal_explanation",
+              "matched_evidence_ids": [
+                "ev_001",
+                "ev_002",
+                "ev_003",
+                "ev_004",
+                "ev_005",
+                "ev_006"
+              ],
+              "missing_term_groups": [],
+              "objects": [],
+              "origin": "verbatim_question_structure_v5",
+              "packed_lexically_covered": true,
+              "relation": "causal_explanation",
+              "request": "explain why this is primary active transport"
+            }
+          ],
+          "response_guidance": "Evaluate source meaning and each required relation and condition. Words distributed across passages may provide complementary evidence but do not establish a valid comparison, causal link or sufficient context. Answer supported parts and name actual gaps.",
+          "semantic_evaluation_required": true,
+          "semantic_sufficiency": null,
+          "transport_version": "coverage_context_v1",
+          "version": "context_coverage_v3"
+        },
+        "LEARNER_TURN": {
+          "current_step": 1,
+          "expected_response_kind": null,
+          "pending_tutor_question": null,
+          "pending_tutor_question_id": null,
+          "turn_role": "user_question"
+        },
+        "POLICY": {
+          "check_cumulative": false,
+          "check_suggestions": false,
+          "condition": "T2",
+          "control_evidence": false,
+          "help_constraint": "Give the complete supported explanation requested, including relevant conditions, units and limits. Do not force hints.",
+          "help_level": 0,
+          "human_rating": null,
+          "online_check": true,
+          "task_type": "process_reasoning",
+          "teaching_mode": "direct",
+          "version": "learning_enhancement_v1"
+        },
+        "PRIOR_EXPOSURE": {
+          "disabled": true
+        },
+        "PROPOSED_DELIVERY": {
+          "citation_views": [],
+          "response": {
+            "answer_text": "The Figure 5.19 caption states that ATP hydrolysis provides the energy for the sodium-potassium pump to move ions against their concentration gradients: three Na⁺ ions move out of the cell for every two K⁺ ions moved into it. [ev_001] The nearby explanation describes the mechanism: three Na⁺ ions bind to the pump inside the cell; the pump hydrolyzes ATP and a phosphate group attaches, causing the protein to change shape and release the Na⁺ ions outside. Two K⁺ ions then bind; removal of the phosphate group allows the pump to return to its inward-facing configuration and release K⁺ into the cytoplasm. [ev_007] This is primary active transport because the pump uses ATP directly to move ions across the membrane against their gradients. [ev_005]",
+            "citations": [
+              "ev_001",
+              "ev_007",
+              "ev_005"
+            ],
+            "confidence": 0.98,
+            "refusal_reason": null,
+            "response_type": "answer",
+            "schema_version": "chat_response_v1",
+            "short_answer": null
+          },
+          "source_display_control_disabled": true
+        },
+        "SOURCE_FRAGMENTS": [
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_001",
+            "exact_text": "Both of these are antiporter carrier proteins.",
+            "fragment_id": "F001"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_001",
+            "exact_text": "Two other carrier proteins are Ca2+ ATPase and H+ ATPase, which carry only calcium and only hydrogen ions, respectively.",
+            "fragment_id": "F002"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_001",
+            "exact_text": "Both are pumps.",
+            "fragment_id": "F003"
+          },
+          {
+            "block_kind": "caption",
+            "complete_block": true,
+            "evidence_id": "ev_001",
+            "exact_text": "FIGURE 5.18 A uniporter carries one molecule or ion. A symporter carries two different molecules or ions, both in the same direction. An antiporter also carries two different molecules or ions, but in different directions. (credit: modification of work by “Lupask”/Wikimedia Commons)",
+            "fragment_id": "F004"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_001",
+            "exact_text": "Primary Active Transport The primary active transport that functions with the active transport of sodium and potassium allows secondary active transport to occur.",
+            "fragment_id": "F005"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_001",
+            "exact_text": "The second transport method is still active because it depends on using energy as does primary transport (Figure 5.19).",
+            "fragment_id": "F006"
+          },
+          {
+            "block_kind": "caption",
+            "complete_block": true,
+            "evidence_id": "ev_001",
+            "exact_text": "FIGURE 5.19 The sodium-potassium pump is an example of primary active transport that moves ions, sodium and potassium ions in this instance, across a membrane against their concentration gradients. The energy is provided by the hydrolysis of ATP. Three sodium ions are moved out of the cell for every 2 potassium ions that are brought into the cell. This creates an electrochemical gradient that is crucial for living cells. Credit: Rao, A., Ryan, K. and Fletcher, S. Department of Biology, Texas A&M University.",
+            "fragment_id": "F007"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_001",
+            "exact_text": "One of the most important pumps in animal cells is the sodium-potassium pump (Na+-K+ ATPase), which maintains the electrochemical gradient (and the correct concentrations of Na+ and K+) in living cells.",
+            "fragment_id": "F008"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_002",
+            "exact_text": "The carrier protein, in its new configuration, has a decreased affinity for potassium, and the two ions moves into the cytoplasm.",
+            "fragment_id": "F009"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_002",
+            "exact_text": "The protein now has a higher affinity for sodium ions, and the process starts again.",
+            "fragment_id": "F010"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_002",
+            "exact_text": "Several things have happened as a result of this process.",
+            "fragment_id": "F011"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_002",
+            "exact_text": "At this point, there are more sodium ions outside the cell than inside and more potassium ions inside than out.",
+            "fragment_id": "F012"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_002",
+            "exact_text": "For every three sodium ions that move out, two potassium ions move in.",
+            "fragment_id": "F013"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_002",
+            "exact_text": "This results in the interior being slightly more negative relative to the exterior.",
+            "fragment_id": "F014"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_002",
+            "exact_text": "This difference in charge is important in creating the conditions necessary for the secondary process.",
+            "fragment_id": "F015"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_002",
+            "exact_text": "The sodium-potassium pump is, therefore, an electrogenic pump (a pump that creates a charge imbalance), creating an electrical imbalance across the membrane and contributing to the membrane potential.",
+            "fragment_id": "F016"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_002",
+            "exact_text": "LINK T O LE ARNING Watch this video (https://openstax.org/l/Na_K_ATPase) to see an active transport simulation in a sodium-potassium ATPase.",
+            "fragment_id": "F017"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_002",
+            "exact_text": "Secondary Active Transport (Co-transport) Secondary active transport uses the kinetic energy of the sodium ions to bring other compounds, against their concentration gradient into the cell.",
+            "fragment_id": "F018"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_002",
+            "exact_text": "As sodium ion concentrations build outside of the plasma membrane because of the primary active transport process, this creates an electrochemical gradient.",
+            "fragment_id": "F019"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_002",
+            "exact_text": "If a channel protein exists and is open, the sodium ions will move down its concentration gradient across the membrane.",
+            "fragment_id": "F020"
+          },
+          {
+            "block_kind": "unresolved_atomic",
+            "complete_block": true,
+            "evidence_id": "ev_003",
+            "exact_text": "The primary active transport system uses ATP to move a substance, such as an ion, into the cell, and often at the same time, a",
+            "fragment_id": "F021"
+          },
+          {
+            "block_kind": "unresolved_atomic",
+            "complete_block": true,
+            "evidence_id": "ev_003",
+            "exact_text": "second substance is moved out of the cell.",
+            "fragment_id": "F022"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_003",
+            "exact_text": "The sodium-potassium pump, an important pump in animal cells, expends energy to move potassium ions into the cell and a different number of sodium ions out of the cell (Figure 3.25).",
+            "fragment_id": "F023"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_003",
+            "exact_text": "The action of this pump results in a concentration and charge difference across the membrane.",
+            "fragment_id": "F024"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_004",
+            "exact_text": "Charged particles, which are hydrophilic by definition, cannot pass through the cell membrane without assistance (Figure 12.17).",
+            "fragment_id": "F025"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_004",
+            "exact_text": "Transmembrane proteins, specifically channel proteins, make this possible.",
+            "fragment_id": "F026"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_004",
+            "exact_text": "Several passive transport channels, as well as active transport pumps, are necessary to generate a transmembrane potential and an action potential.",
+            "fragment_id": "F027"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_004",
+            "exact_text": "Of special interest is the carrier protein referred to as the sodium/potassium pump that moves sodium ions (Na+) out of a cell and potassium ions (K+) into a cell, thus regulating ion concentration on both sides of the cell membrane.",
+            "fragment_id": "F028"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_005",
+            "exact_text": "Two mechanisms exist for transporting small-molecular weight material and small molecules.",
+            "fragment_id": "F029"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_005",
+            "exact_text": "Primary active transport moves ions across a membrane and creates a difference in charge across that membrane, which is directly dependent on ATP.",
+            "fragment_id": "F030"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_005",
+            "exact_text": "Secondary active transport does not directly require ATP: instead, it is the movement of material due to the electrochemical gradient established by primary active transport (Figure 5.19).",
+            "fragment_id": "F031"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_005",
+            "exact_text": "Carrier Proteins for Active Transport An important membrane adaptation for active transport is the presence of specific carrier proteins or pumps to facilitate movement: there are three protein types or transporters (Figure 5.18).",
+            "fragment_id": "F032"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_005",
+            "exact_text": "A uniporter carries one specific ion or molecule.",
+            "fragment_id": "F033"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_005",
+            "exact_text": "A symporter carries two different ions or molecules, both in the same direction.",
+            "fragment_id": "F034"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_005",
+            "exact_text": "An antiporter also carries two different ions or molecules, but in different directions.",
+            "fragment_id": "F035"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_005",
+            "exact_text": "All of these transporters can also transport small, uncharged organic molecules like glucose.",
+            "fragment_id": "F036"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_005",
+            "exact_text": "These three types of carrier proteins are also in facilitated diffusion, but they do not require ATP to work in that process.",
+            "fragment_id": "F037"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_005",
+            "exact_text": "Some examples of pumps for active transport are Na+-K+ ATPase, which carries sodium and potassium ions, and H+-K+ ATPase, which carries hydrogen and potassium ions.",
+            "fragment_id": "F038"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_005",
+            "exact_text": "Both of these are antiporter carrier proteins.",
+            "fragment_id": "F039"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_005",
+            "exact_text": "Two other carrier proteins are Ca2+ ATPase and H+ ATPase, which carry only calcium and only hydrogen ions, respectively.",
+            "fragment_id": "F040"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_005",
+            "exact_text": "Both are pumps.",
+            "fragment_id": "F041"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_006",
+            "exact_text": "The situation is more complex, however, for other elements such as potassium.",
+            "fragment_id": "F042"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_006",
+            "exact_text": "The electrical gradient of K+ promotes diffusion of the ion into the cell, but the concentration gradient of K+ promotes diffusion out of the cell (Figure 3.24).",
+            "fragment_id": "F043"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_006",
+            "exact_text": "The combined gradient that affects an ion is called its electrochemical gradient, and it is especially important to muscle and nerve cells.",
+            "fragment_id": "F044"
+          },
+          {
+            "block_kind": "caption",
+            "complete_block": true,
+            "evidence_id": "ev_006",
+            "exact_text": "FIGURE 3.24 Electrochemical gradients arise from the combined effects of concentration gradients and electrical gradients. Na+ ions are at higher concentration outside the cell, and K+ ions are at higher concentration inside of the cell, and yet the inside of the cell has negative net charge compared to the other side of the membrane. This is due to the presence of K+ binding proteins and other negatively charged molecules. The difference in electrical charges attracts the positively charged Na ions toward the inside of the cell, the electrical gradient, while the K ions tend to flow through K channels toward the outside of the cell due to the concentration difference, the concentration gradient. (credit: modification of work by “Synaptitude”/Wikimedia Commons)",
+            "fragment_id": "F045"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_006",
+            "exact_text": "Moving Against a Gradient To move substances against a concentration or an electrochemical gradient, the cell must use energy.",
+            "fragment_id": "F046"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_006",
+            "exact_text": "This energy is harvested from ATP that is generated through cellular metabolism.",
+            "fragment_id": "F047"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_006",
+            "exact_text": "Active transport mechanisms, collectively called pumps or carrier proteins, work against electrochemical gradients.",
+            "fragment_id": "F048"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_007",
+            "exact_text": "The sodium-potassium pump moves K+ into the cell while moving Na+ out at the same time, at a ratio of three Na+ for every two K+ ions moved in.",
+            "fragment_id": "F049"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_007",
+            "exact_text": "The Na+-K+ ATPase exists in two forms, depending on its orientation to the cell's interior or exterior and its affinity for either sodium or potassium ions.",
+            "fragment_id": "F050"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_007",
+            "exact_text": "The process consists of the following six steps. 1.",
+            "fragment_id": "F051"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_007",
+            "exact_text": "With the enzyme oriented towards the cell's interior, the carrier has a high affinity for sodium ions.",
+            "fragment_id": "F052"
+          },
+          {
+            "block_kind": "unresolved_atomic",
+            "complete_block": true,
+            "evidence_id": "ev_007",
+            "exact_text": "Three ions",
+            "fragment_id": "F053"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_007",
+            "exact_text": "bind to the protein. 2.",
+            "fragment_id": "F054"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_007",
+            "exact_text": "The protein carrier hydrolyzes ATP and a low-energy phosphate group attaches to it. 3.",
+            "fragment_id": "F055"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_007",
+            "exact_text": "As a result, the carrier changes shape and reorients itself towards the membrane's exterior.",
+            "fragment_id": "F056"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_007",
+            "exact_text": "The protein’s affinity for sodium decreases and the three sodium ions leave the carrier. 4.",
+            "fragment_id": "F057"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_007",
+            "exact_text": "The shape change increases the carrier’s affinity for potassium ions, and two such ions attach to the protein.",
+            "fragment_id": "F058"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_007",
+            "exact_text": "Subsequently, the low-energy phosphate group detaches from the carrier. 5.",
+            "fragment_id": "F059"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_007",
+            "exact_text": "With the phosphate group removed and potassium ions attached, the carrier protein repositions itself towards the cell's interior. 6.",
+            "fragment_id": "F060"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_007",
+            "exact_text": "The carrier protein, in its new configuration, has a decreased affinity for potassium, and the two ions moves into the cytoplasm.",
+            "fragment_id": "F061"
+          },
+          {
+            "block_kind": "unresolved_atomic",
+            "complete_block": true,
+            "evidence_id": "ev_008",
+            "exact_text": "In fact, the pump basically",
+            "fragment_id": "F062"
+          },
+          {
+            "block_kind": "unresolved_atomic",
+            "complete_block": true,
+            "evidence_id": "ev_008",
+            "exact_text": "maintains those concentration gradients.",
+            "fragment_id": "F063"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_008",
+            "exact_text": "Ion channels are pores that allow specific charged particles to cross the membrane in response to an existing concentration gradient.",
+            "fragment_id": "F064"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_008",
+            "exact_text": "Proteins are capable of spanning the cell membrane, including its hydrophobic core, and can interact with the charge of ions because of the varied properties of amino acids found within specific domains or regions of the protein channel.",
+            "fragment_id": "F065"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_008",
+            "exact_text": "Hydrophobic amino acids are found in the domains that are apposed to the hydrocarbon tails of the phospholipids.",
+            "fragment_id": "F066"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_008",
+            "exact_text": "Hydrophilic amino acids are exposed to the fluid environments of the extracellular fluid and cytosol.",
+            "fragment_id": "F067"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_008",
+            "exact_text": "Additionally, the ions will interact with the hydrophilic amino acids, which will be selective for the charge of the ion.",
+            "fragment_id": "F068"
+          }
+        ],
+        "TUTOR_QUESTION": null,
+        "answer_mode": "textbook",
+        "current_problem": "Using the caption of Figure 5.19 and the nearby explanation, explain how the sodium-potassium pump gets energy and moves the two ions against their concentration gradients. State the directions and relative numbers of ions moved, and explain why this is primary active transport.",
+        "question": "Using the caption of Figure 5.19 and the nearby explanation, explain how the sodium-potassium pump gets energy and moves the two ions against their concentration gradients. State the directions and relative numbers of ions moved, and explain why this is primary active transport."
+      },
+      "selected_evidence": [
+        {
+          "asset_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+          "chunk_id": "a88586462148c971556928fee2d6230346de",
+          "context_order": 1,
+          "evidence_id": "ev_001",
+          "inherited_from": null,
+          "license": "Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.",
+          "locator": "Chapter 5 Structure and Function of Plasma Membranes / 5.3 Active Transport; PDF physical pages 168, 169; Figures or formulas may require viewing the original PDF.",
+          "pages": [
+            168,
+            169
+          ],
+          "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+          "section": "Chapter 5 Structure and Function of Plasma Membranes / 5.3 Active Transport",
+          "source_title": "Biology 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf",
+          "text": "Both of these are antiporter carrier proteins. Two other carrier proteins are Ca2+ ATPase and H+ ATPase, which carry only calcium and only hydrogen ions, respectively. Both are pumps.\n\nFIGURE 5.18 A uniporter carries one molecule or ion. A symporter carries two different molecules or ions, both in the same direction. An antiporter also carries two different molecules or ions, but in different directions. (credit: modification of work by “Lupask”/Wikimedia Commons) Primary Active Transport The primary active transport that functions with the active transport of sodium and potassium allows secondary active transport to occur. The second transport method is still active because it depends on using energy as does primary transport (Figure 5.19). FIGURE 5.19 The sodium-potassium pump is an example of primary active transport that moves ions, sodium and potassium ions in this instance, across a membrane against their concentration gradients. The energy is provided by the hydrolysis of ATP. Three sodium ions are moved out of the cell for every 2 potassium ions that are brought into the cell. This creates an electrochemical gradient that is crucial for living cells. Credit: Rao, A., Ryan, K. and Fletcher, S. Department of Biology, Texas A&M University. One of the most important pumps in animal cells is the sodium-potassium pump (Na+-K+ ATPase), which maintains the electrochemical gradient (and the correct concentrations of Na+ and K+) in living cells.",
+          "text_hash": "54fee08ea15affba6a143ccc8b8366075858db594cdbe4ab574c069162fcd8f2"
+        },
+        {
+          "asset_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+          "chunk_id": "85c5fe00799c24c8f11d8bd6bb3e7c84d5e4",
+          "context_order": 2,
+          "evidence_id": "ev_002",
+          "inherited_from": null,
+          "license": "Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.",
+          "locator": "Chapter 5 Structure and Function of Plasma Membranes / 5.3 Active Transport; PDF physical pages 170; Figures or formulas may require viewing the original PDF.",
+          "pages": [
+            170
+          ],
+          "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+          "section": "Chapter 5 Structure and Function of Plasma Membranes / 5.3 Active Transport",
+          "source_title": "Biology 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf",
+          "text": "The carrier protein, in its new configuration, has a decreased affinity for potassium, and the two ions moves into the cytoplasm. The protein now has a higher affinity for sodium ions, and the process starts again. Several things have happened as a result of this process. At this point, there are more sodium ions outside the cell than inside and more potassium ions inside than out. For every three sodium ions that move out, two potassium ions move in. This results in the interior being slightly more negative relative to the exterior. This difference in charge is important in creating the conditions necessary for the secondary process. The sodium-potassium pump is, therefore, an electrogenic pump (a pump that creates a charge imbalance), creating an electrical imbalance across the membrane and contributing to the membrane potential. LINK T O LE ARNING Watch this video (https://openstax.org/l/Na_K_ATPase) to see an active transport simulation in a sodium-potassium ATPase. Secondary Active Transport (Co-transport) Secondary active transport uses the kinetic energy of the sodium ions to bring other compounds, against their concentration gradient into the cell. As sodium ion concentrations build outside of the plasma membrane because of the primary active transport process, this creates an electrochemical gradient. If a channel protein exists and is open, the sodium ions will move down its concentration gradient across the membrane.",
+          "text_hash": "a1dd4f98630012f1c97b54ce0a7e001e90c74135d7c36b9e2a5b76c6db076afb"
+        },
+        {
+          "asset_id": "3294e86a-c158-4dbe-97e3-6169352497ab",
+          "chunk_id": "d7e2518524b499971058d2f043b4345cdaa8",
+          "context_order": 3,
+          "evidence_id": "ev_003",
+          "inherited_from": null,
+          "license": "Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.",
+          "locator": "Chapter 3 Cell Structure and Function / 3.6 Active Transport; PDF physical pages 96, 97; Figures or formulas may require viewing the original PDF.",
+          "pages": [
+            96,
+            97
+          ],
+          "processing_id": "82fb328d-a383-43c2-a6eb-b91b61d05069",
+          "section": "Chapter 3 Cell Structure and Function / 3.6 Active Transport",
+          "source_title": "Concepts of Biology",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Concepts-Biology_-_WEB.pdf",
+          "text": "The primary active transport system uses ATP to move a substance, such as an ion, into the cell, and often at the same time, a\n\nsecond substance is moved out of the cell. The sodium-potassium pump, an important pump in animal cells, expends energy to move potassium ions into the cell and a different number of sodium ions out of the cell (Figure 3.25). The action of this pump results in a concentration and charge difference across the membrane.",
+          "text_hash": "b72c524e011677046c97c5cf479d616ae52165c9ea0c4595e320ccb6ba38b268"
+        },
+        {
+          "asset_id": "826b6848-7150-4959-bed9-ce33acfa856d",
+          "chunk_id": "c2a1b90b3ccfe6d8d0fbdfae276444e770f9",
+          "context_order": 4,
+          "evidence_id": "ev_004",
+          "inherited_from": null,
+          "license": "Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.",
+          "locator": "Chapter 12 The Nervous System and Nervous Tissue / 12.4 The Action Potential; PDF physical pages 500; Figures or formulas may require viewing the original PDF.",
+          "pages": [
+            500
+          ],
+          "processing_id": "45a52e51-a625-47b7-813e-59ad16a5f492",
+          "section": "Chapter 12 The Nervous System and Nervous Tissue / 12.4 The Action Potential",
+          "source_title": "Anatomy and Physiology 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/anatomy-and-physiology-2e_-_WEB.pdf",
+          "text": "Charged particles, which are hydrophilic by definition, cannot pass through the cell membrane without assistance (Figure 12.17). Transmembrane proteins, specifically channel proteins, make this possible. Several passive transport channels, as well as active transport pumps, are necessary to generate a transmembrane potential and an action potential. Of special interest is the carrier protein referred to as the sodium/potassium pump that moves sodium ions (Na+) out of a cell and potassium ions (K+) into a cell, thus regulating ion concentration on both sides of the cell membrane.",
+          "text_hash": "5b4588abd04955a860399a9246ec2f79ccccb95127727b2fec81ac6b85d371fd"
+        },
+        {
+          "asset_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+          "chunk_id": "57b20730632995afc34d032da8f44afa9205",
+          "context_order": 5,
+          "evidence_id": "ev_005",
+          "inherited_from": null,
+          "license": "Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.",
+          "locator": "Chapter 5 Structure and Function of Plasma Membranes / 5.3 Active Transport; PDF physical pages 168; Figures or formulas may require viewing the original PDF.",
+          "pages": [
+            168
+          ],
+          "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+          "section": "Chapter 5 Structure and Function of Plasma Membranes / 5.3 Active Transport",
+          "source_title": "Biology 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf",
+          "text": "Two mechanisms exist for transporting small-molecular weight material and small molecules. Primary active transport moves ions across a membrane and creates a difference in charge across that membrane, which is directly dependent on ATP. Secondary active transport does not directly require ATP: instead, it is the movement of material due to the electrochemical gradient established by primary active transport (Figure 5.19). Carrier Proteins for Active Transport An important membrane adaptation for active transport is the presence of specific carrier proteins or pumps to facilitate movement: there are three protein types or transporters (Figure 5.18). A uniporter carries one specific ion or molecule. A symporter carries two different ions or molecules, both in the same direction. An antiporter also carries two different ions or molecules, but in different directions. All of these transporters can also transport small, uncharged organic molecules like glucose. These three types of carrier proteins are also in facilitated diffusion, but they do not require ATP to work in that process. Some examples of pumps for active transport are Na+-K+ ATPase, which carries sodium and potassium ions, and H+-K+ ATPase, which carries hydrogen and potassium ions. Both of these are antiporter carrier proteins. Two other carrier proteins are Ca2+ ATPase and H+ ATPase, which carry only calcium and only hydrogen ions, respectively. Both are pumps.",
+          "text_hash": "3af65d494e7cbd5b2f3243b30701aafab27516cca1362b1b85ed8aad0a4d1ad8"
+        },
+        {
+          "asset_id": "3294e86a-c158-4dbe-97e3-6169352497ab",
+          "chunk_id": "ae110a27dd0574576564697fdd85f9724af4",
+          "context_order": 6,
+          "evidence_id": "ev_006",
+          "inherited_from": null,
+          "license": "Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.",
+          "locator": "Chapter 3 Cell Structure and Function / 3.6 Active Transport; PDF physical pages 96; Figures or formulas may require viewing the original PDF.",
+          "pages": [
+            96
+          ],
+          "processing_id": "82fb328d-a383-43c2-a6eb-b91b61d05069",
+          "section": "Chapter 3 Cell Structure and Function / 3.6 Active Transport",
+          "source_title": "Concepts of Biology",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Concepts-Biology_-_WEB.pdf",
+          "text": "The situation is more complex, however, for other elements such as potassium. The electrical gradient of K+ promotes diffusion of the ion into the cell, but the concentration gradient of K+ promotes diffusion out of the cell (Figure 3.24). The combined gradient that affects an ion is called its electrochemical gradient, and it is especially important to muscle and nerve cells. FIGURE 3.24 Electrochemical gradients arise from the combined effects of concentration gradients and electrical gradients. Na+ ions are at higher concentration outside the cell, and K+ ions are at higher concentration inside of the cell, and yet the inside of the cell has negative net charge compared to the other side of the membrane. This is due to the presence of K+ binding proteins and other negatively charged molecules. The difference in electrical charges attracts the positively charged Na ions toward the inside of the cell, the electrical gradient, while the K ions tend to flow through K channels toward the outside of the cell due to the concentration difference, the concentration gradient. (credit: modification of work by “Synaptitude”/Wikimedia Commons) Moving Against a Gradient To move substances against a concentration or an electrochemical gradient, the cell must use energy. This energy is harvested from ATP that is generated through cellular metabolism. Active transport mechanisms, collectively called pumps or carrier proteins, work against electrochemical gradients.",
+          "text_hash": "fb3b77d1ec0874d94e7d4614bd8932aea639626df9e959b18c6e1b67c03ec420"
+        },
+        {
+          "asset_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+          "chunk_id": "b380ce83834cc7f50a9900880d04f69f8646",
+          "context_order": 7,
+          "evidence_id": "ev_007",
+          "inherited_from": null,
+          "license": "Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.",
+          "locator": "Chapter 5 Structure and Function of Plasma Membranes / 5.3 Active Transport; PDF physical pages 169, 170; Figures or formulas may require viewing the original PDF.",
+          "pages": [
+            169,
+            170
+          ],
+          "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+          "section": "Chapter 5 Structure and Function of Plasma Membranes / 5.3 Active Transport",
+          "source_title": "Biology 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf",
+          "text": "The sodium-potassium pump moves K+ into the cell while moving Na+ out at the same time, at a ratio of three Na+ for every two K+ ions moved in. The Na+-K+ ATPase exists in two forms, depending on its orientation to the cell's interior or exterior and its affinity for either sodium or potassium ions. The process consists of the following six steps. 1. With the enzyme oriented towards the cell's interior, the carrier has a high affinity for sodium ions. Three ions\n\nbind to the protein. 2. The protein carrier hydrolyzes ATP and a low-energy phosphate group attaches to it. 3. As a result, the carrier changes shape and reorients itself towards the membrane's exterior. The protein’s affinity for sodium decreases and the three sodium ions leave the carrier. 4. The shape change increases the carrier’s affinity for potassium ions, and two such ions attach to the protein. Subsequently, the low-energy phosphate group detaches from the carrier. 5. With the phosphate group removed and potassium ions attached, the carrier protein repositions itself towards the cell's interior. 6. The carrier protein, in its new configuration, has a decreased affinity for potassium, and the two ions moves into the cytoplasm.",
+          "text_hash": "c8598d3865e02b2018959215fa80a41abbeaa5962714fb26470457e2ef348861"
+        },
+        {
+          "asset_id": "826b6848-7150-4959-bed9-ce33acfa856d",
+          "chunk_id": "a700fe0a4d32f852d707f2626d43900f80a1",
+          "context_order": 8,
+          "evidence_id": "ev_008",
+          "inherited_from": null,
+          "license": "Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.",
+          "locator": "Chapter 12 The Nervous System and Nervous Tissue / 12.4 The Action Potential; PDF physical pages 500, 501; Figures or formulas may require viewing the original PDF.",
+          "pages": [
+            500,
+            501
+          ],
+          "processing_id": "45a52e51-a625-47b7-813e-59ad16a5f492",
+          "section": "Chapter 12 The Nervous System and Nervous Tissue / 12.4 The Action Potential",
+          "source_title": "Anatomy and Physiology 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/anatomy-and-physiology-2e_-_WEB.pdf",
+          "text": "In fact, the pump basically\n\nmaintains those concentration gradients. Ion channels are pores that allow specific charged particles to cross the membrane in response to an existing concentration gradient. Proteins are capable of spanning the cell membrane, including its hydrophobic core, and can interact with the charge of ions because of the varied properties of amino acids found within specific domains or regions of the protein channel. Hydrophobic amino acids are found in the domains that are apposed to the hydrocarbon tails of the phospholipids. Hydrophilic amino acids are exposed to the fluid environments of the extracellular fluid and cytosol. Additionally, the ions will interact with the hydrophilic amino acids, which will be selective for the charge of the ion.",
+          "text_hash": "be6b363a2a67f627f533aeed398f484bd1c8f241230a735ddcd0a820d301c5b0"
+        }
+      ],
+      "prepared_context": {
+        "utc": "2026-10-14T12:14:27.319550+00:00",
+        "case_id": "D160-Q01",
+        "generation_entry": 1,
+        "programmatic_only": false,
+        "request_id": "9878b6c4-3800-4edc-b628-0fdfb381321b",
+        "profile": {
+          "use_profile": false,
+          "profile": null,
+          "source_version": null,
+          "compiler_version": "profile_rules_v1",
+          "policy": "",
+          "policy_hash": "52f3519683e8e570b4c58e4d4b5f9a5190b4e3a5e5fd4a5339b3ecdd811b619b",
+          "fallback_reason": null,
+          "turn_override": null
+        },
+        "memory_context": null,
+        "teaching_context": {
+          "task_id": "643156e0-e1f3-4cbd-b3bc-f003f04f749e",
+          "task_version": 1,
+          "task_revision": 1,
+          "exposure_epoch": 0,
+          "task_type": "process_reasoning",
+          "question": "Using the caption of Figure 5.19 and the nearby explanation, explain how the sodium-potassium pump gets energy and moves the two ions against their concentration gradients. State the directions and relative numbers of ions moved, and explain why this is primary active transport.",
+          "current_problem": "Using the caption of Figure 5.19 and the nearby explanation, explain how the sodium-potassium pump gets energy and moves the two ions against their concentration gradients. State the directions and relative numbers of ions moved, and explain why this is primary active transport.",
+          "current_request": "Using the caption of Figure 5.19 and the nearby explanation, explain how the sodium-potassium pump gets energy and moves the two ions against their concentration gradients. State the directions and relative numbers of ions moved, and explain why this is primary active transport.",
+          "teaching_mode": "direct",
+          "help_level": 0,
+          "turn_role": "user_question",
+          "pending_tutor_question_id": null,
+          "pending_tutor_question": null,
+          "pending_tutor_question_version": 0,
+          "pending_validation_id": null,
+          "pending_validation_version": 0,
+          "expected_response_kind": null,
+          "current_step": 1,
+          "learner_attempt": null,
+          "last_attempt_evaluation": null,
+          "requested_help": "auto",
+          "continuing": false,
+          "requirements": {
+            "original_question": "Using the caption of Figure 5.19 and the nearby explanation, explain how the sodium-potassium pump gets energy and moves the two ions against their concentration gradients. State the directions and relative numbers of ions moved, and explain why this is primary active transport."
+          },
+          "delivered_turns": [],
+          "disclosure_events": [],
+          "policy_version": "learning_task_v3",
+          "attempt_history": []
+        },
+        "reading_context": null,
+        "prepared_query": {
+          "original_message": "Using the caption of Figure 5.19 and the nearby explanation, explain how the sodium-potassium pump gets energy and moves the two ions against their concentration gradients. State the directions and relative numbers of ions moved, and explain why this is primary active transport.",
+          "standalone_query": "Using the caption of Figure 5.19 and the nearby explanation, explain how the sodium-potassium pump gets energy and moves the two ions against their concentration gradients. State the directions and relative numbers of ions moved, and explain why this is primary active transport.",
+          "intent": "factual",
+          "topic_relation": "new_topic",
+          "referenced_message_ids": [],
+          "needs_clarification": false,
+          "preparation_version": "conversation_preparer_v24",
+          "fallback_reason": "current_explicit_request_proposition_v1"
+        },
+        "history": [],
+        "summary": null,
+        "teaching_plan": {
+          "version": "progress_action_plan_v10",
+          "enabled": false,
+          "policy_flags": {
+            "version": "generation_controls_v10",
+            "arm": "D",
+            "content_plan": true,
+            "display_selection": true,
+            "coverage_version": "context_coverage_v3",
+            "max_targeted_retrievals": 1,
+            "targeted_candidate_limit": 10,
+            "provider_planning_calls": 0,
+            "teaching_plan_version": "progress_action_plan_v10"
+          },
+          "current_step": 1,
+          "action": "complete_explanation",
+          "action_instruction": "Give the complete supported answer requested.",
+          "turn_role": "user_question",
+          "original_problem": "Using the caption of Figure 5.19 and the nearby explanation, explain how the sodium-potassium pump gets energy and moves the two ions against their concentration gradients. State the directions and relative numbers of ions moved, and explain why this is primary active transport.",
+          "current_question": null,
+          "allowed_disclosure": {
+            "help_level": 0,
+            "constraint": "Give the complete supported explanation requested, including relevant conditions, units and limits. Do not force hints.",
+            "complete_answer_allowed": true,
+            "preserve_conditions_and_units": true,
+            "check_current_and_cumulative_surfaces": false
+          },
+          "evidence_needs": [
+            {
+              "id": "requirement_01",
+              "request": "Using the caption of Figure 5.19 and the nearby explanation, explain how the sodium-potassium pump gets energy and moves the two ions against their concentration gradients",
+              "verbatim_request": "Using the caption of Figure 5.19 and the nearby explanation, explain how the sodium-potassium pump gets energy and moves the two ions against their concentration gradients",
+              "terms": [
+                "5.19",
+                "against",
+                "caption",
+                "concentration",
+                "energy",
+                "figure",
+                "gets",
+                "gradient",
+                "ions",
+                "move",
+                "nearby",
+                "potassium",
+                "pump",
+                "sodium",
+                "two",
+                "using"
+              ],
+              "intent": "explanation",
+              "objects": [],
+              "relation": "explanation",
+              "conditions": [
+                "5.19 and"
+              ],
+              "origin": "verbatim_question_structure_v5",
+              "request_span": {
+                "coordinate_space": "requirement_source_text",
+                "start": 0,
+                "end": 171
+              },
+              "presentation_request_ids": [],
+              "lexical_request": "Using the caption of Figure 5.19 and the nearby explanation, explain how the sodium-potassium pump gets energy and moves the two ions against their concentration gradients",
+              "term_groups": [
+                [
+                  "5.19"
+                ],
+                [
+                  "against"
+                ],
+                [
+                  "caption"
+                ],
+                [
+                  "concentration"
+                ],
+                [
+                  "energy"
+                ],
+                [
+                  "figure"
+                ],
+                [
+                  "gets"
+                ],
+                [
+                  "gradient"
+                ],
+                [
+                  "ions"
+                ],
+                [
+                  "move"
+                ],
+                [
+                  "nearby"
+                ],
+                [
+                  "potassium"
+                ],
+                [
+                  "pump"
+                ],
+                [
+                  "sodium"
+                ],
+                [
+                  "two"
+                ],
+                [
+                  "using"
+                ]
+              ]
+            },
+            {
+              "id": "requirement_02",
+              "request": "State the directions and relative numbers of ions moved,",
+              "verbatim_request": "State the directions and relative numbers of ions moved,",
+              "terms": [
+                "direction",
+                "ions",
+                "moved",
+                "number",
+                "relative",
+                "state"
+              ],
+              "intent": "explanation",
+              "objects": [],
+              "relation": "explanation",
+              "conditions": [
+                "5.19 and"
+              ],
+              "origin": "verbatim_question_structure_v5",
+              "request_span": {
+                "coordinate_space": "requirement_source_text",
+                "start": 173,
+                "end": 229
+              },
+              "presentation_request_ids": [],
+              "lexical_request": "State the directions and relative numbers of ions moved,",
+              "term_groups": [
+                [
+                  "direction"
+                ],
+                [
+                  "ions"
+                ],
+                [
+                  "moved"
+                ],
+                [
+                  "number"
+                ],
+                [
+                  "relative"
+                ],
+                [
+                  "state"
+                ]
+              ]
+            },
+            {
+              "id": "requirement_03",
+              "request": "explain why this is primary active transport",
+              "verbatim_request": "explain why this is primary active transport",
+              "terms": [
+                "active",
+                "primary",
+                "transport"
+              ],
+              "intent": "causal_explanation",
+              "objects": [],
+              "relation": "causal_explanation",
+              "conditions": [
+                "5.19 and"
+              ],
+              "origin": "verbatim_question_structure_v5",
+              "request_span": {
+                "coordinate_space": "requirement_source_text",
+                "start": 234,
+                "end": 278
+              },
+              "presentation_request_ids": [],
+              "lexical_request": "explain why this is primary active transport",
+              "term_groups": [
+                [
+                  "active"
+                ],
+                [
+                  "primary"
+                ],
+                [
+                  "transport"
+                ]
+              ]
+            }
+          ],
+          "display_focus_terms": [
+            "5.19",
+            "active",
+            "against",
+            "caption",
+            "concentration",
+            "direction",
+            "energy",
+            "figure",
+            "gets",
+            "gradient",
+            "ions",
+            "move",
+            "moved",
+            "nearby",
+            "number",
+            "potassium",
+            "primary",
+            "pump",
+            "relative",
+            "sodium",
+            "state",
+            "transport",
+            "two",
+            "using"
+          ],
+          "expected_learner_reply": {
+            "kind": "explanation",
+            "instruction": "A follow-up question if the learner needs more explanation."
+          },
+          "previously_exposed_fragment_ids": [],
+          "exposure_snapshot_hash": "3c6621ce9748392c269682e2a4b6e6c921f50734574f08a6e87de1949fb42b45",
+          "previous_delivered_turn_count": 0,
+          "previous_disclosure_event_count": 0,
+          "provider_calls": 0,
+          "mastery_inference": null,
+          "human_rating": null,
+          "observed_attempts": [],
+          "last_attempt_evaluation": null,
+          "repeated_difficulty": false,
+          "next_reply_requirement": "One actionable comparison, application or explanation; do not disclose its answer then ask for verbatim repetition.",
+          "planning_source": "recorded_progress_and_model_checked_attempts",
+          "action_selection_reason": "previous_progress_rule",
+          "exact_given_guard": false
+        },
+        "evidence_count": 16,
+        "generation_context_policy": "literal_coverage_complementary_context_candidate_v1",
+        "source_block_policy": "raw_corroborated_prose_context_candidate_v1"
+      },
+      "generation_policy": {
+        "version": "generation_controls_v10",
+        "arm": "D",
+        "content_plan": true,
+        "display_selection": true,
+        "coverage_version": "context_coverage_v3",
+        "max_targeted_retrievals": 1,
+        "targeted_candidate_limit": 10,
+        "provider_planning_calls": 0,
+        "teaching_plan_version": "progress_action_plan_v10"
+      },
+      "original_native_failure": {
+        "request_id": "9878b6c4-3800-4edc-b628-0fdfb381321b",
+        "job_id": "d8dc6329-4380-4175-a854-43162e0b1ab6",
+        "answer_id": null,
+        "job_state": "failed",
+        "error": {
+          "code": "SEMANTIC_CHECK_FAILED",
+          "message": "The proposed answer did not pass its required support or teaching checks",
+          "details": {
+            "revision": 0,
+            "publication_block": {
+              "version": "semantic_publication_block_v1",
+              "stop_reason": "insufficient_calls_for_repair_and_recheck",
+              "remaining_provider_calls": 0,
+              "required_calls_for_repair_and_recheck": 2,
+              "checker_contract_repair_calls": 0,
+              "checker_reported_body_ok": false,
+              "checker_reported_non_supported_factual_claims": 3,
+              "failed_checker_gate_names": [
+                "body_ok",
+                "complete_answer",
+                "limitations_explicit"
+              ],
+              "checker_reported_coverage": "supported_partial",
+              "requirement_issue_codes": [
+                "SUFFICIENT_CONTEXT_UNDERUSED"
+              ],
+              "structural_issue_codes": [
+                "ACTUAL_CITATION_FRAGMENT_INVALID",
+                "SUFFICIENT_CONTEXT_UNDERUSED"
+              ]
+            }
+          }
+        },
+        "request_budget": {
+          "consumed_calls": 2,
+          "active_seconds": 22.951278900000034,
+          "format_repairs": 0,
+          "transient_retries": 0,
+          "max_calls": 2,
+          "max_active_seconds": 180
+        }
+      },
+      "semantics_measurement": false,
+      "original_outcome": "FAIL",
+      "original_generation_content_sha256": "ccfab410dfc343b47648e2fc5922e56a5b7d100f03bfdbdc3df8505848bc5c19",
+      "original_joint_check_content_sha256": "9f3abf0736e41be4ea7aa52b234b5727c93cd4b644c61c10e9af3121c9a25668",
+      "original_checker_packet_transport_sha256": "e4fe9601452f2e24e01a297c797aa0f3e92ab678d230a4cf146bd485da5253f0"
+    },
+    {
+      "case_id": "Q02",
+      "question": "Using Figure 5.20 and the adjacent explanation, how can sodium-driven co-transport move glucose against its concentration gradient? Explain what supplies the energy and what must be true of the sodium pathway and the transported substance for this secondary transport to occur.",
+      "original_draft_raw": "{\"schema_version\":\"chat_response_v1\",\"response_type\":\"answer\",\"answer_text\":\"A primary active transport process establishes a sodium electrochemical gradient; sodium then moves down that gradient through an open channel, and the energy released by this downhill movement drives glucose against its concentration gradient. [ev_001] [ev_004] For this co-transport to occur, the sodium pathway must be open, and glucose must be attached to the same transport protein that sodium uses to cross the membrane. [ev_001] The two substances are carried in the same direction, as in a symporter. [ev_003]\",\"short_answer\":\"The sodium gradient supplies the energy: sodium moves downhill through an open pathway, driving attached glucose uphill through the same transport protein. [ev_001]\",\"citations\":[\"ev_001\",\"ev_003\",\"ev_004\"],\"refusal_reason\":null,\"follow_up_questions\":[],\"confidence\":0.97,\"tutor_question\":null,\"learner_attempt_evaluation\":null}",
+      "original_checker_raw": "{\n  \"claims\": [\n    {\n      \"claim_id\": \"claim_a1e1fb754f5f9ba69dfe43db_1\",\n      \"reason\": \"B001 supports sodium moving down its gradient through an open channel, the same-protein attachment condition, and the figure's statement that primary active transport generates the Na+ electrochemical gradient whose stored energy moves glucose against its concentration gradient. However, the added assertion that energy released specifically by sodium's downhill movement drives glucose uphill is not established by the selected fragments: F007 describes energy stored in the Na+ gradient, while F001 describes sodium moving down its concentration gradient without connecting that movement as the energy-releasing cause. B002 establishes an electrochemical gradient for Na+ and that its gradients tend to drive it inward, but does not supply the missing glucose-specific causal link. The complete, c\" \n    ,\n      \"basis\": \"textbook\",\n      \"status\": \"partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"ev_001\",\n          \"fragment_ids\": [\n            \"F001\",\n            \"F002\",\n            \"F003\",\n            \"F007\"\n          ],\n          \"relation\": \"supporting\"\n        },\n        {\n          \"evidence_id\": \"ev_004\",\n          \"fragment_ids\": [\n            \"F027\",\n            \"F028\",\n            \"F029\"\n          ],\n          \"relation\": \"supporting\"\n        }\n      ]\n    },\n    {\n      \"claim_id\": \"claim_b458d654173579c55609d972_1\",\n      \"reason\": \"F001 supports the condition that the sodium channel must exist and be open for sodium to move down its gradient. F002 says other substances must be attached to the same transport protein for sodium to cross the membrane, and F003 identifies glucose as a substance that enters this way. Together they support the stated pathway and attachment conditions.\",\n      \"basis\": \"textbook\",\n      \"status\": \"supported\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"ev_001\",\n          \"fragment_ids\": [\n            \"F001\",\n            \"F002\",\n            \"F003\"\n          ],\n          \"relation\": \"supporting\"\n        }\n      ]\n    },\n    {\n      \"claim_id\": \"claim_6b3d9c5a41a2463a8d1d0562_1\",\n      \"reason\": \"F019 defines a symporter as carrying two different molecules or ions in the same direction, but the selected F019 does not identify these two substances as sodium and glucose or establish that this co-transport is a symporter. F020–F021 are not selected and would not establish that identity either. The asserted identity of the substances and their shared direction is therefore not supported by this claim's selected evidence.\",\n      \"basis\": \"textbook\",\n      \"status\": \"unsupported\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"ev_003\",\n          \"fragment_ids\": [\n            \"F019\"\n          ],\n          \"relation\": \"supporting\"\n        }\n      ]\n    },\n    {\n      \"claim_id\": \"claim_5d2f433185224237fc2693c6_1\",\n      \"reason\": \"F001–F003 and F007 support the gradient's role, sodium movement through an open channel, and glucose's attachment to the same transport protein. But the wording that downhill sodium movement itself drives attached glucose uphill is more specific than the selected text establishes: F007 attributes the energy to that stored in the Na+ gradient, and F001 does not state that sodium's movement releases energy that drives glucose transport. The complete short-answer claim is therefore only partially supported.\",\n      \"basis\": \"textbook\",\n      \"status\": \"partial\",\n      \"citations\": [\n        {\n          \"evidence_id\": \"ev_001\",\n          \"fragment_ids\": [\n            \"F001\",\n            \"F002\",\n            \"F003\",\n            \"F007\"\n          ],\n          \"relation\": \"supporting\"\n        }\n      ]\n    }\n  ],\n  \"body_ok\": false,\n  \"specific_help\": true,\n  \"scope_ok\": true,\n  \"suggestions_ok\": true,\n  \"evidence_display_ok\": true,\n  \"cumulative_ok\": true,\n  \"complete_answer\": true,\n  \"coverage\": \"full\",\n  \"missing_facets\": [],\n  \"limitations_explicit\": false,\n  \"reason\": \"The supplied passages cover the requested energy source, sodium pathway condition, and attached-substance condition. The draft gives useful task-specific explanation and stays within direct-answer scope, but it makes unsupported or only partially supported factual assertions, including a stronger causal account of downhill sodium movement and an unestablished sodium/glucose symporter identification. Thus body_ok is false despite full coverage of the requested knowledge.\",\n  \"repair_fragment_ids\": [\n    \"F020\",\n    \"F021\"\n  ],\n  \"attempt_evaluation_ok\": \"not_applicable\",\n  \"tutor_question_ok\": true,\n  \"requirements\": [\n    {\n      \"requirement_id\": \"requirement_01\",\n      \"relevance\": \"related\",\n      \"sufficiency\": \"sufficient\",\n      \"evidence\": [\n        {\n          \"evidence_id\": \"ev_001\",\n          \"fragment_id\": \"F001\",\n          \"quote\": \"If a channel protein exists and is open, the sodium ions will move down its concentration gradient across the membrane.\"\n        },\n        {\n          \"evidence_id\": \"ev_001\",\n          \"fragment_id\": \"F002\",\n          \"quote\": \"This movement transports other substances that must be attached to the same transport protein in order for the sodium ions to move across the membrane (Figure 5.20).\"\n        },\n        {\n          \"evidence_id\": \"ev_001\",\n          \"fragment_id\": \"F003\",\n          \"quote\": \"Many amino acids, as well as glucose, enter a cell this way.\"\n        },\n        {\n          \"evidence_id\": \"ev_001\",\n          \"fragment_id\": \"F007\",\n          \"quote\": \"FIGURE 5.20 An electrochemical gradient (Na+ concentration - green), is generated by primary active transport. The energy stored in the Na+ gradient provides the energy to move other substances against their concentration gradients (Glucose - blue), a process called co-transport or secondary active transport.\"\n        },\n        {\n          \"evidence_id\": \"ev_004\",\n          \"fragment_id\": \"F027\",\n          \"quote\": \"Because ions move into and out of cells and because cells contain proteins that do not move across the membrane and are mostly negatively charged, there is also an electrical gradient, a difference of charge, across the plasma membrane.\"\n        },\n        {\n          \"evidence_id\": \"ev_004\",\n          \"fragment_id\": \"F028\",\n          \"quote\": \"The interior of living cells is electrically negative with respect to the extracellular fluid in which they are bathed, and at the same time, cells have higher concentrations of potassium (K+) and lower concentrations of sodium (Na+) than the extracellular fluid.\"\n        },\n        {\n          \"evidence_id\": \"ev_004\",\n          \"fragment_id\": \"F029\",\n          \"quote\": \"Thus in a living cell, the concentration gradient of Na+ tends to drive it into the cell, and its electrical gradient (a positive ion) also drives it inward to the negatively charged interior.\"\n        }\n      ],\n      \"conditions_preserved\": true,\n      \"response_coverage\": \"covered\",\n      \"missing_information\": \"\",\n      \"reason\": \"The selected source passages establish the Na+ electrochemical gradient generated by primary active transport, its stored energy moving glucose against its gradient, and the open-channel and attachment conditions. The draft covers these requested facets; its additional symporter label is a separate claim-level support defect, not a missing requirement.\"\n    },\n    {\n      \"requirement_id\": \"requirement_02\",\n      \"relevance\": \"related\",\n      \"sufficiency\": \"sufficient\",\n      \"evidence\": [\n        {\n          \"evidence_id\": \"ev_001\",\n          \"fragment_id\": \"F007\",\n          \"quote\": \"The energy stored in the Na+ gradient provides the energy to move other substances against their concentration gradients (Glucose - blue), a process called co-transport or secondary active transport.\"\n        }\n      ],\n      \"conditions_preserved\": true,\n      \"response_coverage\": \"covered\",\n      \"missing_information\": \"\",\n      \"reason\": \"F007 directly identifies energy stored in the Na+ gradient as the energy that moves glucose against its concentration gradient; the answer addresses the requested energy source.\"\n    },\n    {\n      \"requirement_id\": \"requirement_03\",\n      \"relevance\": \"related\",\n      \"sufficiency\": \"sufficient\",\n      \"evidence\": [\n        {\n          \"evidence_id\": \"ev_001\",\n          \"fragment_id\": \"F001\",\n          \"quote\": \"If a channel protein exists and is open, the sodium ions will move down its concentration gradient across the membrane.\"\n        },\n        {\n          \"evidence_id\": \"ev_001\",\n          \"fragment_id\": \"F002\",\n          \"quote\": \"This movement transports other substances that must be attached to the same transport protein in order for the sodium ions to move across the membrane (Figure 5.20).\"\n        },\n        {\n          \"evidence_id\": \"ev_001\",\n          \"fragment_id\": \"F003\",\n          \"quote\": \"Many amino acids, as well as glucose, enter a cell this way.\"\n        },\n        {\n          \"evidence_id\": \"ev_001\",\n          \"fragment_id\": \"F007\",\n          \"quote\": \"The energy stored in the Na+ gradient provides the energy to move other substances against their concentration gradients (Glucose - blue), a process called co-transport or secondary active transport.\"\n        }\n      ],\n      \"conditions_preserved\": true,\n      \"response_coverage\": \"covered\",\n      \"missing_information\": \"\",\n      \"reason\": \"F001 establishes the open sodium-channel condition; F002 establishes that the transported substance must be attached to the same protein, and F003 identifies glucose as one such substance. F007 provides the glucose co-transport context.\"\n    }\n  ],\n  \"non_repetitive_next_action\": true\n}",
+      "checker_packet": {
+        "ACTUAL_CITATION_BINDINGS": [
+          {
+            "claim_id": "claim_a1e1fb754f5f9ba69dfe43db_1",
+            "citations": [
+              {
+                "allowed_fragment_ids": [
+                  "F001",
+                  "F002",
+                  "F003",
+                  "F004",
+                  "F005",
+                  "F006",
+                  "F007",
+                  "F008"
+                ],
+                "evidence_id": "ev_001"
+              },
+              {
+                "allowed_fragment_ids": [
+                  "F022",
+                  "F023",
+                  "F024",
+                  "F025",
+                  "F026",
+                  "F027",
+                  "F028",
+                  "F029"
+                ],
+                "evidence_id": "ev_004"
+              }
+            ]
+          },
+          {
+            "claim_id": "claim_b458d654173579c55609d972_1",
+            "citations": [
+              {
+                "allowed_fragment_ids": [
+                  "F001",
+                  "F002",
+                  "F003",
+                  "F004",
+                  "F005",
+                  "F006",
+                  "F007",
+                  "F008"
+                ],
+                "evidence_id": "ev_001"
+              }
+            ]
+          },
+          {
+            "claim_id": "claim_6b3d9c5a41a2463a8d1d0562_1",
+            "citations": [
+              {
+                "allowed_fragment_ids": [
+                  "F019",
+                  "F020",
+                  "F021"
+                ],
+                "evidence_id": "ev_003"
+              }
+            ]
+          },
+          {
+            "claim_id": "claim_5d2f433185224237fc2693c6_1",
+            "citations": [
+              {
+                "allowed_fragment_ids": [
+                  "F001",
+                  "F002",
+                  "F003",
+                  "F004",
+                  "F005",
+                  "F006",
+                  "F007",
+                  "F008"
+                ],
+                "evidence_id": "ev_001"
+              }
+            ]
+          }
+        ],
+        "ATTEMPT_EVALUATION": null,
+        "ATTEMPT_EVALUATION_APPLICABILITY": {
+          "status": "not_applicable",
+          "version": "conditional_attempt_evaluation_v1"
+        },
+        "CHECK_SCOPE": {
+          "body_and_short_answer": true,
+          "current_evidence_display": false,
+          "current_suggestions": false,
+          "prior_actual_exposure": false
+        },
+        "CLAIMS": [
+          {
+            "answer_field": "answer_text",
+            "claim_id": "claim_a1e1fb754f5f9ba69dfe43db_1",
+            "end": 262,
+            "evidence_ids": [
+              "ev_001",
+              "ev_004"
+            ],
+            "start": 0,
+            "text": "A primary active transport process establishes a sodium electrochemical gradient; sodium then moves down that gradient through an open channel, and the energy released by this downhill movement drives glucose against its concentration gradient. [ev_001] [ev_004]"
+          },
+          {
+            "answer_field": "answer_text",
+            "claim_id": "claim_b458d654173579c55609d972_1",
+            "end": 435,
+            "evidence_ids": [
+              "ev_001"
+            ],
+            "start": 263,
+            "text": "For this co-transport to occur, the sodium pathway must be open, and glucose must be attached to the same transport protein that sodium uses to cross the membrane. [ev_001]"
+          },
+          {
+            "answer_field": "answer_text",
+            "claim_id": "claim_6b3d9c5a41a2463a8d1d0562_1",
+            "end": 517,
+            "evidence_ids": [
+              "ev_003"
+            ],
+            "start": 436,
+            "text": "The two substances are carried in the same direction, as in a symporter. [ev_003]"
+          },
+          {
+            "answer_field": "short_answer",
+            "claim_id": "claim_5d2f433185224237fc2693c6_1",
+            "end": 164,
+            "evidence_ids": [
+              "ev_001"
+            ],
+            "start": 0,
+            "text": "The sodium gradient supplies the energy: sodium moves downhill through an open pathway, driving attached glucose uphill through the same transport protein. [ev_001]"
+          }
+        ],
+        "CONTEXT_COVERAGE": {
+          "budget_lost_requirement_ids": [],
+          "context_sufficiency_estimate": "partial",
+          "requirements": [
+            {
+              "candidate_lexically_covered": false,
+              "conditions": [
+                "5.20 and"
+              ],
+              "id": "requirement_01",
+              "intent": "explanation",
+              "matched_evidence_ids": [
+                "ev_001",
+                "ev_002",
+                "ev_003",
+                "ev_004",
+                "ev_005",
+                "ev_006",
+                "ev_007",
+                "ev_008"
+              ],
+              "missing_term_groups": [
+                [
+                  "driven"
+                ]
+              ],
+              "objects": [],
+              "origin": "verbatim_question_structure_v5",
+              "packed_lexically_covered": false,
+              "relation": "explanation",
+              "request": "Using Figure 5.20 and the adjacent explanation, how can sodium-driven co-transport move glucose against its concentration gradient"
+            },
+            {
+              "candidate_lexically_covered": false,
+              "conditions": [
+                "5.20 and"
+              ],
+              "id": "requirement_02",
+              "intent": "explanation",
+              "matched_evidence_ids": [
+                "ev_001",
+                "ev_003",
+                "ev_004",
+                "ev_005",
+                "ev_006",
+                "ev_007",
+                "ev_008"
+              ],
+              "missing_term_groups": [
+                [
+                  "supplie"
+                ]
+              ],
+              "objects": [],
+              "origin": "verbatim_question_structure_v5",
+              "packed_lexically_covered": false,
+              "relation": "explanation",
+              "request": "Explain what supplies the energy"
+            },
+            {
+              "candidate_lexically_covered": false,
+              "conditions": [
+                "5.20 and"
+              ],
+              "id": "requirement_03",
+              "intent": "explanation",
+              "matched_evidence_ids": [
+                "ev_001",
+                "ev_002",
+                "ev_003",
+                "ev_004",
+                "ev_005",
+                "ev_006",
+                "ev_007"
+              ],
+              "missing_term_groups": [
+                [
+                  "pathway"
+                ],
+                [
+                  "true"
+                ]
+              ],
+              "objects": [],
+              "origin": "verbatim_question_structure_v5",
+              "packed_lexically_covered": false,
+              "relation": "explanation",
+              "request": "what must be true of the sodium pathway and the transported substance for this secondary transport to occur"
+            }
+          ],
+          "response_guidance": "Evaluate source meaning and each required relation and condition. Words distributed across passages may provide complementary evidence but do not establish a valid comparison, causal link or sufficient context. Answer supported parts and name actual gaps.",
+          "semantic_evaluation_required": true,
+          "semantic_sufficiency": null,
+          "transport_version": "coverage_context_v1",
+          "version": "context_coverage_v3"
+        },
+        "LEARNER_TURN": {
+          "current_step": 1,
+          "expected_response_kind": null,
+          "pending_tutor_question": null,
+          "pending_tutor_question_id": null,
+          "turn_role": "user_question"
+        },
+        "POLICY": {
+          "check_cumulative": false,
+          "check_suggestions": false,
+          "condition": "T2",
+          "control_evidence": false,
+          "help_constraint": "Give the complete supported explanation requested, including relevant conditions, units and limits. Do not force hints.",
+          "help_level": 0,
+          "human_rating": null,
+          "online_check": true,
+          "task_type": "process_reasoning",
+          "teaching_mode": "direct",
+          "version": "learning_enhancement_v1"
+        },
+        "PRIOR_EXPOSURE": {
+          "disabled": true
+        },
+        "PROPOSED_DELIVERY": {
+          "citation_views": [],
+          "response": {
+            "answer_text": "A primary active transport process establishes a sodium electrochemical gradient; sodium then moves down that gradient through an open channel, and the energy released by this downhill movement drives glucose against its concentration gradient. [ev_001] [ev_004] For this co-transport to occur, the sodium pathway must be open, and glucose must be attached to the same transport protein that sodium uses to cross the membrane. [ev_001] The two substances are carried in the same direction, as in a symporter. [ev_003]",
+            "citations": [
+              "ev_001",
+              "ev_003",
+              "ev_004"
+            ],
+            "confidence": 0.97,
+            "refusal_reason": null,
+            "response_type": "answer",
+            "schema_version": "chat_response_v1",
+            "short_answer": "The sodium gradient supplies the energy: sodium moves downhill through an open pathway, driving attached glucose uphill through the same transport protein. [ev_001]"
+          },
+          "source_display_control_disabled": true
+        },
+        "SOURCE_FRAGMENTS": [
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_001",
+            "exact_text": "If a channel protein exists and is open, the sodium ions will move down its concentration gradient across the membrane.",
+            "fragment_id": "F001"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_001",
+            "exact_text": "This movement transports other substances that must be attached to the same transport protein in order for the sodium ions to move across the membrane (Figure 5.20).",
+            "fragment_id": "F002"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_001",
+            "exact_text": "Many amino acids, as well as glucose, enter a cell this way.",
+            "fragment_id": "F003"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_001",
+            "exact_text": "This secondary process also stores high-energy hydrogen ions in the mitochondria of plant and animal cells in order to produce ATP.",
+            "fragment_id": "F004"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_001",
+            "exact_text": "The potential energy that accumulates in the stored hydrogen ions translates into kinetic energy as the ions surge through the channel protein ATP synthase, and that energy then converts ADP into ATP.",
+            "fragment_id": "F005"
+          },
+          {
+            "block_kind": "unresolved_atomic",
+            "complete_block": true,
+            "evidence_id": "ev_001",
+            "exact_text": "VISU AL CONNE CTION",
+            "fragment_id": "F006"
+          },
+          {
+            "block_kind": "caption",
+            "complete_block": true,
+            "evidence_id": "ev_001",
+            "exact_text": "FIGURE 5.20 An electrochemical gradient (Na+ concentration - green), is generated by primary active transport. The energy stored in the Na+ gradient provides the energy to move other substances against their concentration gradients (Glucose - blue), a process called co-transport or secondary active transport. Credit: Rao, A., Ryan, K., Tag, A. and Fletcher, S. Department of Biology, Texas A&M University.",
+            "fragment_id": "F007"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_001",
+            "exact_text": "If the pH outside the cell decreases, would you expect the amount of amino acids transported into the cell to increase or decrease?",
+            "fragment_id": "F008"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_002",
+            "exact_text": "Sodium is actively exchanged for K+ using ATP on the basal membrane.",
+            "fragment_id": "F009"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_002",
+            "exact_text": "Most of the substances transported by a symport mechanism on the apical membrane are transported by facilitated diffusion on the basal membrane.",
+            "fragment_id": "F010"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_002",
+            "exact_text": "At least three ions, K+, Ca++, and Mg++, diffuse laterally between adjacent cell membranes (transcellular).",
+            "fragment_id": "F011"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_002",
+            "exact_text": "About 67 percent of the water, Na+, and K+ entering the nephron is reabsorbed in the PCT and returned to the circulation.",
+            "fragment_id": "F012"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_002",
+            "exact_text": "Almost 100 percent of glucose, amino acids, and other organic substances such as vitamins are normally recovered here.",
+            "fragment_id": "F013"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_002",
+            "exact_text": "Some glucose may appear in the urine if circulating glucose levels are high enough that all the glucose transporters in the PCT are saturated, so that their capacity to move glucose is exceeded (transport maximum, or Tm).",
+            "fragment_id": "F014"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_002",
+            "exact_text": "In males, the maximum amount of glucose that can be recovered is about 375 mg/min, whereas in females, it is about 300 mg/min.",
+            "fragment_id": "F015"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_002",
+            "exact_text": "This recovery rate translates to an arterial concentration of about 200 mg/dL.",
+            "fragment_id": "F016"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_002",
+            "exact_text": "Though an exceptionally high sugar intake might cause sugar to appear briefly in the urine, the appearance of glycosuria usually points to type I or II diabetes mellitus.",
+            "fragment_id": "F017"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_002",
+            "exact_text": "The transport of glucose from the lumen of the PCT to the interstitial space is similar to the way it is absorbed by the small intestine.",
+            "fragment_id": "F018"
+          },
+          {
+            "block_kind": "caption",
+            "complete_block": true,
+            "evidence_id": "ev_003",
+            "exact_text": "FIGURE 5.18 A uniporter carries one molecule or ion. A symporter carries two different molecules or ions, both in the same direction. An antiporter also carries two different molecules or ions, but in different directions. (credit: modification of work by “Lupask”/Wikimedia Commons)",
+            "fragment_id": "F019"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_003",
+            "exact_text": "Primary Active Transport The primary active transport that functions with the active transport of sodium and potassium allows secondary active transport to occur.",
+            "fragment_id": "F020"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_003",
+            "exact_text": "The second transport method is still active because it depends on using energy as does primary transport (Figure 5.19).",
+            "fragment_id": "F021"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_004",
+            "exact_text": "5.3 Active Transport LEARNING OBJECTIVES By the end of this section, you will be able to do the following: • Understand how electrochemical gradients affect ions • Distinguish between primary active transport and secondary active transport Active transport mechanisms require the cell’s energy, usually in the form of adenosine triphosphate (ATP).",
+            "fragment_id": "F022"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_004",
+            "exact_text": "If a substance must move into the cell against its concentration gradient—that is, if the substance's concentration inside the cell is greater than its concentration in the extracellular fluid (and vice versa)—the cell must use energy to move the substance.",
+            "fragment_id": "F023"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_004",
+            "exact_text": "Some active transport mechanisms move small-molecular weight materials, such as ions, through the membrane.",
+            "fragment_id": "F024"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_004",
+            "exact_text": "Other mechanisms transport much larger molecules.",
+            "fragment_id": "F025"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_004",
+            "exact_text": "Electrochemical Gradient We have discussed simple concentration gradients—a substance's differential concentrations across a space or a membrane—but in living systems, gradients are more complex.",
+            "fragment_id": "F026"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_004",
+            "exact_text": "Because ions move into and out of cells and because cells contain proteins that do not move across the membrane and are mostly negatively charged, there is also an electrical gradient, a difference of charge, across the plasma membrane.",
+            "fragment_id": "F027"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_004",
+            "exact_text": "The interior of living cells is electrically negative with respect to the extracellular fluid in which they are bathed, and at the same time, cells have higher concentrations of potassium (K+) and lower concentrations of sodium (Na+) than the extracellular fluid.",
+            "fragment_id": "F028"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_004",
+            "exact_text": "Thus in a living cell, the concentration gradient of Na+ tends to drive it into the cell, and its electrical gradient (a positive ion) also drives it inward to the negatively charged interior.",
+            "fragment_id": "F029"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_005",
+            "exact_text": "Some active transport mechanisms move small-molecular weight material, such as ions, through the membrane.",
+            "fragment_id": "F030"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_005",
+            "exact_text": "In addition to moving small ions and molecules through the membrane, cells also need to remove and take in larger molecules and particles.",
+            "fragment_id": "F031"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_005",
+            "exact_text": "Some cells are even capable of engulfing entire unicellular microorganisms.",
+            "fragment_id": "F032"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_005",
+            "exact_text": "You might have correctly hypothesized that the uptake and release of large particles by the cell requires energy.",
+            "fragment_id": "F033"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_005",
+            "exact_text": "A large particle, however, cannot pass through the membrane, even with energy supplied by the cell.",
+            "fragment_id": "F034"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_005",
+            "exact_text": "Electrochemical Gradient We have discussed simple concentration gradients—differential concentrations of a substance across a space or a membrane—but in living systems, gradients are more complex.",
+            "fragment_id": "F035"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_005",
+            "exact_text": "Because cells contain proteins, most of which are negatively charged, and because ions move into and out of cells, there is an electrical gradient, a difference of charge, across the plasma membrane.",
+            "fragment_id": "F036"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_005",
+            "exact_text": "The interior of living cells is electrically negative with respect to the extracellular fluid in which they are bathed; at the same time, cells have higher concentrations of potassium (K+) and lower concentrations of sodium (Na+) than does the extracellular fluid.",
+            "fragment_id": "F037"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_005",
+            "exact_text": "Thus, in a living cell, the concentration gradient and electrical gradient of Na+ promotes diffusion of the ion into the cell, and the electrical gradient of Na+ (a positive ion) tends to drive it inward to the negatively charged interior.",
+            "fragment_id": "F038"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_006",
+            "exact_text": "Mechanisms of Recovery Mechanisms by which substances move across membranes for reabsorption or secretion include active transport, diffusion, facilitated diffusion, secondary active transport, and osmosis.",
+            "fragment_id": "F039"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_006",
+            "exact_text": "These were discussed in an earlier chapter, and you may wish to review them.",
+            "fragment_id": "F040"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_006",
+            "exact_text": "Active transport utilizes energy, usually the energy found in a phosphate bond of ATP, to move a substance across a membrane from a low to a high concentration.",
+            "fragment_id": "F041"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_006",
+            "exact_text": "It is very specific and must have an appropriately shaped receptor for the substance to be transported.",
+            "fragment_id": "F042"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_006",
+            "exact_text": "An example would be the active transport of Na+ out of a cell and K+ into a cell by the Na+/K+ pump.",
+            "fragment_id": "F043"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_006",
+            "exact_text": "Both ions are moved in opposite directions from a lower to a higher concentration.",
+            "fragment_id": "F044"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_006",
+            "exact_text": "Simple diffusion moves a substance from a higher to a lower concentration down its concentration gradient.",
+            "fragment_id": "F045"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_006",
+            "exact_text": "It requires no energy and only needs to be soluble.",
+            "fragment_id": "F046"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_006",
+            "exact_text": "Facilitated diffusion is similar to diffusion in that it moves a substance down its concentration gradient.",
+            "fragment_id": "F047"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_006",
+            "exact_text": "The difference is that it requires specific membrane receptors or channel proteins for movement.",
+            "fragment_id": "F048"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_006",
+            "exact_text": "The movement of glucose and, in certain situations, Na+ ions, is an example of facilitated diffusion.",
+            "fragment_id": "F049"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_006",
+            "exact_text": "In some cases of mediated transport, two different substances share the same channel protein port; these mechanisms are described by the terms symport and antiport.",
+            "fragment_id": "F050"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_007",
+            "exact_text": "Passive transport of a molecule or ion depends on its ability to pass through the membrane, as well as the existence of a concentration gradient that allows the molecules to diffuse from an area of higher concentration to an area of lower concentration.",
+            "fragment_id": "F051"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_007",
+            "exact_text": "Some molecules, like gases, lipids, and water itself (which also utilizes water channels in the membrane called aquaporins), slip fairly easily through the cell membrane; others, including polar molecules like glucose, amino acids, and ions do not.",
+            "fragment_id": "F052"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_007",
+            "exact_text": "Some of these molecules enter and leave cells using facilitated transport, whereby the molecules move down a concentration gradient through specific protein channels in the membrane.",
+            "fragment_id": "F053"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_007",
+            "exact_text": "This process does not require energy.",
+            "fragment_id": "F054"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_007",
+            "exact_text": "For example, glucose is transferred into cells by glucose transporters that use facilitated transport (Figure 26.8).",
+            "fragment_id": "F055"
+          },
+          {
+            "block_kind": "unresolved_atomic",
+            "complete_block": true,
+            "evidence_id": "ev_007",
+            "exact_text": "FIGURE 26.8 Facilitated Diffusion Glucose molecules use facilitated diffusion to move down a concentration gradient through the carrier protein channels in the membrane. (credit: modification of work by Mariana Ruiz Villarreal)",
+            "fragment_id": "F056"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_008",
+            "exact_text": "Diffusion expends no energy.",
+            "fragment_id": "F057"
+          },
+          {
+            "block_kind": "prose",
+            "complete_block": true,
+            "evidence_id": "ev_008",
+            "exact_text": "On the contrary, concentration gradients are a form of potential energy, which dissipates as the gradient is eliminated.",
+            "fragment_id": "F058"
+          }
+        ],
+        "TUTOR_QUESTION": null,
+        "answer_mode": "textbook",
+        "current_problem": "Using Figure 5.20 and the adjacent explanation, how can sodium-driven co-transport move glucose against its concentration gradient? Explain what supplies the energy and what must be true of the sodium pathway and the transported substance for this secondary transport to occur.",
+        "question": "Using Figure 5.20 and the adjacent explanation, how can sodium-driven co-transport move glucose against its concentration gradient? Explain what supplies the energy and what must be true of the sodium pathway and the transported substance for this secondary transport to occur."
+      },
+      "selected_evidence": [
+        {
+          "asset_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+          "chunk_id": "cff6816a7eaca0ca5311a8ee20d4a33f2fbf",
+          "context_order": 1,
+          "evidence_id": "ev_001",
+          "inherited_from": null,
+          "license": "Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.",
+          "locator": "Chapter 5 Structure and Function of Plasma Membranes / 5.3 Active Transport; PDF physical pages 170, 171; Figures or formulas may require viewing the original PDF.",
+          "pages": [
+            170,
+            171
+          ],
+          "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+          "section": "Chapter 5 Structure and Function of Plasma Membranes / 5.3 Active Transport",
+          "source_title": "Biology 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf",
+          "text": "If a channel protein exists and is open, the sodium ions will move down its concentration gradient across the membrane. This movement transports other substances that must be attached to the same transport protein in order for the sodium ions to move across the membrane (Figure 5.20). Many amino acids, as well as glucose, enter a cell this way. This secondary process also stores high-energy hydrogen ions in the mitochondria of plant and animal cells in order to produce ATP. The potential energy that accumulates in the stored hydrogen ions translates into kinetic energy as the ions surge through the channel protein ATP synthase, and that energy then converts ADP into ATP.\n\nVISU AL CONNE CTION FIGURE 5.20 An electrochemical gradient (Na+ concentration - green), is generated by primary active transport. The energy stored in the Na+ gradient provides the energy to move other substances against their concentration gradients (Glucose - blue), a process called co-transport or secondary active transport. Credit: Rao, A., Ryan, K., Tag, A. and Fletcher, S. Department of Biology, Texas A&M University. If the pH outside the cell decreases, would you expect the amount of amino acids transported into the cell to increase or decrease?",
+          "text_hash": "70c55eaab5f5db46125133a102871b4db099ce4c8c0104188ea426ec86f517a7"
+        },
+        {
+          "asset_id": "826b6848-7150-4959-bed9-ce33acfa856d",
+          "chunk_id": "96bc725caa7fd5d260068abc0b8b0ae23ff8",
+          "context_order": 2,
+          "evidence_id": "ev_002",
+          "inherited_from": null,
+          "license": "Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.",
+          "locator": "Chapter 25 The Urinary System / 25.6 Tubular Reabsorption; PDF physical pages 1177; Figures or formulas may require viewing the original PDF.",
+          "pages": [
+            1177
+          ],
+          "processing_id": "45a52e51-a625-47b7-813e-59ad16a5f492",
+          "section": "Chapter 25 The Urinary System / 25.6 Tubular Reabsorption",
+          "source_title": "Anatomy and Physiology 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/anatomy-and-physiology-2e_-_WEB.pdf",
+          "text": "Sodium is actively exchanged for K+ using ATP on the basal membrane. Most of the substances transported by a symport mechanism on the apical membrane are transported by facilitated diffusion on the basal membrane. At least three ions, K+, Ca++, and Mg++, diffuse laterally between adjacent cell membranes (transcellular). About 67 percent of the water, Na+, and K+ entering the nephron is reabsorbed in the PCT and returned to the circulation. Almost 100 percent of glucose, amino acids, and other organic substances such as vitamins are normally recovered here. Some glucose may appear in the urine if circulating glucose levels are high enough that all the glucose transporters in the PCT are saturated, so that their capacity to move glucose is exceeded (transport maximum, or Tm). In males, the maximum amount of glucose that can be recovered is about 375 mg/min, whereas in females, it is about 300 mg/min. This recovery rate translates to an arterial concentration of about 200 mg/dL. Though an exceptionally high sugar intake might cause sugar to appear briefly in the urine, the appearance of glycosuria usually points to type I or II diabetes mellitus. The transport of glucose from the lumen of the PCT to the interstitial space is similar to the way it is absorbed by the small intestine.",
+          "text_hash": "5ee05080be840e75a34a4772af6d0a7912ffd46ec8415f4d8b5b2ac7ff423c21"
+        },
+        {
+          "asset_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+          "chunk_id": "a88586462148c971556928fee2d6230346de",
+          "context_order": 3,
+          "evidence_id": "ev_003",
+          "inherited_from": null,
+          "license": "Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.",
+          "locator": "Chapter 5 Structure and Function of Plasma Membranes / 5.3 Active Transport; PDF physical pages 168, 169; Figures or formulas may require viewing the original PDF.",
+          "pages": [
+            168,
+            169
+          ],
+          "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+          "section": "Chapter 5 Structure and Function of Plasma Membranes / 5.3 Active Transport",
+          "source_title": "Biology 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf",
+          "text": "FIGURE 5.18 A uniporter carries one molecule or ion. A symporter carries two different molecules or ions, both in the same direction. An antiporter also carries two different molecules or ions, but in different directions. (credit: modification of work by “Lupask”/Wikimedia Commons) Primary Active Transport The primary active transport that functions with the active transport of sodium and potassium allows secondary active transport to occur. The second transport method is still active because it depends on using energy as does primary transport (Figure 5.19).",
+          "text_hash": "404dbdc5f71d7eabf6caa23a926146128ec0aa31fb1e90d903b18f67847e55c5"
+        },
+        {
+          "asset_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+          "chunk_id": "ba4c6b1a31991a6333f52d5dd072dd68b9b1",
+          "context_order": 4,
+          "evidence_id": "ev_004",
+          "inherited_from": null,
+          "license": "Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.",
+          "locator": "Chapter 5 Structure and Function of Plasma Membranes / 5.3 Active Transport; PDF physical pages 166; Figures or formulas may require viewing the original PDF.",
+          "pages": [
+            166
+          ],
+          "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+          "section": "Chapter 5 Structure and Function of Plasma Membranes / 5.3 Active Transport",
+          "source_title": "Biology 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf",
+          "text": "5.3 Active Transport LEARNING OBJECTIVES By the end of this section, you will be able to do the following: • Understand how electrochemical gradients affect ions • Distinguish between primary active transport and secondary active transport Active transport mechanisms require the cell’s energy, usually in the form of adenosine triphosphate (ATP). If a substance must move into the cell against its concentration gradient—that is, if the substance's concentration inside the cell is greater than its concentration in the extracellular fluid (and vice versa)—the cell must use energy to move the substance. Some active transport mechanisms move small-molecular weight materials, such as ions, through the membrane. Other mechanisms transport much larger molecules. Electrochemical Gradient We have discussed simple concentration gradients—a substance's differential concentrations across a space or a membrane—but in living systems, gradients are more complex. Because ions move into and out of cells and because cells contain proteins that do not move across the membrane and are mostly negatively charged, there is also an electrical gradient, a difference of charge, across the plasma membrane. The interior of living cells is electrically negative with respect to the extracellular fluid in which they are bathed, and at the same time, cells have higher concentrations of potassium (K+) and lower concentrations of sodium (Na+) than the extracellular fluid. Thus in a living cell, the concentration gradient of Na+ tends to drive it into the cell, and its electrical gradient (a positive ion) also drives it inward to the negatively charged interior.",
+          "text_hash": "843c2adc0b39907fa318ede5c0f13776500e8b8992c6763c2b073a1eb9b51504"
+        },
+        {
+          "asset_id": "3294e86a-c158-4dbe-97e3-6169352497ab",
+          "chunk_id": "4f6391effe2d93eadfe32f646a9f0dbf2a97",
+          "context_order": 5,
+          "evidence_id": "ev_005",
+          "inherited_from": null,
+          "license": "Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.",
+          "locator": "Chapter 3 Cell Structure and Function / 3.6 Active Transport; PDF physical pages 95, 96; Figures or formulas may require viewing the original PDF.",
+          "pages": [
+            95,
+            96
+          ],
+          "processing_id": "82fb328d-a383-43c2-a6eb-b91b61d05069",
+          "section": "Chapter 3 Cell Structure and Function / 3.6 Active Transport",
+          "source_title": "Concepts of Biology",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Concepts-Biology_-_WEB.pdf",
+          "text": "Some active transport mechanisms move small-molecular weight material, such as ions, through the membrane.\n\nIn addition to moving small ions and molecules through the membrane, cells also need to remove and take in larger molecules and particles. Some cells are even capable of engulfing entire unicellular microorganisms. You might have correctly hypothesized that the uptake and release of large particles by the cell requires energy. A large particle, however, cannot pass through the membrane, even with energy supplied by the cell. Electrochemical Gradient We have discussed simple concentration gradients—differential concentrations of a substance across a space or a membrane—but in living systems, gradients are more complex. Because cells contain proteins, most of which are negatively charged, and because ions move into and out of cells, there is an electrical gradient, a difference of charge, across the plasma membrane. The interior of living cells is electrically negative with respect to the extracellular fluid in which they are bathed; at the same time, cells have higher concentrations of potassium (K+) and lower concentrations of sodium (Na+) than does the extracellular fluid. Thus, in a living cell, the concentration gradient and electrical gradient of Na+ promotes diffusion of the ion into the cell, and the electrical gradient of Na+ (a positive ion) tends to drive it inward to the negatively charged interior.",
+          "text_hash": "7e889bb448d1be9733d7dc6eb58d5e7578157b960670a1b3d2c9fe6b8bd29931"
+        },
+        {
+          "asset_id": "826b6848-7150-4959-bed9-ce33acfa856d",
+          "chunk_id": "a55d58f914b5249784d30a79c6906a935084",
+          "context_order": 6,
+          "evidence_id": "ev_006",
+          "inherited_from": null,
+          "license": "Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.",
+          "locator": "Chapter 25 The Urinary System / 25.6 Tubular Reabsorption; PDF physical pages 1174, 1175; Figures or formulas may require viewing the original PDF.",
+          "pages": [
+            1174,
+            1175
+          ],
+          "processing_id": "45a52e51-a625-47b7-813e-59ad16a5f492",
+          "section": "Chapter 25 The Urinary System / 25.6 Tubular Reabsorption",
+          "source_title": "Anatomy and Physiology 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/anatomy-and-physiology-2e_-_WEB.pdf",
+          "text": "Mechanisms of Recovery Mechanisms by which substances move across membranes for reabsorption or secretion include active transport, diffusion, facilitated diffusion, secondary active transport, and osmosis. These were discussed in an earlier chapter, and you may wish to review them. Active transport utilizes energy, usually the energy found in a phosphate bond of ATP, to move a substance across a membrane from a low to a high concentration. It is very specific and must have an appropriately shaped receptor for the substance to be transported. An example would be the active transport of Na+ out of a cell and K+ into a cell by the Na+/K+ pump. Both ions are moved in opposite directions from a lower to a higher concentration. Simple diffusion moves a substance from a higher to a lower concentration down its concentration gradient. It requires no energy and only needs to be soluble. Facilitated diffusion is similar to diffusion in that it moves a substance down its concentration gradient. The difference is that it requires specific membrane receptors or channel proteins for movement. The movement of glucose and, in certain situations, Na+ ions, is an example of facilitated diffusion. In some cases of mediated transport, two different substances share the same channel protein port; these mechanisms are described by the terms symport and antiport.",
+          "text_hash": "c20342eaadaf800c3074ae983dfde5a2015cb608360016df3a2cf5c1a40202fe"
+        },
+        {
+          "asset_id": "826b6848-7150-4959-bed9-ce33acfa856d",
+          "chunk_id": "346f24bf6c003eb85c685a141961c56a3c66",
+          "context_order": 7,
+          "evidence_id": "ev_007",
+          "inherited_from": null,
+          "license": "Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.",
+          "locator": "Chapter 26 Fluid, Electrolyte, and Acid-Base Balance / 26.1 Body Fluids and Fluid Compartments; PDF physical pages 1207; Figures or formulas may require viewing the original PDF.",
+          "pages": [
+            1207
+          ],
+          "processing_id": "45a52e51-a625-47b7-813e-59ad16a5f492",
+          "section": "Chapter 26 Fluid, Electrolyte, and Acid-Base Balance / 26.1 Body Fluids and Fluid Compartments",
+          "source_title": "Anatomy and Physiology 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/anatomy-and-physiology-2e_-_WEB.pdf",
+          "text": "Passive transport of a molecule or ion depends on its ability to pass through the membrane, as well as the existence of a concentration gradient that allows the molecules to diffuse from an area of higher concentration to an area of lower concentration. Some molecules, like gases, lipids, and water itself (which also utilizes water channels in the membrane called aquaporins), slip fairly easily through the cell membrane; others, including polar molecules like glucose, amino acids, and ions do not. Some of these molecules enter and leave cells using facilitated transport, whereby the molecules move down a concentration gradient through specific protein channels in the membrane. This process does not require energy. For example, glucose is transferred into cells by glucose transporters that use facilitated transport (Figure 26.8). FIGURE 26.8 Facilitated Diffusion Glucose molecules use facilitated diffusion to move down a concentration gradient through the carrier protein channels in the membrane. (credit: modification of work by Mariana Ruiz Villarreal)",
+          "text_hash": "8dfa2ce6faec74612b621d5024ab7f144fcae759d4674515a875b59003a23dbb"
+        },
+        {
+          "asset_id": "071d52f9-ad95-4e50-84bd-e43ed136121f",
+          "chunk_id": "590a47a99dedf778b88254a790b0653de462",
+          "context_order": 8,
+          "evidence_id": "ev_008",
+          "inherited_from": null,
+          "license": "Catalog: Creative Commons Attribution-NonCommercial-ShareAlike License 4.0; https://creativecommons.org/licenses/by-nc-sa/4.0/. Embedded PDF terms are separately recorded in source inspection evidence.",
+          "locator": "Chapter 5 Structure and Function of Plasma Membranes / 5.2 Passive Transport; PDF physical pages 159, 160; Figures or formulas may require viewing the original PDF.",
+          "pages": [
+            159,
+            160
+          ],
+          "processing_id": "242be583-8e03-448f-8009-9db23179fdb9",
+          "section": "Chapter 5 Structure and Function of Plasma Membranes / 5.2 Passive Transport",
+          "source_title": "Biology 2e",
+          "source_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Biology-2e_-_WEB.pdf",
+          "text": "Diffusion expends no energy. On the contrary, concentration gradients are a form of potential energy, which dissipates as the gradient is eliminated.",
+          "text_hash": "6e40a693109e76a85bcc1af0a07633841d275dc81523f9b2da2c7fc60358b4bf"
+        }
+      ],
+      "prepared_context": {
+        "utc": "2026-10-14T12:57:48.938959+00:00",
+        "case_id": "D160-Q02",
+        "generation_entry": 1,
+        "programmatic_only": false,
+        "request_id": "ac5c8bce-078c-49c4-9b4c-2d01d7078874",
+        "profile": {
+          "use_profile": false,
+          "profile": null,
+          "source_version": null,
+          "compiler_version": "profile_rules_v1",
+          "policy": "",
+          "policy_hash": "52f3519683e8e570b4c58e4d4b5f9a5190b4e3a5e5fd4a5339b3ecdd811b619b",
+          "fallback_reason": null,
+          "turn_override": null
+        },
+        "memory_context": null,
+        "teaching_context": {
+          "task_id": "a5b1e3d6-b435-45dd-8cb9-9518f661a24a",
+          "task_version": 1,
+          "task_revision": 1,
+          "exposure_epoch": 0,
+          "task_type": "process_reasoning",
+          "question": "Using Figure 5.20 and the adjacent explanation, how can sodium-driven co-transport move glucose against its concentration gradient? Explain what supplies the energy and what must be true of the sodium pathway and the transported substance for this secondary transport to occur.",
+          "current_problem": "Using Figure 5.20 and the adjacent explanation, how can sodium-driven co-transport move glucose against its concentration gradient? Explain what supplies the energy and what must be true of the sodium pathway and the transported substance for this secondary transport to occur.",
+          "current_request": "Using Figure 5.20 and the adjacent explanation, how can sodium-driven co-transport move glucose against its concentration gradient? Explain what supplies the energy and what must be true of the sodium pathway and the transported substance for this secondary transport to occur.",
+          "teaching_mode": "direct",
+          "help_level": 0,
+          "turn_role": "user_question",
+          "pending_tutor_question_id": null,
+          "pending_tutor_question": null,
+          "pending_tutor_question_version": 0,
+          "pending_validation_id": null,
+          "pending_validation_version": 0,
+          "expected_response_kind": null,
+          "current_step": 1,
+          "learner_attempt": null,
+          "last_attempt_evaluation": null,
+          "requested_help": "auto",
+          "continuing": false,
+          "requirements": {
+            "original_question": "Using Figure 5.20 and the adjacent explanation, how can sodium-driven co-transport move glucose against its concentration gradient? Explain what supplies the energy and what must be true of the sodium pathway and the transported substance for this secondary transport to occur."
+          },
+          "delivered_turns": [],
+          "disclosure_events": [],
+          "policy_version": "learning_task_v3",
+          "attempt_history": []
+        },
+        "reading_context": null,
+        "prepared_query": {
+          "original_message": "Using Figure 5.20 and the adjacent explanation, how can sodium-driven co-transport move glucose against its concentration gradient? Explain what supplies the energy and what must be true of the sodium pathway and the transported substance for this secondary transport to occur.",
+          "standalone_query": "Using Figure 5.20 and the adjacent explanation, how can sodium-driven co-transport move glucose against its concentration gradient? Explain what supplies the energy and what must be true of the sodium pathway and the transported substance for this secondary transport to occur.",
+          "intent": "factual",
+          "topic_relation": "new_topic",
+          "referenced_message_ids": [],
+          "needs_clarification": false,
+          "preparation_version": "conversation_preparer_v24",
+          "fallback_reason": null
+        },
+        "history": [],
+        "summary": null,
+        "teaching_plan": {
+          "version": "progress_action_plan_v10",
+          "enabled": false,
+          "policy_flags": {
+            "version": "generation_controls_v10",
+            "arm": "D",
+            "content_plan": true,
+            "display_selection": true,
+            "coverage_version": "context_coverage_v3",
+            "max_targeted_retrievals": 1,
+            "targeted_candidate_limit": 10,
+            "provider_planning_calls": 0,
+            "teaching_plan_version": "progress_action_plan_v10"
+          },
+          "current_step": 1,
+          "action": "complete_explanation",
+          "action_instruction": "Give the complete supported answer requested.",
+          "turn_role": "user_question",
+          "original_problem": "Using Figure 5.20 and the adjacent explanation, how can sodium-driven co-transport move glucose against its concentration gradient? Explain what supplies the energy and what must be true of the sodium pathway and the transported substance for this secondary transport to occur.",
+          "current_question": null,
+          "allowed_disclosure": {
+            "help_level": 0,
+            "constraint": "Give the complete supported explanation requested, including relevant conditions, units and limits. Do not force hints.",
+            "complete_answer_allowed": true,
+            "preserve_conditions_and_units": true,
+            "check_current_and_cumulative_surfaces": false
+          },
+          "evidence_needs": [
+            {
+              "id": "requirement_01",
+              "request": "Using Figure 5.20 and the adjacent explanation, how can sodium-driven co-transport move glucose against its concentration gradient",
+              "verbatim_request": "Using Figure 5.20 and the adjacent explanation, how can sodium-driven co-transport move glucose against its concentration gradient",
+              "terms": [
+                "5.20",
+                "adjacent",
+                "against",
+                "co",
+                "concentration",
+                "driven",
+                "figure",
+                "glucose",
+                "gradient",
+                "move",
+                "sodium",
+                "transport",
+                "using"
+              ],
+              "intent": "explanation",
+              "objects": [],
+              "relation": "explanation",
+              "conditions": [
+                "5.20 and"
+              ],
+              "origin": "verbatim_question_structure_v5",
+              "request_span": {
+                "coordinate_space": "requirement_source_text",
+                "start": 0,
+                "end": 130
+              },
+              "presentation_request_ids": [],
+              "lexical_request": "Using Figure 5.20 and the adjacent explanation, how can sodium-driven co-transport move glucose against its concentration gradient",
+              "term_groups": [
+                [
+                  "5.20"
+                ],
+                [
+                  "adjacent"
+                ],
+                [
+                  "against"
+                ],
+                [
+                  "co"
+                ],
+                [
+                  "concentration"
+                ],
+                [
+                  "driven"
+                ],
+                [
+                  "figure"
+                ],
+                [
+                  "glucose"
+                ],
+                [
+                  "gradient"
+                ],
+                [
+                  "move"
+                ],
+                [
+                  "sodium"
+                ],
+                [
+                  "transport"
+                ],
+                [
+                  "using"
+                ]
+              ]
+            },
+            {
+              "id": "requirement_02",
+              "request": "Explain what supplies the energy",
+              "verbatim_request": "Explain what supplies the energy",
+              "terms": [
+                "energy",
+                "supplie"
+              ],
+              "intent": "explanation",
+              "objects": [],
+              "relation": "explanation",
+              "conditions": [
+                "5.20 and"
+              ],
+              "origin": "verbatim_question_structure_v5",
+              "request_span": {
+                "coordinate_space": "requirement_source_text",
+                "start": 132,
+                "end": 164
+              },
+              "presentation_request_ids": [],
+              "lexical_request": "Explain what supplies the energy",
+              "term_groups": [
+                [
+                  "energy"
+                ],
+                [
+                  "supplie"
+                ]
+              ]
+            },
+            {
+              "id": "requirement_03",
+              "request": "what must be true of the sodium pathway and the transported substance for this secondary transport to occur",
+              "verbatim_request": "what must be true of the sodium pathway and the transported substance for this secondary transport to occur",
+              "terms": [
+                "must",
+                "occur",
+                "pathway",
+                "secondary",
+                "sodium",
+                "substance",
+                "transport",
+                "transported",
+                "true"
+              ],
+              "intent": "explanation",
+              "objects": [],
+              "relation": "explanation",
+              "conditions": [
+                "5.20 and"
+              ],
+              "origin": "verbatim_question_structure_v5",
+              "request_span": {
+                "coordinate_space": "requirement_source_text",
+                "start": 169,
+                "end": 276
+              },
+              "presentation_request_ids": [],
+              "lexical_request": "what must be true of the sodium pathway and the transported substance for this secondary transport to occur",
+              "term_groups": [
+                [
+                  "must"
+                ],
+                [
+                  "occur"
+                ],
+                [
+                  "pathway"
+                ],
+                [
+                  "secondary"
+                ],
+                [
+                  "sodium"
+                ],
+                [
+                  "substance"
+                ],
+                [
+                  "transport"
+                ],
+                [
+                  "transported"
+                ],
+                [
+                  "true"
+                ]
+              ]
+            }
+          ],
+          "display_focus_terms": [
+            "5.20",
+            "adjacent",
+            "against",
+            "co",
+            "concentration",
+            "driven",
+            "energy",
+            "figure",
+            "glucose",
+            "gradient",
+            "move",
+            "must",
+            "occur",
+            "pathway",
+            "secondary",
+            "sodium",
+            "substance",
+            "supplie",
+            "transport",
+            "transported",
+            "true",
+            "using"
+          ],
+          "expected_learner_reply": {
+            "kind": "explanation",
+            "instruction": "A follow-up question if the learner needs more explanation."
+          },
+          "previously_exposed_fragment_ids": [],
+          "exposure_snapshot_hash": "3c6621ce9748392c269682e2a4b6e6c921f50734574f08a6e87de1949fb42b45",
+          "previous_delivered_turn_count": 0,
+          "previous_disclosure_event_count": 0,
+          "provider_calls": 0,
+          "mastery_inference": null,
+          "human_rating": null,
+          "observed_attempts": [],
+          "last_attempt_evaluation": null,
+          "repeated_difficulty": false,
+          "next_reply_requirement": "One actionable comparison, application or explanation; do not disclose its answer then ask for verbatim repetition.",
+          "planning_source": "recorded_progress_and_model_checked_attempts",
+          "action_selection_reason": "previous_progress_rule",
+          "exact_given_guard": false
+        },
+        "evidence_count": 17,
+        "generation_context_policy": "literal_coverage_complementary_context_candidate_v1",
+        "source_block_policy": "raw_corroborated_prose_context_candidate_v1"
+      },
+      "generation_policy": {
+        "version": "generation_controls_v10",
+        "arm": "D",
+        "content_plan": true,
+        "display_selection": true,
+        "coverage_version": "context_coverage_v3",
+        "max_targeted_retrievals": 1,
+        "targeted_candidate_limit": 10,
+        "provider_planning_calls": 0,
+        "teaching_plan_version": "progress_action_plan_v10"
+      },
+      "original_native_failure": {
+        "request_id": "ac5c8bce-078c-49c4-9b4c-2d01d7078874",
+        "job_id": "b3d9d2b3-6a3a-4566-8f16-7173c0c6d75d",
+        "answer_id": null,
+        "job_state": "failed",
+        "error": {
+          "code": "SEMANTIC_CHECK_FAILED",
+          "message": "The proposed answer did not pass its required support or teaching checks",
+          "details": {
+            "revision": 0,
+            "publication_block": {
+              "version": "semantic_publication_block_v1",
+              "stop_reason": "insufficient_calls_for_repair_and_recheck",
+              "remaining_provider_calls": 0,
+              "required_calls_for_repair_and_recheck": 2,
+              "checker_contract_repair_calls": 0,
+              "checker_reported_body_ok": false,
+              "checker_reported_non_supported_factual_claims": 3,
+              "failed_checker_gate_names": [
+                "body_ok"
+              ],
+              "checker_reported_coverage": "full",
+              "requirement_issue_codes": [],
+              "structural_issue_codes": []
+            }
+          }
+        },
+        "request_budget": {
+          "consumed_calls": 2,
+          "active_seconds": 28.62373219999995,
+          "format_repairs": 0,
+          "transient_retries": 0,
+          "max_calls": 2,
+          "max_active_seconds": 180
+        }
+      },
+      "semantics_measurement": false,
+      "original_outcome": "FAIL",
+      "original_generation_content_sha256": "555110f6294cf654e8923635f3b2d7591b1699f1ab39592607d358031f7a2b7f",
+      "original_joint_check_content_sha256": "5fa18de8cf4c47237898845f4f6ebb26b7850f4e1563fd26142cf7a1ce2932e9",
+      "original_checker_packet_transport_sha256": "c3666d5768562d3a40090818d8219ca21ca9a5bc4f9e839789691335544675ac"
+    }
+  ],
+  "annotations": {
+    "version": "phase161_exact160_offline_fixture_v1",
+    "semantic_labels": "Independent human-readable expected labels only; no deterministic entailment or publication override.",
+    "originals_relabelled": false,
+    "cases": [
+      {
+        "case_id": "Q01",
+        "supported_or_false_negative_claim_indexes": [
+          0
+        ],
+        "genuine_gap_claim_indexes": [
+          1,
+          3
+        ],
+        "partial_actor_antecedent_claim_indexes": [
+          2
+        ],
+        "details": {
+          "0": "F007 explicit ATP-energy antecedent, pump identity, against-gradient direction and 3:2; checker causal rejection appears overstrict.",
+          "1": "Original whole sodium mechanism sentence has no own citation; cannot borrow ev007 from next assertion.",
+          "2": "Selected local potassium sequence is supported, but named pump and then relation need own antecedent proof.",
+          "3": "Original ev005 own allowlist excludes F048, which belongs to ev006; pump-specific ATP-to-gradient relation also needs own selected identity proof."
+        }
+      },
+      {
+        "case_id": "Q02",
+        "supported_or_false_negative_claim_indexes": [
+          0,
+          1,
+          3
+        ],
+        "genuine_gap_claim_indexes": [
+          2
+        ],
+        "details": {
+          "0": "Own ev001 F001 open sodium downhill + F002 causal/attachment bridge + F003 glucose + F007 stored gradient energy support whole causal union; inferred connection must remain explicit.",
+          "1": "Own F001-F003 preserve open pathway, glucose actor and same-protein attachment condition.",
+          "2": "Own ev003 F019 generic symporter definition does not identify actual sodium/glucose pair or their direction; other assertion proof cannot be borrowed.",
+          "3": "Own ev001 union supports short answer with open and attachment conditions, with F002 bridge."
+        }
+      }
+    ]
+  },
+  "original_artifact_pins": [
+    {
+      "original_directory": "browser160r2",
+      "original_filename": "01-generation-raw160.json",
+      "fixture_filename": "Q01-generation-raw160.json",
+      "bytes": 1855,
+      "sha256": "1ae330813e1f0b559184252f1d45ef5dc1f665a920ba3d2edb2d48312d6907c1"
+    },
+    {
+      "original_directory": "browser160r2",
+      "original_filename": "01-generation-wire160.json",
+      "fixture_filename": "Q01-generation-wire160.json",
+      "bytes": 42419,
+      "sha256": "2e3d4bab954505e0f7b6c99b154cc28b0d43ed5fc6c3cd0c3206c64338f13108"
+    },
+    {
+      "original_directory": "browser160r2",
+      "original_filename": "02-joint_check-raw160.json",
+      "fixture_filename": "Q01-joint_check-raw160.json",
+      "bytes": 8158,
+      "sha256": "fd86b3e20c7b45a52d0da295f9a4d8c1e28f69589d3ea93d5e0ff2ec930ab728"
+    },
+    {
+      "original_directory": "browser160r2",
+      "original_filename": "02-joint_check-wire160.json",
+      "fixture_filename": "Q01-joint_check-wire160.json",
+      "bytes": 52869,
+      "sha256": "7029a3282eff7c37b3d140257a19ca906fd6f4a84d134da016c2f9be20aedf3f"
+    },
+    {
+      "original_directory": "browser160r2",
+      "original_filename": "prepared-context-D160-Q01160.json",
+      "fixture_filename": null,
+      "bytes": 10503,
+      "sha256": "4aa52bb19c1357fdc21ee06e4ecc798b3df80decaf16a35b6cd06bed675be9e4"
+    },
+    {
+      "original_directory": "browser160r2",
+      "original_filename": "native-result-D160-Q01160.json",
+      "fixture_filename": null,
+      "bytes": 475027,
+      "sha256": "a8a465bac8607d02e209e798f59554fdc32a6ee0edcea8c9ce02223d3445b32a"
+    },
+    {
+      "original_directory": "browser160r3",
+      "original_filename": "03-generation-raw160.json",
+      "fixture_filename": "Q02-generation-raw160.json",
+      "bytes": 1773,
+      "sha256": "cdb05fd04060fb8d927bf04e4cb9cf2e039d1a47a3c589d955b0583d2f025749"
+    },
+    {
+      "original_directory": "browser160r3",
+      "original_filename": "03-generation-wire160.json",
+      "fixture_filename": "Q02-generation-wire160.json",
+      "bytes": 42766,
+      "sha256": "eb1a114b94ff3569a18e320d5722dee2f0616520cfdadaae8318a888cd9829a1"
+    },
+    {
+      "original_directory": "browser160r3",
+      "original_filename": "04-joint_check-raw160.json",
+      "fixture_filename": "Q02-joint_check-raw160.json",
+      "bytes": 11120,
+      "sha256": "ad32d15a7439eb8c8cec88395ba65c6555aea31eda100feceba126328502190e"
+    },
+    {
+      "original_directory": "browser160r3",
+      "original_filename": "04-joint_check-wire160.json",
+      "fixture_filename": "Q02-joint_check-wire160.json",
+      "bytes": 52070,
+      "sha256": "39af952b0b36de696d9905448ea0dbaae68c9285731907b173b570406ecb16d7"
+    },
+    {
+      "original_directory": "browser160r3",
+      "original_filename": "prepared-context-D160-Q02160.json",
+      "fixture_filename": null,
+      "bytes": 10368,
+      "sha256": "46042db475ebd75a04fb645121d36fa92d88c20a660fb2e00f97512ddfa1ee4b"
+    },
+    {
+      "original_directory": "browser160r3",
+      "original_filename": "native-result-D160-Q02160.json",
+      "fixture_filename": null,
+      "bytes": 486638,
+      "sha256": "3b50cf346ff7bf55eddfe8dd5ab8883469b90b9fc7feb4afbb1996d474dbe1e8"
+    }
+  ],
+  "portable_fixture_note": "This derivative retains exact captured draft/checker content and selected evidence/decoded packet. Full original raw/wire bytes remain in separately pinned phase161 scratch evidence; runtime tests need only this relative fixture file. Source-unit/block metadata for offline service replay is explicitly reconstructed from exact selected passages, not a new PDF/database authority."
+}
