@@ -32,10 +32,7 @@ ANSWER_TABLES = "3ae1ba39fe7f"
 
 @pytest.fixture
 def migration_database(monkeypatch):
-    base = os.environ.get(
-        "TEST_DATABASE_SERVER",
-        "postgresql+psycopg://learning:local-dev-database-only@127.0.0.1:55432",
-    ).rstrip("/")
+    base = os.environ["TEST_DATABASE_SERVER"].rstrip("/")
     # Only a generated disposable name can enter these identifier statements.
     name = "cs30_migration_" + uuid4().hex
     assert name.startswith("cs30_migration_") and name.replace("_", "").isalnum()

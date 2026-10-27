@@ -175,10 +175,7 @@ def empty_import_settings(postgres_url, tmp_path, monkeypatch):
 
     fixture_url = make_url(postgres_url)
     configured_server = make_url(
-        os.environ.get(
-            "TEST_DATABASE_SERVER",
-            "postgresql+psycopg://learning:local-dev-database-only@127.0.0.1:55432",
-        )
+        os.environ["TEST_DATABASE_SERVER"]
     )
     assert fixture_url.host in {"127.0.0.1", "localhost", "::1"}
     assert fixture_url.set(database="") == configured_server.set(database="")
