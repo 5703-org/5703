@@ -15,6 +15,9 @@ from scripts.release.common import file_hash
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--path", type=Path, required=True)
+    parser.add_argument(
+        "--owner-id", help="Existing active administrator; required for production import"
+    )
     args = parser.parse_args()
     settings = Settings()
     engine = create_engine(settings.database_url)
@@ -32,7 +35,7 @@ def main():
         )
     engine.dispose()
     if not count:
-        print(json.dumps(import_bundle(args.path, settings)))
+        print(json.dumps(import_bundle(args.path, settings, owner_id=args.owner_id)))
         return
     manifest = json.loads((args.path / "MANIFEST.json").read_text("utf-8"))
     if active != manifest["active_release_id"] or vectors != manifest["active_vector_count"]:
