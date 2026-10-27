@@ -91,7 +91,7 @@ def pointer(scope=ANSWER_AND_CHECKER):
 def test_activation_persists_exact_role_grants_atomically(monkeypatch, scope, roles):
     db = FakeDB(pointer())
     actor = SimpleNamespace(id="actor", workspace_id="workspace")
-    row = SimpleNamespace(id="answer", workspace_id="workspace")
+    row = SimpleNamespace(id="answer", workspace_id="workspace", public_config={"provider": "openai"})
     calls, secrets = [], []
     monkeypatch.setattr(service, "owned", lambda *args, **kwargs: row)
     monkeypatch.setattr(service, "_active_locked", lambda *args: db.pointer)
@@ -163,7 +163,7 @@ def test_answer_only_rejects_contradictory_or_unknown_role_selection(monkeypatch
 
 def test_answer_only_does_not_bypass_answer_proof_or_active_version(monkeypatch):
     db = FakeDB(pointer())
-    row = SimpleNamespace(id="answer")
+    row = SimpleNamespace(id="answer", public_config={"provider": "openai"})
     monkeypatch.setattr(service, "owned", lambda *args, **kwargs: row)
     monkeypatch.setattr(service, "_active_locked", lambda *args: db.pointer)
     monkeypatch.setattr(service, "resolve_secret", lambda *args: None)
@@ -263,15 +263,20 @@ def test_fresh_chat_off_continues_but_checked_or_hint_requests_reject_before_que
         answering, "select_context", lambda *args, **kwargs: SimpleNamespace(model_dump=lambda: {})
     )
     monkeypatch.setattr(answering, "persist_summary", lambda *args: None)
-    monkeypatch.setattr(
-        tasks,
-        "resolve_task",
-        lambda *args: {
+
+    def resolve_fixture(*args, current_reference_policy=None, ordinal_reference_policy=None):
+        from conversation.reference_ownership import POLICY
+        from conversation.ordinal_reference import POLICY as ORDINAL_POLICY
+
+        assert current_reference_policy == POLICY
+        assert ordinal_reference_policy == ORDINAL_POLICY
+        return {
             "task_id": "task",
             "teaching_mode": teaching_mode,
             "turn_role": "user_question",
-        },
-    )
+        }
+
+    monkeypatch.setattr(tasks, "resolve_task", resolve_fixture)
     monkeypatch.setattr(tasks, "recent_attempt_feedback", lambda *args: [])
 
     def fast(*args, **kwargs):

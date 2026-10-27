@@ -56,6 +56,15 @@ def test_saved_policy_drives_native_worker_and_retrieval(
     )
     scope.db.commit()
     request = scope.db.get(AnswerRequest, receipt["request_id"])
+    # This test exercises an already saved pre-ownership-policy command.
+    # New admissions have separate native tests; removing this new field here
+    # recreates the immutable historical command shape, not product behavior.
+    if policy == "anchored_reference_v25":
+        legacy_command = deepcopy(request.command)
+        legacy_command.pop("current_reference_policy")
+        legacy_command.pop("targeted_query_encoding_policy")
+        request.command = legacy_command
+        scope.db.commit()
     frozen = deepcopy(request.command)
     assert frozen["preparation_version"] == "conversation_preparer_" + policy.rsplit("_", 1)[1]
     assert frozen["requirements_version"] == "question_requirements_v8"

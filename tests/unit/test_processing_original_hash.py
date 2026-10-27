@@ -95,7 +95,9 @@ def test_corrupted_original_is_rejected_before_parser_without_whole_file_read(tm
         patch.object(service, "_file_sha256", wraps=service._file_sha256) as stream_hash,
     ):
         with pytest.raises(AppError) as error:
-            service.execute_processing(db, SimpleNamespace(storage_root=str(tmp_path)), run.id)
+            service.execute_processing(
+                db, SimpleNamespace(storage_root=str(tmp_path), env="test", model_mode="mock"), run.id
+            )
 
     assert error.value.code == "SOURCE_UNAVAILABLE"
     stream_hash.assert_called_once_with(original.resolve())

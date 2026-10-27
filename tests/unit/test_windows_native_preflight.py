@@ -192,7 +192,8 @@ def test_startup_and_install_consumers_fail_before_database_or_services():
         < startup.index("from retrieval.runtime import resolve_device")
         < startup.index("-m app.cli migrate")
     )
-    assert native < startup.index("if ($UseExistingDatabase -and")
+    assert native < startup.index("if (-not $UseExistingDatabase)")
+    assert native < startup.index("docker compose --env-file")
     assert (
         "if ($LASTEXITCODE -ne 0) { throw 'Native dependency preflight failed" in startup[native:]
     )

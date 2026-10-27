@@ -7,7 +7,7 @@ from app.modules.answering import service
 from app.modules.answering.models import AnswerRequest, Job
 from app.modules.knowledge.models import ActiveCorpus, CorpusRelease
 from contracts.models import ChatMessageCreate
-from conversation import current_reference as cr
+from conversation import current_reference as cr, reference_ownership
 from test_retry_hint_capability209 import no_external_io  # noqa: F401
 from test_retry_hint_capability209 import scope as scope_fixture
 
@@ -24,7 +24,7 @@ ACID = "Using Chemistry 2e Table 14.2 and its two numbered notes, compare the pH
 @pytest.mark.parametrize(
     "question,enabled,expected",
     [
-        (WATER, False, False),
+        (WATER, False, True),
         (WATER, True, True),
         (ACID, False, True),
         (ACID, True, True),
@@ -61,7 +61,9 @@ def test_saved_policy_controls_original_question(scope, monkeypatch, question, e
     scope.db.commit()
     req = scope.db.get(AnswerRequest, receipt["request_id"])
     frozen = deepcopy(req.command)
-    assert frozen.get("current_reference_policy") == (cr.POLICY if enabled else None)
+    assert frozen.get("current_reference_policy") == (
+        cr.POLICY if enabled else reference_ownership.POLICY
+    )
     job = scope.db.scalar(select(Job).where(Job.request_id == req.id))
     job.state = "running"
     job.execution_token = "zero-network"
@@ -100,7 +102,10 @@ def test_default_off(scope):
 
 @pytest.mark.parametrize(
     "question",
-    [WATER, "Give both voltages with their units. Pair each voltage with its frequency."],
+    [
+        WATER,
+        "Give both voltages with their units. Pair each voltage with its frequency.",
+    ],
 )
 def test_current_question_does_not_continue_unrelated_task(scope, question):
     from app.modules.answering.models import Message

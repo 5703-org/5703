@@ -1,4 +1,8 @@
-"""Portable credential persistence and native Windows launcher boundaries."""
+"""Historical development credential persistence; never the formal launcher.
+
+The original helper remains in excluded development support. Formal startup
+must not provision credentials and has separate no-provisioning assertions.
+"""
 
 from __future__ import annotations
 
@@ -47,7 +51,7 @@ def local_accounts(tmp_path):
         ],
     )
     try:
-        yield engine, SimpleNamespace(database_url=url, storage_root=tmp_path / "storage")
+        yield engine, SimpleNamespace(env="test", database_url=url, storage_root=tmp_path / "storage")
     finally:
         engine.dispose()
 
@@ -132,7 +136,7 @@ def test_corpus_import_requires_active_admin_without_promoting_existing_account(
             admin.role_id = db.scalars(select(Role.id).where(Role.name == "student")).one()
         db.commit()
         before = (admin.hashed_password, admin.status, admin.role_id)
-        with pytest.raises(ValueError, match="active local administrator"):
+        with pytest.raises(ValueError, match="^The corpus owner must be an existing active administrator$"):
             import_bundle(bundle, settings)
         db.expire_all()
         assert (admin.hashed_password, admin.status, admin.role_id) == before
@@ -205,7 +209,7 @@ def run_powershell(runner, credential, mode):
             "Bypass",
             "-File",
             str(runner),
-            str(ROOT / "scripts/release/start_local.ps1"),
+            str(ROOT / "development_support/legacy_start_local.ps1"),
             str(credential),
             mode,
         ],

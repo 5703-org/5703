@@ -306,7 +306,13 @@ def frozen_submission_command(current_settings):
     )
     from app.modules.answering import service as submission
 
+    assert current_settings.chat_query_preparation_policy == "anchored_reference_v25"
+    assert not current_settings.experimental_current_reference_enabled
     ns = {
+        "current_reference": submission.current_reference,
+        "reference_ownership": submission.reference_ownership,
+        "admission_reference_policy": submission.reference_ownership.POLICY,
+        "reference_options": {"current_reference_policy": submission.reference_ownership.POLICY},
         "assertion_fields": {},
         "assertion_checker_submission_policy": assertion_checker_submission_policy,
         "checker_claim_policy": None,

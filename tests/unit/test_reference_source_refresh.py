@@ -38,7 +38,10 @@ def source_fixture(tmp_path):
     engine = create_engine("sqlite:///" + str(tmp_path / "source-refresh.sqlite"))
     try:
         Base.metadata.create_all(engine)
-        settings = SimpleNamespace(storage_root=str(tmp_path / "storage"), max_upload_bytes=8192)
+        settings = SimpleNamespace(
+            storage_root=str(tmp_path / "storage"), max_upload_bytes=8192,
+            env="test", model_mode="mock",
+        )
         with Session(engine, expire_on_commit=False) as db:
             workspace = Workspace(name="Source refresh fixture", slug="source-refresh")
             role = Role(name="admin")
