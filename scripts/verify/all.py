@@ -26,6 +26,7 @@ def source_snapshot():
         "conversation",
         "evaluation",
         "generation",
+        "development_support",
         "personalisation",
         "pipelines",
         "retrieval",
