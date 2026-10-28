@@ -124,8 +124,11 @@ def process(
     body: ProcessInput,
     db: Session = Depends(get_db),
     actor: User = Depends(require_roles("admin")),
+    settings: Settings = Depends(get_settings),
 ):
-    run, job = service.queue_process(db, document_id, actor.id, body.configuration, body.exclusions)
+    run, job = service.queue_process(
+        db, document_id, actor.id, body.configuration, body.exclusions, settings=settings
+    )
     db.commit()
     return ok({"processing_id": run.id, "job_id": job.id if job else None})
 
@@ -197,10 +200,13 @@ def releases(db: Session = Depends(get_db), actor: User = Depends(require_roles(
 
 @router.post("/corpus/releases", status_code=202, response_model=Envelope[dict])
 def create_release(
-    body: ReleaseInput, db: Session = Depends(get_db), actor: User = Depends(require_roles("admin"))
+    body: ReleaseInput,
+    db: Session = Depends(get_db),
+    actor: User = Depends(require_roles("admin")),
+    settings: Settings = Depends(get_settings),
 ):
     release, job = service.queue_release(
-        db, actor.id, body.processing_run_ids, body.configuration_id, body.name
+        db, actor.id, body.processing_run_ids, body.configuration_id, body.name, settings=settings
     )
     db.commit()
     return ok({"release_id": release.id, "job_id": job.id})
@@ -209,9 +215,12 @@ def create_release(
 @router.post("/corpus/releases/{release_id}/activate", response_model=Envelope[dict])
 @router.post("/corpus/releases/{release_id}/rollback", response_model=Envelope[dict])
 def activate(
-    release_id: str, db: Session = Depends(get_db), actor: User = Depends(require_roles("admin"))
+    release_id: str,
+    db: Session = Depends(get_db),
+    actor: User = Depends(require_roles("admin")),
+    settings: Settings = Depends(get_settings),
 ):
-    release = service.activate(db, release_id)
+    release = service.activate(db, release_id, settings=settings)
     db.commit()
     return ok(serialize(release))
 
@@ -228,8 +237,11 @@ def configs(db: Session = Depends(get_db), actor: User = Depends(require_roles("
 
 @router.post("/configurations", status_code=201, response_model=Envelope[dict])
 def create_config(
-    body: ConfigInput, db: Session = Depends(get_db), actor: User = Depends(require_roles("admin"))
+    body: ConfigInput,
+    db: Session = Depends(get_db),
+    actor: User = Depends(require_roles("admin")),
+    settings: Settings = Depends(get_settings),
 ):
-    value = service.config_create(db, body.kind, body.name, body.values)
+    value = service.config_create(db, body.kind, body.name, body.values, settings=settings)
     db.commit()
     return ok(serialize(value))

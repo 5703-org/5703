@@ -31,7 +31,7 @@ def chunks(
         raise ValueError(
             "Require integer 0 <= overlap < target <= cap <= 448 and a positive model window"
         )
-    if strategy not in ("structure", "fixed"):
+    if strategy not in ("structure", "fixed", "structure_atomic"):
         raise ValueError("Unknown chunk strategy")
     tokenize = tokenizer or _fixture_tokens
 
@@ -39,6 +39,25 @@ def chunks(
         result = tokenize(value)
         return result if isinstance(result, int) else len(result)
 
+    # Only an explicit new strategy may use cap rather than the soft target
+    # to retain an entire table-bearing source unit. No row or header is inferred.
+    protected_units = set()
+    if strategy == "structure_atomic":
+        for unit in units:
+            if unit["quality"] != "ready" or not unit["cleaned_text"].strip():
+                continue
+            raw = unit.get("raw_text", "")
+            text = unit["cleaned_text"]
+            numbered_table = isinstance(raw, str) and re.search(
+                r"(?im)^\s*table\s+\d+(?:[.\-]\d+)*\b", raw
+            )
+            explicit_table = unit.get("block_kind") == "table"
+            if (
+                (numbered_table or explicit_table)
+                and count(text) <= cap
+                and count(prefix + unit["section"] + "\n" + text) <= model_window
+            ):
+                protected_units.add(id(unit))
     result, groups, previous_sequence = [], [], None
     for unit in units:
         if unit["quality"] != "ready":
@@ -52,8 +71,10 @@ def chunks(
             and unit.get("sequence", previous_sequence + 1) == previous_sequence + 1
         )
         if (
-            strategy == "structure"
+            strategy in ("structure", "structure_atomic")
+            and id(unit) not in protected_units
             and groups
+            and id(groups[-1][0]) not in protected_units
             and adjacent
             and groups[-1][0]["section"] == unit["section"]
         ):
@@ -62,6 +83,7 @@ def chunks(
             groups.append([unit])
         previous_sequence = unit.get("sequence", (previous_sequence or 0) + 1)
     for group in groups:
+        group_target = cap if id(group[0]) in protected_units else target
         text, source_spans = "", []
         for index, unit in enumerate(group):
             if index:
@@ -82,17 +104,20 @@ def chunks(
                 cursor += 1
             if cursor == len(text):
                 break
-            low, high, fitted = cursor + 1, min(len(text), cursor + target * 8), cursor
+            low, high, fitted = cursor + 1, min(len(text), cursor + group_target * 8), cursor
             while (
                 high < len(text)
-                and count(text[cursor:high]) <= target
+                and count(text[cursor:high]) <= group_target
                 and count(prefix + section + "\n" + text[cursor:high]) <= model_window
             ):
                 high = min(len(text), cursor + (high - cursor) * 2)
             while low <= high:
                 end = (low + high) // 2
                 body = text[cursor:end]
-                if count(body) <= target and count(prefix + section + "\n" + body) <= model_window:
+                if (
+                    count(body) <= group_target
+                    and count(prefix + section + "\n" + body) <= model_window
+                ):
                     fitted, low = end, end + 1
                 else:
                     high = end - 1
@@ -102,7 +127,7 @@ def chunks(
             if end < len(text):
                 paragraph_end = text.rfind("\n\n", cursor, end)
                 if (
-                    strategy == "structure"
+                    strategy in ("structure", "structure_atomic")
                     and paragraph_end > cursor
                     and count(text[cursor:paragraph_end]) >= max(1, target // 2)
                 ):

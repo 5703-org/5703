@@ -93,13 +93,21 @@ def corpus_config(values=None):
     if (
         not 1 <= cfg["dimension"] <= 4096
         or not 1 <= cfg["top_k"] <= 50
-        or cfg["strategy"] not in ("structure", "fixed")
+        or cfg["strategy"] not in ("structure", "fixed", "structure_atomic")
         or cfg["retriever"] not in ("R0", "R1", "R2", "R3")
     ):
         raise AppError(
             "VALIDATION_FAILED",
             detail="Invalid corpus dimension, retrieval depth, strategy or variant.",
         )
+    if cfg["strategy"] == "structure_atomic":
+        revision = "token_spans_atomic_v3"
+        if "chunker_revision" in values and values["chunker_revision"] != revision:
+            raise AppError(
+                "VALIDATION_FAILED",
+                detail="The structure_atomic strategy requires token_spans_atomic_v3.",
+            )
+        cfg["chunker_revision"] = revision
     if cfg["embedding_provider"] not in ("mock", "e5"):
         raise AppError("VALIDATION_FAILED", detail="Unsupported embedding provider.")
     revision = cfg.get("embedding_revision")
@@ -130,10 +138,24 @@ def embedding_signature(cfg):
     return digest(values)
 
 
-def config_create(db, kind, name, values):
+def require_runtime_corpus(settings, values):
+    """Reject authored vectors before queueing or activation; keep history readable."""
+    if settings is None:
+        return
+    from app.modules.model_settings.service import simulation_allowed
+
+    if values.get("embedding_provider", "mock") == "mock" and not simulation_allowed(settings):
+        raise AppError(
+            "VALIDATION_FAILED",
+            detail="This runtime requires an explicit real E5 corpus configuration; development vectors cannot be built or activated.",
+        )
+
+
+def config_create(db, kind, name, values, *, settings=None):
     _secret_free(values)
     if kind in ("retrieval", "corpus", "embedding", "chunking"):
         values = corpus_config(values)
+        require_runtime_corpus(settings, values)
     h = digest({"kind": kind, "values": values})
     old = db.scalar(select(Configuration).where(Configuration.content_hash == h))
     if old:
@@ -328,7 +350,9 @@ def _register_staged(
     return document, version, False
 
 
-def queue_process(db, document_id, actor_id, configuration=None, exclusions=None):
+def queue_process(db, document_id, actor_id, configuration=None, exclusions=None, *, settings=None):
+    configuration = {**corpus_config(configuration), "exclusions": exclusions or {}}
+    require_runtime_corpus(settings, configuration)
     doc = workspace_document(db, actor_id, document_id, lock=True)
     if not doc or doc.revoked or not doc.active:
         raise AppError("NOT_FOUND")
@@ -337,7 +361,6 @@ def queue_process(db, document_id, actor_id, configuration=None, exclusions=None
         .where(DocumentVersion.document_id == document_id)
         .order_by(DocumentVersion.created_at.desc())
     )
-    configuration = {**corpus_config(configuration), "exclusions": exclusions or {}}
     h = digest(configuration)
     existing = db.scalar(
         select(ProcessingRun).where(
@@ -485,6 +508,7 @@ def execute_processing(db, settings, processing_id, execution=None, parser_polic
             _execution_fence(db, execution, "process", processing_id, complete=True)
             db.commit()
             return
+        require_runtime_corpus(settings, run.configuration)
         version = db.get(DocumentVersion, run.document_version_id)
         _processing_stage(db, execution, processing_id, "validating")
         root = Path(settings.storage_root).resolve()
@@ -798,7 +822,11 @@ def processing_diff(db, before_id, after_id):
     }
 
 
-def queue_release(db, owner_id, processing_run_ids, configuration_id=None, name="Corpus release"):
+def queue_release(
+    db, owner_id, processing_run_ids, configuration_id=None, name="Corpus release", *, settings=None
+):
+    if not configuration_id:
+        require_runtime_corpus(settings, DEFAULT_CONFIG)
     if not processing_run_ids or len(set(processing_run_ids)) != len(processing_run_ids):
         raise AppError("VALIDATION_FAILED", detail="Select distinct ready processing runs.")
     runs = [workspace_processing(db, owner_id, id) for id in processing_run_ids]
@@ -808,6 +836,7 @@ def queue_release(db, owner_id, processing_run_ids, configuration_id=None, name=
     if configuration_id and not config:
         raise AppError("NOT_FOUND")
     cfg = corpus_config(config.values if config else {})
+    require_runtime_corpus(settings, cfg)
     if any(
         not db.get(Document, db.get(DocumentVersion, r.document_version_id).document_id).active
         or db.get(Document, db.get(DocumentVersion, r.document_version_id).document_id).revoked
@@ -829,7 +858,7 @@ def queue_release(db, owner_id, processing_run_ids, configuration_id=None, name=
     return release, job
 
 
-def execute_release(db, release_id, execution=None):
+def execute_release(db, release_id, execution=None, *, settings=None):
     try:
         _execution_fence(db, execution, "release", release_id, "embedding")
         release = db.get(CorpusRelease, release_id)
@@ -841,6 +870,7 @@ def execute_release(db, release_id, execution=None):
             db.commit()
             return
         cfg = release.configuration
+        require_runtime_corpus(settings, cfg)
         release.state = "building"
         release.error = None
         db.commit()
@@ -1152,7 +1182,11 @@ def _release_rows(db, release, require_active=False, *, provenance=None, checkpo
     return rows
 
 
-def activate(db, release_id):
+def activate(db, release_id, *, settings=None):
+    if settings is not None:
+        selected = db.get(CorpusRelease, release_id)
+        if selected:
+            require_runtime_corpus(settings, selected.configuration)
     if db.bind.dialect.name == "postgresql":
         lock_source_maintenance(db)
     pointer = db.scalar(select(ActiveCorpus).where(ActiveCorpus.id == 1).with_for_update())
@@ -1490,7 +1524,10 @@ def retrieve(
         if variant != "R1" and visible_rows:
             at = time.perf_counter()
             vector, hit = encode_query(
-                cfg, query, runtime_device=runtime_device, scope=cache_scope,
+                cfg,
+                query,
+                runtime_device=runtime_device,
+                scope=cache_scope,
                 enabled=query_vector_cache,
             )
             timings["query_embedding_ms"] = (time.perf_counter() - at) * 1000

@@ -1,0 +1,2095 @@
+[
+  {
+    "path": "backend/app/modules/knowledge/__init__.py",
+    "owner": 1,
+    "declarations": []
+  },
+  {
+    "path": "backend/app/modules/knowledge/access.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "_workspace",
+        "line": 9,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "workspace_document",
+        "line": 16,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "workspace_processing",
+        "line": 30,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "backend/app/modules/knowledge/cache.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "epoch",
+        "line": 33,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "schema_identity",
+        "line": 58,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "ReleaseIndex",
+        "line": 67,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "load",
+        "line": 75,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "validate_hits",
+        "line": 129,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "clear",
+        "line": 147,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "publication_fence",
+        "line": 152,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "backend/app/modules/knowledge/models.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "Document",
+        "line": 21,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "DocumentVersion",
+        "line": 32,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "Configuration",
+        "line": 42,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "ProcessingRun",
+        "line": 50,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "SourceUnit",
+        "line": 61,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "Chunk",
+        "line": 73,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "CorpusRelease",
+        "line": 85,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "ReleaseChunk",
+        "line": 94,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "ActiveCorpus",
+        "line": 103,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "RetrievalEpoch",
+        "line": 109,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "VisualRegion",
+        "line": 115,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "VisualRegionReview",
+        "line": 132,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_immutable_visual",
+        "line": 145,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "backend/app/modules/knowledge/router.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "ProcessInput",
+        "line": 23,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "ReleaseInput",
+        "line": 28,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "ConfigInput",
+        "line": 34,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "serialize",
+        "line": 40,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "document_out",
+        "line": 45,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "documents",
+        "line": 79,
+        "kind": "FunctionDef",
+        "route_decorators": [
+          "router.get('/documents', response_model=Envelope[list[dict]])"
+        ]
+      },
+      {
+        "name": "upload",
+        "line": 94,
+        "kind": "FunctionDef",
+        "route_decorators": [
+          "router.post('/documents', status_code=201, response_model=Envelope[dict])"
+        ]
+      },
+      {
+        "name": "document",
+        "line": 114,
+        "kind": "FunctionDef",
+        "route_decorators": [
+          "router.get('/documents/{document_id}', response_model=Envelope[dict])"
+        ]
+      },
+      {
+        "name": "process",
+        "line": 122,
+        "kind": "FunctionDef",
+        "route_decorators": [
+          "router.post('/documents/{document_id}/process', status_code=202, response_model=Envelope[dict])"
+        ]
+      },
+      {
+        "name": "processing_quality",
+        "line": 137,
+        "kind": "FunctionDef",
+        "route_decorators": [
+          "router.get('/processing-runs/{processing_id}/quality', response_model=Envelope[dict])"
+        ]
+      },
+      {
+        "name": "processing_diff",
+        "line": 145,
+        "kind": "FunctionDef",
+        "route_decorators": [
+          "router.get('/processing-runs/{before_id}/diff/{after_id}', response_model=Envelope[dict])"
+        ]
+      },
+      {
+        "name": "change_visibility",
+        "line": 156,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "deactivate",
+        "line": 171,
+        "kind": "FunctionDef",
+        "route_decorators": [
+          "router.post('/documents/{document_id}/deactivate', response_model=Envelope[dict])"
+        ]
+      },
+      {
+        "name": "restore",
+        "line": 178,
+        "kind": "FunctionDef",
+        "route_decorators": [
+          "router.post('/documents/{document_id}/restore', response_model=Envelope[dict])"
+        ]
+      },
+      {
+        "name": "revoke",
+        "line": 185,
+        "kind": "FunctionDef",
+        "route_decorators": [
+          "router.post('/documents/{document_id}/revoke', response_model=Envelope[dict])"
+        ]
+      },
+      {
+        "name": "releases",
+        "line": 192,
+        "kind": "FunctionDef",
+        "route_decorators": [
+          "router.get('/corpus/releases', response_model=Envelope[list[dict]])"
+        ]
+      },
+      {
+        "name": "create_release",
+        "line": 202,
+        "kind": "FunctionDef",
+        "route_decorators": [
+          "router.post('/corpus/releases', status_code=202, response_model=Envelope[dict])"
+        ]
+      },
+      {
+        "name": "activate",
+        "line": 217,
+        "kind": "FunctionDef",
+        "route_decorators": [
+          "router.post('/corpus/releases/{release_id}/activate', response_model=Envelope[dict])",
+          "router.post('/corpus/releases/{release_id}/rollback', response_model=Envelope[dict])"
+        ]
+      },
+      {
+        "name": "configs",
+        "line": 229,
+        "kind": "FunctionDef",
+        "route_decorators": [
+          "router.get('/configurations', response_model=Envelope[list[dict]])"
+        ]
+      },
+      {
+        "name": "create_config",
+        "line": 239,
+        "kind": "FunctionDef",
+        "route_decorators": [
+          "router.post('/configurations', status_code=201, response_model=Envelope[dict])"
+        ]
+      }
+    ]
+  },
+  {
+    "path": "backend/app/modules/knowledge/service.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "digest",
+        "line": 53,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_secret_free",
+        "line": 61,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "corpus_config",
+        "line": 78,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "embedding_signature",
+        "line": 124,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "require_runtime_corpus",
+        "line": 141,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "config_create",
+        "line": 154,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "ingest",
+        "line": 171,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_validate_upload_fields",
+        "line": 196,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_file_sha256",
+        "line": 213,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "ingest_stream",
+        "line": 221,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_register_staged",
+        "line": 296,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "queue_process",
+        "line": 353,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "CorpusExecutionCancelled",
+        "line": 405,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "LegacyReleaseUnverified",
+        "line": 409,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_execution_fence",
+        "line": 413,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "mark_operation_interrupted",
+        "line": 447,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_processing_stage",
+        "line": 493,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "execute_processing",
+        "line": 501,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "processing_quality",
+        "line": 701,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "processing_diff",
+        "line": 784,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "queue_release",
+        "line": 825,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "execute_release",
+        "line": 861,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_stored_vector",
+        "line": 1015,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_embedding_hash",
+        "line": 1025,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_validate_chunk",
+        "line": 1036,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_release_rows",
+        "line": 1072,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "activate",
+        "line": 1185,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "prewarm_active_retrieval_cache",
+        "line": 1215,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_retrieve_reference",
+        "line": 1298,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_retrieval_row",
+        "line": 1424,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "retrieve",
+        "line": 1452,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "backend/app/modules/knowledge/visual_router.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "VisualReviewInput",
+        "line": 26,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_owned_region",
+        "line": 35,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_latest_review",
+        "line": 50,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_public_record",
+        "line": 59,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "list_visual_regions",
+        "line": 89,
+        "kind": "FunctionDef",
+        "route_decorators": [
+          "router.get('/admin/source-quality/visual-regions')"
+        ]
+      },
+      {
+        "name": "visual_region_detail",
+        "line": 120,
+        "kind": "FunctionDef",
+        "route_decorators": [
+          "router.get('/admin/source-quality/visual-regions/{region_id}')"
+        ]
+      },
+      {
+        "name": "review_visual_region",
+        "line": 129,
+        "kind": "FunctionDef",
+        "route_decorators": [
+          "router.post('/admin/source-quality/visual-regions/{region_id}/reviews', status_code=201)"
+        ]
+      },
+      {
+        "name": "original_pdf_page",
+        "line": 163,
+        "kind": "FunctionDef",
+        "route_decorators": [
+          "router.get('/learning/library/{document_id}/original-page/{page}')"
+        ]
+      },
+      {
+        "name": "visual_region_original_page",
+        "line": 189,
+        "kind": "FunctionDef",
+        "route_decorators": [
+          "router.get('/admin/source-quality/visual-regions/{region_id}/original-page')"
+        ]
+      },
+      {
+        "name": "_render_original",
+        "line": 199,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "pipelines/__init__.py",
+    "owner": 1,
+    "declarations": []
+  },
+  {
+    "path": "pipelines/chunk.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "_fixture_tokens",
+        "line": 8,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "chunks",
+        "line": 13,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "pipelines/clean.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "clean_source_text",
+        "line": 13,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "pipelines/image_transcriptions.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "apply_image_transcriptions",
+        "line": 10,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "pipelines/native_formula_context_v1.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "_exact",
+        "line": 30,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_quality",
+        "line": 37,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_hints",
+        "line": 55,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_native_lines",
+        "line": 69,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_within",
+        "line": 103,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_line_usable",
+        "line": 114,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_adjacent",
+        "line": 125,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "recover_formula_context",
+        "line": 137,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "validate_formula_context",
+        "line": 214,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "validate_formula_context_against_page",
+        "line": 343,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "pipelines/native_tables_v1.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "_cluster",
+        "line": 33,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_inside",
+        "line": 43,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "native_glyphs",
+        "line": 48,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_position_text",
+        "line": 71,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_rules",
+        "line": 101,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "recover_native_grids",
+        "line": 129,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "match_caption_grid",
+        "line": 268,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "continuation_compatible",
+        "line": 286,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "pipelines/native_tables_v2.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "_CaptionBoundedPage",
+        "line": 34,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "recover_caption_bounded_grid",
+        "line": 53,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_text",
+        "line": 71,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_styles",
+        "line": 75,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "recover_unruled_single_column",
+        "line": 84,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "pipelines/parse.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "parse",
+        "line": 15,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "pipelines/parse_isolated.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "ParseIsolationFailure",
+        "line": 36,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "ParseIsolationCancelled",
+        "line": 42,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "ParsedSource",
+        "line": 47,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_child_environment",
+        "line": 53,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_run_child",
+        "line": 60,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_result_directory",
+        "line": 96,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_read_result",
+        "line": 119,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "parse_isolated",
+        "line": 153,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "pipelines/parse_worker.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "OutputLimitExceeded",
+        "line": 20,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "BoundedUTF8Writer",
+        "line": 24,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_input_status",
+        "line": 41,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "execute",
+        "line": 56,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "main",
+        "line": 88,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "pipelines/pdf_structure.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "outline_destinations",
+        "line": 6,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "split_bookmarked_page",
+        "line": 40,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "has_visual_content",
+        "line": 96,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "pipelines/reports.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "text_hash",
+        "line": 8,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "quality_rows",
+        "line": 12,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "compare_processing",
+        "line": 26,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "pipelines/supplements.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "PublisherImages",
+        "line": 10,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "apply_page_reviews",
+        "line": 22,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "apply_publisher_supplements",
+        "line": 66,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "pipelines/visual_candidate_boundaries.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "is_inline_reference",
+        "line": 11,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "rectangular_table_body",
+        "line": 18,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_hash",
+        "line": 40,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_box",
+        "line": 44,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_page_size",
+        "line": 54,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_within_page",
+        "line": 62,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "validate_v4_source_geometry",
+        "line": 66,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "validate_reference_record",
+        "line": 76,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "validate_reference_targets",
+        "line": 137,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "validate_v3_parent_lineage",
+        "line": 164,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "validate_v4_parent_lineage",
+        "line": 192,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "pipelines/visual_regions.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "_box",
+        "line": 22,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_identity",
+        "line": 26,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_record",
+        "line": 33,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_text_lines",
+        "line": 59,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_caption_below",
+        "line": 73,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "extract_page_regions",
+        "line": 86,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "pipelines/visual_regions_v3.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "_page_regions",
+        "line": 20,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "extract_page_regions",
+        "line": 80,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "pipelines/visual_regions_v4.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "_caption",
+        "line": 24,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_reference_links",
+        "line": 37,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_bind_reference",
+        "line": 45,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "extract_page_regions",
+        "line": 131,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "_source_table_caption",
+        "line": 218,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "pipelines/visual_regions_v5.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "extract_page_regions",
+        "line": 16,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "scripts/dev/acquire_openstax.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "acquire",
+        "line": 17,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "main",
+        "line": 81,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "scripts/dev/acquire_publisher_pages.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "acquire",
+        "line": 20,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "scripts/dev/build_openstax_release.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "main",
+        "line": 21,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "scripts/dev/openstax_pipeline.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "write",
+        "line": 22,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "main",
+        "line": 28,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "scripts/dev/package_image_transcriptions.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "freeze",
+        "line": 15,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "main",
+        "line": 28,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "scripts/dev/prepare_publisher_supplement.py",
+    "owner": 1,
+    "declarations": []
+  },
+  {
+    "path": "scripts/dev/publish_openstax.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "historical_fingerprint",
+        "line": 17,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "main",
+        "line": 33,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "scripts/dev/reprocess_frontmatter_v5.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "save",
+        "line": 25,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "main",
+        "line": 36,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "scripts/dev/review_anatomy_transcriptions.py",
+    "owner": 1,
+    "declarations": []
+  },
+  {
+    "path": "scripts/verify/acquire_chemistry_supplement_candidates.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "Images",
+        "line": 25,
+        "kind": "ClassDef",
+        "route_decorators": []
+      },
+      {
+        "name": "acquire",
+        "line": 37,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "scripts/verify/frontmatter_sections.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "main",
+        "line": 22,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "scripts/verify/inspect_openstax_sources.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "main",
+        "line": 17,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "scripts/verify/ocr_pages.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "main",
+        "line": 17,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "scripts/verify/record_chemistry_supplement_review.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "main",
+        "line": 63,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "scripts/verify/record_openstax_page_decisions.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "main",
+        "line": 55,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "scripts/verify/record_openstax_source_inspection.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "main",
+        "line": 143,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "scripts/verify/render_ocr_pages.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "main",
+        "line": 11,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "scripts/verify/replay_openstax_mock_generation.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "request_evidence",
+        "line": 19,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "main",
+        "line": 31,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "tests/integration/test_corpus_runtime.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "upload",
+        "line": 32,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "process",
+        "line": 43,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "build",
+        "line": 57,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_upload_type_path_limits_recursive_secrets_and_raw_dedup",
+        "line": 71,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_processing_rejects_corrupted_original_before_parser",
+        "line": 128,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_new_processing_is_isolated_and_old_queued_job_keeps_inline_parser",
+        "line": 166,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_isolated_parser_limit_failure_keeps_run_unpublished_and_can_retry",
+        "line": 215,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_malformed_pdf_fails_without_publishing_units_or_chunks",
+        "line": 244,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_quarantine_inspectable_exclusion_and_processing_lineage",
+        "line": 268,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_reprocessing_creates_new_chunks_while_old_evidence_survives",
+        "line": 314,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_quality_hash_export_and_semantic_processing_diff_ignore_new_ids",
+        "line": 350,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_processing_diff_reports_split_groups_by_overlapping_source_spans",
+        "line": 423,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_failed_index_preserves_pointer_cache_and_a_b_a_rollback",
+        "line": 445,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_actual_pgvector_rankings_bm25_independence_and_invalid_mixed_vectors",
+        "line": 492,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_source_deactivation_filters_current_retrieval_and_restore_recovers",
+        "line": 588,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_large_multisource_retrieval_bulk_reads_preserve_integrity_checks",
+        "line": 603,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_cache_rejects_finite_but_corrupted_prior_vectors_and_reencodes",
+        "line": 656,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_reusing_valid_float32_vectors_preserves_exact_bits_and_manifest",
+        "line": 690,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_legacy_release_without_saved_hashes_requires_explicit_new_build",
+        "line": 747,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_process_stop_and_stale_recovery_fence_late_publication_and_allow_rerun",
+        "line": 785,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_release_stop_and_recovery_do_not_lock_provider_or_publish_late_vectors",
+        "line": 863,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "tests/unit/test_answer_delivery_target_pipeline.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "request",
+        "line": 21,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "audited_checker",
+        "line": 29,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_native_generation_preserves_all_existing_gates_without_extra_calls",
+        "line": 52,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_native_bad_origin_or_existing_citation_fault_cannot_publish",
+        "line": 65,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_ordinary_request_remains_unchanged",
+        "line": 83,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_invalid_opt_in_stops_before_any_dispatch",
+        "line": 91,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "tests/unit/test_bound_repair_pipeline.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "failed_question",
+        "line": 24,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "patch_from_feedback",
+        "line": 36,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "run",
+        "line": 59,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_bound_patch_compiles_then_checks_full_draft_and_preserves_raw_proposal",
+        "line": 70,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_compiled_patch_cannot_override_any_failed_fresh_gate",
+        "line": 103,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_invalid_fresh_verdict_is_retained_and_cannot_publish_or_retry_past_budget",
+        "line": 117,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_invalid_patch_does_not_trigger_whole_rewrite_or_skip_reserved_recheck",
+        "line": 132,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_repair_does_not_start_without_budget_for_the_full_fresh_checker",
+        "line": 162,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_unlocated_global_defect_stops_without_authorizing_all_claims",
+        "line": 173,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "tests/unit/test_compact_checker_pipeline.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "candidate",
+        "line": 18,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "input_data",
+        "line": 29,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "compact_checker",
+        "line": 39,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "run",
+        "line": 72,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_success_retains_every_final_gate_actual_source_ids_and_raw_contract",
+        "line": 80,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_literal_selection_presence_and_exact_source_mapping_reach_checker",
+        "line": 103,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_false_missing_selection_is_contract_failure_without_fabricated_support",
+        "line": 133,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_negative_unit_blocks_an_optimistic_compound_and_routes_local_repair",
+        "line": 146,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_absent_independent_judgment_is_never_filled_or_published",
+        "line": 192,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_hint_and_feedback_gates_survive_the_compact_contract",
+        "line": 206,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_incompatible_frozen_axes_fail_before_any_transport_call",
+        "line": 232,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_unchecked_research_cannot_silently_ignore_the_requested_checker",
+        "line": 242,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_legacy_default_keeps_original_schema_and_budget",
+        "line": 247,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_expansion_cannot_publish_duplicate_conflicting_actual_citations",
+        "line": 255,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "tests/unit/test_compact_checker_v7_pipeline.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "check",
+        "line": 16,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "partial",
+        "line": 23,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "patch",
+        "line": 41,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "draft",
+        "line": 58,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "run",
+        "line": 64,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_valid_negatives_with_aggregate_contradiction_repair_content_and_finally_recheck",
+        "line": 72,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_historical_v6_keeps_original_same_draft_correction_path",
+        "line": 92,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_valid_negative_citation_is_repaired_before_a_fresh_publication_check",
+        "line": 102,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_v7_negative_cannot_publish_without_a_budget_for_final_repair_check",
+        "line": 127,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_named_requirement_gap_remains_blocking_after_aggregate_deferral",
+        "line": 133,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_honest_limited_partial_context_does_not_create_a_new_negative",
+        "line": 154,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_final_changed_draft_still_requires_its_own_positive_assessment",
+        "line": 175,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_true_identity_fault_keeps_contract_failure_even_with_a_valid_negative",
+        "line": 183,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_historical_policies_never_select_new_encoding",
+        "line": 196,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_new_payload_policy_round_trips_exact_checked_input_without_replacing_verdicts",
+        "line": 208,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "tests/unit/test_pipeline.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "unit",
+        "line": 13,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_clean_preserves_scientific_symbols_and_ambiguous_hard_hyphens",
+        "line": 24,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_txt_heading_quality_and_original_text_remain_available",
+        "line": 33,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_physical_pdf_pages_carry_real_sections_and_flag_removed_furniture",
+        "line": 46,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_actual_pypdf_extracts_authored_bytes_with_physical_pages",
+        "line": 65,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_pdf_page_extraction_failure_preserves_other_pages_and_blocks_publication",
+        "line": 99,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_chunks_repeatable_unique_across_sections_and_reconstruct_exact_spans",
+        "line": 128,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_exact_tokenizer_bounds_long_text_and_no_unmapped_character_loss",
+        "line": 156,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_excluded_units_and_section_changes_never_merge",
+        "line": 181,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_fixed_and_structure_strategies_preserve_source_coverage_with_distinct_boundaries",
+        "line": 195,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_bookmarks_prevent_contents_false_sections_and_preserve_midpage_continuation",
+        "line": 250,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_low_text_visual_page_blocks_while_prose_retains_visual_limitations",
+        "line": 283,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_actual_unbookmarked_pdf_prefix_uses_page_local_labels_and_preserves_v4",
+        "line": 303,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "tests/unit/test_publisher_supplements.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "fixture",
+        "line": 11,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_alternative_keeps_original_text_and_original_blocking_observation",
+        "line": 43,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_alternative_cannot_clear_unrelated_blocking_quality_issue",
+        "line": 70,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_unverified_or_mismatched_alternative_is_rejected",
+        "line": 92,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_duplicate_or_ambiguous_publisher_element_is_rejected",
+        "line": 100,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "tests/unit/test_selection_task_pipeline.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "annotate",
+        "line": 19,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "bound_patch",
+        "line": 61,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_bound_supplied_option_is_identical_in_generator_checker_and_report",
+        "line": 79,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_unmapped_opposite_branch_failure_preserves_failed_gates_and_stops_before_repair",
+        "line": 104,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_locatable_question_failure_repairs_with_same_contract_and_fresh_check",
+        "line": 141,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_stale_source_annotation_fails_before_any_provider_invocation",
+        "line": 198,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_source_supported_candidate_expression_still_cannot_be_displayed",
+        "line": 213,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "complete_hint_judgment",
+        "line": 227,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "quote_repair",
+        "line": 258,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_complete_current_hint_repairs_only_real_quote_defect_without_completing_solution",
+        "line": 266,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_a_failed_current_help_gate_retains_the_completion_repair",
+        "line": 292,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_partial_or_unproven_hint_retains_completion_repair",
+        "line": 316,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_direct_answer_and_unknown_judgment_keep_the_original_completion_action",
+        "line": 346,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_complete_hint_quote_repair_preserves_approved_question_and_requires_fresh_check",
+        "line": 356,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  },
+  {
+    "path": "tests/unit/test_source_recovery_guards.py",
+    "owner": 1,
+    "declarations": [
+      {
+        "name": "sha",
+        "line": 11,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "source",
+        "line": 15,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "review",
+        "line": 29,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_page_review_retains_original_issues_and_only_resolves_its_verified_scope",
+        "line": 40,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_page_review_rejects_wrong_source_location_hash_and_unsupported_discard",
+        "line": 65,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "artifact_fixture",
+        "line": 70,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_image_transcription_preserves_native_unit_and_links_separate_reviewed_text",
+        "line": 114,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_image_transcription_rejects_tampered_render_ocr_and_review_bytes",
+        "line": 129,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_image_transcription_rejects_unreviewed_misaligned_or_outside_artifacts",
+        "line": 148,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_image_transcription_rejects_wrong_pdf_duplicate_page_and_unrelated_blocker",
+        "line": 156,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_image_transcription_native_rewrapping_is_explicit_but_reordered_text_fails",
+        "line": 168,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      },
+      {
+        "name": "test_image_transcription_paragraph_order_is_part_of_pinned_text_identity",
+        "line": 180,
+        "kind": "FunctionDef",
+        "route_decorators": []
+      }
+    ]
+  }
+]
